@@ -1,0 +1,623 @@
+{
+  "metadata": {
+    "document_id": "10_1513_annalsats_202402_151oc",
+    "title": "Machine Learning Model Predictors of Intrapleural Tissue Plasminogen Activator and DNase Failure in Pleural Infection: A Multicenter Study",
+    "authors": [
+      "Danai Khemasuwan",
+      "Candice Wilshire",
+      "Chakravarthy Reddy",
+      "Christopher Gilbert",
+      "Jed Gorden",
+      "Akshu Balwan",
+      "Trinidad M. Sanchez",
+      "Billie Bixby",
+      "Jeffrey S. Sorensen",
+      "Samira Shojaee"
+    ],
+    "year": 2025,
+    "journal": "Annals of the American Thoracic Society",
+    "doi": "10.1513/annalsats.202402-151oc",
+    "volume": "22",
+    "issue": "2",
+    "pages": "187-192",
+    "citation": "Khemasuwan, et al. (2025). Machine Learning Model Predictors of Intrapleural Tissue Plasminogen Activator and DNase Failure in Pleural Infection: A Multicenter Study. Annals of the American Thoracic Society, 22(2), 187-192. https://doi.org/10.1513/annalsats.202402-151oc",
+    "abstract": "Rationale: Intrapleural enzyme therapy (IET) with tissue plasminogen activator (tPA) and DNase has been shown to reduce the need for surgical intervention for complicated parapneumonic effusion/empyema (CPPE/empyema). Failure of IET may lead to delayed care and increased length of stay. Objectives: The goal of this study was to identify risk factors for failure of IET. Methods: We performed a multicenter, retrospective study of patients who received IET for the treatment of CPPE/empyema. Clinical and radiological variables at the time of diagnosis were included. We compared four different machine learning classifiers (L1-penalized logistic regression, support vector machine [SVM], extreme gradient boosting [XGBoost], and light gradient-boosting machine [LightGBM]) by multiple bootstrap-validated metrics, including Fb , to demonstrate model performances. Results: A total of 466 participants who received IET for pleural infection were included from five institutions across the United States. Resolution of CPPE/empyema with IET was achieved in 78% ( n =365). SVM performed superiorly, with median Fb of 56%, followed by L1-penalized logistic regression, LightGBM, and XGBoost. Clinical and radiological variables were graded based on their ranked variable importance. The top two significant predictors of IET failure using SVM were the presence of an abscess/necrotizing pneumonia (17%) and pleural thickening (13%). Similarly, LightGBM identified abscess/necrotizing pneumonia (35%) and pleural thickening (26%) and XGBoost indicated pleural thickening (36%) and abscess/necrotizing pneumonia (17%) as the most significant predictors of treatment failure. Predictors identified by the L1-penalized logistic regression model were pleural thickening (18%) and pleural fluid lactate dehydrogenase (LDH) (9%). Conclusions: The presence of abscess/necrotizing pneumonia and pleural thickening consistently ranked among the strongest predictors of IET failure in all machine learning models. The difference in rankings between models may be a consequence of the different algorithms used by each model. These results indicate that the presence of abscess/necrotizing pneumonia and pleural thickening may predict IET failure. These results should be confirmed in larger studies. This was a retrospective multicenter study conducted in /uniFB01 ve institutions across the United States and included consecutive patients who underwent IET for CPPE/empyema management between January 2012 and February 2020. The institutional review board at each respective institution approved this study. CPPE was de /uniFB01 ned as the presence of pleural effusion on chest computed tomography (CT) or X-ray and evidence of pleural space septation and/or loculation on thoracic ultrasonography or CT scan, with an exudative pro /uniFB01 le on pleural /uniFB02 uid chemistry and pleural /uniFB02 uid pH < 7.2, whereas empyema was de /uniFB01 ned as pleural /uniFB02 uid that is purulent in appearance or has positive Gram stain or cultures. The success of IET with tPA/DNase was characterized by clinical and radiographic improvement, with CTimaging after IET showing complete or nearly complete resolution of the effusion. Failure was characterized by either the persistence of CPPE/empyema on chest CT or any complications that necessitated surgical intervention",
+    "abstract_source": "metadata",
+    "url": "https://www.atsjournals.org/doi/10.1513/AnnalsATS.202402-151OC"
+  },
+  "source_file": "Machine learing TPA.json",
+  "sections": [
+    {
+      "title": "A Multicenter Study",
+      "content": "Danai Khemasuwan 1 , Candice Wilshire 2 , Chakravarthy Reddy 3 , Christopher Gilbert 4 , Jed Gorden 2 , Akshu Balwan 5 , Trinidad M. Sanchez 1 , Billie Bixby 6 , Jeffrey S. Sorensen 7 , and Samira Shojaee 8\n1 Division of Pulmonary and Critical Care Medicine, Department of Internal Medicine, Virginia Commonwealth University Health System, Richmond, Virginia; 2 Department of Thoracic Surgery and Interventional Pulmonology, Center for Lung Research in Honor of Wayne Gittinger, Swedish Cancer Institute, Seattle, Washington; 3 Pulmonary and Critical Care Medicine, University of Utah, Salt Lake City, Utah; 4 Division of Pulmonary and Critical Care Medicine, Department of Internal Medicine, Medical University of South Carolina, Charleston, South Carolina; 5 Division of Pulmonary and Critical Care Medicine, Department of Internal Medicine, University of New Mexico, Albuquerque, New Mexico; 6 Division of Pulmonary and Critical Care Medicine, Department of Internal Medicine, University of Arizona, Tucson, Arizona; 7 Data Scientist, Nublu, Seattle, Washington; and 8 Division of Allergy, Pulmonary, and Critical Care Medicine, Department of Internal Medicine, Vanderbilt University Medical Center, Nashville, Tennessee\nORCIDID: 0000-0002-3637-1802 (C.W.).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Abstract",
+      "content": "Rationale: Intrapleural enzyme therapy (IET) with tissue plasminogen activator (tPA) and DNase has been shown to reduce the need for surgical intervention for complicated parapneumonic effusion/empyema (CPPE/empyema). Failure of IET may lead to delayed care and increased length of stay.\nObjectives: The goal of this study was to identify risk factors for failure of IET.\nMethods: We performed a multicenter, retrospective study of patients who received IET for the treatment of CPPE/empyema. Clinical and radiological variables at the time of diagnosis were included. We compared four different machine learning classifiers (L1-penalized logistic regression, support vector machine [SVM], extreme gradient boosting [XGBoost], and light gradient-boosting machine [LightGBM]) by multiple bootstrap-validated metrics, including Fb , to demonstrate model performances.\nResults: A total of 466 participants who received IET for pleural infection were included from five institutions across the United States. Resolution of CPPE/empyema with IET was achieved in 78% ( n =365). SVM performed superiorly, with median Fb of\n56%, followed by L1-penalized logistic regression, LightGBM, and XGBoost. Clinical and radiological variables were graded based on their ranked variable importance. The top two significant predictors of IET failure using SVM were the presence of an abscess/necrotizing pneumonia (17%) and pleural thickening (13%). Similarly, LightGBM identified abscess/necrotizing pneumonia (35%) and pleural thickening (26%) and XGBoost indicated pleural thickening (36%) and abscess/necrotizing pneumonia (17%) as the most significant predictors of treatment failure. Predictors identified by the L1-penalized logistic regression model were pleural thickening (18%) and pleural fluid lactate dehydrogenase (LDH) (9%).\nConclusions: The presence of abscess/necrotizing pneumonia and pleural thickening consistently ranked among the strongest predictors of IET failure in all machine learning models. The difference in rankings between models may be a consequence of the different algorithms used by each model. These results indicate that the presence of abscess/necrotizing pneumonia and pleural thickening may predict IET failure. These results should be confirmed in larger studies.\nKeywords : empyema; pleural infection; complex parapneumonic effusion; intrapleural tissue plasminogen activator and DNase; intrapleural enzyme therapy\n(Received in original form February 7, 2024; accepted in final form October 29, 2024)\nAuthor Contributions : Conception and design: D.K., C.W., C.R., J.S.S., and S.S. Acquisition, analysis, or interpretation of data: D.K., C.W., C.R., C.G., J.G., A.B., T.M.S., B.B., and S.S. Analysis and interpretation: D.K., C.W., C.R., C.G., J.G., A.B., T.M.S., B.B., J.S.S., and S.S. Drafting the manuscript for important intellectual content: D.K., C.W., C.R., J.S.S., and S.S.\nCorrespondence and requests for reprints should be addressed to Danai Khemasuwan, M.D., M.B.A., Virginia Commonwealth University, 1200 East Marshall Street, Richmond, VA 23298. E-mail: danai.khemasuwan@vcuhealth.org.\nAnn Am Thorac Soc Vol 22, No 2, pp 187-192, Feb 2025 Copyright © 2025 by the American Thoracic Society DOI: 10.1513/AnnalsATS.202402-151OC Internet address: www : atsjournals : org\nComplicated parapneumonic effusion (CPPE) and empyema management remains challenging and is associated with signi /uniFB01 cant 30-day and 1-year mortality (1). The cornerstones of management are prompt drainage of the infected pleural space and initiation of antimicrobial therapy (2). Intrapleural enzyme therapy (IET), with tissue plasminogen activator (tPA) and DNase (DNase), has been shown to break down /uniFB01 brin in CPPE/empyema and facilitate drainage. IET has been shown to improve radiographic outcomes, decrease hospital length of stay, and reduce the need for surgical intervention in the MIST2 (MultiCentre Intrapleural Sepsis 2) trial (3). This therapy has become the standard of care for management of dif /uniFB01 cult-to-drain CPPE and empyema. There is increasing evidence that demonstrates ef /uniFB01 cacy, with treatment success rates of 90% despite variation in dosage and method of administration (4 -6).\nDespite appropriate medical therapy, surgical intervention continues to play a crucial role in cases where pleural infection has not been effectively controlled. However, the role of surgical intervention remains unclear, with much of the debate revolving around patient selection (7, 8). In addition, patients with later stages of empyema with an organized pleural thickening are less likely to achieve lung reexpansion without surgery (9). Current guidelines recommend the use of surgery in cases of ' medical treatment failure ' or when an advanced /uniFB01 brotic state is suspected with extensive pleural thickening (2). For patients in whom intrapleural tPA/DNase therapy is likely to fail, IET may simply delay surgical referral. It is important for clinicians to identify the patients in whomIET with tPA/DNase is likely to fail, facilitating early surgical intervention. The study used supervised machine learning with extreme gradient boosting to investigate the relative importance of predictors of IET failure among patients with pleural infection. Pleural thickening and the presence of abscess/necrotizing pneumonia have been identi /uniFB01 ed as the most important predictors of IET failure in a single-center study using supervised machine learning with extreme gradient boosting (10).\nMachine learning has been used to analyze large amounts of data and identify patterns that can predict outcomes in patients with respiratory disease (11). Machine learning involves training algorithms to learn from data without being explicitly programmed. Several studies have\ntrained the algorithms on the data from electronic health records that contained information such as patient demographics, medical history, and laboratory values. The machine learning models used in these studies were able to accurately predict outcomes, such as mortality and exacerbation, in patients with respiratory disease with high accuracy, outperforming traditional scoring systems (12 -14). This suggests that machine learning has the potential to improve patient outcomes by identifying high-risk patients early and developing personalized treatment plans.\nTo further evaluate the effectiveness of this predictive model, we performed a retrospective, multicenter study to determine the signi /uniFB01 cance of candidate variables in predicting IET failure among patients with pleural infection.",
+      "category": "abstract",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Study Design",
+      "content": "This was a retrospective multicenter study conducted in /uniFB01 ve institutions across the United States and included consecutive patients who underwent IET for CPPE/empyema management between January 2012 and February 2020. The institutional review board at each respective institution approved this study.\nCPPE was de /uniFB01 ned as the presence of pleural effusion on chest computed tomography (CT) or X-ray and evidence of pleural space septation and/or loculation on thoracic ultrasonography or CT scan, with an exudative pro /uniFB01 le on pleural /uniFB02 uid chemistry and pleural /uniFB02 uid pH < 7.2, whereas empyema was de /uniFB01 ned as pleural /uniFB02 uid that is purulent in appearance or has positive Gram stain or cultures. The success of IET with tPA/DNase was characterized by clinical and radiographic improvement, with CTimaging after IET showing complete or nearly complete resolution of the effusion. Failure was characterized by either the persistence of CPPE/empyema on chest CT or any complications that necessitated surgical intervention.",
+      "category": "methods",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Study Population",
+      "content": "Subjects were retrospectively identi /uniFB01 ed from the hospital pharmacy database based on the presence of Current Procedural Terminology codes 32561 or 32562, indicating the use of intrapleural tPA/DNase for CPPE/empyema. Clinical variables included demographic\ndetails, underlying pulmonary conditions, chest tube size, presence of an additional chest tube, pleural /uniFB02 uid chemistry, inappropriate initial antibiotics (de /uniFB01 ned as those not matching the /uniFB01 nal susceptibility from pleural /uniFB02 uid cultures, if available), and the purulent nature of the effusion. Radiographic features analyzed included pleural thickening ( . 2 mm) on axial plane, an appearance of loculation, and the presence of lung abscess or necrotizing pneumonia.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Management",
+      "content": "All patients were initially given empiric antibiotics as determined by the treating physicians and the clinical setting (community acquired or hospital acquired). Whenever possible, the antibiotics were adjusted based on culture sensitivity results. The determination of chest tube type, size, and management was entrusted to the expertise of clinicians within each respective institution. The size and the method of chest drain placement were recorded, as well as the presence of a second chest drain due to nondraining multiloculated parapneumonic effusion or need for surgery. All participating centers followed a similar regimen for IET: 10 mg of intrapleural tPA and 5 mg of intrapleural DNase. The length and frequency of treatment in each center was per discretion of the pleural disease treatment team in that institution and did not exceed a maximum of six doses of IET during the course of treatment and no more than two therapies within a 24-hour time period. All centers clamped the chest tube for 1 hour after the administration of intrapleural tPA/DNase. The administration of IET was initiated within 24 -48 hours after the insertion of the chest drain.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Statistical Analysis",
+      "content": "Simple descriptive statistics were used to describe patient demographics. Categorical variables were summarized using frequencies with percentages. Continuous variables were displayed as mean and standard deviation when normally distributed or median and interquartile range (IQR) if appropriate. The study included a total of 466 subjects who were randomly divided into training ( n =372) and testing ( n =94) sets at an 80:20 ratio. The dataset contained missing values for 5 out of 14 clinical variables, namely chest tube size, pleural /uniFB02 uid glucose, LDH, protein, and pH. Binary variables were created to\nindicate when an observation required imputation for a given missing variable. The missing values in the dataset were imputed using the multivariate imputation by chained equations (MICE) technique and binary variables (15, 16), which involves estimating the missing values for each variable by using other variables in the dataset as predictors. This method was implemented iteratively, with each iteration improving the estimation of missing values based on information gained in the previous iteration. After imputing missing data using MICE, the resulting dataset was used for further analysis or modeling.\nThe training data were further divided into in-bag and out-of-bag training data (using the same ratio) for hyperparameter tuning. Adaptive optimization (treeparzan estimator) was used to tune the hyperparameters for each of the four different machine learning classi /uniFB01 ers: L1-penalized logistic regression, support vector machine (SVM), Extreme Gradient Boosting (XGBoost), and light gradientboosting machine (LightGBM) to maximize out-of-bag Fb . Finally, each model was /uniFB01 tted to the full training data using the tuned hyperparameter values. The goal of hyperparameter tuning was to /uniFB01 nd the optimal set of hyperparameters for each classi /uniFB01 er that maximized its performance on the out-of-bag training data. Once the hyperparameters were tuned using the\nout-of-bag training data, each model was /uniFB01 tted to the full training data using the optimal set of hyperparameters. This /uniFB01 nal step ensured that the models were trained on the complete training dataset with the optimal set of hyperparameters, which could then be used to make predictions on new data (17 -20).\nOnce each model was tuned and /uniFB01 t, model performance was assessed on the testing data ( n =94) in terms of Fb (a weighted version of the F-1 score). To address the challenges associated with a limited sample size and to mitigate over /uniFB01 tting, we integrated several advanced machine learning techniques into our methodology, including cross-validation, regularization, and bootstrapping. Variable importance was estimated by random permutation to rank the importance of clinical and derived variables with respect to their in /uniFB02 uence on failure of IET. The F-1 score is the harmonic mean of precision (true predictive value) and recall (true positive rate) (21 -23). In clinical practice, delaying surgical intervention in the setting of ongoing or inadequately drained pleural space infection can be harmful to the patients, which may lead to worsening sepsis or increasing risk of complications. Therefore, this study weighted recall twice as heavily as precision. In other words, we scored model performance by prioritizing recall over precision. The whole pipeline was\nrepeated 200 times (from random split to Fb and area under the curve testing) to yield valid distributions for test metrics.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Results",
+      "content": "Weidenti /uniFB01 ed 466 patients with a diagnosis of CPPE/empyema who received at least one chest drain and IET. The median number of dosages was /uniFB01 ve doses (IQR, three doses). Clinical characteristics are summarized in Table 1. Among 466 patients, 37.1% ( n =173) received appropriate antibiotics, ensuring that the prescribed antibiotics matched the sensitivity of their microbiology culture results. Small-bore catheters (8 -18 F) were placed in 413 (88.6%) patients, whereas 53 (11.4%) had large chest drains (20 -32 F). Chest drains were placed percutaneously with image guidance in 438 (94%) subjects. In this cohort, 311 (67%) patients were diagnosed with empyema based on the presence of purulent effusion, positive culture or Gram stain, or acidic /uniFB02 uid with a pH , 7.2. Of the 311 cases, 63% ( n =197) had positive cultures from pleural /uniFB02 uid (Table 2). In the CPPE group (155 patients), effusions were considered as pleural infections based on their clinical assessment including exudative pro /uniFB01 le, low glucose ( , 60 mg/dl), and the presence of septations on imaging studies.\nThe overall success rate of IET was 78.3% ( n =365). Among the 101 patients\nDefinition of abbreviations : Chronic obstructive pulmonary disease (COPD)=chronic obstructive pulmonary disease; CT = computed tomography; IET = intrapleural enzyme therapy; ILD=interstitial lung disease.\nData are given as mean 6 standard deviation, n (%), or median (interquartile range).\nwho did not respond to combined intrapleural therapy, surgery was indicated for the following reasons: 1 ) worsening sepsis irrespective of radiographic /uniFB01 ndings ( n =56); 2 ) persistent infection with deteriorating follow-up chest CT ( n =42); or 3 ) the development of hemothorax ( n =3). There were four candidate machine learning classi /uniFB01 ers: 1 ) SVM performed the best, with median Fb of 56% (central 95th percentile: 44 -65%); followed by 2 ) L1-penalized logistic regression, with median Fb 52% (central 95th percentile: 0 -62%); 3 ) LightGBM, with median Fb 48% (central 95th percentile: 24 -66%); and 4 ) XGBoost, with Fb 45% (central 95th percentile: 0 -63%) (Figure 1).\nThe 14 clinical and radiological variables, as well as 5 imputed variables, were\ngraded based on their ranked variable importance using machine learning models. The top two signi /uniFB01 cant predictors of IET failure using SVM were the presence of an abscess and/or necrotizing pneumonia (17%) and pleural thickening (13%). Meanwhile, the most signi /uniFB01 cant predictors using L1-penalized logistic regression were pleural thickening (18%) and pleural /uniFB02 uid LDH (9%). LightGBM identi /uniFB01 ed abscess or necrotizing pneumonia (35%) and pleural thickening (26%) as the most signi /uniFB01 cant predictors. Similarly, XGBoost indicated that pleural thickening (36%) and abscess or necrotizing pneumonia (17%) were the most signi /uniFB01 cant predictors (Table 3). Figure 2 shows the ranked variable importance from each model.",
+      "category": "results",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Discussion",
+      "content": "To our knowledge, this is the largest study to date to determine the predictors of IET failure in pleural infection. Our dataset represents the experiences of /uniFB01 ve institutions with different practice settings over an 8-year period, including two university-based and three community-based practices. We observed an overall success rate of 78.3%. In comparison, other studies have reported success rates ranging from 85% to 92% (24 -27). IET has proven effective in decreasing the necessity for surgical intervention in patients with CPPE/ empyema (3). However, some cases still require surgery, despite completing a complete course of IET. Identifying risk factors for the failure of combined intrapleural therapy is vital in clinical practice and may aid in identi /uniFB01 cation of high-risk patients who need prompt surgical intervention instead.\nIn a previous retrospective study, machine learning with extreme gradient boosting was used to assess the relative importance of predictors for IET failure, identifying pleural thickening and abscess/necrotizing pneumonia as the most signi /uniFB01 cant predictors (10). In this multicenter study, four machine learning models were used to rank a wide range of clinical and radiological variables that contribute to IET failure.\nThe presence of abscess/necrotizing pneumonia and pleural thickening consistently ranked among the top two predictors of IET failure across three machine learning models (all except\nDefinition of abbreviations : IET = intrapleural enzyme therapy; MRSA = methicillin-resistant Staphylococcus aureus ; MSSA=methicillin-sensitive Staphylococcus aureus . Data are given as n (%).\nL1-penalized logistic regression). The different rankings between models may be attributed to the varying algorithms used by each model. These results suggest that the presence of abscess/necrotizing pneumonia and pleural thickening strongly increases the risk of intrapleural IET failure. Hence, expedited surgical management may need to be considered for patients with these /uniFB01 ndings to prevent the potential failure of IET and delayed control of infection.\nModel selection is a challenging process of choosing proper machine learning models among many candidates for predicting a speci /uniFB01 c outcome. In addition to model performance, there are other competing priorities during model selection, such as complexity, maintainability, and explainability (28). Overly simpli /uniFB01 ed or complicated models commonly lead to suboptimal model performance. Therefore, the optimal model should have just enough complexity, and no more. Attempts to develop a model that works in all cases have failed (29). Alas, with each new problem and each new dataset, data scientists must go through the tedious and sometimes laborious process of /uniFB01 nding the right-sized model for the analysis of interest. To this end, we\ncompared three different classes of models with three different levels of complexity: 1 ) L1-penalized logistic regression, which is relatively low complexity; 2 ) nonlinear SVM, which is marginally more complex; and 3 ) gradient boosted models, which served as our most complex models in this study. Wecompared two implementations of gradient boosted models, XGBoost and LightGBM, because these two models differ with respect to their speed of calculation. Because LightGBM builds histograms for all features in the dataset and uses these histograms to /uniFB01 nd the best split points, it results in a faster training time (18).",
+      "category": "discussion",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Strengths and Limitations",
+      "content": "This study has several strengths. Its multicenter design improves the generalizability of the results across different practice settings, and it validates the signi /uniFB01 cance of the identi /uniFB01 ed predictors, which were detected in a smaller singlecenter study using a similar technique (10). Moreover, our cohort ' s data collection spanned over a long period of time, allowing for a more comprehensive analysis of the study outcomes. We aimed to collect a broad range of data to analyze and\nidentify the clinical parameters that can predict the failure of IET. The study ' s external validity is robust because of the high rates of data completeness and the identical collection of datasets across multiple centers, despite a few parameters with missing data. We used MICE to iteratively impute the missing data, which is capable of managing missing data from diverse sources, a notable advantage (15). This is achieved by using a series of regression models to approximate missing values, enabling it to comprehend the correlations between variables, even in cases where missing data exist in multiple variables (30, 31). This study had a few limitations. Although IET failure was de /uniFB01 ned as the lack of resolution of CPPE/empyema on chest CT or the occurrence of any complication, the decision for surgical intervention was based on local clinical practices, which could have introduced selection bias. However, conducting the study across multiple centers helped mitigate the in /uniFB02 uence of local practices and ensured broader applicability of the /uniFB01 ndings. Another limitation was the retrospective design, which may lead to biases inherent in such studies. The results should be validated in prospective studies.\nDefinition of abbreviations : LDH=lactate dehydrogenase; XGBoost=extreme gradient boosting.\nThe Fb score is a performance metric that assesses a model by combining precision and recall in a flexible manner. A higher Fb score indicates better model performance, reflecting a more optimal balance between precision and recall.",
+      "category": "limitations",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Conclusions",
+      "content": "Using four different machine learning models, pleural thickening and the presence of abscess/necrotizing pneumonia are identi /uniFB01 ed as the two most important predictors of IET failure in the setting of pleural space infection. These /uniFB01 ndings validate a smaller singlecenter study of similar methodology and\nmay serve as important factors to guide triage of high-risk patients in whom IET is likely to fail and expedite early surgical intervention. Within that context, MIST-3, a multicenter, randomized controlled trial (NCT04161677), is recruiting patients to investigate the feasibility of randomizing patients with pleural infection to early surgery versus early intrapleural\ntPA/DNase (32). The results of this study may change the management landscape of pleural infection by personalizing proper treatment strategies based on well-de /uniFB01 ned patient-speci /uniFB01 c risk factors. /H17039\nAuthor disclosures are available with the text of this article at www.atsjournals.org.",
+      "category": "conclusion",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "References",
+      "content": "1 Nayak R, Brogly SB, Lajkosz K, Lougheed MD, Petsikas D. Outcomes of operative and nonoperative treatment of thoracic empyema: a population-based study. Ann Thorac Surg 2019;108:1456 -1463.\n2 Davies HE, Davies RJ, Davies CWH. Management of pleural infection in adults: British Thoracic Society Pleural Disease Guideline 2010. Thorax 2010;65:ii41 -ii53.\n3 Rahman NM, Maskell NA, West A, Teoh R, Arnold A, Mackinlay C, et al. Intrapleural use of tissue plasminogen activator and DNase in pleural infection. N Engl J Med 2011;365:518 -526.\n4 Popowicz N, Bintcliffe O, De Fonseka D, Blyth KG, Smith NA, Piccolo F, et al. Dose de-escalation of intrapleural tissue plasminogen activator therapy for pleural infection: the alteplase dose assessment for pleural infection therapy project. Ann Am Thorac Soc 2017;14: 929 -936.\n5 Mehta H, Biswas A, Penley A, Jantz M. Utilizing once daily use of tissue plasminogen activator (tPA) and deoxyribonuclease (DNase) for management of intrapleural sepsis [abstract]. Am J Respir Crit Care Med 2016;193:A3228.\n6 Majid A, Kheir F, Folch A, Fernandez-Bussy S, Chatterji S, Maskey A, et al. Concurrent intrapleural instillation of tissue plasminogen activator and DNase for pleural infection: a single-center experience. Ann Am Thorac Soc 2016;13:1512 -1518.\n7 Scarci M, Abah U, Solli P, Page A, Waller D, van Schil P, et al. EACTS expert consensus statement for surgical management of pleural empyema. Eur J Cardiothorac Surg 2015;48:642 -653.\n8 Chaddha U, Agrawal A, Feller-Kopman D, Kaul V, Shojaee S, MaldONado F, et al. Use of fibrinolytics and deoxyribonuclease in adult patients with pleural empyema: a consensus statement. Lancet Respir Med 2021;9:1050 -1064.\n9 Bedawi EO, George V, Rahman NM. A new approach to pleural infection: let it be? Curr Pulmonol Rep 2019;8:112 -122.\n10 Khemasuwan D, Sorensen J, Griffin DC. Predictive variables for failure in administration of intrapleural tissue plasminogen activator/deoxyribonuclease in patients with complicated parapneumonic effusions/empyema. Chest 2018;154:550 -556.\n11 Kim NY, Jang B, Gu K-M, Park YS, Kim Y-G, Cho J, et al. Differential diagnosis of pleural effusion using machine learning. Ann Am Thorac Soc 2024;21:211 -217.\n12 Cilloniz C, Ward L, Mogensen ML, Peric /C18 as JM, M /C19 endez R, Gabarr /C19 us A, et al. Machine-learning model for mortality prediction in patients with community-acquired pneumonia: development and validation study. Chest 2023;163:77 -88.\n13 Moll M, Qiao D, Regan EA, Hunninghake GM, Make BJ, Tal-Singer R, et al. Machine learning and prediction of all-cause mortality in Chronic obstructive pulmonary disease (COPD). Chest 2020;158:952 -964.\n14 Zein JG, Wu C-P, Attaway AH, Zhang P, Nazha A. Novel machine learning can predict acute asthma exacerbation. Chest 2021;159: 1747 -1757.\n15 Van Buuren S, Oudshoorn CGM. MICE: multivariate imputation by chained equations in R. J Stat Soft 2011;45:1 -67.\n16 Azur MJ, Stuart EA, Frangakis C, Leaf PJ. Multiple imputation by chained equations: what is it and how does it work? Int J Methods Psychiatr Res 2011;20:40 -49.\n17 Breiman L. Bagging predictors. Mach Learn 1996;24:123 -140.\n18 Ke G, Meng Q, Finley T, Wang T, Chen W, Ma W, et al. LightGBM: a highly efficient gradient boosting decision tree. Advances in Neural Information Processing Systems 2017;30:3146 -3154.\n19 Chen T, Guestrin C. GBoost: a scalable tree boosting system. In: Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining. 2016. pp. 785 -794.\n20 Kingma DP, Ba J. Adam: a method for stochastic optimization [preprint]. arXiv; 2014 [accessed 2023 Aug 18]. Available from: https://arxiv.org/ abs/1412.6980.\n21 Power DMW. Evaluation: from precision, recall and F-measure to ROC, informedness, markedness and correlation. J Mach Learn Technol 2011;2:37 -63.\n22 Ng KH, Goh HK. Application of machine learning in medical diagnosis. J Med Syst 2019;43:183.\n23 Sokolova M, Lapalme G. A systematic analysis of performance measures for classification tasks. Inf Process Manage 2009;45:427 -437.\n24 Abu-Daff S, Maziak DE, Alshehab D, Threader J, Ivanovic J, DeSlaurier V, et al. Intrapleural fibrinolytic therapy (IPFT) in loculated pleural effusions -analysis of predictors for failure of therapy and bleeding: a cohort study. BMJ Open 2013;3:e001887.\n25 Piccolo F, Pitman N, Bhatnagar R, Popowicz N, Smith NA, Brockway B, et al. Intrapleural tissue plasminogen activator and deoxyribonuclease for pleural infection: an effective and safe alternative to surgery. Ann Am Thorac Soc 2014;11:1419 -1425.\n26 Bishwakarma R, Shah S, Frank L, Zhang W, Sharma G, Nishi SPE, et al. Mixing it up: coadministration of tPA/DNase in complicated parapneumonic pleural effusions and empyema. J Bronchology Interv Pulmonol 2017;24:40 -47.\n27 Kheir F, Cheng G, Rivera E, Folch A, Folch E, Fernandez-Bussy S, et al. Concurrent versus sequential intrapleural instillation of tissue plasminogen activator and deoxyribonuclease for pleural infection. J Bronchology Interv Pulmonol 2018;25:125 -131.\n28 Rajkomar A, Dean J, Kohane I. Machine learning in medicine. N Engl J Med 2019;380:1347 -1358.\n29 Wolpert DH, Macready WG. No free lunch theorems for optimization. IEEE Trans Evol Comput 1997;1:67 -82.\n30 Nuzzo R. Statistical errors. Nature 2014;506:150 -152.\n31 Ioannidis JP, Tarone R, McLaughlin JK. The false-positive to false-negative ratio in epidemiologic studies. Epidemiology 2011;22:450 -456.\n32 Bedawi EO, Stavroulias D, Hedley E, Blyth KG, Kirk A, De FonseKa D, et al. Early video-assisted thoracoscopic surgery or intrapleural enzyme therapy in pleural infection: a feasibility randomized controlled trial. The Third Multicenter Intrapleural Sepsis Trial-MIST-3. Am J Respir Crit Care Med 2023;208:1305 -1315.\nCopyright of Annals of the American Thoracic Society is the property of American Thoracic Society and its content may not be copied or emailed to multiple sites or posted to a listserv without the copyright holder's express written permission. However, users may print, download, or email articles for individual use.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    }
+  ],
+  "tables": [
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/45'}",
+      "headers": [
+        "Demographic and Characteristics",
+        "Cohort Data ( N =466)",
+        "IET Success ( n =365)",
+        "IET Failure ( n =101)"
+      ],
+      "rows": [
+        [
+          "Patient characteristic",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Age, yr",
+          "56.3 6 17",
+          "56.7 6 17",
+          "54.7 6 16"
+        ],
+        [
+          "Sex, female",
+          "178 (38.2)",
+          "140 (38.4)",
+          "38 (37.6)"
+        ],
+        [
+          "Presence of COPD or ILD",
+          "83 (17.8)",
+          "70 (19.1)",
+          "13 (12.8)"
+        ],
+        [
+          "Placement of second chest tube",
+          "69 (14.8)",
+          "59 (16.1)",
+          "10 (9.9)"
+        ],
+        [
+          "Small-bore catheter placement (8 - 18 F)",
+          "413 (88.6)",
+          "331 (90.7)",
+          "82 (81.2)"
+        ],
+        [
+          "Appropriate antibiotics (matched sensitivity)",
+          "173 (37.1)",
+          "131 (36)",
+          "42 (41.6)"
+        ],
+        [
+          "Days from drain insertion to removal",
+          "5 (4 - 8)",
+          "5 (4 - 7)",
+          "6 (4 - 10)"
+        ],
+        [
+          "Days from admission to discharge",
+          "12 (8 - 18)",
+          "11 (8 - 17)",
+          "15 (10 - 20)"
+        ],
+        [
+          "Radiographic characteristics",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Evidence of loculation on CT scan",
+          "346 (74.2)",
+          "262 (71.8)",
+          "84 (82.3)"
+        ],
+        [
+          "Pleural thickening ( . 2 mm)",
+          "130 (27.9)",
+          "87 (23.8)",
+          "43 (42.5)"
+        ],
+        [
+          "Presence of abscess and/or necrotizing pneumonia",
+          "122 (26)",
+          "77 (21)",
+          "45 (44.5)"
+        ],
+        [
+          "Pleural effusion characteristics",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Side of effusion, right",
+          "255 (55)",
+          "198 (54.2)",
+          "57 (56.4)"
+        ],
+        [
+          "Culture positive",
+          "197 (42)",
+          "146 (40)",
+          "51 (50.4)"
+        ],
+        [
+          "Presence of purulent pleural fluid",
+          "149 (32)",
+          "100 (27.4)",
+          "49 (48.5)"
+        ],
+        [
+          "Pleural fluid pH",
+          "7.2 6 0.43",
+          "7.2 6 0.37",
+          "7.12 6 0.44"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/51'}",
+      "headers": [
+        "Organisms",
+        "Cohort Data ( N =197)",
+        "IET Success ( n =145)",
+        "IET Failure ( n =52)"
+      ],
+      "rows": [
+        [
+          "Streptococcus spp.",
+          "106 (53.8)",
+          "78 (53.8)",
+          "28 (53.8)"
+        ],
+        [
+          "MRSA",
+          "26 (13.2)",
+          "20 (13.8)",
+          "6 (11.5)"
+        ],
+        [
+          "MSSA",
+          "20 (10.1)",
+          "16 (11)",
+          "4 (7.7)"
+        ],
+        [
+          "Other gram positive",
+          "9 (4.5)",
+          "6 (4.1)",
+          "3 (5.8)"
+        ],
+        [
+          "Anaerobes",
+          "13 (6.6)",
+          "11 (7.5)",
+          "2 (3.8)"
+        ],
+        [
+          "Klebsiella spp.",
+          "5 (2.5)",
+          "4 (2.8)",
+          "1 (1.9)"
+        ],
+        [
+          "Escherichia coli",
+          "3 (1.5)",
+          "1 (0.7)",
+          "2 (3.8)"
+        ],
+        [
+          "Pseudomonas aeruginosa",
+          "3 (1.5)",
+          "1 (0.7)",
+          "2 (3.8)"
+        ],
+        [
+          "Haemophilus spp.",
+          "2 (1)",
+          "1 (0.7)",
+          "1 (1.9)"
+        ],
+        [
+          "Other gram negative",
+          "3 (1.5)",
+          "2 (1.4)",
+          "1 (1.9)"
+        ],
+        [
+          "Fungus",
+          "4 (2)",
+          "3 (2.1)",
+          "1 (1.9)"
+        ],
+        [
+          "Mixed organisms",
+          "3 (1.5)",
+          "2 (1.4)",
+          "1 (1.9)"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/89'}",
+      "headers": [
+        "",
+        "F- b ( % )",
+        "First Ranking",
+        "Second Ranking"
+      ],
+      "rows": [
+        [
+          "Support vector machine",
+          "56 (44 - 65)",
+          "Abscess or necrotizing pneumonia (17%)",
+          "Pleural thickening (13%)"
+        ],
+        [
+          "L1-penalized logistic regression",
+          "52 (0 - 62)",
+          "Pleural thickening (18%)",
+          "LDH pleural (9%)"
+        ],
+        [
+          "Light gradient-boosting machine",
+          "48 (24 - 66)",
+          "Abscess or necrotizing pneumonia (35%)",
+          "Pleural thickening (26%)"
+        ],
+        [
+          "XGBoost",
+          "45 (0 - 63)",
+          "Pleural thickening (36%)",
+          "Abscess or necrotizing pneumonia (17%)"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    }
+  ],
+  "figures": [
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/59'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/96'}",
+      "page": null
+    }
+  ],
+  "references": [
+    {
+      "title": "Outcomes of operative and nonoperative treatment of thoracic empyema: a population-based study"
+    },
+    {
+      "title": "Ann Thorac Surg",
+      "year": 2019
+    },
+    {
+      "title": "Management of pleural infection in adults: British Thoracic Society Pleural Disease Guideline 2010",
+      "year": 2019
+    },
+    {
+      "title": "Thorax",
+      "year": 2010
+    },
+    {
+      "title": "Intrapleural use of tissue plasminogen activator and DNase in pleural infection",
+      "year": 2010
+    },
+    {
+      "title": "N Engl J Med",
+      "year": 2011
+    },
+    {
+      "title": "Dose de-escalation of intrapleural tissue plasminogen activator therapy for pleural infection: the alteplase dose assessment for pleural infection therapy project",
+      "year": 2011
+    },
+    {
+      "title": "Ann Am Thorac Soc",
+      "year": 2017
+    },
+    {
+      "title": "Utilizing once daily use of tissue plasminogen activator (tPA) and deoxyribonuclease (DNase) for management of intrapleural sepsis [abstract",
+      "year": 2017
+    },
+    {
+      "title": "Am J Respir Crit Care Med",
+      "year": 2016
+    },
+    {
+      "title": "Concurrent intrapleural instillation of tissue plasminogen activator and DNase for pleural infection: a single-center experience",
+      "year": 2016
+    },
+    {
+      "title": "EACTS expert consensus statement for surgical management of pleural empyema",
+      "year": 2016
+    },
+    {
+      "title": "Eur J Cardiothorac Surg",
+      "year": 2015
+    },
+    {
+      "title": "Use of fibrinolytics and deoxyribonuclease in adult patients with pleural empyema: a consensus statement",
+      "year": 2015
+    },
+    {
+      "title": "Lancet Respir Med",
+      "year": 2021
+    },
+    {
+      "title": "A new approach to pleural infection: let it be?",
+      "year": 2021
+    },
+    {
+      "title": "Curr Pulmonol Rep",
+      "year": 2019
+    },
+    {
+      "title": "Predictive variables for failure in administration of intrapleural tissue plasminogen activator/deoxyribonuclease in patients with complicated parapneumonic effusions/empyema",
+      "year": 2019
+    },
+    {
+      "title": "Chest",
+      "year": 2018
+    },
+    {
+      "title": "Differential diagnosis of pleural effusion using machine learning",
+      "year": 2018
+    },
+    {
+      "title": "Machine-learning model for mortality prediction in patients with community-acquired pneumonia: development and validation study",
+      "year": 2024
+    },
+    {
+      "title": "Machine learning and prediction of all-cause mortality in COPD",
+      "year": 2023
+    },
+    {
+      "title": "Novel machine learning can predict acute asthma exacerbation",
+      "year": 2020
+    },
+    {
+      "title": "MICE: multivariate imputation by chained equations in R",
+      "year": 2021
+    },
+    {
+      "title": "J Stat Soft",
+      "year": 2021
+    },
+    {
+      "title": "Multiple imputation by chained equations: what is it and how does it work?",
+      "year": 2011
+    },
+    {
+      "title": "Int J Methods Psychiatr Res",
+      "year": 2011
+    },
+    {
+      "title": "Bagging predictors",
+      "year": 2011
+    },
+    {
+      "title": "Mach Learn",
+      "year": 2011
+    },
+    {
+      "title": "LightGBM: a highly efficient gradient boosting decision tree",
+      "year": 1996
+    },
+    {
+      "title": "Advances in Neural Information Processing Systems",
+      "year": 2017
+    },
+    {
+      "title": "GBoost: a scalable tree boosting system",
+      "year": 2017
+    },
+    {
+      "title": "Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining",
+      "year": 2017
+    },
+    {
+      "title": "Adam: a method for stochastic optimization",
+      "year": 2016
+    },
+    {
+      "title": "Evaluation: from precision, recall and F-measure to ROC, informedness, markedness and correlation",
+      "year": 2011
+    },
+    {
+      "title": "J Mach Learn Technol",
+      "year": 2011
+    },
+    {
+      "title": "Application of machine learning in medical diagnosis",
+      "year": 2011
+    },
+    {
+      "title": "J Med Syst",
+      "year": 2019
+    },
+    {
+      "title": "A systematic analysis of performance measures for classification tasks",
+      "year": 2019
+    },
+    {
+      "title": "Inf Process Manage",
+      "year": 2019
+    },
+    {
+      "title": "Intrapleural fibrinolytic therapy (IPFT) in loculated pleural effusions-analysis of predictors for failure of therapy and bleeding: a cohort study",
+      "year": 2009
+    },
+    {
+      "title": "BMJ Open",
+      "year": 2013
+    },
+    {
+      "title": "Intrapleural tissue plasminogen activator and deoxyribonuclease for pleural infection: an effective and safe alternative to surgery",
+      "year": 2013
+    },
+    {
+      "title": "Mixing it up: coadministration of tPA/DNase in complicated parapneumonic pleural effusions and empyema",
+      "year": 2014
+    },
+    {
+      "title": "J Bronchology Interv Pulmonol",
+      "year": 2017
+    },
+    {
+      "title": "Concurrent versus sequential intrapleural instillation of tissue plasminogen activator and deoxyribonuclease for pleural infection",
+      "year": 2017
+    },
+    {
+      "title": "Machine learning in medicine",
+      "year": 2018
+    },
+    {
+      "title": "No free lunch theorems for optimization",
+      "year": 2019
+    },
+    {
+      "title": "IEEE Trans Evol Comput",
+      "year": 1997
+    },
+    {
+      "title": "Statistical errors",
+      "year": 1997
+    },
+    {
+      "title": "Nature",
+      "year": 1997
+    },
+    {
+      "title": "The false-positive to false-negative ratio in epidemiologic studies",
+      "year": 2014
+    },
+    {
+      "title": "Epidemiology",
+      "year": 2011
+    },
+    {
+      "title": "Early video-assisted thoracoscopic surgery or intrapleural enzyme therapy in pleural infection: a feasibility randomized controlled trial. The Third Multicenter Intrapleural Sepsis Trial-MIST-3",
+      "year": 2011
+    }
+  ],
+  "quality": {
+    "completeness_score": 0,
+    "has_abstract": true,
+    "abstract_source": "metadata",
+    "has_doi": true,
+    "has_full_text": true,
+    "num_sections": 11,
+    "num_tables": 3,
+    "num_figures": 3,
+    "num_references": 54
+  }
+}

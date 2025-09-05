@@ -1,0 +1,2577 @@
+{
+  "metadata": {
+    "document_id": "10_1016_j_chest_2020_05_534",
+    "title": "Sensitivity and Safety of Electromagnetic Navigation Bronchoscopy for Lung Cancer Diagnosis",
+    "authors": [
+      "Erik E. Folch",
+      "Gonzalo Labarca",
+      "Daniel Ospina-Delgado",
+      "Fayez Kheir",
+      "Adnan Majid",
+      "Sandeep J. Khandhar",
+      "Hiren J. Mehta",
+      "Michael A. Jantz",
+      "Sebastian Fernandez-Bussy"
+    ],
+    "year": 2020,
+    "journal": "Chest",
+    "doi": "10.1016/j.chest.2020.05.534",
+    "volume": "158",
+    "issue": "4",
+    "pages": "1753-1769",
+    "citation": "Folch, et al. (2020). Sensitivity and Safety of Electromagnetic Navigation Bronchoscopy for Lung Cancer Diagnosis. Chest, 158(4), 1753-1769. https://doi.org/10.1016/j.chest.2020.05.534",
+    "abstract": "BACKGROUND: Bronchoscopy is a useful tool for the diagnosis of lesions near central airways; however, the diagnostic accuracy of these procedures for peripheral pulmonary lesions (PPLs) is a matter of ongoing debate. In this setting, electromagnetic navigation bronchoscopy (ENB) is a technique used to navigate and obtain samples from these lesions. This systematic review and meta-analysis aims to explore the sensitivity of ENB in patients with PPLs suspected of lung cancer. RESEARCH QUESTION: In patients with peripheral pulmonary lesion suspected of lung cancer, what is the sensitivity and safety of electromagnetic navigation bronchoscopy compared to surgery or longitudinal follow up? STUDY DESIGN AND METHODS: A comprehensive search of several databases was performed. Extracted data included sensitivity of ENB for malignancy, adequacy of the tissue sample, and complications. The study quality was assessed using the QUADAS-2 tool, and the combined data were meta-analyzed using a bivariate method model. A summary receiver operatic characteristic curve (sROC) was created. Finally, the quality of evidence was rated using the Grading of Recommendations Assessment, Development and Evaluation approach. RESULTS: Forty studies with a total of 3,342 participants were included in our analysis. ENB reported a pooled sensitivity of 77% (95% CI, 72%-82%; I INTERPRETATION: ENB is very safe with good sensitivity for diagnosing malignancy in patients with PPLs. The applicability of our findings is limited because most studies were done with the superDimension navigation system and heterogeneity was high. TRIAL REGISTRY: PROSPERO; No.: CRD42019109449; URL: https://www.crd.york.ac.uk/prospero/.",
+    "abstract_source": "pubmed",
+    "url": "https://linkinghub.elsevier.com/retrieve/pii/S0012369220315026",
+    "pubmed_id": "32450240"
+  },
+  "source_file": "Sensitivity and safety of ENB systematic review and meta-analysis.json",
+  "sections": [
+    {
+      "title": "Sensitivity and Safety of Electromagnetic Navigation Bronchoscopy for Lung Cancer Diagnosis Systematic Review and Meta-analysis",
+      "content": "Erik E. Folch, MD; Gonzalo Labarca, MD; Daniel Ospina-Delgado, MD; Fayez Kheir, MD; Adnan Majid, MD; Sandeep J. Khandhar, MD; Hiren J. Mehta, MD; Michael A. Jantz, MD; and Sebastian Fernandez-Bussy, MD\nBACKGROUND: Bronchoscopy is a useful tool for the diagnosis of lesions near central airways; however, the diagnostic accuracy of these procedures for peripheral pulmonary lesions (PPLs) is a matter of ongoing debate. In this setting, electromagnetic navigation bronchoscopy (ENB) is a technique used to navigate and obtain samples from these lesions. This systematic review and metaanalysis aims to explore the sensitivity of ENB in patients with PPLs suspected of lung cancer.\nRESEARCH QUESTION: In patients with peripheral pulmonary lesion suspected of lung cancer, what is the sensitivity and safety of electromagnetic navigation bronchoscopy compared to surgery or longitudinal follow up?\nSTUDY DESIGN AND METHODS: A comprehensive search of several databases was performed. Extracted data included sensitivity of ENB for malignancy, adequacy of the tissue sample, and complications. The study quality was assessed using the QUADAS-2 tool, and the combined data were meta-analyzed using a bivariate method model. A summary receiver operatic characteristic curve (sROC) was created. Finally, the quality of evidence was rated using the Grading of Recommendations Assessment, Development and Evaluation approach.\nRESULTS: Forty studies with a total of 3,342 participants were included in our analysis. ENB reported a pooled sensitivity of 77% (95% CI, 72%-82%; I 2 ¼ 80.6%) and a speci /uniFB01 city of 100% (95% CI, 99%-100%; I 2 ¼ 0%) for malignancy. The sROC showed an area under the curve of 0.955 ( P ¼ .03). ENB achieved a suf /uniFB01 cient sample for ancillary tests in 90.9% (95% CI, 84.8%-96.9%; I 2 ¼ 80.7%). Risk of pneumothorax was 2.0% (95% CI, 1.0-3.0; I 2 ¼ 45.2%). We found subgroup differences according to the risk of bias and the number of sampling techniques. Meta-regression showed an association between sensitivity and the mean distance of the sensor tip to the center of the nodule, the number of tissue sampling techniques, and the cancer prevalence in the study.\nINTERPRETATION: ENB is very safe with good sensitivity for diagnosing malignancy in patients with PPLs. The applicability of our /uniFB01 ndings is limited because most studies were done with the superDimension navigation system and heterogeneity was high.\nTRIAL REGISTRY: PROSPERO; No.: CRD42019109449; URL: https://www.crd.york.ac.uk/prospero/;\nCHEST 2020; 158(4):1753-1769\nKEY WORDS: electromagnetic navigation; image-guided biopsy; lung cancer\nFOR EDITORIAL COMMENT, SEE PAGE 1312\nABBREVIATIONS: ENB = electromagnetic navigation bronchoscopy; FN = false negative; FP = false positive; PPL = peripheral pulmonary lesion; r-Endobronchial ultrasound (EBUS) = radial endobronchial ultrasound needle aspiration; ROSE = rapid on-site examination; TN = true negative; TP = true positive; TTNA = transthoracic needle aspiration\nAFFILIATIONS: From the Division of Pulmonary and Critical Care Medicine (Dr Folch), Massachusetts General Hospital, Harvard Medical School, Boston, MA; The Department of Clinical Biochemistry and Immunology, Faculty of Pharmacy, University of Concepcion (Dr Labarca), Concepcion, Chile; the Division of Thoracic Surgery and Interventional Pulmonology (Drs Ospina-Delgado, Kheir, and Majid),\n[\n]\nLung cancer is one of the most commonly diagnosed malignancies and the leading cause of cancer-related mortality in both men and women globally. 1 Early diagnosis of lung cancer is an important proximate objective to facilitate curative intent. According to current clinical practice guidelines, a minimally invasive approach is strongly recommended for patients with pulmonary nodules or lesions suspected of lung cancer. 2 For lesions proximal to central airways, procedures such as endobronchial ultrasound needle aspiration have a sensitivity of > 90% and a speci /uniFB01 city of > 95% for diagnosis and mediastinal staging. 2,3 Although evidence regarding suspicious lesions near the central airways is strong, accuracy for peripheral pulmonary lesions (PPLs) suspected of lung cancer is variable. Furthermore, data regarding the accuracy of radial endobronchial ultrasound needle aspiration (r-Endobronchial ultrasound (EBUS)) is only fair, with the AQuIRe registry reporting a diagnostic yield of 57%. 4 In an attempt to improve the yield, several image-\nguided biopsy diagnostic tools have been developed in the last decade. Electromagnetic navigation bronchoscopy (ENB) allows physicians to access PPLs beyond the reach of conventional bronchoscopy through a minimally invasive method, using an image-guided /uniFB02 exible catheter and a dedicated navigation software system (superDimension [Medtronic], SpiNDrive [Veran], etc). 5 This procedure is an alternative to transthoracic needle aspiration (TTNA), a procedure with a sensitivity for detecting malignancy of 92.1%. 6 Despite displaying a good sensitivity for cancer diagnosis, TTNA accounts for pneumothorax rates of 25.3% when core biopsy is performed and 18.8% when /uniFB01 ne needle aspiration is performed, requiring chest tube placement in up to 11.9% of cases. 7\nThis systematic review and meta-analysis evaluated the sensitivity and safety of ENB for the sampling of PPLs suspected of lung cancer.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Materials and Methods",
+      "content": "This systematic review and meta-analysis was performed according to the current recommendation from the Preferred Reporting Items for a Systematic Review and Meta-analysis of Diagnostic Test Accuracy Studies statement. 8 Full protocol and register were previously published in the PROSPERO database (CRD 42019109449).",
+      "category": "methods",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Literature Search",
+      "content": "A highly sensitive database search was conducted by a review author (G. L.), without language restriction, using the following databases: PubMed (MEDLINE), Embase, LILACS (www.scielo.org), Clinical Trials (ClinicalTrials.gov), Cochrane Central Register of Controlled Trials, ScienceDirect (www.sciencedirect.com), Scirus (www.scirus. com/srsapp), ISI Web of Knowledge (www.isiwebofknowledge.com), and Google Scholar (http://scholar.google.com). An initial literature search was performed in May 2019 and updated in November 2019. References from the included studies were also manually searched along with the abstracts of potential studies presented in conferences from 2014 through 2019 by the American Thoracic Society, American College of Chest Physicians, European Respiratory Society,\nand American Association for Bronchology & Interventional Pulmonology. The full literature search strategy is available in eAppendix 1.\nInclusion Criteria: Criteria for inclusion were as follows: (1) ENB used for diagnosis of PPLs, (2) diagnosis con /uniFB01 rmed histologically or by close clinical follow-up, and (3) studies that stated a clear reference standard for establishing diagnostic sensitivity. We excluded review papers, letters, or studies in which data to calculate sensitivity for malignancy was insuf /uniFB01 cient. Studies were selected for inclusion only after both reviewers assessed the full text.\nSelection of Studies: The references identi /uniFB01 ed after the literature search were included in Covidence software (Veritas Health Innovation Ltd). A highly speci /uniFB01 c hand search screening of both titles and abstracts was independently performed by two review authors (G. L. and D. O.-D.). Eligible studies were evaluated in full text and selected according to our prespeci /uniFB01 ed inclusion and exclusion criteria; any disagreement was resolved by discussion.\nData Extraction and Quality Assessment: Two independent reviewers (G. L. and D. O.-D.) extracted data from each study. The following information was collected: /uniFB01 rst author, publication year, publication type (retrospective or prospective), number of participants, index test, reference standard, number of techniques, true positives (TPs), false positives (FPs), true negatives (TNs), false negatives (FNs), use of rapid on-site examination (ROSE) (yes or no), nodule size, /uniFB02 uoroscopy use (yes or no), r-Endobronchial ultrasound (EBUS) use (yes or no), cancer prevalence, and successful navigation to the target lesion. Cancer prevalence was de /uniFB01 ned as the total lung cancer cases (TPs þ FNs) divided by the total population included in each study. Successful navigation was de /uniFB01 ned as the number of lesions in which navigation was successful divided by the number of lesions in which navigation was attempted.\nQuality assessment was performed using the QUADAS-2 tool 9 by two reviewers (G. L. and D. O.-D.). We rated the risk of bias because of\nBeth Israel Deaconess Medical Center, Harvard Medical School, Boston, MA; the Virginia Cancer Specialists (Dr Khandhar), Inova Health, Fairfax, VA; the Division of Pulmonary and Critical Care (Dr Mehta and Jantz), University of Florida, Gainesville, FL; and the Division of Pulmonary and Critical Care, Mayo Clinic (Dr Fernandez-Bussy), Jacksonville, FL.\nFUNDING/SUPPORT: The authors have reported to CHEST that no funding was received for this study.\nCORRESPONDENCE TO: Erik E. Folch, MD, Complex Chest Disease Center, Division of Pulmonary and Critical Care Medicine, Massachusetts General Hospital, Harvard Medical School, 55 Fruit Str, White 905, Boston, MA 02114; e-mail: efolch@mgh.harvard.edu\nCopyright /C211 2020 American College of Chest Physicians. Published by Elsevier Inc. All rights reserved.\n]\npatient selection, index test, reference standard, /uniFB02 ow and timing, and applicability concern in their respective domains. Finally, we rated the overall risk of bias and categorized it as low risk or high risk according to the results of the QUADAS-2 analysis. Any disagreement was resolved by a third reviewer (F. K.).\nData Analysis: Pooled data were analyzed and imported in a two-bytwo contingency table. The principle outcome was de /uniFB01 ned as the pooled sensitivity of ENB for malignancy (lung cancer). Sensitivity was calculated as TP/TP þ FN, including the total navigation cases (successful and nonsuccessful navigation). Speci /uniFB01 city (TN/TN þ FP), negative likelihood ratio, and positive likelihood ratio were also reported. For quantitative analyses, we performed a proportions meta-analysis after a binomial distribution. 10 We used the metaprop command with a Freeman-Tukey double arcsine transformation on STATA software version 14.2 (Stata Corp) 11 and Open Meta Analyst software (Brown University). 12 We also created a summary receiver operatic characteristic curve. 10,13 All results were expressed as a percentage and a 95% CI with an alpha value of 0.05.\nInterstudy heterogeneity (percentage of total variation across studies that is caused by heterogeneity rather than chance) was measured using visual inspection of a forest plot and an I 2 test. Signi /uniFB01 cant heterogeneity was de /uniFB01 ned as an I 2 > 75% and nonsigni /uniFB01 cant was de /uniFB01 ned as I 2 < 40% according to previous publications. 14 In the case of signi /uniFB01 cant heterogeneity, subgroup analysis evaluating possible explanations of the difference between groups was explored. 15 We prespeci /uniFB01 ed the following variables as potential subgroups: (1) risk of bias of included studies, (2) type of navigation system used (superDimension or others), (3) use of ROSE, (4) use of /uniFB02 uoroscopy guidance, (5) type of anesthesia (general, conscious sedation, or both), (6) r-Endobronchial ultrasound (EBUS) use, (7) time interval in which the study was performed, and (8) number of sampling techniques used in association to ENB. Finally, heterogeneity between subgroups was assessed with a Q test.\nThe potential for publication bias was evaluated through both visual inspection of the funnel plot and Egger test. Asymmetry in the distribution of the studies in the funnel plot raised concerns about serious publication bias. 16\nComplementary Analysis: Adequacy of the Sample Achieved by ENB and Association Between Sensitivity and Covariables: A random effects model was used in cases in which heterogeneity between studies was high. A /uniFB01 xed random effects model was used in cases in which this heterogeneity was low. For overall sensitivity, both models were used, and results were compared. We performed two complementary data analyses. For the /uniFB01 rst analysis, we explored the association between pooled sensitivity for the diagnosis of malignancy and continuous variables related to ENB procedure through a metaregression. The dependent variable was de /uniFB01 ned as the pooled sensitivity for lung cancer. We used the following independent continuous covariables related to ENB procedures to run the model: cancer prevalence, distance between tip of sensor and center of nodule, duration of the procedure, number of sampling techniques used in association to ENB, and nodule size. 17 For the second complementary analysis, we explored the adequacy of samples obtained through ENB to test for driver oncogenes. In this case, we performed a binary effect meta-analysis after a maximum likelihood method. A suf /uniFB01 cient sample was de /uniFB01 ned as a sample obtained using ENB that allowed the performance of the ancillary test. For calculation, we used the proportion of participants in which a suf /uniFB01 cient sample was achieved relative to all participants in which a sample for ancillary testing was attempted as an effect measure.\nSafety Analysis: Additionally, we reviewed the safety of ENB by assessing the proportion of patients that developed the following adverse events: (1) pneumothorax requiring chest tube placement; (2) minor bronchopulmonary bleeding, de /uniFB01 ned as bleeding that stopped spontaneously in < 5 min or with the use of a Fogarty balloon; (3) major bronchopulmonary bleeding, de /uniFB01 ned as bleeding that did not meet minor bleeding criteria; (4) acute respiratory failure; and (5) need for a repeat biopsy.\nThe effect measure used was the proportion of participants who developed the adverse event relative to all the participants included in each study.\nFinally, we created a summary of /uniFB01 ndings table of the diagnostic test results, 18 and the quality of evidence was rated by a panel (G. L. and F. K.) following the Grading of Recommendations Assessment, Development and Evaluation approach.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Overview of Eligible Trials",
+      "content": "A thorough electronic database search retrieved 2,198 citations from different sources and 160 potential studies were identi /uniFB01 ed for analysis. After examining those articles, 75 articles were suitable for full-text review, and 35 articles were excluded. A total of 40 studies were included in the qualitative and quantitative analyses. 19-58 A summary of the literature search following the Preferred Reporting Items for a Systematic Review and Meta-analysis of Diagnostic Test Accuracy Studies statement is shown in Figure 1.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Study Characteristics",
+      "content": "The summary of the study characteristics is shown in Table 1. A total of 3,342 participants were extracted from the selected articles with a mean age of 64.5 years.\nOut of 40 studies, 18 were conducted in North America (45%), 10 in Europe (25%), nine in Asia (22.5%), two in both the United States and Europe (5%), and one in Oceania (2.5%). The median number of participants per study was 35 (range, 10-1,157), and successful navigation to the target lesion was achieved in 3,290 of 3,356 PPLs (98%) included. When the number of centers was evaluated, 37 (92.5%) studies were conducted in a single center and three (7.5%) were multicenter (range, 2-29 centers). Regarding study design, 21 (52.5%) were retrospective and 19 (47.5%) were prospective trials. Two studies were double-arm. 23,53 The superDimension system was used in 38 studies (95%). The average lesion size was 23.2 mm (range, 15-39.8 mm), the average mean distance between the tip of the sensor and the center of the nodule was 8.2 mm (range, 6.3-12.2 mm), and the mean duration of the procedure was 46.3 min (range, 16.8-95.3 min). The average cancer prevalence\nwas 66% (median, 48.2%; range, 20%-92%), and the mean follow-up period was 14.3 months (median, 12; range, 3-24 months).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Quality Assessment",
+      "content": "The risk of bias was evaluated in all studies using the QUADAS-2 tool. Out of 40 studies, 19 reported low risk of bias in most aspects; however, a high or unclear risk of bias regarding patient selection, index test, and the reference standard was found in most studies because no proper reference standard was used. The de /uniFB01 nition of navigation success varied across the studies, possibly resulting in selective reporting. A full report of the risk of bias assessment is shown in Table 2.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Sensitivity of ENB",
+      "content": "A total of 40 studies were included in the quantitative analysis, including 3,342 participants pooled in the meta-analysis. The overall sensitivity of ENB for the diagnosis of lung cancer was 77% (95% CI, 72%-82%; I 2 ¼ 80.6%) using a random effects model (Fig 2); when a /uniFB01 xed effects model was done, sensitivity only dropped to 76% (95% CI, 74%-78%; I 2 ¼ 0%). Speci /uniFB01 city was 100% (95% CI, 99%-100%; I 2 ¼ 0%) (Fig 2). The negative likelihood ratio was 0.2 (95% CI, 0.1-0.3; I 2 ¼ 0%) and the positive likelihood ratio was\n15.8 (95% CI, 10.3-24.2; I 2 ¼ 0%). The summary receiver operatic characteristic curve showed an area under the curve of 0.95 (SE, 0.01; P ¼ .03) (e-Fig 1). Based on a visual inspection of the funnel plot (e-Fig 2), publication bias was low. Egger test was nonsigni /uniFB01 cant ( P ¼ .16). Finally, using the Grading of Recommendations Assessment, Development and Evaluation approach, diagnostic sensitivity and speci /uniFB01 city were determined to be low because of the risk of bias and imprecision (high heterogeneity between studies) (Table 3).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Subgroup Analysis and Explaining Heterogeneity",
+      "content": "A summary of the subgroup analysis is presented in Table 4. Analysis according to the risk of bias showed that studies with high risk had a sensitivity of 66.9% (95% CI, 59%-74%; I 2 ¼ 78.5%), whereas sensitivity increased to 77.1% (95% CI, 71.2%-82.1%; I 2 ¼ 60.2%) when studies had a low risk. There was signi /uniFB01 cant heterogeneity between subgroups with a Q statistic of P < .01.\nA subgroup analysis of studies over time showed no differences in sensitivity when studies were grouped in 2-year intervals. The time interval with the lowest sensitivity was 2015 to 2016, with only a 64% pooled\n]",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "TABLE 1 ] (Continued)",
+      "content": "(Continued)\n]",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "TABLE 1 ] (Continued)",
+      "content": "Endobronchial ultrasound (EBUS) ¼ endobronchial ultrasound needle aspiration; ENB ¼ electromagnetic navigation bronchoscopy; FNA ¼ /uniFB01 ne needle aspiration; PPL ¼ peripheral pulmonary lesion; RCT ¼ randomized controlled trial; TTNA ¼ transthoracic needle aspiration; VATS ¼ video-assisted thoracoscopic surgery.\nH ¼ high risk of bias; L ¼ low risk of bias; U ¼ unclear risk of bias.\nsensitivity. The heterogeneity between subgroups was nonsigni /uniFB01 cant with a Q statistic of P ¼ .55.\nAlthough different navigation systems were used, similar sensitivities were reported. Used in 38 studies, the superDimension system had a pooled sensitivity of 78% (95% CI, 73%-83%; I 2 ¼ 81.31). Two studies included in the analysis used other navigation systems, with a pooled sensitivity of 70% (95% CI, 54%-84%; I 2 ¼ not applicable). There was no signi /uniFB01 cant heterogeneity between subgroups with a Q statistic of 0.37.\nThe type of sedation used showed no difference in the pooled sensitivity between subgroups. General anesthesia was used in 16 studies; the pooled sensitivity for this group was 74% (95% CI, 66%-81%; I 2 ¼ 69.3%). On the other hand, 15 studies used only conscious\nsedation, with a pooled sensitivity of 75% (95% CI, 65%84%; I 2 ¼ 81.8%). Four studies used a mix of general anesthesia and conscious sedation, with a pooled sensitivity of 74% (95% CI, 65%-81%; I 2 ¼ 62.7%). However, there was no signi /uniFB01 cant heterogeneity between subgroups with P ¼ .09.\nUsing complementary techniques such as ROSE, r-Endobronchial ultrasound (EBUS), or /uniFB02 uoroscopy did not result in differences in pooled sensitivity between subgroups. First, use of ROSE was reported in 20 studies, and pooled analysis showed a sensitivity of 76% (95% CI, 69%-83%; I 2 ¼ 83.0%), whereas sensitivity for ENB without ROSE was reported in 14 studies, with a pooled sensitivity of 81% (95% CI, 74%-88%; I 2 ¼ 67.7%), with no signi /uniFB01 cant heterogeneity between subgroups ( P ¼ .51). A total of 19 studies\nreported /uniFB02 uoroscopy guidance in association with ENB, with a sensitivity of 74% (95% CI, 65%-81%; I 2 ¼ 84.2%) compared with 15 studies that reported ENB without /uniFB02 uoroscopy, with a pooled sensitivity of 83% (95% CI, 71.7%-89%; I 2 ¼ 62.7%), without signi /uniFB01 cant heterogeneity between subgroups ( P ¼ .09). Finally, the use of r-Endobronchial ultrasound (EBUS) reported a pooled sensitivity of 80% (95% CI, 74%-83%; I 2 ¼ 73%) compared with 72% (95% CI, 66%-76%; I 2 ¼ 85.5%) without r-Endobronchial ultrasound (EBUS).\nRegarding the number of sampling techniques used in association with ENB, different combinations of forceps, brush, needle, cryoprobe, GenCut (Medtronic), and triple needle brush were reported, including seven studies reporting one technique with a pooled sensitivity of 67% (95% CI, 53%-79%; I 2 ¼ 75.8%), 11 studies reporting two techniques with a pooled sensitivity of 72% (95% CI, 60%-83%; I 2 ¼ 82.2%), 19 studies reporting three techniques with a pooled sensitivity of\n83% (95% CI, 76%-89%; I 2 ¼ 75.1%), one study using four sampling techniques with a sensitivity of 91% (95% CI, 82%-96%), and two studies using /uniFB01 ve different techniques, with a pooled sensitivity of 72% (95% CI, 69%-76%; I 2 ¼ not applicable).\nWe found signi /uniFB01 cant heterogeneity between subgroups ( P < .01).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Sensitivity Analysis: Meta-Regression Report",
+      "content": "We found statistically signi /uniFB01 cant positive associations between sensitivity and cancer prevalence reported as a beta regression coef /uniFB01 cient of 3.45 (95% CI, 2.28-4.61; SE, 0.59; P # .001), and between sensitivity and number of sampling techniques with a beta coef /uniFB01 cient of 0.32 (95% CI, 0.07-0.58; SE, 0.13; P ¼ .011). We also found a statistically signi /uniFB01 cant negative association between sensitivity and mean distance between the tip of sensor and center of nodule, with a beta regression coef /uniFB01 cient\n]\nof /C0 0.38 (95% CI, /C0 0.66 to /C0 0.19; SE, 0.14; P ¼ .006). Finally, we found no statistically signi /uniFB01 cant association between sensitivity and average nodule size. A summary of meta-regression results is shown in Table 5.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Adequacy of Samples Obtained by ENB",
+      "content": "A total of three studies, 46,50,57 including 610 participants, reported data on the adequacy of samples obtained by ENB to perform driver oncogene testing in patients with a positive biopsy result. All studies were published after 2015. The meta-analysis reported an adequate sample proportion of 90.9% (95% CI, 84.8%96.9%; I 2 ¼ 80.7%).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Safety Analysis",
+      "content": "A summary of adverse events reported in each study is available in e-Table 1. Complication rates after ENB were reported in 39 studies, including a total of 3,253 participants with 3,204 PPLs from data analyses across individual studies (exclusion criteria for individual studies were broad). One study did not report adverse events. 40 Pooled analysis showed a 2.0% rate of pneumothorax (95% CI, 1.0%-3.0%; I 2 ¼ 42.5%) (Fig 3), risk of minor bronchopulmonary bleeding of 1.0% (95% CI, 0.6%-1.3%; I 2 ¼ 0%), risk of major bronchopulmonary bleeding of 0.8% (95% CI, 0.5%1.1%; I 2 ¼ 0%), and risk of acute respiratory failure of 0.6% (95% CI, 0.4%-0.9%; I 2 ¼ 0%.) Forest plots for different complications are shown in e-Figs 3-6.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Discussion",
+      "content": "This systematic review and meta-analysis showed the following: (1) ENB has an overall sensitivity of 77%, a speci /uniFB01 city of 100%, a positive likelihood ratio of 15.79, and a negative likelihood ratio of 0.23 for diagnosing PPLs suspected of lung cancer; (2) potential sources of heterogeneity were seen in both risk of bias and number of sampling techniques, with no signi /uniFB01 cant heterogeneity between subgroups noted when navigation system, ROSE, /uniFB02 uoroscopy guidance, anesthesia type, Endobronchial ultrasound (EBUS), or time interval in which the study was performed; (3) sensitivity was associated with lung cancer prevalence, number of sampling techniques used, and mean distance between the tip of the sensor and the center of the nodule; (4) ENB is a very safe procedure with a 2.0% risk of pneumothorax and a risk of any bleeding or respiratory failure of < 1%; and (5) ENB can obtain adequate samples for testing driver oncogenes in 90% of positive biopsies in which additional testing is needed.\nSensitivity was 0.77 (95% CI, 0.72-0.82), speci /uniFB01 city was 1.00 (95% CI, 0.99-1.00), and prevalence was 66%. Prevalence was estimated using a pooled analysis of included studies. a Pretest probability from the pooled prevalence of lung cancer from included studies. Values shown are number of positive tests reported as test per 1,000 participants, and 95% CI is included in parentheses. b Bias because of difference regarding the navigation success de /uniFB01 nition used across studies, which is a potential source of selective reporting. c We downgraded because of signi /uniFB01 cant residual heterogeneity in each subgroup.\nPreviously, three systematic reviews have been published on the topic. Wang Memoli et al 59 quantitatively analyzed 39 studies (prior to 2010) that described alternative PPL exploration techniques (r-Endobronchial ultrasound (EBUS), ENB, etc). The authors reported a diagnostic yield for any diagnoses of 70%, with a pneumothorax rate of 1.5%. 59 A study by Gex et al 60 described the diagnostic accuracy for any diagnoses of ENB including 15 trials with an overall accuracy of 73.9%, a sensitivity of 71.1%, and a risk of pneumothorax of 3.1%. Finally, Zhang et al 61\nincluded 17 studies of ENB with a pooled sensitivity for cancer diagnoses of 82%, a speci /uniFB01 city of 100%, a positive likelihood ratio of 19.36, and a negative likelihood ratio of 0.23. In the present meta-analysis, 40 studies were quantitatively analyzed, including the results of the US cohort for the largest prospective multicenter study, NAVIGATE. 57\nHeterogeneity was high, likely because of a number of factors, including the prevalence of cancer in each study, the average distance between the tip of the sensor and\nN.A. ¼ not applicable; ROSE ¼ rapid on-site examination. See Table 1 legend for expansion of other abbreviation.\n]\nthe center of the nodule, and the number of sampling techniques used in each study. These variables are related to differences in sensitivity across studies. Other variables with nonsigni /uniFB01 cant statistical differences included /uniFB02 uoroscopy use, ROSE use, r-Endobronchial ultrasound (EBUS), anesthesia type, the time interval in which the study was performed, and average nodule size. Different time intervals had similar pooled sensitivities except for 2015 to 2016.\nThe present analysis also explored the role of the speci /uniFB01 c navigation software used (superDimension vs others). Different navigation software have described similar sensitivity; however, there was a wide variation in diagnostic de /uniFB01 nitions. Research on other systems is sparse compared with superDimension; therefore, the conclusion of these analyses is not applicable to other navigation systems. Our data are only applicable for ENB using the superDimension system.\nFigure 3 -Forest plot. Risk of pneumothorax after electromagnetic navigation bronchoscopy. PPL ¼ peripheral pulmonary lesion. See Figure 2 legend for expansion of other abbreviation.\nCompared with other methods, TTNA has historically been the preferred diagnostic method to explore PPLs to avoid unnecessary surgery. TTNA has a pooled sensitivity for cancer diagnosis of 92.1%, with a trend toward lower sensitivity in lesions < 2 cm and in lesions located in the lower lobes, making this an attractive choice in patients with solitary lung lesions without mediastinal or hilar adenopathy. 6,62 However, the overall rate of complications is 24% to 39%, with a risk of pneumothorax ranging between 19% and 25%, depending on the sampling method used. 63 Alternatively, we found that ENB is a safe procedure with < 3% overall complications. These /uniFB01 ndings are similar to previously reported ones, with the most common complication being pneumothorax, occurring in approximately 2% of patients. Considering these factors, it can be said that the use of ENB is a safe alternative to TTNA, especially in those patients with an increased risk of complications because of comorbidities.\nOn the other hand, traditional bronchoscopy has shown variable diagnostic accuracy for total diagnoses for PPLs, as shown by the AQuIRE database. 4 r-Endobronchial ultrasound (EBUS) has been proposed in the literature as an alternative to increase the diagnostic yield of the previously mentioned technique. A recent systematic review and meta-analysis reported a pooled sensitivity for cancer diagnosis of 72% for PPLs (95% CI, 70%-75%; I 2 ¼ 76%), with a pooled risk of pneumothorax of 0.7% (95% CI, 0.3%-1.1%). 64 Although sensitivity improved when r-Endobronchial ultrasound (EBUS) was used, it is dif /uniFB01 cult to draw conclusions because heterogeneity in the mentioned meta-analysis was high. The addition of other techniques, such as ROSE, endobronchial ultrasound needle aspiration, or /uniFB02 uoroscopy did not increase diagnostic sensitivity, as seen in previous studies. 65\nENB should be performed with biopsy tools designed to achieve a suf /uniFB01 cient sample size for analysis. Our data suggest that the use of three biopsy tools may increase sensitivity to 83%. However, whenever more than four biopsy tools were used, sensitivity dropped to 71%. Drawing conclusions based on these data is dif /uniFB01 cult given the signi /uniFB01 cant heterogeneity between groups as seen with a positive Q test. A prospective study designed to look at this is necessary to corroborate these /uniFB01 ndings.\nPrecision medicine requires a comprehensive approach including the determination of driver oncogenes. Studies describe the percentage of adequate samples where these ancillary tests were performed (molecular testing, /uniFB02 ow cytometry, etc). Pooled data from 610 participants showed that when ENB was used, 90% of samples were\nsuf /uniFB01 cient for ancillary tests; this proportion is similar to other minimally invasive methods such as endobronchial ultrasound needle aspiration. 66,67 However, only three studies included data about this topic, and future research incorporating data on the ability to achieve a suf /uniFB01 cient sample for ancillary tests is necessary. At the time of this publication, international guidelines do not recommend the analysis of driver oncogenes in stage I non-small cell lung cancer, and this is likely to impact the number of available cases for analysis.\nThis paper was performed according to current recommendations. In the present meta-analysis, a random effects model was prede /uniFB01 ned because of high heterogeneity between subgroups. This method is strongly recommended in cases of signi /uniFB01 cant interstudy heterogeneity. 14 This approach was based on the binomial distribution as the bivariate model, rather than the DerSimonian and Laird random effects model, because the latter model approximates within-study variability of an outcome by a normal distribution, a method that biases diagnostic test results. 10\nWe found the following limitations. First, the presence of an airway sign and distance of the nodule from the pleura were inconsistently reported between different studies; therefore, it was not possible to do subgroup analyses of sensitivity with these variables. Second, we used a trial-level analysis (both subgroup and metaregression analysis) without patient-speci /uniFB01 c data; therefore, our /uniFB01 ndings should be viewed as exploratory. 68 Although we found a biological plausibility between studies with both increased prevalence and average nodule size, those variables are strongly associated with an increased pretest probability of positive samples achieved by any bronchoscopic procedure. However, the results of our meta-regression should be interpreted with caution, and further patientlevel data would be necessary to evaluate the potential predictive value of these variables and sensitivity.\nFinally, the /uniFB01 ndings of this systematic review and metaanalysis should inform future research on minimally invasive procedures after a precision medicine approach. We emphasize the importance of considering the human and technologic capital available at each institution to provide patients with the lowest procedural risk while maintaining an adequate sensitivity for tissue diagnosis. In some cases, the presence of mediastinal involvement or pleural effusion will dictate a different diagnostic strategy or a procedure that can be combined under the same anesthetic episode.\n]",
+      "category": "discussion",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Conclusions",
+      "content": "ENB is a safe procedure that has good sensitivity for identifying lung cancer, especially in patients with a high pretest probability of malignancy. Signi /uniFB01 cant limitations\nfor this study include the high heterogeneity in several analyses, despite the explanation of potential causes. Further research is needed to improve the evidence of this diagnostic technique.",
+      "category": "conclusion",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Acknowledgments",
+      "content": "Author contributions: E. E. F. and G. L. are the guarantors of the paper and contributed to manuscript conception, literature search, data extraction, data analysis, manuscript writing and /uniFB01 nal editing, and review. S. F.-B., F. K., and D. O-D. contributed to manuscript conception, literature search, data extraction, data analysis, manuscript writing, and /uniFB01 nal editing and review. S. J. K, A. M., H. J. M, and M. A. J. contributed to manuscript conception, critical analysis, manuscript /uniFB01 nal editing, and review. All authors approved the /uniFB01 nal version of this manuscript.\nFinancial/non /uniFB01 nancial disclosures: The authors have reported to CHEST the following: E. E. F. is a scienti /uniFB01 c consultant for Boston Scienti /uniFB01 c and Medtronic, is an educational consultant for Cook Medical and Pinnacle Biologics, and his institution has received a research grant from Intuitive Surgical. S J. K. is a consultant, advisor, and speaker for Medtronic, Boston Scienti /uniFB01 c, and Auris Robotics. A. M. is scienti /uniFB01 c consultant for Boston Scienti /uniFB01 c and an educational consultant for Olympus America, Cook Medical, and Pnnacle Biologics; and has received a research grant from Olympus and Intuitive Surgical. None declared (G. L., D. O.-D., F. K., H. J. M., M. A. J., S. F.-B.).\nAdditional information: The e-Appendix, e-Figures, and e-Table can be found in the Supplemental Materials section of the online article.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "References",
+      "content": "1. Goldstraw P, Ball D, Jett JR, et al. Nonsmall-cell lung cancer. Lancet . 2011;378(9804):1727-1740.\n2. Silvestri GA, Gonzalez AV, Jantz MA, et al. Methods for staging non-small cell lung cancer: diagnosis and management of lung cancer, 3rd ed: American College of Chest Physicians evidence-based clinical practice guidelines. Chest . 2013;143(5 suppl):e211S-e250S.\n3. Labarca G, Aravena C, Ortega F, et al. Minimally invasive methods for staging in lung cancer: systematic review and meta-analysis. Pulm Med . 2016;2016: 1024709.\n4. Ost DE, Ernst A, Lei X, et al. Diagnostic yield and complications of bronchoscopy for peripheral lung lesions. Results of the AQuIRE registry. Am J Respir Crit Care Med . 2016;193(1):68-77.\n5. Shinagawa N. A review of existing and new methods of bronchoscopic diagnosis\nof lung cancer. Respir Investig . 2019;57(1): 3-8.\n6. DiBardino DM, Yarmus LB, Semaan RW. Transthoracic needle biopsy of the lung. J Thorac Dis . 2015;7(suppl 4):S304-S316.\n7. Heerink WJ, de Bock GH, de Jonge GJ, Groen HJ, Vliegenthart R, Oudkerk M. Complication rates of CT-guided transthoracic lung biopsy: meta-analysis. Eur Radiol . 2017;27(1):138-148.\n8. McInnes MDF, Moher D, Thombs BD, et al. Preferred Reporting Items for a Systematic Review and Meta-analysis of Diagnostic Test Accuracy Studies: the PRISMA-DTA statement. JAMA . 2018;319(4):388-396.\n9. Whiting PF, Rutjes AW, Westwood ME, et al. QUADAS-2: a revised tool for the quality assessment of diagnostic accuracy studies. Ann Intern Med . 2011;155(8):529536.\n10. Hamza TH, van Houwelingen HC, Stijnen T. The binomial distribution of meta-analysis was preferred to model within-study variability. J Clin Epidemiol . 2008;61(1):41-51.\n11. Nyaga VN, Arbyn M, Aerts M. Metaprop: a Stata command to perform metaanalysis of binomial data. Arch Public Health . 2014;72(1):39.\n12. Wallace BC, Schmid CH, Lau J, Trikalinos TA. Meta-Analyst: software for meta-analysis of binary, continuous and diagnostic data. BMC Med Res Methodol . 2009;9:80.\n13. Lee /uniFB02 ang MM, Deeks JJ, Gatsonis C, Bossuyt PM. Cochrane Diagnostic Test Accuracy Working Group. Systematic reviews of diagnostic test accuracy. Ann Intern Med . 2008;149(12):889-897.\n14. Higgins JP, Thompson SG, Deeks JJ, Altman DG. Measuring inconsistency in meta-analyses. BMJ . 2003;327(7414):557560.\n15. Sun X, Ioannidis JPA, Agoritsas T, Alba AC, Guyatt G. How to use a subgroup analysis. In: Guyatt G, Rennie D, Meade MO, Cook DJ, eds. User ' s Guides to the Medical Literature . 3rd ed. New York: Mc Graw Hill Education; 2015:515-527.\n16. Macaskill P, Walter SD, Irwig L. A comparison of methods to detect publication bias in meta-analysis. Stat Med . 2001;20(4):641-654.\n17. Thompson SG, Higgins JP. How should meta-regression analyses be undertaken and interpreted? Stat Med . 2002;21(11): 1559-1573.\n18. Schunemann HJ, Oxman AD, Brozek J, et al. Grading quality of evidence and strength of recommendations for diagnostic tests and strategies. BMJ . 2008;336(7653):1106-1110.\n19. Becker H, Herth F, Ernst A, Schwarz Y. Bronchoscopic biopsy of peripheral lung lesions under electromagnetic guidance: a pilot study. J Bronchol . 2005;12(1):9-13.\n20. Hautmann H, Schneider A, Pinkau T, Peltz F, Feussner H. Electromagnetic catheter navigation during bronchoscopy: validation of a novel method by conventional /uniFB02 uoroscopy. Chest . 2005;128(1):382-387.\n21. Gildea TR, Mazzone PJ, Karnak D, Meziane M, Mehta AC. Electromagnetic navigation diagnostic bronchoscopy: a prospective study. Am J Respir Crit Care Med . 2006;174(9):982-989.\n22. Schwarz Y, Greif J, Becker HD, Ernst A, Mehta A. Real-time electromagnetic navigation bronchoscopy to peripheral lung lesions using overlaid CT images: the /uniFB01 rst human study. Chest . 2006;129(4):988994.\n23. Eberhardt R, Anantham D, Ernst A, Feller-Kopman D, Herth F. Multimodality bronchoscopic diagnosis of peripheral lung lesions: a randomized controlled trial. Am J Respir Crit Care Med . 2007;176(1):36-41.\n24. Eberhardt R, Anantham D, Herth F, Feller-Kopman D, Ernst A. Electromagnetic navigation diagnostic bronchoscopy in peripheral lung lesions. Chest . 2007;131(6):1800-1805.\n25. Makris D, Scherpereel A, Leroy S, et al. Electromagnetic navigation diagnostic bronchoscopy for small peripheral lung lesions. Eur Respir J . 2007;29(6):11871192.\n26. Wilson D, Bartlett R. Improved diagnostic yield of bronchoscopy in a community practice: combination of electromagnetic navigation system and rapid on-site evaluation. J Bronchol . 2007;14(4):227232.\n27. Bertoletti L, Robert A, Cottier M, Chambonniere ML, Vergnon JM. Accuracy and feasibility of electromagnetic navigated bronchoscopy under nitrous oxide sedation for pulmonary peripheral opacities: an outpatient study. Respiration . 2009;78(3): 293-300.\n28. Lamprecht B, Porsch P, Pirich C, Studnicka M. Electromagnetic navigation bronchoscopy in combination with PET-CT and rapid on-site cytopathologic\nexamination for diagnosis of peripheral lung lesions. Lung . 2009;187(1):55-59.\n29. Eberhardt R, Morgan RK, Ernst A, Beyer T, Herth FJ. Comparison of suction catheter versus forceps biopsy for sampling of solitary pulmonary nodules guided by electromagnetic navigational bronchoscopy. Respiration . 2010;79(1):54-60.\n30. Seijo LM, de Torres JP, Lozano MD, et al. Diagnostic yield of electromagnetic navigation bronchoscopy is highly dependent on the presence of a Bronchus sign on CT imaging: results from a prospective study. Chest . 2010;138(6): 1316-1321.\n31. Mahajan AK, Patel S, Hogarth DK, Wightman R. Electromagnetic navigational bronchoscopy: an effective and safe approach to diagnose peripheral lung lesions unreachable by conventional bronchoscopy in high-risk patients. J Bronchology Interv Pulmonol . 2011;18(2):133-137.\n32. Brownback KR, Quijano F, Latham HE, Simpson SQ. Electromagnetic navigational bronchoscopy in the diagnosis of lung lesions. J Bronchology Interv Pulmonol . 2012;19(2):91-97.\n33. Pearlstein DP, Quinn CC, Burtis CC, Ahn KW, Katch AJ. Electromagnetic navigation bronchoscopy performed by thoracic surgeons: one center ' s early success. Ann Thorac Surg . 2012;93(3):944949.\n34. Balbo PE, Bodini BD, Patrucco F, et al. Electromagnetic navigation bronchoscopy and rapid on site evaluation added to /uniFB02 uoroscopy-guided assisted bronchoscopy and rapid on site evaluation: improved yield in pulmonary nodules. Minerva Chir . 2013;68(6):579-585.\n35. Karnak D, Ciledag A, Ceyhan K, Atasoy C, Akyar S, Kayacan O. Rapid onsite evaluation and low registration error enhance the success of electromagnetic navigation bronchoscopy. Ann Thorac Med . 2013;8(1):28-32.\n36. Mohanasundaram U, Ho L, Kuschner W, et al. The diagnostic yield of navigational bronchoscopy performed with propofol deep sedation. ISRN Endosc . 2013;2013:15.\n37. Loo FL, Halligan AM, Port JL, Hoda RS. The emerging technique of electromagnetic navigation bronchoscopy-guided /uniFB01 ne-needle aspiration of peripheral lung lesions: promising results in 50 lesions. Cancer Cytopathol . 2014;122(3):191-199.\n38. Odronic SI, Gildea TR, Chute DJ. Electromagnetic navigation bronchoscopy-guided /uniFB01 ne needle aspiration for the diagnosis of lung lesions. Diagn Cytopathol . 2014;42(12): 1045-1050.\n39. Bowling MR, Kohan MW, Walker P, E /uniFB01 rd J, Ben Or S. The effect of general anesthesia versus intravenous sedation on diagnostic yield and success in electromagnetic navigation bronchoscopy.\nJ Bronchology Interv Pulmonol . 2015;22(1):5-13.\n40. Steinfort DP, Bonney A, See K, Irving LB. Sequential multimodality bronchoscopic investigation of peripheral pulmonary lesions. Eur Respir J . 2016;47(2):607614.\n41. Garwood SK, ClenDening P, Hevelone ND, Hood KL, Pidgeon S, Wudel LJ Jr. Navigational bronchoscopy at a community hospital: clinical and economic outcomes. Lung Cancer Manag . 2016;5(3):131-140.\n42. Ozgul G, Cetinkaya E, Ozgul MA, et al. Ef /uniFB01 cacy and safety of electromagnetic navigation bronchoscopy with or without radial endobronchial ultrasound for peripheral lung lesions. Endosc Ultrasound . 2016;5(3):189-195.\n43. Raval AA, Amir L. Community hospital experience using electromagnetic navigation bronchoscopy system integrating tidal volume computed tomography mapping. Lung Cancer Manag . 2016;5(1):9-19.\n44. Flenaugh E, Mohammed K. Initial experience using 4D electromagnetic navigation bronchoscopy system with tip tracked instruments for localization of peripheral lung nodules. The Internet Journal of Pulmonary Medicine . 2016;18(1):1-7.\n45. Bowling MR, Brown C, Anciano CJ. Feasibility and safety of the transbronchial access tool for peripheral pulmonary nodule and mass. Ann Thorac Surg . 2017;104(2):443-449.\n46. Sun J, Xie F, Zheng X, et al. Learning curve of electromagnetic navigation bronchoscopy for diagnosing peripheral pulmonary nodules in a single institution. Transl Cancer Res . 2017;6(3):541-551.\n47. Huang H, Chen S, Pan L, Chen K, Yao F, Ma H. Diagnostic utility of electromagnetic navigation bronchoscopy combined with radial probe endobronchial ultrasound in peripheral pulmonary lesions [in Chinese]. Zhongguo Fei Ai Za Zhi . 2017;20(12):837-840.\n48. Gu Y, Chen S, Shi J, et al. The introduction of electromagnetic navigation bronchoscopy for the diagnosis of small pulmonary peripheral lesions in an Asian population. J Thorac Dis . 2017;9(9):2959-2965.\n49. Mukherjee S, Chacey M. Diagnostic yield of electromagnetic navigation bronchoscopy using a curved-tip catheter to aid in the diagnosis of pulmonary lesions. J Bronchology Interv Pulmonol . 2017;24(1):35-39.\n50. Patrucco F, Gavelli F, Daverio M, et al. Electromagnetic navigation bronchoscopy: Where are we now? Five years of a single-center experience. Lung . 2018;196(6):721-727.\n51. Panchabhai TS, Biswas Roy S, Madan N, et al. Electromagnetic navigational bronchoscopy for diagnosing peripheral lung lesions in lung transplant recipients:\na single-center experience. J Thorac Dis . 2018;10(8):5108-5114.\n52. Sato T, Yutaka Y, Ueda Y, et al. Diagnostic yield of electromagnetic navigational bronchoscopy: results of initial 35 cases in a Japanese institute. J Thorac Dis . 2018;10(suppl 14):S1615-S1619.\n53. Taton O, Bondue B, Gevenois PA, Remmelink M, Leduc D. Diagnostic yield of combined pulmonary cryobiopsies and electromagnetic navigation in small pulmonary nodules. Pulm Med . 2018;2018:6032974.\n54. Pritchett MA, Schampaert S, de Groot JAH, Schirmer CC, van der Bom I. Cone-beam CT with augmented /uniFB02 uoroscopy combined with electromagnetic navigation bronchoscopy for biopsy of pulmonary nodules. J Bronchology Interv Pulmonol . 2018;25(4):274-282.\n55. Sobieszczyk MJ, Yuan Z, Li W, Krimsky W. Biopsy of peripheral lung nodules utilizing cone beam computer tomography with and without trans bronchial access tool: a retrospective analysis. J Thorac Dis . 2018;10(10):59535959.\n56. Cho HJ, Roknuggaman M, Han WS, Kang SK, Kang MW. Electromagnetic navigation bronchoscopy-Chungnam National University Hospital experience. J Thorac Dis . 2018;10(suppl 6):S717-S724.\n57. Folch EE, Pritchett MA, Nead MA, et al. Electromagnetic navigation bronchoscopy for peripheral pulmonary lesions: oneyear results of the prospective, multicenter NAVIGATE Study. J Thorac Oncol . 2019;14(3):445-458.\n58. Cheng SL, Chu CM. Electromagnetic navigation bronchoscopy: the initial experience in Hong Kong. J Thorac Dis . 2019;11(4):1697-1704.\n59. Wang Memoli JS, Nietert PJ, Silvestri GA. Meta-analysis of guided bronchoscopy for the evaluation of the pulmonary nodule. Chest . 2012;142(2):385-393.\n60. Gex G, Pralong JA, Combescure C, Seijo L, Rochat T, Soccal PM. Diagnostic yield and safety of electromagnetic navigation bronchoscopy for lung nodules: a systematic review and metaanalysis. Respiration . 2014;87(2):165-176.\n61. Zhang W, Chen S, Dong X, Lei P. Metaanalysis of the diagnostic yield and safety of electromagnetic navigation bronchoscopy for lung nodules. J Thorac Dis . 2015;7(5):799-809.\n62. Hiraki T, Mimura H, Gobara H, et al. Incidence of and risk factors for pneumothorax and chest tube placement after CT /uniFB02 uoroscopy-guided percutaneous lung biopsy: retrospective analysis of the procedures conducted over a 9-year period. AJR Am J Roentgenol . 2010;194(3): 809-814.\n63. Shinohara S, Hanagiri T, Takenaka M, et al. Evaluation of undiagnosed solitary lung nodules according to the probability of malignancy in the American College of\n]\nChest Physicians (ACCP) evidence-based clinical practice guidelines. Radiol Oncol . 2014;48(1):50-55.\n64. Sainz Zuniga PV, Vakil E, Molina S, Bassett RL Jr, Ost DE. Sensitivity of radial endobronchial ultrasound guided bronchoscopyfor lung cancer in patients with peripheral pulmonary lesions: an updated meta-analysis. Chest . 2020;157(4):994-1011.\n65. Sehgal IS, Dhooria S, Aggarwal AN, Agarwal R. Impact of Rapid On-Site\nCytological Evaluation (ROSE) on the diagnostic yield of transbronchial needle aspiration during mediastinal lymph node sampling: systematic review and meta-analysis. Chest . 2018;153(4): 929-938.\n66. Labarca G, Folch E, Jantz M, Mehta HJ, Majid A, Fernandez-Bussy S. Adequacy of samples obtained by endobronchial ultrasound with transbronchial needle aspiration for molecular analysis in patients with non-small cell lung cancer.\nSystematic review and meta-analysis. Ann Am Thorac Soc . 2018;15(10):12051216.\n67. Vanderlaan PA, Yamaguchi N, Folch E, et al. Success and failure rates of tumor genotyping techniques in routine pathological samples with non-small-cell lung cancer. Lung Cancer . 2014;84(1):39-44.\n68. Higgins JP, Thompson SG. Controlling the risk of spurious /uniFB01 ndings from metaregression. Stat Med . 2004;23(11):1663-1682.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    }
+  ],
+  "tables": [
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/95'}",
+      "headers": [
+        "Study",
+        "Country",
+        "Enrolled Participants With PPL",
+        "Sensitivity",
+        "Mean/Median Age (y)",
+        "No. of Centers",
+        "Design (Retro-/ Prospective)",
+        "Nodule Size Average (mm)",
+        "Duration of Follow-up (mo)",
+        "Criterion Standard (Thoracoscopy, CT Punction, Other)"
+      ],
+      "rows": [
+        [
+          "Becker et al 19",
+          "Germany",
+          "30",
+          "0.63",
+          "65",
+          "1",
+          "Prospective, single arm",
+          "39.8",
+          "Not reported",
+          "Surgery, follow-up"
+        ],
+        [
+          "Hautmann et al 20",
+          "Germany",
+          "16",
+          "1.00",
+          "63.7",
+          "1",
+          "Prospective, single arm",
+          "Not reported",
+          "Not reported",
+          "Not reported"
+        ],
+        [
+          "Gildea et al 21",
+          "USA",
+          "49",
+          "0.74",
+          "67.9",
+          "1",
+          "Prospective, single arm",
+          "22.8",
+          "10.5",
+          "Thoracotomy, CT scan- /uniFB01 ne needle aspiration, mediastinoscopy, and PET scan"
+        ],
+        [
+          "Schwarz et al 22",
+          "Israel",
+          "15",
+          "0.64",
+          "Not reported",
+          "1",
+          "Prospective, single arm",
+          "33.5",
+          "Not reported",
+          "CT scan- /uniFB01 ne needle aspiration, surgery"
+        ],
+        [
+          "Eberhardt et al 23",
+          "Germany/ USA",
+          "39",
+          "0.55",
+          "55",
+          "2",
+          "Prospective, RCT (EBUS only, ENB only, or combined)",
+          "28",
+          "Not reported",
+          "Surgery"
+        ],
+        [
+          "Eberhardt et al 23",
+          "Germany/ USA",
+          "40",
+          "0.90",
+          "51",
+          "2",
+          "Prospective, RCT (EBUS only, ENB only, or combined)",
+          "24",
+          "Not reported",
+          "Surgery"
+        ],
+        [
+          "Eberhardt et al 24",
+          "Germany/ USA",
+          "89",
+          "0.74",
+          "67",
+          "2",
+          "Prospective, single arm",
+          "24",
+          "16.1",
+          "CT scan- /uniFB01 ne needle aspiration, surgery"
+        ],
+        [
+          "Makris et al 25",
+          "France",
+          "40",
+          "0.61",
+          "60",
+          "1",
+          "Prospective, single arm",
+          "23.5",
+          "Not reported",
+          "Open lung biopsy, mediastinoscopy, TTNA"
+        ],
+        [
+          "Wilson and Bartlett 26",
+          "USA",
+          "222",
+          "0.90",
+          "63.1",
+          "1",
+          "Retrospective, single arm",
+          "21",
+          "6",
+          "CT scan- /uniFB01 ne needle aspiration, surgery"
+        ],
+        [
+          "Bertoletti et al 27",
+          "France",
+          "54",
+          "0.71",
+          "67",
+          "1",
+          "Prospective, single arm",
+          "31.2",
+          "> 18",
+          "Surgery, TTNA"
+        ],
+        [
+          "Lamprecht et al 28",
+          "Austria",
+          "13",
+          "0.67",
+          "64.2",
+          "1",
+          "Retrospective, single arm",
+          "30",
+          "Not reported",
+          "Surgery, CT scan- /uniFB01 ne needle aspiration"
+        ],
+        [
+          "Eberhardt et al 29",
+          "Germany",
+          "54",
+          "0.72",
+          "65.1",
+          "1",
+          "Prospective, single arm",
+          "23.3",
+          "Not reported",
+          "Surgery, CT scan- /uniFB01 ne needle aspiration, follow-up"
+        ],
+        [
+          "Seijo et al 30",
+          "Spain",
+          "51",
+          "0.74",
+          "62",
+          "1",
+          "Prospective, single arm",
+          "25",
+          "Not reported",
+          "Surgery, CT scan- /uniFB01 ne needle aspiration, follow-up"
+        ],
+        [
+          "Mahajan et al 31",
+          "USA",
+          "48",
+          "0.67",
+          "Not reported",
+          "1",
+          "Retrospective, single arm",
+          "20",
+          "Not reported",
+          ""
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "",
+      "headers": [
+        "Study",
+        "Country",
+        "Enrolled Participants With PPL",
+        "Sensitivity",
+        "Mean/Median Age (y)",
+        "No. of Centers",
+        "Design (Retro-/ Prospective)",
+        "Nodule Size Average (mm)",
+        "Duration of Follow-up (mo)",
+        "Criterion Standard (Thoracoscopy, CT Punction, Other)"
+      ],
+      "rows": [
+        [
+          "32",
+          "",
+          "",
+          "",
+          "Mean/Median Age (y)",
+          "No. of Centers",
+          "Design (Retro-/ Prospective)",
+          "Nodule Size Average (mm)",
+          "Duration of Follow-up (mo)",
+          "Criterion Standard (Thoracoscopy, CT Punction, Other)"
+        ],
+        [
+          "Brownback et al",
+          "USA",
+          "55",
+          "0.69",
+          "63",
+          "1",
+          "Retrospective, single arm",
+          "30",
+          "Not reported",
+          "Surgery, CT scan- /uniFB01 ne needle aspiration"
+        ],
+        [
+          "Pearlstein et al 33",
+          "USA",
+          "104",
+          "0.82",
+          "69",
+          "1",
+          "Retrospective, single arm",
+          "28",
+          "24",
+          "Surgery, CT scan- /uniFB01 ne needle aspiration, follow-up"
+        ],
+        [
+          "Balbo et al 34",
+          "Italy",
+          "40",
+          "0.76",
+          "71.5",
+          "1",
+          "Retrospective, single arm",
+          "23.5",
+          "Not reported",
+          "Surgery, CT scan- /uniFB01 ne needle aspiration"
+        ],
+        [
+          "Karnak et al 35",
+          "Turkey",
+          "35",
+          "1.00",
+          "55.4",
+          "1",
+          "Prospective, single arm",
+          "23.1",
+          "24",
+          "Surgery, follow-up"
+        ],
+        [
+          "Mohanasundaram et al 36",
+          "USA",
+          "41",
+          "0.88",
+          "65",
+          "1",
+          "Retrospective, single arm",
+          "30.1",
+          "24",
+          "Surgery, CT scan- /uniFB01 ne needle aspiration, follow-up"
+        ],
+        [
+          "Loo et al 37",
+          "USA",
+          "40",
+          "0.88",
+          "67",
+          "1",
+          "Retrospective, single arm",
+          "26",
+          "Not reported",
+          "Surgery, CT scan- /uniFB01 ne needle aspiration, follow-up"
+        ],
+        [
+          "Odronic et al 38",
+          "USA",
+          "91",
+          "0.63",
+          "66",
+          "1",
+          "Retrospective, single arm",
+          "27",
+          "12",
+          "Surgery, CT scan- /uniFB01 ne needle aspiration, follow-up"
+        ],
+        [
+          "Bowling et al 39",
+          "USA",
+          "96",
+          "0.84",
+          "67",
+          "1",
+          "Retrospective, single arm",
+          "Not reported",
+          "> 18",
+          "Surgery, TTNA, follow-up"
+        ],
+        [
+          "Steinfort et al 40",
+          "Australia",
+          "57",
+          "0.19",
+          "69",
+          "1",
+          "Prospective, single arm",
+          "19.1",
+          "12",
+          "Surgery, CT scan- /uniFB01 ne needle aspiration, follow-up"
+        ],
+        [
+          "Garwood et al 41",
+          "USA",
+          "90",
+          "0.69",
+          "65.6",
+          "1",
+          "Retrospective, single arm",
+          "22.7",
+          "24",
+          "Surgery, follow-up"
+        ],
+        [
+          "Ozgul et al 42",
+          "Turkey",
+          "56",
+          "0.65",
+          "60",
+          "1",
+          "Prospective, single arm",
+          "30",
+          "24",
+          "Surgery, CT scan- /uniFB01 ne needle aspiration"
+        ],
+        [
+          "Raval and Amir 43",
+          "USA",
+          "50",
+          "0.58",
+          "67.7",
+          "1",
+          "Retrospective, single arm",
+          "19.3",
+          "24",
+          "Surgery, TTNA, follow-up"
+        ],
+        [
+          "Flenaugh and Mohammed 44",
+          "USA",
+          "41",
+          "0.80",
+          "62.4",
+          "1",
+          "Retrospective, single arm",
+          "22.1",
+          "12",
+          "Surgery, TTNA"
+        ],
+        [
+          "Bowling et al 45",
+          "USA",
+          "14",
+          "0.43",
+          "58.6",
+          "1",
+          "Retrospective, single arm",
+          "23.5",
+          "Not reported",
+          "Follow-up"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "",
+      "headers": [
+        "Study",
+        "Country",
+        "Enrolled Participants With PPL",
+        "Sensitivity",
+        "Mean/Median Age (y)",
+        "No. of Centers",
+        "Design (Retro-/ Prospective)",
+        "Nodule Size Average (mm)",
+        "Duration of Follow-up (mo)",
+        "Criterion Standard (Thoracoscopy, CT Punction, Other)"
+      ],
+      "rows": [
+        [
+          "Sun et al 46",
+          "China",
+          "40",
+          "0.87",
+          "59",
+          "1",
+          "Prospective, single arm",
+          "21.1",
+          "12",
+          "Surgery, CT scan- /uniFB01 ne needle aspiration, follow-up"
+        ],
+        [
+          "Huang et al 47",
+          "China",
+          "18",
+          "1.00",
+          "68",
+          "1",
+          "Prospective, single arm",
+          "Not reported",
+          "Not reported",
+          "Not reported"
+        ],
+        [
+          "Gu et al 48",
+          "China",
+          "78",
+          "1.00",
+          "53.5",
+          "1",
+          "Prospective, single arm",
+          "19",
+          "12",
+          "Follow-up"
+        ],
+        [
+          "Mukherjee and Chacey 49",
+          "USA",
+          "31",
+          "0.96",
+          "66",
+          "1",
+          "Retrospective, single arm",
+          "18",
+          "12",
+          "FNA, follow-up"
+        ],
+        [
+          "Patrucco et al 50",
+          "Italy",
+          "113",
+          "0.75",
+          "72.4",
+          "1",
+          "Retrospective, single arm",
+          "24.6",
+          "24",
+          "Surgery, CT scan- /uniFB01 ne needle aspiration, follow-up"
+        ],
+        [
+          "Panchabhai et al 51",
+          "USA",
+          "10",
+          "1.00",
+          "64.3",
+          "1",
+          "Retrospective, single arm",
+          "20.5",
+          "Not reported",
+          "Follow-up"
+        ],
+        [
+          "Sato et al 52",
+          "Japan",
+          "35",
+          "0.81",
+          ".",
+          "1",
+          "Prospective, single arm",
+          "15.2",
+          "3",
+          "Surgery, follow-up"
+        ],
+        [
+          "Taton et al 53",
+          "Belgium",
+          "32",
+          "0.32",
+          "68",
+          "1",
+          "Prospective, double arm",
+          "16",
+          "6",
+          "Surgery, follow-up"
+        ],
+        [
+          "Taton et al 53",
+          "Belgium",
+          "32",
+          "0.56",
+          "68",
+          "1",
+          "Prospective, double arm",
+          "16",
+          "6",
+          "Surgery, follow-up"
+        ],
+        [
+          "Pritchett et al 54",
+          "USA",
+          "75",
+          "0.91",
+          "70",
+          "1",
+          "Retrospective, single arm",
+          "16",
+          "Not reported",
+          "Surgery, follow-up"
+        ],
+        [
+          "Sobieszczyk et al 55",
+          "USA",
+          "22",
+          "1.00",
+          "69",
+          "1",
+          "Retrospective, single arm",
+          "21",
+          "6",
+          "Follow-up"
+        ],
+        [
+          "Cho et al 56",
+          "South Korea",
+          "30",
+          "0.75",
+          "64",
+          "1",
+          "Retrospective, single arm",
+          "18.4",
+          "8",
+          "TTNA, follow-up"
+        ],
+        [
+          "Folch et al 57",
+          "USA",
+          "1,157",
+          "0.71",
+          "67.6",
+          "29",
+          "Prospective, single arm",
+          "20",
+          "12",
+          "Surgery, TTNA, follow-up"
+        ],
+        [
+          "Cheng and Chu 58",
+          "China",
+          "99",
+          "0.75",
+          "69.1",
+          "1",
+          "Retrospective, single arm",
+          "26",
+          "12",
+          "Surgery, TTNA"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/107'}",
+      "headers": [
+        "",
+        "Risk of Bias",
+        "Risk of Bias",
+        "Risk of Bias",
+        "Risk of Bias",
+        "Applicability Concerns",
+        "Applicability Concerns",
+        "Applicability Concerns",
+        ""
+      ],
+      "rows": [
+        [
+          "Study",
+          "Patient Selection",
+          "Index Test",
+          "Reference Standard",
+          "Flow and Timing",
+          "Patient Selection",
+          "Index Test",
+          "Reference Standard",
+          "Overall"
+        ],
+        [
+          "Becker et al 19",
+          "L",
+          "L",
+          "L",
+          "H",
+          "H",
+          "L",
+          "L",
+          "H"
+        ],
+        [
+          "Hautmann et al 20",
+          "L",
+          "L",
+          "U",
+          "U",
+          "H",
+          "L",
+          "U",
+          "H"
+        ],
+        [
+          "Gildea et al 21",
+          "L",
+          "L",
+          "L",
+          "H",
+          "L",
+          "L",
+          "L",
+          "L"
+        ],
+        [
+          "Schwarz et al 22",
+          "L",
+          "L",
+          "L",
+          "H",
+          "H",
+          "L",
+          "L",
+          "H"
+        ],
+        [
+          "Eberhardt et al 23",
+          "L",
+          "L",
+          "L",
+          "L",
+          "L",
+          "L",
+          "L",
+          "L"
+        ],
+        [
+          "Eberhardt et al 24",
+          "L",
+          "L",
+          "L",
+          "H",
+          "L",
+          "L",
+          "L",
+          "L"
+        ],
+        [
+          "Makris et al 25",
+          "L",
+          "L",
+          "L",
+          "H",
+          "L",
+          "L",
+          "L",
+          "L"
+        ],
+        [
+          "Wilson and Bartlett 26",
+          "H",
+          "L",
+          "L",
+          "H",
+          "H",
+          "L",
+          "L",
+          "H"
+        ],
+        [
+          "Lamprecht et al 28",
+          "H",
+          "L",
+          "L",
+          "H",
+          "H",
+          "L",
+          "L",
+          "H"
+        ],
+        [
+          "Bertoletti et al 27",
+          "L",
+          "L",
+          "L",
+          "H",
+          "H",
+          "L",
+          "L",
+          "H"
+        ],
+        [
+          "Eberhardt et al 29",
+          "L",
+          "L",
+          "L",
+          "H",
+          "L",
+          "L",
+          "L",
+          "L"
+        ],
+        [
+          "Seijo et al 30",
+          "L",
+          "L",
+          "L",
+          "H",
+          "L",
+          "L",
+          "L",
+          "L"
+        ],
+        [
+          "Mahajan et al 31",
+          "H",
+          "L",
+          "L",
+          "H",
+          "L",
+          "L",
+          "L",
+          "L"
+        ],
+        [
+          "Brownback et al 32",
+          "H",
+          "L",
+          "L",
+          "H",
+          "L",
+          "L",
+          "L",
+          "L"
+        ],
+        [
+          "Pearlstein et al 33",
+          "H",
+          "L",
+          "L",
+          "H",
+          "L",
+          "L",
+          "L",
+          "L"
+        ],
+        [
+          "Balbo et al 34",
+          "H",
+          "L",
+          "L",
+          "H",
+          "H",
+          "L",
+          "L",
+          "H"
+        ],
+        [
+          "Karnak et al 35",
+          "L",
+          "L",
+          "L",
+          "H",
+          "L",
+          "L",
+          "L",
+          "L"
+        ],
+        [
+          "Mohanasundaram et al 36",
+          "H",
+          "L",
+          "L",
+          "H",
+          "L",
+          "L",
+          "L",
+          "L"
+        ],
+        [
+          "Loo et al 37",
+          "H",
+          "L",
+          "L",
+          "H",
+          "L",
+          "L",
+          "L",
+          "L"
+        ],
+        [
+          "Odronic et al 38",
+          "H",
+          "L",
+          "L",
+          "H",
+          "L",
+          "L",
+          "L",
+          "L"
+        ],
+        [
+          "Bowling et al 39",
+          "H",
+          "L",
+          "L",
+          "H",
+          "L",
+          "L",
+          "L",
+          "L"
+        ],
+        [
+          "Steinfort et al 40",
+          "L",
+          "L",
+          "L",
+          "H",
+          "H",
+          "L",
+          "L",
+          "L"
+        ],
+        [
+          "Garwood et al 41",
+          "H",
+          "L",
+          "L",
+          "H",
+          "L",
+          "L",
+          "L",
+          "L"
+        ],
+        [
+          "Ozgul et al 42",
+          "L",
+          "L",
+          "L",
+          "H",
+          "L",
+          "L",
+          "L",
+          "L"
+        ],
+        [
+          "Raval and Amir 43",
+          "H",
+          "L",
+          "L",
+          "H",
+          "L",
+          "L",
+          "L",
+          "L"
+        ],
+        [
+          "Flenaugh and Mohammed 44",
+          "H",
+          "L",
+          "L",
+          "H",
+          "L",
+          "L",
+          "L",
+          "L"
+        ],
+        [
+          "Bowling et al 45",
+          "H",
+          "L",
+          "L",
+          "H",
+          "L",
+          "L",
+          "L",
+          "L"
+        ],
+        [
+          "Sun et al 46",
+          "L",
+          "L",
+          "L",
+          "H",
+          "L",
+          "L",
+          "L",
+          "L"
+        ],
+        [
+          "Huang et al 47",
+          "L",
+          "L",
+          "U",
+          "U",
+          "L",
+          "L",
+          "U",
+          "L"
+        ],
+        [
+          "Gu et al 48",
+          "H",
+          "L",
+          "L",
+          "H",
+          "H",
+          "L",
+          "L",
+          "H"
+        ],
+        [
+          "Mukherjee and Chacey 49",
+          "H",
+          "L",
+          "L",
+          "H",
+          "L",
+          "L",
+          "L",
+          "L"
+        ],
+        [
+          "Patrucco et al 50",
+          "H",
+          "L",
+          "L",
+          "H",
+          "L",
+          "L",
+          "L",
+          "L"
+        ],
+        [
+          "Panchabhai et al 51",
+          "H",
+          "L",
+          "L",
+          "H",
+          "H",
+          "L",
+          "L",
+          "H"
+        ],
+        [
+          "Sato et al 52",
+          "L",
+          "L",
+          "L",
+          "H",
+          "L",
+          "L",
+          "L",
+          "L"
+        ],
+        [
+          "Taton et al 53",
+          "L",
+          "L",
+          "L",
+          "H",
+          "L",
+          "L",
+          "L",
+          "L"
+        ],
+        [
+          "Pritchett et al 54",
+          "H",
+          "L",
+          "L",
+          "H",
+          "L",
+          "L",
+          "L",
+          "L"
+        ],
+        [
+          "Sobieszczyk et al 55",
+          "H",
+          "L",
+          "L",
+          "H",
+          "L",
+          "L",
+          "L",
+          "L"
+        ],
+        [
+          "Cho et al 56",
+          "H",
+          "L",
+          "L",
+          "H",
+          "L",
+          "L",
+          "L",
+          "L"
+        ],
+        [
+          "Folch et al 57",
+          "L",
+          "L",
+          "L",
+          "H",
+          "L",
+          "L",
+          "L",
+          "L"
+        ],
+        [
+          "Cheng and Chu 58",
+          "H",
+          "L",
+          "L",
+          "H",
+          "L",
+          "L",
+          "L",
+          "L"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "",
+      "headers": [
+        "Study",
+        "ES (95% CI)",
+        "% Weight",
+        "TN",
+        "FP +"
+      ],
+      "rows": [
+        [
+          "Becker et al (2005)",
+          "1.00 (0.57-1.00)",
+          "0.61",
+          "5",
+          "5"
+        ],
+        [
+          "Hautmann et al (2005)",
+          "1.00 (0.51-1.00)",
+          "0.50",
+          "4",
+          "4"
+        ],
+        [
+          "Gildea et al (2006)",
+          "1.00 (0.68-1.00)",
+          "0.94",
+          "8",
+          "8"
+        ],
+        [
+          "Schewarz et al (2006)",
+          "1.00 (0.34-1.00)",
+          "0.28",
+          "2",
+          "2"
+        ],
+        [
+          "Eberhardt et al (a) (2007)",
+          "1.00 (0.65-1.00)",
+          "0.83",
+          "7",
+          "7"
+        ],
+        [
+          "Eberhardt et al (b) (2007)",
+          "1.00 (0.65-1.00)",
+          "0.83",
+          "7",
+          "7"
+        ],
+        [
+          "Eberhardt et al (2007)",
+          "1.00 (0.72-1.00)",
+          "1.16",
+          "10",
+          "10"
+        ],
+        [
+          "Makris et al (2007)",
+          "1.00 (0.57-1.00)",
+          "0.61",
+          "5",
+          "5"
+        ],
+        [
+          "Wilson et al (2007)",
+          "1.00 (0.95-1.00)",
+          "8.58",
+          "77",
+          "77"
+        ],
+        [
+          "Bertoletti et al (2009)",
+          "1.00 (0.74-1.00)",
+          "1.27",
+          "11",
+          "11"
+        ],
+        [
+          "Lamprecht et al (2009)",
+          "1.00 (0.51-1.00)",
+          "0.50",
+          "4",
+          "4"
+        ],
+        [
+          "Eberhardt et al (2010)",
+          "1.00 (0.61-1.00)",
+          "0.72",
+          "6",
+          "6"
+        ],
+        [
+          "Seijo et al (2010)",
+          "1.00 (0.70-1.00)",
+          "1.05",
+          "9",
+          "9"
+        ],
+        [
+          "Mahajan et al (2011)",
+          "1.00 (0.83-1.00)",
+          "2.16",
+          "19",
+          "19"
+        ],
+        [
+          "Brownback et al (2012)",
+          "1.00 (0.81-1.00)",
+          "1.83",
+          "16",
+          "16"
+        ],
+        [
+          "Pearlstein et al (2012)",
+          "1.00 (0.83-1.00)",
+          "2.16",
+          "19",
+          "19"
+        ],
+        [
+          "Balbo et al (2013)",
+          "1.00 (0.44-1.00)",
+          "0.39",
+          "3",
+          "3"
+        ],
+        [
+          "Karnak et al (2013)",
+          "1.00 (0.78-1.00)",
+          "1.61",
+          "14",
+          "14"
+        ],
+        [
+          "Mohanasudaram et al (2013)",
+          "1.00 (0.78-1.00)",
+          "1.61",
+          "14",
+          "14"
+        ],
+        [
+          "Loo et al (2014)",
+          "1.00 (0.89-1.00)",
+          "3.38",
+          "30",
+          "30"
+        ],
+        [
+          "Odronic et al (2014)",
+          "1.00 (0.94-1.00)",
+          "6.26",
+          "56",
+          "56"
+        ],
+        [
+          "Bowling et al (2015)",
+          "1.00 (0.82-1.00)",
+          "2.05",
+          "18",
+          "18"
+        ],
+        [
+          "Standort et al (2015)",
+          "1.00 (0.51-1.00)",
+          "0.50",
+          "4",
+          "4"
+        ],
+        [
+          "Garwood et al (2016)",
+          "1.00 (0.90-1.00)",
+          "3.93",
+          "35",
+          "35"
+        ],
+        [
+          "Ozgul et al (2016)",
+          "1.00 (0.78-1.00)",
+          "1.61",
+          "14",
+          "14"
+        ],
+        [
+          "Raval et al (2016)",
+          "1.00 (0.88-1.00)",
+          "3.27",
+          "29",
+          "29"
+        ],
+        [
+          "Flenaugh et al (2016)",
+          "1.00 (0.85-1.00)",
+          "2.38",
+          "21",
+          "21"
+        ],
+        [
+          "Bowling et al (2017)",
+          "1.00 (0.65-1.00)",
+          "0.83",
+          "7",
+          "7"
+        ],
+        [
+          "Sun et al (2017)",
+          "1.00 (0.61-1.00)",
+          "0.72",
+          "6",
+          "6"
+        ],
+        [
+          "Huang et al (2017)",
+          "1.00 (0.65-1.00)",
+          "0.83",
+          "7",
+          "7"
+        ],
+        [
+          "Gu et al (2017)",
+          "1.00 (0.91-1.00)",
+          "4.60",
+          "41",
+          "41"
+        ],
+        [
+          "Mukherjee et al (2017)",
+          "1.00 (0.68-1.00)",
+          "0.94",
+          "8",
+          "8"
+        ],
+        [
+          "Panchabhal et",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "al (2018)",
+          "1.00 (0.65-1.00)",
+          "0.83",
+          "7",
+          "7"
+        ],
+        [
+          "Sato et al (2018)",
+          "1.00 (0.51-1.00)",
+          "0.50",
+          "4",
+          "4"
+        ],
+        [
+          "Taton et al (a) (2018)",
+          "1.00 (0.44-1.00)",
+          "0.39",
+          "3",
+          "3"
+        ],
+        [
+          "Taton et al (b) (2018) (2018)",
+          "1.00 (0.51-1.00)",
+          "0.50",
+          "4",
+          "4"
+        ],
+        [
+          "Pritchett et al",
+          "1.00 (0.78-1.00)",
+          "1.61",
+          "14",
+          "14"
+        ],
+        [
+          "Sobieszczyk et al (2018)",
+          "1.00 (0.44-1.00)",
+          "0.39",
+          "3",
+          "3"
+        ],
+        [
+          "Cho et al (2018)",
+          "1.00 (0.21-1.00)",
+          "0.17",
+          "1",
+          "1"
+        ],
+        [
+          "Folch et al (2018)",
+          "1.00 (0.99-1.00)",
+          "31.51",
+          "284",
+          "284"
+        ],
+        [
+          "Suet-Lai & Chung-Ming (2019) Overall (1ˆ2 = 0.00%, P = 1.00)",
+          "1.00 (0.89-1.00)",
+          "3.60",
+          "32",
+          "32"
+        ],
+        [
+          "",
+          "1.00 (1.00-1.00)",
+          "100.00",
+          "",
+          ""
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "",
+      "headers": null,
+      "rows": [
+        [
+          "",
+          "Test Accuracy Con /uniFB01 dence of Evidence",
+          "Moderate",
+          "Low"
+        ],
+        [
+          "Effect per 1,000 Patients Tested",
+          "Pretest Probability of 66% a",
+          "152 (119-185)",
+          "508 (475-541)"
+        ],
+        [
+          "",
+          "Publication Bias",
+          "None",
+          "None"
+        ],
+        [
+          "Factors That May Decrease Certainty of Evidence",
+          "Imprecision",
+          "Not serious",
+          "Not serious"
+        ],
+        [
+          "Factors That May Decrease Certainty of Evidence",
+          "Inconsistency",
+          "Not serious",
+          "Very serious c"
+        ],
+        [
+          "Factors That May Decrease Certainty of Evidence",
+          "Indirectness",
+          "Not serious",
+          "Not serious"
+        ],
+        [
+          "Factors That May Decrease Certainty of Evidence",
+          "Risk of Bias",
+          "Serious b",
+          "Serious b"
+        ],
+        [
+          "",
+          "Study Design",
+          "Cross-sectional (cohort-type accuracy study)",
+          "Cross-sectional (cohort-type accuracy study)"
+        ],
+        [
+          "",
+          "No. of Studies (No. of Patients)",
+          "40 (3,342)",
+          "40 (3,342)"
+        ],
+        [
+          "",
+          "Outcome",
+          "Speci /uniFB01 city",
+          "Sensitivity"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/593'}",
+      "headers": [
+        "Subgroup",
+        "Sensitivity (%)",
+        "95% CI (%)",
+        "I 2 Value (%)",
+        "Intergroup heterogeneity"
+      ],
+      "rows": [
+        [
+          "Risk of bias",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Low risk of bias",
+          "77",
+          "71.2-82.1",
+          "60.10",
+          "Signi /uniFB01 cant"
+        ],
+        [
+          "High risk of bias",
+          "67",
+          "59-74",
+          "78.50",
+          ""
+        ],
+        [
+          "ROSE",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Yes",
+          "72",
+          "66-76",
+          "34.07",
+          "Nonsigni /uniFB01 cant"
+        ],
+        [
+          "No",
+          "74",
+          "65-80",
+          "84.92",
+          ""
+        ],
+        [
+          "EBUS use",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Yes",
+          "80",
+          "74-83",
+          "73.1",
+          "Nonsigni /uniFB01 cant"
+        ],
+        [
+          "No",
+          "72",
+          "66-76",
+          "85.5",
+          ""
+        ],
+        [
+          "Fluoroscopy guidance",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "With /uniFB02 uoroscopy",
+          "71",
+          "60-79",
+          "85.25",
+          "Nonsigni /uniFB01 cant"
+        ],
+        [
+          "Without /uniFB02 uoroscopy",
+          "74",
+          "69-77",
+          "24.66",
+          ""
+        ],
+        [
+          "Navigation system",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Super dimension",
+          "78",
+          "73-83",
+          "81.30",
+          "Nonsigni /uniFB01 cant"
+        ],
+        [
+          "Another platform",
+          "70",
+          "54-84",
+          "N.A.",
+          ""
+        ],
+        [
+          "No. of techniques",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "1",
+          "67",
+          "53-79",
+          "75.14",
+          "Signi /uniFB01 cant"
+        ],
+        [
+          "2",
+          "72",
+          "60-83",
+          "82.24",
+          ""
+        ],
+        [
+          "3",
+          "83",
+          "76-89",
+          "75.14",
+          ""
+        ],
+        [
+          "4",
+          "91",
+          "82-96",
+          "N.A.",
+          ""
+        ],
+        [
+          "5",
+          "72",
+          "69-76",
+          "N.A.",
+          ""
+        ],
+        [
+          "Type of anesthesia",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "General anesthesia",
+          "74",
+          "66-81",
+          "69.29",
+          "Nonsigni /uniFB01 cant"
+        ],
+        [
+          "Conscious sedation",
+          "75",
+          "65-84",
+          "81.75",
+          ""
+        ],
+        [
+          "Combined",
+          "74",
+          "65-81",
+          "62.65",
+          ""
+        ],
+        [
+          "Time interval",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "2005-2006",
+          "75",
+          "58-88",
+          "49.32",
+          "Nonsigni /uniFB01 cant"
+        ],
+        [
+          "2007-2008",
+          "76",
+          "61-89",
+          "84.52",
+          ""
+        ],
+        [
+          "2009-2010",
+          "72",
+          "64-80",
+          "0.00",
+          ""
+        ],
+        [
+          "2011-2012",
+          "75",
+          "64-84",
+          "N.A.",
+          ""
+        ],
+        [
+          "2013-2014",
+          "84",
+          "70-95",
+          "74.94",
+          ""
+        ],
+        [
+          "2015-2016",
+          "64",
+          "45-81",
+          "86.55",
+          ""
+        ],
+        [
+          "2017-2018",
+          "84",
+          "73-93",
+          "88.03",
+          ""
+        ],
+        [
+          "2019-2020",
+          "75",
+          "63-84",
+          "N.A.",
+          ""
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/602'}",
+      "headers": [
+        "Variable",
+        "b Coef /uniFB01 cient",
+        "95% CI",
+        "SE",
+        "P Value"
+      ],
+      "rows": [
+        [
+          "Cancer prevalence (%)",
+          "3.45",
+          "2.28 to 4.61",
+          "0.59",
+          "< .001"
+        ],
+        [
+          "Distance from tip (mm)",
+          "/C0 0.38",
+          "/C0 0.66 to /C0 0.19",
+          "0.14",
+          ".006"
+        ],
+        [
+          "No. of techniques",
+          "0.32",
+          "0.07 to 0.58",
+          "0.13",
+          ".011"
+        ],
+        [
+          "Nodule size (mm)",
+          "/C0 0.018",
+          "/C0 0.06 to /C0 0.032",
+          "0.02",
+          ".484"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "",
+      "headers": [
+        "Study",
+        "ES (95% CI)",
+        "% Weight",
+        "Pneumothorax",
+        "No. of PLL included"
+      ],
+      "rows": [
+        [
+          "Becker et al (2005)",
+          "0.03 (0.01-0.17)",
+          "1.61",
+          "1",
+          "29"
+        ],
+        [
+          "Hautmann et al (2005)",
+          "0.00 (0.00-0.19)",
+          "0.99",
+          "0",
+          "16"
+        ],
+        [
+          "Gildea et al (2006)",
+          "0.04 (0.01-0.13)",
+          "2.55",
+          "2",
+          "54"
+        ],
+        [
+          "Schwarz et al (2006)",
+          "0.00 (0.00-0.23)",
+          "0.83",
+          "0",
+          "13"
+        ],
+        [
+          "Eberhardt et al (a) (2007)",
+          "0.05 (0.01-0.17)",
+          "2.02",
+          "2",
+          "39"
+        ],
+        [
+          "Eberhardt et al (b) (2007)",
+          "0.08 (0.03-0.20)",
+          "2.06",
+          "3",
+          "40"
+        ],
+        [
+          "Eberhardt et al (2007)",
+          "0.02 (0.01-0.08)",
+          "3.55",
+          "2",
+          "92"
+        ],
+        [
+          "Makris et al (2007)",
+          "0.08 (0.03-0.20)",
+          "2.06",
+          "3",
+          "40"
+        ],
+        [
+          "Wilson et al (2007)",
+          "0.01 (0.00-0.03)",
+          "5.62",
+          "3",
+          "266"
+        ],
+        [
+          "Bertoletti et al (2009)",
+          "0.04 (0.01-0.13)",
+          "2.52",
+          "2",
+          "53"
+        ],
+        [
+          "Lamprecht et al (2009)",
+          "0.00 (0.00-0.23)",
+          "0.83",
+          "0",
+          "13"
+        ],
+        [
+          "Eberhardt et al (2010)",
+          "0.02 (0.00-0.10)",
+          "2.52",
+          "1",
+          "53"
+        ],
+        [
+          "Seijo et al (2010)",
+          "0.00 (0.00-0.07)",
+          "2.45",
+          "0",
+          "51"
+        ],
+        [
+          "Mahajan et al (2011)",
+          "0.10 (0.04-0.22)",
+          "2.38",
+          "5",
+          "49"
+        ],
+        [
+          "Brownback et al (2012)",
+          "0.00 (0.00-0.07)",
+          "2.58",
+          "0",
+          "55"
+        ],
+        [
+          "Pearlstein et al (2012)",
+          "0.06 (0.03-0.12)",
+          "3.74",
+          "6",
+          "101"
+        ],
+        [
+          "Balbo et al (2013)",
+          "0.00 (0.00-0.09)",
+          "2.10",
+          "0",
+          "41"
+        ],
+        [
+          "Karnak et al (2013)",
+          "0.09 (0.03-0.22)",
+          "1.86",
+          "3",
+          "35"
+        ],
+        [
+          "Mohanasudaram et al (2013)",
+          "0.13 (0.06-0.25)",
+          "2.32",
+          "6",
+          "47"
+        ],
+        [
+          "Loo et al (2014)",
+          "0.00 (0.00-0.08)",
+          "2.32",
+          "0",
+          "47"
+        ],
+        [
+          "Odronic et al (2014)",
+          "",
+          "",
+          "3",
+          "91"
+        ],
+        [
+          "Bowling et al (2015)",
+          "0.03 (0.01-0.09)",
+          "3.53",
+          "",
+          "86"
+        ],
+        [
+          "Garwood et al (2016)",
+          "0.06 (0.03-0.13)",
+          "3.42",
+          "5",
+          ""
+        ],
+        [
+          "Ozgul et al (2016)",
+          "0.02 (0.00-0.09) 0.02 (0.00-0.11)",
+          "2.61 2.35",
+          "1 1",
+          "56 48"
+        ],
+        [
+          "Raval et al (2016)",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Flenaugh et al (2016)",
+          "0.00 (0.00-0.09)",
+          "2.10",
+          "0",
+          "41"
+        ],
+        [
+          "Bowling et al (2017)",
+          "0.07 (0.01-0.31)",
+          "0.88",
+          "1",
+          "14"
+        ],
+        [
+          "Sun et al (2017)",
+          "0.00 (0.00-0.09)",
+          "2.06",
+          "0",
+          "40"
+        ],
+        [
+          "Huang et al (2017)",
+          "0.03 (0.01-0.17)",
+          "1.66",
+          "1 1",
+          "30"
+        ],
+        [
+          "Gu et al (2017)",
+          "0.01 (0.00-0.06)",
+          "3.37",
+          "2",
+          "84"
+        ],
+        [
+          "Mukherjee et al (2017) Patrucco et al (2018)",
+          "0.06 (0.02-0.21) 0.00 (0.00-0.03)",
+          "1.70 3.96",
+          "0",
+          "31 113"
+        ],
+        [
+          "Panchabhal et al (2018)",
+          "0.00 (0.00-0.28)",
+          "0.66",
+          "0",
+          "10"
+        ],
+        [
+          "Sato et al (2018)",
+          "0.06 (0.02-0.19)",
+          "1.86",
+          "2",
+          "35"
+        ],
+        [
+          "",
+          "",
+          "",
+          "1",
+          "29"
+        ],
+        [
+          "Taton et al (a) (2018)",
+          "0.03 (0.01-0.17)",
+          "1.61",
+          "",
+          "29"
+        ],
+        [
+          "Taton et al (b) (2018) Pritchett et al (2018)",
+          "0.03 (0.01-0.17) 0.03 (0.01-0.09)",
+          "1.61 3.55",
+          "1 3",
+          "92"
+        ],
+        [
+          "Sobieszczyk et al (2018)",
+          "0.00 (0.00-0.15)",
+          "1.29",
+          "0",
+          "22"
+        ],
+        [
+          "",
+          "",
+          "",
+          "0",
+          "5"
+        ],
+        [
+          "Cho et al (2018) Folch et al (2018)",
+          "0.00 (0.00-0.43) 0.05 (0.04-0.06)",
+          "0.36 7.30",
+          "52",
+          "1,053"
+        ],
+        [
+          "Suet-Lai & Chung-Ming (2019)",
+          "0.03 (0.01-0.09)",
+          "3.70",
+          "3",
+          "99"
+        ],
+        [
+          "Overall (1ˆ2 = 37.41%, P = 0.01)",
+          "0.02 (0.01-0.03)",
+          "100.00",
+          "",
+          ""
+        ],
+        [
+          "-0.2 0 0.2",
+          "",
+          "0.6",
+          "",
+          "0.8"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    }
+  ],
+  "figures": [
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/64'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/112'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/346'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    }
+  ],
+  "references": [
+    {
+      "title": "Nonsmall-cell lung cancer"
+    },
+    {
+      "title": "Lancet"
+    },
+    {
+      "title": "Methods for staging non-small cell lung cancer: diagnosis and management of lung cancer, 3rd ed: American College of Chest Physicians evidence-based clinical practice guidelines"
+    },
+    {
+      "title": "Chest"
+    },
+    {
+      "title": "Minimally invasive methods for staging in lung cancer: systematic review and meta-analysis",
+      "year": 2013
+    },
+    {
+      "title": "Pulm Med",
+      "year": 2016
+    },
+    {
+      "title": "Diagnostic yield and complications of bronchoscopy for peripheral lung lesions. Results of the AQuIRE registry",
+      "year": 2016
+    },
+    {
+      "title": "Am J Respir Crit Care Med",
+      "year": 2016
+    },
+    {
+      "title": "A review of existing and new methods of bronchoscopic diagnosis of lung cancer",
+      "year": 2016
+    },
+    {
+      "title": "Respir Investig",
+      "year": 2016
+    },
+    {
+      "title": "Transthoracic needle biopsy of the lung",
+      "year": 2019
+    },
+    {
+      "title": "J Thorac Dis",
+      "year": 2015
+    },
+    {
+      "title": "Complication rates of CT-guided transthoracic lung biopsy: meta-analysis",
+      "year": 2015
+    },
+    {
+      "title": "Eur Radiol",
+      "year": 2017
+    },
+    {
+      "title": "Preferred Reporting Items for a Systematic Review and Meta-analysis of Diagnostic Test Accuracy Studies: the PRISMA-DTA statement",
+      "year": 2017
+    },
+    {
+      "title": "JAMA",
+      "year": 2018
+    },
+    {
+      "title": "QUADAS-2: a revised tool for the quality assessment of diagnostic accuracy studies",
+      "year": 2018
+    },
+    {
+      "title": "Ann Intern Med",
+      "year": 2011
+    },
+    {
+      "title": "The binomial distribution of meta-analysis was preferred to model within-study variability",
+      "year": 2011
+    },
+    {
+      "title": "J Clin Epidemiol",
+      "year": 2008
+    },
+    {
+      "title": "Metaprop: a Stata command to perform metaanalysis of binomial data",
+      "year": 2008
+    },
+    {
+      "title": "Arch Public Health",
+      "year": 2014
+    },
+    {
+      "title": "Meta-Analyst: software for meta-analysis of binary, continuous and diagnostic data",
+      "year": 2014
+    },
+    {
+      "title": "BMC Med Res Methodol",
+      "year": 2009
+    },
+    {
+      "title": "Cochrane Diagnostic Test Accuracy Working Group. Systematic reviews of diagnostic test accuracy",
+      "year": 2009
+    },
+    {
+      "title": "Measuring inconsistency in meta-analyses",
+      "year": 2008
+    },
+    {
+      "title": "BMJ",
+      "year": 2003
+    },
+    {
+      "title": "How to use a subgroup analysis",
+      "year": 2003
+    },
+    {
+      "title": "User&apos;s Guides to the Medical Literature"
+    },
+    {
+      "title": "A comparison of methods to detect publication bias in meta-analysis",
+      "year": 2015
+    },
+    {
+      "title": "Stat Med",
+      "year": 2001
+    },
+    {
+      "title": "How should meta-regression analyses be undertaken and interpreted?",
+      "year": 2001
+    },
+    {
+      "title": "Grading quality of evidence and strength of recommendations for diagnostic tests and strategies",
+      "year": 2002
+    },
+    {
+      "title": "Bronchoscopic biopsy of peripheral lung lesions under electromagnetic guidance: a pilot study",
+      "year": 2008
+    },
+    {
+      "title": "J Bronchol",
+      "year": 2005
+    },
+    {
+      "title": "Electromagnetic catheter navigation during bronchoscopy: validation of a novel method by conventional fluoroscopy",
+      "year": 2005
+    },
+    {
+      "title": "Electromagnetic navigation diagnostic bronchoscopy: a prospective study",
+      "year": 2005
+    },
+    {
+      "title": "Real-time electromagnetic navigation bronchoscopy to peripheral lung lesions using overlaid CT images: the first human study",
+      "year": 2006
+    },
+    {
+      "title": "Multimodality bronchoscopic diagnosis of peripheral lung lesions: a randomized controlled trial",
+      "year": 2006
+    },
+    {
+      "title": "Electromagnetic navigation diagnostic bronchoscopy in peripheral lung lesions",
+      "year": 2007
+    },
+    {
+      "title": "Electromagnetic navigation diagnostic bronchoscopy for small peripheral lung lesions",
+      "year": 2007
+    },
+    {
+      "title": "Eur Respir J",
+      "year": 2007
+    },
+    {
+      "title": "Improved diagnostic yield of bronchoscopy in a community practice: combination of electromagnetic navigation system and rapid on-site evaluation",
+      "year": 2007
+    },
+    {
+      "title": "Accuracy and feasibility of electromagnetic navigated bronchoscopy under nitrous oxide sedation for pulmonary peripheral opacities: an outpatient study",
+      "year": 2007
+    },
+    {
+      "title": "Respiration",
+      "year": 2009
+    },
+    {
+      "title": "Electromagnetic navigation bronchoscopy in combination with PET-CT and rapid on-site cytopathologic chestjournal"
+    },
+    {
+      "title": "Initial experience using 4D electromagnetic navigation bronchoscopy system with tip tracked instruments for localization of peripheral lung nodules"
+    },
+    {
+      "title": "The Internet Journal of Pulmonary Medicine",
+      "year": 2016
+    },
+    {
+      "title": "Feasibility and safety of the transbronchial access tool for peripheral pulmonary nodule and mass",
+      "year": 2016
+    },
+    {
+      "title": "Ann Thorac Surg",
+      "year": 2017
+    },
+    {
+      "title": "Learning curve of electromagnetic navigation bronchoscopy for diagnosing peripheral pulmonary nodules in a single institution",
+      "year": 2017
+    },
+    {
+      "title": "Transl Cancer Res",
+      "year": 2017
+    },
+    {
+      "title": "Diagnostic utility of electromagnetic navigation bronchoscopy combined with radial probe endobronchial ultrasound in peripheral pulmonary lesions [in Chinese",
+      "year": 2017
+    },
+    {
+      "title": "Zhongguo Fei Ai Za Zhi",
+      "year": 2017
+    },
+    {
+      "title": "The introduction of electromagnetic navigation bronchoscopy for the diagnosis of small pulmonary peripheral lesions in an Asian population",
+      "year": 2017
+    },
+    {
+      "title": "Diagnostic yield of electromagnetic navigation bronchoscopy using a curved-tip catheter to aid in the diagnosis of pulmonary lesions",
+      "year": 2017
+    },
+    {
+      "title": "J Bronchology Interv Pulmonol",
+      "year": 2017
+    },
+    {
+      "title": "Electromagnetic navigation bronchoscopy: Where are we now? Five years of a single-center experience",
+      "year": 2017
+    },
+    {
+      "title": "Lung",
+      "year": 2018
+    },
+    {
+      "title": "Electromagnetic navigational bronchoscopy for diagnosing peripheral lung lesions in lung transplant recipients: a single-center experience",
+      "year": 2018
+    },
+    {
+      "title": "Diagnostic yield of electromagnetic navigational bronchoscopy: results of initial 35 cases in a Japanese institute",
+      "year": 2018
+    },
+    {
+      "title": "Diagnostic yield of combined pulmonary cryobiopsies and electromagnetic navigation in small pulmonary nodules",
+      "year": 2018
+    },
+    {
+      "title": "Cone-beam CT with augmented fluoroscopy combined with electromagnetic navigation bronchoscopy for biopsy of pulmonary nodules",
+      "year": 2018
+    },
+    {
+      "title": "Biopsy of peripheral lung nodules utilizing cone beam computer tomography with and without trans bronchial access tool: a retrospective analysis",
+      "year": 2018
+    },
+    {
+      "title": "Electromagnetic navigation bronchoscopy-Chungnam National University Hospital experience",
+      "year": 2018
+    },
+    {
+      "title": "Electromagnetic navigation bronchoscopy for peripheral pulmonary lesions: oneyear results of the prospective, multicenter NAVIGATE Study",
+      "year": 2018
+    },
+    {
+      "title": "J Thorac Oncol",
+      "year": 2019
+    },
+    {
+      "title": "Electromagnetic navigation bronchoscopy: the initial experience in Hong Kong",
+      "year": 2019
+    },
+    {
+      "title": "Meta-analysis of guided bronchoscopy for the evaluation of the pulmonary nodule",
+      "year": 2019
+    },
+    {
+      "title": "Diagnostic yield and safety of electromagnetic navigation bronchoscopy for lung nodules: a systematic review and metaanalysis",
+      "year": 2012
+    },
+    {
+      "title": "Metaanalysis of the diagnostic yield and safety of electromagnetic navigation bronchoscopy for lung nodules",
+      "year": 2014
+    },
+    {
+      "title": "Incidence of and risk factors for pneumothorax and chest tube placement after CT fluoroscopy-guided percutaneous lung biopsy: retrospective analysis of the procedures conducted over a 9-year period",
+      "year": 2015
+    },
+    {
+      "title": "AJR Am J Roentgenol",
+      "year": 2010
+    },
+    {
+      "title": "Evaluation of undiagnosed solitary lung nodules according to the probability of malignancy in the American College of Chest Physicians (ACCP) evidence-based clinical practice guidelines",
+      "year": 2010
+    },
+    {
+      "title": "Radiol Oncol",
+      "year": 2014
+    },
+    {
+      "title": "Sensitivity of radial endobronchial ultrasound guided bronchoscopy for lung cancer in patients with peripheral pulmonary lesions: an updated meta-analysis",
+      "year": 2014
+    },
+    {
+      "title": "Impact of Rapid On-Site Cytological Evaluation (ROSE) on the diagnostic yield of transbronchial needle aspiration during mediastinal lymph node sampling: systematic review and meta-analysis",
+      "year": 2020
+    },
+    {
+      "title": "Adequacy of samples obtained by endobronchial ultrasound with transbronchial needle aspiration for molecular analysis in patients with non-small cell lung cancer. Systematic review and meta-analysis",
+      "year": 2018
+    }
+  ],
+  "quality": {
+    "completeness_score": 0,
+    "has_abstract": true,
+    "abstract_source": "pubmed",
+    "has_doi": true,
+    "has_full_text": true,
+    "num_sections": 17,
+    "num_tables": 9,
+    "num_figures": 7,
+    "num_references": 78
+  }
+}

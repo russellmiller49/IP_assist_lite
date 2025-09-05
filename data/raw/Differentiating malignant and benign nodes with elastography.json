@@ -1,0 +1,918 @@
+{
+  "metadata": {
+    "document_id": "10_1016_j_jfma_2018_06_021",
+    "title": "Differentiating malignant and benign lymph nodes using endobronchial ultrasound elastography",
+    "authors": [
+      "Ching-Kai Lin",
+      "Kai-Lun Yu",
+      "Lih-Yu Chang",
+      "Hung-Jen Fan",
+      "Yueh-Feng Wen",
+      "Chao-Chi Ho"
+    ],
+    "year": 2019,
+    "journal": "Journal of the Formosan Medical Association",
+    "doi": "10.1016/j.jfma.2018.06.021",
+    "volume": "118",
+    "issue": "1",
+    "pages": "436-443",
+    "citation": "Lin, et al. (2019). Differentiating malignant and benign lymph nodes using endobronchial ultrasound elastography. Journal of the Formosan Medical Association, 118(1), 436-443. https://doi.org/10.1016/j.jfma.2018.06.021",
+    "abstract": "Background/Purpose: Endobronchial ultrasound (EBUS) elastography is a new technique that provides information on tissue compressibility during endobronchial ultrasoundguided transbronchial needle aspiration (EBUS-TBNA). The purposes of this study were to evaluate the utility of EBUS elastography in differentiating malignant and benign mediastinal lymph nodes (LNs) and to explore the factors that inﬂuence its accuracy.",
+    "abstract_source": "metadata",
+    "url": "https://linkinghub.elsevier.com/retrieve/pii/S0929664618302754"
+  },
+  "source_file": "Differentiating malignant and benign nodes with elastography.json",
+  "sections": [
+    {
+      "title": "Differentiating malignant and benign lymph nodes using endobronchial ultrasound elastography",
+      "content": "Ching-Kai Lin a,b , Kai-Lun Yu a,b , Lih-Yu Chang a,b , Hung-Jen Fan a,b,c , Yueh-Feng Wen a,b , Chao-Chi Ho b, *\na Department of Internal Medicine, National Taiwan University Hospital Hsin-Chu Branch, HsinChu, Taiwan\nb Department of Internal Medicine, National Taiwan University Hospital, Taipei, Taiwan\nc Department of Internal Medicine, National Taiwan University Hospital Chutung Branch, Chutung, Taiwan",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "KEYWORDS",
+      "content": "Elastography; Endobronchial ultrasound-guided transbronchial needle; Mediastinal lymph node\nAbstract Background/Purpose: Endobronchial ultrasound (Endobronchial ultrasound (EBUS)) elastography is a new technique that provides information on tissue compressibility during endobronchial ultrasoundguided transbronchial needle aspiration (Endobronchial ultrasound (EBUS)-TBNA). The purposes of this study were to evaluate the utility of Endobronchial ultrasound (EBUS) elastography in differentiating malignant and benign mediastinal lymph nodes (LNs) and to explore the factors that influence its accuracy.\nMethods: A retrospective chart review of patients who underwent Endobronchial ultrasound (EBUS)-TBNA from October 2016 to July 2017 was performed. Endobronchial ultrasound (EBUS) with conventional B-mode features and elastographic patterns were compared with the final pathology results or clinical follow-up. We used the following Endobronchial ultrasound (EBUS) elastographic patterns for classification: type 1, predominantly non-blue (green, yellow and red); type 2, part blue, part non-blue; type 3, predominantly blue. The potential impacts of the characteristics of LNs, the underlying lung diseases and obtaining fibrotic components from Endobronchial ultrasound (EBUS)-TBNA specimens were evaluated relative to the accuracy of Endobronchial ultrasound (EBUS) elastography.\nResults: A total of 206 LNs from 94 patients were retrospectively evaluated. In classifying type 1 as 'benign' and type 3 as 'malignant,' the sensitivity, specificity, positive predictive value, negative predictive value and diagnostic accuracy rate were 90.6, 82.6, 71.6, 94.7 and 85.2%, respectively. The Endobronchial ultrasound (EBUS) elastographic patterns had higher diagnostic yields and negative predictive values than conventional B-mode features. Logistic regression analysis revealed that central necrosis was a factor that influenced the accuracy of elastography in malignant LNs. The fibrotic component within benign LNs could cause an incorrect elastographic pattern.\nE-mail address: ccho1203@ntu.edu.tw (C.-C. Ho).\n0929-6646/Copyright ª 2018, Formosan Medical Association. Published by Elsevier Taiwan LLC. This is an open access article under the CC BY-NC-ND license (http://creativecommons.org/licenses/by-nc-nd/4.0/).\nAvailable online at www.sciencedirect.com",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "ScienceDirect",
+      "content": "j o urnal homepage: www.jfma-online.com\nConclusion: Endobronchial ultrasound (EBUS) elastography is a valuable tool in discriminating benign and malignant mediastinal LNs.\nCopyright ª 2018, Formosan Medical Association. Published by Elsevier Taiwan LLC. This is an open access article under the CC BY-NC-ND license (http://creativecommons.org/licenses/bync-nd/4.0/).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Introduction",
+      "content": "Endobronchial ultrasound-guided transbronchial needle aspiration (Endobronchial ultrasound (EBUS)-TBNA) is a relatively new and minimally invasive procedure for approaching mediastinal and hilar lymph nodes (LNs). Prior studies have confirmed its high diagnostic yield in most mediastinal malignancies and in some benign inflammatory processes. 1 e 3 Some studies verified that using Endobronchial ultrasound (EBUS)-TBNA as the initial investigating tool could shorten the duration of diagnosis and staging in non-small cell lung cancer patients. 4,5 As a result, EBUSTBNA has become the first-choice diagnostic and staging tool for mediastinal lesions in most clinical institutions.\nDuring Endobronchial ultrasound (EBUS) procedures, we often found several possible targets in the same station. How the target lesion for aspiration/biopsy is chosen may determine the diagnostic yield of the procedure. Elastography is a new ultrasonography (US) associated technique that generates objective strain images of tissue compressibility. This method is used to detect the stiffness of tissue and could be used to distinguish benign from malignant components. The effectiveness of elastography in breast, thyroid, liver or even endoscopic US is well established. 7 e 10 There is a limited amount of data on the use of elastography in Endobronchial ultrasound (EBUS) procedures. 11,12 Our aims in this study were to evaluate the utility of Endobronchial ultrasound (EBUS) elastography during Endobronchial ultrasound (EBUS)-TBNA and to investigate possible factors that might influence the accuracy of elastographic patterns.",
+      "category": "introduction",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Participants",
+      "content": "A retrospective chart review of patients with unselected mediastinal lymphadenopathy who underwent Endobronchial ultrasound (EBUS)-TBNA and Endobronchial ultrasound (EBUS) elastography at the Department of Thoracic Medicine, National Taiwan University Hospital, Hsin-Chu branch from October 2016 to July 2017 was performed. Patient data on age, gender and indications for Endobronchial ultrasound (EBUS)-TBNA were collected. The locations of the LNs that we approached were recorded using the international TNM staging system reported by Mountain and Dresler. 13\nWritten informed consent was obtained from each patient prior to bronchoscopy. The study was approved by National Taiwan University Hospital, Hsin-Chu Branch Institutional Review Board (IRB #107-016-E).",
+      "category": "methods",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "EBUS B-mode imaging characteristics of LNs",
+      "content": "All procedures were performed under conscious sedation with intravenous fentanyl and midazolam in a bronchoscopy\nroom setting. The convex probe Endobronchial ultrasound (EBUS) (BF-UC260FW; Olympus; Tokyo, Japan) was inserted via the oral route. Scanning was done on a 7.5 MHz frequency US, and images were generated using a new dedicated US processor (EUME2 PREMIER PLUS, Olympus).\nAfter detecting the target LNs, the following Endobronchial ultrasound (EBUS) Bmode sonographic features, based on the previous report by Fujiwara, were recorded 14 : (1) length of the short axis, (2) shape, (3) margin, (4) echogenicity, (5) central hilar structure (CHS), and (6) coagulation necrosis sign (CNS). Round shape was defined as LNs with a ratio of the short to long axis of less than 1.5. Distinct margin was defined as the majority margin ( > 50%) of LN that could be clearly visualized. Heterogeneous echogenicity was considered nonuniform within the LN. CHS was a linear, flat, hyperechoic area detected within the LN. CNS indicated a hypoechoic area within the LN without blood flow. All conventional US B-mode characteristics were interpreted by at least 2 of the experienced pulmonary physicians (CKL, KLY, LYC, HJF) during the procedure.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "EBUS-TBNA with endobronchial elastography",
+      "content": "Elastography was performed after the recording of US Bmode features. The scan range included the entire target lesion and surrounding normal tissue. Elastographic images were generated by the pressure that was produced from the pulsation of great vessels within the mediastinum. The stiffness of tissue was translated into a color signal that was laid over the B mode image. The colors associated with hard, intermediate, and soft tissues were blue, green, and yellow/red, respectively. The classification of elastographic patterns followed the system of Izumo, and was based on the dominant colors and their distribution within the target LNs: 11\nWe used the elastographic evaluation to guide the EBUSTBNA procedure. The dominant blue area within the target LNs would first be selected for puncture. The rapid on-site cytology exam was not performed for all of our patients due to the lack of availability in our institution. When more than one station of LNs existed in one patient, a sequential N3 e N2 e N1 strategy was followed for LN staging.\nIn patients with malignancy, the diagnosis was determined on the basis of malignant cytological and/or histological results at Endobronchial ultrasound (EBUS)-TBNA or with surgical-pathological\nconfirmation. In patients with benign processes, the diagnosis was confirmed with at least 6 months of radiological and clinical follow-up.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Factors that influenced the diagnostic yield of EBUS elastography",
+      "content": "LN characteristics (location and computed tomography (CT) findings), underlying lung diseases (chronic obstructive pulmonary disease and pneumoconiosis), and obtaining the fibrotic component from Endobronchial ultrasound (EBUS)-TBNA specimens were analyzed as possible impact factors. The locations of LNs were divided into right-side (station 2R, 4R, 10R, llR) and non-right-side (station 4L, 10L, 11L, 7). The CT appearances of central necrosis and calcification were investigated respectively. Benign and malignant LNs were studied separately with the potential impact factors.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Statistical analysis",
+      "content": "Sensitivity, specificity, positive predictive value, negative predictive value, and diagnostic accuracy rate were calculated via standard definitions. Univariate and multivariate logistic regression models were used to calculate the odds ratios and 95% confidence intervals for possible impact factors influencing the diagnostic yield of Endobronchial ultrasound (EBUS) elastography. A p -value of less than 0.05 was considered significant. We used SPSS version 22.0 (IBM, SPSS, Chicago, IL) for statistical analysis.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Patients and mediastinal LNs",
+      "content": "The demographic characteristics of the 94 patients that were enrolled and evaluated in this study are summarized in Table 1. Table 2 lists the characteristics of 206 LNs evaluated during the Endobronchial ultrasound (EBUS)-TBNA procedures. No patient had a major complication related to Endobronchial ultrasound (EBUS)-TBNA, except minimal self-limited wound oozing during the procedure.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "B-mode sonographic features and elastography of EBUS",
+      "content": "The diagnosis of benign or malignant processes based on each ultrasonic feature is shown in Fig. 2. In the B-mode sonographic features, LNs with a short axis S 1 cm, round shape, distinct margin, heterogeneous echogenicity, absence of CHS, and presence of CNS were defined as malignant. As for the Endobronchial ultrasound (EBUS) elastographic patterns, we defined type 3 as a malignancy and type 1 as a benign process. True positive was defined as a LN with 'malignant' sonographic features that were proved to be malignant in the final diagnosis. If the LN with 'benign' sonographic features was confirmed to be a benign process, we considered it a true negative. False positive was a benign LN with 'malignant' sonographic features. False negative meant that a 'benign' sonographic feature could be found in malignant LNs. Each sonographic feature (conventional B-mode and elastography) was analyzed separately.\nTable 3 shows the diagnostic test evaluation of elastography and conventional B-mode sonographic features for predicting malignant LNs after excluding type 2 elastographic lesions (44 LNs). The sensitivity, specificity, positive predictive value, negative predictive value and diagnostic\naccuracy rates of Endobronchial ultrasound (EBUS) elastography were 90.6, 82.6, 71.6, 94.7 and 85.2%, respectively. These 162 LNs revealed that the elastographic patterns had higher diagnostic yields and negative predictive values than other conventional B-mode features. The positive predictive value was a little lower for elastographic patterns than CNS, but sensitivity was significantly higher. The distribution of B-mode sonographic features was no different between the 206 LNs in this study and study groups without type 2 elastographic lesions (Table S1). When all the LNs were enrolled in the present study, the diagnostic test parameters for conventional Bmode sonographic features in all study groups (206 LNs) showed very similar results, compared to the study groups without type 2 elastographic lesions (Table S2).\nLogistic regression analysis revealed that elastography, margin and echogenicity were independent predictive factors for malignant LNs (Table 3). By combining elastography and these 2 conventional B-mode sonographic features (margin and echogenicity), higher positive predictive value would be obtained if more positive sonographic features coexisted with the positive elastographic pattern. When all image patterns showed positive results in a LN simultaneously, the positive predictive value was up to 92.6. There was no significant improvement in the diagnostic accuracy of predicting malignancy.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Factors that influence the diagnostic yield of EBUS elastography",
+      "content": "The 206 LNs in the present study were divided into benign and malignant groups based on pathologic and imaging criteria. In the benign group (132 LNs), the type 1 elastographic pattern was defined as the correct diagnosis and type 2/3 elastographic patterns were considered to be the wrong diagnosis. In the malignant group (74 LNs), the type 3 elastographic pattern was defined as the correct diagnosis and type 1/2 elastographic patterns were considered the wrong diagnosis.\nLogistic regression analysis revealed that the location of the LN and the patient's underlying lung disease did not lead to changes in the accuracy of elastography in both the benign and malignant groups (Table 4). Obtaining fibrotic components from the pathological specimen of Endobronchial ultrasound (EBUS)-TBNA would more easily result in misjudgment of elastography results in benign processes. In the malignant group, central necrosis, as shown by CT imaging, would interfere with the interpretation of elastography results.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Discussion",
+      "content": "In the present study, Endobronchial ultrasound (EBUS) elastographic patterns had higher sensitivity, negative predictive values and diagnostic yields than conventional B-mode sonographic features for discriminating between malignant lesions and benign processes. The fibrotic component within benign LNs and malignant LNs with central necrosis could influence the accuracy of elastographic evaluations.\nIdentification of the proper LN or target site at which malignancy is most likely may sometimes be challenging. Several reports showed that the conventional B-mode and vascular Doppler image pattern produced by Endobronchial ultrasound (EBUS) could provide good information for differentiating metastatic LNs\nNon-small cell lung cancer (NSCLC) Z Non-small cell lung cancer.\nEndobronchial ultrasound (EBUS)-TBNA Z endobronchial ultrasound-guided transbronchial needle aspiration; LN Z lymph node.\nin lung cancer patients. 14 e 16 The accuracy depends on the operator's familiarity with the image patterns. Endobronchial ultrasound (EBUS) elastography offers a new modality to differentiate benign from malignant. Neoplastic tissue containing greater cellularity and vascularity, which cause a stiffer texture, compares to normal tissue. 6 In other words, stiffer lesions are more likely to be a malignant process. Previous studies have shown that in classifying the type 1 elastographic pattern as 'benign' and type 3 as 'malignant,' the sensitivity, specificity, positive predictive value, negative predictive value, and diagnostic yield were excellent. 11,17 Using the same criteria in the present study, the sensitivity, specificity, positive predictive value, negative predictive value, and diagnostic yield were 90.6, 82.6, 71.6, 94.7 and 85.2%, respectively. Their utility in detecting malignancy was therefore substantiated.\nFewstudieshavecomparedtheabilityofEBUSelastography and conventional B-mode imaging to differentiate a malignant\nprocess. He et al. reported that the elastography grading score had higher sensitivity and specificity than conventional Bmode criteria in diagnosing malignant lung lesions. 18,19 In the present study, Endobronchial ultrasound (EBUS) elastographic patterns had a better diagnostic yield than all the conventional sonographic features. Though CNS had a higher specificity and positive predict value, the sensitivity was extremely low (13.2%). Therefore, we thought this should not be a suitable parameter for guiding Endobronchial ultrasound (EBUS)-TBNA.Combiningelastography and specific conventional B-mode sonographic features (echogenicity and margin) improved the positive predictive value in the present study (Table 3). If these 3 image patterns existed in one LN, a higher possibility of malignancy would be suspected. However, the diagnostic yield did not increase significantly. Using elastography alone to predict malignancy was still valid. Otherwise, the distribution of all conventional sonographic features was very similar between the study groups and those without type 2\nCHS Z central hilar structure; CNS Z coagulation necrosis sign; LN Z lymph node; NPV Z negative predictive value; PPV Z positive predictive value; * Z statistical significance with p-value < 0.05.\nelastographic patterns. We supposed the result could be extended to the entire study population.\nThis was the first study to verify possible factors that might influence the accuracy of Endobronchial ultrasound (EBUS) elastography. Previous reports considered that fibrous tissue hyperplasia within the benign process might cause greater stiffness. Malignant lesions with central necrosis could become softer as a result. 17,20 These situations might confuse the results of Endobronchial ultrasound (EBUS) elastography. In thepresent study, malignant LNs with central necrosis tended to have a softer elastographic pattern (type 2 or type 1). If Endobronchial ultrasound (EBUS)-TBNA revealed a fibrotic component in benign LN, a harder elastographic pattern (type 2 or type 3) would be expressedmoreeasily.Theseresultscorrespondedtothoseof previous studies. Though our pathologic reports were not controlled with surgical biopsy, we punctured the dominant blue area under the guidance of elastographic evaluation. We supposed that the harder elastographic pattern within the target LN was caused by fibrotic tissue.\nSeveral reports have mentioned that blue elastographic imaging frequently exists in calcified LNs. 17,20 To our knowledge, calcification frequently is detected within the mediastinal LNs due to pneumoconiosis. However, we did not find statistically significant differences in the present study. We thought the reason for this might be the small sample sizes in our study group. CT imaging detected calcification in only 7 LNs, and 3 patients with 9 LNs had underlying pneumoconiosis. The type 3 elastographic pattern was found in a larger proportion of calcified LNs (4/ 7, 57%) and in those with pneumoconiosis (5/9, 55.6%). We believe that elastography is still a good method for accessing the internal structure of the observed lesions.\nRozman et al. thought that the elastographic image for right paratracheal LNs might be influenced by the less heart and vascular pulsations transmitted to the right side of the trachea. 20 In the present study, the diagnostic yield did not differ between right-side and non-right-side LNs. Some researchers also thought that respiratory movement might provide the compressive action need to assist the elastographic image. 19 Different lung conditions have different lung elasticity, thereby producing various compressive effects on the target lesions. In the final result of our study,\nemphysematous lung or fibrotic lung caused by pneumoconiosis would not affect the accuracy of Endobronchial ultrasound (EBUS) elastography. We thought that the conditions just mentioned above need no cautious interpretation when judging the results of Endobronchial ultrasound (EBUS) elastography.\nIn the present study, we used a qualitative method with a 3-type classification of elastographic patterns for assessing the compressibility of the target lesion. The elastography strain ratio, a quantitative method, has also been used. 20,21 Previous studies have demonstrated the great accuracy of elastography strain ratio in distinguishing malignant from benign mediastinal LNs. However, this method seems more complex, and may require more time to analyze the results. One study found that qualitative and quantitative Endobronchial ultrasound (EBUS) elastography had similar diagnostic performances. 21 However, we consider that qualitative Endobronchial ultrasound (EBUS) elastography may be more suitable for clinical practice.\nOur study had some limitations. First, this was a retrospective study. A prospective study is warranted to confirm the utility of elastography in distinguishing malignant LNs. Second, the elastographic images were determined from 'frozen' Endobronchial ultrasound (EBUS) images, so selection bias might have appeared during static image selection. Third, we did not use a surgical criteria standard in defining the pathologies of all study groups, even though all the benign processes were clinically followed for at least 6 months and characterized via chest CT. Finally, we did not change the Endobronchial ultrasound (EBUS)-TBNA needle when puncturing different LNs. This might be a risk factor leading to false positive cytologic results. The specimen might be contaminated if the previous LNs were malignant. We reviewedall of the malignant LNs in the present study, and all of them were diagnosed by the pathologic result. Contamination of the pathologic specimen might be more difficult in this situation. Therefore, we believe the results of the present study can be applied in clinical practice.",
+      "category": "discussion",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Conclusion",
+      "content": "This study showed that Endobronchial ultrasound (EBUS) elastographic patterns are more accurate than conventional B-mode sonographic features for\nCHS Z central hilar structure; CNS Z coagulation necrosis sign; LN Z lymph node; N Z number; * Z statistical significance with p-value < 0.05.\ndistinguishing benign from malignant mediastinal LNs. However, a few situations, such as central necrosis and the fibrotic component within benign LNs, would call for cautious interpretation in the elastographic evaluation. We believe elastography is a valuable tool for guiding the Endobronchial ultrasound (EBUS)-TBNA procedure.",
+      "category": "conclusion",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Conflicts of interest",
+      "content": "All authors have no conflicts of interest to declare.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "References",
+      "content": "1. Yasufuku K, Chiyo M, Sekine Y, Chhajed PN, Shibuya K, Iizasa T, et al. Real-time endobronchial ultrasound-guided transbronchial needle aspiration of mediastinal and hilar lymph nodes. Chest 2004; 126 :122 e 8.\n2. Nakajima T, Yasufuku K, Kurosu K, Takiguchi Y, Fujiwara T, Chiyo M, et al. The role of Endobronchial ultrasound (EBUS)-TBNA for the diagnosis of sarcoidosis e comparisons with other bronchoscopic diagnostic modalities. Respir Med 2009; 103 :1796 e 800.\n3. Annema JT, van Meerbeeck JP, Rintoul RC, Dooms C, Deschepper E, Dekkers OM, et al. Mediastinoscopy vs endosonography for mediastinal nodal staging of lung cancer: a randomized trial. JAMA 2010; 304 :2245 e 52.\n4. Navani N, Nankivell M, Lawrence DR, Lock S, Makker H, Baldwin DR, et al. Lung cancer diagnosis and staging with endobronchial ultrasound-guided transbronchial needle aspiration compared with conventional approaches: an open-label, pragmatic, randomised controlled trial. Lancet Respir Med 2015; 3 :282 e 9.\n5. Lin CK, Lai CL, Chang LY, Wen YF, Ho CC. Learning curve and advantages of endobronchial ultrasound-guided transbronchial needle aspiration as a first-line diagnostic and staging procedure. Thorac Cancer 2018; 9 :75 e 82.\n6. Krouskop TA, Wheeler TM, Kallel F, Garra BS, Hall T. Elastic moduli of breast and prostate tissues under compression. Ultrason Imag 1998; 20 :260 e 74.\n7. Moon WK, Chang RF, Chen CJ, Chen DR, Chen WL. Solid breast masses: classification with computer-aided analysis of continuous US images obtained with probe compression. Radiology 2005; 236 :458 e 64.\n8. Lyshchik A, Higashi T, Asato R, Tanaka S, Ito J, Mai JJ, et al. Thyroid gland tumor diagnosis at US elastography. Radiology 2005; 237 :202 e 11.\n9. Caste ´ra L, Vergniol J, Foucher J, Le Bail B, Chanteloup E, Haaser M, et al. Prospective comparison of transient elastography, Fibrotest, APRI, and liver biopsy for the assessment of fibrosis in chronic hepatitis C. Gastroenterology 2005; 128 : 343 e 50.\n10. Bamber J, Cosgrove D, Dietrich CF, Fromageau J, Bojunga J, Calliada F, et al. EFSUMB guidelines and recommendations on the clinical use of ultrasound elastography. Part 1: basic principles and technology. Ultraschall Med 2013; 34 :169 e 84.\n11. Izumo T, Sasada S, Chavez C, Matsumoto Y, Tsuchida T. Endobronchial ultrasound elastography in the diagnosis of mediastinal and hilar lymph nodes. Jpn J Clin Oncol 2014; 44 : 956 e 62.\n12. Nakajima T, Inage T, Sata Y, Morimoto J, Tagawa T, Suzuki H, et al. Elastography for predicting and localizing nodal metastases during endobronchial ultrasound. Respiration 2015; 90 : 499 e 506.\n13. Mountain CF, Dresler CM. Regional lymph node classification for lung cancer staging. Chest 1997; 111 :1718 e 23.\n14. Fujiwara T, Yasufuku K, Nakajima T, Chiyo M, Yoshida S, Suzuki M, et al. The utility of sonographic features during endobronchial ultrasound-guided transbronchial needle aspiration for lymph node staging in patients with lung cancer: a standard endobronchial ultrasound image classification system. Chest 2010; 138 :641 e 7.\n15. Nakajima T, Anayama T, Shingyoji M, Kimura H, Yoshino I, Yasufuku K. Vascular image patterns of lymph nodes for the prediction of metastatic disease during Endobronchial ultrasound (EBUS)-TBNA for mediastinal staging of lung cancer. J Thorac Oncol 2012; 7 :1009 e 14.\n16. Wang L, Wu W, Hu Y, Teng J, Zhong R, Han B, et al. Sonographic features of endobronchial ultrasonography predict intrathoracic lymph node metastasis in lung cancer patients. Ann Thorac Surg 2015; 100 :1203 e 9.\n17. Huang H, Huang Z, Wang Q, Wang X, Dong Y, Zhang W, et al. Effectiveness of the benign and malignant diagnosis of mediastinal and hilar lymph nodes by endobronchial ultrasound elastography. J Cancer 2017; 8 :1843 e 8.\n18. He HY, Chen JL, Ma H, Zhu J, Wu DD, Lv XD. Value of endobronchial ultrasound elastography in diagnosis of central lung lesions. Med Sci Monit 2017; 23 :3269 e 75.\nCHS Z central hilar structure; CNS Z coagulation necrosis sign; Endobronchial ultrasound (EBUS)-TBNA Z endobronchial ultrasound-guided transbronchial needle aspiration; LN Z lymph node.\nCHS Z central hilar structure; CNS Z coagulation necrosis sign; LN Z lymph node; NPV Z negative predictive value; PPV Z positive predictive value.\n19. He HY, Huang M, Zhu J, Ma H, Lyu XD. Endobronchial ultrasound elastography for diagnosing mediastinal and hilar lymph nodes. Chin Med J (Engl) 2015; 128 :2720 e 5.\n20. Rozman A, Malovrh MM, Adamic K, Subic T, Kovac V, Flezar M. Endobronchial ultrasound elastography strain ratio for mediastinal lymph node diagnosis. Radiol Oncol 2015; 49 :334 e 40.\n21. Korrungruang P, Boonsarngsuk V. Diagnostic value of endobronchial ultrasound elastography for the differentiation of benign and malignant intrathoracic lymph nodes. Respirology 2017; 22 :972 e 7.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    }
+  ],
+  "tables": [
+    {
+      "id": "table",
+      "caption": "",
+      "headers": [
+        "Patient Characteristics",
+        "No"
+      ],
+      "rows": [
+        [
+          "Patients",
+          "94"
+        ],
+        [
+          "Age (years-old, range)",
+          "62.8 (20 e 97)"
+        ],
+        [
+          "Male (%)",
+          "65 (69.1)"
+        ],
+        [
+          "Indication: (%)",
+          ""
+        ],
+        [
+          "Unknown mediastinal lymphadenopathy for initial diagnosing",
+          "67 (71.3)"
+        ],
+        [
+          "Malignancy for staging",
+          "14 (14.9)"
+        ],
+        [
+          "Suspected disease progression for re-biopsy",
+          "13 (13.8)"
+        ],
+        [
+          "Underlying disease:",
+          ""
+        ],
+        [
+          "Malignancy (%)",
+          "62 (66.0)"
+        ],
+        [
+          "Lung cancer",
+          "56 (59.6)"
+        ],
+        [
+          "Adenocarcinoma",
+          "30 (31.9)"
+        ],
+        [
+          "Squamous cell carcinoma",
+          "14 (14.9)"
+        ],
+        [
+          "Small cell carcinoma",
+          "8 (8.5)"
+        ],
+        [
+          "Other NSCLC",
+          "4 (4.3)"
+        ],
+        [
+          "Non-lung primary malignancy",
+          "6 (6.4)"
+        ],
+        [
+          "Esophageal cancer",
+          "2 (2.1)"
+        ],
+        [
+          "Breast cancer",
+          "1 (1.1)"
+        ],
+        [
+          "Oropharyngeal cancer",
+          "1 (1.1)"
+        ],
+        [
+          "Tongue cancer",
+          "1 (1.1)"
+        ],
+        [
+          "Spindle cell carcinoma",
+          "1 (1.1)"
+        ],
+        [
+          "Benign process (%)",
+          "32 (34.0)"
+        ],
+        [
+          "Sarcoidosis",
+          "7 (7.4)"
+        ],
+        [
+          "Tuberculosis",
+          "1 (1.1)"
+        ],
+        [
+          "Pneumoconiosis",
+          "3 (3.2)"
+        ],
+        [
+          "Wegener granulomatosis",
+          "1 (1.1)"
+        ],
+        [
+          "Atypical lymphoid hyperplasia",
+          "1 (1.1)"
+        ],
+        [
+          "Peribronchial cyst",
+          "2 (2.1)"
+        ],
+        [
+          "Pneumonia",
+          "17 (18.1)"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "",
+      "headers": [
+        "LN characteristics",
+        "No"
+      ],
+      "rows": [
+        [
+          "Number",
+          "206"
+        ],
+        [
+          "Size (mm, range)",
+          "13.6 (2.0 e 56.3)"
+        ],
+        [
+          "Puncture times (range)",
+          "2.9 (1 e 7)"
+        ],
+        [
+          "Malignancy (%)",
+          "74 (35.9)"
+        ],
+        [
+          "Location (%)",
+          ""
+        ],
+        [
+          "2R",
+          "7 (3.4)"
+        ],
+        [
+          "4R",
+          "67 (32.5)"
+        ],
+        [
+          "4L",
+          "26 (12.6)"
+        ],
+        [
+          "7",
+          "55 (26.7)"
+        ],
+        [
+          "10R",
+          "2 (1.0)"
+        ],
+        [
+          "10L",
+          "5 (2.4)"
+        ],
+        [
+          "11R",
+          "30 (14.6)"
+        ],
+        [
+          "11L",
+          "14 (68.0)"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/112'}",
+      "headers": [
+        "Morphologic Category",
+        "Sensitivity (%)",
+        "Specificity (%)",
+        "PPV (%)",
+        "NPV (%)",
+        "Diagnostic yield (%)",
+        "Univariate p value",
+        "Multivariate p value"
+      ],
+      "rows": [
+        [
+          "Elastography",
+          "90.6",
+          "82.6",
+          "71.6",
+          "94.7",
+          "85.2",
+          "< 0.001",
+          "< 0.001*"
+        ],
+        [
+          "Short axis",
+          "88.7",
+          "54.1",
+          "48.5",
+          "90.8",
+          "63.6",
+          "< 0.001",
+          "0.156"
+        ],
+        [
+          "Shape",
+          "67.9",
+          "61.5",
+          "46.2",
+          "79.8",
+          "63.6",
+          "< 0.001",
+          "0.952"
+        ],
+        [
+          "Echogenicity",
+          "79.3",
+          "79.8",
+          "65.6",
+          "88.8",
+          "79.6",
+          "< 0.001",
+          "0.002*"
+        ],
+        [
+          "Margin",
+          "58.5",
+          "78.0",
+          "56.4",
+          "79.4",
+          "71.6",
+          "< 0.001*",
+          "0.028*"
+        ],
+        [
+          "CHS",
+          "88.7",
+          "42.2",
+          "42.7",
+          "88.5",
+          "57.4",
+          "< 0.001*",
+          "0.307"
+        ],
+        [
+          "CNS",
+          "13.2",
+          "98.2",
+          "77.8",
+          "70.0",
+          "70.4",
+          "0.003*",
+          "0.556"
+        ],
+        [
+          "Elastography þ sonographic features (echogenicity and margin)",
+          "Elastography þ sonographic features (echogenicity and margin)",
+          "Elastography þ sonographic features (echogenicity and margin)",
+          "Elastography þ sonographic features (echogenicity and margin)",
+          "Elastography þ sonographic features (echogenicity and margin)",
+          "Elastography þ sonographic features (echogenicity and margin)",
+          "Elastography þ sonographic features (echogenicity and margin)",
+          "Elastography þ sonographic features (echogenicity and margin)"
+        ],
+        [
+          "Elastography þ 1 sonographic feature",
+          "100",
+          "81.3",
+          "76",
+          "100",
+          "88.2",
+          "",
+          ""
+        ],
+        [
+          "Elastography þ 2 sonographic feature",
+          "92.6",
+          "71.4",
+          "92.6",
+          "71.4",
+          "88.2",
+          "",
+          ""
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/118'}",
+      "headers": [
+        "Possible Impact Factors",
+        "Univariate p value",
+        "Multivariate p value",
+        "Odds Ratio (95% CI)"
+      ],
+      "rows": [
+        [
+          "Benign process",
+          "",
+          "",
+          ""
+        ],
+        [
+          "LN location",
+          "0.711",
+          "0.74",
+          "1.100 (0.667 e 1.814)"
+        ],
+        [
+          "Central necrosis",
+          "0.193",
+          "0.187",
+          "2.150 (0.928 e 4.983)"
+        ],
+        [
+          "Calcification",
+          "0.141",
+          "0.457",
+          "1.880 (0.939 e 3.763)"
+        ],
+        [
+          "Emphysema",
+          "0.381",
+          "0.402",
+          "0.648 (0.230 e 1.826)"
+        ],
+        [
+          "Pneumoconiosis",
+          "0.403",
+          "0.788",
+          "1.439 (0.662 e 3.128)"
+        ],
+        [
+          "Fibrotic tissue",
+          "0.002*",
+          "0.03*",
+          "2.400 (1.512 e 3.811)"
+        ],
+        [
+          "Malignancy",
+          "",
+          "",
+          ""
+        ],
+        [
+          "LN location",
+          "0.979",
+          "0.797",
+          "0.992 (0.533 e 1.845)"
+        ],
+        [
+          "Central necrosis",
+          "0.011*",
+          "0.033*",
+          "2.269 (1.295 e 3.975)"
+        ],
+        [
+          "Calcification (N Z 0)",
+          "e",
+          "e",
+          "e"
+        ],
+        [
+          "Emphysema",
+          "0.164",
+          "0.251",
+          "1.611 (0.865 e 3.002)"
+        ],
+        [
+          "Pneumoconiosis (N Z 0)",
+          "e",
+          "e",
+          "e"
+        ],
+        [
+          "Fibrotic tissue (N Z 0)",
+          "e",
+          "e",
+          "e"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/134'}",
+      "headers": null,
+      "rows": [
+        [
+          "Morphologic Category",
+          "Whole study LNs (N Z 206, %)",
+          "LNs without type 2 elastographic lesions (N Z 162, %)",
+          "Univariate p Value"
+        ],
+        [
+          "Short axis",
+          "130 (63.1)",
+          "97 (59.9)",
+          "0.528"
+        ],
+        [
+          "Shape",
+          "107 (51.9)",
+          "78 (48.1)",
+          "0.471"
+        ],
+        [
+          "Echogenicity",
+          "89 (43.2)",
+          "64 (39.5)",
+          "0.476"
+        ],
+        [
+          "Margin",
+          "78 (37.9)",
+          "55 (34.0)",
+          "0.439"
+        ],
+        [
+          "CHS",
+          "142 (68.9)",
+          "110 (67.9)",
+          "0.833"
+        ],
+        [
+          "CNS",
+          "18 (8.7)",
+          "9 (5.6)",
+          "0.246"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/136'}",
+      "headers": [
+        "Morphologic Category",
+        "Sensitivity (%)",
+        "Specificity (%)",
+        "PPV (%)",
+        "NPV (%)",
+        "Diagnostic yield (%)"
+      ],
+      "rows": [
+        [
+          "Elastography (type 3 for malignancy)",
+          "64.7",
+          "85.6",
+          "71.6",
+          "81.3",
+          "78.2"
+        ],
+        [
+          "Elastography (types 2 þ 3 for malignancy)",
+          "90.7",
+          "68.2",
+          "53.9",
+          "94.7",
+          "74.7"
+        ],
+        [
+          "Short axis",
+          "90.5",
+          "52.3",
+          "51.5",
+          "90.8",
+          "66.0"
+        ],
+        [
+          "Shape",
+          "73.0",
+          "59.9",
+          "50.5",
+          "79.8",
+          "64.6"
+        ],
+        [
+          "Echogenicity",
+          "79.7",
+          "77.3",
+          "66.3",
+          "87.2",
+          "78.2"
+        ],
+        [
+          "Margin",
+          "59.5",
+          "74.2",
+          "56.4",
+          "76.6",
+          "68.9"
+        ],
+        [
+          "CHS",
+          "86.5",
+          "40.9",
+          "45.1",
+          "84.4",
+          "57.3"
+        ],
+        [
+          "CNS",
+          "18.9",
+          "97.0",
+          "77.8",
+          "68.1",
+          "68.9"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    }
+  ],
+  "figures": [
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/45'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/85'}",
+      "page": null
+    }
+  ],
+  "references": [
+    {
+      "title": "Real-time endobronchial ultrasound-guided transbronchial needle aspiration of mediastinal and hilar lymph nodes"
+    },
+    {
+      "title": "Chest",
+      "year": 2004
+    },
+    {
+      "title": "The role of EBUS-TBNA for the diagnosis of sarcoidosisecomparisons with other bronchoscopic diagnostic modalities",
+      "year": 2004
+    },
+    {
+      "title": "Respir Med",
+      "year": 2009
+    },
+    {
+      "title": "Mediastinoscopy vs endosonography for mediastinal nodal staging of lung cancer: a randomized trial",
+      "year": 2009
+    },
+    {
+      "title": "JAMA",
+      "year": 2010
+    },
+    {
+      "title": "Lung cancer diagnosis and staging with endobronchial ultrasound-guided transbronchial needle aspiration compared with conventional approaches: an open-label, pragmatic, randomised controlled trial",
+      "year": 2010
+    },
+    {
+      "title": "Lancet Respir Med",
+      "year": 2015
+    },
+    {
+      "title": "Learning curve and advantages of endobronchial ultrasound-guided transbronchial needle aspiration as a first-line diagnostic and staging procedure",
+      "year": 2015
+    },
+    {
+      "title": "Thorac Cancer",
+      "year": 2018
+    },
+    {
+      "title": "Elastic moduli of breast and prostate tissues under compression",
+      "year": 2018
+    },
+    {
+      "title": "Ultrason Imag",
+      "year": 1998
+    },
+    {
+      "title": "Solid breast masses: classification with computer-aided analysis of continuous US images obtained with probe compression",
+      "year": 1998
+    },
+    {
+      "title": "Radiology",
+      "year": 2005
+    },
+    {
+      "title": "Thyroid gland tumor diagnosis at US elastography",
+      "year": 2005
+    },
+    {
+      "title": "Prospective comparison of transient elastography, Fibrotest, APRI, and liver biopsy for the assessment of fibrosis in chronic hepatitis C",
+      "year": 2005
+    },
+    {
+      "title": "Gastroenterology",
+      "year": 2005
+    },
+    {
+      "title": "EFSUMB guidelines and recommendations on the clinical use of ultrasound elastography. Part 1: basic principles and technology",
+      "year": 2005
+    },
+    {
+      "title": "Ultraschall Med",
+      "year": 2013
+    },
+    {
+      "title": "Endobronchial ultrasound elastography in the diagnosis of mediastinal and hilar lymph nodes",
+      "year": 2013
+    },
+    {
+      "title": "Jpn J Clin Oncol",
+      "year": 2014
+    },
+    {
+      "title": "Elastography for predicting and localizing nodal metastases during endobronchial ultrasound",
+      "year": 2014
+    },
+    {
+      "title": "Respiration",
+      "year": 2015
+    },
+    {
+      "title": "Regional lymph node classification for lung cancer staging",
+      "year": 2015
+    },
+    {
+      "title": "The utility of sonographic features during endobronchial ultrasound-guided transbronchial needle aspiration for lymph node staging in patients with lung cancer: a standard endobronchial ultrasound image classification system",
+      "year": 1997
+    },
+    {
+      "title": "Vascular image patterns of lymph nodes for the prediction of metastatic disease during EBUS-TBNA for mediastinal staging of lung cancer",
+      "year": 2010
+    },
+    {
+      "title": "J Thorac Oncol",
+      "year": 2012
+    },
+    {
+      "title": "Sonographic features of endobronchial ultrasonography predict intrathoracic lymph node metastasis in lung cancer patients",
+      "year": 2012
+    },
+    {
+      "title": "Ann Thorac Surg",
+      "year": 2015
+    },
+    {
+      "title": "Effectiveness of the benign and malignant diagnosis of mediastinal and hilar lymph nodes by endobronchial ultrasound elastography",
+      "year": 2015
+    },
+    {
+      "title": "J Cancer",
+      "year": 2017
+    },
+    {
+      "title": "Value of endobronchial ultrasound elastography in diagnosis of central lung lesions",
+      "year": 2017
+    },
+    {
+      "title": "Med Sci Monit",
+      "year": 2017
+    },
+    {
+      "title": "Endobronchial ultrasound elastography for diagnosing mediastinal and hilar lymph nodes",
+      "year": 2017
+    },
+    {
+      "title": "Chin Med J (Engl)",
+      "year": 2015
+    },
+    {
+      "title": "Endobronchial ultrasound elastography strain ratio for mediastinal lymph node diagnosis",
+      "year": 2015
+    },
+    {
+      "title": "Radiol Oncol",
+      "year": 2015
+    },
+    {
+      "title": "Diagnostic value of endobronchial ultrasound elastography for the differentiation of benign and malignant intrathoracic lymph nodes",
+      "year": 2015
+    },
+    {
+      "title": "Respirology",
+      "year": 2017
+    }
+  ],
+  "quality": {
+    "completeness_score": 0,
+    "has_abstract": true,
+    "abstract_source": "metadata",
+    "has_doi": true,
+    "has_full_text": true,
+    "num_sections": 16,
+    "num_tables": 6,
+    "num_figures": 8,
+    "num_references": 39
+  }
+}

@@ -1,0 +1,798 @@
+{
+  "metadata": {
+    "document_id": "10_1016_j_brachy_2015_09_006",
+    "title": "American Brachytherapy Society consensus guidelines for thoracic brachytherapy for lung cancer",
+    "authors": [
+      "A. Stewart",
+      "B. Parashar",
+      "M. Patel",
+      "D. O'Farrell",
+      "M. Biagioli",
+      "P. Devlin",
+      "S. Mutyala"
+    ],
+    "year": 2016,
+    "journal": "Brachytherapy",
+    "doi": "10.1016/j.brachy.2015.09.006",
+    "volume": "15",
+    "issue": "1",
+    "pages": "1-11",
+    "citation": "Stewart, et al. (2016). American Brachytherapy Society consensus guidelines for thoracic brachytherapy for lung cancer. Brachytherapy, 15(1), 1-11. https://doi.org/10.1016/j.brachy.2015.09.006",
+    "abstract": "METHODS AND MATERIALS: Members of the American Brachytherapy Society with expertise in thoracic brachytherapy updated recommendations for thoracic brachytherapy based on literature review and clinical experience.\nRESULTS: The American Brachytherapy Society consensus guidelines recommend the use of endobronchial brachytherapy for disease palliation in patients with central obstructing lesions, particularly in patients who have previously received external beam radiotherapy. The use of interstitial implants after incomplete resection may improve outcomes and provide enhanced palliation. Early reports support the use of CT-guided intratumoral volume implants within clinical studies. The use of brachytherapy routinely after sublobar resection is not generally recommended, unless within the conﬁnes of a clinical trial or a registry.\nCONCLUSIONS: American Brachytherapy Society recommendations for thoracic brachytherapy are provided. Practitioners are encouraged to follow these guidelines and to develop further clinical trials to examine this treatment modality to increase the evidence base for its use. Ó 2016 American Brachytherapy Society. Published by Elsevier Inc. All rights reserved.",
+    "abstract_source": "metadata",
+    "url": "https://linkinghub.elsevier.com/retrieve/pii/S1538472115005577"
+  },
+  "source_file": "American Brachytherapy Society consensus guide.json",
+  "sections": [
+    {
+      "title": "American Brachytherapy Society consensus guidelines for thoracic brachytherapy for lung cancer",
+      "content": "A. Stewart 1,2, *, B. Parashar 3 , M. Patel 4 , D. O'Farrell 5 , M. Biagioli 6 , P. Devlin 5 , S. Mutyala 7\n1 St Luke's Cancer Centre, Royal Surrey County Hospital, Guildford, UK\n2 University of Surrey, Guildford, UK\n3 Department of Stich Radiation Oncology, Weill Cornell Medical College, New York, NY\n4 Department of Radiation Oncology, Baylor Scott and White Health, Temple, TX\n5 Dana Faber Cancer Centre, Brigham and Women's Hospital, Harvard Medical School, Boston, MA\n6 Florida Hospital Cancer Institute, Department of Radiation Oncology, H.Lee Moffitt Cancer Center, Tampa, FL\n7 Department of Radiation Medicine, St. Joseph's Hospital and Medical Center, University of Arizona Cancer Center at Dignity Health, Phoenix, AZ\nABSTRACT\nPURPOSE: To update brachytherapy recommendations for pretreatment evaluation, treatment, and dosimetric issues for thoracic brachytherapy for lung cancer.\nMETHODS AND MATERIALS: Members of the American Brachytherapy Society with expertise in thoracic brachytherapy updated recommendations for thoracic brachytherapy based on literature review and clinical experience.\nRESULTS: The American Brachytherapy Society consensus guidelines recommend the use of endobronchial brachytherapy for disease palliation in patients with central obstructing lesions, particularly in patients who have previously received external beam radiotherapy. The use of interstitial implants after incomplete resection may improve outcomes and provide enhanced palliation. Early reports support the use of CT-guided intratumoral volume implants within clinical studies. The use of brachytherapy routinely after sublobar resection is not generally recommended, unless within the confines of a clinical trial or a registry.\nCONCLUSIONS: American Brachytherapy Society recommendations for thoracic brachytherapy are provided. Practitioners are encouraged to follow these guidelines and to develop further clinical trials to examine this treatment modality to increase the evidence base for its use. /C211 2016 American Brachytherapy Society. Published by Elsevier Inc. All rights reserved.\nKeywords:\nEndobronchial brachytherapy; Interstitial seed brachytherapy; Iodine seeds; Cesium seeds; Lung cancer; Thoracic tumors",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Introduction",
+      "content": "Lung cancer is the most common cause of cancer and is a leading cause of cancer mortality worldwide. The estimated incidence in the United States in 2013 of lung\ncancer was 228,190 with 159,480 deaths from the disease (1). Lung cancer is often advanced at diagnosis and many patients present with a poor performance status. These factors may preclude the need for surgery or alter the extent of surgical resection to compensate for poor cardiopulmonary reserve. The risk of close or positive margins increases with limited lung resections. Furthermore, with advanced presentation, the treatment intention may be palliative, with the need to alleviate symptoms from central airway obstruction, such as cough, dyspnea, and hemoptysis.\nThe use of brachytherapy for thoracic tumors has the potential to improve local control by delivering a highly localized dose of radiation using a conformal technique with normal tissue sparing. Endobronchial brachytherapy can be used in the palliative setting to relieve symptoms in patients with endoluminal lesions, usually non e small cell\nDisclaimer: These guidelines represent the views of the authors regarding currently accepted treatment. The suggested doses result from published evidence and clinical experience. The clinician should use their judgment to select appropriate treatment approaches, including dose and fractionation for their patients. The guidelines will be updated as clinical experience increases.\n* Corresponding author. St Luke's Cancer Centre, Royal Surrey County Hospital, Egerton Road, Guildford, GU2 9NY, UK. Tel.: þ 44 (0) 1483-571122; fax: þ 44 (0) 7725-564850\nBrachytherapy 15 (2016) 1 e 11\nlung cancer, but use in other histologic subtypes and in benign conditions has been described (2 e 5). It has also been described as a boost to radical external beam radiotherapy (EBRT) for patients with central tumors (6, 7). Permanent iodine ( 125 I) seed implantation has been described in the treatment of malignant thoracic tumors when resection margins are macroscopically or microscopically involved with tumor (8 e 22) and for the palliation of inoperable disease (23). Use of Cesium ( 131 Cs) has also been described (24, 25). Previously irradiated patients with recurrence may benefit from brachytherapy, and it may be useful in selected cases as initial management for patients with a high-performance status and limited disease burden. Members of the American Brachytherapy Society (ABS) with expertise in thoracic brachytherapy examined the evidence base for these treatments and developed recommendations for pretreatment evaluation, treatment, and dosimetric issues. Previous ABS guidelines from 1993 covered aspects of endobronchial brachytherapy (26) with more detailed guidelines on thoracic brachytherapy issued in 2001 (27).",
+      "category": "introduction",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Endobronchial brachytherapy",
+      "content": "In 1922, Yankauer (28) described the use of radium placed endobronchially to treat lung cancer. Brachytherapy continues to be used to deliver radical or palliative endoluminal therapy to the bronchus. Local treatment can be important to improve the quality of life for lung cancer patients. Endobronchial brachytherapy can be used as sole treatment, particularly for palliation, or in addition to EBRT, especially when used as radical treatment or if the disease is more bulky. Endobronchial brachytherapy can be combined with other modalities, such as endobronchial resection, laser therapy, stenting, and photodynamic therapy. The 2011 American Society of Radiation Oncology guidelines (29) state that there is currently no evidence to support the routine use of endobronchial brachytherapy as\na first-line palliative treatment of endobronchial obstruction. However, brachytherapy was recommended if there is collapsed lung at the first presentation because of improved re-expansion rates using endobronchial brachytherapy over EBRT as observed in a randomized trial (30). Brachytherapy was also recommended in the American Society of Radiation Oncology guidelines for retreatment of patients who previously received EBRT, particularly if there is endoluminal obstruction or hemoptysis.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Patient selection",
+      "content": "The presence of endoluminal disease suitable for brachytherapy is determined at bronchoscopy. CT scanning is also recommended to determine whether there is a significant extrabronchial extent of the tumor, in which case brachytherapy may be chosen as a boost to EBRT or held in reserve for future relapse. The bronchoscope is used to traverse the tumor within the trachea or bronchus. It is recommended that the tumor is photographed to aid radiotherapy planning and to assess treatment response. A narrow bore brachytherapy tube is placed using the side port of the bronchoscope with at least 2 cm passing distal to the lesion. If the catheter is not marked externally by the manufacturer, it may help to make 1-cm interval markings at the distal end with indelible ink before insertion into the bronchoscope. The position of the tube in relation to the tumor should be documented in the notes to aid treatment planning. The tube is firmly secured at the nostril with tape and the position of the nostril marked on the tube. A marker wire is placed in the tube to identify the position accurately. For a carinal or nonbulky subcarinal lesion, 2 catheters clearly labeled and with distinct radio-opaque identifiers may be used, one in each bronchus, to give a cumulative dose to the central area. The use of mini-tracheostomy has been described for patients undergoing multiple fractions to decrease the requirement for multiple bronchoscopies (31).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Planning and postimplant management",
+      "content": "High dose rate (HDR) endobronchial brachytherapy is often delivered weekly but can safely be delivered as a single fraction or as a fractionated treatment with a single catheter insertion as long as there is a minimum interval of 6 h between fractions (see Table 1). Pulsed dose rate (PDR) treatment can be used (32), although the patient will have the catheter in place for longer. Therefore, a single catheter insertion would usually be preferred when using PDR. Low dose rate (LDR) brachytherapy is very rarely used for endobronchial cancer and an alternative approach with PDR or HDR is recommended to allow the opportunity to sculpt the dose using optimization. All reported HDR and PDR experience for endobronchial brachytherapy is currently using 192 Ir.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Summary of updated recommendations",
+      "content": "-CT simulation recommended for endobronchial brachytherapy.\n-CT planning with three-dimensional target definition recommended over point prescription for endobronchial brachytherapy.\n-High dose rate or pulsed dose rate brachytherapy with the ability to optimize dose are recommended over low dose rate brachytherapy for endobronchial treatment.\n-Radical endobronchial brachytherapy (alone or as a boost) is recommended generally within confines of clinical trials.\n-Interstitial seed treatment after sublobar lung resection is recommended generally within the confines of clinical trials.\n-Postoperative CT planning should be performed for interstitial implants with reporting of dose to organs at risk.\n-New dose/fractionation recommendations for thoracic brachytherapy.\n( Continued )\nAlthough fluoroscopy can be used (33), these ABS guidelines recommend that it is best practice where it is available to obtain a CT scan of the patient to identify the applicator position. This way proximity to organs at risk, particularly blood vessels, can be determined. Using this approach may result in decreased complications, particularly massive hemoptysis (34). Comparison of twovs. three-dimensional planning demonstrated that reference doses with 100% coverage of PTV were 31% higher with three-dimensional than with two-dimensional planning, in addition to minimizing doses to critical normal tissues (35). It is important to treat the patient in the same position as used for CT scanning so that applicator position can be as closely replicated as possible. If using multiple catheter insertions for multiple fractions, repeat CT scanning at each insertion is recommended. When administering multiple fractions using the same catheter insertion, consideration can be given to repeat imaging by X-ray or CT, to ensure that no catheter displacement or kinking has occurred between fractions, particularly if the patient has experienced prolonged coughing.\nIn the era of CT planning, the orientation of the catheter within the bronchus has been identified as an area of concern. The dose to the bronchial mucosa may be higher in some cases, particularly in the segmental bronchus because of smaller diameter, degree of curvature, and the dependent position of the catheter. In addition, high localized doses to surrounding blood vessels are demonstrated when the catheter position is not centered within the lumen. This may be overcome using placement methods that stabilize the catheter centrally (36, 37) or by individualized dose prescription, with planning studies suggesting if using a fixed prescription point that a prescription radius of 4 mm is safer (38). This is important because fatal hemoptysis rates have ranged from 7% to 22% in randomized trials.\nUse of a fixed prescription point can result in underdosage of the gross tumor volume with a planning study showing coverage with a 90% isodose ranging from 15% to 35%, which was improved to 85% e 100% when using CT target definition (39). Thus, these updated ABS guidelines recommend individualized CT-based treatment planning with careful selection of a prescription point based on the target volume and doses delivered to surrounding organs at risk. Use of simple straight-line calculations with a fixed prescription radius is not recommended unless the treatment volume lies solely within the trachea. In regions of pronounced curvature, the effect of an increase in prescribed dose in the concave curvature and a decrease in dose over the convex curvature should be noted and may be used to biologic advantage depending on tumor position (40). The effect of a metallic stent should be considered with studies of esophageal stents showing that mucosal doses are increased by 5% at 0.5 mm from the stent surface and up to 245% in the immediate vicinity of the stent (41).\nstatus.\nTo standardize dose reporting and comparison, the dose should be reported not only to the target volume but also at 1 cm from the center of the catheter with reporting of dose to surrounding organs at risk being recommended. The dose prescription should be to the target volume. As heterogeneity-corrected treatment planning modules become available, it will be possible to correct for metallic seed artifacts and the variance of dose absorption in tissues with differing electron densities (42).",
+      "category": "abstract",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Palliative dose schemes",
+      "content": "The 2001 ABS guidelines recommended the use of endobronchial brachytherapy for palliation, particularly for endobronchial lesions not amenable to laser therapy or stenting (27). Suitable patients are able to tolerate bronchoscopy, have significant intraluminal disease, and have predicted survival over 2 months, to allow time for treatment response. Patients who are unable to undergo EBRT or who have already received EBRT will also be particularly suitable. Performance status, overall disease burden, and predicted survival should be used to determine dose fractionation. The potential advantage of a larger number of fractions with regard to the possibility of reduced late effects requires balance with the cost and impact of multiple bronchoscopies to the patient. However, a retrospective review has shown no difference in efficacy or overall survival for patients treated with fractionated treatment vs. a single fraction (43), and a randomized trial of endobronchial brachytherapy fractionation has shown no difference in efficacy and a trend toward lower rates of complication with a reduced number of fractions (44). In a randomized trial, there was no significant difference in survival or symptom relief for patients receiving either EBRT plus a brachytherapy boost vs. a single fraction of endobronchial brachytherapy (45), although duration of relief of hemoptysis was shorter with brachytherapy alone. This could support the use of a single endobronchial brachytherapy fraction of 15 Gy for palliation in patients unable to tolerate EBRT, although small patient numbers mean this study is likely to be underpowered. Stout et al. (46) suggested that patients with a poor prognosis may benefit from endobronchial brachytherapy 15 Gy in one fraction but that in all other patients EBRT would be preferable as first-line treatment.\nWhen endobronchial brachytherapy (15 Gy in three fractions at weekly intervals prescribed at 0.5 cm) was added to Nd-YAG laser resection of tumor, patients experienced prolonged relief of symptoms with significantly better progression-free survival and less bronchoscopic interventions (47). Overall, this resulted in lower costs of treatment. This could be a useful approach in patients with obstructive symptoms and a poor prognosis or who are unsuitable for EBRT. A small randomized trial (19 patients) available only in abstract form described patients receiving 14.4 Gy in two fractions of endobronchial brachytherapy randomized to receive concomitant etoposide chemotherapy or no\nfurther intervention (48). This showed no survival benefit with the addition of chemotherapy and no difference in symptoms, but trial numbers were probably too small to draw reasonable conclusions and the chemotherapy used would not be considered optimal at the current time.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Radical dose schemes",
+      "content": "Endobronchial brachytherapy has been used as a boost after radical radiotherapy. This gives the benefit of delivery of a highly localized boost with rapid dose fall off and precise localization. Meta-analysis of randomized trials has not shown a significant benefit with the addition of endobronchial brachytherapy to EBRT (49); however, a trend toward improvement in symptoms and in radiographic findings has been seen. In retrospective analysis, radically treated patients with positive surgical margins or localized recurrence at the stump receiving brachytherapy, either alone or as a boost combined with EBRT, had improved control over expected rates (50). Endobronchial brachytherapy may be useful in highly selected cases with significant predominantly endobronchial or endotracheal tumors but should not be part of the routine treatment plan for radical lung radiotherapy patients.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Discussion",
+      "content": "A 2010 international practice survey on palliative lung radiotherapy presented the results of 279 online survey respondents who treat lung cancer as part of their practice (51). Endobronchial brachytherapy was a component of treatment in 15% and 60% in the initial and salvage setting for patients with metastatic disease and endobronchial obstruction. In patients with metastatic disease and symptomatic endobronchial disease, ~73% of respondents recommended external beam radiation treatment, 7% recommended brachytherapy, and 9% recommended both modalities. However, in the case of a patient with metastatic lung cancer and endobronchial disease after external beam radiation treatment, approximately 25% of respondents recommended further external beam radiation, whereas 55% recommended intracavitary brachytherapy and 5% of respondents recommended both modalities. Of note, approximately 58% of respondents did not have access to endobronchial brachytherapy at their centers.\nInitial randomized trials of brachytherapy vs. EBRT may have shown poor results for brachytherapy possibly because of the lack of modern pretreatment imaging, for example, Stout et al. (46) completed recruitment in 1993 to discern the presence of bulky extrabronchial disease, which was not encompassed in the brachytherapy field. A 2012 Cochrane meta-analysis (49) examined 14 randomized trials that used endobronchial brachytherapy, either alone or in combination with other therapies, such as EBRT, chemotherapy, or laser therapy. This showed that a variety of dose and fractionation schedules used were similar in overall\nsurvival with 14.8 Gy at 1 cm in two fractions showing superiority for improved local control and less hemoptysis over 15.2 Gy in four fractions (52) d note the subsequent full manuscript described a dose of 14.4 Gy in two fractions used within that trial (44). Also, previous radiation treatment should be taken into consideration when determining the dose and fractionation schedule with HDR endobronchial brachytherapy.\nAlthough Huber et al. (53) showed a survival advantage to adding endobronchial brachytherapy to EBRT, the Cochrane meta-analysis showed no advantage in disease-free or overall survival. When brachytherapy was used as sole therapy, 50% of cases proceeded to EBRT with a median time to treatment of 4 months, compared with under a third requiring brachytherapy after EBRT, with a median time to treatment of 10 months. Unplanned analysis subsequently showed a survival advantage to EBRT with a relative risk reduction of 61% (46). The Cochrane review concluded that endobronchial brachytherapy can be considered for palliation in patients previously treated with EBRT with symptoms secondary to central obstruction. The Cochrane review did not recommend use in radical treatment schedules. Recent ACR guidelines recommend that endobronchial brachytherapy can be used for palliation of patients with symptomatic endobronchial tumors (54). No outcome data have been published for the use of PDR endobronchial brachytherapy, and users are encouraged to publish their results. Further research in this area is required although the early closure of a Medical Research Council study because of lack of patient accrual (55) demonstrates some of the difficulties in recruiting to large randomized trials of endobronchial brachytherapy.\nThese ABS guidelines recommend the dose fractionation schemes in Table 2, although other schemes may be considered based on institutional experience and calculated\nbiologic equivalence (56). There are few studies examining the most appropriate dose for endobronchial brachytherapy, and therefore, the doses given in Table 2 are generally from clinical experience. Further studies examining the most appropriate dose should be encouraged. The use of appropriate dose reporting, such as the equivalent dose in 2 Gy per fraction (EQD2), should be encouraged when reporting results, particularly when EBRT and brachytherapy, are used in combination. This allows more accurate comparison between studies.",
+      "category": "discussion",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Interstitial thoracic seed brachytherapy",
+      "content": "Interstitial brachytherapy in the thoracic cavity has been described since the 1950s (9). Since then, seed manufacture and dosimetry have improved, but many of the same principles of seed placement remain. Table 3 describes the characteristics of radionuclides commonly used in interstitial thoracic brachytherapy. Seeds can be implanted into a tumor as a volume implant or placed directly onto an area at risk, often in a grid pattern, as a planar implant. Seeds can be placed in most anatomic locations in the thorax, such as the mediastinum, within the lung parenchyma (57), on the lung surface after sublobar resection, onto the thoracic wall or the paraspinal area (58). Use in a variety of histologic subtypes has been reported with palliation of symptoms and improvement of outcomes over those predicted (59). Preliminary results of local control and toxicity using 131 Cs in lung are promising (25, 60). No RTOG (Radiation Therapy Oncology Group) Grade 1 e 4 radiation toxicity was observed.\nFor patients with non e small cell lung cancer who were not fit for lobar resection because of poor cardiopulmonary reserve, the addition of brachytherapy to sublobar resection was shown in retrospective review to lower the expected local recurrence rates but with no effect on distant disease or overall survival (58). However, the ACOSOG (American College of Surgeons Oncology Group) Phase III randomized trial of sublobar resection with or without brachytherapy showed that there was no difference in local recurrence rates at 5 years (16.7% with brachytherapy vs 14% without, p 5 0.59) with the addition of brachytherapy. There was no significant difference in disease-free or overall survival. There was a trend toward favoring brachytherapy in patients with positive staple line cytology. It was proposed that the trial was underpowered to detect a small difference\nNote. Prescription depth has traditionally been at 1 cm although with three-dimensional CT planning, prescription to cover a CTV isodose is appropriate.\ngiven that better than expected rates of negative margins were achieved. Therefore, this would not be routinely recommended outside the confines of a clinical trial (61, 62).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Patient evaluation and selection",
+      "content": "Ideally, a patient suitable for intraoperative thoracic seed brachytherapy should be identified before tumor resection, although it may be possible to perform a two-stage procedure and place the brachytherapy implant soon after the time of initial resection. If the surgeon has concern that there will be incomplete tumor resection or close margins intraoperatively, the patient should be consented for brachytherapy in advance. It is important to review all available preoperative imaging and to obtain details of any previous radiotherapy fields, dose, and fractionation. The brachytherapy team should be available for the surgical procedure. It is helpful for the brachytherapist to see the anatomic area at risk intraoperatively and to discuss frozen section findings where appropriate with the histopathologist.\nPatient suitability for a volume implant is determined using CT imaging. The tumor location and size are defined, and the position of organs at risk, including vessels, is determined. The patient is consented for the procedure, including for the risk of pneumothorax and carefully monitored for pneumothorax after procedure.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Planning and postimplant management",
+      "content": "After incomplete resection or close margins, reported doses vary widely. This reflects the heterogeneity of this patient group in both histology and tumor location. The dose chosen must also take into account the type of operation performed and any disruption of natural spacers or vascular supply in the area. Certain operative procedures may be a contraindication for brachytherapy, such as extensive dissection of the subcarinal space that carries an increased risk of fistula (21).\n125 I has traditionally been used for permanent lung implants. The prescription doses have not been standardized by any randomized prospective trial, but a dose of 80 e 120 Gy at 0.5 e 1 cm from the wedge line has been used with success and minimal toxicity (8, 14, 16, 63). Use of Palladium ( 103 Pd) has been described (64, 65), but problems with availability have meant that its use as an alternative to 125 I has generally been superseded by 131 Cs. 131 Cs radioactive seed has been recently introduced into clinical practice (Isoray, Richmond, WA) for permanent seed implant for cancer. It is a 4.5 /C2 0.8-mm titanium encased seed with goldwire. These radionuclides emit therapeutic energies in the 20 e 30 keV range. 131 Cs is Food and Drug administration approved for permanent seed implant for all cancers, including lung, head and neck, and colorectal cancers.\nBecause 131 Cs is a new source to be used in clinical practice, no standard of prescriptions has been established.\nAs far as the radial dose distribution is concerned, this source is very similar to 125 I. Therefore, the technical placement of seeds, that is, the needle positions, and the number of seeds should be very similar to 125 I seed placement (66). The 131 Cs-prescribed dose determination is based on the linear-quadratic formulation where assumptions are made regarding the a / b ratios for late responding and lung tissue, tissue repair constant, average tumor doubling time, repopulation rates, etc. If the a / b for lung cancer is ! 5 as assumed, and given the relative effectiveness of 125 I in lung cancer cell killing in the literature, then a prescribed dose of 60 e 80 Gy (60 e 70 Gy used for lesions ! 1 cm) is assumed to be reasonable especially because of significantly higher dose rate (67). The comparatively short half-life of 131 Cs allows for a higher dose rate, which may allow for a total dose reduction compared with 125 I. 131 Cs will deposit 90% of its dose in 32 vs. 196 days for 125 I.\nIn a study comparing 131 Cs plus wedge resection (to high-risk wedge resections) vs. wedge resections alone (not high risk) vs. stereotactic radiation for early-stage lung cancer, local control and overall survival were similar in the three arms ( p value 5 NS) (68). This is significant because high-risk wedge resections are expected to have higher local recurrence compared with regular wedge resections.\nA table can be used to determine the seed strength and spacing required, either individual to an institution or a published alternative (10, 13, 69, 70), depending on the preference of local physicists and physicians. A nomogram was developed for 131 Cs implants using the Variseed software (Varian Medical Systems, Palo Alto, CA) with source data from American Association of Physicists in Medicine TG43 report (71). As the row or column spacing is changed, activity and number of seeds are changed to maintain the prescribed dose. Doses are calculated using the TG43 formalism. Any reduction in the prescribed dose is based on clinical judgment especially the location of the implant to critical structures, such as pulmonary vessels and aorta (see Table 4). The nomogram was developed by Parashar et al. (24) for a prescription dose at 0.5 cm from the wedge line.\nThe curvature of the implant should also be assessed as it is important to be aware that, over a curved surface, dose penetration is asymmetric compared with a linear implant (72). Isodoses on the convex side of a curvature tend to be drawn toward the implant reducing the range of the prescription isodose line. Conversely, there is a focusing and enhanced penetration of dose on the concave surface of the implant. These phenomena can be used with therapeutic advantage, giving locally increased doses around the tumor on a concave surface. Normal tissue at risk of toxicity must be identified using preoperative imaging and intraoperative findings. A spacer can be used to decrease the dose to surrounding normal tissue. This can be a natural substance, such as omentum or muscle flap, or a manufactured product, such as gelfoam or bone wax. It is important that such spacer materials have a biological absorption rate\ncompatible with the selected radionuclide half-life. The dose an implant delivers can be altered by changing the spacing of the strands or lines of seeds within the delivery platform or by varying the seed activity used, and a lower activity seed at 1-cm spacing delivers a lower total dose than a higher activity seed at the same spacing. Institutions with a large volume of implants may hold a standing order of seeds giving a range of available seed activities to allow the implanting physician greater ability to vary the dose that an implant delivers. If the seeds are ordered at a specific activity on a ''per case'' basis, then the seed spacing can be altered as described to change the dose delivered. Satisfactory dosimetric outcomes can be achieved using 125 I in the 0.4 e 0.5 cGy cm 2 /h per seed range.\nAll commonly used seeds are gamma emitters. 103 Pd and 131 Cs have shorter half-lives, so deposit dose more quickly than 125 I, which may be radiobiologically more efficacious in tumors with a high alpha/beta ratio, such as squamous cell carcinoma (67), and provide a quicker return to background levels of radiation providing increased safety to family members and mitigating against other social implications, such as air travel security. However, it must be remembered that more rapid dose delivery to the tumor bed also results in more rapid dose delivery to critical normal tissues and the risk of increased late side effects.\nFor 125 I seeds, the average activity on implantation within the thorax is 0.4 e 0.6 cGy cm 2 /h. As an example, a planar implant comprising 0.6 cGy cm 2 /h seeds will give a dose of $ 100 Gy (very low e dose rate [vLDR]) at 0.5 cm for a flat target. Most commercially produced iodine seeds are 0.5 cm in length and can be set into suture at regular intervals, typically 1-cm spacing between the center of each seed.\nFor open sublobar resection and placement of a custom made mesh, Santos et al. (17) showed that the brachytherapy\nprocedure added approximately 15 minutes to the anesthesia time. Using good practice, radiation exposure during the procedure to the implanting radiation oncologist and surgeon is very low with the seeds being deployed only as required (24, 73). Occupational radiation exposure levels are comparable with those felt to be safe in interventional radiology (74) and well within occupational radiation exposure guidelines (75). When the implant has been placed and the wound closed, the operating room is surveyed for the presence of residual radiation. This is to ensure that no seeds have fallen outside the patient or in the suction canister. The patient should be surveyed at the outer body surface over the implant, at 0.5 and 1 m, and the results documented. In the immediate postoperative period, no change in patient care is required, subject to the usual post-vLDR implant precautions of preventing exposure to children or pregnant women. Data regarding postoperative distant radiation exposure after 125 I thoracic seed implants have not been published. Data from patients after 125 I vLDR prostate implants show minimal exposure rates at the skin surface (76) and to family members and pets (77). However, prostate implants generally lie deeper within the body in a less anatomically exposed area than an implant on the anterior chest wall, and pelvic tissues may attenuate radiation more than lung tissue. Therefore, data from prostate patients may not be suitably applied to thoracic implants, and exposure rates should be considered individually.\nPreoperative CT imaging and treatment planning can be used for volume implant dose estimation. For planar implants, the area at risk of positive margin is generally determined intraoperatively. These guidelines recommend that postoperative CT-based dosimetry is performed for dose estimation to the tumor and with contouring of organs at risk and reporting of the dose they receive.\nFor institutions that do not offer interstitial seed implantation, HDR catheter placement within the thorax can be considered. When placed intraoperatively, a postoperative planning CT can be performed and the target defined using imaging and intraoperative information. HDR or PDR radiotherapy can then be delivered to the target volume and the catheters removed. In addition to 45 e 50 Gy EBRT, either preceding or subsequent to surgery, previously recommended ABS doses of 15 e 20 Gy in three to four fractions HDR or 30 Gy for PDR treatment (previously recommended for LDR) can be used (27). The catheters can also be placed percutaneously using image guidance (78), and a single palliative fraction of 20 Gy has been described. Some institutions use intraoperative HDR, and a boost dose of 10 e 15 Gy in a single fraction is recommended. The advantage to this form of treatment is that radiosensitive tissues can be shielded or displaced during treatment, thus lowering organ at risk doses. This method cannot be CT planned, but intraoperative placement allows accurate target volume definition. There is little published data regarding this technique, so publication of prospectively collected data is encouraged by these guidelines.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Discussion",
+      "content": "Studies demonstrate that permanent seed implantation can be useful during thoracic surgery in areas of incomplete tumor resection or close or microscopically positive margins. Interstitial seed implantation can also give sustained disease palliation. It is difficult to examine interstitial seed implants used for residual disease within the confines of a randomized trial because of the individualized nature of the treatment. However, further research is important, as is reporting of prospective case series with detailed examination of toxicity to guide future treatments. Many early studies were conducted in the era before CT-based dosimetry. Toxicity was documented, but the relationship of seeds to critical structures could not be correlated with late effects. This is important, so that rules can be generated to\nsuggest seed positioning and late complications can be avoided.\nThese ABS guidelines recommend the dose schemes in Table 5 for vLDR interstitial brachytherapy, although other schemes may be considered based on institutional experience and calculated biological equivalence (56, 71). The guidance for HDR or PDR interstitial catheter treatment remains unchanged from previous guidelines and is detailed earlier.",
+      "category": "discussion",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "References",
+      "content": "[1] Cancer Facts and Figures 2013. American Cancer Society. Available at: http://www.cancer.org/acs/groups/content/@epidemiologysurveilance/ documents/document/acspc-036845.pdf. Accessed December 27, 2013.\n[2] Tscheikuna J, Disayabutr S, Kakanaporn C, et al . High dose rate endobronchial brachytherapy (HDR-EB) in recurrent benign complex tracheobronchial stenosis: experience in two cases. J Med Assoc Thai 2013;96(Suppl. 2):S252 e S256.\n[3] Meyer A, Warszawski-Baumann A, Baumann R, et al . HDR brachytherapy: an option for preventing nonmalignant obstruction in patients after lung transplantation. Strahlenther Onkol 2012;188: 1085 e 1090.\n[4] Allen AM, Abdelrahman N, Silvern D, et al . Endobronchial brachytherapy provides excellent long-term control of recurrent granulation tissue after tracheal stenosis. Brachytherapy 2012;11:322 e 326.\n[5] Dagnault A, Ebacher A, Vigneault E, et al . Retrospective study of 81 patients treated with brachytherapy for endobronchial primary tumor or metastasis. Brachytherapy 2010;9:243 e 247.\n[6] Mantz CA, Dosoretz DE, Rubenstein JH, et al . Endobronchial brachytherapy and optimization of local disease control in medically inoperable non-small cell lung carcinoma: a matched-pair analysis. Brachytherapy 2004;3:183 e 190.\n[7] Rochet N, Hauswald H, Stoiber EM, et al . Primary radiotherapy with endobronchial high-dose-rate brachytherapy boost for inoperable lung cancer: long-term results. Tumori 2013;99:183 e 190.\n[8] Lee W, Daly BD, DiPetrillo TA, et al . Limited resection for nonsmall cell lung cancer: observed local control with implantation of I-125 brachytherapy seeds. Ann Thorac Surg 2003;75:237 e 242.\n[9] Hilaris BS, Martini N. Interstitial brachytherapy in cancer of the lung: a 20 year experience. Int J Radiat Oncol Biol Phys 1979;5: 1951 e 1956.\n[10] Hilaris BS, Dattatreyudu N, Beattie EJ Jr, et al . Value of perioperative brachytherapy in the management of non-oat cell carcinoma of the lung. Int J Radiat Oncol Biol Phys 1983;9:1161 e 1166.\n[11] Hilaris BS, Gomez J, Nori D, et al . Combined surgery, intraoperative brachytherapy and postoperative external radiation in stage III non-small cell lung cancer. Cancer 1985;55:1226 e 1231.\n[12] Aye RW, Mate TP, Anderson HN, et al . Extending the limits of lung cancer resection. Am J Surg 1993;165:572 e 576.\n[13] Chen A, Galloway M, Landreneau R, et al . Intraoperative 125I brachytherapy for high-risk stage I non-small cell lung carcinoma. Int J Radiat Oncol Biol Phys 1999;44:1057 e 1063.\n[14] D'Amato TA, Galloway M, Szydlowski G, et al . Intraoperative brachytherapy following thoracoscopic wedge resection of stage I lung cancer. Chest 1998;114:1112 e 1115.\n[15] Fernando HC, Santos RS, Benfield JR, et al . Lobar and sublobar resection with and without brachytherapy for small stage IA non-small cell lung cancer. J Thorac Cardiovasc Surg 2005;129: 261 e 267.\n[16] Fleischman EH, Kagan AR, Streeter OE, et al . Iodine 125 interstitial brachytherapy in the treatment of carcinoma of the lung. J Surg Oncol 1992;49:25 e 28.\nABS 5 American Brachytherapy Society.\nNote. 131 Cs boost dose is similar to 103 Pd and is a conservative estimate based on clinical outcomes (unpublished) using these doses with external beam radiotherapy.\n[17] Santos R, Colonias A, Parda D, et al . Comparison between sublobar resection and 125Iodine brachytherapy after sublobar resection in high-risk patients with stage I non small cell lung cancer. Surgery 2003;134:691 e 697.\n[18] Voynov G, Heron DE, Lin CJ, et al . Intraoperative 125I vicryl mesh brachytherapy after sublobar resection for high-risk stage I nonsmall cell lung cancer. Brachytherapy 2005;4:278 e 285.\n[19] Rogers CL, Theodore N, Dickman CA, et al . Surgery and permanent 125I seed paraspinal brachytherapy for malignant tumors with spinal cord compression. Int J Radiat Oncol Biol Phys 2002;54: 505 e 513.\n[20] Armstrong JG, Fass DF, Bains M, et al . Paraspinal tumors: techniques and results of brachytherapy. Int J Radiat Oncol Biol Phys 1991;20:787 e 790.\n[21] Stewart AJ, O'Farrell D, Mutyala S, et al . Case reports to describe toxicity resulting from permanent radioactive seed implantation for mediastinal carcinoid tumor. Brachytherapy 2007;6:58 e 61.\n[22] Birdas TJ, Koehler RPM, Colonias A, et al . Sublobar resection with brachytherapy versus lobectomy for stage IB nonsmall cell lung cancer. Ann Thorac Surg 2006;81:434 e 439.\n[23] Heelan RT, Hilaris BS, Anderson LL, et al . Lung tumors: percutaneous implantation of I-125 sources with CT treatment planning. Radiology 1987;164:735 e 740.\n[24] Parashar B, Wernicke AG, Pavese A, et al . Cesium-131 permanent seed brachytherapy: dosimetric evaluation and radiation exposure to surgeons, radiation oncologists, and staff. Brachytherapy 2011;10: 508 e 513.\n[25] Parashar B, Arora S, Christos P, et al . Comparison of wedge resection versus wedge resection plus Cesium-131 brachytherapy versus stereotactic body radiation therapy in management of early stage lung cancer patients that are not candidates for a standard lobectomy. Int J Radiat Oncol Biol Phys 2013;87(Suppl. 2): S203 e S204.\n[26] Nag S, Abitbol AA, Anderson LL, et al . Consensus guidelines for high dose rate remote brachytherapy in cervical, endometrial, and endobronchial tumors. Clinical Research Committee, American Endocurietherapy Society. Int J Radiat Oncol Biol Phys 1993;27: 1241 e 1244.\n[27] Nag S, Kelly JF, Horton JL, et al . Brachytherapy for carcinoma of the lung. Oncology 2001;15:371 e 381.\n[28] Yankauer S. Two cases of lung tumor treated bronchoscopically. NY Med J 1922;21:741.\n[29] Rodrigues G, Videtic GM, Sur R, et al . Palliative thoracic radiotherapy in lung cancer: an American Society for Radiation Oncology evidence-based clinical practice guideline. Pract Radiat Oncol 2011;1:60 e 71.\n[30] Langendijk H, de Jong J, Tjwa M, et al . External irradiation versus external irradiation plus endobronchial brachytherapy in inoperable non-small cell lung cancer: a prospective randomized study. Radiother Oncol 2001;58:257 e 268.\n[31] Kishi K, Yoshimasu T, Shirai S, et al . Usefulness of minitracheostomy and torque controlled insertion of applicator in fractionated endobronchial brachytherapy. Br J Radiol 2006;79: 522 e 525.\n[32] van Eijkeren M, Thienpont M, Boterberg T, et al . Implementation, uptime, and safety of a pulsed dose rate afterloading machine. Int J Radiat Oncol Biol Phys 1996;36:1233 e 1237.\n[33] Liu L, Bassano DA, Prasad SC, et al . On the use of C-arm fluoroscopy for treatment planning in high dose rate brachytherapy. Med Phys 2003;30:2297 e 2302.\n[34] Hara R, Itami J, Aruga T, et al . Risk factors for massive haemoptysis after endobronchial brachytherapy in patients with tracheobronchial maliganacies. Cancer 2001;92:2623 e 2627.\n[35] Sawicki M, Kazalski D, Lyczek J, et al . The evaluation of treatment plans in high-dose-rate endobronchial brachytherapy by utilizing 2D and 3D computed tomography imaging methods. J Contemp Brachytherapy 2014;6:289 e 292.\n[36] Kennedy MP, Jimenez CA, Chang J, et al . Optimisation of bronchial brachytherapy catheter placement with a modified airway stent. Eur Respir J 2008;31:902 e 903.\n[37] Marsiglia H, Baldeyrou P, Lartigau E, et al . High-dose-rate brachytherapy as sole modality for early-stage endobronchial carcinoma. Int J Radiat Oncol Biol Phys 2000;47:665 e 672.\n[38] Gay HA, Allison Relative risk (RR), Downie GH, et al . Toward endobronchial Ir192 high-dose-rate brachytherapy therapeutic optimization. Phys Med Biol 2007;52:2987 e 2999.\n[39] Lyczek J, Kazalski D, Kowalik L, et al . Comparison of the GTV coverage by PTVand isodose of 90% in 2D and 3D planning during endobronchial brachytherapy in the palliative treatment of patients with advanced lung cancer. Pilot study. J Contemp Brachytherapy 2012;4:113 e 115.\n[40] Oh M, Wang Z, Malhotra HK, et al . Impact of surface curvature on dose delivery in intraoperative high-dose-rate brachytherapy. Med Dosim 2009;34:63 e 74.\n[41] Li XA, Chibani O, Greenwald B, et al . Radiotherapy dose perturbation of metallic esophageal stents. Int J Radiat Oncol Biol Phys 2002;54:1276 e 1285.\n[42] Sutherland JGH, Miksys N, Furutani KM, et al . Metallic artefact mitigation and organ-constrained tissue assignment for MonteCarlo calculations of permanent implant lung brachytherapy. Med Phys 2014;41:011712.\n[43] Skowronek J, Kubaszewska M, Kanikowski M, et al . HDR endobronchial brachytherapy (HDRBT) in the management of advanced lung cancer d comparison of two different dose schedules. Radiother Oncol 2009;93:436 e 440.\n[44] Niemoeller OM, P € ollinger B, Niyazi M, et al . Mature results of a randomized trial comparing two fractionation schedules of high dose rate endoluminal brachytherapy for the treatment of endobronchial tumors. Radiat Oncol 2013;7:8.\n[45] Mallick I, Sharma SC, Behera D, et al . Optimization of dose and fractionation of endobronchial brachytherapy with or without external radiation in the palliative management of non-small cell lung cancer: a prospective randomized study. J Cancer Res Ther 2006;2:119 e 125.\n[46] Stout R, Barber P, Burt P, et al . Clinical and quality of life outcomes in the first United Kingdom randomized trial of endobronchial brachytherapy (intraluminal radiotherapy) vs. external beam radiotherapy in the palliative treatment of inoperable non-small cell lung cancer. Radiother Oncol 2000;56:323 e 327.\n[47] Chella A, Ambrogi MC, Ribechini A, et al . Combined Nd-YAG laser/HDR brachytherapy versus Nd-YAG laser only in malignant central airway involvement: a prospective randomized study. Lung Cancer 2000;27:169 e 175.\n[48] Ferstl A, Fischer R, Hautmann H, et al . Simultaneous chemotherapy and high dose rate brachytherapy (HDRBT) in the treatment of locally advanced non-small cell lung cancer. Eur Respir J 1997; 10(Suppl. 25):198.\n[49] Reveiz L, Rueda JR, Cardona AF. Palliative endobronchial brachytherapy for non-small cell lung cancer. Cochrane Database Syst Rev 2012;12:CD004284.\n[50] Skowronek J, Piorunek T, Kanikowski M, et al . Definitive highdose-rate endobronchial brachytherapy of bronchial stump for lung cancer after surgery. Brachytherapy 2013;12:560 e 566.\n[51] Rodrigues G, Macbeth F, Burmeister B, et al . International practice survey on palliative lung radiotherapy: Third International Consensus Workshop on Palliative Radiotherapy and Symptom Control. Clin Lung Cancer 2012;13:225 e 235.\n[52] Pollinger B, Huber RM, Fischer R, et al . Prospective randomised trial on the role of HDR brachytherapy in addition to external beam radiotherapy for central bronchial carcinoma. Int J Radiat Oncol Biol Phys 1996;36(Suppl. 1):208.\n[53] Huber RM, Fischer R, Hautmann H, et al . Does additional brachytherapy improve the effect of external irradiation? A prospective, randomized study in central lung tumors? Int J Radiat Oncol Biol Phys 1997;38:533 e 540.\n[54] Rosenzweig KE, Chang JY, Chetty IJ, et al . ACR appropriateness criteria nonsurgical treatment for non-small-cell lung cancer: poor performance status or palliative intent. J Am Coll Radiol 2013;10:654 e 664.\n[55] Moghissi K, Bond MG, Sambrook RJ, et al . Treatment of endotracheal or endobronchial obstruction by non-small cell lung cancer: lack of patients in an MRC randomized trial leaves key questions unanswered. Medical Research Council Lung Cancer Working Party. Clin Oncol 1999;11:179 e 183.\n[56] Dale RG, Jones B. The clinical radiobiology of brachytherapy. Br J Radiol 1998;71:465 e 483.\n[57] Shi S, Yang J, Sun D. CT-guided 125I brachytherapy on pulmonary metastases after resection of colorectal cancer: a report of six cases. Oncol Lett 2015;9:375 e 380.\n[58] Stewart AJ, Mutyala S, Holloway CL, et al . Intra-operative seed placement for thoracic malignancy-a review of technique, indications and published literature. Brachytherapy 2009;8:63 e 69.\n[59] Mutyala S, Stewart A, Khan AJ, et al . Permanent iodine-125 interstitial planar seed brachytherapy for close or positive margins for thoracic malignancies. Int J Radiat Oncol Biol Phys 2010;76: 1114 e 1120.\n[60] Wernicke AG, Parikh A, Yondorf M, et al . Lung-conserving treatment of a pulmonary oligometastasis with a wedge resection and (131)Cs brachytherapy. Brachytherapy 2013;12:567 e 572.\n[61] Fernando HC, Landreneau RJ, Mandrekar SJ, et al . Analysis of longitudinal quality-of-life data in high-risk operable patients with lung cancer: results from the ACOSOG Z4032 (Alliance) multicenter randomized trial. J Thorac Cardiovasc Surg 2015;149:718 e 726.\n[62] Fernando HC, Landreneau RJ, Mandrekar SJ, et al . Impact of brachytherapy on local recurrence rates after sublobar resection: results from ACOSOG Z4032 (Alliance), a phase III randomized trial for high-risk operable non-small-cell lung canceR. J Clin Oncol 2014;32:2456 e 2462.\n[63] Trombetta MG, Colonias A, Makishi D, et al . Tolerance of the proximal aorta using intraoperative iodine-125 intersitial brachytherapy in cancer of the lung. Brachytherapy 2008;7:50 e 54.\n[64] Mart /C19 ınez-Monge R, Pagola M, Vivas I, et al . CT-guided permanent brachytherapy for patients with medically inoperable early-stage nonsmall cell lung cancer (Non-small cell lung cancer (NSCLC)). Lung Cancer 2008;61:209 e 213.\n[65] Nori D, Li X, Pugkhem T. Intraoperative brachytherapy using Gelfoam radioactive plaque implants for resected stage III non-small cell lung cancer with positive margin: a pilot study. J Surg Oncol 1995;60:257 e 261.\n[66] Yang R, Wang J, Zhang H. Dosimetric study of 131Cs, I-125, and Pd-103 seeds for permanent prostate brachytherapy. Cancer Biother Radiopharm 2009;24:701 e 705.\n[67] Armpilia CI, Dale RG, Coles I, et al . The determination of radiobiologically-optimised half-lives for radionuclides used in permanent brachytherapy implants. Int J Radiat Oncol Biol Phys 2003; 55:378 e 385.\n[68] Parashar B, Port J, Arora S, et al . Analysis of stereotactic radiation vs. wedge resection vs. wedge resection plus Cesium-131 brachytherapy in early-stage lung cancer. Brachytherapy 2015; 14:648 e 654.\n[69] Thomadsen B, Ayyangar K, Anderson L, et al . Chapter 8: brachytherapy treatment planning. In: Nag S, editor. Principles and practice of brachytherapy . Hoboken, NJ: Wiley; 1997. p. 150 e 151.\n[70] Johnson M, Colonias A, Parda D, et al . Dosimetric and technical aspects of intraoperative I-125 brachytherapy for stage I non-small cell lung cancer. Phys Med Biol 2007;52:1237 e 1245.\n[71] Nath R, Anderson LL, Luxton G, et al . Dosimetry of interstitial brachytherapy sources: recommendations of the AAPM Radiation Therapy Committee Task Group No 43. Med Phys 1995; 22:209 e 234.\n[72] Cormack RA, Holloway CL, O'Farrell D, et al . Permanent planar iodine-125 implants: the dosimetric effect of geometric parameters for idealized source configurations. Int J Radiat Oncol Biol Phys 2007;69:1310 e 1315.\n[73] Smith RP, Schuchert M, Komanduri K, et al . Dosimetric evaluation of radiation exposure during I-125 vicryl mesh implants: implications for ACOSOG z4032. Ann Surg Oncol 2007;14: 3610 e 3613.\n[74] Manchikanti L, Cash KA, Moss TL, et al . Risk of whole body radiation exposure and protective measures in fluoroscopically guided interventional techniques: a prospective evaluation. BMC Anesthesiol 2003;3:2.\n[75] National Council on Radiation Protection and Measurements, Limitation of exposure to ionising radiation, N.R.N. 116, Editor. Bethesda, MD: NCRP; 1993.\n[76] Smathers S, Wallner K, Korssjoen T, et al . Radiation safety parameters following prostate brachytherapy. Int J Radiat Oncol Biol Phys 1999;45:397 e 399.\n[77] Michalski J, Mutic S, Eichling J, et al . Radiation exposure to family and household members after prostate brachytherapy. Int J Radiat Oncol Biol Phys 2003;56:764 e 768.\n[78] Sharma DN, Rath GK, Thulkar S, et al . Computerized tomographyguided percutaneous high-dose-rate interstitial brachytherapy for malignant lung lesions. J Cancer Res Ther 2011;7:174 e 179.\n[79] de Aquino Gorayeb MM, Gregorio MG, de Oliveira EQ, et al . Highdose-rate brachytherapy in symptom palliation due to malignant endobronchial obstruction: a quantitative asessment. Brachytherapy 2013;12:471 e 478.\n[80] Sur R, Donde B, Mohuiddin M, et al . Randomized prospective study on the role of high dose rate intraluminal brachytherapy (HDRILBT) in palliation of symptoms in advanced non small cell lung cancer (Non-small cell lung cancer (NSCLC)) treated with radiation alone. Int J Radiat Oncol Biol Phys 2004;60:S205.\n[81] Kawamura H, Ebara T, Katoh H, et al . Long-term results of curative intraluminal high dose rate brachytherapy for endobronchial carcinoma. Radiat Oncol 2012;7:112.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    }
+  ],
+  "tables": [
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/48'}",
+      "headers": [
+        "Type of study, author, year",
+        "Number of patients",
+        "Dose/fractionation",
+        "Treatment planning comments",
+        "Comments"
+      ],
+      "rows": [
+        [
+          "Endobronchial brachytherapy alone",
+          "Endobronchial brachytherapy alone",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Niemoeller et al. (44), 2013 RCT",
+          "142",
+          "14.4 Gy in two fractions vs. 15.2 Gy in four fractions",
+          "Prescribed at 1 cm",
+          "Local tumor response higher in 2 fraction vs 4 fraction group-12 vs 6 wk ( p 5 0.015) OS similar, fatal hemoptysis trend toward lower rates with 2 fractions, patients with squamous cell carcinoma had higher risk of bleeding. Higher PS at time of brachy correlated with survival"
+        ],
+        [
+          "De Aquino Gorayeb et al. (79), 2013 Prospective",
+          "78",
+          "22.5 Gy in three fractions",
+          "Lower doses used if vessels close",
+          "Improvement of bronchial obstruction in 73.4%"
+        ],
+        [
+          "Dagnault et al. (5), 2010 Prospective",
+          "81",
+          "20 Gy in four fractions",
+          "Individually planned on X-ray according to depth of tumor",
+          "85% Improved dyspnea by end of brachy; 95% stable or improved cough"
+        ],
+        [
+          "Skrowonek et al. (43), 2009 Retrospective",
+          "648",
+          "22.5 Gy in three fraction vs. 10 Gy in one fraction",
+          "1 e 2 catheters. Prescribed at 1 cm",
+          "Similar efficacy and no difference in OS"
+        ],
+        [
+          "Nag et al. , 2001",
+          "",
+          "LDR-30 Gy",
+          "Prescribed at 1 cm, usually O 1 Gy/h",
+          ""
+        ],
+        [
+          "ABS recommendations (27)",
+          "",
+          "HDR-22.5 Gy in three fractions, 20 Gy in two fractions, 24 Gy in four fractions",
+          "Prescribed at 1 cm (distal treatments may decrease prescribing point to 5 mm)",
+          "Recommendations based on Level 1 and 2 evidence"
+        ],
+        [
+          "EBRT and endobronchial brachytherapy",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Mallick et al. (45), 2006 RCT",
+          "45",
+          "HDR 15 Gy in one fraction or EBRT 30 Gy in 10 fractions þ HDR 16 Gy in two fractions or 10 Gy in one fraction",
+          "Prescribed at 1 cm using orthogonal imaging",
+          "No difference in OS or symptoms. Improvement in dyspnea 91%, cough 85%, hemoptysis 94%, and obstruction 83% Very small number, possibly underpowered to show a difference"
+        ],
+        [
+          "Sur et al. (80), 2004 RCT",
+          "65",
+          "EBRT either 30 Gy in 10 fractions/36 Gy in 18 fractions/40 Gy in 20 fractions then randomized to EBRT 20 Gy in 10 fractions or 12 Gy in two fractions",
+          "Prescribed at 1 cm",
+          "Updated data in published in abstract form only EBRT boost provided significantly longer symptom free survival than brachytherapy boost, but no difference in hemoptysis, chest pain, or dyspnea-free survival. No difference"
+        ],
+        [
+          "Langendijk et al. (30), 2001 RCT",
+          "95",
+          "EBRT 60 Gy in 30 fractions or 30 Gy in 10 fractions þ / /C0 brachytherapy 15 Gy in two fractions",
+          "Prescribed at 1 cm, no optimization",
+          "in OS Patients stratified for palliative (21%) or radical (79%) EBRT schedules. No difference in OS or symptoms but higher rates of re-expansion of collapsed lungs when brachytherapy added"
+        ],
+        [
+          "Rochet et al. (7) 2013 Retrospective",
+          "35",
+          "Median 15 Gy in three fractions after median EBRT 50 Gy",
+          "Prescribed at 1 cm",
+          "2-y OS 61%, 5-y OS 28% Grade 3 hemoptysis 6% 18.8-mo OS All patients after resection 13 stump"
+        ],
+        [
+          "Skrownek et al. (43), 2013 Retrospective",
+          "34 (25 Brachy only, 9 boost)",
+          "30 Gy in four fractions or 12 Gy in two fractions with EBRT 50 Gy in 25 fractions",
+          "",
+          "recurrence, 21 positive margins"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/126'}",
+      "headers": [
+        "Brachytherapy alone",
+        "Brachytherapy alone"
+      ],
+      "rows": [
+        [
+          "PDR",
+          "30 Gy in one insertion (using pulses that offer biological equivalence to LDR)"
+        ],
+        [
+          "HDR",
+          "10 Gy in one fraction"
+        ],
+        [
+          "",
+          "15 Gy in one fraction"
+        ],
+        [
+          "",
+          "14.2 e 20 Gy in two fractions"
+        ],
+        [
+          "",
+          "22.5 Gy in three fractions"
+        ],
+        [
+          "",
+          "24 Gy in four fractions"
+        ],
+        [
+          "",
+          "30 Gy in six fractions (high dose palliation)"
+        ],
+        [
+          "Brachytherapy as a boost following EBRT (although note Cochrane guidance to not use routinely)",
+          "Brachytherapy as a boost following EBRT (although note Cochrane guidance to not use routinely)"
+        ],
+        [
+          "PDR",
+          "15 e 20 Gy in one insertion (using pulses that offer biologic equivalence to LDR)"
+        ],
+        [
+          "HDR",
+          "10-15 Gy in two to three fractions (following up to 60 Gy in 30 fractions)"
+        ]
+      ],
+      "footnotes": [
+        {
+          "cref": "#/texts/127"
+        }
+      ],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/129'}",
+      "headers": [
+        "Radionuclide",
+        "Half-life (d)",
+        "Therapeutic energy (keV)",
+        "Half-value layer (mm of lead)"
+      ],
+      "rows": [
+        [
+          "Iodine, 125 I",
+          "59.4",
+          "28",
+          "0.025"
+        ],
+        [
+          "Palladium, 103 Pd",
+          "17.0",
+          "21",
+          "0.004"
+        ],
+        [
+          "Cesium, 131 Cs",
+          "9.7",
+          "30",
+          "Minimal"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/151'}",
+      "headers": [
+        "Prescription dose (Gy)",
+        "Covered length (cm)",
+        "Covered width (cm)",
+        "Air kerma strength for /C6 0.5 cm thickness at implant center (U)",
+        "V 100 cm 3"
+      ],
+      "rows": [
+        [
+          "",
+          "9.5",
+          "1.9",
+          "3.25",
+          "14.66"
+        ],
+        [
+          "100",
+          "9.5 (10 seeds)",
+          "3.8 (4 strands)",
+          "2.70",
+          "32.02"
+        ],
+        [
+          "",
+          "9.5 (10 seeds)",
+          "5.8 (6 strands)",
+          "2.40",
+          "46.34"
+        ],
+        [
+          "",
+          "9.5 (10 seeds)",
+          "1.9 (2 strands)",
+          "2.60",
+          "14.66"
+        ],
+        [
+          "80",
+          "9.5 (10 seeds)",
+          "3.8 (4 strands)",
+          "2.15",
+          "31.94"
+        ],
+        [
+          "",
+          "9.5 (10 seeds)",
+          "5.8 (6 strands)",
+          "1.95",
+          "47.58"
+        ],
+        [
+          "",
+          "9.5 (10 seeds)",
+          "1.9 (2 strands)",
+          "1.95",
+          "14.66"
+        ],
+        [
+          "60",
+          "9.5 (10 seeds)",
+          "3.8 (4 strands)",
+          "1.60",
+          "31.78"
+        ],
+        [
+          "",
+          "9.5 (10 seeds)",
+          "5.8 (6 strands)",
+          "1.45",
+          "46.94"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/164'}",
+      "headers": [
+        "As sole therapy 125 I",
+        "100 e 125 Gy"
+      ],
+      "rows": [
+        [
+          "103 Pd",
+          "80 e 125 Gy"
+        ],
+        [
+          "131 Cs",
+          "80 e 100 Gy"
+        ],
+        [
+          "As a boost/re-irradiation",
+          ""
+        ],
+        [
+          "125 I",
+          "50 e 80 Gy"
+        ],
+        [
+          "103 Pd",
+          "50 e 80 Gy"
+        ],
+        [
+          "131 Cs",
+          "50 e 80 Gy"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    }
+  ],
+  "figures": [
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    }
+  ],
+  "references": [
+    {
+      "title": "Cancer Facts and Figures"
+    },
+    {
+      "title": "High dose rate endobronchial brachytherapy (HDR-EB) in recurrent benign complex tracheobronchial stenosis: experience in two cases"
+    },
+    {
+      "title": "J Med Assoc Thai",
+      "year": 2013
+    },
+    {
+      "title": "HDR brachytherapy: an option for preventing nonmalignant obstruction in patients after lung transplantation",
+      "year": 2013
+    },
+    {
+      "title": "Strahlenther Onkol",
+      "year": 2012
+    },
+    {
+      "title": "Endobronchial brachytherapy provides excellent long-term control of recurrent granulation tissue after tracheal stenosis",
+      "year": 2012
+    },
+    {
+      "title": "Brachytherapy",
+      "year": 2012
+    },
+    {
+      "title": "Retrospective study of 81 patients treated with brachytherapy for endobronchial primary tumor or metastasis",
+      "year": 2012
+    },
+    {
+      "title": "Endobronchial brachytherapy and optimization of local disease control in medically inoperable non-small cell lung carcinoma: a matched-pair analysis",
+      "year": 2010
+    },
+    {
+      "title": "Primary radiotherapy with endobronchial high-dose-rate brachytherapy boost for inoperable lung cancer: long-term results",
+      "year": 2004
+    },
+    {
+      "title": "Tumori",
+      "year": 2013
+    },
+    {
+      "title": "Limited resection for nonsmall cell lung cancer: observed local control with implantation of I-125 brachytherapy seeds",
+      "year": 2013
+    },
+    {
+      "title": "Ann Thorac Surg",
+      "year": 2003
+    },
+    {
+      "title": "Interstitial brachytherapy in cancer of the lung: a 20 year experience",
+      "year": 2003
+    },
+    {
+      "title": "Int J Radiat Oncol Biol Phys",
+      "year": 1979
+    },
+    {
+      "title": "Value of perioperative brachytherapy in the management of non-oat cell carcinoma of the lung",
+      "year": 1979
+    },
+    {
+      "title": "Combined surgery, intraoperative brachytherapy and postoperative external radiation in stage III non-small cell lung cancer",
+      "year": 1983
+    },
+    {
+      "title": "Cancer"
+    },
+    {
+      "title": "Extending the limits of lung cancer resection",
+      "year": 1985
+    },
+    {
+      "title": "Am J Surg",
+      "year": 1993
+    },
+    {
+      "title": "Intraoperative 125I brachytherapy for high-risk stage I non-small cell lung carcinoma",
+      "year": 1993
+    },
+    {
+      "title": "Intraoperative brachytherapy following thoracoscopic wedge resection of stage I lung cancer",
+      "year": 1999
+    },
+    {
+      "title": "Chest",
+      "year": 1998
+    },
+    {
+      "title": "Lobar and sublobar resection with and without brachytherapy for small stage IA non-small cell lung cancer",
+      "year": 1998
+    },
+    {
+      "title": "J Thorac Cardiovasc Surg",
+      "year": 2005
+    },
+    {
+      "title": "Iodine 125 interstitial brachytherapy in the treatment of carcinoma of the lung",
+      "year": 2005
+    },
+    {
+      "title": "J Surg Oncol",
+      "year": 1992
+    },
+    {
+      "title": "Comparison between sublobar resection and 125Iodine brachytherapy after sublobar resection in high-risk patients with stage I non small cell lung cancer",
+      "year": 1992
+    },
+    {
+      "title": "Surgery",
+      "year": 2003
+    },
+    {
+      "title": "Intraoperative 125I vicryl mesh brachytherapy after sublobar resection for high-risk stage I nonsmall cell lung cancer",
+      "year": 2003
+    },
+    {
+      "title": "Surgery and permanent 125I seed paraspinal brachytherapy for malignant tumors with spinal cord compression",
+      "year": 2005
+    },
+    {
+      "title": "Paraspinal tumors: techniques and results of brachytherapy",
+      "year": 2002
+    },
+    {
+      "title": "Case reports to describe toxicity resulting from permanent radioactive seed implantation for mediastinal carcinoid tumor",
+      "year": 1991
+    },
+    {
+      "title": "Sublobar resection with brachytherapy versus lobectomy for stage IB nonsmall cell lung cancer",
+      "year": 2007
+    },
+    {
+      "title": "Lung tumors: percutaneous implantation of I-125 sources with CT treatment planning",
+      "year": 2006
+    },
+    {
+      "title": "Radiology",
+      "year": 1987
+    },
+    {
+      "title": "Cesium-131 permanent seed brachytherapy: dosimetric evaluation and radiation exposure to surgeons, radiation oncologists, and staff",
+      "year": 1987
+    },
+    {
+      "title": "Comparison of wedge resection versus wedge resection plus Cesium-131 brachytherapy versus stereotactic body radiation therapy in management of early stage lung cancer patients that are not candidates for a standard lobectomy",
+      "year": 2011
+    },
+    {
+      "title": "Consensus guidelines for high dose rate remote brachytherapy in cervical, endometrial, and endobronchial tumors. Clinical Research Committee, American Endocurietherapy Society",
+      "year": 2013
+    },
+    {
+      "title": "Brachytherapy for carcinoma of the lung",
+      "year": 1993
+    },
+    {
+      "title": "Oncology",
+      "year": 2001
+    },
+    {
+      "title": "Two cases of lung tumor treated bronchoscopically",
+      "year": 2001
+    },
+    {
+      "title": "NY Med J",
+      "year": 2001
+    },
+    {
+      "title": "Palliative thoracic radiotherapy in lung cancer: an American Society for Radiation Oncology evidence-based clinical practice guideline",
+      "year": 1922
+    },
+    {
+      "title": "Pract Radiat Oncol",
+      "year": 2011
+    },
+    {
+      "title": "External irradiation versus external irradiation plus endobronchial brachytherapy in inoperable non-small cell lung cancer: a prospective randomized study",
+      "year": 2011
+    },
+    {
+      "title": "Radiother Oncol",
+      "year": 2001
+    },
+    {
+      "title": "Usefulness of minitracheostomy and torque controlled insertion of applicator in fractionated endobronchial brachytherapy",
+      "year": 2001
+    },
+    {
+      "title": "Br J Radiol",
+      "year": 2006
+    },
+    {
+      "title": "Implementation, uptime, and safety of a pulsed dose rate afterloading machine",
+      "year": 2006
+    },
+    {
+      "title": "On the use of C-arm fluoroscopy for treatment planning in high dose rate brachytherapy",
+      "year": 1996
+    },
+    {
+      "title": "Med Phys",
+      "year": 2003
+    },
+    {
+      "title": "Risk factors for massive haemoptysis after endobronchial brachytherapy in patients with tracheobronchial maliganacies",
+      "year": 2003
+    },
+    {
+      "title": "The evaluation of treatment plans in high-dose-rate endobronchial brachytherapy by utilizing 2D and 3D computed tomography imaging methods",
+      "year": 2001
+    },
+    {
+      "title": "J Contemp Brachytherapy",
+      "year": 2014
+    },
+    {
+      "title": "Optimisation of bronchial brachytherapy catheter placement with a modified airway stent",
+      "year": 2014
+    },
+    {
+      "title": "Eur Respir J",
+      "year": 2008
+    },
+    {
+      "title": "High-dose-rate brachytherapy as sole modality for early-stage endobronchial carcinoma",
+      "year": 2008
+    },
+    {
+      "title": "Toward endobronchial Ir-192 high-dose-rate brachytherapy therapeutic optimization",
+      "year": 2000
+    },
+    {
+      "title": "Phys Med Biol",
+      "year": 2007
+    },
+    {
+      "title": "Comparison of the GTV coverage by PTV and isodose of 90% in 2D and 3D planning during endobronchial brachytherapy in the palliative treatment of patients with advanced lung cancer. Pilot study",
+      "year": 2007
+    },
+    {
+      "title": "Impact of surface curvature on dose delivery in intraoperative high-dose-rate brachytherapy",
+      "year": 2012
+    },
+    {
+      "title": "Med Dosim",
+      "year": 2009
+    },
+    {
+      "title": "Radiotherapy dose perturbation of metallic esophageal stents",
+      "year": 2009
+    },
+    {
+      "title": "Metallic artefact mitigation and organ-constrained tissue assignment for Monte-Carlo calculations of permanent implant lung brachytherapy",
+      "year": 2002
+    },
+    {
+      "title": "HDR endobronchial brachytherapy (HDRBT) in the management of advanced lung cancerdcomparison of two different dose schedules",
+      "year": 2014
+    },
+    {
+      "title": "Mature results of a randomized trial comparing two fractionation schedules of high dose rate endoluminal brachytherapy for the treatment of endobronchial tumors",
+      "year": 2009
+    },
+    {
+      "title": "Radiat Oncol",
+      "year": 1979
+    },
+    {
+      "title": "Optimization of dose and fractionation of endobronchial brachytherapy with or without external radiation in the palliative management of non-small cell lung cancer: a prospective randomized study",
+      "year": 2013
+    },
+    {
+      "title": "J Cancer Res Ther",
+      "year": 2006
+    },
+    {
+      "title": "Clinical and quality of life outcomes in the first United Kingdom randomized trial of endobronchial brachytherapy (intraluminal radiotherapy) vs. external beam radiotherapy in the palliative treatment of inoperable non-small cell lung cancer",
+      "year": 2006
+    },
+    {
+      "title": "Combined Nd-YAG laser/HDR brachytherapy versus Nd-YAG laser only in malignant central airway involvement: a prospective randomized study",
+      "year": 2000
+    },
+    {
+      "title": "Lung Cancer",
+      "year": 2000
+    },
+    {
+      "title": "Simultaneous chemotherapy and high dose rate brachytherapy (HDRBT) in the treatment of locally advanced non-small cell lung cancer",
+      "year": 2000
+    },
+    {
+      "title": "Palliative endobronchial brachytherapy for non-small cell lung cancer",
+      "year": 1997
+    },
+    {
+      "title": "Cochrane Database Syst Rev",
+      "year": 2012
+    },
+    {
+      "title": "Definitive highdose-rate endobronchial brachytherapy of bronchial stump for lung cancer after surgery",
+      "year": 2012
+    },
+    {
+      "title": "International practice survey on palliative lung radiotherapy: Third International Consensus Workshop on Palliative Radiotherapy and Symptom Control",
+      "year": 2013
+    }
+  ],
+  "quality": {
+    "completeness_score": 0,
+    "has_abstract": true,
+    "abstract_source": "metadata",
+    "has_doi": true,
+    "has_full_text": true,
+    "num_sections": 14,
+    "num_tables": 5,
+    "num_figures": 2,
+    "num_references": 78
+  }
+}

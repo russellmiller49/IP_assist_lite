@@ -1,0 +1,721 @@
+{
+  "metadata": {
+    "document_id": "10_1111_1759_7714_14351",
+    "title": "Microwave ablation via a flexible catheter for the treatment of nonsurgical peripheral lung cancer: A pilot study",
+    "authors": [
+      "Fangfang Xie",
+      "Junxiang Chen",
+      "Yifeng Jiang",
+      "Jiayuan Sun",
+      "D. Kyle Hogarth",
+      "Felix J. F. Herth"
+    ],
+    "year": 2022,
+    "journal": "Thoracic Cancer",
+    "doi": "10.1111/1759-7714.14351",
+    "volume": "13",
+    "issue": "7",
+    "pages": "1014-1020",
+    "citation": "Xie, et al. (2022). Microwave ablation via a flexible catheter for the treatment of nonsurgical peripheral lung cancer: A pilot study. Thoracic Cancer, 13(7), 1014-1020. https://doi.org/10.1111/1759-7714.14351",
+    "abstract": "Background: Endobronchial microwave ablation via flexible catheter offers the potential for local therapy for inoperable peripheral lung cancer. The study aimed to evaluate the feasibility and safety of navigation bronchoscopy-guided water-cooled microwave ablation catheter for nonsurgical peripheral lung cancer. Methods: This was a prospective single arm pilot study. Patients with early stage or multiple primary peripheral lung cancer who were nonsurgical candidates for surgery were enrolled in the study. Bronchoscopic microwave ablation was performed via a flexible water-cooled microwave ablation antenna under the guidance of navigation bronchoscopy. Radial probe endobronchial ultrasound combined with fluoroscopy was used to confirm the position. Treatment outcomes were evaluated based on follow-up chest CT and positron emission tomography scans. Primary endpoints were technical success and safety. Secondary endpoints were complete ablation rate, 2-year local control rate, and progression-free survival. Results: Thirteen patients were enrolled in the study from April 2018 to July 2019. A total of 19 sessions of microwave ablation were performed on 14 tumors under the guidance of navigation bronchoscopy. The technical success was 100%. Treatmentrelated complications occurred in two patients. The complete ablation rate was 78.6% (11/14). The 2-year local control rate was 71.4%. Median progression-free survival was 33 months for all patients. Conclusions: In this pilot study, bronchoscopic microwave ablation appears to be feasible with acceptable occurrence of complication in the treatment of peripheral lung cancer under the guidance of navigation bronchoscopy",
+    "abstract_source": "metadata",
+    "url": "https://onlinelibrary.wiley.com/doi/10.1111/1759-7714.14351"
+  },
+  "source_file": "Xie-2022-Microwave ablation via a flexible cat.json",
+  "sections": [
+    {
+      "title": "Microwave ablation via a flexible catheter for the treatment of nonsurgical peripheral lung cancer: A pilot study",
+      "content": "|\n1 Department of Respiratory Endoscopy, Department of Respiratory and Critical Care Medicine, Shanghai Chest Hospital, Shanghai Jiao Tong University, Shanghai, China\n2 Shanghai Engineering Research Center of Respiratory Endoscopy, Shanghai, China\n3 Department of Radiology, Shanghai Chest Hospital, Shanghai Jiao Tong University, Shanghai, China\n4 Department of Medicine, University of Chicago Medicine, Chicago, Illinois, USA\n5 Department of Pneumology and Critical Care Medicine, Thoraxklinik, University of Heidelberg, Heidelberg, Germany",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Correspondence",
+      "content": "Jiayuan Sun, Department of Respiratory Endoscopy, Department of Respiratory and Critical Care Medicine, Shanghai Chest Hospital, Shanghai Jiao Tong University, 241 West Huaihai Road, Shanghai 200030, China.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Funding information",
+      "content": "Clinical Research Plan of SHDC, Grant/Award Number: 16CR3007A; National Key R&D Program of China, Grant/Award Number: 2017YFC0112700; National Multi-disciplinary Treatment Project for Major Diseases, Grant/ Award Number: 2020NMDTP; Shanghai Municipal Education Commission-Gaofeng Clinical Medicine Grant Support, Grant/Award Number: 20181815",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Abstract",
+      "content": "Background: Endobronchial microwave ablation via flexible catheter offers the potential for local therapy for inoperable peripheral lung cancer. The study aimed to evaluate the feasibility and safety of navigation bronchoscopy-guided water-cooled microwave ablation catheter for nonsurgical peripheral lung cancer.\nMethods: This was a prospective single arm pilot study. Patients with early stage or multiple primary peripheral lung cancer who were nonsurgical candidates for surgery were enrolled in the study. Bronchoscopic microwave ablation was performed via a flexible water-cooled microwave ablation antenna under the guidance of navigation bronchoscopy. Radial probe endobronchial ultrasound combined with fluoroscopy was used to confirm the position. Treatment outcomes were evaluated based on follow-up chest CT and positron emission tomography scans. Primary endpoints were technical success and safety. Secondary endpoints were complete ablation rate, 2-year local control rate, and progression-free survival.\nResults: Thirteen patients were enrolled in the study from April 2018 to July 2019. A total of 19 sessions of microwave ablation were performed on 14 tumors under the guidance of navigation bronchoscopy. The technical success was 100%. Treatmentrelated complications occurred in two patients. The complete ablation rate was 78.6% (11/14). The 2-year local control rate was 71.4%. Median progression-free survival was 33 months for all patients.\nConclusions: In this pilot study, bronchoscopic microwave ablation appears to be feasible with acceptable occurrence of complication in the treatment of peripheral lung cancer under the guidance of navigation bronchoscopy.",
+      "category": "abstract",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "KEYWORDS",
+      "content": "bronchoscopic therapy, lung cancer, microwave ablation, multiple primary lung cancer, navigation bronchoscopy",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "INTRODUCTION",
+      "content": "Surgery is the recommended treatment for early stage non-small cell lung cancer (Non-small cell lung cancer (NSCLC)) and some pulmonary metastases. 1,2 However, many patients are not eligible candidates for surgical treatment due to medical\ncomorbidities. 3 As an alternative, stereotactic body radiation therapy (SBRT) or image-guided ablation is recommended as a nonsurgical treatment modality. 1,4 Some patients cannot undergo SBRT due to prior radiation, radiation pneumonitis, or inappropriate tumor location. 5,6 Image-guided percutaneous thermal ablations such as radiofrequency ablation (RFA) and microwave ablation (MWA) have shown potential as an alternative to SBRT. 7,8\nFangfang Xie and Junxiang Chen contributed equally to this article.\nMeeting presentation: ERS International Congress 2020, Virtual, September 7 -9, 2020.\nThis is an open access article under the terms of the Creative Commons Attribution-NonCommercial-NoDerivs License, which permits use and distribution in any medium, provided the original work is properly cited, the use is non-commercial and no modifications or adaptations are made. © 2022 The Authors. Thoracic Cancer published by China Lung Oncology Group and John Wiley & Sons Australia, Ltd.\nRFA has been the most widely used ablation method for the treatment of solid tumors. Although MWA is a relatively new technique, it is currently being used as a primary treatment option for solid tumor ablation. MWA has a lower heat sink effect in lesions close to large vessels due to its ability to produce high temperatures rapidly. 9 In animal models, percutaneous MWA creates larger and more regular zones of ablation than a similarly sized RFA. 10 Clinical studies found that percutaneous MWA was efficacious in both primary lung cancer and metastatic lung tumors. 11,12 However, percutaneous ablation has been reported to be associated with complications such as pneumothorax, hemorrhage, and pleural effusions. 7,9,13 An endobronchial approach has been investigated due to its promising potential in having lower complication rates than transthoracic techniques. 6,14,15\nThe crucial issue for the bronchoscopic approach was the precision of the introduction of the ablation instruments into the tumor. Navigation bronchoscopy provided the ability to accurately reach the target tumor. 16 Ablation instruments could be delivered to the lesion through the working channel to achieve ablation with guided technology. 17 Previous animal experiments have shown that bronchoscopic MWA is feasible and safe. 18,19 Lau et al. 20 reported treatment outcomes of three metastatic lung tumors managed with bronchoscopic MWA.\nThis prospective study aimed to evaluate the feasibility and safety of navigation bronchoscopy-guided MWA as a treatment modality for peripherally located early stage or multiple primary lung cancer.",
+      "category": "introduction",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Patients",
+      "content": "This prospective single arm pilot study was approved by the local ethics committee (KS1737) and registered under ClinicalTrials.gov (NCT02972177). A written informed consent about the procedure and clinical trial was obtained from all participants.\nPatients who met the inclusion criteria were enrolled in our study and underwent bronchoscopic MWA prospectively. The inclusion criteria were as follows: (a) 18 year-old or older; (b) pathologically confirmed peripheral lung cancers with clinical stage I according to the eighth edition of the TNM classification 21 or multiple primary lung cancer (with synchronous lesions or with a history of lung cancer) with the number of tumors no more than five without lymph node and distant metastases; (c) chest computed tomography (CT) showed that lesion size of the large one was no less than <8 mm and no more than 40 mm; (d) ineligibility for surgery assessed by a multidisciplinary team or refusal to undergo surgery and agreed to ablation as their primary treatment; (e) good medical adherence; (f) signed informed consent.\nThe exclusion criteria were as follows: (a) severe cardiopulmonary dysfunction or other disease contraindicated for\nbronchoscopy; (b) contraindicated for anesthesia; (c) lack of access to the peripheral lung tumor confirmed by chest CT or bronchoscopy; (d) the presence of large blood vessels or important structures adjacent to the peripheral lung lesion.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Procedure",
+      "content": "Thin-slice contrast-enhanced chest CT and/or positron emission tomography (PET)-CT were performed prior to bronchoscopic MWA in order to plan the ablation. All procedures were performed using a flexible bronchoscope (BF-1T260, BF-1TQ290, BF-P260F, or BF-P290; Olympus) via a laryngeal mask airway under general anesthesia. Electromagnetic navigation bronchoscopy (ENB) (LungCare navigation system; LungCare Medical Technologies Ltd.; or superDimension/inReach system; Medtronic) or bronchoscopic transparenchymal nodule access (BTPNA) (Archimedes Virtual Bronchoscopy Navigation System; Broncus Medical) was performed as needed for navigational assistance. 22 -24\nWhen the peripheral catheter reached the lesion with navigational assistance, a radial probe endobronchial ultrasound (R-Endobronchial ultrasound (EBUS)) (UM-S20-20R or UM-S20-17S; Olympus) was inserted from the proximal end of the lesion to its distal end to confirm the position and range of the tumor and its relationship to the instruments via the peripheral catheter. Fluoroscopic images of the Endobronchial ultrasound (EBUS) probe were captured at the proximal and distal end of the tumor as a reference of the MWA antenna.\nA flexible water-cooled MWA antenna (MTC-3CA-II6/ Φ 1.8 mm; Vison-China Medical Devices R&D Center; or KY-2AAP-49H/ Φ 1.9 mm; Canyon Medical Inc.) connected to a microwave platform (Surblate, Vison; or KY-2000, Canyon) was introduced into the tumor through the peripheral catheter using prior fluoroscopic images of the Endobronchial ultrasound (EBUS) probe as guidance.\nThe MWA antenna was inserted into the more distal portion of the tumor for the initial cycle of the ablation and was withdrawn at the proximal portion for more cycles when it was necessary depending on the tumor shape and size. If needed, multiple ablations were performed through different paths to obtain better tumor coverage. Power of 50 to 80 W administered for 3 to 10 min was recommended for each cycle of the ablation. This procedure was in accordance with our previous experience. 19 Fluoroscopy was performed immediately to detect the presence of pneumothorax and any other changes after the treatment. All procedures were performed by the same experienced interventional pulmonologist (J.S.).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Follow-up and evaluation",
+      "content": "A chest CT was performed 24 h after the ablation, if it was not available, within 72 h after the procedure was admitted, to evaluate the patient for the presence of any complications and to assess the effectiveness of the treatment approach.\nPatients underwent contrast-enhanced chest CT scans 1 month after the ablation and every 3 months for the next 2 years thereafter. PET-CT at 3 months post-ablation was done to evaluate the efficacy of the ablation. If the outcome was not satisfactory 3 months after treatment, one more MWA was performed. Follow-up was conducted as mentioned above. All patients were followed-up by the end of August 2021.\nThe ablated lesion is usually the same size or larger compared to the tumor before ablation for the first 3 months even if the tumor is completely ablated. 25 Therefore, the commonly used evaluation criteria for solid tumors were not suitable for the assessment of the local efficacy of MWA. In our study, tumor response was evaluated 3 months post-ablation based on the lesion size, density or hypermetabolism on CT or PETCT. Tumor response was categorized as complete ablation, incomplete ablation, and local progression as reported in previous studies. 7,25,26 The 1 month follow-up CT scan was taken as a term of reference.\nComplete ablation was defined as stability or a decrease in the size of the ablation zone without enhancement and/or hypermetabolism. Incomplete ablation was defined as stability or a decrease in size of the ablation zone and the absence of change or decrease in the enhanced zone and/or the hypermetabolic zone. Local progression was defined as an increase in size of at least 20% of the target lesion, with the smallest diameter of the lesion at any time as the reference or the appearance and/or continuation of central or nodular enhancement >10 mm and/or 15 HU of the tumor or an increase or a new uptake metabolic activity at the site of the previously ablated tumor. 26 Radiological evaluation was carried out by a multidisciplinary team consisting of three physicians from medical oncology, radiology, and nuclear medicine who independently evaluated and reached an agreement on the final evaluation.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Outcome measures",
+      "content": "The primary endpoints were technical success and safety. Technical success was defined as the correct placement of the ablation instrument into the target lesion and subsequent completion of the ablation according to the planned protocol. 27 Safety assessment was defined as the assessment of treatmentrelated complications that occurred within 30 days after the treatment was performed. Complications were reported according to the Common Terminology Criteria for Adverse Events (CTCAE) Version 4.0. 28 Both technical success and complications were reported on a per session basis.\nThe secondary endpoints were complete ablation rate, 2-year local control rate, and progression-free survival (PFS). Complete ablation rate was defined as the proportion of complete ablation in all lesions and reported on a per lesion basis. Local control included complete and incomplete ablations. PFS was defined as the time from the first day of receiving the ablation to the day when the target lesion progressed, a new lesion appeared, or death.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Statistical analysis",
+      "content": "Frequency, percentage, mean /C6 standard deviation, and median (range) are presented as appropriate. Survival and local control rate were estimated with the Kaplan -Meier methodology. Median follow-up was analyzed using the reverse Kaplan -Meier methodology. Statistical analysis was performed using the SPSS version 25.0 (IBM).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Patient and tumor characteristics",
+      "content": "A total of 13 patients (8 medically inoperable, 5 who refused surgery) with a median age of 72 years, ranging from 58 to 83 years of age, were enrolled in the study from April 2018 to July 2019. Among them, five had synchronous multiple primary lung cancer, three were heterochronous multiple primary lung cancer, and five were single primary lung cancer. Baseline characteristics of patients and tumors are summarized in Table 1. A total of 14 tumors, including 11 lung adenocarcinomas, two lung squamous cell carcinomas, and one small cell lung cancer, with a mean long-axis diameter of 20.4 /C6 5.7 mm were treated with navigation bronchoscopy-guided MWA. A total of five had it in the left upper lobe, two in the left lower lobe, three in the right upper lobe, one in the right middle lobe, and three in the right lower lobe. All tumors had definite pathological diagnosis prior to ablation. There were two cases (Table 1, cases 1 and 6) of adenocarcinoma confirmed by rapid on-site cytological evaluation which were followed immediately by ablation during the same anesthesia event.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Technical success",
+      "content": "A total of 19 sessions were performed on 14 tumors, with the first five tumors treated for the second session (2.5 ablations per session). There was a technical success rate of 100% (19/19) in all tumors. The median duration of each ablation cycle was 5 min and ranged from 2 to 10 min. The mean ablation time was 13.8 /C6 5.9 min for each session. The average operation time, the time from the bronchoscope passing through to exiting the glottis, was 46.9 /C6 18.8 min for each session and ranged from 20 to 85 min. Case 11 (Table 1), with multiple primary lung cancer, received icotinib treatment combined with etoposide monotherapy for five cycles post-ablation (Appendix S1: Supplementary results and Figure S1). No other patients received any other treatments.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Safety",
+      "content": "No procedure-related deaths occurred. Treatment-related complications occurred in two patients (Table 1, cases 9 and 10) deemed grade 2 by CTCAE. The complication rate per\nablation session was 10.5% (2/19). Hydropneumothorax in case 9 occurred 15 days post-ablation and improved with chest tube insertion and anti-infectious therapy (Figure 1a1 -a4). Pneumothorax in case 10 occurred 4 h post-ablation\nand improved with chest tube insertion (Figure 1b1 -b4). It must be noted that case 8 was a single lung patient who tolerated the procedure without complication. No other postprocedural complications occurred.\nAbbreviations: Adc., adenocarcinoma; CA, complete ablation; Chronic obstructive pulmonary disease (COPD), chronic obstructive pulmonary disease; DLco, carbon monoxide diffusing capacity; F, female; FEV1, forced expiratory volume in 1 s; GGO, ground-glass opacity; IA, incomplete ablation; IHD, ischemic heart disease; LLL, left lower lobe; LP, local progression; LUL, left upper lobe; M, male; PFS, progression-free survival.; RLL, right lower lobe; RML, right middle lobe; RUL, right upper lobe; SCC, squamous cell carcinoma; SCLC, small cell lung cancer.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Efficacy",
+      "content": "Of the 14 tumors, 11 achieved complete ablation, one achieved incomplete ablation, and two achieved local progression postablation (Appendix S1: Supplementary results and Figure S2). The complete ablation rate was 78.6% (11/14). A representative case is shown in Figure 2. The 2-year local control rate was 71.4% for all tumors with a median follow-up of 33 months (95% confidence interval [CI]: 30.6 -35.4 months; Figure 3a). The median PFS was 33 months (95% CI: 15.0 -51.0 months) for all patients (Figure 3b).",
+      "category": "results",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "DISCUSSION",
+      "content": "A previous study reported that bronchoscopy-guided RFA is feasible for the treatment of early stage peripheral lung cancer. 15 The current study showed that bronchoscopic MWA is also feasible for the treatment of peripheral lung cancer. This finding was supported by a technical success rate of 100% and a 2-year local control rate similar to several reported results of percutaneous MWA. Previous studies observed a local control rate of 69% with a median followup of 1-year and a 2- year local control rate of 73.8% in",
+      "category": "discussion",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Progression-free survival",
+      "content": "percutaneous MWA for the treatment of early stage Non-small cell lung cancer (NSCLC). 12,29 Iezzi et al. 30 reported that percutaneous MWA had a 2-year local PFS of 62.5% in patients with inoperable primary lung cancers up to 4 cm in size.\nNo procedure-related deaths occurred in our study and treatment-related complications occurred in two patients. Both patients had a lesion that was close to the pleura or interlobar fissure. The commonly used percutaneous MWA has been reported to have a high incidence rate of complications. 31 Compared with RFA, MWA has been reported to confer a higher risk of persistent air leak, bronchopleural fistula, and infection, with an increased incidence of cavitation, which is probably due to higher ablation temperatures. 11,32 Pneumothorax is the most commonly reported complication in percutaneous ablation, and was seen in /C24 33.9% of patients, of which approximately 11% required chest tube placement, especially in patients with severe emphysema. 33,34 The bronchoscopic approach should not violate the pleural space in order to reduce the occurrence of complications. However, patients with lesions close to the pleura, interlobar fissure, or pulmonary bullous, or with extremely poor lung function still have a high pneumothorax risk for bronchoscopic MWA.\nA bronchoscopic approach has its own unique advantages over a percutaneous approach besides a potential safety profile. Many peripheral lung cancers have a bronchus sign, thereby making the tumor suitable for bronchoscopic ablation. 17 Bronchoscopic approach is not affected by the respiratory motion as the lesion is constrained by the airways and the antenna. Furthermore, the lesion can be diagnosed, staged, and treated in a single procedure via a bronchoscopic approach, thus functioning as a one-stop shop. 9 Patients diagnosed with stage IA lung cancer with bronchus leading to the tumor and located in the inner third lung, having poor pulmonary function, or difficult to access via percutaneous approach, are suitable for bronchoscopic ablation.\nOne of the difficulties in bronchoscopic ablation is reaching the target lesion accurately in a complicated tracheobronchial tree. Another difficulty is the confirmation of the instruments when embedding it within the tumor. We reached the tumor with the guidance of different navigation platforms. R-Endobronchial ultrasound (EBUS) combined with fluoroscopy was then used to confirm the position of the MWA antenna. The optimal device at present to confirm the position is cone beam CT (CBCT) or CT. 15,35 In addition, in order to guarantee the ablation efficacy, we needed to adjust the ablation time, output power, and number of ablation times according to the lesion size and shape. For some tumors, a combination of two or more paths to the lesion were needed in conducting the ablation and in ensuring adequate coverage of the tumor with energy. In some cases, exit from the airways was needed to ensure optimal ablation, such as inserting the ablation instruments into the tumor directly or delivering them into the tumor through a tunnel created via BTPNA approach. 20,23\nThis study has several limitations. Although PET-CT, lymph node staging, and other examinations were performed\nprior to bronchoscopic MWA, it was still possible for patients to be understaged at the time of ablation, which would have affected the PFS data. Second, this procedure required experience and had a steep learning curve, which therefore limited the generalizability of this technique. In our first five cases, the energy and duration of the first ablation session were insufficient; thus, a second session was needed. Our study was also limited by our lack of access to a CBCT or CT scanner during the ablative procedures for real-time confirmation of ablative probe position and instant effect of the ablation. During the ablative procedures in our study, REBUS combined with fluoroscopy was used to monitor the position of the tumor and its relationship to the instruments and the ablation effect. CT scan was performed 24 h after the ablation. Other limitations included the lack of consistency due to the usage of two different MWA catheters. In addition, long-term follow-up is needed to determine the value of ablation of these lesions, especially for ground-glass opacity lesions. Tumors were heterogeneous in our study, but clinical outcomes of different cohorts were not analyzed due to the small sample size.\nIn conclusion, our initial experience indicated that bronchoscopic MWA is feasible with acceptable occurrence of complications for patients with peripheral lung cancer, which may be a promising therapeutic alternative. We continue to accumulate experience in the development of appropriate protocols for the safe and effective treatment. Well-designed comparative clinical studies are needed to prove the clinical benefit of this approach.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "ACKNOWLEDGMENTS",
+      "content": "This study was supported by the National Key R&D Program of China (2017YFC0112700); National Multidisciplinary Treatment Project for Major Diseases (2020NMDTP); Clinical Research Plan of SHDC (16CR3007A); Shanghai Municipal Education Commission-Gaofeng Clinical Medicine Grant Support (20181815). Some of the microwave ablation antennas were generous gifts from Canyon Medical Inc. purely for research purposes.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "CONFLICT OF INTEREST",
+      "content": "All authors have completed the ICMJE uniform disclosure form. Shanghai Chest Hospital and Canyon Medical Inc. jointly own a patent of transbronchial microwave ablation antenna (patent No. ZL 201610424613.7). Dr Sun is the first inventor of this patent. The patent has at present been exclusively licensed to Canyon. The current study evaluates the antenna produced under license of this patent as well as commercialized product from competitor. The efficacy was measured as a combined evaluation of microwave ablation antenna and was not intended to compare the products from competitors. None of the authors holds equity of Canyon Medical Inc., nor are they employed by Canyon Medical Inc.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "CLINICAL TRIAL REGISTRATION",
+      "content": "Registered under ClinicalTrials.gov (NCT02972177).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "ORCID",
+      "content": "Jiayuan Sun https://orcid.org/0000-0003-3158-3256",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "REFERENCES",
+      "content": "1. Howington JA, Blum MG, Chang AC, Balekian AA, Murthy SC. Treatment of stage I and II non-small cell lung cancer: diagnosis and management of lung cancer, 3rd ed: American College of Chest Physicians evidence-based clinical practice guidelines. Chest. 2013;143:e278S -313S.\n2. Erhunmwunsee L, D ' Amico TA. Surgical management of pulmonary metastases. Ann Thorac Surg. 2009;88:2052 -60.\n3. Bach PB, Cramer LD, Warren JL, Begg CB. Racial differences in the treatment of early-stage lung cancer. N Engl J Med. 1999;341:1198 -205. https://doi.org/10.1056/nejm199910143411606\n4. National Comprehensive Cancer Network. NCCN clinical practice guidelines in oncology. Non-Small Cell Lung Cancer. Available from https://www.nccn.org/professionals/physician_gls/default.aspx#nscl; Accessed February 29, 2020.\n5. Timmerman R, McGarry R, Yiannoutsos C, Papiez L, Tudor K, DeLuca J, et al. Excessive toxicity when treating central tumors in a phase II study of stereotactic body radiation therapy for medically inoperable early-stage lung cancer. J Clin Oncol. 2006;24:4833 -9.\n6. Sabath BF, Casal RF. Bronchoscopic ablation of peripheral lung tumors. J Thorac Dis. 2019;11:2628 -38.\n7. Ye X, Fan W, Wang H, Wang J, Wang Z, Gu S, et al. Expert consensus workshop report: guidelines for thermal ablation of primary and metastatic lung tumors (2018 edition). J Cancer Res Ther. 2018;14: 730 -44.\n8. Dupuy DE. Image-guided thermal ablation of lung malignancies. Radiology. 2011;260:633 -55.\n9. Moussa AM, Ziv E, Solomon SB, Camacho JC. Microwave ablation in primary lung malignancies. Semin Intervent Radiol. 2019;36:326 -33.\n10. Brace CL, Hinshaw JL, Laeseke PF, Sampson LA, Lee FT Jr. Pulmonary thermal ablation: comparison of radiofrequency and microwave devices by using gross pathologic and CT findings in a swine model. Radiology. 2009;251:705 -11.\n11. Healey TT, March BT, Baird G, Dupuy DE. Microwave ablation for lung neoplasms: a retrospective analysis of long-term results. J Vasc Interv Radiol. 2017;28:206 -11.\n12. Liu H, Steinke K. High-powered percutaneous microwave ablation of stage I medically inoperable non-small cell lung cancer: a preliminary study. J Med Imaging Radiat Oncol. 2013;57:466 -74.\n13. Akhan O, Guler E, Akinci D, et al. Radiofrequency ablation for lung tumors: outcomes, effects on survival, and prognostic factors. Diagn Interv Radiol. 2015;22:215 -7.\n14. Harris K, Puchalski J, Sterman D. Recent advances in Bronchoscopic treatment of peripheral lung cancers. Chest. 2017;151:674 -85.\n15. Koizumi T, Tsushima K, Tanabe T, Agatsuma T, Yokoyama T, Ito M, et al. Bronchoscopy-guided cooled radiofrequency ablation as a novel intervention therapy for peripheral lung cancer. Respiration. 2015;90: 47 -55.\n16. Wang Memoli JS, Nietert PJ, Silvestri GA. Meta-analysis of guided bronchoscopy for the evaluation of the pulmonary nodule. Chest. 2012;142:385 -93.\n17. Xie F, Zheng X, Xiao B, Han B, Herth FJF, Sun J. Navigation bronchoscopy-guided radiofrequency ablation for nonsurgical peripheral pulmonary tumors. Respiration. 2017;94:293 -8.\n18. Ferguson J, Egressy K, Schefelker R, Thiel M, Thom M, Bissing J, et al. Bronchoscopically-guided microwave ablation in the lung. Chest. 2013;144:87A MeetingAbstracts.\n19. Yuan HB, Wang XY, Sun JY, Xie FF, Zheng XX, Tao GY, et al. Flexible bronchoscopy-guided microwave ablation in peripheral porcine lung: a new minimally-invasive ablation. Transl Lung Cancer Res. 2019;8:787 -96.\n20. Lau K, Spiers A, Pritchett M, Krimsky W. Bronchoscopic imageguided microwave ablation of peripheral lung Tumours -early results. J Thorac Oncol. 2018;13:S542 MeetingAbstracts.\n21. Detterbeck FC, Chansky K, Groome P, Bolejack V, Crowley J, Shemanski L, et al. The IASLC lung cancer staging project:\nmethodology and validation used in the development of proposals for revision of the stage classification of Non-small cell lung cancer (NSCLC) in the forthcoming (eighth) edition of the TNM classification of lung cancer. J Thorac Oncol. 2016;11:1433 -46.\n22. Gildea TR, Mazzone PJ, Karnak D, Meziane M, Mehta AC. Electromagnetic navigation diagnostic bronchoscopy: a prospective study. Am J Respir Crit Care Med. 2006;174:982 -9.\n23. Herth FJ, Eberhardt R, Sterman D, Silvestri GA, Hoffmann H, Shah PL. Bronchoscopic transparenchymal nodule access (BTPNA): first in human trial of a novel procedure for sampling solitary pulmonary nodules. Thorax. 2015;70:326 -32.\n24. Xie F, Zhang J, Cao L, Zheng X, Chen J, Li Y, et al. Design of a prospective, multicenter, and cohort study of an innovative electromagnetic navigation bronchoscopy in diagnosing pulmonary nodules among Chinese population. J Thorac Dis. 2019;11:5592 -600.\n25. Genshaft S, Guteirrez A, Abtin F, Chheang S, Suh R. Imaging features following thermal ablation of lung malignancies. Semin Intervent Radiol. 2013;30:157 -68.\n26. Liu BD, Ye X, Fan WJ, Li XG, Feng WJ, Lu Q, et al. Expert consensus on image-guided radiofrequency ablation of pulmonary tumors: 2018 edition. Thorac Cancer. 2018;9:1194 -208.\n27. Ambrogi MC, Fanucchi O, Cioni R, Dini P, De Liperi A, Cappelli C, et al. Long-term results of radiofrequency ablation treatment of stage I non-small cell lung cancer: a prospective intention-to-treat study. J Thorac Oncol. 2011;6:2044 -51.\n28. National Cancer Institute. Common Terminology Criteria for Adverse Events (CTCAE) Version 4.0. Available from: http://evs.nci.nih.gov/ ftp1/CTCAE/CTCAE_4.03/CTCAE_4.03_2010-06-14_ QuickReference_5x7.pdf. Accessed February 29, 2020.\n29. Han X, Yang X, Ye X, Liu Q, Huang G, Wang J, et al. Computed tomography-guided percutaneous microwave ablation of patients 75 years of age and older with early-stage nonsmall cell lung cancer. Indian J Cancer. 2015;52:e56 -60.\n30. Iezzi R, Cioni R, Basile D, Tosoratti N, Posa A, Busso M, et al. Standardizing percutaneous microwave ablation in the treatment of lung tumors: a prospective multicenter trial (MALT study). Eur Radiol. 2020;31:2173 -82.\n31. Ni Y, Xu H, Ye X. Image-guided percutaneous microwave ablation of early-stage non-small cell lung cancer. Asia Pac J Clin Oncol. 2020;16: 320 -5. https://doi.org/10.1111/ajco.13419\n32. Palussiere J, Catena V, Buy X. Percutaneous thermal ablation of lung tumors - radiofrequency, microwave and cryotherapy: where are we going? Diagn Interv Imaging. 2017;98:619 -25. https://doi.org/10.1016/ j.diii.2017.07.003\n33. Yuan Z, Wang Y, Zhang J, Zheng J, Li W. A meta-analysis of clinical outcomes after radiofrequency ablation and microwave ablation for lung cancer and pulmonary metastases. J Am Coll Radiol. 2019;16:302 -14.\n34. Tsakok MT, Little MW, Hynes G, Millington RS, Boardman P, Gleeson FV, et al. Local control, safety, and survival following imageguided percutaneous microwave thermal ablation in primary lung malignancy. Clin Radiol. 2019;74(80):e19-80 e26.\n35. Pritchett MA, Schampaert S, de Groot JAH, Schirmer CC, van der Bom I. Cone-beam CT with augmented fluoroscopy combined with electromagnetic navigation bronchoscopy for biopsy of pulmonary nodules. J Bronchology Interv Pulmonol. 2018;25:274 -82.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "SUPPORTING INFORMATION",
+      "content": "Additional supporting information may be found in the online version of the article at the publisher ' s website.\nHow to cite this article: Xie F, Chen J, Jiang Y, Sun J, Hogarth DK, Herth FJF. Microwave ablation via a flexible catheter for the treatment of nonsurgical peripheral lung cancer: A pilot study. Thorac Cancer. 2022;13:1014 -20. https://doi.org/10.1111/1759-7714. 14351",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    }
+  ],
+  "tables": [
+    {
+      "id": "table",
+      "caption": "",
+      "headers": [
+        "Case",
+        "Gender",
+        "Age (years)",
+        "Location",
+        "Pathology",
+        "Density",
+        "Size (mm)",
+        "Comorbid diseases or history",
+        "Efficacy"
+      ],
+      "rows": [
+        [
+          "1",
+          "F",
+          "83",
+          "RLL",
+          "Adc.",
+          "Solid",
+          "18.5",
+          "After LUL lobectomy and RUL wedge resection for lung cancer, after right nephrectomy for kidney cancer, hypertension, diabetes",
+          "CA"
+        ],
+        [
+          "2",
+          "M",
+          "83",
+          "LUL",
+          "SCC",
+          "Solid",
+          "17.7",
+          "Old tuberculosis, hypertension, emphysema",
+          "CA"
+        ],
+        [
+          "3",
+          "M",
+          "63",
+          "RLL",
+          "Adc.",
+          "Solid",
+          "25.1",
+          "COPD (FEV1% predicted 27.4, DLco% predicted 25.8), hypertension, cerebral infarction",
+          "IA"
+        ],
+        [
+          "4",
+          "F",
+          "74",
+          "LLL",
+          "Adc.",
+          "Solid",
+          "21.1",
+          "Multiple primary lung cancer, diabetes",
+          "CA"
+        ],
+        [
+          "5",
+          "M",
+          "70",
+          "LUL",
+          "SCC",
+          "Solid",
+          "28.3",
+          "COPD (FEV1% predicted 43.1, DLco% predicted 50.8)",
+          "LP"
+        ],
+        [
+          "6",
+          "M",
+          "63",
+          "LUL",
+          "Adc.",
+          "Solid",
+          "20.7",
+          "COPD (FEV1% predicted 24.1, DLco% predicted 14.9)",
+          "LP"
+        ],
+        [
+          "7",
+          "F",
+          "72",
+          "RUL",
+          "Adc.",
+          "Mixed GGO",
+          "34.8",
+          "After LUL lobectomy for lung cancer, hypertension",
+          "CA"
+        ],
+        [
+          "8",
+          "M",
+          "59",
+          "RLL",
+          "Adc.",
+          "Mixed GGO",
+          "21.0",
+          "After left pneumonectomy for lung cancer",
+          "CA"
+        ],
+        [
+          "9",
+          "M",
+          "80",
+          "RML",
+          "Adc.",
+          "Mixed GGO",
+          "18.7",
+          "Multiple primary lung cancer, IHD, after colon cancer resection, hypertension, diabetes",
+          "CA"
+        ],
+        [
+          "10",
+          "F",
+          "74",
+          "LUL",
+          "Adc.",
+          "Mixed GGO",
+          "15.0",
+          "Multiple primary lung cancer",
+          "CA"
+        ],
+        [
+          "",
+          "",
+          "",
+          "LLL",
+          "Adc.",
+          "Mixed GGO",
+          "19.6",
+          "",
+          "CA"
+        ],
+        [
+          "11",
+          "M",
+          "76",
+          "LUL",
+          "SCLC",
+          "Solid",
+          "14.2",
+          "Multiple primary lung cancer (Adc. and SCLC)",
+          "CA"
+        ],
+        [
+          "12",
+          "F",
+          "58",
+          "RUL",
+          "Adc.",
+          "Pure GGO",
+          "14.8",
+          "Multiple primary lung cancer, hypertension, diabetes",
+          "CA"
+        ],
+        [
+          "13",
+          "F",
+          "71",
+          "RUL",
+          "Adc.",
+          "Mixed GGO",
+          "16.2",
+          "COPD (FEV1% predicted 58.2), bronchiectasis, scoliosis",
+          "CA"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    }
+  ],
+  "figures": [
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/81'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/93'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/118'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    }
+  ],
+  "references": [
+    {
+      "title": "Treatment of stage I and II non-small cell lung cancer: diagnosis and management of lung cancer, 3rd ed: American College of Chest Physicians evidence-based clinical practice guidelines"
+    },
+    {
+      "title": "Chest"
+    },
+    {
+      "title": "Surgical management of pulmonary metastases",
+      "year": 2013
+    },
+    {
+      "title": "Ann Thorac Surg",
+      "year": 2009
+    },
+    {
+      "title": "Racial differences in the treatment of early-stage lung cancer",
+      "year": 2009
+    },
+    {
+      "title": "N Engl J Med",
+      "year": 1999
+    },
+    {
+      "title": "NCCN clinical practice guidelines in oncology",
+      "year": 1999
+    },
+    {
+      "title": "Excessive toxicity when treating central tumors in a phase II study of stereotactic body radiation therapy for medically inoperable early-stage lung cancer"
+    },
+    {
+      "title": "J Clin Oncol",
+      "year": 2006
+    },
+    {
+      "title": "Bronchoscopic ablation of peripheral lung tumors",
+      "year": 2006
+    },
+    {
+      "title": "J Thorac Dis",
+      "year": 2019
+    },
+    {
+      "title": "Expert consensus workshop report: guidelines for thermal ablation of primary and metastatic lung tumors (2018 edition)",
+      "year": 2019
+    },
+    {
+      "title": "J Cancer Res Ther",
+      "year": 2018
+    },
+    {
+      "title": "Image-guided thermal ablation of lung malignancies",
+      "year": 2018
+    },
+    {
+      "title": "Radiology",
+      "year": 2018
+    },
+    {
+      "title": "Microwave ablation in primary lung malignancies",
+      "year": 2011
+    },
+    {
+      "title": "Semin Intervent Radiol",
+      "year": 2019
+    },
+    {
+      "title": "Pulmonary thermal ablation: comparison of radiofrequency and microwave devices by using gross pathologic and CT findings in a swine model",
+      "year": 2019
+    },
+    {
+      "title": "Microwave ablation for lung neoplasms: a retrospective analysis of long-term results",
+      "year": 2009
+    },
+    {
+      "title": "J Vasc Interv Radiol",
+      "year": 2017
+    },
+    {
+      "title": "High-powered percutaneous microwave ablation of stage I medically inoperable non-small cell lung cancer: a preliminary study",
+      "year": 2017
+    },
+    {
+      "title": "J Med Imaging Radiat Oncol",
+      "year": 2013
+    },
+    {
+      "title": "Radiofrequency ablation for lung tumors: outcomes, effects on survival, and prognostic factors",
+      "year": 2013
+    },
+    {
+      "title": "Diagn Interv Radiol",
+      "year": 2015
+    },
+    {
+      "title": "Recent advances in Bronchoscopic treatment of peripheral lung cancers",
+      "year": 2015
+    },
+    {
+      "title": "Bronchoscopy-guided cooled radiofrequency ablation as a novel intervention therapy for peripheral lung cancer",
+      "year": 2017
+    },
+    {
+      "title": "Respiration",
+      "year": 2015
+    },
+    {
+      "title": "Meta-analysis of guided bronchoscopy for the evaluation of the pulmonary nodule",
+      "year": 2015
+    },
+    {
+      "title": "Navigation bronchoscopy-guided radiofrequency ablation for nonsurgical peripheral pulmonary tumors",
+      "year": 2012
+    },
+    {
+      "title": "Bronchoscopically-guided microwave ablation in the lung",
+      "year": 2017
+    },
+    {
+      "title": "Flexible bronchoscopy-guided microwave ablation in peripheral porcine lung: a new minimally-invasive ablation",
+      "year": 2013
+    },
+    {
+      "title": "Transl Lung Cancer Res",
+      "year": 2019
+    },
+    {
+      "title": "Bronchoscopic imageguided microwave ablation of peripheral lung Tumoursearly results",
+      "year": 2019
+    },
+    {
+      "title": "J Thorac Oncol",
+      "year": 2018
+    },
+    {
+      "title": "The IASLC lung cancer staging project: methodology and validation used in the development of proposals for revision of the stage classification of NSCLC in the forthcoming (eighth) edition of the TNM classification of lung cancer",
+      "year": 2018
+    },
+    {
+      "title": "Electromagnetic navigation diagnostic bronchoscopy: a prospective study",
+      "year": 2016
+    },
+    {
+      "title": "Am J Respir Crit Care Med",
+      "year": 2006
+    },
+    {
+      "title": "Bronchoscopic transparenchymal nodule access (BTPNA): first in human trial of a novel procedure for sampling solitary pulmonary nodules",
+      "year": 2006
+    },
+    {
+      "title": "Thorax",
+      "year": 2015
+    },
+    {
+      "title": "Design of a prospective, multicenter, and cohort study of an innovative electromagnetic navigation bronchoscopy in diagnosing pulmonary nodules among Chinese population",
+      "year": 2015
+    },
+    {
+      "title": "Imaging features following thermal ablation of lung malignancies",
+      "year": 2019
+    },
+    {
+      "title": "Expert consensus on image-guided radiofrequency ablation of pulmonary tumors: 2018 edition",
+      "year": 2013
+    },
+    {
+      "title": "Thorac Cancer",
+      "year": 2018
+    },
+    {
+      "title": "Long-term results of radiofrequency ablation treatment of stage I non-small cell lung cancer: a prospective intention-to-treat study",
+      "year": 2018
+    },
+    {
+      "title": "Common Terminology Criteria for Adverse Events (CTCAE) Version 4.0",
+      "year": 2011
+    },
+    {
+      "title": "Computed tomography-guided percutaneous microwave ablation of patients 75 years of age and older with early-stage nonsmall cell lung cancer"
+    },
+    {
+      "title": "Indian J Cancer",
+      "year": 2015
+    },
+    {
+      "title": "Standardizing percutaneous microwave ablation in the treatment of lung tumors: a prospective multicenter trial (MALT study)",
+      "year": 2015
+    },
+    {
+      "title": "Eur Radiol",
+      "year": 2020
+    },
+    {
+      "title": "Image-guided percutaneous microwave ablation of early-stage non-small cell lung cancer",
+      "year": 2020
+    },
+    {
+      "title": "Asia Pac J Clin Oncol",
+      "year": 2020
+    },
+    {
+      "title": "Percutaneous thermal ablation of lung tumors -radiofrequency, microwave and cryotherapy: where are we going?",
+      "year": 2020
+    },
+    {
+      "title": "Diagn Interv Imaging",
+      "year": 2017
+    },
+    {
+      "title": "A meta-analysis of clinical outcomes after radiofrequency ablation and microwave ablation for lung cancer and pulmonary metastases",
+      "year": 2017
+    },
+    {
+      "title": "J Am Coll Radiol",
+      "year": 2019
+    },
+    {
+      "title": "Local control, safety, and survival following imageguided percutaneous microwave thermal ablation in primary lung malignancy",
+      "year": 2019
+    },
+    {
+      "title": "Clin Radiol",
+      "year": 2019
+    },
+    {
+      "title": "Cone-beam CT with augmented fluoroscopy combined with electromagnetic navigation bronchoscopy for biopsy of pulmonary nodules",
+      "year": 2019
+    },
+    {
+      "title": "J Bronchology Interv Pulmonol",
+      "year": 2018
+    }
+  ],
+  "quality": {
+    "completeness_score": 0,
+    "has_abstract": true,
+    "abstract_source": "metadata",
+    "has_doi": true,
+    "has_full_text": true,
+    "num_sections": 23,
+    "num_tables": 1,
+    "num_figures": 13,
+    "num_references": 59
+  }
+}

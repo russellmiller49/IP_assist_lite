@@ -1,0 +1,804 @@
+{
+  "metadata": {
+    "document_id": "10_1007_s13665_023_00329_6",
+    "title": "Transbronchial Tumor Ablation",
+    "authors": [
+      "Russell Miller",
+      "George Cheng"
+    ],
+    "year": 2024,
+    "journal": "Current Pulmonology Reports",
+    "doi": "10.1007/s13665-023-00329-6",
+    "volume": "13",
+    "issue": "1",
+    "pages": "103-115",
+    "citation": "Miller, R.; Cheng, G. (2024). Transbronchial Tumor Ablation. Current Pulmonology Reports, 13(1), 103-115. https://doi.org/10.1007/s13665-023-00329-6",
+    "abstract": "Purpose of Review Technological advancements in transbronchial tumor ablation are poised to revolutionize bronchoscopic interventions by enabling diagnosis and treatment in one session. However, a deep understanding of ablation technologies and the factors determining their success is vital for effective implementation, which this review aims to address. Recent Findings While percutaneous ablation has been part of lung cancer care for over two decades, transbronchial ablation is in its infancy. Recent reports of transbronchial ablation bring excitement and the need for further developments. Summary Transbronchial ablative technologies could soon be a key part of the toolset for interventional pulmonologists. Thorough knowledge about ablation technologies, their determining factors and conditions for safe and effective application are crucial for effective utilization. Keywords Bronchoscopy · Transbronchial · Ablation · Thermal · Tumor ablation · Lung cancer · Lung nodule · Peripheral ablation · Radial frequency · Microwave · Cryoablation · Cryotherapy",
+    "abstract_source": "metadata",
+    "url": "https://link.springer.com/10.1007/s13665-023-00329-6"
+  },
+  "source_file": "transbronchial ablation Miller.json",
+  "sections": [
+    {
+      "title": "Transbronchial Tumor Ablation",
+      "content": "Russell Miller 1,2 · George Cheng 2",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Abstract",
+      "content": "Purpose of Review Technological advancements in transbronchial tumor ablation are poised to revolutionize bronchoscopic interventions by enabling diagnosis and treatment in one session. However, a deep understanding of ablation technologies\nand the factors determining their success is vital for effective implementation, which this review aims to address. Recent Findings While percutaneous ablation has been part of lung cancer care for over two decades, transbronchial ablation is in its infancy. Recent reports of transbronchial ablation bring excitement and the need for further developments. Summary Transbronchial ablative technologies could soon be a key part of the toolset for interventional pulmonologists. Thorough knowledge about ablation technologies, their determining factors and conditions for safe and effective application are crucial for effective utilization.\nKeywords Bronchoscopy · Transbronchial · Ablation · Thermal · Tumor ablation · Lung cancer · Lung nodule · Peripheral ablation · Radial frequency · Microwave · Cryoablation · Cryotherapy",
+      "category": "abstract",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Introduction",
+      "content": "Transbronchial tumor ablation, allowing for diagnosis and treatment in a single session, has long been considered the holy grail of bronchoscopic interventions. With advances in  technology enabling improved navigation and realtime in-lesion confirmation, it appears that transbronchial ablative technology may soon establish itself in the armamentarium of the interventional pulmonologist. However, a prerequisite for performing ablative interventions is a thorough understanding of the technologies used for tumor ablation and the mechanisms that factor into their success or failure. This paper will discuss the general principles of ablation technologies, concentrating on those most applicable to transbronchial ablation, highlighting current data regarding the use of the thermal based technologies, and\nexploring the conditions necessary for safe and effective transbronchial ablation.",
+      "category": "introduction",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Historical Perspective",
+      "content": "Tumor ablation involves the direct application of thermal energy, chemicals, or other means to a tumor with the goal of causing cellular necrosis. The idea of intratumor ablation stemmed from a case report that described the unexpected resolution of hyperparathyroidism after fine needle aspiration of a parathyroid adenoma believed to be due to intraglandular hemorrhage [1]. This report inspired Luigi Solbiati, a pioneer in image-guided tumor ablation (IGTA), to explore the intentional injection of sclerosing agents into tumors to achieve a comparable outcome. In 1985, his group used ultrasound-guided ethanol injection to treat seven patients with hyperparathyroidism caused by parathyroid adenoma successfully [2]. Subsequent studies employing ethanol injection to treat small encapsulated hepatocellular carcinomas (HCC) similarly demonstrated promising results, establishing it as an effective treatment for HCC [3].\nHowever, it had its limitations. Challenges arose when dealing with larger tumors or metastatic lesions, primarily due to variations in tissue consistency and the absence of surrounding capsules [4]. These factors hindered the\nuniform distribution of ethanol within the tumor, resulting in reduced efficacy. Furthermore, even in the case of small tumors, multiple ablations were often required to achieve a complete response [5].\nThe  limitations  encountered  with  ethanol  injection prompted the exploration of alternative approaches, leading to the emergence of thermal treatments as a progressive step forward. The concept of using extreme heat or cold to destroy tissue has been recognized since ancient times, and Hippocrates documented the application of heat to treat tumors of the skin [6]. However, the knowledge gained from ethanol ablation led to exploring the application of localized heat and cold to treat non-superficial tumors. Various techniques exist for thermal ablation to include cryoablation (CA), radiofrequency ablation (RFA), microwave ablation (MWA), high-intensity focused ultrasound (HIFU), bronchoscopic laser interstitial thermal therapy (BLITT), and bronchoscopic thermal vapor ablation (BTAV). However, for this focused introduction, we will be focusing on RFA, MWA, and CA.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "General Principles of Thermal Ablation",
+      "content": "IGTA utilizes extreme heat or cold as a substrate to overcome many limitations of chemical-based approaches, especially in larger or non-encapsulated lesions. In the upcoming sections, we will examine the details of thermal-based ablation techniques and discuss their clinical applications.\nThe core principles of ablative therapies align closely with surgical resection or radiation therapy, as they all aim to eradicate all viable tumor cells, both visibly apparent and microscopic within the surrounding margin. They also\nstrive to minimize damage to adjacent healthy tissue [7]. It is essential for physicians planning to use ablation therapies to understand the relationship between thermal exposure (encompassing temperature and duration of exposure) and resultant thermal damage. Heat injury occurs in two distinct phases: direct thermal effects followed by indirect thermal effects. These indirect effects involve triggering an immune response due to the release of various inflammatory mediators at the injury site, leading to further destruction of malignant cells.\nThe impact of temperature on tissues is determined by various temperature ranges and exposure times, as illustrated in Table 1. Although the effects of thermal ablation can vary based on the specific type of tissue (i.e., physical and biological properties) and the ablation technique being employed, significant tissue changes typically do not occur below 42 °C. At temperatures above 42 °C, prolonged exposure (ranging from 30 to 60 min) can lead to protein denaturation, which in turn causes enzyme inactivation, mitochondrial injury, and varying degrees of tissue necrosis. As the temperature increases, the exposure time required to cause tissue injury decreases while the severity of injury intensifies. When temperatures exceed 60 °C, a mere few seconds of exposure result in immediate and complete coagulation necrosis. At 100 °C, the boiling point of water, tissues undergo rapid vaporization, which almost instantaneously leads to the formation of steam vacuoles, tissue desiccation, and charring. As temperatures continue to increase, exceeding 300 °C, smoke generation and tissue vaporization occur, potentially resulting in carbonization and cavitation [8-10].\nIn IGTA, the ablating device is typically inserted into the center of the lesion, and energy is dispersed outward to\nmaximize tissue effects. As a result, three somewhat distinct zones of tissue injury develop around the delivery device, which correlates with the temperature reached in the respective tissue, as described in Table 1. The area in closest proximity to the applicator, where the highest temperatures are reached, is known as the zone of central necrosis or charring zone. Surrounding this central necrosis zone is the coagulation zone, corresponding to areas with temperatures between 60 and 100 °C where denatured proteins result in complete necrosis. Finally, at the outer rim of the coagulation zone is a surrounding area of tissue that is partially affected by heat and is variably referred to as the congestion zone [11]. This zone exhibits partial necrosis and is often associated with hyperemia, edema, or inflammation.\nIn an ideal ablation procedure, the entire tumor, plus a margin of normal tissue, would be covered by the coagulation zone to reduce the risk of leaving behind any viable tumor cells that could potentially lead to recurrence. However, excessively high temperatures at the delivery device site can hinder heat distribution and diminish the ablation zone efficacy.\nJust as extreme heat can effectively denature proteins and eliminate tumors, the power of extreme cold can also be harnessed for localized tumor ablation. When temperatures plummet to remarkably low levels, typically ranging from - 20 to - 40 °C, tumor destruction takes place through a combination of direct and indirect mechanisms, as outlined in Table 2. Cryoablation, which utilizes extreme cold for tumor destruction, hinges on direct cellular damage as well as the obstruction of the blood supply to the tumor, causing cell death [12, 13].",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Radiofrequency Ablation (RFA)",
+      "content": "RFA has been extensively used in medicine since the advent of the Bovie knife, introduced by Harvey Cushing and William Bovie in 1926. The Bovie knife employs radiofrequency energy,\nprimarily for cutting and coagulating surface tissue. In a monopolar RFA system, an RF generator is connected to an electrode and a dispersive grounding pad, forming a closed-loop circuit. This system operates with alternating currents, typically within the frequency range of 350 to 500 kHz. The electrical current flowing through the system is concentrated at the electrode tip due to the significant difference in surface area between the tip and the grounding pad. As the current encounters resistance in the surrounding tissue, water molecules and other ions within the tissue rapidly oscillate to align with the alternating currents. This ionic agitation generates friction, leading to heat production through a process known as resistive heating [14].\nIn 1990, McGahan and his team modified a standard monopolar Bovie device by connecting an insulated 18-gage needle to the active electrode and inserting it deep into excised bovine livers [15]. When RF energy was applied, the heat generated at the electrode-tissue interface created not only the burning effect typically seen with the use of a Bovie knife but also a surrounding area of tissue coagulation. This was due to the generated heat not having a pathway to escape externally and spreading through conductive heating.\nHowever, the ablation zone created with this original apparatus was small, as standard radiofrequency has a limited field effect due to resistive heating occurring mostly at the electrode-tissue interface. As temperatures rise, the water content in the tissue quickly begins to evaporate, leading to microbubble formation and tissue desiccation, which results in charring. This process results in a rapid increase in tissue impedance, which hampers current flow and further heat generation. High temperatures can also lead to vaporization and steam production, which acts as an insulator, further hindering heat transfer to the peripheral areas of the tumor.\nSeveral innovative modifications have been developed, including RF electrodes with internal cannulas that infuse cold saline in a closed loop. During ablation, heat from the tissue is transferred to the probe tip and removed via the circulating water. Although it might seem counterintuitive, this modification significantly increased the ablation field by reducing temperatures to a level that minimized charring. A similar modification, known as 'cooled-wet tip RFA,' infuses saline in an open technique, allowing saline to enter the tumor [16, 17]. This maintains a moist environment, as the water molecules are the necessary substrate for ionic agitation. However, it creates a less predictable ablation zone due to the inability to predict the direction of water accumulation [18]. Additionally, the use of multiprong expandable electrodes and simultaneous insertion of multiple electrodes have also been employed to expand the ablation field [19, 20].\nDespite these modifications, several challenges persist in RFA use. First, a significant limitation is the heat-sink effect, which occurs when ablation is performed near a blood vessel. In this case, much of the heat is dissipated into the\nflowing blood, preventing the attainment of temperatures required for tissue destruction in the adjacent tumor [21]. Second, difficulty to generate a sizable and uniform coagulation zone. As with all electrical circuits, energy seeks the path of least resistance and grounds itself, often resulting in irregular ablation zones. Finally, finding the optimal temperature can be challenging as the effects occur around the electrode and propagate outward [9]. Although temperatures above 100 °C might seem desirable for complete tissue destruction, the effects of vaporization should not be overlooked. As mentioned previously, vaporization produces steam, which acts as an insulator, hindering further heat transfer from the source to the peripheral areas of the tumor. Additionally, carbonization can occur at high temperatures, which increases the impedance of the electrical field in radiofrequency applications, consequently reducing the zone of effect [7].",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Microwave Ablation (MWA)",
+      "content": "While RFA technology continues to play a vital role in thermal ablation procedures, newer technologies, which tackle many of RFA's associated challenges, are providing a comparable alterative to RFA. Among these novel technologies, microwave technology holds significant promise.\nMWA technology was discovered by Percy Spencer while working with a magnetron, a device that generates microwaves. Amid his experiment, Spencer observed a candy bar in his pocket had melted, leading to the revelation that electromagnetic waves can heat uniformly throughout a material rather than merely via conduction from a heat focal point [22]. This discovery not only revolutionized home cooking but also unveiled a plethora of possibilities for medical therapeutics. It is important to note that while microwaves and RFA differ in terms of their technology, their mechanism of inducing tissue injury and death-dependent on the achieved tissue temperature-remains the same. However, the method of heat generation does vary and imparts MWA with some distinct advantages over RFA.\nWater molecules possess a dipolar structure, meaning they have an uneven distribution of positive and negative charges. When subjected to an electromagnetic field, these molecules rotate to align themselves with the oscillating field, resulting in friction and subsequent heat generation. In contrast to radiofrequency (RF) waves that create currents at a frequency range of 350 to 500 kHz, microwaves operate at significantly higher frequencies, typically between 900 and 2450 MHz. This superior frequency facilitates a faster rotation of the water molecules and, consequently, a higher heat generation [23].\nHigher frequency microwaves not only produce more heat but they also interact more strongly with ions and electrons, potentially leading to greater heating depth [24].\nFurthermore, as microwaves are absorbed by tissue instead of following an electrical current path, they bypass issues associated with RF, such as increased impedance due to charring. Additionally, since microwaves generate heat within the tissue, they are less susceptible to the 'heat-sink' effect seen in RFA, where neighboring vascular structures disperse heat, diminishing the ablation field [25, 26].\nDespite its advantages, microwave technology does present certain limitations. While microwaves are less affected by the increased tissue impedance related to charring, excessive heat can lead to unintended effects. For instance, without proper cooling, microwave antennas can melt into the tissue, a scenario seldom encountered with RF electrodes [27]. This can happen due to significant localized thermal buildup within the antenna since the heat is generated in the tissue and not through a current. Cooled tip technology, like those in RFA catheters, has been integrated into MWA antennas to prevent this issue from occurring. Additionally, because the heating process is volumetric, heat does not dissipate into the surrounding tissue as all of the tissue is heated uniformly [28]. Therefore, when treating central structures with large vessels, caution should be used.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Cryoablation (CA)",
+      "content": "Endobronchial cryotherapy, an established and familiar tool for bronchoscopists, involves the use of cryoablation for the destruction of targeted tissues. This process involves subjecting tissue to cycles of freezing and thawing, causing direct cellular damage from cold-induced injuries and indirect alterations to the cellular microenvironment. This alteration can impair tissue viability and lead to additional cell death.\nCryogens such as liquid nitrogen and liquid CO2, used in the treatment of superficial tumors, have been in practice for over a century [29]. In 1961, Dr. Irving Cooper introduced the first cryoprobe, a tool that leveraged the latent heat of vaporization from liquid nitrogen to absorb heat from the tissue [12]. This cryoprobe consisted of a vacuuminsulated cannula containing liquid nitrogen at a temperature of - 196 °C. A non-insulated tip enabled the evaporation of the liquid nitrogen, which resulted in heat absorption from the adjacent tissue. The vaporized nitrogen gas was then expelled through a vent located at the distal end of the cannula. However, this early cryoprobe design faced practical limitations, such as the lack of control over the cooling and heating cycles which heightened the risk of collateral damage to surrounding healthy tissues. Additionally, the design necessitated relatively large probes to house the liquid nitrogen and ventilation system.\nModern cryoprobe systems generate cooling via the Joule-Thomson effect, where a gas cools down as it is allowed to expand. In these updated systems, high-pressure gasses like argon or carbon dioxide are delivered through\nthe probe, where they rapidly expand. This sudden expansion results in a significant decrease in the gas' temperature, generating extremely cold temperatures at the probe tip and facilitating tissue freezing [30].\nMultiple factors affect the effective ablation zone with cryoablation. These include cooling rate, nadir temperature, freeze duration, thaw duration, and number of freeze-thaw cycles as described in Table 3 [31, 32].\nWhile the parameters of the administration algorithm influence the overall tissue destruction, clinical outcomes of cryoablation can vary significantly. The process of cooling and warming during cryoablation does not occur at the same rate throughout the targeted tissue. This variation is due to the tissue's complex structure, including differences in blood vessel distribution and density. This complexity makes it challenging to ensure adequate cooling of all areas within the tissue, which is crucial for effective cryoablation [13].",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Current State of Ablation for Peripheral Lung Cancer",
+      "content": "The evolving landscape of endoluminal therapies for peripheral lung cancers presents an exciting therapeutic horizon. Emerging bronchoscopic ablative techniques are poised to complement and augment the existing paradigm of curative intent treatment. This spectrum of therapies includes a diverse array of methods such as BLITT, BTVA, HIFU, photodynamic therapy (PDT), brachytherapy (BT), pulse electric field (PEF)/irreversible electroporation (IRE), and intratumoral therapy (IT) with chemotherapy or oncolytic viral agents [33-35]. These modalities are largely in the early stages of investigation and have been addressed in other\nreviews. This section will review the available evidence for transbronchial RFA, MWA, and CA in peripheral ablation.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Comparison of IGTA Modalities",
+      "content": "Percutaneous IGTA is an established, minimally invasive treatment choice for lung cancer, specifically for patients who are not candidates for surgery [36, 37]. RFA and MWA tend to demonstrate comparable local control rates and have been shown to achieve complete ablation rates approaching 80-90%, with the best results obtained in tumors less than 2-3 cm in diameter. In contrast, cryoablation is historically more often used for management of tumor-related pain. However, recent data suggest that cryoablation can be used effectively to ablate primary lung cancers [38, 394 summarizes the differences between RFA, MWA, and CA.\nAs discussed previously, while RFA has the largest clinical experience, MWA has several advantages over RFA in the lung. MWA is less susceptible to the high impedance of lung tissue and has reduced heat sink effect caused by blood vessels. Moreover, MWA can generate larger and more consistent ablation zones, attain higher intratumoral temperatures, and expedite ablation times [40]. While percutaneous ablative approach has shown adequate local control rates, complications related to the ablative approach cannot be ignored, with an overall rate ranging from 20 to 50%. Complications related to the IGTA include pneumothorax, pleural effusions, parenchymal hemorrhage, and hemoptysis. In rarer cases, complications can involve needle tract seeding, infection, exacerbation of underlying interstitial lung disease (ILD), pseudoaneurysms, rib fractures, and chest wall burns in hyperthermal techniques [39 · ].\nTable 4\nComparison of thermal IGTA modalities\nCompared to  percutaneous  ablation,  bronchoscopic therapy should have an overall reduction in complication rates and risk of pleural-based complications, as the visceral pleura is not intentionally violated during the procedure. As such, it may represent a more favorable approach to deliver lung ablation [40].",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Bronchoscopic RFA",
+      "content": "Transbronchial RFA is being rapidly developed as evidenced by a series of animal studies and multiple 'ablate and resect' studies, published by a Japanese group, that show encouraging results [41-43]. The most comprehensive study involves 28 procedures (including 23 initial treatments and 5 retreatments) conducted between 2006 and 2012, targeting 20 patients deemed inappropriate for surgery. These procedures utilized a CT-guided bronchoscopic cooled-RFA catheter (1.67 mm in diameter with a 10 mm active tip and an ablation time of 50 s). The treated group consisted of an older population with multiple comorbidities, with roughly a 2: 1 ratio of adenocarcinoma to squamous cell carcinoma and a median tumor size of 24 mm. All the targeted lesions showed an air-bronchus sign on thin-slice CT. No severe adverse events occurred, though three patients experienced unplanned hospitalization due to feverish illnesses. The study showed a local control rate of 82.6% and a 5-year survival rate of 61.5% [43].\nThe more recent studies explored the use of novel RFA catheters. Steinfort et al. reported on the safety and feasibility of a novel, completely endobronchial RFA catheter with an externally cooled electrode for the ablation of peripheral nonsmall cell lung cancer (Non-small cell lung cancer (NSCLC)). Eight patients with stage I biopsy-confirmed Non-small cell lung cancer (NSCLC) underwent bronchoscopic RFA of the tumor 7 days prior to lobectomy. The RFA catheter was delivered bronchoscopically to peripheral Non-small cell lung cancer (NSCLC) lesions, guided by radial endobronchial ultrasound, with positioning confirmed using intra-procedural cone beam CT (CBCT). The study found that when applied within strictly controlled parameters, including complete neuromuscular blockade, delivery of RFA is safe and feasible. The results demonstrate a dose dependency of the ablation zone size, ultimately achieving relatively large zones of ablation including target tumor at the highest energy levels. Importantly, uniformity of tissue necrosis within the areas of ablation was observed [44]. Two additional bronchoscopy devices have been documented for radiofrequency ablation (RFA) of peripheral lesions. One of these devices utilizes 'flower-like' tines to enhance the treatment volume, while the other employs an internally cooled probe. Both devices were employed as definitive therapies for patients who were not suitable candidates for surgery. The reported 12-month progression-free survival rates ranged from 66 to 83% [43, 45].",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Bronchoscopic MWA",
+      "content": "Transbronchial MWA is rapidly gaining clinical evidence. Electromagnetic navigation bronchoscopy and cone-beam CT guidance for MWA uses advanced imaging techniques to plan, guide, and monitor the ablation of lung nodules. Several studies have shown that the technique is technically feasible, safe, and effective for the treatment of malignant or radiologically suspicious lung nodules in selected patients [40, 46-49]. In the recently concluded Navablate study, involving institutions in UK and China, 30 nodules underwent transbronchial MWA. The median nodule size was 12.5 mm, and the procedure achieved a 100% technical success rate on the day of the operation. Furthermore, the mean ablative margin was 9.9 mm, and the technique's effectiveness, confirmed via a one-month CT scan, was also rated at 100%. The technique demonstrated its safety, with only a 3.3% rate of device-related mild hemoptysis and no serious adverse events noted over a 30-day span [47 · ].\nSince 2019, the Chinese group has performed MWA successfully on 122 cases. The average hospital stay was one day, which is comparable to the duration associated with the percutaneous approach. Minor complications included a 3.4% incidence of pneumothorax necessitating chest drainage, two instances of bronchopleural fistula addressed with an endobronchial valve, post-ablation reaction and fever in 8.9% of patients, minor hemoptysis in 4.4%, pleural effusion in 1.7%, and chest or pleural space infection in 2.6%. Local ablation site recurrence was noted in five cases (4.0%) over a median follow-up duration of 507 days [47 · ]. Additionally, a separate Chinese group performed transbronchial MWA using a different flexible water-cooled MWA antenna and reported a complete ablation rate of 78.6%, a two-year local control rate of 71.4%, and a median progression-free survival of 33 months [48, 50].",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Bronchoscopic Cryoablation",
+      "content": "Transbronchial CA has been applied commonly to central airway lesions. More recently, cryoprobe has been used to perform transbronchial cryobiopsy of both mediastinal lymph nodes and peripheral lung nodules [51, 52]. However, there have not been any published reports on transbronchial cryotherapy for the intent of treatment of peripheral lung cancer. Transbronchial cryoablation is currently being evaluated in animal models [53, 54].\nPercutaneous CA, while relatively more recent compared to RFA and MWA, has recently been evaluated in management of both primary and metastatic lesions. In Stage I  Non-Small Cell Lung Cancer (Non-small cell lung cancer (NSCLC)), non-surgical cohort, a 2015 study, retrospectively assessed 45 patients\nwho underwent percutaneous CA, reported a 5-year overall survival (OS) rate of 67.8% and a 5-year progression-free survival (PFS) rate of 87.9%. Local recurrence was reported in 36.2% of cases [55]. A more contemporary retrospective analysis of 25 stage I Non-small cell lung cancer (NSCLC) patients treated with CA showed OS rates of 100% after one year and 63% after three years. However, local control rates were lower than those observed with microwave ablation (MWA) or radiofrequency ablation (RFA), at 71% after one year and 37% after 3 years. Like MWA and RFA, the maximum tumor diameter emerged as the most significant predictive factor. Tumors with a diameter exceeding 3 cm presented a higher risk of progression [56]. For oligometastatic disease, two studies are often reported. In 2015, the ECLIPSE trial investigated 40 patients with 60 lung metastases treated via CA, monitored for a minimum of 12 months. This study implemented rigorous eligibility requirements. Local tumor control rates were reported 96.6% and 94.2% at 6 months and 12 months, respectively. The 1-year OS rate was 97.5% [57]. The larger 'SOLSTICE' trial-a multicenter, phase II, prospective, uncontrolled study yielded compelling results in OS rates and local tumor efficacy. Across a cohort of 128 patients with 244 lung metastases undergoing CA, 12-month OS rate was 97.6% (95% CI, 92.6-99.2), with a robust 24-month OS rate of 86.6% (95% CI, 78.7-91.7). Concurrently, local tumor control rate was 85.1% at 12 months (172 out of 202) and 77.2% at 24 months (139 out of 180). Secondary local recurrence-free response following a subsequent cryoablation for recurring tumors exhibited an improvement, with 91.1% (184 out of 202) at 12 months and 84.4% (152 out of 180) at 24 months. This data underscores the potential therapeutic utility of cryoablation in managing metastatic lung tumors [58]. Similar results may be achievable via transbronchial approach.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Procedure Safety Considerations",
+      "content": "Generally, transbronchial ablative techniques are welltolerated among patients and should have lower rate of complications as compared to percutaneous ablation approach. Procedure considerations are similar between percutaneous and bronchoscopic approaches. However, there are nuances to consider, as the optimal technique is determined by IGTA modality, tumor size, location, and individual patient factors (comorbid conditions). Regardless the IGTA modality, CT imaging should be used in preprocedural phase to assist with ablation catheter placement, in intraprocedural phase to assess treatment zone formation, and in postprocedural phase to evaluate for post-ablation complications. There are three distinct forms of this technology: conventional computed tomography-guided technique (CCT), CT-fluoroscopy-guided technique (CTF),\nand cone-beam CT-guided technique (CBCT). Irrespective of the specific technique, all CT-guided bronchoscopies should follow a standard workflow [59 · ].\nAdditionally, postprocedural follow-up should be done in a standardized fashion. IGTA similar to Stereotactic Body Radiation Therapy (SBRT) but unlike resection applies energy directly to the in situ tumor without removal, making thorough imaging follow-up essential to evaluate treatment effectiveness and detect early recurrence. The post-ablation imaging appearance varies depending on the modality, with RFA and MWA often resulting in tumor size reduction and the formation of concentric rings around the tumor, while cryoablation typically leaves tumor size unchanged. A recommended follow-up schedule after percutaneous IGTA is as follows: the first Chest CT scan is conducted around 1 month post-IGTA. At this point, a mass-like consolidation is expected at the treated tumor site. Over time, the ablation zone is expected to shrink, and patients are advised to undergo contrast-enhanced chest CT every 3 months for the first year, semi-annually in the second year, and annually thereafter. Residual or recurrent disease is most common within 6-12 months post-IGTA, and early detection is critical as small tumors can be effectively treated with repeat IGTA. Fluorodeoxyglucose Positron Emission Tomography (FDG PET/CT) can also be employed to evaluate the ablation zone for tumors that exhibited focal FDG/CT uptake before ablation [38] (Table 5).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Patient Selection",
+      "content": "The process of patient selection for bronchoscopic IGTA requires careful deliberation over multiple factors. Foremost, tumor characteristics such as size and location hold significant  weight.  Ablative  techniques  have  demonstrated the highest efficacy for tumors smaller than 3 cm in diameter and located sufficiently far from vital structures, thereby minimizing the risk of inadvertent harm. Additionally, the stage of the disease warrants consideration, given that percutaneous ablative therapies have been shown to be effective for early-stage non-small cell lung cancer (Non-small cell lung cancer (NSCLC)) and oligometastatic disease, conditions that are particularly responsive to localized treatments like ablation. Finally, a comprehensive assessment of patients' comorbidities and potential contraindications is critical, as ablative therapies may offer a suitable treatment path for patients who are not surgical candidates or have high surgical risk, provided they maintain adequate lung function and overall health status to tolerate the procedure [59 · ].\nThis  multidimensional  evaluation  is  best  conducted through  a  real-time  assessment  by  a  multidisciplinary team. This team brings together the combined expertise of\ninterventional pulmonology, interventional radiology, thoracic surgery, radiation oncology, and medical oncology, thus ensuring an integrative approach to determine the most efficacious intervention for each case.\nDuring this evaluation, three critical factors are balanced: local control, treatment-related morbidity, and preservation of healthy lung tissue. Notably, no single intervention may satisfy all three aspects. For instance, small central lesions, otherwise requiring a lobectomy if treated surgically, may alternatively be addressed through IGTA or radiation therapy. While radiation therapy is typically less morbid than IGTA in the short term, it might compromise more lung parenchyma due to the radiation dose affecting adjacent tissues. Conversely, IGTA, while preserving lung parenchyma, may not adequately address > 3 cm lesions as shown by increased local recurrence rate with these larger lesions. Hence, radiation or surgery is a more appropriate therapy modality. Furthermore, in cases of multiple lesions, a multimodal approach incorporating different treatment modalities in a strategic manner could offer significant benefits, thus emphasizing the necessity of a comprehensive, collaborative approach in patient selection and treatment planning [38] (Table 6).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Guideline Recommendations on Percutaneous IGTA",
+      "content": "Several professional societies have endorsed the application of percutaneous IGTA for the treatment of Non-small cell lung cancer (NSCLC) and pulmonary metastases, substantiated by evidence gathered since the advent of percutaneous IGTA in pulmonary application in 2000.\nThe Society of Interventional Radiology (SIR) in their 2021 guidelines noted the comparable efficacy of IGTA, SBRT, and sublobar resection for Non-small cell lung cancer (NSCLC) [37]. In contrast, the 2012 guidelines issued by the Society of Thoracic Surgeons (STS) and the American College of Chest Physicians\n(ACCP) endorsed IGTA's use exclusively for peripheral tumors measuring less than 3 cm, advocating caution in utilizing IGTA for tumors in proximity to the mediastinum [60]. The National Comprehensive Cancer Network (NCCN) supports the use of IGTA for Non-small cell lung cancer (NSCLC) in selected patients with tumor less than 3 cm who are non-surgical candidates due to comorbid conditions, while acknowledging increased local recurrence rate for treating tumor greater than 3 cm and increased risk of pneumothorax with percutaneous approach with up to 21% requiring chest tube placement [61]. Similarly, the Cardiovascular and Interventional Radiological Society of Europe (CIRSE) endorses IGTA for Non-small cell lung cancer (NSCLC) patients who are not candidates for surgical intervention [62]. European Society for Medical Oncology (ESMO) indicates that IGTA is an appropriate treatment for Non-small cell lung cancer (NSCLC) patients who are not candidates for surgery or SBRT [63]. When considering IGTA in the context of metastatic disease, the guidelines from these societies exhibit a degree of uniformity, consistently noting that IGTA can be utilized in the treatment of oligometastatic disease.\n*Initial clinic visit should be done within 2 weeks to assess any periablative complications. Low threshold to start antibiotics.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Transbronchial Tumor Ablation Challenges and Future Directions",
+      "content": "Thermal ablation techniques have firmly established their role in the treatment of both primary and metastatic malignancies in the liver, kidney, and bone. While RFA, MWA, and CA have been employed to treat lung cancer via percutaneous approach, interpreting the data is challenging due to variations in tumor type (metastatic vs. primary lung), rates of biopsy confirmation, follow-up periods, and techniques. A poignant illustration of this is a 2019 meta-analysis of 12 studies involving 985 patients, where MWA was used. Every study was found to have significant methodological weaknesses, with only four addressing missing data in their findings. Moreover, most studies had a follow-up period of fewer than 2 years [64].\nWhile RFA remains a viable option for treating many tumors, MWA is increasingly showing numerous advantages over RFA. It is rapidly becoming the treatment of choice for many cancers due to its ability to generate larger and more uniform ablation zones and reduced complications associated with charring and heat sink effect. In the lung, RFA is particularly disadvantaged due to the high tissue impedance of aerated lung, resulting in decreased conductivity. Additionally, the highly vascular nature of lung tissue exacerbates the problems of heat-sink, limiting RFA's effectiveness. However, even with microwave ablation, several lung properties can affect the ability to create reliable ablation fields. First, the heat-sink effect, which is less problematic with microwaves compared to RFA, can still be troublesome due to the extensive pulmonary blood flow and intertwined networks of pulmonary arterioles, venules, and capillaries. The act of ventilation also introduces a heat-sink effect as heat can dissipate from the intended ablation site simply through the process of breathing [65].\nThe lung has a much lower water content than other tissues, and tissue water is crucial for completing the electrical circuit for RFA and serves as the primary catalyst for dipolar ablation in microwave ablation [66, 67]. Air also acts as an insulator, reducing thermal conductivity. Although these differences might initially seem beneficial in confining ablation to the intended tumor site-since the surrounding normal lung tissue is less likely to incur thermal injury, lung cancers often grow in lepidic patterns with ground-glass components and irregular shapes, making this assumption questionable [24, 68, 69].\nThis becomes an even greater challenge when considering the presence of surrounding emphysema, which is more common than not for patients eligible for ablation (poor surgical candidates). The tumor irregularity might negate the perceived benefit of more spherical ablation zones with microwave ablation compared to radiofrequency\nand introduce further complexity in accurately predicting ablation zones.\nAdvancements in catheter and system designs are being developed to compensate for many of these issues. However, it is unclear how close we are to generating reliable ablation zones in lung cancer. Manufacturers advocate the use of ablation zone confirmation software to ensure adequate ablation zones. Yet, the technology for zone prediction receives FDA clearance based on ex vivo heating experiments [70]. While this appears to correlate well with actual ablation zones in the liver, the nature of the inflated lung is different, and the software might provide a false sense of accuracy [71]. Available studies so far have shown a poor correlation of ablation zone prediction with the actual ablation zone in the lung [69]. For example, a 2021 study of pulmonary tumor ablation prior to planned resection showed that the ablation zone predicted by the software was, on average, 57.7% smaller than planned [68].\nLung ablation also suffers from less reliable measures of the achieved ablation zone post-treatment. Traditionally, CT scan findings to assess the ablation zone rely on the development of a ground-glass opacification surrounding the lesion [72]. However, this is not a reliable marker and often overestimates the degree of coagulative necrosis. This could be caused by the inflammatory response as well as tumor bleeding resulting from the ablation [73].\nCryoablation is still in its infancy but has some potential advantages over RFA and microwave ablation. From the perspective of bronchoscopist, one obvious advantage is the comfort with this technology and easy access. Additionally, thermal ablation therapies, especially RFA can be very painful, while the cooling effect of cryotherapy has inherent analgesic properties and has been shown to be associated with reduced pain, which could be a consideration when tumors are near the pleural surface [74]. It also might have advantages near central airways due to the cryo-resistance of cartilage which is one of the features that has made it such a popular device in central airway disease [75].",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Conclusion",
+      "content": "In summary, much of what we learned from percutaneous IGTA will likely to be applicable to transbronchial IGTA. The guidelines currently support percutaneous IGTA in both  non-surgical  stage  I  Non-small cell lung cancer (NSCLC)  and  oligometastatic disease. Despite the multitude of challenges listed above, transbronchial  IGTA  holds  the  potential  to  be  a  safer ablative approach that offers the advantage of overlapping ablation zones, multiple ablation targets in one setting (i.e., bilateral lesions or multiple lesions in one lobe), and potential for multi-modality approach (IGTA and IT with\nor without immunotherapy). Undoubtedly, a substantial amount of work lies ahead, and it will necessitate universal collaboration to establish transbronchial IGTA as a part of the armamentarium in lung cancer management.",
+      "category": "conclusion",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Declarations",
+      "content": "Conflict of Interest Russell J. Miller, MD, CDR, MC, USN is a military service member or federal/contracted employee of the United States government. This work was prepared as part of his official duties. Title 17 U.S.C. 105 provides that 'copyright protection under this title is not available for any work of the United States Government.' Title 17 U.S.C. 101 defines US Government work as work prepared by a military service member or employee of the US Government as part of that person's official duties. The views expressed in this article reflect the results of research conducted by the author and do not necessarily reflect the official policy or position of the Department of the Navy, Department of Defense, nor the United States Government.\nHuman and Animal Rights and Informed Consent This article does not contain any studies with human or animal subjects performed by any of the authors.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "References",
+      "content": "Papers of particular interest, published recently, have been highlighted as:\n• Of importance\n1. Doppman JL, Krudy AG, Marx SJ, et al. Aspiration of enlarged parathyroid glands for parathyroid hormone assay. Radiology. 1983;148(1):31-5.\n2. Solbiati L, Giangrande A, De Pra L, Bellotti E, Cantù P, Ravetto C. Percutaneous ethanol injection of parathyroid tumors under US guidance: Treatment for secondary hyperparathyroidism. Radiology. 1985;155(3):607-10.\n3. Livraghi T, Festi D, Monti F, Salmi A, Vettori C. US-guided percutaneous alcohol injection of small hepatic and abdominal tumors. Radiology. 1986;161(2):309-12.\n4. Livraghi T, Vettori C, Lazzaroni S. Liver metastases: Results of percutaneous ethanol injection in 14 patients. Radiology. 1991;179(3):709-12.\n5. Livraghi T, Giorgio A, Marin G, et al. Hepatocellular carcinoma and cirrhosis in 746 patients: Long-term results of percutaneous ethanol injection. Radiology. 1995;197(1):101-8.\n6. Glazer ES, Curley SA. The ongoing history of thermal therapy for cancer. Surg. Oncol. Clin. N . 2011.\n7. Goldberg SN, Gazelle GS, Mueller PR. Thermal ablation therapy for focal malignancy: A unified approach to underlying principles, techniques, and diagnostic imaging guidance. Am J Roentgenol. 2000;174(2):323-31.\n8. Chu KF, Dupuy DE. Thermal ablation of tumours: Biological mechanisms and advances in therapy. Nat Rev Cancer. 2014;14(3):199-208.\n9. Strasberg S, Linehan D. Radiofrequency ablation of liver tumors. Curr Probl Surg. 2003;40(8):459-98.\n10. Goldberg SN, Gazelle GS, Halpern EF, Rittman WJ, Mueller PR, Rosenthal DI. Radiofrequency tissue ablation: Importance of local temperature along the electrode tip exposure in determining lesion shape and size. Acad Radiol. 1996;3(3):212-8.\n11. Ahmed M, Brace CL, Lee FC, Goldberg SN. Principles of and advances in percutaneous ablation. Radiology . 2011.\n12. Cooper IS. Cryogenic surgery: A new method of destruction or extirpation of benign or malignant tissues. N Engl J Med. 1963;268(14):743-9.\n13. Gage AA, Baust J. Mechanisms of tissue injury in cryosurgery. Cryobiology. 1998;37(3):171-86.\n14. Organ LW. Electrophysiologic principles of radiofrequency lesion making. Appl Neurophysiol. 1976;39(2):69-76.\n15. McGahan JP, Browning PD, Brock JM, Tesluk H. Hepatic ablation using radiofrequency electrocautery. Invest Radiol. 1990;25(3):267-70.\n16. Livraghi T, Goldberg SN, Monti F, et al. Saline-enhanced radio-frequency tissue ablation in the treatment of liver metastases. Radiology. 1997;202(1):205-10.\n17. Ni Y, Miao Y, Mulier S, Yu J, Baert AL, Marchal G. A novel 'cooled-wet' electrode  for  radiofrequency  ablation.  Eur. Radiol . 2000.\n18. Pereira PL, Trübenbach J, Schenk M, et al. Radiofrequency ablation: In vivo comparison of four commercially available devices in pig livers. Radiology. 2004;232(2):482-90.\n19. Rossi S, Buscarini E, Garbagnati F, et al. Percutaneous treatment of small hepatic tumors by an expandable RF needle electrode. Am J Roentgenol. 1998;170(4):1015-22.\n20. Laeseke PF, Frey TM, Brace CL, et al. Multiple-electrode radiofrequency ablation of hepatic malignancies: Initial clinical experience. Am J Roentgenol. 2007;188(6):1485-94.\n21. Lu DS, Raman SS, Vodopich DJ, Wang M, Sayre J, Lassman C. Effect of vessel size on creation of hepatic radiofrequency lesions in pigs: Assessment of the 'heat sink' effect. Am J Roentgenol. 2002;178(1):47-51.\n22. Osepchuk JM. The history of the microwave oven: A critical review. Paper presented at: 2009 IEEE MTT-S International Microwave Symposium Digest. 2009.\n23. Sun Y, Wang Y, Ni X, et al. Comparison of ablation zone between 915- and 2,450-MHz cooled-shaft microwave antenna: Results in in vivo porcine livers. AJR Am. J. Roentgenol . 2009.\n24. Brace CL. Microwave ablation technology: What every user should know. Curr Probl Diagn Radiol. 2009;38(2):61-7.\n25. Carrafiello G, Laganà D, Mangini M, et al. Microwave tumors ablation: Principles, clinical applications and review of preliminary experiences. Int J Surg. 2008;6(Suppl 1):S65-69.\n26. Poulou LS, Botsa E, Thanou I, Ziakas PD, Thanos L. Percutaneous microwave ablation vs radiofrequency ablation in the treatment of hepatocellular carcinoma. World J. Hepatol . 2015.\n27. Fallahi H, Prakash P. Antenna designs for microwave tissue ablation. Crit Rev Biomed Eng . 2018.\n28. Lubner MG, Brace CL, Hinshaw JL, Lee FT. Microwave tumor ablation: Mechanism of action, clinical results, and devices. JVIR 2010;21(8, Supplement):S192-S203.\n29. Gage  AA.  History  of  cryosurgery.  Semin  Surg  Oncol. 1998;14(2):99-109.\n30. Erinjeri JP, Clark T. Cryoablation: Mechanism of action and devices. JVIR . 2010.\n31. Lyons GR, Winokur RS, Pua BB. Pulmonary cryoablation zones: More aggressive ablation is warranted in vivo. AJR Am. J. Roentgenol . 2019.\n32. Gage AA, Guest K, Montes M, Caruana JA, Whalen DA. Effect of varying freezing and thawing rates in experimental cryosurgery. Cryobiology. 1985;22(2):175-82.\n33. Olive G, Yung R, Marshall H, Fong KM. Alternative methods for local ablation-interventional pulmonology: A narrative review. Transl Lung Cancer Res. 2021;10(7):3432-45.\n34. Steinfort  DP,  Rangamuwa  K.  A  glimpse  of  the  future?Bronchoscopic ablation of peripheral early stage lung cancer. Transl Lung Cancer Res. 2021;10(10):3861-4.\n35. Harris K, Puchalski J, Sterman D. Recent advances in bronchoscopic  treatment  of  peripheral  lung  cancers.  Chest. 2017;151(3):674-85.\n36. de  Baere  T,  Tselikas  L,  Catena  V,  Buy  X,  Deschamps  F, Palussiere J. Percutaneous thermal ablation of primary lung cancer. Diagn Interv Imaging. 2016;97(10):1019-24.\n37. Genshaft SJ, Suh RD, Abtin F, et al. Society of interventional radiology multidisciplinary position statement on percutaneous ablation of non-small cell lung cancer and metastatic disease to the lungs: Endorsed by the Canadian Association for Interventional Radiology, the Cardiovascular and Interventional Radiological Society of Europe, and the Society of Interventional Oncology. J Vasc Interv Radiol . 2021;32(8):1241 e1241-1241 e1212.\n38. Murphy  MC,  Wrobel  MM,  Fisher  DA,  Cahalane  AM, Fintelmann FJ. Update on image-guided thermal lung ablation: Society guidelines, therapeutic alternatives, and postablation imaging findings. AJR Am J Roentgenol. 2022;219(3):471-85.\n39.· Bartlett EC, Rahman S, Ridge CA. Percutaneous image-guided thermal ablation of lung cancer: What is the evidence? Lung Cancer. 2023;176:14-23. This is the most recent review on the evidence to date for percutaneous IGTA.\n40. Siu ICH, Chan JWY, Manuel II TB, Ngai JCL, Lau RWH, Ng CSH. Bronchoscopic ablation of lung tumours: Patient selection and technique. JOVS . 2021;8.\n41. Tsushima K, Koizumi T, Tanabe T, et al. Bronchoscopy-guided radiofrequency ablation as a potential novel therapeutic tool. Eur Respir J. 2007;29(6):1193-200.\n42. Tanabe T, Koizumi T, Tsushima K, et al. Comparative study of three different catheters for CT imaging-bronchoscopy-guided radiofrequency ablation as a potential and novel interventional therapy for lung cancer. Chest. 2010;137(4):890-7.\n43. Koizumi T, Tsushima K, Tanabe T, et al. Bronchoscopy-guided cooled radiofrequency ablation as a novel intervention therapy for peripheral lung cancer. Respiration. 2015;90(1):47-55.\n44. Steinfort  DP,  Antippa  P,  Rangamuwa  K,  et  al.  Safety  and feasibility of a novel externally cooled bronchoscopic radiofrequency ablation catheter for ablation of peripheral lung tumours: A first-in-human dose escalation study. Respiration. 2023;102(3):211-9.\n45. Xie F, Zheng X, Xiao B, Han B, Herth FJF, Sun J. Navigation bronchoscopy-guided radiofrequency ablation for nonsurgical peripheral pulmonary tumors. Respiration. 2017;94(3):293-8.\n46. Chan JWY, Lau RWH, Ngai JCL, et al. Transbronchial microwave ablation of lung nodules with electromagnetic navigation bronchoscopy guidance-A novel technique and initial experience with 30 cases. Transl Lung Cancer Res. 2021;10(4):1608-22.\n47.· Chan JWY, Siu ICH, Chang ATC, et al. Transbronchial techniques for lung cancer treatment: Where are we now? Cancers (Basel). 2023;15(4). This is the most recent review on transbronchial techniques for lung cancer.\n48. Xie F, Chen J, Jiang Y, Sun J, Hogarth DK, Herth FJF. Microwave ablation via a flexible catheter for the treatment of nonsurgical peripheral lung cancer: A pilot study. Thorac Cancer. 2022;13(7):1014-20.\n49. Pritchett MA, Reisenauer JS, Kern R, et al. Novel image-guided flexible-probe transbronchial microwave ablation for stage 1 lung cancer. Respiration. 2023;102(3):182-93.\n50. Bao F, Yu F, Wang R, et al. Electromagnetic bronchoscopy guided microwave ablation for early stage lung cancer presenting  as  ground  glass  nodule.  Transl  Lung  Cancer  Res. 2021;10(9):3759-70.\n51. Fan Y, Zhang AM, Wu XL, et al. Transbronchial needle aspiration combined with cryobiopsy in the diagnosis of mediastinal diseases: A multicentre, open-label, randomised trial. Lancet Respir Med. 2023;11(3):256-64.\n52. Kim SH, Mok J, Jo EJ, et al. The additive impact of transbronchial cryobiopsy using a 11-mm diameter cryoprobe on conventional biopsy for peripheral lung nodules. Cancer Res Treat. 2023;55(2):506-12.\n53. Hammer D, Budi L, Nagy A, Varga R, Horvath P. Evaluation of a transbronchial cryoprobe for the ablation of pulmonary nodules: An in vitro pilot study. BMC Pulm Med. 2023;23(1):71.\n54. Zheng X, Yuan H, Gu C, et al. Transbronchial lung parenchyma cryoablation with a novel flexible cryoprobe in an in vivo porcine model. Diagn Interv Imaging. 2022;103(1):49-57.\n55. Moore W, Talati R, Bhattacharji P, Bilfinger T. Five-year survival after cryoablation of stage I non-small cell lung cancer in medically inoperable patients. J Vasc Interv Radiol. 2015;26(3):312-9.\n56. McDevitt JL, Mouli SK, Nemcek AA, Lewandowski RJ, Salem R, Sato KT. Percutaneous cryoablation for the treatment of primary and metastatic lung tumors: Identification of risk factors for recurrence and major complications. J Vasc Interv Radiol. 2016;27(9):1371-9.\n57. de Baere T, Tselikas L, Woodrum D, et al. Evaluating cryoablation of metastatic lung tumors in patients-Safety and efficacy: The ECLIPSE trial-Interim analysis at 1 year. J Thorac Oncol. 2015;10(10):1468-74.\n58. Callstrom  MR,  Woodrum  DA,  Nichols  FC,  et  al.  Multicenter study of metastatic lung tumors targeted by interventional cryoablation evaluation (SOLSTICE). J Thorac Oncol. 2020;15(7):1200-9.\n59.· Paez-Carpio A, Gomez FM, Isus Olive G, et al. Image-guided percutaneous ablation for the treatment of lung malignancies: Current state of the art. Insights Imaging. 2021;12(1):57. This is a detailed review of technical aspects percutaneous IGTA .\n60. Howington JA, Blum MG, Chang AC, Balekian AA, Murthy SC. Treatment of stage I and II non-small cell lung cancer: Diagnosis and management of lung cancer, 3rd ed: American College of Chest Physicians evidence-based clinical practice guidelines. Chest. 2013;143(5 Suppl):e278S-e313S.\n61. NCCN. NCCN guidelines® insights - Non-small cell lung cancer, version 3.2023. https://  www.  nccn.  org/  profe  ssion  als/  physi  cian_  gls/ pdf/  nscl.  pdf. Published 2023. Accessed 06/01/2023, 2023.\n62. Venturini M, Cariati M, Marra P, Masala S, Pereira PL, Carrafiello G. CIRSE standards of practice on thermal ablation of primary and secondary lung tumours. Cardiovasc Intervent Radiol. 2020;43(5):667-83.\n63. Eberhardt WE, De Ruysscher D, Weder W, et al. 2nd ESMO consensus conference in lung cancer: Locally advanced stage III non-small-cell lung cancer. Ann Oncol. 2015;26(8):1573-88.\n64. Nelson DB, Tam AL, Mitchell KG, et al. Local recurrence after microwave ablation of lung malignancies: A systematic review. Ann Thorac Surg. 2019;107(6):1876-83.\n65. Sebek J, Taeprasartsit P, Wibowo H, Beard WL, Bortel R, Prakash P. Microwave ablation of lung tumors: A probabilistic approach for simulation -based treatment planning. Med Phys . 2021.\n66. Ponder E. The coefficient of thermal conductivity of blood and of various tissues. J Gen Physiol. 1962;45(3):545-51.\n67. Sonntag PD, Hinshaw JL, Lubner MG, CL Brace, Lee FT Jr. Thermal ablation of lung tumors. Surg Oncol Clin N Am. 2011;20(0):369-87.\n68. Blackmon SH, Sterner R, Eiken PW, et al. Technical and safety performance of CT-guided percutaneous microwave ablation for lung tumors: An ablate and resect study. JTD . 2021.\n69. Frandon J, Akessoul P, Kammoun T, et al. Microwave ablation of liver, kidney and lung lesions: One-month response and manufacturer's charts' reliability in clinical practice. Sensors (Basel). 2022;22(11).\n70. U.S. Food and Drug Administration. (2020, October 13). Letter to NeuWave Medical, Inc. regarding the NEUWAVE Microwave Ablation System and Accessories (K200081). https://  www. acces  sdata.  fda.  gov/  cdrh_  docs/  pdf20/  K2000  81.  pdf.\n71. Hu H, Nan Q, Tian Z, Gao X. Study on the microwave ablation effect of inflated porcine lung. Appl. Sci . 2022.\n72. Vespro V, Bonanno MC, Andrisani MC, et al. CT after lung microwave ablation: Normal findings and evolution patterns of treated lesions. Tomography. 2022;8(2):617-26.\n73. Chheang S, Abtin F, Guteirrez A, Genshaft S, Suh RD. Imaging features following thermal ablation of lung malignancies. Semin. Interv. Radiol . 2013.\n74. Li H, Long Y, Yan G-W, et al. Microwave ablation vs. cryoablation for treatment of primary and metastatic pulmonary malignant tumors. Mol Chin Oncol . 2022.\n75. Colak E, Tatli S, Shyn PB, Tuncali K, Silverman SG. CT-guided percutaneous cryoablation of central lung tumors. Diagn Interv Radiol . 2014.\nPublisher's  Note Springer  Nature  remains  neutral  with  regard  to jurisdictional claims in published maps and institutional affiliations.\nSpringer Nature or its licensor (e.g. a society or other partner) holds exclusive rights to this article under a publishing agreement with the author(s) or other rightsholder(s); author self-archiving of the accepted manuscript version of this article is solely governed by the terms of such publishing agreement and applicable law.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    }
+  ],
+  "tables": [
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/29'}",
+      "headers": [
+        "Zone name",
+        "Temperature range (° C )",
+        "Tissue findings",
+        "Mechanism of injury",
+        "Location",
+        "Necessary exposure time",
+        "Comments"
+      ],
+      "rows": [
+        [
+          "Central Necrosis Zone (Charring zone)",
+          "100 to 300 >300",
+          "-Charring -Liquefaction necrosis -Carbonization -Cavitation",
+          "-Tissue desiccation, -Steam vacuoles formation -Smoke generation -Vaporization",
+          "Center region in closet proximity to applicator",
+          "Instantaneous",
+          "-Increased impedance and reduction in water content reduces electrical conduction"
+        ],
+        [
+          "Coagulation Zone",
+          "60 to 100",
+          "-Coagulation necrosis -Hyperchromasia -Cell shrinkage -Pyknosis",
+          "-Protein denaturation -Membrane rupture -Cytokine release",
+          "Surrounds central necrosis zone",
+          "Few seconds",
+          "-Goal temperature to induce maximal tumor cell killing"
+        ],
+        [
+          "Congestion Zone (Peripheral Zone or Transitional zone)",
+          "42 to 60",
+          "-May include hyperemia, edema, or inflammation -Partial necrosis",
+          "-Enzyme inactivation -Mitochondrial injury",
+          "Outer rim of coagulation zone",
+          "30 to 60 min",
+          "-Inconsistent tumor killing -Increased sensitivity to chemotherapy and radiation (synergistic)"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/38'}",
+      "headers": [
+        "Mechanism",
+        "Effects"
+      ],
+      "rows": [
+        [
+          "Direct",
+          "Intracellular ice crystal formation Membrane rupture Cell dehydration Protein denaturation Apoptosis"
+        ],
+        [
+          "Indirect",
+          "Blood supply obstruction Platelet aggregation Microthrombosis formation Ischemia Cell death"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/68'}",
+      "headers": [
+        "Variable",
+        "Mechanism",
+        "Equipment factors",
+        "Tissue factors"
+      ],
+      "rows": [
+        [
+          "Low nadir temperature",
+          "Intracellular and extracellular ice crystals lead to cell rupture and apoptosis",
+          "Probe design, specific cryogen used, cryogen flow rate, pressure in system",
+          "Water content, perfusion, ambient temperature"
+        ],
+        [
+          "Longer duration of freezing",
+          "Expands field of ice crystal formation",
+          "Time control in the machine",
+          "Tissue type and density"
+        ],
+        [
+          "Increased number of freeze-thaw cycles and thaw duration",
+          "Thawing (and ice crystal melting) causes osmotic imbalances, increasing tissue injury",
+          "Control over cycles and duration in the machine",
+          "Tissue resilience to osmotic changes"
+        ],
+        [
+          "Faster cooling rate",
+          "Results in larger ice crystals that cause more mechanical damage to cells",
+          "Cooling system capabilities, cryogen type and concentration, probe design",
+          "Tissue type and density, perfusion rate"
+        ],
+        [
+          "Tissue temperature at probe tip",
+          "Temperature at the probe tip gives an indication of the effectiveness of the freezing process",
+          "Quality and sensitivity of the temperature sensor, data feedback mechanisms",
+          "Tissue type, tissue density, thermal conductivity of the tissue"
+        ],
+        [
+          "Size and shape of the ablation zone",
+          "The shape and size of the ablation zone determine the extent of tissue destruction",
+          "Probe size, shape, and design; operator control over the size and shape of the ablation zone",
+          "Tissue type, tissue density, perfusion, thermal conductivity of the tissue"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "",
+      "headers": null,
+      "rows": [
+        [
+          "Treatment time",
+          "10-15 min",
+          "3-5 min (dependent on lesion size)",
+          "min or more"
+        ],
+        [
+          "Advantages",
+          "increases reducing and Less blood due to for IGTA in with the longest experience. Internal cooling can help high temperature",
+          "zone, caution used when central Less susceptible to the 'heat sink' phenomenon. Higher temperatures achieved more quickly, leading to shorter ablation times and larger ablation volumes. Adequate results",
+          "time- Can with cycles ice ball on monitoring of the it tumors Less pain due effects of treated 30"
+        ],
+        [
+          "",
+          "Technique the lung clinical electrode overcome limitations",
+          "in aerated lung tissue",
+          "Visualization of the CT for close ablation zone Preserves collagenous architecture, making suitable for central intraprocedural to the anesthetic cold Preferable for peripheral subpleural lesions without general anesthetic"
+        ],
+        [
+          "Limitations",
+          "leading to and coagulation temperatures tissue charring High temperature tissue impedance, heat conductance the ablation zone. effective near large vessels and airways 'heat sink'",
+          "of molecules, heat death Large ablation needed to be applying near structures",
+          "occurs due and ice resulting in cell Also involves and Procedure is more consuming compared to RFA and MWA. take 30 min or more multiple freeze-thaw"
+        ],
+        [
+          "Effect",
+          "Heat generation protein denaturation subsequent necrosis. High (>100 °C) can cause vaporization and",
+          "Oscillation and rotation dipole water generating frictional leading to cellular through coagulative necrosis",
+          "Cell death to intracellular extracellular formation dehydration. vasoconstriction coagulative necrosis"
+        ],
+        [
+          "Frequency",
+          "RFA passage electrical the electrode ~400 kHz",
+          "more within applying electromagnetic Between 915 and 2450 MHz",
+          "sub-zero to using a gas passed N/A"
+        ],
+        [
+          "Procedure",
+          "ablation Placement of an electrode, the of alternating currents from to target tissue",
+          "Placement of one or microwave antennae a lung tumor and alternating fields",
+          "Applies hypothermal Celsius temperatures target tissue (usually argon) through a cryoablation probe"
+        ],
+        [
+          "",
+          "(RFA)",
+          "ablation (MWA)",
+          "(CA)"
+        ],
+        [
+          "Technique",
+          "Radio-frequency",
+          "Microwave",
+          "Cryoablation"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/97'}",
+      "headers": [
+        "Patient selection",
+        "Indications",
+        "Contraindications"
+      ],
+      "rows": [
+        [
+          "Tumor (≤3 cm) Able to tolerate anesthesia Select ablation modality based on risk profile Evaluate with a multi-D tumor ablation board",
+          "Early stage NSCLC and contraindication to surgery Oligometastatic cancer (≤3 cm) and contraindication to surgery Multiple and synchronous NSCLC suitable for definitive ablative treatment",
+          "Absolute Life expectancy of<3 months ECOG scale>2 Non-correctable hemorrhagic diathesis Inability to undergo anesthesia Inability to undergo bronchoscopy Relative Impaired lung function Tumors located near large vessels or hilum (RFA) Cardiac pacemakers (RFA) Correctable hemorrhagic diathesis"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/104'}",
+      "headers": [
+        "Time ( mo ) after IGTA",
+        "Examination"
+      ],
+      "rows": [
+        [
+          "0.5 1 3 6 9 12 18 24 >24",
+          "Clinic visit/virtual visit* Clinic visit, chest CT Clinic visit, chest CT Clinic visit, chest CT or PET/CT** Clinic visit, chest CT Clinic visit, chest CT or PET/CT** Clinic visit, chest CT Clinic visit, chest CT Clinic visit, chest CT***"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    }
+  ],
+  "figures": [
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    }
+  ],
+  "references": [
+    {
+      "title": "Aspiration of enlarged parathyroid glands for parathyroid hormone assay"
+    },
+    {
+      "title": "Radiology",
+      "year": 1983
+    },
+    {
+      "title": "Percutaneous ethanol injection of parathyroid tumors under US guidance: Treatment for secondary hyperparathyroidism",
+      "year": 1983
+    },
+    {
+      "title": "US-guided percutaneous alcohol injection of small hepatic and abdominal tumors",
+      "year": 1985
+    },
+    {
+      "title": "Liver metastases: Results of percutaneous ethanol injection in 14 patients",
+      "year": 1986
+    },
+    {
+      "title": "Hepatocellular carcinoma and cirrhosis in 746 patients: Long-term results of percutaneous ethanol injection",
+      "year": 1991
+    },
+    {
+      "title": "The ongoing history of thermal therapy for cancer",
+      "year": 1995
+    },
+    {
+      "title": "Surg. Oncol. Clin. N",
+      "year": 2011
+    },
+    {
+      "title": "Thermal ablation therapy for focal malignancy: A unified approach to underlying principles, techniques, and diagnostic imaging guidance",
+      "year": 2011
+    },
+    {
+      "title": "Am J Roentgenol",
+      "year": 2000
+    },
+    {
+      "title": "Thermal ablation of tumours: Biological mechanisms and advances in therapy",
+      "year": 2000
+    },
+    {
+      "title": "Nat Rev Cancer",
+      "year": 2014
+    },
+    {
+      "title": "Radiofrequency ablation of liver tumors",
+      "year": 2014
+    },
+    {
+      "title": "Curr Probl Surg",
+      "year": 2014
+    },
+    {
+      "title": "Radiofrequency tissue ablation: Importance of local temperature along the electrode tip exposure in determining lesion shape and size",
+      "year": 2003
+    },
+    {
+      "title": "Acad Radiol",
+      "year": 1996
+    },
+    {
+      "title": "Principles of and advances in percutaneous ablation",
+      "year": 1996
+    },
+    {
+      "title": "Cryogenic surgery: A new method of destruction or extirpation of benign or malignant tissues",
+      "year": 2011
+    },
+    {
+      "title": "N Engl J Med",
+      "year": 2011
+    },
+    {
+      "title": "Mechanisms of tissue injury in cryosurgery",
+      "year": 1963
+    },
+    {
+      "title": "Cryobiology",
+      "year": 1963
+    },
+    {
+      "title": "Electrophysiologic principles of radiofrequency lesion making",
+      "year": 1998
+    },
+    {
+      "title": "Appl Neurophysiol",
+      "year": 1998
+    },
+    {
+      "title": "Hepatic ablation using radiofrequency electrocautery",
+      "year": 1976
+    },
+    {
+      "title": "Invest Radiol",
+      "year": 1990
+    },
+    {
+      "title": "Saline-enhanced radio-frequency tissue ablation in the treatment of liver metastases",
+      "year": 1990
+    },
+    {
+      "title": "A novel &quot;cooled-wet&quot; electrode for radiofrequency ablation",
+      "year": 1997
+    },
+    {
+      "title": "Eur. Radiol",
+      "year": 2000
+    },
+    {
+      "title": "Radiofrequency ablation: In vivo comparison of four commercially available devices in pig livers",
+      "year": 2000
+    },
+    {
+      "title": "Percutaneous treatment of small hepatic tumors by an expandable RF needle electrode",
+      "year": 2004
+    },
+    {
+      "title": "Multiple-electrode radiofrequency ablation of hepatic malignancies: Initial clinical experience",
+      "year": 1998
+    },
+    {
+      "title": "Effect of vessel size on creation of hepatic radiofrequency lesions in pigs: Assessment of the &quot;heat sink&quot; effect",
+      "year": 2007
+    },
+    {
+      "title": "The history of the microwave oven: A critical review",
+      "year": 2002
+    },
+    {
+      "title": "IEEE MTT-S International Microwave Symposium",
+      "year": 2002
+    },
+    {
+      "title": "Comparison of ablation zone between 915-and 2,450-MHz cooled-shaft microwave antenna: Results in in vivo porcine livers"
+    },
+    {
+      "title": "AJR Am. J. Roentgenol",
+      "year": 2009
+    },
+    {
+      "title": "Microwave ablation technology: What every user should know",
+      "year": 2009
+    },
+    {
+      "title": "Curr Probl Diagn Radiol",
+      "year": 2009
+    },
+    {
+      "title": "Microwave tumors ablation: Principles, clinical applications and review of preliminary experiences",
+      "year": 2009
+    },
+    {
+      "title": "Int J Surg",
+      "year": 2008
+    },
+    {
+      "title": "Percutaneous microwave ablation vs radiofrequency ablation in the treatment of hepatocellular carcinoma",
+      "year": 2008
+    },
+    {
+      "title": "World J. Hepatol",
+      "year": 2015
+    },
+    {
+      "title": "Antenna designs for microwave tissue ablation",
+      "year": 2015
+    },
+    {
+      "title": "Crit Rev Biomed Eng",
+      "year": 2015
+    },
+    {
+      "title": "Microwave tumor ablation: Mechanism of action, clinical results, and devices",
+      "year": 2018
+    },
+    {
+      "title": "JVIR",
+      "year": 2010
+    },
+    {
+      "title": "History of cryosurgery",
+      "year": 2010
+    },
+    {
+      "title": "Semin Surg Oncol",
+      "year": 2010
+    },
+    {
+      "title": "Cryoablation: Mechanism of action and devices",
+      "year": 1998
+    },
+    {
+      "title": "Pulmonary cryoablation zones: More aggressive ablation is warranted in vivo",
+      "year": 2010
+    },
+    {
+      "title": "Effect of varying freezing and thawing rates in experimental cryosurgery",
+      "year": 2019
+    },
+    {
+      "title": "Alternative methods for local ablation-interventional pulmonology: A narrative review",
+      "year": 1985
+    },
+    {
+      "title": "Transl Lung Cancer Res",
+      "year": 2021
+    },
+    {
+      "title": "A glimpse of the future?-Bronchoscopic ablation of peripheral early stage lung cancer",
+      "year": 2021
+    },
+    {
+      "title": "Recent advances in bronchoscopic treatment of peripheral lung cancers",
+      "year": 2021
+    },
+    {
+      "title": "Chest",
+      "year": 2017
+    },
+    {
+      "title": "Percutaneous thermal ablation of primary lung cancer",
+      "year": 2017
+    },
+    {
+      "title": "Diagn Interv Imaging",
+      "year": 2016
+    },
+    {
+      "title": "Society of interventional radiology multidisciplinary position statement on percutaneous ablation of non-small cell lung cancer and metastatic disease to the lungs: Endorsed by the Canadian Association for Interventional Radiology, the Cardiovascular and Interventional Radiological Society of Europe, and the Society of Interventional Oncology",
+      "year": 2016
+    },
+    {
+      "title": "J Vasc Interv Radiol",
+      "year": 2021
+    },
+    {
+      "title": "Update on image-guided thermal lung ablation: Society guidelines, therapeutic alternatives, and postablation imaging findings",
+      "year": 2021
+    },
+    {
+      "title": "AJR Am J Roentgenol",
+      "year": 2022
+    },
+    {
+      "title": "Percutaneous image-guided thermal ablation of lung cancer: What is the evidence?",
+      "year": 2022
+    },
+    {
+      "title": "Lung Cancer",
+      "year": 2021
+    },
+    {
+      "title": "Bronchoscopic ablation of lung tumours: Patient selection and technique",
+      "year": 2023
+    },
+    {
+      "title": "JOVS",
+      "year": 2021
+    },
+    {
+      "title": "Bronchoscopy-guided radiofrequency ablation as a potential novel therapeutic tool",
+      "year": 2021
+    },
+    {
+      "title": "Eur Respir J",
+      "year": 2007
+    },
+    {
+      "title": "Comparative study of three different catheters for CT imaging-bronchoscopy-guided radiofrequency ablation as a potential and novel interventional therapy for lung cancer",
+      "year": 2007
+    },
+    {
+      "title": "Bronchoscopy-guided cooled radiofrequency ablation as a novel intervention therapy for peripheral lung cancer",
+      "year": 2010
+    },
+    {
+      "title": "Respiration",
+      "year": 2015
+    },
+    {
+      "title": "Safety and feasibility of a novel externally cooled bronchoscopic radiofrequency ablation catheter for ablation of peripheral lung tumours: A first-in-human dose escalation study",
+      "year": 2015
+    },
+    {
+      "title": "Navigation bronchoscopy-guided radiofrequency ablation for nonsurgical peripheral pulmonary tumors",
+      "year": 2023
+    },
+    {
+      "title": "Transbronchial microwave ablation of lung nodules with electromagnetic navigation bronchoscopy guidance-A novel technique and initial experience with 30 cases",
+      "year": 2017
+    },
+    {
+      "title": "Transbronchial techniques for lung cancer treatment: Where are we now? Cancers",
+      "year": 2021
+    },
+    {
+      "title": "Microwave ablation via a flexible catheter for the treatment of nonsurgical peripheral lung cancer: A pilot study",
+      "year": 2023
+    },
+    {
+      "title": "Thorac Cancer",
+      "year": 2022
+    },
+    {
+      "title": "Novel image-guided flexible-probe transbronchial microwave ablation for stage 1 lung cancer",
+      "year": 2022
+    },
+    {
+      "title": "Electromagnetic bronchoscopy guided microwave ablation for early stage lung cancer presenting as ground glass nodule",
+      "year": 2023
+    },
+    {
+      "title": "Transbronchial needle aspiration combined with cryobiopsy in the diagnosis of mediastinal diseases: A multicentre, open-label, randomised trial",
+      "year": 2021
+    }
+  ],
+  "quality": {
+    "completeness_score": 0,
+    "has_abstract": true,
+    "abstract_source": "metadata",
+    "has_doi": true,
+    "has_full_text": true,
+    "num_sections": 20,
+    "num_tables": 6,
+    "num_figures": 11,
+    "num_references": 80
+  }
+}

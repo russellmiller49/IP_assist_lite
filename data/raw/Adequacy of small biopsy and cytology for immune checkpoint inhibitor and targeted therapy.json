@@ -1,0 +1,727 @@
+{
+  "metadata": {
+    "document_id": "10_1136_jclinpath_2021_207597",
+    "title": "Adequacy of small biopsy and cytology specimens for comprehensive genomic profiling of patients with non-small-cell lung cancer to determine eligibility for immune checkpoint inhibitor and targeted therapy",
+    "authors": [
+      "Erin Faber",
+      "Horiana Grosu",
+      "Sharjeel Sabir",
+      "Francis Anthony San Lucas",
+      "Bedia A Barkoh",
+      "Roland L Bassett",
+      "Rajyalakshmi Luthra",
+      "John Stewart",
+      "Sinchita Roy-Chowdhuri"
+    ],
+    "year": 2024,
+    "journal": "Journal of Clinical Pathology",
+    "doi": "10.1136/jclinpath-2021-207597",
+    "volume": "75",
+    "issue": "9",
+    "pages": "612-619",
+    "citation": "Faber, et al. (2024). Adequacy of small biopsy and cytology specimens for comprehensive genomic profiling of patients with non-small-cell lung cancer to determine eligibility for immune checkpoint inhibitor and targeted therapy. Journal of Clinical Pathology, 75(9), 612-619. https://doi.org/10.1136/jclinpath-2021-207597",
+    "abstract": "Aims In advanced- stage non- small- cell lung cancer (Non-small cell lung cancer (NSCLC)), incomplete genotyping for guidelinerecommended genomic biomarkers poses a significant challenge to making informed and timely clinical decisions. We report our institution's experience in assessing the adequacy of small specimens for comprehensive genomic profiling for guidelinerecommended lung cancer biomarker testing. Methods We performed a retrospective evaluation of all image- guided procedures for Non-small cell lung cancer (NSCLC) performed in our institution between October 2016 and July 2018, including core needle biopsy (CNB) and fine- needle aspiration (FNA) in patients who had undergone genomic profiling for lung cancer. Lung cancer biomarker adequacy, defined as successful testing of guidelinerecommended biomarkers including, epidermal growth factor receptor ( EGFR ); serine/threonine protein kinase B- Raf ( BRAF ); anaplastic lymphoma kinase ( ALK ); proto- oncogene tyrosine protein kinase ROS ( ROS1 ); Rearranged during Transfection ( RET ); Tyrosine protein kinase Met ( MET ); and programmed cell death ligand 1 (PD- L1), was evaluated. Results A total of 865 cases were evaluated in this study, 785 of which included testing of all lung cancer biomarkers. Lung tissue was adequate for biomarker testing in 84% of cases; this rate increased to 87% when biomarker testing was combined with concurrently acquired FNA or CNB specimens. Biomarker testing success correlated strongly with DNA concentration (p<0.0001) and the use of 22G needles in endobronchial ultrasound- guided transbronchial needle aspiration (Endobronchial ultrasound (EBUS)- TBNA) procedures (p=0.0035). Biomarker testing of CNB specimens showed a significantly higher success rate than did biomarker testing of cytology FNA specimens (p=0.0005). The adequacy of Endobronchial ultrasound (EBUS)- TBNA samples was not significantly different from that of the transthoracic needle aspiration samples (p=0.40). Variables such as age, gender, lesion size, site, diagnosis and number of needle passes showed no significant correlation with success rates in lung cancer biomarker testing. Conclusion The growing numbers of therapeutic biomarkers in Non-small cell lung cancer (NSCLC) requires judicious triage of limited- volume tissue from small specimens. Our study showed that thoracic small tissue specimens can be used successfully to provide prognostic and predictive information for the current guideline- recommended biomarkers for Non-small cell lung cancer (NSCLC) in most cases",
+    "abstract_source": "metadata",
+    "url": "https://jcp.bmj.com/lookup/doi/10.1136/jclinpath-2021-207597"
+  },
+  "source_file": "Adequacy of small biopsy and cytology for immune checkpoint inhibitor and targeted therapy.json",
+  "sections": [
+    {
+      "title": "ABSTRACT",
+      "content": "Aims In advanced-  stage non-  small-  cell lung cancer (Non-small cell lung cancer (NSCLC)), incomplete genotyping for guidelinerecommended genomic biomarkers poses a significant challenge to making informed and timely clinical decisions. We report our institution's experience in assessing the adequacy of small specimens for comprehensive genomic profiling for guidelinerecommended lung cancer biomarker testing.\nMethods We performed a retrospective evaluation of all image-  guided procedures for Non-small cell lung cancer (NSCLC) performed in our institution between October 2016 and July 2018, including core needle biopsy (CNB) and fine-  needle aspiration (FNA) in patients who had undergone genomic profiling for lung cancer. Lung cancer biomarker adequacy, defined as successful testing of guidelinerecommended biomarkers including, epidermal growth factor receptor ( EGFR ); serine/threonine protein kinase B-  Raf ( BRAF ); anaplastic lymphoma kinase ( ALK ); proto-  oncogene tyrosine protein kinase ROS ( ROS1 ); Rearranged during Transfection ( RET ); Tyrosine protein kinase Met ( MET ); and programmed cell death ligand 1 (PD-  L1), was evaluated.\nResults A total of 865 cases were evaluated in this study, 785 of which included testing of all lung cancer biomarkers. Lung tissue was adequate for biomarker testing in 84% of cases; this rate increased to 87% when biomarker testing was combined with concurrently acquired FNA or CNB specimens. Biomarker testing success correlated strongly with DNA concentration (p<0.0001) and the use of 22G needles in endobronchial ultrasound-  guided transbronchial needle aspiration (Endobronchial ultrasound (EBUS)-  TBNA) procedures (p=0.0035). Biomarker testing of CNB specimens showed a significantly higher success rate than did biomarker testing of cytology FNA specimens (p=0.0005). The adequacy of Endobronchial ultrasound (EBUS)-  TBNA samples was not significantly different from that of the transthoracic needle aspiration samples (p=0.40). Variables such as age, gender, lesion size, site, diagnosis and number of needle passes showed no significant correlation with success rates in lung cancer biomarker testing.\nConclusion The growing numbers of therapeutic biomarkers in Non-small cell lung cancer (NSCLC) requires judicious triage of limited-  volume tissue from small specimens. Our study showed that thoracic small tissue specimens can be used successfully to provide prognostic and predictive\ninformation for the current guideline-  recommended biomarkers for Non-small cell lung cancer (NSCLC) in most cases.",
+      "category": "abstract",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "INTRODUCTION",
+      "content": "In  recent  years,  advances  in  characterising  the genomic landscape of lung cancer, particularly nonsmall-  cell  lung  cancer  (Non-small cell lung cancer (NSCLC)),  have  resulted  in significant progress in the development of effective targeted therapies. 1-3 The recent addition of testing for  T yrosine  protein  kinase  Met  ( MET )  exon  14 skipping mutation and Rearranged during Transfection  ( RET )  fusions  to  the  already  well-  established testing for epidermal growth factor receptor ( EGFR )  and serine/threonine protein kinase B-  Raf ( BRAF ) mutations and anaplastic lymphoma kinase ( ALK ) and proto-  oncogene tyrosine protein kinase ROS  ( ROS1 )  rearrangements  has  increased  the number of 'must test' genes recommended by the National Comprehensive Cancer Network (NCCN) for Non-small cell lung cancer (NSCLC). 4 In addition to biomarkers for targeted therapy,  the  development  of  immune  checkpoint inhibitor (ICI) therapies that use immune-  mediated destruction of tumour cells has led to United States Food  and  Drug  Administration  (FDA)  approvals of immunomodulatory monoclonal antibodies such  as  pembrolizumab,  nivolumab,  atezolizumab and  durvalumab  for  treatment  of  advanced-  stage Non-small cell lung cancer (NSCLC). 5 In contrast to therapy that targets specific molecules  in  signalling  pathways  involved  in  the growth  and  propagation  of  cancer  cells,  immunotherapy uses the host immune system to recognise  tumour  cells,  stimulate  the  immune  system, and relieve the suppression of antitumour activity. Current NCCN guidelines for advanced or metastatic  Non-small cell lung cancer (NSCLC)  therefore  recommend  programmed cell  death  ligand  1  (PD-  L1)  testing  to  evaluate eligibility for ICI, in addition to routine molecular profiling  for EGFR , BRAF , ALK , ROS1 , RET and MET exon  14  skipping  mutations. 4 In  addition, biomarkers such as neurotrophic receptor tyrosine kinase  ( NTRK )  have  been  included  in  the  NCCN guidelines,  since  the  FDA  has  approved  larotrectinib and entrectinib as first-  line therapy in NTRK fusion-  positive  patients  with  any  advanced-  stage solid  organ  malignancies.  Furthermore,  emerging markers  such  as  Erb-  B2  receptor  tyrosine  kinase\n( ERBB2 or HER2 ),  high  level MET amplification,  and  Kirsten Rat Sarcoma Viral Oncogene ( KRAS ) exon 2  p.G13C are likely to be included in the Non-small cell lung cancer (NSCLC)-  targeted therapeutic armamentarium in the near future.\nAdvanced-  stage lung cancer is commonly diagnosed with the use of minimally invasive techniques such as core needle biopsy  (CNB)  and/or  fine-  needle  aspiration  (FNA).  For thoracic lesions, typically an endobronchial/transbronchial approach, which commonly uses ultrasound (US) guidance, or a transthoracic (percutaneous) approach, which uses CT or US guidance, is used to collect these 'small specimens'. 6 The  procedural  modality  of  choice  depends  on  multiple factors including the site/size of the lesion, skill and expertise  of  the  proceduralist,  availability  of  resources  and institutional/personal preferences. With the rapid pace of genomic discovery and the implementation of moleculardriven personalised care for patients with Non-small cell lung cancer (NSCLC), there is a critical need to perform an increasing number of ancillary studies  on  these  limited-  volume  small  specimens.  Several studies have shown the utility and feasibility of performing ancillary testing for genotyping small specimens, including CNB  and  FNA  samples,  demonstrating  a  success  rate  of about 80%-90% for lung biomarker assays. 7-12  However, the  list  of  lung  biomarkers  that  are  needed  for  patient care  is  constantly  expanding,  and  incomplete  genotyping for guideline-  recommended genomic markers poses a significant challenge to making informed and timely clinical  decisions. 13 The  College  of  American  Pathologists (CAP)  recently  published  guidelines  for  the  collection and handling of thoracic small specimens to improve the adequacy  of  these limited-  volume specimens  for  lung biomarker studies. 6\nIn this study, we evaluated thoracic small specimens (CNB and  FNA  samples)  that  were  collected  in-  house  for  lung cancer  biomarker  testing,  including  factors  such  as  patient demographics,  lesion  size  and  site, collection modality, tumour type, needle gauge and number of passes, to determine  the  molecular  adequacy  and  success  rate  of  comprehensive  lung  biomarker  testing  on  these  samples.  For  the purpose of this study, lung biomarker adequacy was defined as  adequate  tissue  for  testing  the  clinically  recommended genes, EGFR , BRAF , RET , MET , ALK , ROS1 and PD-  L1.",
+      "category": "introduction",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Case selection and patient samples",
+      "content": "We  retrospectively  identified  consecutive  malignant  small specimens  (CNB  and  FNA  samples)  that  were  collected in-  house  via  image-  guided  procedures,  performed  between October  2016  and  July  2018,  for  lung  biomarker  testing. These  included  procedures  performed  by  interventional radiologists  (IR)  under  CT  or  US  guidance  as  well  as  by interventional pulmonologists using endobronchial US (Endobronchial ultrasound (EBUS)) guidance. Only cases with a lung biomarker request that  included  the  molecular  markers  outlined  by  current NCCN guidelines, as described above, were included in this study set. Biomarker requests at our institution are usually performed on the CNB sample and reflexed to the concurrent FNA sample if the CNB is inadequate for testing or in cases  in  which  the  FNA  is  the  only  specimen  available  for testing (ie, in the absence of a concurrent CNB). The cases were  retrospectively  reviewed  for  patient  demographics, procedure notes, diagnosis and IHC/molecular adequacy to determine success rates for lung biomarker testing.\nAll  FNA  procedures  were  performed  with  rapid  on-  site evaluation  (ROSE)  for  adequacy  and  a  preliminary  diagnosis.  Direct  smears  were  stained  by  using  both  Diff-  Quik and rapid Papanicolaou staining as previously  described. 14 The  FNA  rinse  collected  in  RPMI  medium  was  centrifuged (1500 RPM for 10 min) to prepare either a cytospin or  a  cell  block  preparation.  Details  of  cell  block  preparation  have  been  previously  described. 15  16 Briefly,  the  cell pellet  was  fixed  in  formalin  and  embedded  in  paraffin  to generate a formalin-  fixed paraffin-  embedded (FFPE) block for  sectioning  into  4-5  micron  thick  sections  that  were stained with use of H&E) for morphological evaluation and estimation of tumour fraction. Unstained sections from the cell  block  were  subsequently  used  for  biomarker  testing. All CNB samples collected were fixed immediately in 10% neutral buffered formalin and processed according to standard  histologic  procedures  to  create  an  FFPE  tissue  block that was used for morphological evaluation, diagnosis and subsequent biomarker testing.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Molecular testing for lung biomarkers",
+      "content": "All molecular testing for mutation-  based assays was performed in-  house in our CLIA-  certified molecular diagnostic laboratory. Testing for EGFR , BRAF , MET , KRAS and ERBB2 was performed  as  part  of  a  next-  generation  sequencing  (NGS) multigene  panel  by  using  an  Ion  Torrent  platform  (ThermoFisher,  Waltham,  Massachusetts,  USA),  as  previously described. 15  17 Briefly,  nucleic  acid  was  extracted  with  use of AllPrep DNA/RNA Extraction Kit (Qiagen, Germantown, MD) and/or a PicoPure DNA Extraction Kit (ThermoFisher) from  direct  smear  preparations  and/or  unstained  FFPE sections of cytology cell blocks or CNB tissue blocks per the manufacturer's instructions. For the DNA-  based NGS assay, 10-20 ng of input DNA was used. In a small subset of cases, if NGS analysis failed, the extracted DNA was used to perform single-  gene sequencing assays, such as Sanger sequencing for EGFR and pyrosequencing for BRAF . 18\nALK , ROS1 , RET and MET genes were evaluated by fluorescence in situ hybridisation (FISH), as previously described. 19 In brief, FISH was performed with use of the LSI ALK dualcolour break-  apart rearrangement probe (Abbott Molecular, Des Plaines, Illinois, USA); the XT ROS1 dual-  colour, breakapart  probe  (MetaSystems  Group,  Newton,  Massachusetts, USA);  the  Clear-  View  FISH RET dual-  colour  break-  apart probe  (CymoGen  DX,  Biocare  Medical,  Concord,  California, USA); and the CymoGen DX MET/CC7 DNA Probe Kit (Biocare Medical), using criteria previously established in our cytogenetics laboratory. 19 A subset of cases were evaluated by an RNA-  based NGS fusion assay sequenced with use of a commercially available targeted amplicon-  based NGS on the Ion S5XL platform, to amplify a set of targeted fusion sequences in 51 genes that included ALK , ROS1 , RET , MET and NTRK (Oncomine  Comprehensive  Assay  v3M,  ThermoFisher). Details of the NGS RNA fusion assay have been previously described. 20\nImmunohistochemical (IHC) analysis of PD-  L1 was performed on FFPE sections from either the cell block preparation or CNB specimens using the 22C3 antibody clone (Agilent Technologies, Santa Clara, California, USA). IHC staining was evaluated by the pathologist and reported as a Tumour Proportion  Score  based  on  the  percentage  of  viable  tumour  cells demonstrating  complete  or  partial  membranous  staining,  as described previously. 21",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Evaluation of molecular adequacy",
+      "content": "The tested sample was considered adequate for lung biomarker testing,  if EGFR , ALK , ROS1 , BRAF , MET , RET and  PD-  L1 testing was performed successfully. Since the RNA-  based NGS assay for fusion detection became available at our institution in early 2018, fusion testing by NGS assay was available in only a  small  subset  of  our  cases.  While  most  of  the  recommended lung cancer biomarkers (including ALK , ROS1, RET and MET ) were being tested by an alternative assay such as FISH, testing for NTRK fusions was only performed in a subset of our cohort with RNA-  based NGS fusion assay and therefore were excluded from the statistical analysis of lung biomarker adequacy. Testing for ALK , ROS1 and RET was performed by both FISH and NGS fusion assay in a small subset of cases. Testing outcomes were categorised as follows: (1) adequate for biomarker testing for all genes on the same sample; (2) adequate for biomarker testing in combination with another concurrent malignant FNA or CNB sample; (3) partially adequate for some but not all the requested biomarkers and (4) inadequate for all biomarker testing.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Statistical analysis",
+      "content": "Wilcoxon rank-  sum tests were used to compare the distribution of continuous variables between the groups defined above. Fisher's exact tests were used to compare the distribution of categorical parameters between groups. All statistical analyses were performed using R V .3.6.1. All statistical tests used a significance level of P<0.005.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "RESULTS",
+      "content": "A  total  of  865  cases  were  evaluated  in  this  study,  including CT-  guided  CNB  specimens  (n=679)  and  FNA  samples  from Endobronchial ultrasound (EBUS)-  transbronchial needle aspiration (TBNA) (n=150) and IR (n=36)  FNA procedures.  The  median  age  of  patients  was  67 years (range 26-97 years). There was similar gender distribution, with 48% male (n=417) and 52% female (n=448) patients. The site  of  lesion  included  lung  (n=467),  lymph  node  (n=210), liver (n=44), pleura (n=39), soft tissue (n=36), bone (n=30), adrenal  gland  (n=29),  mediastinum  (n=6),  kidney  (n=3)  and stomach (n=1). The diagnosis in most cases was adenocarcinoma (n=643), followed by squamous cell carcinoma (n=87), neuroendocrine carcinomas (including small-  cell carcinoma (n=41)), poorly  differentiated  carcinoma  (n=34),  non-  small-  cell  carcinoma not otherwise specified (NOS) (n=26), carcinoma NOS (n=26), other malignant neoplasms NOS (n=5) and sarcomatoid neoplasms (n=3). Patient demographics and clinicopathological features are summarised in table 1.",
+      "category": "results",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Procedural parameters",
+      "content": "Of the 679 CNB specimens procured, data for the needle gauge used  and  the  number  of  core  biopsies  collected  were  available in 412 cases. The most commonly used needle gauge was 20G (n=331; 80%), followed by 18G (n=80; 19%) and 19G (n=1;<1%). A coaxial guide needle was used in 366 procedures, including a 19G guide needle (n=308; 84%), a 17G guide needle (n=58; 16%). No guide needle was used in 51 procedures and no data regarding the use of coaxial needle was available for the remaining 262 cases (table 2). Of the 412 CNB procedures that had data on the number of core biopsies collected, in most cases, either 2 (n=162; 39%) or 3 (n=156; 38%) cores were collected. The remaining cases ranged from 1 to 8 core samples that were procured.  The  median  lesion  size  targeted  for  CNB  specimen collection was 2  cm (range 0.43-9  cm).\nA large percentage of the 679 CNB specimens procured had a concurrent FNA sample (n=419; 62%), whereas the remaining samples  (n=260;  38%)  did  not.  Adverse  events  had  been recorded in were 417 cases, with pneumothorax noted in 15% of  cases  requiring  chest  tubes  in  a  subset  (4.5%)  of  cases;  the remaining 85% of cases did not have any adverse events from the procedure (table 2).\nOf  the  36  IR  FNA  samples  that  had  biomarker  testing requested,  9  were  done  under  US  guidance,  whereas  the remaining 27 were done under CT guidance. Of these FNA cases that were used for biomarker testing, 33 (92%) had a concurrent CNB, 5 of which were negative for tumour. The remaining 28 cases had a concurrent CNB that had inadequate tumour for biomarker analysis, requiring testing to be reflexed to the FNA sample. Data for the needle gauge used for collecting FNA specimens were available for  22  of  these  cases,  all  of  which  were performed with a 22G needle. The median number of needle passes  was  2  (range,  1-4  passes).  The  median  lesion  size  was 2  cm  (range  0.8-7.3  cm).  Adverse  events  reported  in  19  cases included 2 cases with pneumothorax (both of which had concurrent CNB using 20G needles) and 17 cases had no adverse events noted (table 2).\nOf the 150 Endobronchial ultrasound (EBUS)-  TBNA cases included in this study, only 11 (7%)  had  a  concurrent  surgical  biopsy.  Of  the  144  cases  that had available data on needle gauge, most procedures used a 22G\nCNB, core needle biopsy; Endobronchial ultrasound (EBUS)-  TBNA, endobronchial ultrasound-  guided transbronchial needle aspiration; IR-  FNA, interventional radiology-  fine needle aspiration; NOS, not otherwise specified.\nneedle (n=133; 92%), with a few cases using 21G (n=5; 3%) or 20G (n=6; 4%) needles. All 150 Endobronchial ultrasound (EBUS)-  TBNAs were performed with the use of a stylet. The median number of needle passes was 6 (range 2-12 passes), and the median lesion size was 1.7  cm (range 0.5-5.4  cm) (table 2). No adverse events were noted in the Endobronchial ultrasound (EBUS)-  TBNA cases.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Biomarker testing",
+      "content": "The median DNA yield for CNB, Endobronchial ultrasound (EBUS)-  TBNA and IR-  FNA specimens was 0.02 µ g/ µ l (range 0.0002-0.2 µ g/ µ L), 0.01 µ g/ µ l (range 0.0002-0.07 µ g/ µ L)  and  0.006 µ g/ µ L  (range  0.001-0.019 µ g/ µ L),  respectively.  The  adequacy  of  tissue  for  lung  biomarker testing,  for  which  all  clinically  recommended  genes  ( EGFR , BRAF , RET , MET , ALK , ROS1 and  PD-  L1)  were  successfully performed on the requested sample, was 84% (659/785). When testing  was  performed  by  using  a  combination  of  specimens, that is, combined with a concurrent FNA or CNB, the overall success  rate  of  lung  biomarker  testing  was  87%  (679/785). Partial results (for some, but not all, of the lung biomarker tests performed) were obtained in an additional 8% (64/785) of the cases, whereas the overall failure rate for lung biomarker testing was 5% (42/785). A subset of cases (n=80) were excluded from evaluation of biomarker testing success rates, since testing for all of the clinically recommended genes was either not requested or not performed at the discretion of the ordering clinician. Results of biomarker testing are summarised in table 3.\nLung  biomarker  adequacy  correlated  strongly  with  DNA concentration  (p<0.0001),  with  CNB  samples  demonstrating the  highest  average  DNA  yield  and  IR-  FNA  samples  showing the lowest average DNA yield. Most of the variables we evaluated, including age, gender, lesion size, lesion site and diagnosis, showed no significant correlation with lung biomarker adequacy. There was no evidence that the number of passes or the needle gauge  used  for  obtaining  CNB  specimens  correlated  with  the adequacy for lung biomarker testing. Similarly, for FNA samples, there  was  no  evidence  that  the  number  of  passes  correlated with  adequacy  of  the  sample.  There  was  some  evidence  that lung biomarker adequacy positively correlated with the use of 22G needles in Endobronchial ultrasound (EBUS)-  TBNA procedures (p=0.0035); however, the  number  of  Endobronchial ultrasound (EBUS)-  TBNA  procedures  using  other  needles (ie, 21G and 20G) was low (8% of all cases). Lung biomarker testing of CNB specimens showed a significantly higher success rate than did biomarker testing of the cytology FNA specimens (p=0.0005).  The  adequacy  of  Endobronchial ultrasound (EBUS)-  TBNA  samples  was  not\nsignificantly  different  than  that  of  IR-  FNA  samples  (p=0.40); however, the overall sample size of IR-  FNA samples was relatively low.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "CNB specimens",
+      "content": "All 679 CNB cases had a request for mutation analysis by NGS and PD-  L1 IHC analysis. Of these cases, 628 (93%) were adequate for EGFR , BRAF and MET by NGS assay, and 650 (96%) were adequate for PD-  L1 IHC analysis. Fusion testing for ALK , ROS1 and RET was requested in a subset of cases by FISH and/or RNAbased NGS assay. The sample was adequate for fusion testing in 598 of 634 cases (94%) for ALK ;  600 of 636 cases (94%) for ROS1 ; and 460 of 485 cases (95%) for RET . Fusion testing for NTRK was available in 257 cases and was adequate for testing in 90% (n=231) of the cases tested; one case had fusion testing for NTRK on a concurrent FNA sample. Lung biomarker testing for the clinically recommended genes ( EGFR , BRAF , RET , MET , ALK , ROS1 and  PD-  L1)  was  successfully  performed  on  90% (548/610) for the CNB samples (figure 1).\nPartial  results  for  a  subset  of  the  lung  biomarker  tests  were obtained in an additional 43 (7%) CNB cases. Of these, 21 cases were inadequate for NGS mutation testing but were adequate for fusion testing and PD-  L1 IHC analysis; 9 cases were inadequate for NGS and fusion testing with only PD-  L1 reported; 5 cases were inadequate for fusion testing and PD-  L1 IHC analysis but adequate for NGS; 4 cases were adequate for NGS and fusion testing but inadequate for PD-  L1 and 4 cases were adequate for NGS and PD-  L1 but inadequate for fusion testing (table 3). In a  subset  of  CNB  cases  (n=69;  10%),  testing  for  all  the  clinically recommended genes was not requested by the clinician, and these were excluded from our analysis.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Cytology FNA specimens",
+      "content": "For  the  150  Endobronchial ultrasound (EBUS)-  TBNA  specimens  in  our  study,  a  request for  mutation  analysis  by  NGS  was  received  in  148  cases  and was adequate for EGFR , BRAF and MET analysis in 124 cases (84%), with an additional case for which NGS was performed on a concurrent FNA. All 150 cases had PD-  L1 IHC analysis\nCNB, core needle biopsies; Endobronchial ultrasound (EBUS)-  TBNA, endobronchial ultrasound-  guided transbronchial needle aspirations; FNA, fine-  needle aspirations; IR, interventional radiology.\nBM, biomarkers; CNB, core needle biopsies; Endobronchial ultrasound (EBUS)-  TBNA, endobronchial ultrasoundguided transbronchial needle aspirations; FNA, fine-  needle aspirations; IHC, immunohistochemistry; IR, interventional radiology.\nrequested,  which  was  adequate  in  119  cases  (79%),  with  an additional seven cases that had adequate material on the concurrent CNB to report PD-  L1. Fusion testing for ALK , ROS1 and RET was requested in 138 cases and was adequate in 103 cases (75%), with an additional five cases for which fusion testing was reported  on  a  concurrent  FNA/CNB  specimen.  Fusion  testing by  NGS  assay,  including NTRK ,  was  requested  in  46  Endobronchial ultrasound (EBUS) TBNA cases and was adequate for  testing  in  37  cases  (80%). Lung  biomarker  testing  for  the  clinically  recommended  genes was successfully performed on 71% of the Endobronchial ultrasound (EBUS)-  TBNA samples (97/137). An additional eight cases were adequate for providing clinically recommended genomic information when testing was performed in combination with a concurrent FNA/CNB specimen (figure 1).\nPartial results were obtained in 12% of the cases (17/137). Of these, five cases were adequate for NGS and PD-  L1 but inadequate for fusion testing for ALK , ROS1 ,  and RET ;  three  cases were adequate for NGS and fusion testing but inadequate for PD-  L1, whereas three cases were inadequate for NGS and fusion testing with only PD-  L1 reported; three cases were inadequate for fusion testing and PD-  L1 IHC but adequate for NGS; two cases  were  inadequate  for  NGS  but  adequate  for  PD-  L1  IHC analysis and fusion testing and one case adequate for only fusion testing but inadequate for NGS and PD-  L1 (table 3). A subset of cases (n=11), for which testing for all the clinically recommended  genes  was  either  not  requested  or  not  performed  at the discretion of the ordering clinician, were excluded from the analysis.\nIR-  FNA samples made up the smallest group of specimens sent for lung biomarker testing, as molecular test requests at our institution are typically reflexed to the concurrent CNB specimen. Of  the  36  FNA  cases,  all  specimens  had  a  request  for  mutation analysis and PD-  L1 and were adequate for EGFR , BRAF ,\nand MET mutation analysis by NGS in 26 cases (72%) and for PD-  L1 IHC in 16 cases (44%); however, an additional 12 cases (33%) had adequate material on the concurrent CNB to report PD-  L1. Fusion testing for ALK , ROS1 , and RET were requested in 33 cases by FISH and/or RNA-  based NGS assay; the sample was adequate for testing in 17 (52%) of the 33 cases, with an additional 8 cases for which fusion testing was reported on the concurrent CNB. Nine cases were tested for NTRK fusions by an RNA-  based NGS assay, of which 6 cases (67%) were adequate for testing. Lung biomarker testing was successfully performed on  39%  of  the  specimens  (14/36);  the  adequacy  increased  to 72% (26/36) when testing was performed in combination with a concurrent FNA/CNB sample (figure 1). Of these, 10 cases were adequate for NGS, but fusion testing and/or PD-  L1 IHC analysis was performed on the concurrent CNB; the remaining two cases were adequate for fusion testing and PD-  L1 IHC, but NGS was performed on the concurrent specimen.\nPartial results were obtained in four cases, in which one case was  adequate  for  NGS  and  fusion  testing  but  inadequate  for PD-  L1, 1 case was adequate for only NGS but inadequate for both  fusions  and  PD-  L1  testing,  and  the  remaining  two  cases had fusion and PD-  L1 testing on a concurrent CNB but were inadequate for NGS (table 3).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "DISCUSSION",
+      "content": "In the current genomic landscape of Non-small cell lung cancer (NSCLC), there is a critical need for the evaluation of biomarkers in patients with advancedstage  disease  to  determine  eligibility  for  targeted  therapy  and immunotherapy. 22 Since most Non-small cell lung cancer (NSCLC) is diagnosed from small specimens  obtained  via  minimally  invasive  techniques,  the need  for  optimising  tissue  acquisition  procedures  and  specimen  processing  techniques  to  ensure  the  adequacy  of  these\nlimited-  volume samples for biomarker testing is critical. 23 24 A recent CAP guideline provides recommendations for the collection  and  handling  of  thoracic  small  tissue  specimens  in  an effort to ensure adequacy of these small specimens for ancillary studies. 6 Although  several  studies  have  evaluated  the  success rates of thoracic specimens for molecular testing, the literature is limited on the adequacy and success rates of comprehensive biomarker testing for targeted therapy and immunotherapy as per current NCCN guidelines. Therefore, in this study, we retrospectively reviewed consecutive Non-small cell lung cancer (NSCLC) core biopsies and FNA specimens that were performed in-  house under image guidance and evaluated a variety of parameters including lesion size and site, collection modality, tumour type, needle gauge and number of  passes,  to  determine  the  adequacy  and  success  rate  of  lung biomarker testing on these samples.\nThe results from our retrospective review of lung biomarker adequacy  of  thoracic small tissue specimens  for clinically recommended  genes  ( EGFR , BRAF , RET , MET , ALK , ROS1 and PD-  L1) showed a success rate of 84%, which increased to 87% when a concurrent FNA or CNB sample was combined to complete  the  testing.  These  results  were  comparable  to  those published in the literature for lung biomarker testing for smaller panels involving EGFR , ALK and ROS1 . The overall failure rate for lung biomarker testing was 5%, with partial results for some of  the  required  lung  biomarker tests obtained in 8% of cases. Biomarker testing of CNB specimens showed significantly higher success rates than did biomarker testing of cytology FNA specimens (p=0.0005). This may be largely due to the availability of a FFPE tissue block for CNB specimens that can be used for obtaining multiple sections for all  of  the  requested  biomarker testing.\nAt  our  institution,  all  CNB  specimens  are  initially  evaluated by using 10 levels (2 H&E and 8 unstained sections in between),  followed  by  additional  15  unstained  sections  recut from  the  block  when  the  biomarker  test  request  is  received. Cytology  specimens  frequently  lack  adequate  tumour  on  the cell block preparation for performing biomarker testing. Several studies have reported suboptimal cell block preparation, despite good  aspirates  as  demonstrated  by  adequate  smear  preparations. 15 25-28 The reasons are typically multifactorial and include the  inability  to  collect  additional  dedicated  passes  into  the needle rinse; dilution of a needle pass with good tumour cellularity  with  subsequent  hemodilute  passes;  and  loss  of  cellular material during cell block processing. NGS testing of cytology specimens at our institution does not rely solely on FFPE cell block  preparations,  and  a  large  percentage  of  cases  are  tested with  use  of  direct  smears  alone  or  in  combination  with  cell block  sections.  As  noted  in  prior  studies  from  our  group,  the use of smear preparations for molecular testing has significantly improved our adequacy of cytology samples for both DNA and RNA-  based NGS assays. 15 20 However, our study showed that the overall adequacy of cytology samples compared with their histologic counterparts significantly decreased with the addition of FISH- and IHC-  based biomarker studies, suggesting that lung biomarker adequacy of cytology specimens is often limited by suboptimal cell block preparation. These results underscore the need for collecting an adequate sample for cell block preparation during Endobronchial ultrasound (EBUS) TBNA procedures, as highlighted in the recent CAP recommendations. 6\nAlthough our results demonstrated that both Endobronchial ultrasound (EBUS)-  TBNA and IR-  FNA  specimens  have  similar  overall  success  rates  for  lung biomarker testing, the adequacy of NGS testing is lower in the latter (85% vs 72%, respectively). This is likely a reflection of the vastly different procurement processes for the two modalities.\nFor  Endobronchial ultrasound (EBUS)-  TBNA  procedures,  the  bronchoscopist  relies  largely on ROSE and performs on average six needle passes to collect an adequate sample for diagnosis and subsequent biomarker testing. Furthermore, Endobronchial ultrasound (EBUS) procedures are largely dependent on acquisition of only an FNA sample, with only 7% of cases in this cohort having  a  concurrent  surgical  biopsy  specimen.  In  contrast,  IR procedures, especially transthoracic procedures, focus primarily on collecting CNB samples, and typically 2 FNA needle passes are performed during the procedure. In this study, 92% of all IR-  FNA samples had a concurrent CNB specimen collected. As previously mentioned, lung biomarker test requests at our institution are reflexed to the CNB samples, and FNA specimens are usually used to supplement the CNB sample or in cases in which the biopsy has insufficient tumour. This is reflected in the significantly  lower  numbers  of  IR-  FNA  samples  used  for  biomarker testing  seen  in  this  cohort.  Therefore,  unlike  Endobronchial ultrasound (EBUS)  TBNA specimens,  the  IR-  FNA  samples  usually  have  limited  material on both smears and cell block preparation, as reflected in the significantly  lower  adequacy  rates  for  both  NGS-  based  testing (72% adequate) as well as FISH (76% adequate) and IHC (78% adequate) assays.\nVariables such as age, gender, lesion size, site and diagnosis showed  no  significant  correlation  with  success  rates  of  lung biomarker testing. As expected, biomarker adequacy correlated strongly  with  DNA  concentration.  The  use  of  22G  needles in  Endobronchial ultrasound (EBUS)-  TBNA  procedures  positively  correlated  with  lung biomarker  adequacy  but  showed  no  correlation  in  CNB  or IR-  FNA  samples.  In  addition,  there  was  no  evidence  that  the number of passes for obtaining CNB and FNA samples correlated with the adequacy for lung biomarker testing.\nWith the increasing number  of clinically relevant lung biomarkers needed for patient care decisions, there is a critical need  for  optimal  collection  and  processing  of  thoracic  small specimens  to  judiciously  triage  and  perform  all  of  the  necessary testing. Although lung molecular testing guidelines do not outline specific assays for relevant biomarker testing, there is a definite shift from performing single gene testing to expanded multiplexed  assays  capable  of  interrogating  multiple  genes simultaneously. 22 This primarily stems from the need to do more with less,  as  limited-  volume  specimens  frequently  fall  short  in providing all the relevant genomic information required to guide patient  treatment.  For  example,  current  NCCN guidelines list several  methodologies  for  testing EGFR and BRAF (real-  time PCR,  Sanger  sequencing  preferably  with  tumour  enrichment, NGS), ALK and ROS1 (FISH,  IHC,  NGS,  targeted  real-  time PCR), RET (FISH,  RT-  PCR,  NGS) and MET (NGS, RT-  PCR). Testing all of these biomarkers by single gene sequencing assays would  require  a  minimum  of  20-30  FFPE  sections  from  a moderately  cellular  biopsy  and/or  FNA  specimen  (table  4).  If using  direct  smears,  10-13  moderately  cellular  smears  would be needed for sequencing and FISH assays alone. The ability to combine biomarker testing with use of multiplexed assays such as  NGS has provided the opportunity to perform these assays on multiple genes using limited material. In fact, current NCCN guidelines recommend broad molecular profiling by using either an  FDA-  approved  or  laboratory-  developed  platform  to  test  at a  minimum  the  guideline-  recommended  biomarkers  ( EGFR , BRAF , ALK , ROS1 , RET,  MET and NTRK )  with  an  option  to test for emerging biomarkers including high-  level MET amplification, ERBB2 mutations and tumour mutational burden (TMB).\nOne limitation of our study was the retrospective nature spanning a period of 2 years, during which lung biomarker evaluation was performed by using different testing methodologies. Whereas  mutation  testing  was  performed  primarily  using  a\nDNA-  based NGS assay for all samples, fusion testing was done using  FISH,  NGS, or a combination of both. The FISH assay evaluates ALK , ROS1 and RET fusions, but the NGS multiplexed fusion  assay  includes  several  other  genes  including NTRK . Although the subset of cases evaluated by the NGS fusion assay was small (n=312), the overall success rate of fusion testing by NGS ( ALK , ROS1 , RET , MET , NTRK )  was 88%. Hence, if an appropriately  designed  NGS  testing  assay  is  used,  with  which DNA and RNA are simultaneously  extracted,  lung  biomarker testing  could  be  performed  by  using  as  few  as  10-15  FFPE sections or 4-6 direct smears (table 4). With use of such an assay, in  addition  to  the  current  guideline-  recommended  genes,  the combined DNA and RNA NGS assay would cover ERBB2 and KRAS mutations, MET amplifications and TMB.\nIn  summary,  this  study  showed  that  thoracic  small  tissue specimens  can  be  used  successfully  to  provide  prognostic  and predictive information for the current guideline-  recommended biomarkers for Non-small cell lung cancer (NSCLC) in most cases. The availability of a tissue block and concurrently acquired CNB and FNA samples increases the chances of adequacy for lung biomarker testing. The use of multiplexed expanded molecular profiling assays such as NGS, which judiciously uses limited amounts of tissue for testing, can provide all the clinically required biomarker testing needed to guide the care of patients with Non-small cell lung cancer (NSCLC).",
+      "category": "discussion",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Take home messages",
+      "content": "⇒ Guideline-  recommended biomarker testing is critical in nonsmall-  cell lung cancer.\n⇒ Incomplete genotyping due to inadequate tissue poses significant challenges in small tissue specimens.\n⇒ If appropriately collected and handled, majority of thoracic small tissue specimens are adequate for determining therapeutic eligibility.\n⇒ Genomic profiling of small tissue specimens can be used in making clinical decisions.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Handling editor Runjan Chetty.",
+      "content": "Twitter Sinchita Roy-  Chowdhuri @Sinchita_Roy\nAcknowledgements We thank Tamara Locke, Scientific Editor, Research Medical Library, for editing this article.\nContributors Conception and design of the work: SR-  C. Acquisition, analysis and interpretation of data: EF , SR-  C. Acquisition of data: HG, SS, FASL and BAB. Drafting/ revising the work: EF and SR-  C. Analysis and interpretation of data: RLB. Final approval of the version published: all authors.\nFunding This work was supported in part by the NIH/NCI Cancer Centre Support Grant (award number P30 CA016672) and used the Biostatistics Resource Group.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Patient consent for publication Not required.",
+      "content": "Ethics approval We retrospectively identified consecutive malignant small specimens that were collected in-  house via image-  guided procedures, performed between October 2016 and July 2018, for lung biomarker testing following approval by the institutional review board.\nProvenance and peer review Not commissioned; externally peer reviewed. Data availability statement All data relevant to the study are included in the article.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "ORCID iD",
+      "content": "Sinchita Roy-  Chowdhuri http://orcid.org/0000-0002-9447-7701",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "REFERENCES",
+      "content": "1 Arbour KC, Riely GJ. Systemic therapy for locally advanced and metastatic non-  small cell lung cancer: a review. JAMA 2019;322:764-74.\n2 Pennell NA, Arcila ME, Gandara DR, et al . Biomarker testing for patients with advanced non-  small cell lung cancer: real-  world issues and tough choices. Am Soc Clin Oncol Educ Book 2019;39:531-42.\n3 Lindeman NI, Cagle PT, Aisner DL. Updated molecular testing guideline for the selection of lung cancer patients for treatment with targeted tyrosine kinase inhibitors: guideline from the College of American pathologists, the International association for the study of lung cancer, and the association for molecular pathology. Arch Pathol Lab Med 2018.\n4 National Comprehensive Cancer Network Clinical Practice Guidelines in Oncology (NCCN Guidelines). Non-  Small cell lung cancer, version 2.2021, 2021. Available: https://www.nccn.org/professionals/physician_gls/pdf/nscl.pdf [Accessed 19 January 2021].\n5 Lantuejoul S, Sound-  Tsao M, Cooper WA, et al . Pd-  L1 testing for lung cancer in 2019: perspective from the IASLC pathology Committee. J Thorac Oncol 2020;15:499-519.\n6 Roy-  Chowdhuri S, Dacic S, Ghofrani M, et al . Collection and handling of thoracic small biopsy and cytology specimens for ancillary studies: guideline from the College of American pathologists in collaboration with the American College of chest physicians, association for molecular pathology, American Society of cytopathology, American thoracic Society, pulmonary pathology Society, Papanicolaou Society of cytopathology, society of interventional radiology, and society of thoracic radiology. Arch Pathol Lab Med 2020. doi:10.5858/arpa.2020-0119-CP\n7 Rekhtman N, Brandt SM, Sigel CS, et al . Suitability of thoracic cytology for new therapeutic paradigms in non-  small cell lung carcinoma: high accuracy of tumor subtyping and feasibility of EGFR and KRAS molecular testing. J Thorac Oncol 2011;6:451-8.\n8 Smouse JH, Cibas ES, Jänne PA, et al . Egfr mutations are detected comparably in cytologic and surgical pathology specimens of nonsmall cell lung cancer. Cancer 2009;117:67-72.\n9 Tam AL, Kim ES, Lee JJ, et al . Feasibility of image-  guided transthoracic core-  needle biopsy in the battle lung trial. J Thorac Oncol 2013;8:436-42.\n10 Tokaca N, Barth S, O'Brien M, et al . Molecular adequacy of image-  guided Rebiopsies for molecular retesting in advanced non-  small cell lung cancer: a single-  center experience. J Thorac Oncol 2018;13:63-72.\n11 Arcila ME, Oxnard GR, Nafa K, et al . Rebiopsy of lung cancer patients with acquired resistance to EGFR inhibitors and enhanced detection of the T790M mutation using a locked nucleic acid-  based assay. Clin Cancer Res 2011;17:1169-80.\n12 Vanderlaan PA, Yamaguchi N, Folch E, et al . Success and failure rates of tumor genotyping techniques in routine pathological samples with non-  small-  cell lung cancer. Lung Cancer 2014;84:39-44.\nALK, anaplastic lymphoma kinase; BRAF, B-  Raf proto-  oncogene, serine/threonine kinase; EGFR, epidermal growth factor receptor; FISH, fluorescence in situ hybridisation; IHC, immunohistochemistry; PD-  L1, programmed Cell death ligand 1; RET, RET proto-  oncogene; ROS1, ROS proto-  oncogene 1.\n13 Leighl NB, Page RD, Raymond VM, et al . Clinical utility of comprehensive cell-  free DNA analysis to identify genomic biomarkers in patients with newly diagnosed metastatic non-  small cell lung cancer. Clin Cancer Res 2019;25:4691-700.\n14 Billah S, Stewart J, Staerkel G, et al . Egfr and KRAS mutations in lung carcinoma: molecular testing by using cytology specimens. Cancer Cytopathol 2011;119:111-7.\n15 Roy-  Chowdhuri S, Goswami RS, Chen H, et al . Factors affecting the success of nextgeneration sequencing in cytology specimens. Cancer Cytopathol 2015;123:659-68.\n16 Kalhor N, Wistuba II. Perfecting the fine-  needle aspirate cell block. Cancer Cytopathol 2013;121:109-10.\n17 Roy-  Chowdhuri S, Chen H, Singh Relative risk (RR), et al . Concurrent fine needle aspirations and core needle biopsies: a comparative study of substrates for next-  generation sequencing in solid organ malignancies. Mod Pathol 2017;30:499-508.\n18 Kanagal-  Shamanna R, Portier BP, Singh Relative risk (RR), et al . Next-  Generation sequencingbased multi-  gene mutation profiling of solid tumors using fine needle aspiration samples: promises and challenges for routine clinical diagnostics. Mod Pathol 2014;27:314-27.\n19 Tang Z, Zhang J, Lu X, et al . Coexistent genetic alterations involving ALK, RET, ROS1 or Met in 15 cases of lung adenocarcinoma. Mod Pathol 2018;31:307-12.\n20 Ramani NS, Chen H, Broaddus Relative risk (RR), et al . Utilization of cytology smears improves success rates of RNA-  based next-  generation sequencing gene fusion assays for clinically relevant predictive biomarkers. Cancer Cytopathol 2020. doi:10.1002/ cncy.22381\n21 Noll B, Wang W-  L, Gong Y , et al . Programmed death ligand 1 testing in non-  small cell lung carcinoma cytology cell block and aspirate smear preparations. Cancer Cytopathol 2018;126:342-52.\n22 VanderLaan PA, Rangachari D, Costa DB. The rapidly evolving landscape of biomarker testing in non-  small cell lung cancer. Cancer Cytopathol 2020.\n23 VanderLaan PA. Collection and handling of thoracic small biopsy and cytology specimens for ancillary studies guideline from the College of American pathologists (CAP): implications for the cytology community. J Am Soc Cytopathol 2020;9:286-90.\n24 Roy-  Chowdhuri S. A new guideline from the College of American pathologists to improve the adequacy of thoracic small specimens for ancillary studies. Cancer Cytopathol 2020;128:690-2.\n25 Knoepp SM, Roh MH. Ancillary techniques on direct-  smear aspirate slides: a significant evolution for cytopathology techniques. Cancer Cytopathol 2013;121:120-8.\n26 Betz BL, Dixon CA, Weigelin HC, et al . The use of stained cytologic direct smears for ALK gene rearrangement analysis of lung adenocarcinoma. Cancer Cytopathol 2013;121:489-99.\n27 Roh MH. The utilization of cytologic fine-  needle aspirates of lung cancer for molecular diagnostic testing. J Pathol Transl Med 2015;49:300-9.\n28 Roh MH, Schmidt L, Placido J, et al . The application and diagnostic utility of immunocytochemistry on direct smears in the diagnosis of pulmonary adenocarcinoma and squamous cell carcinoma. Diagn Cytopathol 2012;40:949-55.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    }
+  ],
+  "tables": [
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/43'}",
+      "headers": null,
+      "rows": [
+        [
+          "Clinical parameters",
+          ""
+        ],
+        [
+          "Patients",
+          "No of patients"
+        ],
+        [
+          "Male",
+          "417 (48%)"
+        ],
+        [
+          "Female",
+          "448 (52%)"
+        ],
+        [
+          "Age , median (range)",
+          "67 (26-97)years"
+        ],
+        [
+          "Procedure modality",
+          "No of cases"
+        ],
+        [
+          "CNB",
+          "679"
+        ],
+        [
+          "IR-FNA",
+          "36"
+        ],
+        [
+          "EBUS-TBNA",
+          "150"
+        ],
+        [
+          "Lesion Site",
+          "No of cases"
+        ],
+        [
+          "Lung",
+          "467"
+        ],
+        [
+          "Lymph node",
+          "210"
+        ],
+        [
+          "Liver",
+          "44"
+        ],
+        [
+          "Pleura",
+          "39"
+        ],
+        [
+          "Soft tissue",
+          "36"
+        ],
+        [
+          "Bone",
+          "30"
+        ],
+        [
+          "Adrenal",
+          "29"
+        ],
+        [
+          "Mediastinum",
+          "6"
+        ],
+        [
+          "Kidney",
+          "3"
+        ],
+        [
+          "Stomach",
+          "1"
+        ],
+        [
+          "Diagnosis",
+          "No of cases"
+        ],
+        [
+          "Adenocarcinoma",
+          "643"
+        ],
+        [
+          "Squamous cell carcinoma",
+          "87"
+        ],
+        [
+          "Neuroendocrine carcinoma",
+          "41"
+        ],
+        [
+          "Poorly differentiated carcinoma",
+          "34"
+        ],
+        [
+          "Non-small-cell carcinoma",
+          "26"
+        ],
+        [
+          "Carcinoma, NOS",
+          "26"
+        ],
+        [
+          "Malignant neoplasm, NOS",
+          "5"
+        ],
+        [
+          "Sarcomatoid neoplasm",
+          "3"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/52'}",
+      "headers": [
+        "",
+        "CNB (N=679)",
+        "IR-FNA (N=36)",
+        "EBUS-TBNA (N=150)"
+      ],
+      "rows": [
+        [
+          "Needle gauge",
+          "N=412",
+          "N=22",
+          "N=144"
+        ],
+        [
+          "Needle gauge",
+          "20G: 331 (80%)",
+          "22G: 22 (100%)",
+          "22G: 133 (92%)"
+        ],
+        [
+          "Needle gauge",
+          "18G: 80 (19%)",
+          "",
+          "21G: 5 (3%)"
+        ],
+        [
+          "Needle gauge",
+          "19G: 1 (0.2%)",
+          "",
+          "20G: 6 (4%)"
+        ],
+        [
+          "Median no of cores/ passes (range)",
+          "N=412",
+          "N=22",
+          "N=144"
+        ],
+        [
+          "Median no of cores/ passes (range)",
+          "3 (1-8)",
+          "2 (1-4)",
+          "6 (2-12)"
+        ],
+        [
+          "Median lesion size (range)",
+          "2 (0.43-9)cm",
+          "2 (0.8-7.3)cm",
+          "1.7 (0.5-5.4)cm"
+        ],
+        [
+          "Concurrent FNA/CNB",
+          "N=419 (62%)",
+          "N=33 (92%)",
+          "N=11 (7%)"
+        ],
+        [
+          "Adverse events",
+          "63 of 417 (15%)",
+          "2 of 19 (11%)",
+          "0 of 150 (0%)"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/58'}",
+      "headers": [
+        "",
+        "CNB",
+        "IR-FNA",
+        "EBUS-TBNA"
+      ],
+      "rows": [
+        [
+          "Lung BM testing adequacy (all BM)",
+          "N=548/610 (90%)",
+          "N=26/36 (72%)",
+          "N=105/137 (77%)"
+        ],
+        [
+          "Partial results",
+          "N=43 (7%)",
+          "N=4 (11%)",
+          "N=17 (12%)"
+        ],
+        [
+          "Mutation and fusion testing",
+          "4 (<1%)",
+          "1 (3%)",
+          "3 (2%)"
+        ],
+        [
+          "Mutation testing and IHC",
+          "4 (<1%)",
+          "0 (0%)",
+          "5 (4%)"
+        ],
+        [
+          "Fusion testing and IHC",
+          "21 (3%)",
+          "2 (6%)",
+          "2 (1%)"
+        ],
+        [
+          "Mutation testing only",
+          "5 (<1%)",
+          "1 (3%)",
+          "3 (2%)"
+        ],
+        [
+          "Fusion testing only",
+          "0 (0%)",
+          "0 (0%)",
+          "1 (<1%)"
+        ],
+        [
+          "IHC only",
+          "9 (3%)",
+          "0 (0%)",
+          "3 (2%)"
+        ],
+        [
+          "Lung BM testing inadequate (all BM)",
+          "N=19 (3%)",
+          "N=6 (17%)",
+          "N=17 (12%)"
+        ],
+        [
+          "Cases excluded (all BM not requested)",
+          "N=69 (10%)",
+          "N=0 (0%)",
+          "N=11 (7%)"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/114'}",
+      "headers": [
+        "",
+        "Single gene-based testing approach",
+        "Single gene-based testing approach",
+        "",
+        ""
+      ],
+      "rows": [
+        [
+          "Biomarkers",
+          "Sequencing based",
+          "FISH based",
+          "IHC based",
+          "Multiplexed molecular profiling approach"
+        ],
+        [
+          "EGFR",
+          "5 sections or 2 smears",
+          "",
+          "",
+          "10-15 sections or 3-5 smears"
+        ],
+        [
+          "BRAF",
+          "5 sections or 2 smears",
+          "",
+          "",
+          ""
+        ],
+        [
+          "ALK",
+          "5 sections or 2 smears",
+          "OR 1 section or 1 smear",
+          "OR 1 section or 1 smear",
+          ""
+        ],
+        [
+          "ROS1",
+          "5 sections or 2 smears",
+          "OR 1 section or 1 smear",
+          "OR 1 section or 1 smear",
+          ""
+        ],
+        [
+          "RET",
+          "5 sections or 2 smears",
+          "OR 1 section or 1 smear",
+          "",
+          ""
+        ],
+        [
+          "MET",
+          "5 sections or 2 smears",
+          "",
+          "",
+          ""
+        ],
+        [
+          "PD-L1",
+          "",
+          "",
+          "1 section or 1 smear",
+          "1 section or 1 smear"
+        ],
+        [
+          "No of slides",
+          "19-31 sections or 10-13 smears",
+          "",
+          "",
+          "11-16 sections or 4-6 smears"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    }
+  ],
+  "figures": [
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/70'}",
+      "page": null
+    }
+  ],
+  "references": [
+    {
+      "title": "Systemic therapy for locally advanced and metastatic non-small cell lung cancer: a review"
+    },
+    {
+      "title": "JAMA",
+      "year": 2019
+    },
+    {
+      "title": "Biomarker testing for patients with advanced non-small cell lung cancer: real-world issues and tough choices",
+      "year": 2019
+    },
+    {
+      "title": "Am Soc Clin Oncol Educ Book",
+      "year": 2019
+    },
+    {
+      "title": "Updated molecular testing guideline for the selection of lung cancer patients for treatment with targeted tyrosine kinase inhibitors: guideline from the College of American pathologists, the International association for the study of lung cancer, and the association for molecular pathology",
+      "year": 2019
+    },
+    {
+      "title": "Arch Pathol Lab Med",
+      "year": 2018
+    },
+    {
+      "title": "Non-Small cell lung cancer, version 2",
+      "year": 2018
+    },
+    {
+      "title": "National Comprehensive Cancer Network Clinical Practice Guidelines in Oncology (NCCN Guidelines)",
+      "year": 2018
+    },
+    {
+      "title": "Pd-L1 testing for lung cancer in 2019: perspective from the IASLC pathology Committee"
+    },
+    {
+      "title": "J Thorac Oncol",
+      "year": 2020
+    },
+    {
+      "title": "Collection and handling of thoracic small biopsy and cytology specimens for ancillary studies: guideline from the College of American pathologists in collaboration with the American College of chest physicians, association for molecular pathology, American Society of cytopathology, American thoracic Society, pulmonary pathology Society, Papanicolaou Society of cytopathology, society of interventional radiology, and society of thoracic radiology",
+      "year": 2020
+    },
+    {
+      "title": "Suitability of thoracic cytology for new therapeutic paradigms in non-small cell lung carcinoma: high accuracy of tumor subtyping and feasibility of EGFR and KRAS molecular testing",
+      "year": 2020
+    },
+    {
+      "title": "Egfr mutations are detected comparably in cytologic and surgical pathology specimens of nonsmall cell lung cancer",
+      "year": 2011
+    },
+    {
+      "title": "Cancer",
+      "year": 2018
+    },
+    {
+      "title": "Feasibility of image-guided transthoracic core-needle biopsy in the battle lung trial",
+      "year": 2009
+    },
+    {
+      "title": "Molecular adequacy of image-guided Rebiopsies for molecular retesting in advanced non-small cell lung cancer: a single-center experience",
+      "year": 2013
+    },
+    {
+      "title": "Rebiopsy of lung cancer patients with acquired resistance to EGFR inhibitors and enhanced detection of the T790M mutation using a locked nucleic acid-based assay",
+      "year": 2018
+    },
+    {
+      "title": "Clin Cancer Res",
+      "year": 2011
+    },
+    {
+      "title": "Success and failure rates of tumor genotyping techniques in routine pathological samples with non-small-cell lung cancer",
+      "year": 2011
+    },
+    {
+      "title": "Lung Cancer",
+      "year": 2014
+    },
+    {
+      "title": "Clinical utility of comprehensive cell-free DNA analysis to identify genomic biomarkers in patients with newly diagnosed metastatic non-small cell lung cancer",
+      "year": 2014
+    },
+    {
+      "title": "Egfr and KRAS mutations in lung carcinoma: molecular testing by using cytology specimens",
+      "year": 2019
+    },
+    {
+      "title": "Cancer Cytopathol",
+      "year": 2011
+    },
+    {
+      "title": "Factors affecting the success of nextgeneration sequencing in cytology specimens",
+      "year": 2011
+    },
+    {
+      "title": "Perfecting the fine-needle aspirate cell block",
+      "year": 2015
+    },
+    {
+      "title": "Concurrent fine needle aspirations and core needle biopsies: a comparative study of substrates for next-generation sequencing in solid organ malignancies",
+      "year": 2013
+    },
+    {
+      "title": "Mod Pathol",
+      "year": 2017
+    },
+    {
+      "title": "Next-Generation sequencingbased multi-gene mutation profiling of solid tumors using fine needle aspiration samples: promises and challenges for routine clinical diagnostics",
+      "year": 2017
+    },
+    {
+      "title": "Coexistent genetic alterations involving ALK, RET, ROS1 or Met in 15 cases of lung adenocarcinoma",
+      "year": 2014
+    },
+    {
+      "title": "Utilization of cytology smears improves success rates of RNA-based next-generation sequencing gene fusion assays for clinically relevant predictive biomarkers",
+      "year": 2018
+    },
+    {
+      "title": "Programmed death ligand 1 testing in non-small cell lung carcinoma cytology cell block and aspirate smear preparations",
+      "year": 2020
+    },
+    {
+      "title": "The rapidly evolving landscape of biomarker testing in non-small cell lung cancer",
+      "year": 2018
+    },
+    {
+      "title": "Collection and handling of thoracic small biopsy and cytology specimens for ancillary studies guideline from the College of American pathologists (CAP): implications for the cytology community",
+      "year": 2020
+    },
+    {
+      "title": "J Am Soc Cytopathol",
+      "year": 2020
+    },
+    {
+      "title": "A new guideline from the College of American pathologists to improve the adequacy of thoracic small specimens for ancillary studies",
+      "year": 2020
+    },
+    {
+      "title": "Ancillary techniques on direct-smear aspirate slides: a significant evolution for cytopathology techniques",
+      "year": 2020
+    },
+    {
+      "title": "The use of stained cytologic direct smears for ALK gene rearrangement analysis of lung adenocarcinoma",
+      "year": 2013
+    },
+    {
+      "title": "The utilization of cytologic fine-needle aspirates of lung cancer for molecular diagnostic testing",
+      "year": 2013
+    },
+    {
+      "title": "J Pathol Transl Med",
+      "year": 2013
+    },
+    {
+      "title": "The application and diagnostic utility of immunocytochemistry on direct smears in the diagnosis of pulmonary adenocarcinoma and squamous cell carcinoma",
+      "year": 2015
+    },
+    {
+      "title": "Diagn Cytopathol",
+      "year": 2012
+    }
+  ],
+  "quality": {
+    "completeness_score": 0,
+    "has_abstract": true,
+    "abstract_source": "metadata",
+    "has_doi": true,
+    "has_full_text": true,
+    "num_sections": 17,
+    "num_tables": 4,
+    "num_figures": 4,
+    "num_references": 41
+  }
+}

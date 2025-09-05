@@ -1,0 +1,601 @@
+{
+  "metadata": {
+    "document_id": "10_1186_s12890_020_1173_3",
+    "title": "Digital versus analogue chest drainage system in patients with primary spontaneous pneumothorax: a randomized controlled trial",
+    "authors": [
+      "Dieuwertje Ruigrok",
+      "Peter W. A. Kunst",
+      "Marielle M. J. Blacha",
+      "Ben Tomlow",
+      "Jacobine W. Herbrink",
+      "Eva J. Japenga",
+      "Wim Boersma",
+      "Paul Bresser",
+      "Ivo Van Der Lee",
+      "Kris Mooren"
+    ],
+    "year": 2020,
+    "journal": "BMC Pulmonary Medicine",
+    "doi": "10.1186/s12890-020-1173-3",
+    "volume": "20",
+    "issue": "1",
+    "pages": "136",
+    "citation": "Ruigrok, et al. (2020). Digital versus analogue chest drainage system in patients with primary spontaneous pneumothorax: a randomized controlled trial. BMC Pulmonary Medicine, 20(1), 136. https://doi.org/10.1186/s12890-020-1173-3",
+    "abstract": "Background: Patients with a primary spontaneous pneumothorax (PSP) who are treated with chest tube drainage are traditionally connected to an analogue chest drainage system, containing a water seal and using a visual method of monitoring air leakage. Electronic systems with continuous digital monitoring of air leakage provide better insight into actual air leakage and changes in leakage over time, which may lead to a shorter length of hospital stay. Methods: We performed a randomized controlled trial comparing the digital with analogue system, with the aim of demonstrating that use of a digital drainage system in PSP leads to a shorter hospital stay. Results: In 102 patients enrolled with PSP we found no differences in total duration of chest tube drainage and hospital stay between the groups. However, in a post-hoc analysis, excluding 19 patients needing surgery due to prolonged air leakage, hospital stay was significantly shorter in the digital group (median 1 days, IQR 1 -5 days) compared to the analogue group (median 3 days, IQR 2 -5 days) (p 0.014). Treatment failure occurred in 3 patients in both groups; the rate of recurrence within 12 weeks was not significantly different between groups (16% in the digital group versus 8% in the analogue group, p 0.339). Conclusion: Length of hospital stay was not shorter in patients with PSP when applying a digital drainage system compared to an analogue drainage system. However, in the large subgroup of uncomplicated PSP, a significant reduction in duration of drainage and hospital stay was demonstrated with digital drainage. These findings suggest that digital drainage may be a practical alternative to manual aspiration in the management of PSP. Trial registration: Registered 22 September 2013 - Retrospectively registered, Trial NL4022 (NTR4195) Pneumothorax, primary spontaneous, Drainage, Chest tubes",
+    "abstract_source": "metadata",
+    "url": "https://bmcpulmmed.biomedcentral.com/articles/10.1186/s12890-020-1173-3"
+  },
+  "source_file": "Ruigrok-2020-Digital versus analogue chest dra.json",
+  "sections": [
+    {
+      "title": "Digital versus analogue chest drainage system in patients with primary spontaneous pneumothorax: a randomized controlled trial",
+      "content": "Dieuwertje Ruigrok 1 , Peter W. A. Kunst 2 , Marielle M. J. Blacha 1 , Ben Tomlow 3 , Jacobine W. Herbrink 1 , Eva J. Japenga 2 , Wim Boersma 3 , Paul Bresser 2 , Ivo van der Lee 1 and Kris Mooren 1*",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Abstract",
+      "content": "Background: Patients with a primary spontaneous pneumothorax (PSP) who are treated with chest tube drainage are traditionally connected to an analogue chest drainage system, containing a water seal and using a visual method of monitoring air leakage. Electronic systems with continuous digital monitoring of air leakage provide better insight into actual air leakage and changes in leakage over time, which may lead to a shorter length of hospital stay.\nMethods: We performed a randomized controlled trial comparing the digital with analogue system, with the aim of demonstrating that use of a digital drainage system in PSP leads to a shorter hospital stay.\nResults: In 102 patients enrolled with PSP we found no differences in total duration of chest tube drainage and hospital stay between the groups. However, in a post-hoc analysis, excluding 19 patients needing surgery due to prolonged air leakage, hospital stay was significantly shorter in the digital group (median 1 days, IQR 1 -5 days) compared to the analogue group (median 3 days, IQR 2 -5 days) (p 0.014). Treatment failure occurred in 3 patients in both groups; the rate of recurrence within 12 weeks was not significantly different between groups (16% in the digital group versus 8% in the analogue group, p 0.339).\nConclusion: Length of hospital stay was not shorter in patients with PSP when applying a digital drainage system compared to an analogue drainage system. However, in the large subgroup of uncomplicated PSP, a significant reduction in duration of drainage and hospital stay was demonstrated with digital drainage. These findings suggest that digital drainage may be a practical alternative to manual aspiration in the management of PSP.\nTrial registration:\nRegistered 22 September 2013 - Retrospectively registered, Trial NL4022 (NTR4195) Pneumothorax, primary spontaneous, Drainage, Chest tubes\nKeywords:\n© The Author(s). 2020 Open Access This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if changes were made. The images or other third party material in this article are included in the article's Creative Commons licence, unless indicated otherwise in a credit line to the material. If material is not included in the article's Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this licence, visit http://creativecommons.org/licenses/by/4.0/. The Creative Commons Public Domain Dedication waiver (http://creativecommons.org/publicdomain/zero/1.0/) applies to the data made available in this article, unless otherwise stated in a credit line to the data.\nAK, Haarlem, the Netherlands\nFull list of author information is available at the end of the article",
+      "category": "abstract",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Background",
+      "content": "Primary spontaneous pneumothorax (PSP) is defined as the spontaneous occurrence of air in the pleural space in patients without clinically apparent lung disease [1]. The condition is associated with smoking [2, 3].\nThe management of PSP is based on two principles: first, the initial management of the pneumothorax with symptom control and re-expansion of the lung and secondly, reducing recurrence rate [4]. The recurrence rate is reported to be between 17 and 54% [5, 6], with the majority of recurrences in the first year after the primary event [7]. Recurrence rate can be reduced by surgical pleurectomy or thoracoscopic pleurodesis [8]. Initial management of PSP has been subject of ongoing debate [4, 8], with a trend towards a more conservative approach using manual aspiration and outpatient treatment [4, 6, 8 -12]. Manual aspiration has been shown to be effective in approximately two-thirds of patients [8] and is as equally effective as chest tube drainage [8]. Since it is associated with reduced hospitalization or length of stay (LOS) [8], manual aspiration is recommended as the standard of care in international guidelines and recommendations [5, 13]. However, in daily practice, insertion of a small-bore pleural catheter or chest tube is still common practice in the Netherlands, probably due to practical reasons.\nUntil recently, the pleural catheter or chest tube was commonly connected to an analogue drainage system, in which air leakage is assessed by the observation of bubbling in the water seal. A major disadvantage of analogue systems is their inability to give accurate information about the quantity of air leakage and about air leak patterns. Uncertainty about air leakage might lead to unnecessary prolongation of hospital stay and additionally might increase the risk of recurrence, due to removing the tube before the pleural defect has healed [14].\nDigital drainage systems provide quantitative information on air leakage (flow) in mL/min, both actual and historical, thereby providing information on air leakage patterns [15]. In thoracic surgical patients these drainage systems have been shown to reduce duration of hospital stay, compared to analogue drainage systems [16]. Digital monitoring of air leakage patterns might be useful in predicting prolonged air leakage after pulmonary resection, thereby providing a window-of opportunity for early intervention [17].\nWhether digital drainage of PSP affects duration of hospital stay has yet to be established. The aim of the study was to investigate whether the use of a digital drainage system in PSP leads to a shorter length of (hospital) stay compared to the use of an analogue drainage system.",
+      "category": "introduction",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Study design",
+      "content": "The Dutch Pneumothorax Study (DPS) was a multicentre, randomized controlled trial, carried out in five\nDutch hospitals (4 large teaching hospitals and 1 regional hospital) between 2012 and 2017. The study compared the efficacy (LOS) and safety (recurrence rate of pneumothorax within twelve weeks) of a digital drainage system compared to conventional analogue drainage systems in patients with PSP and a need for clinical treatment with chest drainage. Blinding was not possible due to the nature of the study. This study, within the scope of the Medical Research Involving Human Subjects Act, was approved by the Medical Ethics Review Committee of the Academic Medical Centre/University of Amsterdam (NL36778.018.1). The trial was registered in the Netherlands Trial Register https://www.trialregister. nl/trial/4022). This was an investigator-initiated study; after the study protocol was written, Medela Benelux BV provided the participating centres with the Thopaz digital drainage system for the duration of the study. The company was not involved in study design, trial execution or data analysis.",
+      "category": "methods",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Study subjects",
+      "content": "Patients with PSP who were treated with chest tube drainage were asked to participate in the study. Those with recurrent pneumothorax were referred to surgery directly and were therefore not included. Study subjects had to be 18 years or older. Patients with respiratory failure, intensive care unit admission or with uncontrolled bleeding tendency were excluded from the study.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Procedures",
+      "content": "Patients were randomized between the analogue and digital drainage system. Randomization was performed centrally using a web-based program (Research Manager©). The digital drainage system consisted of Thopaz (Medela Healthcare, Switzerland); analogue drainage systems were not predefined, locally available systems per participating centre were used.\nChoice of chest tube size and insertion site was left to the treating clinician. In both groups, the drainage system was initially put on water seal [18, 19]. Air leakage was assessed three times daily by professional medical staff. If no air leakage was visible (analogue group), or if the air leak was below 15 mL/min (digital group) [20], a chest X-ray was performed (Fig. 1). If the longest distance between lung and chest wall was less than 2 cm on the chest X-ray [21], the chest tube was removed and the patient was discharged. If the chest X-ray showed a pneumothorax larger than 2 cm (both groups), the tube was clamped for 4 h and the chest X-ray was repeated. If the pneumothorax did not increase, the tube was removed and the patient was discharged. If the chest X-ray showed an increase in pneumothorax size, the clamp was removed and the water seal reapplied [22, 23]. If an air leak existed for more than 72 h, a thoracic surgeon\nwas consulted and all further treatment strategies (such as applying suction) were left to the treating clinician. All medical decisions were recorded in a web-based case report form (CRF). All patients had a follow-up visit with chest X-ray scheduled at the outpatient clinic 4 weeks after discharge. After twelve weeks, patients were asked by means of a telephone call whether they had sought medical care for symptoms of recurrence of pneumothorax.\nThe following variables were recorded at baseline: selfreported smoking status, number of pack.\nyears, previous medical history, length and weight.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Statistical analysis",
+      "content": "Primary outcome of this randomized controlled trial was efficacy of a digital drainage system in patients with a primary spontaneous pneumothorax, defined as a reduction in LOS (duration of hospital stay) compared to patients treated with drainage using an analogue drainage system. Secondary objectives were treatment failure, defined by clinically relevant recurrence of pneumothorax\nwithin 1 week of discharge, or a recurrence of pneumothorax within twelve weeks leading to a medical intervention such as manual aspiration, drainage, thoracoscopy or surgery.\nTo obtain a reduction of 20% in length of hospital stay (with a standard deviation of 20%, α = 0.05 and β = 0.9) a sample size of 86 subjects in each treatment arm was needed. Considering a possible dropout rate of 10%, a target inclusion rate of 190 patients was set.\nData were interpreted according to the intention-totreat principle. Crossover to another drainage system was allowed as were any off-protocol decisions made by the treating physician based on best medical judgement.\nData are presented as mean (standard deviation, SD) or median (interquartile range, IQR), depending on the number of patients and distribution of values. Normal distribution was tested by using D ' Agostino-Pearson omnibus normality test. Differences in baseline characteristics, efficacy and safety were tested using unpaired T-test/Mann Whitney test Odds ratio (or) Chi-square/Fisher exact test where appropriate. Values of p < 0.05 were\nconsidered to reflect statistical significance. Statistics were performed using GraphPad Prism version 7.0b (GraphPad Software, La Jolla, California, USA).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Results",
+      "content": "From October 2012 until September 2017 a total of 102 patients with a spontaneous pneumothorax were included: in 50 patients an analogue drainage system was used, and in 52 patients the digital drainage system was used. The study was terminated before the target of 190 patients was reached due to slower inclusion than expected.\nBoth groups had the same demography except for BMI (Table 1). Males were predominant in both groups (80 -88%). The majority of patients had a first episode of spontaneous pneumothorax. In retrospect 6 cases of secondary spontaneous pneumothorax were included (4 in the analogue group and 2 in the digital group); these patients with secondary spontaneous pneumothorax were diagnosed with an underlying pulmonary condition after their hospital admission with pneumothorax.\nCrossover to the digital drainage system occurred 4 times in the analogue group, mainly due to the reduced mobility with suction drainage using the analogue system. Crossover occurred only once in the digital group, after surgery due to logistic reasons.",
+      "category": "results",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Primary outcome",
+      "content": "In the whole group of patients, total duration of chest tube drainage and LOS did not differ between the two groups (Table 2). However, 19 patients underwent surgery because of prolonged air leakage, 6 in the analogue group and 13 in the digital group (p 0.127). After excluding these subjects with a complicated course, both the duration of chest tube drainage and LOS were significantly shorter in the patients randomized to digital drainage ( n = 39) compared to analogue drainage ( n = 44): median 1 (IQR 1 -3) versus 3 (IQR 2 -\n5) days (p 0.024) and median 1 (IQR 1 -5) versus 3 (IQR 2 -5) days (p 0.014) respectively (Table 3).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Secondary outcomes",
+      "content": "Clinically relevant pneumothorax within 1 week of discharge occurred in 6% ( n = 3) in both groups (Table 2). Recurrence, arbitrarily defined as a clinically relevant pneumothorax within 12 weeks (excluding those with recurrence within 1 week of discharge) occurred in 7 (16%) patients in the analogue group versus 4 (8%) patients in the digital drainage group (p 0.339) (Table 2). In the analogue group, three patients had a recurrence or increase of pneumothorax size at the time of the scheduled follow-up visit after 4 weeks; in one of them this was not clinically relevant and spontaneous resolution was observed; two patients underwent surgical intervention as a result of the recurrent pneumothorax. In the digital group, only one patient had an increase in pneumothorax size at the time of the scheduled followup 4 weeks after discharge, which was not clinically relevant and had a spontaneous resolution.",
+      "category": "results",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Discussion",
+      "content": "To our knowledge, this trial is the largest multicentre randomized controlled clinical trial concerning PSP that has been conducted to date. Our reason for performing this study was the introduction of digital drainage systems, which potentially have an advantage in treating PSP. Digital drainage systems have been extensively evaluated in patients who have undergone thoracic surgery [22, 23], but not in PSP. In PSP, there are recent data that digital drainage might identify patients who benefit from early referral to surgery, but further data collection is ongoing [24].\nIn this randomized controlled trial comparing digital and analogue chest tube drainage systems in primary spontaneous pneumothorax patients, total duration of chest tube drainage and LOS were not different between both groups. However, after excluding those patients\nData presented as median (IQR) or number of patients (%) unless otherwise stated. BMI: body mass index. Statistical tests used: Mann Whitney test, Fisher ' s exact test, Chi-square test. Statistical significance indicated with an *\nwith prolonged air leak (i.e. those undergoing surgery, medical thoracoscopy and/or pleurodesis), duration of chest tube drainage and LOS were significantly shorter (median 1 vs 3 days) in patients randomized to digital drainage compared to analogue drainage. The use of digital drainage is safe when compared to the analogue system, since there was no significant difference in treatment failure between the groups.\nFor the whole group of PSP patients LOS was comparable between the analogue and the digital drainage group. However, the large majority of patients (83/102) was treated with drainage only (i.e. without thoracoscopy, surgery or pleurodesis); in these patients we observed a highly significant difference in LOS. Therefore, in the subgroup analysis of patients without persistent air leak, which we call uncomplicated PSP, digital drainage was shown to shorten LOS in the patients studied here. The fact that we did not find a difference in hospital stay between the two complete groups may be explained by the large effect exerted by those with a prolonged air leak, on a relatively small study.",
+      "category": "discussion",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "population.",
+      "content": "According to current guidelines, manual aspiration is regarded as first choice therapy in PSP. Based on our subgroup analysis, digital drainage possibly has an advantage over analogue systems in uncomplicated PSP. Digital drainage might be considered a practical alternative for manual aspiration: after insertion of a chest tube, the clinician connects it to a digital device instead of\nevacuating air manually. As soon as the digital device indicates that there is less than 15 ml air flow per minute and the chest X-ray shows no more than a small pneumothorax, removal of the chest tube appears to be safe. According to our study data, the chance of treatment failure is much lower than the percentages found in trials on manual aspiration (manual aspiration success rates range from 30 to 80% [11], although the definition of success rate varies considerably between the various studies). One could hypothesize that if we set the air leak threshold lower than 15 ml/min, the failure rate could drop even further. It is noteworthy that there is no consensus between clinicians on airflow threshold values for chest tube removal [20].\nUnfortunately, due to the large variability in clinical management despite the trial algorithm, we cannot make meaningful statements regarding the usefulness of performing a chest X-ray in the absence of air leakage or clamping the chest tube in the absence of air leakage.\nA noteworthy finding is the follow-up chest X-ray and outpatient clinic appointment, which at present is common practice. It is questionable whether this is necessary, as only 4 of all study subjects (4%) had a recurrence of pneumothorax at this scheduled follow-up.\nAn interesting aspect of digital drainage, that was not been evaluated in the current study, is air leakage patterns, as suggested by Takamochi et al. [17]. Patients who have a high, non-declining flow rate are likely to have a persistent pleural defect and to benefit from early\nData presented as median (IQR) or number of patients (%). LOS: length of stay. Statistical tests used: Mann Whitney test, Fisher ' s exact test\nData presented as median (IQR) or number of patients (%). LOS: length of stay. Statistical tests used: Mann Whitney test, Fisher ' s exact test. Statistical significance indicated with an *\nreferral for surgery. Patients with a declining flow rate are likely to benefit from a conservative approach. A recent study by Hallifax et al. indeed demonstrated that digital air leak measurements early in the treatment course potentially predicts future treatment failure [24].\nAnother potential subject for research is outpatient treatment of PSP with digital drainage systems. Digital drainage could facilitate home treatment since flow rate can easily be assessed and reported by the patient. It may also be of interest to compare these management strategies with manual aspiration in future studies.\nIn our view, the main strength of this study is that it is a ' real life ' study in a common but underresearched condition. It helps us to define how to implement digital drainage systems in our daily clinical practice, and to reevaluate the way we approach patients with PSP. On the other hand, our study has some important limitations. In PSP, when chest tube placement is indicated, it is usually placed shortly (several hours) after the diagnosis has been made -frequently out of hours. In the five participating hospitals, patients were seen both by doctors working for the pulmonary division as emergency doctors, for whom randomization was often too timeconsuming. This led to missed inclusions and a slow inclusion rate. Therefore, the study was terminated before the target sample size was reached. The missed inclusions may have led to a selection bias. Thirdly, the use of different types of chest tubes (including different chest tube diameters) might have influenced the results.\nIn conclusion, although a difference could not be shown for the whole group of PSP patients, a significant reduction in length of hospital stay was shown in the patients with uncomplicated PSP (not needing surgery due to prolonged air leakage) when using a digital drainage system.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Conclusions",
+      "content": "Length of hospital stay was not shorter in patients with PSP when applying a digital drainage system compared to an analogue drainage system. However, in the large subgroup of uncomplicated PSP, a significant reduction in duration of drainage and hospital stay was demonstrated with digital drainage. Whether digital drainage has an advantage over manual aspiration, and whether digital drainage has the potential to predict which patients benefit from early referral to surgery, is an important subject for further research.",
+      "category": "conclusion",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Abbreviations",
+      "content": "PSP: Primary spontaneous pneumothorax; LOS: Length of stay; DPS: Dutch Pneumothorax Study; CRF: Case report form; SD: Standard deviation; IQR: Interquartile range; BMI: Body mass index",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Acknowledgements",
+      "content": "The authors would like to thank Geert Haasnoot for his comments on the statistical analysis.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Authors ' contributions",
+      "content": "The study was designed by KM and PK. DR was responsible for data management and statistical analysis. The other authors included patients and assisted in writing the manuscript. All authors read and approved the final manuscript.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Funding",
+      "content": "There has been no funding for this investigator-initiated trial. Medela Benelux BV provided the participating centers with the Thopaz digital drainage system for the duration of the study. Medela Benelux BV had no role in collection, analysis, and interpretation of data, nor in writing the manuscript.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Availability of data and materials",
+      "content": "The complete study protocol, datasets used and/or analysed during the current study are available from the corresponding author on request.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Ethics approval and consent to participate",
+      "content": "This study, within the scope of the Medical Research Involving Human Subjects Act, was approved by the Medical Ethics Review Committee of the Academic Medical Centre/University of Amsterdam (NL36778.018.1). All study subjects gave their written informed consent.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Consent for publication",
+      "content": "Not applicable, all data are anonymously published. This study adheres to CONSORT guidelines.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Competing interests",
+      "content": "None of the authors have competing interests.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Author details",
+      "content": "1 Department of Pulmonary Medicine, Spaarne Gasthuis, PO Box 417 2000, AK, Haarlem, the Netherlands. 2 Department of Pulmonary Medicine, OLVG, Amsterdam, The Netherlands. 3 Department of Pulmonary Medicine, NWZG, Alkmaar, The Netherlands.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "References",
+      "content": "1. Baumann MH. Management of spontaneous pneumothorax. Clin Chest Med. 2006;27:369 -81.\n2. Ruppert AM, Perrin J, Khalil A, Vieira T, Abou-Chedid D, Masmoudi H, Crequit P, Giol M, Cadranel J, Assaouad J, Gounant V. Effect of cannabis and tobacco on emphysema in patients with spontaneous pneumothorax. Diagn Interv Imaging. 2018;99:465 -71.\n3. Bense L, Eklund G, Wiman LG. Smoking and the increased risk of contracting spontaneous pneumothorax. Chest. 1987;92:1009 -12.\n4. Plojoux J, Froudarakis M, Janssens JP, Soccal PM, Tschopp JM. New insights and improved strategies for the management of primary spontaneous pneumothorax. Clin Respir J. 2019. https://doi.org/10.1111/crj.12990.\n5. Tschopp JM, Bintcliffe O, Astoul P, Canalis E, Driesen P, Janssen J, Krasnik M, Maskell M, Van Schil P, Tonia T, Waller DA, Marquette CH, Cardillo G. ERS task force statement: diagnosis and treatment of primary spontaneous pneumothorax. Eur Respir J. 2015;46:321 -35.\n6. Walker SP, Bibby AC, Halford P, Stadon L, White P, Maskell NA. Recurrence rates in primary spontaneous pneumothorax: a systematic review and metaanalysis. Eur Respir J. 2018;52:18000864.\n7. Massongo M, Leroy S, Scherpereel A, Vaniet F, Dhalluin X, Chahine B, Sanfiorenzo C, Genin M, Marquette CH. Outpatient management of primary spontaneous pneumothorax: a prospective study. Eur Respir J. 2014;43:582 -90.\n8. Vuong NL, Elshafay A, Thao LP, Abdalla AR, Mohyeldin IA, Elsabaa K, Omran ES, Yu F, Hirayama K, Huy NT. Efficacy of treatments in primary spontaneous pneumothorax: a systematic review and network meta-analysis of randomized clinical trials. Respir Med. 2018;137:152 -66.\n9. Wang C, Lyu M, Zhou J, Liu Y, Ji Y. Chest tube drainage versus needle aspiration for primary spontaneous pneumothorax: which is better? J Thorac Dis. 2017;9:4027 -38.\n10. Carson-Chahhoud KV, Wakai A, van Agteren JE, Smith BJ, McCabe G, Brinn MP, O ' Sullivan R. Simple aspiration versus intercostal tube drainage for\nprimary spontaneous pneumothorax in adults. Cochrane Database Syst Rev. 2017;9:CD004479.\n11. Noppen M, Alexander P, Driesen P, Slabbynck H, Verstraeten A. Manual aspiration versus chest tube drainage in first episodes of primary spontaneous pneumothorax: a multicenter, prospective, randomized pilot study. Am J Respir Crit Care Med. 2002;165:1240 -4.\n12. Thelle A, Gjerdevik M, SueChu M, Hagen OM, Bakke P. Randomised comparison of needle aspiration and chest tube drainage in spontaneous pneumothorax. Eur Respir J. 2017;49:1601296.\n13. MacDuff A, Arnold A, Harvey J. BTS Pleural Disease Guideline Group. Management of spontaneous pneumothorax: British Thoracic Society Pleural Disease Guideline 2010. Thorax. 2010;65(supplement 2):18 -31.\n14. Raymond DP. Are we ready for the digital age? J Thorac Cardiovasc Surg. 2018;155:1841 -2.\n15. Thopaz Digital Chest Drainage System. Medela, 2011. Available online: http://www.medelahealthcare.us/healthcare/products/cardiothoracicdrainage/thopaz.\n16. Zhou J, Lyu M, Chen N, Wang Z, Hai Y, Hao J, Liu L. Digital chest drainage is better than traditional chest drainage following pulmonary surgery: a meta analysis. Eur J Cardiothorac Surg. 2018;54:635 -43.\n17. Takamochi K, Imashimizu K, Fukui M, Maeyashiki T, Suzuki M, Ueda T, Matsuzawa H, Hirayama S, Matsunaga T, Suzuki K. Utility of objective chest tube management after pulmonary resection using a digital drainage system. Ann Thorac Surg. 2017;104:275 -83.\n18. Cerfolio RJ, Bass C, Katholi CR. Prospective randomized trial compares suction versus water seal for air leaks. Ann Thorac Surg. 2001;71:1613 -7.\n19. Marshall MB, Deeb ME, Bleier JI, Kucharczuk JC, Friedberg JS, Kaiser LR, Shrager JB. Suction vs water seal after pulmonary resection: a randomized prospective study. Chest. 2002;121:831 -5.\n20. Baringer K, Talbert S. Chest drainage systems and management of air leaks after a pulmonary resection. J Thorac Dis. 2017;9:5399 -403.\n21. Noppen M, Alexander P, Driesen P, Slabbynck H, Verstraete A; Vlaamse Werkgroep voor Medische Thoracoscopie en Interventionele Bronchoscopie. Quantification of the size of primary spontaneous pneumothorax: accuracy of the light index. Respiration 2001; 68: 396 -399.\n22. Gilbert S, McGuire AL, Maghera S, Sundaresan SR, Seely AJ, Maziak DE, Shamji FM, Villeneuve PJ. Randomized trial of digital versus analog pleural drainage in patients with or without a pulmonary air leak after lung resection. J Thorac Cardiovasc Surg. 2015;150:1243 -9.\n23. Brunelli A, Salati M, Refai M, Nunzio D, Xiume F, Sabbatini A. Evaluation of a new chest tube removal protocol using digital air leak monitoring after lobectomy: a prospective randomised trial. Eur J Cardiothorac Surg. 2010;37: 56 -60.\n24. Hallifax R, Laskawiec-Szkonter M, Rahman N. Predicting outcomes in primary spontaneous pneumothorax using air leak measurements. Thorax. 2019; 74(4):410 -2.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Publisher ' s Note",
+      "content": "Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    }
+  ],
+  "tables": [
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/67'}",
+      "headers": [
+        "Variable",
+        "Analogue drainage N =50",
+        "Digital drainage N = 52",
+        "P -value"
+      ],
+      "rows": [
+        [
+          "Age (years)",
+          "32 (range 18 - 86)",
+          "33 (range 18 - 89)",
+          "0.869"
+        ],
+        [
+          "Male (n, %)",
+          "40 (80%)",
+          "46 (88%)",
+          "0.284"
+        ],
+        [
+          "Height (cm)",
+          "180 (170 - 188)",
+          "180 (177 - 186)",
+          "0.386"
+        ],
+        [
+          "BMI (kg/m 2 )",
+          "20.9 (18.5 - 23.6)",
+          "22.3 (20.0 - 24.2)",
+          "0.035*"
+        ],
+        [
+          "Left sided pneumothorax (n, %)",
+          "21 (42%)",
+          "21 (40%)",
+          "0.868"
+        ],
+        [
+          "Current/former smokers (n, %)",
+          "38 (76%)",
+          "45 (87%)",
+          "0.208"
+        ],
+        [
+          "First episode of pneumothorax (n, %)",
+          "47 (94%)",
+          "46 (88%)",
+          "0.488"
+        ],
+        [
+          "Secondary spontaneous pneumothorax (n, %)",
+          "4 (8%)",
+          "2 (4%)",
+          "0.432"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/72'}",
+      "headers": [
+        "Variable",
+        "Analogue N =50",
+        "Digital N =52",
+        "P -value"
+      ],
+      "rows": [
+        [
+          "Total duration chest tube drainage (days)",
+          "3 (2 - 5)",
+          "2 (1 - 12)",
+          "0.488"
+        ],
+        [
+          "LOS (days)",
+          "3 (2 - 6)",
+          "2.5 (1 - 14)",
+          "0.640"
+        ],
+        [
+          "Number of patients undergoing surgery (n, %)",
+          "6 (12%)",
+          "13 (25%)",
+          "0.127"
+        ],
+        [
+          "Number of chest X-ray during admission",
+          "2.5 (1 - 4)",
+          "2 (1 - 3)",
+          "0.158"
+        ],
+        [
+          "Treatment failure (recurrence within one week) (n, %)",
+          "3 (6%)",
+          "3 (6%)",
+          "> 0.999"
+        ],
+        [
+          "Recurrence within 12 weeks follow-up (n, %) (excluding those with treatment failure)",
+          "7 (16%) (missing follow-up in n =3)",
+          "4 (8%)",
+          "0.339"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/80'}",
+      "headers": [
+        "Variable",
+        "Analogue N = 44",
+        "Digital N = 39",
+        "P -value"
+      ],
+      "rows": [
+        [
+          "Total duration chest tube drainage (days)",
+          "3 (2 - 5)",
+          "1 (1 - 3)",
+          "0.024*"
+        ],
+        [
+          "LOS (days)",
+          "3 (2 - 5)",
+          "1 (1 - 5)",
+          "0.014*"
+        ],
+        [
+          "Number of chest x-ray during admission",
+          "2 (1 - 3)",
+          "1 (1 - 2)",
+          "0.017*"
+        ],
+        [
+          "Treatment failure (recurrence within one week) (n, %)",
+          "3 (7%)",
+          "2 (5%)",
+          "> 0.999"
+        ],
+        [
+          "Recurrence within 12 weeks follow-up (n, %) (excluding those with treatment failure)",
+          "6 (16%) (missing follow-up in n =3)",
+          "2 (5%)",
+          "0.262"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    }
+  ],
+  "figures": [
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    }
+  ],
+  "references": [
+    {
+      "title": "Management of spontaneous pneumothorax",
+      "year": 2006
+    },
+    {
+      "title": "Clin Chest Med",
+      "year": 2006
+    },
+    {
+      "title": "Effect of cannabis and tobacco on emphysema in patients with spontaneous pneumothorax",
+      "year": 2006
+    },
+    {
+      "title": "Diagn Interv Imaging",
+      "year": 2018
+    },
+    {
+      "title": "Smoking and the increased risk of contracting spontaneous pneumothorax",
+      "year": 2018
+    },
+    {
+      "title": "Chest",
+      "year": 2006
+    },
+    {
+      "title": "New insights and improved strategies for the management of primary spontaneous pneumothorax",
+      "year": 1987
+    },
+    {
+      "title": "Clin Respir J",
+      "year": 2019
+    },
+    {
+      "title": "ERS task force statement: diagnosis and treatment of primary spontaneous pneumothorax",
+      "year": 2019
+    },
+    {
+      "title": "Eur Respir J",
+      "year": 2015
+    },
+    {
+      "title": "Recurrence rates in primary spontaneous pneumothorax: a systematic review and metaanalysis",
+      "year": 2015
+    },
+    {
+      "title": "Outpatient management of primary spontaneous pneumothorax: a prospective study",
+      "year": 2018
+    },
+    {
+      "title": "Efficacy of treatments in primary spontaneous pneumothorax: a systematic review and network meta-analysis of randomized clinical trials",
+      "year": 2014
+    },
+    {
+      "title": "Respir Med",
+      "year": 2018
+    },
+    {
+      "title": "Chest tube drainage versus needle aspiration for primary spontaneous pneumothorax: which is better?",
+      "year": 2018
+    },
+    {
+      "title": "J Thorac Dis",
+      "year": 2017
+    },
+    {
+      "title": "Simple aspiration versus intercostal tube drainage for primary spontaneous pneumothorax in adults",
+      "year": 2017
+    },
+    {
+      "title": "Cochrane Database Syst Rev",
+      "year": 2017
+    },
+    {
+      "title": "Manual aspiration versus chest tube drainage in first episodes of primary spontaneous pneumothorax: a multicenter, prospective, randomized pilot study",
+      "year": 2017
+    },
+    {
+      "title": "Am J Respir Crit Care Med",
+      "year": 2002
+    },
+    {
+      "title": "Randomised comparison of needle aspiration and chest tube drainage in spontaneous pneumothorax",
+      "year": 2002
+    },
+    {
+      "title": "Management of spontaneous pneumothorax: British Thoracic Society Pleural Disease Guideline",
+      "year": 2017
+    },
+    {
+      "title": "Thorax"
+    },
+    {
+      "title": "Are we ready for the digital age?",
+      "year": 2018
+    },
+    {
+      "title": "J Thorac Cardiovasc Surg",
+      "year": 2018
+    },
+    {
+      "title": "Thopaz Digital Chest Drainage System",
+      "year": 2018
+    },
+    {
+      "title": "Digital chest drainage is better than traditional chest drainage following pulmonary surgery: a meta analysis",
+      "year": 2011
+    },
+    {
+      "title": "Eur J Cardiothorac Surg",
+      "year": 2018
+    },
+    {
+      "title": "Utility of objective chest tube management after pulmonary resection using a digital drainage system",
+      "year": 2018
+    },
+    {
+      "title": "Ann Thorac Surg",
+      "year": 2017
+    },
+    {
+      "title": "Prospective randomized trial compares suction versus water seal for air leaks",
+      "year": 2017
+    },
+    {
+      "title": "Suction vs water seal after pulmonary resection: a randomized prospective study",
+      "year": 2001
+    },
+    {
+      "title": "Chest drainage systems and management of air leaks after a pulmonary resection",
+      "year": 2002
+    },
+    {
+      "title": "Vlaamse Werkgroep voor Medische Thoracoscopie en Interventionele Bronchoscopie. Quantification of the size of primary spontaneous pneumothorax: accuracy of the light index",
+      "year": 2017
+    },
+    {
+      "title": "Respiration",
+      "year": 2001
+    },
+    {
+      "title": "Randomized trial of digital versus analog pleural drainage in patients with or without a pulmonary air leak after lung resection",
+      "year": 2001
+    },
+    {
+      "title": "Evaluation of a new chest tube removal protocol using digital air leak monitoring after lobectomy: a prospective randomised trial",
+      "year": 2015
+    },
+    {
+      "title": "Predicting outcomes in primary spontaneous pneumothorax using air leak measurements",
+      "year": 2010
+    }
+  ],
+  "quality": {
+    "completeness_score": 0,
+    "has_abstract": true,
+    "abstract_source": "metadata",
+    "has_doi": true,
+    "has_full_text": true,
+    "num_sections": 24,
+    "num_tables": 3,
+    "num_figures": 6,
+    "num_references": 38
+  }
+}

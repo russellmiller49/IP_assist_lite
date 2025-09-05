@@ -1,0 +1,1280 @@
+{
+  "metadata": {
+    "document_id": "10_1159_000540102",
+    "title": "Radiation Principles, Protection, and Reporting for Interventional Pulmonology: A World Association of Bronchology and Interventional Pulmonology White Paper",
+    "authors": [
+      "Inge N. Wijma",
+      "Roberto F. Casal",
+      "George Z. Cheng",
+      "Paul F. Einsiedel",
+      "Alberto Fantin",
+      "David J. Hall",
+      "Felix J.F. Herth",
+      "Calvin S.H. Ng",
+      "Michael A. Pritchett",
+      "Pallav L. Shah",
+      "Daniel P. Steinfort",
+      "Rocco Trisolini",
+      "Roel L.J. Verhoeven",
+      "Erik H.F.M. Van Der Heijden"
+    ],
+    "year": 2024,
+    "journal": "Respiration",
+    "doi": "10.1159/000540102",
+    "volume": "103",
+    "issue": "11",
+    "pages": "707-722",
+    "citation": "Wijma, et al. (2024). Radiation Principles, Protection, and Reporting for Interventional Pulmonology: A World Association of Bronchology and Interventional Pulmonology White Paper. Respiration, 103(11), 707-722. https://doi.org/10.1159/000540102",
+    "abstract": "The use and availability of diverse advanced X-ray based imaging and guidance systems in the /uniFB01 eld of interventional pulmonology are rapidly growing. This popularity links inextricably to an increase in ionizing radiation use. Knowing ionizing radiation is hazardous, knowledge and competent use of X-ray imaging and guidance systems are important. The globally implemented As Low As Reasonably Achievable (ALARA) principle demands careful attention to minimize radiation exposure while achieving the precise goals of the intervention and imaging therein. To allow careful and targeted weighing of risk against reward while using X-ray based equipment, proper background knowledge of physics as well as imaging system aspects are needed. This white paper summarizes the principles of ionizing radiation which Endorsed by the European and American Association for Bronchology and Interventional Pulmonology. On behalf of the WABIP ad hoc committee radiation safety white paper: chaired by Erik H.F.M. van der Heijden. are crucial to enhance awareness and interpretation of dosimetric quantities. Consecutively, a consensus on standards for reporting radiation exposure in interventional pulmonology procedures is indicated to facilitate comparisons between different systems, approaches and results. Last but not least, it provides a list of practical measures, considerations and tips to optimize procedural imaging as well as reduce radiation dose to patients and staff",
+    "abstract_source": "metadata",
+    "url": "https://karger.com/article/doi/10.1159/000540102"
+  },
+  "source_file": "Radiation Principles, Protection, and Reporting.json",
+  "sections": [
+    {
+      "title": "Radiation Principles, Protection, and Reporting for Interventional Pulmonology: A World Association of Bronchology and Interventional Pulmonology White Paper",
+      "content": "Inge N. Wijma a Roberto F. Casal b George Z. Cheng c Paul F. Einsiedel d Alberto Fantin e David J. Hall f, g Felix J.F. Herth h Calvin S.H. Ng i Michael A. Pritchett j Pallav L. Shah k, l Daniel P. Steinfort m Rocco Trisolini n Roel L.J. Verhoeven a Erik H.F.M. van der Heijden a\na Department of Pulmonary Diseases, Interventional Pulmonology, Radboud University Medical Center, Nijmegen, The Netherlands; b Department of Medicine, Advanced Bronchoscopy Program, Clinical Research Unit, Department of Pulmonary Medicine, The University of Texas MD Anderson Cancer Center, Houston, TX, USA; c Department of Interventional Pulmonology, Bronchoscopy, and Pleural Disease, Interventional Pulmonology Fellowship, University of California San Diego, La Jolla, CA, USA; d Department of Medical Imaging, The Royal Melbourne Hospital, Parkville, VIC, Australia; e Department of Pulmonology, University Hospital of Udine (ASUFC), Udine, Italy; f Department of Radiology, Diagnostic Medical Physics, University of California, San Diego, CA, USA; g UCSD Moores Cancer Center, La Jolla, CA, USA; h Department of Pneumology and Critical Care Medicine, Thoraxklinik, University of Heidelberg, Heidelberg, Germany; i Department of Thoracic Surgery, Prince of Wales Hospital, The Chinese University of Hong Kong, Hong Kong, Hong Kong SAR; j Chest Center of the Carolinas, FirstHealth of the Carolinas and Pinehurst Medical Clinic, Pinehurst, NC, USA; k Royal Brompton Hospital, London, UK; l National Heart and Lung Institute, Imperial College, London, UK; m Department Respiratory Medicine, The Royal Melbourne Hospital City Campus, Parkville, VIC, Australia; n Department of Pulmonary Medicine and Interventional Pulmonolonology, Catholic University of the Sacred Hearth, Fondazione Polilcinico Universitario Agostino Gemelli IRCCS, Rome, Italy",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Abstract",
+      "content": "The use and availability of diverse advanced X-ray based imaging and guidance systems in the /uniFB01 eld of interventional pulmonology are rapidly growing. This popularity links inextricably to an increase in ionizing radiation use. Knowing ionizing radiation is hazardous, knowledge and competent use of X-ray imaging and guidance systems are important. The globally implemented As Low As Reasonably Achievable (ALARA) principle demands careful attention to minimize radiation exposure while achieving the precise goals of the\nintervention and imaging therein. To allow careful and targeted weighing of risk against reward while using X-ray based equipment, proper background knowledge of physics as well as imaging system aspects are needed. This white paper summarizes the principles of ionizing radiation which\nEndorsed by the European and American Association for Bronchology and Interventional Pulmonology. On behalf of the WABIP ad hoc committee radiation safety white paper: chaired by Erik H.F.M. van der Heijden.\nare crucial to enhance awareness and interpretation of dosimetric quantities. Consecutively, a consensus on standards for reporting radiation exposure in interventional pulmonology procedures is indicated to facilitate comparisons between different systems, approaches and results. Last but not least, it provides a list of practical measures, considerations and tips to optimize procedural imaging as well as reduce radiation dose to patients and staff.",
+      "category": "abstract",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Introduction",
+      "content": "In the past decade, the /uniFB01 eld of interventional pulmonology has been transformed by the signi /uniFB01 cant increase in the use of advanced imaging modalities and technological guidance for both diagnostic and therapeutic procedures. The advent of these technologies leads the ability to perform more procedures through bronchoscopy. In diagnostics for peripheral pulmonary lesions, for example, advanced technologies such as electromagnetic tracking, virtual endoscopic guidance based on pre-procedural CT scans, novel shape sensing technologies, and multiple other technologies are being used. Whereas the majority of these technologies aim to provide navigation as a standalone modality, the vast majority of procedures sees it accompanied or integrated with real-time X-ray imaging. While only a decade ago the portfolio consisted predominantly of basic /uniFB02 uoroscopy guidance, recent advancements have introduced algorithms enabling not only simple two-dimensional (2D) /uniFB02 uoroscopy but also threedimensional (3D) imaging modalities such as tomosynthesis and cone-beam CT (CBCT). Although access to high-end hybrid operating rooms (ORs) or interventional radiology suites equipped with /uniFB01 xed /uniFB02 at panel CBCT systems is still limited in many countries, the advent of mobile CBCT systems will likely translate into a rapid increase in the use of these devices.\nAs diverse image-guiding systems become more available to interventional pulmonologists, increasing the use of ionizing radiation, it is crucial to enhance awareness and education about ionizing radiation principles among both patients and hospital staff. Furthermore, there is a pressing need to establish an international reporting standard for consistent and accurate reporting on radiation dose and safety. This would enable standardized and comparable assessment of radiation metrics among studies. This paper aims to (1) refresh our\nknowledge on the basic principles of ionizing radiation, (2) guide researchers to address radiation dose and safety accurately and consistently in (future) studies, and (3) create awareness and provide practical tips on how to prevent unnecessary exposure to radiation for the safety of our patients, our staff and ourselves.",
+      "category": "introduction",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Physics of Ionizing Radiation in Diagnostic Imaging",
+      "content": "Ionizing radiation refers to any form of electromagnetic or particle radiation with suf /uniFB01 cient energy to remove tightly bound electrons from atoms. Ionizing radiation includes photons, alpha particles, beta particles, and neutrons. In the case of diagnostic X-ray imaging, the elementary ionizing particles that are of interest are photons (X-rays and gamma rays). These photons possess higher energy levels (expressed in the term electronvolt) than photons known from visible light and therefore have different properties while interacting with tissue. In diagnostic, imaging photons are generated in the X-ray tube (Fig. 1). An image is created by summating all the photons at the detector that did not interact with matter. X-ray photons that interact with matter can either be absorbed or scattered. The chance of interaction between a photon and tissue is small but can be optimized for diagnostic imaging by adjusting the number of photons emitted, photon energy, density of tissue, and pathway length. The difference in absorption per tissue is the building block of images and causes the variation in contrast of the image. As an obvious example, air is less dense than bone tissue so it is more likely that photons interact with bone tissue than with air. Upon interaction of photons with tissue, they are scattered in different directions. The scattered portion negatively contributes to image quality as the scattered radiation can also reach the detector but have an unknown trajectory that cannot be fully distinguished from the original radiation beam causing a reduction in image contrast. Therefore, a grid (Fig. 1) is installed between the patient and the detector to prevent incoming scattered radiation from reaching the detector. The radiation that scatters to the side of the X-ray tube is called ' back-scattered radiation ' and is much more intense than ' forward-scattered radiation ' (Fig. 1).\nThe exposure settings of the X-ray imaging system in /uniFB02 uence the image quality and radiation dose received by the patient. The tube voltage (kilovoltage peak, kVp) and tube electrical current multiplied with the exposure time (milliampere seconds, mAs), respectively, determine the energy the photons will get and the number of photons\nthat are generated. In order for the detector to obtain any signal the photons require adequate energy to allow penetration (i.e., suf /uniFB01 ciently high voltage) but also interaction with the tissue (i.e., the voltage should not be too high). To allow the generation of suf /uniFB01 cient photons for clinical image quality, the tube electric current should be suf /uniFB01 ciently high. Newer /uniFB02 uoroscopy systems have specialized automatic exposure control feedback loops that can adjust the tube kVp and mA to achieve optimal imaging quality (radiation dose vs. imaging quality). As an example, when using speci /uniFB01 c lung-tailored protocols in larger adult torsos there is a need for higher energy X-ray photons to penetrate the anatomy than in that of a small child ' s torso.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Radiation Effects",
+      "content": "There is a general consensus that ionizing radiation negatively affects the human body. X-ray photon and tissue interactions typically do not lead to problematic disruptions at atomic or molecular level. However, dysregulations in the chemical bonds in the DNA can have signi /uniFB01 cant consequences even with a minimal amount of energy. Normally, DNA repair mechanisms will address these damages immediately, or the affected cells undergo apoptosis. However, DNA double-strand breaks or misrepairs can cause mutations in cells that can result in the induction of cancer. It is widely acknowledged that an increase in radiation exposure corresponds to an increased risk for individuals. The risk of developing\nisocenter (purple dot). The X-ray photons that are not absorbed in the patient (gradient-opaque purple colored box) or scattered (black arrows), need to pass the /uniFB01 ltering grid (wire frame in light blue) to reach the image detector (orange colored box). The summation of signals received in the image detector leads to the image formation. Radiation scatter is the greatest radiation exposure source to staff. * The cumulative air kerma is measured in the IRP. ** The dose area product is measured using an ionization chamber. This /uniFB01 gure was created with BioRender.com.\ncancer due to radiation cannot be clinically distinguished from the same type of cancer arising from other causes. Hence, any cancer risk estimates at diagnostic and interventional levels must be treated with caution [1].\nThe interaction of tissue with radiation can lead to two different effects in the human population:\n1. Deterministic effects: deterministic effects are effects in which the severity of the injury (rather than its probability of occurrence) increases once a threshold dose has been exceeded. Below the threshold, no effect will be apparent. For example, after an interventional procedure where the peak skin dose (PSD) ranges from 2 to 5 Gy, symptoms such as skin erythema may appear within 2 weeks and hair loss (epilation) can occur within two to 8 weeks. Complete recovery from these symptoms is typically expected at the lower threshold skin doses. Higher doses ( > 5 Gy) will have longer or even permanent consequences.\n2. Stochastic effects: Stochastic effects refer to the probability of an effect occurring (rather than its severity) and increase with dose, e.g., radiation-induced cancer and hereditary effects. There is no de /uniFB01 ned threshold dose for stochastic effects.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Radiation Metrics",
+      "content": "In interventional pulmonology literature, various metrics have been used to report on radiation use. These are not only metrics provided by the system but also metrics that require additional assumptions about the procedure and the patient (including simulation modeling) for accurate calculation. For example, to estimate the effective dose, one must know the speci /uniFB01 c organs involved and their positioning within the irradiated /uniFB01 eld. As rotating the C-arm would signi /uniFB01 cantly alter the geometry, this would signi /uniFB01 cantly affect the procedural effective dose measurements. The use of different units and diverse assumptions complicates the comparison of radiation doses between studies, procedures, hospitals, operators, devices, or even personal performance over time. Below is a brief overview of core metrics as commonly referenced in radiation literature.\nModern /uniFB02 uoroscopy systems report the CAK and the DAP as Dose Metrics:\n· Cumulative Air Kerma (CAK, in Gy): The total cumulative Kinetic Energy Released in MAtter (KERMA), speci /uniFB01 cally in air (Air Kerma) is reported for /uniFB02 uoroscopy systems at a speci /uniFB01 c location known as the interventional reference point (IRP, Fig. 1). It is expressed in Gray (Gy), which is the SI (International System of Units) base unit of absorbed ionizing ra-\ndiation. The CAK is roughly correlated with the risk of deterministic effects of radiation on biological tissue and re /uniFB02 ects the dose received by the skin. It is important to note that the CAK is reported for the entire patient exam, which may have been distributed over the patient surface opposed to delivering it all at one surface location.\n· Dose Area Product (DAP, in Gy · cm 2 ): The DAP is calculated by multiplying the Dose (Gy) by the area of irradiation (cm 2 ). This measurement re /uniFB02 ects the absorbed dose within a speci /uniFB01 c area of tissue that has been irradiated. DAP is measured using an ionization meter placed beyond the X-ray collimators (Fig. 1). DAP is approximately correlative with the risk of stochastic effects, such as cancer, due to radiation exposure in biological tissue. Akin to CAK, /uniFB02 uoroscopy systems also report the total DAP for a patient examination and thus never re /uniFB02 ect the dose in a speci /uniFB01 c organ.\n· Effective Dose (ED, in Sv): The ED accounts for the fact that different tissue types exhibit varying levels of sensitivity to the stochastic risk of radiation (re /uniFB02 ected in a weighing factor Wt). The ED is expressed in Sieverts (Sv), which is the SI-unit that represents the stochastic health risk of ionizing radiation. The ED is estimated from the DAP using conversion factors. The accuracy of this estimation depends on many factors such as the C-arm angle, collimation used, organ presence in the /uniFB01 eld of view, type of exam performed, et cetera. The conversion from DAP to effective dose is rarely generalizable across cohorts in non-standardized imaging procedures (i.e., procedures which allow the operator to adjust imaging performed). Due to the multiple variables involved in estimating the effective dose from DAP in X-ray imaging systems such as C-arms and CBCT systems, a signi /uniFB01 cant error margin can be expected in the calculated effective dose [2 -4]. In interventional pulmonology, it should therefore be regarded with caution and only used as a means to allow the risks to be compared with other imaging modalities like PET-CT and CT in a general sense.\n· Note that /uniFB02 uoroscopy systems generally only report total CAK and DAP in a procedural summary report. More recent systems may also provide CAK and DAP for every radiation exposure event, including the beam geometry, in a more detailed Radiation Dose Structured Report which the clinical physicist of the hospital can provide. We recommend that conversion from the reported total CAK and DAP to PSD for deterministic risk and ED for stochastic risk is conducted by a physicist.\n· Personal Dose Equivalent (in Sv): For occupational radiation protection monitoring, the personal dose equivalent is measured by dosimeter badges. It is used as an estimation of the effective dose of the staff. Depending on the photon energy and position where the badge is worn, the badge may lead to inaccuracies of the actual effective dose received [5].\nBackground Dose and Diagnostic Imaging Procedures Radiation exposure does not only occur in healthcare facilities as every human is exposed to background radiation occurring in nature every day. The average annual background radiation level worldwide is estimated to be 2.4 mSv [6]. An example of effective dose estimations that patients are exposed to in diagnostic imaging can be found below in Table 1. Note that the effective dose should not be used for individual patient doses but rather to compare doses across exam types and modalities.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Image-Guided Procedures in Interventional Pulmonology",
+      "content": "Historically, the use of ionizing radiation in interventional pulmonology primarily involved /uniFB02 uoroscopy as facilitated by either mobile or /uniFB01 xed C-arm systems with only 2D imaging capabilities. Diagnostic applications of /uniFB02 uoroscopy included the assessment of interstitial lung diseases or nodules, as well as the evaluation of diaphragm motility. Therapeutic interventions often involved bronchoscopic lung volume reduction using coils or valves for severe emphysema, airway stents for central airway ob-\nstructions, and less frequently brachytherapy as a form of local radiotherapy. Although trans -thoracic needle aspiration has had a consistent place in interventional pulmonology, it has predominantly been performed under CT guidance by (interventional) radiologists.\nAdvanced X-ray image guidance has garnered signi /uniFB01 cant interest in interventional pulmonology, particularly with the rise of navigation bronchoscopy procedures. The use and development of advanced X-ray imaging techniques has captured the attention of physicians and the health industry worldwide. The available clinical setups nowadays include (advanced) /uniFB02 uoroscopy, tomosynthesis, /uniFB01 xed CBCT systems in hybrid ORs and interventional radiology suites, and mobile CBCT systems capable of 3D imaging. Numerous studies have been published addressing the procedure outcomes utilizing these technologies. However, the associated radiation exposures are often absent, limited or presented in formats that are dif /uniFB01 cult to interpret, complicating the task of making accurate comparisons. For example, an extensive but non-exhaustive review of the literature on navigation bronchoscopy technologies that included radiation metrics is presented in Table 2. There is considerable variability in how procedures are performed; with physicians balancing the use of 2D /uniFB02 uoroscopy and 3D image acquisition based on their speci /uniFB01 c needs. Increasing the use of 2D /uniFB02 uoroscopy can lead to fewer 3D acquisitions and vice versa. The adoption of supplementary guidance technologies plays a role in this clinical decision as well. Aside of differences in individual physician preferences in imaging, imaging and guidance systems also have speci /uniFB01 c requirements that result in different radiation exposures. The limited subset of studies as shown in Table 2 show the\nThereported effective dose is expressed in millisievert (mSv) and can serve as a reference in evaluating the radiation exposure in the /uniFB01 eld of intervention pulmonology. CT, computed tomography; TTNA, transthoracic needle aspiration. a The actual radiation exposure depends on many things including the imaging system used, the duration of imaging, patient size, patient positioning, and sensitivity of the tissue being targeted.\nradiation exposure variates considerably even in a similar approach and that there is no consistent total radiation exposure difference between /uniFB01 xed and mobile systems with 3Dcapabilities nor is there a consistent difference in single or multi-modality settings. The considerable variability as caused by individual preference as well as technological background shows multiple variables are needed to understand differences between studies and procedure performance. For example, although the /uniFB02 uoroscopy time and number of CBCT spins are frequently mentioned, it does not linearly correlate with radiation dose. Comparing the number of spins or /uniFB02 uoroscopy time between reports and then taking an ' average ' CBCTscanor /uniFB02 uoroscopy dose per amount of time leads to an inaccurate estimation of the total dose. An initial CBCT scan at the start of a navigation bronchoscopy procedure might use a wider /uniFB01 eld of view and higher image quality for airway visualization than subsequent scans that utilize only collimated 3D imaging with lower quality to con /uniFB01 rm tool-in-lesion positioning. As highlighted in the study of Verhoeven et al. with precise radiation measures both /uniFB02 uoroscopy time and the number of spins can increase while still decreasing the overall radiation dose [12].",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Radiation Reporting Recommendations",
+      "content": "The International Commission on Radiological Protection (ICRP) is an independent, international organization that provides guidance and recommendations on protection against the harmful effects of ionizing radiation. These recommendations are recognized by many countries and adopted into legislation to minimize patient dose and protect employees and citizens against the dangers of uncontrolled use of ionizing radiation. In 2015, ICRP Publication 129 stated that the most important dose index that should be reported and tracked in /uniFB02 uoroscopy and CBCT imaging is the kerma area product, which is in diagnostic X-ray imaging interpreted to be equal in value to the DAP. They conclude that reporting DAP facilitates a direct comparison between 2D examinations such as /uniFB02 uoroscopy and 3D examinations such as 3D CBCT spins. The commission further stated that the effective dose is not a suitable dosimetric quantity for reporting patient doses in /uniFB02 uoroscopic or cone-beam imaging [42].\nThe radiation dose per procedure is not only determined by the extensive /uniFB02 uoroscopy and 3D image usage but also determined by the patient on the table. The body mass index (BMI) has a strong in /uniFB02 uence on the radiation dose produced during the procedure, resulting in a signi /uniFB01 cant increase in DAP for overweight (25.0 -29.9) and obese ( > 30) patients compared to healthy weight BMI range (18.5 -24.9) [43]. Also increasing patient ' s BMI is associated with a\nsigni /uniFB01 cant increase in the physician ' s radiation dose during /uniFB02 uoroscopy use [44]. Therefore, it is important to mention the mean/median BMI together with your radiation reports.\nDetailed data reporting on radiation exposure is crucial and should, at minimum, include several key metrics to allow meaningful comparison of procedural imaging approaches and study outcomes. For future research involving radiation exposure in interventional pulmonology, we recommend including the information outlined in Table 3.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Dose Reduction Measures -Practical Tips",
+      "content": "Engaging in activities that involve the use of ionizing radiation, particularly in clinical settings, demands careful attention to minimize exposure while preserving the quality of diagnostic images. This approach is steadfastly guided by the ALARA principle -As Low As Reasonably Achievable -signifying a dedicated commitment to use the minimum radiation exposure necessary to achieve the precise goals of imaging [45]. While image quality and radiation exposure share a close relationship, it might be inferred that decreasing radiation exposure could potentially compromise image quality, impacting decision-making during procedures. Nonetheless, numerous measures exist to manage radiation exposure without signi /uniFB01 cantly impacting image quality. In general, a reduction of patient dose directly translates to a reduction in dose for the staff.\nIn the following section, practical tips for interventional pulmonology procedures are listed.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Exposure Time and Number of 3D Imaging Spins",
+      "content": "· Critically examine /uniFB02 uoroscopy use, do you need to see your instruments continuously or is intermittent /uniFB02 uoroscopy use also suf /uniFB01 cient? Instruct to disengage the /uniFB02 uoroscopy pedal when imaging is no longer relevant.\n· Fluoroscopic imaging at multiple imaging angles can help validate the 3D position of instruments but consider using only intermittent instead of continuous imaging while performing the rotation.\n· Fluoroscopic imaging in pulsed mode obtains images in short X-ray pulse emissions compared to continuous /uniFB02 uoroscopy. It can signi /uniFB01 cantly reduce radiation exposure while keeping suf /uniFB01 cient image /uniFB02 uency [46]. Review your /uniFB02 uoroscopy frame rate; how low can you go without compromising image quality?\n· Most 3D imaging systems have a subset of protocols available ranging in radiation dose and image quality; do you need the highest quality at every time point in the procedure or for every patient, or is a lower dose with reduced image quality also suf /uniFB01 cient?\n· Some hybrid imaging systems allow the acquisition of 3D information through tomosynthesis of /uniFB02 uoroscopy at a limited set of angles rather than performing a full 3D CBCT scan; evaluate the comparative radiation dose of both imaging sequences and assess the imaging quality needed with the least radiation dose.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Distance",
+      "content": "The radiation emanating from a point source follows the inverse square law, wherein the dose (or dose rate) reduces proportionally to the square of the distance from the source (irradiation from a point source in a spherical fashion). To illustrate, doubling the distance from the radiation ' source ' (i.e., tube and/or patient) results in a reduction of the radiation dose by approximately a factor of four.\nDistance is a very applicable term in radiation protection and is two-fold.\n· Patient distancing: as direct X-ray beams traverse patients to reach the detector, physicians are encouraged to adhere to optimal radiographic geometry practices to improve image quality while reducing radiation dose.\n-This entails positioning the patient as close to the image detector as feasible, to minimize the air gap. The detector in most /uniFB01 xed C-arm and CBCT systems can\nbe mechanically lowered, or the table height increased. A high table position reduces the PSD of the patient and increases the /uniFB01 eld of view without requiring magni /uniFB01 cation. These adjustments may not always be possible when mobile CBCT is being utilized and ' isocentering ' is required to ensure visualization of the target in CBCT images. The height of the table is then mostly adjusted according to how anterior or posterior the target is located. At all times, keep the ergonomic working position of the interventional pulmonologist in mind for evaluating the right position.\n-Posteroanterior projection angles demand the minimal dose (or dose rate) necessary for effective imaging, as this is the smallest distance for the X-ray source to transverse the (least amount/dense) tissue. However, when transitioning to the left anterior oblique or right anterior oblique system orientations and further into lateral orientation, the dose may escalate signi /uniFB01 cantly [47].\n· Staff distancing: as scattered radiation emanates from the patient, it is omnidirectional but more potent in the backscattered direction (Fig. 1). It is the greatest radiation exposure source for staff.\n-Every staff member should avoid direct exposure to the primary X-ray beam.\nIt is recommended to make a distinction in reporting between /uniFB02 uoroscopy and CBCT/tomosynthesis imaging. However, not all systems will have a 2D and 3D distinction for DAP and CAK, only a total cumulative report per procedure. It is recommended to use the mean or median along with standard deviation or 95% con /uniFB01 dence interval based on the distribution of data (non-normal vs. normal). BMI, body mass index; CAK, cumulative air kerma; CBCT, cone-beam CT; CT, computed tomography; DAP, dose area product; FL, /uniFB02 uoroscopy. 1 If available: tomosynthesis /uniFB02 uoroscopy dose for /uniFB02 uoroscopy or 3D imaging separately.\n-Positioning the X-ray tube beneath the patient support is most ef /uniFB01 cient in terms of radiation protection for the staff. The primary source of staff exposure arises from scattered X-rays emanating back from the patient (back-scattered radiation, Fig. 1). Consequently, the patient serves as a natural shield for staff positioned near the image detector. This protective effect is particularly pronounced as the majority of backscattered radiation tends to be directed towards below the pelvis level, targeting tissue that are less susceptible to X-ray exposure compared to those in the upper part of the staff ' s body. The angulation of the C-arm or CBCT to the left or right anterior oblique can signi /uniFB01 cantly increase the scattered dose [47 -49].\n-It is advised to maximize the distance of staff to the X-ray source and limit the presence of staff near the patient. Position yourself in a low-scatter area. For example, it is a common mistake that the operator stands on the side of the X-ray tube during lateral /uniFB02 uoroscopy, which is the area of the most intense back-scattered radiation [48]. In tomosynthesis image acquisitions with prolonged manual spin of the /uniFB02 uoroscopy arm between certain left and right anterior oblique orientations can increase the scatter for staff if they are not distancing.\n-Reconsider your physical location relative to the X-ray source when you dedicated 3D imaging, move away as far as reasonably possible or /uniFB01 nd proper shielding. As most physician ' s /uniFB01 nd proper shielding during 3D imaging, the main source of occupational radiation dose originates from the 2D /uniFB02 uoroscopy.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Collimation",
+      "content": "An X-ray collimator is a crucial device positioned in close proximity to the X-ray tube to control and con /uniFB01 ne the area of the X-ray beam horizontally, vertically or\ncircularly (Fig. 1). Collimation primarily serves to limit the radiation exposure only to the speci /uniFB01 c area of interest and to a lesser extent improves image quality due to a reduction in the number of scattered X-ray photons. Reducing the area reduces the DAP.\n· While using /uniFB02 uoroscopy imaging during interventions, the operator mainly focuses on a certain point while the whole /uniFB01 eld of view is irradiated. Collimation is a useful technique for reducing the radiation exposure of the areas of no interest (Fig. 2).\n· In 3D CBCT spins, collimation can also be applied in cranio-caudal orientations, which results in a signi /uniFB01 -cant dose saving [14].",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Magni /uniFB01 cation",
+      "content": "There are multiple types of magnifying modes associated with /uniFB02 uoroscopic equipment. Modern systems with /uniFB02 at panel detectors allow for analog magni /uniFB01 cation by increasing the spatial resolution to obtain a greater level of image detail. An additional magni /uniFB01 cation feature is also available in some systems and is referred to as digital zooming. Using this mode, the resultant image can be magni /uniFB01 ed while the inherent resolution properties of the image remain unchanged.\n· Analog magni /uniFB01 cation increases the exposure rate, ensuring that the signal-to-noise ratio of the image is approximately constant regardless of the X-ray pathway length, and density of the anatomical region in the /uniFB01 eld of view. Therefore, the use of analog magni /uniFB01 cation should be minimized unless it is speci /uniFB01 cally necessary for diagnosis.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Irrelevant Objects",
+      "content": "Irrelevant objects, especially metal objects with a high attenuation coef /uniFB01 cient, will trigger the automatic exposure control to increase the dose rate of the X-ray system. These objects in the /uniFB01 eld of view, such as parts of the navigation systems and blood pressure band connectors,\netc., should be removed by either repositioning the object, moving the /uniFB01 eld of view of the imaging system or collimation of the imaging system.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Protective Equipment",
+      "content": "Protective equipment is available in many forms and includes both shielding and radiation monitoring devices. Radiation exposure is mainly caused by the scattered radiation from the patient. It should be rare for staff to be exposed to the primary X-ray beam.\n· Shielding in the form of lead equivalent aprons and thyroid collars is best used for occupational work with image-guided radiation. Lead protective glasses are optional and mainly recommended for interventions with high /uniFB02 uoroscopy workloads where the operator is continually in close proximity to the patient [50].\n· Additional shielding in the form of glass screens and table skirts minimizes exposure.\n· Depending on local requirements, occupational radiation monitoring devices may be worn at the torso or thyroid level, either beneath or outside lead protective garments. Regular monitoring of these dosimetry devices is essential to track the annual radiation exposure of the operator. This task is typically carried out by the Radiation Safety Of /uniFB01 cer or Medical Physicist. Precautionary measures must be applied to respect national radiation levels.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Room Ambience",
+      "content": "The number of shades of gray the human eye can distinguish is greatly affected by the lighting conditions.\n· During /uniFB02 uoroscopic examinations, the room lighting should be minimal to enhance the visualization of the gray-scale images on the monitor. Excessive light will decrease the ability of the eye to resolve detail on the monitor which could cause the physician to modify the exposure parameters to increase the brightness of the resultant image. Once again, an increase in the exposure parameters will directly impact on patient ' s dose.\n· Large display monitors can be used to reduce image magni /uniFB01 cation and prevent the interventional pulmonologist from leaning in high-risk irradiated /uniFB01 elds.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Pregnancy",
+      "content": "Extra considerations arise when a patient or staff member is pregnant. On top of the practical measures listed above, alternative treatments, additional shielding, or monitoring may be worth considering.\n· Pregnant patients: In every patient, the justi /uniFB01 cation for using ionizing radiation should outweigh the risks that radiation exposure may cause. The fetus is more sus-\nceptible to radiation effects; it is important to have suf/uniFB01 cient reason for using radiation near the fetus and at least additional radiation reduction and optimization measures.\n· Staff Pregnancy: Staff working with ionizing radiation should inform hospital authorities to ensure that the fetus is afforded the appropriate level of protection. The local Radiation Safety Of /uniFB01 cer should be able to assist with more frequent radiation monitoring of the exposure via the use of specialized electronic dosimeters [51].",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Implementation, Training, and Monitoring",
+      "content": "The above-mentioned practical dose reduction measures can be easily implemented into everyday clinical work /uniFB02 ows, however, to further optimize the use of radiation additional measures should also be considered. Training is an important aspect of this clinical implementation of dose reduction measures in the imaging suite, as many interventional pulmonologists have not received a formal radiation safety training during their careers. Any training implemented should include both the operator of the imaging equipment and staff routinely required to be in attendance during these imaging procedures or interventions. Any training package offered should be delivered by educators with both clinical experience and radiation protection/medical physics expertise. The interventional pulmonologists should be made aware of and recognize the situations in which dose reduction measures can be applied and act accordingly. Additionally, further optimization measures can be achieved for complex procedures requiring prolonged /uniFB02 uoroscopic imaging using medium to high output imaging equipment with the presence of radiography support (radiographer, medical imaging technologist, etc.) for these exams. The involvement of radiography support during /uniFB02 uoroscopic applications is a key element in minimizing patient exposure. Not only to keep prioritization and awareness as physicians are often mentally burdened with procedure performance but also as an adept and experienced teams collaborates best. The radiography support can assist the interventional pulmonologists to recognize the situations in which dose reduction measures can be applied, and act accordingly.\nThe contribution of clinical physicists and other technologists can help the team gain insight into the radiation dose per procedure and strive for lower radiation levels to further implement ALARA principles to minimize risks. The clinical physicist should be involved in the initial setup, periodic quality control and staff education. Incorporating radiation protection into the\nbrie /uniFB01 ng or debrie /uniFB01 ng can help ensure that every team member is aware. Dosimeters can provide insights into the radiation doses to which people in the OR are exposed. Real-time dosimeters, which provide dose rates in real-time, are available on the market and are an effective tool for achieving these outcomes. In addition to the operational aspects of optimizing radiation exposure, facilities should also review or benchmark their patient exposures against facilities performing similar procedures or against published literature for that type of examination. By uniformly reporting radiation doses in the literature, a multi-institutional analysis can help individuals improve radiation reduction measures. Additionally, some countries have implemented diagnostic reference levels for speci /uniFB01 c procedure types. The objective of a diagnostic reference level is to assist in the avoidance of excessive radiation dose to the patient that does not contribute additional clinical information to the medical imaging task. Dose monitoring software that alert when a threshold is exceeded are recommended. Cases where the expected threshold is exceeded can be reviewed to clarify and justify why the dose was excessive and serve as an opportunity to improve practice.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Future Perspectives",
+      "content": "Given the recent advances in image-guided diagnostic procedures in interventional pulmonology, it is inevitable that X-ray imaging will be increasingly used in the interventional pulmonology /uniFB01 eld over the coming years. This is especially apparent in the increasing demand and interest in peripheral pulmonary nodule procedures where advanced 3D imaging in combination with hightech navigation systems is developing into the new gold standard. With the increasing use of chest CT scanning and where lung cancer screening programs are being implemented broadly, more (incidental) nodules will be detected requiring tissue diagnosis [52]. Also, new developments for both diagnostics and local therapy will increase and expand the demand for X-ray guided procedures.\nTo accommodate this need, advanced mobile systems and hybrid imaging systems have become commercially available over recent years. Although these systems yet have lower image quality and longer acquisition time compared to currently available /uniFB01 xed systems, these systems are a solution for sites without 3D image con/uniFB01 rmation systems or limited capacity for intervention radiology rooms and may save costs [31, 33]. Furthermore, the /uniFB01 xed CBCT system developments have not\nreached their technological limits, as there is room for improvement in more advanced /uniFB02 uoroscopy to guide the bronchoscopist to the lesion and give insight into margins for therapy [19]. Accurate tool-in-lesion con /uniFB01 rmation requires reliable imaging systems with 3D acquisition capabilities. Software tools for tool-in-lesion reconstruction lack suf /uniFB01 cient accuracy at a millimeter level. In local therapeutics such as microwave ablation, accurate 3D imaging and advanced /uniFB02 uoroscopy are essential for the recon /uniFB01 rmation of nodule margins to critical structures, catheter positioning con /uniFB01 rmation and postablation zone evaluation [30]. Although all these developments will increase the number of 3D acquisitions in our procedures, it is a challenge to limit radiation exposure for both patients and staff.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Conclusion",
+      "content": "The use of advanced X-ray image guidance is rapidly increasing. Interventional pulmonologists are encouraged to minimize radiation exposure for both patients and staff, by understanding the physics of radiation and maximizing the use of radiation safety measures according to the ALARA principles. In daily care, the correct interpretation of your own site ' s radiation exposure is important in order to apply correct radiation measures and it should be seen as an effort of the total interventional team. All future clinical research using X-ray image guidance in the /uniFB01 eld of interventional pulmonology should systematically and uniformly report radiation exposure and safety measures to allow interpretation and comparison of different procedures, clinical setups and devices. We also advise future researchers, reviewers, and editors to address radiation safety. To report doses, our advice is that DAP and CAK should be used relative to the patient ' s BMI. In conclusion, as the reliance on advanced X-ray imaging continues to grow in interventional pulmonology, it is imperative for the entire interventional team to rigorously apply radiation safety measures in line with ALARA principles, continually monitor and interpret site-speci /uniFB01 c radiation data and ensure that future research adheres to consistent reporting standards for radiation exposure to enhance safety, comparability, and clinical outcomes.",
+      "category": "conclusion",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Acknowledgments",
+      "content": "We would like to thank S. Langereis, PhD, and F. Mammadli, MSc, for providing help in the literature search.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Statement of Ethics",
+      "content": "Statement of Ethics is not applicable as this research is based on literature, physics, and published articles.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Con /uniFB02 ict of Interest Statement",
+      "content": "The authors declare that they have no con /uniFB02 icts of interest in relation to the content or conceptualization of the work reported in this white paper. All authors have completed the ICMJE uniform disclosure form. P.F. Einsiedel, A. Fantin, and D.J. Hall declare no con /uniFB02 ict of interest. I.N. Wijma received no personal fees but discloses institutional and departmental research contracts with Innovative Health Initiative (EU fund). R.F. Casal discloses to receive research funding from Intuitive Surgical, Siemens, Johnson & Johnson, as well as consulting fees from Cannon, Intuitive Surgical and Olympus, and payment for presentations/educational events from Siemens. G.Z. Cheng discloses to receive research funding from Intuitive Surgical, consulting fees from Intuitive Surgical, Olympus, Boston Scienti /uniFB01 c, Pinnicle Biologics, and Biodesix, and payment for presentations/educational events from Cook Medical and Biodesix, participation on a Data Safety Monitoring Board or Advisory Board for LeadOPTIK and Biodesix, and a current executive board membership at the AABIP and ACCP. F.J.F. Herth discloses to receive payment in the past (2018 -2022) for presentations/educational events from Pulmonx and Uptake. C.S.H. Ng discloses to receive personal payment for presentations/educational events from Medtronic and Johnson & Johnson. M.A. Pritchett discloses to receive personal payment for consulting fees from Philips, Intuitive, Medtronic, Johnson & Johnson and Noah Medical, payment for research and speaking from Philips, Intuitive, Medtronic and Johnson & Johnson, travel fees from Intuitive, Noah Medical, Johnson & Johnson and Philips, and a current board membership at the Society for Advanced Bronchoscopy. P.L. Shah discloses to receive payment for speaking from Pulmonx, Olympus and Philips. D.P. Steinfort discloses trial related funds from Zidan Medical and Phenomapper Inc. R. Trisolini discloses to receive consulting fees from MSD and Medi-Globe, payment for presentations/educational activities from Pentax, Medi-Globe, AstraZeneca, Eli Lilly, MSD and Amgen, and participation on a Data Safety Monitoring Board or Advisory Board for MSD, Amgen and AstraZeneca. R.L.J. Verhoeven\nreceived no personal fees but discloses institutional and departmental research contracts with Pentax medical, AstraZeneca, Johnson & Johnson, Philips, Intuitive, Innovative Health Initiative (EU fund), KWF (national cancer fund), as well as consulting fees from Intuitive, Johnson & Johnson, NLC paid to the institution, travel support from Intuitive and Johnson & Johnson, equipment gifts from Philips Medical, and a current board membership at the Dutch society for Technical Physicians (NVvTG, unpaid). E. H.F.M. Van der Heijden received no personal fees but discloses institutional research grants from Pentax medical, AstraZeneca, Johnson & Johnson, Philips, Intuitive, Innovative Health Initiative (EU fund), KWF (national cancer fund), as well as consulting fees from Intuitive, Johnson & Johnson, NLC paid to the institution, travel support from Intuitive Surgical and Johnson & Johnson; speaker fees paid to institution by Janssen-Cilag, Pentax, Philips, Astra Zeneca, Intuitive, Siemens and Ethicon; equipment gifts from Philips Medical and equipment loans from Pentax Medical and Intuitive, and a current executive board membership at the European Association for Bronchology and Interventional Pulmonology (unpaid).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Funding Sources",
+      "content": "There were no funding sources for this study.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Author Contributions",
+      "content": "I.N. Wijma: conceptualization, writing -original draft, reviewing and editing, /uniFB01 nal approval. R.F. Casal, P.F. Einsiedel, A. Fantin, D.J. Hall, F.J.F. Herth, C.S.H. Ng, M.A. Pritchett, P.L. Shah, D.P. Steinfort, R. Trisolini, R.L.J. Verhoeven, E.H.F.M. van der Heijden, and G.Z. Cheng: conceptualization, writing -review and editing, and /uniFB01 nal approval.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Data Availability Statement",
+      "content": "All data are available in the references, as it is based on literature, physics, and published articles.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "References",
+      "content": "1 Brenner DJ, Hall EJ. Computed tomography -an increasing source of radiation exposure. N Engl J Med. 2007;357(22):2277 -84. https://doi.org/10. 1056/NEJMra072149\n2 International Atomic Energy Agency. Radiation doses in interventional procedures; 2022. Available from: https://www.iaea.org/resources/ rpop/health-professionals/interventionalprocedures/radiation-doses-in-interventional/uniFB02 uoroscopy\n3 Casal RF, Sarkiss M, Jones AK, Stewart J, Tam A, Grosu HB, et al. Cone beam computed tomography-guided thin/ultrathin bronchoscopy\nfor diagnosis of peripheral lung nodules: a prospective pilot study. J Thorac Dis. 2018;10(12): 6950 -9. https://doi.org/10.21037/jtd.2018.11.21\n4 Kalchiem-Dekel O, Bergemann R, Ma X, Christos PJ, Miodownik D, Gao Y, et al. Determinants of radiation exposure during mobile cone-beam CT-guided roboticassisted bronchoscopy. Respirology. 2024. https://doi.org/10.1111/resp.14765\n5 International Atomic Energy Agency. Occupational radiation protection. In: IAEA safety standards series no. GSG-7. International Atomic Energy Agency; 2018.\n6 Sources and Effects of Ionizing Radiation. The united nations scienti /uniFB01 c committee on the effects of atomic radiation (UNSCEAR); 2008.\n7 Mettler FA Jr, Huda W, Yoshizumi TT, Mahesh M. Effective doses in radiology and diagnostic nuclear medicine: a catalog. Radiology. 2008;248(1):254 -63.\n8 McCunney RJ, Li J. Radiation risks in lung cancer screening programs: a comparison with nuclear industry workers and atomic bomb survivors. Chest. 2014;145(3):618 -24. https://doi.org/10.1378/chest.13-1420\n9 Hendrick RE, Smith RA. Bene /uniFB01 t-toradiation-risk of low-dose computed tomography lung cancer screening. Cancer. 2024;130(2):216 -23. https://doi.org/10.1002/ cncr.34855\n10 Mascalchi M, Mazzoni LN, Falchini M, Belli G, Picozzi G, Merlini V, et al. Dose exposure in the ITALUNG trial of lung cancer screening with low-dose CT. Br J Radiol. 2012;85(1016):1134 -9. https://doi.org/10. 1259/bjr/20711289\n11 Grasso RF, Cazzato RL, Luppi G, D ' Agostino F, Schena E, Del Vescovo R, et al. Percutaneous lung biopsies: performance of an optical CT-based navigation system with a lowdose protocol. Eur Radiol. 2013;23(11): 3071 -6. https://doi.org/10.1007/s00330-0132932-9\n12 Verhoeven RLJ, van der Sterren W, Kong W, Langereis S, van der Tol P, van der Heijden EHFM. Cone-beam CT and augmented /uniFB02 uoroscopy -guided navigation bronchoscopy: radiation exposure and diagnostic accuracy learning curves. J Bronchology Interv Pulmonol. 2021;28(4):262 -71. https://doi.org/ 10.1097/LBR.0000000000000783\n13 Casal RF, Sarkiss M, Jones AK, Stewart J, Tam A, Grosu HB, et al. Cone beam computed tomography-guided thin/ultrathin bronchoscopy for diagnosis of peripheral lung nodules: a prospective pilot study. J Thorac Dis. 2018;10(12):6950 -59. https://doi.org/10. 21037/jtd.2018.11.21\n14 Steinfort DP, D ' Agostino RD, Vrjlic I, Einsiedel P, Prasad JD, Jennings BR, et al. CT/uniFB02 uoroscopic guidance for performance of targeted transbronchial cryobiopsy: a preliminary report. Respiration. 2018;96(5): 472 -9. https://doi.org/10.1159/000490547\n15 Verhoeven RLJ, Fütterer JJ, Hoefsloot W, van der Heijden EHFM. Cone-beam CT image guidance with and without electromagnetic navigation bronchoscopy for biopsy of peripheral pulmonary lesions. J Bronchology Interv Pulmonol. 2021;28(1):60 -9. https:// doi.org/10.1097/LBR.0000000000000697\n16 Yu K-L, Yang SM, Ko HJ, Tsai HY, Ko JC, Lin CK, et al. Ef /uniFB01 cacy and safety of cone-beam computed tomography-derived augmented /uniFB02 uoroscopy combined with endobronchial ultrasound in peripheral pulmonary lesions. Respiration. 2021;100(6):538 -46. https://doi. org/10.1159/000515181\n17 Lin C-K, Fan HJ, Yao ZH, Lin YT, Wen YF, Wu SG, et al. Cone-beam computed tomography-derived augmented /uniFB02 uoroscopy improves the diagnostic yield of endobronchial ultrasound-guided transbronchial biopsy for peripheral pulmonary lesions. Diagnostics. 2021;12(1):41. https://doi.org/10. 3390/diagnostics12010041\n18 DiBardino DM, Kim RY, Cao Y, Andronov M, Lanfranco AR, Haas AR, et al. Diagnostic yield of cone-beam -derived augmented /uniFB02 uoroscopy and ultrathin bronchoscopy versus conventional navigational bronchoscopy techniques. J Bronchology Interv Pul-\nmonol. 2023;30(4):335 -45. https://doi.org/ 10.1097/LBR.0000000000000883\n19 Pritchett MA, Williams JC, Schirmer CC, Langereis S. Cone-beam CT-based navigation with augmented /uniFB02 uoroscopy of the airways for image-guided bronchoscopic biopsy of peripheral pulmonary nodules: a prospective clinical study. J Bronchology Interv Pulmonol. 2024;31(2):175 -82. https://doi.org/10. 1097/LBR.0000000000000949\n20 Lian M-E, Yee WG, Yu KL, Wu GY, Yang SM, Tsai HY. Radiation exposure in augmented /uniFB02 uoroscopic bronchoscopy procedures: a comprehensive analysis for patients and physicians. J Radiol Prot. 2024;44(1):011502. https://doi.org/10.1088/1361-6498/ad1cd3\n21 Watson JM, Einsiedel PF, Antippa P, Rangamuwa K, Irving L, Steinfort DP. Effective radiation dose from cone beam CT guidance during bronchoscopic tumor ablation. Melbourne Victoria Australia: Royal Melbourne Hospital; 2024.\n22 Bowling MR, Brown C, Anciano CJ. Feasibility and safety of the transbronchial access tool for peripheral pulmonary nodule and mass. Ann Thorac Surg. 2017; 104(2):443 -9. https://doi.org/10.1016/j. athoracsur.2017.02.035\n23 Pritchett MA, Schampaert S, de Groot JAH, Schirmer CC, van der Bom I. Cone-beam CT with augmented /uniFB02 uoroscopy combined with electromagnetic navigation bronchoscopy for biopsy of pulmonary nodules. J Bronchology Interv Pulmonol. 2018;25(4):274 -82. https:// doi.org/10.1097/LBR.0000000000000536\n24 Benn BS, Romero AO, Lum M, Krishna G. Robotic-assisted navigation bronchoscopy as a paradigm shift in peripheral lung access. Lung. 2021;199(2):177 -86. https://doi.org/10. 1007/s00408-021-00421-1\n25 Chan JWY, Lau RWH, Ngai JCL, Tsoi C, Chu CM, Mok TSK, et al. Transbronchial microwave ablation of lung nodules with electromagnetic navigation bronchoscopy guidance-a novel technique and initial experience with 30 cases. Transl Lung Cancer Res. 2021;10(4):1608 -22. https://doi.org/10. 21037/tlcr-20-1231\n26 Katsis J, Roller L, Lester M, Johnson J, Lentz R, Rickman O, et al. High accuracy of digital tomosynthesis-guided bronchoscopic biopsy con /uniFB01 rmed by intraprocedural computed tomography. Respiration. 2021;100(3):1 -8. https://doi.org/10.1159/000512802\n27 Podder S, Chaudry S, Singh H, Jondall EM, Kurman JS, Benn BS, et al. Ef /uniFB01 cacy and safety of cone-beam CT augmented electromagnetic navigation guided bronchoscopic biopsies of indeterminate pulmonary nodules. Tomography. 2022;8(4):2049 -58. https://doi.org/10. 3390/tomography8040172\n28 Bondue B, Taton O, Tannouri F, Van de Velde N, Remmelink M, Leduc D. High diagnostic yield of electromagnetic navigation bronchoscopy performed under cone beam CT guidance: results of a randomized Belgian monocentric study. BMC Pulm Med. 2023;",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "23(1):185. https://doi.org/10.1186/s12890023-02492-7",
+      "content": "29 Styrvoky K, Schwalk A, Pham D, Madsen K, Chiu HT, Abu-Hijleh M. Radiation dose of cone beam CT combined with shape sensing robotic assisted bronchoscopy for the evaluation of pulmonary lesions: an observational single center study. J Thorac Dis. 2023;15(9): 4836 -48. https://doi.org/10.21037/jtd-23-587\n30 Lau KKW, Lau RWH, Baranowski R, Krzykowski J, Ng CSH. Transbronchial microwave ablation of peripheral lung tumors: the NAVABLATE study. J Bronchology Interv Pulmonol. 2024;31(2):165 -74. https://doi. org/10.1097/LBR.0000000000000950\n31 Avasarala SK, Machuzak MS, Gildea TR. Multidimensional precision: hybrid mobile 2D/3D C-arm assisted biopsy of peripheral lung nodules. J Bronchology Interv Pulmonol. 2020;27(2):153 -5. https://doi.org/10. 1097/LBR.0000000000000650\n32 Kalchiem-Dekel O, Fuentes P, Bott MJ, Beattie JA, Lee RP, Chawla M, et al. Multiplanar 3D /uniFB02 uoroscopy rede /uniFB01 nes tool -lesion relationship during robotic-assisted bronchoscopy. Respirology. 2021;26(1):120 -3. https://doi.org/10.1111/resp.13966\n33 Reisenauer J, Duke JD, Kern R, Fernandez-Bussy S, Edell E. Combining shape-sensing robotic bronchoscopy with mobile three-dimensional imaging to verify tool-in-lesion and overcome divergence: a pilot study. Mayo Clin Proc Innov Qual Outcomes. 2022;6(3):177 -85. https://doi. org/10.1016/j.mayocpiqo.2022.02.004\n34 Abia-Trujillo D, Folch EE, Yu Lee-Mateus A, Balasubramanian P, Kheir F, Keyes CM, et al. Mobile cone-beam computed tomography complementing shape-sensing roboticassisted bronchoscopy in the small pulmonary nodule sampling: a multicentre experience. Respirology. 2024;29(4):324 -32. https://doi.org/10.1111/resp.14626\n35 Salahuddin M, Bashour SI, Khan A, Chintalapani G, Kleinszig G, Casal RF. Mobile cone-beam CT-assisted bronchoscopy for peripheral lung lesions. Diagnostics. 2023;13(5):827. https://doi.org/10. 3390/diagnostics13050827\n36 Cho RJ, Senitko M, Wong J, Dincer EH, Khosravi H, Abraham GE 3rd. Feasibility of using the O-arm imaging system during ENB-rEBUS -guided peripheral lung biopsy: a dual-center experience. J Bronchology Interv Pulmonol. 2021; 28(4):248 -54. https://doi.org/10.1097/ LBR.0000000000000738\n37 Chambers J, Knox D, Leclair T. O-Arm CT for con /uniFB01 rmation of successful navigation during robotic assisted bronchoscopy. J Bronchology Interv Pulmonol. 2023;30(2):155 -162. https:// doi.org/10.1097/LBR.0000000000000894\n38 Bhadra K. Radiation dose to patients and clinicians during biopsy of peripheral pulmonary lesions guided by augmented /uniFB02 uoroscopy. In: C110. Interventional pulmonology: the SWISS army knife for thoracic oncology; 2018. p. A6151.\n39 Mathew R, Roy WE. Radiation exposure trends with augmented /uniFB02 uoroscopy and C-ARM-BASED tomosynthesis for navigated bronchoscopy. Chest. 2023;164(4 Supplment):A5236. https://doi.org/10.1016/ j.chest.2023.07.3395\n40 Steinfort DP, Einsiedel P, Irving LB. Radiation dose to patients and clinicians during /uniFB02 uoroscopically-guided biopsy of peripheral pulmonary lesions. Respir Care. 2010;55(11): 1469 -74.\n41 Katsurada M, Izumo T, Nagai Y, Chavez C, Kitagawa M, Torii J, et al. The dose and risk factors for radiation exposure to medical staff during endobronchial ultrasonography with a guide sheath for peripheral pulmonary lesions under X-ray /uniFB02 uoroscopy. Jpn J Clin Oncol. 2014;44(3):257 -62. https://doi.org/10. 1093/jjco/hyt224\n42 Rehani MM. ICRP publication 129: radiological protection in cone beam computed tomography (CBCT). Ann ICRP. 2015;44(1): 7 -127.\n43 Dolenc L, Petrinjak B, Meki š N, Š krk D. The impact of body mass index on patient radi-\nation dose in general radiography. J Radiol Prot. 2022;42(4):041505. https://doi.org/10. 1088/1361-6498/ac9f1f\n44 Madder RD, VanOosterhout S, Mulder A, Ten Brock T, Clarey AT, Parker JL, et al. Patient body mass index and physician radiation dose during coronary angiography. Circ Cardiovasc Interv. 2019;12(1):e006823. https://doi.org/10. 1161/CIRCINTERVENTIONS.118.006823\n45 IAEA Safety Series. International basic safety standards for protection against ionizing radiation and for the safety of radiation sources. ICRP Recommendation. IAEA Safety Series; 1996.\n46 Boudjemline Y. Effects of reducing frame rate from 7.5 to 4 frames per second on radiation exposure in transcatheter atrial septal defect closure. Cardiol Young. 2018:1467 -107.\n47 de Ruiter QMB, Moll FL, Hazenberg CEVB, van Herwaarden JA. Radiation awareness for endovascular abdominal aortic aneurysm repair in the hybrid operating room: an instant operator risk chart for daily practice. J Endovasc Ther. 2022;28(4):530 -541. https:// doi.org/10.1177/15266028211007458\n48 Schueler BA. Operator shielding: how and why. Tech Vasc Interv Radiol. 2010;13(3): 167 -71. https://doi.org/10.1053/j.tvir.2010. 03.005\n49 Haqqani OP, Agarwal PK, Halin NM, Iafrati MD. Minimizing radiation exposure to the vascular surgeon. J Vasc Surg. 2012;55(3): 799 -805. https://doi.org/10.1016/j.jvs.2011. 08.055\n50 van Rooijen BD, de Haan MW, Das M, Arnoldussen CWKP, de Graaf R, van Zwam WH, et al. Ef /uniFB01 cacy of radiation safety glasses in interventional radiology. Cardiovasc Intervent Radiol. 2014;37(5):1149 -55. https:// doi.org/10.1007/s00270-013-0766-0\n51 Protection; I.C.o.R. Pregnancy and medical radiation. In: Valentin J, editor. Annals of the ICRP. Pergamon; 2000.\n52 Hendrix W, Rutten M, Hendrix N, van Ginneken B, Schaefer-Prokop C, Scholten ET, et al. Trends in the incidence of pulmonary nodules in chest computed tomography: 10-year results from two Dutch hospitals. Eur Radiol. 2023;33(11):8279 -88. https://doi.org/10.1007/s00330-023-09826-3",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    }
+  ],
+  "tables": [
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/70'}",
+      "headers": [
+        "",
+        "Examination",
+        "Average effective dose, mSv a",
+        "Reference"
+      ],
+      "rows": [
+        [
+          "Background radiation level",
+          "-",
+          "2.4",
+          "[6]"
+        ],
+        [
+          "X-ray",
+          "Thorax",
+          "0.1",
+          "[7]"
+        ],
+        [
+          "CT diagnostic",
+          "Chest CT Low-dose CT lung cancer screening",
+          "6 - 8 0.4 - 2.4",
+          "[7, 8] [8 - 10]"
+        ],
+        [
+          "CT interventional",
+          "CT-TTNA Coronary angiography (diagnostic) Coronary percutaneous transluminal angioplasty, stent placement, or radiofrequency ablation",
+          "1 - 3.5 7 15",
+          "[11] [7] [7]"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "",
+      "headers": [
+        "Total CAK FL+3D, mGy",
+        "-",
+        "-",
+        "- - - - - -",
+        "- - -",
+        "",
+        "- - -",
+        "- - - -",
+        "-",
+        "-",
+        "1.69",
+        "-",
+        "259.6",
+        "-",
+        "858.5",
+        "-",
+        "63.5",
+        "697.8"
+      ],
+      "rows": [
+        [
+          "Total DAP, Gy • cm 2",
+          "64.57",
+          "-",
+          "47.5 45.3 29.8 28.2 25.4 -",
+          "19.59 25.48 70.4",
+          "56.0",
+          "25.90",
+          "58.45 35.94 29.32 73.17 77.78",
+          "- 31.0",
+          "",
+          "-",
+          "278.7",
+          "-",
+          "- -",
+          "",
+          "-",
+          "22.6",
+          "-"
+        ],
+        [
+          "3D Total 3D DAP, Gy • cm 2",
+          "50.5",
+          "-",
+          "29.9 29.9 27.2 31.1 25.8 -",
+          "16.42 22.78 -",
+          "-",
+          "22.66 51.99 34.11 27.30 61.46 -",
+          "-",
+          "",
+          "-",
+          "",
+          "-",
+          "-",
+          "-",
+          "-",
+          "-",
+          "-",
+          "-"
+        ],
+        [
+          "No. of spins",
+          "1.5",
+          "5.5",
+          "2.47 2.47 2.0 2.25 2.93 2.2",
+          "1 - 2.0",
+          "1.75",
+          "2 3 2 2 3 3",
+          "-",
+          "",
+          "1.5",
+          "-",
+          "7.6",
+          "",
+          "1.5",
+          "3.5",
+          "3",
+          "1.5",
+          "11.1"
+        ],
+        [
+          "Fluoroscopy DAP, Gy • cm 2",
+          "-",
+          "-",
+          "19.0 7.1 7.1 2.2 2.2 -",
+          "3.17 2.7 -",
+          "-",
+          "2.04 6.46 0.71 3.95 12.47 -",
+          "-",
+          "",
+          "",
+          "-",
+          "-",
+          "-",
+          "-",
+          "- -",
+          "",
+          "-",
+          "-"
+        ],
+        [
+          "Fluoroscopy time, min",
+          "8.6",
+          "0.5",
+          "9.9 13.6 13.6 15.6 15.6 9.9",
+          "2.2 - -",
+          "-",
+          "3 2 3.5 3 9 0.3",
+          "",
+          "17.0",
+          "6.2 -",
+          "",
+          "-",
+          "8.8",
+          "7.3",
+          "-",
+          "-",
+          "5.6",
+          "-"
+        ],
+        [
+          "Procedural time, min",
+          "62.5",
+          "- - -",
+          "- - - -",
+          "40.8 41.9 -",
+          "-",
+          "- - - - - -",
+          "-",
+          "",
+          "- 65",
+          "126",
+          "",
+          "78.7",
+          "-",
+          "-",
+          "80",
+          "68",
+          "123"
+        ],
+        [
+          "- 2 Diagnostic or Therapeutic",
+          "D",
+          "D 25.3 D D",
+          "D D D D",
+          "D D D",
+          "D",
+          "D D D D D T",
+          "",
+          "D",
+          "D",
+          "D",
+          "D & T",
+          "D",
+          "D",
+          "D",
+          "D",
+          "D",
+          "D & T"
+        ],
+        [
+          "BMI, kg m",
+          "-",
+          "-",
+          "-",
+          "- - -",
+          "28.3",
+          "22.6 21.6 20.7 22.3 24.3 -",
+          "",
+          "-",
+          "-",
+          "-",
+          "-",
+          "-",
+          "-",
+          "-",
+          "26",
+          "27.1",
+          "-"
+        ],
+        [
+          "Lesions, N",
+          "20",
+          "4 26 7",
+          "24 13 30 47",
+          "53 115 57",
+          "58",
+          "23 2 2 11 7 10",
+          "",
+          "14",
+          "9",
+          "59",
+          "30",
+          "29",
+          "40",
+          "17",
+          "25",
+          "269",
+          "30"
+        ],
+        [
+          "Year",
+          "2018 2018 2021",
+          "",
+          "2021",
+          "2021 2022 2023",
+          "2023",
+          "2024 2024 2024 2024 2024",
+          "2024",
+          "2017",
+          "2018",
+          "2021",
+          "2021",
+          "2021",
+          "2021",
+          "2022",
+          "2023",
+          "2023",
+          "2024"
+        ],
+        [
+          "Author",
+          "Casal et al. [13] Steinfort et al. [14] Verhoeven et al. [12]",
+          "Casal et al. [13] Steinfort et al. [14] Verhoeven et al. [12]",
+          "Casal et al. [13] Steinfort et al. [14] Verhoeven et al. [12]",
+          "Verhoeven et al. [15] Yu et al. [16] Lin et al. [17] DiBardino [18] Pritchett et al. [19] Lian et al. [20]",
+          "Verhoeven et al. [15] Yu et al. [16] Lin et al. [17] DiBardino [18] Pritchett et al. [19] Lian et al. [20]",
+          "Verhoeven et al. [15] Yu et al. [16] Lin et al. [17] DiBardino [18] Pritchett et al. [19] Lian et al. [20]",
+          "Watson et al. [21]",
+          "and Bowling et al. [22] Pritchett et al. [23] Benn et al. [24] Chan et al. [25] Katsis et al. [26] Verhoeven et al. [15] Podder et al. [27] Bondue et al. [28] Styrvoky et al. [29] Lau et al. [30]",
+          "and Bowling et al. [22] Pritchett et al. [23] Benn et al. [24] Chan et al. [25] Katsis et al. [26] Verhoeven et al. [15] Podder et al. [27] Bondue et al. [28] Styrvoky et al. [29] Lau et al. [30]",
+          "and Bowling et al. [22] Pritchett et al. [23] Benn et al. [24] Chan et al. [25] Katsis et al. [26] Verhoeven et al. [15] Podder et al. [27] Bondue et al. [28] Styrvoky et al. [29] Lau et al. [30]",
+          "and Bowling et al. [22] Pritchett et al. [23] Benn et al. [24] Chan et al. [25] Katsis et al. [26] Verhoeven et al. [15] Podder et al. [27] Bondue et al. [28] Styrvoky et al. [29] Lau et al. [30]",
+          "and Bowling et al. [22] Pritchett et al. [23] Benn et al. [24] Chan et al. [25] Katsis et al. [26] Verhoeven et al. [15] Podder et al. [27] Bondue et al. [28] Styrvoky et al. [29] Lau et al. [30]",
+          "and Bowling et al. [22] Pritchett et al. [23] Benn et al. [24] Chan et al. [25] Katsis et al. [26] Verhoeven et al. [15] Podder et al. [27] Bondue et al. [28] Styrvoky et al. [29] Lau et al. [30]",
+          "and Bowling et al. [22] Pritchett et al. [23] Benn et al. [24] Chan et al. [25] Katsis et al. [26] Verhoeven et al. [15] Podder et al. [27] Bondue et al. [28] Styrvoky et al. [29] Lau et al. [30]",
+          "and Bowling et al. [22] Pritchett et al. [23] Benn et al. [24] Chan et al. [25] Katsis et al. [26] Verhoeven et al. [15] Podder et al. [27] Bondue et al. [28] Styrvoky et al. [29] Lau et al. [30]",
+          "and Bowling et al. [22] Pritchett et al. [23] Benn et al. [24] Chan et al. [25] Katsis et al. [26] Verhoeven et al. [15] Podder et al. [27] Bondue et al. [28] Styrvoky et al. [29] Lau et al. [30]",
+          "and Bowling et al. [22] Pritchett et al. [23] Benn et al. [24] Chan et al. [25] Katsis et al. [26] Verhoeven et al. [15] Podder et al. [27] Bondue et al. [28] Styrvoky et al. [29] Lau et al. [30]"
+        ],
+        [
+          "/uniFB01 cation",
+          "system CBCT-AF, FL CBCT-AF, FL ENB, VNB, or RAB",
+          "system CBCT-AF, FL CBCT-AF, FL ENB, VNB, or RAB",
+          "system CBCT-AF, FL CBCT-AF, FL ENB, VNB, or RAB",
+          "system CBCT-AF, FL CBCT-AF, FL ENB, VNB, or RAB",
+          "system CBCT-AF, FL CBCT-AF, FL ENB, VNB, or RAB",
+          "system CBCT-AF, FL CBCT-AF, FL ENB, VNB, or RAB",
+          "system CBCT-AF, FL CBCT-AF, FL ENB, VNB, or RAB",
+          "system CBCT-AF, FL CBCT-AF, FL ENB, VNB, or RAB",
+          "system CBCT-AF, FL CBCT-AF, FL ENB, VNB, or RAB",
+          "system CBCT-AF, FL CBCT-AF, FL ENB, VNB, or RAB",
+          "system CBCT-AF, FL CBCT-AF, FL ENB, VNB, or RAB",
+          "system CBCT-AF, FL CBCT-AF, FL ENB, VNB, or RAB",
+          "system CBCT-AF, FL CBCT-AF, FL ENB, VNB, or RAB",
+          "system CBCT-AF, FL CBCT-AF, FL ENB, VNB, or RAB",
+          "system CBCT-AF, FL CBCT-AF, FL ENB, VNB, or RAB",
+          "system CBCT-AF, FL CBCT-AF, FL ENB, VNB, or RAB",
+          "system CBCT-AF, FL CBCT-AF, FL ENB, VNB, or RAB"
+        ],
+        [
+          "Modality",
+          "CBCT with uoroscopy (2D + 3D) Fixed",
+          "CBCT with uoroscopy (2D + 3D) Fixed",
+          "CBCT with uoroscopy (2D + 3D) Fixed",
+          "CBCT with uoroscopy (2D + 3D) Fixed",
+          "CBCT with uoroscopy (2D + 3D) Fixed",
+          "CBCT with uoroscopy (2D + 3D) Fixed",
+          "CBCT with uoroscopy (2D + 3D) Fixed",
+          "CBCT with uoroscopy (2D + 3D) Fixed",
+          "CBCT with uoroscopy (2D + 3D) Fixed",
+          "CBCT with uoroscopy (2D + 3D) Fixed",
+          "CBCT with uoroscopy (2D + 3D) Fixed",
+          "CBCT with uoroscopy (2D + 3D) Fixed",
+          "CBCT with uoroscopy (2D + 3D) Fixed",
+          "CBCT with uoroscopy (2D + 3D) Fixed",
+          "CBCT with uoroscopy (2D + 3D) Fixed",
+          "CBCT with uoroscopy (2D + 3D) Fixed",
+          "CBCT with uoroscopy (2D + 3D) Fixed"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "",
+      "headers": null,
+      "rows": [
+        [
+          "/C1 cm 2 Total CAK FL+3D, mGy",
+          "-",
+          "-",
+          "- -",
+          "",
+          "-",
+          "71.0 107.6 141.4 204.1",
+          "-",
+          "-",
+          "- -",
+          "-",
+          "-",
+          "-",
+          "14.7"
+        ],
+        [
+          "2 Total DAP, Gy",
+          "40.93",
+          "37.1",
+          "50.3",
+          "37.20",
+          "41.92",
+          "9.78 15.15 20.37 29.35",
+          "-",
+          "-",
+          "-",
+          "38",
+          "-",
+          "- 27.15",
+          "3.07"
+        ],
+        [
+          "Total 3D DAP, Gy /C1 cm",
+          "-",
+          "-",
+          "-",
+          "-",
+          "11.4",
+          "- - - -",
+          "-",
+          "-",
+          "-",
+          "-",
+          "N/A",
+          "N/A N/A",
+          "N/A"
+        ],
+        [
+          "No. of 3D spins",
+          "3.25",
+          "1.5",
+          "2.5",
+          "-",
+          "1.82",
+          "1 2 3 ≥ 4",
+          "4.33",
+          "2.9",
+          "-",
+          "1.6",
+          "N/A N/A",
+          "N/A",
+          "N/A"
+        ],
+        [
+          "Fluoroscopy DAP, Gy /C1 cm 2",
+          "-",
+          "-",
+          "-",
+          "-",
+          "30.6",
+          "- - - -",
+          "-",
+          "-",
+          "-",
+          "-",
+          "- -",
+          "-",
+          "3.07"
+        ],
+        [
+          "Fluoroscopy time, min",
+          "8.4",
+          "-",
+          "8.7",
+          "8.40",
+          "13.6",
+          "4.8 6.3 8.4 9.4",
+          "1.2",
+          "-",
+          "3.3",
+          "7",
+          "1.6 7.6",
+          "5.23",
+          "2.2"
+        ],
+        [
+          "Procedural time, min",
+          "-",
+          "81.9",
+          "-",
+          "81",
+          "85",
+          "36 58 66 75",
+          "-",
+          "80",
+          "- -",
+          "",
+          "- 20",
+          "51",
+          "25"
+        ],
+        [
+          "Diagnostic or Therapeutic",
+          "D",
+          "D",
+          "D",
+          "D",
+          "D",
+          "D D D D",
+          "D",
+          "D",
+          "D D",
+          "",
+          "D D",
+          "D",
+          "D"
+        ],
+        [
+          "BMI, kg m - 2",
+          "-",
+          "-",
+          "27.7",
+          "26.0",
+          "-",
+          "27.1 26.5 24.9 27.5",
+          "-",
+          "-",
+          "- -",
+          "",
+          "- 21.98",
+          "26.3",
+          "26.7"
+        ],
+        [
+          "Lesions, N",
+          "8",
+          "10",
+          "30",
+          "117",
+          "51",
+          "45 47 15 11",
+          "6",
+          "79",
+          "30 46",
+          "",
+          "45 132",
+          "75",
+          "48"
+        ],
+        [
+          "Year",
+          "2020",
+          "2020",
+          "2022",
+          "2023",
+          "2023",
+          "2024",
+          "2021",
+          "2023",
+          "2018 2023",
+          "",
+          "2010 2014",
+          "2023",
+          "2024"
+        ],
+        [
+          "Author",
+          "Avasarala et al. [31] Kalchiem- Dekel et al. [32] Reisenauer et al. [33] Abia-Trujillo et al. [34] Salahuddin et al. [35] Kalchiem- Dekel et al. [4]",
+          "Avasarala et al. [31] Kalchiem- Dekel et al. [32] Reisenauer et al. [33] Abia-Trujillo et al. [34] Salahuddin et al. [35] Kalchiem- Dekel et al. [4]",
+          "Avasarala et al. [31] Kalchiem- Dekel et al. [32] Reisenauer et al. [33] Abia-Trujillo et al. [34] Salahuddin et al. [35] Kalchiem- Dekel et al. [4]",
+          "Avasarala et al. [31] Kalchiem- Dekel et al. [32] Reisenauer et al. [33] Abia-Trujillo et al. [34] Salahuddin et al. [35] Kalchiem- Dekel et al. [4]",
+          "Avasarala et al. [31] Kalchiem- Dekel et al. [32] Reisenauer et al. [33] Abia-Trujillo et al. [34] Salahuddin et al. [35] Kalchiem- Dekel et al. [4]",
+          "Avasarala et al. [31] Kalchiem- Dekel et al. [32] Reisenauer et al. [33] Abia-Trujillo et al. [34] Salahuddin et al. [35] Kalchiem- Dekel et al. [4]",
+          "FL or RAB Cho et al. [36] Chambers et al. [37]",
+          "",
+          "Bhadra [38] Mathew",
+          "and Roy [39]",
+          "Steinfort et al. [40] Katsurada et al. [41] Abia-Trujillo et al. [34] Kalchiem- Dekel",
+          "Steinfort et al. [40] Katsurada et al. [41] Abia-Trujillo et al. [34] Kalchiem- Dekel",
+          "Steinfort et al. [40] Katsurada et al. [41] Abia-Trujillo et al. [34] Kalchiem- Dekel"
+        ],
+        [
+          "",
+          "CBCT, FL and RAB",
+          "CBCT, FL and RAB",
+          "CBCT, FL and RAB",
+          "CBCT, FL and RAB",
+          "CBCT, FL and RAB",
+          "CBCT, FL and RAB",
+          "CBCT (O-arm), and ENB",
+          "CBCT (O-arm), and ENB",
+          "Tomosynthesis, FL",
+          "FL",
+          "FL and/or VNB",
+          "FL and RAB",
+          ""
+        ],
+        [
+          "Speci /uniFB01 cation",
+          "Mobile system",
+          "Mobile system",
+          "Mobile system",
+          "Mobile system",
+          "Mobile system",
+          "Mobile system",
+          "Mobile system",
+          "Mobile system",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Modality",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "Tomosynthesis (2D + 3D)",
+          "",
+          "Fluoroscopy (2D)",
+          "",
+          ""
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/111'}",
+      "headers": [
+        "Metric",
+        "Reporting unit",
+        "Relevant for modality"
+      ],
+      "rows": [
+        [
+          "General information",
+          "",
+          ""
+        ],
+        [
+          "BMI",
+          "kg/m 2",
+          "FL + CBCT + tomosynthesis"
+        ],
+        [
+          "Fluoroscopy",
+          "",
+          ""
+        ],
+        [
+          "Time",
+          "min:s",
+          "FL + CBCT + tomosynthesis 1"
+        ],
+        [
+          "DAP",
+          "Gy • cm 2",
+          "FL + CBCT + tomosynthesis 1"
+        ],
+        [
+          "CAK",
+          "mGy",
+          "FL + CBCT + tomosynthesis 1"
+        ],
+        [
+          "CBCT/tomosynthesis",
+          "",
+          ""
+        ],
+        [
+          "Number of scans",
+          "#",
+          "CBCT + tomosynthesis 1"
+        ],
+        [
+          "Average scan DAP",
+          "Gy • cm 2",
+          "CBCT + tomosynthesis 1"
+        ],
+        [
+          "Total scan DAP",
+          "Gy • cm 2",
+          "CBCT + tomosynthesis 1"
+        ],
+        [
+          "Total scan CAK",
+          "mGy",
+          "CBCT + tomosynthesis 1"
+        ],
+        [
+          "Procedure",
+          "",
+          ""
+        ],
+        [
+          "Procedural total time (scope in - scope out)",
+          "min:s",
+          "FL + CBCT + tomosynthesis"
+        ],
+        [
+          "DAP",
+          "Gy • cm 2",
+          "FL + CBCT + tomosynthesis"
+        ],
+        [
+          "CAK",
+          "mGy",
+          "FL + CBCT + tomosynthesis"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    }
+  ],
+  "figures": [
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/32'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/128'}",
+      "page": null
+    }
+  ],
+  "references": [
+    {
+      "title": "Computed tomographyan increasing source of radiation exposure"
+    },
+    {
+      "title": "N Engl J Med",
+      "year": 2007
+    },
+    {
+      "title": "Radiation doses in interventional procedures",
+      "year": 2007
+    },
+    {
+      "title": "Cone beam computed tomography-guided thin/ultrathin bronchoscopy for diagnosis of peripheral lung nodules: a prospective pilot study",
+      "year": 2022
+    },
+    {
+      "title": "J Thorac Dis",
+      "year": 2018
+    },
+    {
+      "title": "Determinants of radiation exposure during mobile cone-beam CT-guided roboticassisted bronchoscopy",
+      "year": 2018
+    },
+    {
+      "title": "Respirology",
+      "year": 2024
+    },
+    {
+      "title": "Occupational radiation protection",
+      "year": 2024
+    },
+    {
+      "title": "Benefit-toradiation-risk of low-dose computed tomography lung cancer screening",
+      "year": 2024
+    },
+    {
+      "title": "Cancer",
+      "year": 2024
+    },
+    {
+      "title": "Dose exposure in the ITALUNG trial of lung cancer screening with low-dose CT",
+      "year": 2024
+    },
+    {
+      "title": "Br J Radiol"
+    },
+    {
+      "title": "Percutaneous lung biopsies: performance of an optical CT-based navigation system with a lowdose protocol"
+    },
+    {
+      "title": "Eur Radiol",
+      "year": 2013
+    },
+    {
+      "title": "Cone-beam CT and augmented fluoroscopy-guided navigation bronchoscopy: radiation exposure and diagnostic accuracy learning curves",
+      "year": 2013
+    },
+    {
+      "title": "J Bronchology Interv Pulmonol",
+      "year": 2021
+    },
+    {
+      "title": "CTfluoroscopic guidance for performance of targeted transbronchial cryobiopsy: a preliminary report",
+      "year": 2018
+    },
+    {
+      "title": "Respiration",
+      "year": 2018
+    },
+    {
+      "title": "Cone-beam CT image guidance with and without electromagnetic navigation bronchoscopy for biopsy of peripheral pulmonary lesions",
+      "year": 2018
+    },
+    {
+      "title": "Efficacy and safety of cone-beam computed tomography-derived augmented fluoroscopy combined with endobronchial ultrasound in peripheral pulmonary lesions",
+      "year": 2021
+    },
+    {
+      "title": "Cone-beam computed tomography-derived augmented fluoroscopy improves the diagnostic yield of endobronchial ultrasound-guided transbronchial biopsy for peripheral pulmonary lesions",
+      "year": 2021
+    },
+    {
+      "title": "Diagnostics",
+      "year": 2021
+    },
+    {
+      "title": "Diagnostic yield of cone-beam-derived augmented fluoroscopy and ultrathin bronchoscopy versus conventional navigational bronchoscopy techniques",
+      "year": 2021
+    },
+    {
+      "title": "J Bronchology Interv Pul-monol",
+      "year": 2023
+    },
+    {
+      "title": "Cone-beam CT-based navigation with augmented fluoroscopy of the airways for image-guided bronchoscopic biopsy of peripheral pulmonary nodules: a prospective clinical study",
+      "year": 2023
+    },
+    {
+      "title": "Radiation exposure in augmented fluoroscopic bronchoscopy procedures: a comprehensive analysis for patients and physicians",
+      "year": 2024
+    },
+    {
+      "title": "J Radiol Prot",
+      "year": 2024
+    },
+    {
+      "title": "Effective radiation dose from cone beam CT guidance during bronchoscopic tumor ablation",
+      "year": 2024
+    },
+    {
+      "title": "Feasibility and safety of the transbronchial access tool for peripheral pulmonary nodule and mass",
+      "year": 2024
+    },
+    {
+      "title": "Ann Thorac Surg",
+      "year": 2017
+    },
+    {
+      "title": "Cone-beam CT with augmented fluoroscopy combined with electromagnetic navigation bronchoscopy for biopsy of pulmonary nodules",
+      "year": 2017
+    },
+    {
+      "title": "Robotic-assisted navigation bronchoscopy as a paradigm shift in peripheral lung access",
+      "year": 2018
+    },
+    {
+      "title": "Lung",
+      "year": 2021
+    },
+    {
+      "title": "Transbronchial microwave ablation of lung nodules with electromagnetic navigation bronchoscopy guidance-a novel technique and initial experience with 30 cases",
+      "year": 2021
+    },
+    {
+      "title": "Transl Lung Cancer Res",
+      "year": 2021
+    },
+    {
+      "title": "High accuracy of digital tomosynthesis-guided bronchoscopic biopsy confirmed by intraprocedural computed tomography",
+      "year": 2021
+    },
+    {
+      "title": "Efficacy and safety of cone-beam CT augmented electromagnetic navigation guided bronchoscopic biopsies of indeterminate pulmonary nodules",
+      "year": 2021
+    },
+    {
+      "title": "Tomography",
+      "year": 2022
+    },
+    {
+      "title": "High diagnostic yield of electromagnetic navigation bronchoscopy performed under cone beam CT guidance: results of a randomized Belgian monocentric study",
+      "year": 2022
+    },
+    {
+      "title": "BMC Pulm Med",
+      "year": 2023
+    },
+    {
+      "title": "Radiation dose of cone beam CT combined with shape sensing robotic assisted bronchoscopy for the evaluation of pulmonary lesions: an observational single center study",
+      "year": 2023
+    },
+    {
+      "title": "Transbronchial microwave ablation of peripheral lung tumors: the NAVABLATE study",
+      "year": 2023
+    },
+    {
+      "title": "Multidimensional precision: hybrid mobile 2D/3D C-arm assisted biopsy of peripheral lung nodules",
+      "year": 2024
+    },
+    {
+      "title": "Multiplanar 3D fluoroscopy redefines tool-lesion relationship during robotic-assisted bronchoscopy",
+      "year": 2020
+    },
+    {
+      "title": "Combining shape-sensing robotic bronchoscopy with mobile three-dimensional imaging to verify tool-in-lesion and overcome divergence: a pilot study",
+      "year": 2021
+    },
+    {
+      "title": "Mayo Clin Proc Innov Qual Outcomes",
+      "year": 2022
+    },
+    {
+      "title": "Mobile cone-beam computed tomography complementing shape-sensing roboticassisted bronchoscopy in the small pulmonary nodule sampling: a multicentre experience",
+      "year": 2022
+    },
+    {
+      "title": "Mobile cone-beam CT-assisted bronchoscopy for peripheral lung lesions",
+      "year": 2024
+    },
+    {
+      "title": "Feasibility of using the O-arm imaging system during ENB-rEBUS-guided peripheral lung biopsy: a dual-center experience",
+      "year": 2023
+    },
+    {
+      "title": "O-Arm CT for confirmation of successful navigation during robotic assisted bronchoscopy",
+      "year": 2021
+    },
+    {
+      "title": "Radiation dose to patients and clinicians during biopsy of peripheral pulmonary lesions guided by augmented fluoroscopy",
+      "year": 2023
+    },
+    {
+      "title": "Interventional pulmonology: the SWISS army knife for thoracic oncology"
+    },
+    {
+      "title": "Radiation dose to patients and clinicians during fluoroscopically-guided biopsy of peripheral pulmonary lesions"
+    },
+    {
+      "title": "Respir Care",
+      "year": 2010
+    },
+    {
+      "title": "The dose and risk factors for radiation exposure to medical staff during endobronchial ultrasonography with a guide sheath for peripheral pulmonary lesions under X-ray fluoroscopy",
+      "year": 2010
+    },
+    {
+      "title": "Jpn J Clin Oncol",
+      "year": 2014
+    },
+    {
+      "title": "ICRP publication 129: radiological protection in cone beam computed tomography (CBCT)",
+      "year": 2014
+    },
+    {
+      "title": "Ann ICRP",
+      "year": 2014
+    },
+    {
+      "title": "The impact of body mass index on patient radi-ation dose in general radiography",
+      "year": 2015
+    },
+    {
+      "title": "Patient body mass index and physician radiation dose during coronary angiography",
+      "year": 2022
+    },
+    {
+      "title": "Circ Cardiovasc Interv",
+      "year": 2019
+    },
+    {
+      "title": "International basic safety standards for protection against ionizing radiation and for the safety of radiation sources",
+      "year": 2019
+    },
+    {
+      "title": "Effects of reducing frame rate from 7.5 to 4 frames per second on radiation exposure in transcatheter atrial septal defect closure",
+      "year": 1996
+    },
+    {
+      "title": "Cardiol Young",
+      "year": 2018
+    },
+    {
+      "title": "Radiation awareness for endovascular abdominal aortic aneurysm repair in the hybrid operating room: an instant operator risk chart for daily practice",
+      "year": 2018
+    },
+    {
+      "title": "J Endovasc Ther",
+      "year": 2022
+    },
+    {
+      "title": "Operator shielding: how and why",
+      "year": 2022
+    },
+    {
+      "title": "Tech Vasc Interv Radiol",
+      "year": 2022
+    },
+    {
+      "title": "Minimizing radiation exposure to the vascular surgeon",
+      "year": 2010
+    },
+    {
+      "title": "J Vasc Surg",
+      "year": 2012
+    },
+    {
+      "title": "Efficacy of radiation safety glasses in interventional radiology",
+      "year": 2012
+    },
+    {
+      "title": "Cardiovasc Intervent Radiol",
+      "year": 2014
+    },
+    {
+      "title": "Pregnancy and medical radiation",
+      "year": 2014
+    },
+    {
+      "title": "Annals of the ICRP",
+      "year": 2014
+    },
+    {
+      "title": "Trends in the incidence of pulmonary nodules in chest computed tomography: 10-year results from two Dutch hospitals",
+      "year": 2000
+    },
+    {
+      "title": "Protection, and Reporting for Interventional Pulmonology Respiration"
+    }
+  ],
+  "quality": {
+    "completeness_score": 0,
+    "has_abstract": true,
+    "abstract_source": "metadata",
+    "has_doi": true,
+    "has_full_text": true,
+    "num_sections": 28,
+    "num_tables": 4,
+    "num_figures": 3,
+    "num_references": 76
+  }
+}

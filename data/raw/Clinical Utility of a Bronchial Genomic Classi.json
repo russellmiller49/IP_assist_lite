@@ -1,0 +1,658 @@
+{
+  "metadata": {
+    "document_id": "10_1016_j_chest_2016_02_636",
+    "title": "Clinical Utility of a Bronchial Genomic Classifier in Patients With Suspected Lung Cancer",
+    "authors": [
+      "Anil Vachani",
+      "Duncan H. Whitney",
+      "Edward C. Parsons",
+      "Marc Lenburg",
+      "J. Scott Ferguson",
+      "Gerard A. Silvestri",
+      "Avrum Spira"
+    ],
+    "year": 2016,
+    "journal": "Chest",
+    "doi": "10.1016/j.chest.2016.02.636",
+    "volume": "150",
+    "issue": "1",
+    "pages": "210-218",
+    "citation": "Vachani, et al. (2016). Clinical Utility of a Bronchial Genomic Classifier in Patients With Suspected Lung Cancer. Chest, 150(1), 210-218. https://doi.org/10.1016/j.chest.2016.02.636",
+    "abstract": "BACKGROUND: Bronchoscopy is often the initial diagnostic procedure performed in patients with pulmonary lesions suggestive of lung cancer. A bronchial genomic classiﬁer was previously validated to identify patients at low risk for lung cancer after an inconclusive bronchoscopy. In this study, we evaluated the potential of the classiﬁer to reduce invasive procedure utilization in patients with suspected lung cancer.\nMETHODS: In two multicenter trials of patients undergoing bronchoscopy for suspected lung cancer, the classiﬁer was measured in normal-appearing bronchial epithelial cells from a mainstem bronchus. Among patients with low and intermediate pretest probability of cancer (n ¼ 222), subsequent invasive procedures after an inconclusive bronchoscopy were identiﬁed. Estimates of the ability of the classiﬁer to reduce unnecessary procedures were calculated.\nRESULTS: Of the 222 patients, 188 (85%) had an inconclusive bronchoscopy and follow-up procedure data available for analysis. Seventy-seven (41%) patients underwent an additional 99 invasive procedures, which included surgical lung biopsy in 40 (52%) patients. Benign and malignant diseases were ultimately diagnosed in 62 (81%) and 15 (19%) patients, respectively. Among those undergoing surgical biopsy, 20 (50%) were performed in patients with benign disease. If the classiﬁer had been used to guide decision making, procedures could have been avoided in 50% (21 of 42) of patients undergoing further invasive testing. Further, among 35 patients with an inconclusive index bronchoscopy who were diagnosed with lung cancer, the sensitivity of the classiﬁer was 89%, with 4 (11%) patients having a false-negative classiﬁer result.\nCONCLUSIONS: Invasive procedures after an inconclusive bronchoscopy occur frequently, and most are performed in patients ultimately diagnosed with benign disease. Using the genomic classiﬁer as an adjunct to bronchoscopy may reduce the frequency and associated morbidity of these invasive procedures.",
+    "abstract_source": "metadata",
+    "url": "https://linkinghub.elsevier.com/retrieve/pii/S0012369216012551"
+  },
+  "source_file": "Clinical Utility of a Bronchial Genomic Classi.json",
+  "sections": [
+    {
+      "title": "Clinical Utility of a Bronchial Genomic Classi /uniFB01 er in Patients With Suspected Lung Cancer",
+      "content": "Anil Vachani, MD; Duncan H. Whitney, PhD; Edward C. Parsons, PhD; Marc Lenburg, PhD; J. Scott Ferguson, MD; Gerard A. Silvestri, MD; and Avrum Spira, MD\nBACKGROUND: Bronchoscopy is often the initial diagnostic procedure performed in patients with pulmonary lesions suggestive of lung cancer. A bronchial genomic classi /uniFB01 er was previously validated to identify patients at low risk for lung cancer after an inconclusive bronchoscopy. In this study, we evaluated the potential of the classi /uniFB01 er to reduce invasive procedure utilization in patients with suspected lung cancer.\nMETHODS: In two multicenter trials of patients undergoing bronchoscopy for suspected lung cancer, the classi /uniFB01 er was measured in normal-appearing bronchial epithelial cells from a mainstem bronchus. Among patients with low and intermediate pretest probability of cancer (n ¼ 222), subsequent invasive procedures after an inconclusive bronchoscopy were identi /uniFB01 ed. Estimates of the ability of the classi /uniFB01 er to reduce unnecessary procedures were calculated.\nRESULTS: Of the 222 patients, 188 (85%) had an inconclusive bronchoscopy and follow-up procedure data available for analysis. Seventy-seven (41%) patients underwent an additional 99 invasive procedures, which included surgical lung biopsy in 40 (52%) patients. Benign and malignant diseases were ultimately diagnosed in 62 (81%) and 15 (19%) patients, respectively. Among those undergoing surgical biopsy, 20 (50%) were performed in patients with benign disease. If the classi /uniFB01 er had been used to guide decision making, procedures could have been avoided in 50% (21 of 42) of patients undergoing further invasive testing. Further, among 35 patients with an inconclusive index bronchoscopy who were diagnosed with lung cancer, the sensitivity of the classi /uniFB01 er was 89%, with 4 (11%) patients having a false-negative classi /uniFB01 er result.\nCONCLUSIONS: Invasive procedures after an inconclusive bronchoscopy occur frequently, and most are performed in patients ultimately diagnosed with benign disease. Using the genomic classi /uniFB01 er as an adjunct to bronchoscopy may reduce the frequency and associated morbidity of these invasive procedures.\nTRIAL REGISTRY: ClinicalTrials.gov; Nos. NCT01309087 and NCT00746759; URL: www. clinicaltrials.gov CHEST 2016; 150(1):210-218\nKEY WORDS: bronchoscopy; clinical utility; gene expression; lung cancer\nABBREVIATIONS: TTNB = transthoracic needle biopsy AFFILIATIONS: From the Pulmonary, Allergy, and Critical Care Division (Dr Vachani), Department of Medicine, Perelman School of Medicine, University of Pennsylvania, Philadelphia, PA; Veracyte Inc (Dr Whitney), South San Francisco, CA; Allegro Diagnostics (Dr Parsons), Boston, MA; the Division of Computational Biomedicine (Drs Lenburg and Spira), Department of Medicine, Boston University\nSchool of Medicine, Boston, MA; Allergy, Pulmonary, and Critical Care (Dr Ferguson), Department of Medicine, University of Wisconsin School of Medicine and Public Health, Madison, WI; and the Division of Pulmonary and Critical Care (Dr Silvestri), Department of Medicine, Medical University of South Carolina, Charleston, SC.\nFUNDING/SUPPORT: This research was supported by Veracyte Inc.\n[\n]\n]\nLesions that are suggestive of lung cancer on chest imaging present a unique diagnostic challenge. Incidental lung lesions are increasingly common given the rapid rise in the use of chest computed tomography for a variety of indications. 1 Coupled with the recent evidence from the National Lung Screening Trial supporting the use of low-dose CT screening for lung cancer, 2 there will likely be a signi /uniFB01 cant increase in the identi /uniFB01 cation of patients with suspicious lung lesions that require diagnostic evaluation.\nBronchoscopy is often the initial diagnostic procedure performed in patients with suspected lung cancer, and can provide a de /uniFB01 nitive diagnosis and allows for simultaneous staging. 3 Despite advances such as navigational and ultrathin bronchoscopy and peripheral endobronchial ultrasound, 4 the sensitivity of bronchoscopy for smaller, peripherally located nodules is limited. 5 Given its limited sensitivity and low negative predictive value, a bronchoscopy that does not provide a de /uniFB01 nitive diagnosis of cancer frequently leads to additional invasive testing, such as transthoracic needle biopsy (TTNB) or surgical lung biopsy. In patients with a low to intermediate probability of cancer and an inconclusive bronchoscopy, the decision of whether to pursue additional invasive testing or follow a plan of watchful waiting can be a dif /uniFB01 cult one. It requires balancing the risks of invasive procedures in patients who may have a benign lesion with the possibility of a delayed lung cancer diagnosis. 6\nRecently a bronchial genomic classi /uniFB01 er was validated in two prospective multicenter studies and was shown to improve the sensitivity of bronchoscopy and better identify patients who are at low probability ( < 10%) of lung cancer after an inconclusive bronchoscopy. 7,8 The classi /uniFB01 er is based on analysis of gene expression\nmeasured in cytologically normal-appearing bronchial epithelial cells collected from a mainstem bronchus at the time of bronchoscopy. 7,8 The classi /uniFB01 er does not require direct sampling of the lung lesion, but instead detects changes in lung cancer-associated gene expression occurring in the airway ' /uniFB01 eld of injury. ' 9,10 In patients with a low or intermediate risk of cancer, the classi /uniFB01 er achieved a sensitivity of 88% and speci /uniFB01 city of 52%. The sensitivity of the classi /uniFB01 er was similar across different histologies and stages of lung cancer and different lesion sizes. When bronchoscopy did not result in a diagnosis of cancer, the observed rate of lung cancer for patients with a negative classi /uniFB01 er result was low (9%) among patients at intermediate pretest probability of cancer (de /uniFB01 ned as 10% to 60%), and very low (0%) among patients with a low pretest probability (de /uniFB01 ned as < 10%). 8\nAlthough these previous studies establish clinical validity of the genomic classi /uniFB01 er, 7,8 the clinical utility of this test has not been established. The performance of the classi /uniFB01 er suggests that a negative score would support a more conservative diagnostic approach in patients with a low and intermediate pretest probability and has the potential to reduce the use of invasive procedures in patients who are likely to have benign disease. The present study examines the rate of invasive diagnostic procedures observed in the AEGIS trials 7,8 with a low or intermediate pretest probability of cancer as it is this population in which additional diagnostic testing after an inconclusive bronchoscopy is frequently performed and a biomarker with high negative predictive value may result in greater utilization of surveillance imaging. We also estimate the ability of the classi /uniFB01 er to reduce the rate of invasive procedures in patients ultimately diagnosed with benign disease.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Study Population",
+      "content": "The Airway Epithelial Gene Expression in the Diagnosis of Lung Cancer (AEGIS) trials (AEGIS-1 and -2, NCT01309087 and NCT00746759), were two prospective, multicenter (n ¼ 28 centers),\nobservational studies that enrolled 939 current and former smokers without a prior history of cancer who underwent bronchoscopy for suspected lung cancer. The design of these studies has been described in detail elsewhere. 8 The study protocol was approved by the institutional review board at each center, and all patients provided written informed consent before enrollment.\nAt the time of bronchoscopy, two brushings of bronchial epithelial cells from a normal-appearing area of a mainstem bronchus were collected and pro /uniFB01 led for gene expression by Gene 1.0 ST arrays (Affymetrix). A 23-gene expression classi /uniFB01 er for detecting lung cancer (Percepta, Veracyte Inc) was trained using samples from a cohort of 299 patients from AEGIS-1, 7 then validated in samples from two independent cohorts (AEGIS-1, n ¼ 298; and AEGIS-2, n ¼ 341). 8 Physicians and patients were blinded to results of the classi /uniFB01 er. Bronchoscopy was considered diagnostic if a lung cancer diagnosis was established by cytopathology. All other patients were followed\nCORRESPONDENCETO: Anil Vachani, MD, University of Pennsylvania School of Medicine, 1016E Abramson Research Center, 3615 Civic Center Blvd, Philadelphia, PA 19104; e-mail: avachani@mail.med. upenn.edu\nCopyright /C211 2016 The Authors. Published by Elsevier Inc under license from the American College of Chest Physicians. This is an open access article under the CC BY-NC-ND license (http:// creativecommons.org/licenses/by-nc-nd/4.0/).\nuntil a de /uniFB01 nitive diagnosis was established or 1 year after bronchoscopy. Patients determined to be cancer-free had either a speci /uniFB01 c benign diagnosis or radiographic stability or resolution by 12 months. Patients without a diagnosis of lung cancer, a speci /uniFB01 c benign diagnosis, or stability or resolution at 12 months were excluded from further analysis.\nPrior to bronchoscopy, the treating physician assessed each patient ' s pretest probability of cancer with the use of a /uniFB01 ve-level scale ( < 10%, 10% to 39%, 40% to 60%, 61% to 85%, and > 85%), which were then binned into three risk categories of low ( < 10%), intermediate (10% to 60%), and high ( > 60%). Because our prior studies found that the classi /uniFB01 er ' s negative likelihood ratio of 0.06 would not reduce the posttest risk among the high pretest probability group to less than 10%, 8 the current analysis assesses the classi /uniFB01 er ' s impact on procedure utilization in the 222 patients (24%) with a low or intermediate pretest probability (ie, < 60%) in which a negative classi /uniFB01 er score would reduce the posttest risk of cancer to less than 10% and potentially alter clinical decision making (ie, deferring further invasive procedures and instead adopting surveillance imaging).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Data Collection and Analysis of Classi /uniFB01 er",
+      "content": "Baseline data collection included demographics, tobacco use, medical history, and previous diagnostic tests. For patients in whom the initial bronchoscopy did not yield a diagnosis of lung cancer, data were collected on all subsequent diagnostic procedures within the /uniFB01 rst 12 months or until a cancer diagnosis was con /uniFB01 rmed.\nInvasive procedures were categorized as repeat bronchoscopy, TTNB, and surgical biopsy (open thoracotomy, video-assisted thoracoscopic surgery, or mediastinoscopy). Other tests (eg, imaging, sputum analysis, thoracentesis, bone scans, nuclear medicine scans,\nultrasound, and pulmonary function tests), as well as biopsies of organs other than the lungs, were not considered in this analysis.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Statistical Analysis",
+      "content": "Summary statistics are reported as medians and interquartile range for continuous variables and as proportions for categorical variables. Comparison of differences in baseline variables between low and intermediate probability patients was calculated using the MannWhitney U (Wilcoxon) test for continuous variables and Fisher exact test for categorical variables. Subsequent invasive procedures after the index bronchoscopy were summarized as counts and rates. These were calculated overall, and strati /uniFB01 ed by pretest probability (low vs intermediate). Procedures within the initial reporting period (0 to 3 months) vs the follow-up period (3 to 12 months) were counted separately and together to examine the timing of procedure use. Statistical analysis was performed using CRAN R software (version 3.2.1).\nBecause the performance of the classi /uniFB01 er (as measured by the area under the curve) was not different between the training and two validation sets (data not shown), they were combined for the analysis of procedure utilization. Results of the classi /uniFB01 er were used to estimate the number of patients in whom the decision to pursue subsequent invasive procedures may have been in /uniFB02 uenced by the test. The potential reduction in the rate of invasive procedure utilization was calculated on the assumption that a negative classi /uniFB01 er result would result in the treating physician deferring further invasive procedures and instead adopting a watchful waiting approach with surveillance imaging. Among patients who did not have lung cancer identi /uniFB01 ed on the index bronchoscopy, the number and proportion of true-negative results (patients with benign disease and a negative classi /uniFB01 er result) and false-negative results (patients with lung cancer and a negative classi /uniFB01 er result) were reported.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Patient Population",
+      "content": "There were 222 patients with a low or intermediate pretest probability of cancer enrolled in AEGIS-1 and -2; 199 (90%) had an inconclusive index bronchoscopy (Fig 1). Data on the subsequent use of additional\nprocedures were available for 188 (94%) of these patients; demographic data and details of the speci /uniFB01 c bronchoscopic techniques used are shown in Table 1. Patients with an intermediate probability were signi /uniFB01 cantly older ( P ¼ .001), had greater cumulative tobacco exposure ( P < .001), and were more likely to have lesions greater than 3 cm in size ( P ¼ .01), but they\nFigure 1 -Study exclusions used to identify the population of patients with a low or intermediate probability of cancer who had an inconclusive bronchoscopy in AEGIS-1 and -2. A total of 222 patients in the AEGIS trials were found to have a low or intermediate pretest probability of cancer. Of those, 23 patients had a diagnosis of lung cancer at bronchoscopy and the remaining 199 (90%) had an inconclusive bronchoscopy, in which no malignancy was found. Longitudinal diagnosis and procedure utilization data were unavailable for 11 patients; the /uniFB01 nal analytical cohort of 188 patients consisted of 35 diagnosed with lung cancer and 153 with benign diagnoses during the follow-up period.\n]\nData reported as No. (%) unless otherwise indicated. Endobronchial ultrasound (EBUS) ¼ endobronchial ultrasound; EMN ¼ electromagnetic navigation; IQR ¼ NOS ¼ not otherwise speci /uniFB01 ed; Non-small cell lung cancer (NSCLC) ¼ non-small cell lung cancer; TBNA ¼ transbronchial needle aspiration. a De /uniFB01 ned as sampling that included use of cytological brush, endobronchial biopsy, transbronchial biopsy, and/or bronchoalveolar lavage.\ninterquartile range;\nwere similar in terms of race and sex distribution. Overall, lung cancer was diagnosed in 35 patients (19%); the remaining 153 (81%) were ultimately diagnosed with benign disease. In patients with an inconclusive bronchoscopy, the lung cancer prevalence was 3% and 28% in patients with a low and intermediate pretest probability, respectively.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Diagnostic Procedure Utilization",
+      "content": "In the 188 patients with an inconclusive index bronchoscopy, subsequent invasive biopsy procedures were performed in 77 (41%) (Table 2). A total of 99 procedures were performed in these 77 patients and included 18 procedures in 15 patients with low probability and 81 procedures in 62 patients with intermediate probability. The type and rate of subsequent invasive procedures performed among these 77 patients included surgical lung biopsy in 40 (52%) patients, TTNB in 20 (26%) patients, and repeat bronchoscopy in 39 (51%) patients. Physicians were more likely to pursue additional procedures in patients with an intermediate probability compared with those with low probability (53% vs 21%; P < .001) (Table 2).\nForty-two (55%) of the 77 patients in the combined low and intermediate probability categories who underwent additional invasive testing were ultimately diagnosed with benign disease. Among patients with intermediate probability who underwent a subsequent procedure, 29 (47%) of 62 patients were diagnosed with benign disease, compared with 13 (87%) of 15 patients with low probability who were found to have benign disease (Fig 2A). Among the 42 patients with benign disease, a total of 52 procedures were performed, with 16 procedures performed in 13 patients with low probability and 36 procedures performed in 29 patients with intermediate probability (Fig 2B).\nAmong the 77 patients who underwent subsequent invasive testing, 40 (52%) had a surgical lung biopsy, of\nwhich half were performed in patients with benign disease (20 of 40 patients); this included 86% (6 of 7) in patients with low probability and 42% (14 of 33) in patients with intermediate probability, respectively.\nTo examine the likelihood of a delayed lung cancer diagnosis, we calculated the timing of additional invasive procedures in the 35 patients diagnosed with lung cancer after an inconclusive bronchoscopy; 27 (80%) had a lung cancer diagnosis established within 3 months of the index bronchoscopy, whereas 8 (20%) had a delay in their diagnosis of between 3 and 12 months.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Potential Impact of the Classi /uniFB01 er on Invasive Procedure Utilization",
+      "content": "The potential for the bronchial genomic classi /uniFB01 er to reduce the number of invasive procedures in patients with an inconclusive bronchoscopy was assessed by examining the rate of a negative classi /uniFB01 er result among patients who underwent subsequent invasive procedures. This analysis assumes that a negative classi /uniFB01 er score would result in a decision to use surveillance imaging instead of proceeding to an additional invasive procedure. Among the 153 total patients with benign disease (including 84 patients with intermediate and 69 patients with low pretest probability), 83 (54%) had a negative classi /uniFB01 er result, yielding a reduction in the posttest probability of cancer (Fig 3A). Forty-one (49%) patients with intermediate probability were determined to have a low posttest probability on the basis of a negative classi /uniFB01 er result, with the balance of patients remaining at intermediate posttest probability. Forty-two (61%) patients with low pretest probability were determined to have a very low posttest probability on the basis of a negative classi /uniFB01 er result, whereas the remaining 27 (39%) remained at low posttest probability.\nOf the 153 patients with low and intermediate pretest probability who had benign disease, 42 (27%) underwent a total of 52 subsequent invasive procedures. The\n]\nclassi /uniFB01 er was negative (ie, true negatives) in 21 (50%) patients, leading to the possible avoidance of 24 procedures (including 12 bronchoscopies, 3 TTNA, and 9 surgeries). This represents a 46% (24 of 52) reduction in all invasive procedures performed in patients with benign disease. Of the 21 patients with benign disease who were classi /uniFB01 er negative, 9 (43%) were patients with low pretest probability, and 12 (57%) were patients with intermediate pretest probability (Fig 3B).\nAmong 35 patients with an inconclusive index bronchoscopy who were diagnosed with lung cancer, there were 4 patients with a negative classi /uniFB01 er result (false-negative rate of 11%) (Fig 4). This occurred in 4 patients with an intermediate pretest probability of cancer prior to bronchoscopy in whom a negative classi /uniFB01 er result yielded a low posttest probability.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Discussion",
+      "content": "In this study, we examined the rate of invasive diagnostic procedures among current and former smokers with low and intermediate pretest probability of cancer after an inconclusive bronchoscopy. We found\nthat there is a relatively high frequency of invasive diagnostic procedures in this clinical setting (41% overall), with a majority of those procedures occurring in patients ultimately diagnosed with benign disease. Our estimates suggest that a signi /uniFB01 cant proportion of invasive procedures could be avoided after an inconclusive bronchoscopy with the use of the genomic classi /uniFB01 er.\nSubsequent invasive procedures after an inconclusive bronchoscopy have the potential for substantial morbidity from procedural complications. In this study 50% of surgical lung biopsies were performed in patients with benign disease. This rate is consistent with the rate of surgical biopsies resulting in a diagnosis of benign disease seen in lung cancer screening studies and in a population-based study of lung nodule management. 2,11-14 Surgical lung biopsy has a moderate complication rate and a 30-day mortality of approximately 1%. 15,16 TTNB is also associated with substantial complications, including a 15% rate of pneumothorax and a 6% rate of pneumothorax\nrequiring chest tube drainage. 17-19 The classi /uniFB01 er will likely result in a reduction in invasive procedure utilization in patients with low and intermediate pretest probability lesions, the majority of whom have benign disease. Fifty-four percent of patients with benign disease and an inconclusive bronchoscopy had a negative classi /uniFB01 er result, enabling a lower postclassi /uniFB01 er probability of cancer, which could facilitate the decision by physicians to recommend watchful waiting rather than proceed with another invasive procedure. Of the patients with benign disease who subsequently underwent additional procedures, 50% had a negative classi /uniFB01 er result. The primary clinical value of the bronchial genomic classi /uniFB01 er is conferred on patients with an intermediate probability and an inconclusive bronchoscopy in whom a negative classi /uniFB01 er results in a low posttest likelihood of lung cancer. The classi /uniFB01 er may also be useful in patients with a low pretest probability as the majority (87%) who went on to an invasive procedure had a negative classi /uniFB01 er result and were ultimately diagnosed with benign disease.\nIn the current study, 4 (11%) of 35 patients with lung cancer had a negative classi /uniFB01 er result (false negatives) and may have experienced a delayed diagnosis if they were followed with surveillance imaging as a result of the classi /uniFB01 er. However, we found that in the absence of the classi /uniFB01 er, 20% (7 of 35) of patients with lung cancer and an inconclusive bronchoscopy were not diagnosed\nwithin 3 months after their initial procedure because of a decision to pursue surveillance imaging prior to the decision to pursue additional procedures. The low rate of false-negative results observed with the classi /uniFB01 er may result in a modest increase in the number of patients with lung cancer who undergo surveillance prior to additional invasive evaluation. If patients with a negative classi /uniFB01 er are evaluated with serial imaging (ie, repeat scan at 3 months) there should not be a lengthy delay in identifying lesions that are growing that should proceed to another biopsy.\nAlthough the AEGIS trials provided us with a unique opportunity to estimate the clinical utility of the bronchial genomic classi /uniFB01 er, there are a number of important limitations to our study. In our current analysis we estimated the ability of the classi /uniFB01 er to decrease subsequent invasive procedure utilization. This approach rests on the underlying assumption that a negative classi /uniFB01 er result would have been suf /uniFB01 cient to warrant a more conservative diagnostic evaluation in patients who would have otherwise been sent for an invasive procedure. Our study was not designed to assess the factors associated with physicians ' decisions to pursue additional invasive procedures. In addition, as physicians were blinded to results of the classi /uniFB01 er we are unable to directly evaluate the actual impact of that classi /uniFB01 er on their decision making. In some patients with a negative classi /uniFB01 er result, physicians may still choose to proceed with further invasive testing. We also did not estimate the effect that patient preferences may have on subsequent invasive procedure utilization after an inconclusive bronchoscopy. Importantly, we were unable to evaluate whether some of the invasive procedures in patients with benign disease resulted in a diagnosis that altered clinical management of that patient, providing clinically useful results to the physician.\nGiven that these observational studies did not mandate that subsequent evaluation after bronchoscopy occur at the study center, there may have been additional invasive procedures performed that are not accounted for in our data. The studies were limited to 12 months of clinical follow-up after the index bronchoscopy. We do not believe that we missed a signi /uniFB01 cant number of lung cancers that would have been found with an additional year of follow-up. The high sensitivity of CT to detect nodule growth makes it unlikely that solid nodules that are stable for 12 months will grow subsequently. This is supported by lung cancer screening studies that showed only 1 of 1000 nodules that were\n]\nstable in the /uniFB01 rst year were determined to be malignant in the second year of follow-up. 13 Finally, we used data from all patients enrolled in both trials given the similar accuracy estimates observed in the training and test sets. As our goal was to estimate downstream procedure use after an index bronchoscopy, the similar area under the curve estimates allowed for this approach to increase statistical power.\nThere are a number of strengths to our study that contribute to the potential impact of our /uniFB01 ndings. First, we leveraged two large multicenter studies that enabled us to include geographically diverse academic and community practices in our estimate of invasive procedure use. Second, our data were collected in a clinical setting identical to that in which the classi /uniFB01 er would be used (before diagnosis), allowing us to better estimate the potential clinical utility of the test. Third, we limited these studies to patients with low and intermediate pretest probability in whom physicians are most uncertain about the likelihood of cancer and in whom the classi /uniFB01 er holds the greatest ability to\nalter clinical decision making. Finally, the probability of cancer was based on a physician ' s subjective assessment (as opposed to risk prediction models), which both mirrors clinical practice and was shown to re /uniFB02 ect cancer prevalence rates in the AEGIS trials. 8\nIn summary, there is a high frequency of invasive procedures performed in patients with a low or intermediate pretest probability of lung cancer after an inconclusive bronchoscopy, and a majority of these procedures are performed in patients ultimately diagnosed with benign disease. This analysis suggests that using the bronchial genomic classi /uniFB01 er during bronchoscopy may reduce invasive procedures in this population. Future studies should attempt to con /uniFB01 rm reductions in invasive procedures that result from the /uniFB01 nding of a negative genomic classi /uniFB01 er that prompts a physician to pursue serial imaging surveillance after an inconclusive bronchoscopy, as well as examine the impact of the classi /uniFB01 er on cancer end points such as stage at diagnosis and the impact on costs and patient-reported outcomes.",
+      "category": "discussion",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Acknowledgments",
+      "content": "Author contributions: A. V. had access to all study data and takes responsibility for the integrity of the data and the accuracy of the analysis. A. V. also contributed to the study design, data analysis, and manuscript writing. E. P., D. W., M. L., G. S., J. S. F., and A. S. contributed to the study design, data analysis, and manuscript writing.\nFinancial/non /uniFB01 nancial disclosures: The authors have reported to CHEST the following: A. V., G. S., and J. S. F. served on a scienti /uniFB01 c advisory board for Allegro Diagnostics from April 2012 to September 2014. E. P. was formerly an employee of Allegro Diagnostics. D. W. is an employee of Veracyte, and a former employee of Allegro Diagnostics. A. S. is a consultant to Veracyte and a founder of Allegro Diagnostics. M. L. is a consultant to Veracyte and former consultant to Allegro Diagnostics.\nRole of sponsors: The AEGIS-1 and AEGIS-2 clinical trials were originally designed by Allegro Diagnostics, Inc. and study investigators. This secondary analysis was funded by Veracyte, Inc. All authors, including those employed by the funder (D. W. and E. P.), were involved in data interpretation. All authors had full access to the data, and contributed to the development of and approved the manuscript for submission. The corresponding author had full access to the data for this analysis and had /uniFB01 nal responsibility for the decision to submit for publication.\nOther contributions: We thank Jerome Brody for assistance in the design of the AEGIS studies and Kate Porta Smith, BS, for management of the studies. We also thank all of the AEGIS investigators. Finally we thank Mike Rosenbluth, PhD, Yoonha Choi, PhD, Neil Barth, MD, and Jing Huang, PhD, for critical review of the manuscript.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "References",
+      "content": "1. Gould MK, Tang T, Liu IL, et al. Recent trends in the identi /uniFB01 cation of incidental pulmonary nodules. Am J. Respir Crit Care Med . 2015;192(10):1208-1214.\n2. Aberle DR, Adams AM, Berg CD, et al; National Lung Screening Trial Research Team. Reduced lung-cancer mortality with low-dose computed tomographic screening. N Engl J Med . 2011;365(5): 395-409.\n3. Rivera MP, Mehta AC, Wahidi MM. Establishing the diagnosis of lung cancer: diagnosis and management of lung cancer, 3rd ed: American College of Chest Physicians evidence-based clinical practice guidelines. Chest . 2013;143(5 suppl): e142S-e165S.\n4. Wang Memoli JS, Nietert PJ, Silvestri GA. Meta-analysis of guided bronchoscopy for the evaluation of the pulmonary nodule. Chest . 2012;142(2):385-393.\n5. Ost DE, Ernst A, Lei X, et al; AQuIRE Bronchoscopy Registry. Diagnostic yield and complications of bronchoscopy for\nperipheral lung lesions: results of the AQuIRE Registry. Am J Respir Crit Care Med . 2016;193(1):68-77.\n6. Ost DE, Gould MK. Decision making in patients with pulmonary nodules. Am J Respir Crit Care Med . 2012;185(4): 363-372.\n7. Whitney DH, Elashoff MR, PortaSmith K, et al. Derivation of a bronchial genomic classi /uniFB01 er for lung cancer in a prospective study of patients undergoing diagnostic bronchoscopy. BMC Med Genomics . 2015;8(1):18.\n8. Silvestri GA, Vachani A, Whitney D, et al; AEGIS Study Team. A bronchial genomic classi /uniFB01 er for the diagnostic evaluation of lung cancer. N Engl J Med . 2015;373(3): 243-251.\n9. Spira A, Beane J, Shah V, et al. Effects of cigarette smoke on the human airway epithelial cell transcriptome. Proc Natl Acad Sci USA . 2004;101(27): 10143-10148.\n10. Spira A, Beane JE, Shah V, et al. Airway epithelial gene expression in the diagnostic evaluation of smokers with suspect lung cancer. Nat Med . 2007;13(3):361-366.\n11. Saghir Z, Dirksen A, Ashraf H, et al. CT screening for lung cancer brings forward early disease. The randomised Danish Lung Cancer Screening Trial: status after /uniFB01 ve annual screening rounds with low-dose CT. Thorax . 2012;67(4): 296-301.\n12. Infante M, Cavuto S, Lutman FR, et al; DANTE Study Group. A randomized\nstudy of lung cancer screening with spiral computed tomography: three-year results from the DANTE trial. Am J Respir Crit Care Med . 2009;180(5): 445-453.\n13. van Klaveren RJ, Oudkerk M, Prokop M, et al. Management of lung nodules detected by volume CT scanning. N Engl J Med . 2009;361(23):2221-2229.\n14. Tanner NT, Aggarwal J, Gould MK, et al. Management of pulmonary nodules by community pulmonologists: a multicenter observational study. Chest . 2015;148(6): 1405-1414.\n15. Ost D, Fein AM, Feinsilver SH. Clinical practice. The solitary pulmonary nodule. N Engl J Med . 2003;348(25): 2535-2542.\n16. Gould MK, Donington J, Lynch WR, et al. Evaluation of individuals with pulmonary nodules: when is it lung cancer? Diagnosis and management of lung cancer, 3rd ed: American College of Chest Physicians evidence-based clinical practice guidelines. Chest . 2013;143(5 suppl):e93S-e120S.\n17. Wiener RS, Wiener DC, Gould MK. Risks of transthoracic needle biopsy:\nhow high? Clin Pulm Med . 2013;20(1): 29-35.\n18. Covey AM, Gandhi R, Brody LA, Getrajdman G, Thaler HT, Brown KT. Factors associated with pneumothorax and pneumothorax requiring treatment after percutaneous lung biopsy in 443 consecutive patients. J Vasc Interv Radiol . 2004;15(5):479-483.\n19. Lacasse Y, Wong E, Guyatt GH, Cook DJ. Transthoracic needle aspiration biopsy for the diagnosis of localised pulmonary lesions: a meta-analysis. Thorax . 1999;54(10):884-893.\n]",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    }
+  ],
+  "tables": [
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/64'}",
+      "headers": [
+        "Variable",
+        "Analysis Set (n ¼ 188)",
+        "Low Probability ( < 10%) (n ¼ 71)",
+        "Intermediate Probability (10%-60%) (n ¼ 117)",
+        "P Value"
+      ],
+      "rows": [
+        [
+          "Sex",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Female",
+          "68 (36)",
+          "26 (37)",
+          "42 (36)",
+          "1"
+        ],
+        [
+          "Male",
+          "120 (64)",
+          "45 (63)",
+          "75 (64)",
+          ""
+        ],
+        [
+          "Age, y, median (IQR)",
+          "59.2 (50.4-69.0)",
+          "56.5 (46.3-65.5)",
+          "62.1 (52.7-70.6)",
+          ".001"
+        ],
+        [
+          "Race",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Caucasian",
+          "149 (79)",
+          "61 (86)",
+          "88 (75)",
+          ".23"
+        ],
+        [
+          "African American",
+          "29 (15)",
+          "7 (10)",
+          "22 (19)",
+          ""
+        ],
+        [
+          "Other",
+          "8 (4)",
+          "3 (4)",
+          "5 (4)",
+          ""
+        ],
+        [
+          "Unknown",
+          "2 (1)",
+          "0 (0)",
+          "2 (2)",
+          ""
+        ],
+        [
+          "Smoking status",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Current",
+          "63 (34)",
+          "21 (30)",
+          "42 (36)",
+          ".43"
+        ],
+        [
+          "Former",
+          "125 (66)",
+          "50 (70)",
+          "75 (64)",
+          ""
+        ],
+        [
+          "Pack-years, median (IQR)",
+          "25 (12-45)",
+          "15.5 (6-31)",
+          "34 (20-52)",
+          "< .001"
+        ],
+        [
+          "Mass size",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "< 2 cm",
+          "73 (39)",
+          "31 (44)",
+          "42 (36)",
+          ".004"
+        ],
+        [
+          "2 to 3 cm",
+          "23 (12)",
+          "5 (7)",
+          "18 (15)",
+          ""
+        ],
+        [
+          "$ 3 cm",
+          "40 (21)",
+          "8 (11)",
+          "32 (27)",
+          ""
+        ],
+        [
+          "Ill-de /uniFB01 ned in /uniFB01 ltrate",
+          "45 (24)",
+          "24 (34)",
+          "21 (18)",
+          ""
+        ],
+        [
+          "Unknown",
+          "7 (4)",
+          "3 (4)",
+          "4 (3)",
+          ""
+        ],
+        [
+          "Mass location",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Central",
+          "61 (32)",
+          "29 (41)",
+          "32 (27)",
+          ".07"
+        ],
+        [
+          "Peripheral",
+          "75 (40)",
+          "21 (30)",
+          "54 (46)",
+          ""
+        ],
+        [
+          "Both",
+          "42 (22)",
+          "15 (21)",
+          "27 (23)",
+          ""
+        ],
+        [
+          "Unknown",
+          "10 (5)",
+          "6 (8)",
+          "4 (3)",
+          ""
+        ],
+        [
+          "Lung cancer histology",
+          "35 (19)",
+          "2 (3)",
+          "33 (28)",
+          "1"
+        ],
+        [
+          "Small cell",
+          "2 (6)",
+          "0 (0)",
+          "2 (6)",
+          ""
+        ],
+        [
+          "Non-small cell",
+          "32 (91)",
+          "2 (100)",
+          "30 (91)",
+          ""
+        ],
+        [
+          "Adenocarcinoma",
+          "19 (54)",
+          "2 (100)",
+          "17 (52)",
+          ""
+        ],
+        [
+          "Squamous",
+          "9 (26)",
+          "0 (0)",
+          "9 (27)",
+          ""
+        ],
+        [
+          "Large cell",
+          "3 (9)",
+          "0 (0)",
+          "3 (9)",
+          ""
+        ],
+        [
+          "NSCLC, NOS",
+          "1 (3)",
+          "0 (0)",
+          "1 (3)",
+          ""
+        ],
+        [
+          "Unknown",
+          "1 (3)",
+          "0 (0)",
+          "1 (3)",
+          ""
+        ],
+        [
+          "Benign diagnoses",
+          "153 (81)",
+          "69 (97)",
+          "84 (72)",
+          ".10"
+        ],
+        [
+          "Infection",
+          "32 (21)",
+          "10 (14)",
+          "22 (26)",
+          ""
+        ],
+        [
+          "Sarcoidosis",
+          "36 (24)",
+          "22 (32)",
+          "14 (17)",
+          ""
+        ],
+        [
+          "Resolution or stability",
+          "43 (28)",
+          "18 (26)",
+          "25 (30)",
+          ""
+        ],
+        [
+          "Other",
+          "42 (27)",
+          "19 (28)",
+          "23 (27)",
+          ""
+        ],
+        [
+          "Bronchoscopy technique a",
+          "188 (100)",
+          "71 (100)",
+          "117 (100)",
+          "."
+        ],
+        [
+          "Standard",
+          "81 (43)",
+          "30 (42)",
+          "51 (44)",
+          ""
+        ],
+        [
+          "Standard þ EBUS-TBNA",
+          "75 (40)",
+          "29 (41)",
+          "46 (39)",
+          ""
+        ],
+        [
+          "Standard þ EMN",
+          "2 (1)",
+          "1 (1)",
+          "1 (1)",
+          ""
+        ],
+        [
+          "Standard þ EBUS-TBNA þ EMN",
+          "7 (4)",
+          "0 (0)",
+          "7 (6)",
+          ""
+        ],
+        [
+          "Data unavailable",
+          "23 (12)",
+          "11 (15)",
+          "12 (10)",
+          ""
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/79'}",
+      "headers": [
+        "Variable",
+        "All",
+        "Low Probability ( < 10%)",
+        "Intermediate Probability (10%-60%)",
+        "P Value"
+      ],
+      "rows": [
+        [
+          "Total No. of patients",
+          "188",
+          "71",
+          "117",
+          ""
+        ],
+        [
+          "Patients with any invasive procedure",
+          "77 (41)",
+          "15 (21)",
+          "62 (53)",
+          ".004"
+        ],
+        [
+          "Repeat bronchoscopy",
+          "39 (21)",
+          "10 (14)",
+          "29 (25)",
+          ".198"
+        ],
+        [
+          "Transthoracic needle aspiration",
+          "20 (11)",
+          "1 (1)",
+          "19 (16)",
+          ".002"
+        ],
+        [
+          "Surgery",
+          "40 (21)",
+          "7 (10)",
+          "33 (28)",
+          ".016"
+        ],
+        [
+          "Total procedures",
+          "99",
+          "18",
+          "81",
+          ""
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    }
+  ],
+  "figures": [
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/85'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/117'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/156'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    }
+  ],
+  "references": [
+    {
+      "title": "Recent trends in the identification of incidental pulmonary nodules"
+    },
+    {
+      "title": "Am J. Respir Crit Care Med",
+      "year": 2015
+    },
+    {
+      "title": "Reduced lung-cancer mortality with low-dose computed tomographic screening",
+      "year": 2015
+    },
+    {
+      "title": "N Engl J Med",
+      "year": 2011
+    },
+    {
+      "title": "Establishing the diagnosis of lung cancer: diagnosis and management of lung cancer, 3rd ed: American College of Chest Physicians evidence-based clinical practice guidelines",
+      "year": 2011
+    },
+    {
+      "title": "Chest",
+      "year": 2011
+    },
+    {
+      "title": "Meta-analysis of guided bronchoscopy for the evaluation of the pulmonary nodule",
+      "year": 2013
+    },
+    {
+      "title": "Diagnostic yield and complications of bronchoscopy for peripheral lung lesions: results of the AQuIRE Registry",
+      "year": 2012
+    },
+    {
+      "title": "Am J Respir Crit Care Med",
+      "year": 2016
+    },
+    {
+      "title": "Decision making in patients with pulmonary nodules",
+      "year": 2016
+    },
+    {
+      "title": "Derivation of a bronchial genomic classifier for lung cancer in a prospective study of patients undergoing diagnostic bronchoscopy",
+      "year": 2012
+    },
+    {
+      "title": "BMC Med Genomics",
+      "year": 2015
+    },
+    {
+      "title": "A bronchial genomic classifier for the diagnostic evaluation of lung cancer",
+      "year": 2015
+    },
+    {
+      "title": "Effects of cigarette smoke on the human airway epithelial cell transcriptome",
+      "year": 2015
+    },
+    {
+      "title": "Proc Natl Acad Sci",
+      "year": 2004
+    },
+    {
+      "title": "Airway epithelial gene expression in the diagnostic evaluation of smokers with suspect lung cancer",
+      "year": 2004
+    },
+    {
+      "title": "Nat Med",
+      "year": 2007
+    },
+    {
+      "title": "CT screening for lung cancer brings forward early disease. The randomised Danish Lung Cancer Screening Trial: status after five annual screening rounds with low-dose CT",
+      "year": 2007
+    },
+    {
+      "title": "Thorax",
+      "year": 2012
+    },
+    {
+      "title": "A randomized journal.publications.chestnet.org study of lung cancer screening with spiral computed tomography: three-year results from the DANTE trial",
+      "year": 2012
+    },
+    {
+      "title": "Management of lung nodules detected by volume CT scanning",
+      "year": 2009
+    },
+    {
+      "title": "Management of pulmonary nodules by community pulmonologists: a multicenter observational study",
+      "year": 2009
+    },
+    {
+      "title": "Clinical practice. The solitary pulmonary nodule",
+      "year": 2015
+    },
+    {
+      "title": "Evaluation of individuals with pulmonary nodules: when is it lung cancer? Diagnosis and management of lung cancer, 3rd ed: American College of Chest Physicians evidence-based clinical practice guidelines",
+      "year": 2003
+    },
+    {
+      "title": "Risks of transthoracic needle biopsy: how high?",
+      "year": 2013
+    },
+    {
+      "title": "Clin Pulm Med",
+      "year": 2013
+    },
+    {
+      "title": "Factors associated with pneumothorax and pneumothorax requiring treatment after percutaneous lung biopsy in 443 consecutive patients",
+      "year": 2013
+    },
+    {
+      "title": "J Vasc Interv Radiol",
+      "year": 2004
+    },
+    {
+      "title": "Transthoracic needle aspiration biopsy for the diagnosis of localised pulmonary lesions: a meta-analysis",
+      "year": 2004
+    }
+  ],
+  "quality": {
+    "completeness_score": 0,
+    "has_abstract": true,
+    "abstract_source": "metadata",
+    "has_doi": true,
+    "has_full_text": true,
+    "num_sections": 10,
+    "num_tables": 2,
+    "num_figures": 7,
+    "num_references": 29
+  }
+}

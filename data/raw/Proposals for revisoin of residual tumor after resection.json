@@ -1,0 +1,1472 @@
+{
+  "metadata": {
+    "document_id": "10_1016_j_jtho_2024_03_021",
+    "title": "The International Association for the Study of Lung Cancer Lung Cancer Staging Project: Proposals for Revision of the Classification of Residual Tumor After Resection for the Forthcoming (Ninth) Edition of the TNM Classification of Lung Cancer",
+    "authors": [
+      "Frank C. Detterbeck",
+      "Marcin Ostrowski",
+      "Hans Hoffmann",
+      "Ramón Rami-Porta",
+      "Ray U. Osarogiagbon",
+      "Jessica Donnington",
+      "Maurizio Infante",
+      "Mirella Marino",
+      "Edith M. Marom",
+      "Jun Nakajima",
+      "Andrew G. Nicholson",
+      "Paul Van Schil",
+      "William D. Travis",
+      "Ming S. Tsao",
+      "John G. Edwards",
+      "Hisao Asamura"
+    ],
+    "year": 2024,
+    "journal": "Journal of Thoracic Oncology",
+    "doi": "10.1016/j.jtho.2024.03.021",
+    "volume": "19",
+    "issue": "7",
+    "pages": "1052-1072",
+    "citation": "Detterbeck, et al. (2024). The International Association for the Study of Lung Cancer Lung Cancer Staging Project: Proposals for Revision of the Classification of Residual Tumor After Resection for the Forthcoming (Ninth) Edition of the TNM Classification of Lung Cancer. Journal of Thoracic Oncology, 19(7), 1052-1072. https://doi.org/10.1016/j.jtho.2024.03.021",
+    "abstract": "Introduction: The goal of surgical resection is to completely remove a cancer; it is useful to have a system to describe how well this was accomplished. This is captured by the residual tumor (R) classi /uniFB01 cation, which is separate from the TNM classi /uniFB01 cation that describes the anatomic extent of a cancer independent of treatment. The traditional R-classi /uniFB01 cation designates as R0 a complete resection, as R1 a macroscopically complete resection but with microscopic tumor at the surgical margin, and as R2 a resection that leaves gross tumor behind. For lung cancer, an additional category encompasses situations in which the presence of residual tumor is uncertain. Methods: This paper represents a comprehensive review of evidence regarding these R categories and the descriptors thereof, focusing on studies published after the year 2000 and with adjustment for potential confounders. *Corresponding author. q See appendices This research did not receive any speci /uniFB01 c grant from funding agencies in the public, commercial, or not-for-pro /uniFB01 t sectors. Address for correspondence: Frank C. Detterbeck, MD, Division of Thoracic Surgery, Department of Surgery, Yale University School of Medicine, 330 Cedar Street, New Haven, Connecticut 06520-8062. E-mail: frank.detterbeck@yale.edu ª 2024 International Association for the Study of Lung Cancer. Published by Elsevier Inc. All rights reserved. Results: Consistent discrimination between complete, uncertain, and incomplete resection is revealed with respect to overall survival. Evidence regarding speci /uniFB01 c descriptors is generally somewhat limited and only partially consistent; nevertheless, the data suggest retaining all descriptors but with clari /uniFB01 cations to address ambiguities. Conclusion: On the basis of this review, the R-classi /uniFB01 cation for the ninth edition of stage classi /uniFB01 cation of lung cancer is proposed to retain the same overall framework and descriptors, with more precise de /uniFB01 nitions of descriptors. These re /uniFB01 nements should facilitate application and further research. /C211 2024 International Association for the Study of Lung Cancer. Published by Elsevier Inc. All rights reserved",
+    "abstract_source": "metadata",
+    "url": "https://linkinghub.elsevier.com/retrieve/pii/S1556086424001291"
+  },
+  "source_file": "Proposals for revisoin of residual tumor after resection.json",
+  "sections": [
+    {
+      "title": "",
+      "content": "The International Association for the Study of Lung Cancer Lung Cancer Staging Project: Proposals for Revision of the Classi /uniFB01 cation of Residual Tumor After Resection for the Forthcoming (Ninth) Edition of the TNM Classi /uniFB01 cation of Lung Cancer\nFrank C. Detterbeck, MD, a, * Marcin Ostrowski, MD, b Hans Hoffmann, MD, c Ramón Rami-Porta, MD, FETCS, d Ray U. Osarogiagbon, M.B.B.S., e Jessica Donnington, MD, MSCR, f Maurizio Infante, MD, g Mirella Marino, MD, h Edith M. Marom, MD, i Jun Nakajima, MD, j Andrew G. Nicholson, DM, FRCPath., k Paul van Schil, MD, l William D. Travis, MD, m Ming S. Tsao, MD, n John G. Edwards, PhD, FRCS(C/Th), o Hisao Asamura, MD, p and the Members of the Staging and Prognostic Factors Committee and Advisory Boards q\na Department of Surgery, Yale University School of Medicine, New Haven, Connecticut\nb Department of Thoracic Surgery, Medical University of Gdansk, Gdansk, Poland\nc Division of Thoracic Surgery, Department of Surgery, Klinikum Rechts der Isar , Technical University of Munich, Munich, Germany d\nDepartment of Thoracic Surgery, Hospital Universitari Mutua Terrassa, University of Barcelona, Terrassa, Barcelona, Spain\ne\nOncology Research Group, Multidisciplinary Thoracic Oncology Program, Baptist Cancer Center, Memphis, Tennessee\nf Department of Surgery, University of Chicago, Chicago, Illinois\ng Department of Thoracic Surgery, Ospedale Borgo Trento, Verona, Italy\nh Department of Pathology, IRCCS Regina Elena National Cancer Institute, Rome, Italy\ni Department of Diagnostic Imaging, The Chaim Sheba Medical Center, Ramat Gan, Israel\nj Department of Thoracic Surgery, The University of Tokyo, Tokyo, Japan\nk Department of Histopathology, Royal Brompton and Hare /uniFB01 eld NHS Hospitals, Guy ' s and St. Thomas ' NHS Foundation Trust and National Heart and Lung Institute, Imperial College, London, United Kingdom\nl Department of Thoracic and Vascular Surgery, Antwerp University Hospital, Edegem (Antwerp), Belgium\nm Department of Pathology, Memorial Sloan-Kettering Cancer Center, New York, New York\nn Department of Pathology, The Princess Margaret Cancer Centre, Toronto, Ontario, Canada\no Department of Cardiothoracic Surgery, Shef /uniFB01 eld Teaching Hospitals National Health Service Foundation Trust, Northern General Hospital, Shef /uniFB01 eld, United Kingdom\np Division of Thoracic Surgery, Keio School of Medicine, Tokyo, Japan\nReceived 10 February 2024; revised 20 March 2024; accepted 25 March 2024 Available online - 1 April 2024",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "ABSTRACT",
+      "content": "Introduction: The goal of surgical resection is to completely remove a cancer; it is useful to have a system to describe how well this was accomplished. This is captured by the residual tumor (R) classi /uniFB01 cation, which is separate from the TNM classi /uniFB01 cation that describes the anatomic extent of a cancer independent of treatment. The traditional R-classi /uniFB01 cation designates as R0 a complete resection, as R1 a macroscopically complete resection but with microscopic tumor at the surgical margin, and as R2 a resection that leaves gross tumor behind. For lung cancer, an additional category encompasses situations in which the presence of residual tumor is uncertain.\nMethods: This paper represents a comprehensive review of evidence regarding these R categories and the descriptors\nthereof, focusing on studies published after the year 2000 and with adjustment for potential confounders.\n*Corresponding author.\nq See appendices\nThis research did not receive any speci /uniFB01 c grant from funding agencies in the public, commercial, or not-for-pro /uniFB01 t sectors.\nAddress for correspondence: Frank C. Detterbeck, MD, Division of Thoracic Surgery, Department of Surgery, Yale University School of Medicine, 330 Cedar Street, New Haven, Connecticut 06520-8062. E-mail: frank.detterbeck@yale.edu\nª 2024 International Association for the Study of Lung Cancer. Published by Elsevier Inc. All rights reserved.\nResults: Consistent discrimination between complete, uncertain, and incomplete resection is revealed with respect to overall survival. Evidence regarding speci /uniFB01 c descriptors is generally somewhat limited and only partially consistent; nevertheless, the data suggest retaining all descriptors but with clari /uniFB01 cations to address ambiguities.\nConclusion: On the basis of this review, the R-classi /uniFB01 cation for the ninth edition of stage classi /uniFB01 cation of lung cancer is proposed to retain the same overall framework and descriptors, with more precise de /uniFB01 nitions of descriptors. These re /uniFB01 nements should facilitate application and further research.\n/C211 2024 International Association for the Study of Lung Cancer. Published by Elsevier Inc. All rights reserved.\nKeywords: Lung cancer; Surgery; Complete resection; Residual disease",
+      "category": "abstract",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Introduction",
+      "content": "Surgical resection is well established as a treatment of localized cancers, including lung cancer. A fundamental principle of cancer surgery is complete resection of the tumor with a margin of normal tissue to ensure that no residual tumor remains. This is not only logical but also supported by decades of experience revealing high cure rates for many localized cancers when this is achieved. Re /uniFB02 ecting this, the residual tumor (R) classi/uniFB01 cation of resection completeness has been well established as a complement to the TNM classi /uniFB01 cation of the anatomic extent of cancer since the /uniFB01 rst edition of the American Joint Committee on Cancer (AJCC) staging manual published in 1977. 1 The traditional R-classi /uniFB01 cation designates as R0 a complete resection, as R1 a macroscopically complete resection with microscopic tumor at the surgical margin, and as R2 a resection that leaves gross tumor behind.\nIncreasing knowledge naturally leads to questions about /uniFB01 ner details -the R-classi /uniFB01 cation for lung cancer is no exception. The seventh edition of TNM classi /uniFB01 cation of lung cancer marked a major upgrade through the International Association for the Study of Lung Cancer (IASLC) initiative to create an unprecedented large database, an international multidisciplinary expert panel (the Staging and Prognostic Factors Committee, SPFC), and extensive analysis to provide a solid basis for revisions in TNM classi /uniFB01 cation. 2 This included re /uniFB01 nements of the R-classi /uniFB01 cation, such as designation of a resection in the face of a malignant pleural effusion as R1, a focus on extracapsular extension of involved lymph nodes as a potential source of residual disease, and proposal of an ' uncertain ' R category. This new category included limited node evaluation or /uniFB01 nding involvement of the highest resected lymph node, designated as R0(un), and\ncarcinoma in situ (CIS) at the bronchial margin Odds ratio (or) /uniFB01 nding tumor cells in a pleural lavage (performed despite the absence of an effusion), designated respectively as R1(is) or R1(cy þ ). 3\nAs with the seventh and eighth editions of TNM classi /uniFB01 cation of lung cancer, the IASLC SPFC has been tasked with creating proposals for re /uniFB01 nements for the ninth edition. This effort included an R-subcommittee, involving an international multidisciplinary group. This paper describes the proposals for R-classi /uniFB01 cation for the ninth edition. Speci /uniFB01 cally, this paper provides a review and analysis of the available evidence regarding the Rclassi /uniFB01 cation and potential re /uniFB01 nements of the descriptors of the R categories. Additional work by the Rsubcommittee will be published elsewhere.",
+      "category": "introduction",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Methods",
+      "content": "To inform potential revisions to the R-classi /uniFB01 cation, a review of the available pertinent literature was undertaken. This involved the PubMed database and Englishlanguage articles using search terms related to lung cancer, surgery, completeness of resection, residual tumor, and resection margins. In addition, reference lists of relevant papers and reviews were assessed.\nPapers were identi /uniFB01 ed for inclusion if they provided information about the prognostic impact of the existing R categories and descriptors -speci /uniFB01 cally to evaluate between-category discrimination and within-category homogeneity. The inherent problem that prognosis is determined by multiple factors is accentuated when evaluating the R-status. There are clearly tumor-related differences associated with resection completeness and patient- and setting-related factors that can limit the ability to achieve a complete resection. Therefore, this review focused on reports that adjusted for at least some confounders. Study interpretation must also consider potential residual confounding; con /uniFB01 dence that an observed difference is due to the question of interest (i.e., R-status) in a nonrandomized comparison is undermined by potential confounders that were not accounted for. It was deemed best to focus on studies with at least 100 patients, as the number of confounders that can be included and the strength of multivariate adjustment are diminished when the number of outcome events is limited. Inclusion criteria for each table are listed in the respective legends.\nIn addition, the R-subcommittee considered areas of ambiguitythat haveemerged during implementationofthe eighth edition de /uniFB01 nitions. Areas for clari /uniFB01 cation stem in part from a survey conducted by the R-subcommittee, from assessing how the R-classi /uniFB01 cation has been understood in published studies, and from a critical reassessment of the wording in the eighth edition classi /uniFB01 cation. Results of the R-classi /uniFB01 cation survey are the topic of a separate paper.\nTheproposedrevisionswerereviewedanddiscussedin the R-subcommittee and the SPFC steering committee. A re /uniFB01 ned document was then reviewed and approved by the entire SPFC according to the standard process of the SPFC.",
+      "category": "methods",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "R-Status Categories",
+      "content": "De /uniFB01 nitions. The AJCC/Union for International Cancer Control (UICC) classi /uniFB01 cation system de /uniFB01 nes R0 as a complete resection, R1 as a microscopically positive resection margin, and R2 as gross unresected tumor remaining. 4,5 Speci /uniFB01 cally for lung cancer, the IASLC and the UICC additionally recognize an uncertain resection category, 3,4,6 de /uniFB01 ned as resections that are microscopically and macroscopically complete but have potentially concerning features, that is, (1) a limited lymph node assessment was performed, (2) the highest node removed is involved, (3) CIS is found at the bronchial resection margin, and (4) a pleural lavage was performed and result was found to be cytologically positive. 3,6,7 The /uniFB01 rst two descriptors are designated as R0(un). The latter two are designated as R1(is) and R1(cy þ ) -because UICC de /uniFB01 nes these situations as R1 8 but with the addition of (is) and (cy þ ) to distinguish them from a standard microscopically positive margin or malignant pleural effusion. These two descriptors are referred to in this paper as R1(un); the four scenarios are collectively referred to as R(un).\nAt the time of resection, IASLC has recommended a minimum assessment of six nodes/station; this should include the subcarinal station, at least two other mediastinal nodes/station, and three nodes/station from the\nhilum or other N1 locations. 6 The eighth edition IASLC recommendation is not speci /uniFB01 c regarding nodes versus node stations, and presumably both preoperative and intraoperative assessments count (although not explicitly stated).\nValidation. The overall survival (OS) of patients in the R(un) category consistently falls in-between that of R0 and R1,2 cohorts (Table 1, Fig. 1). 9 -15 In all studies, the uncertain category included all four uncertain descriptors. The OS differences were maintained after multivariate adjustment for potential confounders, which included tumor-related and demographic factors in all studies, and frequently also comorbidities 10,11,13,14 and/or treatment-related factors (e.g., adjuvant therapy, lobectomy versus wedge resection). 9 -11,13 Subset analyses in particular cohorts (N category, stage) maintained consistent differences. Furthermore, taken together, the four validation studies reveal that the ordering and statistical differences between the R categories are generally consistent across various geographic regions and time periods. In addition, a multivariate analysis found statistical differences in OS and recurrence-free survival (RFS) by R categories in 910 stage III-N2 patients who underwent neoadjuvant therapy before resection. 16\nOnly two studies noted no statistically signi /uniFB01 cant difference between the R0 and R(un) cohorts although ordering consistent with other studies was maintained. One involved an unadjusted analysis of a prospective cohort from 1993 to 1997 (not included in Table 1). 15 In the other study, an unadjusted statistically signi /uniFB01 cant",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Table 1. Studies Evaluating the R(un) Category",
+      "content": "Inclusion criteria: Studies comparing IASLC R categories: R0, R(un), R1, R2, published from 2000 to 2023, with at least 100 patients total, and using a method of adjustment for confounders. A Hazard ratio (HR) of > 1 indicates worse survival in the second of the two cohorts being compared. a R1 only.\nColor coding: green, statistically signi /uniFB01 cant; yellow, not signi /uniFB01 cant.\nHazard ratio (HR), hazard ratio; IASLC, International Association for the Study of Lung Cancer; limited N, limited node assessment ( < 6 nodes/station); MSQSR, Mid-South Quality of Surgical Resection database; N þ , pathologically proven node involvement; OS, overall survival; pI, pathologic stage I; R(un), R-status uncertain, this includes insuf /uniFB01 cient node assessment, highest node station involved, positive pleural lavage cytology, carcinoma-in-situ at the bronchial margin.\ndifference disappeared when adjustment for N2 subgroups was done (N2a with skip metastasis, N2a and N2b); furthermore, 90% of the R(un) cohort consisted of patients with highest node station involvement [most R(un) cases involved limited node assessment in other studies]. 14\nDistinguishing gross residual disease (R2) from a microscopically positive margin (R1) that may or may not imply residual disease is based on a rationale that is intuitively reasonable. Nevertheless, few studies have compared the survival of R1 versus R2 cohorts. No difference was noted in a study considering all stages together 10 and in another that adjusted for T, N, histotype, and region. 12 In a stage-speci /uniFB01 c analysis, differences were noted but with some inconsistency (OS was better in patients undergoing an R1 versus R2 resection of pI and pIII tumors but lower after an R1 versus R2 resection of pII tumors). 17 Unstudied confounders include comorbidities and use of adjuvant therapy. The R2 cohort in all studies is small; presumably, imaging technology makes it unusual to encounter unexpected unresectable tumor.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Speci /uniFB01 c R(un) Descriptors",
+      "content": "R0(un) -Limited Node Assessment. There is a discrepancy between the prevalence of limited node\nassessment and how well this descriptor has been studied. In Table 1, the vast majority of R(un) resections in most studies were classi /uniFB01 ed as such because of a limited node assessment. The consistent ordering and statistical difference in OS support retention of this descriptor of R0(un). In all studies, the IASLC de /uniFB01 nition of adequate assessment was interpreted as pertaining to node stations (not the number of discrete nodes).\nFew studies have focused speci /uniFB01 cally on the impact of the extent of node assessment (Table 2). 10,18 One study found incrementally lower survival as the degree of node assessment diminishes (Fig. 2). 10 The OS differences are statistically signi /uniFB01 cant after multivariate adjustment between patients who underwent a fully compliant node assessment (R0), a partially compliant assessment (at least one mediastinal station sampled), no node assessment (NX), and an incomplete resection (R1,2); a further group with only N1 nodes assessed falls in-between the partially compliant and NX cohorts, although the differences are not statistically signi /uniFB01 cant. In contrast, another study found a trend toward better survival with more limited node assessment, but differences in adjusted OS rates were not statistically signi /uniFB01 -cant between patients who underwent a completely compliant node assessment (R0), a partially compliant assessment (at least one mediastinal station was\nSurvival, Mo\nTimo (Year)\nsampled in > 90%), and no node assessment (NX). 18 The latter study involved an increasing proportion of cI tumors and lepidic tumors in the partially compliant and NX cohorts. Unfortunately, only total size was collected, leaving the proportion of ground-glass tumors unclear, and hampering multivariate adjustment for T size. The study noted no differences by degree of node assessment\nin subgroup analyses involving adenocarcinoma in situ (AIS) or minimally invasive adenocarcinoma, pIA1 and pIA2 tumors; however, among pIA3 tumors, better OS was observed when patients underwent fully compliant versus partially compliant node assessment.\nThese /uniFB01 ndings suggest that although there is general support for the six-station node assessment R0(un)\nInclusion criteria: Studies comparing the IASLC R0(un) limited node assessment descriptor versus other R categories, published from 2000 to 2023, with at least 100 patients total, and using a method of adjustment for confounders. A Hazard ratio (HR) of > 1 indicates worse survival in the second of the two cohorts being compared. Color coding: green, statistically signi /uniFB01 cant; yellow, not signi /uniFB01 cant.\ncI, clinical stage I; Hazard ratio (HR), hazard ratio; MSQSR, Mid-South Quality of Surgical Resection Database; OS, overall survival.\nTime since surgery (months)\ndescriptor, this does not apply to all types of tumors (e.g., small and ground-glass tumors). In addition, it seems prudent to clarify that the de /uniFB01 nition refers to node stations (not nodes); this re /uniFB02 ects how the descriptor has been interpreted around the world for almost two decades.\nR0(un) - Highest Node Station Involvement. Studies addressing involvement of the highest node removed have used the highest node station assessed (most cephalad) as a surrogate. Among N2-positive cases, data are con /uniFB02 icting regarding a survival difference among cohorts with versus without highest node station involvement -that is, R0(un) versus R0 (Table 3). 9,10,12,14,19 -21 No clear reason for the discrepancy is apparent. All studies involved some adjustment for potential confounders. Results do not correlate with adjustment for the N2 subcategories; only one study adjusted for comorbidities. 14\nOne study 20 explored a de /uniFB01 nition of ' most distant ' node involvement (e.g., station 9) following an earlier suggestion. 15 No difference was noted between R0 and R0(un) as de /uniFB01 ned by either highest or most distant node involvement in multivariate analyses of N2 tumors. 20 Another study explored laterality and found similar signi /uniFB01 cant adjusted differences between R0 versus R0(un) cohorts among right- and left-sided tumors, using R2 and L4, respectively, as the de /uniFB01 nition of the highest station. 19\nUnrecognized factors seem to be contributing to the con /uniFB02 icting results; further study is warranted. Nevertheless, it seems reasonable to include highest station involvement as an R0(un) descriptor. Furthermore,\nde /uniFB01 ning the descriptor as highest station instead of highest individual node is practical and re /uniFB02 ects how data are collected.\nR1(is) - Carcinoma In Situ at the Bronchial Margin. CIS at the bronchial resection margin is reported infrequently. A systematic SPFC review in 2011 found 136 cases, with almost all patients diagnosed 20 to 40 years ago, and limited availability of details. 22 The incidence of CIS was 0.9%. Little additional data have emerged since then. The IASLC 1999 -2010 database contained 13 cases. 12 The IASLC ninth edition database was not assessed regarding CIS in time for this review. The most informative contemporary study involves 18 patients with bronchial margin CIS [R1(is)] and 42 with extramucosal microscopic residual cancer at the bronchial margin (R1). 23\nStump recurrences are rare after R1(is) resection (6% at 5 years in the recent study). 23 This is corroborated by others, although less speci /uniFB01 cally, 22,24 and is consistent with studies revealing that CIS may regress Odds ratio (or) may never progress in a substantial portion of cases. 25 Adjuvant radiotherapy was often administered in R1(is) cases, but the impact is unclear. Some studies report a higher rate of death from radiation toxicity than from cancer recurrence. 26,27\nSurveillance studies of untreated preinvasive endobronchial lesions provide additional evidence. Moderate interand intra-observer variability in classi /uniFB01 cation of preinvasive squamous bronchial lesions (degrees of dysplasia versus CIS) suggests some uncertainty. 28 In addition, a prospective study noted sustained regression in 63% of foci of severe dysplasia and regression in 31%",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Table 3. Studies Evaluating the Highest Node Station Positive R0(un) Descriptor",
+      "content": "Inclusion criteria: Studies comparing the highest node station positive R0(un) descriptor with other R categories/descriptors, published from 2000 to 2023, with at least 100 patients total, and using a method of adjustment for confounders. A Hazard ratio (HR) of > 1 indicates worse survival in the second of the two cohorts being compared.\na 90% of the R(un) cohort were so classi /uniFB01 ed due to HN þ ; data are reported for entire R(un) cohort.\nb Reported for Hazard ratio (HR) compared with R1,2 cohort, in parentheses, because not directly comparable to R(un) by other descriptors.\nc\nUnclear if patients with insuf\n/uniFB01\ncient node assessment were included.\nColor coding: green, statistically signi /uniFB01 cant; yellow, not signi /uniFB01 cant; blue, statistically signi /uniFB01 cant but versus a different end point.\nHN þ , highest mediastinal node station involved; Hazard ratio (HR), hazard ratio; IASLC, International Association for the Study of Lung Cancer; MSQSR, Mid-South Quality of Surgical Resection database; OS, overall survival.\nof CIS lesions at 3 months (mostly to normal epithelium) which was sustained in 71% during further surveillance. 29 Although a review reported development of invasive cancer in approximately 50% of patients with CIS (over 2 -8 years), 30 this may be misleading because several studies report that most invasive cancers do not occur at the site of the CIS. 31 -33 In a large prospective study, the 10-year rate of progression to invasive cancer at a site of CIS/severe dysplasia was 11% (among patients with a prior respiratory cancer undergoing bronchoscopic surveillance of a preinvasive endobronchial lesion). 32\nGood OS is generally reported for R1(is) -in the 2011 SPFC review the 5-year OS was approximately 70% 22 ; this is corroborated by others. 11,23 Survival of patients with R1(is) and similar-stage R0 tumors is not clearly different. A contemporary study noted no difference in OS by multivariate analysis for patients undergoing R1(is) versus either R0 or R1 resections with microscopic invasive cancer at the bronchial margin, analyzed separately for stage I -II and stage III tumors. 23 The sample size limits the certainty of this observation.\nIn conclusion, CIS at the bronchial margin is rare but has a good prognosis. It is intuitively dif /uniFB01 cult to ignore clear demonstration of CIS at the margin. Nevertheless, lack of progression and regression of bronchial CIS is well documented, making the impact unclear. It is reasonable to designate this as an R1(un) descriptor.\nR1(cy D ) -Positive Pleural Lavage Cytology. Pleural lavage cytology has been studied frequently, especially in Japan; a 2016 meta-analysis included 28 studies and more than 20,000 patients worldwide. 34 Pleural lavage cytology result is positive in approximately 5% of patients. 35 -40 Several meta-analyses have consistently found that positive cytology result is associated with lower OS and higher recurrence. 34,41 Nevertheless, metaanalyses of nonrandomized comparisons obscure the impact of confounders. 42\nLarge multivariate studies involving routine pleural lavage report that positive cytology result is independently associated with lower OS and RFS with few exceptions (versus negative cytology result, Table 4). 35 -40,43 -50 Most studies have adjusted for tumor-related factors (positive lavage cytology result increases with greater anatomic\nInclusion criteria: Studies comparing the IASLC R1(cy þ ) positive pleural lavage descriptor versus other R categories, published from 2000 to 2023, with at least 500 patients total, and using a method of adjustment for confounders. A Hazard ratio (HR) of > 1 indicates worse survival in the second of the two cohorts being compared. a Not explicitly stated that all cases were considered R0 (other than the lavage).\nb Pathologic stage.\nc 12-center collaboration.\nColor coding: green, statistically signi /uniFB01 cant; yellow, not signi /uniFB01 cant.\ncI, clinical stage I; Hazard ratio (HR), hazard ratio; IPLCC, international pleural lavage cytology collaborators; LCR, Lung Cancer Registry; OS, overall survival; pI, pathologic stage I; Pre, pre-resection lavage (immediately on entering the thorax); Post, post-resection lavage (before closure); RFS, recurrence-free survival.\ntumor extent), approximately half have adjusted for surgical extent, and few have adjusted for patient-related factors (e.g., performance status, comorbidities) or treatment-related factors (e.g., adjuvant therapy). Although the incidence is lower, R1(cy þ ) is found even in stage pI tumors. Most studies involve careful stage evaluation by imaging and node dissection. The data from multivariate-adjusted studies suggest an impact of R1(cy þ ) on long-term outcomes in stage I tumors, but this is less certain.\nMost studies performed lavage before any lung manipulation. A few studies have assessed lavage cytology pre- and post-resection, 36,45,48 and found that in approximately half of cases with positive pre-resection cytology result, the post-resection lavage result is negative, and vice versa (Supplementary Fig. 1). 36,45,48 These studies have also suggested that prognosis correlates more strongly and consistently with postthan preresection lavage. 36,45,48\nIn a large multicenter study, the 5-year OS for patients without and with positive cytology result, respectively, was 77% and 54% for stage pI, 50% and 29% for stage pII, and 35% and 21% for pIII ( /uniFB01 fth/sixth edition TNM). 37 Positive lavage cytology result clearly\nhas an impact on outcomes, but it does not indicate that resection is futile. Several studies have also compared R0 and R1(cy þ ) cases with patients with pleural dissemination who underwent resection (Fig. 3). 39,44,46,47 These have revealed that outcomes for R1(cy þ ) cohorts fall inbetween R0 cohorts and patients with pleural dissemination undergoing resection (R1). Among patients with pleural dissemination who underwent resection, approximately two-thirds had pleural nodules and onethird a malignant pleural effusion. These studies provide the best available comparison to R1,2 resections; no studies have compared R1(cy þ ) and general R1,2 resection cohorts.\nPositive lavage cytology result is associated with a higher risk of recurrence (approximately twofold overall, approximately twofold for distant, approximately /uniFB01 vefold for pleural recurrence; rates not adjusted for potential confounders). 34,35,41 The pleural recurrence rate is 15% to 20% versus 2% to 3%, respectively, after R1(cy þ ) versus R0 resections in two meta-analyses. In addition, pleural recurrences are involved in approximately 30% of all recurrences after R1(cy þ ) resection. 34,41 A small study (n ¼ 17) of intrapleural chemotherapy for R1(cy þ ) cases suggested a bene /uniFB01 t. 51\nNevertheless, a randomized controlled trial (n ¼ 49, closed prematurely due to poor accrual) of intrapleural chemotherapy for cytology-positive cases found no difference in OS but a dramatic reduction in pleural recurrences. 52\nIn summary, there is substantial evidence that positive pleural lavage cytology result is associated with worse survival than R0 resection and consistent evidence that outcomes fall in-between R0 resections and patients with pleural dissemination who underwent resection. Positive pleural lavage result is associated with a higher risk of pleural recurrence, but this occurs in a minority of patients. Classi /uniFB01 cation of R1(cy þ ) as an R(un) descriptor is appropriate. If no lavage was performed, the R1(cy þ ) descriptor does not apply.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "R1 -Microscopically Positive Resection Margin.",
+      "content": "Depending on how speci /uniFB01 c the desired evidence is, there is either extensive or somewhat limited data regarding the impact of microscopic invasive cancer at a resection margin. Numerous reports document lower OS (unadjusted) for R1 versus R0 resections. Large database studies using the basic UICC de /uniFB01 nitions reveal a meaningful difference between R1 and R0 resection (5-year OS approximately 35% versus approximately 60%). 10,12,17,27 Table 1 documents that numerous adjusted studies consistently /uniFB01 nd signi /uniFB01 cant differences for R1,2 versus R(un) resections, and versus R0 resections. 9 -15 Most of these incomplete resections were R1, and most of the R1 resections involved the positive\nmargin descriptor (among studies reporting such details).\nFewer studies have speci /uniFB01 cally evaluated the R1 microscopic margin descriptor. Table 5 depicts studies involving multivariate adjustment or reporting results strati /uniFB01 ed by stage. 10,17,23,27,53,54 The outcomes of R1 versus R0 cohorts support the microscopic margin descriptor as a useful differentiator; comparisons to R(un) or R2 cohorts have not been reported. In smaller studies, the difference is less consistent. Some studies have focused speci /uniFB01 cally on the bronchial margin. 23,54 Although the bronchial margin is most common, other margins (e.g., hilar tissues, vascular or parenchymal margins) account for a substantial minority of microscopically positive resections. Some data suggest worse outcomes with a positive extrabronchial versus a bronchial or peribronchial margin. 53 This may be due to node involvement, but studies have not adjusted for this.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "R1 -Extracapsular Extension of Involved Lymph",
+      "content": "Nodes. In the seventh and eighth edition manuals, extranodal extension of involved lymph nodes was not clearly de /uniFB01 ned. 3,6 This feature is mentioned both under microscopic- and macroscopic-positive margin headings, suggesting extranodal extension merely refers to the surgical margin around a resected node or node packet. Nevertheless, the speci /uniFB01 c mention of extracapsular extension implies that it is different than other resection margins.\nStudies addressing this topic do not mention whether extranodal extension was present at a resection margin or contained within a packet of surrounding normal\nInclusion criteria: Studies comparing the R1 microscopically positive margin descriptor versus other R categories, published from 2000 to 2023, with at least 500 patients total, and using a method of adjustment for confounders or reporting results strati /uniFB01 ed by stage. A Hazard ratio (HR) of > 1 indicates worse survival in the second of the two cohorts being compared.\na\nRate for all stages combined.\nb Included only cases involving bronchial/peribronchial margin.\nColor coding: green, statistically signi /uniFB01 cant; yellow, not signi /uniFB01 cant.\nHazard ratio (HR), hazard ratio; MSQSR, Mid-South Quality of Surgical Resection database; NCDB, National Cancer Database (USA); NR, not reported (but statistical significance reported); OS, overall survival; pI,II or pIII, pathologic stage I, II, or III; recur, recurrence.\ntissue (presumably re /uniFB02 ecting that this information was not collected). Therefore, this paper assesses whether extracapsular extension (without information on the surrounding margin) has prognostic implications similar to a microscopically positive margin. Cases of direct primary tumor invasion of an adjacent node are excluded.\nStudies evaluating extranodal extension reveal mixed results (Table 6). 10,55 -61 The largest study suggests distinctly worse outcomes among resections with versus without extranodal extension (among resections otherwise meeting R0 criteria). 10 Furthermore, the outcomes are similar to that of patients undergoing R1,2 resection 10 ; this is corroborated by an unadjusted comparison in another study. 59 A meta-analysis found that extracapsular extension was associated with lower OS and higher recurrence rates, although most studies did not adjust for confounders and spanned four decades. 62\nThe reason for con /uniFB02 icting results is unclear. The incidence of extranodal extension varies dramatically between studies, also unexplained. Most studies have not adjusted for N2 subcategories. One study found incrementally worse survival when more nodes exhibit extranodal extension, but whether extranodal extension involved N1 or N2 nodes had little impact. 57\nAlthough the microscopic presence of extranodal extension seems straightforward, what this represents regarding the surgical procedure is unclear. One can envision (1) a node with extranodal extension within a node packet, surrounded by a margin of normal tissue, (2) microscopically visible extranodal tumor extension at a resection margin of the node/node packet, or (3) extranodal extension in nodes that have been removed in pieces (making margin assessment impossible). The\n/uniFB01 rst scenario is mostly a tumor burden issue, the second a margin issue (already addressed by R1 and R2 margin descriptors), and the third a technical issue and communication issue between the surgeon and pathologist. This third scenario is presumably most common. Because nodes are friable and lie within loose tissue, they are often removed in pieces -rendering it impossible to ascertain a margin. The pathologist ' s only recourse is the capsule of an intact node as a surrogate -the resection margin is presumably negative if tumor lies within a node with an intact capsule, but potentially positive if extracapsular extension is found. A problem remains when nodes are removed in pieces -the resection margin cannot be assessed (and identi /uniFB01 cation of extranodal extension is compromised). From a practical perspective, the pathology report provides some information about extranodal extension, whereas information on how nodes were removed or the nodal resection margin is rarely available.\nIn summary, more research is needed to clarify the impact of the extranodal extension descriptor. Perhaps more importantly, better de /uniFB01 nition of the issue of interest is needed so appropriate data are gathered.\nOne can argue that uncertainty about the impact and ambiguity about what it re /uniFB02 ects suggests that extranodal extension /uniFB01 ts as an R(un) descriptor. A general SPFC principle is to avoid changes unless there is strong evidence that change is needed. Because addressing the uncertainties will take time, it is best to retain extranodal extension as an R1 descriptor.\nR1 -Malignant Pleural or Pericardial Effusion. Patients with malignant pleural/pericardial nodules or\nInclusion criteria: Studies comparing the extranodal extension descriptor versus other R categories, published from 2000 to 2023, with at least 100 patients total, and using a method of adjustment for confounders. A Hazard ratio (HR) of > 1 indicates worse survival in the second of the two cohorts being compared. a Hazard ratio (HR) is for recurrence-free survival.\nColor coding: green, statistically signi /uniFB01 cant; yellow, not signi /uniFB01 cant.\nENE, extranodal extension; Hazard ratio (HR), hazard ratio; MSQSR, Mid-South Quality of Surgical Resection database; NR, not reported (but statistical signi /uniFB01 cance reported); OS, overall survival.\neffusion are generally not considered appropriate for resection, but in the select patients who do, the resection is classi /uniFB01 ed as R1 (if otherwise meeting R0 criteria). This seems intuitively logical, but data directly comparing this with other R1 descriptors are limited. Survival was similar among patients with a malignant effusion who underwent resection (R1) and those with a positive margin (90% microscopic, 10% macroscopic residual, R1,2) in one study (adjusted for eight potential confounders, but involving a limited number of malignant effusion cases). 10 In addition, reasonable long-term outcomes are consistently reported in patients with pleural dissemination undergoing resection. The eighth and ninth edition analyses have not addressed this, but in the seventh edition analysis, such patients had a 5-year OS of 31% if N0 R0 (22 patients) and 24% if N0 R-any (87 patients). 63 Similar results are found in Figure 3 among patients undergoing resections meeting criteria for R0 other than the pleural dissemination. 39,44,46,47 Many studies corroborate this. 64 -73 A substantial proportion of these patients never experience a pleural recurrence (or recurrence at any site). Although not well de /uniFB01 ned, approximately two-thirds of patients undergoing resection of pleural M1a tumors involved pleural tumor nodules, and outcomes may be better after macroscopic complete resection of pleural nodules versus when a malignant effusion is present. 65 -67,70 Limited data have been reported regarding resection of tumors with pericardial dissemination. 70\nThus, consistent data suggest that outcomes are similar in patients with pleural dissemination undergoing macroscopic complete resection and those undergoing an R1 resection de /uniFB01 ned by other criteria (but comparisons across studies should be interpreted cautiously). Moreover, it is intuitively logical to consider a resection in the face of pleural dissemination as R1 -concern of microscopic residual exists despite no visible tumor remaining.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "R2 Descriptors",
+      "content": "The R2 category denotes macroscopic tumor remaining after resection. It is intuitively logical to distinguish this from a complete (R0) or a microscopic margin positive (R1) resection. Data on outcomes after R2 resections are limited (see R-Status Categories section).\nThe seventh and eighth edition R-classi /uniFB01 cations speci /uniFB01 cally mention macroscopic residual disease at the site of extranodal extension or pleural nodules. Nevertheless, this is not meant to imply anything other than macroscopic residual at such sites. It would avoid potential confusion to focus the R2 descriptor on the gross\nresidual tumor (without mention of extranodal extension or pleural nodules).\nFinally, R2 includes lack of resection of involved nodes. 6 This seems intuitively logical, but limited data exist. A cohort of 14 such patients exhibited similar survival after resection as those undergoing an R1 or R2 resection as de /uniFB01 ned by other descriptors. 10 Good communication between the surgeon and pathologist is needed to avoid confusion with respect to R2 status.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Proposed Ninth Edition R-Classi /uniFB01 cation",
+      "content": "On review of the evidence and considerations discussed in the previous sections, some modi /uniFB01 cations to the R-classi /uniFB01 cation are proposed (Table 7). The table includes changes from the eighth edition intended to improve clarity and a summary assessment of the basis for the descriptors.\nThe uncertain descriptors of positive pleural lavage cytology result Odds ratio (or) CIS at a bronchial margin are more explicitly identi /uniFB01 ed as R1(un) descriptors. Highest node involvement is interpreted to mean that tumor is present in the highest (most cephalad) node station (lowest node station number) assessed, rather than an individual node.\nThe recommendation regarding a complete node assessment is clari /uniFB01 ed to apply to node stations rather than individual nodes ( /C21 6 stations, with at least station #7 and two additional mediastinal stations). It is important that the surgeon labels nodes (e.g., #10, #11), whether submitted separately or en-bloc with the specimen. Node stations invasively assessed preoperatively (e.g., endobronchial ultrasound, mediastinoscopy) and intraoperatively count collectively toward this descriptor. Actual dissection of a node station that documents absence of any nodes (e.g., #L2) counts as a station that was evaluated (if clearly documented in the operative report). The same applies regarding N1 node stations dissected by the pathologist (with documentation in the pathology report). For endobronchial ultrasound, documentation of no nodes or only nodes less than 5 mm within a node station counts as an assessment. If the tissue submitted from a node station reveals no nodal tissue, or there is insuf /uniFB01 cient tissue (e.g., aspiration cytology) to allow a de /uniFB01 nitive diagnosis, it counts as a negative assessment of that station (this assumes that clinicians will exercise judgment and consider a second assessment of the station if the negative/nondiagnostic result is suspected to be a false negative).\nIf a limited node assessment reveals no involved nodes, the tumor is classi /uniFB01 ed as N0 by IASLC, AJCC, and UICC; if no nodes at all are assessed, it is classi /uniFB01 ed as NX. 4 -6 The resection in both of these scenarios is\nclassi /uniFB01 ed as R0(un) (provided the resection meets other criteria for R0).\nThe seventh and eighth edition descriptions of the Rclassi /uniFB01 cation 3,6 mentioned a lobe-speci /uniFB01 c node dissection as de /uniFB01 ned by the European Society of Thoracic Surgeons 74 as an alternative to the 6-station de /uniFB01 nition of a complete node assessment. Nevertheless, the technical difference is limited -the lobe-speci /uniFB01 c assessment still requires 6 node stations; the difference is in which mediastinal stations are recommended based on the lobe involved. A recent detailed study found identical OS comparing resections de /uniFB01 ned as R0 by the IASLC 6node/station de /uniFB01 nition or by a lobe-speci /uniFB01 c de /uniFB01 nition (n ¼ 1119; 2009 -2019). 10 Another detailed study found involvement of N2 node stations not included in the lobe-speci /uniFB01 c de /uniFB01 nition in a substantial minority of resections, in both single N2 (N2a) and multistation (N2b) cohorts (n ¼ 1779; 1980 -2009). 75 Implementation of a general system is easier than a lobe-speci /uniFB01 c system. Therefore, the R-subcommittee recommends the more general 6-station de /uniFB01 nition of a complete node assessment, with the assumption that knowledgeable surgeons will include the stations most likely to be involved in an individual patient.\nExtranodal extension is de /uniFB01 ned as a /uniFB01 nding on pathologic evaluation of hilar and mediastinal nodes. This applies (provided there is no gross tumor remaining) regardless of how the nodes were resected (as intact individual nodes, in fragments, or as a node packet involving an entire node station). Extranodal extension is not contingent on identi /uniFB01 cation of a resection margin around the nodes (or whether there is extension to a resection margin). It does not apply to intraparenchymal\nnodes, which presumably are surrounded by a margin of the resected lung. The de /uniFB01 nition of extranodal extension includes tumor that is directly extending beyond the node capsule into perinodal tissue, including discontinuous tumor deposits in lymphatics or perinodal fatty tissue. By the general UICC/AJCC rules, isolated tumor cells (de /uniFB01 ned as isolated cells or clumps of cells < 0.2 mm in diameter, often identi /uniFB01 ed by special staining techniques) are not counted toward the TNM categories or stage group assignment. Such a /uniFB01 nding in hilar/ mediastinal tissues is not included in the R-classi /uniFB01 cation. Nevertheless, micrometastases (tumor deposits 0.2 -2 mm in largest dimension) in perinodal tissues count as extranodal extension.\nWhen a resection involves several R descriptors, the overall R designation is based on the highest R descriptor that applies. Direct communication between the surgeon and pathologist is encouraged to resolve questions whether or not a surface with exposed tumor represents a surgical margin.\nThe R-subcommittee recommends using the R-classi /uniFB01 cation only in the context of a surgical resection and not consider expansion to describe response to nonsurgical treatment modalities, as was previously suggested 8 ; this is congruent with current UICC policy. 76 The de /uniFB01 -nitions and descriptors are clearly focused on a surgical setting. Issues regarding the de /uniFB01 nition of response in other settings are not addressed (e.g., response after stereotactic body radiosurgery, pseudoprogression after immunotherapy). The meaning of a complete response after targeted therapy (with frequent emergence of resistance) is different than complete tumor resection. Classi /uniFB01 cation systems of response designed speci /uniFB01 cally\na Overall assessment of amount, consistency, and strength (e.g., accounting for confounders, generalizability) of evidence of within-category homogeneity and between-category discrimination regarding the descriptor.\nb Recommended assessment is /C21 6 node stations (including subcarinal and two other mediastinal stations).\nc Appears generally justi /uniFB01 ed, but not de /uniFB01 ned across tumor subgroups.\nd Applies to any site of tumor resection (i.e., primary tumor, involved nodes, resected pleural implants, resected extrathoracic metastasis).\ne Applies when identi /uniFB01 ed microscopically, regardless of how the nodes are resected (individually, in fragments, en-bloc packet of an entire node station) -provided there is no gross tumor remaining.\nf This classi /uniFB01 cation (R1) applies if a resection has been accomplished that meets criteria for R0 in a patient with a malignant pleural (or pericardial) effusion or resected nodules.\nfor nonsurgical treatment modalities should be used instead of the R-classi /uniFB01 cation.\nThe R-subcommittee recommends that the R-classi/uniFB01 cation applies to tumor resection at any site (i.e., the primary tumor, intrathoracic lymph nodes, pleural nodules, or distant metastases). Speci /uniFB01 cally, if resection of oligometastatic distant metastases is undertaken (e.g., adrenal, brain metastases), the R-classi /uniFB01 cation should apply to describe the completeness of the procedure. The R-subcommittee recommends following the UICC policy 76 of recording the site of resection -for example, R0 (thorax) or R0 (adrenal).\nWith the increasing use of de /uniFB01 nitive local therapy for oligometastatic disease, it is important to de /uniFB01 ne how the R-classi /uniFB01 cation applies when de /uniFB01 nitive local therapy is not delivered to all sites of disease simultaneously. The eighth edition AJCC and UICC books contain statements that are internally con /uniFB02 icting and ambiguous 5,76 ; IASLC has not addressed the issue in the past. 6 The R-subcommittee proposes that the R-classi/uniFB01 cation applies to a speci /uniFB01 c surgical procedure -and not count tumor in another site that is to be addressed at another time (perhaps with another treatment modality). It is important to clearly communicate the completeness of a resection, even if it is only one part of the treatment plan. It is also critical to acknowledge that another site of tumor remains to be addressed; this is essential for accurate recording in databases. Recording the site of resection -for example, R0 (thorax) and the M1 category -accomplishes this. This approach would be able to accommodate separate steps in the management strategy, a combination of treatment modalities, and communicate the completeness of a speci /uniFB01 c step.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Discussion",
+      "content": "In conjunction with proposed revisions for the ninth edition TNM classi /uniFB01 cation of lung cancer, the R-subcommittee has undertaken re /uniFB01 nement of the R-classi /uniFB01 cation. In general, the existing classi /uniFB01 cation is supported by available evidence, although in many areas, it is limited. Many clari /uniFB01 cations align with how studies have been applying the R-classi /uniFB01 cation. Therefore, we anticipate that the ninth edition R-classi /uniFB01 cation can be implemented easily. We hope that these revisions facilitate consistent recording of the R-status in health care records around the world.\nWe believe that this review provides as solid a basis for re /uniFB01 nement of the R-classi /uniFB01 cation as is currently possible despite limitations in the available data. Understanding whether an observed difference re /uniFB02 ects the resection completeness or simply an association with a confounding anatomic-, patient-, or setting-related factor is a particular challenge. This review addressed this by\nemphasizing studies that have adjusted for at least some confounders. As a crude measure, the tables list the number of factors used. Nevertheless, this does not shed light on unaddressed domains of confounding, how closely the factors used approximate the actual potential confounders, and statistical limitations when the number of events is low.\nThe R-classi /uniFB01 cation is not part of a prognostic model. Outcomes are assessed only to judge whether a potential R-descriptor is consequential enough to include. The Rstatus is a categorization of the physical presence of residual tumor after resection. Thus, the purpose of the R-classi /uniFB01 cation allows conclusions to be drawn despite ambiguities in the available data on outcomes. Furthermore, by providing clear de /uniFB01 nitions, the R-classi /uniFB01 cation establishes a universal way that terms are understood, data are collected, and results are reported. This facilitates ongoing research and the day-to-day ability to communicate and evaluate the applicability of clinical trials and guidelines to individual patients.\nThere are clearly areas of ambiguity that require more work. For example, although a thorough node evaluation is generally supported, this does not apply to all tumors. Several considerations need to be evaluated to /uniFB01 gure out how best to address this. The increased complexity would hamper implementation if the R-classi /uniFB01 cation only applied to some tumors or involved different de /uniFB01 nitions depending on tumor characteristics. Analysis of the impact of the extent of node assessment in the ninth edition IASLC database is planned. The Japan Clinical Oncology Group has completed accrual (n ¼ 1500) to a randomized trial of systematic versus selective node dissection for cI -II Non-small cell lung cancer (NSCLC); results are anticipated in 2027. 77\nAlthough the recommendation for assessment of six node stations to fully de /uniFB01 ne the pathologic stage remains, this should not be interpreted as a quality metric. Designing (and implementing) quality metrics is not the purview of the SPFC and requires consideration of factors such as validity (consistency of linkage to improved outcomes), feasibility (ability to measure and translate into practice), and relevance (variability in existing practice and applicability of the indicator).\nThe extranodal extension descriptor also requires improvement. Current data are con /uniFB02 icting and likely in /uniFB02 uenced by unaccounted confounders. Particularly with the subdivision of the N2 category in the ninth edition (N2a and N2b), this needs to be studied more thoroughly to understand whether extranodal extension itself is important or simply a marker of tumor burden or technical challenges during node dissection.\nAspects of the parenchymal margin assessment need additional attention, particularly as sublobar resection is\ngaining importance and peripheral tumors have replaced central endobronchial tumors as the predominant tumor location. The SPFC has decided that ' spread through air spaces ' (STAS, a microscopic /uniFB01 nding adjacent to the primary tumor) should be an additional histologic descriptor and not a component of the T- or R-classi/uniFB01 cation. 78 Should /uniFB01 nding foci of AIS at a parenchymal margin be included in the R-classi /uniFB01 cation? Arguments against this include the fact that, when observed, most foci that likely are AIS histologically do not progress in 10 years. 79 -81\nTechniques that can detect evidence of tumor in the bloodstream (e.g., circulating tumor cells, cell-free DNA) are not addressed in this paper. A thoughtful exploration is needed to de /uniFB01 ne what role, if any, this should play in a classi /uniFB01 cation of the completeness of surgical resection. Considerations include assay availability, standardization, false negative rates, broad applicability versus only with speci /uniFB01 c molecular markers, and context (e.g., immediately postoperatively, long-term surveillance). The most important issue is probably whether it is appropriate to view tumor detection in the blood as a measure of a surgical procedure, anatomic tumor extent, a prognostic factor, or a useful marker to guide patient management.\nIn conclusion, the R-subcommittee has assembled available evidence to inform revisions to the R-classi /uniFB01 cation of lung cancer. Although the evidence generally has upheld the R categories -R0, R(un), R1, and R2 -the review has also pointed out opportunities to clarify the de /uniFB01 nition of some descriptors in these categories. We hope that the proposed re /uniFB01 nements of the R-classi /uniFB01 cation will facilitate communication about the type of resection accomplished as the ninth edition becomes implemented. We also hope that review of the available data and knowledge gaps will stimulate research by the global thoracic community and promote continued progress.",
+      "category": "discussion",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "CReDIT Authorship Contribution Statement",
+      "content": "Frank C. Detterbeck: Conceptualization; Investigation; Methodology; Supervision; Validation; Visualization; Roles/Writing-original draft; Writing-review and editing.\nMarcin Ostrowski: Investigation; Methodology; Supervision; Validation; Visualization; Roles/Writingoriginal draft; Writing-review and editing.\nHans Hoffmann: Investigation; Methodology; Supervision; Validation; Visualization; Roles/Writingoriginal draft; Writing-review and editing.\nRamón Rami-Porta: Investigation; Methodology; Supervision; Validation; Visualization; Roles/Writingoriginal draft; Writing-review and editing.\nRay U. Osarogiagbon: Investigation; Methodology; Supervision; Validation; Visualization; Roles/Writingoriginal draft; Writing-review and editing.\nJessica Donnington: Writing-review & editing. Maurizio Infante: Writing-review & editing. Mirella Marino: Writing-review & editing. Edith M. Marom: Writing-review & editing. Jun Nakajima: Writing-review & editing. Andrew G. Nicholson: Writing-review & editing. Paul van Schil: Writing-review & editing. William D. Travis: Writing-review & editing. Ming S. Tsao: Writing-review & editing. John G. Edwards: Writing-review & editing. Hisao Asamura: Writing-review & editing.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Disclosure",
+      "content": "Drs. Asamura, Detterbeck, Edwards, Hoffmann, Infante, Marino, Nakajima, Ostrowski, Rami-Porta, Travis have nothing to disclose.Dr. Van Schil reports personal fees from BMS, personal fees from MSD, personal fees from Roche, from Janssen, outside the submitted work; and BACTS (Belgian Association for Cardiothoracic Surgery) treasurer - no fees, IASLC (International Association for the Study of Lung Cancer) president 20232025 - no feesDr. Tsao reports grants and personal fees from AstraZeneca, grants and personal fees from Bayer, grants and personal fees from Sano /uniFB01 , personal fees from Daiichi Sankyo, personal fees from Amgen, personal fees from Abbvie, outside the submitted workDr. Donington reports Amgen: advisory board, AstraZeneca: advisory board and speaker, BMS: advisory board and speaker, Merck: advisory board and speaker, Roche/Genentech: advisory board and speaker.Dr. NICHOLSON reports personal fees from MERCK, personal fees from BOEHRINGER INGELHEIM, grants and personal fees from PFIZER, personal fees from NOVARTIS, personal fees from ASTRA ZENECA, personal fees from BRISTOL MYER SQUIB, personal fees from ROCHE, personal fees from ASTRA ZENECA, personal fees from ABBVIE, personal fees from ONCOLOGICA, personal fees from UPTODATE, personal fees from EUROPEAN SOCIETY OF ONOCLOGY, personal fees from LIBERUM, personal fees from TAKEDA UK, personal fees from SANOFI, outside the submitted work; .Dr. Marom reports other from boehringer ingelheim, other from AstraZeneca, other from Merck Sharp & Dohme, outside the submitted work; Raymond U. Osarogiagbon reports grants from National Cancer Institute, during the conduct of the study; personal fees from American Cancer Society, personal fees from Biodesix, personal fees from Genentech/Roche, personal fees from Lungevity Foundation, personal fees from National Cancer Institute, personal fees from Tryptych Healthcare Partners, personal fees\nfrom AstraZeneca, personal fees from GE Healthcare, personal fees from Eli Lilly, personal fees from Gilead Sciences, personal fees from P /uniFB01 zer, outside the submitted work; In addition, Dr. Osarogiagbon has a patent Lymph node specimen collection kit issued, and a patent Method for collecting lymph nodes issued and Board Chair, Hope Foundation for Cancer Research (SWOG); Board of Scienti /uniFB01 c Advisors, National Cancer Institute; Steering Committee, National Lung Cancer Roundtable; Scienti /uniFB01 c Advisory Board, Lung Cancer Foundation of America; Scienti /uniFB01 c Advisory Board, GO2 Foundation; Scienti /uniFB01 c Advisory Board, Druckenmiller Center for Lung Cancer Research, Memorial Sloan Kettering Cancer Center; Scienti /uniFB01 c Advisory Board, LUNGevity Foundation. Founder, Oncobox Devices, Inc.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "IASLC Staging and Prognostic Factors Committee",
+      "content": "Hisao Asamura (chair), Keio University, Tokyo, Japan; Valerie Rusch (chair elect), Memorial Sloan Kettering Cancer Center, New York, New York, USA; Ramón RamiPorta (past chair), Hospital Universitari Mútua Terrassa, Terrassa, Spain; Luiz Henrique Araujo, Brazilian National Cancer Institute, Rio de Janeiro, Brazil; David Beer, University of Michigan, Ann Arbor, Michigan, USA; Pietro Bertoglio, IRCCS Azienda Ospedaliero Universitaria di Bologna, Bologna, Italy; Ricardo Beyruti, University of São Paulo Medical School, Sao Paolo, Brazil; Andrea Bille, Guy ' s Hospital, London, United Kingdom; Souheil Boubia, Department of Thoracic Surgery, University Hospital Ibn Rochd, Laboratoire de Pathologie Cellulaire et Moléculaire Hassan II University of Casablanca, Casablanca, Morocco; Elisabeth Brambilla, Centre Hospitalier Universitaire, Grenoble, France, University of Grenoble Alpes, Grenoble, France; A. K. Cangir, Ankara University Faculty of Medicine, Ankara, Turkey; David Carbone, The Ohio State University, Columbus, Ohio, USA; Vanessa Cilento, Cancer Research And Biostatistics, Seattle, Washington, USA; Casey Connolly, IASLC, Denver, Colorado, USA; Gail Darling, University of Toronto, Toronto, Canada; Frank Detterbeck, Yale University School of Medicine, New Haven, Connecticut, USA; Daniel Dibaba, Cancer Research And Biostatistics, Seattle, Washington, USA; Xavier Benoit D ' Journo, Aix-Marseille University, Marseille, France; Jessica Donington, University of Chicago, Chicago, Illinois, USA; Wilfried Eberhardt, West German Cancer Centre, University Hospital Essen, Essen, Germany; John Edwards, Northern General Hospital, Shef /uniFB01 eld, United Kingdom; Megan Eisele, Cancer Research And Biostatistics, Seattle, Washington, USA; Jeremy Erasmus, M. D. Anderson Cancer Center, Houston, Texas, USA; Wentao Fang, Department of Thoracic Surgery, Shanghai Chest Hospital, Jiaotong University\nMedical School, Shanghai, People ' s Republic of China; Dean Fennell, Leicester Cancer Research Centre, Department of Genetics and Genome Biology, University of Leicester and University Hospital of Leicester National Health Service Trust, Leicester, United Kingdom; Kwun Fong, University of Queensland Thoracic Research Centre, Brisbane, Australia; Françoise Galateau-Salle, Centre Hospitalier Universitaire, Caen, France; Oliver Gautschi, Cancer Center, Cantonal Hospital Lucerne, Lucerne, Switzerland; Ritu R. Gill, Beth Israel Lahey Health, Boston, Massachusetts, USA; Dorothy Giroux, Cancer Research And Biostatistics, Seattle, Washington, USA; Meredith Giuliani, The Princess Margaret Cancer Centre/University Health Network, Toronto, Ontario, Canada; Department of Otolaryngology - Head and Neck Surgery, The University of Toronto, Toronto, Ontario, Canada; Jin Mo Goo, Seoul National University, Seoul, Republic of Korea; Seiki Hasegawa, Hyogo College of Medicine, Nishinomiya, Japan; Emily Goren, Cancer Research And Biostatistics, Seattle, Washington, USA; Fred Hirsch, Center for Thoracic Oncology, Tisch Cancer Institute, Mount Sinai Health System, New York, New York, USA; Antje Hoering, Cancer Research And Biostatistics, Seattle, Washington, USA; Hans Hoffman, Technical University of Munich, Munich, Germany; Wayne Hofstetter, M. D. Anderson Cancer Center, Houston, Texas, USA; James Huang, Memorial Sloan Kettering Cancer Center, New York, New York, USA; Philippe Joubert, Quebec Heart and Lung Institute, Quebec, Canada; Kemp H. Kernstine, The University of Texas Southwestern Medical Center, Dallas, Texas, USA; Keith Kerr, University of Aberdeen, School of Medicine and Dentistry, Aberdeen, United Kingdom; Young Tae Kim, Seoul National University, Seoul, Republic of Korea; Hong Kwan Kim, Samsung Medical Center, Seoul, Republic of Korea; Hedy Kindler, The University of Chicago Medical Center, Chicago, Illinois, USA; Yolande Lievens, Radiation Oncology Department, Ghent University Hospital and Ghent University, Ghent, Belgium; Hui Liu, Sun Yat-Sen University Cancer Center, Guangdong Sheng, People ' s Republic of China; Donald E Low, Virginia Mason Medical Center, Seattle, Washington, USA; Gustavo Lyons, Buenos Aires British Hospital, Buenos Aires, Argentina; Heber MacMahon, University of Chicago, Chicago, Illinois, USA; Alyson Mahar, School of Nursing, Queen ' s University, Ontario, Canada; Mirella Marino, IRCCS Regina Elena National Cancer Institute, Rome, Italy; Edith M. Marom, University of Tel Aviv, the Chaim Sheba Medical Center, Tel Aviv, Israel; José-María Matilla, Valladolid University Hospital, Valladolid, Spain; Jan van Meerbeeck, Antwerp University and Antwerp University Hospital, Antwerp, Belgium; Luis M. Montuenga, Center of Applied Medical Research, University of Navarra, Pamplona, Spain and Centro de Investigación Biomédica en Red de Cáncer,\nSpain; Andrew G. Nicholson, Royal Brompton and Hare/uniFB01 eld Hospitals, Guy ' s and St Thomas ' NHS Foundation Trust and Imperial College, London, United Kingdom; Katie Nishimura, Cancer Research And Biostatistics, Seattle, Washington, USA; Anna Nowak, University of Western Australia, Perth, Australia; Isabelle Opitz, University Hospital Zurich, Zurich, Switzerland; Meinoshin Okumura, National Hospital Organization Osaka Toneyama Medical Center, Osaka, Japan; Raymond U. Osarogiagbon, Baptist Cancer Center, Memphis, Tennessee, USA; Harvey Pass, New York University, New York, New York, USA; Marc de Perrot, University of Toronto, Toronto, Canada; Helmut Prosch, Medical University of Vienna, Vienna, Austria; David Rice, M. D. Anderson Cancer Center, Houston, Texas, USA; Andreas Rimner, Memorial Sloan Kettering Cancer Center, New York, New York, USA; Adam Rosenthal, Cancer Research And Biostatistics, Seattle, Washington, USA; Enrico Ruf /uniFB01 ni, University of Torino, Torino, Italy; Shuji Sakai, Tokyo Women ' s Medical University, Tokyo, Japan; Paul Van Schil, Antwerp University and Antwerp University Hospital, (Edegem) Antwerp, Belgium; Navneet Singh, Postgraduate Institute of Medical Education and Research, Chandigarh, India; Francisco Suárez, Clínica Santa María, Santiago, Chile; Ricardo M. Terra, University of Sao Paulo, Sao Paulo, Brazil; William D Travis, Memorial Sloan Kettering Cancer Center, New York, New York, USA; Ming S. Tsao, Princess Margaret Cancer Centre, Toronto, Canada; Paula Ugalde, Brigham & Women ' s Hospital, Boston, Massachusetts, USA; Shun-ichi Watanabe, National Cancer Center Hospital, Tokyo, Japan; Ignacio Wistuba, The University of Texas M. D. Anderson Cancer Center, Houston, Texas, USA; Murry Wynes, IASLC, Denver, Colorado, USA; Yasushi Yatabe, National Cancer Center Hospital, Tokyo, Japan.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Advisory Board to the Lung Cancer Domain",
+      "content": "Samuel Armato, The University of Chicago, Chicago, USA; Lawek Berzenji, University of Antwerp, Antwerp, Belgium; Alex Brunelli, St. James ' s University Hospital, Leeds, UK; Giuseppe Cardillo, Azienda Ospedaliera San Camilo Forlanini, Rome, Italy; Jason Chang, Memorial Sloan Kettering Cancer Center, New York, New York, USA; Keneng Chen, Peking University, Beijing Cancer Hospital, Beijing, China; Wendy Cooper, Royal Prince Alfred Hospital, NSW Health Pathology, Sydney, Australia; Pier Luigi Filosso, University of Torino, Torino, Italy; Liyan Jiang, Shanghai Chest Hospital, Shanghai, People ' s Republic of China; Nagla Karim, Inova Cancer Institute-University of Virginia, Virginia, USA; Peter Kneuertz, The Ohio State University College of Medicine, Ohio, USA; Mark Krasnik, Gentofte University Hospital, Copenhagen, Denmark; Kaoru Kubota, Nippon Medical\nSchool Hospital, Tokyo, Japan; Catherine Labbe, Quebec Heart and Lung Institute, Quebec, Canada; Ho Yun Lee, Samsung Medical Center, Sungkyunkwan University School of Medicine, Seoul, Korea; Eric Lim, Imperial College and the Royal Brompton Hospital, London, United Kingdom; Geoffrey Liu, Princess Margaret Cancer Centre, University of Toronto, Toronto, Canada; Hongxu Liu, Cancer Hospital of China Medical University, Liaoning Cancer Hospital & Institute, Liaoning, People ' s Republic of China; Philip Mack, Mount Sinai, New York, New York, USA; David Naidich, NYU-Langone Medical Center, New York, New York, USA; Mizuki Nishino, Brigham and Women ' s Hospital and Dana-Farber Cancer Institute, Boston, Massachusetts, USA; Marcin Ostrowski, Medical University of Gda /C19 nsk, Gda /C19 nsk, Poland; Charles Powell, Mount Sinai School of Medicine, New York, New York, USA; Carolyn Presley, The Ohio State University, Ohio, USA; Paul Martin Putora, Kantonsspital St. Gallen, St. Gallen, Switzerland; Natasha Rekhtman, Memorial Sloan Kettering Cancer Center, New York, New York, USA; Harry Ren, Shanghai Pulmonary Hospital, Shanghai, China; M Patricia Rivera, University of North Carolina, Department of Medicine, Chapel Hill, North Carolina, USA; Gaetano Rocco, Memorial Sloan Kettering Cancer Center, New York, New York, USA; Maria Teresa Ruiz Tzukazan, Ponti /uniFB01 cal Catholic University of Rio Grande do Sul, PUCRS, Porto Alegre, Brazil; Robert Samstein, Mount Sinai, New York, New York, USA; Yu Yang Soon, National University Hospital, Harvard University Hospital, Singapore; Kenichi Suda, Kindai University Faculty of Medicine, Osaka, Japan; Martin Tammemägi, Department of Community Health Sciences, Ontario, Canada; Lynn Tanoue, Yale University, Department of Medicine, New Haven, Connecticut, USA; Akif Turna, Istanbul University-Cerrahpasa, Cerrahpasa Medical Faculty, Istanbul, Turkey; Benny Weksler, University of Tennessee Health Science Center, Tennessee, USA; Terence Williams, City of Hope Comprehensive Cancer Center, California, USA; Dawei Yang Zhongshan Hospital Fudan University, Shanghai, People ' s Republic of China; Jeff Yang, Massachusetts General Hospital/Harvard Medical School, Massachusetts, USA; Masaya Yotsukura, Department of Thoracic Surgery, National Cancer Center Hospital, Tokyo, Japan.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Advisory Board to the Thymic Tumor Domain",
+      "content": "Usman Ahmad, Cleveland Clinic, Cleveland, Ohio, USA, Thoracic Surgery, Heart, Vascular and Thoracic Institute, Cleveland Clinic and Cleveland Clinic Abu Dhabi, United Arab Emirates; Sarit Appel, Sheba Medical Center, Ramat Gan, Israel; Cecilia Brambilla, Royal Brompton and Hare /uniFB01 eld Hospital, Guy ' s and St. Thomas NHS Foundation Trust, London, UK; Conrad B. Falkson, Queen ' s\nUniversity, Kingston, Ontario, Canada; Pier Luigi Filosso, University of Torino, Torino, Italy; Giuseppe Giaccone, Weill-Cornell Medicine, New York, New York, USA; Francesco Guerrera, University of Torino, Torino, Italy; Maurizio Infante, University and Hospital Trust Azienda Ospedaliera Universitaria Integrata, Verona, Italy; Dong Kwan Kim, Asan Medical Center, Seoul, and University of Ulsan College of Medicine, Seoul, Republic of Korea; Marco Lucchi, Division of Thoracic Surgery, Azienda Ospedaliero-Universitaria Pisana, Pisa, Italy; Anja Roden, Laboratory Medicine and Pathology, Mayo Clinic Rochester, Minnesota, USA; Charles B. Simone II, New York Proton Center and Memorial Sloan Kettering Cancer Center, New York, USA.\nAdvisory Board to the Esophageal Cancer Domain Mark Ferguson, The University of Chicago, Chicago, USA.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Advisory Board to the Mesothelioma Domain",
+      "content": "Jennifer Sauter, Memorial Sloan Kettering Cancer Center, New York, New York, USA; Andrea Wolf, Icahn School of Medicine at Mount Sinai, New York, New York, USA.\nAPPENDIX 2. Chairpersons and Members of the Subcommittees of the Lung Cancer, Thymic Epithelial Tumors, Pleural Mesothelioma and Esophageal Cancer Domains of the IASLC Staging and Prognostic Factors Committee\nIASLC Staging and Prognostic Factors Committee Chair: Hisao Asamura.\nLung Cancer Domain\nLung Cancer Domain Chair. Paul Van Schil.\nLung Cancer Domain Vice Chair. Kemp H. Kernstine.\nLung Cancer Domain T Descriptors Subcommittee. Hisao Asamura (chair), Young Tae Kim (cochair) Pietro Bertoglio, A. K. Cangir, Jessica Donington, Wentao Fang, Yolande Lievens, Hiu Liu, Gustavo Lyons, Shuji Sakai, William Travis, Paula Ugalde, Paul Van Schil, Jeff Yang, Masaya Yotsukura.\nLung Cancer Domain N Descriptors Subcommittee. James Huang (chair), Raymond U. Osarogiagbon (co-chair), Andrea Bille, Giuseppe Cardillo, Kemp H. Kernstine, Hong Kwan Kim, Kaoru Kubota, Yolande Lievens, Eric Lim, Edith M. Marom, Helmut Prosch, Paul Martin Putora, David Rice, Gaetano Rocco,\nValerie Rusch, Paul Van Schil, Isabelle Opitz, Francisco Suárez, Jeff Yang, Shun-ichi Watanabe.\nLung Cancer Domain M Descriptors Subcommittee. Kwun Fong (chair), Wilfried Eberhardt (cochair), Jeremy Erasmus, Yolande Lievens, Mirella Marino, Edith M. Marom, Paul Martin Putora, Navneet Singh, Francisco Suárez.\nLung Cancer Domain Lepidic & GGO Subcommittee. William Travis (chair), Philippe Joubert (co-chair), Hisao Asamura, Frank Detterbeck, Giuseppe Cardillo, Wendy Cooper, Ritu R. Gill, Jin Mo Goo, Young Tae Kim, Ho Yun Lee, Heber MacMahon, Edith M. Marom, David Naidich, Andrew G. Nicholson, Mizuki Nishino, Helmut Prosch, Ramon Rami-Porta, Valerie Rusch, Shuji Sakai, Yasushi Yatabe, Shun-ichi Watanabe.\nLung Cancer Domain Neuroendocrine Tumors Subcommittee. Ming Tsao (chair), Andrew G. Nicholson, (co-chair), Ricardo Beyruti, Frank Detterbeck, Wilfried Eberhardt, Pier Luigi Filosso, Yolande Lievens, Eric Lim, Geoffrey Liu, José-María Matilla, Natasha Rekhtman, William Travis, Jeff Yang, Yasushi Yatabe.\nLung Cancer Domain Stage Group Subcommittee. Hisao Asamura (chair), Giuseppe Cardillo, Frank Detterbeck, John Edwards, Kwun Fong, Meredith Giuliani, James Huang, Kemp H. Kernstine, Edith M. Marom, Andrew G. Nicholson, Ramón Rami-Porta, William Travis, Ming Tsao, Paul Van Schil, Shun-ichi Watanabe.\nLung Cancer Domain Lymph Node Chart Subcommittee. Shun-ichi Watanabe (chair), Jin Mo Goo (cochair), Hisao Asamura, Hans Hoffman, James Huang, Kemp H. Kernstine, Yolanda Lievens, Raymond U. Osarogiagbon, Paul Martin Putora, Ramón Rami-Porta, Valerie Rusch, Paul Van Schil, Jeff Yang.\nLung Cancer Domain Validation and Methodology Subcommittee. Frank Detterbeck (chair), Alyson Mahar (co-chair), Hisao Asamura, Meredith Giuliani, Mirella Marino, Raymond U. Osarogiagbon, Valerie Rusch.\nLung Cancer Domain Prognostic Factors Subcommittee. Frank Detterbeck (chair), Raymond U. Osarogiagbon (co-chair), Alex Brunelli, Kwun Fong, James Huang, Young Tae Kim, Mark Krasnik, Hiu Liu, Jan van Meerbeeck, Luis M. Montuenga, Andrew G. Nicholson, Valerie Rusch, Robert Samstein, Navneet Singh, Martin Tammemägi, Ricardo Terra, Ming Tsao, Akif Turna, Terence Williams.\nLung Cancer Domain R Factor Subcommittee. John Edwards (chair), Marcin Ostrowski (co-chair), Souheil Boubia, Jessica Donnington, Hans Hoffman, Maurizio Infante, Mirella Marino, Edith M. Marom, Jun Nakajima, Andrew G. Nicholson, Paul Van Schil, William Travis, Ming Tsao, Yasushi Yatabe.\nLung Cancer Domain Imaging Subcommittee. Jim Mo Goo (chair), Ritu R. Gill (co-chair), Helmut Prosch (cochair), Samuel Armato, Hui Liu, Heber MacMahon, Edith M. Marom, David Naidich, Charles Powell, Paul Van Schil, William Travis.\nLung Cancer Domain Multiple Pulmonary Nodules Subcommittee. Frank Detterbeck (chair), Alyson Mahar (co-chair), Sarit Appel, Jason Chang, Keneng Chen, Nicolas Girard, Jin Mo Goo, Young Tae Kim, Heber MacMahon, Andrew G. Nicholson, Paul Martin Putora, Natasha Rekhtman, M Patricia Rivera, Lynn Tanoue, Ricardo M. Terra, William Travis, Paula Ugalde.\nLung Cancer Domain Molecular Subcommittee. David Carbone (co-chair), Fred Hirsch (co-chair), Luiz Henrique Araujo, Hisao Asamura, Elisabeth Brambilla, Jason Chang, Frank Detterbeck, Oliver Gautschi, Nagla Karim, Keith Kerr, Peter Kneuertz, Eric Lim, Philip Mack, José-María Matilla, Luis M. Montuenga, Andrew G. Nicholson, Raymond U. Osarogiagbon, Harvey Pass, Carolyn J Presley, Ramón Rami-Porta, Natasha Rekhtman, Harry Ren, Robert Samstein, Kenichi Suda, Ricardo M. Terra, William Travis, Ming Tsao, Terence Williams, Ignacio Wistuba, Dawei Yang, Yasushi Yatabe.\nLung Cancer Domain Database. Paula Ugalde (chair), Pietro Bertoglio (co-chair), Sarit Appel, Philippe Joubert, Catherine Labbe, Hongxu Liu, Gustavo Lyons, José-María Matilla, Robert Samstein, Ricardo Terra, Maria Teresa Ruiz Tzukazan, Benny Weksler.\nCancer Research And Biostatistics. Vanessa Cilento, Daniel Dibaba, Megan Eisele, Dorothy Giroux, Emily Goren, Antje Hoering, Katie Nishimura, Adam Rosenthal.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Thymic Epithelial Tumors Domain",
+      "content": "Enrico Ruf /uniFB01 ni (chair), James Huang (co-chair), Usman Ahmad, Sarit Appel, Andrea Bille, Souheil Boubia, Cecilia Brambilla, A. K. Cangir, Frank Detterbeck, Conrad Falkson, Wentao Fang, Pier Luigi Filosso, Giuseppe Giaccone, Nicolas Girard, Francesco Guerrera, Maurizio Infante, Dong Kwan Kim, Marco Lucchi, Mirella Marino, Edith M. Marom, Andrew Nicholson, Meinoshin Okumura, Andreas Rimner, Anja Roden, Charles B. Simone II.\nThymic Domain T descriptor. Andrew Nicholson (chair), Cecilia Brambilla, A. K. Cangir, Maurizio Infante, Mirella Marino, Edith M. Marom, Meinoshin Okumura.\nThymic Domain N descriptor. Wentao Fang (chair), Frank Detterbeck, Pier Luigi Filosso, Marco Lucchi, Edith M. Marom, Charles B. Simone II.\nThymic Domain M descriptor. Nicolas Girard (chair), Usman Ahmad, Sarit Appel, Conrad Falkson, Wentao Fang, Giuseppe Giaccone, Dong Kwan Kim, Edith M. Marom, Andreas Rimner.\nThymic Domain Database subcommittee. Pier Luigi Filosso (chair), Usman Ahmad, Andrea Billè, Souheil Boubia, Frank Detterbeck, Wentao Fang, Nicolas Girard, Francesco Guerrera, James Huang, Dong Kwan Kim, Meinoshin Okumura, Enrico Ruf /uniFB01 ni.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Pleural Mesothelioma Domain",
+      "content": "Valerie Rusch (chair), Anna K. Nowak (co-chair), Pietro Bertoglio, Andrea Billè, Ayten K. Cangir, Dean Fennell, Françoise Galateau, Ritu R. Gill, Seiki Hasegawa, Hong Kwan Kim, Hedy Kindler, Joseph Friedberg, Jan van Meerbeeck, Isabelle Opitz, Harvey Pass, Marc de Perrot, David Rice, Andreas Rimner, Robert T. Ripley, Jennifer Sauter, Ming S. Tsao, David Waller, Andrea Wolf.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Esophageal Cancer Domain",
+      "content": "Wentao Fang (chair), Xavier D ' Journo (co-chair), Gail Darling, Jeremy Erasmus, Mark Ferguson, Wayne Hofstetter, Hong Kwan Kim, Donald Low, Paula Ugalde.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Supplementary Data",
+      "content": "Note: To access the supplementary material accompanying this article, visit the online version of the Journal of Thoracic Oncology at www.jto.org and at https://doi. org/10.1016/j.jtho.2024.03.021.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "References",
+      "content": "1. American Joint Committee for Cancer Staging and End Results Reporting. Manual for Staging of Cancer . 1st ed. Chicago, IL: American Joint Committee; 1977.\n2. Goldstraw P , Crowley J, Chansky K, et al. The IASLC Lung Cancer Staging Project: proposals for the revision of the TNM stage groupings in the forthcoming (seventh) edition of the TNM Classi /uniFB01 cation of malignant tumours. J Thorac Oncol . 2007;2:706 -714.\n3. Goldstraw P . IASLC Staging Manual in Thoracic Oncology . Orange Park, FL: Editorial Rx Press; 2009.\n4. UICC. TNM Classi /uniFB01 cation of Malignant Tumors . 8th ed. Hoboken, NJ: Wiley-Blackwell; 2017.\n5. Amin M. AJCC Cancer Staging Manual . 8th ed. Berlin, Germany: Springer; 2017.\n6. Rami-Porta R. IASLC Staging Manual in Thoracic Oncology . 2nd ed. Orange Park, FL: Editorial Rx Press; 2016.\n7. Rami-Porta R. The evolving concept of complete resection in lung cancer surgery. Cancers (Basel) . 2021;13:2583.\n8. Wittekind C, Compton CC, Brierley J, Sobin LH. TNM Supplement: A Commentary on Uniform Use . 4th ed. Oxford, UK: Blackwell Publishers; 2012.\n9. Ren Y, She Y , Tang H, et al. Prognostic evaluation of the proposed residual tumor classi /uniFB01 cation in a Chinese nonsmall cell lung cancer population. J Surg Oncol . 2022;125:1061 -1070.\n10. Osarogiagbon RU, Faris NR, Stevens W, et al. Beyond margin status: population-based validation of the proposed International Association for the Study of Lung Cancer residual tumor classi /uniFB01 cation recategorization. J Thorac Oncol . 2020;15:371 -382.\n11. Gagliasso M, Migliaretti G, Ardissone F . Assessing the prognostic impact of the International Association for the Study of Lung Cancer proposed de /uniFB01 nitions of complete, uncertain, and incomplete resection in non-small cell lung cancer surgery. Lung Cancer . 2017;111:124 -130.\n12. Edwards JG, Chansky K, Van Schil P , et al. The IASLC lung cancer staging project: analysis of resection margin status and proposals for residual tumor descriptors for non-small cell lung cancer. J Thorac Oncol . 2020;15:344 -359.\n13. Kadomatsu Y, Nakamura S, Ueno H, et al. Prognostic value of uncertain resection for overall survival in nonsmall cell lung cancer. Ann Thorac Surg . 2022;114:1262 -1268.\n14. Yun JK, Lee GD, Choi S, et al. A validation study of the recommended change in residual tumor descriptors proposed by the International Association for the Study of Lung Cancer for patients with pN2 Non-small cell lung cancer (NSCLC). J Thorac Oncol . 2021;16:817 -826.\n15. Rami-Porta R, Mateu-Navarro M, Freixinet J, et al. Type of resection and prognosis in lung cancer. Experience of a multicentre study. Eur J Cardiothorac Surg . 2005;28:622 -628.\n16. Lee J, Lee J, Hong YS, et al. Validation of the IASLC residual tumor classi /uniFB01 cation in patients with Stage III-N2 non-small cell lung cancer undergoing neoadjuvant chemoradiotherapy followed by surgery. Ann Surg . 2023;277:e1355 -e1363.\n17. Hancock JG, Rosen JE, Antonicelli A, et al. Impact of adjuvant treatment for microscopic residual disease after non-small cell lung cancer surgery. Ann Thorac Surg . 2015;99:406 -413.\n18. Lee J, Hong YS, Cho J, et al. Reclassifying the International Association for the Study of Lung Cancer residual tumor classi /uniFB01 cation according to the extent of nodal dissection for Non-small cell lung cancer (NSCLC): one size does not /uniFB01 t all. J Thorac Oncol . 2022;17:890 -899.\n19. Zheng H, Hu XF , Jiang GN, et al. De /uniFB01 ne relative incomplete resection by highest mediastinal lymph node metastasis for non-small cell lung cancers: rationale based on prognosis analysis. Lung Cancer . 2011;72:348 -354.\n20. Park SY, Byun GE, Lee CY, et al. Clinical implications of uncertain resection in scenarios of metastasis of the highest or most distant mediastinal lymph node station following surgical treatment of non-small-cell lung cancer. Lung Cancer . 2019;138:1 -5.\n21. Wang SD, Liu GW, Li X, Sui XZ, Yang F , Wang J. Propensity-matched analysis of clinical relevance of the highest mediastinal lymph node metastasis. Ann Thorac Surg . 2021;111:277 -282.\n22. Vallières E, Van Houtte P , Travis WD, Rami-Porta R, Goldstraw P , International Association for the Study of Lung Cancer (IASLC) International Staging Committee. Carcinoma in situ at the bronchial resection margin: a review. J Thorac Oncol . 2011;6:1617 -1623.\n23. Lee GD, Kim DK, Jang SJ, et al. Signi /uniFB01 cance of R1resection at the bronchial margin after surgery for non-small-cell lung cancer. Eur J Cardiothorac Surg . 2017;51:176 -181.\n24. Kawaguchi T, Watanabe S, Kawachi R, Suzuki K, Asamura H. The impact of residual tumor morphology on prognosis, recurrence, and /uniFB01 stula formation after lung cancer resection. J Thorac Oncol . 2008;3:599 -603.\n25. Banerjee AK. Preinvasive lesions of the bronchus. J Thorac Oncol . 2009;4:545 -551.\n26. Massard G, Doddoli C, Gasser B, et al. Prognostic implications of a positive bronchial resection margin. Eur J Cardiothorac Surg . 2000;17:557 -565.\n27. Osarogiagbon RU, Lin CC, Smeltzer MP , Jemal A. Prevalence, prognostic implications, and survival modulators of incompletely resected non-small cell lung cancer in the U.S. National Cancer Data Base. J Thorac Oncol . 2016;11:e5 -e16.\n28. Nicholson AG, Perry LJ, Cury PM, et al. Reproducibility of the WHO/IASLC grading system for pre-invasive squamous lesions of the bronchus: a study of inter-observer and intra-observer variation. Histopathology . 2001;38:202 -208.\n29. Bota S, Auliac JB, Paris C, et al. Follow-up of bronchial precancerous lesions and carcinoma in situ using /uniFB02 uorescence endoscopy. Am J Respir Crit Care Med . 2001;164:1688 -1693.\n30. Wisnivesky JP , Yung RC, Mathur PN, Zulueta JJ. Diagnosis and treatment of bronchial intraepithelial neoplasia and early lung cancer of the central airways: diagnosis and management of lung cancer, 3rd ed: American College of Chest Physicians evidence-based clinical practice guidelines. Chest . 2013;143:e263S -e277S.\n31. Alaa M, Shibuya K, Fujiwara T , et al. Risk of lung cancer in patients with preinvasive bronchial lesions followed by auto /uniFB02 uorescence bronchoscopy and chest computed tomography. Lung Cancer . 2011;72:303 -308.\n32. van Boerdonk RA, Smesseim I, Heideman DA, et al. Close surveillance with long-term follow-up of subjects with preinvasive endobronchial lesions. Am J Respir Crit Care Med . 2015;192:1483 -1489.\n33. Jeremy George P , Banerjee AK, Read CA, et al. Surveillance for the detection of early lung cancer in patients with bronchial dysplasia. Thorax . 2007;62:43 -50.\n34. Wang CM, Ling ZG, Wu YB, et al. Prognostic value of pleural lavage cytology in patients with lung cancer\nresection: an updated meta-analysis. PLoS One . 2016;11:e0157518.\n35. Kameyama K, Okumura N, Miyaoka E, et al. Prognostic value of intraoperative pleural lavage cytology for nonsmall cell lung cancer: the in /uniFB02 uence of positive pleural lavage cytology results on T classi /uniFB01 cation. J Thorac Cardiovasc Surg . 2014;148:2659 -2664.\n36. Aokage K, Yoshida J, Ishii G, et al. The impact on survival of positive intraoperative pleural lavage cytology in patients with non-small-cell lung cancer. J Thorac Cardiovasc Surg . 2010;139:1246 -1252.e1.\n37. Lim E, Clough R, Goldstraw P , et al. Impact of positive pleural lavage cytology on survival in patients having lung resection for non-small-cell lung cancer: an international individual patient data meta-analysis. J Thorac Cardiovasc Surg . 2010;139:1441 -1446.\n38. Mizuno K, Isaka M, Ono M, et al. Impact of positive pleural lavage cytology for each stage of non-small cell lung cancer patients. Ann Thorac Surg . 2021;111:1696 -1702.\n39. Nakao M, Hoshi R, Ishikawa Y, et al. Prognosis of nonsmall-cell lung cancer patients with positive pleural lavage cytology. Interact Cardiovasc Thorac Surg . 2015;20:777 -782.\n40. Tomizawa K, Nishino M, Sesumi Y, et al. Prognostic impact of pleural lavage cytology in patients with primary lung cancer. Lung Cancer . 2016;102:60 -64.\n41. Saso S, Rao C, Ashra /uniFB01 an H, Ghaem-Maghami S, Darzi A, Athanasiou T. Positive pre-resection pleural lavage cytology is associated with increased risk of lung cancer recurrence in patients undergoing surgical resection: a meta-analysis of 4450 patients. Thorax . 2012;67:526 -532.\n42. Detterbeck FC, Kumbasar U. Systematic /uniFB02 aws in the use of systematic reviews and meta-analyses. Chest . 2022;161:1150 -1152.\n43. Kaneda M, Yokoi K, Ito S, et al. The value of pleural lavage cytology examined during surgery for primary lung cancer. Eur J Cardiothorac Surg . 2012;41:1335 -1341.\n44. Hokka D, Uchino K, Tane K, et al. Pleural lavage cytology as an independent prognostic factor in non-small-cell lung cancer patients with stage I disease and adenocarcinoma. Mol Clin Oncol . 2015;3:244 -248.\n45. Shintani Y, Ohta M, Iwasaki T, et al. Intraoperative pleural lavage cytology after lung resection as an independent prognostic factor for staging lung cancer. J Thorac Cardiovasc Surg . 2009;137:835 -839.\n46. Nakagawa T, Okumura N, Kokado Y, Miyoshi K, Matsuoka T, Kameyama K. Clinical relevance of intraoperative pleural lavage cytology in non-small cell lung cancer. Ann Thorac Surg . 2007;83:204 -208.\n47. Okada M, Sakamoto T, Nishio W, Uchino K, Tsuboshima K, Tsubota N. Pleural lavage cytology in non-small cell lung cancer: lessons from 1000 consecutive resections. J Thorac Cardiovasc Surg . 2003;126:1911 -1915.\n48. Shoji F , Yamazaki K, Kouso H, Mori R, Takeo S. The impact of pleural lavage cytology both before and after lung resection on recurrence of non-small cell lung cancer. Ann Thorac Surg . 2016;101:2141 -2146.\n49. Higashiyama M, Oda K, Okami J, et al. Prognostic value of intraoperative pleural lavage cytology for lung cancer without carcinomatous pleuritis: importance in patients with early stage disease during long-term follow-up. Eur J Cardiothorac Surg . 2009;35:337 -342.\n50. Kawachi R, Nakazato Y, Masui K, Takei H, Koshi-ishi Y, Goya T. Clinical signi /uniFB01 cance of pleural lavage cytology for non-small cell lung cancer: is surgical resection valid for patients with positive pleural lavage cytology? Interact Cardiovasc Thorac Surg . 2009;9:265 -268.\n51. Baba T, Uramoto H, Kuwata T, et al. Intrapleural chemotherapy improves the survival of non-small cell lung cancer patients with positive pleural lavage cytology. Surg Today . 2013;43:648 -653.\n52. Ichinose Y, Tsuchiya R, Koike T, et al. A prematurely terminated phase III trial of intraoperative intrapleural hypotonic cisplatin treatment in patients with resected non-small cell lung cancer with positive pleural lavage cytology: the incidence of carcinomatous pleuritis after surgical intervention. J Thorac Cardiovasc Surg . 2002;123:695 -699.\n53. Riquet M, Achour K, Foucault C, Le Pimpec Barthes F , Dujon A, Cazes A. Microscopic residual disease after resection for lung cancer: a multifaceted but poor factor of prognosis. Ann Thorac Surg . 2010;89:870 -875.\n54. Lequaglie C, Conti B, Brega Massone PP , Giudice G. Unsuspected residual disease at the resection margin after surgery for lung cancer: fate of patients after long-term follow-up. Eur J Cardiothorac Surg . 2003;23:229 -232.\n55. Liu W, Shao Y , Guan B, et al. Extracapsular extension is a powerful prognostic factor in stage IIA-IIIA non-small cell lung cancer patients with completely resection. Int J Clin Exp Pathol . 2015;8:11268 -11277.\n56. Shih BC, Jeon JH, Chung JH, et al. Prognostic signi /uniFB01 -cance of the extranodal extension of regional lymph nodes in Stage III-N2 non-small-cell lung cancer after curative resection. J Clin Med . 2021;10:3324.\n57. Lee YC, Wu CT, Kuo SW, Tseng YT, Chang YL. Signi /uniFB01 cance of extranodal extension of regional lymph nodes in surgically resected non-small cell lung cancer. Chest . 2007;131:993 -999.\n58. Müller C, Taber S, Pfannschmidt J, Griff S. Extracapsular extension of pN2 lymph node metastases is not prognostically signi /uniFB01 cant in surgically resected patients with non-small cell lung cancer. Innov Surg Sci . 2023;8:9 -16.\n59. Yoon SK, Yun JK, Lee GD, et al. Prognostic signi /uniFB01 cance of extranodal extension in patients with pathologic N1 nonsmall cell lung cancer undergoing complete resection. J Thorac Dis . 2023;15:3245 -3255.\n60. Shin S, Kim HK, Choi YS, Kim K, Kim J, Shim YM. Prognosis of unexpected and expected pathologic N1 non-small cell lung cancer. Ann Thorac Surg . 2013;96:969 -975.\n61. Borghetti P , Barbera F , Bonù ML, et al. Resected pN1 non-small cell lung cancer: recurrence patterns and nodal risk factors may suggest selection criteria for post-operative radiotherapy. Radiol Med . 2016;121:696 -703.\n62. Luchini C, Veronese N, Nottegar A, et al. Extranodal extension of nodal metastases is a poor prognostic\nmoderator in non-small cell lung cancer: a meta-analysis. Virchows Arch . 2018;472:939 -947.\n63. Rami-Porta R, Ball D, Crowley J, et al. The IASLC Lung Cancer Staging Project: proposals for the revision of the T descriptors in the forthcoming (seventh) edition of the TNM classi /uniFB01 cation for lung cancer. J Thorac Oncol . 2007;2:593 -602.\n64. Shimizu J, Oda M, Morita K, et al. Comparison of pleuropneumonectomy and limited surgery for lung cancer with pleural dissemination. J Surg Oncol . 1996;61:1 -6.\n65. Iida T , Shiba M, Yoshino I, et al. Surgical intervention for non-small-cell lung cancer patients with pleural carcinomatosis: results from the Japanese lung cancer registry in 2004. J Thorac Oncol . 2015;10:1076 -1082.\n66. Hu J, Chen Y, Zhu X, et al. Surgical choice of non-small cell lung cancer with unexpected pleural dissemination intraoperatively. BMC Cancer . 2021;21:445.\n67. Ren YJ, She YL, Dai CY , Jiang GN, Fei K, Chen C. Primary tumour resection showed survival bene /uniFB01 ts for non-smallcell lung cancers with unexpected malignant pleural dissemination. Interact Cardiovasc Thorac Surg . 2016;22:321 -326.\n68. Ren Y, Dai C, Shen J, et al. The prognosis after contraindicated surgery of Non-small cell lung cancer (NSCLC) patients with malignant pleural effusion (M1a) may be better than expected. Oncotarget . 2016;7:26856 -26865.\n69. Li H, Liu T , Sun Z, Wang Z, Liu X, Yang F . New horizons in non-small-cell lung cancer patients with ipsilateral pleural dissemination (M1a): review of the literature. Ann Transl Med . 2021;9:959.\n70. Li H, Sun Z, Yang F , Sui X, Liu T , Wang J. Primary tumour resection in non-small-cell lung cancer patients with ipsilateral pleural dissemination (M1a): a populationbased study. Eur J Cardiothorac Surg . 2019;55:1121 -1129.\n71. Ichinose Y , Tsuchiya R, Koike T , et al. The prognosis of patients with non-small cell lung cancer found to have carcinomatous pleuritis at thoracotomy. Surg Today . 2000;30:1062 -1066.\n72. Fan L, Yang H, Han K, et al. Surgical resection of primary tumors provides survival bene /uniFB01 ts for lung cancer patients with unexpected pleural dissemination. Front Surg . 2021;8:679565.\n73. Xu Y, Chen N, Wang Z, et al. Should primary tumor be resected for non-small cell lung cancer with malignant pleural disease unexpectedly found during operation?-a systemic review and meta-analysis. J Thorac Dis . 2016;8:2843 -2852.\n74. Lardinois D, De Leyn P , Van Schil P , et al. ESTS guidelines for intraoperative lymph node staging in nonsmall cell lung cancer. Eur J Cardiothorac Surg . 2006;30:787 -792.\n75. Riquet M, Rivera C, Pricopi C, et al. Is the lymphatic drainage of lung cancer lobe-speci /uniFB01 c? A surgical appraisal. Eur J Cardiothorac Surg . 2015;47:543 -549.\n76. Wittekind C, Brierley J, Lee A, van Eycken E. TNM Supplement: A Commentary on Uniform Use . 5th ed. Oxford, UK: Wiley-Blackwell; 2019.\n77. Hishida T , Saji H, Watanabe SI, et al. A randomized Phase III trial of lobe-speci /uniFB01 c vs. systematic nodal dissection for clinical stage I-II non-small cell lung cancer (JCOG1413). Jpn J Clin Oncol . 2018;48:190 -194.\n78. Travis WD, Eisele M, Nishimura KK, et al. The International Association for the Study of Lung Cancer (IASLC) Staging Project for Lung Cancer: Recommendation to Introduce Spread Through Air Spaces as a Histologic Descriptor in the Ninth Edition of the TNM Classi /uniFB01 cation of Lung Cancer. Analysis of 4061 Pathologic Stage I Non-small cell lung cancer (NSCLC). J Thorac Oncol . 2024;19:1028 -1051.\n79. Kobayashi Y, Fukui T , Ito S, et al. How long should small lung lesions of ground-glass opacity be followed? J Thorac Oncol . 2013;8:309 -314.\n80. Mase VJ Jr, Detterbeck FC. Approach to the subsolid nodule. Clin Chest Med . 2020;41:99 -113.\n81. Sawada S, Yamashita N, Sugimoto R, Ueno T, Yamashita M. Long-term outcomes of patients with ground-glass opacities detected using CT scanning. Chest . 2017;151:308 -315.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    }
+  ],
+  "tables": [
+    {
+      "id": "table",
+      "caption": "",
+      "headers": [
+        "",
+        "",
+        "",
+        "",
+        "Adjusted HR for OS",
+        "Adjusted HR for OS",
+        "",
+        ""
+      ],
+      "rows": [
+        [
+          "First Author",
+          "n",
+          "Cohort",
+          "% Limited N Among R(un)",
+          "R0 vs. R(un)",
+          "R(un) vs. R1,2",
+          "Multivariate Adjustment",
+          "Data Source, Years"
+        ],
+        [
+          "Ren 9",
+          "5293",
+          "All",
+          "85%",
+          "1.41",
+          "1.23",
+          "10 factors",
+          "China 2009 - 2013"
+        ],
+        [
+          "Osarogiagbon 10",
+          "3361",
+          "All",
+          "98%",
+          "1.36",
+          "2.18",
+          "8 factors",
+          "MSQSR 2009 - 2019"
+        ],
+        [
+          "Gagliasso 11",
+          "1277",
+          "All",
+          "58%",
+          "1.69",
+          "1.70",
+          "9 factors",
+          "Torino 1998 - 2007"
+        ],
+        [
+          "Edwards 12",
+          "8839",
+          "pI",
+          "96%",
+          "1.22",
+          "-",
+          "4 factors",
+          "IASLC 1999 - 2010"
+        ],
+        [
+          "Ren 9",
+          "3733",
+          "N0",
+          "85%",
+          "1.76",
+          "2.38",
+          "10 factors",
+          "China 2009 - 2013"
+        ],
+        [
+          "Osarogiagbon 10",
+          "2453",
+          "N0",
+          "98%",
+          "1.31",
+          "1.81",
+          "8 factors",
+          "MSQSR 2009 - 2019"
+        ],
+        [
+          "Edwards 12",
+          "3494",
+          "N þ",
+          "96%",
+          "1.27",
+          "1.36 a",
+          "4 factors",
+          "IASLC 1999 - 2010"
+        ],
+        [
+          "Ren 9",
+          "1556",
+          "N þ",
+          "85%",
+          "1.14",
+          "1.61",
+          "10 factors",
+          "China 2009 - 2013"
+        ],
+        [
+          "Osarogiagbon 10",
+          "682",
+          "N þ",
+          "98%",
+          "1.24",
+          "2.15",
+          "8 factors",
+          "MSQSR 2009 - 2019"
+        ],
+        [
+          "Kadomatsu 13",
+          "119",
+          "N þ",
+          "34%",
+          "2.66",
+          "-",
+          "6 factors",
+          "Japan 2014 - 2015"
+        ],
+        [
+          "Yun 14",
+          "1039",
+          "N2",
+          "10%",
+          "1.06",
+          "1.40",
+          "10 factors",
+          "Korea 2004 - 2018"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "",
+      "headers": [
+        "Table 2. Studies Evaluating the Limited Node Assessment R0(un) Descriptor",
+        "Table 2. Studies Evaluating the Limited Node Assessment R0(un) Descriptor",
+        "Table 2. Studies Evaluating the Limited Node Assessment R0(un) Descriptor",
+        "Table 2. Studies Evaluating the Limited Node Assessment R0(un) Descriptor",
+        "Table 2. Studies Evaluating the Limited Node Assessment R0(un) Descriptor",
+        "Table 2. Studies Evaluating the Limited Node Assessment R0(un) Descriptor",
+        "Table 2. Studies Evaluating the Limited Node Assessment R0(un) Descriptor",
+        "Table 2. Studies Evaluating the Limited Node Assessment R0(un) Descriptor"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "Adjusted HR for OS",
+          "Adjusted HR for OS",
+          "",
+          ""
+        ],
+        [
+          "First Author",
+          "n",
+          "Cohort",
+          "% cI",
+          "R0 vs. R0(un)",
+          "R0(un) vs. R1,2",
+          "Multivariate Adjustment",
+          "Data Source, Years"
+        ],
+        [
+          "R0(un) [ partially compliant node assessment",
+          "R0(un) [ partially compliant node assessment",
+          "R0(un) [ partially compliant node assessment",
+          "R0(un) [ partially compliant node assessment",
+          "R0(un) [ partially compliant node assessment",
+          "R0(un) [ partially compliant node assessment",
+          "R0(un) [ partially compliant node assessment",
+          "R0(un) [ partially compliant node assessment"
+        ],
+        [
+          "Osarogiagbon 10",
+          "3357",
+          "All",
+          "69%",
+          "1.28",
+          "1.7",
+          "8 factors",
+          "MSQSR 2009 - 2019"
+        ],
+        [
+          "Lee 18",
+          "4765",
+          "All",
+          "74%",
+          "1.07",
+          "-",
+          "6 factors",
+          "Korea 2008 - 2016"
+        ],
+        [
+          "R0(un) [ Nx (no nodes assessed)",
+          "R0(un) [ Nx (no nodes assessed)",
+          "R0(un) [ Nx (no nodes assessed)",
+          "R0(un) [ Nx (no nodes assessed)",
+          "R0(un) [ Nx (no nodes assessed)",
+          "R0(un) [ Nx (no nodes assessed)",
+          "R0(un) [ Nx (no nodes assessed)",
+          "R0(un) [ Nx (no nodes assessed)"
+        ],
+        [
+          "Osarogiagbon 10",
+          "3357",
+          "All",
+          "69%",
+          "1.74",
+          "1.25",
+          "8 factors",
+          "MSQSR 2009 - 2019"
+        ],
+        [
+          "Lee 18",
+          "3158",
+          "All",
+          "72%",
+          "0.99",
+          "-",
+          "6 factors",
+          "Korea 2008 - 2016"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "",
+      "headers": [
+        "",
+        "",
+        "",
+        "Adjusted HR for OS",
+        "Adjusted HR for OS",
+        "",
+        "",
+        ""
+      ],
+      "rows": [
+        [
+          "First Author",
+          "n",
+          "Cohort",
+          "R0 vs. R0(un)-HN þ",
+          "R0(un)-HN þ vs. other R(un)",
+          "Multivariate Adjustment",
+          "Adjusted for N2 Subtype?",
+          "Data Source, Years"
+        ],
+        [
+          "Edwards 12",
+          "1820",
+          "N2",
+          "1.32",
+          "-",
+          "4 factors",
+          "-",
+          "IASLC 1999 - 2010"
+        ],
+        [
+          "Ren 9",
+          "1207",
+          "N2",
+          "1.23",
+          "0.94",
+          "10 factors",
+          "-",
+          "China 2009 - 2013"
+        ],
+        [
+          "Yun a ,14",
+          "1039",
+          "N2",
+          "1.06",
+          "(1.40) b",
+          "10 factors",
+          "Yes",
+          "Korea 2004 - 2018"
+        ],
+        [
+          "Zheng 19",
+          "549",
+          "N2",
+          "1.58",
+          "-",
+          "13 factors",
+          "Yes",
+          "China 1999 - 2005"
+        ],
+        [
+          "Park 20",
+          "339",
+          "N2",
+          "1.02",
+          "-",
+          "10 factors",
+          "Yes",
+          "Korea 2000 - 2015"
+        ],
+        [
+          "Osarogiagbon 10",
+          "231",
+          "N2",
+          "1.08",
+          "1.07",
+          "8 factors",
+          "-",
+          "MSQSR 2009 - 2019"
+        ],
+        [
+          "Wang c ,21",
+          "218",
+          "N2",
+          "1.00",
+          "-",
+          "6 factors",
+          "-",
+          "China 2004 - 2015"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/260'}",
+      "headers": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Adjusted HR R0 vs. R1(cy þ )",
+        "Adjusted HR R0 vs. R1(cy þ )",
+        "",
+        ""
+      ],
+      "rows": [
+        [
+          "First Author",
+          "n",
+          "Cohort",
+          "% cI",
+          "Lavage Timing",
+          "OS",
+          "RFS",
+          "Multivariate Adjustment",
+          "Data Source, Years"
+        ],
+        [
+          "Lim a ,37",
+          "8763",
+          "All",
+          "-",
+          "-",
+          "1.47",
+          "-",
+          "13 factors",
+          "IPLCC -"
+        ],
+        [
+          "Kameyama a ,35",
+          "4171",
+          "All",
+          "65% b",
+          "-",
+          "1.57",
+          "-",
+          "7 factors",
+          "Japan LCR 2004"
+        ],
+        [
+          "Kaneda a ,43",
+          "3231",
+          "All",
+          "60% b",
+          "Pre",
+          "1.44",
+          "1.36",
+          "6 factors",
+          "Japan c 2000 - 207"
+        ],
+        [
+          "Aokage 36",
+          "2178",
+          "All",
+          "87%",
+          "Pre",
+          "1.54",
+          "1.45",
+          "14 factors",
+          "Japan 1992 - 2006"
+        ],
+        [
+          "Nakao 39",
+          "1572",
+          "All",
+          "79%",
+          "Pre",
+          "1.23",
+          "-",
+          "8 factors",
+          "Japan 1991 - 2009"
+        ],
+        [
+          "Hokka 44",
+          "1317",
+          "All",
+          "64%",
+          "Pre",
+          "1.54",
+          "-",
+          "11 factors",
+          "Japan 1987 - 2004"
+        ],
+        [
+          "Mizuno 38",
+          "1293",
+          "All",
+          "63% b",
+          "Pre",
+          "1.34",
+          "1.7",
+          "7 factors",
+          "Japan 2002 - 2014"
+        ],
+        [
+          "Shintani 45",
+          "1271",
+          "All",
+          "57% b",
+          "Pre",
+          "1.07",
+          "-",
+          "8 factors",
+          "Japan 1985 - 2005"
+        ],
+        [
+          "Nakagawa a ,46",
+          "1025",
+          "All",
+          "68%",
+          "Pre",
+          "3.42",
+          "-",
+          "6 factors",
+          "Japan 1993 - 2005"
+        ],
+        [
+          "Okada 47",
+          "1000",
+          "All",
+          "59% b",
+          "Pre",
+          "1.63",
+          "-",
+          "8 factors",
+          "Japan 1987 - 2001"
+        ],
+        [
+          "Tomizawa a ,40",
+          "754",
+          "All",
+          "69%",
+          "Pre",
+          "2.25",
+          "-",
+          "10 factors",
+          "Japan 2007 - 13"
+        ],
+        [
+          "Shoji 48",
+          "700",
+          "All",
+          "77%",
+          "Pre",
+          "-",
+          "1.14",
+          "10 factors",
+          "Japan 1994 - 2011"
+        ],
+        [
+          "Higashiyama 49",
+          "679",
+          "All",
+          "57% b",
+          "Pre",
+          "1.67",
+          "-",
+          "15 factors",
+          "Japan 1988 - 1997"
+        ],
+        [
+          "Kawachi 50",
+          "597",
+          "All",
+          "71% b",
+          "Pre",
+          "2.96",
+          "-",
+          "5 factors",
+          "Japan 1993 - 2006"
+        ],
+        [
+          "Mizuno 38",
+          "818",
+          "pI",
+          "-",
+          "Pre",
+          "1.91",
+          "2.68",
+          "7 factors",
+          "Japan 2002 - 2014"
+        ],
+        [
+          "Higashiyama 49",
+          "395",
+          "pI",
+          "-",
+          "Pre",
+          "1.75",
+          "-",
+          "9 factors",
+          "Japan 1988 - 1997"
+        ],
+        [
+          "Aokage 36",
+          "2178",
+          "All",
+          "87%",
+          "Post",
+          "1.77",
+          "1.55",
+          "14 factors",
+          "Japan 1992 - 2006"
+        ],
+        [
+          "Shintani 45",
+          "1271",
+          "All",
+          "57% b",
+          "Post",
+          "2.31",
+          "-",
+          "8 factors",
+          "Japan 1985 - 2005"
+        ],
+        [
+          "Shoji 48",
+          "700",
+          "All",
+          "77%",
+          "Post",
+          "-",
+          "1.56",
+          "10 factors",
+          "Japan 1994 - 2011"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/347'}",
+      "headers": [
+        "",
+        "n",
+        "",
+        "n",
+        "",
+        "Adjusted HR for OS",
+        "Adjusted HR for OS",
+        "Multivariate Adjustment",
+        "Data Source,"
+      ],
+      "rows": [
+        [
+          "First Author",
+          "Total",
+          "Cohort",
+          "R1 Cases",
+          "% Recur at Margin",
+          "R0 vs. R1",
+          "R1 vs. R2",
+          "",
+          "Years"
+        ],
+        [
+          "Multivariate adjusted",
+          "Multivariate adjusted",
+          "Multivariate adjusted",
+          "Multivariate adjusted",
+          "Multivariate adjusted",
+          "Multivariate adjusted",
+          "Multivariate adjusted",
+          "Multivariate adjusted",
+          "Multivariate adjusted"
+        ],
+        [
+          "Riquet 53",
+          "4026",
+          "All",
+          "216",
+          "-",
+          "NR",
+          "-",
+          "7",
+          "France 1984 - 2006"
+        ],
+        [
+          "Osarogiagbon 10",
+          "3316",
+          "All",
+          "153",
+          "-",
+          "2.08",
+          "-",
+          "8",
+          "MSQSR 2009 - 2019"
+        ],
+        [
+          "Lee 23",
+          "1249",
+          "pI,II",
+          "16",
+          "12% a",
+          "2.21 b",
+          "-",
+          "9",
+          "Korea 1994 - 2012"
+        ],
+        [
+          "Lee 23",
+          "533",
+          "pIII",
+          "26",
+          "12% a",
+          "1.05 b",
+          "-",
+          "9",
+          "Korea 1994 - 2012"
+        ],
+        [
+          "Strati /uniFB01 ed by stage, but unadjusted",
+          "Strati /uniFB01 ed by stage, but unadjusted",
+          "Strati /uniFB01 ed by stage, but unadjusted",
+          "Strati /uniFB01 ed by stage, but unadjusted",
+          "Strati /uniFB01 ed by stage, but unadjusted",
+          "Strati /uniFB01 ed by stage, but unadjusted",
+          "Strati /uniFB01 ed by stage, but unadjusted",
+          "Strati /uniFB01 ed by stage, but unadjusted",
+          "Strati /uniFB01 ed by stage, but unadjusted"
+        ],
+        [
+          "Osarogiagbon 27",
+          "112,998",
+          "pI-III",
+          "3041",
+          "-",
+          "NR",
+          "-",
+          "-",
+          "NCDB 2004 - 2011"
+        ],
+        [
+          "Hancock 17",
+          "54,512",
+          "pI-III",
+          "1688",
+          "-",
+          "NR",
+          "-",
+          "-",
+          "NCDB 2003 - 2006"
+        ],
+        [
+          "Lequaglie 54",
+          "4530",
+          "pI-III",
+          "56",
+          "-",
+          "NR b",
+          "",
+          "-",
+          "Italy 1998 - 1998"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "",
+      "headers": [
+        "Table 6. Studies Evaluating the Extranodal Extension Descriptor",
+        "Table 6. Studies Evaluating the Extranodal Extension Descriptor",
+        "Table 6. Studies Evaluating the Extranodal Extension Descriptor",
+        "Table 6. Studies Evaluating the Extranodal Extension Descriptor",
+        "Table 6. Studies Evaluating the Extranodal Extension Descriptor",
+        "Table 6. Studies Evaluating the Extranodal Extension Descriptor",
+        "Table 6. Studies Evaluating the Extranodal Extension Descriptor",
+        "Table 6. Studies Evaluating the Extranodal Extension Descriptor",
+        "Table 6. Studies Evaluating the Extranodal Extension Descriptor"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "% With",
+          "Adjusted HR for OS",
+          "Adjusted HR for OS",
+          "Multivariate Adjustment",
+          "Adjusted for N2 Subtype?",
+          "Data Source, Years"
+        ],
+        [
+          "First Author",
+          "n",
+          "Cohort",
+          "ENE",
+          "R0 vs. ENE",
+          "ENE vs. R1,2",
+          "Multivariate Adjustment",
+          "Adjusted for N2 Subtype?",
+          "Data Source, Years"
+        ],
+        [
+          "Osarogiagbon 10",
+          "3181",
+          "All",
+          ".6%",
+          "3.03",
+          "NR",
+          "8 factors",
+          "-",
+          "MSQSR 2009 - 2019"
+        ],
+        [
+          "Liu 55",
+          "388",
+          "II, IIIA",
+          "22%",
+          "1.23",
+          "-",
+          "13 factors",
+          "-",
+          "China 2008 - 2009"
+        ],
+        [
+          "Shih 56",
+          "282",
+          "N2",
+          "30%",
+          "1.63 a",
+          "-",
+          "15 factors",
+          "Yes",
+          "Korea 2005 - 2018"
+        ],
+        [
+          "Lee 57",
+          "199",
+          "II, IIIA",
+          "63%",
+          "NR",
+          "-",
+          "9 factors",
+          "-",
+          "Taiwan 1990 - 1999"
+        ],
+        [
+          "Müller 58",
+          "118",
+          "N2",
+          "43%",
+          "NR",
+          "-",
+          "17 factors",
+          "-",
+          "Germany 2013 - 2018"
+        ],
+        [
+          "Yoon 59",
+          "862",
+          "N1",
+          "15%",
+          "1.34",
+          "-",
+          "10 factors",
+          "-",
+          "Korea 2004 - 2018"
+        ],
+        [
+          "Shin 60",
+          "305",
+          "N1",
+          "21%",
+          "1.59",
+          "-",
+          "8 factors",
+          "-",
+          "Korea 2003 - 2009"
+        ],
+        [
+          "Borghetti 61",
+          "202",
+          "N1",
+          "9%",
+          "NR",
+          "-",
+          "17 factors",
+          "-",
+          "Italy 2001 - 2011"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/384'}",
+      "headers": [
+        "Symbol",
+        "Name",
+        "Descriptor",
+        "Evidence Basis a"
+      ],
+      "rows": [
+        [
+          "R0",
+          "No residual",
+          "No identi /uniFB01 able tumor remaining, negative surgical margins, adequate node assessment, b and highest node station assessed is negative",
+          "Reference"
+        ],
+        [
+          "R0(un) R1(un)",
+          "Uncertain residual",
+          "Limited node assessment b Highest station assessed is positive R1(is) carcinoma in situ at the bronchial margin R1(cy ) pleural lavage performed with malignant cytology",
+          "Moderate c Con /uniFB02 icting Con /uniFB02 icting Strong"
+        ],
+        [
+          "R1",
+          "Microscopic residual",
+          "þ Microscopically positive surgical margin but no visible tumor remaining d Extranodal extension of an involved hilar or mediastinal node e Malignant pleural or pericardial nodules or effusion f",
+          "Good Con /uniFB02 icting Moderate"
+        ],
+        [
+          "R2",
+          "Gross residual",
+          "Gross (visible or palpable) tumor remaining d Involved nodes not resected",
+          "Intuitive Intuitive"
+        ],
+        [
+          "RX",
+          "Unknown",
+          "Margin cannot be assessed",
+          "Intuitive"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    }
+  ],
+  "figures": [
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/273'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    }
+  ],
+  "references": [
+    {
+      "title": "Detterbeck: Conceptualization; Investigation; Methodology; Supervision; Validation"
+    },
+    {
+      "title": "Investigation; Methodology; Supervision; Validation; Visualization; Roles/Writingoriginal draft; Writing-review and editing"
+    },
+    {
+      "title": "Ramón Rami-Porta: Investigation; Methodology; Supervision; Validation; Visualization; Roles/Writingoriginal draft"
+    },
+    {
+      "title": "Investigation; Methodology; Supervision; Validation; Visualization; Roles/Writingoriginal draft"
+    },
+    {
+      "title": "Jessica Donnington: Writing-review &amp; editing"
+    },
+    {
+      "title": "Jun Nakajima: Writing-review &amp; editing"
+    },
+    {
+      "title": "Writing-review &amp; editing"
+    },
+    {
+      "title": "Hisao Asamura: Writing-review &amp; editing"
+    },
+    {
+      "title": "Royal Brompton and Harefield Hospitals, Guy&apos;s and St Thomas"
+    },
+    {
+      "title": "Baptist Cancer Center"
+    },
+    {
+      "title": "Andreas Rimner"
+    },
+    {
+      "title": "Clínica Santa María"
+    },
+    {
+      "title": "Memorial Sloan Kettering Cancer Center"
+    },
+    {
+      "title": "Princess Margaret Cancer Centre"
+    },
+    {
+      "title": "The University of Texas M. D. Anderson Cancer Center"
+    },
+    {
+      "title": "Advisory Board to the Lung Cancer Domain Samuel Armato"
+    },
+    {
+      "title": "Azienda Ospedaliera San Camilo Forlanini"
+    },
+    {
+      "title": "People&apos;s Republic of China"
+    },
+    {
+      "title": "Imperial College and the Royal Brompton Hospital"
+    },
+    {
+      "title": "Liaoning, People&apos;s Republic of China"
+    },
+    {
+      "title": "Brigham and Women&apos;s Hospital and Dana-Farber Cancer Institute"
+    },
+    {
+      "title": "Mount Sinai School of Medicine"
+    },
+    {
+      "title": "Natasha Rekhtman"
+    },
+    {
+      "title": "Pontifical Catholic University of Rio Grande do Sul"
+    },
+    {
+      "title": "City of Hope Comprehensive Cancer Center"
+    },
+    {
+      "title": "New York Proton Center and Memorial Sloan Kettering Cancer Center"
+    },
+    {
+      "title": "Advisory Board to the Esophageal Cancer Domain Mark Ferguson"
+    },
+    {
+      "title": "Icahn School of Medicine at Mount Sinai"
+    },
+    {
+      "title": "Thymic Epithelial Tumors, Pleural Mesothelioma and Esophageal Cancer Domains of the IASLC Staging and Prognostic Factors Committee IASLC Staging and Prognostic Factors Committee Chair"
+    },
+    {
+      "title": "The IASLC Lung Cancer Staging Project: proposals for the revision of the TNM stage groupings in the forthcoming (seventh) edition of the TNM Classification of malignant tumours"
+    },
+    {
+      "title": "J Thorac Oncol",
+      "year": 2007
+    },
+    {
+      "title": "IASLC Staging Manual in Thoracic Oncology",
+      "year": 2007
+    },
+    {
+      "title": "UICC. TNM Classification of Malignant Tumors",
+      "year": 2009
+    },
+    {
+      "title": "AJCC Cancer Staging Manual",
+      "year": 2017
+    },
+    {
+      "title": "The evolving concept of complete resection in lung cancer surgery",
+      "year": 2016
+    },
+    {
+      "title": "Cancers",
+      "year": 2016
+    },
+    {
+      "title": "TNM Supplement: A Commentary on Uniform Use",
+      "year": 2021
+    },
+    {
+      "title": "Prognostic evaluation of the proposed residual tumor classification in a Chinese nonsmall cell lung cancer population",
+      "year": 2012
+    },
+    {
+      "title": "J Surg Oncol",
+      "year": 2022
+    },
+    {
+      "title": "Beyond margin status: population-based validation of the proposed International Association for the Study of Lung Cancer residual tumor classification recategorization",
+      "year": 2022
+    },
+    {
+      "title": "Assessing the prognostic impact of the International Association for the Study of Lung Cancer proposed definitions of complete, uncertain, and incomplete resection in non-small cell lung cancer surgery",
+      "year": 2020
+    },
+    {
+      "title": "Lung Cancer"
+    },
+    {
+      "title": "The IASLC lung cancer staging project: analysis of resection margin status and proposals for residual tumor descriptors for non-small cell lung cancer",
+      "year": 2017
+    },
+    {
+      "title": "Prognostic value of uncertain resection for overall survival in nonsmall cell lung cancer",
+      "year": 2020
+    },
+    {
+      "title": "Ann Thorac Surg",
+      "year": 2022
+    },
+    {
+      "title": "A validation study of the recommended change in residual tumor descriptors proposed by the International Association for the Study of Lung Cancer for patients with pN2 NSCLC",
+      "year": 2022
+    },
+    {
+      "title": "Type of resection and prognosis in lung cancer. Experience of a multicentre study",
+      "year": 2021
+    },
+    {
+      "title": "Eur J Cardiothorac Surg",
+      "year": 2005
+    },
+    {
+      "title": "Validation of the IASLC residual tumor classification in patients with Stage III-N2 non-small cell lung cancer undergoing neoadjuvant chemoradiotherapy followed by surgery",
+      "year": 2005
+    },
+    {
+      "title": "Ann Surg",
+      "year": 2023
+    },
+    {
+      "title": "Impact of adjuvant treatment for microscopic residual disease after non-small cell lung cancer surgery",
+      "year": 2023
+    },
+    {
+      "title": "Reclassifying the International Association for the Study of Lung Cancer residual tumor classification according to the extent of nodal dissection for NSCLC: one size does not fit all",
+      "year": 2015
+    },
+    {
+      "title": "Define relative incomplete resection by highest mediastinal lymph node metastasis for non-small cell lung cancers: rationale based on prognosis analysis",
+      "year": 2022
+    },
+    {
+      "title": "Clinical implications of uncertain resection in scenarios of metastasis of the highest or most distant mediastinal lymph node station following surgical treatment of non-small-cell lung cancer",
+      "year": 2011
+    },
+    {
+      "title": "Propensity-matched analysis of clinical relevance of the highest mediastinal lymph node metastasis",
+      "year": 2019
+    },
+    {
+      "title": "International Association for the Study of Lung Cancer (IASLC) International Staging Committee. Carcinoma in situ at the bronchial resection margin: a review",
+      "year": 2021
+    },
+    {
+      "title": "Significance of R1resection at the bronchial margin after surgery for non-small-cell lung cancer",
+      "year": 2011
+    },
+    {
+      "title": "The impact of residual tumor morphology on prognosis, recurrence, and fistula formation after lung cancer resection",
+      "year": 2017
+    },
+    {
+      "title": "Preinvasive lesions of the bronchus",
+      "year": 2008
+    },
+    {
+      "title": "Prognostic implications of a positive bronchial resection margin",
+      "year": 2009
+    },
+    {
+      "title": "Prevalence, prognostic implications, and survival modulators of incompletely resected non-small cell lung cancer in the U.S. National Cancer Data Base",
+      "year": 2000
+    },
+    {
+      "title": "Reproducibility of the WHO/IASLC grading system for pre-invasive squamous lesions of the bronchus: a study of inter-observer and intra-observer variation",
+      "year": 2016
+    },
+    {
+      "title": "Histopathology",
+      "year": 2001
+    },
+    {
+      "title": "Follow-up of bronchial precancerous lesions and carcinoma in situ using fluorescence endoscopy",
+      "year": 2001
+    },
+    {
+      "title": "Am J Respir Crit Care Med",
+      "year": 2001
+    },
+    {
+      "title": "Diagnosis and treatment of bronchial intraepithelial neoplasia and early lung cancer of the central airways: diagnosis and management of lung cancer, 3rd ed: American College of Chest Physicians evidence-based clinical practice guidelines",
+      "year": 2001
+    },
+    {
+      "title": "Chest"
+    },
+    {
+      "title": "Risk of lung cancer in patients with preinvasive bronchial lesions followed by autofluorescence bronchoscopy and chest computed tomography",
+      "year": 2013
+    },
+    {
+      "title": "Close surveillance with long-term follow-up of subjects with preinvasive endobronchial lesions",
+      "year": 2011
+    },
+    {
+      "title": "Surveillance for the detection of early lung cancer in patients with bronchial dysplasia",
+      "year": 2015
+    },
+    {
+      "title": "Thorax",
+      "year": 2007
+    },
+    {
+      "title": "Prognostic value of pleural lavage cytology in patients with lung cancer resection: an updated meta-analysis",
+      "year": 2007
+    },
+    {
+      "title": "PLoS One",
+      "year": 2016
+    },
+    {
+      "title": "Prognostic value of intraoperative pleural lavage cytology for nonsmall cell lung cancer: the influence of positive pleural lavage cytology results on T classification",
+      "year": 2016
+    },
+    {
+      "title": "J Thorac Cardiovasc Surg",
+      "year": 2014
+    },
+    {
+      "title": "The impact on survival of positive intraoperative pleural lavage cytology in patients with non-small-cell lung cancer",
+      "year": 2014
+    }
+  ],
+  "quality": {
+    "completeness_score": 0,
+    "has_abstract": true,
+    "abstract_source": "metadata",
+    "has_doi": true,
+    "has_full_text": true,
+    "num_sections": 24,
+    "num_tables": 7,
+    "num_figures": 11,
+    "num_references": 76
+  }
+}

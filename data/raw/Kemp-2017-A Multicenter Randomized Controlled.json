@@ -1,0 +1,4371 @@
+{
+  "metadata": {
+    "document_id": "10_1164_rccm_201707_1327oc",
+    "title": "A Multicenter Randomized Controlled Trial of Zephyr Endobronchial Valve Treatment in Heterogeneous Emphysema (TRANSFORM)",
+    "authors": [
+      "Samuel V. Kemp",
+      "Dirk-Jan Slebos",
+      "Alan Kirk",
+      "Malgorzata Kornaszewska",
+      "Kris Carron",
+      "Lars Ek",
+      "Gustav Broman",
+      "Gunnar Hillerdal",
+      "Herve Mal",
+      "Christophe Pison",
+      "Amandine Briault",
+      "Nicola Downer",
+      "Kaid Darwiche",
+      "Jagan Rao",
+      "Ralf-Harto Hübner",
+      "Christof Ruwwe-Glosenkamp",
+      "Valéry Trosini-Desert",
+      "Ralf Eberhardt",
+      "Felix J. Herth",
+      "Eric Derom",
+      "Thomas Malfait",
+      "Pallav L. Shah",
+      "Justin L. Garner",
+      "Nick H. Ten Hacken",
+      "Hazem Fallouh",
+      "Sylvie Leroy",
+      "Charles H. Marquette"
+    ],
+    "year": 2017,
+    "journal": "American Journal of Respiratory and Critical Care Medicine",
+    "doi": "10.1164/rccm.201707-1327oc",
+    "volume": "196",
+    "issue": "12",
+    "pages": "1535-1543",
+    "citation": "Kemp, et al. (2017). A Multicenter Randomized Controlled Trial of Zephyr Endobronchial Valve Treatment in Heterogeneous Emphysema (TRANSFORM). American Journal of Respiratory and Critical Care Medicine, 196(12), 1535-1543. https://doi.org/10.1164/rccm.201707-1327oc",
+    "abstract": "Rationale: Single-center RCTs of Zephyr Endobronchial Valve (EBV) treatment have demonstrated benefit in severe heterogeneous emphysema. This is the first multicenter study evaluating this treatment approach. Objectives: To evaluate the efficacy and safety of Zephyr EBVs in patients with heterogeneous emphysema and absence of collateral ventilation. Methods: Prospective, multicenter 2:1 RCT of EBVs plus standard of care or standard of care (SoC) alone. Primary outcome at 3 months post-procedure was the percent of subjects with a FEV1 improvement from baseline of ≥ 12%. Changes in FEV1, RV, 6MWD, SGRQ, and mMRC were assessed at 3 and 6 months, and target lobe volume reduction (TLVR) on chest CT at 3 months. Results: Ninety seven subjects were randomized to EBV (n=65) or SoC (n=32). At 3 months, 55.4% of EBV and 6.5% of SoC subjects had an FEV1 improvement ≥ 12% (p<0.001). Improvements were maintained at 6 months: EBV 56.3% vs SoC 3.2% (p<0.001), with a mean change in FEV1 at 6 months of 20.7 ± 29.6% and -8.6 ± 13.0%, respectively. 89.8% of EBV subjects had TLVR ≥ 350ml, mean 1.09 ± 0.62L (p<0.001). Between group differences for changes at 6 months were statistically and clinically significant: ∆EBV-SoC for RV -700ml; 6MWD +78.7m; SGRQ -6.5 points; mMRC Dyspnea score -0.6 points; BODE Index -1.8 points (all p<0.05). Pneumothorax was the commonest adverse event, occurring in 19/65 (29.2%) of EBV subjects. Conclusions: EBV treatment in hyperinflated patients with heterogeneous emphysema without collateral ventilation resulted in clinically meaningful benefits in lung function, dyspnea, exercise tolerance, and quality of life, with an acceptable safety profile",
+    "abstract_source": "metadata",
+    "url": "https://www.atsjournals.org/doi/10.1164/rccm.201707-1327OC"
+  },
+  "source_file": "Kemp-2017-A Multicenter Randomized Controlled.json",
+  "sections": [
+    {
+      "title": "A Multicenter Randomized Controlled Trial of Zephyr Endobronchial Valve Treatment in Heterogeneous Emphysema (TRANSFORM)",
+      "content": "Kemp, Samuel V.; Slebos, Dirk-Jan; Kirk, Alan; Kornaszewska, Malgorzata; Carron, Kris; Ek, Lars; Broman, Gustav; Hillerdal, Gunnar; Mal, Herve; Pison, Christophe\nPublished in:\nAmerican Journal of Respiratory and Critical Care Medicine\nIMPORTANT NOTE: You are advised to consult the publisher's version (publisher's PDF) if you wish to cite from it. Please check the document version below.\nDocument Version\nFinal author's version (accepted by publisher, after peer review)\nPublication date:\n2017\nLink to publication in University of Groningen/UMCG research database\nCitation for published version (APA):\nKemp, S. V., Slebos, D-J., Kirk, A., Kornaszewska, M., Carron, K., Ek, L., ... TRANSFORM Study Team (2017). A Multicenter Randomized Controlled Trial of Zephyr Endobronchial Valve Treatment in Heterogeneous Emphysema (TRANSFORM). American Journal of Respiratory and Critical Care Medicine, 196(12), 1535-1543. https://doi.org/10.1164/rccm.201707-1327OC",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Copyright",
+      "content": "Other than for strictly personal use, it is not permitted to download or to forward/distribute the text or part of it without the consent of the author(s) and/or copyright holder(s), unless the work is under an open content license (like Creative Commons).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Take-down policy",
+      "content": "If you believe that this document breaches copyright please contact us providing details, and we will remove access to the work immediately and investigate your claim.\nDownloaded from the University of Groningen/UMCG research database (Pure): http://www.rug.nl/research/portal. For technical reasons the number of authors shown on this cover page is limited to 10 maximum.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "A Multicenter RCT of Zephyr® Endobronchial Valve Treatment in Heterogeneous Emphysema (TRANSFORM)",
+      "content": "Samuel  V  Kemp 1,10 ,  Dirk-Jan  Slebos 2 ,  Alan  Kirk 3 ,  Malgorzata  Kornaszewska 4 ,  Kris Carron 5 ,  Lars Ek 6 ,  Gustav Broman 7 , Gunnar Hillerdal 7 ,  Herve Mal 8 ,  Christophe Pison 9 , Amandine Briault 9 , Nicola Downer 10 , Kaid Darwiche 11 , Jagan Rao 12 , Ralf-Harto Hübner 13 ,  Christof  Ruwwe-Glosenkamp 13 ,  Valéry  Trosini-Desert 14 ,  Ralf  Eberhardt 15 , Felix J Herth 15 , Eric Derom 16 , Thomas Malfait 16 , Pallav L Shah 1 , Justin L Garner 1 , Nick H  ten  Hacken 2 ,  Hazem  Fallouh 4 ,  Sylvie  Leroy 17 ,  and  Charles  H  Marquette 17 for  the TRANSFORM Study Team*",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Author Affiliations",
+      "content": "1.  Royal  Brompton  Hospital  and  Imperial  College,  Fulham  Road,  London  SW3  6NP, London, United Kingdom\n2.  Department  of  Pulmonary  Diseases,  University  of  Groningen,  University  Medical Center Groningen, Postbus 30.001, 9700RB Groningen, The Netherlands\n3.  Department of Thoracic Surgery West of Scotland Regional Heart & Lung Centre, Golden  Jubilee  National  Hospital  Agamemnon  Street,  Clydebank  G81  4DY,  West Dunbartonshire, Scotland, United Kingdom\n4.  University Hospital of Wales, Department of Cardiothoracic Surgery, Cardiff CF144XW, United Kingdom\n5.  Department of Pulmonology, AZ Delta, Oude Leielaan 6, 8930 Menen, Belgium\n6.  Department  of  Pulmonary  Diseases,  Skane  University  Hospital  in  Lund,  221  85 Lund, Sweden\n7.  Department of Pulmonary Diseases, Uppsala University Hospital, 751 85 Uppsala, Sweden\n8.  Service de Pneumologie A, Hôpital Bichat, 46 rue Henri Huchart, 75877 Paris Cedex 18, France\n9.  Clinique  Universitaire  de  Pneumologie,  Pôle  Thorax  et  Vaisseaux,  CHU  Grenoble Alpes, CS10217,  38043  Grenoble  Cedex  09, France; Inserm1055, Université Grenoble Alpes\n10.  Sherwood  Forest  Hospitals  NHS  Foundation  Trust,  Mansfield  Road,  Sutton  in Ashfield, Nottinghamshire NG17 4JL, United Kingdom\n11.  Department  of  Interventional  Pneumology,  Ruhrlandklinik,  West  German  Lung Center, University Clinic Essen, Tüschener Weg 40, 45239 Essen, Germany\n12.  Sheffield  Teaching  Hospitals  NHS  Foundation  Trust,  Herries  Road,  Sheffield S5 7AU, United Kingdom\n13.  Charité  Universitätsmedizin  Berlin,  Medizinische  Klinik  m.  Schw.  Infektiologie  und Pneumologie, Campus Virchow, Augustenburgerplatz 1, Berlin'Germany\n14.  Service  de  Pneumologie  et  Réanimation,  Unité  d'Endoscopie  bronchique,  Groupe Hospitalier Pitié Salpétrière, 47-83 boulevard de l'Hopital, 75013 Paris, France\n15.  Department of  Pneumology  and  Critical  Care  Medicine,  Thoraxklinik,  University  of Heidelberg and Translational Lung Research Center Heidelberg (TLRCH, German Center for Lung Research (DZL), Röntgenstr. 1, 69126 Heidelberg, Germany\n16.  Ghent  University  Hospital,  Department of Pulmonary Diseases, Building 7 K12 IE, De Pintelaan 185, 9000 Ghent, Belgium\n17.  Université  Côte  d'Azur,  Centre  Hospitalier  Universitaire  de  Nice,  FHU  OncoAge, Service de Pneumologie, Nice, France\n* A full list of investigators and study coordinators is available in the Supplement",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Corresponding Author",
+      "content": "This  study  was  sponsored  and  funded  by  Pulmonx  Corporation,  Redwood  City,  CA, USA.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Scientific knowledge on the subject:",
+      "content": "Zephyr Endobronchial Valves properly placed in segmental and sub-segmental airways in patients with severe heterogeneous or homogeneous emphysema with no collateral ventilation between target and ipsilateral lobe have been shown to decrease\nhyperinflation by reducing target lobe volume, thereby providing clinical improvements in lung function, exercise tolerance and quality of life.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "What this study adds to the field",
+      "content": "This  first,  multicenter,  prospective,  randomized  controlled  clinical  trial  of  the  Zephyr Endobronchial valves (EBVs) confirms findings from 2 previous single-center RCTs that in  patients  with  heterogeneous  emphysema  distribution  and  absence  of  collateral ventilation,  these  one-way  valves  improve  lung  function, dyspnea, exercise  tolerance, and quality of life over current standard of care medical therapy.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Author Contributions",
+      "content": "Samuel Kemp: SK is an Investigator at 2 individual sites over the course of the study, actively  recruited  and  treated  patients  in the  study,  participated  in  acquisition  of  data, wrote the first draft of the manuscript and edited the manuscript after feedback from coauthors.\nDirk-Jan Slebos: DJS is an investigator in the study and actively recruited and treated patients in the study, participated in acquisition of data, and provided revisions to the manuscript.\nAlan  Kirk,  MD:  AK  is  an  investigator  in  the  study  and  actively  recruited  and  treated patients in the study, participated in acquisition of data, and provided revisions to the manuscript.\nMalgorzata Kornaszewska: MK is an investigator in the study and actively recruited and treated patients in the study, participated in acquisition of data, and provided revisions to the manuscript.\nKris  Carron:  KC  is  an  investigator  in  the  study  and  actively  recruited  and  treated patients in the study, participated in acquisition of data, and provided revisions to the manuscript.\nLars Ek: LE is an investigator in the study and actively recruited and treated patients in the study, participated in acquisition of data, and provided revisions to the manuscript.\nGustav  Broman:  GB  is  an  investigator  in  the  study,  actively  recruited  and  treated patients in the study, and provided revision to the manuscript.\nGunnar Hillerdal:  GH  was  a  Principal  Investigator  in  the  study,  actively  recruited  and treated patients in the study, and provided revision to the manuscript.\nHerve Mal: HM is an investigator in the study and actively recruited and treated patients in the study, participated in acquisition of data,  and  provided  revisions to the manuscript.\nChristophe Pison: CP is an investigator in the study and actively recruited, participated in acquisition of data, and provided revisions to the manuscript.\nAmandine  Briault:  AB  is  a  sub-investigator  in  the  study  and  actively  recruited  and treated patients in the study, participated in acquisition of data, and provided revisions to the manuscript.\nNicola  Downer:  ND  is  an  investigator  in  the  study  and  actively  recruited  and  treated patients in the study, participated in acquisition of data, and provided revisions to the manuscript.\nKaid  Darwiche:  KD  is  an  investigator  in  the  study  and  actively  recruited  and  treated patients in the study, participated in acquisition of data, and provided revisions to the manuscript.\nJagan Rao:  JR is an investigator in the study and actively recruited and treated patients in the study, participated in acquisition of data,  and  provided  revisions to the manuscript.\nRalf-Harto  Hübner:  RHH  is  an  investigator  in  the  study  and  actively  recruited  and treated patients in the study, participated in acquisition of data, and provided revisions to the manuscript.\nChristof  Ruwwe-Glosenkamp:  CRG  is  a  sub-investigator  in  the  study  and  treated patients in the study, participated in acquisition of data.\nValéry  Trosini-Desert:  VTD  is  an  investigator  in  the  study  and  actively  recruited  and treated patients in the study, participated in acquisition of data, and provided revisions to the manuscript.\nRalf  Eberhardt:  RE  is  an  investigator  in  the  study  and  actively  recruited  and  treated patients in the study, participated in acquisition of data, and provided revisions to the manuscript.\nFelix JF Herth: FJFH is an investigator in the study and actively recruited and treated patients in the study, participated in acquisition of data, and provided revisions to the manuscript.\nEric  Derom:  ED  is  an  investigator  in  the  study  and  actively  recruited  patients  in  the study, participated in acquisition of data, and provided revisions to the manuscript.\nThomas Malfait: TM is an investigator in  the  study  and  actively  recruited  and  treated patients in the study, participated in acquisition of data, and provided revisions to the manuscript.\nPallav L Shah: PS is a sub-investigator in the study and actively recruited and treated patients in the study, participated in acquisition of data, and provided revisions to the manuscript.\nJustin Garner: JG is a sub-investigator in the study and actively recruited and treated patients in the study, participated in acquisition of data, and provided revisions to the manuscript.\nHazem Fallouh: Heart failure (HF) is a sub-investigator in the study and actively recruited and treated patients in the study, participated in acquisition of data, and provided revisions to the manuscript.\nNick HT ten Hacken: NHTH is a sub- investigator in the study, actively recruited and treated  patients  in  the  study,  and  participated  in  data  acquisition  and  revision  of  the manuscript.\nSylvie Leroy: SL is a sub-investigator in the study, and participated in acquisition of data and to revision of the manuscript.\nCharles  H  Marquette:  CHM  is  an  investigator  in  the  study  and  actively  recruited  and treated patients in the study, participated in acquisition of data, and provided revisions to the manuscript.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Abstract",
+      "content": "Rationale:  Single-center  RCTs  of  Zephyr  Endobronchial  Valve  (EBV)  treatment  have demonstrated benefit in severe heterogeneous emphysema. This is the first multicenter study evaluating this treatment approach.\nObjectives:  To  evaluate  the  efficacy  and  safety  of  Zephyr  EBVs  in  patients  with heterogeneous emphysema and absence of collateral ventilation.\nMethods: Prospective, multicenter 2:1 RCT of EBVs plus standard of care or standard of care (SoC) alone. Primary outcome at 3 months post-procedure was the percent of subjects  with  a  FEV1  improvement  from  baseline  of ≥ 12%.    Changes  in  FEV1,  RV, 6MWD, SGRQ, and mMRC were assessed at 3 and 6 months, and target lobe volume reduction (TLVR) on chest CT at 3 months.\nResults:  Ninety  seven  subjects  were  randomized  to  EBV  (n=65)  or  SoC  (n=32).  At  3 months,  55.4%  of  EBV  and  6.5%  of  SoC  subjects  had  an  FEV1  improvement ≥ 12% (p<0.001).  Improvements  were  maintained  at  6  months:  EBV  56.3%  vs  SoC  3.2% (p<0.001), with a mean change in FEV1 at 6 months of 20.7 ± 29.6% and -8.6 ± 13.0%, respectively. 89.8% of EBV subjects had TLVR ≥ 350ml, mean 1.09 ± 0.62L (p<0.001). Between  group  differences  for  changes  at  6  months  were  statistically  and  clinically significant:  ∆EBV-SoC  for  RV  -700ml;  6MWD  +78.7m;  SGRQ  -6.5  points;  mMRC Dyspnea score -0.6 points; BODE Index -1.8 points (all p<0.05). Pneumothorax was the commonest adverse event, occurring in 19/65 (29.2%) of EBV subjects.\nConclusions: EBV treatment in hyperinflated patients with heterogeneous emphysema without  collateral  ventilation  resulted  in  clinically  meaningful  benefits  in  lung  function, dyspnea, exercise tolerance, and quality of life, with an acceptable safety profile.",
+      "category": "abstract",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Introduction",
+      "content": "Chronic obstructive pulmonary disease (Chronic obstructive pulmonary disease (COPD)) is a progressive, life-threatening, lung disease characterized by airflow obstruction that results in breathlessness and predisposes afflicted individuals to exacerbations and serious illness (1). Patients with advanced emphysema remain one of the most at-risk sub-populations. It is estimated that  over  300  million  people  globally  have  Chronic obstructive pulmonary disease (COPD),  with  considerable  dyspnea  due  to lung  hyperinflation,  poor  quality  of  life,  few  treatment  options,  and  a  reduced  life expectancy (2,3,4).\nLung  volume  reduction  surgery  (LVRS)  results  in  improvements  in  lung  function, dyspnea, exercise tolerance, and long-term survival in appropriately selected patients with  emphysema (5,6,7,8). Whilst LVRS has proven effective in selected populations, the  technique  is  relatively  under-utilized  owing  to  concerns  about  the  invasiveness  of the  procedure,  morbidity,  and  the  narrow  patient  eligibility  criteria  (9,10).  Zephyr® endobronchial  valves  (EBV®,  Pulmonx  Corporation,  Redwood  City,  CA)  are  one-way valves inserted via the bronchoscope into the airways of emphysematous lung, and are designed to cause lung deflation (and hence a reduction in hyperinflation) by allowing air and secretions out but preventing air entry.\nBronchoscopic lung volume reduction with Zephyr EBVs aims to provide the benefits seen with LVRS but with a reduction in morbidity.  The VENT study achieved statistical but  not  clinically  meaningful  improvements  in  forced  expiratory  volume  in  1  second (FEV1)  and  six-minute  walking  distance  (6MWD)  between  EBV-treated  and  control groups (11), with post-hoc analysis showing that improvements in these outcomes were clinically  meaningful  only  in  patients  with  no  collateral  ventilation  (CV)  between  the\ntarget and ipsilateral lobes (11,12). Zephyr EBVs have been shown to cause target lobe volume reduction (TLVR) in patients without CV and where lobar occlusion is achieved (13,14).    Clinically  and  statistically  meaningful  benefits  in  multiple  outcome  measures have been demonstrated in patients with heterogeneous (15,16) as well as homogeneous  emphysema  (16,17).  Two  single-center  randomized  controlled  trials (15,16) have reported significant benefits of Zephyr EBVs over best medical care, and we now report the first multi-center study in patients with heterogeneous emphysema and without CV. Some of the results of this study have been previously reported in the form of an abstract (18).",
+      "category": "introduction",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Methods",
+      "content": "Study  Conduct:  This  randomized,  controlled  trial  (NCT02022683)  enrolled  patients between June 2014 and June 2016 at 17 sites across Europe. The study was approved by the respective Ethics Committees at each site, and conducted in accordance with the Declaration of Helsinki (19). All participating subjects provided written informed consent.\nStudy  Subjects:  Eligible  subjects  were  ex-smokers  ≥40  years  of  age  with  severe emphysema. Key inclusion criteria were post-bronchodilator FEV1 of between 15% and 45% predicted despite optimal medical management, total lung capacity (TLC) >100% predicted, residual volume (RV) ≥180% predicted, and a 6MWD of between 150m and 450m (complete criteria provided in online supplement - Section E1).  High resolution computed tomography (HRCT) scans were analyzed at an independent imaging core laboratory  using  quantitative  software  (VIDA  Diagnostics,  Coralville,  IA,  USA)  to measure lobar volumes and emphysema destruction by lobe. Heterogeneous\nemphysema was defined as a >10% difference  in destruction  scores  between  target and ipsilateral lobes.\nEligible patients underwent  Chartis® (Pulmonx  Corporation,  Redwood  City,  CA) assessment to determine the presence of CV between target and adjacent lobes before randomization.  The  Chartis®  Pulmonary  Assessment  System  is  a  validated  system designed to assess for the presence of collateral ventilation within isolated lung units. It consists  of  a  Chartis  console  connected  to  a  balloon  catheter  with  a  central  channel which is used to occlude the target lobe, and to subsequently measure pressure and flow  in  order  to  calculate  resistance  to  airflow  in  that  lobe,  and  hence  to  quantify collateral  ventilation  (13).  Figure  E1  in  the  online  supplement  shows  examples  of  CV negative  and  CV  positive  read-outs.  Subjects  who  had  a  CV  negative  target  were randomized  in  a  2:1  fashion  (blocked  design  and  concealed  envelopes)  immediately after  the  Chartis  measurement  into  either  the  EBV  group  or  the  SoC  group.    The bronchoscopy procedure for subjects randomized to SoC was terminated and subjects recovered appropriately as per institutional standards. Subjects randomized to the EBV group underwent immediate placement of Zephyr EBVs with the intention of complete lobar occlusion (12,20). Subjects assessed to be CV positive were excluded. See online supplement Sections E2 and E3 for complete details.\nWhere  there  was  more  than  one  potential  target  lobe,  the  lobe  with  the  highest destruction score and lowest perfusion as determined by scintigraphy was assessed for CV  first.  If  the  primary  target  lobe  was  CV  positive,  or  if  the  CV  status  was  not assessable, then the secondary target lobe was evaluated (for further information, see Figure E2 in the online supplement).\nFollow-up: Subjects randomized to SoC  were discharged after standard postbronchoscopy recovery, unless the treating physician deemed an admission necessary. Subjects  randomized  to  EBVs  were  hospitalized  for  at  least  one  day  and  discharged following a chest X-ray if there were no complications/serious adverse events (SAEs). Subjects were instructed to seek immediate medical attention in the event of symptoms of  a  potential  pneumothorax.  EBV  subjects  were  evaluated  at  45  days  with  a  HRCT scan  to  assess  TLVR,  and  to  verify  whether  complete  lobar  occlusion  had  been achieved. If necessary (TLVR  <50%,  or incomplete lobar occlusion), a repeat bronchoscopy and valve revision/replacement was performed.\nOutcome Measures: All subjects were assessed at 3 months post-bronchoscopy (SoC and EBV). For EBV subjects who underwent valve replacement or revision based on their 45 day HRCT scan, follow-up occurred 3 months after the revision bronchoscopy. Subjects  in  the  SoC  group  were  given  the  option  of  exiting  the  study  following  the  6 month evaluation if they  wished to pursue EBV treatment, or to continue in follow-up until  12  months.  Follow-up  of  the  EBV  group  will  continue  to  24  months  (see  study scheme, Figure E3 in online supplement).\nThe primary endpoint was the percentage of subjects in the EBV group at 3 months post-procedure  who  had  an  improvement  in  the  post-bronchodilator  FEV1  of  ≥12% (protocol-defined  minimal  clinically  important  difference  (MCID))  compared  to  the percentage of subjects in the SoC group.\nSecondary  endpoints  included  comparison  between  EBV  and  SoC  groups  for  the absolute and percent changes and responder rates (percentage of subjects achieving the MCID) at 3 and 6 months for FEV1 (≥12%), RV (≤-430 mL), St. George's Respiratory Questionnaire  (SGRQ)  score  (≤-4  points),  6MWD  (≥26  meters),  modified  Medical Research Council (mMRC) dyspnea score (≤-1 point), and for the EBV group only, the absolute  and  percent  change  in  TLVR  at  45  days  post-procedure  and  the  percent  of subjects  meeting  the  TLVR  MCID  of  ≥350mL  (12)  relative  to  baseline.  Safety  was assessed through review of all adverse events solicited at all scheduled or unscheduled visits.\nStatistical  Analyses:  The  sample  size  calculation  of  78  subjects  was  based  on proportions for the primary endpoint of a ≥12% improvement in FEV1 at 47% (EBV) and 13%  (SoC)  estimated  from  the  VENT  study  (11),  a  2:1  randomization,  80%  power, alpha = 0.05, a two-sided Chi-Square test, and 15% drop-out rate.  For the intention-totreat  (ITT)  analysis,  missing  data  were  imputed  using  the  last  observation  carried forward method. All statistical analyses were performed using SAS 9.4 (SAS Institute, Cary NC). Absolute and percent changes from baseline were analyzed using a fixedeffect one-way ANOVA (or ANCOVA with baseline as a covariate) model for normally distributed data; otherwise the Wilcoxon Rank-Sum test was used. Categorical variables were analyzed using a Chi-Square test. Details of the analysis populations in Section E4 in online supplement.",
+      "category": "methods",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Results",
+      "content": "Two  hundred  and  seventy-three  (273)  subjects  were  screened,  with  125  subjects meeting  the  inclusion/exclusion  criteria.  A  total  of  97  subjects  deemed  to  be  CV\nnegative  were  randomized,  65  subjects  to  EBVs  and  32  to  SoC  (see  CONSORT diagram, Figure E4 in online supplement). The median(range) number of randomized subjects per center was 5(1-14). Baseline characteristics were similar in both groups, although  the  EBV  group  reported  a  worse  respiratory  related  quality  of  life  (p=0.042) and absolute but not percent predicted FEV1 (p=0.008). See Table 1 and Table E1 in online supplement.\nTreatment details: A median of 4 valves (range 2 to 8) per subject were implanted in the 65 EBV subjects. Treatment distributions were 52% left upper lobe, 22% left lower lobe, 15% right  upper  lobe,  8%  right  upper  and  right  middle  lobe  combined,  and  3%  right lower lobe. The median hospital stay for the treatment visit was 4 days (range 1 to 49 days) for the EBV group and 1 day (range 1 to 3 days) for the SoC group. At 45 days post-procedure, 89.8% of subjects achieved a TLVR of ≥350ml, with a mean of 1.09 ± 0.62L  (p<0.001).  Individual  subject  TLVR  changes  are  provided  in  Figure  E5  in  the online supplement. Eighteen subjects underwent a repeat bronchoscopy, 17 of whom had a revision procedure, and 12 of those subsequently developed significant TLVR.\nPrimary  outcome:  At  3  months  post-procedure,  responder  rates  (≥12%  improvement from baseline in FEV1) in the ITT population were 55.4% in the EBV group and 6.5% in the  SoC  group  (p<0.001),  and  for  the  per  protocol  (PP)  population  were  66.7%  and 6.7%, respectively (p<0.001). These differences were maintained at 6 months: ITT (EBV vs  SoC)  56.3%  vs  3.2%  (p<0.001),  and  PP  66.3%  vs  3.3%  (p<0.001),  respectively (Figure 1).\nSecondary outcomes:  Statistically and clinically significant improvements from baseline were seen at both 3 and 6 months in the EBV group compared to the SoC group for FEV1  (Figure  2a),  6MWD  (Figure  2b),  and  SGRQ  score  (Figure  2c).  There  was  a decrease in RV (p<0.001, Figure 2d) and BODE Index (points, p<0.001, Figure 2e) in the EBV vs SoC group at both 3 and 6 months. The absolute and percent changes from baseline at 6 months are summarized in Table 2. Changes from baseline for EBV and SoC groups and differences between groups for the changes for the PP population are provided in Tables E2 to E9 in online supplement.\nFor each outcome measure, a significantly greater number of subjects in the EBV group met Odds ratio (or) exceeded the MCID (Table 3, and Table E10, and Figures E6, E7, and E8 in online supplement). In post-hoc analysis, 76.9% of the ITT population and 90.2% of the PP population achieved the MCID for at least one of FEV1, 6MWD, and SGRQ at 6 months.  Following the 6 month evaluation, 30 of the 32 SoC subjects exited the study and opted for EBV treatment.\nSafety outcomes: At 6 months, there were 44 respiratory related SAEs in 31 (47.7%) subjects in the EBV group compared to 4 events in 3 (9.4%) subjects in the SoC group (p<0.001,  Fishers  test),  with  most  events  occurring  within  30  days  of  the  procedure (Table  4).  In  the  EBV  group,  the  most  common  SAE  was  pneumothorax,  which  was managed according to a protocolized pneumothorax management flow chart (21, and Figure E9 in online supplement). Other respiratory related SAEs during the first 30 days in the EBV group included dyspnea (7.7%), Chronic obstructive pulmonary disease (COPD) exacerbation (4.6%), and pneumonia (4.6%). A summary of all respiratory and non-respiratory adverse events is provided in Tables E11 and E12 in the online supplement.\nPneumothorax: Over the 6 month follow-up period, there were 20 pneumathoraces in 19/65 (29.2%) EBV subjects, with a median time to onset of 1 day. Table E13 in the online  supplement  shows  pneumothorax  rate by  lobe  treated. In  14 subjects,  the pneumothorax  required  an intervention and/or hospitalization and  was  therefore considered a SAE. Pneumothorax was managed by observation only in 8 cases, and placement  of  chest  drains  in  11  cases.  In  one  case,  the  air  leak  was  addressed surgically. Seven subjects underwent a second bronchoscopy for an adverse event, 5 for valve removal for pneumothorax management, one for valve replacement a day after the initial  procedure due to expectoration of a valve, and one for loss of effect.  One EBV subject died of in-hospital cardiac arrest as a complication of pneumothorax. There were  no  differences  in  any  outcome  measure  at  3  or  6  months  in  the  EBV  cohort between  subjects  who  experienced  a  pneumothorax  (n=19)  and  those  that  did  not (n=46). See tables E14 and E15 in the online supplement.",
+      "category": "results",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Discussion",
+      "content": "This is the first multicenter, prospective RCT of Zephyr EBV treatment in patients with severe  heterogeneous  emphysema  and  absence  of  collateral  ventilation.  We  found statistically  and  clinically  significant  improvements  in  lung  function,  exercise  capacity, and  quality  of  life  associated  with  Zephyr  EBV  treatment  compared  with  standard  of care. Ninety percent of subjects experienced TLVR, indicating appropriate selection of CV  negative  patients and  effective occlusion of the target lobe following  EBV placement. Of significance, the EBV group had improvements that exceeded the MCIDs for FEV1, SGRQ, RV, 6MWD, and mMRC at 6 months post-treatment.\nPost-hoc analysis of the VENT study (11,12) demonstrated the critical importance of the absence  of  CV  and  achieving  complete  lobar  occlusion  as  necessary  elements  for successful  lung  volume  reduction  with  EBVs.  Whilst  visual  evaluation  of  fissure completeness  has  been  useful  in  patient  selection  for  bronchoscopic  lung  volume reduction  with  Zephyr  EBVs  (15),  the  physiologic  assessment  of  air  flow  using  the Chartis System has been more reliable (13,16). Using this approach, Klooster et al (16) successfully  demonstrated  significant  improvements  in  lung  function  and  exercise capacity  in  patients  with  severe  emphysema  characterized  by  an  absence  of  CV. Similarly, Valipour et al (17) reported benefits in patients with homogeneous emphysema. The findings of the present multicenter RCT provide further confirmation that  patients  carefully  selected  for  absence  of  CV  experience  significant,  meaningful reduction in treated lobar volumes (mean 1.09 ± 0.62L, p<0.001) with benefits in lung function, dyspnea, exercise capacity, and quality of life following  Zephyr  EBV placement.\nThe magnitude of benefits seen in this study are comparable to those observed after LVRS (8), but with reduced morbidity. The mean change presented here in the 6MWD, a  patient-centered  outcome,  is  three  times  the  MCID,  and  similar  to  values  reported from a single center RCT (16). Zephyr EBV treatment has the added benefits of being suitable for both upper and lower lobe disease, as well as homogeneous disease (17), and is a reversible procedure. Valves were permanently removed in 7 subjects in our study with no associated complications.\nThere  were  a  greater  number  of  serious  adverse  events  in  the  early  post-procedure period  (within  the  first  30  days)  in  the  EBV  group  than  in  the  SoC  group  (Table  4).\nPneumothorax was the most common adverse event, and was managed according to published  guidelines  (21).  The  occurrence  of  pneumothoraces  and  air  leaks  is  a common side-effect of thoracic procedures, ranging from 4% to 42% after CT-guided biopsy (22,23), 11.6% for endobronchial coil treatment (24), and up to 90% of patients within  30-days  of  LVRS  (25).  The  frequency  of  pneumothorax  in  the  present  study (21.5%) was similar to other published Zephyr EBV treatment studies (16,17), and the occurrence  of  pneumothorax  does  not  appear  to  negatively  impact  clinical  outcomes (26).  Of note, 94% (30/32) of the control subjects opted to exit the study and receive Zephyr EBV treatment after the 6 month evaluation.\nPrevious retrospective analyses have demonstrated a survival advantage where TLVR is achieved after Zephyr EBV placement (27,28,29). A reduction of more than 1 point in the  BODE Index has been associated with a significant decrease in mortality (30,31) and the difference between groups in the change in BODE Index in this prospective trial was -1.8 points.  This  is  compatible  with  the  recent  report  by  Klooster  at  al  (32),  and raises the hope of improved survival in our subjects. This will need to be confirmed in future studies and with longer follow up data.\nOne limitation of this study is the follow-up out to only 6 months, though earlier single center RCTs have reported 1-year follow-up data, demonstrating the durability of this treatment (33,34).  Subjects in the EBV group will be followed out to 2 years, important for capturing events that may be infrequent in a 6 month window, such as exacerbations or  mortality.      Another  limitation  is  the  absence  of  a  sham  bronchoscopy  in  the  SoC group, since the treatment involves an intervention with associated adverse events and the potential for a placebo effect. However, unlike other interventional devices for BLVR,\nthe benefit of EBV treatment using a sham control has previously been demonstrated (15),  and  patients  in  the  SoC  arm  in  our  study  did  undergo  bronchoscopy  for  the purposes of Chartis examination (although this does not mitigate against any placebo effect associated with actual valve implantation).\nAnother  potential  limitation  is  the  lack  of  mandatory  pulmonary  rehabilitation  in  the period prior to trial entry. Given the randomized nature of the trial, any changes or lack thereof associated with the potentially variable provision of pre-procedure PR should be balanced across the 2 groups, and therefore would not be expected to be a significant factor in any between group differences.\nWhilst there was an apparent imbalance in the absolute FEV1, and to a lesser extent SGRQ,  at  baseline  between  the  two  groups  (although  not  in  the  percent  predicted FEV1), which could have affected outcome, ANCOVA models with baseline values as the covariate resulted in the same p-values as when using the t-test for all secondary endpoints,  indicating  that  the  group  differences  (EBV  vs.  SoC)  are  there  despite  the groups having different baseline values.\nThe  benefits  of  EBV  treatment  for  patients  with  severe  heterogeneous  emphysema reported here, and for homogeneous patients previously reported by Valipour et al (17), demonstrate that EBV placement is an effective treatment option in patients without CV regardless of emphysema distribution. The success of the treatment requires accurate patient selection including correct determination of the absence of CV between target and adjacent lobes, and expertise in the management of procedural complications.",
+      "category": "discussion",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Conclusion",
+      "content": "EBV treatment in hyperinflated subjects with heterogeneous emphysema without CV in the target lobe results in clinically meaningful and statistically significant benefits in lung function, dyspnea, exercise tolerance, and quality of life over current standard of care medical therapy. Benefits are in line with those seen with LVRS, and the consistent trial results, potential reduction in post-procedure morbidity, and reversibility of the procedure  position  Zephyr  EBV  treatment  as  a  viable  treatment  option  in  those  who remain symptomatic on maximal medical therapy.",
+      "category": "conclusion",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Acknowledgements",
+      "content": "The  authors  thank  Lars  Enochson  PhD,  and  the  Team  at  Devicia  AB  (Kungsbacka, Sweden)  for  providing  oversight  and  data  monitoring  for  this  study,  and  Anders Ljungström, BA (Progstat AB, Tumba, Sweden) for performing the statistical analyses.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Disclosures",
+      "content": "Zephyr is a registered trademark of Pulmonx Corporation.\nEBV is a registered trademark of Pulmonx Corporation.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Figure 2: Absolute changes from Baseline in key outcome measures at 3 and 6 months",
+      "content": "Legend to Figure  2:    Data  presented  are  mean  ±  SEM  for  changes  from  baseline  to  3  and  6 months  post  bronchoscopy  for  EBV  (□),  SoC  (○),  and  difference  between  EBV  and  SoC  (Δ). Figure  2a:  FEV1  (L);  Figure  2b:  6-Minute  Walk  Distance  (m);  Figure  2c:  RV  (L);  Figure  2d:  St. George's Respiratory Questionnaire; and Figure 2e: BODE Index.\nValues are means ± SD.\n*  Emphysema  destruction  score  was  assessed  as  the  percentage  of  voxels  of  less  than  -910 Hounsfield units on CT.\n† Heterogeneity Index was assessed as the difference in the Emphysema score between the target and the ipsilateral lobe.\n‡  St.  George's  Respiratory  Questionnaire  (SGRQ)  scores  range  from  0  to  100,  with  higher  scores indicating worse quality of life.\n§ Modified Medical Research Council dyspnea (mMRC) scores scale ranges from 0 to 4, with higher scores indicating more severe dyspnea.\n** BODE Index score ranges from 0 to 10 based on a multidimensional scoring system to include FEV1, body-mass index, 6 Minute Walk Distance, and the modified MRC dyspnea score. Higher scores denote a greater risk of mortality.\n††: Wilcoxon signed-rank test.\nValues are means ± SD.\n*: Two sample t test\n†: Wilcoxon signed-rank test\nANCOVA with baseline as covariate did not impact any outcomes\nFEV1:  Forced  Expiratory  Volume  in  1  second;  RV:  Residual  Volume;  SGRQ:  St.  George's  Respiratory Questionnaire;  6MWD:  Six-Minute  Walk  Distance;  mMRC:  Modified  Medical  Research  Council Dyspnea score\n*: Chi-squared test\nSerious  Adverse  Events  were  events  leading  to  death  or  to  serious  deterioration  in  health  that  resulted  in  a  lifethreatening  illness  or  injury,  a  permanent  impairment  of  a  body  structure  or  body  function,  hospitalization  or prolongation of existing hospitalization, or medical or  surgical intervention to prevent permanent impairment to body structure or body function.\nǂ: Also included in the count of Pneumothorax; subject died of cardiac arrest during hospitalization for a pneumothorax\n*: p=0.004 Fisher's Exact Test (EBV vs SoC at ≤30 days)",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "REFERENCES",
+      "content": "1. GOLD  2017  Global  Strategy  for  the  Diagnosis,  Management  and  Prevention  of  Chronic obstructive pulmonary disease (COPD) http://goldcopd.org/\n2. López/.notdefópez2017 Global Strategy for the Diagnosis, Management  and  Prevention Respirology. 2016; 21(1): 14-23.\n3. Mathers CD, Loncar D (2006) Projections of Global Mortality and Burden of Disease from 2002 to 2030. PLoS Med 3(11): e442.\n4. Davies Adeloye, Stephen Chua, Chinwei Lee, Catriona Basquill, Angeliki Papana, Evropi Theodoratou, Harish Nair, Danijela Gasevic, Devi Sridhar, Harry Campbell, Kit Yee Chan, Aziz  Sheikh,  Igor  Rudan,  and  Global  Health  Epidemiology  Reference  Group  (GHERG) Global and regional estimates of Chronic obstructive pulmonary disease (COPD) prevalence: Systematic review and meta-analysis. J Glob Health. 2015 Dec; 5(2): 020415.\n5. Fishman A, Martinez F, Naunheim K, Piantadosi S, Wise R, Ries A, Weinmann G, Wood DE; National Emphysema Treatment Trial Research Group. A randomized trial comparing lung-volume-reduction surgery with medical therapy for severe emphysema. N Engl J Med 2003; 348: 2059-2073\n6. Geddes D, Davies M, Koyama H, Hansell D, Pastorino U, Pepper J, Agent P, Cullinan P, MacNeill SJ, Goldstraw P. Effect of lung-volume-reduction surgery in patients with severe emphysema. N Engl J Med 2000; 343: 239-245.\n7. Miller  JD,  Berger  RL,  Malthaner  RA,  Celli  BR,  Goldsmith  CH,  Ingenito  EP,  Higgins  D, Bagley  P,  Cox  G,  Wright  CD.  Lung  volume  reduction  surgery  vs.  medical  treatment  for\npatients with advanced emphysema. Chest 2005; 127: 1166-1177.\n8. Washko GR, Fan VS, Ramsey SD, Mohsenifar, Martinez F, Make BJ, Scuirba FC, Criner GJ,  Minai  O,  DeCamp  MM,  Reilly  JJ;  National  Emphysema  Treatment  Trial  Research Group. The Effect of Lung Voume Reduction Surgery on Chronic Obstructive Pulmonary Disease Exacerbations. Am J Respir Crit Care Med. 2008; 177: 164-169.\n9. DeCamp  Jr,  Malcolm  M,  Mckenna  Jr,  RJ,  Deschamps  CC,  Krasna  MJ.  Lung  volume reduction  surgery:  technique,  operative  mortality,  and  morbidity.  Proc  Am  Thorac  Soc. 2008; 5: 442-446.\n10. DeCamp Jr, MM, Lipson, D, Krasna M, Minai OA, McKenna Jr, RJ, Thomashow BM. The evaluation  and  preparation  of  the  patient  for  lung  volume  reduction  surgery.  Proc  Am Thorac Soc. 2008; 5(4): 427-431.\n11. Sciurba  FC,  Ernst  A,  Herth  FJF,  Strange  C,  Criner  GJ,  Marquette  CH,  Kovitz,  KL, Chiacchierini RP, Goldin J, McLennan G. A randomized study of endobronchial valves for advanced emphysema. N Engl J Med 2010; 363: 1233 - 1244.\n12. Herth FJF, Noppen M, Valipour A, Leroy S, Vergnon J, Ficker JH, Egan JJ, Gasparini S, Agusti  C,  Holmes-Higgin  D,  Ernst  A.  Efficacy  predictors  of  lung  volume  reduction  with Zephyr valves in a European cohort. Eur Respir J 2012; 39: 1334 -1342.\n13. Herth FJ, Eberhardt R, Gompelmann D, Ficker JH, Wagner M, Ek L, Schmidt B, Slebos DJ. Radiological and clinical outcomes of using Chartis to plan endobronchial valve treatment. Eur Respir J. 2013; 41(2):302-308.\n14. Valipour A, Herth FJ, Burghuber OC, Criner G, Vergnon JM, Goldin J, Sciurba F, Ernsy A; VENT Study  Group.  Target  lobe  volume  reduction  and  Chronic obstructive pulmonary disease (COPD)  outcome  measures  after endobronchial valve therapy. Eur Respir J. 2014; 43(2):387-396.\n15. Davey C, Zoumot Z, Jordan S, McNulty WH, Carr DH, Hind MD, Hansell DM, Rubens MB, Banya W, Polkey MI, Shah PL, Hopkinson NS. Bronchoscopic lung volume reduction with endobronchial  valves  for  patients  with  heterogeneous  emphysema  and  intact  interlobar fissures  (the  BeLieVeR-HIFi  study):  a  randomised  controlled  trial.  Lancet.  2015;  386: 1066-1073.\n16. Klooster K, ten Hacken NHT, Hartman JE, Kerstjens HAM, van Rikxoort EM, Slebos DJ. Endobronchial  Valves  for  Emphysema  without  Interlobar  Collateral  Ventilation.  N  Engl  J Med 2015; 373:2325-2335\n17. Valipour A, Slebos DJ, Herth F, Darwiche K, Wagner M, Ficker JH, Petermann C, Hubner RH, Stanzel F, Eberhardt R; IMPACT Study Team. Endobronchial valve therapy in patients with  homogeneous emphysema: results from the IMPACT study. Am J Respir Crit Care Med 2016; 194: 1073-1082.\n18. Kemp SV, Slebos DJ, Kirk A, Kornaszewska M, Carron K, Ek L, Mal H, Pison C, Downer NJ, Broman G, Darwiche K, Rao J, Hubner R-H, Trosini-Desert V, Eberhardt R, Herth FJF, Derom E, and Marquette CH. A Multicenter, Prospective, Randomized, Controlled Trial of Endobronchial  Valve  Treatment  vs  standard  of  Care  in  Heterogeneous  Emphysema (Transform). Am J Respir Crit Care Med. 2017; 19S: A6740.\n19. World  Medical  Association.  World  Medical  Association  Declaration  of  Helsinki  Ethical Principles  for  Medical  Research  Involving  Human  Subjects.  JAMA.  2013;310(20):21912194.\n20. Slebos  Dirk-Jan,  Shah  PL,  Herth  FJF,  Valipour  A.  Endobronchial  Valves  for  Endoscopic Lung Volume Reduction: Best Practice Recommendations from Expert Panel on Endoscopic Lung Volume Reduction. Respiration. 2017; 93:138-150.\n21. Valipour A, Slebos DJ, de Oliveira HG, Eberhardt R, Freitag L, Criner GJ, Herth FJ: Expert statement:  pneumothorax  associated  with  endoscopic  valve  therapy  for  emphysema  potential  mechanisms,  treatment  algorithm,  and  case  examples.  Respiration  2014;  87: 513-521.\n22. Laspas  F,  Roussakis  A,  Efthimiadou  R,  Papaioannou  D,  Papadopoulos  S,  Andreou  J. Percutaneous CT-guided fine-needle aspiration of pulmonary lesions: results and complications in 409 patients. J Med Imaging Radiat Oncol. 2008; 52: 458-462.\n23. Hiraki T, Mimura H, Gobara H, Shibamoto K, Inoue D, Matsui Y, Kanazawa S. Incidence of and risk factors for pneumothorax and chest tube placement after CT fluoroscopy-guided percutaneous lung biopsy: retrospective  analysis  of  the  procedures  conducted over  a 9year period. AJR Am J Roentgenol. 2010; 194: 809-814.\n24. Sciurba FC, Criner GJ, Strange C, Shah PL, Michaud G, Connolly TA, Deslée G, Tillis WP, Delage  A,  Marquette  CH,  Krishna  G,  Kalhan  R,  Ferguson  JS,  Jantz  M,  Maldonado  F, McKenna R, Majid A, Rai N, Gay S, Dransfield MT, Angel L, Maxfield R, Herth FJ, Wahidi MM, Mehta A, Slebos DJ; RENEW Study Research Group. Effect of Endobronchial Coils vs Usual Care on Exercise Tolerance in Patients with Severe Emphysema: The RENEW Randomized Clinical Trial. JAMA. 2016; 315(20):2178-2189.\n25. DeCamp MM, Blackstone EH, Naunheim KS, Krasna MJ, Wood DE, Meli YM, McKenna RJ Jr;  NETT  Research  Group.  Patient  and  surgical  factors  influencing  air  leak  after  lung volume reduction surgery: lessons learned from the National Emphysema Treatment Trial. Ann Thorac Surg. 2006; 82(1): 197-207.\n26. Gompelmann  D,  Herth  FJ,  Slebos  DJ,  Valipour  A,  Ernst  A,  Criner  GJ,  Eberhardt  R. Pneumothorax following endobronchial valve therapy and its impact on clinical outcomes in\nsevere emphysema. Respiration. 2014; 87(6):485-491.\n27. Hopkinson  NS,  Kemp  SV,  Toma  TP,  Hansell  DM,  Geddes  DM,  Shah  PL,  Polkey  MI. Atelectasis and survival after bronchoscopic lung volume reduction for Chronic obstructive pulmonary disease (COPD). Eur Respir J. 2011 Jun; 37(6):1346-51.\n28. Garner J, Kemp SV, Toma TP, Hansell DM, Polkey MI, Shah PL, Hopkinson NS. Survival after Endobronchial Valve Placement for Emphysema: A 10-Year Follow-up Study. Am J Respir Crit Care Med. 2016; 15;194(4): 519-21.\n29. Venuta F, Anile M, Diso D, Carillo C, De Giacomo T, D'Andrilli A, Fraioli F, Rendina EA and Coloni GF. Long-term follow-up after bronchoscopic lung volume reduction in patients with emphysema. Eur Respir J. 2013; 39(3): 1084 - 1089.\n30. Celli BR, Cote CG, Marin JM, Casanova C, Montes de Oca M, Mendez RA, Pinto Plata V, Cabral HJ. The body-mass index, airflow obstruction, dyspnea, and exercise capacity index in chronic obstructive pulmonary disease. N Engl J Med 2004; 350: 1005-1012.\n31. Martinez FJ, Han MK, Andrei AC, Wise R, Murray S, Curtis JL, Sternberg A, Criner G, Gay SE, Reilly J, Make B, Reis AL, Sciurba F, Weinmann G, Mosenifar Z, DeCamp M, Fishman AP, Celli BR; National Emphysema Treatment Trial Research Group. Longitudinal change in the BODE index predicts mortality in severe emphysema. Am J Respir Crit Care Med. 2008;178: 491-499.\n32. Klooster K, Hartman JE, ten Hacken NHT, and Slebos DJ. Improved Predictors of Survival after  Endobronchial  Valve  Treatment  in  Patients  with  Severe  Emphysema.  Am  J  Respir Crit Care Med. 2017; 195: 1272 - 1274.\n33. Klooster  K,  Hartman  JE,  Ten  Hacken  NH,  Slebos  DJ.  One-Year  Follow-Up  after Endobronchial Valve Treatment in Patients with Emphysema without Collateral Ventilation\nTreated in the STELVIO Trial. Respiration. 2017;93(2):112-121.\n34. Zoumot  Z,  Davey  C,  Jordan  S,  McNulty  WH,  Carr  DH,  Hind  MD,  Polkey  MI,  Shah  PL, Hopkinson  NS.  Endobronchial  valves  for  patients  with  heterogeneous  emphysema  and without  interlobar  collateral  ventilation:  open  label  treatment  following  the  BeLieVeR-HIFi study. Thorax. 2017; 72(3):277-279.\n35. Haniana  NA,  Celli  BR,  Donohue  JF,  Martin  UJ.  Bronchodilator  Reversibility  in  Chronic obstructive pulmonary disease (COPD). Chest. 2011; 140:1055-1063.\n36. Donohue JF. Minimal clinically important differences in Chronic obstructive pulmonary disease (COPD) lung function. Chronic obstructive pulmonary disease (COPD). 2005; 2(1):111-24.\n37. Hartman  JE, Ten  Hacken  NH, Klooster  K, Boezen  HM, de  Greef  MH, Slebos DJ.  The minimal important difference for residual volume in patients with severe emphysema. Eur Respir J. 2012;40(5):1137-41.\n38. Jones  P.W.  Interpreting  thresholds  for  a  clinically  significant  change  in  health  status  in asthma and Chronic obstructive pulmonary disease (COPD). Eur Respir J. 2002; 19:398-404.\n39. Puhan MA, Chandra D, Mosenifar Z, Ries A, Make B, Hansel NN, Wise RA, Scruiba F for the NETT Research Group. The minimal important difference of exercise tests in severe Chronic obstructive pulmonary disease (COPD). Eur Respir J. 2011;37(4):784-90.\n40. Gross NJ. Chronic obstructive pulmonary disease outcome  measurements:  what's important? What's useful? Proc Am Thorac Soc. 2005; 2(4):267-71.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "A Multicenter RCT of Zephyr® Endobronchial Valve Treatment in Heterogeneous Emphysema (TRANSFORM)",
+      "content": "Samuel  V  Kemp 1,10 ,  Dirk-Jan  Slebos 2 ,  Alan  Kirk 3 ,  Malgorzata  Kornaszewska 4 ,  Kris Carron 5 ,  Lars Ek 6 ,  Gustav Broman 7 , Gunnar Hillerdal 7 ,  Herve Mal 8 ,  Christophe Pison 9 , Amandine Briault 9 , Nicola Downer 10 , Kaid Darwiche 11 , Jagan Rao 12 , Ralf-Harto Hübner 13 ,  Christof  Ruwwe-Glosenkamp 13 ,  Valéry  Trosini-Desert 14 ,  Ralf  Eberhardt 15 , Felix J Herth 15 , Eric Derom 16 , Thomas Malfait 16 , Pallav L Shah 1 , Justin L Garner 1 , Nick H  ten  Hacken 2 ,  Hazem  Fallouh 4 ,  Sylvie  Leroy 17 ,  and  Charles  H  Marquette 17 for  the TRANSFORM Study Team*\nThis supplementary material is provided by the authors to give readers additional information relating to the above-mentioned work.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Tables",
+      "content": "Table E1:\nBaseline Absolute Values\nTable E2:\nChanges from Baseline to 3 Month Follow-up for ITT Population\nTable E3:\nChanges from Baseline to 6 Month Follow-up for ITT Population\nTable E4:\nChanges from Baseline to 3 Month Follow-up for PP Population\nTable E5:\nChanges from Baseline to 6 Month Follow-up for PP Population\nTable E6:\nDifference  between  groups  for  Changes  from  Baseline  to  3  Month  Follow  up  for  ITT Population\nTable E7:\nDifference  between  groups  for  Changes  from  Baseline  to  6  Month  Follow  up  for  ITT Population\nTable E8:\nDifference  between  groups  for  Changes  from  Baseline  to  3  Month  Follow  up  for  PP\nPopulation\nTable E9:\nDifference  between  groups  for  Changes  from  Baseline  to  6  Month  Follow  up  for  PP Population\nTable E10:\nMCID responders for key outcome measures in the PP population at 6 months\nTable E11:\nRespiratory Adverse Events over 6 Months\nTable E12:\nNon-Respiratory Adverse Events over 6 Months\nTable E13:\nOccurrence of pneumothorax by lobe treated\nTable E14:\nEBV Subjects with pneumothorax and no pneumothorax: Difference between groups for changes from Baseline to 3 Month Follow up (ITT)\nTable E15:\nEBV Subjects with pneumothorax and no pneumothorax: Difference between groups for changes from Baseline to 6 Month Follow up (ITT)",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Figures",
+      "content": "Figure E1:\nExamples of CV negative and CV positive read-outs from the Chartis system\nFigure E2:\nTarget Lobe Selection\nFigure E3:\nStudy Scheme\nFigure E4:\nCONSORT Flow Diagram\nFigure E5:\nResponders based on Target Lobe Volume Reduction of ≥350mL\nFigure E6:\nResponders based on Minimal Clinically Important Difference for Forced Expiratory\nVolume in 1 Second (%) (ITT population)",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Section E1: Study Subjects: Inclusion and Exclusion criteria",
+      "content": "Subjects enrolled in the Study had to meet the following Inclusion and Exclusion criteria:",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Inclusion Criteria",
+      "content": "1. Obtained informed consent.\n2. Diagnosis of heterogeneous emphysema with a heterogeneity index of ≥10 % between target and adjacent lobes.\n3. Subjects of both genders of at least 40 years of age.\n4. 15 % predicted ≤ FEV1≤ 45% predicted.\n5. TLC > 100% and RV ≥ 180% predicted.\n6. 150 meters < 6MWT < 450 meters.\n7. Non-smoker >8 weeks prior to signing the Informed Consent.\n8. CV negative target lobe.\nAdditional inclusion criterion French CIP*:\n- If treated in France, Subject must be entitled to French social security",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Exclusion criteria",
+      "content": "1. Any contraindication for bronchoscopic procedure.\n2. Evidence of active pulmonary infection.\n3. History of 2 or more exacerbations requiring hospitalization over the past 12 months.\n4. Known pulmonary hypertension that according to the physician will be unsuitable for EBV treatment.\n5. Myocardial infarction or other relevant cardiovascular events in the past 6 months.\n6. Significant bronchiectasis seen at CT scan.\n7. Greater than two tablespoons of sputum production per day.\n8. Prior LVR Odds ratio (or) LVRS procedure. French CIP wording*: Prior lung transplant, median sternotomy, LVR or LVRS procedure (including lobectomy).\n9. Pulmonary nodule requiring follow-up within any lobe.\n10. Pregnant Odds ratio (or) nursing women. French CIP wording*: Subject is pregnant Odds ratio (or) lactating, or plans to become pregnant within the study timeframe.\n11. Hypercapnia (paCO2 >7.33 kPa).\n12. Current diagnosis of asthma.\n13. > 25mg Prednisolone (or equivalent) use/days.\n14. Any  other  condition  that  as  judged  by  the  investigator  may  make  follow-up  or investigations inappropriate.\n15. Evidence of pleural adhesions or earlier pulmonary surgery.\n16. Severe Bullous Emphysema (> 1/3 Hemithorax)\n17. Any subject that according to the Declaration of Helsinki is unsuitable for enrollment. Additional exclusion criteria in French CIP*:\n- History of allergy to silicone and/or nitinol.\n- If treated in France, Subject is a \"personne vulnerable\" as defined by French regulation.\n- Simultaneous participation in another drug and/or medical device related clinical.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Section E2: Study Design and Methods",
+      "content": "Prospective,  randomized,  controlled,  two-armed  multi-center  trial.  Planned  to  enroll  78 subjects with heterogeneous emphysema at Study centers in Europe.\n· Potential subjects with heterogeneous emphysema will be asked to sign the inform consent form and will thereafter initially be identified by visual read of a high-resolution computer tomography  scan  (HRCT)  by  the  investigator.  Subjects  underwent  baseline  evaluations including medical history, physical examination, blood test, echocardiogram, measures lung volumes and lung function, scintigraphy, Six-Minute Walk Test (6MWD), and questionnaires including  St.  George's  Respiratory  Questionnaire  (SGRQ),  modified  Medical  Research Council (mMRC) Dyspnea score, and EQ-5D.\n· Heterogeneity was confirmed using computerized software to determine the heterogeneity index (HI). Subjects with a HI (difference in destruction scores between potential target and ipsilateral lobe(s)) of ≥10% and a destruction score ≥50% in the potential target lobe were considered for enrollment into the Trial. In case of multiple target lobes, the lobe with the highest destruction score and lowest perfusion or ventilation as determined by scintigraphy was assessed for CV first. The scheme for target lobe determinations is shown in Figure E1.\n· All  potential  study  candidates  then  underwent  a  Chartis  assessment  to  determine  the extent of collateral ventilation (CV) between target and adjacent lobes. In case of multiple (2)  target  lobes,  the  lobe  with  the  highest  destruction  score  and  lowest  perfusion  or ventilation  as  determined  by  scintigraphy  was  assessed  for  CV  first.  If  the  primary  target lobe was CV positive or if the CV status was not assessable, then the secondary target lobe was  evaluated  for  CV  status.  Only  subjects  with  a  CV  negative  (low  collateral  flow  as determined by the investigator) target lobe and with an exhaled volume of >100 ml were considered. Subjects fulfilling all the eligibility criteria were considered enrolled and were randomized 2:1 into either the EBV group or the SoC group.\n· Subjects  randomized  to  EBV  treatment  arm  had  EBVs  placed  during  a  bronchoscopy procedure (under general anesthesia or sedation) to achieve lobar occlusion. Subjects in the SoC arm received standard treatment.\n· Subjects  in  whom  EBV  were  placed  were  monitored  at  the  hospital  at  least  24  hours following valve placement to screen for signs of volume reduction, pneumothorax and any other side effects or complications and had a chest X-ray performed immediately prior to discharge. Following discharge, the subjects were recommended to avoid anything else but mild physical activity and bedrest for additional four days by the treating physician. Cough suppressants could be prescribed prophylactically.",
+      "category": "methods",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Figure E2: Target Lobe Selection",
+      "content": "· EBV group subjects had a HRCT performed at 45 days after the procedure to verify technical success  of  valve  placement.  Valve  adjustment  or  valve  replacement,  if  indicated  to  be necessary as per the HRCT, was considered part of the study procedure.  In the case of a secondary  valve  procedure,  the  follow-up  schedule  was  calculated  from  the  date  of  the latest valve procedure. Valve adjustment/replacement could be performed only once for a study participant within the trial. A valve adjustment or valve replacement procedure was considered if:\n1. The  45-day  HRCT  scan,  as  read  by  the  core  radiology  reading  laboratory  and measured using software designed to evaluate HRCT changes, showed less than 50% volumetric reduction in the EBV-treated lobe.\n2. The 45-day HRCT scan, as read by the core radiology reading laboratory, demonstrated  signs  indicative  of  incomplete  occlusion,  including  no  valve  in  a segmental airway, anatomic variation resulting in the valve not occluding accessory branches, leakage around the valve, and incorrect placement.\nIn  addition  to  verifying  technical  success  as  judged  by  the  HRCT  scan,  the  TLVR  was calculated relative to baseline.\n· Subjects in both EBV and SoC arms performed assessments at 3 and 6 months. SoC subjects could exit the trial after the 6-month evaluation and thereafter receive EBV treatment. Any subjects remaining in the SoC group (declining valve treatment after the 6-month follow up) was followed up at 12 months where after they would exit the study. In addition to the 3, 6, and 12 months follow-up visits, subjects in the EBV group will be followed-up at 45 days, 18 and 24 months following valve placement.\n· Adverse events were solicited during each visit and during any unscheduled visit.\nV1: Screening\nV2: Bronchoscopy to determine CV status and randomization is CV negative (CV-)\nV3: 45 Day - HRCT for EBV group only\nV4: 3-month assessment\nV5: 6-month assessment; exit of SoC subjects if choosing to pursue EBV treatment\nV6: 12-month assessment\nV7: 18-month assessment - EBV only\nV8: 24-month assessment - EBV only",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Section E3: Randomization",
+      "content": "Subjects were randomly assigned at a 2:1 ratio to the EBV treatment group or the SoC group during  the  bronchoscopy  procedure.  Once  CV  negative  status  was  confirmed,  two  study participants  were  randomized  to  the  EBV  Treatment  arm  for  every  one  (1)  participant randomized to the SoC arm using a blocked design to assure the 2:1 balance from start. Each site  was  provided  with  sealed  envelopes  with  consecutive  numbering.  The  envelopes  were brought into the bronchoscopy suite and the seal was broken once the CV negative status has been confirmed; the enclosed document was marked 'EBV' or 'SoC'.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Section E4: Analysis population",
+      "content": "During  statistical  analysis  of  the  study  results  the  patient  population  may  be  divided  into subgroups, for example:\n· Intention-to-treat  (ITT):  all  patients  included  in  the  study  whether  or  not  treated according to protocol.\n· Per-protocol (PP): all patients that meet the following criteria:\n1.   Meets inclusion/exclusion criteria. Prospective deviations preapproved by Sponsor does not cause removal from the PP group.\n2.   Received treatment (EBV or SoC). Any valve removed has been replaced before 3month assessment.\nSafety analyses were performed on the ITT population.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Section E5: Handling of Missing Data",
+      "content": "If  the  FEV 1 (L)  data  from  the  3-month  follow-up  visit  have  failed  to  be  collected,  then  this subject's data for this parameter was excluded from the statistical analysis. Available data for other measures was analyzed.\nFor  the  Intention  to  Treat  analyses,  for  a  missed  visit,  values  for  all  variables  were  imputed using  the  Last  Observation  Carried  Forward  (LOCF)  method.  For  a  completed  visit,  no imputation was done for a single missing variable.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Reasons for withdrawn consents",
+      "content": "· 5 EBV subjects before 3-month visit: 1 difficult anatomy for EBV placement; 1 experienced 2 pneumothoraces, worsening Chronic obstructive pulmonary disease (COPD); 2 for lack of perceived benefit; 1 non-compliant, withdrawn by Investigator\n· 1 SoC subject before 3-month visit: Pursue EBV commercially\n· 1 EBV subjects between 3 and 6-month visit: Worsening Chronic obstructive pulmonary disease (COPD), all valves removed, subject withdrew consent\nLegend for Figure E5: Each bar represents an individual subject. Blue bars represent subjects that had a Target Lobe Volume reduction of equal to or greater than 350mL. Black bars represent subjects who did not achieve a TLVR of ≥350mL.  Dotted line represents a target volume of 350mL.\nLegend for Figure E6: Each bar represents an individual subject. Blue bars represent subjects that met Odds ratio (or) exceeded the minimal clinical important difference (MCID) for FEV1 of ≥12% improvement in FEV1 (L). Black bars represent subjects who did not meet the MCID. Dotted line represents the MCID.\nLegend for Figure E7: Each bar represents an individual subject. Blue bars represent subjects that met Odds ratio (or) exceeded  the  minimal  clinical  important  difference  (MCID)  for  6-Minute  Walk  Distance  (26  meters). Black bars represent subjects who did not meet the MCID. Dotted line represents the MCID.\nLegend for Figure E8: Each bar represents an individual subject. Blue bars represent subjects that met or exceeded the minimal clinical important difference (MCID) for St. George's Respiratory Questionnaire (4 points). Black bars represent subjects who did not meet the MCID. Dotted line represents the MCID.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Table E5: Changes from Baseline to 6 Month Follow up for PP Population",
+      "content": "*Consort diagram in figure E4 shows 51 EBV patients completed the study. FEV1 was not recorded for 1 subject at 6 months. All other assessments were completed. For the PP population, LOCF was only done for FEV1 where none of the data for a visit was available i.e. there was a missed visit.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Table E9: Difference between groups for Changes from Baseline to 6 Month Follow up for PP Population",
+      "content": "FEV1: Forced Expiratory Volume in 1 second; RV: Residual Volume; SGRQ: Sr. George's Respiratory  Questionnaire'  6MWD:  Six  Minute  Walk  Distance;  mMRC:  Modified Medical Research Council Dyspnea score *: Chi-squared test",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    }
+  ],
+  "tables": [
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/344'}",
+      "headers": [
+        "Variable",
+        "EBV (n=65)",
+        "SoC (n=32)",
+        "t-test p-value"
+      ],
+      "rows": [
+        [
+          "Gender",
+          "37 Males / 28 Females",
+          "21 Males / 11 Females",
+          "NS"
+        ],
+        [
+          "Age (years)",
+          "64.9 ± 8.0",
+          "63.0 ± 6.0",
+          "NS"
+        ],
+        [
+          "BMI (kg/m 2 )",
+          "23.7 ± 4.4",
+          "24.3 ± 5.3",
+          "NS"
+        ],
+        [
+          "Smoking history (pack years)",
+          "42.0 ± 21.5",
+          "42.0 ± 20.2",
+          "NS"
+        ],
+        [
+          "Clinical Characteristics",
+          "",
+          "",
+          ""
+        ],
+        [
+          "GOLD Stage",
+          "Stage III: 26 (40%) Stage IV: 39 (60%)",
+          "Stage III: 18 (56%) Stage IV: 14 (44%)",
+          "NS"
+        ],
+        [
+          "Emphysema score of the target lobe at -910 HU*",
+          "69.3 ± 9.3",
+          "68.4 ± 11.2",
+          "NS"
+        ],
+        [
+          "Heterogeneity Index between target and ipsilateral lobe(s) †",
+          "21.8 ± 14.6",
+          "25.5 ± 15.8",
+          "NS"
+        ],
+        [
+          "Forced Expiratory Volume in 1 sec. (L)",
+          "0.78 ± 0.24",
+          "0.94 ± 0.31",
+          "0.008"
+        ],
+        [
+          "Forced Expiratory Volume in 1 sec. (% predicted)",
+          "29.8 ± 9.2",
+          "32.2 ± 8.4",
+          "NS"
+        ],
+        [
+          "Residual Volume (% predicted)",
+          "249.4 ± 51.8",
+          "241.0 ± 41.4",
+          "NS"
+        ],
+        [
+          "Total Lung Capacity (% predicted)",
+          "139.0 ± 18.9",
+          "137.3 ± 12.5",
+          "NS"
+        ],
+        [
+          "6 Minute Walk Distance (m)",
+          "282 ± 94",
+          "320 ± 92",
+          "NS"
+        ],
+        [
+          "SGRQ Total score ‡",
+          "64.3 ± 14.4",
+          "58.1 ± 13.3",
+          "0.042"
+        ],
+        [
+          "mMRC score §",
+          "3.00 ± 0.77",
+          "2.88 ± 0.83",
+          "NS"
+        ],
+        [
+          "BODE Index score **",
+          "6.14 ± 1.68",
+          "5.55 ± 1.77",
+          "NS††"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/356'}",
+      "headers": [
+        "Outcome Measure",
+        "Change from Baseline",
+        "EBV (n=65)",
+        "SoC (n=32)",
+        "Δ EBV - SoC Mean [95% CI]",
+        "p-value*"
+      ],
+      "rows": [
+        [
+          "FEV 1",
+          "Liters (L)",
+          "0.14 ± 0.24",
+          "-0.09 ± 0.14",
+          "0.2 [0.1, -0.3]",
+          "<0.001"
+        ],
+        [
+          "FEV 1",
+          "Percent (%)",
+          "20.7 ± 29.6",
+          "-8.6 ± 13.0",
+          "29.3 [18.3, -40.4]",
+          "<0.001"
+        ],
+        [
+          "RV",
+          "Liters (L)",
+          "-0.66 ± 1.04",
+          "0.01 ± 0.79",
+          "-0.7 [-1.1, -0.3]",
+          "0.002"
+        ],
+        [
+          "6MWD",
+          "Meters",
+          "36.2 ± 76.9",
+          "-42.5 ± 68.2",
+          "78.7 [46.3, 111.0]",
+          "<0.001"
+        ],
+        [
+          "SGRQ total score",
+          "Points",
+          "-7.2 ± 15.1",
+          "-0.7 ± 10.4",
+          "-6.5 [-12.4, -0.6]",
+          "0.031"
+        ],
+        [
+          "mMRC Grade",
+          "Points",
+          "-0.56 ± 1.04",
+          "0.00 ± 0.86",
+          "-0.6 [-1.0, -0.1]",
+          "0.010"
+        ],
+        [
+          "BODE Index score",
+          "Points",
+          "--0.97 + 2.01",
+          "0.79 ± 1.17",
+          "-1.8 [-2.6, -0.9]",
+          "<0.001 †"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/361'}",
+      "headers": [
+        "Variable",
+        "EBV",
+        "SoC",
+        "p-value *"
+      ],
+      "rows": [
+        [
+          "FEV 1 (L): (MCID ≥ +12%) 35,36",
+          "36/64 (56.3%)",
+          "1/31 (3.2%)",
+          "< 0.001"
+        ],
+        [
+          "RV (ml): (MCID ≤ -430 mL) 37",
+          "37/64 (57.8%)",
+          "8/31 (25.8%)",
+          "0.003"
+        ],
+        [
+          "SGRQ: (MCID ≤ -4 points) 38",
+          "35/62 (61.7%)",
+          "11/32 (34.4%)",
+          "0.042"
+        ],
+        [
+          "6MWD: (MCID≥ +26 meters) 39",
+          "33/63 (52.4%)",
+          "4/31 (12.9%)",
+          "<0.001"
+        ],
+        [
+          "mMRC: (MCID ≤ -1 point) 40",
+          "29/64 (43.8%)",
+          "7/31 (22.6%)",
+          "0.032"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/368'}",
+      "headers": [
+        "",
+        "EBV (n=65)",
+        "EBV (n=65)",
+        "EBV (n=65)",
+        "EBV (n=65)",
+        "SoC (n=32)",
+        "SoC (n=32)",
+        "SoC (n=32)",
+        "SoC (n=32)"
+      ],
+      "rows": [
+        [
+          "Event",
+          "≤30 days Events",
+          "≤30 days Subjects (%)",
+          ">30 days to 6 months Events",
+          ">30 days to 6 months Subjects (%)",
+          "≤30 days Events",
+          "≤30 days Subjects (%)",
+          ">30 days to 6 months Events",
+          ">30 days to 6 months Subjects (%)"
+        ],
+        [
+          "Pneumothorax",
+          "13",
+          "13 (20.0%) *",
+          "2 ¶",
+          "2 (3.1%)",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "Dyspnea",
+          "6",
+          "5 (7.7%)",
+          "2",
+          "2 (3.1%)",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "Pneumonia",
+          "3",
+          "3 (4.6%)",
+          "3",
+          "3 (4.6%)",
+          "0",
+          "0",
+          "1",
+          "1 (3.1%)"
+        ],
+        [
+          "COPD Exacerbation",
+          "3",
+          "3 (4.6%)",
+          "4",
+          "3 (4.6%)",
+          "0",
+          "0",
+          "3",
+          "2 (6.3%)"
+        ],
+        [
+          "Subcutaneous emphysema",
+          "1",
+          "1 (1.5%)",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "Hemoptysis",
+          "1",
+          "1 (1.5%)",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "Inhaled foreign body",
+          "1",
+          "1 (1.5%)",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "Lower Respiratory Tract Infection",
+          "1",
+          "1 (1.5%)",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "Death",
+          "1",
+          "1 (1.5%)ǂ",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "Bronchospasm",
+          "0",
+          "0",
+          "2",
+          "1 (3.1%)",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "Influenza",
+          "0",
+          "0",
+          "1",
+          "1 (1.5%)",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "EBV removal",
+          "0",
+          "0",
+          "1",
+          "1 (1.5%)",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "",
+      "headers": [
+        "Clinical Site",
+        "Investigators and Study Coordinator"
+      ],
+      "rows": [
+        [
+          "1 Royal Brompton Hospital, London, United Kingdom",
+          "Samuel Kemp, Pallav L Shah, Justin Garner, Dingani Mpoko, Zainab Sanni-Alashe"
+        ],
+        [
+          "2 University Medical Center Groningen, Groningen, the Netherlands",
+          "Dirk-Jan Slebos, Nick Ten Hackens, Karin Klooster, Jorine Hartman, Wouter Heero van Geffen"
+        ],
+        [
+          "3 West of Scotland Regional Heart& Lung Center, Golden Jubilee National Hospital, Glasgow, United Kingdom",
+          "Alan Kirk, Julie Buckley, David Patton, Elizabeth Boyd, Elaine Matthews"
+        ],
+        [
+          "4 University Hospital of Wales, Cardiff, United Kingdom",
+          "Margaret Kornaszewska, Hazem Fallouh, Helen Dyer, Joseph George, Hatem Naase, Azin Salimian, Jaqueline Holder"
+        ],
+        [
+          "5 AZ Delta, Menen, Belgium",
+          "Kris Carron, Ingel Demedts, Melissa Masschelin, Lieke Seynaeve, Lies Breyne"
+        ],
+        [
+          "6 Skane University Hospital, Lund, Sweden",
+          "Lars Ek, Johan Svahn, Pernilla Neglén, Charlotta Zyto"
+        ],
+        [
+          "7 Uppsala University Hospital, Uppsala, Sweden",
+          "Gunnar Hillerdal, Gustav Broman, Elisabeth Bernspång, Helen Wallstedt"
+        ],
+        [
+          "8 Hôpital Bichat, Paris, France",
+          "Hervé Mal, Armelle Marceau, Marie Christine Dombret, Yolande Costa"
+        ],
+        [
+          "9 Centre Hospitalier Universitaire, Grenoble, France",
+          "Christophe Pison, Francois Arbib, Amandine Briault, Marie Jondot, Sebastien Quetant, Cècile Cherion, Anne-Lise Schneider"
+        ],
+        [
+          "10 King's Mill Hospital, Sherwood Forest Hospitals NHS, Sutton in Ashfield, United Kingdom",
+          "Nicola Downer, Samuel Kemp, Lynne Allsop, Andrea Palfreman"
+        ],
+        [
+          "11 Ruhrlandklinik, University Clinic Essen, Essen, Germany",
+          "Kaid Darwiche, Diana Friedrich, Ulrike Sampel, Jane Winantea, Hilmar Kuehl, Ruediger Michael Karpf- Wissel, Stephan Eisenmann, Jennifer Thälker, Ulrike Kaiser, Filiz Özkan, Birte Schwarz"
+        ],
+        [
+          "12 Sheffield Teaching Hospital NHS Foundation Trust, Sheffield, the UK",
+          "Jagan Rao, Janet Middle, Kay Housley, Esther Ludbrook, Allah Dino Keerio, Pene Fati"
+        ],
+        [
+          "13 Charité Universitätsmedizin Berlin Charité Campus Virchow-Klinikum, Berlin, Germany",
+          "Ralf-Harto Hübner, Christof Ruwwe-Glosenkamp, Ulrike Föllmer, Melanie Wegemund, Tamar Zhamurashvili, Nora Grosse Darrelmann, Sandra Korge"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "",
+      "headers": null,
+      "rows": [
+        [
+          "14 Groupe Hospitalier Pitié Salpétrière, Paris, France",
+          "Valéry Trosini-Desert, Juan Alejandro Cascón Hernández, Gwenaël Le Breton"
+        ],
+        [
+          "15 Thoraxklinik, Universitäts klinikum, Heidelberg, Germany",
+          "Ralf Eberhardt, Felix Herth, Konstantina Kontogianni, Daniela Gompelmann, Brigitte Rump, Michaela Korthöber, Marie-Therese Schuster"
+        ],
+        [
+          "16 Ghent University Hospital, Ghent, Belgium",
+          "Eric Derom, Thomas Malfait, Bénédicte Demeyere, Stefanie Vermeersch, Anja Delporte"
+        ],
+        [
+          "17 Hôpital Pasteur, Nice, France",
+          "Charles-Hugo Marquette, Ariane Guillemart, Michèle Benhayoun, Johana Pradelli, Sylvia Korzeniewski, Claude Clary, Charles Leheron, Arfi Thierry, Sylvie Leroy, Fernand Macone, Céline Sanfiorenzo, Michel Poudenx, Pierre Wolter, Brigitte Pays, Jennifer Griffonnet, Virgine Roux, Casamitjana Laure, Brigitte Pays, Chantal Gutierrez, Maureen Fontaine"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "",
+      "headers": [
+        "Variable",
+        "Group",
+        "n",
+        "Mean",
+        "SD",
+        "Min",
+        "Median",
+        "Max",
+        "t-test p-value"
+      ],
+      "rows": [
+        [
+          "Emphysema score",
+          "EBV",
+          "65",
+          "69.28",
+          "9.30",
+          "42.00",
+          "70.00",
+          "88.00",
+          "0.692"
+        ],
+        [
+          "",
+          "SoC",
+          "32",
+          "68.42",
+          "11.23",
+          "41.00",
+          "70.00",
+          "86.00",
+          ""
+        ],
+        [
+          "Heterogeneity index",
+          "EBV",
+          "65",
+          "21.77",
+          "14.59",
+          "-17.00",
+          "20.00",
+          "64.00",
+          "0.252"
+        ],
+        [
+          "",
+          "SoC",
+          "32",
+          "25.50",
+          "15.79",
+          "5.00",
+          "22.50",
+          "63.00",
+          ""
+        ],
+        [
+          "FEV1 (L)",
+          "EBV",
+          "65",
+          "0.78",
+          "0.24",
+          "0.37",
+          "0.76",
+          "1.40",
+          "0.008"
+        ],
+        [
+          "",
+          "SoC",
+          "32",
+          "0.94",
+          "0.31",
+          "0.47",
+          "0.87",
+          "1.61",
+          ""
+        ],
+        [
+          "FEV1 (% predicted)",
+          "EBV",
+          "65",
+          "29.75",
+          "9.18",
+          "15.00",
+          "28.00",
+          "48.00",
+          "0.214"
+        ],
+        [
+          "",
+          "SoC",
+          "32",
+          "32.16",
+          "8.35",
+          "17.00",
+          "32.00",
+          "49.00",
+          ""
+        ],
+        [
+          "RV (L)",
+          "EBV",
+          "64",
+          "5.47",
+          "1.26",
+          "3.10",
+          "5.38",
+          "8.37",
+          "0.764"
+        ],
+        [
+          "",
+          "SoC",
+          "32",
+          "5.39",
+          "1.16",
+          "3.36",
+          "5.29",
+          "8.56",
+          ""
+        ],
+        [
+          "RV (% predicted)",
+          "EBV",
+          "64",
+          "249.44",
+          "51.76",
+          "161.00",
+          "238.00",
+          "409.00",
+          "0.423"
+        ],
+        [
+          "",
+          "SoC",
+          "32",
+          "240.97",
+          "41.39",
+          "166.00",
+          "243.50",
+          "364.00",
+          ""
+        ],
+        [
+          "TLC (L)",
+          "EBV",
+          "64",
+          "8.12",
+          "1.54",
+          "5.30",
+          "8.13",
+          "12.49",
+          "0.200"
+        ],
+        [
+          "",
+          "SoC",
+          "32",
+          "8.55",
+          "1.56",
+          "5.74",
+          "8.74",
+          "11.12",
+          ""
+        ],
+        [
+          "TLC (% predicted)",
+          "EBV",
+          "64",
+          "138.97",
+          "18.88",
+          "102.00",
+          "136.50",
+          "209.00",
+          "0.648"
+        ],
+        [
+          "",
+          "SoC",
+          "32",
+          "137.28",
+          "12.48",
+          "117.00",
+          "139.00",
+          "163.00",
+          ""
+        ],
+        [
+          "FEV1/FVC (%)",
+          "EBV",
+          "65",
+          "32.70",
+          "8.13",
+          "18.90",
+          "31.46",
+          "56.17",
+          "0.508"
+        ],
+        [
+          "",
+          "SoC",
+          "32",
+          "31.57",
+          "7.32",
+          "19.48",
+          "31.03",
+          "49.12",
+          ""
+        ],
+        [
+          "RV/TLC (%)",
+          "EBV",
+          "64",
+          "67.20",
+          "7.79",
+          "50.58",
+          "68.09",
+          "87.16",
+          "0.016"
+        ],
+        [
+          "",
+          "SoC",
+          "32",
+          "63.13",
+          "7.47",
+          "52.08",
+          "62.63",
+          "78.46",
+          ""
+        ],
+        [
+          "DLco (mmol/min/kPa)",
+          "EBV",
+          "59",
+          "2.50",
+          "1.49",
+          "0.33",
+          "2.20",
+          "8.90",
+          "0.370"
+        ],
+        [
+          "",
+          "SoC",
+          "31",
+          "2.81",
+          "1.63",
+          "0.47",
+          "2.86",
+          "8.07",
+          ""
+        ],
+        [
+          "DLco (% predicted)",
+          "EBV",
+          "60",
+          "32.32",
+          "13.11",
+          "8.00",
+          "32.50",
+          "82.00",
+          "0.304"
+        ],
+        [
+          "",
+          "SoC",
+          "31",
+          "35.35",
+          "13.55",
+          "13.00",
+          "36.00",
+          "74.00",
+          ""
+        ],
+        [
+          "SGRQ total score",
+          "EBV",
+          "64",
+          "64.34",
+          "14.39",
+          "32.94",
+          "65.08",
+          "93.29",
+          "0.042"
+        ],
+        [
+          "",
+          "SoC",
+          "32",
+          "58.07",
+          "13.26",
+          "18.46",
+          "59.94",
+          "81.10",
+          ""
+        ],
+        [
+          "6MWD(m)",
+          "EBV",
+          "65",
+          "282.46",
+          "94.41",
+          "150.00",
+          "260.00",
+          "484.00",
+          "0.065"
+        ],
+        [
+          "",
+          "SoC",
+          "32",
+          "320.25",
+          "91.79",
+          "150.00",
+          "327.50",
+          "470.00",
+          ""
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/998'}",
+      "headers": [
+        "Variable",
+        "Group",
+        "n",
+        "Mean",
+        "SD",
+        "Min",
+        "Median",
+        "Max",
+        "t-test p-value"
+      ],
+      "rows": [
+        [
+          "MRC breathlessness grade",
+          "EBV",
+          "65",
+          "3.00",
+          "0.77",
+          "1.00",
+          "3.00",
+          "4.00",
+          "0.466"
+        ],
+        [
+          "",
+          "SoC",
+          "32",
+          "2.88",
+          "0.83",
+          "1.00",
+          "3.00",
+          "4.00",
+          ""
+        ],
+        [
+          "BODE index",
+          "EBV",
+          "65",
+          "6.14",
+          "1.68",
+          "3.00",
+          "6.00",
+          "9.00",
+          "0.116"
+        ],
+        [
+          "",
+          "SoC",
+          "31",
+          "5.55",
+          "1.77",
+          "3.00",
+          "5.00",
+          "9.00",
+          ""
+        ],
+        [
+          "PaO2 (kPa)",
+          "EBV",
+          "63",
+          "9.22",
+          "1.30",
+          "6.87",
+          "9.00",
+          "13.16",
+          "0.365"
+        ],
+        [
+          "",
+          "SoC",
+          "32",
+          "8.96",
+          "1.33",
+          "5.73",
+          "9.15",
+          "11.00",
+          ""
+        ],
+        [
+          "PaCO2 (kPa)",
+          "EBV",
+          "63",
+          "5.31",
+          "0.66",
+          "3.76",
+          "5.24",
+          "7.07",
+          "0.213"
+        ],
+        [
+          "",
+          "SoC",
+          "32",
+          "5.13",
+          "0.61",
+          "4.08",
+          "5.14",
+          "6.44",
+          ""
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "",
+      "headers": [
+        "Variable",
+        "Group",
+        "n",
+        "Mean",
+        "SD",
+        "Min",
+        "Median",
+        "Max",
+        "t-test p-value"
+      ],
+      "rows": [
+        [
+          "Change (%) FEV1 (L)",
+          "EBV",
+          "65",
+          "23.21",
+          "28.49",
+          "-21.93",
+          "19.67",
+          "125.00",
+          "<.001"
+        ],
+        [
+          "",
+          "SoC",
+          "31",
+          "-4.01",
+          "12.95",
+          "-36.61",
+          "-2.67",
+          "15.48",
+          ""
+        ],
+        [
+          "Change FEV1 (L)",
+          "EBV",
+          "65",
+          "0.15",
+          "0.20",
+          "-0.26",
+          "0.13",
+          "0.72",
+          "<.001"
+        ],
+        [
+          "",
+          "SoC",
+          "31",
+          "-0.05",
+          "0.14",
+          "-0.41",
+          "-0.02",
+          "0.14",
+          ""
+        ],
+        [
+          "Change FEV1 (% predicted)",
+          "EBV",
+          "65",
+          "6.22",
+          "8.03",
+          "-7.00",
+          "5.00",
+          "33.00",
+          "<.001"
+        ],
+        [
+          "",
+          "SoC",
+          "31",
+          "-1.61",
+          "5.08",
+          "-16.00",
+          "-1.00",
+          "7.00",
+          ""
+        ],
+        [
+          "Change DLco (mmol/min/kPa)",
+          "EBV",
+          "58",
+          "0.07",
+          "1.03",
+          "-5.19",
+          "0.14",
+          "2.33",
+          "0.723"
+        ],
+        [
+          "",
+          "SoC",
+          "29",
+          "0.00",
+          "0.57",
+          "-1.49",
+          "0.00",
+          "1.37",
+          ""
+        ],
+        [
+          "Change DLco (% predicted)",
+          "EBV",
+          "59",
+          "2.78",
+          "8.84",
+          "-30.00",
+          "3.00",
+          "28.00",
+          "0.062"
+        ],
+        [
+          "",
+          "SoC",
+          "29",
+          "-0.72",
+          "6.54",
+          "-17.00",
+          "0.00",
+          "15.00",
+          ""
+        ],
+        [
+          "Change SGRQ total score",
+          "EBV",
+          "60",
+          "-8.87",
+          "15.70",
+          "-48.88",
+          "-7.45",
+          "46.08",
+          "0.018"
+        ],
+        [
+          "",
+          "SoC",
+          "30",
+          "-1.22",
+          "10.44",
+          "-21.16",
+          "-3.65",
+          "28.31",
+          ""
+        ],
+        [
+          "Change 6MWD(m)",
+          "EBV",
+          "64",
+          "37.22",
+          "65.11",
+          "-125.00",
+          "39.00",
+          "197.00",
+          "<.001"
+        ],
+        [
+          "",
+          "SoC",
+          "29",
+          "-20.86",
+          "32.46",
+          "-118.00",
+          "-15.00",
+          "51.00",
+          ""
+        ],
+        [
+          "Change MRC breathlessness grade",
+          "EBV",
+          "64",
+          "-0.59",
+          "1.03",
+          "-3.00",
+          "0.00",
+          "2.00",
+          "0.002"
+        ],
+        [
+          "",
+          "SoC",
+          "32",
+          "0.03",
+          "0.59",
+          "-1.00",
+          "0.00",
+          "1.00",
+          ""
+        ],
+        [
+          "Change BODE index",
+          "EBV",
+          "63",
+          "-1.14",
+          "1.75",
+          "-6.00",
+          "-1.00",
+          "3.00",
+          "<.001"
+        ],
+        [
+          "",
+          "SoC",
+          "28",
+          "0.39",
+          "0.83",
+          "-1.00",
+          "0.00",
+          "2.00",
+          ""
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "",
+      "headers": [
+        "Variable",
+        "Group",
+        "n",
+        "Mean",
+        "SD",
+        "Min",
+        "Median",
+        "Max",
+        "t-test p-value"
+      ],
+      "rows": [
+        [
+          "Change (%) FEV1 (L)",
+          "EBV",
+          "64",
+          "20.70",
+          "29.58",
+          "-36.36",
+          "15.54",
+          "108.86",
+          "<.001"
+        ],
+        [
+          "",
+          "SoC",
+          "31",
+          "-8.64",
+          "13.03",
+          "-44.54",
+          "-6.67",
+          "13.79",
+          ""
+        ],
+        [
+          "Change FEV1 (L)",
+          "EBV",
+          "64",
+          "0.14",
+          "0.24",
+          "-0.40",
+          "0.11",
+          "0.86",
+          "<.001"
+        ],
+        [
+          "",
+          "SoC",
+          "31",
+          "-0.09",
+          "0.14",
+          "-0.53",
+          "-0.05",
+          "0.12",
+          ""
+        ],
+        [
+          "Change FEV1 (% predicted)",
+          "EBV",
+          "64",
+          "5.45",
+          "8.77",
+          "-16.00",
+          "4.00",
+          "29.00",
+          "<.001"
+        ],
+        [
+          "",
+          "SoC",
+          "31",
+          "-2.87",
+          "4.44",
+          "-14.00",
+          "-2.00",
+          "4.00",
+          ""
+        ],
+        [
+          "Change DLco (mmol/min/kPa)",
+          "EBV",
+          "58",
+          "0.09",
+          "1.42",
+          "-5.95",
+          "0.23",
+          "3.15",
+          "0.062"
+        ],
+        [
+          "",
+          "SoC",
+          "28",
+          "-0.47",
+          "0.99",
+          "-2.95",
+          "-0.15",
+          "0.86",
+          ""
+        ],
+        [
+          "Change DLco (% predicted)",
+          "EBV",
+          "59",
+          "4.02",
+          "12.39",
+          "-31.00",
+          "2.00",
+          "65.00",
+          "0.004"
+        ],
+        [
+          "",
+          "SoC",
+          "28",
+          "-3.60",
+          "7.74",
+          "-19.00",
+          "-2.00",
+          "10.00",
+          ""
+        ],
+        [
+          "Change SGRQ total score",
+          "EBV",
+          "62",
+          "-7.22",
+          "15.10",
+          "-33.57",
+          "-6.80",
+          "43.58",
+          "0.031"
+        ],
+        [
+          "",
+          "SoC",
+          "32",
+          "-0.70",
+          "10.36",
+          "-20.46",
+          "-0.12",
+          "25.97",
+          ""
+        ],
+        [
+          "Change 6MWD(m)",
+          "EBV",
+          "63",
+          "36.17",
+          "76.93",
+          "-175.00",
+          "29.00",
+          "230.00",
+          "<.001"
+        ],
+        [
+          "",
+          "SoC",
+          "31",
+          "-42.48",
+          "68.15",
+          "-236.00",
+          "-30.00",
+          "55.00",
+          ""
+        ],
+        [
+          "Change MRC breathlessness grade",
+          "EBV",
+          "64",
+          "-0.56",
+          "1.04",
+          "-3.00",
+          "0.00",
+          "1.00",
+          "0.010"
+        ],
+        [
+          "",
+          "SoC",
+          "31",
+          "0.00",
+          "0.86",
+          "-2.00",
+          "0.00",
+          "2.00",
+          ""
+        ],
+        [
+          "Change BODE index",
+          "EBV",
+          "61",
+          "-0.97",
+          "2.01",
+          "-6.00",
+          "-1.00",
+          "4.00",
+          "<.001"
+        ],
+        [
+          "",
+          "SoC",
+          "28",
+          "0.79",
+          "1.17",
+          "-1.00",
+          "0.50",
+          "3.00",
+          ""
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "",
+      "headers": [
+        "Variable",
+        "Group",
+        "n",
+        "Mean",
+        "SD",
+        "Min",
+        "Median",
+        "Max",
+        "t-test p-value"
+      ],
+      "rows": [
+        [
+          "Change (%) FEV 1 (L)",
+          "EBV",
+          "51",
+          "27.76",
+          "29.82",
+          "-21.93",
+          "23.29",
+          "125.00",
+          "<.001"
+        ],
+        [
+          "",
+          "SoC",
+          "30",
+          "-4.14",
+          "13.14",
+          "-36.61",
+          "-2.90",
+          "15.48",
+          ""
+        ],
+        [
+          "Change FEV 1 (L)",
+          "EBV",
+          "51",
+          "0.18",
+          "0.21",
+          "-0.26",
+          "0.18",
+          "0.72",
+          "<.001"
+        ],
+        [
+          "",
+          "SoC",
+          "30",
+          "-0.05",
+          "0.14",
+          "-0.41",
+          "-0.02",
+          "0.14",
+          ""
+        ],
+        [
+          "Change FEV 1 (% predicted)",
+          "EBV",
+          "51",
+          "7.52",
+          "8.49",
+          "-7.00",
+          "7.00",
+          "33.00",
+          "<.001"
+        ],
+        [
+          "",
+          "SoC",
+          "30",
+          "-1.67",
+          "5.16",
+          "-16.00",
+          "-1.00",
+          "7.00",
+          ""
+        ],
+        [
+          "Change DLco (mmol/min/kPa)",
+          "EBV",
+          "45",
+          "0.24",
+          "0.77",
+          "-1.81",
+          "0.27",
+          "2.33",
+          "0.155"
+        ],
+        [
+          "",
+          "SoC",
+          "28",
+          "0.00",
+          "0.58",
+          "-1.49",
+          "-0.01",
+          "1.37",
+          ""
+        ],
+        [
+          "Change DLco (% predicted)",
+          "EBV",
+          "45",
+          "4.02",
+          "8.55",
+          "-16.00",
+          "4.00",
+          "28.00",
+          "0.014"
+        ],
+        [
+          "",
+          "SoC",
+          "28",
+          "-0.74",
+          "6.66",
+          "-17.00",
+          "0.00",
+          "15.00",
+          ""
+        ],
+        [
+          "Change SGRQ total score",
+          "EBV",
+          "48",
+          "-10.73",
+          "16.65",
+          "-48.88",
+          "-10.35",
+          "46.08",
+          "0.008"
+        ],
+        [
+          "",
+          "SoC",
+          "28",
+          "-1.16",
+          "10.80",
+          "-21.16",
+          "-3.65",
+          "28.31",
+          ""
+        ],
+        [
+          "Change 6MWD(m)",
+          "EBV",
+          "50",
+          "47.80",
+          "66.60",
+          "-125.00",
+          "52.00",
+          "197.00",
+          "<.001"
+        ],
+        [
+          "",
+          "SoC",
+          "28",
+          "-21.61",
+          "32.81",
+          "-118.00",
+          "-15.00",
+          "51.00",
+          ""
+        ],
+        [
+          "Change MRC breathlessness grade",
+          "EBV",
+          "51",
+          "-0.67",
+          "1.11",
+          "-3.00",
+          "0.00",
+          "2.00",
+          "0.001"
+        ],
+        [
+          "",
+          "SoC",
+          "30",
+          "0.07",
+          "0.58",
+          "-1.00",
+          "0.00",
+          "1.00",
+          ""
+        ],
+        [
+          "Change BODE index",
+          "EBV",
+          "50",
+          "-1.38",
+          "1.84",
+          "-6.00",
+          "-1.00",
+          "3.00",
+          "<.001"
+        ],
+        [
+          "",
+          "SoC",
+          "27",
+          "0.41",
+          "0.84",
+          "-1.00",
+          "0.00",
+          "2.00",
+          ""
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "",
+      "headers": [
+        "Variable",
+        "Group",
+        "n",
+        "Mean",
+        "SD",
+        "Min",
+        "Median",
+        "Max",
+        "t-test p-value"
+      ],
+      "rows": [
+        [
+          "Change (%) FEV 1 (L)",
+          "EBV",
+          "50*",
+          "25.05",
+          "31.33",
+          "-36.36",
+          "21.05",
+          "108.86",
+          "<.001"
+        ],
+        [
+          "",
+          "SoC",
+          "30",
+          "-8.92",
+          "13.16",
+          "-44.54",
+          "-6.90",
+          "13.79",
+          ""
+        ],
+        [
+          "Change FEV 1 (L)",
+          "EBV",
+          "50",
+          "0.17",
+          "0.26",
+          "-0.40",
+          "0.15",
+          "0.86",
+          "<.001"
+        ],
+        [
+          "",
+          "SoC",
+          "30",
+          "-0.09",
+          "0.14",
+          "-0.53",
+          "-0.07",
+          "0.12",
+          ""
+        ],
+        [
+          "Change FEV 1 (% predicted)",
+          "EBV",
+          "50",
+          "6.67",
+          "9.43",
+          "-16.00",
+          "5.00",
+          "29.00",
+          "<.001"
+        ],
+        [
+          "",
+          "SoC",
+          "30",
+          "-2.97",
+          "4.48",
+          "-14.00",
+          "-2.00",
+          "4.00",
+          ""
+        ],
+        [
+          "Change DLco (mmol/min/kPa)",
+          "EBV",
+          "45",
+          "-0.38",
+          "0.94",
+          "-2.85",
+          "0.46",
+          "3.15",
+          "<.001"
+        ],
+        [
+          "",
+          "SoC",
+          "27",
+          "-0.49",
+          "1.00",
+          "-2.95",
+          "-0.20",
+          "0.86",
+          ""
+        ],
+        [
+          "Change DLco (% predicted)",
+          "EBV",
+          "45",
+          "5.78",
+          "13.30",
+          "-31.00",
+          "6.00",
+          "65.00",
+          "0.001"
+        ],
+        [
+          "",
+          "SoC",
+          "27",
+          "-3.73",
+          "7.86",
+          "-19.00",
+          "-2.00",
+          "10.00",
+          ""
+        ],
+        [
+          "Change SGRQ total score",
+          "EBV",
+          "50",
+          "-8.89",
+          "16.06",
+          "-33.57",
+          "-10.11",
+          "43.58",
+          "0.014"
+        ],
+        [
+          "",
+          "SoC",
+          "30",
+          "-0.60",
+          "10.69",
+          "-20.46",
+          "-0.12",
+          "25.97",
+          ""
+        ],
+        [
+          "Change 6MWD(m)",
+          "EBV",
+          "49",
+          "47.71",
+          "82.82",
+          "-175.00",
+          "53.00",
+          "230.00",
+          "<.001"
+        ],
+        [
+          "",
+          "SoC",
+          "29",
+          "-44.31",
+          "70.03",
+          "-236.00",
+          "-30.00",
+          "55.00",
+          ""
+        ],
+        [
+          "Change MRC breathlessness grade",
+          "EBV",
+          "51",
+          "-0.65",
+          "1.13",
+          "-3.00",
+          "-1.00",
+          "1.00",
+          "0.006"
+        ],
+        [
+          "",
+          "SoC",
+          "29",
+          "0.03",
+          "0.87",
+          "-2.00",
+          "0.00",
+          "2.00",
+          ""
+        ],
+        [
+          "Change BODE index",
+          "EBV",
+          "48",
+          "-1.21",
+          "2.18",
+          "-6.00",
+          "-1.00",
+          "4.00",
+          "<.001"
+        ],
+        [
+          "",
+          "SoC",
+          "27",
+          "0.81",
+          "1.18",
+          "-1.00",
+          "1.00",
+          "3.00",
+          ""
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "",
+      "headers": [
+        "Variable",
+        "Group",
+        "Mean",
+        "SD",
+        "95% CI",
+        "t-test p-value"
+      ],
+      "rows": [
+        [
+          "Change (%) FEV1 (L)",
+          "Δ EBV-SoC",
+          "27.22",
+          "24.62",
+          "16.55 - 37.89",
+          "<.001"
+        ],
+        [
+          "Change FEV1 (L)",
+          "Δ EBV-SoC",
+          "0.20",
+          "0.18",
+          "0.12 - 0.28",
+          "<.001"
+        ],
+        [
+          "Change FEV1 (% predicted)",
+          "Δ EBV-SoC",
+          "7.83",
+          "7.22",
+          "4.70 - 10.96",
+          "<.001"
+        ],
+        [
+          "Change DLco (mmol/min/kPa)",
+          "Δ EBV-SoC",
+          "0.07",
+          "0.09",
+          "-0.34 - 0.48",
+          "0.723"
+        ],
+        [
+          "Change DLco (% predicted)",
+          "Δ EBV-SoC",
+          "3.50",
+          "8.16",
+          "-0.18 - 7.18",
+          "0.062"
+        ],
+        [
+          "Change (%) RV (L)",
+          "Δ EBV-SoC",
+          "-10.59",
+          "14.68",
+          "-17.04 - -4.13",
+          "0.002"
+        ],
+        [
+          "Change RV (L)",
+          "Δ EBV-SoC",
+          "-0.58",
+          "0.84",
+          "-0.95 - -0.21",
+          "0.002"
+        ],
+        [
+          "Change RV (% predicted)",
+          "Δ EBV-SoC",
+          "-28.33",
+          "38.85",
+          "-45.40 - -11.26",
+          "0.001"
+        ],
+        [
+          "Change FEV1/FVC (%)",
+          "Δ EBV-SoC",
+          "2.3",
+          "5.8",
+          "-0.2 - 4.8",
+          "0.074"
+        ],
+        [
+          "Change RV/TLC (%)",
+          "Δ EBV-SoC",
+          "-5.2",
+          "7.3",
+          "-8.4 - -2.0",
+          "0.002"
+        ],
+        [
+          "Change SGRQ total score",
+          "Δ EBV-SoC",
+          "-7.64",
+          "14.18",
+          "-13.95 - -1.34",
+          "0.018"
+        ],
+        [
+          "Change 6MWD(m)",
+          "Δ EBV-SoC",
+          "58.08",
+          "57.09",
+          "32.70 - 83.46",
+          "<.001"
+        ],
+        [
+          "Change MRC breathlessness grade",
+          "Δ EBV-SoC",
+          "-0.63",
+          "0.91",
+          "-1.02 - -0.23",
+          "0.003"
+        ],
+        [
+          "Change BODE index",
+          "Δ EBV-SoC",
+          "-1.54",
+          "1.53",
+          "-2.23 - -0.85",
+          "<.001"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "",
+      "headers": [
+        "Variable",
+        "Group",
+        "Mean",
+        "SD",
+        "95% CI",
+        "t-test p-value"
+      ],
+      "rows": [
+        [
+          "Change (%) FEV1 (L)",
+          "Δ EBV-SoC",
+          "29.34",
+          "25.44",
+          "18.28 - 40.39",
+          "<.001"
+        ],
+        [
+          "Change FEV1 (L)",
+          "Δ EBV-SoC",
+          "0.23",
+          "0.21",
+          "0.14 - 0.32",
+          "<.001"
+        ],
+        [
+          "Change FEV1 (% predicted)",
+          "Δ EBV-SoC",
+          "8.32",
+          "7.65",
+          "4.99 - 11.64",
+          "<.001"
+        ],
+        [
+          "Change DLco (mmol/min/kPa)",
+          "Δ EBV-SoC",
+          "0.56",
+          "1.30",
+          "-0.03 - 1.16",
+          "0.062"
+        ],
+        [
+          "Change DLco (% predicted)",
+          "Δ EBV-SoC",
+          "7.62",
+          "11.12",
+          "2.55 - 12.70",
+          "0.004"
+        ],
+        [
+          "Change (%) RV (L)",
+          "Δ EBV-SoC",
+          "-13.10",
+          "17.55",
+          "-20.73 - -5.48",
+          "<.001"
+        ],
+        [
+          "Change RV (L)",
+          "Δ EBV-SoC",
+          "-0.67",
+          "0.97",
+          "-1.09 - -0.25",
+          "0.002"
+        ],
+        [
+          "Change RV (% predicted)",
+          "Δ EBV-SoC",
+          "-32.41",
+          "44.67",
+          "-51.82 - -13.00",
+          "0.001"
+        ],
+        [
+          "Change FEV1/FVC (%)",
+          "Δ EBV-SoC",
+          "2.9",
+          "5.2",
+          "0.7 - 5.2",
+          "0.011"
+        ],
+        [
+          "Change RV/TLC (%)",
+          "Δ EBV-SoC",
+          "-6.4",
+          "7.7",
+          "-9.7 - -3.0",
+          "<.001"
+        ],
+        [
+          "Change SGRQ total score",
+          "Δ EBV-SoC",
+          "-6.52",
+          "13.69",
+          "-12.44 - -0.61",
+          "0.031"
+        ],
+        [
+          "Change 6MWD(m)",
+          "Δ EBV-SoC",
+          "78.66",
+          "74.18",
+          "46.34 - 110.98",
+          "<.001"
+        ],
+        [
+          "Change MRC breathlessness grade",
+          "Δ EBV-SoC",
+          "-0.56",
+          "0.98",
+          "-0.99 - -0.14",
+          "0.010"
+        ],
+        [
+          "Change BODE index",
+          "Δ EBV-SoC",
+          "-1.75",
+          "1.79",
+          "-2.56 - -0.94",
+          "<.001"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "",
+      "headers": [
+        "Variable",
+        "Group",
+        "Mean",
+        "SD",
+        "95% CI",
+        "t-test p-value"
+      ],
+      "rows": [
+        [
+          "Change (%) FEV1 (L)",
+          "Δ EBV-SoC",
+          "31.90",
+          "25.02",
+          "20.44 - 43.36",
+          "<.001"
+        ],
+        [
+          "Change FEV1 (L)",
+          "Δ EBV-SoC",
+          "0.23",
+          "0.19",
+          "0.14 - 0.32",
+          "<.001"
+        ],
+        [
+          "Change FEV1 (% predicted)",
+          "Δ EBV-SoC",
+          "9.19",
+          "7.44",
+          "5.78 - 12.60",
+          "<.001"
+        ],
+        [
+          "Change DLco (mmol/min/kPa)",
+          "Δ EBV-SoC",
+          "0.24",
+          "0.71",
+          "-0.09 - 0.58",
+          "0.155"
+        ],
+        [
+          "Change DLco (% predicted)",
+          "Δ EBV-SoC",
+          "4.76",
+          "7.88",
+          "0.98 - 8.54",
+          "0.014"
+        ],
+        [
+          "Change (%) RV (L)",
+          "Δ EBV-SoC",
+          "-12.40",
+          "14.96",
+          "-19.36 - -5.45",
+          "<.001"
+        ],
+        [
+          "Change RV (L)",
+          "Δ EBV-SoC",
+          "-0.67",
+          "0.84",
+          "-1.06 - -0.28",
+          "0.001"
+        ],
+        [
+          "Change RV (% predicted)",
+          "Δ EBV-SoC",
+          "-33.67",
+          "39.83",
+          "-52.18 - -15.16",
+          "<.001"
+        ],
+        [
+          "Change FEV1/FVC (%)",
+          "Δ EBV-SoC",
+          "2.8",
+          "6.2",
+          "-0.0 - 5.7",
+          "0.051"
+        ],
+        [
+          "Change RV/TLC (%)",
+          "Δ EBV-SoC",
+          "-6.0",
+          "7.4",
+          "-9.5 - -2.5",
+          "<.001"
+        ],
+        [
+          "Change SGRQ total score",
+          "Δ EBV-SoC",
+          "-9.57",
+          "14.79",
+          "-16.57 - -2.56",
+          "0.008"
+        ],
+        [
+          "Change 6MWD(m)",
+          "Δ EBV-SoC",
+          "69.41",
+          "56.94",
+          "42.64 - 96.17",
+          "<.001"
+        ],
+        [
+          "Change MRC breathlessness grade",
+          "Δ EBV-SoC",
+          "-0.73",
+          "0.95",
+          "-1.17 - -0.30",
+          "0.001"
+        ],
+        [
+          "Change BODE index",
+          "Δ EBV-SoC",
+          "-1.79",
+          "1.57",
+          "-2.53 - -1.04",
+          "<.001"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "",
+      "headers": [
+        "Variable",
+        "Group",
+        "Mean",
+        "SD",
+        "95% CI",
+        "t-test p-value"
+      ],
+      "rows": [
+        [
+          "Change (%) FEV1 (L)",
+          "Δ EBV-SoC",
+          "33.98",
+          "26.09",
+          "21.98 - 45.97",
+          "<.001"
+        ],
+        [
+          "Change FEV1 (L)",
+          "Δ EBV-SoC",
+          "0.26",
+          "0.22",
+          "0.16 - 0.36",
+          "<.001"
+        ],
+        [
+          "Change FEV1 (% predicted)",
+          "Δ EBV-SoC",
+          "9.64",
+          "7.96",
+          "5.98 - 13.30",
+          "<.001"
+        ],
+        [
+          "Change DLco (mmol/min/kPa)",
+          "Δ EBV-SoC",
+          "0.87",
+          "0.96",
+          "-0.41 - 1.34",
+          "<.001"
+        ],
+        [
+          "Change DLco (% predicted)",
+          "Δ EBV-SoC",
+          "9.51",
+          "11.58",
+          "3.89 - 15.13",
+          "0.001"
+        ],
+        [
+          "Change (%) RV (L)",
+          "Δ EBV-SoC",
+          "-15.25",
+          "18.20",
+          "-23.62 - -6.89",
+          "<.001"
+        ],
+        [
+          "Change RV (L)",
+          "Δ EBV-SoC",
+          "-0.78",
+          "0.99",
+          "-1.24 - -0.33",
+          "<.001"
+        ],
+        [
+          "Change RV (% predicted)",
+          "Δ EBV-SoC",
+          "-38.77",
+          "45.73",
+          "-59.79 - -17.74",
+          "<.001"
+        ],
+        [
+          "Change FEV1/FVC (%)",
+          "Δ EBV-SoC",
+          "3.2",
+          "5.5",
+          "0.7 - 5.7",
+          "0.014"
+        ],
+        [
+          "Change RV/TLC (%)",
+          "Δ EBV-SoC",
+          "-7.6",
+          "7.9",
+          "-11.2 - -4.0",
+          "<.001"
+        ],
+        [
+          "Change SGRQ total score",
+          "Δ EBV-SoC",
+          "-8.29",
+          "14.31",
+          "-14.87 - -1.71",
+          "0.014"
+        ],
+        [
+          "Change 6MWD(m)",
+          "Δ EBV-SoC",
+          "92.02",
+          "78.35",
+          "55.46 - 128.58",
+          "<.001"
+        ],
+        [
+          "Change MRC breathlessness grade",
+          "Δ EBV-SoC",
+          "-0.68",
+          "1.04",
+          "-1.16 - -0.20",
+          "0.006"
+        ],
+        [
+          "Change BODE index",
+          "Δ EBV-SoC",
+          "-2.02",
+          "1.89",
+          "-2.93 - -1.12",
+          "<.001"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/1044'}",
+      "headers": [
+        "Variable",
+        "EBV Group",
+        "SoC Group",
+        "p-value *"
+      ],
+      "rows": [
+        [
+          "FEV 1 (L): (MCID ≥ +12%)",
+          "33/50 (66.0%)",
+          "1/30 (3.3%)",
+          "< 0.001"
+        ],
+        [
+          "RV (ml): (MCID ≤ -430 mL)",
+          "34/50 (68.0%)",
+          "8/30 (26.7%)",
+          "<0.001"
+        ],
+        [
+          "SGRQ: (MCID ≤ -4 points)",
+          "33/50 (66.0%)",
+          "10/30 (33.3%)",
+          "0.005"
+        ],
+        [
+          "6MWD: (MCID≥ +26 meters)",
+          "32/49 (65.3%)",
+          "4/29 (13.8%)",
+          "<0.001"
+        ],
+        [
+          "mMRC: (MCID ≤ -1 point)",
+          "26/51 (51.0%)",
+          "6/29 (20.7%)",
+          "0.008"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "",
+      "headers": [
+        "",
+        "Adverse Events",
+        "Adverse Events",
+        "Adverse Events",
+        "Adverse Events",
+        "Adverse Events",
+        "Subjects with Adverse",
+        "Subjects with Adverse",
+        "Subjects with Adverse",
+        "Subjects with Adverse",
+        "Subjects with Adverse"
+      ],
+      "rows": [
+        [
+          "Event",
+          "EBV No. of events",
+          "EBV %of events",
+          "SoC No. of events",
+          "SoC %of events",
+          "Fisher p-valve",
+          "EBV No. of subjects",
+          "EBV %of subjects",
+          "SoC No. of subjects",
+          "SoC %of subjects",
+          "Fisher p- value"
+        ],
+        [
+          "Respiratory AEs",
+          "148",
+          "96.1",
+          "26",
+          "57.8",
+          "<.001",
+          "59",
+          "90.8",
+          "13",
+          "40.6",
+          "<.001"
+        ],
+        [
+          "Bleeding bulla right lung",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000"
+        ],
+        [
+          "Bronchitis",
+          "1",
+          "1.5",
+          "1",
+          "3.1",
+          "1.000",
+          "1",
+          "1.5",
+          "1",
+          "3.1",
+          "1.000"
+        ],
+        [
+          "Bronchospasm",
+          "2",
+          "3.0",
+          "1",
+          "3.1",
+          "1.000",
+          "1",
+          "1.5",
+          "1",
+          "3.1",
+          "1.000"
+        ],
+        [
+          "COPD Exacerbation",
+          "39",
+          "48.8",
+          "13",
+          "36.1",
+          "0.231",
+          "24",
+          "36.9",
+          "9",
+          "28.1",
+          "0.496"
+        ],
+        [
+          "Chest infection",
+          "10",
+          "14.5",
+          "5",
+          "14.3",
+          "1.000",
+          "6",
+          "9.2",
+          "2",
+          "6.3",
+          "1.000"
+        ],
+        [
+          "Chest pain",
+          "6",
+          "9.2",
+          "0",
+          "0.0",
+          "0.173",
+          "6",
+          "9.2",
+          "0",
+          "0.0",
+          "0.173"
+        ],
+        [
+          "Common cold",
+          "2",
+          "3.1",
+          "0",
+          "0.0",
+          "1.000",
+          "2",
+          "3.1",
+          "0",
+          "0.0",
+          "1.000"
+        ],
+        [
+          "Cough",
+          "4",
+          "6.2",
+          "0",
+          "0.0",
+          "0.299",
+          "4",
+          "6.2",
+          "0",
+          "0.0",
+          "0.299"
+        ],
+        [
+          "Desaturation",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000"
+        ],
+        [
+          "Dyspnea",
+          "23",
+          "32.4",
+          "1",
+          "3.1",
+          "<.001",
+          "17",
+          "26.2",
+          "1",
+          "3.1",
+          "0.005"
+        ],
+        [
+          "EBV removal",
+          "2",
+          "3.1",
+          "0",
+          "0.0",
+          "1.000",
+          "2",
+          "3.1",
+          "0",
+          "0.0",
+          "1.000"
+        ],
+        [
+          "Emphysema",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000"
+        ],
+        [
+          "Hemoptysis",
+          "4",
+          "6.2",
+          "0",
+          "0.0",
+          "0.299",
+          "4",
+          "6.2",
+          "0",
+          "0.0",
+          "0.299"
+        ],
+        [
+          "Hyperventilation",
+          "0",
+          "0.0",
+          "1",
+          "3.1",
+          "0.330",
+          "0",
+          "0.0",
+          "1",
+          "3.1",
+          "0.330"
+        ],
+        [
+          "Influenza",
+          "1",
+          "1.5",
+          "1",
+          "3.1",
+          "1.000",
+          "1",
+          "1.5",
+          "1",
+          "3.1",
+          "1.000"
+        ],
+        [
+          "Inhaled foreign body",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000"
+        ],
+        [
+          "Lower Respiratory Tract Infection",
+          "2",
+          "3.1",
+          "0",
+          "0.0",
+          "1.000",
+          "2",
+          "3.1",
+          "0",
+          "0.0",
+          "1.000"
+        ],
+        [
+          "Mucus",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000"
+        ],
+        [
+          "Mucus production",
+          "3",
+          "4.6",
+          "0",
+          "0.0",
+          "0.549",
+          "3",
+          "4.6",
+          "0",
+          "0.0",
+          "0.549"
+        ],
+        [
+          "Pneumonia",
+          "8",
+          "12.1",
+          "1",
+          "3.1",
+          "0.264",
+          "7",
+          "10.8",
+          "1",
+          "3.1",
+          "0.265"
+        ],
+        [
+          "Pneumothorax",
+          "20",
+          "30.3",
+          "0",
+          "0.0",
+          "<.001",
+          "19",
+          "29.2",
+          "0",
+          "0.0",
+          "<.001"
+        ],
+        [
+          "Post-operative pain",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000"
+        ],
+        [
+          "Pulmonary infection",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000"
+        ],
+        [
+          "Purulent Sputum",
+          "0",
+          "0.0",
+          "1",
+          "3.1",
+          "0.330",
+          "0",
+          "0.0",
+          "1",
+          "3.1",
+          "0.330"
+        ],
+        [
+          "Quincke's Oedema of the Lingula",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000"
+        ],
+        [
+          "Respiratory infection",
+          "2",
+          "3.1",
+          "0",
+          "0.0",
+          "1.000",
+          "2",
+          "3.1",
+          "0",
+          "0.0",
+          "1.000"
+        ],
+        [
+          "Sinusitis",
+          "0",
+          "0.0",
+          "1",
+          "3.1",
+          "0.330",
+          "0",
+          "0.0",
+          "1",
+          "3.1",
+          "0.330"
+        ],
+        [
+          "Sore throat",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000"
+        ],
+        [
+          "Thoracic pain",
+          "4",
+          "6.2",
+          "0",
+          "0.0",
+          "0.299",
+          "4",
+          "6.2",
+          "0",
+          "0.0",
+          "0.299"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "",
+      "headers": [
+        "",
+        "Adverse Events",
+        "Adverse Events",
+        "Adverse Events",
+        "Adverse Events",
+        "Adverse Events",
+        "Subjects with Adverse Events",
+        "Subjects with Adverse Events",
+        "Subjects with Adverse Events",
+        "Subjects with Adverse Events",
+        "Subjects with Adverse Events"
+      ],
+      "rows": [
+        [
+          "Event",
+          "EBV No. of events",
+          "EBV %of events",
+          "SoC No. of events",
+          "SoC %of events",
+          "Fisher p-valve",
+          "EBV No. of subjects",
+          "EBV %of subjects",
+          "SoC No. of subjects",
+          "SoC %of subjects",
+          "Fisher p- value"
+        ],
+        [
+          "Upper Respiratory Tract Infection",
+          "4",
+          "6.1",
+          "0",
+          "0.0",
+          "0.300",
+          "3",
+          "4.6",
+          "0",
+          "0.0",
+          "0.549"
+        ],
+        [
+          "Valve dislocation",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000"
+        ],
+        [
+          "Wheezing",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/1060'}",
+      "headers": [
+        "",
+        "Adverse Events",
+        "Adverse Events",
+        "Adverse Events",
+        "Adverse Events",
+        "Adverse Events",
+        "Subjects with Adverse",
+        "Subjects with Adverse",
+        "Subjects with Adverse",
+        "Subjects with Adverse",
+        "Subjects with Adverse"
+      ],
+      "rows": [
+        [
+          "Event",
+          "EBV No. of events",
+          "EBV %of events",
+          "SoC No. of events",
+          "SoC %of events",
+          "Fisher p-valve",
+          "EBV No. of subjects",
+          "EBV %of subjects",
+          "SoC No. of subjects",
+          "SoC %of subjects",
+          "Fisher p- value"
+        ],
+        [
+          "Non-Respiratory AEs",
+          "43",
+          "50.0",
+          "12",
+          "33.3",
+          "0.112",
+          "22",
+          "33.8",
+          "8",
+          "25.0",
+          "0.485"
+        ],
+        [
+          "Abdominal pain",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000"
+        ],
+        [
+          "Allergic reaction",
+          "2",
+          "3.0",
+          "0",
+          "0.0",
+          "1.000",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000"
+        ],
+        [
+          "Anxiety",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000"
+        ],
+        [
+          "Asthenia",
+          "0",
+          "0.0",
+          "1",
+          "3.1",
+          "0.330",
+          "0",
+          "0.0",
+          "1",
+          "3.1",
+          "0.330"
+        ],
+        [
+          "Back pain",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000"
+        ],
+        [
+          "Bruises left side arms and legs (traffic accident)",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000"
+        ],
+        [
+          "Chronic flebothrombosis",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000"
+        ],
+        [
+          "Cushingoid face",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000"
+        ],
+        [
+          "Diarrhea",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000"
+        ],
+        [
+          "Diverticulitis",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000"
+        ],
+        [
+          "Dizziness",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000"
+        ],
+        [
+          "Edema",
+          "3",
+          "4.5",
+          "0",
+          "0.0",
+          "0.549",
+          "2",
+          "3.1",
+          "0",
+          "0.0",
+          "1.000"
+        ],
+        [
+          "Fever",
+          "0",
+          "0.0",
+          "1",
+          "3.1",
+          "0.330",
+          "0",
+          "0.0",
+          "1",
+          "3.1",
+          "0.330"
+        ],
+        [
+          "Foot fracture",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000"
+        ],
+        [
+          "Fungal infection",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000"
+        ],
+        [
+          "Gastric reflux",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000"
+        ],
+        [
+          "Headache",
+          "2",
+          "3.1",
+          "0",
+          "0.0",
+          "1.000",
+          "2",
+          "3.1",
+          "0",
+          "0.0",
+          "1.000"
+        ],
+        [
+          "Heart failure",
+          "2",
+          "3.1",
+          "0",
+          "0.0",
+          "1.000",
+          "2",
+          "3.1",
+          "0",
+          "0.0",
+          "1.000"
+        ],
+        [
+          "Hoarseness",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000"
+        ],
+        [
+          "Hypercholesterolemia",
+          "0",
+          "0.0",
+          "1",
+          "3.1",
+          "0.330",
+          "0",
+          "0.0",
+          "1",
+          "3.1",
+          "0.330"
+        ],
+        [
+          "Hypertension",
+          "3",
+          "4.6",
+          "1",
+          "3.1",
+          "1.000",
+          "3",
+          "4.6",
+          "1",
+          "3.1",
+          "1.000"
+        ],
+        [
+          "Hyperthyroidism",
+          "1",
+          "1.5",
+          "1",
+          "3.1",
+          "1.000",
+          "1",
+          "1.5",
+          "1",
+          "3.1",
+          "1.000"
+        ],
+        [
+          "Hypotension",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000"
+        ],
+        [
+          "Mucositis",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000"
+        ],
+        [
+          "Musculoskeletal event",
+          "0",
+          "0.0",
+          "1",
+          "3.1",
+          "0.330",
+          "0",
+          "0.0",
+          "1",
+          "3.1",
+          "0.330"
+        ],
+        [
+          "Nausea",
+          "2",
+          "3.1",
+          "0",
+          "0.0",
+          "1.000",
+          "2",
+          "3.1",
+          "0",
+          "0.0",
+          "1.000"
+        ],
+        [
+          "Radiomucositis",
+          "0",
+          "0.0",
+          "1",
+          "3.1",
+          "0.330",
+          "0",
+          "0.0",
+          "1",
+          "3.1",
+          "0.330"
+        ],
+        [
+          "Rheumatoid arthritis",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/1065'}",
+      "headers": [
+        "",
+        "Adverse Events",
+        "Adverse Events",
+        "Adverse Events",
+        "Adverse Events",
+        "Adverse Events",
+        "Subjects with Adverse Events",
+        "Subjects with Adverse Events",
+        "Subjects with Adverse Events",
+        "Subjects with Adverse Events",
+        "Subjects with Adverse Events"
+      ],
+      "rows": [
+        [
+          "Event",
+          "EBV No. of events",
+          "EBV %of events",
+          "SoC No. of events",
+          "SoC %of events",
+          "Fisher p-valve",
+          "EBV No. of subjects",
+          "EBV %of subjects",
+          "SoC No. of subjects",
+          "SoC %of subjects",
+          "Fisher p- value"
+        ],
+        [
+          "Rib fracture",
+          "0",
+          "0.0",
+          "1",
+          "3.1",
+          "0.330",
+          "0",
+          "0.0",
+          "1",
+          "3.1",
+          "0.330"
+        ],
+        [
+          "Right shoulder pain",
+          "0",
+          "0.0",
+          "1",
+          "3.1",
+          "0.330",
+          "0",
+          "0.0",
+          "1",
+          "3.1",
+          "0.330"
+        ],
+        [
+          "Skin rash",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000"
+        ],
+        [
+          "Squamous carcinoma",
+          "0",
+          "0.0",
+          "1",
+          "3.1",
+          "0.330",
+          "0",
+          "0.0",
+          "1",
+          "3.1",
+          "0.330"
+        ],
+        [
+          "Supraventricular tachycardia",
+          "2",
+          "3.1",
+          "0",
+          "0.0",
+          "1.000",
+          "2",
+          "3.1",
+          "0",
+          "0.0",
+          "1.000"
+        ],
+        [
+          "Throat pain",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000"
+        ],
+        [
+          "Tiredness",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000"
+        ],
+        [
+          "Tooth pain",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000"
+        ],
+        [
+          "Unspecified infection",
+          "3",
+          "4.6",
+          "0",
+          "0.0",
+          "0.549",
+          "3",
+          "4.6",
+          "0",
+          "0.0",
+          "0.549"
+        ],
+        [
+          "Urinary tract infection",
+          "0",
+          "0.0",
+          "1",
+          "3.1",
+          "0.330",
+          "0",
+          "0.0",
+          "1",
+          "3.1",
+          "0.330"
+        ],
+        [
+          "Urosepsis",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000"
+        ],
+        [
+          "Vertebral fracture",
+          "0",
+          "0.0",
+          "1",
+          "3.1",
+          "0.330",
+          "0",
+          "0.0",
+          "1",
+          "3.1",
+          "0.330"
+        ],
+        [
+          "Viral infection",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000"
+        ],
+        [
+          "Wound infection",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000",
+          "1",
+          "1.5",
+          "0",
+          "0.0",
+          "1.000"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "",
+      "headers": [
+        "Treated lobe",
+        "Number of subjects with pneumothorax",
+        "Total number of subjects treated per lobe",
+        "%Subjects with pneumothorax by Lobe Treated"
+      ],
+      "rows": [
+        [
+          "11 (12 events)",
+          "34",
+          "32.4",
+          "LUL"
+        ],
+        [
+          "6",
+          "14",
+          "42.9",
+          "LLL"
+        ],
+        [
+          "2",
+          "10",
+          "20.0",
+          "RUL"
+        ],
+        [
+          "0",
+          "5",
+          "0.0",
+          "RUL+RML"
+        ],
+        [
+          "RLL",
+          "0",
+          "2 0.0",
+          ""
+        ],
+        [
+          "Total 19 (20",
+          "events) 65",
+          "",
+          ""
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "",
+      "headers": [
+        "Variable",
+        "Group",
+        "Mean",
+        "SD",
+        "95% CI",
+        "t-test p-value"
+      ],
+      "rows": [
+        [
+          "Change (%) FEV1 (L)",
+          "Δ Pneu-No Pneu",
+          "1.17",
+          "28.71",
+          "-14.48 - 16.81",
+          "0.882"
+        ],
+        [
+          "Change FEV1 (L)",
+          "Δ Pneu-No Pneu",
+          "0.02",
+          "0.20",
+          "-0.09 - 0.13",
+          "0.764"
+        ],
+        [
+          "Change FEV1 (% predicted)",
+          "Δ Pneu-No Pneu",
+          "0.27",
+          "8.09",
+          "-4.14 - 4.69",
+          "0.901"
+        ],
+        [
+          "Change DLco (mmol/min/kPa)",
+          "Δ Pneu-No Pneu",
+          "0.02",
+          "1.04",
+          "-0.58 - 0.62",
+          "0.941"
+        ],
+        [
+          "Change DLco (% predicted)",
+          "Δ Pneu-No Pneu",
+          "0.42",
+          "8.92",
+          "-4.71 - 5.55",
+          "0.870"
+        ],
+        [
+          "Change SGRQ total score",
+          "Δ Pneu-No Pneu",
+          "-1.07",
+          "15.82",
+          "-9.99 - 7.86",
+          "0.812"
+        ],
+        [
+          "Change 6MWD(m)",
+          "Δ Pneu-No Pneu",
+          "18.71",
+          "65.07",
+          "-17.45 - 54.87",
+          "0.305"
+        ],
+        [
+          "Change MRC breathlessness grade",
+          "Δ Pneu-No Pneu",
+          "-0.18",
+          "1.04",
+          "-0.76 - 0.40",
+          "0.351"
+        ],
+        [
+          "Change BODE index",
+          "Δ Pneu-No Pneu",
+          "-0.61",
+          "1.74",
+          "-1.60 - 0.38",
+          "0.174"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "",
+      "headers": [
+        "Variable",
+        "Group",
+        "Mean",
+        "SD",
+        "95% CI",
+        "t-test p-value"
+      ],
+      "rows": [
+        [
+          "Change (%) FEV1 (L)",
+          "Δ Pneu-No Pneu",
+          "4.70",
+          "29.74",
+          "-11.56 - 20.96",
+          "0.566"
+        ],
+        [
+          "Change FEV1 (L)",
+          "Δ Pneu-No Pneu",
+          "0.04",
+          "0.24",
+          "-0.09 - 0.17",
+          "0.567"
+        ],
+        [
+          "Change FEV1 (% predicted)",
+          "Δ Pneu-No Pneu",
+          "1.53",
+          "8.82",
+          "-3.29 - 6.35",
+          "0.529"
+        ],
+        [
+          "Change DLco (mmol/min/kPa)",
+          "Δ Pneu-No Pneu",
+          "0.11",
+          "1.43",
+          "-0.72 - 0.94",
+          "0.787"
+        ],
+        [
+          "Change DLco (% predicted)",
+          "Δ Pneu-No Pneu",
+          "-1.90",
+          "12.46",
+          "-9.08 - 5.27",
+          "0.598"
+        ],
+        [
+          "Change SGRQ total score",
+          "Δ Pneu-No Pneu",
+          "1.69",
+          "15.21",
+          "-6.82 - 10.20",
+          "0.693"
+        ],
+        [
+          "Change 6MWD(m)",
+          "Δ Pneu-No Pneu",
+          "2.99",
+          "77.55",
+          "-39.58 - 45.56",
+          "0.889"
+        ],
+        [
+          "Change MRC breathlessness grade",
+          "Δ Pneu-No Pneu",
+          "-0.22",
+          "1.04",
+          "-0.80 - 0.36",
+          "0.307"
+        ],
+        [
+          "Change BODE index",
+          "Δ Pneu-No Pneu",
+          "-0.20",
+          "2.02",
+          "-1.34 - 0.93",
+          "0.546"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    }
+  ],
+  "figures": [
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/584'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/599'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/617'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/796'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/807'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/846'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/886'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    }
+  ],
+  "references": [
+    {
+      "title": "GOLD 2017 Global Strategy for the Diagnosis, Management and Prevention of COPD"
+    },
+    {
+      "title": "López-ópez2017 Global Strategy for the Diagnosis",
+      "year": 2016
+    },
+    {
+      "title": "Management and Prevention Respirology",
+      "year": 2016
+    },
+    {
+      "title": "Projections of Global Mortality and Burden of Disease from 2002 to 2030",
+      "year": 2016
+    },
+    {
+      "title": "PLoS Med",
+      "year": 2006
+    },
+    {
+      "title": "Global Health Epidemiology Reference Group (GHERG) Global and regional estimates of COPD prevalence: Systematic review and meta-analysis",
+      "year": 2006
+    },
+    {
+      "title": "J Glob Health"
+    },
+    {
+      "title": "A randomized trial comparing lung-volume-reduction surgery with medical therapy for severe emphysema"
+    },
+    {
+      "title": "N Engl J Med",
+      "year": 2003
+    },
+    {
+      "title": "Effect of lung-volume-reduction surgery in patients with severe emphysema",
+      "year": 2003
+    },
+    {
+      "title": "Lung volume reduction surgery vs. medical treatment for patients with advanced emphysema",
+      "year": 2000
+    },
+    {
+      "title": "Chest",
+      "year": 2005
+    },
+    {
+      "title": "The Effect of Lung Voume Reduction Surgery on Chronic Obstructive Pulmonary Disease Exacerbations",
+      "year": 2005
+    },
+    {
+      "title": "Am J Respir Crit Care Med",
+      "year": 2008
+    },
+    {
+      "title": "Lung volume reduction surgery: technique, operative mortality, and morbidity",
+      "year": 2008
+    },
+    {
+      "title": "Proc Am Thorac Soc",
+      "year": 2008
+    },
+    {
+      "title": "The evaluation and preparation of the patient for lung volume reduction surgery",
+      "year": 2008
+    },
+    {
+      "title": "A randomized study of endobronchial valves for advanced emphysema",
+      "year": 2008
+    },
+    {
+      "title": "Efficacy predictors of lung volume reduction with Zephyr valves in a European cohort",
+      "year": 2010
+    },
+    {
+      "title": "Eur Respir J",
+      "year": 2012
+    },
+    {
+      "title": "Radiological and clinical outcomes of using Chartis to plan endobronchial valve treatment",
+      "year": 2012
+    },
+    {
+      "title": "Target lobe volume reduction and COPD outcome measures after endobronchial valve therapy",
+      "year": 2013
+    },
+    {
+      "title": "Bronchoscopic lung volume reduction with endobronchial valves for patients with heterogeneous emphysema and intact interlobar fissures (the BeLieVeR-HIFi study): a randomised controlled trial",
+      "year": 2014
+    },
+    {
+      "title": "Lancet",
+      "year": 2015
+    },
+    {
+      "title": "Endobronchial Valves for Emphysema without Interlobar Collateral Ventilation",
+      "year": 2015
+    },
+    {
+      "title": "Endobronchial valve therapy in patients with homogeneous emphysema: results from the IMPACT study",
+      "year": 2015
+    },
+    {
+      "title": "A Multicenter, Prospective, Randomized, Controlled Trial of Endobronchial Valve Treatment vs standard of Care in Heterogeneous Emphysema (Transform)",
+      "year": 2016
+    },
+    {
+      "title": "World Medical Association. World Medical Association Declaration of Helsinki Ethical Principles for Medical Research Involving Human Subjects",
+      "year": 2017
+    },
+    {
+      "title": "JAMA",
+      "year": 2017
+    },
+    {
+      "title": "Endobronchial Valves for Endoscopic Lung Volume Reduction: Best Practice Recommendations from Expert Panel on Endoscopic Lung Volume Reduction",
+      "year": 2013
+    },
+    {
+      "title": "Respiration",
+      "year": 2017
+    },
+    {
+      "title": "Expert statement: pneumothorax associated with endoscopic valve therapy for emphysemapotential mechanisms, treatment algorithm, and case examples",
+      "year": 2017
+    },
+    {
+      "title": "Percutaneous CT-guided fine-needle aspiration of pulmonary lesions: results and complications in 409 patients",
+      "year": 2014
+    },
+    {
+      "title": "J Med Imaging Radiat Oncol",
+      "year": 2008
+    },
+    {
+      "title": "Incidence of and risk factors for pneumothorax and chest tube placement after CT fluoroscopy-guided percutaneous lung biopsy: retrospective analysis of the procedures conducted over a 9year period",
+      "year": 2008
+    },
+    {
+      "title": "AJR Am J Roentgenol",
+      "year": 2010
+    },
+    {
+      "title": "Effect of Endobronchial Coils vs Usual Care on Exercise Tolerance in Patients with Severe Emphysema: The RENEW Randomized Clinical Trial",
+      "year": 2010
+    },
+    {
+      "title": "Patient and surgical factors influencing air leak after lung volume reduction surgery: lessons learned from the National Emphysema Treatment Trial",
+      "year": 2016
+    },
+    {
+      "title": "Ann Thorac Surg",
+      "year": 2006
+    },
+    {
+      "title": "Pneumothorax following endobronchial valve therapy and its impact on clinical outcomes in severe emphysema",
+      "year": 2006
+    },
+    {
+      "title": "Atelectasis and survival after bronchoscopic lung volume reduction for COPD",
+      "year": 2014
+    },
+    {
+      "title": "Survival after Endobronchial Valve Placement for Emphysema: A 10-Year Follow-up Study"
+    },
+    {
+      "title": "Long-term follow-up after bronchoscopic lung volume reduction in patients with emphysema",
+      "year": 2016
+    },
+    {
+      "title": "The body-mass index, airflow obstruction, dyspnea, and exercise capacity index in chronic obstructive pulmonary disease",
+      "year": 2013
+    },
+    {
+      "title": "Longitudinal change in the BODE index predicts mortality in severe emphysema",
+      "year": 2004
+    },
+    {
+      "title": "Improved Predictors of Survival after Endobronchial Valve Treatment in Patients with Severe Emphysema",
+      "year": 2008
+    },
+    {
+      "title": "One-Year Follow-Up after Endobronchial Valve Treatment in Patients with Emphysema without Collateral Ventilation Treated in the STELVIO Trial",
+      "year": 2017
+    },
+    {
+      "title": "Endobronchial valves for patients with heterogeneous emphysema and without interlobar collateral ventilation: open label treatment following the BeLieVeR-HIFi study",
+      "year": 2017
+    },
+    {
+      "title": "Thorax",
+      "year": 2017
+    },
+    {
+      "title": "Bronchodilator Reversibility in COPD",
+      "year": 2017
+    },
+    {
+      "title": "Minimal clinically important differences in COPD lung function",
+      "year": 2011
+    },
+    {
+      "title": "COPD",
+      "year": 2016
+    },
+    {
+      "title": "The minimal important difference for residual volume in patients with severe emphysema",
+      "year": 2005
+    },
+    {
+      "title": "Interpreting thresholds for a clinically significant change in health status in asthma and COPD",
+      "year": 2012
+    },
+    {
+      "title": "The minimal important difference of exercise tests in severe COPD",
+      "year": 2002
+    },
+    {
+      "title": "Chronic obstructive pulmonary disease outcome measurements: what&apos;s important? What&apos;s useful?",
+      "year": 2011
+    },
+    {
+      "title": "FEV 1 : Forced Expiratory Volume in 1 second; RV: Residual Volume; SGRQ: Sr. George&apos;s Respiratory Questionnaire&apos; 6MWD: Six Minute Walk Distance; mMRC: Modified Medical Research Council Dyspnea score *: Chi-squared test",
+      "year": 2011
+    }
+  ],
+  "quality": {
+    "completeness_score": 0,
+    "has_abstract": true,
+    "abstract_source": "metadata",
+    "has_doi": true,
+    "has_full_text": true,
+    "num_sections": 33,
+    "num_tables": 24,
+    "num_figures": 20,
+    "num_references": 57
+  }
+}

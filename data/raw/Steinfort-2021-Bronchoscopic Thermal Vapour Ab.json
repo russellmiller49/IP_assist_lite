@@ -1,0 +1,710 @@
+{
+  "metadata": {
+    "document_id": "10_1159_000514109",
+    "title": "Bronchoscopic Thermal Vapour Ablation for Localized Cancer Lesions of the Lung: A Clinical Feasibility Treat-and-Resect Study",
+    "authors": [
+      "Daniel P. Steinfort",
+      "Michael Christie",
+      "Phillip Antippa",
+      "Kanishka Rangamuwa",
+      "Robert Padera",
+      "Michael Rolf Müller",
+      "Louis B. Irving",
+      "Arschang Valipour"
+    ],
+    "year": 2021,
+    "journal": "Respiration",
+    "doi": "10.1159/000514109",
+    "volume": "100",
+    "issue": "5",
+    "pages": "432-442",
+    "citation": "Steinfort, et al. (2021). Bronchoscopic Thermal Vapour Ablation for Localized Cancer Lesions of the Lung: A Clinical Feasibility Treat-and-Resect Study. Respiration, 100(5), 432-442. https://doi.org/10.1159/000514109",
+    "abstract": "Background: Bronchoscopic thermal vapour ablation (BTVA) is an established and approved modality for minimally invasive lung volume reduction in severe emphysema. Preclinical data suggest potential for BTVA in minimally invasive ablation of lung cancer lesions. Objectives: The objective of this study is to establish the safety, feasibility, and ablative efficacy of BTVA for minimally invasive ablation of lung cancers. Methods: Single arm treat-and-resect clinical feasibility study of patients with biopsy-confirmed lung cancer. A novel BTVA for lung cancer (BTVA-C) system for minimally invasive treatment of peripheral pulmonary tumours was used to deliver 330 Cal thermal vapour energy via bronchoscopy to target lesion. Patients underwent planned lobectomy to complete oncologic care. Pre-surgical CT chest and post-re- section histologic analysis were performed to evaluate ablative efficacy. Results: Six patients underwent BTVA-C, and 5 progressed to planned lobectomy. Median procedure duration was 12 min. No major procedure-related complications occurred. All 5 resected lesions were part-solid lung adenocarcinomas with median solid component size 1.32±0.36 cm. Large uniform ablation zones were seen in 4 patients where thermal dose exceeded 3 Cal/mL, with complete/ near-complete necrosis of target lesions seen in 2 patients. Tumour positioned within ablation zones demonstrated necrosis in >99% of cross-sectional area examined. Conclusion: BTVA of lung tumours is feasible and well tolerated, with preliminary evidence suggesting high potential for effective ablation of tumours. Thermal injury is well demarcated, and uniform tissue necrosis is observed within ablation zones receiving sufficient thermal dose per volume of lung. Treatment of smaller volumes and ensuring adequate thermal dose may be important for ablative efficacy",
+    "abstract_source": "metadata",
+    "url": "https://karger.com/article/doi/10.1159/000514109"
+  },
+  "source_file": "Steinfort-2021-Bronchoscopic Thermal Vapour Ab.json",
+  "sections": [
+    {
+      "title": "Bronchoscopic Thermal Vapour Ablation for Localized Cancer Lesions of the Lung: A Clinical Feasibility Treat-and-Resect Study",
+      "content": "a Department Respiratory Medicine, Royal Melbourne Hospital, Parkville, VIC, Australia;  b Department of Medicine, Faculty of Medicine, Dentistry & Health Sciences, University of Melbourne, Parkville, VIC, Australia;  c Department of Pathology, Royal Melbourne Hospital, Parkville, VIC, Australia;  d Department of Cardiothoracic Surgery, Royal Melbourne Hospital, Parkville, VIC, Australia;  e Department of Pathology, Brigham and Women's Hospital, Boston, MA, USA;  f Department of Thoracic Surgery, North Clinic Vienna, Karl-Landsteiner-Institute of Thoracic Oncology, Sigmund-Freud-University Medical Faculty, Vienna, Austria;  g Department of Respiratory and Critical Care Medicine, Karl-Landsteiner-Institute for Lung Research and Pulmonary Oncology, Klinik Floridsdorf, Vienna, Austria",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Keywords",
+      "content": "Bronchoscopy · Catheter ablation · Ablation techniques · Lung cancer · Endobronchial ultrasound",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Abstract",
+      "content": "Background: Bronchoscopic thermal vapour ablation (BTVA) is an established and approved modality for minimally invasive lung volume reduction in severe emphysema. Preclinical data suggest potential for BTVA in minimally invasive ablation  of  lung  cancer  lesions. Objectives: The  objective  of this study is to establish the safety, feasibility, and ablative efficacy of BTVA for minimally invasive ablation of lung cancers. Methods: Single arm treat-and-resect clinical feasibility study of patients with biopsy-confirmed lung cancer. A novel BTVA for lung cancer (BTVA-C) system for minimally invasive treatment of peripheral pulmonary tumours was used to deliver 330 Cal thermal vapour energy via bronchoscopy to target lesion. Patients underwent planned lobectomy to complete oncologic care. Pre-surgical CT chest and post-re-\nsection histologic analysis were performed to evaluate ablative efficacy. Results: Six patients underwent BTVA-C, and 5 progressed to planned lobectomy. Median procedure duration was 12 min. No major procedure-related complications occurred. All 5 resected lesions were part-solid lung adenocarcinomas  with  median  solid  component  size  1.32±0.36 cm. Large uniform ablation zones were seen in 4 patients where  thermal  dose  exceeded  3  Cal/mL,  with  complete/ near-complete necrosis of target lesions seen in 2 patients. Tumour positioned within ablation zones demonstrated necrosis in >99% of cross-sectional area examined. Conclusion: BTVA of lung tumours is feasible and well tolerated, with preliminary evidence suggesting high potential for effective ablation  of  tumours.  Thermal  injury  is  well  demarcated,  and uniform tissue necrosis is observed within ablation zones receiving sufficient thermal dose per volume of lung. Treatment of  smaller  volumes  and  ensuring  adequate  thermal dose may be important for ablative efficacy.",
+      "category": "abstract",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Introduction",
+      "content": "Surgical resection with lobectomy is currently the recommended therapy for management of localized (Stage I) non-small cell lung cancer (Non-small cell lung cancer (NSCLC)) [1]; however, surgery is precluded in many patients by the presence of significant  comorbidities  or  frailty  [2].  Targeted  ablation techniques may be used for such patients with curative intent and may be non-invasive (e.g., stereotactic ablative body radiotherapy) [3] or invasive (varied percutaneous techniques) [4, 5]. These techniques may be limited in many patients due to anatomic location of tumour or to clinical features such as multifocal disease, ground glass lesions, or underlying pulmonary disease (e.g., fibrosis) [6-8].\nBronchoscopic thermal vapour ablation (BTVA) is an established and approved modality for minimally invasive lung volume reduction in severe emphysema. Targeted delivery of thermal energy induces an inflammatory reaction within treated pulmonary segments resulting  in  fibrosis  and  shrinkage  of  the  segment,  and consequent lung volume reduction [9].\nSubsequent modification of the emphysema treatment catheter  allowed  for  delivery  of  thermal  energy  from  a point beyond sub-segmental level. Greater energy delivery (per volume of lung) could be delivered and in an in vivo porcine model was shown to achieve a uniform field of necrosis which followed the sub-segmental anatomical boundary  [10].  Subsequent  ex  vivo  studies  in  human lungs demonstrated that with sufficient energy delivery, uniform ablation was achieved [11], indicating a potential role  for  BTVA  in  the  minimally  invasive  treatment  of lung cancer.\nThis study aimed to evaluate the safety and feasibility of a novel BTVA for lung cancer (BTVA-C) system for minimally  invasive  treatment  of  peripheral  pulmonary tumours  in  this  treat-and-resect  study.  Secondary  end points regarding distribution of thermal injury and uniformity of necrosis following BTVA-C are also presented in detail to examine potential efficacy of the treatment.",
+      "category": "introduction",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Materials and Methods",
+      "content": "Study Design and End Points\nThis prospective, single-arm, treat-and-resect study was conducted at a single tertiary centre (Royal Melbourne Hospital) in Victoria, Australia, between December 2018 and August 2019. Patients with microscopic proof of malignancy suitable for resection via lobectomy were considered for inclusion in the study. Lesions were required to be ≤20 mm and positioned within the outer third\nof the lung. Detailed inclusion and exclusion criteria are recorded in online suppl. File 1; for all online suppl. material, see www.karger.com/doi/10.1159/000514109.\nPre-procedure planning of treatment was established based on analysis of the patient's diagnostic CT chest by commercially available  quantitative  pulmonary image analysis software - Apollo ® Software (VIDA, Coralville, IA, USA) and by a commercially available virtual bronchoscopy navigation system - Archimedes ® Planner (Broncus Medical Inc., San Jose, CA, USA). Details are presented in online suppl. File 2.\nBronchoscopic Thermal Vapour Ablation for Lung Cancer Device\nThe BTVA-C system is comprised of 3 components: (i) a sterile, disposable vapour delivery catheter (shown in Fig. 1), (ii) generator with attached handpiece, and (iii) water line kit. The generator consists of a graphic user interface to enter control parameters, an electronically controlled syringe pump for controlled delivery of sterile water to its handpiece, and a flow-based technology which creates resistive heating to convert sterile water into thermal vapour. The BTVA-C catheter is connected to the generator's handpiece and delivers the vapour to the patient. Sterile water is delivered via the water line kit to the handpiece where resistive heating converts sterile water into thermal vapour.\nThe catheter is a sterile, disposable, non-reusable device used to deliver vapour from the generator handpiece to the targeted airway. The catheter is very similar in design, construction, and use of the InterVapor catheter used for the treatment of emphysema.\nAblation Procedure and Post-Ablation Assessment\nProcedures were performed under general anaesthesia. Bronchoscopic  navigation  to  the  target  airway  was  performed  using\nstandard videobronchoscopy (BF-P190, Olympus. Tokyo, Japan). Bronchoscopic navigation to target segment was aided by Archimedes planning software, as previously described [12]. Confirmation of position 'on-target' with radial Endobronchial ultrasound (EBUS) was confirmed where possible. Patients receiving 'on-target' treatments received a single treatment in this safety/feasibility study. In patients where ontarget treatment could not be confirmed with radial Endobronchial ultrasound (EBUS), 2 treatments were used to maximized likelihood that the tumour would be included within the treatment volume.\nThe BTVA-C system was programmed to deliver 330 calories per treatment of thermal energy over 8 s. Prophylactic broad-spectrum  antibiotics  were  administered  during  the  procedure  (1  g amoxycillin IV). Following the procedure, participants were electively admitted overnight for routine observation following their BTVA-C procedures. Oral antibiotics (amoxycillin 1 g tds) was prescribed on discharge and continued until day of surgery.\nPost-ablation CT chest was performed 1 day prior to plan surgical resection to visualize the area of localized inflammatory response (LIR) in relation to the original tumour location. Thoracoscopic lobectomy together with systematic nodal dissection was performed by a dedicated thoracic surgeon. All patients were followed until 30 days post-resection.",
+      "category": "methods",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Pathologic Examination",
+      "content": "Gross images with rulers were reviewed and gross measurements of parenchymal necrosis and tumour size were made. Size of ablation size was measured in the axial and lateral directions based  on  the  gross  pathological  pictures  (with  scale)  combined with the estimated slice depth. The axial and lateral measurements were aided by the histological examination to assure that structures and observations in the gross pathology pictures correlated to histological features.\nGlass  slides  were  reviewed  using  an  Olympus  BX41  microscope, and microscopic photographs were obtained with an Olympus DP27 camera and Olympus cellSens Entry software. Microscopic measurements were made using an eyepiece reticule for lesions confined to 1 glass slide or using a ruler after outlining areas of interest with a dotting pen and reconstructing the anatomy for lesions that bridged multiple glass slides. Pathologic review was performed blinded to any clinical information including diagnosis, imaging, treatment details, or surgical findings.\nParenchymal  necrosis  was  identified  as  non-neoplastic  lung that  demonstrated  pneumocyte  and  interstitial  necrosis,  often with accompanying haemorrhage. Tumour necrosis was identified\nas  neoplastic  tissue  exhibiting  cytoplasmic  hyper-eosinophilia, loss of cellular borders, and nuclear changes of cell death (karryorhexis,  karryolysis,  or  pyknosis);  these  changes  were  typically seen in both the malignant cells and tumour stroma. Viable tumour was identified as neoplastic tissue with intact cell borders, intact nuclear morphology, and healthy appearing stroma.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Results",
+      "content": "Six patients provided informed consent and underwent BTVA-C. One patient, who received BTVA-C (2 treatments) to an 11 mm nodule in the superior segment left lower lobe, had previously undergone chemoradiotherapy for a right-sided stage III Non-small cell lung cancer (NSCLC) and experienced  significant  radiation  fibrosis.  His  BTVA-C was complicated by pleuritic chest pain, managed electively with intravenous antibiotics, resulting in an extra day  admission  in  hospital.  A  brief  inflammatory  response was observed, with CRP and neutrophil count peaking at day 4 (220 mg/mL) and day 2 (16.8 × 10 9 ), respectively. At planned resection, he tolerated singlelung ventilation poorly, and planned anatomic resection was abandoned.\nThe remaining 5 patients who proceeded to surgical lobectomy of their tumours form the basis of this report and are presented in detail below. Radiologic details and treatment parameters are recorded in Table 1. Median size of solid component of tumour was 1.32±0.36 cm. Patient 2 reported moderate pleuritic chest pain requiring oral opioids on day 1 post-BTVA-C. This had resolved by the time of resection. No other procedure-related complications were reported (Table 2).",
+      "category": "results",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Patient 1",
+      "content": "A 73-year-old male underwent 2 BTVA-C treatments at  second-generation  airway  segment  of  apical  RUL\n(shown in Fig. 2). Total volume of treated lung parenchyma was 257 mL.\nThe pathologic findings in the resection specimen correlated with the radiologic findings. There was patchy parenchymal necrosis that appeared to correlate with bronchioalveolar units that did not completely envelop the tumour. The maximum tumour dimension pathologically\nwas 2.5 cm, and approximately 69% of the tumour remained viable.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Assessment",
+      "content": "BTVA-C safely delivered; however, delivery of thermal vapour proximal to planned segment resulted in a significantly larger treatment volume than planned, with\nBTVA-C, bronchoscopic thermal vapour ablation for lung cancer. ^ Boyden classification of bronchial anatomy. * Describes generation # beyond segmental bronchus. # Small degree of back-leak of vapour noted, energy delivered to lung parenchymal likely to be lower than recorded.\nconsequent dilution of thermal dose and patchy and subablative injury within apical RUL segment.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Patient 2",
+      "content": "A  67-year-old  female  underwent  a  single  on-target BTVA-C  treatment  following  confirmation  of  tumour position within Rb4a (shown in Fig. 3) by radial Endobronchial ultrasound (EBUS). The treatment catheter tip was positioned in the 4th generation  airway  of  the  lateral  segment  RML,  just  9  mm from the tumour. Volume of treated lung parenchyma was 27 mL. Delivery of BTVA-C was auto-terminated at 6 s due to an internal generator safety switch.\nSurgical resection was uncomplicated. Histologic examination of resected specimen (shown in Fig. 4) demonstrated a zone of parenchymal necrosis measuring 42 × 28 × 78 mm, comprising necrotic tumour (63%) and tumour demonstrating changes of expected necrosis (35.2%). A small portion of the tumour (1.8% of total tumour) was present outside the envelope of parenchymal necrosis and remained viable. The tumour within the envelope of parenchymal necrosis was necrotic with the exception of a microscopic focus of tumour in an area of pleural invasion.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Assessment",
+      "content": "Successful  delivery  of  BTVA-C  with  near-complete ablation of target achieved, despite truncation of BTVA-\nC  delivery.  Two  small  portions  of  viable  tumour  were identified just outside the ablation zone.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Patient 3",
+      "content": "A  58-year-old  female  underwent  a  single  on-target (confirmed by radial Endobronchial ultrasound (EBUS)) treatment at 4th generation airway  level  within  the  anterior  RUL  segment  (Rb3a) (shown in Fig. 5), with 55 mL of lung parenchyma treated. Catheter  tip  was  3.6  cm  from  proximal  portion  of  tumour.\nSurgical resection was uncomplicated. Examination of gross pathologic specimen demonstrated a wedge-shaped ablation zone incorporating the target lesion (shown in Fig. 6). Microscopic examination demonstrated complete necrosis of the entire tumour (100%).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Assessment",
+      "content": "Successful delivery of BTVA-C with complete ablation (necrosis) of target lesion achieved.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Patient 4",
+      "content": "A 69-year-old male received 2 on-target treatments in 5th generation airways of the apical RUL segmental bronchus (Rb1b) (shown in Fig. 7), treating a total parenchymal volume of 66 mL. On histologic evaluation, the tumour contained a prominent central scar along with a\nmicroscopic area of visceral pleural invasion deep to this scar that was within the envelope of parenchymal necrosis;  the  tumour  within  the  pleura  deep  to  the  scar  remained histologically  viable.  Histologic  evaluation  was also significant for an area of viable tumour outside of the zone of parenchymal necrosis. The remainder of the tumour demonstrated necrosis. Persistent air-leak was observed  following  lobectomy,  which  resolved  spontaneously after 9 days.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Assessment",
+      "content": "Approximately 14% of tumour remained viable at day 5 post-ablation. While 2 'on-target' treatments were successfully delivered, the anterior surface of the tumour was not within the ablation zone. The remainder of viable tumour was limited to a section of lung positioned between pleura and a small area of parenchymal scarring.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Patient 5",
+      "content": "A 68-year-old male presented with synchronous primary tumours. Initial management was with lobectomy\nfor a 27 mm LUL tumour (T2 N1). Following recovery from this, the patient underwent BTVA-C to a Rb1c lesion (shown in Fig. 8), receiving 1 on-target treatment to a part-solid lesion with a 14 × 8mm solid component and 40 × 28 mm ground glass component.\nBack-leakage of vapour was noted, with blanching of airway segments visible just proximal to the position of catheter balloon, potentially compromising the thermal dose to the target lesion. The catheter balloon was observed post-ablation to be fully inflated, suggesting mild\nproximal dislocation of the balloon during treatment as the cause for back-leakage of vapour.\nHistologic examination revealed an adenocarcinoma with a central solid area and a peripheral lepidic area. A portion of this lepidic area was outside of the envelope of parenchymal necrosis and remained histologically viable. The solid area of the tumour contained dense desmoplastic stroma and was necrotic; this scarring did not appear to prevent tumour ablation.\nLobectomy was complicated by injury to the proximal right pulmonary artery. Immediate post-operative course was complicated by bleeding requiring return to theatre and  subsequent  admission  to  ICU.  Support  including ECMO was required; however, the patient was successfully weaned from ECMO and MV and discharged from ICU at day 20 post-surgery. He continues follow-up and remains at home and disease-free at 365 days.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Assessment",
+      "content": "Despite 2 on-target treatments, viable tumour was located outside treatment zone suggesting need for improved methods for predicting treatment zone distribution.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Discussion",
+      "content": "Our findings demonstrate the feasibility of BTVA for ablation of peripheral parenchymal cancers. Four patients with  confirmation  of  'on-target'  treatment  by  radial Endobronchial ultrasound (EBUS) achieved large uniform ablation zones, even where a single treatment was delivered, provided thermal dose exceeded 3 Cal/mL. In 2 participants, BTVA-C achieved complete/near-complete necrosis (100 and 98%) of target lesions. Median procedure duration was just 12 min.\nSafety also appears consistent with known safety profile of BTVA for treatment of emphysema. No infection, pneumothorax, or haemoptysis were reported within the\nshort  post-interventional  observation  period.  Two  patients experienced post-ablation chest pain, likely reflecting exuberant pleural inflammation secondary to thermal ablation, reflected in changes on CT chest (Fig. 3). This was not a noted complication of BTVA and possibly reflects the higher dose per treated volume received in these patients (50.6 cal/g, compared to 8.5 cal/g in emphysema therapy [9]). Importantly, these events were self-limiting. Major complications observed were assessed as not related  to  the  treatment  or  device,  instead  reflecting  the known complications of surgical lobectomy (persistent air leak is reported in 10% of patients following VATS lobectomy [13], major vascular injury in 3-8% [14, 15]).\nOur findings indicate the potential for effective bronchoscopic ablation of peripheral tumours using readily available tools of radial Endobronchial ultrasound (EBUS) and virtual bronchoscopy for treatment planning. The intervention was well tolerated with minor self-limiting complication observed in 1 patient who experienced pleuritic chest pain, associated with a small pleural effusion, suggesting pleural inflammation. This did not warrant intervention beyond oral analgesia and did not complicate surgery or post-operative recovery. Our findings are, therefore, reassuring regarding tolerability of the treatment in patients with compromised physiology. Radial Endobronchial ultrasound (EBUS) is demonstrated safe even in patients with advanced Chronic obstructive pulmonary disease (COPD) [16], and BTVA is established for use in patients with advanced emphysema [9], suggesting this technique will be feasible in patients\nwith compromised physiology, which is the group this modality is likely to be applied to.\nThermal doses used in this study are significantly lower  than  for  BTVA  for  treatment  of  emphysema  (target dose 330 Cal vs. average dose in STEP-UP study of 399 Cal [9]), though at higher concentrations (cal/mL). Ablation zones  were  well  demarcated  both  on  post-ablation  CT chest and on histologic examination. Tumour positioned within ablation zones demonstrated necrosis in >99% of cross-sectional area examined. The only viable area within an ablation zone appeared to be in an area of pleural invasion deep to a central scar. Fibrosis and central scars in the other patients did not appear to diminish the efficacy of the vapour ablation. It may be that some combination  of  the  pleural  invasion,  central  scar,  and  distance from the ablation catheter led to this result. As this was the only patient with pleural invasion in this cohort, it will be important to evaluate areas of pleural invasion in future patients to determine whether pleural vessels exert a heatsink effect, if pleural tissue is intrinsically heat-resistant, or if a large distance from catheter tip to pleura allows significant dissipation of thermal energy by the time vapour reaches the pleura, compromising ablative efficacy.\nPersistence of viable tumour in resection specimens was most frequently noted outside the parenchymal ablation zone. Ensuring treatments fully encompass the target lesion  will  be  important  in  future  studies  of  this  technique, either via more accurate targeting of treatments or use  of  multiple  treatments.  Intra-procedural  imaging may also aid in ensuring target is fully encompassed in ablation zones [17].\nGreater extent of tumour necrosis may have been observed within treatment zone with a longer interval from ablation to resection (median in this cohort 5 days). Cells receiving lower, but still lethal, thermal injury may have progressed to histologically evident necrotic cell death. Similarly, damage to blood vessels following thermal injury within and around the zone of parenchymal necrosis may produce delayed thrombosis and avascular/hypoxic death of tumour initially appearing viable. Further studies  with  longer  ablation-to-resection  intervals  are  required to address this finding.\nFrom this limited experience, we identify some significant findings regarding the efficacy of BTVA-C. Treatment volume appears to be significant. If treatment volume is too large, thermal injury is limited to main airways and adjacent parenchyma. Reducing treatment volumes (likely through more distal delivery of BTVA-C) and ensuring sufficient energy per mL parenchyma are likely to be important in future work.\nSurgical  resection  has  remained  standard  of  care  for treatment of early stage Non-small cell lung cancer (NSCLC) since the 1950s. Lobectomy is clearly preferred to sub-lobar resection, based on superior survival outcomes, however, may be problematic in patients with limited functional reserve. Perioperative mortality following lobectomy exceeds 1.5% and does not appear to be smaller following sub-lobar resection [18]. Stereotactic ablative body radiotherapy has proven efficacy, however, is  limited  in  patients  with  underlying pulmonary disease (e.g., fibrosis) [7, 8], tumours positioned proximal to central airways [19], or previous radiation treatment.\nBronchoscopic ablation is likely to be significantly safer than current percutaneous techniques, which are associated with pneumothorax rates up to 60% [4] and intercostal  drain  requirement  in  up  to  38%  [5],  which  is clearly problematic for a modality likely to be applied in multiply comorbid patients. Haemorrhage, haemoptysis, and effusion are also frequently reported complications following percutaneous tumour ablation [20]. In physiologically frail patients, bronchoscopic ablation may allow diagnosis (using rapid on-site evaluation [21]), staging [22], and treatment to be completed in a single procedure.  In  addition  to  an  improved  safety  profile,  this  is likely to be more cost-effective than existing modalities [23], especially in older patients who experience higher rates of morbidity and mortality following resection [24].\nNumerous  clinical  studies  are  underway  examining multiple novel devices for bronchoscopic tumour ablation, with  a  recently  published  review  summarizing  the  published  evidence  for  individual  modalities  [20].  Radiofrequency ablation and photodynamic therapy remain, prior to this study, the only modalities where bronchoscopic experience in ablation of peripheral tumours in clinical settings has been reported [20]. Studies examining bronchoscopically delivered microwave ablation, bronchoscopic laser interstitial thermal therapy, and cryoablation are limited to preclinical settings. All of these techniques require direct localization of target lesions to ensure accurate delivery of ablative energy, which may limit their utility.\nIn contrast, BTVA is an established technique with a known safety profile following its use in emphysema, and multiple treatments may be delivered within a single procedure [9]. This could be used to ensure treatment zones fully encompass a target lesion. BTVA-C may not necessitate bronchoscopic localization, as treatment need only be  delivered  via  a  'feeding'  airway.  Ablation  zones  are likely  to  be  larger  than  achievable  by  localized  ablative technologies.  Additional  treatments,  perhaps  following intra-procedural  cone-beam  CT  imaging  [17],  may  be possible,  to  ensure  a  margin  around  the  tumour  is  achieved.\nFuture studies are required to optimize lesion targeting and to ensure tumours are encompassed by treatment zones. Efficacy for larger lesions should be established. 'Dose' optimization will also be necessary, and establishing a safety profile in less physiologically robust patients will be required to allow this modality to proceed to definitive 'treat-and-leave' studies. Intriguing translational research suggests that thermal ablation of Non-small cell lung cancer (NSCLC) may up-regulate an antitumour immune response [25, 26], increasing  responsiveness  to  immunotherapy which may also expand the application of BVTA-C, though this requires further study.",
+      "category": "discussion",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Conclusion",
+      "content": "BTVA of lung tumours is feasible and well tolerated, with preliminary evidence suggesting high potential for effective ablation of tumours. Thermal injury is well demarcated, and uniform tissue necrosis is observed within ablation zones receiving sufficient thermal dose per volume of lung. Treatment of smaller volumes and ensuring adequate thermal dose may be important for ablative efficacy. Further studies are required to optimize targeting of BTVA-C as well as thermal dose and to establish the impact of intra-tumoural scarring and pleural contact on ablative efficacy of BTVA-C.",
+      "category": "conclusion",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Statement of Ethics",
+      "content": "This study received institutional review board approval (HREC/17/MH/422) with all participants  providing  written  informed consent. This study was prospectively registered (NCT03198468).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Conflict of Interest Statement",
+      "content": "Dr. Padera reports personal fees from Broncus Medical during the conduct of the study. The remaining authors have no conflicts to declare.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Funding Sources",
+      "content": "This study was sponsored by Uptake Medical ® Technology, Inc (Seattle, WA, USA). D.P.S. is supported by an Early Career Fellowship form the National Health and Medical Research Council of Australia.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Author Contributions",
+      "content": "Study  concept  -  A.V.,  M.R.M.,  and  D.P.S.  Study  design  D.P.S., V.A., A.M., and R.P. Acquisition of data - D.P.S., P.A., K.R., L.B.I.,  and  M.C.  Analysis/interpretation  of  data  -  D.P.S.,  M.C., R.P., and K.R. Drafting of manuscript - D.P.S. and R.P. Revision of manuscript - M.C., K.R., P.A., L.B.I., M.R.M., and A.V.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "References",
+      "content": "1  Howington JA, Blum MG, Chang AC, Balekian AA, Murthy SC. Treatment of stage I and II non-small cell lung cancer: diagnosis and management of lung cancer, 3rd ed: American  college  of  chest  physicians  evidencebased clinical practice guidelines. Chest. 2013; 143(5 Suppl l): e278S-313S.\n2  Dupuy DE. Treatment of medically inoperable non-small-cell lung cancer with stereotactic body radiation therapy versus image-guided tumor ablation: can interventional radiology  compete?  J  Vasc  Interv  Radiol.  2013; 24(8): 1139-45.\n3  Siva S, Ball D. Curing operable stage I nonsmall cell lung cancer with stereotactic ablative  body  radiotherapy: the  force  awakens. Oncologist. 2016; 21(4): 393-8.\n4  Inoue M, Nakatsuka S, Jinzaki M. Cryoablation of early-stage primary lung cancer. Biomed Res Int. 2014; 2014: 521691.\n5  Zhao ZR, Lau RWH, Ng CSH. Catheter-based alternative treatment for early-stage lung cancer with a high-risk for morbidity. J Thorac Dis. 2018; 10(Suppl 16): S1864-70.\n6  Sabath BF, Casal RF. Bronchoscopic ablation of peripheral lung tumors. J Thorac Dis. 2019; 11(6): 2628-38.\n7  Bahig H, Filion E, Vu T, Chalaoui J, Lambert L, Roberge D, et al. Severe radiation pneumonitis after lung stereotactic ablative radiation therapy in patients with interstitial lung disease. Pract Radiat Oncol. 2016; 6(5): 367-74.\n8  Chen H, Senan S, Nossent EJ, Boldt RG, Warner  A,  Palma  DA,  et  al.  Treatment-related toxicity in patients with early-stage non-small cell  lung  cancer  and  coexisting  interstitial lung disease: a systematic review. Int J Radiat Oncol Biol Phys. 2017; 98(3): 622-31.\n9  Herth FJ, Valipour A, Shah PL, Eberhardt R, Grah C, Egan J, et al. Segmental volume reduction using thermal vapour ablation in patients  with  severe  emphysema: 6-month results of the multicentre, parallel-group, openlabel, randomised controlled STEP-UP trial. Lancet Respir Med. 2016; 4(3): 185-93.\n10  Henne  E,  Ferguson  JS,  Mest  R,  Herth  FJ. Thermal vapor ablation for lung lesions in a porcine model. Respiration. 2015; 90(2): 14654.\n11  Ferguson JS, Henne E. Bronchoscopically delivered thermal vapor ablation of human lung lesions. J Bronchology Interv Pulmonol. 2019 Apr; 26(2): 108-13.\n12  Herth FJ, Eberhardt R, Sterman D, Silvestri GA, Hoffmann H, Shah PL. Bronchoscopic transparenchymal  nodule  access  (BTPNA): first in human trial of a novel procedure for sampling  solitary  pulmonary  nodules.  Thorax. 2015; 70(4): 326-32.\n13  Zhao K, Mei J, Xia C, Hu B, Li H, Li W, et al. Prolonged air leak after video-assisted thoracic surgery lung cancer resection: risk factors and its effect on postoperative clinical recovery. J Thorac Dis. 2017; 9(5): 1219-25.\n14  Louie BE. Catastrophes and complicated intraoperative events during robotic lung resection. J Vis Surg. 2017; 3: 52.\n15  Liu L, Mei J, He J, Demmy TL, Gao S, Li S, et al.  International  interest  group  on  bleeding during  VLS.  International  expert  consensus on the management of bleeding during VATS lung  surgery.  Ann  Transl  Med.  2019; 7(23): 712.\n16  Georgiou HD, Taverner J, Irving LB, Steinfort DP. Safety and efficacy of radial Endobronchial ultrasound (EBUS) for the investigation of peripheral pulmonary lesions in patients with advanced Chronic obstructive pulmonary disease (COPD). J Bronchology Interv Pulmonol. 2016; 23(3): 192-8.\n17  Steinfort  DP,  Vrjlic  I,  Einsiedel  P,  Prasad  J, Jennings B, Heinze S, et al. CT-fluoroscopic guidance for performance of targeted transbronchial  cryobiopsy: a  preliminary  report. Respiration. 2018; 96(5): 472-9.\n18  Altorki NK, Wang X, Wigle D, Gu L, Darling G, Ashrafi AS, et al. Perioperative mortality and morbidity after sublobar versus lobar resection  for  early-stage  non-small-cell  lung cancer: post-hoc analysis of an international, randomised, phase 3 trial (CALGB/Alliance 140503). Lancet Respir Med. 2018; 6(12): 91524.\n19  Chen H, Laba JM, Zayed S, Boldt RG, Palma DA, Louie AV. Safety and effectiveness of stereotactic ablative radiotherapy for ultra-central lung lesions: a systematic review. J Thorac Oncol. 2019; 14(8): 1332-42.\n20  Steinfort DP, Herth FJF. Bronchoscopic treatments for early-stage peripheral lung cancer: are  we  ready  for  prime  time?  Respirology. 2020; 25(9): 944-52.\n21  Steinfort  DP,  Leong  TL,  Laska  IF,  Beaty  A, Tsui A, Irving LB. Diagnostic utility and accuracy of rapid on-site evaluation of bronchoscopic  brushings.  Eur  Respir  J.  2015; 45(6): 1653-60.\n22  Leong TL, Loveland PM, Gorelik A, Irving L, Steinfort DP. Preoperative staging by Endobronchial ultrasound (EBUS) in cN0/N1 lung cancer: systematic  review  and meta-analysis. J Bronchology Interv Pulmonol. 2019; 26(3): 155-65.\n23  Smith BD, Jiang J, Chang JY, Welsh J, Likhacheva A, Buchholz TA, et al. Cost-effectiveness of stereotactic radiation, sublobar resection, and lobectomy for early non-small cell lung cancers in older adults. J Geriatr Oncol. 2015; 6(4): 324-31.\n24  Vazirani J, Moraes J, Barnett S, Johnson DF, Knight S, Miller A, et al. Outcomes following resection of non-small cell lung cancer in octogenarians. ANZ J Surg. 2018; 88(12): 13227.\n25  Rangamuwa K, Leong TL, Weeden C, Asselin-Labat ML, Bozinovski S, Christie M, et al. Thermal ablation in non-small cell lung cancer: a  review  of  treatment  modalities and the evidence for combination with immune  checkpoint  inhibitors.  Transl  Lung Cancer Res. 2020. [in press - accepted Nov 2020].\n26  Rangamuwa K, Leong TL, Asselin-Labat ML, Bozinovski S,  Christie  M,  John  T,  et  al.  Increase in tumour PD-L1 expression in Non-small cell lung cancer (NSCLC) following  thermal  ablation  is  not  related  to systemic inflammatory response. Transl Lung Cancer Res. 2020.  [in  press  -  accepted  Dec 2020].",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    }
+  ],
+  "tables": [
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/38'}",
+      "headers": [
+        "",
+        "003",
+        "004",
+        "005",
+        "006",
+        "007"
+      ],
+      "rows": [
+        [
+          "Age/sex",
+          "73M",
+          "67 F",
+          "58 F",
+          "69M",
+          "68 M"
+        ],
+        [
+          "FEV1 (L, %predicted)",
+          "2.82 (98%)",
+          "1.58 (66)",
+          "1.47 (82)",
+          "2.41 (82)",
+          "1.82 (81)"
+        ],
+        [
+          "Tumour size,mm Solid component Overall size visibility",
+          "4×9",
+          "16×8",
+          "10×9",
+          "17×14",
+          "14×8"
+        ],
+        [
+          "",
+          "24×16",
+          "27×23",
+          "12×11",
+          "18×16",
+          "40×25"
+        ],
+        [
+          "Tumour",
+          "Part-solid",
+          "Part-solid; mild spiculation",
+          "Part-solid; mild spiculation",
+          "Part-solid; dilated bronchi with bubble-like lucencies",
+          "Spiculated, part-solid"
+        ],
+        [
+          "Pleural contact (Y/N)",
+          "N",
+          "Y",
+          "Y",
+          "Y",
+          "Y"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/57'}",
+      "headers": [
+        "",
+        "003",
+        "004",
+        "005",
+        "006",
+        "007"
+      ],
+      "rows": [
+        [
+          "Treatments, n",
+          "2",
+          "1",
+          "1",
+          "2",
+          "1"
+        ],
+        [
+          "'On-target' treatment",
+          "Y",
+          "Y",
+          "Y",
+          "Y",
+          "Y"
+        ],
+        [
+          "Distance from catheter to tumour, cm",
+          "2.8, 3.1",
+          "0.9",
+          "2.6",
+          "3.9, 3.6",
+          "3.9"
+        ],
+        [
+          "Distance from catheter to pleura, cm",
+          "6.5, 7.0",
+          "5.5",
+          "3.6",
+          "4.8, 4.8",
+          "5.6"
+        ],
+        [
+          "Bronchial segment^",
+          "Apical RUL (Rb1b)",
+          "Lateral RML (Rb4a)",
+          "Anterior RUL (Rb3a)",
+          "Apical RUL (Rb1b)",
+          "Apical RUL (Rb1c)"
+        ],
+        [
+          "Generation *",
+          "2nd, 2nd",
+          "4th",
+          "3rd",
+          "5th, 5th",
+          "4th"
+        ],
+        [
+          "Tumour position confirmed with radial EBUS",
+          "N",
+          "Y",
+          "Y",
+          "Y",
+          "Y"
+        ],
+        [
+          "Treatment volume, mL",
+          "129, 128",
+          "28",
+          "55",
+          "33, 33",
+          "62"
+        ],
+        [
+          "Procedural complications",
+          "Nil",
+          "Small right pleural effusion Pleuritic chest pain requiring oral opioids",
+          "Nil",
+          "Nil",
+          "Nil"
+        ],
+        [
+          "Energy delivery",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Overall",
+          "660",
+          "243",
+          "330",
+          "660",
+          "330"
+        ],
+        [
+          "Cal per mL",
+          "2.57",
+          "8.68",
+          "6",
+          "10",
+          "5.32 #"
+        ],
+        [
+          "Procedure duration",
+          "45",
+          "12",
+          "12",
+          "11",
+          "21"
+        ],
+        [
+          "Interval BTVA-C to resection (days)",
+          "5",
+          "5",
+          "4",
+          "5",
+          "5"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    }
+  ],
+  "figures": [
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/26'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/59'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/72'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/94'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/97'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/110'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/112'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/123'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    }
+  ],
+  "references": [
+    {
+      "title": "Treatment of stage I and II non-small cell lung cancer: diagnosis and management of lung cancer, 3rd ed: American college of chest physicians evidencebased clinical practice guidelines"
+    },
+    {
+      "title": "Chest",
+      "year": 2013
+    },
+    {
+      "title": "Treatment of medically inoperable non-small-cell lung cancer with stereotactic body radiation therapy versus image-guided tumor ablation: can interventional radiology compete?",
+      "year": 2013
+    },
+    {
+      "title": "J Vasc Interv Radiol",
+      "year": 2013
+    },
+    {
+      "title": "Curing operable stage I nonsmall cell lung cancer with stereotactic ablative body radiotherapy: the force awakens",
+      "year": 2013
+    },
+    {
+      "title": "Oncologist",
+      "year": 2016
+    },
+    {
+      "title": "Cryoablation of early-stage primary lung cancer",
+      "year": 2016
+    },
+    {
+      "title": "Biomed Res Int",
+      "year": 2014
+    },
+    {
+      "title": "Catheter-based alternative treatment for early-stage lung cancer with a high-risk for morbidity",
+      "year": 2014
+    },
+    {
+      "title": "J Thorac Dis",
+      "year": 2018
+    },
+    {
+      "title": "Bronchoscopic ablation of peripheral lung tumors",
+      "year": 2018
+    },
+    {
+      "title": "Severe radiation pneumonitis after lung stereotactic ablative radiation therapy in patients with interstitial lung disease",
+      "year": 2019
+    },
+    {
+      "title": "Pract Radiat Oncol",
+      "year": 2016
+    },
+    {
+      "title": "Treatment-related toxicity in patients with early-stage non-small cell lung cancer and coexisting interstitial lung disease: a systematic review",
+      "year": 2016
+    },
+    {
+      "title": "Int J Radiat Oncol Biol Phys",
+      "year": 2017
+    },
+    {
+      "title": "Segmental volume reduction using thermal vapour ablation in patients with severe emphysema: 6-month results of the multicentre, parallel-group, openlabel, randomised controlled STEP-UP trial",
+      "year": 2017
+    },
+    {
+      "title": "Lancet Respir Med",
+      "year": 2016
+    },
+    {
+      "title": "Thermal vapor ablation for lung lesions in a porcine model",
+      "year": 2016
+    },
+    {
+      "title": "Respiration",
+      "year": 2015
+    },
+    {
+      "title": "Bronchoscopically delivered thermal vapor ablation of human lung lesions",
+      "year": 2015
+    },
+    {
+      "title": "J Bronchology Interv Pulmonol"
+    },
+    {
+      "title": "Bronchoscopic transparenchymal nodule access (BTPNA): first in human trial of a novel procedure for sampling solitary pulmonary nodules"
+    },
+    {
+      "title": "Thorax",
+      "year": 2015
+    },
+    {
+      "title": "Prolonged air leak after video-assisted thoracic surgery lung cancer resection: risk factors and its effect on postoperative clinical recovery",
+      "year": 2015
+    },
+    {
+      "title": "Catastrophes and complicated intraoperative events during robotic lung resection",
+      "year": 2017
+    },
+    {
+      "title": "J Vis Surg",
+      "year": 2017
+    },
+    {
+      "title": "International interest group on bleeding during VLS. International expert consensus on the management of bleeding during VATS lung surgery",
+      "year": 2017
+    },
+    {
+      "title": "Ann Transl Med",
+      "year": 2019
+    },
+    {
+      "title": "Steinfort/Christie/Antippa/Rangamuwa/ Padera/Müller/Irving/Valipour",
+      "year": 2019
+    },
+    {
+      "title": "Safety and efficacy of radial EBUS for the investigation of peripheral pulmonary lesions in patients with advanced COPD",
+      "year": 2021
+    },
+    {
+      "title": "CT-fluoroscopic guidance for performance of targeted transbronchial cryobiopsy: a preliminary report",
+      "year": 2016
+    },
+    {
+      "title": "Perioperative mortality and morbidity after sublobar versus lobar resection for early-stage non-small-cell lung cancer: post-hoc analysis of an international, randomised, phase 3 trial (CALGB/Alliance 140503)",
+      "year": 2018
+    },
+    {
+      "title": "Safety and effectiveness of stereotactic ablative radiotherapy for ultra-central lung lesions: a systematic review",
+      "year": 2018
+    },
+    {
+      "title": "J Thorac Oncol",
+      "year": 2019
+    },
+    {
+      "title": "Bronchoscopic treatments for early-stage peripheral lung cancer: are we ready for prime time?",
+      "year": 2019
+    },
+    {
+      "title": "Respirology",
+      "year": 2020
+    },
+    {
+      "title": "Diagnostic utility and accuracy of rapid on-site evaluation of bronchoscopic brushings",
+      "year": 2020
+    },
+    {
+      "title": "Eur Respir J",
+      "year": 2015
+    },
+    {
+      "title": "Preoperative staging by EBUS in cN0/N1 lung cancer: systematic review and meta-analysis",
+      "year": 2015
+    },
+    {
+      "title": "Cost-effectiveness of stereotactic radiation, sublobar resection, and lobectomy for early non-small cell lung cancers in older adults",
+      "year": 2019
+    },
+    {
+      "title": "J Geriatr Oncol",
+      "year": 2015
+    },
+    {
+      "title": "Outcomes following resection of non-small cell lung cancer in octogenarians",
+      "year": 2015
+    },
+    {
+      "title": "ANZ J Surg",
+      "year": 2018
+    },
+    {
+      "title": "Thermal ablation in non-small cell lung cancer: a review of treatment modalities and the evidence for combination with immune checkpoint inhibitors",
+      "year": 2018
+    },
+    {
+      "title": "Transl Lung Cancer Res",
+      "year": 2020
+    },
+    {
+      "title": "Increase in tumour PD-L1 expression in NSCLC following thermal ablation is not related to systemic inflammatory response",
+      "year": 2020
+    }
+  ],
+  "quality": {
+    "completeness_score": 0,
+    "has_abstract": true,
+    "abstract_source": "metadata",
+    "has_doi": true,
+    "has_full_text": true,
+    "num_sections": 24,
+    "num_tables": 2,
+    "num_figures": 15,
+    "num_references": 46
+  }
+}

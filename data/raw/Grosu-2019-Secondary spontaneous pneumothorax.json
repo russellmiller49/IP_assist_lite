@@ -1,0 +1,1644 @@
+{
+  "metadata": {
+    "document_id": "10_21037_jtd_2019_03_35",
+    "title": "Secondary spontaneous pneumothorax in cancer patients",
+    "authors": [
+      "Horiana B. Grosu",
+      "Macarena R. Vial",
+      "Mike Hernandez",
+      "Liang Li",
+      "Roberto F. Casal",
+      "Georgie A. Eapen",
+      "David E. Ost"
+    ],
+    "year": 2019,
+    "journal": "Journal of Thoracic Disease",
+    "doi": "10.21037/jtd.2019.03.35",
+    "volume": "11",
+    "issue": "4",
+    "pages": "1495-1505",
+    "citation": "Grosu, et al. (2019). Secondary spontaneous pneumothorax in cancer patients. Journal of Thoracic Disease, 11(4), 1495-1505. https://doi.org/10.21037/jtd.2019.03.35",
+    "abstract": "Background: Malignancy-associated secondary spontaneous pneumothorax (MSSP) poses significant challenges due to limited survival. By assessing risk factors associated with a MSSP recurrence, there is potential to identify patients who could benefit from early intervention intended to prevent recurrence.\nMethods: We performed a retrospective cohort study of patients with MSSP. The primary outcome was time to MSSP recurrence. We used a competing risk model to identify risk factors associated with MSSP recurrence.\nResults: A total of 2,532 patients were diagnosed with pneumothorax, with 114 having MSSP but only 96 were evaluable for the time-to-recurrence analysis. Of the 96 patients, 9 (9.4%) patients experienced recurrent MSSP, and 58 (60.4%) patients died during the study’s follow-up period. The estimated cumulative incidence (CI) of MSSP considering death as a competing risk was 10.1% at 15 months. The univariable model identified the following covariates as associated with MSSP recurrence: mediastinal shift (HR 12.30, 95% CI: 3.44–43.91, P<0.001), distance from lung apex to thoracic cupola (HR 1.02, 95% CI: 1.00–1.03, P=0.003), and distance between visceral and chest wall at the hilum (HR 1.02, 95% CI: 1.00–1.03, P=0.026).\nConclusions: Although the incidence of MSSP recurrence was found to be low, clinical factors such as sarcoma, the associated mediastinal shift, greater distance from lung apex to thoracic cupola, greater distance between visceral and chest wall at the hilum were found to be risk factors for MSSP recurrence.",
+    "abstract_source": "metadata",
+    "url": "http://jtd.amegroups.com/article/view/28145/20892"
+  },
+  "source_file": "Grosu-2019-Secondary spontaneous pneumothorax.json",
+  "sections": [
+    {
+      "title": "Introduction",
+      "content": "Spontaneous pneumothorax is classified as primary (PSP) in the absence of underlying lung disease and secondary (SSP) when it occurs in the setting of known lung disease (1). The most common underlying conditions in patients with SSP are emphysema, cystic fibrosis, infections, and malignancy (1).\nClinicians dealing with patients experiencing SSP are faced with two main treatment decisions: first, whether to drain the pneumothorax, and second, whether to perform a  definitive procedure to prevent further recurrences. However, approaches to the initial management of SSP\nhave significant practice variation, with marked differences between pulmonologists and thoracic surgeons (2). In patients with a large pneumothorax who are unstable, these treatment decisions are straightforward. However, in patients with SSP that are clinically stable and asymptomatic the approach varies, with differences arising among published guidelines and consensus statements (3,4).\nBritish Thoracic Society (BTS) guidelines suggest drainage in the majority of patients with SSP , admission for at least 24 hours, and supplemental oxygen for those with small pneumothoraxes with low threshold for drainage (3). On the other hand, the American College of Chest",
+      "category": "introduction",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Secondary spontaneous pneumothorax in cancer patients",
+      "content": "Horiana B. Grosu, Macarena R. Vial, Mike Hernandez, Liang Li, Roberto F. Casal, Georgie A. Eapen, David E. Ost\nDepartment of Pulmonary Medicine, The University of T exas MD Anderson Cancer Center, Houston, TX, USA\nContributions: (I) Conception and design: HB Grosu, MR Vial; (II) Administrative support: None; (III) Provision of study materials or patients: None; (IV) Collection and assembly of data: MR Vial, HB Grosu; (V) Data analysis and interpretation: M Hernandez; (VI) Manuscript writing: All authors; (VII) Final approval of manuscript: All authors.\nCorrespondence to: Horiana B. Grosu, MD, MPH. Department of Pulmonary Medicine, Unit 1462, The University of T exas MD Anderson Cancer Center, 1515 Holcombe Blvd., Houston, TX 77030, USA. Email: hbgrosu@mdanderson.org.\nBackground: Malignancy-associated secondary spontaneous pneumothorax (MSSP) poses significant challenges due to limited survival. By assessing risk factors associated with a MSSP recurrence, there is potential to identify patients who could benefit from early intervention intended to prevent recurrence.\nMethods: We performed a retrospective cohort study of patients with MSSP. The primary outcome was time to MSSP recurrence. We used a competing risk model to identify risk factors associated with MSSP recurrence.\nResults: A total of 2,532 patients were diagnosed with pneumothorax, with 114 having MSSP but only 96 were evaluable for the time-to-recurrence analysis. Of the 96 patients, 9 (9.4%) patients experienced recurrent MSSP, and 58 (60.4%) patients died during the study's follow-up period. The estimated cumulative incidence (CI) of MSSP considering death as a competing risk was 10.1% at 15 months. The univariable model identified the following covariates as associated with MSSP recurrence: mediastinal shift (Hazard ratio (HR) 12.30, 95% CI: 3.44-43.91, P<0.001), distance from lung apex to thoracic cupola (Hazard ratio (HR) 1.02, 95% CI: 1.00-1.03, P=0.003), and distance between visceral and chest wall at the hilum (Hazard ratio (HR) 1.02, 95% CI: 1.00-1.03, P=0.026). Conclusions: Although the incidence of MSSP recurrence was found to be low, clinical factors such as sarcoma, the associated mediastinal shift, greater distance from lung apex to thoracic cupola, greater distance between visceral and chest wall at the hilum were found to be risk factors for MSSP recurrence.\nPhysicians (ACCP) consensus advises hospitalization, with some panel members being against observation alone because of reports of deaths associated with this approach. Most members of the ACCP panel recommended an intervention after the first occurrence of SSP because of potential for mortality if another pneumothorax occurs (3-5).\nEvidence to support these recommendations is scarce and mainly derives from studies involving patients with SSP due to chronic obstructive pulmonary disease (Chronic obstructive pulmonary disease (COPD)) or infections. Furthermore, although guidelines provide separate recommendations for special subgroups such as patients with cystic fibrosis, HIV-positive status, and pregnancy, SSP in patients with malignancy has not been addressed separately (3).\nCompared to other forms of SSP, malignancy-associated secondary spontaneous pneumothorax (MSSP) poses specific challenges due to limited life expectancy of patients (6-8). Additionally, pleural involvement can be significantly more extensive in MSSP than in other pneumothoraxes; therefore, optimal management strategies for MSSP may differ from other forms of SSP. Hence, the decision to perform a procedure in order to prevent further recurrences (e.g., talc pleurodesis) should be based on a careful consideration of the possibility of a second pneumothorax, how well tolerated the pneumothorax would be, and consideration of the competing risk of death given the limited life expectancy of these patients. A high probability of recurrence and/or the inability to tolerate recurrence would favor an aggressive strategy; while conversely, a low probability of a recurrent pneumothorax combined with good tolerance would favor a conservative strategy.\nThe primary objective of this study was to estimate the cumulative incidence (CI) and to identify risk factors\nassociated with MSSP recurrence. This will help inform clinician decision-making after a first MSSP, specifically whether or not to perform a definitive procedure aimed at preventing recurrence. If the risk of recurrence is high and patients will live long enough to have a recurrence that favors a definitive procedure at the time of first pneumothorax. The secondary objective was to identify risk factors associated with worsening MSSP requiring an intervention among patients who were initially treated with observation. Finally, we evaluated whether our institutional management matched ACCP and BTS guidelines.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Methods",
+      "content": "We performed a retrospective review of all patients with spontaneous pneumothorax and an underlying malignancy who were evaluated at MD Anderson Cancer Center between January 2005 and January 2015. The protocol was approved by the Institutional Review Board (IRB protocol number PA15-0761). We identified our patient population by using billing procedure codes for pneumothorax (ICD9codes 512.0, 512.81, 512.82, 512.83, 512.89). We then screened these patients' medical records to assess for inclusion and exclusion criteria. We included patients aged 16 years or older with a diagnosis of MSSP. We excluded patients with iatrogenic pneumothorax such as those patients with pneumothorax after computed tomography (CT) guided or ultrasound guided biopsy and patients with SSP due to other causes.",
+      "category": "methods",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Definitions",
+      "content": "MSSP was defined as a pneumothorax presenting in the absence of trauma or iatrogenic cause in the presence of underlying lung or pleural disease, in this case metastatic lung disease.\nEvidence of metastatic disease to the chest was defined as imaging demonstrating multiple nodules or masses in a typical clinical pattern, such as PET or CT with findings sufficiently definitive that the patient was deemed to have metastatic disease to the chest or biopsy/cytology-proven metastatic disease ( Figure 1 ).\nInitial treatment was defined by the treatment chosen on the day the patient presented with the pneumothorax and categorized into one of two groups:\nInvasive procedure group included those patients who underwent any procedure aiming towards draining the pneumothorax, whether it was simple aspiration or a\nchest tube.\nObservation only group patients were those patients who on presentation with a pneumothorax were observed and not treated with an invasive procedure.\nDefinitive procedures included any procedure aiming to prevent a recurrence, including chemical pleurodesis using a chest tube or pleurodesis using video-assisted thoracoscopic surgery (VATS) or any other form of surgical procedure aimed to prevent a recurrence.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Size of the pneumothorax",
+      "content": "The size of the pneumothorax was evaluated on the initial upright posterior-anterior admission chest radiograph. We measured the distance in millimeters from the visceral pleura to parietal pleura at the level of the hilum, as suggested by the BTS guidelines, and the distance from the lung apex to the ipsilateral thoracic cupola at the parietal surface, as suggested by ACCP guidelines.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Main outcomes",
+      "content": "Our primary outcome was time to recurrence of MSSP, measured as days from the diagnosis of the first pneumothorax to the day of diagnosis of the recurrent pneumothorax. Of note, for a recurrence to happen, the first pneumothorax must have resolved. Resolution was defined differently for patients who were in the observation only group as opposed to those whose initial treatment was in the invasive procedure group. In the observation only group, the pneumothorax was considered resolved at 15 days after diagnosis or upon evidence of pneumothorax resolution on imaging, whichever occurred first. This period of 15 days was chosen based on data indicating that total resolution of the pneumothorax occurs within 12 days in the presence of room air and can be accelerated by supplemental oxygen (9,10). In the invasive procedure group, the pneumothorax was considered resolved after chest tube removal with evidence of pneumothorax resolution on imaging. If a patient was in the observation only arm initially, and had to have an intervention, then time originated with removal of the chest tube.\nOur secondary outcome was to evaluate time to worsening of pneumothorax requiring an intervention in those patients in the observation only group in order to identify risk factors associated with worsening requiring an intervention. The observation time for this outcome was up to 15 days after the initial presentation of the MSSP; any intervention after that period was considered an\nintervention for a recurrence and not for treatment of the worsening MSSP.\nFinally, we evaluated whether our institutional management matched ACCP and BTS guidelines.",
+      "category": "results",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Statistical analysis",
+      "content": "Demographic and clinical characteristics were summarized using the mean and standard deviation (SD) or the median and range (min to max) when describing continuous variables. Frequencies and percentages were used to summarize categorical variables. Patient and clinical characteristics, considered categorical, were compared by subgroups of interest using a chi-square test or Fisher's exact test, whiles continuous variables were compared using independent samples t -tests or Wilcoxon rank-sum tests.\nThe CI function of the primary outcome, i.e., the MSSP recurrence, was estimated using the competing risks method of Gooley et al. (1999), accounting death as a competing risk for MSSP recurrence. We also use the subdistribution hazard model (Fine & Gray 1999) to estimate the CI for each patient given the baseline risk factors. Estimates of the subdistribution hazards ratio and 95% confidence interval were provided for all potential risk factors.\nWe used a cause-specific proportional hazard model to analyze time to worsening of pneumothorax, this model identifies risk factors associated with the hazard of pneumothorax worsening. A correlation analysis of all potential risk factors was conducted prior to specifying a full model consisting of covariates of interest. Variables with a P value of less than 0.20 on univariate analysis were considered candidate variables for multivariate regression models. Backward selection with a P value of <0.05 for covariate retention was used to arrive at a multivariable model.\nTo assess if our institutional management matched ACCP and BTS guidelines we performed a concordance analysis using McNemar's test.\nA two-tailed P value <0.05 was considered statistically significant for all analyses. All analyses were conducted using Stata (Release 15. College Station, TX: StataCorp LLC).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Results",
+      "content": "We identified 2,532 patients with a diagnosis of pneumothorax who were evaluated in our institution between January 2005 and January 2015. Since we used the ICD9 codes 512.0, 512.81, 512.82, 512.83, 512.89 for all pneumothoraxes\nwe have a very high number of pneumothoraxes that we reviewed and most associated with an intervention, usually lung biopsy. We excluded 2,418 of the 2,532 patients, 2,403 because they had an iatrogenic pneumothorax and 15 because they did not have metastatic disease in the chest ( Figure 2 ). The remaining 114 patients presented with a MSSP .",
+      "category": "results",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Risk factors for recurrence of pneumothorax after initial MSSP",
+      "content": "Out of 114 patients with MSSP for the outcome of time to recurrence we further excluded 18 patients, 8 patients who had a definitive procedure (5 patients who had talc pleurodesis via VATS and 3 patients who had talc pleurodesis via chest tube) and 10 who died with the chest tube in place. The remaining 96 patients constituted the cohort for analysis. Out of 96 patients, 29 patients had sarcoma, 15 hematological malignancy, 24 lung cancer, and 28 solid non lung cancer. Out of 28 patients with solid non lung malignancy there were 7 patients had gastrointestinal malignancy, 7 patients had head and neck cancer, 3 patients had breast cancer, 2 patients had thyroid cancer, 5 patients had renal cancer, 1 patient had mesothelioma, 1 patient had melanoma, 1 patient had ovarian cancer, 1 patient had endometrial.\nRecurrent MSSP occurred in 9 (9.4%) of these patients. The median time to recurrence of MSSP was 0.69 (range, 0.16 to 10.1) months. The median survival time was 7.8 months (95% CI: 4.8-11.1). Clinical and radiological characteristics by MSSP recurrence status are shown in Table 1 . The estimated CI of MSSP considering death as a competing risk was 8.5% and 10.1% at 10 and 15 months, respectively ( Figure 3 ).\nThe univariable subdistribution hazard model using the method for death as a competing risk analysis identified the associated contralateral mediastinal shift (P<0.001), distance from lung apex to thoracic cupola (P=0.003), and distance between visceral pleura, and chest wall at hilum (P=0.026) as all associated with significantly increasing the CI probability of MSSP recurrence. In addition, compared to all other types of cancer, sarcoma type of cancer was associated with a significantly increased CI of MSSP recurrence (P=0.0011) ( Table 2 ).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Risk factors for clinical deterioration requiring intervention among patients initially managed with observation",
+      "content": "Out of 114 patients, 65 patients were initially managed with observation only and this constituted the cohort for\nTable 1 (continued)\nACCP, distance from lung apex to thoracic cupola; SD, standard deviation; BTS, distance between visceral pleura and chest wall at hilum.\nour secondary analysis on time to worsening; clinical and radiological characteristics by worsening status are shown in Table 3 .\nThe univariable cause-specific proportional hazard\nanalysis identified patients with sarcomas as having a higher risk of clinical deterioration requiring intervention when compared to solid non-lung tumors (P=0.007) and lung cancer (P=0.022). Other factors associated with increased\nrisk of clinical deterioration requiring interventions were the presence of cavitary lung nodules (P=0.034), mediastinal contralateral shift (P=0.013), shortness of breath (P<0.001), higher respiratory rate (P=0.005), higher heart rate (P=0.016), greater distance from lung apex to thoracic cupola in millimeters (P<0.001), and greater distance between visceral pleura and chest wall at hilum in millimeters (P=0.001) ( Table 4 ). On multivariate analysis, only the presence of shortness of breath remained as a significant predictor of worsening and the need for an invasive procedure (P=0.033).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "MD Anderson Cancer Center management vs. guidelines",
+      "content": "On the basis of the ACCP guidelines, an invasive intervention was recommended in 60 (53%) of 114 patients. This recommendation was followed for 38 (63%) of the 60 patients. Of the 22 patients for whom the ACCP recommended intervention and who were treated with observation, 10 worsened and required an intervention. ( Figure S1 ) The BTS guidelines recommended intervention in 78 (68%) of the 114 patients. This recommendation was followed for 48 (62%) of the 78. Only 84 (74%) of the 114 patients were hospitalized for pneumothorax. Of the 30 patients for whom the BTS guidelines recommended\nintervention and who were treated with observation, 17 worsened and required an intervention. ( Figure S2 ) BTS guideline had a higher concordance (83%) with correct outcome ( Table S1 ).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Discussion",
+      "content": "This is the first study to develop a parsimonious model for time to pneumothorax recurrence in patients with evidence of MSSP. The recurrence rate was low and, of 96 patients, only 9 (9.4%) had a recurrence. The competing risk model showed that associated mediastinal shift, greater distance from lung apex to thoracic cupola, and greater distance between visceral and chest wall at the hilum were associated with a higher hazard of pneumothorax recurrence. In addition, compared to all other types of cancer, sarcoma type of cancer was associated with a significantly increased CI of MSSP recurrence (P=0.0011).\nFor the outcome of time to worsening in those patients initially observed, we identified multiple risk factors, but due to the sample size only shortness of breath was selected in the multivariate model. It is quite likely that if we had a larger sample size and hence more events we would identify other risk factors.\nThe low recurrence rate of MSSP (9.6%) observed in this study is in contrast to the recurrence rate of patients with secondary spontaneous pneumothorax due to other causes such as Chronic obstructive pulmonary disease (COPD), who with conservative treatment have recurrence rates of 41% to 47% over 2 year. Due to the high recurrence rate and significant associated mortality, recommended treatment for patients with SSP due to Chronic obstructive pulmonary disease (COPD) is surgery after the first occurrence of SSP to prevent a potentially lethal event (11). However, surgical treatment for SSP is usually planned for patients who have well-preserved respiratory function and a good performance status. This was not the case in our study population with limited survival, and likely at risk for respiratory failure due to high disease burden.\nIn addition, clinicians have a heterogeneous approach to the management of spontaneous pneumothorax, and the ACCP and BTS have proposed different treatment recommendations (2,4,11,12). ACCP recommends that clinically stable patients with small pneumothorax be hospitalized, whereas BTS guidelines states that observation alone is recommended only in patients with small secondary pneumothoraxes of less than 1 cm depth or isolated apical pneumothoraxes in asymptomatic patients. Hospitalization is recommended in all cases (3,4). In our\nSHR, sub hazard ratio.\npatient population, only 84 (74%) of 114 patients were hospitalized for pneumothorax and in just about 60% of cases the ACCP and BTS guidelines were followed in respect to treating the pneumothorax with an intervention. This may be a reasonable approach, especially given that our study found that, in patients with MSSP treated with observation, worsening was seen in 21 (32%) of 65 patients\nand no patient died with this management strategy. In addition, ACCP and BTS guidelines recommend definitive intervention to prevent recurrence, but since the recurrence rate is low, we recommend against upfront definitive treatment, such as surgical intervention (pleurodesis), in this patient population.\nThis is the first study to use a Fine-Gray subdistribution",
+      "category": "discussion",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Journal of Thoracic Disease, Vol 11, No 4 April 2019",
+      "content": "SD, standard deviation.\nhazard model for MSSP recurrence. Competing risks are particularly good for clinical prediction, compared with conventional Kaplan-Meier and Cox models, because when competing risks are present and occur with high frequency, the Kaplan-Meier survival function will consistently overestimate the crude incidence of the outcome of interest (13).\nWe recognize that our study has limitations such as the retrospective nature of data collection, which could have led to some misclassification bias (e.g., documentation may have failed to capture SOB that was present. Misclassification bias of this sort would favor the null hypothesis, so while our estimates of the Hazard ratio (HR) may be falsely low, the association is likely to be true. In addition, inaccuracies in billing\ndiagnoses could have led to bias in identifying all cases.\nIn conclusion, when MSSP presents, risk factors that predict worsening of the first MSSP requiring an intervention include: having sarcomas, presence of cavitary lung nodules, mediastinal contralateral shift, shortness of breath, higher respiratory rate, higher heart rate, greater distance from lung apex to thoracic cupola, and greater distance between visceral pleura and chest wall at hilum. After the first MSSP resolves, factors that increase the risk of having a recurrence include: contralateral mediastinal shift, distance from lung apex to thoracic cupola, and distance between visceral pleura, and chest wall at hilum. Knowing this will inform our decision as to whether a definitive intervention is used (e.g., talc pleurodesis). The overall incidence of a second MSSP was only 9.4% and median life expectancy was low. This suggests that conservative management strategies for MSSP are reasonable, and this is different than in other forms of SSP such as Chronic obstructive pulmonary disease (COPD).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Acknowledgements",
+      "content": "None.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Footnote",
+      "content": "Conflicts of Interest: The authors have no conflicts of interest to declare.\nEthical Statement: The protocol was approved by the Institutional Review Board (IRB protocol number PA15-0761).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "References",
+      "content": "1. Wright FW. Spontaneous pneumothorax and pulmonary malignant disease--a syndrome sometimes associated with cavitating tumours. Report of nine new cases, four with metastases and five with primary bronchial tumours. Clin\nRadiol 1976;27:211-22.\n2. Baumann MH, Strange C. The clinician's perspective on pneumothorax management. Chest 1997;112:822-8.\n3. MacDuff A, Arnold A, Harvey J et al. Management of spontaneous pneumothorax: British thoracic society pleural disease guideline 2010. Thorax 2010;65 Suppl 2:ii18-31.\n4. Baumann MH, Strange C, Heffner JE, et al. Management of spontaneous pneumothorax: an American College of Chest Physicians Delphi consensus statement. Chest 2001;119:590-602.\n5. O'Rourke JP, Yee ES. Civilian Spontaneous Pneumothorax: Treatment Options and Long-term Results. Chest 1989;96:1302-6.\n6. Chan SN, Okuno SH, Jatoi A. Causes and outcomes of spontaneous pneumothoraces in solid tumor cancer patients: an update for the medical oncologist. J Thorac Oncol 2006;1:335-8.\n7. Lai RS, Perng RP, Chang SC. Primary lung cancer complicated with pneumothorax. Jpn J Clin Oncol 1992;22:194-7.\n8. Yellin A, Benfield JR. Pneumothorax associated with lymphoma. Am Rev Respir Dis 1986;134:590-2.\n9. Novakov IP, Hadzhigeorgiev GN, Safev GP. Resolution of experimental pneumothorax by room air. Folia Med (Plovdiv) 2011;53:60-4.\n10.  Park CB, Moon MH, Jeon HW, et al. Does oxygen therapy increase the resolution rate of primary spontaneous pneumothorax? J Thorac Dis 2017;9:5239-43.\n11.  Baumann MH. Management of spontaneous pneumothorax. Clin Chest Med 2006;27:369-81.\n12.  Henry M, Arnold T, Harvey J. BTS guidelines for the management of spontaneous pneumothorax. Thorax 2003;58 Suppl 2:ii39-52.\n13.  Austin PC, Lee DS, Fine JP . Introduction to the analysis of survival data in the presence of competing risks. Circulation 2016;133:601-9.\nCite this  article  as: Grosu HB, Vial MR, Hernandez M, Li L, Casal RF, Eapen GA, Ost DE. Secondary spontaneous pneumothorax in cancer patients. J Thorac Dis 2019;11(4 ):1495-1505. doi: 10.21037/jtd.2019.03.35\nACCP, American College of Chest Physicians; BTS, British Thoracic Society.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    }
+  ],
+  "tables": [
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/105'}",
+      "headers": [
+        "Characteristics",
+        "No recurrence (n=87)",
+        "Recurrence (n=9)",
+        "P value"
+      ],
+      "rows": [
+        [
+          "Age, years",
+          "",
+          "",
+          "0.742"
+        ],
+        [
+          "Mean ± SD",
+          "52.11±17.38",
+          "50.08±19.44",
+          ""
+        ],
+        [
+          "Median (min to max)",
+          "55 (16 to 84)",
+          "49 (23 to 80)",
+          ""
+        ],
+        [
+          "Sex, n (%)",
+          "",
+          "",
+          "0.458"
+        ],
+        [
+          "Female",
+          "30 (34.48)",
+          "2 (22.22)",
+          ""
+        ],
+        [
+          "Male",
+          "57 (65.52)",
+          "7 (77.78)",
+          ""
+        ],
+        [
+          "Smoking status, n (%)",
+          "",
+          "",
+          "0.320"
+        ],
+        [
+          "Never",
+          "53 (60.92)",
+          "7 (77.78)",
+          ""
+        ],
+        [
+          "Former/current",
+          "34 (39.08)",
+          "2 (22.22)",
+          ""
+        ],
+        [
+          "Cancer type, n (%)",
+          "",
+          "",
+          "0.077"
+        ],
+        [
+          "Sarcoma",
+          "23 (26.44)",
+          "6 (66.67)",
+          ""
+        ],
+        [
+          "Hematological malignancy",
+          "15 (17.24)",
+          "0 (0)",
+          ""
+        ],
+        [
+          "Solid non-lung",
+          "26 (29.89)",
+          "2 (22.22)",
+          ""
+        ],
+        [
+          "Lung cancer",
+          "23 (26.44)",
+          "1 (11.11)",
+          ""
+        ],
+        [
+          "Cancer type, n (%)",
+          "",
+          "",
+          "0.012"
+        ],
+        [
+          "Sarcoma",
+          "23 (26.44)",
+          "6 (66.67)",
+          ""
+        ],
+        [
+          "Non-sarcoma malignancy",
+          "64 (73.56)",
+          "3 (33.33)",
+          ""
+        ],
+        [
+          "Cavitary lung tumor on imaging, n (%)",
+          "",
+          "",
+          "0.098"
+        ],
+        [
+          "No",
+          "62 (71.26)",
+          "4 (44.44)",
+          ""
+        ],
+        [
+          "Yes",
+          "25 (28.74)",
+          "5 (55.56)",
+          ""
+        ],
+        [
+          "Pleural-based lesions on imaging, n (%)",
+          "",
+          "",
+          "0.325"
+        ],
+        [
+          "No",
+          "44 (50.57)",
+          "3 (33.33)",
+          ""
+        ],
+        [
+          "Yes",
+          "43 (49.43)",
+          "6 (66.67)",
+          ""
+        ],
+        [
+          "Emphysema on imaging, n (%)",
+          "",
+          "",
+          "0.639"
+        ],
+        [
+          "No",
+          "72 (82.76)",
+          "8 (88.89)",
+          ""
+        ],
+        [
+          "Yes",
+          "15 (17.24)",
+          "1 (11.11)",
+          ""
+        ],
+        [
+          "Prior radiation chest, n (%)",
+          "",
+          "",
+          "0.537"
+        ],
+        [
+          "No",
+          "70 (80.46)",
+          "8 (88.89)",
+          ""
+        ],
+        [
+          "Yes",
+          "17 (19.54)",
+          "1 (11.11)",
+          ""
+        ],
+        [
+          "ACCP",
+          "",
+          "",
+          "0.018"
+        ],
+        [
+          "Mean ± SD",
+          "29.5±27.11",
+          "52.60±30.59",
+          ""
+        ],
+        [
+          "Median (min to max)",
+          "24 (0.00-104.20)",
+          "48 (13.40-120.00)",
+          ""
+        ],
+        [
+          "ACCP recommended intervention, n (%)",
+          "",
+          "",
+          "0.069"
+        ],
+        [
+          "No",
+          "47 (54.02)",
+          "2 (22.22)",
+          ""
+        ],
+        [
+          "Yes",
+          "40 (45.98)",
+          "7 (77.78)",
+          ""
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/112'}",
+      "headers": [
+        "Characteristics",
+        "No recurrence (n=87)",
+        "Recurrence (n=9)",
+        "P value"
+      ],
+      "rows": [
+        [
+          "BTS",
+          "",
+          "",
+          "0.108"
+        ],
+        [
+          "Mean ± SD",
+          "19.09±21.55",
+          "31.18±17.64",
+          ""
+        ],
+        [
+          "Median (min to max)",
+          "15.4 (0.00-91.90)",
+          "25 (9.50-67.00)",
+          ""
+        ],
+        [
+          "BTS recommended intervention, n (%)",
+          "",
+          "",
+          "0.017"
+        ],
+        [
+          "No",
+          "35 (40.23)",
+          "0 (0)",
+          ""
+        ],
+        [
+          "Yes",
+          "52 (59.77)",
+          "9 (100)",
+          ""
+        ],
+        [
+          "Associated pleural effusion, n (%)",
+          "",
+          "",
+          "0.451"
+        ],
+        [
+          "No",
+          "68 (78.16)",
+          "8 (88.89)",
+          ""
+        ],
+        [
+          "Yes",
+          "19 (21.84)",
+          "1 (11.11)",
+          ""
+        ],
+        [
+          "Associated mediastinal contralateral shift, n (%)",
+          "",
+          "",
+          "<0.001"
+        ],
+        [
+          "No",
+          "81 (93.10)",
+          "4 (44.44)",
+          ""
+        ],
+        [
+          "Yes",
+          "6 (6.90)",
+          "5 (55.56)",
+          ""
+        ],
+        [
+          "Shortness of breath, n (%)",
+          "",
+          "",
+          "0.051"
+        ],
+        [
+          "No",
+          "39 (44.83)",
+          "1 (11.11)",
+          ""
+        ],
+        [
+          "Yes",
+          "48 (55.17)",
+          "8 (88.89)",
+          ""
+        ],
+        [
+          "Respiratory rate at presentation",
+          "",
+          "",
+          "0.855"
+        ],
+        [
+          "Mean ± SD",
+          "19.08±2.28",
+          "19.22±1.20",
+          ""
+        ],
+        [
+          "Median (min to max)",
+          "18 (15.00-31.00)",
+          "20 (17.00-20.00)",
+          ""
+        ],
+        [
+          "Heart rate at presentation",
+          "",
+          "",
+          "0.058"
+        ],
+        [
+          "Mean ± SD",
+          "89.70 ±19.85",
+          "103.33±23.76",
+          ""
+        ],
+        [
+          "Median (min to max)",
+          "91 (54.00-137.00)",
+          "100 (75.00-135.00)",
+          ""
+        ],
+        [
+          "Systolic blood pressure in mmHg",
+          "",
+          "",
+          "0.808"
+        ],
+        [
+          "Mean ± SD",
+          "127.75±20.19",
+          "129.56±29.73",
+          ""
+        ],
+        [
+          "Median (min to max)",
+          "124 (94.00-186.00)",
+          "118(100.00-181.00)",
+          ""
+        ],
+        [
+          "Diastolic blood pressure in mmHg",
+          "",
+          "",
+          "0.725"
+        ],
+        [
+          "Mean ± SD",
+          "73.55±12.39",
+          "75.11±14.84",
+          ""
+        ],
+        [
+          "Median (min to max)",
+          "71 (52.00-106.00)",
+          "70 (50.00-97.00)",
+          ""
+        ],
+        [
+          "Oxygen saturation",
+          "",
+          "",
+          "0.593"
+        ],
+        [
+          "Mean ± SD",
+          "97.09±2.32",
+          "96.67±1.58",
+          ""
+        ],
+        [
+          "Median (min to max)",
+          "98 (89.00-100.00)",
+          "97 (94.00-99.00)",
+          ""
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/146'}",
+      "headers": [
+        "Parameter",
+        "Univariate competing risk",
+        "Univariate competing risk",
+        "Univariate competing risk",
+        "Univariate competing risk"
+      ],
+      "rows": [
+        [
+          "",
+          "SHR",
+          "95% CI",
+          "95% CI",
+          "P value"
+        ],
+        [
+          "Age, in years",
+          "0.99",
+          "0.95",
+          "1.03",
+          "0.754"
+        ],
+        [
+          "Male",
+          "1.82",
+          "0.39",
+          "8.48",
+          "0.445"
+        ],
+        [
+          "Smoking",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Current/former",
+          "1.00",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Never",
+          "2.17",
+          "0.45",
+          "10.45",
+          "0.334"
+        ],
+        [
+          "Cancer type",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Sarcoma",
+          "1.00",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Liquid tumor",
+          "-",
+          "-",
+          "-",
+          ""
+        ],
+        [
+          "Solid non-lung",
+          "0.32",
+          "0.06",
+          "1.60",
+          "0.167"
+        ],
+        [
+          "Lung cancer",
+          "0.18",
+          "0.02",
+          "1.42",
+          "0.105"
+        ],
+        [
+          "Cancer type",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "All others",
+          "1.00",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Sarcoma",
+          "6.17",
+          "1.52",
+          "24.98",
+          "0.011"
+        ],
+        [
+          "Cavitary lung nodules/masses present",
+          "2.67",
+          "0.73",
+          "9.70",
+          "0.135"
+        ],
+        [
+          "Pleural-based lung nodules/masses present",
+          "1.99",
+          "0.49",
+          "7.92",
+          "0.329"
+        ],
+        [
+          "Emphysema present",
+          "0.59",
+          "0.07",
+          "4.59",
+          "0.621"
+        ],
+        [
+          "Prior radiation to the chest",
+          "0.50",
+          "0.06",
+          "3.91",
+          "0.512"
+        ],
+        [
+          "Associated pleural effusion",
+          "0.44",
+          "0.05",
+          "3.55",
+          "0.448"
+        ],
+        [
+          "Associated mediastinal contralateral shift",
+          "12.30",
+          "3.44",
+          "43.91",
+          "<0.001"
+        ],
+        [
+          "Shortness of breath",
+          "6.19",
+          "0.76",
+          "49.88",
+          "0.087"
+        ],
+        [
+          "Respiratory rate at presentation, breaths/minute",
+          "1.02",
+          "0.88",
+          "1.19",
+          "0.744"
+        ],
+        [
+          "Heart rate at presentation, beats/minute",
+          "1.03",
+          "0.99",
+          "1.07",
+          "0.062"
+        ],
+        [
+          "Systolic blood pressure, mmHg",
+          "1.00",
+          "0.96",
+          "1.04",
+          "0.847"
+        ],
+        [
+          "Diastolic blood pressure, mmHg",
+          "1.00",
+          "0.95",
+          "1.06",
+          "0.749"
+        ],
+        [
+          "Oxygen saturation,%",
+          "0.93",
+          "0.79",
+          "1.10",
+          "0.447"
+        ],
+        [
+          "Distance from lung apex to thoracic cupola,mm",
+          "1.02",
+          "1.00",
+          "1.03",
+          "0.003"
+        ],
+        [
+          "Distance between visceral pleura and chest wall at hilum,mm",
+          "1.02",
+          "1.00",
+          "1.03",
+          "0.026"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/155'}",
+      "headers": [
+        "Characteristics",
+        "Worsened (n=21)",
+        "Not worsened (n=44)",
+        "P value"
+      ],
+      "rows": [
+        [
+          "Age, years",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Mean ± SD",
+          "52.11±17.38",
+          "50.08±19.44",
+          "0.6850"
+        ],
+        [
+          "Sex, n (%)",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Male",
+          "12 (57.14)",
+          "31 (70.45)",
+          "0.2890"
+        ],
+        [
+          "Smoking status, n (%)",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Former/current",
+          "9 (42.86)",
+          "17 (38.64)",
+          "0.7450"
+        ],
+        [
+          "Cancer type, n (%)",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Sarcoma",
+          "11 (52.38)",
+          "5 (11.36)",
+          ""
+        ],
+        [
+          "Hematological malignancy",
+          "3 (14.29)",
+          "6 (13.64)",
+          ""
+        ],
+        [
+          "Solid non-lung",
+          "3 (14.29)",
+          "18 (40.91)",
+          ""
+        ],
+        [
+          "Lung cancer",
+          "4 (19.05)",
+          "15 (34.09)",
+          "0.0030"
+        ],
+        [
+          "Cavitary lung tumor on imaging, n (%)",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Yes",
+          "6 (28.57)",
+          "8 (18.18)",
+          "0.2600"
+        ],
+        [
+          "Pleural-based lesions on imaging, n (%)",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Yes",
+          "15 (71.43)",
+          "18 (40.91)",
+          "0.0200"
+        ],
+        [
+          "Emphysema on imaging, n (%)",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Yes",
+          "4 (19.05)",
+          "4 (9.09)",
+          "0.2260"
+        ],
+        [
+          "Prior radiation chest, n (%)",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Yes",
+          "2 (9.52)",
+          "12 (27.27)",
+          "0.0430"
+        ],
+        [
+          "Distance from lung apex to thoracic cupola (mm)",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Mean ± SD",
+          "41.17±35.34",
+          "17.61±14.55",
+          "0.0003"
+        ],
+        [
+          "Distance between visceral pleura and chest wall at hilum",
+          "(mm)",
+          "",
+          ""
+        ],
+        [
+          "Mean ± SD",
+          "23.07±21.82",
+          "7.51±11.02",
+          "0.0003"
+        ],
+        [
+          "Associated pleural effusion, n (%)",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Yes",
+          "4 (19.05)",
+          "8 (18.18)",
+          "0.5910"
+        ],
+        [
+          "Associated mediastinal contralateral shift, n (%)",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Yes",
+          "2 (9.52)",
+          "0 (0.00)",
+          "0.1010"
+        ],
+        [
+          "Shortness of breath, n (%)",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Yes",
+          "17 (80.95)",
+          "9 (20.45)",
+          "<0.0001"
+        ],
+        [
+          "Respiratory rate at presentation (breaths/minute)",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Mean ± SD",
+          "19.33±2.22",
+          "18.15±1.27",
+          "0.0080"
+        ],
+        [
+          "Heart rate at presentation (beats/minute)",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Mean ± SD",
+          "97.47±21.87",
+          "84±23.76",
+          "0.0090"
+        ],
+        [
+          "Systolic blood pressure in mmHg",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Mean ± SD",
+          "116.61±15.92",
+          "122±52",
+          "0.1760"
+        ],
+        [
+          "Diastolic blood pressure in mmHg",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Mean ± SD",
+          "72.28±8.82",
+          "69.90±9.60",
+          "0.3420"
+        ],
+        [
+          "Oxygen saturation (%)",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Mean ± SD",
+          "96.57±2.03",
+          "97.61±2.00",
+          "0.0550"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/162'}",
+      "headers": [
+        "Parameter",
+        "Univariate Cox model",
+        "Univariate Cox model",
+        "Univariate Cox model",
+        "Univariate Cox model",
+        "Multivariate Cox model",
+        "Multivariate Cox model",
+        "Multivariate Cox model",
+        "Multivariate Cox model"
+      ],
+      "rows": [
+        [
+          "",
+          "HR",
+          "95% CI",
+          "95% CI",
+          "P value",
+          "HR",
+          "95% CI",
+          "95% CI",
+          "P value"
+        ],
+        [
+          "Age, in years",
+          "0.98",
+          "0.96",
+          "1.03",
+          "0.334",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Male",
+          "0.63",
+          "0.26",
+          "1.48",
+          "0.299",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Smoking",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Current/former",
+          "1.00",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Never",
+          "0.89",
+          "0.53",
+          "1.50",
+          "0.668",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Cancer type",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Sarcoma",
+          "1.00",
+          "",
+          "",
+          "",
+          "1.00",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Liquid tumor",
+          "0.42",
+          "0.11",
+          "1.53",
+          "0.193",
+          "0.56",
+          "0.09",
+          "3.21",
+          "0.521"
+        ],
+        [
+          "Solid non-lung",
+          "0.17",
+          "0.47",
+          "0.61",
+          "0.007",
+          "0.45",
+          "0.10",
+          "2.04",
+          "0.303"
+        ],
+        [
+          "Lung cancer",
+          "0.26",
+          "0.82",
+          "0.83",
+          "0.022",
+          "0.42",
+          "0.08",
+          "2.04",
+          "0.285"
+        ],
+        [
+          "Cancer type",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "All other types",
+          "1.00",
+          "",
+          "",
+          "",
+          "1.00",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Sarcoma",
+          "3.99",
+          "1.68",
+          "9.45",
+          "0.002",
+          "2.12",
+          "0.64",
+          "7.05",
+          "0.216"
+        ],
+        [
+          "Cavitary lung nodules/masses present",
+          "1.37",
+          "0.53",
+          "3.51",
+          "0.512",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Pleural-based lung nodules/masses present",
+          "2.79",
+          "1.08",
+          "7.21",
+          "0.034",
+          "1.21",
+          "0.35",
+          "4.23",
+          "0.756"
+        ],
+        [
+          "Emphysema present",
+          "1.73",
+          "0.58",
+          "5.19",
+          "0.321",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Prior radiation to the chest",
+          "0.36",
+          "0.08",
+          "1.54",
+          "0.169",
+          "0.92",
+          "0.14",
+          "5.93",
+          "0.937"
+        ],
+        [
+          "Associated pleural effusion",
+          "1.09",
+          "0.36",
+          "3.25",
+          "0.869",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Associated mediastinal contralateral shift",
+          "7",
+          "1.51",
+          "32.39",
+          "0.013",
+          "0.31",
+          "0.02",
+          "4.20",
+          "0.382"
+        ],
+        [
+          "Shortness of breath",
+          "8.50",
+          "2.83",
+          "25.49",
+          "<0.001",
+          "3.96",
+          "1.11",
+          "14.06",
+          "0.035"
+        ],
+        [
+          "Respiratory rate at presentation, breaths/minute",
+          "1.27",
+          "1.07",
+          "1.50",
+          "0.005",
+          "0.93",
+          "0.67",
+          "1.28",
+          "0.669"
+        ],
+        [
+          "Heart rate at presentation, beats/minute",
+          "1.03",
+          "1.01",
+          "1.05",
+          "0.016",
+          "1.01",
+          "0.98",
+          "1.04",
+          "0.282"
+        ],
+        [
+          "Systolic blood pressure, mmHg",
+          "0.97",
+          "0.95",
+          "1.00",
+          "0.163",
+          "0.98",
+          "0.94",
+          "1.03",
+          "0.630"
+        ],
+        [
+          "Diastolic blood pressure, mmHg",
+          "1.02",
+          "0.97",
+          "1.07",
+          "0.314",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Oxygen saturation,%",
+          "0.84",
+          "0.70",
+          "1.01",
+          "0.080",
+          "0.81",
+          "0.61",
+          "1.05",
+          "0.125"
+        ],
+        [
+          "Distance from lung apex to thoracic cupola,mm",
+          "1.02",
+          "1.01",
+          "1.04",
+          "<0.001",
+          "1.02",
+          "0.99",
+          "1.04",
+          "0.06"
+        ],
+        [
+          "Distance between visceral pleura and chest wall at hilum,mm",
+          "1.04",
+          "1.02",
+          "1.06",
+          "<0.001",
+          "1.00",
+          "0.97",
+          "1.03",
+          "0.814"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/221'}",
+      "headers": [
+        "Guidelines",
+        "No. (%)",
+        "Concordance",
+        "95% CI",
+        "McNemar's P value"
+      ],
+      "rows": [
+        [
+          "Guideline concordance",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "ACCP vs. BTS",
+          "",
+          "70.20%",
+          "(60.9%, 78.4%)",
+          "0.002"
+        ],
+        [
+          "ACCP No/BTS No",
+          "28 (24.6)",
+          "",
+          "",
+          ""
+        ],
+        [
+          "ACCP No/BTS Yes",
+          "26 (22.8)",
+          "",
+          "",
+          ""
+        ],
+        [
+          "ACCP Yes/BTS No",
+          "8 (7.0)",
+          "",
+          "",
+          ""
+        ],
+        [
+          "ACCP Yes/BTS Yes",
+          "52 (45.6)",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Outcome concordance",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "I ACCP vs. Outcome",
+          "",
+          "69.30%",
+          "(60.0%, 77.6%)",
+          "0.063"
+        ],
+        [
+          "ACCP No/Outcome No",
+          "31 (27.2)",
+          "",
+          "",
+          ""
+        ],
+        [
+          "ACCP No/Outcome Yes",
+          "23 (20.2)",
+          "",
+          "",
+          ""
+        ],
+        [
+          "ACCP Yes/Outcome No",
+          "12 (10.5)",
+          "",
+          "",
+          ""
+        ],
+        [
+          "ACCP Yes/Outcome Yes",
+          "48 (42.1)",
+          "",
+          "",
+          ""
+        ],
+        [
+          "II BTS vs. Outcome",
+          "",
+          "83.30%",
+          "(75.2%, 89.6%)",
+          "0.108"
+        ],
+        [
+          "BTS No/Outcome No",
+          "30 (26.3)",
+          "",
+          "",
+          ""
+        ],
+        [
+          "BTS No/Outcome Yes",
+          "6 (5.3)",
+          "",
+          "",
+          ""
+        ],
+        [
+          "BTS Yes/Outcome No",
+          "13 (11.4)",
+          "",
+          "",
+          ""
+        ],
+        [
+          "BTS Yes/Outcome Yes",
+          "65 (57.0)",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    }
+  ],
+  "figures": [
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/22'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/61'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/121'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/197'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/209'}",
+      "page": null
+    }
+  ],
+  "references": [
+    {
+      "title": "Spontaneous pneumothorax and pulmonary malignant disease--a syndrome sometimes associated with cavitating tumours. Report of nine new cases, four with metastases and five with primary bronchial tumours"
+    },
+    {
+      "title": "Clin Radiol",
+      "year": 1976
+    },
+    {
+      "title": "The clinician&apos;s perspective on pneumothorax management",
+      "year": 1976
+    },
+    {
+      "title": "Chest",
+      "year": 1997
+    },
+    {
+      "title": "Management of spontaneous pneumothorax: British thoracic society pleural disease guideline 2010",
+      "year": 1997
+    },
+    {
+      "title": "Thorax",
+      "year": 2010
+    },
+    {
+      "title": "Management of spontaneous pneumothorax: an American College of Chest Physicians Delphi consensus statement",
+      "year": 2010
+    },
+    {
+      "title": "Civilian Spontaneous Pneumothorax: Treatment Options and Long-term Results",
+      "year": 2001
+    },
+    {
+      "title": "Causes and outcomes of spontaneous pneumothoraces in solid tumor cancer patients: an update for the medical oncologist",
+      "year": 1989
+    },
+    {
+      "title": "J Thorac Oncol",
+      "year": 2006
+    },
+    {
+      "title": "Primary lung cancer complicated with pneumothorax",
+      "year": 2006
+    },
+    {
+      "title": "Jpn J Clin Oncol",
+      "year": 1992
+    },
+    {
+      "title": "Pneumothorax associated with lymphoma",
+      "year": 1992
+    },
+    {
+      "title": "Am Rev Respir Dis",
+      "year": 1992
+    },
+    {
+      "title": "Resolution of experimental pneumothorax by room air",
+      "year": 1986
+    },
+    {
+      "title": "Folia Med (Plovdiv)",
+      "year": 2011
+    },
+    {
+      "title": "Does oxygen therapy increase the resolution rate of primary spontaneous pneumothorax?",
+      "year": 2011
+    },
+    {
+      "title": "J Thorac Dis",
+      "year": 2017
+    },
+    {
+      "title": "Management of spontaneous pneumothorax",
+      "year": 1997
+    },
+    {
+      "title": "Clin Chest Med",
+      "year": 2017
+    },
+    {
+      "title": "BTS guidelines for the management of spontaneous pneumothorax",
+      "year": 2006
+    },
+    {
+      "title": "Introduction to the analysis of survival data in the presence of competing risks",
+      "year": 2003
+    }
+  ],
+  "quality": {
+    "completeness_score": 0,
+    "has_abstract": true,
+    "abstract_source": "metadata",
+    "has_doi": true,
+    "has_full_text": true,
+    "num_sections": 16,
+    "num_tables": 6,
+    "num_figures": 6,
+    "num_references": 22
+  }
+}

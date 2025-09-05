@@ -1,0 +1,501 @@
+{
+  "metadata": {
+    "document_id": "10_1016_j_chest_2016_03_001",
+    "title": "Three-dimensional Printing and 3D Slicer",
+    "authors": [
+      "George Z. Cheng",
+      "Raul San Jose Estepar",
+      "Erik Folch",
+      "Jorge Onieva",
+      "Sidhu Gangadharan",
+      "Adnan Majid"
+    ],
+    "year": 2016,
+    "journal": "Chest",
+    "doi": "10.1016/j.chest.2016.03.001",
+    "volume": "149",
+    "issue": "5",
+    "pages": "1136-1142",
+    "citation": "Cheng, et al. (2016). Three-dimensional Printing and 3D Slicer. Chest, 149(5), 1136-1142. https://doi.org/10.1016/j.chest.2016.03.001",
+    "abstract": "Recent advances in the three-dimensional (3D) printing industry have enabled clinicians to explore the use of 3D printing in preprocedural planning, biomedical tissue modeling, and direct implantable device manufacturing. Despite the increased adoption of rapid prototyping and additive manufacturing techniques in the health-care field, many physicians lack the technical skill set to use this exciting and useful technology. Additionally, the growth in the 3D printing sector brings an ever-increasing number of 3D printers and printable materials. Therefore, it is important for clinicians to keep abreast of this rapidly developing field in order to benefit. In this Ahead of the Curve, we review the history of 3D printing from its inception to the most recent biomedical applications. Additionally, we will address some of the major barriers to wider adoption of the technology in the medical field. Finally, we will provide an initial guide to 3D modeling and printing by demonstrating how to design a personalized airway prosthesis via 3D Slicer. We hope this information will reduce the barriers to use and increase clinician participation in the 3D printing health-care sector.",
+    "abstract_source": "pubmed",
+    "url": "https://linkinghub.elsevier.com/retrieve/pii/S0012369216416132",
+    "pubmed_id": "26976347"
+  },
+  "source_file": "Cheng-2016-Three-dimensional Printing and 3D S.json",
+  "sections": [
+    {
+      "title": "Three-dimensional Printing and 3D Slicer Powerful Tools in Understanding and Treating Structural Lung Disease",
+      "content": "George Z. Cheng, MD, PhD; Raul San Jose Estepar, PhD; Erik Folch, MD; Jorge Onieva, MSc; Sidhu Gangadharan, MD; and Adnan Majid, MD\nRecent advances in the three-dimensional (3D) printing industry have enabled clinicians to explore the use of 3D printing in preprocedural planning, biomedical tissue modeling, and direct implantable device manufacturing. Despite the increased adoption of rapid prototyping and additive manufacturing techniques in the health-care /uniFB01 eld, many physicians lack the technical skill set to use this exciting and useful technology. Additionally, the growth in the 3D printing sector brings an ever-increasing number of 3D printers and printable materials. Therefore, it is important for clinicians to keep abreast of this rapidly developing /uniFB01 eld in order to bene /uniFB01 t. In this Ahead of the Curve , we review the history of 3D printing from its inception to the most recent biomedical applications. Additionally, we will address some of the major barriers to wider adoption of the technology in the medical /uniFB01 eld. Finally, we will provide an initial guide to 3D modeling and printing by demonstrating how to design a personalized airway prosthesis via 3D Slicer. We hope this information will reduce the barriers to use and increase clinician participation in the 3D printing health-care sector. CHEST 2016; 149(5):1136-1142\nWith three-dimensional (3D) printers, digital surface models are readily made into physical models to allow rapid prototyping. 3D printing has been increasingly applied to medical disciplines in which therapeutic interventions heavily depend on appreciation of complex anatomic structural relationships. 1 This article aims to provide an overview of 3D printing technology and its applications in pulmonary medicine. More speci /uniFB01 cally, we will focus on how to use a medical image analysis program -3D Slicer (Surgical\nPlanning Laboratory) -to provide pulmonary physicians the ability to generate digital airway models to aid in their daily practice.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Overview of 3D Printing",
+      "content": "3D printing technology has been in existence since the 1980s. Charles ' Chuck ' Hull, cofounder of 3D Systems, is credited with the invention of the world ' s /uniFB01 rst 3D printer (stereolithography) in 1983. In the mid to late 1980s, there was a proliferation of 3D printing technology. In 1987, Dr Carl\nABBREVIATIONS: 3D = three-dimensional; FDA = US Food and Drug Administration; PCL = polycaprolactone; PLA = polylactic acid; PLGA = poly lacticco -glycolic acid; SLS = selective laser sintering AFFILIATIONS: From the Division of Thoracic Surgery and Interventional Pulmonology (Drs Cheng, Folch, Gangadharan, and Majid), Beth Israel Deaconess Medical Center, and the Department of Radiology (Dr Estepar and Mr Onieva), Brigham and Women ' s Hospital, Harvard Medical School, Boston, MA.\nFUNDING/SUPPORT: This study was supported by Center for Integration of Medicine & Innovative Technology funding for three-dimensional\nmodeling and Chest Imaging Platform development and National Institutes of Health [Grant 1R01HL116931] for slicer work.\nCORRESPONDENCE TO: George Z. Cheng, MD, PhD, Division of Thoracic Surgery and Interventional Pulmonology, Beth Israel Deaconess Medical Center, Harvard Medical School, 185 Pilgrim Rd, Deaconess 201, Boston, MA 02215; e-mail: gzcheng@bidmc.harvard. edu\nCopyright /C211 2016 American College of Chest Physicians. Published by Elsevier Inc. All rights reserved.\nDOI: http://dx.doi.org/10.1016/j.chest.2016.03.001\n[\n]\n[\n]\nDeckard developed the selective laser sintering (SLS) process. In 1989, Scott Crump invented fusion deposition modeling and went on to cofound Stratasys. Today, these two companies, 3D Systems and Stratasys, are the leaders in the 3D printing industry. 2\nAdditive manufacturing via 3D printing has several variations (Fig 1). The most commonly available 3D printing technologies are stereolithography, SLS, fused deposition modeling, and multijet modeling. First, stereolithography (3D Systems; Formlabs) uses a laser to generate an ultraviolet beam at the surface of a pool of photosensitive resin, which leads to local polymerization of the liquid resin. The reaction platform is raised or dropped as each layer is created. This method offers high geometric accuracy but is limited by the resin material available for use (Fig 1A, Video 1). 3 Second, SLS (3D Systems) uses a high-power laser (carbon dioxide) to fuse thermoplastic powder made from plastic, metal, or ceramic. After laser fusing a cross-section, the powder bed drops down one layer thickness, and a new layer of thermoplastic powder is applied. This method allows a variety of materials to be used and affords high accuracy and resolution but at a higher cost (Fig 1B). Third, fused deposition modeling (Stratasys) uses various /uniFB01 laments (acrylonitrile butadiene styrene, polylactic acid [PLA], polycarbonate,\npolyamides, polystyrene) that are forced through a heated extrusion nozzle, which melts the /uniFB01 laments on a platform bed. The printer nozzle moves in an x-y-z plane and deposits layer after layer of material that hardens after extrusion. This method provides high geometric accuracy and models that can be sterilized for use in an operative setting (Fig 1C, Video 2). Fourth, multijet modeling (Z Corporation) uses layers of /uniFB01 ne powder (plaster or resin) that is bonded by water-based adhesive. This method allows full-color prototyping but at the sacri /uniFB01 ce of geometric accuracy and mechanical strength (Fig 1D). 2",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "3D Printing Materials",
+      "content": "3D printing materials vary depending on the 3D printer used. 3D printable materials that are approved by the US Food and Drug Administration (FDA) for other medical applications include, but are not limited to, polycaprolactone (PCL), PLA, and poly lacticco -glycolic acid (PLGA). These medical polymers can be used alone or blended to achieve desired properties. PCL has a long history of medical applications attributed to its low melting temperature of approximately 60 /C14 C, low glass transition temperature of /C0 60 /C14 C, and high thermal stability. PCL has been used in both fusion deposition modeling and SLS printers for manufacturing of biological scaffolds for tissue engineering. 4,5 Initially synthesized in the 1920s, PLA is biodegradable thermoplastic aliphatic polyester derived from renewable resources such as corn, sugarcane, roots, or starch. This versatile bioplastic degrades into lactic acid and has been used for implantable screws, mesh, rods, and scaffolds for bone regeneration. 6 PLGA is a copolymer of PLA and polyglycolic acid that is biocompatible and biodegradable and exhibits broad erosion times with modi /uniFB01 able mechanical properties. Depending on the blending ratio of PLA and polyglycolic acid, the resulting PLGA copolymer has very different mechanical properties and degradation pro /uniFB01 les. PLGA has been used for extended drug delivery because it degrades via hydrolysis into lactic and glycolic acid. 7,8 A recent review examined in detail the advances in 3D printing biomaterials. 9",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "3D Printing and Medical Applications",
+      "content": "Beginning in the 1990s, 3D printing found applications in oral and maxillofacial surgery, 10 neurosurgery, 11 and orthopedics. 12 As the technology matured, imaging techniques kept pace. Investigators were able to use\nCT images to guide the creation of physical models of vascular structures in the brain, heart, and lung. These advances have already proved to be very valuable in clinical care, trainee education, and device development. 3,13 Perhaps the most exciting part of the technology is the potential use of extracellular matrix to 3D bioprint, which may lead to the development of organ printing in the future. 14-16",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "3D Printing in Pulmonary Medicine",
+      "content": "The anatomy of the tracheobronchial tree is uniquely suited for 3D printing technology. 17 The adult trachea has an internal diameter of approximately 16 to 20 mm and spans approximately 10 to 13 cm. It is covered with 16 to 20 C-shaped pieces of cartilage anterolaterally, and the posterior trachea is membranous. The right mainstem bronchus is approximately 1.5 cm long with an internal diameter of 10 to 12 mm. The left mainstem bronchus is approximately 4 to 4.5 cm long with an internal diameter of 8 to 12 mm (DICOM dataset /uniFB01 le available online as supplementary material). 18 The current molded silicone stents (DUMON; Novatech) have the appropriate ranges of diameter (9-18 mm), thickness (1-1.5 mm), and length (20-110 mm). These stents are manufactured with a conventional mold injection technique and come in prede /uniFB01 ned sizes. If custom modi /uniFB01 cations were needed, a custom stent could be generated in approximately 3 weeks, a substantial wait time for the patient. 19\nSeveral publications have addressed 3D printing in pulmonology. First, in the recent report by Morrison et al, 20 the authors generated personalized airway splints for three pediatric patients with tracheobronchomalacia. The authors used MATLAB (MathWorks) and Mimics (i.Materialise) to create the 3D mesh models of the airway splint and airway, respectively. Subsequently, the airway splint mesh was 3D printed via the FORMIGA P 100 system (EOS e-Manufacturing Solutions) using a blend of 96% PCL (Capa 6501; Polysciences) and 4% hydroxyapatite (Plasma Biotal). After manufacturing, the splints were treated with air blasting, then sonication in 70% ethanol for 30 minutes, and then ethylene oxide sterilization at 49 /C14 C. 20 These splints were placed under the medical device emergency use exemption from the FDA. Second, there were several case reports in which investigators used 3D printed models in thoracic surgery planning or stent placement. 17,21 These articles, when taken together, suggest that\nproducing personalized airway prostheses via additive manufacturing is feasible.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Barriers in 3D Medical Printing",
+      "content": "There are several barriers to broad adoption of 3D design and printing in pulmonary medicine. First, there is material limitation. Despite the rapidly increasing number of 3D printable materials, there is a limited amount of materials that are /uniFB02 exible, biocompatible, and FDA approved for medical applications. Many of these materials are in the experimental stage and not accessible to the public.\nSecond, there is a lack of standardization of material testing and cleansing protocols. According to the Center for Disease Control ' s Guideline for Disinfection and Sterilization in Healthcare Facilities, 22 four sterilization techniques are commonly used to sterilize medical equipment: autoclave, ethylene oxide gas, hydrogen peroxide gas plasma, and gamma radiation. The autoclave uses direct contact with steam at high temperature (121 /C14 C or 132 /C14 C) and pressure for a minimal amount of time. Although this approach is nontoxic, most 3D printable materials cannot withstand the high temperature, so low temperature ( < 60 /C14 C) approaches are desirable. Ethylene oxide gas is a microbicidal gas that inhibits cellular metabolism and replication via alkylation of protein, DNA, and RNA. Hydrogen peroxide gas plasma and gamma radiation can also be used to sterilize 3D printed material leaving little to no toxic residue. 22\nThird, there is a lack of clarity about how personalized\n3D printed medical devices will be manufactured or regulated. Traditionally, there have been several FDA pathways to market, with premarket approval, 510(k), and humanitarian use device being the most common. Premarket approval is the review process for the safety and effectiveness of Class III medical devices. 23 The FDA classi /uniFB01 es medical devices into Class I, II, or III. Class III devices are intended to support life and prevent health impairment and have potential risk of causing injury. 24 As such, these devices are subject to clinical trials and the highest standards. The 510(k) is essentially a me-too process through which a medical device is demonstrated to be equivalent to a prior marketed device, so the new medical device is subjected to a less stringent review process. 25 The humanitarian use device is an alternative pathway for devices targeting rare diseases ( < 4,000 patients per year) to obtain market approval without proof of\n]\neffectiveness. 26 To date, most of the 3D printed devices have received FDA approval via the 510(k) process. However, as personalization of devices via 3D printing becomes a reality, the challenge will be to provide standardization of design, manufacturing, and sterilization. 27 A recent review outlines the current regulatory pathways, with special consideration given to 3D printed devices. 28\nFinally, physicians often lack the technical skill set to use 3D design and modeling software. This lack leads to slower adoption of 3D printing in the health-care /uniFB01 eld. Of these barriers, we aim to address the last barrier by introducing the use of the open-source software, 3D Slicer, for digital modeling.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Introduction of 3D Slicer",
+      "content": "3D Slicer is a free, cross-operating system, open-source piece of extensible software that specializes in medical image visualization and computation (www.slicer.org). It serves as a platform to facilitate development of clinical-oriented image analytic tools for clinical research applications (Table 1). On the basis of experiences at the Massachusetts Institute of Technology and Surgical Planning Laboratory, David Gering built the initial prototype of 3D Slicer in 1999. Subsequently, Steve Pieper and Ron Kikinis have led the development efforts supported by the National Institutes of Health. 29 This powerful platform has been used and cited in more than 443 publications and more than 36 pulmonary-speci /uniFB01 c articles.",
+      "category": "introduction",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Use of 3D Slicer in Pulmonary Studies",
+      "content": "3D Slicer has been used extensively in preclinical to clinical studies in a research capacity. Within the pulmonary space, 3D Slicer was used successfully in the CT-based quanti /uniFB01 cation of Chronic obstructive pulmonary disease (COPD) by using the Airway Inspector extension (www.airwayinspector.org). Airway Inspector offers the ability to extract the lung automatically and performs densitometry analysis for emphysema and gas trapping quanti /uniFB01 cation. It is also capable of evaluating airway wall size to study airway\nremodeling based on chest CT scans. 30-33 The Chest Imaging Platform (www.chestimagingplatform.org) is the evolution of the Airway Inspector extension to facilitate computational approaches based on chest CT imaging. The Chest Imaging Platform offers a collection of tools for the preprocessing of lung images as well as user modules for disease-speci /uniFB01 c quanti /uniFB01 cation tasks. 34 The by-products of these quanti /uniFB01 cation tasks are digital models of various lung structures that could be used for 3D printing operations (Fig 2, Video 3). For example, the lobar and airway anatomy can be extracted and converted into 3D models for printing. In order to achieve a high/uniFB01 delity 3D reconstruction, it would be ideal to use high-resolution CT scans. However, 3D Slicer is capable of using Digital Imaging and Communications in Medicine data from low-dose CT scans and is still able to construct acceptable models.\nCOPDGene investigators have successfully used 3D Slicer to examine airway wall thickness in patients with Chronic obstructive pulmonary disease (COPD) and bronchodilator responsiveness. Processing more than 3,600 subjects ' CT scans, the group found that the airway wall thickness is increased in the cohort that has bronchodilator reactivity. 35 Furthermore, 3D Slicer has been used in pulmonary nodule assessment for lung cancer. In a 2013 study on non-small cell lung cancer, Velazquez et al 36 used 3D Slicer to extract volumetric data on non-small cell lung cancer size. This capability to quantify tumor growth accurately in 3D space allows a medical oncologist to engage patients better and to monitor treatment response more accurately. These approaches demonstrate just a few ways in which 3D Slicer is used today.\nAt the time of writing of this article, 3D Slicer is in version 4.54 and has 70 installable extensions. The major appeal of 3D Slicer is manifold. It is freeware with an open modular platform, clean user interface, and ability to run on the main computing platforms (Windows, Mac OS X, and Linux). The major drawback of 3D Slicer is that it is not FDA approved for daily clinical applications but rather is to be used for clinical research.\n3D ¼ three-dimensional; PC ¼ personal computer.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "3D Slicer in Airway Segmentation",
+      "content": "One of the main advantages of 3D Slicer is that it provides an extensible platform for novel automated algorithms. In a recent publication by Nardelli et al, 37\nan airway segmentation algorithm was developed as a 3D Slicer extension and validated with a number of CT scans. Most airway segmentation techniques are based on a region-growing approach in which a base\n]\nvoxel serves as the seed and a threshold cutoff for separating air from tissue. The method of Nardelli et al 37 used region growing from cropped trachea and right and left bronchi with their respective thresholds. This approach allowed them to generate a very accurate tracheobronchial tree (Video 4; e-Appendix 1).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "3D Slicer to Generate Physical Airway Models",
+      "content": "The process of generating a physical airway model is straightforward. After downloading and installing 3D Slicer, the user will need to install the extension for airway segmentation. 3D Slicer will have to be restarted for the extension to take effect. The user will then need to load the CT scan and select the airway segmentation module. Once in airway segmentation, /uniFB01 ducials (or seeds) must be placed within the trachea and right and left bronchi, which will serve as the start of airway modeling. Once the digital model of the airway has been generated, the user can then save the /uniFB01 le into .STL format, which can then be sent to a 3D printer for printing (Fig 3). Using the 3D Slicer airway segmentation algorithm, one can generate a physical 3D printed airway model. This model can then be used for preprocedural planning. The digital model generated from 3D Slicer can be imported into a variety of types of digital modeling software that allow further manipulation of the digital airway model (Fig 4; e-Appendix 1).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Future Considerations",
+      "content": "Despite the rapid development of the 3D printing industry and the increasing avenues where it is being\napplied in medicine, many challenges still remain. This is especially true when considering personalized airway prostheses. As a disruptive technology in manufacturing and design, 3D printing has the potential to change the landscape of medicine. Increasingly, institutions are recognizing this potential and are actively creating institutional innovation centers and pursuing a close collaboration with industry leaders such as Stratasys and 3D Systems. These efforts will secure the continued use of 3D design and printing in everyday medicine.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Acknowledgments",
+      "content": "Author contributions: G. Z. C. and R. S. J. E.: guarantor of the paper, conception and design, authoring/revising the article.\nE. F., J. O., S. G., and A. M.: conception and design, revising the article.\nFinancial/non /uniFB01 nancial disclosures: The authors have reported to CHEST the following: E. F. is a scienti /uniFB01 c consultant for Boston Scienti /uniFB01 c in the development of metallic airway stents. None declared (G. Z. C., R. S. J. E., J. O., S. G., A. M.).\nRole of sponsors: The sponsor had no role in the design of the study, the collection and analysis of the data, or the preparation of the manuscript.\nAdditional information: The e-Appendix, Videos, and DICOM /uniFB01 le can be found in the Supplemental Materials and Multimedia sections of the online article.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "References",
+      "content": "1. McGurk M, Amis AA, Potamianos P, Goodger NM. Rapid prototyping techniques for anatomical modelling in medicine. Ann R Coll Surg Engl . 1997;79(3):169-174.\n2. Gibson I, Rosen D, Stucker B. Additive Manufacturing Technologies 3D Printing, Rapid Prototyping, and Direct Digital Manufacturing . 2nd ed. New York, NY: Springer; 2015.\n3. Kim MS, Hansgen AR, Wink O, Quaife RA, Carroll JD. Rapid prototyping: a new tool in understanding and treating structural heart disease. Circulation . 2008;117(18):2388-2394.\n4. Ramanath HS, Chua CK, Leong KF, Shah KD. Melt /uniFB02 ow behaviour of poly-epsilon-caprolactone in fused deposition modelling. J Mater Sci Mater Med . 2008;19(7):2541-2550.\n5. Chen CH, Shyu VB, Chen JP, Lee MY. Selective laser sintered polyepsilon-caprolactone scaffold hybridized with collagen hydrogel for cartilage tissue engineering. Biofabrication . 2014;6(1):015004.\n6. Serra T, Mateos-Timoneda MA, Planell JA, Navarro M. 3D printed PLA-based scaffolds: a versatile tool in regenerative medicine. Organogenesis . 2013;9(4):239-244.\n7. Kapoor DN, Bhatia A, Kaur R, Sharma R, Kaur G, Dhawan S. PLGA: a unique polymer for drug delivery. Ther Deliv . 2015;6(1):41-58.\n8. Emami J, Hamishehkar H, Najafabadi AR, et al. Particle size design of PLGA microspheres for potential pulmonary drug delivery using response surface methodology. J Microencapsul . 2009;26(1):1-8.\n9. Chia HN, Wu BM. Recent advances in 3D printing of biomaterials. J Biol Eng . 2015;9:4.\n10. D ' Urso PS, Barker TM, Earwaker WJ, et al. Stereolithographic biomodelling in cranio-maxillofacial surgery: a prospective trial. J Craniomaxillofac Surg . 1999;27(1):30-37.\n11. Heissler E, Fischer FS, Bolouri S, et al. Custom-made cast titanium implants produced with CAD/CAM for the reconstruction of cranium defects. Int J Oral Maxillofac Surg . 1998;27(5):334-338.\n12. Munjal S, Leopold SS, Kornreich D, Shott S, Finn HA. CT-generated 3-dimensional models for complex acetabular reconstruction. J Arthroplasty . 2000;15(5):644-653.\n13. Bustamante S, Bose S, Bishop P, Klatte R, Norris F. Novel application of rapid prototyping for simulation of bronchoscopic anatomy. J Cardiothorac Vasc Anesth . 2014;28(4):1134-1137.\n14. Hoque ME, Chuan YL, Pashby I. Extrusion based rapid prototyping technique: an advanced platform for tissue engineering scaffold fabrication. Biopolymers . 2012;97(2):83-93.\n15. Skoog SA, Goering PL, Narayan RJ. Stereolithography in tissue engineering. J Mater Sci Mater Med . 2014;25(3):845-856.\n16. Lee V, Singh G, Trasatti JP, et al. Design and fabrication of human skin by three-dimensional bioprinting. Tissue Eng Part C Methods . 2014;20(6):473-484.\n17. Tam MD, Laycock SD, Jayne D, Babar J, Noble B. 3-D printouts of the tracheobronchial tree generated from CT images as an aid to management in a case of tracheobronchial chondromalacia caused by relapsing polychondritis. J Radiol Case Rep . 2013;7(8):34-43.\n18. Ernst A, Herth FJF. Principles and Practice of Interventional Pulmonology . New York, NY: Springer; 2013.\n19. Freitag L, Darwiche K. Endoscopic treatment of tracheal stenosis. Thorac Surg Clin . 2014;24(1):27-40.\n20. Morrison RJ, Hollister SJ, Niedner MF, et al. Mitigation of tracheobronchomalacia with 3D-printed personalized medical devices in pediatric patients [published correction appears in Sci Transl Med . 2015;7(287):287er4] Sci Transl Med . 2015;7(285):285ra264.\n21. Cheng GZ, Folch E, Brik R, et al. Three-dimensional modeled T-tube design and insertion in a patient with tracheal dehiscence. Chest . 2015;148(4):e106-e108.\n22. Rutala WA, Weber DJ; Healthcare Infection Control Practices Advisory Committee. Guideline for disinfection and sterilization in healthcare facilities, 2008. http://www.cdc.gov/hicpac/pdf/ guidelines/Disinfection_Nov_2008.pdf. Accessed December 1, 2015.\n23. US Food and Drug Administration. Premarket approval (PMA). http://www.fda.gov/Medicaldevices/Deviceregulationandguidance/ Howtomarketyourdevice/Premarketsubmissions/Premarket approvalpma/Default.Htm. Accessed January 2, 2016.\n24. US Food and Drug Administration. Device advice: comprehensive regulatory assistance. http://www.fda.gov/MedicalDevices/Device RegulationandGuidance/default.htm. Accessed January 2, 2016.\n25. US Food and Drug Administration. Premarket noti /uniFB01 cation 510(k). http://www.fda.gov/MedicalDevices/DeviceRegulationandGuidance/ HowtoMarketYourDevice/PremarketSubmissions/Premarket Noti /uniFB01 cation510k/default.htm. Accessed January 2, 2016.\n26. US Food and Drug Administration. Designating humanitarian use device (HUD). http://www.fda.gov/ForIndustry/DevelopingProducts forRareDiseasesConditions/DesignatingHumanitarianUseDevices HUDS/default.htm. Accessed January 2, 2016.\n27. Hartford J. FDA ' s view on 3-D printing medical devices. Medical Device and Diagnostic Industry . February 11, 2015. http://www. mddionline.com/article/fdas-view-3-d-printing-medical-devices. Accessed January 2, 2016.\n28. Morrison RJ, Kashlan KN, Flanangan CL, et al. Regulatory considerations in the design and manufacturing of implantable 3D-printed medical devices. Clin Transl Sci . 2015;8(5): 594-600.\n29. Fedorov A, Beichel R, Kalpathy-Cramer J, et al. 3D Slicer as an image computing platform for the Quantitative Imaging Network. Magn Reson Imaging . 2012;30(9):1323-1341.\n30. Lutey BA, Conradi SH, Atkinson JJ, et al. Accurate measurement of small airways on low-dose thoracic CT scans in smokers. Chest . 2013;143(5):1321-1329.\n31. Yamashiro T, Matsuoka S, Estepar RS, et al. Kurtosis and skewness of density histograms on inspiratory and expiratory CT scans in smokers. Chronic obstructive pulmonary disease (COPD) . 2011;8(1):13-20.\n32. Washko GR, Hunninghake GM, Fernandez IE, et al. Lung volumes and emphysema in smokers with interstitial lung abnormalities. N Engl J Med . 2011;364(10):897-906.\n33. Washko GR, Drans /uniFB01 eld MT, Estepar RS, et al. Airway wall attenuation: a biomarker of airway disease in subjects with Chronic obstructive pulmonary disease (COPD). J Appl Physiol . 2009;107(1):185-191.\n34. Estepar RSJ, Ross JC, Harmouche R, Onieva J, Diaz AA, Washko GR. Chest Imaging Platform: an open-source library and workstation for quantitative chest imaging. Am J Respir Crit Care Med . 2015;191:A4975.\n35. Kim V, Desai P, Newell JD, et al. Airway wall thickness is increased in Chronic obstructive pulmonary disease (COPD) patients with bronchodilator responsiveness. Respir Res . 2014;15(1):84.\n36. Velazquez ER, Parmar C, Jermoumi M, et al. Volumetric CTbased segmentation of Non-small cell lung cancer (NSCLC) using 3D-Slicer. Sci Rep . 2013;3(1): 3529.\n37. Nardelli P, Khan KA, Corvo A, et al. Optimizing parameters of an open-source airway segmentation algorithm using different CT images. Biomed Eng Online . 2015;14(1):62.\n]",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    }
+  ],
+  "tables": [
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/63'}",
+      "headers": [
+        "Program",
+        "Laboratory or Company",
+        "Platform",
+        "Plug-ins",
+        "Memory (bit)",
+        "Cost"
+      ],
+      "rows": [
+        [
+          "3D Slicer",
+          "Surgical Planning Laboratory",
+          "Mac, PC, Linux",
+          "Yes",
+          "64",
+          "Free"
+        ],
+        [
+          "Horos",
+          "Horos Project",
+          "Mac",
+          "Yes",
+          "64",
+          "Free"
+        ],
+        [
+          "OsiriX",
+          "Pixmeo",
+          "Mac",
+          "Yes",
+          "32 or 64",
+          "Free or $699"
+        ],
+        [
+          "Mimics",
+          "iMaterialize",
+          "PC",
+          "No",
+          "64",
+          "Variable"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    }
+  ],
+  "figures": [
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/23'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/67'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/93'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/106'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    }
+  ],
+  "references": [
+    {
+      "title": "Rapid prototyping techniques for anatomical modelling in medicine"
+    },
+    {
+      "title": "Ann R Coll Surg Engl",
+      "year": 1997
+    },
+    {
+      "title": "Additive Manufacturing Technologies 3D Printing, Rapid Prototyping, and Direct Digital Manufacturing",
+      "year": 1997
+    },
+    {
+      "title": "Rapid prototyping: a new tool in understanding and treating structural heart disease",
+      "year": 2015
+    },
+    {
+      "title": "Circulation",
+      "year": 2008
+    },
+    {
+      "title": "Melt flow behaviour of poly-epsilon-caprolactone in fused deposition modelling",
+      "year": 2008
+    },
+    {
+      "title": "J Mater Sci Mater Med",
+      "year": 2008
+    },
+    {
+      "title": "Selective laser sintered polyepsilon-caprolactone scaffold hybridized with collagen hydrogel for cartilage tissue engineering",
+      "year": 2008
+    },
+    {
+      "title": "Biofabrication",
+      "year": 2014
+    },
+    {
+      "title": "3D printed PLA-based scaffolds: a versatile tool in regenerative medicine",
+      "year": 2014
+    },
+    {
+      "title": "Organogenesis",
+      "year": 2013
+    },
+    {
+      "title": "PLGA: a unique polymer for drug delivery",
+      "year": 2013
+    },
+    {
+      "title": "Ther Deliv",
+      "year": 2015
+    },
+    {
+      "title": "Particle size design of PLGA microspheres for potential pulmonary drug delivery using response surface methodology",
+      "year": 2015
+    },
+    {
+      "title": "J Microencapsul",
+      "year": 2009
+    },
+    {
+      "title": "Recent advances in 3D printing of biomaterials",
+      "year": 2009
+    },
+    {
+      "title": "J Biol Eng",
+      "year": 2015
+    },
+    {
+      "title": "Stereolithographic biomodelling in cranio-maxillofacial surgery: a prospective trial",
+      "year": 2015
+    },
+    {
+      "title": "J Craniomaxillofac Surg",
+      "year": 1999
+    },
+    {
+      "title": "Custom-made cast titanium implants produced with CAD/CAM for the reconstruction of cranium defects",
+      "year": 1999
+    },
+    {
+      "title": "Int J Oral Maxillofac Surg",
+      "year": 1998
+    },
+    {
+      "title": "CT-generated 3-dimensional models for complex acetabular reconstruction",
+      "year": 1998
+    },
+    {
+      "title": "J Arthroplasty",
+      "year": 2000
+    },
+    {
+      "title": "Novel application of rapid prototyping for simulation of bronchoscopic anatomy",
+      "year": 2000
+    },
+    {
+      "title": "J Cardiothorac Vasc Anesth",
+      "year": 2014
+    },
+    {
+      "title": "Extrusion based rapid prototyping technique: an advanced platform for tissue engineering scaffold fabrication",
+      "year": 2014
+    },
+    {
+      "title": "Biopolymers",
+      "year": 2012
+    },
+    {
+      "title": "Stereolithography in tissue engineering",
+      "year": 2012
+    },
+    {
+      "title": "Design and fabrication of human skin by three-dimensional bioprinting",
+      "year": 2014
+    },
+    {
+      "title": "Tissue Eng Part C Methods",
+      "year": 2014
+    },
+    {
+      "title": "3-D printouts of the tracheobronchial tree generated from CT images as an aid to management in a case of tracheobronchial chondromalacia caused by relapsing polychondritis",
+      "year": 2014
+    },
+    {
+      "title": "J Radiol Case Rep",
+      "year": 2013
+    },
+    {
+      "title": "Principles and Practice of Interventional Pulmonology",
+      "year": 2013
+    },
+    {
+      "title": "Endoscopic treatment of tracheal stenosis",
+      "year": 2013
+    },
+    {
+      "title": "Thorac Surg Clin",
+      "year": 2013
+    },
+    {
+      "title": "Mitigation of tracheobronchomalacia with 3D-printed personalized medical devices in pediatric patients [published correction appears in",
+      "year": 2014
+    },
+    {
+      "title": "Sci Transl Med"
+    },
+    {
+      "title": "Three-dimensional modeled T-tube design and insertion in a patient with tracheal dehiscence"
+    },
+    {
+      "title": "Chest",
+      "year": 2015
+    },
+    {
+      "title": "Healthcare Infection Control Practices Advisory Committee. Guideline for disinfection and sterilization in healthcare facilities"
+    },
+    {
+      "title": "Device advice: comprehensive regulatory assistance"
+    },
+    {
+      "title": "Premarket notification"
+    },
+    {
+      "title": "Designating humanitarian use device (HUD)"
+    },
+    {
+      "title": "FDA&apos;s view on 3-D printing medical devices"
+    },
+    {
+      "title": "Medical Device and Diagnostic Industry"
+    },
+    {
+      "title": "Regulatory considerations in the design and manufacturing of implantable 3D-printed medical devices"
+    },
+    {
+      "title": "Clin Transl Sci",
+      "year": 2015
+    },
+    {
+      "title": "3D Slicer as an image computing platform for the Quantitative Imaging Network",
+      "year": 2015
+    },
+    {
+      "title": "Magn Reson Imaging",
+      "year": 2012
+    },
+    {
+      "title": "Accurate measurement of small airways on low-dose thoracic CT scans in smokers",
+      "year": 2012
+    },
+    {
+      "title": "Kurtosis and skewness of density histograms on inspiratory and expiratory CT scans in smokers",
+      "year": 2013
+    },
+    {
+      "title": "COPD",
+      "year": 2011
+    },
+    {
+      "title": "Lung volumes and emphysema in smokers with interstitial lung abnormalities",
+      "year": 2011
+    },
+    {
+      "title": "N Engl J Med",
+      "year": 2011
+    },
+    {
+      "title": "Airway wall attenuation: a biomarker of airway disease in subjects with COPD",
+      "year": 2011
+    },
+    {
+      "title": "J Appl Physiol",
+      "year": 2009
+    },
+    {
+      "title": "Chest Imaging Platform: an open-source library and workstation for quantitative chest imaging",
+      "year": 2009
+    },
+    {
+      "title": "Am J Respir Crit Care Med",
+      "year": 2015
+    },
+    {
+      "title": "Airway wall thickness is increased in COPD patients with bronchodilator responsiveness",
+      "year": 2015
+    },
+    {
+      "title": "Respir Res",
+      "year": 2014
+    },
+    {
+      "title": "Volumetric CTbased segmentation of NSCLC using 3D-Slicer",
+      "year": 2014
+    },
+    {
+      "title": "Sci Rep",
+      "year": 2013
+    },
+    {
+      "title": "Optimizing parameters of an open-source airway segmentation algorithm using different CT images",
+      "year": 2013
+    },
+    {
+      "title": "Biomed Eng Online",
+      "year": 2015
+    }
+  ],
+  "quality": {
+    "completeness_score": 0,
+    "has_abstract": true,
+    "abstract_source": "pubmed",
+    "has_doi": true,
+    "has_full_text": true,
+    "num_sections": 13,
+    "num_tables": 1,
+    "num_figures": 9,
+    "num_references": 64
+  }
+}

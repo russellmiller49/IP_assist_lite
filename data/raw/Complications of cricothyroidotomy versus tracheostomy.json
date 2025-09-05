@@ -1,0 +1,1362 @@
+{
+  "metadata": {
+    "document_id": "10_1186_s12871_020_01135_2",
+    "title": "Complications of cricothyroidotomy versus tracheostomy in emergency surgical airway management: a systematic review",
+    "authors": [
+      "Fabricio Batistella Zasso",
+      "Kong Eric You-Ten",
+      "Michelle Ryu",
+      "Khrystyna Losyeva",
+      "Jaya Tanwani",
+      "Naveed Siddiqui"
+    ],
+    "year": 2020,
+    "journal": "BMC Anesthesiology",
+    "doi": "10.1186/s12871-020-01135-2",
+    "volume": "20",
+    "issue": "1",
+    "pages": "216",
+    "citation": "Zasso, et al. (2020). Complications of cricothyroidotomy versus tracheostomy in emergency surgical airway management: a systematic review. BMC Anesthesiology, 20(1), 216. https://doi.org/10.1186/s12871-020-01135-2",
+    "abstract": "Background: Airway guidelines recommend an emergency surgical airway as a potential life-saving treatment in a ' Can ' t Intubate, Can ' t Oxygenate ' (CICO) situation. Surgical airways can be achieved either through a cricothyroidotomy or tracheostomy. The current literature has limited data regarding complications of cricothyroidotomy and tracheostomy in an emergency situation. The objective of this systematic review is to analyze complications following cricothyroidotomy and tracheostomy in airway emergencies. Methods: This synthesis of literature was exempt from ethics approval. Eight databases were searched from inception to October 2018, using a comprehensive search strategy. Studies were included if they were randomized controlled trials or observational studies reporting complications following emergency surgical airway. Complications were classified as minor (evolving to spontaneous remission or not requiring intervention or not persisting chronically), major (requiring intervention or persisting chronically), early (from the start of the procedure up to 7 days) and late (beyond 7 days of the procedure). Results: We retrieved 2659 references from our search criteria. Following the removal of duplicates, title and abstract review, 33 articles were selected for full-text reading. Twenty-one articles were finally included in the systematic review. We found no differences in minor, major or early complications between the two techniques. However, late complications were significantly more frequent in the tracheostomy group [Odds ratio (OR) (95% CI) 0.21 (0.20 -0.22), p < 0.0001]. Conclusions: Our results demonstrate that cricothyroidotomies performed in emergent situations resulted in fewer late complications than tracheostomies. This finding supports the recommendations from the latest Difficult Airway Society (DAS) guidelines regarding using cricothyroidotomy as the technique of choice for emergency surgical airway. However, emergency cricothyroidotomies should be converted to tracheostomies in a timely fashion as there is insufficient evidence to suggest that emergency cricothyrotomies are long term airways",
+    "abstract_source": "metadata",
+    "url": "https://bmcanesthesiol.biomedcentral.com/articles/10.1186/s12871-020-01135-2"
+  },
+  "source_file": "Complications of cricothyroidotomy versus tracheostomy.json",
+  "sections": [
+    {
+      "title": "Complications of cricothyroidotomy versus tracheostomy in emergency surgical airway management: a systematic review",
+      "content": "Fabricio Batistella Zasso 1* , Kong Eric You-Ten 1 , Michelle Ryu 2 , Khrystyna Losyeva 3 , Jaya Tanwani 4 and Naveed Siddiqui 1",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Abstract",
+      "content": "Background: Airway guidelines recommend an emergency surgical airway as a potential life-saving treatment in a ' Can ' t Intubate, Can ' t Oxygenate ' (CICO) situation. Surgical airways can be achieved either through a cricothyroidotomy or tracheostomy. The current literature has limited data regarding complications of cricothyroidotomy and tracheostomy in an emergency situation. The objective of this systematic review is to analyze complications following cricothyroidotomy and tracheostomy in airway emergencies.\nMethods: This synthesis of literature was exempt from ethics approval. Eight databases were searched from inception to October 2018, using a comprehensive search strategy. Studies were included if they were randomized controlled trials or observational studies reporting complications following emergency surgical airway. Complications were classified as minor (evolving to spontaneous remission or not requiring intervention or not persisting chronically), major (requiring intervention or persisting chronically), early (from the start of the procedure up to 7 days) and late (beyond 7 days of the procedure).\nResults: We retrieved 2659 references from our search criteria. Following the removal of duplicates, title and abstract review, 33 articles were selected for full-text reading. Twenty-one articles were finally included in the systematic review. We found no differences in minor, major or early complications between the two techniques. However, late complications were significantly more frequent in the tracheostomy group [Odds ratio (OR) (95% CI) 0.21 (0.20 -0.22), p < 0.0001].\nConclusions: Our results demonstrate that cricothyroidotomies performed in emergent situations resulted in fewer late complications than tracheostomies. This finding supports the recommendations from the latest Difficult Airway Society (DAS) guidelines regarding using cricothyroidotomy as the technique of choice for emergency surgical airway. However, emergency cricothyroidotomies should be converted to tracheostomies in a timely fashion as there is insufficient evidence to suggest that emergency cricothyrotomies are long term airways.\nKeywords: Cricothyroidotomy, Tracheostomy, Complications, Emergency surgical airway, Systematic review\n© The Author(s). 2020 Open Access This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if changes were made. The images or other third party material in this article are included in the article's Creative Commons licence, unless indicated otherwise in a credit line to the material. If material is not included in the article's Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this licence, visit http://creativecommons.org/licenses/by/4.0/. The Creative Commons Public Domain Dedication waiver (http://creativecommons.org/publicdomain/zero/1.0/) applies to the data made available in this article, unless otherwise stated in a credit line to the data.\n* Correspondence: Fabricio.Zasso@sinaihealthsystem.ca\n1 MD, Department of Anaesthesia, Mount Sinai Hospital, University of Toronto,\nToronto, Ontario, Canada\nFull list of author information is available at the end of the article",
+      "category": "abstract",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Background",
+      "content": "Airway management is an essential element of several medical specialties, including anesthesia, intensive care and emergency medicine. The vast majority of airways are managed uneventfully through basic and advanced use of available techniques and equipment. Failed airway management can lead to a ' Can ' t Intubate Can ' t Oxygenate ' (CICO) situation, which is defined by failed attempts to deliver oxygen to the patient by face-mask ventilation, tracheal intubation, and placement of a supraglottic airway [1 -3]. CICO is a rare life-threatening situation which can result in significant morbidity and mortality leading to brain hypoxia or death, unless there is rapid resolution [4].\nAirway management guidelines have been systematically developed to assist physicians in making decisions. An unanticipated difficult airway can lead to a CICO crisis. When this feared situation happens, airway guidelines recommend that an emergency surgical airway should be performed either through a cricothyroidotomy or tracheostomy [3, 5].\nHistorically, the guidelines progressed over the years on which technique should be used. In 1993, the first American Society of Anesthesiologists (ASA) guideline recommended that tracheostomy should be the surgical airway approach [6]. During the next decades, guidelines suggested that either cricothyroidotomy or tracheostomy could be performed [5, 7, 8]. The Difficult Airway Society (DAS) published their last guidelines recommending that cricothyroidotomy should be preferentially performed. This recommendation was founded on published evidence and where evidence is lacking, it was based on feedback from expert opinions. The guidelines were supported by the concept that a surgical airway should be a fast and simple procedure done with readily available equipment [3]. Moreover, an editorial by Pracy et al. advocated that anesthesiologists and head and neck surgeons should have a common surgical approach via the cricothyroid membrane [9]. This approach would increase the chances of success and decrease adverse patient outcomes. However, the DAS guidelines authors recognized that there is a lack of evidence in the literature on which one technique is superior to another [3].\nDespite the recommendation towards cricothyroidotomy, the definitive technique for an emergency surgical airway is still debatable. The ideal approach should result in a high success rate and a low complication rate [10]. There are a considerable amount of studies analyzing the complications of elective and urgent surgical airways. However, the current literature has limited data regarding complications of cricothyroidotomy and tracheostomy in an emergency situation. Given the limited evidence supporting the preferred emergency surgical airway technique in the literature, we conducted a\nsystematic review in order to compare the rate of complications in patients requiring an emergency cricothyroidotomy or tracheostomy. The goal of this systematic review was to compare the rates of early, late, minor and major complications between both techniques.",
+      "category": "introduction",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Methods",
+      "content": "This systematic review was exempt from ethics approval. The Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA) guidelines were followed to conduct the systematic review of the literature [11].",
+      "category": "methods",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Study identification",
+      "content": "The following electronic bibliographic databases were searched from inception to October 2018 using a comprehensive search strategy developed by an information specialist: (1) Ovid MEDLINE, (2) Ovid Embase, (3) Ovid EBM Reviews - Cochrane Central Register of Controlled Trials, (4) PubMed, and (5) EBSCO CINAHL Complete. We also searched the U.S. ClinicalTrials.gov, the World Health Organization ' s International Clinical Trials Registry Platform (ICTRP), and the International Standard Randomised Controlled Trial Number Registry (ISRCTNR) for all registered clinical trials and randomized controlled trials (RCTs). A validated search filter for RCTs from the Cochrane Handbook for Systematic Reviews of Interventions [12] and observational studies of surgical interventions search filter by Fraser et al. [13] were used to screen Ovid Medline, Ovid Embase and PubMed. A pre-tested search filter for observational studies and RCTs was adapted from the Scottish Intercollegiate Guidelines Network [14] to screen EBSCO CINAHL Complete. Duplicate records were removed in EndNote X8 citation management software (search strategy detailed in Additional file 1).\nThe search strategy was structured according to the 2015 Peer-Reviewed Electronic Search Strategies (PRES S) Guidelines. We included Medical Subject Headings (MeSH), Entree terms, and free text terms related to ' emergency medicine, ' critical care ' , ' cricothyroidotomy ' , and ' tracheostomy ' and ' postoperative complications ' . No restrictions were applied to publication language or publication year. The search was complemented by hand-searching references of relevant articles, preregister repositories (i.e. PROSPERO, Open Science Framework), and related organization websites.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Eligibility criteria",
+      "content": "Studies were considered eligible for inclusion if they were randomized controlled trials or observational studies reporting complications following emergency cricothyroidotomy or tracheostomy. Additionally, the studies were only included if they provided sufficient information to allow the reviewers to classify the type of\ncomplications. Studies were excluded if less than four patients were involved (considered case reports), complications for both techniques were reported together, complications for emergent and urgent procedures were not separated, or included patients below 10 years old. As this systematic review is focused on clinical practice, animal, cadaver, and mannequin studies were excluded.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Data collection and data extraction",
+      "content": "All article titles were screened. Abstracts of potentially relevant articles were subsequently assessed, and those without relevance were eliminated. Full-text manuscripts of all remaining studies were obtained, read and assessed qualitatively. Disagreements between the authors were resolved by a consensus-based discussion. The risk of bias was assessed using the modified Newcastle-Ottawa Scale (NOS). This scale evaluates the quality of studies through three items (selection, comparability and outcome), resulting in a grade between one and eight. We considered articles with less than four points as highrisk for bias, which was the criteria for exclusion. NOS scores of selection, comparability and outcome for each study are included in Table 1.\nComplications were classified as minor (evolving to spontaneous remission or not requiring intervention or not persisting chronically), major (requiring intervention or persisting chronically), early (from the start of the procedure up to 7 days) and late (beyond 7 days of the procedure). A full description of minor and major complications is described in Additional file 2. The list of complications was compiled pre-screening of the articles.\nWe extracted the following data from the included studies: type of study, follow-up period, sample size, number of minor complications, number of major complications, number of early complications, sample size for late complications and number of late complications. We gathered each type of complications in two groups: CRICO (cricothyroidotomy) and TRACH (tracheostomy). A number of articles did not performed followup, which resulted in no late complications reported. In the articles that performed it, there were lost due to death or failure to contact the patients. As a result, the sample size for late complications was smaller than the sample size for early complications.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Statistical analysis",
+      "content": "We compared minor, major, early and late complications between cricothyroidotomy and tracheostomy groups using the chi-square test. Additionally, we reported the pooled risk ratio with 95% confidence intervals using weighted logistic regression to compare the two techniques (the weight was defined as the ratio of the sample size for each study and the total sample size of all\nstudies). A difference of p < 0.05 was considered statistically significant in all analyses.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Results",
+      "content": "We retrieved 2659 references from our databases search. After removing duplicates, 2452 records were obtained. Following the title and abstract review, 33 articles were selected for full-text reading. Twelve articles were excluded as they did not meet the study criteria. Therefore, 21 articles were included in the systematic review (Fig. 1 -Flow chart).\nWe found 20 observational studies (19 retrospective and one prospective), and one randomized clinical trial (RCT) describing complications following emergency surgical airway. The number of studies in each category is not additive. Five studies reported only tracheostomy complications [15 -19]; 14 studies reported only cricothyroidotomy complications [20 -33]; and two studies reported complications from both techniques (RCT included) [34, 35].\nTwo articles from the TRACH group included elective, urgent and emergent procedures [15, 18], but only data from the latter was extracted (Table 2). The remaining articles contained only emergency procedures. In the TRACH group, three articles performed percutaneous [16, 17, 35], and four performed surgical approach [15, 18, 19, 34]. In the CRICO group, only one article used percutaneous [35], one used both (13 procedures under percutaneous and 16 under surgical) [27], and all other used surgical technique [20 -26, 28 -34] (Table 3).\nThe location and healthcare providers performing the emergency surgical airways varied between tracheostomies and cricothyroidotomies. All emergency tracheostomies were performed in the hospital, in settings such as Operation Room (OR), Emergency Department (ED), Intensive Care Unit (ICU), and on Inpatient Unit, mainly by surgeons (ENT - Ear, Nose, Throat, thoracic, general, trauma) [15 -19, 34, 35]. In contrast, cricothyroidotomies were performed in both pre- and intra-hospital by a variety of healthcare workers including physicians and nonphysicians. 50% of the 16 included studies reported only pre-hospital cricothyroidotomies. In six out of eight prehospital studies, non-physicians (nurses and/or paramedics) performed the surgical procedures [21 -23, 25, 30, 31], whereas physicians executed the pre-hospital interventions in the remaining two studies [20, 27]. Five studies reported only intra-hospital emergency cricothyroidotomies performed by different physicians (ENT, general surgeons, ICU physicians) and in different locations (ER, OR, Inpatient Unit). Three studies described a mix of preand intra-hospital cricothyroidotomies [24, 29, 32]; intra-hospital cases were performed in the ED by trauma surgeons or emergency medicine (EM) physicians whereas nurses or paramedics carried\nout pre-hospital procedures. The third study did not specify location of emergency cricothyroidotomies.\nThere was a marked heterogeneity in the follow-up periods. In the TRACH group, they ranged from a\nmaximum of 48 h to 23 months, and one article did not report for how long patients were followed [17]. In the CRICO group, the follow-up period varied from 24 h to 5 years. However, nine articles did not describe it [20,\n22, 23, 27, 29 -33]. Two articles still reported late complications despite not specifying for how long patients were followed [22, 27].\nIn the TRACH group, the number of procedures per study ranged from 10 to 84, with a total sample size of 282, whereas the number of interventions per study varied from 11 to 85, with a total a sample size of 725 in the CRICO group. There were no statistical differences in minor, major and early complications between TRAC H and CRICO groups (Table 3). However, the CRICO group showed fewer late complications compared to TRACH group [Odds ratio (OR) (95% CI) 0.21 (0.20 -0.22), p < 0.0001] (Table 4).",
+      "category": "results",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Discussion",
+      "content": "Our systematic review summarized 21 articles from the literature that described complications following surgical airways performed under emergency situations. Our results demonstrated that there was a higher rate of late complications in tracheostomies than in cricothyroidotomies performed in the emergency setting. When comparing minor, major and early complications, there were no differences between the two procedures.\nTo our knowledge, this is the first systematic review comparing complications of cricothyroidotomies and tracheostomies in emergencies. The majority of the studies assessing complications of both techniques was either elective or urgent procedures. A previous prospective study comparing elective surgical tracheostomy and cricothyroidotomy in the ICU showed that the incidence of minor, major, early, and late complications was similar between both techniques [36]. One possible explanation for the different findings was the emergent nature of the cases in our review. Factors related to emergency procedures, such as time constraints, higher complexity, and higher tissue trauma, can lead to late complications.\nThe description of complications and safety of cricothyroidotomies were based in non-emergency cases for decades. The cricothyroidotomy technique was introduced a long time after the first tracheostomy was performed. In 1909, Chevelier Jackson described the surgical approach and considerations to perform cricothyroidotomies successfully. In 1921, he published a case series of 200 patients with tracheal stenosis, showing that 158 had undergone cricothyroidotomies. He",
+      "category": "discussion",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Conclusion",
+      "content": "In conclusion, this systematic review demonstrates that emergency tracheostomies are associated with a greater incidence of late complications than emergency cricothyrotomies. These findings support the recommendations from the latest DAS guidelines that cricothyroidotomy performed by anesthesiologists is the technique of choice for emergency surgical airway. However, there is insufficient evidence to suggest that emergency cricothyrotomies are long term airways. Current practices remain that emergency cricothyrotomies are short term airways that should be converted to tracheostomies in a timely fashion. Future studies in emergency cricothyrotomies as long term airways are warranted.",
+      "category": "conclusion",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Supplementary information",
+      "content": "Supplementary information accompanies this paper at https://doi.org/10. 1186/s12871-020-01135-2.\nAdditional file 1.\nAdditional file 2.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Abbreviations",
+      "content": "ASA: American Society of Anesthesiologists; CICO: Can ' t Intubate, Can ' t Oxygenate; DAS: Difficult Airway Society; CRICO: Cricothyroidotomy; ED: Emergency department; EM: Emergency medicine; ENT: Ear, Nose, Throat; FONA: Front Of Neck Access; ICU: Intensive care unit; MeSH: Medical Subject Headings; NOS: Newcastle-Ottawa Scale; OR: Operation room; PRISMA: The Preferred Reporting Items for Systematic Reviews and Meta-Analyses; PRES S: Peer-Reviewed Electronic Search Strategies; RCT: Randomized clinical trial; TRACH: Tracheostomy",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Acknowledgements",
+      "content": "We would like to acknowledge the contribution of Xiang Y. Ye, MSc for conducting statistical analysis.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Authors ' contributions",
+      "content": "FBZ, NS and KEYT conceived the study. MR performed the database search. FBZ, KL and JT screened article titles and abstracts. FBZ, KL and JT reviewed full text of manuscripts. Discrepancies were solved through consensus between all three. FBZ, NS and KEYT evaluated the quality of included studies and extracted the data. FBZ wrote the first version of this manuscript. FBZ, NS and KEYT were the major contributors in writing this manuscript. All authors read and approved the final manuscript.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Funding",
+      "content": "This research did not receive any specific grant from funding agencies in the public, commercial, or not-for-profit sectors.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Availability of data and materials",
+      "content": "The datasets used and/or analysed during the current study are available from the corresponding author on reasonable request.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Ethics approval and consent to participate",
+      "content": "Not applicable.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Consent for publication",
+      "content": "Not applicable.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Competing interests",
+      "content": "The authors declare that they have no competing interests.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Author details",
+      "content": "1 MD, Department of Anaesthesia, Mount Sinai Hospital, University of Toronto, Toronto, Ontario, Canada. 2 MLIS, Information Specialist, Sidney Liswood Health Science Library, Sinai Health System, University of Toronto, Toronto, Ontario, Canada. 3 Summer Research Student, Mount Sinai Hospital, University of Toronto, Toronto, Ontario, Canada. 4 Medical Student, Faculty of Medicine, University of Toronto, Toronto, Ontario, Canada.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "References",
+      "content": "1. Joffe AM, Aziz MF, Posner KL, Duggan LV, Mincer SL, Domino KB. Management of difficult tracheal intubation: a closed claims analysis. Anesthesiology. 2019;131:818 -29.\n2. Cook TM, Woodall N, Frerk C. Fourth National Audit Project: major complications of airway management in the UK: results of the fourth national audit project of the royal college of anaesthetists and the difficult airway society. Part 1: anaesthesia. Br J Anaesth. 2011;106:617 -31.\n3. Frerk C, Mitchell VS, McNarry AF, et al. Difficult airway society 2015 guidelines for the management of unanticipated difficult intubation in adults. Br J Anaesth. 2015;115:827 -48.\n4. Wong DT, Lai K, Chung FF, Ho RY. Cannot intubate -cannot ventilate and difficult intubation strategies: results of a Canadian national survey. Anesth Analg. 2005;100:1439 -46.\n5. Apfelbaum JL, Hagberg CA, Caplan RA, et al. Practice guidelines for management of the difficult airway: an updated report by the American Society of Anesthesiologists task force on management of the difficult airway. Anesthesiology. 2013;118:251 -70.\n6. Caplan R, Benumof J, Berry F, et al. Practice guidelines for management of the difficult airway. Anesthesiology. 1993;78:597 -602.\n7. Caplan R, Benumof J, Berry F, et al. Practice guidelines for management of the difficult airway. Anesthesiology. 2003;98:1269 -77.\n8. Henderson JJ, Popat MT, Latto IP, Pearce AC. Difficult airway society guidelines for management of the unanticipated difficult intubation. Anaesthesia. 2004;59:675 -94.\n9. Pracy JP, Brennan L, Cook TM, et al. Surgical intervention during a can ' t intubate can ' t oxygenate (cico) event: emergency front-of-neck airway (FONA)? Clin Otolaryngol. 2016;41:624 -6.\n10. Kristensen MS, Teoh WHL, Baker PA. Percutaneous emergency airway access; prevention, preparation, technique and training. Br J Anaesth. 2015;114(3): 357 -61.\n11. Moher D, Liberati A, Tetzlaff J, Altman DG. The PRISMA group. Preferred reporting items for systematic reviews and meta-analyses: the PRISMA statement. PLoS Med. 2009;6(7):e1000097.\n12. Higgins JP, Green S. Cochrane handbook for systematic reviews of interventions. Chichester: Wiley; 2011.\n13. Fraser C, Murray A, Burr J. Identifying observational studies of surgical interventions in MEDLINE and EMBASE. BMC Med Res Methodol. 2006;6:41.\n14. Scottish Intercollegiate Guidelines Network. Search filters the Network, Healthcare Improvement Scotland. http://www.sign.ac.uk/search-filters.html. Accessed 12 June 2018.\n15. Waldron J, Padgham ND, Hurley SE. Complications of emergency and elective tracheostomy: a retrospective study of 150 consecutive cases. Ann R Coll Surg Engl. 1990;72:218 -20.\n16. Ben-Nun A, Altman E, Best LE. Emergency percutaneous tracheostomy in trauma patients: an early experience. Ann Thorac Surg. 2004;77:1045 -7.\n17. Davidson SB, Blostein PA, Walsh J, Maltz SB, VandenBerg SL. Percutaneous tracheostomy: a new approach to the emergency airway. J Trauma Acute Care Surg. 2012;73(2 Suppl 1):83 -8.\n18. Muhammad R, Khan F, Rehman F, Iqbal J, Khan M, Ullah G. Early complications of elective and emergency tracheostomy. J Ayub Med Coll Abbottabad. 2012;24(1):44 -7.\n19. Fang CH, Friedman R, White PE, Mady LJ, Kalyoussef E. Emergent awake tracheostomy -the five-year experience at an urban tertiary care center. Laryngoscope. 2015;125(11):2476 -9.\n20. Miklus RM, Elliott C, Snow N. Surgical cricothyrotomy in the field: experience of a helicopter transport team. J Trauma. 1991;29(4):506 -8.\n21. Cook S, Dawson R, Falcone R. Prehospital cricothyrotomy in air medical transport: outcome. J Air Med Transp. 1991;10(12):7 -9,12.\n22. Nugent WL, Rhee KJ, Wisher DH. Can nurses perform surgical cricothyrotomy with acceptable success and complication rates? Ann Emerg Med. 1991;20(4):367 -70.\n23. Boyle MF, Hatton D, Sheets C. Surgical cricothyrotomy performed by air ambulance flight nurses: a 5-year experience. J Emerg Med. 1993;11(1):41 -5.\n24. Hawkins ML, Shapiro MB, Cue JI, Wiggins SS. Emergency cricothyroidotomy: a reassessment. Am Surg. 1995;61:52 -5.\n25. Jacobson L, Gomez G, Sobieray R, et al. Surgical cricothyroidotomy in trauma patients: analysis of its use by paramedics in the field. J Trauma. 1996;41(1):15 -20.\n26. Isaacs JH, Pedersen AD. Emergency cricothyroidotomy. Am Surg. 1997;63: 346 -9.\n27. Leibovici D, Fredman B, Gofrit ON, Shemer J, Blumenfeld A, Shapira SC. Prehospital cricothyroidotomy by physicians. Am J Emerg Med. 1997;15(1): 91 -3.\n28. Wright MJ, Greenberg DE, Hunt JP, Madan AK, McSwain NE. Surgical cricothyroidotomy in trauma patients. South Med J. 2003;96(5):465 -7.\n29. Bair AE, Panacek EA, Wisner DH, Bales R, Sackles JC. Cricothyrotomy: a 5-year experience at one institution. J Emerg Med. 2003;24(2):151 -6.\n30. McIntosh SE, Swanson ER, Barton ED. Cricothyrotomy in air medical. Transport J Trauma. 2008;64:1543 -7.\n31. Warner KJ, Sharar SR, Copass MK, Bulger EM. Prehospital management of the difficult airway: a prospective cohort study. J Emer Med. 2009;36(3):257 -65.\n32. King D, Ogilvie M, Michailidou M, et al. Fifty-four emergent cricothyroidotomies: are surgeons reluctant teachers? Scan J Surg. 2012; 101(1):13 -5.\n33. Darby JM, Halenda G, Chou C, Quinlan JJ, Alarcon LH, Simmons RL. Emergency surgical airways following activation of a difficult airway management team in hospitalized critically ill patients: a case series. J Intensive Care Med. 2016;33(9):517 -26.\n34. Gillespie MB, Eisele DW. Outcomes of emergency surgical airway procedures in a hospital-wide setting. Laryngoscope. 1999;109(11):1766 -9.\n35. Beshey BN, Helmy TA, Asaad HS, Ibrahim EEM. Emergency percutaneous tracheotomy in failed intubation. Egypt J Chest Dis Tuberc. 2014;63:939 -45.\n36. François B, Clavel M, Desachy A, Puyraud S, Roustan J, Vignon P. Complications of tracheostomy performed in the ICU - subthyroid tracheostomy vs surgical cricothyroidotomy. Chest. 2003;123(1):151 -8.\n37. Jackson C. High tracheotomy and other errors: the chief causes of chronic laryngeal stenosis. Surg Gynecol Obstet. 1921;32:392 -8.\n38. Brantigan CO, Grow JB Sr. Cricothyroidotomy: elective use in respiratory problems requiring tracheostomy. J Thoracic Cardiovasc Surg. 1976;71(1): 72 -81.\n39. Kheterpal S, Martin L, Shanks AM, Tremper KK. Prediction and outcomes of impossible mask ventilation: a review of 50,000 anesthetics. Anesthesiology. 2009;110:891 -7.\n40. Walls RM, Brown CA, Bair AE, Pallin DJ. Emergency airway management: a multi-center report of 8937 emergency department intubations. J Emerg Med. 2011;41:347 -54.\n41. Stephens CT, Kahntroff S, Dutton RP. The success of emergency endotracheal intubation in trauma patients: a 10-year experience at a major adult trauma referral center. Anesth Analg. 2009;109:866 -72.\n42. Chang RS, Hamilton RJ, Carter WA. Declining rate of cricothyrotomy in trauma patients with an emergency medicine residency: implications for skills training. Acad Emerg Med. 1998;5:247 -51.\n43. Sagarin MJ, Barton ED, Chng YM, Walls RM. National Emergency Airway Registry Investigators. Airway management by US and Canadian emergency\nmedicine residents: a multicenter analysis of more than 6,000 endotracheal intubation attempts. Ann Emerg Med. 2005;46(4):328 -36.\n44. Duggan LV, Lockhart SL, Cook TM, O ' Sullivan EP, Dare T, Baker PA. The airway app: exploring the role of smartphone technology to capture emergency front-of-neck airway experiences internationally. Anaesthesia. 2018;73(6):703 -10.\n45. Greenland KB, Bradley WPL, Chapman GA, Goulding G, Irwin MG. Emergency front-of-neck access: scalpel or cannula -and the parable of Buridan ' s ass. Br J Anaesth. 2017;118(6):811 -4.\n46. You-Ten KE, Bould MD, Friedman Z, Riem N, Sydor D, Boet S. Cricothyrotomy training increases adherence to the ASA difficult airway algorithm in a simulated crisis: a randomized controlled trial. Can J Anaesth. 2015;62(5):485 -94.\n47. Peterson GN, Domino KB, Caplan RA, Posner KL, Lee LA, Cheney FW. Management of the difficult airway: a closed claims analysis. Anesthesiology. 2005;103:33 -9.\n48. Hamaekers AE, Henderson JJ. Equipment and strategies for emergency tracheal access in the adult patient. Anaesthesia. 2011;66(Suppl 2):65 -80.\n49. Toye FJ, Weinstein JD. Clinical experience with percutaneous tracheostomy and cricothyroidotomy in 100 patients. J Trauma. 1986;26:1034 -40.\n50. Langvad S, Hyldmo PK, Nakstad AR, Vist GE, Sandberg M. Emergency cricothyrotomy- a systematic review. Scand J Trauma Resusc Emerg Med. 2013;21:43.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Publisher ' s Note",
+      "content": "Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    }
+  ],
+  "tables": [
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/51'}",
+      "headers": [
+        "Source",
+        "",
+        "Selection",
+        "Selection",
+        "Selection",
+        "Comparability",
+        "Outcome",
+        "Outcome",
+        "Outcome",
+        "Total"
+      ],
+      "rows": [
+        [
+          "",
+          "Representative-ness of the intervention cohort",
+          "Selection of non- intervention cohort",
+          "Ascertainment of intervention",
+          "Outcome of interest not present at start of study",
+          "Cohort comparable on the basis of the design",
+          "Assessment of outcome",
+          "Follow-up long enough",
+          "Adequacy of follow- up",
+          ""
+        ],
+        [
+          "Waldron et al., 1990",
+          "No",
+          "No",
+          "Yes",
+          "Yes",
+          "No",
+          "Yes",
+          "Yes",
+          "Yes",
+          "5"
+        ],
+        [
+          "Ben-Nun et al., 2004 [16]",
+          "Yes",
+          "No",
+          "Yes",
+          "Yes",
+          "No",
+          "Yes",
+          "Yes",
+          "Yes",
+          "6"
+        ],
+        [
+          "Davidson et al., 2012 [17]",
+          "Yes",
+          "No",
+          "Yes",
+          "Yes",
+          "No",
+          "Yes",
+          "No",
+          "No",
+          "4"
+        ],
+        [
+          "Muhammad et al., 2012 [18]",
+          "Yes",
+          "No",
+          "Yes",
+          "Yes",
+          "No",
+          "Yes",
+          "No",
+          "Yes",
+          "5"
+        ],
+        [
+          "Fang et al., 2015 [19]",
+          "Yes",
+          "No",
+          "Yes",
+          "Yes",
+          "No",
+          "Yes",
+          "No",
+          "No",
+          "4"
+        ],
+        [
+          "Miklus et al., 1989 [20]",
+          "Yes",
+          "No",
+          "Yes",
+          "Yes",
+          "No",
+          "Yes",
+          "No",
+          "No",
+          "4"
+        ],
+        [
+          "Cook et al., 1991 [21]",
+          "Yes",
+          "No",
+          "Yes",
+          "Yes",
+          "No",
+          "Yes",
+          "Yes",
+          "Yes",
+          "6"
+        ],
+        [
+          "Nugent et al., 1991 [22]",
+          "Yes",
+          "No",
+          "Yes",
+          "Yes",
+          "No",
+          "Yes",
+          "No",
+          "No",
+          "4"
+        ],
+        [
+          "Boyle et al., 1993 [23]",
+          "Yes",
+          "No",
+          "Yes",
+          "Yes",
+          "No",
+          "Yes",
+          "No",
+          "Yes",
+          "5"
+        ],
+        [
+          "Hawkins et al., 1995 [24]",
+          "Yes",
+          "No",
+          "Yes",
+          "Yes",
+          "No",
+          "Yes",
+          "Yes",
+          "No",
+          "5"
+        ],
+        [
+          "Jacobson et al., 1996 [25]",
+          "Yes",
+          "No",
+          "Yes",
+          "Yes",
+          "No",
+          "Yes",
+          "Yes",
+          "No",
+          "5"
+        ],
+        [
+          "Isaacs et al., 1997 [26]",
+          "Yes",
+          "No",
+          "Yes",
+          "Yes",
+          "No",
+          "Yes",
+          "Yes",
+          "No",
+          "5"
+        ],
+        [
+          "Leibovici et al., 1997 [27]",
+          "Yes",
+          "No",
+          "Yes",
+          "Yes",
+          "No",
+          "Yes",
+          "No",
+          "No",
+          "4"
+        ],
+        [
+          "Wright et al., 2003 [28]",
+          "Yes",
+          "No",
+          "Yes",
+          "Yes",
+          "No",
+          "Yes",
+          "Yes",
+          "No",
+          "5"
+        ],
+        [
+          "Bair et al., 2003 [29]",
+          "Yes",
+          "No",
+          "Yes",
+          "Yes",
+          "No",
+          "Yes",
+          "No",
+          "Yes",
+          "5"
+        ],
+        [
+          "McIntosh et al., 2008 [30]",
+          "Yes",
+          "No",
+          "Yes",
+          "Yes",
+          "No",
+          "Yes",
+          "No",
+          "Yes",
+          "5"
+        ],
+        [
+          "Warner et al., 2009 [31]",
+          "Yes",
+          "No",
+          "Yes",
+          "Yes",
+          "No",
+          "Yes",
+          "No",
+          "Yes",
+          "5"
+        ],
+        [
+          "King et al., 2012 [32]",
+          "Yes",
+          "No",
+          "Yes",
+          "Yes",
+          "No",
+          "Yes",
+          "No",
+          "No",
+          "4"
+        ],
+        [
+          "Darby et al., 2016 [33]",
+          "Yes",
+          "No",
+          "Yes",
+          "Yes",
+          "No",
+          "Yes",
+          "No",
+          "No",
+          "4"
+        ],
+        [
+          "Gillespie et al., 1999 [34]",
+          "Yes",
+          "Yes",
+          "Yes",
+          "Yes",
+          "No",
+          "Yes",
+          "Yes",
+          "No",
+          "6"
+        ],
+        [
+          "Beshey et al., 2014 [35]",
+          "Yes",
+          "Yes",
+          "Yes",
+          "Yes",
+          "Yes",
+          "Yes",
+          "No",
+          "No",
+          "6"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "",
+      "headers": [
+        "size for complications Description of Late complications",
+        "Tracheo-cutaneous fistula, scar formation",
+        "-",
+        "Recurrent hemoptysis",
+        "-",
+        "-",
+        "-",
+        "Bleeding (5), tracheitis (5), obstructed tube (4), tube dislodgement (4), pneumonia (3), neck abscess (3), pneumonia (2), tracheal granuloma (2)"
+      ],
+      "rows": [
+        [
+          "Sample Late",
+          "38",
+          "8",
+          "5",
+          "NA",
+          "NA",
+          "NA",
+          "49 100"
+        ],
+        [
+          "Late",
+          "2",
+          "0",
+          "1",
+          "NA",
+          "NA",
+          "NA",
+          "28 31"
+        ],
+        [
+          "Early",
+          "7",
+          "3",
+          "0",
+          "1",
+          "28",
+          "3",
+          "11 53"
+        ],
+        [
+          "Major",
+          "4",
+          "2",
+          "0",
+          "1",
+          "11",
+          "2",
+          "29 49"
+        ],
+        [
+          "Complications Minor",
+          "5",
+          "1",
+          "1",
+          "0",
+          "17",
+          "1",
+          "10 35"
+        ],
+        [
+          "Follow-up Sample size",
+          "Minimum months 38",
+          "Average 23 months 14",
+          "year 10",
+          "18",
+          "50",
+          "Maximum 48 h 84",
+          "68 282"
+        ],
+        [
+          "Setting; Performers period",
+          "ENT 6",
+          "Intra-hospital; ENT, general surgeon",
+          "ED, ICU; Thoracic surgeons 1",
+          "Intra-hospital; Trauma surgeons NA",
+          "ENT 7 days",
+          "ICU; Physician",
+          "bedside; ENT Mean 7.2 weeks"
+        ],
+        [
+          "Type of technique",
+          "Surgical OR;",
+          "Surgical",
+          "Percutaneous",
+          "Percutaneous",
+          "Surgical OR;",
+          "Percutaneous ED,",
+          "Surgical OR,"
+        ],
+        [
+          "Type of procedure",
+          "Elective, urgency, emergency",
+          "Emergency",
+          "Emergency",
+          "Emergency",
+          "Elective, urgency,",
+          "Emergency",
+          ""
+        ],
+        [
+          "Author, Yr Type of study",
+          "Waldron et 1990 [15] Retrospective",
+          "Gillespie et 1999 [34] Retrospective",
+          "Ben-Nun et 2004 [16] Retrospective",
+          "Davidson et al., 2012 [17] Retrospective",
+          "Muhammad et al., 2012 [18] Prospective cohort emergency",
+          "Beshey et 2014 [35] RCT",
+          "Fang et al., 2015 [19] Retrospective Emergency TOTAL"
+        ],
+        [
+          "",
+          "al.,",
+          "al.,",
+          "al.,",
+          "",
+          "",
+          "al.,",
+          ""
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "",
+      "headers": [
+        "Description of Late complications",
+        "-",
+        "-",
+        "Subglottic stenosis (2)",
+        "",
+        "-",
+        "-",
+        "Cartilage injury, tracheal granuloma, vocal cord paralysis",
+        "-",
+        "Subglottic stenosis",
+        "Pneumonia (4), retropharyngeal abscess",
+        "-",
+        "-",
+        "-",
+        "-",
+        "-",
+        "-",
+        "",
+        ""
+      ],
+      "rows": [
+        [
+          "size for Late complications",
+          "",
+          "",
+          "",
+          "",
+          "-",
+          "-",
+          "Cartilage injury, tracheal granuloma, vocal cord paralysis",
+          "-",
+          "Subglottic stenosis",
+          "Pneumonia (4), retropharyngeal abscess",
+          "-",
+          "-",
+          "-",
+          "-",
+          "-",
+          "-",
+          "",
+          ""
+        ],
+        [
+          "Sample",
+          "8",
+          "NA",
+          "15",
+          "NA",
+          "26",
+          "19",
+          "27",
+          "13",
+          "12",
+          "15",
+          "NA",
+          "NA",
+          "NA",
+          "NA",
+          "NA",
+          "NA",
+          "135",
+          "Care Unit"
+        ],
+        [
+          "",
+          "Late 0",
+          "NA",
+          "2",
+          "NA",
+          "0",
+          "0",
+          "3",
+          "0",
+          "1",
+          "5",
+          "NA",
+          "NA",
+          "NA",
+          "NA",
+          "NA",
+          "NA",
+          "11",
+          "Intensive"
+        ],
+        [
+          "",
+          "Early 0",
+          "3",
+          "9",
+          "6",
+          "3",
+          "11",
+          "10",
+          "7",
+          "3",
+          "2",
+          "55",
+          "5",
+          "3",
+          "11",
+          "14",
+          "31",
+          "173",
+          ""
+        ],
+        [
+          "Complication",
+          "Major 0",
+          "3",
+          "11",
+          "6",
+          "3",
+          "6",
+          "13",
+          "4",
+          "2",
+          "7",
+          "15",
+          "5",
+          "3",
+          "9",
+          "12",
+          "20",
+          "119",
+          "Trial,"
+        ],
+        [
+          "",
+          "Minor 0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "5",
+          "0",
+          "3",
+          "2",
+          "0",
+          "40",
+          "0",
+          "0",
+          "2",
+          "2",
+          "11",
+          "65",
+          "Clinical"
+        ],
+        [
+          "Sample size",
+          "20",
+          "68",
+          "55",
+          "69",
+          "66",
+          "50",
+          "65",
+          "29",
+          "20",
+          "46",
+          "50",
+          "17",
+          "11",
+          "54",
+          "48 85",
+          "20",
+          "725",
+          "Randomized"
+        ],
+        [
+          "Follow-up period",
+          "NA",
+          "24 h",
+          "NA",
+          "NA",
+          "= 8) 5 years",
+          "2 to 5 years",
+          "Average months",
+          "NA",
+          "general Average months",
+          "Minimum months",
+          "( n = 28) NA",
+          "NA",
+          "NA",
+          "/ NA",
+          "Maximum h",
+          "ICU NA",
+          "",
+          "Medicine physician,"
+        ],
+        [
+          "Setting; Performers",
+          "Pre-hospital; Physicians",
+          "Pre-hospital; Nurse/ Paramedics",
+          "Pre-hospital; Nurses",
+          "Pre-hospital; Nurses",
+          "Pre-hospital; Not given ( n ED; Trauma surgeons ( n = 58)",
+          "Pre-hospital; Paramedics",
+          "Intra-hospital; ENT",
+          "Pre-hospital; Physicians",
+          "Intra-hospital; ENT, surgeon",
+          "ED; Surgeons",
+          "Pre-hospital; Nurses ( n = 22) ED; EM, Trauma surgeon",
+          "Pre-hospital; Nurse/ Paramedics",
+          "Pre-hospital; Paramedics",
+          "Pre-hospital; Nurse Paramedics ( n =6) ED;",
+          "Surgeons ( n = 48) ED, ICU; Physician",
+          "Intra-hospital;",
+          "physicians",
+          "Throat, Emergency"
+        ],
+        [
+          "Type of technique",
+          "Surgical",
+          "Surgical",
+          "Surgical",
+          "Surgical",
+          "Surgical",
+          "Surgical",
+          "Surgical",
+          "Percutaneous surgical ( n =",
+          "Surgical",
+          "Surgical",
+          "Surgical",
+          "Surgical",
+          "Surgical",
+          "Surgical",
+          "Percutaneous",
+          "Surgical",
+          "",
+          "Ear,"
+        ],
+        [
+          "Type of procedure",
+          "Emergency",
+          "Emergency",
+          "Emergency",
+          "Emergency",
+          "Emergency",
+          "Emergency",
+          "Emergency",
+          "Emergency",
+          "Emergency",
+          "Emergency",
+          "Emergency",
+          "Emergency",
+          "Emergency",
+          "Emergency",
+          "Emergency",
+          "Emergency",
+          "",
+          "Emergency Department,"
+        ],
+        [
+          "Type of study",
+          "Retrospective",
+          "Retrospective",
+          "Retrospective",
+          "Retrospective",
+          "Retrospective",
+          "Retrospective",
+          "Retrospective",
+          "Retrospective",
+          "Retrospective",
+          "Retrospective",
+          "Retrospective",
+          "Retrospective",
+          "Prospective Cohort",
+          "2012 Retrospective",
+          "RCT",
+          "Retrospective",
+          "",
+          "Available,"
+        ],
+        [
+          "Author, Yr",
+          "Miklus et al., 1989 [20]",
+          "Cook et al., 1991",
+          "[21] Nugent et al., 1991 [22]",
+          "Boyle et al., 1993 [23]",
+          "Hawkins et al., 1995 [24]",
+          "Jacobson et al., 1996 [25]",
+          "Isaacs et al., 1997 [26]",
+          "Leibovici et al., 1997 [27]",
+          "Gillespie et al., 1999 [34]",
+          "Wright et al., 2003 [28]",
+          "Bair et al., 2003 [29]",
+          "McIntosh et al., 2008 [30]",
+          "Warner et al., 2009 [31]",
+          "King et al., [32]",
+          "Beshey et al., 2014 [35]",
+          "Darby et al., 2016",
+          "[33] TOTAL",
+          "Data Not"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/365'}",
+      "headers": [
+        "Complications",
+        "CRICO Number of complications/ total sample size (%)",
+        "TRACH Number of complications/ total sample size (%)",
+        "p -value 1",
+        "CRICO vs TRACH OR (95%CI)",
+        "p -value 2"
+      ],
+      "rows": [
+        [
+          "Minor a",
+          "65/725 (8.97%)",
+          "35/282 (12.41%)",
+          "0.1",
+          "0.60 (0.08, 4.25)",
+          "0.61"
+        ],
+        [
+          "Major b",
+          "119/725 (16.41%)",
+          "49/282 (17.38%)",
+          "0.71",
+          "0.77 (0.16, 3.64)",
+          "0.74"
+        ],
+        [
+          "Early c",
+          "173/725 (23.86%)",
+          "53/282 (18.79%)",
+          "0.08",
+          "0.72 (0.14, 3.63)",
+          "0.69"
+        ],
+        [
+          "Late d",
+          "11/135 (8.15%)",
+          "31/100 (31.00%)",
+          "< 0.0001",
+          "0.21 (0.20, 0.22)",
+          "<0.0001"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    }
+  ],
+  "figures": [
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/64'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    }
+  ],
+  "references": [
+    {
+      "title": "Management of difficult tracheal intubation: a closed claims analysis"
+    },
+    {
+      "title": "Anesthesiology",
+      "year": 2019
+    },
+    {
+      "title": "Fourth National Audit Project: major complications of airway management in the UK: results of the fourth national audit project of the royal college of anaesthetists and the difficult airway society. Part 1: anaesthesia",
+      "year": 2019
+    },
+    {
+      "title": "Br J Anaesth",
+      "year": 2011
+    },
+    {
+      "title": "Difficult airway society 2015 guidelines for the management of unanticipated difficult intubation in adults",
+      "year": 2011
+    },
+    {
+      "title": "Cannot intubate-cannot ventilate and difficult intubation strategies: results of a Canadian national survey",
+      "year": 2015
+    },
+    {
+      "title": "Anesth Analg",
+      "year": 2005
+    },
+    {
+      "title": "Practice guidelines for management of the difficult airway: an updated report by the American Society of Anesthesiologists task force on management of the difficult airway",
+      "year": 2005
+    },
+    {
+      "title": "Practice guidelines for management of the difficult airway",
+      "year": 2005
+    },
+    {
+      "title": "Difficult airway society guidelines for management of the unanticipated difficult intubation",
+      "year": 2003
+    },
+    {
+      "title": "Anaesthesia",
+      "year": 2004
+    },
+    {
+      "title": "Surgical intervention during a can&apos;t intubate can&apos;t oxygenate (cico) event: emergency front-of-neck airway (FONA)?",
+      "year": 2004
+    },
+    {
+      "title": "Clin Otolaryngol",
+      "year": 2016
+    },
+    {
+      "title": "Percutaneous emergency airway access; prevention, preparation, technique and training",
+      "year": 2016
+    },
+    {
+      "title": "The PRISMA group. Preferred reporting items for systematic reviews and meta-analyses: the PRISMA statement",
+      "year": 2015
+    },
+    {
+      "title": "PLoS Med",
+      "year": 2009
+    },
+    {
+      "title": "Cochrane handbook for systematic reviews of interventions",
+      "year": 2009
+    },
+    {
+      "title": "Identifying observational studies of surgical interventions in MEDLINE and EMBASE",
+      "year": 2011
+    },
+    {
+      "title": "BMC Med Res Methodol",
+      "year": 2006
+    },
+    {
+      "title": "Search filters the Network, Healthcare Improvement Scotland",
+      "year": 2006
+    },
+    {
+      "title": "Complications of emergency and elective tracheostomy: a retrospective study of 150 consecutive cases"
+    },
+    {
+      "title": "Ann R Coll Surg Engl",
+      "year": 1990
+    },
+    {
+      "title": "Emergency percutaneous tracheostomy in trauma patients: an early experience",
+      "year": 1990
+    },
+    {
+      "title": "Ann Thorac Surg",
+      "year": 2004
+    },
+    {
+      "title": "Percutaneous tracheostomy: a new approach to the emergency airway",
+      "year": 2004
+    },
+    {
+      "title": "J Trauma Acute Care Surg",
+      "year": 2012
+    },
+    {
+      "title": "Early complications of elective and emergency tracheostomy",
+      "year": 2012
+    },
+    {
+      "title": "J Ayub Med Coll Abbottabad",
+      "year": 2012
+    },
+    {
+      "title": "Emergent awake tracheostomy-the five-year experience at an urban tertiary care center",
+      "year": 2012
+    },
+    {
+      "title": "Laryngoscope",
+      "year": 2015
+    },
+    {
+      "title": "Surgical cricothyrotomy in the field: experience of a helicopter transport team",
+      "year": 2015
+    },
+    {
+      "title": "J Trauma",
+      "year": 2012
+    },
+    {
+      "title": "Prehospital cricothyrotomy in air medical transport: outcome",
+      "year": 1991
+    },
+    {
+      "title": "J Air Med Transp",
+      "year": 1991
+    },
+    {
+      "title": "Can nurses perform surgical cricothyrotomy with acceptable success and complication rates?",
+      "year": 1991
+    },
+    {
+      "title": "Ann Emerg Med",
+      "year": 1991
+    },
+    {
+      "title": "Surgical cricothyrotomy performed by air ambulance flight nurses: a 5-year experience",
+      "year": 1991
+    },
+    {
+      "title": "J Emerg Med",
+      "year": 1993
+    },
+    {
+      "title": "Emergency cricothyroidotomy: a reassessment",
+      "year": 1993
+    },
+    {
+      "title": "Am Surg",
+      "year": 1995
+    },
+    {
+      "title": "Surgical cricothyroidotomy in trauma patients: analysis of its use by paramedics in the field",
+      "year": 1995
+    },
+    {
+      "title": "Emergency cricothyroidotomy",
+      "year": 1993
+    },
+    {
+      "title": "Prehospital cricothyroidotomy by physicians",
+      "year": 1997
+    },
+    {
+      "title": "Am J Emerg Med",
+      "year": 1997
+    },
+    {
+      "title": "Surgical cricothyroidotomy in trauma patients",
+      "year": 1995
+    },
+    {
+      "title": "South Med J",
+      "year": 2003
+    },
+    {
+      "title": "Cricothyrotomy: a 5-year experience at one institution",
+      "year": 2003
+    },
+    {
+      "title": "Cricothyrotomy in air medical",
+      "year": 2003
+    },
+    {
+      "title": "Transport J Trauma",
+      "year": 2008
+    },
+    {
+      "title": "Prehospital management of the difficult airway: a prospective cohort study",
+      "year": 2008
+    },
+    {
+      "title": "J Emer Med",
+      "year": 2009
+    },
+    {
+      "title": "Fifty-four emergent cricothyroidotomies: are surgeons reluctant teachers?",
+      "year": 2009
+    },
+    {
+      "title": "Scan J Surg",
+      "year": 2012
+    },
+    {
+      "title": "Emergency surgical airways following activation of a difficult airway management team in hospitalized critically ill patients: a case series",
+      "year": 2012
+    },
+    {
+      "title": "J Intensive Care Med",
+      "year": 2016
+    },
+    {
+      "title": "Outcomes of emergency surgical airway procedures in a hospital-wide setting",
+      "year": 2016
+    },
+    {
+      "title": "Emergency percutaneous tracheotomy in failed intubation",
+      "year": 1999
+    },
+    {
+      "title": "Egypt J Chest Dis Tuberc",
+      "year": 2014
+    },
+    {
+      "title": "Complications of tracheostomy performed in the ICU -subthyroid tracheostomy vs surgical cricothyroidotomy",
+      "year": 2014
+    },
+    {
+      "title": "Chest",
+      "year": 2014
+    },
+    {
+      "title": "High tracheotomy and other errors: the chief causes of chronic laryngeal stenosis",
+      "year": 2003
+    },
+    {
+      "title": "Surg Gynecol Obstet",
+      "year": 2003
+    },
+    {
+      "title": "Cricothyroidotomy: elective use in respiratory problems requiring tracheostomy",
+      "year": 1921
+    },
+    {
+      "title": "J Thoracic Cardiovasc Surg",
+      "year": 1976
+    },
+    {
+      "title": "Prediction and outcomes of impossible mask ventilation: a review of 50,000 anesthetics",
+      "year": 1976
+    },
+    {
+      "title": "Emergency airway management: a multi-center report of 8937 emergency department intubations",
+      "year": 2009
+    },
+    {
+      "title": "The success of emergency endotracheal intubation in trauma patients: a 10-year experience at a major adult trauma referral center",
+      "year": 2011
+    },
+    {
+      "title": "Declining rate of cricothyrotomy in trauma patients with an emergency medicine residency: implications for skills training",
+      "year": 2009
+    },
+    {
+      "title": "Acad Emerg Med",
+      "year": 1998
+    },
+    {
+      "title": "National Emergency Airway Registry Investigators. Airway management by US and Canadian emergency medicine residents: a multicenter analysis of more than 6,000 endotracheal intubation attempts",
+      "year": 1998
+    },
+    {
+      "title": "The airway app: exploring the role of smartphone technology to capture emergency front-of-neck airway experiences internationally",
+      "year": 2005
+    },
+    {
+      "title": "Emergency front-of-neck access: scalpel or cannula-and the parable of Buridan&apos;s ass",
+      "year": 2018
+    },
+    {
+      "title": "Cricothyrotomy training increases adherence to the ASA difficult airway algorithm in a simulated crisis: a randomized controlled trial",
+      "year": 2017
+    },
+    {
+      "title": "Can J Anaesth",
+      "year": 2015
+    },
+    {
+      "title": "Management of the difficult airway: a closed claims analysis",
+      "year": 2015
+    },
+    {
+      "title": "Equipment and strategies for emergency tracheal access in the adult patient",
+      "year": 2005
+    },
+    {
+      "title": "Clinical experience with percutaneous tracheostomy and cricothyroidotomy in 100 patients",
+      "year": 2011
+    },
+    {
+      "title": "Emergency cricothyrotomy-a systematic review",
+      "year": 1986
+    },
+    {
+      "title": "Scand J Trauma Resusc Emerg Med",
+      "year": 2013
+    }
+  ],
+  "quality": {
+    "completeness_score": 0,
+    "has_abstract": true,
+    "abstract_source": "metadata",
+    "has_doi": true,
+    "has_full_text": true,
+    "num_sections": 23,
+    "num_tables": 4,
+    "num_figures": 7,
+    "num_references": 79
+  }
+}

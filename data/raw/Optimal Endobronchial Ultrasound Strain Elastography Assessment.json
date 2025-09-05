@@ -1,0 +1,826 @@
+{
+  "metadata": {
+    "document_id": "10_1159_000494143",
+    "title": "Optimal Endobronchial Ultrasound Strain Elastography Assessment Strategy: An Explorative Study",
+    "authors": [
+      "Roel L.J. Verhoeven",
+      "Chris L. de Korte",
+      "Erik H.F.M. van der Heijden"
+    ],
+    "year": 2018,
+    "journal": "Respiration",
+    "doi": "10.1159/000494143",
+    "volume": "97",
+    "issue": "4",
+    "pages": "337-347",
+    "citation": "Verhoeven, R.; Korte, C.; Heijden, E. (2018). Optimal Endobronchial Ultrasound Strain Elastography Assessment Strategy: An Explorative Study. Respiration, 97(4), 337-347. https://doi.org/10.1159/000494143",
+    "abstract": "Background: In lung cancer staging, mediastinal lymph nodes are currently aspirated using endobronchial ultrasound transbronchial needle aspiration (Endobronchial ultrasound (EBUS)-TBNA) based on size and FDG-PET avidity. Endobronchial ultrasound (EBUS) strain elastography (SE) is a new technique that may help predict the presence of malignancy. However, a standardized assessment strategy for Endobronchial ultrasound (EBUS)-SE measurement is lacking. Objectives: The aim of this study was to determine the optimal assessment strategy for investigating the predictive value of Endobronchial ultrasound (EBUS)-SE in mediastinal lymph nodes. Methods: Two qualitative visual analogue scale strain scores and two semiquantitative strain elastography measurements (a strain histogram and strain ratio) were acquired in 120 lymph nodes of 63 patients with (sus- pected) lung cancer. The dataset was randomized into an 80% training dataset to determine cut-off values. Performance was consecutively tested on the remaining 20% and the overall dataset. Results: The semiquantitative mean histogram scoring strategy with a cut-off value of 78 (range 0-255) showed the best and most reproducible performance in prediction of malignancy with 93% overall sensitivity, 75% specificity, 69% positive predictive value, 95% negative predictive value, and 82% accuracy. Combining the Endobronchial ultrasound (EBUS)-SE mean histogram scoring outcome with PET-CT information increased the post-test probability of disease in relevant clinical scenarios, having a positive test likelihood ratio of 4.16 (95% CI 2.98-8.13) and a negative test likelihood ratio of 0.14 (95% CI 0.04-2.81) in suspicious lymph nodes based on FDGPET Odds ratio (or) CT imaging. Conclusions: Endobronchial ultrasound (EBUS)-SE can potentially help predict lymph node malignancy in patients with lung cancer. The best semiquantitative assessment method is the mean strain histogram technique. © 2018 The Author(s) Published by S. Karger AG, Basel",
+    "abstract_source": "metadata",
+    "url": "https://karger.com/article/doi/10.1159/000494143"
+  },
+  "source_file": "Optimal Endobronchial Ultrasound Strain Elastography Assessment.json",
+  "sections": [
+    {
+      "title": "Optimal Endobronchial Ultrasound Strain Elastography Assessment Strategy: An Explorative Study",
+      "content": "Roel L.J. Verhoeven a-c Chris L. de Korte a, b Erik H.F.M. van der Heijden c\na Medical Ultrasound Imaging Center (MUSIC), Radboud University Medical Center, Nijmegen, The Netherlands; b Faculty of Science and Technology, Twente University, Enschede, The Netherlands;  c Department of Pulmonology, Radboud University Medical Center, Nijmegen, The Netherlands",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Established Facts",
+      "content": "· Accurate and systematic mediastinal lymph node staging through endobronchial ultrasound (Endobronchial ultrasound (EBUS)) transbronchial needle aspiration is important for the diagnosis and decision of treatment strategy in lung cancer. In order to predict malignancy in lymph nodes, ultrasound characteristics can be used in adjunct to PET and CT characteristics. A new ultrasound technique termed strain elastography (SE) has become available in Endobronchial ultrasound (EBUS) and measures tissue elasticity. However, the elastography assessment lacks standardization.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Novel Insights",
+      "content": "· We systematically compared different Endobronchial ultrasound (EBUS)-SE assessment strategies in patients with lung cancer and show that the mean strain histogram technique is the most robust, objective, and reproducible technique. Applied in daily clinical practice, adding the Endobronchial ultrasound (EBUS)-SE histogram mean has a clear additional predictive value in both imaging suspicious and imaging normal lymph nodes, with stiffer lymph nodes being more likely malignant. These findings could be of potential value to better select patients for additional surgical staging procedures.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Keywords",
+      "content": "Elasticity imaging techniques · Bronchoscopy · Endoscopic ultrasonography  · Computer-assisted image interpretation · Lung cancer",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Abstract",
+      "content": "Background: In  lung  cancer  staging,  mediastinal  lymph nodes  are  currently  aspirated  using  endobronchial  ultrasound transbronchial needle aspiration (Endobronchial ultrasound (EBUS)-TBNA) based\non size and FDG-PET avidity. Endobronchial ultrasound (EBUS) strain elastography (SE) is a new technique that may help predict the presence of malignancy. However, a standardized assessment strategy for Endobronchial ultrasound (EBUS)-SE measurement is lacking. Objectives: The aim of this study was to determine the optimal assessment strategy for investigating the predictive value of Endobronchial ultrasound (EBUS)-SE in mediastinal lymph  nodes. Methods: Two  qualitative  visual  analogue scale strain scores and two semiquantitative strain elastography  measurements  (a  strain  histogram  and  strain  ratio) were acquired in 120 lymph nodes of 63 patients with (sus-\npected) lung cancer. The dataset was randomized into an 80%  training  dataset  to  determine  cut-off  values.  Performance was consecutively tested on the remaining 20% and the overall dataset. Results: The semiquantitative mean histogram scoring  strategy  with  a  cut-off  value  of  78  (range 0-255) showed the best and most reproducible performance in prediction of malignancy with 93% overall sensitivity, 75% specificity, 69% positive predictive value, 95% negative predictive  value,  and  82%  accuracy.  Combining  the  Endobronchial ultrasound (EBUS)-SE mean histogram scoring outcome with PET-CT information increased the post-test probability of disease in relevant clinical scenarios, having a positive test likelihood ratio of 4.16 (95% CI 2.98-8.13) and a negative test likelihood ratio of 0.14 (95% CI 0.04-2.81) in suspicious lymph nodes based on FDGPET  Odds ratio (or)  CT  imaging. Conclusions: Endobronchial ultrasound (EBUS)-SE  can  potentially help predict lymph node malignancy in patients with lung cancer. The best semiquantitative assessment method is the\nmean strain histogram technique.\n© 2018 The Author(s) Published by S. Karger AG, Basel",
+      "category": "abstract",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Introduction",
+      "content": "Endobronchial ultrasound transbronchial needle aspiration (Endobronchial ultrasound (EBUS)-TBNA) has evolved from a diagnostic procedure to a staging procedure, and is now recommended as the first-line staging procedure in lung cancer [1, 2]. For accurate and complete staging, it is imperative that the endoscopist performs a full and systematic evaluation of the entire mediastinum. The evaluation should start in the contralateral hilum and proceed to the ipsilateral hilum,  and  preferably  combine  Endobronchial ultrasound (EBUS)  evaluation  with esophageal ultrasound evaluation using the Endobronchial ultrasound (EBUS) scope (EUSb) [1]. The goal of Endobronchial ultrasound (EBUS) has herein shifted from the confirmation of metastatic disease to proving the absence of metastatic disease. Besides the available CT and FDGPET  information,  ultrasound  characteristics  are  often used for selecting nodes to aspirate in daily clinical practice. A study by Fujiwara et al. [3] introduced the B-mode ultrasound characteristics of round shape, distinct lymph node margins, heterogeneous echogenicity, and presence of a central necrosis sign as independent predictive markers  for  malignancy.  Later  however,  Evison  et  al.  [4] showed that heterogeneous echogenicity was the only significant  predictor  of  malignancy.  Several  other  studies also found discording results in using these ultrasound features [5-7], resulting in limited widespread diagnostic application of these echo characteristics [8].\nAdditional  tools  like  ultrasound  strain  elastography (SE)  have  become  available  that  may  help  predict  the probability of malignancy in mediastinal lymph nodes.\nUltrasound SE visualizes relative tissue stiffness by measuring axial tissue deformation. In Endobronchial ultrasound (EBUS)-TBNA specifically, the periodical motion of the heart and greater vessels cause tissue deformation. Monitoring this tissue deformation by means of ultrasound over time enables a derivation of relative tissue strain which is a marker of tissue stiffness. A region of tissue that is heavily deformed over time when compared to another region in the same image is relatively soft (and thus high in strain). A region that is barely deformed by this same deformation force is in contrast relatively stiff (and thus low in strain). In ultrasound SE, the received signal intensities over time are correlated to one another for quantifying these deformations. As current ultrasound technology only allows accurate  cross-correlation  of  signal  intensity  along  the propagation direction of ultrasound itself, it  should  be acknowledged that it is primarily an axial measurement of strain (for more information, also refer to the online supplementary material; for all online suppl. material, see www.karger.com/doi/10.1159/000494143). Ultrasound SE has already shown value in differentiating benign from malignant lesions in the thyroid and breast, where an external force can be used and standardized [9-12]. Several pilot studies now report that endoscopic ultrasound SE can also be used for differentiating malignant and benign lymph  nodes  in  the  mediastinum  with  high  accuracy, with  lesions  low  in  strain  being  more  likely  malignant [13-20]. However, the optimal method for scoring the presentation of the SE values in Endobronchial ultrasound (EBUS) applications remains unclear [21]. Several qualitative and semiquantitative techniques have been reported so far. For qualitative presentation of strain, visual analogue scale (VAS) scoring techniques can be used. This is done by converting calculated relative strain into a color gradient and superimposing it on the B-mode image. This strain color image is then used for scoring the lymph node region of interest upon its major color component [14, 17, 18, 22] or pattern-color combination [12]. Another frequently reported method is the semiquantitative strain ratio measurement [17, 19, 23]. This technique requires that the operator  manually  selects  the  lymph  node  region  and  a secondary surrounding tissue region. By doing so, a ratio of strain can be calculated [17, 19, 23, 24]. A third less frequently used method is the semiquantitative strain histogram scoring method. This method quantifies the relative strain found in a manually selected lymph node area, and presents this as a histogram of strain counts [25].\nIdeally,  every  assessment  is  operator  independent, swift, and safe. Yet in Endobronchial ultrasound (EBUS) several factors will influence measurement results as a consequence of the technologi-\ncal principles used in SE (see online suppl. material). For example, the position of the target node in relation to the source of compression and the tip of the Endobronchial ultrasound (EBUS) scope affects the measured axial strain in Endobronchial ultrasound (EBUS)-SE.\nIn this explorative study, we aim to determine the optimal  Endobronchial ultrasound (EBUS)-SE  scoring  and  assessment  strategy  in  patients with suspected or proven lung cancer. This is done by comparing the performance of predicting mediastinal lymph node malignancy among different scoring methods.  We hypothesize that the strain histogram method will give the best overall predictive accuracy for diagnosing the lymph node malignancy since this will be the most operator independent and thus objective technique. We furthermore hypothesize that Endobronchial ultrasound (EBUS)-SE will increase the predictive value of mediastinal lymph node ultrasound imaging. To do so, we aim to explore what the clinical effect of adding Endobronchial ultrasound (EBUS)-SE is on the probability of malignancy in combination with FDG-PET and CT imaging.",
+      "category": "introduction",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Materials and Methods",
+      "content": "All patients at the Radboud University Medical Center (Nijmegen, The Netherlands) who had an indication for a diagnostic or staging Endobronchial ultrasound (EBUS)-TBNA procedure for suspicion of lung cancer were eligible and included. This study was conducted with approval of independent ethics committee as part of the E-predict multicenter study  (NCT02488928)  and  all  included  patients  gave  informed consent. The inclusion period ranged from July 2015 to April 2016. All subjects had no history of prior radio- or chemotherapy and no general Endobronchial ultrasound (EBUS)-TBNA contraindications. The Endobronchial ultrasound (EBUS)-TBNA procedure was performed according to local and international guidelines [1, 26]. Measurements were acquired using the Hitachi Preirus Hi Vision processor (Hitachi Corp., Tokyo, Japan) with Hitachi Real-Time Elastography software in combination with Pentax EB-1970UK  echo-endoscopes  (Pentax  Medical,  Tokyo,  Japan). The recommended diagnostic workup of our hospital was used; all nodes  with  a  short-axis  size  > 10  mm on CT, ultrasound-based short axis size > 5 mm, or FDG-PET avid nodes in at least regions 4L, 4R, and 7 were routinely aspirated. FDG-PET scans were obtained  and  evaluated  by  the  radiologist  following  the  European Association of Nuclear Medicine guidelines [27]. While standard uptake values of individual lymph nodes were not routinely reported, a cut-off of 2.5 was typically used. Endobronchial ultrasound (EBUS)-SE measurement collection and assessment was performed using a standardized operating protocol (online suppl. Fig. E.1.). In brief, real-time dual ultrasound B-mode and elastography imaging were used for data collection of both B-mode lymph node ultrasound characteristics (size, shape, margin, echogenicity, central hilar structure presence, and  coagulation  necrosis  sign)  and  quantitative  and  qualitative Endobronchial ultrasound (EBUS)-SE  measurements.  After  these  measurements,  routine Endobronchial ultrasound (EBUS)-TBNA sampling was performed under guidance of B-mode ultrasound alone. Cytology and consecutive histology (if available) of the Endobronchial ultrasound (EBUS)-TBNA specimen combined with clinical follow-up were used as the gold standard for determining individual lymph node diagnosis.\nEndobronchial ultrasound (EBUS)-SE Evaluation Techniques\nQualitative Evaluation\nFor  visual  scoring  of  the  strain,  two  VAS  scoring  methods based upon earlier reports were used [14, 17, 22]. The first VAS system requires the operator to classify the image into one of five groups based on the major color component. From low to high strain, respectively, these scores correspond to: 1, predominantly blue; 2, blue and green; 3, predominantly green; 4, green and red; 5, predominantly red (Fig. 1).\nThe second qualitative VAS scoring method used a modified version of the Tsukuba score, a scoring system based on a combination of the visualized color and the pattern of the strain image. This scoring method has shown to be promising in the classification of breast lesions [12]. However, the scoring was slightly altered by the authors to accommodate for the differences in breast US and Endobronchial ultrasound (EBUS) imaging. The operator grades the lymph node Endobronchial ultrasound (EBUS)-SE image following a six-category classification system (Fig. 2).",
+      "category": "methods",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Semiquantitative EBUS-SE Evaluation",
+      "content": "For  semiquantitative  scoring  of  Endobronchial ultrasound (EBUS)-SE,  two  measurement methods are evaluated (see online suppl. material). The first measurement method is the mean SE histogram. This requires a (rectangular) hand selection of a lymph node region of interest. After selection, strain values are computed from the selected area and relayed back to the operator through a histogram of strain counts (Fig. 1). The  second  semiquantitative  scoring  method  is  the  strain  ratio. Herein,  the  lymph  node  region  of  interest  as  selected  during  the strain histogram method are compared against a hand-selected surrounding reference tissue area using the Matlab Image Processing Toolbox (version 9.1.0, MathWorks Inc., Natick, MA, USA; online suppl. Fig. E.2). As opposed to the other methods, the strain ratio was measured after completion of the Endobronchial ultrasound (EBUS) procedure by one operator (R.L.J.V.) blinded for patient details and pathology outcome.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Statistics",
+      "content": "The performance of the different Endobronchial ultrasound (EBUS)-SE scoring techniques was evaluated by a priori randomizing the final dataset into an 80% training dataset for determining scoring method cut-off values and using the remaining 20% of data to test the scoring method performance on unseen data. To evaluate the performance of the models, sensitivity,  specificity,  negative  predictive  value  (NPV),  positive predictive value (PPV), accuracy, negative and positive likelihood ratios, and post-test probability of malignancies (using the likelihood ratios) with their respective 95% confidence intervals (CI) are calculated among the separate and combined datasets. Area under the curve (AUC) is calculated for continuous variables.\nTo exploratively correlate SE imaging to outcome, pathology results were classified as malignant or benign. Patients diagnosed with granulomatous disease or patients for whom measurement data were incomplete were excluded from the final dataset before randomization and analysis (Fig. 3). The statistical computing language R and interface R-studio (version 1.1.414) were used for statistical analysis [28].",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Results",
+      "content": "In total, 150 lymph node SE measurements were obtained in 81 patients. After the exclusion of other pathologies and incomplete measurements, 120 lymph nodes in\n63 unique patients remained (Fig. 3). A total of 45 lymph nodes  herein  proved  to  be  malignant  based  on  EBUSTBNA alone (43 lymph nodes, 28 patients) or by surgical follow-up of false negative benign Endobronchial ultrasound (EBUS)-TBNA cytology findings (2 lymph nodes, 2 patients). For the 75 lymph nodes (42 unique patients) eventually classified as benign, follow-up data were available in 61 nodes (81.3%). Surgical proof of benign Endobronchial ultrasound (EBUS)-TBNA findings was available in 41 lymph nodes (55%) by either resection (15 nodes, 9 pa-\ntients) or mediastinoscopy (26 nodes, 13 patients). Longterm clinical follow-up was available in 20 lymph nodes (27%,  12  patients)  with  a  median  follow-up  time  of  23 months (min.-max. 3-34). No follow-up of benign EBUSTBNA findings was available in 14 lymph nodes (19%, 9 patients) due to rapid disease progression (6 nodes, 5 patients) and loss to follow-up (8 nodes, 4 patients).\nThe  general  patient  demographics  and  lymph  node details are summarized in Table 1. The lymph nodes were\nrandomized into the training and test dataset (Fig. 3). The a priori-defined training dataset included 100 randomly selected lymph nodes. The remaining testing dataset consisted of 20 lymph nodes. The prevalence of malignancy or pre-test probability of malignant disease in both datasets was approximately equal at 0.38 and 0.35, respectively. The results of general B-mode ultrasound feature classification  are  presented  in  online  supplementary  Table E.1.  In  the  final  dataset,  79  of  120  lymph  nodes  (66%) were classified as FDG-PET positive. No PET scan was available in 3 patients (three lymph nodes), and no contrast CT was available in 1 patient (one lymph node).\nEndobronchial ultrasound (EBUS)-SE Scoring Method Assessment Cut-Off Values Cut-off values of all four SE scoring methods were first optimized by analyzing performance on the training dataset using accuracy, AUC (in the cases of strain histogram and strain ratio scoring), and individual predictive values of sensitivity, specificity, NPV, and PPV.\nFor the color VAS scoring system, optimal predictive performance  was  found  if  lymph  nodes  categorized  as 'predominantly blue' or 'blue and green' were grouped together (predicting malignancy) versus all other catego-\nries grouped (predicting benign outcome, online suppl. Fig. E.3).\nThe  modified  Tsukuba  scoring  method  performed best  when  placing  the  cut-off  at  the  two  lowest  of  five scores (online suppl. Fig. E.4), grouping scores 4-5 as malignant and scores 1-3 as benign. For the semiquantitative measurements, the ROC curve analysis of the strain histogram method (AUC 0.846, online suppl. Fig. E.5) showed a relative mean strain value of < 78 (range 0-255, with a lower value representing less strain) to be most predictive of malignancy using our software settings. The strain ratio was most predictive of malignancy when the mean of the lymph node strain divided by the reference tissue strain was more than 1.67 (AUC 0.637, online suppl. Fig. E.5).",
+      "category": "results",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "EBUS-SE Predictive Value",
+      "content": "With the above-described cut-off values, the different predictive values as introduced in the Methods section were calculated on both datasets. The results are summarized in Table 2, and the calculation of likelihood ratios are also presented in online supplementary Table E.2. The prospectively collected color VAS scoring, modified Tsu-\nValues are presented as the mean (range) or n (%). SA, short axis; NA, not available; Non-small cell lung cancer (NSCLC), non-small cell lung cancer; SqCC, squamous cell carcinoma; NOS, not otherwise specified; LCNEC, large cell neuroendocrine carcinoma; EB, endobronchial; EUSb, esophageal using Endobronchial ultrasound (EBUS) scope; LMB, left main bronchus; RMB, right main bronchus.\nkuba scoring, and strain histogram scoring had similar accuracies in the training dataset of 76, 82, and 82%, respectively.  The  most  notable  differences  in  individual performance factors among these methods were found in sensitivity and NPV. Sensitivity and NPV are upwards of 76% in all three methods. However, fewer false negatives were found in the strain histogram method, having a sensitivity of 92% and NPV of 94% (being 3-16% higher than the  other  two  methods).  Consequently,  it  also  had  the lowest negative post-test probability of malignancy in our dataset (0.06). Following the specificity and PPV, positive post-test probability of malignancy in our dataset seems to be similar in the three methods at around 0.70. While performance among the three prospective methods seems comparable,  the  strain  ratio  most  markedly  has  lower sensitivity (50%) and NPV (73%) in the training dataset, which is further reflected by the lower accuracy (71%).\nWhen the  cut-offs  of  the  four  scoring  methods  are consecutively used to analyze performance on the testing dataset,  the  accuracies  remain  within  the  earlier  determined 95% CI of the training dataset (Table 2). However, the positive and negative post-test probability of malignancy as based on the likelihood ratios (online suppl. Ta-\nble E.2) do show differences. All collected methods except the strain ratio showed no false negatives in the test dataset. Consequently, both the color VAS score and modified Tsukuba  score  performed  better  than  the  95%  CI  as determined from the training dataset. Furthermore, we would expect a higher than 0.58 positive post-test probability  of  malignancy  of  the  modified  Tsukuba  scoring method  based  on  the  training  dataset  results  (95%  CI 0.61-0.82).\nWhen combining performances of both the training and test dataset, the mean of the strain histogram is shown to best predict lymph node malignancy. It has the lowest negative post-test probability of malignancy while accuracy is similar to the best of the methods. The mean of the strain histogram furthermore shows similar performance when testing on new and unseen data.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Effect of EBUS-SE on Probability of Malignancy Assessment",
+      "content": "Based on the analysis of the different Endobronchial ultrasound (EBUS)-SE scoring methods,  the  SE  histogram  mean  scoring  method  was used to further investigate if Endobronchial ultrasound (EBUS)-SE could be of potential added value in clinical workup. This was investigated\nScoring method performance was obtained by randomly partitioning the total dataset into a training (80%) and test dataset (20%). The cut-off scores of the scoring methods are first determined by optimization of performance on the training dataset (online suppl. Fig. E.3-E.5). Transferability of performance using these scores is subsequently assessed in the test dataset. The post-test probabilities of malignancy are determined by the pre-test probability of malignancy and the likelihood ratios as defined in online supplementary Table E.2. * Denotes significant differences between training and test dataset, being outside the 95% CI as determined in the training dataset. Sens, sensitivity; Spec, specificity; PPV, positive predictive value; NPV, negative predictive value; VAS, visual analog scale.\nby calculating the effect on the probability of malignancy when combined with PET-CT imaging information of both the abnormal and normal mediastinal lymph nodes in the overall dataset (Fig. 4; online suppl. Table E.2, E3). Based on available combined PET avidity and/or CT size > 10 mm, a group of normal ( n = 26) and suspicious ( n = 90) mediastinal lymph nodes were identified in our complete dataset. In these groups, the probability of malignancy was 8 and 46%, respectively. Explorative analyses showed that the addition of Endobronchial ultrasound (EBUS)-SE histogram scoring in the subgroup of suspicious lymph nodes increases the post-test probability of malignancy from 46 to 73% (positive likelihood ratio 4.61, 95% CI 2.98-8.13). Oppositely,\na negative Endobronchial ultrasound (EBUS)-SE histogram analysis in this group of suspicious nodes reduces the post-test probability of malignancy from 46 to 8% (negative likelihood ratio 0.143, 95% CI 0.04-2.81; Fig. 4; online suppl. Table E.3). In the subgroup of imaging normal lymph nodes, a mean EBUSSE histogram < 78 increased the probability of malignancy from 8 to 45%. If Endobronchial ultrasound (EBUS)-SE outcome indicated nonmalignancy  in  the  PET/CT  negative  lymph  nodes,  the probability of malignancy dropped from 8 to 0%, negating 2 cases where PET-CT imaging was found to be false negative (Fig. 4; online suppl. Table E.3).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Discussion",
+      "content": "Endobronchial ultrasound (EBUS)-SE could potentially be a sensitive technique to help  predict  lymph  node  malignancy  in  patients  with lung cancer. We found that the semiquantitative mean histogram  scoring  method  with  a  cut-off  value  of  78 (range 0-255) showed the best, most objective and most reproducible performance in the prediction of malignancy with 93% overall sensitivity, 75% specificity, 69% PPV, 95% NPV, and 82% accuracy. Exploratively combining relative lymph node stiffness by using the Endobronchial ultrasound (EBUS)-SE histogram mean scoring outcome with CT and/or PET-CT information  further  increased  confidence  in  post-test probability of disease, having a positive test likelihood ratio of 4.16 (95% CI 2.98-8.13) and a negative test likelihood ratio of 0.14 (95% CI 0.04-2.81) in imaging suspicious lymph nodes. Endobronchial ultrasound (EBUS)-SE scoring may thus enable a better prediction and separation of lymph nodes with a high and low probability of disease but will not replace a tissue  diagnosis.  It  can,  however,  be  a  helpful  tool  for guiding which node to aspirate in a distinct region, or ultimately deciding whether to proceed with, or omit, additional diagnostic procedures if ROSE or conclusive cytology results are unavailable (especially when FDG-PET information is lacking). Yet, care needs to be taken in interpreting these results. This explorative study is of limited size and further research to corroborate our findings using a standardized assessment procedure based on clinical findings and technological considerations is recommended.",
+      "category": "discussion",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Differences in EBUS-SE Scoring Methods",
+      "content": "In the qualitative scoring, both the scoring of a major color component (color VAS method) and a combined scoring of pattern and color (modified Tsukuba score) perform similarly in terms of overall accuracy. Our proposed use of the modified Tsukuba scoring system has\nnot  previously  been  introduced  in  Endobronchial ultrasound (EBUS)  applications. Even though we expected that taking into account both pattern and color above color alone would provide more information, it does not seem to be of clear additional value over the color VAS system in this dataset.\nThree studies used a scoring system like the color VAS scoring system, with comparable results [14, 18, 22]. He et al. [14] reported best accuracy if the visualized color was over 50% blue, then indicative of malignancy with an accuracy of 73.7%. Huang et al. [22] and Izumo et al. [18] introduced  an  additional  cut-off;  only  predominantly blue  lesions  were  indicative  of  malignancy,  while  predominantly non-blue lesions were indicative of benign lymph nodes. By leaving out an intermediary group (part blue, part non-blue) they were able to report an overall accuracy in these categories of 91.4 and 96.7%, respectively. Leaving out uncertain cases (part blue, part nonblue) was not done in our study for accurate comparison of scoring methods (but see online suppl. Fig. E.3, E4). Possibly, such a method could increase diagnostic success.\nIn semiquantitative scoring, the majority of previous pilot studies report using the strain ratio for scoring [17, 19, 23]. Our study, however, clearly shows that the mean value of the strain as obtained from the histogram has best performance. As reflected by the comparatively low performance of the strain ratio scoring method, we found that the strain ratio outcome relied heavily on the selected secondary reference tissue region in Endobronchial ultrasound (EBUS). Adequate selection of a uniform secondary reference tissue while taking into account the technical and clinical boundary conditions is difficult not only because of limited tissue uniformity, but also heterogeneous sources of strain (online suppl. material). This is likely one of the reasons why other pilot studies investigating Endobronchial ultrasound (EBUS)-SE with strain ratios reported different cut-off values [29] and collected multiple measurements for combining them into one average reference value [17, 19, 23]. A potential limitation of our study is that we collected strain ratio measurements retrospectively rather than prospectively, which could have affected the strain ratio scoring outcome.",
+      "category": "methods",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Combining EBUS-SE with Other Predictive Variables",
+      "content": "FDG-PET and/or CT imaging of lymph nodes in this study had sensitivities comparable to the reported literature [2], but a lower combined specificity of 33% (online suppl. Table E.3). This could in part be explained by the systematic staging of all lymph nodes by Endobronchial ultrasound (EBUS)-TBNA as applied  in  our  clinical  practice.  Combining  Endobronchial ultrasound (EBUS)-SE with pre-test contrast CT and FDG-PET avidity, howev-\ner, was able to improve the predictive accuracy of lymph node pathology in both PET-CT negative and positive imaging  cases.  The  relative  stiffness  as  measured  by Endobronchial ultrasound (EBUS)-SE thus seems to show additional value to the metabolic and size information as given by FDG-PET and CT. Yet again, care needs to be taken in interpreting the results of adding Endobronchial ultrasound (EBUS)-SE information to PET and CT negative nodes, as only 26 lymph nodes, of which 2 were false negative, were available for an exploratory analysis. While adding Endobronchial ultrasound (EBUS)-SE correctly changed the diagnosis to malignant in both cases and could be promising, additional studies are warranted.\nBesides  PET-CT  information,  ultrasound  B-mode characteristics as described by Fujiwara et al. [3] were also collected  in  this  explorative  study  (online  suppl.  Table E.1).  Since  different  studies  have  shown conflicting results in the value of these features, we did not integrate these into a combined predictive value or integrate them with Endobronchial ultrasound (EBUS)-SE findings [3-7]. Analysis of these features in  our  dataset  showed  the  presence  of  heterogeneous echogenicity and a central necrosis sign to be most predictive of malignancy, with positive likelihood ratios of 5.83 and 3.65. An AUC of 0.73 of the B-mode-based size of lymph nodes revealed a correlation between size and malignancy.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "General Remarks",
+      "content": "The mean lymph node short axis diameter in this study was 9.9 mm (range 4-26). This indicates it was not a population with bulky mediastinal disease, but rather a group with  a  low  disease  burden.  Malignant  lymph  node  involvement can be heterogeneous and microscopic. This is cause for concern in both TBNA and SE of individual lymph nodes. TBNA provides only limited information about the complete node, as it samples limited amounts of  tissue  within  the  node.  SE  can  provide  information about the entire node, but is based only on the strain of tissue upon deformation. Whether elastography is able to differentiate between micrometastatic disease accurately and if it may guide the site of aspiration within a lymph node to detect intranodal fields at risk of micrometastatic disease is unclear. The current dataset does not allow this level of analysis.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Observer Scoring Variability",
+      "content": "A general point of concern for all Endobronchial ultrasound (EBUS)-SE measurement methods is the inter- and intraobserver variability in lymph node scoring and frame selection through different platforms. System settings and operator protocol can affect the Endobronchial ultrasound (EBUS)-SE measurement outcome (online\nsuppl. material). A standardized operating procedure is essential. In this current study, the prospective elastography measurements and scoring were done by one pulmonologist using a standardized operating protocol (E.v.d.H.). Interobserver variability was thus minimal in order to adequately study the differences in scoring method performance. Reproducibility of this technique based upon operator expertise, operator color acuity, and anatomical site and region needs to be further investigated. Widespread implementation of this technique can only be realized when system settings and operator methods are unified. Transferability of these findings to other diseases, such as sarcoidosis for example, are unknown and also need to be studied. In doing so, we recommend using the mean of the strain histogram for scoring as it showed the best performance in this study, requires the least operator input, and will have highest interobserver agreement based upon technique background.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Conclusion",
+      "content": "Endobronchial ultrasound (EBUS)-SE is a sensitive technique which may help predict lymph node malignancy in patients with lung cancer. In this study we found that the semiquantitative mean histogram  scoring  method  with  a  cut-off  value  of  78 (range  0-255)  showed  the  best  and  most  reproducible performance in the prediction of malignancy, with 93% overall sensitivity, 75% specificity, 69% PPV, 95% NPV, and 82% accuracy. Combining the Endobronchial ultrasound (EBUS)-SE mean histogram scoring outcome with CT and/or PET-CT information increased confidence in post-test probability of disease, with a positive test likelihood ratio of 4.16 (95% CI 2.98-8.13)  and  a  negative  test  likelihood  ratio  of  0.14 (0.04-2.81 95% CI) in suspicious lymph nodes based on PET Odds ratio (or) CT imaging. We further present a standard operating procedure for Endobronchial ultrasound (EBUS)-SE assessment and future research.",
+      "category": "conclusion",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Acknowledgements",
+      "content": "We  would  like  to  thank  Olga  Schuurbiers,  MD,  PhD,  and Wouter Hoefsloot, MD, PhD, for their contributions and comments. We would also like to thank Priya Vart, PhD, assistant professor of biostatistics, for his advice on statistical analysis.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Statement of Ethics",
+      "content": "The research was conducted ethically in accordance with the latest  World  Medical  Association  Declaration  of  Helsinki.  The study protocol was approved by the independent local medical ethical committee and institutional review body before subject inclusion commenced. Informed consent was obtained. The study is registered  and  can  be  found  on  ClinicalTrials.gov  (identifier: NCT02488928).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Disclosure Statement",
+      "content": "The authors have no conflicts of interest to declare in relation to this study.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Funding Sources",
+      "content": "Unrestricted research grants for this study were obtained from the Ankie Hak Fund, Astra Zeneca Oncology, and Pentax Medical.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Author Contributions",
+      "content": "R.L.J.V.  and  E.v.d.H.  contributed  to  the  design,  acquisition, analysis and interpretation of data for the work, drafted the work, revised it critically, and gave final approval of the version to be published. C.L.d.K. contributed to the design and analysis and interpretation of data for the study, and provided feedback for important intellectual content revisions.\nAll authors gave final approval of the version to be published and agree to be accountable for all aspects of the work in ensuring that questions relating to the accuracy or integrity of any part of the work are appropriately investigated and resolved.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "References",
+      "content": "1  Vilmann P, Clementsen PF, Colella S, Siemsen  M,  De  Leyn  P,  Dumonceau  JM,  et  al. Combined  endobronchial  and  oesophageal endosonography for the diagnosis and staging of lung cancer. European Society of Gastrointestinal Endoscopy (ESGE) Guideline, in cooperation  with  the  European  Respiratory Society  (ERS)  and  the  European  Society  of Thoracic Surgeons (ESTS). Eur Respir J. 2015 Jul; 46(1): 40-60.\n2  Silvestri GA, Gonzalez AV, Jantz MA, Margolis ML, Gould MK, Tanoue LT, et al. Methods for staging non-small cell lung cancer: diagnosis and management of lung cancer, 3rd ed: American  College  of  Chest  Physicians  evidence-based clinical practice guidelines. Chest. 2013 may;e211S-e205S.\n3  Fujiwara T, Yasufuku K, Nakajima T, Chiyo M, Yoshida S, Suzuki M, et al. The utility of sonographic  features  during  endobronchial\nultrasound-guided transbronchial needle aspiration  for  lymph  node  staging  in  patients with lung cancer: a standard endobronchial ultrasound image classification system. Chest. 2010 Sep; 138(3): 641-7.\n4  Evison M, Morris J, Martin J, Shah R, Barber PV, Booton R, et al. Nodal staging in lung cancer:  a  risk  stratification  model  for  lymph nodes classified as negative by Endobronchial ultrasound (EBUS)-TBNA. J Thorac Oncol. 2015 Jan; 10(1): 126-33.\n5  Satterwhite  LG,  Berkowitz  DM,  Parks  CS, Bechara RI. Central intranodal vessels to predict  cytology  during  endobronchial  ultrasound  transbronchial  needle  aspiration.  J Bronchology Interv Pulmonol. 2011; 18: 3228.\n6  Wang Memoli JS, El-Bayoumi E, Pastis NJ, Tanner NT, Gomez M, Huggins JT, et al. Using endobronchial ultrasound features to predict lymph node metastasis in patients with lung cancer. Chest. 2011 Dec; 140(6): 1550-6.\n7  Garcia-Olivé I, Monsó E, Andreo F, Sanz J, Castellà E, Llatjós M, et al. Sensitivity of linear endobronchial  ultrasonography  and  guided transbronchial needle aspiration for the identification of nodal metastasis in lung cancer staging.  Ultrasound  Med  Biol.  2009  Aug; 35(8): 1271-7.\n8  Wahidi MM, Herth F, Yasufuku K, Shepherd RW, Yarmus L, Chawla M, et al. Technical aspects  of  endobronchial  ultrasound-guided transbronchial  needle  aspiration  -  CHEST guideline and expert panel report. Chest. 2016 Mar; 149(3): 816-35.\n9  Gong X, Xu Q, Xu Z, Xiong P, Yan W, Chen Y. Real-time elastography for the differentiation of benign and malignant breast lesions: a meta-analysis. Breast Cancer Res Treat. 2011 Nov; 130(1): 11-8.\n10  Sadigh G, Carlos RC, Neal CH, Dwamena BA. Accuracy of quantitative ultrasound elastography for differentiation of malignant and benign  breast  abnormalities:  a  meta-analysis. Breast  Cancer  Res  Treat.  2012  Aug; 134(3): 923-31.\n11  Sun J, Cai J, Wang X. Real-time ultrasound elastography for differentiation of benign and malignant thyroid nodules: a meta-analysis. J Ultrasound Med. 2014 Mar; 33(3): 495-502.\n12  Itoh A, Ueno E, Tohno E, Kamma H, Takahashi H, Shiina T, et al. Breast disease: clinical application of US elastography for diagnosis. Radiology. 2006 May; 239(2): 341-50.\n13  Dietrich CF, Jenssen C, Arcidiacono PG, Cui XW, Giovannini M, Hocke M, et al. Endoscopic ultrasound: elastographic lymph node evaluation. Endosc Ultrasound. 2015 Jul-Sep; 4(3): 176-90.\n14  He HY, Chen JL, Ma H, Zhu J, Wu DD, Lv XD. Value of endobronchial ultrasound elastography in diagnosis of central lung lesions. Med Sci Monit. 2017 Jul; 23: 3269-75.\n15  Xu W, Shi J, Zeng X, Li X, Xie W-F, Guo J, et al. EUS elastography for the differentiation of benign and malignant lymph nodes: a metaanalysis.  Gastrointest  Endosc.  2011  Nov; 74: 1001-9.\n16  Nakajima  T,  Inage  T,  Sata  Y,  Morimoto  J, Tagawa T, Suzuki H, et al. Elastography for predicting  and  localizing  nodal  metastases during  endobronchial  ultrasound.  Respiration. 2015; 90(6): 499-506.\n17  Korrungruang P, Boonsarngsuk V. Diagnostic value of endobronchial ultrasound elastography  for  the  differentiation  of  benign  and malignant intrathoracic lymph nodes. Respirology. 2017 Jul; 22(5): 972-7.\n18  Izumo T, Sasada S, Chavez C, Matsumoto Y, Tsuchida T. Endobronchial ultrasound elastography in the diagnosis of mediastinal and hilar lymph nodes. Jpn J Clin Oncol. 2014 Oct; 44(10): 956-62.\n19  Rozman A, Malovrh MM, Adamic K, Subic T, Kovac  V,  Flezar  M.  Endobronchial  ultrasound elastography strain ratio for mediastinal lymph node diagnosis. Radiol Oncol. 2015 Nov; 49(4): 334-40.\n20  Dietrich CF, Săftoiu A, Jenssen C. Real time elastography  endoscopic  ultrasound  (RTEEUS), a comprehensive review. Eur J Radiol. 2014 Mar; 83(3): 405-14.\n21  Steinfort DP. Elastography in endobronchial ultrasound: stretching the boundary of minimally  invasive  staging  further.  Respirology. 2017 Jul; 22(5): 843-4.\n22  Huang H, Huang Z, Wang Q, Wang X, Dong Y, Zhang W, et al. Effectiveness of the benign and malignant diagnosis of mediastinal and hilar  lymph  nodes  by  endobronchial  ultrasound elastography. J Cancer. 2017 Jul; 8(10): 1843-8.\n23  Bediwy AS, Hantira MS, Sharawy DE, Sawa AE.  The  role  of  endobronchial  ultrasound elastography in the diagnosis of mediastinal lymph nodes. Egypt J Bronchol. 2018; 12: 3340.\n24  Havre RF, Waage JR, Gilja OH, Ødegaard S, Nesje LB. Real-time elastography: strain ratio measurements are influenced by the position of the reference area. Ultraschall Med. Epub 2011 Jun 10.\n25  Săftoiu A, Vilmann P, Gorunescu F, Janssen J, Hocke M, Larsen M, et al.; European EUS Elastography Multicentric Study Group. Accuracy  of  endoscopic  ultrasound  elastography  used  for  differential  diagnosis  of  focal pancreatic  masses:  a  multicenter  study.  Endoscopy. 2011 Jul; 43(7): 596-603.\n26  De Leyn P, Dooms C, Kuzdzal J, Lardinois D, Passlick B, Rami-Porta R, et al. Revised ESTS guidelines for preoperative mediastinal lymph node staging for non-small-cell lung cancer. Eur J Cardiothorac Surg. 2014 May; 45(5): 787-98.\n27  Boellaard  R,  Delgado-Bolton  R,  Oyen  WJ, Giammarile F, Tatsch K, Eschner W, et al.; European  Association  of  Nuclear  Medicine (EANM).  FDG  PET/CT:  EANM  procedure guidelines  for  tumour  imaging:  version  2.0. Eur J Nucl Med Mol Imaging. 2015 Feb; 42(2): 328-54.\n28  R Core Team. R: A language and environment for statistical computing. 2016; available from: https://www.r-project.org.\n29  Mittal  S,  Madan  K.  Correspondence:  endobronchial ultrasound elastography for the differentiation of benign and malignant lymph nodes. Respirology. 2017; 22(5): 972-7.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    }
+  ],
+  "tables": [
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/122'}",
+      "headers": [
+        "Schematic illustration",
+        "Classification standard",
+        "Score"
+      ],
+      "rows": [
+        [
+          "",
+          "Strain is seen in the entire hypoechoic area (the entire lesion is shown in green similar to the surrounding tissue)",
+          "1"
+        ],
+        [
+          "",
+          "Strain is seen within most of the hypoechoic area but some areas show no strain (the lesion is a mixture of red, green, and blue)",
+          "2"
+        ],
+        [
+          "",
+          "Strain appears only in the periphery, no strain in the center of the lesion (center of the lesion is blue, the periphery is green)",
+          "3"
+        ],
+        [
+          "",
+          "No strain is measured within the lesion (the entire lesion is shown in blue)",
+          "4"
+        ],
+        [
+          "",
+          "No strain is measured within the lesion nor in the surrounding tissues (the lesion and the surrounding tissues are blue)",
+          "5"
+        ],
+        [
+          "",
+          "Typical artifact seen when blood vessels invade the lymph node. Red in the center of the vessel surrounding, green in the vicinity",
+          "X"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/161'}",
+      "headers": [
+        "Demographics and characterization",
+        "Demographics and characterization",
+        "Measured lymph nodes",
+        "Measured lymph nodes",
+        "Measured lymph nodes"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "region",
+          "n (malignant/benign)",
+          "%total"
+        ],
+        [
+          "Study subjects, n",
+          "63",
+          "2L",
+          "1 (1/0)",
+          "0.8"
+        ],
+        [
+          "Mean age, years",
+          "64.3 (41-83)",
+          "2R",
+          "2 (2/0)",
+          "1.6"
+        ],
+        [
+          "Sex (male/female)",
+          "39 (61)/24 (39)",
+          "4L (EB)",
+          "23 (11/12)",
+          "19.2"
+        ],
+        [
+          "Aspirated lymph node characteristics",
+          "Aspirated lymph node characteristics",
+          "4L (EUSb) 4R",
+          "7 (4/3) 25 (7/18)",
+          "5.8 20.8"
+        ],
+        [
+          "CT size (SA),mm",
+          "11.95 (2-41)",
+          "7 (LMB)",
+          "3 (0/3)",
+          "2.5"
+        ],
+        [
+          "FDG-PET avidity",
+          "79 FDG+/38 FDG-/3NA",
+          "7 (RMB)",
+          "23 (4/19)",
+          "19.2"
+        ],
+        [
+          "US size (SA),mm",
+          "9.95 (4-26)",
+          "7 (EUSb)",
+          "10 (5/5)",
+          "8.3"
+        ],
+        [
+          "",
+          "",
+          "10L",
+          "0 (0/0)",
+          "0"
+        ],
+        [
+          "Lymph node pathology outcome",
+          "Lymph node pathology outcome",
+          "10R",
+          "2 (1/1)",
+          "1.6"
+        ],
+        [
+          "Benign 75 (62.5)",
+          "Benign 75 (62.5)",
+          "11L",
+          "10 (3/7)",
+          "8.3"
+        ],
+        [
+          "Malignant 45 (37.5)",
+          "Malignant 45 (37.5)",
+          "11R",
+          "14 (7/7)",
+          "11.7"
+        ],
+        [
+          "NSCLC adenocarcinoma 19",
+          "NSCLC adenocarcinoma 19",
+          "(15.8)",
+          "",
+          ""
+        ],
+        [
+          "NSCLC SqCC",
+          "NSCLC SqCC",
+          "15 (12.5)",
+          "",
+          ""
+        ],
+        [
+          "NSCLC NOS",
+          "NSCLC NOS",
+          "1 (0.8)",
+          "",
+          ""
+        ],
+        [
+          "Small cell lung carcinoma",
+          "Small cell lung carcinoma",
+          "5 (4.2)",
+          "",
+          ""
+        ],
+        [
+          "LCNEC",
+          "LCNEC",
+          "3 (2.5)",
+          "",
+          ""
+        ],
+        [
+          "Invasive ductal carcinoma",
+          "Invasive ductal carcinoma",
+          "2 (1.6)",
+          "",
+          ""
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/175'}",
+      "headers": null,
+      "rows": [
+        [
+          "EBUS-SE scoring method",
+          "Sens,%",
+          "Spec,%",
+          "PPV,%",
+          "NPV,%",
+          "Accuracy,% (95% CI)",
+          "Positive post-test probability of malignancy (95% CI)",
+          "Negative post-test probability of malignancy (95% CI)"
+        ],
+        [
+          "Training dataset (100 lymph nodes, 38 malignancies - pre-test probability of malignancy 0.38)",
+          "Training dataset (100 lymph nodes, 38 malignancies - pre-test probability of malignancy 0.38)",
+          "Training dataset (100 lymph nodes, 38 malignancies - pre-test probability of malignancy 0.38)",
+          "Training dataset (100 lymph nodes, 38 malignancies - pre-test probability of malignancy 0.38)",
+          "Training dataset (100 lymph nodes, 38 malignancies - pre-test probability of malignancy 0.38)",
+          "Training dataset (100 lymph nodes, 38 malignancies - pre-test probability of malignancy 0.38)",
+          "Training dataset (100 lymph nodes, 38 malignancies - pre-test probability of malignancy 0.38)",
+          "Training dataset (100 lymph nodes, 38 malignancies - pre-test probability of malignancy 0.38)"
+        ],
+        [
+          "Color VAS score",
+          "76",
+          "77",
+          "67",
+          "84",
+          "77 (68-85)",
+          "0.67 (0.56-0.78)",
+          "0.16 (0.08-0.23)"
+        ],
+        [
+          "Modified Tsukuba score",
+          "87",
+          "79",
+          "72",
+          "91",
+          "82 (73-89)",
+          "0.72 (0.61-0.82)",
+          "0.09 (0.03-0.16)"
+        ],
+        [
+          "Strain histogram mean",
+          "92",
+          "76",
+          "70",
+          "94",
+          "82 (73-89)",
+          "0.70 (0.61-0.80)",
+          "0.06 (0.00-0.13)"
+        ],
+        [
+          "Strain ratio",
+          "50",
+          "84",
+          "65",
+          "73",
+          "71 (61-80)",
+          "0.66 (0.50-0.80)",
+          "0.27 (0.20-0.33)"
+        ],
+        [
+          "Test dataset (20 lymph nodes, 7 malignancies - pre-test probability of malignancy 0.35)",
+          "Test dataset (20 lymph nodes, 7 malignancies - pre-test probability of malignancy 0.35)",
+          "Test dataset (20 lymph nodes, 7 malignancies - pre-test probability of malignancy 0.35)",
+          "Test dataset (20 lymph nodes, 7 malignancies - pre-test probability of malignancy 0.35)",
+          "Test dataset (20 lymph nodes, 7 malignancies - pre-test probability of malignancy 0.35)",
+          "Test dataset (20 lymph nodes, 7 malignancies - pre-test probability of malignancy 0.35)",
+          "Test dataset (20 lymph nodes, 7 malignancies - pre-test probability of malignancy 0.35)",
+          "Test dataset (20 lymph nodes, 7 malignancies - pre-test probability of malignancy 0.35)"
+        ],
+        [
+          "Color VAS score",
+          "100",
+          "69",
+          "64%",
+          "100",
+          "80",
+          "0.64",
+          "0.00 *"
+        ],
+        [
+          "Modified Tsukuba score",
+          "100",
+          "62",
+          "58",
+          "100",
+          "75",
+          "0.58 *",
+          "0.00 *"
+        ],
+        [
+          "Strain histogram mean",
+          "100",
+          "69",
+          "64",
+          "100",
+          "80",
+          "0.64",
+          "0.00"
+        ],
+        [
+          "Strain ratio",
+          "29",
+          "85",
+          "50",
+          "69",
+          "65",
+          "0.5",
+          "0.31"
+        ],
+        [
+          "Overall dataset (120 lymph nodes, 45 malignancies - pre-test probability of malignancy 0.375)",
+          "Overall dataset (120 lymph nodes, 45 malignancies - pre-test probability of malignancy 0.375)",
+          "Overall dataset (120 lymph nodes, 45 malignancies - pre-test probability of malignancy 0.375)",
+          "Overall dataset (120 lymph nodes, 45 malignancies - pre-test probability of malignancy 0.375)",
+          "Overall dataset (120 lymph nodes, 45 malignancies - pre-test probability of malignancy 0.375)",
+          "Overall dataset (120 lymph nodes, 45 malignancies - pre-test probability of malignancy 0.375)",
+          "Overall dataset (120 lymph nodes, 45 malignancies - pre-test probability of malignancy 0.375)",
+          "Overall dataset (120 lymph nodes, 45 malignancies - pre-test probability of malignancy 0.375)"
+        ],
+        [
+          "Color VAS score",
+          "80",
+          "76",
+          "67",
+          "86",
+          "78",
+          "0.67",
+          "0.14"
+        ],
+        [
+          "Modified Tsukuba score",
+          "89",
+          "76",
+          "69",
+          "92",
+          "81",
+          "0.69",
+          "0.08"
+        ],
+        [
+          "Strain histogram mean",
+          "93",
+          "75",
+          "69",
+          "95",
+          "82",
+          "0.69",
+          "0.05"
+        ],
+        [
+          "Strain ratio",
+          "47",
+          "84",
+          "64",
+          "72",
+          "70",
+          "0.64",
+          "0.28"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    }
+  ],
+  "figures": [
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/49'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/121'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/187'}",
+      "page": null
+    }
+  ],
+  "references": [
+    {
+      "title": "Combined endobronchial and oesophageal endosonography for the diagnosis and staging of lung cancer. European Society of Gastrointestinal Endoscopy (ESGE) Guideline, in cooperation with the European Respiratory Society (ERS) and the European Society of Thoracic Surgeons (ESTS)"
+    },
+    {
+      "title": "Eur Respir J"
+    },
+    {
+      "title": "Methods for staging non-small cell lung cancer: diagnosis and management of lung cancer, 3rd ed: American College of Chest Physicians evidence-based clinical practice guidelines"
+    },
+    {
+      "title": "Chest"
+    },
+    {
+      "title": "The utility of sonographic features during endobronchial ultrasound-guided transbronchial needle aspiration for lymph node staging in patients with lung cancer: a standard endobronchial ultrasound image classification system",
+      "year": 2013
+    },
+    {
+      "title": "Nodal staging in lung cancer: a risk stratification model for lymph nodes classified as negative by EBUS-TBNA"
+    },
+    {
+      "title": "J Thorac Oncol"
+    },
+    {
+      "title": "Central intranodal vessels to predict cytology during endobronchial ultrasound transbronchial needle aspiration"
+    },
+    {
+      "title": "J Bronchology Interv Pulmonol",
+      "year": 2011
+    },
+    {
+      "title": "Using endobronchial ultrasound features to predict lymph node metastasis in patients with lung cancer",
+      "year": 2011
+    },
+    {
+      "title": "Sensitivity of linear endobronchial ultrasonography and guided transbronchial needle aspiration for the identification of nodal metastasis in lung cancer staging"
+    },
+    {
+      "title": "Ultrasound Med Biol"
+    },
+    {
+      "title": "Technical aspects of endobronchial ultrasound-guided transbronchial needle aspiration -CHEST guideline and expert panel report"
+    },
+    {
+      "title": "Real-time elastography for the differentiation of benign and malignant breast lesions: a meta-analysis"
+    },
+    {
+      "title": "Breast Cancer Res Treat"
+    },
+    {
+      "title": "Accuracy of quantitative ultrasound elastography for differentiation of malignant and benign breast abnormalities: a meta-analysis"
+    },
+    {
+      "title": "Real-time ultrasound elastography for differentiation of benign and malignant thyroid nodules: a meta-analysis"
+    },
+    {
+      "title": "J Ultrasound Med"
+    },
+    {
+      "title": "Breast disease: clinical application of US elastography for diagnosis"
+    },
+    {
+      "title": "Radiology"
+    },
+    {
+      "title": "Endoscopic ultrasound: elastographic lymph node evaluation"
+    },
+    {
+      "title": "Endosc Ultrasound"
+    },
+    {
+      "title": "Value of endobronchial ultrasound elastography in diagnosis of central lung lesions"
+    },
+    {
+      "title": "Med Sci Monit"
+    },
+    {
+      "title": "EUS elastography for the differentiation of benign and malignant lymph nodes: a metaanalysis"
+    },
+    {
+      "title": "Gastrointest Endosc"
+    },
+    {
+      "title": "Elastography for predicting and localizing nodal metastases during endobronchial ultrasound"
+    },
+    {
+      "title": "Respiration"
+    },
+    {
+      "title": "Diagnostic value of endobronchial ultrasound elastography for the differentiation of benign and malignant intrathoracic lymph nodes",
+      "year": 2015
+    },
+    {
+      "title": "Respirology"
+    },
+    {
+      "title": "Endobronchial ultrasound elastography in the diagnosis of mediastinal and hilar lymph nodes"
+    },
+    {
+      "title": "Jpn J Clin Oncol"
+    },
+    {
+      "title": "Endobronchial ultrasound elastography strain ratio for mediastinal lymph node diagnosis"
+    },
+    {
+      "title": "Radiol Oncol"
+    },
+    {
+      "title": "Real time elastography endoscopic ultrasound (RTE-EUS), a comprehensive review"
+    },
+    {
+      "title": "Eur J Radiol"
+    },
+    {
+      "title": "Elastography in endobronchial ultrasound: stretching the boundary of minimally invasive staging further"
+    },
+    {
+      "title": "Effectiveness of the benign and malignant diagnosis of mediastinal and hilar lymph nodes by endobronchial ultrasound elastography"
+    },
+    {
+      "title": "J Cancer"
+    },
+    {
+      "title": "The role of endobronchial ultrasound elastography in the diagnosis of mediastinal lymph nodes"
+    },
+    {
+      "title": "Egypt J Bronchol",
+      "year": 2018
+    },
+    {
+      "title": "Real-time elastography: strain ratio measurements are influenced by the position of the reference area",
+      "year": 2018
+    },
+    {
+      "title": "Ultraschall Med"
+    },
+    {
+      "title": "European EUS Elastography Multicentric Study Group. Accuracy of endoscopic ultrasound elastography used for differential diagnosis of focal pancreatic masses: a multicenter study"
+    },
+    {
+      "title": "Endoscopy"
+    },
+    {
+      "title": "Revised ESTS guidelines for preoperative mediastinal lymph node staging for non-small-cell lung cancer"
+    },
+    {
+      "title": "Eur J Cardiothorac Surg"
+    },
+    {
+      "title": "European Association of Nuclear Medicine (EANM). FDG PET/CT: EANM procedure guidelines for tumour imaging: version 2.0"
+    },
+    {
+      "title": "Eur J Nucl Med Mol Imaging"
+    },
+    {
+      "title": "R: A language and environment for statistical computing",
+      "year": 2016
+    },
+    {
+      "title": "Correspondence: endobronchial ultrasound elastography for the differentiation of benign and malignant lymph nodes",
+      "year": 2016
+    }
+  ],
+  "quality": {
+    "completeness_score": 0,
+    "has_abstract": true,
+    "abstract_source": "metadata",
+    "has_doi": true,
+    "has_full_text": true,
+    "num_sections": 24,
+    "num_tables": 3,
+    "num_figures": 11,
+    "num_references": 51
+  }
+}

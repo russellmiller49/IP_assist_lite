@@ -1,0 +1,929 @@
+{
+  "metadata": {
+    "document_id": "10_1177_0885066618755334",
+    "title": "Ultrasound-Guided Percutaneous Dilational Tracheostomy: A Systematic Review of Randomized Controlled Trials and Meta-Analysis",
+    "authors": [
+      "André L. N. Gobatto",
+      "Bruno A. M. P. Besen",
+      "Mino Cestari",
+      "Paolo Pelosi",
+      "Luiz M. S. Malbouisson"
+    ],
+    "year": 2018,
+    "journal": "Journal of Intensive Care Medicine",
+    "doi": "10.1177/0885066618755334",
+    "volume": "35",
+    "issue": "5",
+    "pages": "445-452",
+    "citation": "Gobatto, et al. (2018). Ultrasound-Guided Percutaneous Dilational Tracheostomy: A Systematic Review of Randomized Controlled Trials and Meta-Analysis. Journal of Intensive Care Medicine, 35(5), 445-452. https://doi.org/10.1177/0885066618755334",
+    "abstract": "Introduction: Percutaneous dilational tracheostomy (PDT) is a common and increasingly used procedure in the intensive care unit (ICU). It is usually performed with bronchoscopy guidance. Ultrasound has emerged as a useful tool in order to assist PDT, potentially improving its success rate and reducing procedural-related complications. Objective: To investigate whether the ultrasound-guided PDT is equivalent or superior to the bronchoscopy-guided or anatomical landmarks-guided PDT with regard to procedural-related and clinical complications. Methods: A systematic review of randomized clinical trials was conducted comparing an ultrasound-guided PDT to the control groups (either a bronchoscopy-guided PDT or an anatomical landmarkguided PDT) in patients undergoing a PDT in the ICU. The primary outcome was the incidence of major procedural-related and clinical complication rates. The secondary outcome was the incidence of minor complication rates. Random-effect meta-analyzes were used to pool the results. Results: Four studies fulfilled the inclusion criteria and they were analyzed. The studies included 588 participants. There were no differences in the major complication rates between the patients who were assigned to the ultrasound-guided PDT when compared to the control groups (pooled risk ratio [Relative risk (RR)]: 0.48; 95% confidence interval [CI]: 0.131.71, I 2 ¼ 0%). The minor complication rates were not different between the groups, but they had a high heterogeneity (pooled Relative risk (RR): 0.49; 95% CI 0.16-1.50; I 2 ¼ 85%). The sensitivity analyzes that only included the randomized controlled trials that used a landmark-guided PDT as the control group showed lower rates of minor complications in the ultrasound-guided PDT group (pooled Relative risk (RR): 0.55; 95% CI: 0.31-0.98, I 2 ¼ 0%). Conclusion: The ultrasound-guided PDT seems to be safe and it is comparable to the bronchoscopy-guided PDT regarding the major and minor procedural-related or clinical complications. It also seems to reduce the minor complications when compared to the anatomical landmark-guided PDT",
+    "abstract_source": "metadata",
+    "url": "https://journals.sagepub.com/doi/10.1177/0885066618755334"
+  },
+  "source_file": "Ultrasound-Guided Percutaneous Dilational Trac.json",
+  "sections": [
+    {
+      "title": "Ultrasound-Guided Percutaneous Dilational Tracheostomy: A Systematic Review of Randomized Controlled Trials and Meta-Analysis",
+      "content": "Andre ´ L. N. Gobatto, MD 1,2,3,4 , Bruno A. M. P. Besen, MD 5,6 , Mino Cestari, MD 7 , Paolo Pelosi, MD, FERS 8 , and Luiz M. S. Malbouisson, MD, PhD 1,9",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Abstract",
+      "content": "Introduction: Percutaneous dilational tracheostomy (PDT) is a common and increasingly used procedure in the intensive care unit (ICU). It is usually performed with bronchoscopy guidance. Ultrasound has emerged as a useful tool in order to assist PDT, potentially improving its success rate and reducing procedural-related complications. Objective: To investigate whether the ultrasound-guided PDT is equivalent or superior to the bronchoscopy-guided or anatomical landmarks-guided PDT with regard to procedural-related and clinical complications. Methods: A systematic review of randomized clinical trials was conducted comparing an ultrasound-guided PDT to the control groups (either a bronchoscopy-guided PDT or an anatomical landmarkguided PDT) in patients undergoing a PDT in the ICU. The primary outcome was the incidence of major procedural-related and clinical complication rates. The secondary outcome was the incidence of minor complication rates. Random-effect meta-analyzes were used to pool the results. Results: Four studies fulfilled the inclusion criteria and they were analyzed. The studies included 588 participants. There were no differences in the major complication rates between the patients who were assigned to the ultrasound-guided PDT when compared to the control groups (pooled risk ratio [Relative risk (RR)]: 0.48; 95% confidence interval [CI]: 0.131.71, I 2 ¼ 0%). The minor complication rates were not different between the groups, but they had a high heterogeneity (pooled Relative risk (RR): 0.49; 95% CI 0.16-1.50; I 2 ¼ 85%). The sensitivity analyzes that only included the randomized controlled trials that used a landmark-guided PDT as the control group showed lower rates of minor complications in the ultrasound-guided PDT group (pooled Relative risk (RR): 0.55; 95% CI: 0.31-0.98, I 2 ¼ 0%). Conclusion: The ultrasound-guided PDT seems to be safe and it is comparable to the bronchoscopy-guided PDT regarding the major and minor procedural-related or clinical complications. It also seems to reduce the minor complications when compared to the anatomical landmark-guided PDT.",
+      "category": "abstract",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Keywords",
+      "content": "tracheostomy, ultrasound, bronchoscopy, intensive care unit",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Introduction",
+      "content": "Percutaneous dilational tracheostomy (PDT) is a commonly performed procedure, especially in mechanically ventilated patients in an intensive care unit (ICU). 1 It has a safety profile that favorably compares with surgical tracheostomy. 2,3 Although the overall complication rates are low, severe adverse events, including death, are still reported. 4\nBronchoscopy guidance was introduced as a safety adjunctive tool. It has been shown to improve the procedure's accuracy and to reduce the PDT-related complications when compared with the anatomical landmark-guided technique. 5 Bronchoscopy helps to more beneficially define the appropriate site for the tracheal puncture, to guide the real-time entrance of the needle into the trachea, avoiding tracheal posterior wall injuries, as well as confirming the endotracheal tube placement. 6,7 However, bronchoscopy does not identify the cervical\nReceived October 22, 2017. Received revised December 20, 2017. Accepted January 05, 2018.",
+      "category": "introduction",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Corresponding Author:",
+      "content": "Andre ´ L. N. Gobatto, Department of Internal Medicine, Salvador University, Avenida Sa ˜o Rafael, 2152, 6th. floor, Salvador, Brazil. Email: andregobatto@gmail.com\nJournal of Intensive Care Medicine 2020, Vol. 35(5) 445-452 ª The Author(s) 2018 Article reuse guidelines: sagepub.com/journals-permissions DOI: 10.1177/0885066618755334 journals.sagepub.com/home/jic\nanatomical structures and it does not prevent potential complications, such as vascular lesions or thyroid punctures.\nRecently, ultrasound has emerged as a potentially useful tool in assisting PDT. The potential advantages of ultrasound include the ability of identifying the cervical vasculature 8 to help in identifying the most appropriate location for the tracheal puncture site, as well as in guiding the needle's insertion into the trachea, which is similar to the technique as used in ultrasound-guided vascular punctures. Several case series and observational studies have demonstrated the value of preprocedural cervical ultrasound and the use of real time ultrasound guidance in improving the safety of PDT, suggesting that the method is effective and safe 9 . A few randomized controlled trials (RCTs) have been published suggesting that the use of real-time ultrasound-guided PDT may significantly improve the rate of first-pass punctures, the puncture's accuracy, as well as reducing the procedural-related complications, when compared to the anatomical landmark-guided PDT 10,11 and the bronchoscopy-guided PDT. 12,13 Nevertheless, most of these trials are small and limited by their sample size and their quality of data.\nAs a result, we have performed a systematic review and have conducted meta-analyzes in order to investigate whether the ultrasound-guided PDT is equivalent or even superior to the bronchoscopy-guided PDT or to the anatomical landmarkguided PDT, with regard to the procedural-related safety and clinical complications.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Data Sources and Search Strategies",
+      "content": "Randomized clinical trials that compared the ultrasoundguided PDT with the bronchoscopy-guided PDT or the anatomical landmark-guided PDT were identified, by using a broad search strategy including both electronic and manual search strategies. These searches were supplemented by scanning the bibliographies of all of the retrieved articles, as well as the reviewed articles. We also reexamined selected conference proceedings. We investigated Medline, the Cochrane Central Register of Controlled Trials, Literatura Latino-Americana e do Caribe em Cie ˆncias da Sau ´de, and Scientific Electronic Library Online from their inception to April 2017. No language restrictions were applied. A sensitive search strategy was conducted, combining the following keywords and the Boolean Operators of 'AND' and 'OR': ('tracheostomy' OR 'tracheotomy') AND ('ultrasound' OR 'ultrasonography' OR 'echography'). In addition to the electronic searches, we checked the cross references from the original articles and reviews. We retrieved additional case studies by hand, searching the Abstracts from the Meetings of the American Thoracic Society, the Society of Critical Care Medicine, and the European Society of Intensive Care Medicine. These were all held between 2010 and 2017. Completed but unpublished studies were identified by searching the various websites on the Public Registers of Clinical Trials. Neither ethical approval nor\npatient consent was needed for these meta-analyzes. A prefered reporting items for systematic reviews and meta-analyses (PRISMA) statement was used for guidance, 14 and the metaanalysis was registered on the international prospective register of systematic reviews database (CRD42017064316).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Study Selection",
+      "content": "Titles and Abstracts were screened to assess whether the study was an RCT that addressed the ultrasound-guided PDT. The full-text articles of such were retrieved and assessed to determine whether they fulfilled the predetermined eligible criteria for inclusion. Two authors (M.C. and B.B.) independently applied the inclusion criteria to the potentially eligible articles, with any disagreements resolved by discussion or by resort to a third reviewer (A.G.). To be eligible for inclusion, the article had to describe a study that fulfilled all following eligibility criteria: Study Design-RCT, Intervention-to have compared the ultrasound-guided PDT to any other method of elective PDT, Population-adult patients, and Outcomes-to have reported at least one of the measures of: bleeding, of a wound infection, mortality, the duration of mechanical ventilation, or the ICU's length of stay.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Data Extraction",
+      "content": "The data were extracted individually, by using a prestandardized data extraction form, by 2 authors (M.C. and B.B.). Another reviewer (A.G.) compared the individual data extraction and checked for the extraction's accuracy, without any information about the authors, the journal, the institutional affiliation, or the date of publication. When the data were not reported in sufficient enough detail, in order to determine a study's eligibility, its validity, or its outcomes, we attempted to contact the corresponding author by e-mail for clarification.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Outcome Measures",
+      "content": "The primary outcome was the number of total major complications. In order to reduce the bias and the heterogeneity, the number of total major complications was calculated for each study based on a predefined list of standardized complications that were defined as: the reporting of a procedural-related death, a cardiac arrest, a tracheal wall injury, a false passage cannulation, pneumothorax, pneumomediastinum, a tracheostomy cannula obstruction, an esophageal injury, a tracheaesophageal fistula, a conversion to surgical tracheostomy, persistent hypotension (systolic blood pressure below 90 mm Hg for more than 5 minutes and an associated intervention that was used to increase the blood pressure by using fluids, a vasopressor infusion, or a repeated vasopressor bolus), persistent acute hypoxemia (oxygen peripheral saturation below 90 % for more than 5 minutes as measured by a pulse oximeter), major bleeding (a stoma, an intratracheal, or a tracheavascular fistula, causing hypoxemia and/or requiring an emergency transfusion and/or a surgical repair), and a\ntracheostomy-related sepsis (a stoma infection as the only identifiable source of sepsis).\nThe secondary sought outcome was the number of minor complications. The composed number of minor complications was calculated for each study based on a predefined list of standardized complications that were defined as: transient hypotension (systolic blood pressure below 90 mm Hg for more than 5 minutes and an associated intervention that was used to increase the blood pressure by using fluids, or a single vasopressor bolus), transient acute hypoxemia (oxygen peripheral saturation below 90 % for less than 5 minutes as measured by a pulse oximeter), atelectasis, an accidental decannulation, a tracheostomy stomal infection, localized minor bleeding (a stoma, or an intratracheal self-limiting bleeding, or bleeding successfully when treated with a local compression, or by an instillation of topical vasoconstrictive agents), a localized subcutaneous emphysema without any evidence of pneumothorax or pneumomediastinum, and local stomal infections not causing sepsis.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Risk of Bias Assessment",
+      "content": "The risk of bias of the individual trials was assessed by using the Cochrane Risk of Bias Tool. 15 For the outcomes of each included trial, the risk of bias was reported as a 'low risk,' an 'unclear risk,' or a 'high risk,' in the following domains: random sequence generation, allocation concealment, blinding of participants and personnel, blinding of the outcome assessments, incomplete outcome data, selective reporting, or any other bias. Two authors (M.C. and B.B.) independently analyzed the eligible articles, with disagreements resolved by discussion, or by resort to a third reviewer (A.G.).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Qualitative Analyzes",
+      "content": "A narrative summary approach was used to explore the study's characteristics. Quality indicators were used in order to analyze the study-to-study variations and their implications on the outcomes, as reported in the included RCTs. 16",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Quantitative Analyzes",
+      "content": "Meta-analyzes were performed according to the Cochrane Collaboration Guidelines. 15 The pooled effect estimates for the binary variables were expressed as odds ratios with a 95 % confidence interval (CI), whereas the continuous variables were expressed as mean differences with 95 % CI. The differences in the estimations of the treatment effects between the treatments and the control groups were tested for each hypothesis by using a 2-sided z test with a statistical significance considered to be at P < .05. The heterogeneity was examined by using the Cochran Q test and Higgins I 2 test. 17,18 We predefined the heterogeneity as being low, moderate, or high, with I 2 values above 25 % , 50 % , or 75 % , respectively. 17 Metaanalyzes were applied on a random-effects model. We considered a 2-tailed P < .05 as being significant. The potential for\npublication bias was assessed by inspection of funnel plots for asymmetry. A priori selected subgroups for sensitivity analysis included the use of bronchoscopic guidance to guide the PDT and if the PDT was performed by and experienced physician or trainee. All of the statistical analyzes were performed with Review Manager Software (Revman 5.3, The Cochrane Collaboration, Oxford, United Kingdom) for preparing and maintaining the Cochrane systematic reviews.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Results",
+      "content": "A total of 293 publications were identified by the established research strategies. Twenty-five full-text articles were retrieved for a more detailed review, and finally 4 studies 10-13 fulfilled all of the inclusion criteria, and these were included in the analyzes (Figure 1).",
+      "category": "results",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Study Description",
+      "content": "A total of 588 patients were randomized from 4 RCTs. The main characteristics of the studies are shown in Table 1. All of the studies were single center, unblinded, and included patients admitted to an ICU. Two of the studies compared the ultrasound-guided PDT with the anatomical landmark-guided PDT, 10,11 while the 2 additional studies compared ultrasoundguided PDT with bronchoscopy-guided PDT. 12,13 The studies that were conducted by Rudas et al 11 and Gobatto et al 13 followed up the patients until their hospital discharge. The followup period in the study that was conducted by Yavuz et al 10 lasted from 3 to 8 months after the tracheostomy. In the study that was conducted by Ravi and Vijay, the follow-up period was unclear. 12 Multiple trainee intensivists or senior intensivists performed the PDT procedures in the trials that were conducted by Rudas et al, 11 Ravi and Vijay, 12 and Gobatto et al. 13 A single clinician was responsible for performing all of the PDTs in the Yavuz trial. 10\nIn the 4 included studies, the ultrasound-guided PDTs were performed under real-time ultrasound guidance. Three of the trials 10,12,13 used the forceps dilator technique as described by Griggs et al, 19 and 1 trial 11 used the single dilator technique as described by Ciaglia. 20 The patients' characteristics for each study are described in Table 2.\nMost of the included patients in the 4 included studies did not have a difficult anatomy, for example, in the study conducted by Rudas et al, 11 no patient was classified as having a difficult anatomy. However, in the other trials, there was a considerable number of patients with difficult anatomy. In the trial by Yavuz et al, 10 85 (24.9 % ) patients had a short neck in the overall population. In Ravi and Vijay, 12 26 (35 % ) patients were obese, 12 (16 % ) patients had a short neck, and 14 (19 % ) patients had tracheal deviation. And in the trial conducted by Gobatto et al, 13 6 (5 % ) patients had a short neck, 2 (1.7 % ) patients had tracheal deviation, 4 (3.4 % ) patients had goiter, and 4 (3.4 % ) had a limited neck extension.\nThree of the trials reported on procedure duration. 10,12,13 Overall, ultrasound-guided PDT was faster than the\nAbbreviations: ICU, intensive care unit; PDT, percutaneous dilational tracheostomy.\na Values are expressed as the mean (standard deviation), median (25th-75th percentiles), or a number (percentage).\nbronchoscopy-guided PDT or the anatomical landmark-guided PDT (Table 2). However, only in the trial conducted by Yavuz et al, 10 this difference was statistically significant (18.6 + 6.3 minutes vs 24.1 + 8.0 minutes, P ¼ .001, respectively). Additionally, Yavuz et al 10 describe a lower number of multiple attempts (6 [3.9 % ] patients vs and 23 [13.6 % ] patients, P ¼ .003) and Rudas et al 11 describe a higher first-pass success rate (20 [87 % ] patients vs 14 [58 % ] patients, P ¼ .028) when comparing ultrasound-guided PDT with landmark-guided PDT.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Risk of Bias Assessment",
+      "content": "Figure 2 summarizes the Cochrane Risk of Bias Tool assessment. All of the studies were unblinded due to the nature of the interventions. Two of the studies clearly used a random sequence generation and they maintained an allocation concealment, 11,13 while in the 2 other studies, the allocation concealment was unclear. 10,12 There was no evidence of publication bias by the funnel plot asymmetry analysis (Supplemental Appendix).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Major Complications",
+      "content": "All of the trials reported total major complications as an outcome. Ten (1.8 % ) major complications were reported, ranging from 0 % to 2.2 % among the included trials. There were no significant differences in the major complications between those patients who were assigned to the ultrasound-guided PDT when compared with those who were assigned to the bronchoscopy-guided PDT Odds ratio (or) the landmark-guided PDT (pooled Relative risk (RR): 0.48; 95 % CI: 0.13-1.71, I 2 ¼ 0 % ; Figure 3). Two sensitivity analyzes for the RCTs using only the bronchoscopyguided PDT 12,13 or only the anatomical landmark-guided PDT for the control groups showed similar results 10,11 (Supplemental Appendix).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Minor Complications",
+      "content": "All of the studies reported minor complications as an outcome, with a high variability of definitions. The pooled minor complications rate was 19.2 % , ranging from 9.6 % to 37.8 % . The minor complications were not different between those patients who were randomized to the ultrasound-guided PDT group when compared with those who were randomized to the bronchoscopy-guided PDT group Odds ratio (or) the anatomical landmark-guided PDT group (pooled Relative risk (RR): 0.49; 95 % CI: 0.161.50, I 2 ¼ 86 % ; Figure 4). There was a high heterogeneity. The sensitivity analyzes that included only the RCTs that used the landmark-guided PDT for the control group 10,11 showed lower rates of total minor complications in the ultrasoundguided PDT group (pooled Relative risk (RR): 0.49; 95 % CI: 0.25-0.96, I 2 ¼ 0 % ; Figure 5). For the RCTs that used a bronchoscopyguided PDT for the control group, the sensitivity analyzes showed no differences between the groups; although, the CI and the heterogeneity were rather large (pooled Relative risk (RR): 0.35; 95 % CI: 0.01-10.53, I 2 ¼ 95 % ; Supplemental Appendix). Additional sensitivity analyzes and a detailed description of the\nAbbreviations: BMI, body mass index; MV, mechanical ventilation; NA, not available.\na Values are expressed as the mean (standard deviation), median (25th-75th percentiles), or a number (percentage).\nprocedural-related and the clinical complications are available in the Supplemental Appendix.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Discussion",
+      "content": "Our systematic review and the meta-analyzes have shown that the ultrasound-guided PDT when compared to the control groups (the bronchoscopy-guided PDT or the anatomical landmark-guided PDT) had no differences in the rates of procedural-related and clinical major or clinical minor complications. Furthermore, the sensitivity analyzes suggests that the ultrasound-guided PDT might reduce the minor complications when compared to the anatomical landmark-guided PDT but not when compared to the bronchoscopy-guided PDT.\nThe major and minor complication outcomes were calculated for each study from a predefined list of standardized complications, instead of using the number of total complications provided by the authors. This method was chosen due to\nthe high variability of the reports and the definitions among the included trials. This standardization list was based on the trial by Gobatto et al. 13\nThe number of major complications was low in all of the 4 trials, ranging from 0 % to 2.2 % , which is similar to previously published complication rates. In the 2 largest retrospective cohorts that analyzed those patients who were submitted to a PDT, which included 4162 patients, the major complication rates ranged from 0.4 % to 1.4 % , 4,21 which was similar to the 1.8 % major complications rate in our pooled analyzes. The major complication rates were not different between the ultrasound-guided PDT and the bronchoscopy-guided PDT or the anatomical landmark-guided PDT. This low complication rate is a potential limitation to this analysis since these trials may have been underpowered to detect such small differences, even when they were combined in the meta-analyzes.\nWith a standardization of the definitions, the minor complication rates were highly variable, ranging from 9.6 % to 37.8 % ,\nprobably reflecting the different populations and the interventions among the included trials. The total minor complications were not different when comparing the ultrasound-guided PDT with the bronchoscopy-guided PDT or the anatomical landmark-guided PDT. However, in the sensitivity analyzes, when the ultrasound-guided PDT was compared to the anatomical landmark-guided PDT, there was a lower rate of minor complications in the ultrasound-guided group.\nUltrasound can assist in the identification of the cervical vasculature, 8 the definition of the most appropriate location for the tracheal puncture site, as well as in guiding the needle's insertion into the trachea. The tracheal puncture site might change up to 50 % of the times when a cervical ultrasound is performed after the puncture site had been previously defined by the anatomical landmarks. 22 Furthermore, the ultrasoundguided PDT is faster and may significantly improve the rate of first-pass punctures and the puncture's accuracy when compared to the anatomical landmark-guided PDT. 11 Taken together, this information might explain the superiority of the ultrasound-guided PDT to the anatomical landmark-guided PDT when reducing the complications that are related to PDT. However, caution is advised since these results were only derived from analyzes of 2 of the 4 trials that were initially included in the systematic review, with a limited number of patients and low incidence of events.\nMost of the included patients in the 4 trials did not have a difficult anatomy. However, there was a considerable number of patients with difficult anatomy, especially in the trials conducted by Yavuz, 23 Ravi and Vijay, 12 and Gobatto et al. 13 In the trial conducted by Ravi and Vijay, 12 26 (35 % ) patients were obese, and in the trial by Yavuz et al, 10 85 (24.9 % ) patients had a short neck. Thus, the results of this systematic review might be generalizable to these patients.\nThe results of this meta-analysis lead to another consideration. Either bronchoscopy-guided PDT or ultrasound-guided PDT seems to improve safety of the procedure, at least with regard to minor complications. However, none of the trials tested the hypothesis that these 2 methods may, indeed, be complementary. Although bronchoscopy can help to observe what is actually happening in the trachea during the procedure, such as posterior wall puncture, ultrasound is able to identify abnormal cervical structures or vasculature and to guide the correct puncture site with visualization of the guidewire. Therefore, there seems to be space for a combined approach in order to enhance procedural safety.\nThe average quality of the included trials was only moderate. Two of the trials were qualified as having a better caliber, 11,13 by showing a low risk of bias in the random sequence generation, in the allocation concealment, together with the incomplete outcome data and the selective reporting. The blinding of the participants and personnel exhibited a high risk of bias in all included trials, due to the nature of the procedures. In the other 2 included trials, 10,12 there was an unclear description of the random sequence generation and the allocation concealment, elevating these 2 trials into a risk of bias.\nThis systematic review has had some limitations. First, in spite of the literature search that was conducted, only 4 trials were identified. No study that had been published in the nonindexed journals or in the conference proceedings was identified. Second, the included studies had a significant heterogeneity when they were evaluated for minor complications. Third, the studies were all single-center and they had relatively small sample sizes. Fourth, all of the trials had different protocols. The trials also used differing PDT techniques (3 used a forceps dilator and 1 used a single dilator). Fifth, the trials had different physicians with dissimilar experiences when performing the procedures.",
+      "category": "discussion",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Conclusion",
+      "content": "This systematic review has shown that the ultrasound-guided PDT is safe. It was comparable to the bronchoscopy-guided PDT when considering the major and minor complications. Furthermore, the ultrasound-guided PDT seems to reduce the minor complications when compared to the anatomical landmark-guided PDT. As a result, the ultrasound-guided PDT might represent an alternative to the bronchoscopy-guided PDT or the anatomical landmark-guided PDT.",
+      "category": "conclusion",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Authors' Note",
+      "content": "The design, collection, analysis and interpretation of data, plus writing and publication of the manuscript were done by the authors without participation or influence from any funding source.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Declaration of Conflicting Interests",
+      "content": "The author(s) declared no potential conflicts of interest with respect to the research, authorship, and/or publication of this article.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Funding",
+      "content": "The author(s) received no financial support for the research, authorship, and/or publication of this article.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "ORCID iD",
+      "content": "Bruno A. M. P. Besen, MD https://orcid.org/0000-0002-3516-9696",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Supplemental Material",
+      "content": "Supplemental material for this article is available online.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "References",
+      "content": "1. Vargas M, Sutherasan Y, Antonelli M, et al. Tracheostomy procedures in the intensive care unit: an international survey. Crit Care . 2015;19:291.\n2. Delaney A, Bagshaw SM, Nalos M. Percutaneous dilatational tracheostomy versus surgical tracheostomy in critically ill patients: a systematic review and meta-analysis. Crit Care . 2006;10(2):R55.\n3. Putensen C, Theuerkauf N, Guenther U, Vargas M, Pelosi P. Percutaneous and surgical tracheostomy in critically ill adult patients: a meta-analysis. Crit Care . 2014;18(6):544.\n4. Dennis BM, Eckert MJ, Gunter OL, Morris JA Jr, May AK. Safety of bedside percutaneous tracheostomy in the critically ill:\nevaluation of more than 3,000 procedures. J Am Coll Surg . 2013; 216(4):858-865; discussion 865-857.\n5. Kost KM. Endoscopic percutaneous dilatational tracheotomy: a prospective evaluation of 500 consecutive cases. Laryngoscope . 2005;115(10 pt 2):1-30.\n6. Hinerman R, Alvarez F, Keller CA. Outcome of bedside percutaneous tracheostomy with bronchoscopic guidance. Intensive Care Med . 2000;26(12):1850-1856.\n7. Fernandez L, Norwood S, Roettger R, Gass D, Wilkins H 3rd. Bedside percutaneous tracheostomy with bronchoscopic guidance in critically ill patients. Arch Surg . 1996;131(2): 129-132.\n8. Flint AC, Midde R, Rao VA, Lasman TE, Ho PT. Bedside ultrasound screening for pretracheal vascular structures may minimize the risks of percutaneous dilatational tracheostomy. Neurocrit Care . 2009;11(3):372-376.\n9. Alansari M, Alotair H, Al Aseri Z, Elhoseny MA. Use of ultrasound guidance to improve the safety of percutaneous dilatational tracheostomy: a literature review. Crit Care . 2015;19(1):229.\n10. Yavuz A, Yilmaz M, Goya C, Alimoglu E, Kabaalioglu A. Advantages of US in percutaneous dilatational tracheostomy: randomized controlled trial and review of the literature. Radiology . 2014;273(3):927-936.\n11. Rudas M, Seppelt I, Herkes R, Hislop R, Rajbhandari D, Weisbrodt L. Traditional landmark versus ultrasound guided tracheal puncture during percutaneous dilatational tracheostomy in adult intensive care patients: a randomised controlled trial. Crit Care . 2014;18(5):514.\n12. Ravi PR, Vijay MN. Real time ultrasound-guided percutaneous tracheostomy: is it a better option than bronchoscopic guided percutaneous tracheostomy? Med J Armed Forces India . 2015; 71(2):158-164.\n13. Gobatto AL, Besen BA, Tierno PF, et al. Ultrasound-guided percutaneous dilational tracheostomy versus bronchoscopy-guided\npercutaneous dilational tracheostomy in critically ill patients (TRACHUS): a randomized noninferiority controlled trial. Intensive Care Med . 2016;42(3):342-351.\n14. Liberati A, Altman DG, Tetzlaff J, et al. The PRISMA statement for reporting systematic reviews and meta-analyses of studies that evaluate healthcare interventions: explanation and elaboration. BMJ . 2009;339:b2700.\n15. Higgins JP, Altman DG, Gotzsche PC, et al; Cochrane Bias Methods Group; Cochrane Statistical Methods Group. The cochrane collaboration's tool for assessing risk of bias in randomised trials. BMJ . 2011;343:d5928.\n16. Dixon-Woods M, Shaw RL, Agarwal S, Smith JA. The problem of appraising qualitative research. Qual Saf Health Care . 2004; 13(3):223-225.\n17. Higgins JP, Thompson SG, Deeks JJ, Altman DG. Measuring inconsistency in meta-analyses. BMJ . 2003;327(7414): 557-560.\n18. Higgins JP, Thompson SG. Quantifying heterogeneity in a metaanalysis. Stat Med . 2002;21(11):1539-1558.\n19. Griggs WM, Worthley LI, Gilligan JE, Thomas PD, Myburg JA. A simple percutaneous tracheostomy technique. Surg Gynecol Obstet . 1990;170(6):543-545.\n20. Ciaglia P, Firsching R, Syniec C. Elective percutaneous dilatational tracheostomy. A new simple bedside procedure; preliminary report. Chest . 1985;87(6):715-719.\n21. Kornblith LZ, Burlew CC, Moore EE, et al. One thousand bedside percutaneous tracheostomies in the surgical intensive care unit: time to change the gold standard. J Am Coll Surg . 2011;212(2):163-170.\n22. Guinot PG, Zogheib E, Petiot S, et al. Ultrasound-guided percutaneous tracheostomy in critically ill obese patients. Crit Care . 2012;16(2):R40.\n23. Yavuz A. Ultrasound-guided percutaneous dilatational tracheostomy: stated advantages are just the tip of the iceberg. J Crit Care . 2015;30(2):425-426.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    }
+  ],
+  "tables": [
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/89'}",
+      "headers": [
+        "Study",
+        "Design",
+        "Patients Randomized (n ¼ 588)",
+        "Patients Analyzed (n ¼ 561)",
+        "Population",
+        "Comparison",
+        "Follow-Up",
+        "Method of PDT",
+        "Performed By"
+      ],
+      "rows": [
+        [
+          "Rudas et al 11",
+          "Single center, unblinded",
+          "50",
+          "48",
+          "ICU Patients",
+          "Landmarks-guided PDT",
+          "Hospital discharge",
+          "Single dilator",
+          "Trainee"
+        ],
+        [
+          "Yavuz et al 10",
+          "Single center, unblinded",
+          "341",
+          "321",
+          "ICU patients",
+          "Landmark-guided PDT",
+          "3-8 months",
+          "Forceps",
+          "Clinician"
+        ],
+        [
+          "Ravi and Vijay 12",
+          "Single center, unblinded",
+          "74",
+          "74",
+          "ICU patients",
+          "Bronchoscopy- guided PDT",
+          "Unclear",
+          "Forceps",
+          "Intensivist"
+        ],
+        [
+          "Gobatto et al 13",
+          "Single center, unblinded",
+          "123",
+          "118",
+          "ICU patients",
+          "Bronchoscopy- guided PDT",
+          "Hospital discharge",
+          "Forceps",
+          "Trainee"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/94'}",
+      "headers": [
+        "Study",
+        "Rudas et al 11",
+        "Rudas et al 11",
+        "Yavuz et al 10",
+        "Yavuz et al 10",
+        "Ravi and Vijay 12",
+        "Ravi and Vijay 12",
+        "Gobatto et al 13",
+        "Gobatto et al 13"
+      ],
+      "rows": [
+        [
+          "",
+          "Ultrasound",
+          "Landmarks",
+          "Ultrasound",
+          "Landmarks",
+          "Ultrasound",
+          "Bronchoscopy",
+          "Ultrasound",
+          "Bronchoscopy"
+        ],
+        [
+          "Number of patients, n (%)",
+          "24",
+          "24",
+          "154",
+          "157",
+          "38",
+          "36",
+          "60",
+          "58"
+        ],
+        [
+          "Age, years",
+          "57.0 (15.1)",
+          "58.4 (15.2)",
+          "59.6 (14.8)",
+          "57.2 (11.4)",
+          "58 (1.6)",
+          "61 (1.2)",
+          "49.9 (16.6)",
+          "46.9 (18.6)"
+        ],
+        [
+          "BMI, kg/m 2",
+          "26.1 (7.2)",
+          "30.3 (8.4)",
+          "NA",
+          "NA",
+          "26",
+          "24",
+          "25.1 (23.3-27.8)",
+          "25.2 (22.8-27.2)"
+        ],
+        [
+          "MV days before tracheostomy, days",
+          "9.3 (4.7)",
+          "10.1 (4.5)",
+          "NA",
+          "NA",
+          "7",
+          "5",
+          "13 (8-18)",
+          "15 (9-17)"
+        ],
+        [
+          "Procedure duration, minutes",
+          "NA",
+          "NA",
+          "24.1 (8.0)",
+          "18.6 (6.3)",
+          "12 (9-14)",
+          "18 (12-22)",
+          "11 (7-19)",
+          "13 (8-20)"
+        ],
+        [
+          "Change in puncture site, n (%)",
+          "",
+          "",
+          "39 (23.8)",
+          "",
+          "",
+          "",
+          "14 (23.3)",
+          ""
+        ],
+        [
+          "Major complications, n (%)",
+          "0",
+          "1 (4.2)",
+          "2 (1.3)",
+          "5 (3.2)",
+          "0",
+          "0",
+          "1 (1.7)",
+          "1 (1.7)"
+        ],
+        [
+          "Minor complications, n (%)",
+          "5 (20.8)",
+          "8 (33.3)",
+          "10 (6.5)",
+          "20 (12.7)",
+          "2 (5.3)",
+          "27 (75)",
+          "20 (33.3)",
+          "12 (20.7)"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "",
+      "headers": [
+        "Study or Subgroup",
+        "Ultrasound Events Total",
+        "Control Events",
+        "Total",
+        "Weight",
+        "Risk Ratio Risk Ratio M-H, Random, 95% CI M-H, Random, 95% CI",
+        ""
+      ],
+      "rows": [
+        [
+          "Gobatto 2016",
+          "60",
+          "",
+          "58",
+          "21.69 0.97 [0.06, 15.09]",
+          "",
+          ""
+        ],
+        [
+          "Ravi 2015",
+          "38",
+          "",
+          "36",
+          "Not estimable",
+          "",
+          ""
+        ],
+        [
+          "Rudas 2014",
+          "24",
+          "24",
+          "16.4%",
+          "0.33 [0.01, 7.80]",
+          "",
+          ""
+        ],
+        [
+          "Yavuz 2014",
+          "154",
+          "157",
+          "61.9%",
+          "0.41 [0.08, 2.07]",
+          "",
+          ""
+        ],
+        [
+          "Total (95% CI)",
+          "276",
+          "275",
+          "100.0%",
+          "0.48 [0.13, 1.71]",
+          "",
+          ""
+        ],
+        [
+          "Total events",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Heterogeneity: Tau? 0.00; Chi? 0.34, df = 2 (P = 0.84); /? 0%",
+          "Heterogeneity: Tau? 0.00; Chi? 0.34, df = 2 (P = 0.84); /? 0%",
+          "Heterogeneity: Tau? 0.00; Chi? 0.34, df = 2 (P = 0.84); /? 0%",
+          "Heterogeneity: Tau? 0.00; Chi? 0.34, df = 2 (P = 0.84); /? 0%",
+          "Heterogeneity: Tau? 0.00; Chi? 0.34, df = 2 (P = 0.84); /? 0%",
+          "0.01 10 Favours Ultrasound Favours Control",
+          "100"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "",
+      "headers": [
+        "",
+        "Ultrasound",
+        "Ultrasound",
+        "Control",
+        "Control",
+        "",
+        "Risk Ratio",
+        "Risk Ratio"
+      ],
+      "rows": [
+        [
+          "Study or Subgroup",
+          "Events",
+          "Total",
+          "Events",
+          "Total",
+          "Weight",
+          "M-H, Random, 95% CI",
+          "M-H, Random, 95% CI"
+        ],
+        [
+          "Gobatto 2016",
+          "20",
+          "60",
+          "12",
+          "58",
+          "",
+          "1.61 [0.87, 2.99]",
+          ""
+        ],
+        [
+          "Ravi 2015",
+          "",
+          "38",
+          "27",
+          "36",
+          "",
+          "0.07 [0.02, 0.27]",
+          ""
+        ],
+        [
+          "Rudas 2014",
+          "",
+          "24",
+          "",
+          "24",
+          "24.79",
+          "0.63 [0.24, 1.64]",
+          ""
+        ],
+        [
+          "Yavuz 2014",
+          "10",
+          "154",
+          "20",
+          "157",
+          "26.89",
+          "0.51 [0.25, 1.05]",
+          ""
+        ],
+        [
+          "Total (95% CI)",
+          "",
+          "276",
+          "",
+          "275",
+          "100.0%",
+          "0.49 [0.16, 1.50]",
+          ""
+        ],
+        [
+          "Total events",
+          "37",
+          "",
+          "67",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Heterogeneity: Tau? 1.10; Chi? = 20.71, df = 3 (P = 0.0001); 1? = 86% 0.01 0.1 10 Test for overall effect: Z = 1.25 (P = 0.21) Favours Ultrasound Favours Control",
+          "Heterogeneity: Tau? 1.10; Chi? = 20.71, df = 3 (P = 0.0001); 1? = 86% 0.01 0.1 10 Test for overall effect: Z = 1.25 (P = 0.21) Favours Ultrasound Favours Control",
+          "Heterogeneity: Tau? 1.10; Chi? = 20.71, df = 3 (P = 0.0001); 1? = 86% 0.01 0.1 10 Test for overall effect: Z = 1.25 (P = 0.21) Favours Ultrasound Favours Control",
+          "Heterogeneity: Tau? 1.10; Chi? = 20.71, df = 3 (P = 0.0001); 1? = 86% 0.01 0.1 10 Test for overall effect: Z = 1.25 (P = 0.21) Favours Ultrasound Favours Control",
+          "Heterogeneity: Tau? 1.10; Chi? = 20.71, df = 3 (P = 0.0001); 1? = 86% 0.01 0.1 10 Test for overall effect: Z = 1.25 (P = 0.21) Favours Ultrasound Favours Control",
+          "Heterogeneity: Tau? 1.10; Chi? = 20.71, df = 3 (P = 0.0001); 1? = 86% 0.01 0.1 10 Test for overall effect: Z = 1.25 (P = 0.21) Favours Ultrasound Favours Control",
+          "Heterogeneity: Tau? 1.10; Chi? = 20.71, df = 3 (P = 0.0001); 1? = 86% 0.01 0.1 10 Test for overall effect: Z = 1.25 (P = 0.21) Favours Ultrasound Favours Control",
+          "Heterogeneity: Tau? 1.10; Chi? = 20.71, df = 3 (P = 0.0001); 1? = 86% 0.01 0.1 10 Test for overall effect: Z = 1.25 (P = 0.21) Favours Ultrasound Favours Control"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "",
+      "headers": [
+        "",
+        "Ultrasound",
+        "Ultrasound",
+        "Control",
+        "Control",
+        "",
+        "Risk Ratio",
+        "",
+        "Risk Ratio",
+        "",
+        "",
+        ""
+      ],
+      "rows": [
+        [
+          "Study or Subgroup",
+          "Events",
+          "Total",
+          "Events",
+          "Total",
+          "Weight",
+          "M-H, Random, 95% CI",
+          "",
+          "M-H, Random, 95% CI",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Rudas 2014",
+          "",
+          "24",
+          "",
+          "24",
+          "36.2%",
+          "0.63 [0.24, 1.64]",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Yavuz 2014",
+          "10",
+          "154",
+          "20",
+          "157",
+          "63.8%",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Total (95% CI)",
+          "",
+          "178",
+          "",
+          "181",
+          "100.0%",
+          "0.55 [0.31,0.98]",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Total events",
+          "15",
+          "",
+          "28",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Heterogeneity: Tau? 0.00; Chi? 096",
+          "Heterogeneity: Tau? 0.00; Chi? 096",
+          "Heterogeneity: Tau? 0.00; Chi? 096",
+          "Heterogeneity: Tau? 0.00; Chi? 096",
+          "Heterogeneity: Tau? 0.00; Chi? 096",
+          "Heterogeneity: Tau? 0.00; Chi? 096",
+          "0.01",
+          "0.1",
+          "",
+          "10",
+          "100",
+          ""
+        ],
+        [
+          "Test for overall effect: Z = 2.03 (P = 0.04)",
+          "Test for overall effect: Z = 2.03 (P = 0.04)",
+          "Test for overall effect: Z = 2.03 (P = 0.04)",
+          "Test for overall effect: Z = 2.03 (P = 0.04)",
+          "Test for overall effect: Z = 2.03 (P = 0.04)",
+          "Test for overall effect: Z = 2.03 (P = 0.04)",
+          "Test for overall effect: Z = 2.03 (P = 0.04)",
+          "Favours Ultrasound Favours Landmarks",
+          "Favours Ultrasound Favours Landmarks",
+          "Favours Ultrasound Favours Landmarks",
+          "Favours Ultrasound Favours Landmarks",
+          "Favours Ultrasound Favours Landmarks"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    }
+  ],
+  "figures": [
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/55'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/97'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/164'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/217'}",
+      "page": null
+    }
+  ],
+  "references": [
+    {
+      "title": "Tracheostomy procedures in the intensive care unit: an international survey"
+    },
+    {
+      "title": "Crit Care",
+      "year": 2015
+    },
+    {
+      "title": "Percutaneous dilatational tracheostomy versus surgical tracheostomy in critically ill patients: a systematic review and meta-analysis",
+      "year": 2015
+    },
+    {
+      "title": "Percutaneous and surgical tracheostomy in critically ill adult patients: a meta-analysis",
+      "year": 2006
+    },
+    {
+      "title": "Safety of bedside percutaneous tracheostomy in the critically ill: evaluation of more than 3,000 procedures",
+      "year": 2014
+    },
+    {
+      "title": "J Am Coll Surg",
+      "year": 2013
+    },
+    {
+      "title": "Endoscopic percutaneous dilatational tracheotomy: a prospective evaluation of 500 consecutive cases",
+      "year": 2013
+    },
+    {
+      "title": "Laryngoscope",
+      "year": 2013
+    },
+    {
+      "title": "Outcome of bedside percutaneous tracheostomy with bronchoscopic guidance",
+      "year": 2005
+    },
+    {
+      "title": "Intensive Care Med",
+      "year": 2000
+    },
+    {
+      "title": "Bedside percutaneous tracheostomy with bronchoscopic guidance in critically ill patients",
+      "year": 2000
+    },
+    {
+      "title": "Arch Surg",
+      "year": 1996
+    },
+    {
+      "title": "Bedside ultrasound screening for pretracheal vascular structures may minimize the risks of percutaneous dilatational tracheostomy",
+      "year": 1996
+    },
+    {
+      "title": "Neurocrit Care",
+      "year": 2009
+    },
+    {
+      "title": "Use of ultrasound guidance to improve the safety of percutaneous dilatational tracheostomy: a literature review",
+      "year": 2009
+    },
+    {
+      "title": "Advantages of US in percutaneous dilatational tracheostomy: randomized controlled trial and review of the literature",
+      "year": 2015
+    },
+    {
+      "title": "Radiology",
+      "year": 2014
+    },
+    {
+      "title": "Traditional landmark versus ultrasound guided tracheal puncture during percutaneous dilatational tracheostomy in adult intensive care patients: a randomised controlled trial",
+      "year": 2014
+    },
+    {
+      "title": "Real time ultrasound-guided percutaneous tracheostomy: is it a better option than bronchoscopic guided percutaneous tracheostomy?",
+      "year": 2014
+    },
+    {
+      "title": "Med J Armed Forces India",
+      "year": 2015
+    },
+    {
+      "title": "Ultrasound-guided percutaneous dilational tracheostomy versus bronchoscopy-guided percutaneous dilational tracheostomy in critically ill patients (TRACHUS): a randomized noninferiority controlled trial",
+      "year": 2015
+    },
+    {
+      "title": "The PRISMA statement for reporting systematic reviews and meta-analyses of studies that evaluate healthcare interventions: explanation and elaboration",
+      "year": 2016
+    },
+    {
+      "title": "BMJ",
+      "year": 2009
+    },
+    {
+      "title": "The cochrane collaboration&apos;s tool for assessing risk of bias in randomised trials",
+      "year": 2009
+    },
+    {
+      "title": "The problem of appraising qualitative research",
+      "year": 2011
+    },
+    {
+      "title": "Qual Saf Health Care",
+      "year": 2004
+    },
+    {
+      "title": "Measuring inconsistency in meta-analyses",
+      "year": 2004
+    },
+    {
+      "title": "Quantifying heterogeneity in a metaanalysis",
+      "year": 2003
+    },
+    {
+      "title": "Stat Med",
+      "year": 2002
+    },
+    {
+      "title": "A simple percutaneous tracheostomy technique",
+      "year": 2002
+    },
+    {
+      "title": "Surg Gynecol Obstet",
+      "year": 1990
+    },
+    {
+      "title": "Elective percutaneous dilatational tracheostomy. A new simple bedside procedure; preliminary report",
+      "year": 1990
+    },
+    {
+      "title": "Chest",
+      "year": 1985
+    },
+    {
+      "title": "One thousand bedside percutaneous tracheostomies in the surgical intensive care unit: time to change the gold standard",
+      "year": 1985
+    },
+    {
+      "title": "Ultrasound-guided percutaneous tracheostomy in critically ill obese patients",
+      "year": 2011
+    },
+    {
+      "title": "Ultrasound-guided percutaneous dilatational tracheostomy: stated advantages are just the tip of the iceberg",
+      "year": 2012
+    },
+    {
+      "title": "J Crit Care",
+      "year": 2012
+    }
+  ],
+  "quality": {
+    "completeness_score": 0,
+    "has_abstract": true,
+    "abstract_source": "metadata",
+    "has_doi": true,
+    "has_full_text": true,
+    "num_sections": 25,
+    "num_tables": 5,
+    "num_figures": 7,
+    "num_references": 37
+  }
+}

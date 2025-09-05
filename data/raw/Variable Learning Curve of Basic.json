@@ -1,0 +1,615 @@
+{
+  "metadata": {
+    "document_id": "10_1159_000514627",
+    "title": "Variable Learning Curve of Basic Rigid Bronchoscopy in Trainees",
+    "authors": [
+      "Kamran Mahmood",
+      "Momen M. Wahidi",
+      "Ray Wes Shepherd",
+      "A. Christine Argento",
+      "Lonny B. Yarmus",
+      "Hans Lee",
+      "Samira Shojaee",
+      "David M. Berkowitz",
+      "Keriann Van Nostrand",
+      "Carla R. Lamb",
+      "Scott L. Shofer",
+      "Junheng Gao",
+      "Mohsen Davoudi"
+    ],
+    "year": 2021,
+    "journal": "Respiration",
+    "doi": "10.1159/000514627",
+    "volume": "100",
+    "issue": "6",
+    "pages": "530-537",
+    "citation": "Mahmood, et al. (2021). Variable Learning Curve of Basic Rigid Bronchoscopy in Trainees. Respiration, 100(6), 530-537. https://doi.org/10.1159/000514627",
+    "abstract": "Background: Despite increased use of rigid bronchoscopy (RB) for therapeutic indications and recommendations from professional societies to use performance-based competency, an assessment tool has not been utilized to measure the competency of trainees to perform RB in clinical settings. Objectives: The aim of the study was to evaluate a previously developed assessment tool Rigid Bronchoscopy Tool for Assessment of Skills and Competence (RIGID-TASC) - for determining the RB learning curve of interventional pulmonary (IP) trainees in the clinical setting and explore the variability of learning curve of trainees. Methods: IP fellows at 4 institutions were enrolled. After preclinical simulation training, all RBs performed in patients were scored by faculty using RIGID-TASC until competency threshold was achieved. Competency threshold was defined as unassisted RB intubation and navigation through the central airways on 3 consecutive patients at the first attempt with a minimum score of 89. A regression-based model was devised to construct and compare the learning curves. Results: Twelve IP fellows performed 178 RBs. Trainees reached the competency threshold between 5 and 24 RBs, with a median of 15 RBs (95% CI, 6-21). There were differences among trainees in learning curve parameters including starting point, slope, and inflection point, as demonstrated by the curve-fitting model. Subtasks that required the highest number of procedures (median = 10) to gain competency included ability to intubate at the first attempt and intubation time of <60 s. Conclusions: Trainees acquire RB skills at a variable pace, and RIGID-TASC can be used to assess learning curve of IP trainees in clinical settings. © 2021 S. Karger AG, Basel",
+    "abstract_source": "metadata",
+    "url": "https://karger.com/article/doi/10.1159/000514627"
+  },
+  "source_file": "Variable Learning Curve of Basic.json",
+  "sections": [
+    {
+      "title": "Variable Learning Curve of Basic Rigid Bronchoscopy in Trainees",
+      "content": "Kamran Mahmood a     Momen M. Wahidi a     Ray Wes Shepherd b A. Christine Argento c Lonny B. Yarmus d Hans Lee d Samira Shojaee b David M. Berkowitz e     Keriann Van Nostrand e Carla R. Lamb f Scott L. Shofer a     Junheng Gao g     Mohsen Davoudi h\na Department of Medicine, Division of Pulmonary, Allergy and Critical Care, Duke University, Durham, NC, USA; b Virginia Commonwealth University, Richmond, VA, USA;  c Department of Medicine, Division of Pulmonary and Critical Care Medicine, Northwestern University, Chicago, IL, USA;  d Department of Medicine, Interventional Pulmonology, Johns Hopkins University, Baltimore, MD, USA;  e Department of Medicine, Division of Pulmonary, Allergy and Critical Care, Emory University School of Medicine, Atlanta, GA, USA;  f Division of Pulmonary and Critical Care Medicine, Lahey Hospital and Medical Center, Burlington, MA, USA;  g Department of Biostatistics and Bioinformatics, Duke University, Durham, NC, USA;  h Beckman Laser Institute, Division of Pulmonary and Critical Care Medicine, University of California Irvine, Irvine, CA, USA",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Keywords",
+      "content": "Rigid bronchoscopy · Learning · Learning curve · Trainees · Competency",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Abstract",
+      "content": "Background: Despite increased use of rigid bronchoscopy (RB) for therapeutic indications and recommendations from professional societies to use performance-based competency, an assessment tool has not been utilized to measure the competency of trainees to perform RB in clinical settings. Objectives: The  aim  of  the  study  was  to  evaluate  a  previously developed assessment tool Rigid Bronchoscopy Tool for  Assessment of Skills and Competence (RIGID-TASC)  -  for determining the RB learning curve of interventional pulmonary (IP) trainees in the clinical setting and explore the variability of learning curve of trainees. Methods: IP fellows at 4 institutions were enrolled. After preclinical simulation training, all RBs performed in patients were scored by faculty using RIGID-TASC until competency threshold was achieved. Competency threshold was defined as unassisted RB intubation and navigation through the central airways on 3 consecutive patients at the first attempt with a minimum score\nof 89. A regression-based model was devised to construct and compare the learning curves. Results: Twelve IP fellows performed  178  RBs.  Trainees  reached  the  competency threshold between 5 and 24 RBs, with a median of 15 RBs (95% CI,  6-21).  There  were  differences  among  trainees  in learning  curve  parameters  including  starting  point,  slope, and inflection point, as demonstrated by the curve-fitting model. Subtasks that required the highest number of procedures (median = 10) to gain competency included ability to intubate at the first attempt and intubation time of <60 s. Conclusions: Trainees  acquire  RB  skills  at  a  variable  pace, and RIGID-TASC can be used to assess learning curve of IP trainees in clinical settings. © 2021 S. Karger AG, Basel",
+      "category": "abstract",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Introduction",
+      "content": "Rigid bronchoscopy (RB) has seen an increased role in the management of malignant and nonmalignant central airway disorders [1, 2]. The rigid bronchoscope is a surgical  instrument  which  can  perform  debulking,  dilation, hemostasis, and other therapeutic functions, all while se-\ncuring a safe airway for ventilation and providing a conduit  for  intraluminal  devices  such  as  flexible  bronchoscopes, balloons, stents, and ablative therapies. Thus, RB has rightfully become the cornerstone of interventional pulmonary (IP) training.\nDespite its increased utilization, there are limited data regarding  the  slope  and  variability  of  the  RB  learning curve. The importance of this gap has been further accentuated with the proliferation of IP training programs in the USA and worldwide [3], along with the inclusion and emphasis  on  RB  training  in  many  otolaryngology  and thoracic  surgery  programs  [4-6].  Without  robust  evidence, professional organizations including the American Thoracic Society (ATS), European Respiratory Society, and American College of Chest Physicians (ACCP) have recommended a 20-procedure threshold for achieving RB competency [7-9], albeit with the recognition that such  numeric-threshold  criteria  for  competency  are fraught with limitations [6]. In addition, research in flexible  bronchoscopy  (FB)  and  endobronchial  ultrasound training has shown that learners acquire skills at different paces [10, 11].\nWe have previously developed the Rigid Bronchoscopy Tool  for  Assessment  of  Skills  and  Competence (RIGIDTASC), an assessment tool to evaluate RB intubation and airway navigation skills [12]. It is a 23-point checklistbased assessment tool that evaluates RB intubation and airway  navigation  by  an  operator.  RIGID-TASC  was demonstrated to have validity in discriminating the RB skills of novice, intermediate, and expert operators in a manikin, with a high inter-rater reliability. We thus hypothesized that\n1.  The RIGID-TASC can be used to effectively measure and plot the RB skill acquisition curve of IP trainees undergoing clinical training to the point where they achieve a predefined basic competency threshold.\n2.  The  skill  acquisition  curve  of  RB  learners  will  have markedly different slopes and variations, highlighting the necessity of competence-based testing, as opposed to adherence to volume-based criteria.",
+      "category": "introduction",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Methods",
+      "content": "In this prospective, multicenter study, twelve novice IP fellows at  4  US  training  programs  were  recruited  and  scored  using  the RIGID-TASC while performing RB as part of their clinical training. All RBs performed by the trainees were supervised and scored by a faculty interventional pulmonologist, starting with their initial  procedure at the beginning of training, until the criteria for basic competency threshold were achieved. This basic competency\nthreshold was defined as successful RB intubation and central airway navigation at the first attempt, without a supervisor's help, with a minimum score of 89/100, on 3 consecutive procedures. The third consecutive successful procedure was recorded as the procedure when competency was achieved. The score of 89/100 was chosen as it was shown to be the minimum score attained by the expert group of rigid bronchoscopists during the initial validation study [12]. In order to control for and exclude the confounding effects of anatomic variability of patients and a 'lucky' accidental high score, we required 3 consecutive 89/100 scores. Since not all patients required every element of RB tested by the RIGID-TASC (e.g., navigation of mainstem bronchi in patients with tracheal stenosis  or  tumors),  the  score  percentage  was  calculated  from  the clinically  necessary,  completed  subtasks.  IRB  approval  was  obtained  at  all  respective  institutions:  Duke  University  (Pro00055274), Virginia Commonwealth University (HM20002272), Johns Hopkins University (00139179), and Emory University (00075805). Informed consent was obtained from the participating IP fellows; participation of the fellows was voluntary with no bearing on their fellowship training or evaluations.",
+      "category": "methods",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Preclinical Training",
+      "content": "Prior to their initial RB, trainees attended a didactic lecture and demonstration by the supervising faculty at each institution; basic hands-on  RB  training  was  provided  on  low-fidelity  simulation manikins. Additionally, all participating fellows attended the IP Boot Camp organized by the American Association of Bronchology  and  Interventional  Pulmonology  at  the  beginning  of  their training, where they practiced RB on cadavers. All participating IP fellows were proficient in FB as it was a mandatory component of their prior pulmonary and critical care training. Participants were asked to complete a survey which included their demographics, prior FB and RB experience, and perceptions about RB (Table 1).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Rigid Bronchoscopy and RIGID-TASC Scoring",
+      "content": "Supervising IP faculty scored every single RB performed by the participating  trainee  using  the  RIGID-TASC  until  the  trainee achieved 89 points on 3 consecutive RBs at first attempt. The maximum score of 100 could be earned by optimally performing the various steps of RB, including pre-intubation assembly of RB, patient positioning, trauma prevention, and upper and lower airway navigation on a single attempt in a timely manner. At the end of each procedure, the learner received constructive, positive, and remedial feedback based on the RIGID-TASC checklist. These scores were plotted for each fellow to demonstrate the learning curves. All RBs  were  performed  under  general  anesthesia  using  the  rigid bronchoscopes (LYMOL Medical, Woburn, MA, USA, formerly Bryan Corp.) available at the respective institutions.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Statistical Methods",
+      "content": "Data were presented by median and interquartile range (IQR) for continuous variables and percentage for categorical variables. The cumulative incidence curve was used to summarize the cumulative percentage of participants who achieved competency threshold over the number of RB procedures. The estimated number of RB procedures at which 25, 50, 75, and 100% of the participants reached competency threshold was calculated by one minus Kaplan-Meier  estimate.  We  also  used  a  learning  curve  estimating equation to simulate and fit participant learning patterns (details in  the  online  suppl.  material;  for  all  online  suppl.  material,  see\nwww.karger.com/doi/10.1159/000514627).  As  the  learning  process progressed, the ability of each participant was expected to improve  gradually  up  to  an  inflection  point.  After  the  inflection point, as the participant continued to acquire the skill, the performance  score  would  remain  relatively  stable  and  a  plateau  was achieved. Participant RIGID-TASC scores over successive procedures were used to fit the model. We treated scores as continuous variable and number of procedures as the continuous time variable. The Gauss-Newton method was used to iteratively fit the estimating equation. Analysis was performed using SAS 9.4 (SAS Institute, Cary, NC) and R 3.4.1.",
+      "category": "methods",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Results",
+      "content": "Twelve participants were recruited upon starting their IP training between 2014 and 2017 (demographics shown in Table 1). After the initial pre-patient contact training (lecture and RB simulation on manikin and RB practice on cadaver at the IP Boot Camp), every clinical RB procedure was scored using the RIGID-TASC, starting from\nthe first procedure until the threshold of 3 consecutive scores of 89 at first attempt was achieved (Fig. 1). The clinical  indications  included  malignant  central  airway obstruction (38%), nonmalignant central airway obstruction (53%), and other miscellaneous indications (9%). A total of 178 RB procedures were performed by the participants and scored by the supervising IP faculty.\nParticipant learners achieved the threshold of 3 consecutive scores of 89 at first attempt in as few as 5 to as many as 24 RB procedures, with a median of 15 RBs. The performance of individual participants and summary regression curve is shown in Figure 1. There was a wide fluctuation of scores until a consistent plateau was achieved. In addition to the wide range of the scores obtained, participants were markedly different in their beginning score, slope of the learning curve, and inflection point (see online suppl. Fig. 1, 2 and see online suppl. Table 1). Trainees achieved the threshold of 3 consecutive scores of 89 at first attempt at different procedure volumes with 25% compe-\nRB, rigid bronchoscopy; FB, flexible bronchoscopy; IP, interventional pulmonary; IQR, interquartile range.\ntent at 9 RBs (95% CI, 5-15); 50% at 15 procedures (95% CI, 6-21); 75% at 20 RB (95% CI, 15-24); and 100% trainees at 24 RB, as shown on the cumulative incidence curve in online suppl. Fig. 3.\nWe also assessed the learners' performance of different steps of RB using subtasks of the RIGID-TASC checklist, in order to determine which subtasks were most difficult to master as shown in Table 2 and Figure 2. The competency threshold for the subtask was defined as the ability to perform that subtask without any assistance from the\nsupervisor in 3 consecutive RB procedures. Two subtasks were the most difficult to master as they needed the most number of attempts to achieve the threshold of 3 consecutive successful attempts: the ability to intubate the patient on the first attempt (median 10, IQR 8-16) and ability to complete intubation from introduction of bronchoscope into mouth to trachea within 1 min (median 9.5, IQR 7-18.2). Other subtasks that required more attempts to master included the ability to obtain full view of larynx (median 6.5, IQR 4-8), avoiding excessive contact or in-\nColor version available online\njury to arytenoids (median 6.5, IQR 5-9.2), the ability to rotate the bronchoscope 90° with the bevel parallel to vocal cords prior to passing through (median 7, IQR 3-9), and keeping the scope centered in the airway to avoid unnecessary tissue trauma (median 5.5, IQR 4-9.5).\nThe perception of participants about RB has been included in Table 1. They were of the opinion that their current IP fellowship offered adequate opportunity to gain competence in RB, and most of them believed that RB is an advanced skill which should be learned in a dedicated fellowship program. They also felt that RB would be incorporated into their clinical practice after the training. There were a few complications associated with RB, including 1 loose tooth, 2 upper airway mucosal injuries, 2 lower airway mucosal injuries, and 2 incidents of hypoxemia with oxygen saturation of ≤88%.",
+      "category": "results",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Discussion",
+      "content": "This is the first study to objectively measure, plot, and compare the skill acquisition of RB learners in a clinical setting.  We  used  a  previously  published  tool,  RIGIDTASC [12], to objectively assess serial RBs performed by IP trainees until a designated competency threshold was reached; this was defined as independently performing RB intubation and navigation in 3 consecutive patients at first attempt while obtaining a predefined score. We demonstrated that RIGID-TASC could accurately measure the minimal fluctuations in operator performance from 1 procedure to the next, and it was effectively used to  measure  and  plot  RB  skill  acquisition  curves  in  IP trainees to the threshold where a consistent level of competency  was  achieved.  More  significantly,  we  demonstrated that there was a difference in the rate that skills were acquired as the learners had learning curves that varied widely.\nThe trainees obtained a wide range of scores on their initial  RB,  while  their  gradual  upward  trends  also  followed different curves in terms of shape, slope, acceleration (negative vs. positive), degree of up-and-down fluctuation, and the inflection point leading to the plateau. We used a curve-fitting technique that was modified to depict and compare the different important parameters such as starting point, slope, inflection point, and plateau. Similar statistical methodology has been used in surgical competency assessment literature [13], yet it has not been utilized to assess bronchoscopy learning patterns.\nPrior studies have shown that learners acquire procedural skills and achieve competency at differing rates. In a study looking at the experience of thirteen pulmonary fellows learning endobronchial ultrasound, the trainees needed a varying number of procedures (5-13), in order to perform the procedure independently [11]. Our study demonstrated that the learning curve for RB is more variable, with the number of procedures required to achieve initial competency ranging from 5 to 24 procedures. This further underscores the notion that one-size-fits-all number criteria to achieve competency ignore this inter-learner variability.\nProfessional societies are mandated to develop minimum standards to certify the competency of graduating trainees.  To  this  end,  ATS  and  ACCP  have  published guidelines, based on the expert opinion, suggesting twenty RBs as threshold to achieve initial competency [7-9]. These organizations, and later a multi-society IP fellowship  accreditation  committee,  have  acknowledged  the limitation of procedure-volume quota as a competency metric [3]. An ACCP expert panel has recommended that organizations certifying pulmonary trainees should transition from volume-based certification to objective competency assessments based on skill and knowledge acquisition [6]. We use RIGID-TASC, a previously developed assessment tool, to address this gap for basic RB training. We demonstrate that it can effectively measure and plot the  skill  acquisition  of  trainees  from  the  point  of  skill transfer in a simulation laboratory to achievement of clinical competency threshold.\nIn an era of simulation-based education, it is now established that patients must not bear the burdens of procedure-related training. The higher the risk of potential harm a procedure may pose to our patients, the more imperative\nchea;  (16)  keeps  scope  centered;  (17)  intubation  attempts;  (18) teeth guard use; (19) turns head to left to advance scope into right mainstem bronchus; (20) able to advance scope into bronchus intermedius; (21) turns the head to the right to advance scope into left mainstem bronchus; (22) able to insert scope into distal left mainstem bronchus; (23) able to introduce scope from mouth to trachea in <60 s. RIGID-TASC, Rigid Bronchoscopy Tool for Assessment of Skills and Competence.\nColor version available online\nit becomes that the basic skills are learned on a simulation model [10]. The next important step is the seamless transfer of the acquired skills to the clinical setting. The effectiveness of this skill transfer has been demonstrated in many procedural  fields  [14-16].  Of  the  different  major  procedures taught during IP fellowship, RB is one of the most invasive procedures that can lead to significant morbidities if performed poorly. The ability to objectively demonstrate the effective transfer of RB skills to the patient's bedside, while measuring and plotting the learning curve to a competency threshold is of utmost importance; we demonstrated this process in the current study. In addition, each learner's RIGID-TASC scores, especially the sub-scores for each of the constituent components, were used by supervising faculty to deliver personalized, objective feedback, making this a process of iterative deliberate practice. Repeated use of an assessment tool to guide learning is what has been coined as dynamic testing or assessment [17, 18].\nA major reason we broke down RB into its stepwise components in RIGID-TASC was to guide the process of iterative feedback between consecutive procedures. There are 23 steps or subtasks necessary to perform RB intubation  and  airway  navigation  based  on  RIGID-TASC. We found that trainees had the most difficulty with and needed more procedures to learn composite tasks: intubation at first  attempt  and  completion  of  intubation  within  60  s. Other areas which required more procedures were centering the RB during airway navigation and avoiding unnecessary trauma to the arytenoids, vocal cords, and lower airway. Salud and colleagues [5] had also observed that during RB on a pressure-sensor mounted manikin, a key feature that differentiates novice from expert bronchoscopists is a higher number of unnecessary tissue contact and increased pressure. Acquiring this precise, objective data for each individual learner allows for extra remedial attention and deliberate practice, focused on each learner's weaknesses.\nExtensive research exists on the rates and patterns with which learners acquire procedural skills. A significant portion of this literature focuses on the different factors that impact the characteristics of the learning curve [19]. Some of the more crucial factors include the nature of the task, in terms of complexity and ratio of pure motor versus cognitive and other skills; task difficulty as it impacts positive versus negative acceleration of the curve, and how intense difficulty makes the task less sensitive to deliberate practice; degree of prior learning, either of the entire task or its components;  the  threshold  for  training  termination,  when 'mastery level' has been achieved; the temporal distribution of practice and the role of interference and forgetting; differences among individuals and training methods; the\neffects of interest and motivation; and the correlations between the pattern and slope of learning curve with retention. We devised a novel curve-fitting model and successfully pilot-tested it to create a template for RB. This model can also be used to systematically determine learning curves for  other  procedures.  We can then assess how changing combinations of the factors listed above may impact the slope, inflection, and plateau of the learning curve and ultimately  the  training  outcome.  This  information  can  be used to improve coaching methodology and parameters, training more effective and masterful operators while improving return on investment in resources and time.\nThe strengths of our study include the prospective utilization of a previously developed assessment tool to objectively measure the acquisition of clinical RB skills by IP trainees and the use of an innovative curve-fitting model to plot learning curves for comparison. The weaknesses of the study include small sample size of participants and that  knowledge,  cognitive,  and  decision-making  skills were not assessed. The score of 89 was chosen as the minimum criterion for basic competency because it was the lowest score achieved by one of the experts in the original validation study [12]. We also did not include assessment of adjunct therapeutic procedures, performed either by flexible  bronchoscope  introduced  through  rigid  bronchoscope - such as self-expandable stent placement and use of ablative therapies - or RB coring and silicone stent placement. There are different competency metrics for these  endobronchial  procedures,  as  underscored  by  an ACCP statement [9]. As training in the therapeutic procedures logically follows achievement of competence in RB intubation and navigation, these adjunct skills could be evaluated in future studies.",
+      "category": "discussion",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Conclusion",
+      "content": "This study demonstrated that RIGID-TASC can be effectively used to assess and plot acquisition of RB skills, from the point of skill transfer in a simulation laboratory to the clinical setting. In addition, novice learners acquire RB skills  with  widely  different  learning  curves  and  the currently established guidelines and practices to evaluate competency need to be updated.",
+      "category": "conclusion",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Acknowledgements",
+      "content": "We acknowledge the resolve and perseverance of all the trainees and their mentors.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Statement of Ethics",
+      "content": "Research complied with the guidelines for human studies and was conducted ethically in accordance with the World Medical Association Declaration of Helsinki. All the trainee participants provided written informed consent for participation. The study was approved by the institutional review board of all the participating institutions: Duke University (Pro00055274), Virginia Commonwealth  University  (HM20002272),  Johns  Hopkins  University (00139179), and Emory University (00075805).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Conflict of Interest Statement",
+      "content": "No author has any conflict of interest pertaining to this study.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Funding Sources",
+      "content": "There was no funding source for this study.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Author Contributions",
+      "content": "K.M. and M.D. wrote the manuscript which was reviewed, edited, and approved by all authors. K.M., M.M.W., C.R.L., and M.D. designed the study; K.M., M.M.W., W.S., A.C.C., L.B.Y., H.L., S.S., D.M.B., K.V.N., and S.L.S. collected and interpreted the data; J.G., K.M., and M.D. analyzed the data.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "References",
+      "content": "1  Ost DE, Ernst A, Grosu HB, Lei X, Diaz-Mendoza J, Slade M, et al. Therapeutic bronchoscopy  for  malignant  central  airway  obstruction: success rates and impact on dyspnea and quality of life. Chest. 2015; 147(5): 1282-98.\n2  Mahmood K, Wahidi MM, Thomas S, Argento AC, Ninan NA, Smathers EC, et al. Therapeutic  bronchoscopy  improves  spirometry, quality of life, and survival in central airway obstruction. Respiration. 2015; 89(5): 404-13.\n3  Mullon JJ, Burkart KM, Silvestri G, Hogarth DK, Almeida F, Berkowitz D, et al. Interventional pulmonology fellowship accreditation standards: executive summary of the multisociety interventional pulmonology fellowship accreditation committee. Chest. 2017; 151(5): 1114-21.\n4  Ishman SL, Benke JR, Johnson KE, Zur KB, Jacobs IN, Thorne MC, et al. Blinded evaluation  of  interrater  reliability  of  an  operative competency assessment tool for direct laryngoscopy and rigid bronchoscopy. Arch Otolaryngol Head Neck Surg. 2012; 138(10): 91622.\n5  Salud  LH,  Peniche  AR,  Salud  JC,  de  Hoyos AL, Pugh CM. Toward a simulation and assessment method for the practice of cameraguided rigid bronchoscopy. Stud Health Technol Inform. 2011; 163: 535-41.\n6  Ernst A, Wahidi MM, Read CA, Buckley JD, Addrizzo-Harris  DJ,  Shah  PL,  et  al.  Adult bronchoscopy training: current state and suggestions for the future: CHEST expert panel report. Chest. 2015; 148(2): 321-32.\n7  Bolliger CT, Mathur PN, Beamis JF, Becker HD, Cavaliere S, Colt H, et al. ERS/ATS statement on interventional pulmonology. European  respiratory  society/American  thoracic society. Eur Respir J. 2002; 19(2): 356-73.\n8  Ernst A, Silvestri GA, Johnstone D. Interventional pulmonary procedures: guidelines from  the  American  college  of  chest  physicians. Chest. 2003; 123(5): 1693-717.\n9  Lamb CR, Feller-Kopman D, Ernst A, Simoff MJ, Sterman DH, Wahidi MM, et al. An approach  to  interventional  pulmonary  fellowship training. Chest. 2010; 137(1): 195-9.\n10  Wahidi MM, Silvestri GA, Coakley RD, Ferguson JS, Shepherd RW, Moses L, et al. A prospective  multicenter  study  of  competency metrics and educational interventions in the learning of bronchoscopy among new pulmonary fellows. Chest. 2010; 137(5): 1040-9.\n11  Wahidi  MM,  Hulett  C,  Pastis  N,  Shepherd RW, Shofer SL, Mahmood K, et al. Learning experience  of  linear  endobronchial  ultrasound  among  pulmonary  trainees.  Chest. 2014; 145(3): 574-8.\n12  Mahmood K, Wahidi MM, Osann KE, Coles K, Shofer SL, Volker EE, et al. Development of a tool to assess basic competency in the performance  of  rigid  bronchoscopy.  Ann  Am Thorac Soc. 2016; 13(4): 502-11.\n13  Feldman LS, Cao J, Andalib A, Fraser S, Fried GM. A method to characterize the learning curve for performance of a fundamental laparoscopic  simulator  task: defining  \"learning plateau\"  and  \"learning  rate.  Surgery.  2009; 146: 381-6.\n14  Aghazadeh  MA,  Mercado  MA,  Pan  MM, Miles  BJ,  Goh  AC.  Performance  of  robotic simulated skills tasks is positively associated with  clinical  robotic  surgical  performance. BJU Int. 2016; 118(3): 475-81.\n15  Culligan P, Gurshumov E, Lewis C, Priestley J, Komar J, Salamon C. Predictive validity of a  training  protocol  using  a  robotic  surgery simulator. Female Pelvic Med Reconstr Surg. 2014; 20(1): 48-51.\n16  Dawe SR, Pena GN, Windsor JA, Broeders JA, Cregan PC, Hewett PJ, et al. Systematic review of  skills  transfer  after  surgical  simulationbased training. Br J Surg. 2014; 101(9): 106376.\n17  Resing WC, Elliott JG. Dynamic testing with tangible electronics: measuring children's change in strategy use with a series completion  task.  Br  J  Educ  Psychol.  2011; 81(Pt 4): 579-605.\n18  Haywood HC, Lidz CS. Dynamic assessment in practice : clinical and educational applications.  Cambridge,  New  York: Cambridge University Press; 2007.\n19  Lane NE. Skill acquisition rates and patterns : issues and training implications. New York: Springer-Verlag; 1987.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    }
+  ],
+  "tables": [
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/36'}",
+      "headers": [
+        "Participant variable",
+        "Total ( N = 12)"
+      ],
+      "rows": [
+        [
+          "Age in years (median, IQR)",
+          "33.5 (32.0-34.0)"
+        ],
+        [
+          "Gender",
+          ""
+        ],
+        [
+          "Female",
+          "5 (42%)"
+        ],
+        [
+          "Male",
+          "7 (58%)"
+        ],
+        [
+          "Years graduated from medical school (median, IQR)",
+          "7 (6-9)"
+        ],
+        [
+          "Practice setting prior to IP fellowship",
+          ""
+        ],
+        [
+          "Pulmonary fellowship",
+          "11 (92%)"
+        ],
+        [
+          "Academic appointment",
+          "1 (8%)"
+        ],
+        [
+          "No. of FBs prior to IP fellowship (median, IQR)",
+          "200 (200-400)"
+        ],
+        [
+          "Self-assessed FB level",
+          ""
+        ],
+        [
+          "Beginner",
+          "2 (17%)"
+        ],
+        [
+          "Experienced",
+          "9 (75%)"
+        ],
+        [
+          "Expert",
+          "1 (8%)"
+        ],
+        [
+          "No. of RBs prior to IP fellowship (median, IQR)",
+          "0 (0-0)"
+        ],
+        [
+          "Self-assessed RB level",
+          ""
+        ],
+        [
+          "Beginner",
+          "12 (100%)"
+        ],
+        [
+          "Experienced",
+          "0"
+        ],
+        [
+          "Expert",
+          "0"
+        ],
+        [
+          "Believe that RB will be part of future practice",
+          ""
+        ],
+        [
+          "Very likely",
+          "12 (100%)"
+        ],
+        [
+          "Somewhat likely",
+          "0"
+        ],
+        [
+          "Unlikely",
+          "0"
+        ],
+        [
+          "Believe that RB should be reserved for those with IP training",
+          ""
+        ],
+        [
+          "Yes",
+          "11 (92%)"
+        ],
+        [
+          "No",
+          "1 (8%)"
+        ],
+        [
+          "Believe that current IP training program offers adequate RB training",
+          ""
+        ],
+        [
+          "Yes",
+          "12 (100%)"
+        ],
+        [
+          "No",
+          "0"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/299'}",
+      "headers": null,
+      "rows": [
+        [
+          "RIGID-TASC subtask",
+          "Attempts to achieve competency threshold in subtask, * median (IQR)"
+        ],
+        [
+          "1. Correct assembly of bronchoscope",
+          "4 (3-7)"
+        ],
+        [
+          "2. Correct positioning of the head of the patient",
+          "3 (3-4.5)"
+        ],
+        [
+          "3. Protection of lips and teeth",
+          "4 (3-5.2)"
+        ],
+        [
+          "4. Holds the bronchoscope with right hand",
+          "3 (3-3)"
+        ],
+        [
+          "5. Holds the bronchoscope with bevel up",
+          "3 (3-3)"
+        ],
+        [
+          "6. Stabilization of telescope in the rigid bronchoscope",
+          "4.5 (3-8.5)"
+        ],
+        [
+          "7. Correct positioning of telescope so that whole distal rim of rigid bronchoscope is visible",
+          "3 (3-4.5)"
+        ],
+        [
+          "8. Correct positioning of suction catheter in the bronchoscope",
+          "3 (3-4.2)"
+        ],
+        [
+          "9. Introduction of rigid bronchoscope into the airway at appropriate angle",
+          "3.5 (3-4)"
+        ],
+        [
+          "10. Follows tongue/uvula to epiglottis",
+          "4.5 (3.7-5.2)"
+        ],
+        [
+          "11. Elevates epiglottis",
+          "3.5 (3-6.2)"
+        ],
+        [
+          "12. Able to obtain full view of vocal cords",
+          "6.5 (4-8)"
+        ],
+        [
+          "13. Avoids excess contact/injury to arytenoids",
+          "6.5 (5-9.2)"
+        ],
+        [
+          "14. Able to insert bronchoscope through vocal cords with 90° rotation so that bevel is parallel to vocal cords",
+          "7 (3-9)"
+        ],
+        [
+          "15. Advances scope further with bevel down in trachea",
+          "3.5 (3-5.2)"
+        ],
+        [
+          "16. Keeps the rigid scope centered in the airway to avoid trauma",
+          "5.5 (4-9.5)"
+        ],
+        [
+          "17. Able to insert bronchoscope into trachea at the first attempt",
+          "10 (8-16)"
+        ],
+        [
+          "18. Positions upper teeth guard correctly",
+          "3 (3-5.2)"
+        ],
+        [
+          "19. Turns head to the opposite side to advance scope into right mainstem bronchus",
+          "3 (3-5)"
+        ],
+        [
+          "20. Able to manipulate scope into distal bronchus intermedius",
+          "3 (3-4.5)"
+        ],
+        [
+          "21. Turns the head to the opposite side to advance scope into left mainstem bronchus",
+          "3 (3-5.2)"
+        ],
+        [
+          "22. Able to manipulate scope into distal left mainstem bronchus",
+          "3 (3-5)"
+        ],
+        [
+          "23. Able to complete the procedure from introduction of bronchoscope into mouth to trachea in <60 s",
+          "9.5 (7-18.2)"
+        ]
+      ],
+      "footnotes": [
+        {
+          "cref": "#/texts/300"
+        }
+      ],
+      "page": null
+    }
+  ],
+  "figures": [
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/48'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/310'}",
+      "page": null
+    }
+  ],
+  "references": [
+    {
+      "title": "Correct assembly of bronchoscope 4 (3-7) 2. Correct positioning of the head of the patient 3 (3-4"
+    },
+    {
+      "title": "Protection of lips and teeth"
+    },
+    {
+      "title": "Holds the bronchoscope with right hand"
+    },
+    {
+      "title": "Holds the bronchoscope with bevel up 3 (3-3) 6. Stabilization of telescope in the rigid bronchoscope 4"
+    },
+    {
+      "title": "Correct positioning of telescope so that whole distal rim of rigid bronchoscope is visible"
+    },
+    {
+      "title": "Correct positioning of suction catheter in the bronchoscope"
+    },
+    {
+      "title": "Introduction of rigid bronchoscope into the airway at appropriate angle 3.5 (3-4) 10. Follows tongue/uvula to epiglottis 4.5"
+    },
+    {
+      "title": "Able to obtain full view of vocal cords 6.5 (4-8) 13"
+    },
+    {
+      "title": "Able to insert bronchoscope through vocal cords with 90° rotation so that bevel is parallel to vocal cords 7 (3-9) 15"
+    },
+    {
+      "title": "Keeps the rigid scope centered in the airway to avoid trauma 5"
+    },
+    {
+      "title": "Able to insert bronchoscope into trachea at the first attempt 10 (8-16) 18"
+    },
+    {
+      "title": "Turns head to the opposite side to advance scope into right mainstem bronchus 3 (3-5) 20. Able to manipulate scope into distal bronchus"
+    },
+    {
+      "title": "Able to manipulate scope into distal left mainstem bronchus"
+    },
+    {
+      "title": "Able to complete the procedure from introduction of bronchoscope into mouth to trachea in &lt;60 s 9"
+    },
+    {
+      "title": "Rigid Bronchoscopy Tool for Assessment of Skills and Competence; IQR, interquartile range. * Competency threshold was defined as the ability to complete the subtask in 3 consecutive RB procedures"
+    },
+    {
+      "title": "Respiration"
+    },
+    {
+      "title": "Therapeutic bronchoscopy for malignant central airway obstruction: success rates and impact on dyspnea and quality of life"
+    },
+    {
+      "title": "Chest",
+      "year": 2015
+    },
+    {
+      "title": "Therapeutic bronchoscopy improves spirometry, quality of life, and survival in central airway obstruction",
+      "year": 2015
+    },
+    {
+      "title": "Interventional pulmonology fellowship accreditation standards: executive summary of the multisociety interventional pulmonology fellowship accreditation committee",
+      "year": 2015
+    },
+    {
+      "title": "Blinded evaluation of interrater reliability of an operative competency assessment tool for direct laryngoscopy and rigid bronchoscopy",
+      "year": 2017
+    },
+    {
+      "title": "Arch Otolaryngol Head Neck Surg",
+      "year": 2012
+    },
+    {
+      "title": "Toward a simulation and assessment method for the practice of cameraguided rigid bronchoscopy",
+      "year": 2012
+    },
+    {
+      "title": "Stud Health Technol Inform",
+      "year": 2011
+    },
+    {
+      "title": "Adult bronchoscopy training: current state and suggestions for the future: CHEST expert panel report",
+      "year": 2011
+    },
+    {
+      "title": "ERS/ATS statement on interventional pulmonology. European respiratory society/American thoracic society",
+      "year": 2015
+    },
+    {
+      "title": "Eur Respir J",
+      "year": 2002
+    },
+    {
+      "title": "Interventional pulmonary procedures: guidelines from the American college of chest physicians",
+      "year": 2002
+    },
+    {
+      "title": "An approach to interventional pulmonary fellowship training",
+      "year": 2003
+    },
+    {
+      "title": "A prospective multicenter study of competency metrics and educational interventions in the learning of bronchoscopy among new pulmonary fellows",
+      "year": 2010
+    },
+    {
+      "title": "Learning experience of linear endobronchial ultrasound among pulmonary trainees",
+      "year": 2010
+    },
+    {
+      "title": "Development of a tool to assess basic competency in the performance of rigid bronchoscopy",
+      "year": 2014
+    },
+    {
+      "title": "Ann Am Thorac Soc",
+      "year": 2016
+    },
+    {
+      "title": "A method to characterize the learning curve for performance of a fundamental laparoscopic simulator task: defining &quot;learning plateau&quot; and &quot;learning rate",
+      "year": 2016
+    },
+    {
+      "title": "Surgery",
+      "year": 2009
+    },
+    {
+      "title": "Performance of robotic simulated skills tasks is positively associated with clinical robotic surgical performance",
+      "year": 2009
+    },
+    {
+      "title": "BJU Int",
+      "year": 2016
+    },
+    {
+      "title": "Predictive validity of a training protocol using a robotic surgery simulator",
+      "year": 2016
+    },
+    {
+      "title": "Female Pelvic Med Reconstr Surg",
+      "year": 2014
+    },
+    {
+      "title": "Systematic review of skills transfer after surgical simulationbased training",
+      "year": 2014
+    },
+    {
+      "title": "Br J Surg",
+      "year": 2014
+    },
+    {
+      "title": "Dynamic testing with tangible electronics: measuring children&apos;s change in strategy use with a series completion task",
+      "year": 2014
+    },
+    {
+      "title": "Br J Educ Psychol",
+      "year": 2011
+    },
+    {
+      "title": "Dynamic assessment in practice : clinical and educational applications",
+      "year": 2011
+    },
+    {
+      "title": "Skill acquisition rates and patterns : issues and training implications",
+      "year": 2007
+    }
+  ],
+  "quality": {
+    "completeness_score": 0,
+    "has_abstract": true,
+    "abstract_source": "metadata",
+    "has_doi": true,
+    "has_full_text": true,
+    "num_sections": 17,
+    "num_tables": 2,
+    "num_figures": 3,
+    "num_references": 45
+  }
+}

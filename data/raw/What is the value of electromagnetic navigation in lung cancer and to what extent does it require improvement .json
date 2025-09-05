@@ -1,0 +1,857 @@
+{
+  "metadata": {
+    "document_id": "10_1080_17476348_2020_1748012",
+    "title": "What is the value of electromagnetic navigation in lung cancer and to what extent does it require improvement?",
+    "authors": [
+      "Brian D. Shaller",
+      "Thomas R. Gildea"
+    ],
+    "year": 2020,
+    "journal": "Expert Review of Respiratory Medicine",
+    "doi": "10.1080/17476348.2020.1748012",
+    "volume": "14",
+    "issue": "7",
+    "pages": "655-669",
+    "citation": "Shaller, B.; Gildea, T. (2020). What is the value of electromagnetic navigation in lung cancer and to what extent does it require improvement?. Expert Review of Respiratory Medicine, 14(7), 655-669. https://doi.org/10.1080/17476348.2020.1748012",
+    "abstract": "Introduction : Lung nodules are being identified with increasing frequency. With this growing burden of nodules comes a growing need for diagnostic technologies extending beyond the current reach of conventional bronchoscopy. One such method for diagnosing peripheral lung lesions is electromagnetic navigational bronchoscopy (ENB), which comprises a set of tools designed to aid the bronchoscopist in identifying, accessing, and sampling peripheral lung lesions under virtual guidance. Areas covered : Herein we present an in-depth review of ENB, including commercially available electromagnetic navigation platforms, factors influencing diagnostic yield, adjunctive imaging and biopsy tools, potential risks, cost, technical shortcomings, and competing technologies. A review of the scientific literature was conducted primarily through PubMed, ScienceDirect, and Google Scholar, and pertinent publications and abstracts from the inception of electromagnetic navigation through early 2020 were considered. We also share our perspective on the future of ENB from both a diagnostic and a therapeutic standpoint. Expert opinion : ENB is currently a leading tool in the diagnostic evaluation of peripheral lung lesions. The future of ENB rests not only on its potential to expand into the therapeutic realm but also on its ability to keep pace with competing diagnostic and therapeutic technologies. Received 23 January 2020 Accepted 24 March 2020",
+    "abstract_source": "metadata",
+    "url": "https://www.tandfonline.com/doi/full/10.1080/17476348.2020.1748012"
+  },
+  "source_file": "What is the value of electromagnetic navigation in lung cancer and to what extent does it require improvement .json",
+  "sections": [
+    {
+      "title": "Expert Review of Respiratory Medicine",
+      "content": "ISSN: (Print) (Online) Journal homepage: www.tandfonline.com/journals/ierx20",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Brian D. Shaller & Thomas R. Gildea",
+      "content": "To cite this article: Brian D. Shaller & Thomas R. Gildea (2020) What is the value of electromagnetic navigation in lung cancer and to what extent does it require improvement?, Expert Review of Respiratory Medicine, 14:7, 655-669, DOI: 10.1080/17476348.2020.1748012\nTo link to this article: https://doi.org/10.1080/17476348.2020.1748012\nPublished online: 04 Apr 2020.\nSubmit your article to this journal\nArticle views: 286\nView related articles\nView Crossmark data\nCiting articles: 3 View citing articles\nCrossMark",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Brian D. Shaller and Thomas R. Gildea",
+      "content": "Interventional Pulmonology, Respiratory Institute, Cleveland Clinic, Cleveland, OH, USA",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "ABSTRACT",
+      "content": "Introduction : Lung nodules are being identified with increasing frequency. With this growing burden of nodules comes a growing need for diagnostic technologies extending beyond the current reach of conventional bronchoscopy. One such method for diagnosing peripheral lung lesions is electromagnetic navigational bronchoscopy (ENB), which comprises a set of tools designed to aid the bronchoscopist in identifying, accessing, and sampling peripheral lung lesions under virtual guidance.\nAreas covered : Herein we present an in-depth review of ENB, including commercially available electromagnetic navigation platforms, factors influencing diagnostic yield, adjunctive imaging and biopsy tools, potential risks, cost, technical shortcomings, and competing technologies. A review of the scientific literature was conducted primarily through PubMed, ScienceDirect, and Google Scholar, and pertinent publications and abstracts from the inception of electromagnetic navigation through early 2020 were considered. We also share our perspective on the future of ENB from both a diagnostic and a therapeutic standpoint.\nExpert opinion : ENB is currently a leading tool in the diagnostic evaluation of peripheral lung lesions. The future of ENB rests not only on its potential to expand into the therapeutic realm but also on its ability to keep pace with competing diagnostic and therapeutic technologies.",
+      "category": "abstract",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "ARTICLE HISTORY",
+      "content": "Received 23 January 2020 Accepted 24 March 2020",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "KEYWORDS",
+      "content": "Electromagnetic navigation bronchoscopy; peripheral lung nodule; lung cancer",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "1. Introduction",
+      "content": "With the increased use of advanced diagnostic radiography, greater sensitivity of chest computed tomography (CT), and growing enrollment of patients in lung cancer screening programs, the incidence of lung nodules detected on imaging is on the rise. A study of trends in CT imaging from 2006 to 2012 determined that while the annual frequency of imaging increased from 1.3% to 1.9%, the percentage of scans identifying a lung nodule increased from 24% to 31% [1]. Despite supportive evidence for low-dose CT screening borne out of such trials as the National Lung Screening Trial (NLST) and Dutch-Belgian Randomized Lung Cancer Screening Trial (NELSON), a slim but slowly growing minority of eligible adults are currently being screened for lung cancer [2 -4]. As this number continues to rise, so too will the burden of suspicious lesions demanding clinical attention.\nImportant factors in choosing the appropriate clinical pathway for patients with suspicious peripheral lung lesions include malignancy risk factors, the manner in which the lesion was detected (incidentally or through screening), comorbidities, access to diagnostic resources, and patient-preference. The majority of lung nodules are discovered incidentally, and the widely accepted Fleischner Society guidelines recommend consideration of biopsy for solitary solid nodules >8 mm in diameter [5]. For nodules detected through screening, the American College of Radiology ' s Lung-RADS classification system offers diagnostic biopsy as an option for solid nodules ≥ 15 mm at\nbaseline or new or growing solid nodules ≥ 8 mm; subsolid nodules with a solid component ≥ 8 mm at baseline or a new or growing solid component ≥ 4 mm; or nodules with less worrisome size or growth patterns in the setting of other concerning radiographic findings [6]. A unified algorithm proposed by the American College of Chest Physicians recommends biopsy for nodules >8 mm when the estimated probability of malignancy is low to moderate, discordance exists between radiographic findings and the probability of malignancy, a potential benign diagnosis requiring treatment is suspected, the risks of surgery are felt to be too high, or whenever a patient at a high probability of malignancy prefers diagnostic proof prior to undergoing resection [7]. When nonsurgical tissue-sampling is warranted, the two main routes are transthoracic and bronchoscopic: belonging to this latter category is electromagnetic navigation bronchoscopy, or ENB. Further complicating this issue is the knowledge that the majority of suspicious lung nodules detected on CT ultimately turn out to be false-positives (non-neoplastic), comprising 96.4% of nodules detected in the NLST [4]. Therefore, the importance of choosing a diagnostic strategy that maximizes yield while minimizing harm is of paramount importance.\nElectromagnetic navigation (EMN) is a clinical tool in which a pathway to an anatomic target is plotted on diagnostic imaging and overlayed onto the patient using an electromagnetic field, thereby enabling the proceduralist to navigate to the target along the pathway using specialized instruments whose positions within the patient are determined based on\nshalleb@ccf.org\ntheir location within the electromagnetic field. The purpose of EMN is to allow access to targets or lesions within the body that are otherwise difficult to reach by noninvasive means. The earliest EMN systems were developed in the 1990s for stereotactic sampling of occult brain lesions. Advances in chest CT in the late 1990s and 2000s made it possible to render threedimensional reconstructions of the airways, thereby opening the way to EMN in the lungs, and in 2006 the first successful clinical experience with electromagnetic bronchoscopy (ENB) in humans was published [8].",
+      "category": "introduction",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "2. Overarching principles of ENB",
+      "content": "ENB is divided into planning, registration, and navigation phases (Figure 1). As the superDimension system is currently the most widely used ENB platform and the one to which the authors have direct access, figures, and descriptions illustrating the phases of ENB use this system as a reference point.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "2.1. Planning",
+      "content": "During planning (Figure 2), a three-dimensional airway map is generated from a high-resolution CT scan using proprietary software through a process called auto-segmentation. The bronchoscopist identifies the target lesion on the scan and\ndefines a retrograde path through the airways from the lesion to the trachea. When the path intersects with an airway included in the auto-segmented map, the software automatically completes the path from that point back to the trachea. The number of airway-generations included in the autosegmented map is proportional to the quality of the scan, and some maps may not include the distalmost airways leading to the target. Therefore, the bronchoscopist may have to manually draw a path along several airway-generations before intersecting with an auto-segmented airway, at which point the software completes the pathway. The clinician then reviews the pathway and, based on their own interpretation of the scan, decides whether to accept it or attempt to plot a different one. The bronchoscopist may also view a ' simulated bronchoscopy ' along the pathway within the virtual airway map to get a better understanding of the anatomic approach to the lesion. In some systems, airway landmarks (for example, the main carina and a secondary carina within each lobe of both lungs) are tagged on the virtual airway map upon completion of planning. This process is required for performing a ' manual registration ' in the event that ' automatic registration ' is unsuccessful (described below).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "2.2. Registration",
+      "content": "After planning, the patient is brought to the bronchoscopy suite for the procedure. An electromagnetic field generator connected to the navigation system is positioned either above or underneath the patient and sensors are affixed to the patient ' s chest, enabling the system to generate an electromagnetic field around the patient. After anesthetic administration, bronchoscopic examination of the airways is performed to clear secretions and identify any potential endobronchial lesions that might interfere with (or obviate the need for) ENB. Depending on the system being used, registration is performed at this time. An extended working channel (EWC) is advanced into the airways via the working channel of the bronchoscope, and through this, a probe with electromagnetic coils in its tip is introduced into the airways: when the probe enters the electromagnetic field, current induced within its coils enables the EMN system to determine its threedimensional position within the field and depict that location on the virtual map. The bronchoscope and probe are maneuvered to prespecified locations (for example, the mid-trachea and each lobe bilaterally) so that the system can synchronize these anatomic landmarks within the patient to their corresponding locations on the virtual map (termed ' automatic registration ' ). If this is unsuccessful (due, for example, to interval-change in lung geometry from atelectasis), a ' manual registration ' is performed: the electromagnetic probe is put into direct contact with the anatomic reference-points that were tagged on the virtual map during the planning phase, and the system uses these landmarks to overlay the virtual map onto the patient within the electromagnetic field. A more detailed assessment of the lobe containing the target lesion may then be performed by advancing the EWC and probe into each segmental bronchus of that lobe, allowing the system to obtain more spatial information within the lobe of interest and improve the granularity of registration.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Article Highlights",
+      "content": "● Electromagnetic navigational bronchoscopy (ENB) has become a commonly employed means of sampling peripheral lung lesions.\n● There are several commercially available electromagnetic navigation (EMN) platforms in the United States, each with its own unique features; however, prospective comparisons of these different systems are lacking.\n● The overall diagnostic yield of ENB as reported in the scientific literature ranges widely, with the largest and most recent prospective study reporting a yield of 73% [14].\n● The diagnostic yield of ENB hinges heavily on the biopsy techniques employed: although transbronchial needle aspiration appears to be the most reliable method, many bronchoscopists employ more than one sampling modality in an effort to maximize diagnostic yield.\n● Features intrinsic to the target lesion that may influence the efficacy of EMN-guided biopsy include size, location, and -perhaps most significantly -whether an airway leads directly into the lesion (presence of a bronchus sign).\n● Risks associated with ENB pertain more directly to the biopsy methods employed or to bronchoscopy in general: most common among potential complications are pneumothorax, bleeding, and respiratory failure.\n● A major limitation of EMN is its inability to compensate for changes in lung geometry and nodule-positioning that occur after acquisition of the CT scan used to plan the navigation: this is termed CT-to-body divergence.\n● The incorporation of more advanced imaging modalities (for example, cone-beam CT and fluoroscopy with three-dimensional reconstruction) may allow for better visual assessment and fine-tuning of navigation, while technologies such as fluoroscopic navigation may facilitate some degree of compensation for CT-to-body divergence through intraprocedural local registration.\n● The future of ENB lies in its ability to overcome its limitations (such as CT-to-body divergence), keep pace with competing technologies (such as standalone fluoroscopic navigation and other advanced bronchoscopic techniques that enable navigation and biopsy under real-time guidance), and perhaps demonstrate its utility in the arena of lung cancer therapeutics.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "2.3. Navigation",
+      "content": "After registration, navigation is performed. The bronchoscope is maneuvered toward the target lobe or segment under visual guidance. When it becomes necessary to move out beyond the bronchoscope ' s reach, the bronchoscope is held in place while the EWCandprobeareadvanceddistally toward the target lesion. The system tracks the probe ' s movements within the electromagnetic field and continuously updates its position on the virtual map, thereby enabling the bronchoscopist to maneuver the probe toward the lesion under virtual guidance (Figure 3). The general principles of navigation are fairly similar across platforms: the\nelectromagnetic probe and target lesion are depicted in several different views simultaneously, including the virtual airway map and multiplanar CT slices. As the probe is manipulated in the airways, the orientation of the images and target lesion change relative to the virtual depiction of the probe. The distance between the probe and the target is also depicted on-screen, and once they are brought within a reasonable distance of each other, the bronchoscopist may employ adjunctive imaging modalities to confirm proximity to the lesion, and, if satisfied with their positioning, proceed with either tissue-sampling or fiducialor dyemarking to guide surgical resection or stereotactic radiation therapy.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "3. EMN platforms",
+      "content": "Currently, there are three FDA-approved ENB platforms: the superDimension Navigation System (Medtronic), the Veran SPiN Thoracic Navigation System (Veran Medical Technologies), and the Monarch platform (Auris Health) (Figure 4). The superDimension and Veran systems are used in conjunction with conventional bronchoscopy (a therapeutic bronchoscope with a 2.8-mm working channel), while Monarch is a robotic bronchoscopy platform.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "3.1. superDimension Navigation System",
+      "content": "The superDimension Navigation System was the first ENB platform approved for clinical use. It uses an end-inspiratory CT obtained within 30 days of bronchoscopy for planning. The electromagnetic field generator takes the form of a ' location board ' that is placed under the patient ' s chest (other systems\nuse a field generator positioned over the hemithorax containing the target lesion). To minimize electromagnetic interference, Medtronic recommends that a mapping of ferromagnetic objects within the procedure room is performed prior to system installation and that any ferromagnetic objects (for example, a fluoroscope) be kept at least 50 cm from the patient during registration and navigation.\nThe superDimension system requires the use of a proprietary ' Edge ' EWC. Depending on how tortuous the path to the lesion, there are several EWCs with different degrees of tip-angulation available (those most commonly used have tips angled at 45, 90, or 180 degrees) (Figure 5). The forthcoming superDimension platform (ILLUMISITE) incorporates electromagnetic sensors into the tip of the EWC, thereby allowing the system to keep track of the EWC within the electromagnetic field at all times. This is an advancement over previous iterations, in which the electromagnetic probe (termed the ' Locatable Guide ' ) was a separate\ncomponent inserted through the EWC for navigation; this resulted in virtual guidance being lost upon removal of the probe, which was required to introduce other instruments via the EWC.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "3.2. Veran SPiN Thoracic Navigation System",
+      "content": "The Veran platform was the second FDA-approved EMN system. It is recommended that the planning CT be performed on the day of bronchoscopy, with specialized sensor pads placed on the patient ' s chest (oriented in the midline and contralateral to the target lesion). Acquiring images with these sensors in place obviates the need for a separate registration process. Images are also acquired at end-inspiration (with arms held above the head) and end-expiration (with arms held at the sides) to permit respiratory gating and help compensate for the positional change in the airways and target lesion during breathing.\nThe Veran system utilizes a proprietary EWC and an array of ' Always-On Tip Tracked ' biopsy instruments that are outfitted with electromagnetic sensors to allow the bronchoscopist to maintain a virtual view throughout the entire navigation and biopsy process. Alternatively, nonproprietary instruments can be used with Veran ' s ' View Peripheral Catheter ' -an EWC with built-in electromagnetic sensors. The Veran system also facilitates EMN-guided transthoracic needle biopsy or fiducial placement (called ' SPiN Perc ' ), which may be utilized either to optimize diagnostic yield or in the event of unsuccessful ENB.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "3.3. Monarch platform",
+      "content": "The Monarch platform gained FDA approval in 2018. It is the first of two commercially available robotic bronchoscopy systems and the only one to use EMN. The Monarch bronchoscope system consists of a 6-mm bronchoscope sheath and a slimmer, longer bronchoscope with an outer diameter of 4.4 mm and a 2.1-mm working channel affixed to the robot ' s two arms. The bronchoscope houses a camera, light source, and electromagnetic sensors, and telescopes within the scope sheath. Both are inserted, together, into the airways via an endotracheal tube, where they may be maneuvered either as a unit or independently. A brief manual registration, consisting of\nmaking direct contact between the bronchoscope tip and the main carina, followed by advancing and retracting the bronchoscope a fixed distance down the mainstem bronchus contralateral to the target lesion, is required prior to navigation.\nThe telescoping design of the Monarch bronchoscope allows for the more rigid sheath to be advanced ahead of the bronchoscope into airways that might be too convoluted or offer too much resistance to the thinner bronchoscope; once the sheath has been extended across the challenging airway segment, the bronchoscope may be extended out through the sheath with greater ease. The tip of the Monarch bronchoscope is capable of omnidirectional angulation, allowing for more precise movements in comparison to either a conventional bronchoscope or an EWC. The Monarch bronchoscope is also slimmer than conventional therapeutic bronchoscopes, thereby enabling the bronchoscopist to maneuver more distally under direct visualization before having to rely on virtual navigation to traverse the remaining distance to the target lesion. As the bronchoscope houses the electromagnetic sensors, virtual views are maintained throughout the entire procedure. Lastly, the Monarch system does not require the use of proprietary biopsy tools and can accommodate any instrument under 2.1 mm in diameter and over 105.2 cm long.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "4. ENB outcomes and factors influencing successful biopsy",
+      "content": "The diagnostic yield of conventional bronchoscopy for solitary nodules lying beyond bronchoscopic visibility ranges from 14% up to around 63% [9 -11]. Factors negatively impacting yield include smaller size and greater distance from the hilum [11]. As such, virtual guidance and adjunctive imaging may be well suited to the task of accessing smaller, peripheral lesions.",
+      "category": "results",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "4.1. Overall success of ENB",
+      "content": "One challenge in evaluating the diagnostic yield of ENB is the fact that EMN is only one of the several tools used to access and sample a peripheral lesion. Therefore, ENB ' s relative success is a reflection of multiple variables, including success of navigation, application of complementary imaging modalities, use of different biopsy tools, and lesion-specific factors, and studies of ENB have reported widely-ranging diagnostic yields from under 50% to over 80% (Figure 6) [12,13]. Presently, the largest study evaluating the overall yield of ENB is NAVIGATE -a prospective, multicenter study of over 1,000 adults with peripheral nodules with a median diameter of 2 cm. NAVIGATE reported a pooled yield of 72.9%. Predictors of a successful biopsy after multivariate analysis included shorter procedure-times, presence of multiple lesions, and presence of an airway running through the target lesion ( ' bronchus sign ' ) [14].\nIn most studies, success is defined according to diagnostic yield -whether a definitive abnormal result is obtained, or a negative result is corroborated by either surgical resection or subsequent stability on radiographic surveillance. Although this is the most clinically relevant endpoint, it is worth noting that ' drop-off ' may be seen from successful navigation to diagnostic biopsy (Figure 7) [15]. Two large studies of radial endobronchial\nultrasound (rEBUS)-guided biopsy of peripheral lung nodules noted a significant discrepancy between successful ultrasonographic localization of the target lesion (95.4% to 96%) and diagnostic yield (58.4% to 69%) [16,17]. Similar observations have been made with ENB and other peripheral techniques, where published rates of successful navigation (defined as the ability to navigate within a predetermined distance of the target) typically exceed 90% but diagnostic yield tends to be some 20 percentage points lower [11,15,18]. Despite ' drop-off, ' there is nonetheless some association between successful navigation and successful biopsy. Early in the development of ENB, the term ' average fiducial target registration error ' (AFTRE) was coined to describe the difference between the expected and actual location of the EMN catheter at the completion of navigation. AFTRE has been used as a surrogate for successful navigation, and although data are not uniformly in agreement, several studies demonstrate an association between lower AFTRE and higher diagnostic yield [19,20]. Ultimately, these and other factors addressed below should be kept in mind when considering a case for ENB.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "4.2. Nodule characteristics",
+      "content": "Various nodule-specific properties have been examined as potential predictors of successful ENB-guided biopsy. Most consistently associated with higher success is the presence of a bronchus sign (Figure 8). In the American College of Chest\nPhysicians Quality Improvement, Registry, Evaluation, and Education (AQuIRE) registry of 581 patients who underwent bronchoscopic biopsy of peripheral lung nodules (with or without EMN), a bronchus sign was present in 63.1% of lesions with a diagnostic biopsy versus only 36.9% of lesions with a nondiagnostic biopsy [10]. Other studies (including NAVIGATE) have supported the significance of the bronchus sign, and a recent meta-analysis demonstrated a yield of 74.1% versus 49.6% for nodules with or without a radiographic bronchus sign (odds ratio of successful biopsy = 3.4) [14,21 -24].\nAlthough smaller nodule-size adversely impacts the diagnostic yield of bronchoscopy overall, the addition of EMN may help [10,25,26]. One study comparing ENB with rEBUS to rEBUS alone found that although the overall diagnostic yield was similar (83.6% versus 66.7%, P = 0.4), the combined modalities were more successful than rEBUS alone for nodules <2 cm in diameter (80% versus 53.6%, P = 0.04) [25]. Within the ENB-focused literature, there are mixed results regarding the impact of size on successful biopsy, with many studies demonstrating either a trend toward higher diagnostic yield or statistically significant higher yield for nodules ≥ 2 cm (ranging from 44% to 81.7%) versus those below this size-threshold (ranging from 19% to 48.8%) [23,27 -29]. Still, several other studies have failed to demonstrate a relationship between nodule size and the success of ENB-guided biopsy -a conclusion that was bolstered by the multivariate analysis from the NAVIGATE registry [12,14,24,30].",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Diagnostic Yield in Published ENB Studies",
+      "content": "ENB without radial Endobronchial ultrasound (EBUS)\nAll rights reserved. Used with the Permission of Medtronic.\nt ENB plus radial Endobronchial ultrasound (EBUS) to confirm location\nPresented at ATS 2018 (Folch et al. Am J Respir Crit Care Med. 2018,197.A7784)\nWhether a nodule ' s location within the lung affects the success of ENB-guided biopsy is another area of uncertainty. Although one of the earlier studies of ENB demonstrated a trend toward higher diagnostic yield for nodules in the right middle lobe, most studies have failed to show a relationship between lobe-location and successful biopsy [10,25,26]. It is suspected that nodules in the lower lobes might be more challenging to access, and although studies have demonstrated significantly greater respiratory variation in the lower lung fields, the impact on diagnostic outcomes was not determined [31,32]. Regarding distance from the pleura, most studies accounting for this variable have not demonstrated a significant effect on\ndiagnostic yield [9,16,24]. Ultimately, more complex interactions between nodules and airways, pleural distance, degree of angulation from the central airways, and dynamic changes in lung geometry (discussed below) may have a larger and as-of-yet underappreciated impact on ENB.\nLastly, there are scant data regarding the impact of radiographic density on ENB-guided biopsy. Although one study demonstrated that the addition of ENB to rEBUS increased the rate of successful biopsy for mixed ground-glass (69% versus 57%) and pure ground-glass (65% versus 45%) lesions, the NAVIGATE registry did not find ground-glass density to be a significant factor after logistic regression, and there are no\nstudies directly comparing yield specifically on the basis of nodule density or morphology [14,33].",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "4.3. Radial endobronchial ultrasound (rEBUS)",
+      "content": "Because many ENB targets are not fluoroscopically visible (40% of cases that utilized fluoroscopy in NAVIGATE), rEBUS is often employed to verify successful navigation [14]. When added to conventional bronchoscopy, the success of rEBUS-assisted biopsy of peripheral nodules ranges from under 60% to around 80% [12,16,17,34 -36]. In a randomized trial of ENB and rEBUS in 118 patients with peripheral nodules (mean diameter of 26 ± 6 mm), the diagnostic yield for ENB with rEBUS was significantly higher (88%) than for either ENB (59%) or rEBUS (69%) alone [12]. The AQuIRE registry also noted a higher yield when rEBUS was added to ENB after multivariate logistic regression [10]. Conversely, in NAVIGATE, the use of rEBUS did not significantly affect diagnostic yield after multivariate analysis [14]. There are several potential explanations for these conflicting results: regarding NAVIGATE and AQuIRE, their pragmatic designs did not dictate the circumstances under which a particular diagnostic modality could be used, and it has been postulated that clinicians may have preferentially resorted to one technology over the other, thereby relegating the other to only the most challenging cases. AQuIRE was a study of bronchoscopy overall (and not ENB specifically) for peripheral lung lesions, and it is possible that participating bronchoscopists may have used rEBUS preferentially and ENB only in more challenging cases. In contrast, NAVIGATE was a study of ENB specifically; therefore, it may be that, at least in some instances, rEBUS was added to ENB only when available, deemed potentially helpful, or success of navigation was in doubt.\nUltimately, there are few (if any) significant downsides to using rEBUS and fluoroscopy in concert with ENB, and it is our practice to corroborate successful navigation with rEBUS and obtain all biopsies under fluoroscopic visualization. Benefits to the latter include the ability to confirm that the EWC remains in a stable position (and ascertain whether the EWC ' s position is substantially affected by the introduction of biopsy instruments, thereby potentially resulting in an off-target biopsy), track the development of atelectasis that may adversely impact yield, and detect potential complications (such as pneumothorax) as early as possible.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "4.4. Biopsy methods",
+      "content": "Techniques most commonly used to sample peripheral lesions include transbronchial needle aspiration (TBNA), catheter aspiration, transbronchial forceps biopsy (TBBx), brushing, and bronchoalveolar lavage (BAL). Although less commonly used, catheter aspiration was found to be superior to TBBx in two earlier retrospective ENB studies, furnishing diagnostic yields of 90% versus 55% in one study, and 75% versus 44% in the other [37,38]. Despite these data, catheter aspiration is used infrequently and is not represented in either the AQuIRE or NAVIGATE registries.\nOverall, TBNA appears to be the single most efficacious biopsy method: although utilized in only 16% of cases in AQuIRE, TBNA yielded a diagnostic result 43.2% of the time\nand had a higher yield in comparison to other biopsy modalities (43.2% for TBBx, 37.8% for brushing, and 19.3% for BAL) [10]. A retrospective review of ENB for the sampling of 95 peripheral nodules (mean diameter of 2.7 cm) similarly found TBNA to be the single most sensitive technique (63%, versus 57% for TBBx and 54% for brushing), although the combined use of all four biopsy methods proved far more sensitive (83%) than any one method alone [23]. This latter finding was supported in a recent analysis of NAVIGATE data showing that 86.8% of true-positive biopsies of malignant lesions were obtained using an ' extensive tool strategy ' (utilizing a greater array of biopsy instruments), as compared to 13.2% using a ' limited tool strategy ' (any combination of TBBx, standard cytology brushing, and BAL) [39].\nApart from their relative efficacies, there are other benefits and downsides to different tissue-sampling techniques. TBNA and brushings facilitate rapid on-site evaluation (ROSE), which may influence the decision to continue obtaining samples if diagnostic, or to consider modifying or reattempting navigation if nondiagnostic. Brushings and TBBx may cause more bleeding than TBNA, while TBBx carries the highest risk of pneumothorax [40 -44]. Unlike other techniques, TBBx procures a sufficiently sized sample for histologic (rather than exclusively cytologic) evaluation. We commonly perform TBNA first in all ENB cases: if a diagnostic biopsy is obtained and the lesion is not clearly in a location where the risk of complications might be unacceptably high, then TBBx is generally performed next. When TBNA is nondiagnostic or shows atypical cells only, we often perform brushings next, followed by TBBx.",
+      "category": "methods",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "4.5. ENB versus transthoracic needle aspiration",
+      "content": "In determining the most suitable biopsy modality, it should be kept in mind that transthoracic needle aspiration (TTNA) generally outperforms ENB, with a higher pooled sensitivity (over 90% for CT-guided biopsy) and a false negative rate in the range of 20 -30% [7]. The most well-documented complication of TTNA is pneumothorax, for which reported rates range widely from 8% to 64%, and may vary based on nodule characteristics and biopsy technique (for example, needle-gauge) [45]. Comparative sensitivities and risks -as well as the potential need for endobronchial ultrasound (Endobronchial ultrasound (EBUS))-guided lymph node-interrogation -should be taken into account when selecting the most appropriate diagnostic modality.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "5. ENB safety and adverse events",
+      "content": "EMN is itself very safe, with the brunt of procedural risk stemming from different biopsy instruments. The most commonly encountered adverse events are pneumothorax and bleeding; respiratory failure and death are exceptionally uncommon, and the risk of interference with implanted cardiac devices is likely theoretical in nature.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "5.1. Pneumothorax",
+      "content": "Pneumothorax is seen most frequently with TBBx, with published rates typically ranging from 1% to 8% [40 -44]. By comparison, rates of pneumothorax after TBNA generally do not exceed 1% [43,46].\nIn AQuIRE, pneumothorax occurred in 1.7% of cases [10]. In NAVIGATE, the overall rate of pneumothorax was 4.3% (2.9% for pneumothorax producing symptoms or requiring intervention) [14]. Independent risk factors for pneumothorax after bronchoscopic biopsy include emphysema, tangential orientation of the airway relative to the nodule on rEBUS, and sub-interlobular pleural location of the nodule [47,48].",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "5.2. Bleeding",
+      "content": "While the EWC may induce some mucosal trauma through contact with the airway wall, ENB-associated bleeding results primarily from biopsy techniques, with TBBx being the greatest culprit. Rates of bleeding in NAVIGATE were 2.5% overall (1.5% for bleeding necessitating intervention) [10]. Risk factors for bleeding include coagulopathy, lung transplantation, uremia, therapeutic anticoagulation, and the use of non-aspirin antiplatelet medications [49 -56]. Although an elevated pulmonary artery systolic pressure is an oft-invoked risk factor for bleeding, studies have shown that bronchoscopic biopsies may be safely obtained without an increased incidence of bleeding in individuals with pulmonary hypertension [57,58]. Published recommendations for the periprocedural management of antiplatelet and anticoagulant medications should be followed to mitigate the risk of iatrogenic bleeding [53].",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "5.3. Respiratory failure or death",
+      "content": "The risk of respiratory failure with ENB is likely no greater than with flexible bronchoscopy overall. Refractory hypoxemia or respiratory failure occurred in <1% of patients in AQuIRE and NAVIGATE [10,14]. Regarding postprocedural mortality, NAVIGATE reported one death from hypoxemic respiratory failure occurring 9 days after bronchoscopy, and no deaths directly linked to ENB itself [14].",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "5.4. Implanted cardiac devices",
+      "content": "The EMN system generates an electromagnetic field of around 0.0001 T; by comparison, the earth ' s intrinsic magnetic field has a strength of 0.00003 to 0.00005 T. Commercial instructions for EMN recommend excluding patients with implanted cardiac devices, and the 2003 American College of Chest Physicians guidelines for interventional pulmonary procedures include such devices as a relative contraindication to ENB [59]. Studies have failed to demonstrate interference with devicefunctioning or inadvertent device-reprogramming during ENB; given these data, we recommend that ENB not be deferred solely on the basis of an implanted cardiac device [60,61].",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "6. ENB cost",
+      "content": "It is undeniable that the cost and availability of competing resources may affect the decision to incorporate ENB into one ' s clinical practice. Although there are limited published data comparing costs associated with ENB to other diagnostic modalities, it seems that ENB is generally more expensive than the most commonly utilized alternative -TTNA. ENB was\nfound to be more costly than CT-guided TTNA (mean 6,633 USD versus 2,913 USD) in one study that utilized cost data from insurance agencies and the American Medical Association [62]. In a more recent single-center study examining overarching costs (including those associated with anesthesiology and hospitalization) from 49 consecutive ENB and 77 consecutive TTNA procedures, the base proceduralist cost for ENB and TTNA was 5,248 USD and 1,476, USD, respectively, while the average total per-procedure cost was 14,923 USD for ENB and 4,764 USD for TTNA. It bears mentioning that the average length-of-hospitalization for patients undergoing ENB was thrice as high as for TTNA (6 versus 2 days) for unspecified reasons, further adding to the cost of ENB [63]. Ultimately, the cost of ENB likely varies along a variety of parameters including the capital cost of different EMN systems, costs of adjunctive instruments or technologies, pricing of non-reusable components, facility fees, and anesthesiaassociated costs.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "7. ENB shortcomings",
+      "content": "Perhaps the greatest limitation of ENB is that it occurs in two different and potentially discordant planes simultaneously: that of the patient ' s dynamic tracheobronchial tree in vivo , through with the bronchoscope maneuvers; and that of the static virtual airway map, through which the LG believes itself to be moving. The dynamic nature of the patient ' s lungs -and the potential impact of changing lung geometry on airwaynodule relationships -is not reflected in the virtual realm, thereby creating the potential for unsuccessful navigation or conflicting outcomes of navigation and tissue-sampling. The term ' CT-to-body divergence ' describes this potential discrepancy between the location of a nodule on static imaging and in the dynamic lung itself.\nThe impact of CT-to-body divergence was highlighted in an early publication that noted a significantly higher diagnostic yield when the difference in position between landmarks in the planning CT and the patient ' s actual airways during bronchoscopy did not exceed 4 mm (77.2% versus 44.4%, P = 0.03) [19]. Corroborating this observation were the results of a subsequent study that found the diagnostic yield of ENB to be significantly higher when CT-to-body divergence was no greater than 4 mm (91% versus 87%, P = 0.003) [64]. The effect of the bronchoscope itself on lung geometry was highlighted in one study that noted the dynamic movement of sensors placed in the periphery of a porcine lung model increased significantly when the bronchoscope moved from a central airway into a wedged position proximal to the sensor -likely as a result of regional atelectasis [65]. Nodule-movement secondary to respiratory motion was the focus of another study of 85 nodules in 46 patients, in which nodules moved a mean 17.6 mm as lung-volume changed from total lung capacity to functional residual capacity, with the degree of displacement being greater for nodules located in the lower versus upper lobes [31]. Compensation for respiratory variation was the impetus behind the Veran system ' s incorporation of end-inspiratory and end-expiratory images in the planning CT; however, studies demonstrating whether this influences outcomes have not been published.\nThere is growing interest in techniques to reduce CT-tobody divergence, including the elucidation of optimal anesthetic or ventilatory conditions under which to perform ENB. Whether the mode of anesthesia impacts the success of navigation or diagnostic yield remains uncertain. A 2014 metaanalysis identified a higher diagnostic yield in studies that performed ENB under general anesthesia [18]. Contrastingly, several studies directly comparing the mode of anesthesia (moderate or deep sedation versus general anesthesia) during ENB found no significant difference in diagnostic yield [12,66,67]. Furthermore, NAVIGATE did not find the type of anesthesia to be a significant predictor of successful biopsy in logistic regression models [14].\nThe mode of mechanical ventilation used during ENB hinges on three main factors: meeting the patient ' s ventilatory needs, minimizing potential deleterious effects of mechanical ventilation, and mitigating the development of atelectasis. Regarding the last of these considerations, higher-pressure mechanical ventilation (whether through higher inspiratory pressures, positive end-expiratory pressure, or recruitment maneuvers) and judicious limitation of the fraction of inspired oxygen (to minimize the potential for resorption atelectasis) have been promoted to varying degrees; however, published data in support of one ventilatory strategy over another remain limited. Interestingly, a recent publication comparing jet ventilation to conventional lung-protective volume ventilation found that the use of jet ventilation resulted in significantly less spatial displacement from the tip of the EMN catheter to the target lesion (2 mm versus 17 mm, P < 0.05) and a significantly higher diagnostic yield (54% versus 43%, P < 0.05) among patients lacking an airway leading directly to the target lesion [68]. As the bronchus sign is a well-established factor for predicting the success of ENB, techniques to improve yield in the absence of this finding would be most welcome.\nLastly, although not directly related to navigational success itself, a 2018 prospective study of planning CT acquisition techniques found that airways-segmentation was superior when positive airway pressure (PAP) therapy was administered prior to imaging (a 1.63-fold increase in overall airwayssegmentation and a 1.34-fold increase in segmentation of airways leading directly to the target lesion on expiratory images obtained after administration of PAP at 14 cm H2 O for 15 min) [69].\nWe routinely perform ENB under total intravenous anesthesia with propofol and a nondepolarizing paralytic agent, using pressure-control ventilation with a positive end-expiratory pressure of 8 to 12 cm H2O. We have found this regimen to be relatively effective and well tolerated, both from a procedural standpoint and from the perspective of patient safety.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "8. Expert opinion",
+      "content": "Some compelling recent developments in ENB involve the incorporation of additional imaging modalities into the navigation process, conferring the ability to visualize lung nodules that are otherwise occult on conventional fluoroscopy and potentially helping to compensate for some degree of CT-tobody divergence and improve the success of navigation\nthrough local registration. Here we offer a review of these modalities, as well as our views on competing diagnostic technologies, our opinions regarding the current role of ENB in diagnostic bronchoscopy, and our perspective on the emergence of ENB in the therapeutic realm.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "8.1. Cone-beam CT and fluoroscopy with three-dimensional reconstruction",
+      "content": "Cone-beam CT (CBCT) is a form of real-time CT capable of providing detailed three-dimensional images around a target of interest (Figure 9). The C-arm-mounted CBCT radiation source is centered on a point of interest, images are acquired as the C-arm rotates around its target, and volumetric reconstruction is used to generate three-dimensional images [70]. Benefits of CBCT in concert with bronchoscopy include higherfidelity intraprocedural imaging with the ability to confirm the placement of the biopsy instrument within the target lesion. In a prospective study of CBCT with ultrathin bronchoscopy and rEBUS (without ENB) for localization of peripheral nodules with a mean diameter of 2.1 cm, bronchoscopic adjustments based on intraprocedural CBCT improved diagnostic yield from 50% to 70% (P = 0.04) [71]. In a prospective study combining CBCT with ENB in eight patients with peripheral nodules averaging 1.34 cm in diameter, navigational success was 100%, CBCT confirmed the biopsy instrument within the lesion in 7 of 8 cases, and a definitive diagnosis of cancer was made in 3 of 8 cases [72].\nFilling a similar niche are newer fluoroscopes capable of both conventional two-dimensional and reconstructed threedimensional imaging (Figure 10). The units operate similarly to CBCT: X-ray images are acquired at a rapid frame-rate as the fluoroscope rotates at least 180 degrees around its target, and proprietary image-processing software generates tomographic reconstructions in the axial, coronal, and sagittal planes. Image-acquisition may be performed at various points during ENB to verify the success of navigation or confirm the placement of a biopsy instrument within a lesion. Potential benefits of these novel fluoroscopy units over CBCT include greater mobility (they are freestanding and wheel-mounted), ease of operation (similar to standard fluoroscopy), and lower ionizing radiation exposure. There are, as of yet, no published data exploring the additive benefit of these devices in conjunction with ENB.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "8.2. Tomosynthesis and fluoroscopic navigation",
+      "content": "Tomosynthesis is a form of fluoroscopy in which a sequence of X-ray images are acquired over a limited angle of rotation (usually between 20 and 70 degrees) around a target and then processed to generate a three-dimensional reconstruction. Tomosynthesis using a C-arm fluoroscope permits visualization of smaller lesions and their immediate surrounding structures at a much lower radiation dose than CBCT (although with reduced image-fidelity). In a study conducted in a ventilated ex vivo porcine lung model, EMN was used to access and place fiducial markers as close as possible to 7-mm peripheral targets that were not visible on two-dimensional fluoroscopy. Targets were imaged with tomosynthesis before\nand after fiducial-placement, and the distance from the fiducial to the target as determined by tomosynthesis and as estimated by EMN were compared to measurements on CBCT. All 40 targets were visualized by tomosynthesis prior to navigation, and distances from the fiducial to the target on tomosynthesis were highly concordant with CBCT measurements, whereas distances as determined by the EMN system were not (correlation coefficient of 0.926 versus 0.048) [73].\nTomosynthesis has since been adapted for ' fluoroscopic navigation, ' both as an adjunct to EMN as well as a standalone navigation system using augmented fluoroscopy. The primary aim of adding tomosynthesis to EMN is to help compensate for CT-to-body divergence by accounting for the intraprocedural movement of the target. The latest update to the superDimension system incorporates tomosynthesis directly into ENB: prior to navigation, tomosynthesis is performed over the target lesion with the patient positioned on a fiducial marker board, and proprietary software ' fuses ' the fluoroscopic images with the planning CT. The system is thus capable of determining\nthe location of the lesion on fluoroscopy and tracking its movement relative to landmarks on the fiducial marker board. Tomosynthesis may be repeated during the navigation process, and changes in lesion-position relative to the fiducial landmarks are used to update the registration (termed ' local registration ' ). The EMN software subsequently uses local registration data to update the navigation path. Current data on the integration of fluoroscopic navigation into ENB are promising: a recent comparison of ENB using the superDimension system with or without fluoroscopic navigation and local registration showed a significantly higher diagnostic yield when intraprocedural local registration was used (79.1% versus 55.3%, P = 0.0015) [74]. Another prospective study of 50 patients (61.2% of lesions < 20 mm and 46.9% without a bronchus sign) showed that after performing local registration with the superDimension ' s fluoroscopic navigation platform, the number of cases in which there was overlap in target location as determined by EMN and CBCT rose from 68.3% to 95.1%, with an overall diagnostic biopsy rate of 63.3% [75].",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "8.3. Beyond ENB",
+      "content": "The goal of ENB is to guide the bronchoscope to within biopsy range of a target; as such, its future will be shaped not only by its own progress toward achieving that goal but also by the development of competing technologies that serve a similar purpose. Although ENB has become a central diagnostic modality in the bronchoscopist ' s armamentarium, it could just as easily fall from favor as other tools with similar (or greater) efficacy and fewer shortcomings become available. Everslimmer bronchoscopes may ultimately enable the clinician to get within biopsy-range of peripheral targets without the need for virtual guidance [76]. Just as the convex Endobronchial ultrasound (EBUS) bronchoscope revolutionized the interrogation of central lesions and lymph nodes, so too might an ultrathin Endobronchial ultrasound (EBUS) bronchoscope change the face of peripheral lung nodule-sampling [77]. Standalone fluoroscopic navigation (LungVision platform, BodyVision Medical) (Figure 11) has already shown promise as a tool for accessing peripheral lesions while providing some degree of real-time compensation for CT-to-body divergence, and although fluoroscopic navigation is incorporated into the newest version of the superDimension system, it has yet to be determined whether combining the two technologies offers significant benefit over fluoroscopic navigation alone [78 -80]. Lastly, in the field of robotic bronchoscopy, the Ion system (Intuitive Surgical) employs a thin (3.5-mm outer diameter) bronchoscope with fiberoptic positional sensing (rather positional localization within an electromagnetic field) for guided navigation to peripheral targets. The proprietary positional sensing technology also enables the bronchoscope to hold its position more effectively and compensate for movement at the distal tip during the\nintroduction of biopsy instruments, which may in turn aid in the sampling of parenchymal lesions lying adjacent to the airway wall or lacking a bronchus sign. While ENB continues to occupy a place of importance in the world of diagnostic bronchoscopy, its future nonetheless remains uncertain as competing technologies gain momentum and we amass more data in support of their potential advantages.\nIt is, in our opinion, also worth considering the purpose of peripheral lung lesion-sampling in general when discussing ENB ' s role in the management of pulmonary nodules. The ultimate intent of diagnostic bronchoscopy is to inform a treatment strategy. In patients with sufficiently high-risk nodules, definitive and potentially curative therapy (surgical resection, or stereotactic body radiation therapy in poor surgical candidates or those preferring to forego surgery) should be the goal -even in absence of histopathologic confirmation of malignancy. Therefore, biopsy is often unnecessary, may result in treatmentdelays, and may expose the patient to undue procedural risk. It is our practice and our recommendation to forego ENB in such patients -regardless of its feasibility -andtopursuelymphnodestaging alone in individuals who have radiographically abnormal intrathoracic lymph nodes, hypermetabolic lymph nodes on positron emission tomography, nodules ≥ 2 cm in diameter, or centrally located nodules (within the inner one-third of the lung). Where we feel ENB has an unconditional role is in the diagnostic evaluation of patients with intermediate-risk nodules and unremarkable lymph nodes, or in whom a diagnosis other than primary lung cancer (for example, metastatic extrapulmonary malignancy or benign disease potentially requiring treatment) is a strong consideration. In contrast to suspected primary lung\ncancer, where bronchoscopy serves both diagnostic and staging purposes, these are situations in which lymph node sampling may be less likely to furnish a diagnosis or influence treatment; and while a diagnostic lymph node biopsy might negate the need to sample the nodule, a negative or nondiagnostic result would not. Because of these factors -and in light of our growing understanding of changes that occur in lung geometry under conditions of general anesthesia, mechanical ventilation, and bronchoscopy itself that likely increase the probability of unsuccessful navigation and biopsy -we highly recommend prioritizing ENB (or other nodule-sampling techniques) over lymph node assessment in clinical scenarios where a diagnosis other than primary lung cancer is being considered. Similarly, in situations where ENB or comparable diagnostic techniques are unavailable, patients who fit the above criteria should be referred to a provider or facility capable of providing the appropriate services. Endobronchial ultrasound (EBUS)-guided lymph node evaluation should not be viewed as an acceptable alternative in such situations when timely referral is feasible, as negative or nondiagnostic results of lymph node sampling may not obviate the need to pursue the peripheral nodule, and would therefore result in the patient being subjected to two separate diagnostic procedures (and their associated risks and costs) rather than potentially one.\nLastly, we feel that the future of ENB and similar navigation platforms may also lie in the therapeutic realm. Catheterdirected ablation techniques already exist for use in other organ systems; whether they may be adapted to ENB for the treatment of peripheral lung neoplasms is under investigation [81 -83]. Yet, as we work on the frontiers of technology, we are continually confronted by old questions and challenges -for example, defining the degree to which multimodal biopsy techniques are complementary, grasping the full impact of dynamic changes in lung geometry on the success of EMN, and elucidating the true extent to which EMN is limited by its fundamentally non-real-time nature. Furthermore, the optimal role of EMN -and all other diagnostic technologies -in the evaluation and management of suspicious lung lesions has yet to be determined as we continue to search for the holy grail of noninvasive lung cancer tests that might someday obviate the need for invasive diagnostic procedures altogether.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Funding",
+      "content": "This paper was not funded.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Declaration of Interest",
+      "content": "T. R. Gildea has been part of several scientific advisory boards (e.g., Medtronic, Auris, Intuitive Surgical, Siemens, Ethicon/J&J, Boston Scientific) and their employer has grant support for educational activities (e.g., Veran, Olympus, etc.) that has some interaction with content. The authors have no other relevant affiliations or financial involvement with any organization or entity with a financial interest in or financial conflict with the subject matter or materials discussed in the manuscript apart from those disclosed.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Reviewer Disclosures",
+      "content": "Peer reviewers on this manuscript have no relevant financial or other relationships to disclose.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "ORCID",
+      "content": "Brian D. Shaller http://orcid.org/0000-0002-5620-8674 Thomas R. Gildea http://orcid.org/0000-0001-9511-2790",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "References",
+      "content": "Papers of special note have been highlighted as either of interest ( · ) or of considerable interest ( ·· ) to readers.\n1. Gould MK, Tang T, Liu I-LA, et al. Recent trends in the identification of incidental pulmonary nodules. Am J Respir Crit Care Med. 2015;192:1208 -1214.\n2. Koning HD, Aalst CVD, Haaf KT, et al. Effects of volume CT lung cancer screening: mortality results of the NELSON randomised-controlled population based trial. J Thorac Oncol. 2018;13:S185.\n3. Okereke IC, Nishi S, Zhou J, et al. Trends in lung cancer screening in the United States, 2016 -2017. J Thorac Dis. 2019;11:873 -881.\n4. Aberle DR, Adams AM, Berg CD, et al. Reduced lung-cancer mortality with low-dose computed tomographic screening. N Engl J Med. 2011;365:395 -409.\n5. MacMahon H, Naidich DP, Goo JM, et al. Guidelines for management of incidental pulmonary nodules detected on CT images: from the Fleischner Society 2017. Radiology. 2017;284:228 -243.\n6. American College of Radiology. Lung CT screening reporting & data system (Lung-RADS) [Internet]. [cited 2020 Feb 24]. Available from: https://www.acr.org/Clinical-Resources/Reporting-and-Data-Systems /Lung-Rads\n7. Gould MK, Donington J, Lynch WR, et al. Evaluation of individuals with pulmonary nodules: when is it lung cancer? Chest. 2013;143: e93S -e120S.\n8. Schwarz Y, Greif J, Becker HD, et al. Real-time electromagnetic navigation bronchoscopy to peripheral lung lesions using overlaid CT images. Chest. 2006;129:988 -994.\n9. Baaklini WA, Reinoso MA, Gorin AB, et al. Diagnostic yield of fiberoptic bronchoscopy in evaluating solitary pulmonary nodules. Chest. 2000;117:1049 -1054.\n10. Ost DE, Ernst A, Lei X, et al. Diagnostic yield and complications of bronchoscopy for peripheral lung lesions. Results of the AQuIRE registry. Am J Respir Crit Care Med. 2015;193:68 -77.\n·· Multicenter registry of patients undergoing bronchoscopy for biopsy of peripheral lung lesions, with a focus on diagnostic yield of different tissue-sampling techniques and a comparison of different localization modalities (including EMN and rEBUS).\n11. Wang Memoli JS, Nietert PJ, Silvestri GA. Meta-analysis of guided bronchoscopy for the evaluation of the pulmonary nodule. Chest. 2012;142:385 -393.\n12. Eberhardt R, Anantham D, Ernst A, et al. Multimodality bronchoscopic diagnosis of peripheral lung lesions. Am J Respir Crit Care Med. 2007;176:36 -41.\n13. Rivera MP, Mehta AC, Wahidi MM. Establishing the diagnosis of lung cancer: diagnosis and management of lung cancer, 3rd ed: American college of chest physicians evidence-based clinical practice guidelines. Chest. 2013;143:e142S -e165S.\n· American College of Chest Physicians consensus guidelines outlining a diagnostic approach to suspicious lung nodules.\n14. Folch EE, Pritchett MA, Nead MA, et al. Electromagnetic navigation bronchoscopy for peripheral pulmonary lesions: one-year results of the prospective, multicenter NAVIGATE study. J Thorac Oncol. 2019;14:445 -458.\n·· Landmark large, multicenter, prospective study of ENB with a focus on diagnostic yield and adverse events, with multivariate logistic regression identifying factors associated with successful ENB.\n15. Gildea TR. Lung lesion localization and the diagnostic drop. Ann ATS. 2016;13:1450 -1452.\n16. Chen AC, Loiselle A, Zhou L, et al. Localization of peripheral pulmonary lesions using a method of computed tomography -anatomic correlation and radial probe endobronchial ultrasound confirmation. Ann ATS. 2016;13:1586 -1592.\n17. Chen A, Chenna P, Loiselle A, et al. Radial probe endobronchial ultrasound for peripheral pulmonary lesions. A 5-year institutional experience. Ann ATS. 2014;11:578 -582.\n18. Gex G, Pralong JA, Combescure C, et al. Diagnostic yield and safety of electromagnetic navigation bronchoscopy for lung nodules: a systematic review and meta-analysis. Respiration. 2014;87:165 -176.\n19. Makris D, Scherpereel A, Leroy S, et al. Electromagnetic navigation diagnostic bronchoscopy for small peripheral lung lesions. Eur Respir J. 2007;29:1187 -1192.\n20. Karnak D, Çileda ğ A, Ceyhan K, et al. Rapid on-site evaluation and low registration error enhance the success of electromagnetic navigation bronchoscopy. Ann Thorac Med. 2013;8:28 -32.\n21. Seijo LM, de Torres JP, Lozano MD, et al. Diagnostic yield of electromagnetic navigation bronchoscopy is highly dependent on the presence of a bronchus sign on CT imaging: results from a prospective study. Chest. 2010;138:1316 -1321.\n· Prospective study highlighting the significance of the bronchus sign in successful EMN-guided biopsy.\n22. Ali MS, Sethi J, Taneja A, et al. Computed tomography bronchus sign and the diagnostic yield of guided bronchoscopy for peripheral pulmonary lesions. A systematic review and meta-analysis. Ann ATS. 2018;15:978 -987.\n23. Anantham D, Tan AH, Yii A, et al. Utility of virtual bronchoscopy navigation in the diagnosis of peripheral lung lesions. Eur Respir J. 2017;50:PA3774.\n24. Naranjo OR, Punter RMG, de Tejada JAGR, et al. Improved diagnostic of electromagnetic navigation bronchoscopy in peripheral lung lesions: are the size and the bronchus sign important? Eur Respir J. 2011;38:p3718.\n25. Xu C, Yuan Q, Wang Y, et al. Usefulness of virtual bronchoscopic navigation combined with endobronchial ultrasound guided transbronchial lung biopsy for solitary pulmonary nodules. Medicine (Baltimore). 2019;98:e14248.\n26. Chee A, Stather DR, MacEachern P, et al. Diagnostic utility of peripheral endobronchial ultrasound with electromagnetic navigation bronchoscopy in peripheral lung nodules. Respirology. 2013;18:784 -789.\n27. Mahajan AK, Patel S, Hogarth DK, et al. Electromagnetic navigational bronchoscopy: an effective and safe approach to diagnose peripheral lung lesions unreachable by conventional bronchoscopy in high-risk patients. J Bronchology Interv Pulmonol. 2011;18:133 -137.\n28. Odronic SI, Gildea TR, Chute DJ. Electromagnetic navigation bronchoscopy-guided fine needle aspiration for the diagnosis of lung lesions. Diagn Cytopathol. 2014;42:1045 -1050.\n29. Jensen KW, Hsia DW, Seijo LM, et al. Multicenter experience with electromagnetic navigation bronchoscopy for the diagnosis of pulmonary nodules. J Bronchology Interv Pulmonol. 2012;19:195 -199.\n30. Gildea TR, Mazzone PJ, Karnak D, et al. Electromagnetic navigation diagnostic bronchoscopy. Am J Respir Crit Care Med. 2006;174:982 -989.\n· Landmark prospective pilot study of ENB.\n31. Chen A, Pastis N, Furukawa B, et al. The effect of respiratory motion on pulmonary nodule location during electromagnetic navigation bronchoscopy. Chest. 2015;147:1275 -1281.\n32. Furukawa BS, Pastis NJ, Tanner NT, et al. Comparing pulmonary nodule location during electromagnetic bronchoscopy with predicted location on the basis of two virtual airway maps at different phases of respiration. Chest. 2018;153:181 -186.\n33. Ikezawa Y, Shinagawa N, Sukoh N, et al. Usefulness of endobronchial ultrasonography with a guide sheath and virtual bronchoscopic navigation for ground-glass opacity lesions. Ann Thorac Surg. 2017;103:470 -475.\n34. Paone G, Nicastri E, Lucantoni G, et al. Endobronchial ultrasound-driven biopsy in the diagnosis of peripheral lung lesions. Chest. 2005;128:3551 -3557.\n35. Herth FJF, Ernst A, Becker HD. Endobronchial ultrasound-guided transbronchial lung biopsy in solitary pulmonary nodules and peripheral lesions. Eur Respir J. 2002;20:972 -974.\n36. Kurimoto N, Miyazawa T, Okimasa S, et al. Endobronchial ultrasonography using a guide sheath increases the ability to diagnose peripheral pulmonary lesions endoscopically. Chest. 2004;126:959 -965.\n37. Franke K-J, Nilius G, Ruhle K-H. Transbronchial catheter aspiration compared to forceps biopsy in the diagnosis of peripheral lung cancer. Eur J Med Res. 2009;14:13 -17.\n38. Eberhardt R, Morgan RK, Ernst A, et al. Comparison of suction catheter versus forceps biopsy for sampling of solitary pulmonary nodules guided by electromagnetic navigational bronchoscopy. Respiration. 2010;79:54 -60.\n39. Gildea T, Folch E, Khandhar S, et al. The impact of biopsy tool choice and rapid on-site evaluation on the diagnostic accuracy for malignant lesions in the prospective, multicenter NAVIGATE study. Chest. 2019;156:A827 -A829.\n40. Rand IAD, Blaikley J, Booton R, et al. British Thoracic Society guideline for diagnostic flexible bronchoscopy in adults: accredited by NICE. Thorax. 2013;68:i1 -i44.\n41. Herout V, Heroutova M, Merta Z, et al. Transbronchial biopsy from the upper pulmonary lobes is associated with increased risk of pneumothorax -a retrospective study. BMC Pulm Med. 2019;19:56.\n42. Almadani AH, Deenadayalu A, Ping MNY, et al. Comparison between different types of forceps used in transbronchial lung biopsy. Eur Respir J. 2017;50:PA3782.\n43. Huang Y, Huang H, Li Q, et al. Transbronchial lung biopsy and pneumothorax. J Thorac Dis. 2014;6:S443 -S447.\n44. Garcha PS, Santacruz JF, Jaber WS, et al. Pneumothorax post flexible bronchoscopy. Am J Respir Crit Care Med. 2011;183: A2351.\n45. Geraghty PR, Kee ST, McFarlane G, et al. CT-guided transthoracic needle aspiration biopsy of pulmonary nodules: needle size and pneumothorax rate. Radiology. 2003;229:475 -481.\n46. Boskovic T, Stojanovic M, Stanic J, et al. Pneumothorax after transbronchial needle biopsy. J Thorac Dis. 2014;6:S427 -S434.\n47. Huang C-T, Ruan S-Y, Liao W-Y, et al. Risk factors of pneumothorax after endobronchial ultrasound-guided transbronchial biopsy for peripheral lung lesions. PLoS One. 2012;7:e49125.\n48. Chino H, Iikura M, Saito N, et al. Subinterlobular pleural location is a risk factor for pneumothorax after bronchoscopy. Respir Care. 2016;61:1664 -1670.\n49. Herth FJF, Becker HD, Ernst A. Aspirin does not increase bleeding complications after transbronchial biopsy. Chest. 2002;122:1461 -1464.\n50. Ernst A, Eberhardt R, Wahidi M, et al. Effect of routine clopidogrel use on bleeding complications after transbronchial biopsy in humans. Chest. 2006;129:734 -737.\n51. Youness HA, Keddissi J, Berim I, et al. Management of oral antiplatelet agents and anticoagulation therapy before bronchoscopy. J Thorac Dis. 2017;9:S1022 -S1033.\n52. Chinsky K. Bleeding risk and bronchoscopy: in search of the evidence in evidence-based medicine. Chest. 2005;127:1875 -1877.\n53. Abuqayyas S, Raju S, Bartholomew JR, et al. Management of antithrombotic agents in patients undergoing flexible bronchoscopy. Eur Respir Rev. 2017;26:170001.\n54. Modrykamien AM, Santacruz JF, Heresi GA. Clopidogrel airway. J Bronchology Interv Pulmonol. 2008;15:102.\n55. Diette GB, Wiener CM, White P. The higher risk of bleeding in lung transplant recipients from bronchoscopy is independent of traditional bleeding risks: results of a prospective cohort study. Chest. 1999;115:397 -402.\n56. Bernasconi M, Koegelenberg CFN, Koutsokera A, et al. Iatrogenic bleeding during flexible bronchoscopy: risk factors, prophylactic measures and management. ERJ Open Res. 2017;3:00084 -02016.\n57. Diaz-Guzman E, Vadi S, Minai OA, et al. Safety of diagnostic bronchoscopy in patients with pulmonary hypertension. Respiration. 2009;77:292 -297.\n58. Diaz-Fuentes G, Bajantri B, Adrish M. Safety of bronchoscopy in patients with echocardiographic evidence of pulmonary hypertension. Respiration. 2016;92:182 -187.\n59. Ernst A, Silvestri GA, Johnstone D, et al. Interventional pulmonary procedures: guidelines from the American college of chest physicians. Chest. 2003;123:1693 -1717.\n60. Magnani A, Balbo P, Facchini E, et al. Lack of interference of electromagnetic navigation bronchoscopy to implanted cardioverter-defibrillator: in-vivo study. Europace. 2014;16:1767 -1771.\n61. Khan AY, Berkowitz D, Krimsky WS, et al. Safety of pacemakers and defibrillators in electromagnetic navigation bronchoscopy. Chest. 2013;143:75 -81.\n62. Dale CR, Madtes DK, Fan VS, et al. Navigational bronchoscopy with biopsy versus CT-guided biopsy for the diagnosis of a solitary pulmonary nodule: a cost-consequences analysis. J Bronchology Interv Pulmonol. 2012;19:294 -303.\n63. Desai H, Akulian A, Belanger A, et al. Cost-effectiveness of electromagnetic navigational bronchoscopy and CT-guided transthoracic needle biopsy for diagnosis of pulmonary nodules, with consideration of diagnostic efficacy and complications. Am J Respir Crit Care Med. 2017;195:A2881.\n64. Mohanasundaram U, Ho LA, Kuschner WG, et al. The diagnostic yield of navigational bronchoscopy performed with propofol deep sedation. Int Sch Res Notices [Internet]. 2013 [cited 2019 Nov 24]. Available from: https://www.hindawi.com/journals/isrn/2013/824693/\n65. Leira HO, Lango T, Sorger H, et al. Bronchoscope-induced displacement of lung targets: first in vivo demonstration of effect from wedging maneuver in navigated bronchoscopy. J Bronchology Interv Pulmonol. 2013;20:206 -212.\n66. Eberhardt R, Anantham D, Herth F, et al. Electromagnetic navigation diagnostic bronchoscopy in peripheral lung lesions. Chest. 2007;131:1800 -1805.\n67. Bowling MR, Kohan MW, Walker P, et al. The effect of general anesthesia versus intravenous sedation on diagnostic yield and success in electromagnetic navigation bronchoscopy. J Bronchology Interv Pulmonol. 2015;22:5 -13.\n68. Webb TNB, Bonta DV, Masters RC, et al. Jet ventilation decreases target motion and increases yield of ENB especially in lesions with negative bronchus sign. J Bronchology Interv Pulmonol. 2020;27:14 -21.\n69. Diez-Ferrer M, Gil D, Tebe C, et al. Positive airway pressure to enhance computed tomography imaging for airway segmentation for virtual bronchoscopic navigation. Respiration. 2018;96:525 -534.\n70. Hohenforst-Schmidt W, Banckwitz R, Zarogoulidis P, et al. Radiation exposure of patients by cone beam CT during endobronchial navigation -a phantom study. J Cancer. 2014;5:192 -202.\n71. Casal RF, Sarkiss M, Jones AK, et al. Cone beam computed tomography-guided thin/ultrathin bronchoscopy for diagnosis of peripheral lung nodules: a prospective pilot study. J Thorac Dis. 2018;10:6950 -6959.\n· Pilot study of ultrathin bronchoscopy and cone beam CT (without ENB) for biopsy of peripheral lung lesions, showing significant improvement in diagnostic yield as a result of intraprocedural CT-based adjustments.\n72. Lam L, Gildea T, Machuzak M, et al. Electromagnetic navigation bronchoscopy paired with cone-beam CT confirmation for biopsy of difficult peripheral lung lesions: a prospective pilot trial. Chest. 2016;150:1005A.\n73. Nelson G, Wu M, Hinkel C, et al. Improved targeting accuracy of lung tumor biopsies with scanning-beam digital x-ray tomosynthesis image guidance. Med Phys. 2016;43:6282 -6290.\n74. Aboudara M, Roller L, Lentz RJ, et al. FluoroNav assisted navigational bronchoscopy and diagnostic yield. Am J Respir Crit Care Med. 2019;199:A1262.\n· Published abstract describing early successful experience with fluoroscopic navigation integrated into ENB, showing improved diagnostic yield with both modalities versus ENB alone.\n75. Bhadra K, Mattingley J, Pritchett M. Electromagnetic navigation bronchoscopy with advanced fluoroscopy-based localization and intraprocedural local registration for the evaluation of peripheral pulmonary nodules. Chest. 2019;156:A2262 -A2263.\n76. Diez-Ferrer M, Morales A, Tebé C, et al. Ultrathin bronchoscopy with and without virtual bronchoscopic navigation: influence of segmentation on diagnostic yield. Respiration. 2019;97:252 -258.\n77. Patel P, Wada H, Hu H-P, et al. First evaluation of the new thin convex probe endobronchial ultrasound scope: a human ex vivo lung study. Ann Thorac Surg. 2017;103:1158 -1164.\n78. Pritchett M. Feasibility of the LungVision augmented endobronchial fluoroscopic navigation and localization system: comparison with cone beam CT for nodule localization. Chest. 2017;152:A863.\n79. Whitten P. Augmented endobronchial fluoroscopic navigation and localization system: integration of multimodalities and biopsy tools to increase diagnostic yield. Chest. 2018;154:658A.\n80. Hogarth DK, Bhadra K, Whitten P, et al. A novel endobronchial fluoroscopic navigation and localization system: a summary of a multicenter LungVision trial. Chest. 2018;154:880A -882A.\n· Published abstract from a recent prospective study of fluoroscopic navigation without ENB for the biopsy of peripheral lung lesions, demonstrating a successful localization of 86% and diagnostic yield of 78%.\n81. Xie F, Zheng X, Xiao B, et al. Navigation bronchoscopy-guided radiofrequency ablation for nonsurgical peripheral pulmonary tumors. Respiration. 2017;94:293 -298.\n82. Zhao Z-R, Lau RWH, Ng CSH. Catheter-based alternative treatment for early-stage lung cancer with a high-risk for morbidity. J Thorac Dis. 2018;10:S1864 -S1870.\n83. Sabath BF, Casal RF. Bronchoscopic ablation of peripheral lung tumors. J Thorac Dis. 2019;11:2628 -2638.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    }
+  ],
+  "figures": [
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/64'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/101'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/113'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/128'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/141'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/201'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/208'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/260'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/267'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/278'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    }
+  ],
+  "references": [
+    {
+      "title": "Recent trends in the identification of incidental pulmonary nodules"
+    },
+    {
+      "title": "Am J Respir Crit Care Med",
+      "year": 2015
+    },
+    {
+      "title": "Effects of volume CT lung cancer screening: mortality results of the NELSON randomised-controlled population based trial",
+      "year": 2015
+    },
+    {
+      "title": "J Thorac Oncol",
+      "year": 2018
+    },
+    {
+      "title": "Trends in lung cancer screening in the United States, 2016-2017",
+      "year": 2018
+    },
+    {
+      "title": "J Thorac Dis",
+      "year": 2019
+    },
+    {
+      "title": "Reduced lung-cancer mortality with low-dose computed tomographic screening",
+      "year": 2019
+    },
+    {
+      "title": "N Engl J Med",
+      "year": 2011
+    },
+    {
+      "title": "Guidelines for management of incidental pulmonary nodules detected on CT images: from the Fleischner Society",
+      "year": 2011
+    },
+    {
+      "title": "Radiology"
+    },
+    {
+      "title": "Lung CT screening reporting &amp; data system (Lung-RADS)"
+    },
+    {
+      "title": "Evaluation of individuals with pulmonary nodules: when is it lung cancer?"
+    },
+    {
+      "title": "Chest",
+      "year": 2013
+    },
+    {
+      "title": "Real-time electromagnetic navigation bronchoscopy to peripheral lung lesions using overlaid CT images",
+      "year": 2013
+    },
+    {
+      "title": "Diagnostic yield of fiberoptic bronchoscopy in evaluating solitary pulmonary nodules",
+      "year": 2006
+    },
+    {
+      "title": "Diagnostic yield and complications of bronchoscopy for peripheral lung lesions. Results of the AQuIRE registry",
+      "year": 2000
+    },
+    {
+      "title": "Multicenter registry of patients undergoing bronchoscopy for biopsy of peripheral lung lesions, with a focus on diagnostic yield of different tissue-sampling techniques and a comparison of different localization modalities (including EMN and rEBUS)",
+      "year": 2015
+    },
+    {
+      "title": "Meta-analysis of guided bronchoscopy for the evaluation of the pulmonary nodule"
+    },
+    {
+      "title": "Multimodality bronchoscopic diagnosis of peripheral lung lesions",
+      "year": 2012
+    },
+    {
+      "title": "Establishing the diagnosis of lung cancer: diagnosis and management of lung cancer, 3rd ed: American college of chest physicians evidence-based clinical practice guidelines",
+      "year": 2007
+    },
+    {
+      "title": "Electromagnetic navigation bronchoscopy for peripheral pulmonary lesions: one-year results of the prospective, multicenter NAVIGATE study",
+      "year": 2013
+    },
+    {
+      "title": "diagnostic yield and adverse events, with multivariate logistic regression identifying factors associated with successful ENB",
+      "year": 2019
+    },
+    {
+      "title": "Landmark large, multicenter",
+      "year": 2019
+    },
+    {
+      "title": "Lung lesion localization and the diagnostic drop",
+      "year": 2016
+    },
+    {
+      "title": "Ann ATS",
+      "year": 2016
+    },
+    {
+      "title": "Localization of peripheral pulmonary lesions using a method of computed tomography-anatomic correlation and radial probe endobronchial ultrasound confirmation",
+      "year": 2016
+    },
+    {
+      "title": "Radial probe endobronchial ultrasound for peripheral pulmonary lesions. A 5-year institutional experience",
+      "year": 2016
+    },
+    {
+      "title": "Diagnostic yield and safety of electromagnetic navigation bronchoscopy for lung nodules: a systematic review and meta-analysis",
+      "year": 2014
+    },
+    {
+      "title": "Respiration",
+      "year": 2014
+    },
+    {
+      "title": "Electromagnetic navigation diagnostic bronchoscopy for small peripheral lung lesions",
+      "year": 2014
+    },
+    {
+      "title": "Eur Respir J",
+      "year": 2007
+    },
+    {
+      "title": "Rapid on-site evaluation and low registration error enhance the success of electromagnetic navigation bronchoscopy",
+      "year": 2007
+    },
+    {
+      "title": "Ann Thorac Med",
+      "year": 2013
+    },
+    {
+      "title": "Diagnostic yield of electromagnetic navigation bronchoscopy is highly dependent on the presence of a bronchus sign on CT imaging: results from a prospective study",
+      "year": 2013
+    },
+    {
+      "title": "Computed tomography bronchus sign and the diagnostic yield of guided bronchoscopy for peripheral pulmonary lesions. A systematic review and meta-analysis",
+      "year": 2010
+    },
+    {
+      "title": "Utility of virtual bronchoscopy navigation in the diagnosis of peripheral lung lesions",
+      "year": 2018
+    },
+    {
+      "title": "Improved diagnostic of electromagnetic navigation bronchoscopy in peripheral lung lesions: are the size and the bronchus sign important?",
+      "year": 2017
+    },
+    {
+      "title": "Usefulness of virtual bronchoscopic navigation combined with endobronchial ultrasound guided transbronchial lung biopsy for solitary pulmonary nodules",
+      "year": 2011
+    },
+    {
+      "title": "Medicine",
+      "year": 2019
+    },
+    {
+      "title": "Diagnostic utility of peripheral endobronchial ultrasound with electromagnetic navigation bronchoscopy in peripheral lung nodules",
+      "year": 2019
+    },
+    {
+      "title": "Respirology",
+      "year": 2013
+    },
+    {
+      "title": "Electromagnetic navigational bronchoscopy: an effective and safe approach to diagnose peripheral lung lesions unreachable by conventional bronchoscopy in high-risk patients",
+      "year": 2013
+    },
+    {
+      "title": "J Bronchology Interv Pulmonol",
+      "year": 2011
+    },
+    {
+      "title": "Electromagnetic navigation bronchoscopy-guided fine needle aspiration for the diagnosis of lung lesions",
+      "year": 2011
+    },
+    {
+      "title": "Diagn Cytopathol",
+      "year": 2014
+    },
+    {
+      "title": "Multicenter experience with electromagnetic navigation bronchoscopy for the diagnosis of pulmonary nodules",
+      "year": 2014
+    },
+    {
+      "title": "Electromagnetic navigation diagnostic bronchoscopy",
+      "year": 2014
+    },
+    {
+      "title": "The effect of respiratory motion on pulmonary nodule location during electromagnetic navigation bronchoscopy",
+      "year": 2006
+    },
+    {
+      "title": "Comparing pulmonary nodule location during electromagnetic bronchoscopy with predicted location on the basis of two virtual airway maps at different phases of respiration",
+      "year": 2015
+    },
+    {
+      "title": "Usefulness of endobronchial ultrasonography with a guide sheath and virtual bronchoscopic navigation for ground-glass opacity lesions",
+      "year": 2018
+    },
+    {
+      "title": "Ann Thorac Surg",
+      "year": 2017
+    },
+    {
+      "title": "Endobronchial ultrasound-driven biopsy in the diagnosis of peripheral lung lesions",
+      "year": 2017
+    },
+    {
+      "title": "Endobronchial ultrasound-guided transbronchial lung biopsy in solitary pulmonary nodules and peripheral lesions",
+      "year": 2005
+    },
+    {
+      "title": "Endobronchial ultrasonography using a guide sheath increases the ability to diagnose peripheral pulmonary lesions endoscopically",
+      "year": 2002
+    },
+    {
+      "title": "Transbronchial catheter aspiration compared to forceps biopsy in the diagnosis of peripheral lung cancer",
+      "year": 2004
+    },
+    {
+      "title": "Eur J Med Res",
+      "year": 2009
+    },
+    {
+      "title": "Comparison of suction catheter versus forceps biopsy for sampling of solitary pulmonary nodules guided by electromagnetic navigational bronchoscopy",
+      "year": 2009
+    },
+    {
+      "title": "The impact of biopsy tool choice and rapid on-site evaluation on the diagnostic accuracy for malignant lesions in the prospective, multicenter NAVIGATE study",
+      "year": 2010
+    },
+    {
+      "title": "British Thoracic Society guideline for diagnostic flexible bronchoscopy in adults: accredited by NICE",
+      "year": 2019
+    },
+    {
+      "title": "Thorax",
+      "year": 2013
+    },
+    {
+      "title": "Transbronchial biopsy from the upper pulmonary lobes is associated with increased risk of pneumothoraxa retrospective study",
+      "year": 2013
+    },
+    {
+      "title": "BMC Pulm Med",
+      "year": 2019
+    },
+    {
+      "title": "Comparison between different types of forceps used in transbronchial lung biopsy",
+      "year": 2019
+    },
+    {
+      "title": "Transbronchial lung biopsy and pneumothorax",
+      "year": 2017
+    },
+    {
+      "title": "Pneumothorax post flexible bronchoscopy",
+      "year": 2014
+    },
+    {
+      "title": "CT-guided transthoracic needle aspiration biopsy of pulmonary nodules: needle size and pneumothorax rate",
+      "year": 2011
+    },
+    {
+      "title": "Pneumothorax after transbronchial needle biopsy",
+      "year": 2003
+    },
+    {
+      "title": "Risk factors of pneumothorax after endobronchial ultrasound-guided transbronchial biopsy for peripheral lung lesions",
+      "year": 2014
+    },
+    {
+      "title": "PLoS One",
+      "year": 2012
+    },
+    {
+      "title": "Subinterlobular pleural location is a risk factor for pneumothorax after bronchoscopy",
+      "year": 2012
+    },
+    {
+      "title": "Respir Care",
+      "year": 2016
+    },
+    {
+      "title": "Aspirin does not increase bleeding complications after transbronchial biopsy",
+      "year": 2016
+    }
+  ],
+  "quality": {
+    "completeness_score": 65,
+    "has_abstract": true,
+    "abstract_source": "metadata",
+    "has_doi": true,
+    "has_full_text": true,
+    "num_sections": 39,
+    "num_tables": 0,
+    "num_figures": 37,
+    "num_references": 72
+  }
+}

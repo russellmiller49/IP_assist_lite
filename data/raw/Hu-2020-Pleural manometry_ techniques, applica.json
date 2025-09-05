@@ -1,0 +1,670 @@
+{
+  "metadata": {
+    "document_id": "10_21037_jtd_2020_04_04",
+    "title": "Pleural manometry: techniques, applications, and pitfalls",
+    "authors": [
+      "Kurt Hu",
+      "Amit Chopra",
+      "John Terrill Huggins",
+      "Rahul Nanchal"
+    ],
+    "year": 2020,
+    "journal": "Journal of Thoracic Disease",
+    "doi": "10.21037/jtd.2020.04.04",
+    "volume": "12",
+    "issue": "5",
+    "pages": "2759-2770",
+    "citation": "Hu, et al. (2020). Pleural manometry: techniques, applications, and pitfalls. Journal of Thoracic Disease, 12(5), 2759-2770. https://doi.org/10.21037/jtd.2020.04.04",
+    "abstract": "Pleural manometry (PM) is a novel tool that allows direct measurement of the pressure in the pleural space in the presence of either a pleural effusion or a pneumothorax. Originally it was used to guide therapy for tuberculosis (TB) before the development of anti-TB medications. It was relegated to highly specialized centers for thoracoscopies until Light used it to investigate pleural effusions in the 1980s. However, there remains lack of robust data to support the routine use of PM. Recently additional published studies have generated renewed interest supporting the use of PM in specialized cases of complex pleural disorders. In this paper we summarize the current different techniques, applications, and pitfalls for the use of PM.",
+    "abstract_source": "metadata",
+    "url": "http://jtd.amegroups.com/article/view/38438/html"
+  },
+  "source_file": "Hu-2020-Pleural manometry_ techniques, applica.json",
+  "sections": [
+    {
+      "title": "Introduction",
+      "content": "Pleural manometry (PM) is the direct measurement of pressure in the pleural space through a catheter. PM was first performed well over a century ago by the German physician Heinrich Iraenaeus Quincke in 1878 (1). Prior to development of anti-tuberculous therapy, PM was used to guide collapse therapy in the treatment of active pulmonary tuberculosis to assist  in  the  creation  of  an  artificial pneumothorax to treat the disease (2). The use of PM was virtually abandoned and relegated to specialized centers for thoracoscopy until Light et al. reintroduced interest in 1980s for its use in the management of pleural effusions (3).\nIn 1997, Lan et al. described the first clinical utility of PM in optimizing yield of pleurodesis in patients with malignant pleural effusions (MPEs) (4). In 2004, Doelken improved the PM technique by introducing a customized electronic hemodynamic manometer (5). Subsequently,\nhand held digital manometers were approved by the FDA in 2010 to measure hemodynamics pressures from central vascular catheters and later this device was adopted to measure pleural pressures (Ppl). Though four decades have elapsed since Light's original observations, there is still a paucity of data supporting the use of PM in clinical practice. Recently, there has been renewed interest in the technique with multiple studies looking at the clinical utility of PM in the management of pleural disorders (6-8). In this review we discuss the techniques, novel use, current evidence and pitfalls of PM.",
+      "category": "introduction",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Techniques",
+      "content": "The PM technique has evolved over the last 30 years, from simple a u-shaped water manometer to disposable digital units. Currently, there are three acceptable techniques for measuring Ppl directly: (I) hemodynamic electronic",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Kurt Hu 1 , Amit Chopra 2 , John Terrill Huggins 3 , Rahul Nanchal 1",
+      "content": "1 Division of Pulmonary and Critical Care Medicine, Medical College of Wisconsin, Milwaukee, Wisconsin, USA; 2 Division of Pulmonary and Critical Care Medicine, Albany Medical College, Albany, NY, USA; 3 Division of Pulmonary, Critical Care, Allergy and Sleep Medicine, Medical University of South Carolina, Charleston, SC, USA\nContributions: (I) Conception and design: All authors; (II) Administrative support: None; (III) Provision of study materials or patients: None; (IV) Collection and assembly of data: All authors; (V) Data analysis and interpretation: All authors; (VI) Manuscript writing: All authors; (VII) Final approval of manuscript: All authors.\nCorrespondence to: Kurt Hu, MD. Assistant Professor of Medicine, Division of Pulmonary and Critical Care Medicine, Medical College of Wisconsin, 8701 Watertown Plank Road, Milwaukee, Wisconsin 53226, USA. Email: kuhu@mcw.edu.\nAbstract: Pleural manometry (PM) is a novel tool that allows direct measurement of the pressure in the pleural space in the presence of either a pleural effusion or a pneumothorax. Originally it was used to guide therapy for tuberculosis (TB) before the development of anti-TB medications. It was relegated to highly specialized centers for thoracoscopies until Light used it to investigate pleural effusions in the 1980s. However, there remains lack of robust data to support the routine use of PM. Recently additional published studies have generated renewed interest supporting the use of PM in specialized cases of complex pleural disorders. In this paper we summarize the current different techniques, applications, and pitfalls for the use of PM.\nKeywords: Pneumothorax; malignant pleural effusion (MPE); pleural disease; pleural effusions; pulmonary physiology; pleural manometry (PM)\ntransducer (ET), (II) digital manometer (DM), and (III) U-tube (UT) water manometer. The most acceptable technique is the ET system as it produces the most accurate and reproducible measurements (9). However, no gold standard has been established. In one study, ET and DM have strong linear correlation (r=0.9582, P<0.001), while UT and ET are poorly correlated (r=0.448, P=0.84) (9). A limitation to this correlative study may have resulted in not using a dampened UT. Using a dampened UT system Doelken et al. (5) demonstrated strong correlation between UT and ET. All three major techniques require stoppage of the drainage for measurement. Choice of technique is  largely governed by the availability of equipment and operator preferences. Our preference is the use of the ET as it provides accurate detailed reading, continuous data points, and allows for identification of periods of quiet breathing. Table 1 provides a summary of the currently available PM techniques.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Hemodynamic ET manometer",
+      "content": "Ppl can be measured accurately by using a hemodynamic transducer system. This technique involves connecting the hemodynamic transducer with two three-way stopcocks in series, allowing for drainage and transducing a pressure without disconnecting the system.\nThere are two variants of this technique, one utilizing the hemodynamic monitoring systems ( Figure 1 ) which are readily available, while the other uses a non-commercially available analog-to-digital converter through a signal processor to record the data (11). ( Figure 2 ). The custombuilt system allows accurate measurements at very high frequencies which is useful when patients have high respiratory rates, which occurs towards the end of the pleural drainage (10). It can show positive and negative Ppl of each individual respiratory cycle. A sample tracing is shown in Figure 3 . Data can be stored and analyzed later to construct pressure/volume (P/V) curves (12) ( Figures 3,4 ).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "UT water manometer",
+      "content": "This simple device is made from sterile intravenous tubing, which is prefilled with sterile saline and is connected to a water column usually via a three-way stopcock in order to allow for drainage and measurements without having to disconnect the system. ( Figure 5 ).\nPpl swings can be minimized by dampening the circuit by adding mechanical resistance, such as a 22-guage needle. This increased resistance dampens the system which lessens the pressure swings at both inspiration and expiration allowing for the mean Ppl to be directly read from the scale (5). The zero point of the water manometer is at the insertion of the\ncatheter at the chest wall and pressures should be measured in cmH2O above this point at the end of expiration.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "DM",
+      "content": "There is currently one commercially available DM (Compass). This system measures general compartment pressures  and  is  not  specifically  designed  for  Ppl measurements.  These  are  disposable,  single  use, manometers that display a digital read of the pressure.\nA three-way stopcock is used to allow for drainage and measurement without having to completely disconnect the system ( Figure 6 ).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Other manometer systems",
+      "content": "A system for continuous measurement was developed by Salamonsen et al. (13) in which they utilize a thin epidural catheter passed through the thoracentesis catheter. Pressure measurement occurs through the epidural catheter, while",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Considerations",
+      "content": "Pressure in the pleural space is not uniform; it is affected by the hydrostatic forces and the natural movement of pleural fluid generated by gravity, ventilation, cardiogenic forces, and lymphatic drainage (14,15). Pressure measurements through a pleural catheter represents the pressure at the level of catheter insertion and is influenced by the elastic forces of the lung, chest wall, as well as the vertical height of the pleural effusion. Therefore, the absolute numbers are of less importance. It can be assumed that most of the variables within the pleural space remain relatively constant during drainage so that pressure change during drainage can be used to calculate pleural elastance (Pel) (5). Elastance are measured in units of P/V and is the inverse of compliance. It represents the resistance to change. In order to directly measure the Ppl utilizing currently available methods, there must be either a small amount of pleural fluid or pleural air present. The pleural space is normally approximately 20 µm in thickness and the introduction of a catheter leads to measurement of the local deformation forces and not the Ppl akin to what is observed in the lobar areas of a normal pleural space (16). A minimum of 50 mL of pleural fluid by either further drainage or by ultrasound should remain in order to prevent these geometric deformation forces to obscure final Ppl readings.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Clinical application",
+      "content": "The role for routine use of  PM is  not  completely established. However, PM can be useful in the following clinical scenarios: (I) diagnosis of non-expandable lung (NEL); (II) guidance in large volume pleural drainage; (III) guidance for pleurodesis in MPEs; (IV) and management of selective pneumothorax cases. Most of prior studies were proof of concepts with several trials underway to establish the clinical role of PM (7,8,17). Table 2 summarizes the current evidence concerning the application of PM.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Identification of NEL",
+      "content": "NEL is defined as the inability of lung to expand to the volume of the chest cavity allowing for normal parietal and visceral pleural apposition. There are three mechanistically distinct causes of NEL, endobronchial lesion resulting in lobar collapse, chronic atelectasis and visceral pleural restriction due to pleural disease (21). PM can accurately identify NEL, but cannot differentiate between mechanisms\ndrainage occurs through the larger thoracentesis catheter. This allows for continuous measurement of Ppl. However, the authors caution that there needs to be little to no movement of fluid in front of the measurement catheter for this method to work. Therefore, this method cannot be used in conjunction with larger bore drainage catheters (>15 Fr).\nPpl, pleural pressure; CVP , central venous pressure; NEL, non-expandable lung; PM, pleural manometry.\ncontributing to the NEL processes.\nUtilizing PM, Pel, which is the change in pressure/ change in volume (dP/dV), can be calculated. PM in an expandable lung with a pleural effusion generally demonstrates an initial positive mean Ppl which drops only minimally after fluid removal generating a P/V that is  monophasic. The calculated Pel is <14.5 cmH 2O/L.\nConversely a restricted pleura, as in those with NEL, will have a very high Pel (>14.5 cmH 2 O/L), as a little change in volume will cause precipitous decreases in Ppl.\nNormal values for Pel were derived by Heidecker et al. (18) from a series of thoracentesis done under PM. They assumed that pleural mechanics were determined by the overall respiratory mechanics, both hemi-thoraces\nhad similar properties and acted in series, local geometric distortion played little to a minimal role, and hydrostatic forces had no effect. Using these assumptions and complex derivations, they determined that the expected mean Pel was 7.44 cmH2O/L for a respiratory system with a normal compliance (100 mL/cmH2O), while the maximum Pel was\n15.5 cmH2O/L for a stiff respiratory system (compliance of 40 mL/cmH2O). Utilizing this model, they found 124 patients with 'normal' Pel values. Their sample cohort was normally distributed with a mean of 7.5 and a standard deviation (SD) of 3.5 cmH 2 O/L, which in turn was in close agreement with the hypothesized model. Therefore, the\nnormal Pel range was accepted as 0.5 to 14.5 cmH2O/L (mean ± 2 SDs).\nTraditionally, NEL due to visceral pleural restriction is  separated into trapped lung and lung entrapment. T o best visualize the differences of these NEL, a P/V curve can be utilized ( Figure 7 ).  T rapped lung is due to visceral thickening, results in a transudative effusion in most cases and is a form of defective pleural space healing from remote pleural space infection, inflammation or hemothorax. The P/V curve is monophasic, usually represented by an initial negative mean pressure and a steep decline in pressure with minimal fluid removal (5). Lung entrapment is due to visceral restriction from active inflammation and usually results in an exudative effusion. Unlike a 'trapped lung', lung entrapment is not representative of a true clinical entity  but  does  describe  the  presence  of  an  NEL  in diseases such as malignancy or a parapneumonic effusion. The initial Ppl is usually positive and initially changes in a normal fashion with a steeper decline in Ppl later when the lung can no longer re-expand. This results in two distinct portions of the curve, known as a biphasic P/V curve (18).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Large volume thoracentesis",
+      "content": "Large volume thoracentesis guided by PM may potentially help reduce re-expansion pulmonary edema (RPE) and chest symptoms.\nRPE is rare (<2%) complication of large volume thoracentesis, and carries a mortality of 20% (22). The proposed pathophysiology of RPE is the presence of excessive negative pressure in the pleural space, surfactant deficiency, and reperfusion injury (23). Large volume thoracentesis is defined as drainage greater than 1-1.5 liters of fluid in one session (24). PM can be used guide the volume to be drained. Current data suggests that drainage should be stopped when there is a change of >10 cmH 2O between two drainage aliquots (usually 250 mL) reaching a value of ≤ -10 cmH 2 O, or if there is an absolute Ppl of < -20 cmH 2 O (25). These values were originally derived from animal studies. In rabbits, RPE started at a Ppl of < -20 mmHg (note not cmH 2 O) and all had RPE by Ppl of -40 mmHg (23).\nWithout PM, it has been proposed that drainage should be terminated by symptomology of either chest pain or hypotension or when complete aspiration of pleural fluid occurs. In a series of 169 patients, Feller-Kopman et  al. (19)  reported that onset of chest discomfort was associated with lower Ppl and a total change in Ppl, while cough did not correlate with lower Ppl or the change in Ppl. Therefore, the presence of cough should not be an indication for termination of further pleural drainage. In fact, the group with the higher incidence of cough had lower Pel, suggesting expandable lungs. Majority of those who developed chest discomfort had a Ppl >-20 cmH 2 O, while only 22% of patients had potentially unsafe decreases in their Ppl. This suggests that stopping fluid removal at the onset of chest discomfort avoids 'unsafe' Ppl in most patients. However, despite using PM five patients who had 'normal' Ppl developed RPE, with one being clinically significant (20).\nLentz et al. (6), in a series of 128 patients, with ≥ 0.5 L free-flowing pleural effusions, were randomly assigned to either cessation of drainage based on symptoms or based on symptoms in addition to use of PM. Their primary outcome was chest pain prevention with PM. Drainage termination parameters in the PM group were Ppl of <-20 cmH 2 O, or a drop of Ppl of >10 cmH 2 O between two readings to a value <-10 cmH 2 O. They found no difference in chest discomfort (mean difference of 2.4 mm based on a 100 mm VAS score,\n95% CI: -5.7 to 10.5, P=0.56). However, 6/62 patients in the non-PM group developed pneumothorax ex vacuo (nonclinically relevant finding as it did not lead to a change in clinical management), while there was none in the PM group (P=0.01).\nNone of the studies demonstrated that using PM routinely prevented RPE or chest pain. However, the use of symptoms alone cannot be used as a surrogate of excessive levels of negative Ppl, especially if altered sensorium prevents the patient from reporting chest pain. Nonetheless, the absolute value of an unsafe Ppl in humans is unknown. In our practice we use PM to guide large volume thoracentesis in selected cases where NEL is suspected or in patients who can't report symptoms because of altered sensorium to reduce the risk of RPE.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Guidance for pleurodesis in MPEs",
+      "content": "Currently guidelines recommend indwelling pleural catheter or pleurodesis depending on the decision of the patient. However, NEL is an absolute contraindication for chemical pleurodesis. A recent study found that >50% of patients with MPEs have NEL, which is consistent with the reported success of pleurodesis through an indwelling pleural catheter (26,27). Moreover, chest radiographs and PM have a discordance in predicting NEL immediately following pleural fluid drainage. Currently, it is not known how to guide pleurodesis based on the post-thoracentesis chest radiography showing adequate lung re-expansion. A quarter of patients may have high terminal elastance despite chest radiograph showing full expansion after complete drainage of pleural effusion in MPE patients. This erroneously indicates expandable lung and thereby may lead to failure of pleurodesis (7).\nThe most important requirement for pleurodesis is complete lung expansion. Currently lung expansion for the pleurodesis is most commonly determined by a chest X-ray (24). Lan and colleagues found that MPE patients with Pel of >19 cmH2O/L resulted in failed pleurodesis by bleomycin, while those with a Pel <19 cmH2O/L and absence of trapped lung had a 98% success rate (4). Chopra et al. (7) recently found elevated Pel (>14.5 cmH 2 O/L) even when >90% pleural apposition was found on chest X-ray. The authors concluded that chest X-ray alone may not be the best modality to rule-out NEL (26,27). Similarly, other recent studies have found pleurodesis rates of <50% despite near complete lung expansion as detected by chest\nradiograph (27-29), suggesting that chest radiograph alone may not be the best modality to select patients for pleurodesis. An ongoing trial (EDIT - elastance-directed indwelling pleural catheter or talc slurry pleurodesis) is  examining the role of PM in selecting patients for pleurodesis (8). Currently, we are unable to make strong recommendations for the use of PM to separate those who would benefit from chemical pleurodesis versus IPC placement. A recent editorial by Pannu et al. (30) calls for the need for PM data to provide further insight into pleural pathophysiology to improve the care of MPE patients. We do agree that chest X-ray may not be a good way to determine complete lung expansion.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Management of selective cases of pneumothoraces",
+      "content": "PM may aid in distinguishing between pneumothorax ex vacuo versus procedure related traumatic pneumothorax.\nConceptually, pneumothorax is categorized as stable or unstable. Stable pneumothorax usually occurs after pleural drainage in patients with NEL, often appearing as a basilar, loculated pneumothorax without contralateral shift  in  the  mediastinum. This type of pneumothorax is  also  known  as  pneumothorax ex  vacuo ,  which  is  a misnomer. The phenomenon was originally thought to occur because of persistent negative pressures. Heidecker et al. (18) demonstrated that even under PM and controlled withdrawal of the pleural effusion, a pneumothorax may occur. They conjectured that it was likely due to a mismatch in the shape of the lung and thoracic cavity resulting in a localized stretch which causes lung deformation letting air to escape. Once deformation is relieved by the replacement of air, the leak is abolished. They further demonstrated that the Ppl would always return to a similar point and representative of normal Ppl, even if attempts at evacuating the pneumothorax occurred on a cyclic basis. These type of pneumothoraces do not result in symptoms or tension physiology. PM can accurately identify this type of pneumothorax, as when sequential Ppl are measured after clamping of the chest tube to simulate a closed system, the Ppl will not rise over time ( Figure 8 ).  Once a stable pneumothorax is identified, tube thoracostomy can be discontinued. Constant suction should be discouraged as constant applied drainage pressure induces a persistent air leak (PAL) delaying chest tube removal and increasing hospital stay. Therefore, the best therapy is monitoring in the absence of suction.\nWith the use thoracic ultrasonographic guidance, unstable pneumothorax from traumatic injury rarely occurs. Heidecker et al. (18) in a study of 192 therapeutic thoracentesis reported only 9 pneumothoraces, out of which eight patients had NEL due to a pressure dependent pneumothorax. PM was able to identify these correctly and patients did not need additional interventions.\nConversely, an unstable pneumothorax usually occurs due to direct injury of the lung parenchyma, either from trauma, primary spontaneous pneumothorax, or secondary spontaneous pneumothorax. These tend to have a more global appearance on radiograph, and when large enough will  cause lung collapse and hemodynamic instability. When measured by PM, these tend to start with a positive Ppl which slowly increases over time ( Figure 9 ).  The nature of most unstable pneumothoraces are from direct\ndamage; therefore, this continual leak of air continues to build up in the pleural space and creates increasing positive pressure. This will eventually collapse the lungs and compresses the adjacent vascular structures leading to hemodynamics compromise. The management of this type of pneumothorax involves draining of the pleural space.\nPM can reliably differentiate between stable and unstable pneumothoraxes ( Table 3 ). Finding a stable alveolar pleural fistula (APF) may have significant clinical benefit which include early removal of chest tube, decreased length of  stay,  and  decreased the need for additional pleural procedures. PM may also be used to further support Brown et al. (31) assertion that conservative versus invasive therapy is noninferior by adding a pathophysiological basis for their findings. It may explain why certain patients with primary spontaneous pneumothoraces develop increase recurrence\nand PAL after tube thoracostomy placement. This is likely due to deformation of subpleural alveolar conformation changes after application of pleural drainage and may also occur even under water seal, where the pressure remains\nvariably negative, not zero.\nThe use of PM can aid in creation of  artificial pneumothoraces for both diagnostic and therapeutic purposes. Normally, the pleura cannot be seen clearly on\n0      20      40     60     80    100   120    140   160    180   200   220   240   260    280   300   320   340   360    380   400   420    440   460   480\nAbsolute time (seconds)\nNEL, non-expandable lung.\nconventional computed tomography (CT). For diagnostic purposes, air is introduced into the pleural space under ET manometry guidance, to create a contrast between the chest wall and pleura allowing for more accurate characterization of visceral and parietal pleura (19). Guided therapeutic pneumothorax can be used to relieve chest pain during pleural drainage when a NEL is encountered. By doing this, complete drainage of the pleural space can occur without discomfort (32).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Pitfalls",
+      "content": "Currently, there is a paucity of data concerning the application of PM. Most prior studies are small, proof of concept, single center studies and difficult to generalize to routine practice. However, there are currently multiple studies underway to expand the clinical utility of PM. The prior studies have inconsistent methodology of PM with a few using ET and have not derived meaningful clinical outcomes. The techniques of PM have not been standardized as previously published by Doelken et al. (5).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Conclusion and future directions",
+      "content": "PM is a useful additional tool in in the management of complex pleural diseases. Our understanding of pleural space physiology is incomplete. Direct PM may be an insight into some of the forces at play. Unfortunately, there is no robust data to support the routine use of PM. At the time of this review, there remains a scarcity of data to make general conclusions regarding its usefulness in pneumothoraces. These applications are mostly used as research tools but can be helpful in selected cases at experienced centers. There are several ongoing studies that are awaiting completion that may provide stronger evidence of PM in selected cases, such as MPE.",
+      "category": "conclusion",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Acknowledgments",
+      "content": "Funding: None.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Footnote",
+      "content": "Conflicts of Interest: All authors have completed the ICMJE uniform disclosure form (available at  http://dx.doi. org/10.21037/jtd.2020.04.04). Dr. Huggins reports personal fees from IBIOS, personal fees from Roche/Genetech,\npersonal fees from Boehringer Ingelheim, outside the submitted work. The other authors have no conflicts of interest to declare.\nEthical Statement: The authors are accountable for all aspects of the work in ensuring that questions related to the accuracy or integrity of any part of the work are appropriately investigated and resolved.\nOpen Access Statement: This  is  an  Open  Access article distributed in accordance with the Creative Commons Attribution-NonCommercial-NoDerivs 4.0 International License (CC BY-NC-ND 4.0), which permits the noncommercial replication and distribution of the article with the strict proviso that no changes or edits are made and the original work is properly cited (including links to both the formal publication through the relevant DOI and the license). See: https://creativecommons.org/licenses/by-nc-nd/4.0/.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "References",
+      "content": "1. Feller-Kopman D. Therapeutic thoracentesis: the role of ultrasound and pleural manometry. Curr Opin Pulm Med 2007;13:312-8.\n2. Jacobs S. Manometry in the Conduct of Artificial Pneumothorax. Dis Chest 1937;3:18-20, 26.\n3. Light RW, Jenkinson SG, Minh VD, et al. Observations on pleural fluid pressures as fluid is withdrawn during thoracentesis. Am Rev Respir Dis 1980;121:799-804.\n4. Lan RS. Elastance of the Pleural Space: A Predictor for the Outcome of Pleurodesis in Patients with Malignant Pleural Effusion. Ann Intern Med 1997;126:768.\n5. Doelken P, Huggins JT, Pastis NJ, et al. Pleural manometry: T echnique and clinical implications. Chest 2004;126:1764-9.\n6. Lentz RJ, Lerner AD, Pannu JK, et al. Routine monitoring with pleural manometry during therapeutic largevolume thoracentesis to prevent pleural-pressure-related complications: a multicentre, single-blind randomised controlled trial. Lancet Respir Med 2019;7:447-55.\n7. Chopra A, Judson MA, Doelken P, et al. The Relationship of Pleural Manometry With Postthoracentesis Chest Radiographic Findings in Malignant Pleural Effusion. Chest 2020;157:421-6.\n8. Martin GA, Tsim S, Kidd AC, et al. Pre-EDIT: A Randomized Feasibility Trial of Elastance-Directed Intrapleural Catheter or T alc Pleurodesis in Malignant Pleural Effusion. Chest 2019;156:1204-13.\n2770\n9. Lee HJ, Yarmus L, Kidd D, et al. Comparison of Pleural Pressure Measuring Instruments. Chest 2014;146:1007-12.\n10.  Zielinska-Krawczyk M, Grabczak EM, Michnikowski M, et al. Patterns of pleural pressure amplitude and respiratory rate changes during therapeutic thoracentesis. BMC Pulm Med 2018;18:36.\n11.  Krenke R, Gu ć M, Grabczak EM, et al. Development of an electronic manometer for intrapleural pressure monitoring. Respiration 2011;82:377-85.\n12.  Boshuizen RC, Sinaasappel M, Vincent AD, et al. Pleural pressure swing and lung expansion after malignant pleural effusion drainage the benefits of high-temporal resolution pleural manometry. J Bronchology Interv Pulmonol 2013;20:200-5.\n13.  Salamonsen M, Ware R, Fielding D. A new method for performing continuous manometry during pleural effusion drainage. Respiration 2014;88:61-6.\n14.  Lai-Fook SJ. Mechanics of the pleural space: Fundamental concepts. Lung 1987;165:249-67.\n15.  Lai-Fook SJ, Rodarte JR. Pleural pressure distribution and its relationship to lung volume and interstitial pressure. J Appl Physiol 1991;70:967-78.\n16.  Lai-Fook SJ. Pleural Mechanics and Fluid Exchange. Physiol Rev 2004;84:385-410.\n17.  Hu K, Fabian T, Judson M, et al. New Concept: Not Every Postoperative Air Leak Is the Same. Chest 2019;156:A967.\n18.  Heidecker J, Huggins JT, Sahn SA, et al. Pathophysiology of Pneumothorax Following Ultrasound-Guided Thoracentesis. Chest 2006;130:1173-84.\n19.  Feller-Kopman D, Walkey A, Berkowitz D, et al. The relationship of pleural pressure to symptom development during therapeutic thoracentesis. Chest 2006;129:1556-60.\n20.  Feller-Kopman D, Berkowitz D, Boiselle P , et al. LargeVolume Thoracentesis and the Risk of Reexpansion Pulmonary Edema. Ann Thorac Surg 2007;84:1656-61.\n21.  Huggins JT, Doelken P, Sahn SA. The unexpandable lung. F1000 Med Rep 2010;2:77.\n22.  Mahfood S, Hix WR, Aaron BL, et al. Reexpansion Pulmonary Edema. Ann Thorac Surg 1988;45:340-5.\n23.  Pavlin J, Cheney FW. Unilateral pulmonary edema in rabbits after reexpansion of collapsed lung. J Appl Physiol 1979;46:31-5.\n24.  Roberts ME, Neville E, Berrisford RG, et al. Management of a malignant pleural effusion: British Thoracic Society pleural disease guideline 2010. Thorax 2010;65:ii32-40.\n25.  Huggins JT, Maldonado F, Chopra A, et al. Unexpandable lung from pleural disease. Respirology 2018;23:160-7.\n26.  Chopra A, Argula R, Schaefer C, et al. The value of sound waves and pleural manometry in diagnosing a pleural effusion with the dual diagnosis. Thorax 2016;71:1064-5.\n27.  Bhatnagar R, Keenan EK, Morley AJ, et al. Outpatient talc administration by indwelling pleural catheter for malignant effusion. N Engl J Med 2018;378:1313-22.\n28.  Davies HE, Mishra EK, Kahan BC, et al. Effect of an indwelling pleural catheter vs chest tube and talc pleurodesis for relieving dyspnea in patients with malignant pleural effusion: The TIME2 randomized controlled trial. JAMA 2012;307:2383-9.\n29.  Thomas R, Fysh ETH, Smith NA, et al. Effect of an indwelling pleural catheter vs talc pleurodesis on hospitalization days in patients with malignant pleural effusion: The AMPLE randomized clinical trial. JAMA 2017;318:1903-12.\n30.  Pannu JK, Lentz RJ. Discordance Between Pleural Elastance and Postthoracentesis Chest Radiograph: Putting Pressure on Pleurodesis Trials. Chest 2020;157:249-50.\n31.  Brown SGA, Ball EL, Perrin K, et al. Conservative versus Interventional Treatment for Spontaneous Pneumothorax. N Engl J Med 2020;382:405-15.\n32.  Gurung P, Huggins JT, Doelken P, et al. Efficacy And Safety Of Therapeutic Pneumothorax For Treating Chest Pain During Thoracentesis Due T o An Unexpandable Lung. Am J Respir Crit Care Med 2011;183:A4635.\nCite this article as: Hu K, Chopra A, Huggins JT, Nanchal R. Pleural manometry: techniques, applications, and pitfalls. J Thorac Dis 2020;12(5):2759-2770. doi: 10.21037/jtd.2020.04.04",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    }
+  ],
+  "tables": [
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/20'}",
+      "headers": [
+        "Technique",
+        "U-tube water",
+        "Hemodynamic",
+        "Digital",
+        "Custom electronic",
+        "Continuous"
+      ],
+      "rows": [
+        [
+          "Availability",
+          "Universal",
+          "Universal",
+          "Commercial",
+          "Custom built",
+          "Custom built"
+        ],
+        [
+          "Zero point",
+          "At the insertion site",
+          "Below the insertion site",
+          "At the insertion site",
+          "At the insertion site",
+          "At the insertion site"
+        ],
+        [
+          "Measurement timing",
+          "Intermittent",
+          "Intermittent",
+          "Intermittent",
+          "Intermittent",
+          "Continuous"
+        ],
+        [
+          "Data recorded",
+          "Written",
+          "Printed or Written or stored",
+          "Written",
+          "Digital",
+          "Digital"
+        ],
+        [
+          "Advantages",
+          "Universal available",
+          "Easily available Data can be stored on monitor system",
+          "Commercially available Small",
+          "Accurate, records pressure waveform Data can be saved",
+          "Same as electronic custom, no need to stop drainage during pressure measurement"
+        ],
+        [
+          "",
+          "",
+          "",
+          "No need to zero",
+          "",
+          ""
+        ],
+        [
+          "Disadvantages",
+          "High pressure swings (10) Needs mechanical dampening (5)",
+          "Unable to measure negative numbers, values in mmHg instead of cmH 2 O (1 mmHg = 1.36 cmH 2 O)",
+          "High pressure swings (10) Needs additional dampening Low sampling rate",
+          "Custom built Bulky Complex and lengthy set-up",
+          "Unable to do through large tube, bulky, more complex, custom built"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/113'}",
+      "headers": [
+        "Study",
+        "N",
+        "Technique",
+        "Study design",
+        "Aims and objectives",
+        "Outcome"
+      ],
+      "rows": [
+        [
+          "Light, 1980 (3)",
+          "52",
+          "Undampened U-shaped water manometer Pleural fluid measurement",
+          "Prospective observational",
+          "PM guided large volume thoracentesis and safety",
+          "Large volume thoracentesis is safe if Ppl remains above -20 cmH 2 O"
+        ],
+        [
+          "Lan, 1997 (4)",
+          "65",
+          "Undampened CVP water column manometer Elastance at 500 mL removed",
+          "Prospective observational",
+          "Factors that may aid in predicting the outcome of pleurodesis in malignant pleural effusions",
+          "Patients with pleural elastance >19 cmH 2 O/L had high incidence of trapped lung and decreased pleurodesis success"
+        ],
+        [
+          "Heidecker, 2006 (18)",
+          "367",
+          "Custom electronic manometer Pleural measurement at every 100 to 250 mL aliquots",
+          "Retrospective chart review",
+          "Pathophysiology of post- procedure pneumothorax",
+          "Normal values for pleural elastance of 0.5 to 14.5 cmH 2 O/L. Post thoracentesis pneumothorax are due to NEL"
+        ],
+        [
+          "Feller-Kopman, 2007 (19)",
+          "169",
+          "Custom electronic manometer or dampened water manometer Pleural measurement at every 240 mL",
+          "Prospective observational",
+          "PM and development of drainage related symptoms",
+          "Vague chest discomfort may correlate with potential development of unsafe negative pressures"
+        ],
+        [
+          "Feller-Kopman, 2007 (20)",
+          "185",
+          "Custom electronic manometer or dampened water manometer Pleural measurement at",
+          "Prospective observational",
+          "PM and development of re- expansion pulmonary edema",
+          "Re-expansion pulmonary edema is rare and independent of fluid volume removed, Ppl, and pleural elastance"
+        ],
+        [
+          "Lentz, 2019 (6)",
+          "124",
+          "Digital manometer",
+          "Single-blinded randomized control",
+          "PM and development of drainage related symptoms",
+          "PM does not prevent drainage related symptoms, such as chest pain, but reduces pneumothorax ex vacuo"
+        ],
+        [
+          "Chopra, 2020 (7)",
+          "70",
+          "Custom electronic manometer Pleural measurement at every 100 to 250 mL aliquots",
+          "Prospective observation",
+          "Relationship of PM and chest X-ray in malignant pleural effusion",
+          "PM does not correlate well with X-ray findings"
+        ],
+        [
+          "Pre-EDIT, 2019 (8)",
+          "31",
+          "Rocket Medical digital manometer",
+          "Prospective, feasibility",
+          "PM utility in identifying pleurodesis candidates in malignant pleural effusions",
+          "Feasibility study. Awaiting results from EDIT trial"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/241'}",
+      "headers": [
+        "Type",
+        "Stable pneumothorax",
+        "Unstable pneumothorax"
+      ],
+      "rows": [
+        [
+          "Origin",
+          "Pressure-dependent alveolar-pleural fistula",
+          "Pressure-independent broncho-pleural fistula"
+        ],
+        [
+          "Radiographic",
+          "basilar loculated",
+          "Usually apical"
+        ],
+        [
+          "Hemodynamics",
+          "Stable",
+          "Usually unstable"
+        ],
+        [
+          "Occurrence",
+          "After pleural drainage in patients with NEL",
+          "Trauma or spontaneous"
+        ],
+        [
+          "Lung disease",
+          "Usually present",
+          "Usually not present in trauma, present in spontaneous"
+        ],
+        [
+          "Manometric findings",
+          "Ppl doesn't rise over time after clamping and cough maneuver",
+          "Ppl rises over time after clamping and cough maneuver"
+        ],
+        [
+          "Treatment",
+          "Monitoring",
+          "Drainage"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    }
+  ],
+  "figures": [
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/32'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/47'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/72'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/91'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/123'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/138'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/155'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/198'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    }
+  ],
+  "references": [
+    {
+      "title": "Therapeutic thoracentesis: the role of ultrasound and pleural manometry",
+      "year": 2007
+    },
+    {
+      "title": "Curr Opin Pulm Med",
+      "year": 2007
+    },
+    {
+      "title": "Manometry in the Conduct of Artificial Pneumothorax",
+      "year": 2007
+    },
+    {
+      "title": "Dis Chest",
+      "year": 2007
+    },
+    {
+      "title": "Observations on pleural fluid pressures as fluid is withdrawn during thoracentesis"
+    },
+    {
+      "title": "Am Rev Respir Dis",
+      "year": 1980
+    },
+    {
+      "title": "Elastance of the Pleural Space: A Predictor for the Outcome of Pleurodesis in Patients with Malignant Pleural Effusion",
+      "year": 1980
+    },
+    {
+      "title": "Ann Intern Med",
+      "year": 1980
+    },
+    {
+      "title": "Pleural manometry: Technique and clinical implications",
+      "year": 1997
+    },
+    {
+      "title": "Chest",
+      "year": 2007
+    },
+    {
+      "title": "Routine monitoring with pleural manometry during therapeutic largevolume thoracentesis to prevent pleural-pressure-related complications: a multicentre, single-blind randomised controlled trial",
+      "year": 2004
+    },
+    {
+      "title": "Lancet Respir Med",
+      "year": 2019
+    },
+    {
+      "title": "The Relationship of Pleural Manometry With Postthoracentesis Chest Radiographic Findings in Malignant Pleural Effusion",
+      "year": 2019
+    },
+    {
+      "title": "Pre-EDIT: A Randomized Feasibility Trial of Elastance-Directed Intrapleural Catheter or Talc Pleurodesis in Malignant Pleural Effusion",
+      "year": 2020
+    },
+    {
+      "title": "Comparison of Pleural Pressure Measuring Instruments",
+      "year": 2019
+    },
+    {
+      "title": "Patterns of pleural pressure amplitude and respiratory rate changes during therapeutic thoracentesis",
+      "year": 2014
+    },
+    {
+      "title": "BMC Pulm Med",
+      "year": 2018
+    },
+    {
+      "title": "Development of an electronic manometer for intrapleural pressure monitoring",
+      "year": 2018
+    },
+    {
+      "title": "Respiration",
+      "year": 2011
+    },
+    {
+      "title": "Pleural pressure swing and lung expansion after malignant pleural effusion drainage the benefits of high-temporal resolution pleural manometry",
+      "year": 2011
+    },
+    {
+      "title": "J Bronchology Interv Pulmonol",
+      "year": 2013
+    },
+    {
+      "title": "A new method for performing continuous manometry during pleural effusion drainage",
+      "year": 2013
+    },
+    {
+      "title": "Mechanics of the pleural space: Fundamental concepts",
+      "year": 2014
+    },
+    {
+      "title": "Lung",
+      "year": 2014
+    },
+    {
+      "title": "Pleural pressure distribution and its relationship to lung volume and interstitial pressure",
+      "year": 1987
+    },
+    {
+      "title": "J Appl Physiol",
+      "year": 1991
+    },
+    {
+      "title": "Pleural Mechanics and Fluid Exchange",
+      "year": 1991
+    },
+    {
+      "title": "Physiol Rev",
+      "year": 1991
+    },
+    {
+      "title": "New Concept: Not Every Postoperative Air Leak Is the Same",
+      "year": 2004
+    },
+    {
+      "title": "Pathophysiology of Pneumothorax Following Ultrasound-Guided Thoracentesis",
+      "year": 2019
+    },
+    {
+      "title": "The relationship of pleural pressure to symptom development during therapeutic thoracentesis",
+      "year": 2006
+    },
+    {
+      "title": "Large-Volume Thoracentesis and the Risk of Reexpansion Pulmonary Edema",
+      "year": 2006
+    },
+    {
+      "title": "Ann Thorac Surg",
+      "year": 2007
+    },
+    {
+      "title": "The unexpandable lung",
+      "year": 2007
+    },
+    {
+      "title": "Med Rep"
+    },
+    {
+      "title": "Reexpansion Pulmonary Edema",
+      "year": 2006
+    },
+    {
+      "title": "Unilateral pulmonary edema in rabbits after reexpansion of collapsed lung",
+      "year": 1988
+    },
+    {
+      "title": "Management of a malignant pleural effusion: British Thoracic Society pleural disease guideline 2010",
+      "year": 1979
+    },
+    {
+      "title": "Thorax",
+      "year": 2010
+    },
+    {
+      "title": "Unexpandable lung from pleural disease",
+      "year": 2010
+    },
+    {
+      "title": "Respirology",
+      "year": 2018
+    },
+    {
+      "title": "The value of sound waves and pleural manometry in diagnosing a pleural effusion with the dual diagnosis",
+      "year": 2018
+    },
+    {
+      "title": "Outpatient talc administration by indwelling pleural catheter for malignant effusion",
+      "year": 2016
+    },
+    {
+      "title": "N Engl J Med",
+      "year": 2018
+    },
+    {
+      "title": "Effect of an indwelling pleural catheter vs chest tube and talc pleurodesis for relieving dyspnea in patients with malignant pleural effusion: The TIME2 randomized controlled trial",
+      "year": 2018
+    },
+    {
+      "title": "JAMA",
+      "year": 2012
+    },
+    {
+      "title": "Effect of an indwelling pleural catheter vs talc pleurodesis on hospitalization days in patients with malignant pleural effusion: The AMPLE randomized clinical trial",
+      "year": 2012
+    },
+    {
+      "title": "Discordance Between Pleural Elastance and Postthoracentesis Chest Radiograph: Putting Pressure on Pleurodesis Trials",
+      "year": 2017
+    },
+    {
+      "title": "Conservative versus Interventional Treatment for Spontaneous Pneumothorax",
+      "year": 2020
+    },
+    {
+      "title": "Efficacy And Safety Of Therapeutic Pneumothorax For Treating Chest Pain During Thoracentesis Due To An Unexpandable Lung",
+      "year": 2020
+    },
+    {
+      "title": "Am J Respir Crit Care Med"
+    }
+  ],
+  "quality": {
+    "completeness_score": 0,
+    "has_abstract": true,
+    "abstract_source": "metadata",
+    "has_doi": true,
+    "has_full_text": true,
+    "num_sections": 18,
+    "num_tables": 3,
+    "num_figures": 13,
+    "num_references": 51
+  }
+}

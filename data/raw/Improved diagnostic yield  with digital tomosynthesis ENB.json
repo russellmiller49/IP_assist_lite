@@ -1,0 +1,1053 @@
+{
+  "metadata": {
+    "document_id": "10_1111_resp_13609",
+    "title": "Improved diagnostic yield for lung nodules with digital tomosynthesis‐corrected navigational bronchoscopy: Initial experience with a novel adjunct",
+    "authors": [
+      "Matt Aboudara",
+      "Lance Roller",
+      "Otis Rickman",
+      "Robert J. Lentz",
+      "Jasleen Pannu",
+      "Heidi Chen",
+      "Fabien Maldonado"
+    ],
+    "year": 2017,
+    "journal": "Respirology",
+    "doi": "10.1111/resp.13609",
+    "volume": "25",
+    "issue": "2",
+    "pages": "206-213",
+    "citation": "Aboudara, et al. (2017). Improved diagnostic yield for lung nodules with digital tomosynthesis‐corrected navigational bronchoscopy: Initial experience with a novel adjunct. Respirology, 25(2), 206-213. https://doi.org/10.1111/resp.13609",
+    "abstract": "Background and objective: The diagnostic yield of electromagnetic navigation bronchoscopy (ENB) is inferior to that of computed tomography (CT)-guided needle biopsy for pulmonary nodules. One explanation for this is divergence between the nodule location on the preprocedure CT scan and its actual location during the procedure. Fluoroscopic ENB (F-ENB) consists of digital tomosynthesis using a conventional C-arm to re-register the target lesion based on near real-time imaging. We performed a retrospective review of ENB cases at our institution before and after introduction of F-ENB to assess diagnostic yield. Methods: All consecutive ENB procedures performed at our institution from 25 December 2017 to 25 August 2018 were reviewed. F-ENB was introduced on 25 April 2018. Two cohorts were analysed: standard ENB (S-ENB) from 25 December 2017 to 24 April 2018 and F-ENB from 25 April 2018 to 25 August 2018. All procedural, demographic and diagnostic data were collected. Descriptive statistics, chi-square, Wilcoxon test and Student ' s t-test were used where appropriate. A multivariable regression analysis was performed to assess factors associated with diagnostic yield. Results: A total of 101 and 67 nodules were biopsied in the S-ENB and F-ENB groups, respectively. Diagnostic yield was 54% in S-ENB cohort and 79% in the F-ENB group ( P = 0.0019). Factors independently associated with a positive diagnosis were F-ENB and a positive radial ultrasound view (odds ratio (Odds ratio (OR)): 3.57, 95% CI: 1.56 -8.18 and Odds ratio (OR): 3.74, 95% CI: 1.37 -11.05, respectively). Complications were minimal (pneumothorax: 1.5%). Conclusion: The use of F-ENB may increase the diagnostic yield of ENB and has a low complication rate. Key words: /uniFB02 uoroscopy, lung nodule, navigational bronchoscopy, tomosynthesis",
+    "abstract_source": "metadata",
+    "url": "https://onlinelibrary.wiley.com/doi/10.1111/resp.13609"
+  },
+  "source_file": "Improved diagnostic yield  with digital tomosynthesis ENB.json",
+  "sections": [
+    {
+      "title": "Improved diagnostic yield for lung nodules with digital tomosynthesis-corrected navigational bronchoscopy: Initial experience with a novel adjunct",
+      "content": "MATT ABOUDARA, 1 * LANCE ROLLER, 1 * OTIS RICKMAN, 1 ROBERT J. LENTZ, 1 JASLEEN PANNU, 2 HEIDI CHEN 3 AND FABIEN MALDONADO 1\n1 Division of Allergy, Pulmonary and Critical Care Medicine, Vanderbilt University Medical Center, Nashville, TN, USA; 2 The Division of Pulmonary Critical Care and Sleep Medicine, The Ohio State University Wexner Medical Center, Columbus, OH, USA; 3 Department of Biostatistics, Vanderbilt University Medical Center, Nashville, TN, USA",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "ABSTRACT",
+      "content": "Background and objective: The diagnostic yield of electromagnetic navigation bronchoscopy (ENB) is inferior to that of computed tomography (CT)-guided needle biopsy for pulmonary nodules. One explanation for this is divergence between the nodule location on the preprocedure CT scan and its actual location during the procedure. Fluoroscopic ENB (F-ENB) consists of digital tomosynthesis using a conventional C-arm to re-register the target lesion based on near real-time imaging. We performed a retrospective review of ENB cases at our institution before and after introduction of F-ENB to assess diagnostic yield.\nMethods: All consecutive ENB procedures performed at our institution from 25 December 2017 to 25 August 2018 were reviewed. F-ENB was introduced on 25 April 2018. Two cohorts were analysed: standard ENB (S-ENB) from 25 December 2017 to 24 April 2018 and F-ENB from 25 April 2018 to 25 August 2018. All procedural, demographic and diagnostic data were collected. Descriptive statistics, chi-square, Wilcoxon test and Student ' s t-test were used where appropriate. A multivariable regression analysis was performed to assess factors associated with diagnostic yield.\nResults: A total of 101 and 67 nodules were biopsied in the S-ENB and F-ENB groups, respectively. Diagnostic yield was 54% in S-ENB cohort and 79% in the F-ENB group ( P = 0.0019). Factors independently associated with a positive diagnosis were F-ENB and a positive radial ultrasound view (odds ratio (Odds ratio (OR)): 3.57, 95% CI: 1.56 -8.18 and Odds ratio (OR): 3.74, 95% CI: 1.37 -11.05, respectively). Complications were minimal (pneumothorax: 1.5%).\nConclusion: The use of F-ENB may increase the diagnostic yield of ENB and has a low complication rate.\nKey words: /uniFB02 uoroscopy, lung nodule, navigational bronchoscopy, tomosynthesis.",
+      "category": "abstract",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "INTRODUCTION",
+      "content": "A cornerstone of lung cancer management is early detection, with substantially improved outcomes in early stage disease, particularly in cancers <3 cm without nodal involvement. 1 With estimates of incidentally identi /uniFB01 ed pulmonary nodules approaching 1.5 million per year in the United States alone 2 and two large randomized trials in lung cancer screening demonstrating a survival bene /uniFB01 t with annual low-dose computed tomography (CT), 3,4 the rate of minimally invasive biopsies for incidentally and screen-identi /uniFB01 ed nodules is expected to increase. As such, there is an urgent need for minimally invasive diagnostic techniques with both excellent performance and safety for evaluation of lung nodules.\nThe reported sensitivity of CT-guided biopsy is 90%, but estimates for lesions <1.5 cm are less optimistic (70 -82%). 5 In comparison, the overall diagnostic yield of currently available electromagnetic navigation bronchoscopy (ENB) techniques is lower, approaching 70 -73% 6 -8 while other data suggest an even lower rate of 44 -57%. 9,10 When analysed more closely, the diagnostic yield appears to be in /uniFB02 uenced by nodule size and presence of a bronchus sign. 7,11\nOne major limitation of all ENB platforms is the reliance on preoperative CT for planning and navigation as opposed to real-time image guidance. This\nReceived 30 January 2019; invited to revise 11 March 2019; revised 26 March 2019; accepted 29 April 2019 (Associate Editor: Pyng Lee; Senior Editor: Phan Nguyen)",
+      "category": "introduction",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "SUMMARY AT A GLANCE",
+      "content": "Tomosynthesis-assisted navigational bronchoscopy using a conventional /uniFB02 uoroscopic C-arm is a new technique that can correct for nodule divergence but its impact on diagnostic yield is unproven. We performed a retrospective study evaluating this technology and found a 25% increase in diagnostic yield with small peripheral nodules.\ncommonly results in CT body divergence, de /uniFB01 ned as the difference between the location of the nodule on the pre-procedure CT scan and its actual location during the procedure. This divergence has been hypothesized to explain, among other factors, the generally disappointing yields on navigational bronchoscopy. Some proposed causes of divergence include lung volume differences at the time of planning CT and the procedure, general anaesthesia and development of atelectasis. 12\nWhile the use of intraoperative cone-beam CT con /uniFB01 rmation might mitigate these issues and provide near real-time con /uniFB01 rmatory imaging, access to conebeam technology is limited to a handful of expert centres, and dissemination of the technology will likely be slow. 13 Fluoroscopic ENB (F-ENB, Medtronic, Minneapolis, MN, USA) is a novel technology that uses digital tomosynthesis technology via a conventional /uniFB02 uoroscopy C-arm to visualize and re-register the target nodule based on near real-time imaging to compensate for divergence. The bronchoscopist can then redirect the locatable guide (LG) and extended working channel (EWC) to the reregistered nodule position. While the potential utility of this technology is appealing, no published data exist as to its impact on diagnostic yield. We performed a retrospective review of our preliminary experience with F-ENB before and after its introduction at our institution to assess the impact on diagnostic yield and safety.",
+      "category": "abstract",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "METHODS",
+      "content": "We conducted a retrospective review of all consecutive ENB procedures performed at Vanderbilt University Medical Center from 25 December 2017 to 25 August 2018. The study was approved by our institutional review board (IRB number: 181411; consent was waived for this study). F-ENB was introduced on 25 April 2018 and for practical reasons we included data from 4 months prior and 4 months after the introduction of F-ENB. The SuperDimension iLogic 7.2 ENB platform (SuperDimension, Medtronic) was used for all procedures, and the technique has been described in detail previously. 8 Fluoroscopic tomosynthesis is a software upgrade to the most current version of SuperDimension. There is no speci /uniFB01 c time frame requirement from date of pre-procedure CT to procedure, although a CT scan obtained <4 weeks is recommended by the manufacturer. The speci /uniFB01 cations of the pre-procedure CT scan did not change with the software upgrade (image resolution 512 × 512, 1.0 -1.25 mm thickness, 0.8 -1.0 mm interval, overlap 20 -50%). All patients were intubated under total intravenous anaesthesia. For F-ENB cases, neuromuscular blockade was used because a breathhold manoeuvre is required to permit capture of a tomosynthesis image.\nFluoroscopic tomosynthesis is performed in the following manner: The LG with the EWC is positioned no greater than 25 mm of the target nodule. The software upgrade provides a step-by-step process to perform the procedure. Currently, only the GE 9800 or 9900 /uniFB02 uoroscopy C-arm may be used (GE Healthcare, Chicago, IL, USA). These C-arms allow a large enough image to\ncapture both the nodule and the catheter tip in different oblique views. With the C-arm, a 25 /C14 left lateral oblique (LAO) image of the catheter tip is obtained, followed by a 25 /C14 right lateral oblique (RAO) image with the catheter tip. The C-arm is then repositioned in the 25 /C14 LAO starting position. An inspiratory breathhold manoeuvre with the adjustable pressure limiting (APL) valve set at 20 cm H2O is performed by the anaesthesiology provider. This attempts to mimic the inspiratory breath hold done during a CT scan. During the breath-hold manoeuvre, a /uniFB02 uoroscopy sweep is performed from the LAO 25 /C14 to the RAO 25 /C14 position with high-level continuous /uniFB02 uoroscopy. This sweep is performed over a minimum of 8 s and a maximum of 30 s. The software then converts the curved images to /uniFB02 attened images to allow identi /uniFB01 cation of both the nodule and catheter tip in space. The position of the nodule and catheter tip is marked, and the nodule registration is updated. The bronchoscopist then redirects the position of the LG and EWC to establish correct alignment with the nodule (Fig. 1). Retraction of the scope into the mainstem bronchi or trachea and a complete renavigation to the nodule is not necessary. For our work /uniFB02 ow, no additional personnel are required for this /uniFB02 uoroscopy sweep.\nNot all procedures after 24 April were performed with F-ENB for two reasons: (i) Two SuperDimension systems are available at our institution and only one system has F-ENB capability. Concurrent navigational procedures would by default preclude use of F-ENB for one of those procedures. The least accessible nodule (smaller, no bronchus sign) was then assigned to the FENB capable unit when feasible. (ii) For procedures performed on the F-ENB system: the decision to use FENB was made after navigation to the lesion and attempted localization with radial endobronchial ultrasound (rEBUS). If, at the bronchoscopist ' s discretion, the nodule was not satisfactorily visualized with rEBUS, then a tomosynthesis correction was performed. Procedures were performed by M.A., O.R., R.J.L., J.P. and F.M. Two historical cohorts of consecutive patients undergoing ENB were compared: standard ENB (SENB) from 25 December 2017 to 24 April 2018 and FENB from 25 April 2018 to 25 August 2018.\nAll tissue samples and cytology specimens were evaluated by a lung pathology expert. Our typical work /uniFB02 ow for nodule biopsy is as follows: we use rapid onsite cytology (ROSE) for all cases. Transbronchial needle aspiration (TBNA) is used /uniFB01 rst because samples can be assessed by ROSE. If a diagnosis is con /uniFB01 rmed with TBNA by ROSE and a suf /uniFB01 cient cell block is obtained, we do not perform transbronchial biopsy (TBBX), brush or wash. If no con /uniFB01 -dent diagnosis is con /uniFB01 rmed by ROSE, there is an inadequate cell block with TBNA, or if there is concern for infection, TBBX is performed. A 10-mL wash is routinely performed through the EWC if no diagnosis is con /uniFB01 rmed by ROSE. We do not routinely use a cytology brush as it frequently de /uniFB02 ects the EWC from the target nodule due to its stiffness and, in our institutional experience, has not added value to diagnostic yield.\nA positive diagnosis was de /uniFB01 ned as (i) presence of malignancy; (ii) benign histological /uniFB01 ndings that clearly accounted for the presence of the nodule (granulomatous in /uniFB02 ammation and robust neutrophilic in /uniFB02 ammation\nconsistent with infection) on tissue biopsy, similar /uniFB01 ndings on cytopathology specimens; or (iii) positive cultures, speci /uniFB01 c stains or fungal antigens on ENB-directed washings. Normal lung parenchyma, atypical cells or non-speci /uniFB01 c in /uniFB02 ammation were considered nondiagnostic biopsies.\nThe primary outcome was diagnostic yield. The overall diagnostic yield was calculated by adding the number of true positives for both malignancy and benign disease in the numerator and dividing by the total number of nodules biopsied. The diagnostic rate for malignancy was obtained by dividing the number of true positives for malignancy by the total number of nodules biopsied.\nDivergence (mm) was de /uniFB01 ned for the purposes of this study as the distance of the catheter to the nodule following a tomosynthesis sweep (F-ENB cases only). This represents the degree of catheter malpositioning based on the original patient registration that required intra-procedural correcting and catheter repositioning to achieve central target alignment. These data were extracted from the SuperDimension software.\nAll procedural, demographic and diagnostic data performed 4 months prior and 4 months after the introduction of F-ENB were collected and de /uniFB01 ned as previously described. 9 De /uniFB01 nitions for nodule location are as follows: peripheral: within the outer two-third of the lung; central: within the inner one-third of the lung; pleural based: nodule abutting the pleura. We do not routinely collect procedure duration time as part of our normal work /uniFB02 ow; as such, it was not available for this retrospective study. Reporting of complications was based on\nde /uniFB01 nitions used by a previous national quality improvement project initiative for diagnostic bronchoscopy. 9 Descriptive statistics including sample median and interquartile ranges (IQR) or sample mean and SD (when appropriate) for continuous variables as well as percent and frequencies for categorical variables were presented. Group comparisons were analysed using the Wilcoxon rank-sum test or t-test (when appropriate) for continuous variables and chi-square test for categorical variables. Multivariable logistic regression analysis was applied to assess the association between F-ENB and diagnosis with the adjustment of radial ultrasound image acquisition, size, location of the nodule and presence of an air bronchogram. Results were reported as odds ratios (Odds ratio (OR)) and 95% CI. All analyses were performed using R version 3.5.1 and JASP (version 0.9.1, Amsterdam, The Netherlands).",
+      "category": "methods",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "RESULTS",
+      "content": "A total of 101 nodules in 90 subjects underwent S-ENB biopsy between 25 December 2017 and 24 April 2018. From 25 April 2018 to 25 August 2018, a total of 67 nodules in 59 subjects underwent F-ENB biopsy (Fig. 2). There was no difference between the S-ENB and FENB groups in terms of sex, age, smoking status or outpatient status (Table 1).\nThe primary outcome of diagnostic yield was signi /uniFB01 -cantly higher in the F-ENB group (79%, 53/67) than the S-ENB group (54%, 55/101) ( P = 0.0019; Table 1). The\nmedian (IQR) size of nodules biopsied in the S-ENB and F-ENB cohorts was similar at 15 mm (12 -24) versus 16 mm (12 -24), respectively ( P = 0.56; Table 1). Considering only nodules <20 mm, there remained no difference in nodule size between cohorts (S-ENB: 13 mm, 11 -15; F-ENB: 14 mm, 11 -16; P = 0.27).\nThe median (IQR) divergence within the F-ENB cohort was 12.2 mm (IQR: 7 -17). Table 2 shows median (IQR) catheter divergence per lobe.\nIn analysing procedure-speci /uniFB01 c characteristics, there was no difference between the groups in terms of the rEBUS view obtained (concentric, eccentric and no view), location of the nodule (pleural based, peripheral or central; speci /uniFB01 c lobe), whether the nodule was a solid or subsolid opacity or the type of biopsy method (TBNA, TBBX or bronchoalveolar lavage (BAL)) (Table 3). A cytology brush was infrequently used and not reported as it had no bearing on diagnostic yield in either group (if the brush was positive, it was always accompanied by a positive TBNA and/or TBBX). More patients in the S-ENB had a bronchus sign compared with the F-ENB group (37% (38/101) vs 22% (15/67), respectively, P = 0.04).\nTable 4 provides information on nodule diagnosis by method utilized: cytology (TBNA), histology (TBBX) or culture (culture from bronchial wash, TBNA and TBBX). For the F-ENB group, 66% (35/53) of patients had a diagnosis made by cytology alone, 18% (10/53) by histology alone and 11% (6/53) had a positive\ndiagnosis by both cytology and histology. In the S-ENB group, 43% (23/55) were diagnosed by cytology alone, 8% (15/55) by histology alone and 33% (18/55) had a positive diagnosis by both cytology and histology.\nUnivariate analysis identi /uniFB01 ed the use of F-ENB and presence of a concentric or eccentric rEBUS view as factors associated with a positive diagnosis (Table 5). In the multivariate logistic regression model, F-ENB and rEBUS identi /uniFB01 cation were both independent predictors of a\n† Number of nodules biopsied per group.\n‡ rEBUS was attempted for one nodule in this group but results were not reported.\nBAL, bronchoalveolar lavage; ENB, electromagnetic navigation bronchoscopy; F-ENB, /uniFB02 uoroscopic ENB; GGO, ground glass opacity; LLL, left lower lobe; LUL, left upper lobe; rEBUS, radial endobronchial ultrasound; RLL, right lower lobe; RML, right middle lobe; RUL, right upper lobe; S-ENB, standard ENB; TBBX, transbronchial lung biopsy; TBNA, transbronchial needle aspiration; US, ultrasound.\npositive result. Patients undergoing an ENB procedure with F-ENB were more likely to have a diagnosis made than those undergoing an S-ENB procedure (Odds ratio (OR): 3.57, 95% CI: 1.56 -8.18). The presence of a concentric Odds ratio (or) eccentric rEBUS was associated with similar odds of achieving a diagnosis (Table 6; Odds ratio (OR): 3.74 and 3.89, 95% CI: 1.26 -11.06 and 1.37 -11.05, respectively).\nDuring the post-F-ENB introduction period, 46% (43/94) of subjects were assigned to S-ENB based on criteria outlined above (Fig. 2). The diagnostic yields were similar between the S-ENB and F-ENB groups (72.5% and 79.4%, P = 0.51, respectively, Table S1, Supplementary Information). However, in this speci /uniFB01 c S-ENB group compared with F-ENB, the median (IQR) sizes were larger (23 mm (15 -31) vs 16 mm (12 -24), P = 0.005), there was a greater number of cancer diagnoses (86% (32/37) vs 52% (36/53), P = 0.04) and a higher number of nodules had a bronchus sign (53% (27/51) vs 22% (15/67), P = 0.009), (Table S2, Supplementary Information).\nComplications were minimal (Table 7) and there were no differences seen between the groups. The most common complication was pneumothorax which occurred in 1.5% of subjects.",
+      "category": "results",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "DISCUSSION",
+      "content": "In our retrospective review of patients undergoing ENB before and after the introduction of the novel\nF-ENB platform, we observed a 25% absolute increase in diagnostic yield with F-ENB compared with S-ENB (79% vs 54%). This diagnostic yield was based on a conservative de /uniFB01 nition of a positive diagnosis and was achieved despite the fact that the majority of nodules (64%) were <20 mm and only 22% had a bronchus sign. The only factor associated with diagnostic yield was the use of F-ENB and a concentric or eccentric ultrasound image. Other factors, such as biopsy method, presence of a bronchus sign, size or location of the nodule, did not affect diagnostic outcome, all of which have been previously reported to improve diagnostic yield. 9,11,14,15\nOur study also con /uniFB01 rms the value of rEBUS as a con /uniFB01 rmation tool in diagnostic bronchoscopy. Interestingly, as previously reported, we observed a signi /uniFB01 cant ' diagnostic drop-off ' (81% localization with rEBUS by S-ENB with positive diagnosis in 54%), which highlights the limitations of rEBUS in con /uniFB01 rming adequate navigation and the need for additional imaging con /uniFB01 rmation. 16\nThe ability to integrate digital tomosynthesis-based re-registration into the S-ENB platform allows for the correction of signi /uniFB01 cant nodule divergence and allows repositioning of the extending working channel to achieve correct alignment and more accurate biopsies (Fig. 1). Divergence occurs for several reasons: Lung volume difference and nodule movement (full inhalation vs tidal breathing and rapid development of\nAFB, acid fast bacilli; CA, cancer; COP, cryptogenic organizing pneumonia; Cx, Culture; Cyto, Cytology; ENB, electromagnetic navigation bronchoscopy; F-ENB, /uniFB02 uoroscopic ENB; Histo, Histology; Non-small cell lung cancer (NSCLC), non-small cell lung cancer; NTM, non-tuberculosis mycobacterium; S-ENB, standard ENB; TB, Mycobacterium tuberculosis ; TBNA, transbronchial needle aspiration.\natelectasis), patient positioning ( /uniFB02 at or curved beds, use of pillows and arms up or down) and muscle movement (affected by paralytics and general anaesthesia). Divergence can be a source of frustration for the clinician, particularly for smaller lesions, and correcting for this error with /uniFB02 uoroscopic navigation is a signi /uniFB01 cant advancement in improving diagnostic accuracy of navigational bronchoscopy.\nWhile initial data for navigational bronchoscopy (with adjuncts such as rEBUS) held promise in achieving high diagnostic yields comparable to CT-guided biopsy, 17 two meta-analyses tempered this enthusiasm with a pooled diagnostic rate of 65 -70%, regardless of modality. 6,7 Retrospective data evaluating bronchoscopy for peripheral nodules reported a diagnostic yield of 47% (ENB plus rEBUS) to 63% (no ENB or rEBUS technology utilized). In this study, independent predictors of a higher diagnostic yield were the use of TBNA, non-upper lobe location, larger lesion size and history of tobacco smoking, 9 factors that were not associated with a positive diagnostic sample in our study. While not necessarily a study evaluating navigational bronchoscopy, Tanner et al . in their randomized trial comparing conventional bronchoscopy in conjunction with /uniFB02 uoroscopy versus conventional bronchoscopy with /uniFB02 uoroscopic guidance plus rEBUS provided useful information on these bronchoscopic interventions. 10 Disappointingly, they reported a diagnostic yield ranging from 38% to 49%. This was despite a bronchus sign present in 69% of subjects and\na mean nodule size of 3.1 cm, both predictors of a higher diagnostic yield. Finally, the NAVIGATE investigators recently reported the 12-month interim results of their multicentre prospective cohort study of navigational bronchoscopy using the SuperDimension system over a 24-month period. This study enrolled 1215 patients at 29 centres (academic and community based) with a median lesion size of 20 mm. The overall diagnostic yield over 12 months was 73% and a bronchus sign was an independent predictor of a positive diagnosis. A planned 24-month analysis is pending, which may alter the /uniFB01 nal diagnostic yield. 8\nOur study assessing S-ENB (as used in NAVIGATE) versus F-ENB found a high diagnostic yield for small nodules in which 86% of sampled nodules were either peripheral or pleural based. In addition, our data suggest no major impact on yield by the presence or absence of bronchus sign, size of nodule or biopsy method (TBNA, TBBX, etc.). The only major difference between the groups was the introduction of F-ENB to navigational bronchoscopy procedures. rEBUS also had value in predicting diagnostic yield. We hypothesize that this is an observed result of F-ENB in correctly reregistering the target nodule in alignment with the catheter. It is possible that rEBUS may not be necessary once nodule re-registration with digital tomosynthesis has been completed. The median catheter correction of 12 mm (IQR: 7 -17) is signi /uniFB01 cant when one considers that 65% of the nodules biopsied in our study were <20 mm. If this in fact is borne out in prospective studies, this represents a major step forward in understanding the limitations of currently available navigational bronchoscopy platforms and improving diagnostic yields.\nOur study has inherent limitations that affect all retrospective cohort studies, but this is the /uniFB01 rst study to describe the impact of navigational /uniFB02 uoroscopic digital tomosynthesis on diagnostic yield and lays the groundwork for further prospective investigations. Given the retrospective nature of our study, we were not able to be more detailed in reporting speci /uniFB01 c\n† One patient did not have data available to con /uniFB01 rm nodule location or presence of air bronchogram.\nENB, electromagnetic navigation bronchoscopy; F-ENB, /uniFB02 uoroscopic ENB; IQR, interquartile range; S-ENB, standard ENB.\nF-ENB, /uniFB02 uoroscopic electromagnetic navigation bronchoscopy; OR, odds ratio; rEBUS, radial endobronchial ultrasound.\ncomplications. We may have missed complications that could have been identi /uniFB01 ed in a prospective analysis. However, we routinely followed up with all our patients either in person within a week or by telephone within 2 -3 days of the procedure. Many major complications would have been identi /uniFB01 ed during these encounters and documented in our electronic\nmedical record. Bias in patient selection may have impacted our results. The diagnostic yield of 54% in the S-ENB arm initially appears lower than reported in prior navigation studies. However, the nodules in the pre/uniFB02 uoroscopic navigation S-ENB group were smaller (15 vs 23 mm) and less likely to have a bronchus sign (36% vs 53%) than the post/uniFB02 uoroscopic navigation S-ENB group, both factors known to impact diagnostic yield. Also, we used a strict de /uniFB01 nition of diagnostic yield that was not used in many initial studies. 8 We believe that the S-ENB yield would have been higher if follow-up data were known to identify true negatives. We do not routinely use TBBX for all nodule biopsies because we rely heavily on ROSE to triage specimens with TBNA. 9,18 Regardless, it is possible that initial adequate specimens on ROSE with TBNA may have had a /uniFB01 nal non-diagnostic result in which the addition of TBBX may have added a positive diagnosis in those cases. While an operator learning curve for navigational bronchoscopy is possible (particularly for trainees), the SuperDimension system has been used at our institution since 2009. The procedural-speci /uniFB01 c technical aspects are identical except for the introduction of a /uniFB02 uoroscopy sweep. While we did not record time duration of procedures, in our\nComplications were calculated based on the number of patients undergoing ENB (S-ENB: n = 90, F-ENB: n = 59) and not on a per-nodule basis.\nENB, electromagnetic navigation bronchoscopy; F-ENB, /uniFB02 uoroscopic ENB; S-ENB, standard ENB.\nexperience, the /uniFB02 uoroscopy sweep is <5 min from initial capture to nodule re-registration. Our sample size for the F-ENB cohort was small and our follow-up of nondiagnostic biopsies was limited. However, we used very conservative diagnostic criteria and aggressively pursued further testing for high pretest probability nodules with an inconclusive initial biopsy result. Finally, not all nodules following introduction of F-ENB were biopsied with this technique. Larger nodules accompanied by a bronchus sign were more frequently allocated to S-ENB over F-ENB as speci /uniFB01 ed above. It is possible, given the high yield of small nodules with F-ENB, that if F-ENB was used for all cases, the overall yield may have been higher. Regardless, this lack of uniform utilization of F-ENB may impact the true diagnostic rate and highlights the importance of additional prospective studies to assess this technology.\nIn summary, the F-ENB dramatically improved diagnostic yield as compared to the S-ENB by correcting for nodule and catheter position and allowing more accurate sampling of small peripheral nodules. This diagnostic yield may approach that of CT-guided biopsy with an acceptable complication rate; however, further prospective comparative studies are needed to con /uniFB01 rm these /uniFB01 ndings.\nAuthor contributions: Conceptualization: F.M., M.A., L.R., O.R., R.L., J.P., H.C. Data curation: L.R., M.A., O.B., R.L., J.P., F.M., H.C. Formal analysis: H.C., M.A., L.R., O.B., L.R., J.P., F.M. Methodology: F.M., M.A., O.B., R.L., H.C. Supervision: F.M. Writing -original draft: M.A., F.M. Writing -review and editing: M.A., L.R., O.B., R.L., J.P., H.C., F.M.\nAbbreviations: CT, computed tomography; ENB, electromagnetic navigation bronchoscopy; EWC, extended working channel; F-ENB, /uniFB02 uoroscopic ENB; IQR, interquartile range; LAO, left lateral oblique; LG, locatable guide; RAO, right lateral oblique; rEBUS, radial endobronchial ultrasound; ROSE, rapid onsite cytology; S-ENB, standard ENB; TBBX, transbronchial lung biopsy; TBNA, transbronchial needle aspiration.",
+      "category": "discussion",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "REFERENCES",
+      "content": "1 Detterbeck FC, Boffa DJ, Kim AW, Tanoue LT. The Eighth Edition Lung Cancer Stage Classi /uniFB01 cation. Chest 2017; 151 : 193 -203.\n2 Gould MK, Tang T, Liu IL, Lee J, Zheng C, Danforth KN, Kosco AE, Di Fiore JL, Suh DE. Recent trends in the identi /uniFB01 cation of incidental pulmonary nodules. Am. J. Respir. Crit. Care Med. 2015; 192 : 1208 -14.\n3 Aberle DR, Adams AM, Berg CD, Black WC, Clapp JD, Fagerstrom RM, Gareen IF, Gatsonis C, Marcus PM, Sicks JD. Reduced lung-cancer mortality with low-dose computed tomographic screening. N. Engl. J. Med. 2011; 365 : 395 -409.\n4 De Koning H, Van Der Aalst C, Ten Haaf K, Oudkerk M. PL02.05 Effects of volume CT lung cancer screening: Mortality results of the NELSON randomised-controlled population based trial. J Thorac. Oncol . 2018; 13 : S185\n5 Gould MK, Donington J, Lynch WR, Mazzone PJ, Midthun DE, Naidich DP, Wiener RS. Evaluation of individuals with pulmonary nodules: when is it lung cancer? Diagnosis and management of lung cancer, 3rd ed: American College of Chest Physicians\nevidence-based clinical practice guidelines. Chest 2013; 143 (5 Suppl.): e93S -120S.\n6 Gex G, Pralong JA, Combescure C, Seijo L, Rochat T, Soccal PM. Diagnostic yield and safety of electromagnetic navigation bronchoscopy for lung nodules: a systematic review and meta-analysis. Respiration 2014; 87 : 165 -76.\n7 Wang Memoli JS, Nietert PJ, Silvestri GA. Meta-analysis of guided bronchoscopy for the evaluation of the pulmonary nodule. Chest 2012; 142 : 385 -93.\n8 Folch EE, Pritchett MA, Nead MA, Bowling MR, Murgu SD, Krimsky WS, Murillo BA, LeMense GP, Minnich DJ, Bansal S et al . Electromagnetic navigation bronchoscopy for peripheral pulmonary lesions: one-year results of the prospective, multicenter NAVIGATE study. J. Thorac. Oncol. 2019; 14 : 445 -58.\n9 Ost DE, Ernst A, Lei X, Kovitz KL, Benzaquen S, Diaz-Mendoza J, Greenhill S, Toth J, Feller-Kopman D, Puchalski J et al . Diagnostic yield and complications of bronchoscopy for peripheral lung lesions. Results of the AQuIRE Registry. Am. J. Respir. Crit. Care Med. 2016; 193 : 68 -77.\n10 Tanner NT, Yarmus L, Chen A, Wang Memoli J, Mehta HJ, Pastis NJ, Lee H, Jantz MA, Nietert PJ, Silvestri GA. Standard bronchoscopy with /uniFB02 uoroscopy vs thin bronchoscopy and radial endobronchial ultrasound for biopsy of pulmonary lesions: a multicenter, prospective, randomized trial. Chest 2018; 154 : 1035 -43.\n11 Ali MS, Sethi J, Taneja A, Musani A, Maldonado F. Computed tomography bronchus sign and the diagnostic yield of guided bronchoscopy for peripheral pulmonary lesions. A systematic review and meta-analysis. Ann. Am. Thorac. Soc. 2018; 15 : 978 -87.\n12 Chen A, Pastis N, Furukawa B, Silvestri GA. The effect of respiratory motion on pulmonary nodule location during electromagnetic navigation bronchoscopy. Chest 2015; 147 : 1275 -81.\n13 Pritchett MA, Schampaert S, de Groot JAH, Schirmer CC, van der Bom I. Cone-beam CT with augmented /uniFB02 uoroscopy combined with electromagnetic navigation bronchoscopy for biopsy of pulmonary nodules. J. Bronchology Interv. Pulmonol. 2018; 25 : 274 -82.\n14 Schreiber G, McCrory DC. Performance characteristics of different modalities for diagnosis of suspected lung cancer: summary of published evidence. Chest 2003; 123 (1 Suppl.): 115s -28s.\n15 Yamada N, Yamazaki K, Kurimoto N, Asahina H, Kikuchi E, Shinagawa N, Oizumi S, Nishimura M. Factors related to diagnostic yield of transbronchial biopsy using endobronchial ultrasonography with a guide sheath in small peripheral pulmonary lesions. Chest 2007; 132 : 603 -8.\n16 Gildea TR. Lung lesion localization and the diagnostic drop. Ann. Am. Thorac. Soc. 2016; 13 : 1450 -2.\n17 Eberhardt R, Anantham D, Ernst A, Feller-Kopman D, Herth F. Multimodality bronchoscopic diagnosis of peripheral lung lesions: a randomized controlled trial. Am. J. Respir. Crit. Care Med. 2007; 176 : 36 -41.\n18 Chao TY, Chien MT, Lie CH, Chung YH, Wang JL, Lin MC. Endobronchial ultrasonography-guided transbronchial needle aspiration increases the diagnostic yield of peripheral pulmonary lesions: a randomized trial. Chest 2009; 136 : 229 -36.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Supplementary Information",
+      "content": "Additional supplementary information can be accessed via the html version of this article at the publisher ' s website.\nTable S1 Comparison of demographics between F-ENB and S-ENB during post-F-ENB period (April -August 2018). Table S2 Procedure-related characteristics between F-ENB and S-ENB during post-FluoroNAV period (April -August 2018).\nVisual Abstract Fluoroscopic tomosynthesis navigational bronchoscopyimproves diagnostic yield.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    }
+  ],
+  "tables": [
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/62'}",
+      "headers": [
+        "Variable",
+        "S-ENB ( n = 101 † )",
+        "F-ENB ( n = 67 † )",
+        "P -value"
+      ],
+      "rows": [
+        [
+          "Number of patients, n",
+          "90",
+          "59",
+          ""
+        ],
+        [
+          "Patient demographics",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Sex",
+          "",
+          "",
+          "0.06"
+        ],
+        [
+          "Male, n (%)",
+          "38 (41.2)",
+          "16 (27.1)",
+          ""
+        ],
+        [
+          "Female, n (%)",
+          "52 (57.7)",
+          "43 (72.8)",
+          ""
+        ],
+        [
+          "Age, mean (SD)",
+          "64.4 (11.8)",
+          "62.2 (11.33)",
+          "0.25"
+        ],
+        [
+          "Smoking status",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Current, n (%)",
+          "14 (15.3)",
+          "10 (1.7)",
+          "0.05"
+        ],
+        [
+          "Former, n (%)",
+          "54 (60)",
+          "31 (52.5)",
+          ""
+        ],
+        [
+          "Never, n (%)",
+          "22 (25.2)",
+          "18 (30.5)",
+          ""
+        ],
+        [
+          "ASA score ‡",
+          "",
+          "",
+          ""
+        ],
+        [
+          "2, n (%)",
+          "7 (7.6)",
+          "15 (25.4)",
+          "0.006"
+        ],
+        [
+          "3, n (%)",
+          "74 (82.2)",
+          "42 (71.2)",
+          ""
+        ],
+        [
+          "4, n (%)",
+          "9 (9.8)",
+          "2 (3.3)",
+          ""
+        ],
+        [
+          "Outpatient status, n (%)",
+          "85 (93.4)",
+          "57 (96.6)",
+          "0.70"
+        ],
+        [
+          "Size of nodule",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Overall size, mm, median (IQR)",
+          "15 (12 - 24)",
+          "16 (12 - 24)",
+          "0.56"
+        ],
+        [
+          "<20 mm, n (%)",
+          "64 (63.3)",
+          "43 (64.1)",
+          ""
+        ],
+        [
+          "Median size, mm(IQR)",
+          "13 (11 - 15)",
+          "14 (11 - 16)",
+          "0.74"
+        ],
+        [
+          "≥ 20 mm, n (%)",
+          "37 (36.6)",
+          "24 (35.8)",
+          ""
+        ],
+        [
+          "Median size, mm(IQR)",
+          "28 (23 - 38)",
+          "30 (23 - 35)",
+          "0.33"
+        ],
+        [
+          "Diagnostic yield, total n (%)",
+          "55 (54.4)",
+          "53 (79.1)",
+          "0.0019"
+        ],
+        [
+          "Malignant, n (%)",
+          "39 (38.6)",
+          "36 (53.7)",
+          "0.07"
+        ],
+        [
+          "Benign, n (%)",
+          "16 (15.8)",
+          "17 (25.3)",
+          "0.84"
+        ]
+      ],
+      "footnotes": [
+        {
+          "cref": "#/texts/63"
+        },
+        {
+          "cref": "#/texts/64"
+        },
+        {
+          "cref": "#/texts/65"
+        }
+      ],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/70'}",
+      "headers": [
+        "Lobe",
+        "Divergence, mmmedian (IQR)"
+      ],
+      "rows": [
+        [
+          "Right lower †",
+          "14.9 (11 - 24)"
+        ],
+        [
+          "Left lower",
+          "16.2 (13 - 17)"
+        ],
+        [
+          "Right upper",
+          "7.9 (5 - 13)"
+        ],
+        [
+          "Left upper ‡",
+          "13.3 (9 - 16)"
+        ]
+      ],
+      "footnotes": [
+        {
+          "cref": "#/texts/71"
+        },
+        {
+          "cref": "#/texts/72"
+        },
+        {
+          "cref": "#/texts/73"
+        }
+      ],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/74'}",
+      "headers": [
+        "Variable",
+        "S-ENB ( n : 101 † )",
+        "F-ENB ( n : 67 † )",
+        "P -value"
+      ],
+      "rows": [
+        [
+          "Radial US image",
+          "",
+          "",
+          "0.23"
+        ],
+        [
+          "Concentric, n (%)",
+          "40 (39.6)",
+          "25 (37.3)",
+          ""
+        ],
+        [
+          "Eccentric, n (%)",
+          "42 (41.5)",
+          "34 (50.7)",
+          ""
+        ],
+        [
+          "No view, n (%)",
+          "16 (15.8)",
+          "8 (11.9) ‡",
+          ""
+        ],
+        [
+          "Not attempted, n (%)",
+          "3 (2.9)",
+          "0 (0)",
+          ""
+        ],
+        [
+          "Bronchus sign, n (%)",
+          "38 (37.6)",
+          "15 (22.3)",
+          "0.04"
+        ],
+        [
+          "Pleural based, n (%)",
+          "18 (17.8)",
+          "14 (20.8)",
+          "0.68"
+        ],
+        [
+          "Peripheral, n (%)",
+          "55 (54.4)",
+          "45 (67.2)",
+          "0.11"
+        ],
+        [
+          "Central, n (%)",
+          "28 (27.7)",
+          "8 (11.9)",
+          "0.02"
+        ],
+        [
+          "TBNA, n (%)",
+          "83 (92.2)",
+          "58 (98.3)",
+          "0.14"
+        ],
+        [
+          "0 passes",
+          "8 (7.7)",
+          "1 (1.7)",
+          ""
+        ],
+        [
+          "1 - 3 passes",
+          "2 (1.9)",
+          "0 (0)",
+          ""
+        ],
+        [
+          "4 - 20 passes",
+          "81 (78.6)",
+          "58 (98.3)",
+          ""
+        ],
+        [
+          "BAL, n (%)",
+          "41 (39.8)",
+          "30 (50.8)",
+          "0.87"
+        ],
+        [
+          "TBBX, n (%)",
+          "60 (66.6)",
+          "39 (66.1)",
+          "0.87"
+        ],
+        [
+          "<6 bx",
+          "29 (32.2)",
+          "19 (32.2)",
+          ""
+        ],
+        [
+          "≥ 6 bx",
+          "31 (34.4)",
+          "20 (33.8)",
+          ""
+        ],
+        [
+          "No bx",
+          "31 (34.4)",
+          "20 (33.8)",
+          ""
+        ],
+        [
+          "GGO, n (%)",
+          "8 (7.7)",
+          "6 (8.9)",
+          "1.0"
+        ],
+        [
+          "Location, n (%)",
+          "",
+          "",
+          ""
+        ],
+        [
+          "RUL",
+          "34 (33.6)",
+          "24 (35.8)",
+          "0.80"
+        ],
+        [
+          "RML",
+          "12 (11.6)",
+          "6 (8.9)",
+          ""
+        ],
+        [
+          "RLL",
+          "19 (18.4)",
+          "11 (16.4)",
+          ""
+        ],
+        [
+          "LUL",
+          "19 (18.8)",
+          "15 (22.3)",
+          "0.88"
+        ],
+        [
+          "Lingula",
+          "4 (3.8)",
+          "1 (1.5)",
+          ""
+        ],
+        [
+          "LLL",
+          "13 (12.8)",
+          "8 (11.9)",
+          ""
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/85'}",
+      "headers": [
+        "",
+        "",
+        "F-ENB a",
+        "F-ENB a",
+        "F-ENB a",
+        "",
+        "",
+        "S-ENB b",
+        "S-ENB b",
+        "S-ENB b"
+      ],
+      "rows": [
+        [
+          "",
+          "Histo",
+          "Cyto",
+          "Histo + Cyto",
+          "Cx",
+          "",
+          "Histo",
+          "Cyto",
+          "Histo + Cyto",
+          "Cx"
+        ],
+        [
+          "Malignant, n (%) NSCLC c",
+          "3 (8)",
+          "22 (61)",
+          "5 (14)",
+          "",
+          "Malignant, n (%) NSCLC d Lymphoma e",
+          "1 (3)",
+          "21 (54)",
+          "12 (31)",
+          ""
+        ],
+        [
+          "Small cell CA",
+          "",
+          "1 (3)",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "1 (3)",
+          ""
+        ],
+        [
+          "Carcinoid",
+          "",
+          "1 (3)",
+          "",
+          "",
+          "Carcinoid",
+          "",
+          "",
+          "1 (3)",
+          ""
+        ],
+        [
+          "Metastasis",
+          "",
+          "4 (11)",
+          "",
+          "",
+          "Metastasis",
+          "",
+          "2 (5)",
+          "1 (3)",
+          ""
+        ],
+        [
+          "Benign, n (%)",
+          "",
+          "",
+          "",
+          "",
+          "Benign, n (%)",
+          "",
+          "",
+          "1 (6)",
+          ""
+        ],
+        [
+          "Histoplasmosis Cryptococcus f",
+          "1 (6)",
+          "1 (6)",
+          "1 (6)",
+          "",
+          "Histoplasmosis Cryptococcus",
+          "",
+          "",
+          "",
+          "1 (6)"
+        ],
+        [
+          "Granulomas COP",
+          "3 (17) 1 (6)",
+          "4 (24)",
+          "",
+          "",
+          "Granulomas COP",
+          "3 (19) 4 (25)",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Aspergillus g",
+          "",
+          "1 (6)",
+          "",
+          "1 (6)",
+          "Aspergillus h",
+          "",
+          "",
+          "",
+          "1 (6)"
+        ],
+        [
+          "Lipoid pneumonia",
+          "",
+          "1 (6)",
+          "",
+          "",
+          "TB i",
+          "",
+          "",
+          "",
+          "1 (6)"
+        ],
+        [
+          "Nocardia",
+          "",
+          "",
+          "",
+          "1 (6)",
+          "NTM j",
+          "",
+          "",
+          "",
+          "2 (13)"
+        ],
+        [
+          "Pneumonia",
+          "2 (12)",
+          "",
+          "",
+          "",
+          "Pneumonia Hamartoma",
+          "",
+          "",
+          "1 (6) 1 (6)",
+          "1 (6)"
+        ],
+        [
+          "Total, n (%)",
+          "10 (18)",
+          "35 (66)",
+          "6 (11.3)",
+          "2 (4)",
+          "Total, n (%)",
+          "8 (15)",
+          "23 (42)",
+          "18 (33)",
+          "6 (11)"
+        ]
+      ],
+      "footnotes": [
+        {
+          "cref": "#/texts/86"
+        },
+        {
+          "cref": "#/texts/87"
+        },
+        {
+          "cref": "#/texts/88"
+        },
+        {
+          "cref": "#/texts/89"
+        },
+        {
+          "cref": "#/texts/90"
+        },
+        {
+          "cref": "#/texts/91"
+        },
+        {
+          "cref": "#/texts/92"
+        },
+        {
+          "cref": "#/texts/93"
+        },
+        {
+          "cref": "#/texts/94"
+        },
+        {
+          "cref": "#/texts/95"
+        }
+      ],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/110'}",
+      "headers": [
+        "Variable",
+        "Positive biopsy ( n = 108)",
+        "Negative biopsy ( n = 60)",
+        "Combined ( n = 168)",
+        "P -value"
+      ],
+      "rows": [
+        [
+          "Navigation technique",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "S-ENB, n (%)",
+          "55 (51)",
+          "46 (77)",
+          "101 (60)",
+          "0.001"
+        ],
+        [
+          "F-ENB, n (%)",
+          "53 (49)",
+          "14 (23)",
+          "67 (40)",
+          ""
+        ],
+        [
+          "Radial ultrasound",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Concentric",
+          "46 (43)",
+          "19 (32)",
+          "65 (39)",
+          "0.002"
+        ],
+        [
+          "Eccentric",
+          "53 (49)",
+          "12 (38)",
+          "76 (45)",
+          ""
+        ],
+        [
+          "Attempted, no view",
+          "9 (8)",
+          "15 (25)",
+          "24 (14)",
+          ""
+        ],
+        [
+          "Not attempted",
+          "0 (0)",
+          "3 (5)",
+          "3 (2)",
+          ""
+        ],
+        [
+          "Size mm, median (IQR)",
+          "16 (13 - 24)",
+          "14 (11 - 22)",
+          "16 (12 - 24)",
+          "0.07"
+        ],
+        [
+          "Location †",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Peripheral",
+          "61 (57)",
+          "34 (57)",
+          "95 (57)",
+          "0.96"
+        ],
+        [
+          "Central",
+          "46 (43)",
+          "26 (43)",
+          "72 (43)",
+          ""
+        ],
+        [
+          "Air bronchogram †",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Present",
+          "39 (36)",
+          "14 (24)",
+          "53 (32)",
+          "0.1"
+        ],
+        [
+          "Absent",
+          "69 (64)",
+          "45 (76)",
+          "114 (68)",
+          ""
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/113'}",
+      "headers": [
+        "Factors",
+        "OR",
+        "95% CI"
+      ],
+      "rows": [
+        [
+          "F-ENB",
+          "3.57",
+          "1.56 - 8.18"
+        ],
+        [
+          "rEBUS",
+          "",
+          ""
+        ],
+        [
+          "Concentric",
+          "3.74",
+          "1.26 - 11.06"
+        ],
+        [
+          "Eccentric",
+          "3.89",
+          "1.37 - 11.05"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "",
+      "headers": [
+        "Type",
+        "S-ENB ( n = 101)",
+        "F-ENB ( n = 67)"
+      ],
+      "rows": [
+        [
+          "Pneumothorax, n (%)",
+          "2 (1.9)",
+          "1 (1.5)"
+        ],
+        [
+          "Pneumothorax requiring chest tube, n (%)",
+          "1 (0.9)",
+          "1 (1)"
+        ],
+        [
+          "Unplanned admission, n (%)",
+          "1 (0.9)",
+          "0 (0)"
+        ],
+        [
+          "Bleeding requiring advanced intervention, n (%)",
+          "1 (0.9)",
+          "0 (0)"
+        ],
+        [
+          "Respiratory failure, n (%)",
+          "1 (0.9)",
+          "0 (0)"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    }
+  ],
+  "figures": [
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/44'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    }
+  ],
+  "references": [
+    {
+      "title": "The Eighth Edition Lung Cancer Stage Classification"
+    },
+    {
+      "title": "Chest",
+      "year": 2017
+    },
+    {
+      "title": "Recent trends in the identification of incidental pulmonary nodules",
+      "year": 2017
+    },
+    {
+      "title": "Am. J. Respir. Crit. Care Med",
+      "year": 2015
+    },
+    {
+      "title": "Reduced lung-cancer mortality with low-dose computed tomographic screening",
+      "year": 2015
+    },
+    {
+      "title": "N. Engl. J. Med",
+      "year": 2011
+    },
+    {
+      "title": "PL02.05 Effects of volume CT lung cancer screening: Mortality results of the NELSON randomised-controlled population based trial",
+      "year": 2011
+    },
+    {
+      "title": "J Thorac. Oncol",
+      "year": 2018
+    },
+    {
+      "title": "Evaluation of individuals with pulmonary nodules: when is it lung cancer? Diagnosis and management of lung cancer, 3rd ed: American College of Chest Physicians evidence-based clinical practice guidelines",
+      "year": 2018
+    },
+    {
+      "title": "Diagnostic yield and safety of electromagnetic navigation bronchoscopy for lung nodules: a systematic review and meta-analysis",
+      "year": 2013
+    },
+    {
+      "title": "Respiration",
+      "year": 2014
+    },
+    {
+      "title": "Meta-analysis of guided bronchoscopy for the evaluation of the pulmonary nodule",
+      "year": 2014
+    },
+    {
+      "title": "Electromagnetic navigation bronchoscopy for peripheral pulmonary lesions: one-year results of the prospective, multicenter NAV-IGATE study",
+      "year": 2012
+    },
+    {
+      "title": "J. Thorac. Oncol",
+      "year": 2019
+    },
+    {
+      "title": "Diagnostic yield and complications of bronchoscopy for peripheral lung lesions. Results of the AQuIRE Registry",
+      "year": 2019
+    },
+    {
+      "title": "Standard bronchoscopy with fluoroscopy vs thin bronchoscopy and radial endobronchial ultrasound for biopsy of pulmonary lesions: a multicenter, prospective, randomized trial",
+      "year": 2016
+    },
+    {
+      "title": "Computed tomography bronchus sign and the diagnostic yield of guided bronchoscopy for peripheral pulmonary lesions. A systematic review and meta-analysis",
+      "year": 2018
+    },
+    {
+      "title": "Ann. Am. Thorac. Soc",
+      "year": 2018
+    },
+    {
+      "title": "The effect of respiratory motion on pulmonary nodule location during electromagnetic navigation bronchoscopy",
+      "year": 2018
+    },
+    {
+      "title": "Cone-beam CT with augmented fluoroscopy combined with electromagnetic navigation bronchoscopy for biopsy of pulmonary nodules",
+      "year": 2015
+    },
+    {
+      "title": "J. Bronchology Interv. Pulmonol",
+      "year": 2018
+    },
+    {
+      "title": "Performance characteristics of different modalities for diagnosis of suspected lung cancer: summary of published evidence",
+      "year": 2018
+    },
+    {
+      "title": "Factors related to diagnostic yield of transbronchial biopsy using endobronchial ultrasonography with a guide sheath in small peripheral pulmonary lesions",
+      "year": 2003
+    },
+    {
+      "title": "Lung lesion localization and the diagnostic drop",
+      "year": 2007
+    },
+    {
+      "title": "Multimodality bronchoscopic diagnosis of peripheral lung lesions: a randomized controlled trial",
+      "year": 2016
+    },
+    {
+      "title": "Endobronchial ultrasonography-guided transbronchial needle aspiration increases the diagnostic yield of peripheral pulmonary lesions: a randomized trial",
+      "year": 2007
+    }
+  ],
+  "quality": {
+    "completeness_score": 0,
+    "has_abstract": true,
+    "abstract_source": "metadata",
+    "has_doi": true,
+    "has_full_text": true,
+    "num_sections": 9,
+    "num_tables": 7,
+    "num_figures": 10,
+    "num_references": 26
+  }
+}

@@ -1,0 +1,608 @@
+{
+  "metadata": {
+    "document_id": "10_1016_j_aan_2014_08_011",
+    "title": "Anesthesia and Upper and Lower Airway Management for Advanced Diagnostic and Therapeutic Bronchoscopy",
+    "authors": [
+      "Basem Abdelmalak",
+      "Sonali Sethi",
+      "Thomas R. Gildea"
+    ],
+    "year": 2014,
+    "journal": "Advances in Anesthesia",
+    "doi": "10.1016/j.aan.2014.08.011",
+    "volume": "32",
+    "issue": "1",
+    "pages": "71-87",
+    "citation": "Abdelmalak, B.; Sethi, S.; Gildea, T. (2014). Anesthesia and Upper and Lower Airway Management for Advanced Diagnostic and Therapeutic Bronchoscopy. Advances in Anesthesia, 32(1), 71-87. https://doi.org/10.1016/j.aan.2014.08.011",
+    "abstract": "This review outlines anesthesia strategies for modern diagnostic and therapeutic bronchoscopy, emphasizing that case mix, procedure duration, and \"shared airway\" demands favor general anesthesia (often TIVA with neuromuscular blockade) over moderate sedation for most advanced procedures. It summarizes anesthetic implications for optical diagnostics, EBUS (including prolonged, systematic mediastinal staging), and electromagnetic navigation bronchoscopy, then details management of malignant central airway obstruction: choosing rigid vs flexible bronchoscopy, combining rapid mechanical debulking with immediate or delayed ablative modalities, and placing airway stents when extrinsic or mixed lesions threaten early re-collapse. Practical pearls include using a large-ID endotracheal tube (8.5–9.0 mm) with a swivel adapter for simultaneous ventilation and scope manipulation (pp. 10–11), selecting a supraglottic airway for subglottic targets or small patients (p. 11), maintaining high fresh gas flows and titrating FiO₂ below ~40%—ideally ~30%—during airway laser/electrocautery (p. 12), and packing around rigid bronchoscopes to limit leaks during conventional positive-pressure ventilation (p. 13). Special sections address bronchial thermoplasty sessions and complex scenarios (e.g., Montgomery T-tubes), perioperative risk reduction (restrict fluids, cautious premedication), and common complications (hypoxemia/hypercapnia, pneumothorax, bleeding), with most patients suitable for same-day discharge after brief observation. The central message is meticulous pre-op assessment, continuous anesthesiologist–pulmonologist communication, and technique tailoring to patient, pathology, and device to optimize safety and outcomes. Keywords: advanced bronchoscopy, anesthesia, EBUS, electromagnetic navigation, rigid bronchoscopy, airway stent, FiO₂ management, TIVA.",
+    "abstract_source": "manual_curation",
+    "url": "https://linkinghub.elsevier.com/retrieve/pii/S0737614614000124"
+  },
+  "source_file": "Anesthesia and Upper and Lower Airway.json",
+  "sections": [
+    {
+      "title": "Anesthesia and Upper and Lower Airway Management for Advanced Diagnostic and Therapeutic Bronchoscopy",
+      "content": "Basem Abdelmalak, MD a,b,c, *, Sonali Sethi, MD d , Thomas R. Gildea, MD, MS e\na Department of General Anesthesiology, Cleveland Clinic Lerner College of Medicine of Case Western Reserve University, Cleveland Clinic, 9500 Euclid Avenue, Cleveland, OH 44195, USA; b Anesthesia for Bronchoscopic Surgery, Department of General Anesthesiology, Anesthesiology Institute, Cleveland Clinic, 9500 Euclid Avenue, Cleveland, OH 44195, USA; c Department of Outcomes Research, Anesthesiology Institute, Cleveland Clinic, 9500 Euclid Avenue, Cleveland, OH 44195, USA; d Department of Pulmonary, Allergy and Critical Care Medicine, Respiratory Institute, Cleveland Clinic, Cleveland, OH, USA; e Section of Bronchoscopy, Department of Pulmonary, Allergy and Critical Care Medicine, Transplant Center, Respiratory Institute, Cleveland Clinic, 9500 Euclid Avenue, Cleveland, OH 44195, USA\nFinancial Support: Support was provided solely from institutional and/or departmental sources.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Keywords",
+      "content": "/C15 Bronchoscopy /C15 Lower airway management /C15 Silicon stents /C15 Metallic stents\n/C15 Endobronchial ultrasound (EBUS) /C15 ENB /C15 Anesthesia",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Key points",
+      "content": "/C15 Advanced diagnostic and therapeutic bronchoscopy is evolving.\n/C15 Pulmonologists and anesthesiologists should stay abreast of these advances.\n/C15 Most patients having bronchoscopic surgery are high risk.\n/C15 Flexibility is needed to tailor and modify the anesthetic techniques to match patient and procedure needs.\n/C15 Bronchoscopic procedures take the concept of sharing the airway to a new level.\n/C15 The key to favorable outcomes lies in deep understanding of the underlying lung disorder, open 2-way communication between anesthesiologists and pulmonologists, understandingthenatureoftheprocedure,andaboveall,vigilanceandpreparedness.\n*Corresponding author. Department of General Anesthesiology, Cleveland Clinic, 9500 Euclid Avenue/E31, Cleveland, OH 44195. E-mail address : abdelmb@ccf.org\n0737-6146/14/$ - see front matter http://dx.doi.org/10.1016/j.aan.2014.08.011 /C211 2014 Elsevier Inc. All rights reserved.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "INTRODUCTION",
+      "content": "Advanced Diagnostic Bronchoscopy is a relatively new term that describes several new bronchoscopic techniques. Over the last decade advancements in the optical capabilities of the flexible bronchoscope and adjunctive catheterbased imaging tools have created new windows into the lung. Autofluorescence, Narrow-Band imaging (NBI), probe-based confocal light endomicroscopy (pCLE) are in various levels of clinical utility and investigation. Endobronchial Ultrasound (Endobronchial ultrasound (EBUS)) is now replacing mediastinoscopy and combined with conventional or navigational bronchoscopy is now the preferred route for diagnosis and staging lung cancer [1-3]. Navigational Bronchoscopy is a group of similar technologies that incorporate additional image guidance. These can be in the form of virtual bronchoscopy, real-time CT guidance, and adjunctive peripheral endobronchial ultrasound. Electromagnetic guidance is combined with specific catheters and probes to reach peripheral lung lesions. While many studies regarding these technologies have used what is described as ''moderate sedation'', the evolving practice of multimodality bronchoscopy favors the use of general anesthesia [4,5]. This is because these techniques often require a longer duration than simple diagnostic bronchoscopy, precise positioning, and often a large diameter bronchoscope with complex instrumentation. We describe some of these advanced diagnostic procedures in more detail along with their anesthetic considerations and management.\nTherapeutic bronchoscopic procedures aim at either relieving central airway obstruction, management of tracheobronchial defects such as fistulas and/or dehiscence of anastomosis (e.g post lung transplant), or endobronchial treatment of severe asthma. Central airway obstruction can result from relatively benign conditions like Wegner's granulomatosis (now known as granulomatosis with polyangiitis), a complication of tracheostomy or tracheal intubation related trauma, or as a result of a malignant process. However, the principles of management are somewhat similar; thus for the sake of simplicity we will focus on discussing malignant central airway obstruction to demonstrate principles of therapeutic interventional bronchoscopy and the anesthetic management.",
+      "category": "introduction",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "ADVANCED DIAGNOSTIC BRONCHOSCOPY",
+      "content": "Endobronchial optical advanced diagnostic techniques\nAutofluorescence (AF) bronchoscopy is a technique that is based on the observation that dysplasia and carcinoma in situ show less fluorescence than normal tissue when stimulated with wavelengths of light between 380 and 460 nm. This so-called blue light bronchoscopy has been shown to be more sensitive than standard white light bronchoscopy for detecting malignant and premalignant endobronchial lesions [6]. However, this is a nonspecific test in that it can be abnormal with any inflammation or prior injury [7]. At present there are no available AF systems in the United States.\nNarrow band imaging is another use of different wavelengths of light in the blue and green spectrum (415 nm and 540 nm) to enhance abnormal airway findings.\nThere are described patterns of abnormalities that indicate dysplasia and carcinoma to guide endobronchial biopsies [8-11]. Probe-based confocal light endomicroscopy is currently an experimental procedure. This procedure involves a catheter-based endoscopic microscope that uses the properties of autofluorescence to visualize living tissue. Based on the physician's understanding of the abnormalities investigated, it has been used to guide biopsies. It has not yet been declared as standard biopsy practice and a full understanding of pulmonary disease is still being investigated with this optical technology [12].\nAll of these optical techniques are typically performed under moderate sedation and without the use of an endotracheal tube to allow complete visualization of all airway structures. When these techniques are used for peripheral lung applications, general anesthesia with intubation may be necessary.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Endobronchial ultrasonography",
+      "content": "Endobronchial ultrasonography (Endobronchial ultrasound (EBUS)) describes several different techniques associated with bronchoscopy. The original description of Endobronchial ultrasound (EBUS) involved catheter-based ultrasonography with a balloon used for assessing anatomic structures surrounding central airways. This device was also adopted for assessing airway wall structures for mucosal invasion of malignancy. Since then, a linear convex probe ultrasonography bronchoscope was developed specifically for transbronchial needle aspiration of mediastinal adenopathy. At present, the most common use of Endobronchial ultrasound (EBUS) is sampling mediastinal masses, specifically in staging non-small cell lung cancer [2]. There is also now peripheral lung sampling using catheter-based ultrasonography for localizing peripheral lung lesions. Each of these techniques has been performed using either moderate sedation or general anesthesia and each requires a specific set of equipment and expertise, and has related risks to the patients.\nUtility of radial probe Endobronchial ultrasound (EBUS) has been noted in endobronchial disease even for radiographically invisible tumors [13]. This technique involves placing a balloon catheter with an embedded ultrasonography probe over suspicious areas and images are recorded. In general, this technique requires that clinicians only have to achieve tissue contact as shown in Fig. 1 but care must be maintained to avoid airway occlusion. Peripheral radial Endobronchial ultrasound (EBUS) has been used to help localize, and in some cases detect, malignancy. There are several different probes made for this purpose and most of them are directed via guide sheath or some other catheter-based system. For radial Endobronchial ultrasound (EBUS), risks are associated with the biopsy and are not specifically associated with the imaging technique. The most common risk is pneumothorax, which theoretically may be accentuated with use of positive pressure ventilation; however, this has not definitely been proven [14]. Linear convex probe Endobronchial ultrasound (EBUS) is a very specific procedure requiring a dedicated bronchoscope. The Endobronchial ultrasound (EBUS) bronchoscope is slightly larger than the standard therapeutic bronchoscope. The distal tip has a 6.9-mm outer diameter, a 30 /C14 angle of vision, and slightly limited range of motion. Significant skills are required to perform this procedure beyond those required for standard conventional bronchoscopy [15]. There are 2 separate\ntechniques: (1) mediastinal sampling and (2) systematic mediastinal staging. Depending on the indication, the procedure may be significantly longer in the case of systematic mediastinal staging (distinct nodal stations are identified and targeted for lymph nodes >5 mm). In known or suspected non-small cell lung cancer each of these nodal stations are sampled with multiple needle passes [1,2]. Procedure duration can be 120 minutes or longer depending on the complexity and number of nodal stations that require biopsy. This procedure is traditionally performed either via a large endotracheal tube (ideally 8.5 mm ID or larger) or via a supraglottic airway (SGA) under general anesthesia. It has also been described as being performed transorally with moderate sedation. This procedure is rapidly replacing mediastinoscopy as the primary modality of diagnosing and staging advanced-stage lung cancer. Overall this is a safe procedure in which the risks are mainly the same as those associated with other biopsy techniques or damage to the instruments [14,16].",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Electromagnetic navigation bronchoscopy",
+      "content": "Electromagnetic navigation bronchoscopy describes a platform for several different therapeutic and diagnostic techniques. A computed tomography scan of the patient is used as a virtual roadmap on which a target map is developed. The patient is placed inside an electromagnetic field with special care taken to minimize ferromagnetic interference. The flexible bronchoscope is used as a conduit to direct the catheter-based probe, which interacts with the electromagnetic field and generates real-time, directional information to the operator to direct the catheter toward a target [17,18]. This information allows additional confirmation with techniques like fluoroscopy or radial probe Endobronchial ultrasound (EBUS) to facilitate transbronchial lung tissue acquisition. There are also established techniques for placing fiducial implants, directing high-dose radiation brachytherapy catheters, and placing dye marking on the pleural surface for assisting in video-assisted thoracoscopic surgery (VATS).\nConsiderable research is now being directed toward bronchoscopic ablative techniques [19-21]. This procedure has been described using both moderate sedation and general anesthesia [5,18]. In cases in which advanced-stage lung cancer may be suspected, mediastinal staging may also occur during this procedure using convex probe linear Endobronchial ultrasound (EBUS). In these cases general anesthesia is preferred because of the duration and complexity of the procedures.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "ADVANCED THERAPEUTIC BRONCHOSCOPY",
+      "content": "Central airway obstruction\nDefinition/pathogenesis\nMalignant central airway obstruction is broadly defined as obstruction of the trachea, either mainstem bronchus, and/or the bronchus intermedius by tumor. In general, the airway must be obstructed at least 50% before the development of symptoms. However, any other airway compromise, such as secretions, edema, or hemoptysis, may result in the patient becoming symptomatic earlier. In some cases, a ball-valve phenomenon can exist whereby gas trapping distal to the\nlesion results in a mechanical disadvantage, thus increasing the work of breathing. In some patients, symptoms are acute in onset with severe respiratory distress and imminent failure. In other instances, the symptoms develop slowly. More than half of patients presenting acutely with malignant airway obstructions present in respiratory failure requiring an emergent airway intervention.\nPatients often present with cough, stridor, wheezing, and recurrent or persistent postobstructive pneumonia. Stridor is usually attributable to impingement at the level of the trachea or larynx, whereas wheezing may be focal and as a result of obstruction distal to the main carina. Dyspnea in these patients is caused by airflow limitation and increased work of breathing.\nMany patients are too ill to perform pulmonary function tests in the acute setting. However, in more stable patients, spirometry may provide information regarding the severity of disease and whether it is an intrathoracic or extrathoracic obstruction. The spirometric abnormalities are in 3 categories: (1) fixed airway obstruction with reduction of both inspiratory and expiratory flow rates, (2) variable intrathoracic obstruction with flow limitation of expiration, and (3) variable extrathoracic obstruction that shows inspiratory flow limitations [22].\nThe gold standard for diagnostic testing for malignant airway obstruction is bronchoscopy. The safety and efficacy of rigid versus flexible bronchoscopy as the initial tool remains controversial.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Classification of central airway obstruction",
+      "content": "Central airway obstruction is generally classified into 3 types depending on whether the tumor is purely endoluminal, extraluminal, or mixed. If the tumor is confined to the airway lumen (endoluminal), it is considered intrinsic compression. In contrast, if the tumor is obstructing the airway because of mass effect and there is no endoluminal component, it is called extrinsic compression (extraluminal). Most central airway obstructions are in the final mixed category, in which there are elements of both intrinsic and extrinsic involvement. The tumor often originates adjacent to the airway and erodes through the airway wall, invading the lumen. This classification system provides the best therapeutic approach that can be used [23].",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Bronchoscopic management of central airway obstruction",
+      "content": "The management of central airway obstruction poses a unique challenge and requires a multidisciplinary approach. Bronchoscopy gives the most essential information in the preinterventional assessment of patients. Direct visualization identifies the location of the lesion, the extent of airway involvement, and the vascularity and fragility of the lesion. However, bronchoscopy in these patients has risks. There is potential for patients to develop complete airway obstruction caused by the presence of the bronchoscope in a critically narrowed central airway. In addition, local bleeding and mucosal trauma during bronchoscopy may further compromise the airway lumen. Therefore, it is essential that the procedure is performed with the utmost care. Rigid bronchoscopy has several advantages compared with flexible bronchoscopy when dealing with central airway obstruction. The major advantage is the ability to ventilate the patient\nwhile reestablishing airway patency. It has a wider working channel, which permits efficient suctioning and instrumentation. In addition, the rigid bronchoscope may also be used to tamponade any bleeding, selectively intubate one of the main stem bronchi, and/or mechanically debride the airway. The flexible bronchoscope may be used through the rigid barrel, allowing the evaluation of airways distal to the obstruction.\nRelief of the obstruction should be expeditious and should initially focus on securing the airway. Once the airway is secured, a variety of airway interventions can be used to restore the patency of central airways. The most appropriate endobronchial management of a malignant airway stenosis is based on whether there is an intrinsic, extrinsic, or mixed stenosis. Purely intrinsic tumor involving the airway may simply be debrided and definitive treatment planned. Mechanical debulking using a rigid bronchoscope is an effective method to achieve rapid recanalization of central airways combined with ablative techniques. If there is concern about rapid regrowth or tumor pending response to treatment, an endobronchial stent may be considered.\nExtrinsic airway compression nearly always results in recurrence within days to weeks if the airway is not stented following dilatation. As such, most of these cases require airway stents to prevent airway obstruction recurrence pending initiation of definitive treatment.\nIn a mixed stenosis, there is often a significant component of extrinsic compression and simply removing the endoluminal component is insufficient to maintain airway patency. A stent may be necessary both to prevent regrowth and to counteract the mass effect of the extrinsic component [24].\nIn the case of highly chemosensitive or radiosensitive tumors, such as small cell lung cancer or lymphoma, endobronchial management may be deferred until the patient shows clinical relapse of the malignant airway obstruction.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Tumor ablative techniques",
+      "content": "Endobronchial tumors are often well vascularized and easily bleed; therefore, before considering tumor debridement, it is often necessary to devitalize the tumor. A host of techniques exist with some having immediate effects and other techniques being performed as staged procedures with ablative properties. Immediate ablative techniques include laser, argon plasma coagulation, and electrocautery, whereas the most common delayed techniques are cryotherapy, brachytherapy, and photodynamic therapy [25]. In most instances, a combination of several interventional procedures is needed for best results.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Airway stents",
+      "content": "Once the airway has been debrided, the clinician must estimate the risk of airway recollapse. Airway stents (Fig. 1) have a critical role in maintaining airway patency. If there is a concern regarding postprocedure patency, clinicians must consider placement of an airway stent. However, complications related to stents may themselves result in airway obstruction; these include formation of granulation tissue, obstruction secondary to secretions, bacterial\novergrowth, and migration. Such complications may necessitate additional interventions later that require a specially trained pulmonologist and carry several risks; they may result in severe consequences like total airway obstruction or loss of airway integrity [26].",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Other examples of therapeutic bronchoscopic procedures",
+      "content": "A variety of procedures are currently being performed endobronchially, including placing fiducial implants, directing high-dose brachytherapy catheters, and placing dye marking on the pleural surface for assisting in VATS using the endoscopic navigational bronchoscopy capabilities as discussed earlier. Additional procedures include foreign body removal; inserting valves for treating persistent bronchopleural fistulas; post-lung transplant airway dehiscence restoration, as well as the procedure newly approved by the US Food and Drug Administration; and thermoplasty for asthma, which is discussed in more detail later because of its novelty.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "ENDOBRONCHIAL TREATMENT OF SEVERE ASTHMA",
+      "content": "Bronchial thermoplasty is a procedure in which controlled heat is applied endobronchially to reduce the mass of the airway smooth muscle as a treatment of severe asthma despite maximal medical therapy [27]. This procedure is performed over 3 sessions, targeting the right lower lobe, the left lower lobe, and bilateral upper lobes respectively in each session. This treatment modality has been shown to reduce asthma symptoms and emergency room visits as well as lost days of work [28,29]. These procedures are done with conscious sedation after premedication with bronchodilators and systemic steroids. However, in select cases when patients experience severe intraprocedural bronchospasm, general anesthesia is indicated to complete the 3 sessions. We have noticed that the benefits of the bronchodilatory effect of sevoflurane assists in these\ncases but data are needed to validate this observation. Although severe asthma is considered a relative contraindication to both bronchoscopy and elective surgery, it is reasonably well tolerated. The main complications associated with this procedure are in the immediate postoperative period with exacerbation of airflow obstruction. The patient is not discharged from observation until postprocedure forced expiratory volume in 1 second is within 20% of baseline.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "ANESTHETIC CONSIDERATIONS AND MANAGEMENT",
+      "content": "Preoperative assessment\nPreoperative assessment is conducted in the customary fashion, the same as for any other surgical procedure. However, because of the urgency and the airway compromise already being experienced by many of these patients, clinicians may end up proceeding with care for patients with less than ideal optimization of some coexisting conditions. Special attention is needed during airway evaluation, symptoms of compromise, and review of the pulmonologist's evaluation regarding the size of the lesion or tumor and its location within the bronchial tree and the degree of impact on ventilation, as discussed earlier for central airway obstruction. The incidence of the so-called difficult airway, which is a term used to identify difficulty to mask ventilate, intubate the trachea, difficulty with ventilation using a supraglottic airway, and/or difficulty with surgical airway [30], may not be any higher than the general surgical population. However, lower airway-related difficulties can be encountered, such as airway bleeding, obstruction, and loss of airway integrity from lesions such as fistulas. However, because of an aging population and advances in treatment, the authors have encountered many patients who survived their head and neck cancers after undergoing a resection, a flap reconstruction, and/or neck radiation. These patients lived long enough to develop lung cancer and related lower airway stenosis/obstruction, and thus had upper and lower airway challenges and required some modifications and custom management that are beyond the scope of this article. Note that judicious use of premedication sedatives and anxiolytics is advised in this patient population because many of them have limited respiratory reserve [31].",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Type of anesthetic",
+      "content": "For most of the advanced diagnostic and therapeutic bronchoscopy procedures, a general anesthetic is preferred rather than moderate sedation. General anesthesia not only provides a comfortable and amnestic experience for the patient, it allows better control of ventilation through an airway and use of muscle relaxants, which has many advantages as detailed later. General anesthesia also arguably reduces procedure time, and allows faster recovery because of the use of the faster onset and shorter acting anesthetics compared with sedation medications used for moderate sedation; such procedures would require sedation medication doses that are higher than those used for moderate sedation for conventional simple airway examination bronchoscopy. Moreover, the involvement of the anesthesia team focusing on monitoring and managing\npatients' ventilation and homeostasis allows pulmonology teams to focus on the procedure at hand. When general anesthesia is used, a total intravenous anesthetic technique (TIVA), usually an infusion of propofol, is preferred rather than an inhalational anesthetic technique. Compared with an inhalational anesthetic technique, TIVA ensures continuous delivery of the anesthetic and prevents the pollution of the operating room by inhalational anesthetic that can be caused by circuit leaks because of the nature of the procedure [26]. Sarkiss and colleagues [32], also reported observing more bleeding at the needle biopsy site when inhalation anesthetics were used compared with the TIVA technique, presumably because of the vascular dilatory effects of inhalational anesthetics. Inhalational anesthetics may have some advantages in certain situations. We previously described our anesthetic technique [33] for the management of mediastinal mass, when inhalational anesthetics were used to augment the amnestic properties of dexmedetomidine while still maintaining spontaneous ventilation. The potent bronchodilating effect of inhalational anesthetics can be helpful in overcoming the severe bronchospasm often encountered in the third session of thermoplasty for endobronchial treatment of severe asthma, as discussed earlier [5].\nWhen TIVA is used, the continuous flow of the anesthetic through the intravenous line should be monitored throughout the procedure. In addition, a hypnosis/anesthesia monitor (eg, the Bispectral index monitor [BIS Monitor] Covidien, Dublin, Ireland) should be used to help monitor the depth of anesthesia and possibly avoid intraoperative recall [34].",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Anesthetic adjuvants",
+      "content": "Muscle relaxants are commonly used in these procedures (regardless of the airway used: endotracheal tube [ETT] or SGA). They facilitate ETT insertion and/or SGA placement and improve overall lung compliance by eliminating the chest wall component and thus making positive pressure ventilation easier and more effective. Moreover, when an SGA is used (vs ETT) paralyzed vocal cords in an abducted position are potentially exposed to less trauma caused by the large-diameter operating bronchoscope. In addition, they provide a motionless patient, which is advantageous because unexpected patient movement can have serious consequences [35]. An example of such a situation is when trying to sample a node that is very close to the great vessels adjacent to hilar area. Irritation of the tracheobronchial tree during needle insertion for biopsy in a nonparalyzed patient may result in patient movement, which may lead to missing the target, especially if it is a small node, requiring the process to be repeated, multiplied by the number of attempts at each location, which can considerably prolong the procedure time. However, avoiding muscle relaxation and maintaining spontaneous ventilation may have some advantages in managing patients with very large mediastinal masses [33], as well as in avoiding positive pressure ventilation in cases associated with loss of airway integrity; for example, tracheoesophageal fistula, and post-lung transplant main stem dehiscence.\nIt is wise to restrict all administered fluids to the minimum needed for these patients, because many of them present with very limited lung reserve. Any pulmonary congestion may aggravate their condition.\nMany anesthesiologists and pulmonologists use corticosteroids, in particular dexamethasone, as a prophylactic measure to decrease airway edema after airway surgery so that residual postoperative swelling can be minimized. Steroids are also used in cases of extensive surgical tracheobronchial tissue trauma. However, this practice is defended only because of its perceived clinical advantage, but evidence of its real advantage is controversial at best [3639]. Furthermore, steroids are a known effective antiemetic for prophylaxis against postoperative nausea and vomiting [40]. In addition, corticosteroids can shorten recovery time [41].",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Airway control and fresh gas flow",
+      "content": "Intubation with a large-diameter ETT (eg, size 8.5 or 9.0 mm ID) facilitates ventilation around the large-diameter flexible bronchoscope (Fig. 2A) and the ETT is generally cut short to facilitate the maneuverability of the fiberoptic bronchoscope and decrease the resistance to its insertion and removal through the ETT (see Fig. 2B). We cautiously maintain the original length of the ETT in procedures involving management of tumors that are highly vascular and for which the chances of bleeding are high, to be able to advance the ETT to one\nmain stem for the purpose of lung isolation should bleeding ensue from either of the lungs. Use of a fiberoptic swivel connector/adaptor allows continuous ventilation, thereby avoiding circuit disconnection during flexible bronchoscopy (see Fig. 2B) [5]. The ETT provides a secure airway to facilitate adequate ventilation, especially in such patients as those who are obese or have severe lung compromise, and it protects the airway in those with very high risk for aspiration. The ETT also protects the vocal cords (VCs) from rubbing against the large-diameter operating bronchoscope as it goes in and out of the airway, which could result in VC edema.\nIn cases in which the site of the lesion to be treated is subglottic (Fig. 3A), an SGA for example, a laryngeal mask airway or an i-gel can be effective [42,43]. They also allow better apposition of the scope in the mid and upper trachea (see Fig. 3B) and offer a means of ventilation as well. Another situation in which an SGA might be helpful is when caring for small patients (eg, a patient weighing 40 kg). The use of a large-diameter ETT might be a challenge, whereas the use of small SGA, like a size 3 i-gel, is feasible, but still provides a large-diameter airway that allows the easy passage of the large-diameter operating bronchoscope and ventilation around it. However, SGAs do not guarantee reliable protection against aspiration.\nAdministering a fraction of inspired oxygen (FiO 2 ) of 1.0 (100%) in such procedures is common. Also, maintaining a high fresh gas flow rate (12-15 L/min\nof oxygen) is essential to compensate for the circuit leaks caused by the nature of the procedure. This high FiO 2 needs to be titrated down to less than 40%, preferably around 30% if tolerated, when using laser energy in the airway, and/or electrocautery. Reducing FiO 2 should also be achieved while maintaining a high fresh gas flow rate. An example of flow rate used at the authors' institution is 12 L/min of air mixed with 1.5 L/min of oxygen, resulting in an FiO 2 around 32%. In patients who do not tolerate such a low FiO 2, an alternative treatment strategy should be considered, like the use of cryoablation when FiO2 of 1.0 can be maintained.\nThe techniques described earlier require clear communication between the anesthesiologist and the pulmonologist. Such advanced diagnostic pulmonary procedures are currently being performed in bronchoscopy laboratories attached to a main hospital (Fig. 4). However, with increased training and experience in providing this service on the part of the pulmonologists and anesthesiologists, it is expected to become a common procedure at ambulatory surgery centers [44].",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Rigid bronchoscopy and anesthesia",
+      "content": "A rigid bronchoscope is preferred for major airway interventions (ie, insertion and removal of silicon stents) because of its size and its noncompressible material; for removal of large broncholiths and granulation tissue; as part of treating a central airway obstruction as detailed earlier; and, in some instances, to support airway patency when a large mediastinal mass is compressing the airway. When the rigid bronchoscope is used, ventilation can be accomplished through either attaching the anesthetic circuit to the bronchoscope ventilating port for conventional positive pressure ventilation or through jet ventilation for which the jetting device is attached through a special adaptor to the bronchoscope ventilating port. When positive pressure conventional ventilation is used\n(Fig. 5), it is important to minimize leaks around the rigid bronchoscope, which can easily be accomplished through maximizing the fresh gas flow, using rubber plugs to cover all unused rigid bronchoscopy ports, using fenestrated caps to introduce various rigid bronchoscopy tools and suction, and packing the mouth with saline-soaked gauze. At the authors' institution this is the preferred modality for ventilation with rigid bronchoscopy because of its simplicity, ease, safety, and low cost. Whenever a rigid bronchoscope is used, special attention should be given to protecting the lips and teeth and assessing them at the end of the procedure, as well as removing all the gauze to avoid subsequent airway obstruction from retained gauze pieces when the bronchoscope is removed.\nWhen rigid bronchoscopy is used in the context of a very difficult airway, especially in patients with minimal reserve who cannot tolerate even a brief apnea, we often start the anesthetic with ETT awake intubation. Following the induction of general anesthesia and complete muscle relaxation, the rigid bronchoscope intubation is then inserted next to the ETT; when the VCs come into view, the ETT is withdrawn and the rigid bronchoscope is advanced into the trachea. At the end of the procedure, a tube exchange catheter is used to change the rigid bronchoscope to a single-lumen ETT (see Fig. 5).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Complex bronchoscopic procedures",
+      "content": "The more advanced the referral center, and the more experienced the providers, the greater the complexity of the case mix for which they are caring. Thus, it is common for specialized centers to care for certain high-risk subpopulations, such as those having tracheomalacia, having tracheal reconstruction after airway fires (usually present with recurrent airway stenosis caused by buildup of fibrous tissue and scars), and patients with complications related\nto T tubes. Such complex airway procedures may require alternative techniques of management, and they may require the anesthesiologist to improvise, which often means the continued change of airway devices and ventilation modes from SGA, endotracheal tubes, rigid bronchoscopy, to no airway, and\nintermittent apnea technique. Detailed discussion of such scenarios is beyond the scope of this article. However, as an example of a complex scenario, the management of patients with a T tube, may require the use of different airways and ventilation techniques depending on the stage of the procedure and whether it is a replacement, or dilatation of the stoma and/or the trachea below and/or above the stoma, as shown in Fig. 6.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Postanesthesia care",
+      "content": "Patients typically go home immediately following a short recovery time of 45 minutes to 1 hour [35]. This recovery period compares favorably with that of invasive thoracic surgery such as mediastinoscopy or open or minimally invasive lung biopsy, which may require postoperative hospital admission, and potentially intensive care unit admission in cases of lung biopsy or mediastinal staging.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "COMPLICATIONS",
+      "content": "As discussed earlier, potential complications of bronchoscopic procedures range from hypercapnia and minor levels of hypoxemia and/or cough to pneumothorax [14], major bleeding, and even loss of the airway. These complications should always be considered when patients rapidly deteriorate during and/or after the procedure.\nThe most commonly seen complications include varying degrees of sore throat that may last up to a day or so and severe cough that usually improves and returns to baseline levels in about 20 to 30 minutes after conclusion of the procedure.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "SUMMARY",
+      "content": "Advanced diagnostic and therapeutic bronchoscopy is evolving. Pulmonologists and anesthesiologists should stay abreast of these advances. Flexibility is needed to tailor and modify the anesthetic techniques to match patient and procedure needs. The key to favorable outcomes lies in deep understanding of the underlying lung disorder; open 2-way communication between the anesthesiologist and pulmonologist; understanding the nature of the procedure; and, above all, vigilance and preparedness.",
+      "category": "abstract",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "References",
+      "content": "[1] Almeida FA. Bronchoscopy and endobronchial ultrasound for diagnosis and staging of lung cancer. Cleve Clin J Med 2012;79(Electronic Suppl 1):eS11-6.\n[2] Kinsey CM, Arenberg DA. Endobronchial ultrasound-guided transbronchial needle aspiration for non-small cell lung cancer staging. Am J Respir Crit Care Med 2014;189:640-9.\n[3] Rivera MP, Mehta AC, Wahidi MM. Establishing the diagnosis of lung cancer: diagnosis and management of lung cancer, 3rd ed: American College of Chest Physicians evidence-based clinical practice guidelines. Chest 2013;143:e142S-65S.\n[4] Yarmus LB, Akulian JA, Gilbert C, et al. Comparison of moderate versus deep sedation for endobronchial ultrasound transbronchial needle aspiration. Ann Am Thorac Soc 2013;10: 121-6.\n[5] Abdelmalak BB, Gildea TR, Doyle DJ. Anesthesia for bronchoscopy. Curr Pharm Des 2012;18:6314-24.\n[6] Sun J, Garfield DH, Lam B, et al. The value of autofluorescence bronchoscopy combined with white light bronchoscopy compared with white light alone in the diagnosis of intraepithelial neoplasia and invasive lung cancer: a meta-analysis. J Thorac Oncol 2011;6:1336-44.\n[7] Gildea TR. Autofluorescence bronchoscopy: a far rising. J Bronchol Intervent Pulmonol 2006;13:52-3.\n[8] Zaric B, Stojsic V, Sarcev T, et al. Advanced bronchoscopic techniques in diagnosis and staging of lung cancer. J Thorac Dis 2013;5:S359-70.\n[9] Zaric B, Perin B, Stojsic V, et al. Relation between vascular patterns visualized by Narrow Band Imaging (NBI) videobronchoscopy and histological type of lung cancer. Med Oncol 2013;30:374.\n[10] Shibuya K, Nakajima T, Fujiwara T, et al. Narrow band imaging with high-resolution bronchovideoscopy: a new approach for visualizing angiogenesis in squamous cell carcinoma of the lung. Lung Cancer 2010;69:194-202.\n[11] Herth FJ, Eberhardt R, Anantham D, et al. Narrow-band imaging bronchoscopy increases the specificity of bronchoscopic early lung cancer detection. J Thorac Oncol 2009;4:1060-5.\n[12] Yserbyt J, Dooms C, Ninane V, et al. Perspectives using probe-based confocal laser endomicroscopy of the respiratory tract. Swiss Med Wkly 2013;143:w13764.\n[13] Herth F, Becker H, LoCicero J, et al. Endobronchial ultrasound improves classification of suspicious lesions detected by autofluorescence bronchoscopy. J Bronchology Interv Pulmonol 2003;10:249-52.\n[14] Eapen GA, Shah AM, Lei X, et al. Complications, consequences, and practice patterns of endobronchial ultrasound-guided transbronchial needle aspiration: results of the AQuIRE registry. Chest 2013;143:1044-53.\n[15] Jantz MA, McGaghie WC. It's time for a STATassessment of bronchoscopy skills: the endobronchial ultrasound bronchoscopy (Endobronchial ultrasound (EBUS))-STAT and Endobronchial ultrasound (EBUS)-transbronchial needle aspiration skill evaluation. Am J Respir Crit Care Med 2012;186:703-5.\n[16] Asano F, Aoe M, Ohsaki Y, et al. Complications associated with endobronchial ultrasoundguided transbronchial needle aspiration: a nationwide survey by the Japan Society for Respiratory Endoscopy. Respir Res 2013;14:50.\n[17] Schwarz Y, Greif J, Becker HD, et al. Real-time electromagnetic navigation bronchoscopy to peripheral lung lesions using overlaid CT images: the first human study. Chest 2006;129: 988-94.\n[18] Gildea TR, Mazzone P, Karnak D, et al. Electromagnetic navigation diagnostic bronchoscopy: a prospective study. Am J Respir Crit Care Med 2006;174:982-9.\n[19] Eberhardt R, Kahn N, Herth FJ. 'Heat and destroy': bronchoscopic-guided therapy of peripheral lung lesions. Respiration 2010;79:265-73.\n[20] Anantham D, Feller-Kopman D, Shanmugham LN, et al. Electromagnetic navigation bronchoscopy guided fiducial placement for robotic stereotactic radiosurgery of lung tumors: a feasibility study. Chest 2007;132:930-5.\n[21] Harley DP, Krimsky WS, Sarkar S, et al. Fiducial marker placement using endobronchial ultrasound and navigational bronchoscopy for stereotactic radiosurgery: an alternative strategy. Ann Thorac Surg 2010;89:368-73 [discussion: 373-4].\n[22] Miller RD, Hyatt RE. Evaluation of obstructing lesions of the trachea and larynx by flowvolume loops. Am Rev Respir Dis 1973;108:475-81.\n[23] Ernst A, Feller-Kopman D, Becker HD, et al. Central airway obstruction. Am J Respir Crit Care Med 2004;169:1278-97.\n[24] Chen K, Varon J, Wenker OC. Malignant airway obstruction: recognition and management. J Emerg Med 1998;16:83-92.\n[25] Lee P, Kupeli E, Mehta AC. Therapeutic bronchoscopy in lung cancer. Laser therapy, electrocautery, brachytherapy, stents, and photodynamic therapy. Clin Chest Med 2002;23: 241-56.\n[26] Doyle DJ, Abdelmalak B, Machuzak M, et al. Anesthesia and airway management for removing pulmonary self-expanding metallic stents. J Clin Anesth 2009;21:529-32.\n[27] Cox G, Miller JD, McWilliams A, et al. Bronchial thermoplasty for asthma. Am J Respir Crit Care Med 2006;173:965-9.\n[28] Gildea TR, Khatri SB, Castro M. Bronchial thermoplasty: a new treatment for severe refractory asthma. Cleve Clin J Med 2011;78:477-85.\n[29] Castro M, Rubin AS, Laviolette M, et al. Effectiveness and safety of bronchial thermoplasty in the treatment of severe asthma: a multicenter, randomized, double-blind, sham-controlled clinical trial. Am J Respir Crit Care Med 2010;181:116-24.\n[30] Apfelbaum JL, Hagberg CA, Caplan RA, et al. Practice guidelines for management of the difficult airway: an updated report by the American Society of Anesthesiologists Task Force on Management of the Difficult Airway. Anesthesiology 2013;118:251-70.\n[31] Abdelmalak B, Riad I. Monitored anesthesia care and anesthesia outside the operating room. In: Longnecker DE, Brown DL, Newman MD, Zapol WM, editors. Anesthesiology. New York: The McGraw-Hill Medical; 2013. p. 1260-74.\n[32] Sarkiss M, Kennedy M, Riedel B, et al. Anesthesia technique for endobronchial ultrasoundguided fine needle aspiration of mediastinal lymph node. J Cardiothorac Vasc Anesth 2007;21:892-6.\n[33] Abdelmalak B, Marcanthony N, Abdelmalak J, et al. Dexmedetomidine for anesthetic management of anterior mediastinal mass. J Anesth 2010;24:607-10.\n[34] Avidan MS, Zhang L, Burnside BA, et al. Anesthesia awareness and the bispectral index. NEngl J Med 2008;358:1097-108.\n[35] Abdelmalak B, Sarkiss M. Anesthesia for diagnostic bronchoscopic procedures. In: Abdelmalak B, Doyle DJ, editors. Anesthesia for otolaryngologic surgery. London: Cambridge University Press; 2013. p. 297-308.\n[36] Weber CR, Griffin JM. Evaluation of dexamethasone for reducing postoperative edema and inflammatory response after orthognathic surgery. J Oral Maxillofac Surg 1994;52: 35-9.\n[37] Blair E, Montgomery AV, Swan H. Posthypothermic circulatory failure. I. Physiologic observations on the circulation. Circulation 1956;13:909-15.\n[38] Gersema L, Baker K. Use of corticosteroids in oral surgery. J Oral Maxillofac Surg 1992;50: 270-7.\n[39] Hughes R, McGuire G, Montanera W, et al. Upper airway edema after carotid endarterectomy: the effect of steroid administration. Anesth Analg 1997;84:475-8.\n[40] Gan TJ, Diemunsch P, Habib AS, et al. Consensus guidelines for the management of postoperative nausea and vomiting. Anesth Analg 2014;118:85-113.\n[41] Coloma M, Duffy LL, White PF, et al. Dexamethasone facilitates discharge after outpatient anorectal surgery. Anesth Analg 2001;92:85-8.\n[42] Abdelmalak B, Ryckman JV, AlHaddad S, et al. Respiratory arrest after successful neodymium:yttrium-aluminum-garnet laser treatment of subglottic tracheal stenosis. Anesth Analg 2002;95:485-6.\n[43] Hung WT, Liao SM, Su JM. Laryngeal mask airway in patients with tracheal stents who are undergoing non-airway related interventions: report of three cases. J Clin Anesth 2004;16: 214-6.\n[44] Abdelmalak B. Anesthesia for interventional pulmonology. In: Urman R, Gross W, Philip B, editors. Anesthesia outside of the operating room. New York: Oxford University Press; 2011. p. 167-74.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    }
+  ],
+  "figures": [
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/72'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/105'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/114'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/128'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/137'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/143'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    }
+  ],
+  "extracted_drugs": [],
+  "references": [
+    {
+      "title": "Bronchoscopy and endobronchial ultrasound for diagnosis and staging of lung cancer"
+    },
+    {
+      "title": "Cleve Clin J Med",
+      "year": 2012
+    },
+    {
+      "title": "Endobronchial ultrasound-guided transbronchial needle aspiration for non-small cell lung cancer staging",
+      "year": 2012
+    },
+    {
+      "title": "Am J Respir Crit Care Med",
+      "year": 2014
+    },
+    {
+      "title": "Establishing the diagnosis of lung cancer: diagnosis and management of lung cancer, 3rd ed: American College of Chest Physicians evidence-based clinical practice guidelines",
+      "year": 2014
+    },
+    {
+      "title": "Chest",
+      "year": 2014
+    },
+    {
+      "title": "Comparison of moderate versus deep sedation for endobronchial ultrasound transbronchial needle aspiration",
+      "year": 2013
+    },
+    {
+      "title": "Ann Am Thorac Soc",
+      "year": 2013
+    },
+    {
+      "title": "Anesthesia for bronchoscopy",
+      "year": 2013
+    },
+    {
+      "title": "Curr Pharm Des",
+      "year": 2012
+    },
+    {
+      "title": "The value of autofluorescence bronchoscopy combined with white light bronchoscopy compared with white light alone in the diagnosis of intraepithelial neoplasia and invasive lung cancer: a meta-analysis",
+      "year": 2012
+    },
+    {
+      "title": "J Thorac Oncol",
+      "year": 2011
+    },
+    {
+      "title": "Autofluorescence bronchoscopy: a far rising",
+      "year": 2011
+    },
+    {
+      "title": "J Bronchol Intervent Pulmonol",
+      "year": 2011
+    },
+    {
+      "title": "Advanced bronchoscopic techniques in diagnosis and staging of lung cancer",
+      "year": 2006
+    },
+    {
+      "title": "J Thorac Dis",
+      "year": 2013
+    },
+    {
+      "title": "Relation between vascular patterns visualized by Narrow Band Imaging (NBI) videobronchoscopy and histological type of lung cancer",
+      "year": 2013
+    },
+    {
+      "title": "Med Oncol",
+      "year": 2013
+    },
+    {
+      "title": "Narrow band imaging with high-resolution bronchovideoscopy: a new approach for visualizing angiogenesis in squamous cell carcinoma of the lung",
+      "year": 2013
+    },
+    {
+      "title": "Lung Cancer",
+      "year": 2010
+    },
+    {
+      "title": "Narrow-band imaging bronchoscopy increases the specificity of bronchoscopic early lung cancer detection",
+      "year": 2010
+    },
+    {
+      "title": "Perspectives using probe-based confocal laser endomicroscopy of the respiratory tract",
+      "year": 2009
+    },
+    {
+      "title": "Swiss Med Wkly",
+      "year": 2013
+    },
+    {
+      "title": "Endobronchial ultrasound improves classification of suspicious lesions detected by autofluorescence bronchoscopy",
+      "year": 2013
+    },
+    {
+      "title": "J Bronchology Interv Pulmonol",
+      "year": 2003
+    },
+    {
+      "title": "Complications, consequences, and practice patterns of endobronchial ultrasound-guided transbronchial needle aspiration: results of the AQuIRE registry",
+      "year": 2003
+    },
+    {
+      "title": "It&apos;s time for a STAT assessment of bronchoscopy skills: the endobronchial ultrasound bronchoscopy (EBUS)-STAT and EBUS-transbronchial needle aspiration skill evaluation",
+      "year": 2013
+    },
+    {
+      "title": "Complications associated with endobronchial ultrasoundguided transbronchial needle aspiration: a nationwide survey by the Japan Society for Respiratory Endoscopy",
+      "year": 2012
+    },
+    {
+      "title": "Respir Res",
+      "year": 2013
+    },
+    {
+      "title": "Real-time electromagnetic navigation bronchoscopy to peripheral lung lesions using overlaid CT images: the first human study",
+      "year": 2013
+    },
+    {
+      "title": "Electromagnetic navigation diagnostic bronchoscopy: a prospective study",
+      "year": 2006
+    },
+    {
+      "title": "Heat and destroy&apos;: bronchoscopic-guided therapy of peripheral lung lesions",
+      "year": 2006
+    },
+    {
+      "title": "Respiration",
+      "year": 2010
+    },
+    {
+      "title": "Electromagnetic navigation bronchoscopy guided fiducial placement for robotic stereotactic radiosurgery of lung tumors: a feasibility study",
+      "year": 2010
+    },
+    {
+      "title": "Fiducial marker placement using endobronchial ultrasound and navigational bronchoscopy for stereotactic radiosurgery: an alternative strategy",
+      "year": 2007
+    },
+    {
+      "title": "Ann Thorac Surg",
+      "year": 2010
+    },
+    {
+      "title": "Evaluation of obstructing lesions of the trachea and larynx by flowvolume loops",
+      "year": 2010
+    },
+    {
+      "title": "Am Rev Respir Dis",
+      "year": 1973
+    },
+    {
+      "title": "Central airway obstruction",
+      "year": 1973
+    },
+    {
+      "title": "Malignant airway obstruction: recognition and management",
+      "year": 2004
+    },
+    {
+      "title": "J Emerg Med",
+      "year": 1998
+    },
+    {
+      "title": "Therapeutic bronchoscopy in lung cancer. Laser therapy, electrocautery, brachytherapy, stents, and photodynamic therapy",
+      "year": 1998
+    },
+    {
+      "title": "Clin Chest Med",
+      "year": 2002
+    },
+    {
+      "title": "Anesthesia and airway management for removing pulmonary self-expanding metallic stents",
+      "year": 2002
+    },
+    {
+      "title": "J Clin Anesth",
+      "year": 2009
+    },
+    {
+      "title": "Bronchial thermoplasty for asthma",
+      "year": 2009
+    },
+    {
+      "title": "Bronchial thermoplasty: a new treatment for severe refractory asthma",
+      "year": 2006
+    },
+    {
+      "title": "Effectiveness and safety of bronchial thermoplasty in the treatment of severe asthma: a multicenter, randomized, double-blind, sham-controlled clinical trial",
+      "year": 2011
+    },
+    {
+      "title": "Practice guidelines for management of the difficult airway: an updated report by the American Society of Anesthesiologists Task Force on Management of the Difficult Airway",
+      "year": 2010
+    },
+    {
+      "title": "Anesthesiology",
+      "year": 2013
+    },
+    {
+      "title": "Monitored anesthesia care and anesthesia outside the operating room",
+      "year": 2013
+    },
+    {
+      "title": "Anesthesia technique for endobronchial ultrasoundguided fine needle aspiration of mediastinal lymph node",
+      "year": 2013
+    },
+    {
+      "title": "J Cardiothorac Vasc Anesth",
+      "year": 2007
+    },
+    {
+      "title": "Dexmedetomidine for anesthetic management of anterior mediastinal mass",
+      "year": 2007
+    },
+    {
+      "title": "J Anesth",
+      "year": 2010
+    },
+    {
+      "title": "Anesthesia awareness and the bispectral index",
+      "year": 2010
+    },
+    {
+      "title": "N Engl J Med",
+      "year": 2008
+    },
+    {
+      "title": "Anesthesia for diagnostic bronchoscopic procedures",
+      "year": 2008
+    },
+    {
+      "title": "Anesthesia for otolaryngologic surgery",
+      "year": 2008
+    },
+    {
+      "title": "Evaluation of dexamethasone for reducing postoperative edema and inflammatory response after orthognathic surgery",
+      "year": 2013
+    },
+    {
+      "title": "J Oral Maxillofac Surg",
+      "year": 1994
+    },
+    {
+      "title": "Posthypothermic circulatory failure. I. Physiologic observations on the circulation",
+      "year": 1994
+    },
+    {
+      "title": "Circulation",
+      "year": 1956
+    },
+    {
+      "title": "Use of corticosteroids in oral surgery",
+      "year": 1956
+    },
+    {
+      "title": "Upper airway edema after carotid endarterectomy: the effect of steroid administration",
+      "year": 1992
+    },
+    {
+      "title": "Anesth Analg",
+      "year": 1997
+    },
+    {
+      "title": "Consensus guidelines for the management of postoperative nausea and vomiting",
+      "year": 1997
+    },
+    {
+      "title": "Dexamethasone facilitates discharge after outpatient anorectal surgery",
+      "year": 2014
+    },
+    {
+      "title": "Respiratory arrest after successful neodymium:yttrium-aluminum-garnet laser treatment of subglottic tracheal stenosis",
+      "year": 2001
+    },
+    {
+      "title": "Laryngeal mask airway in patients with tracheal stents who are undergoing non-airway related interventions: report of three cases",
+      "year": 2002
+    },
+    {
+      "title": "Anesthesia for interventional pulmonology",
+      "year": 2004
+    },
+    {
+      "title": "Anesthesia outside of the operating room",
+      "year": 2004
+    }
+  ],
+  "quality": {
+    "completeness_score": 61,
+    "has_abstract": true,
+    "abstract_source": "manual_curation",
+    "has_doi": true,
+    "has_full_text": true,
+    "num_sections": 24,
+    "num_tables": 0,
+    "num_figures": 13,
+    "num_references": 72
+  }
+}

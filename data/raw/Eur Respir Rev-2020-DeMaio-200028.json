@@ -1,0 +1,702 @@
+{
+  "metadata": {
+    "document_id": "10_1183_16000617_0028_2020",
+    "title": "Bronchoscopic intratumoural therapies for non-small cell lung cancer",
+    "authors": [
+      "Andrew DeMaio",
+      "Daniel Sterman"
+    ],
+    "year": 2020,
+    "journal": "European Respiratory Review",
+    "doi": "10.1183/16000617.0028-2020",
+    "volume": "29",
+    "issue": "156",
+    "pages": "200028",
+    "citation": "DeMaio, A.; Sterman, D. (2020). Bronchoscopic intratumoural therapies for non-small cell lung cancer. European Respiratory Review, 29(156), 200028. https://doi.org/10.1183/16000617.0028-2020",
+    "abstract": "The past decade has brought remarkable improvements in the treatment of non-small cell lung cancer (NSCLC) with novel therapies, such as immune checkpoint inhibitors, although response rates remain suboptimal. Direct intratumoural injection of therapeutic agents via bronchoscopic approaches poses the unique ability to directly target the tumour microenvironment and offers several theoretical advantages over systemic delivery including decreased toxicity. Increases in understanding of the tumour microenvironment and cancer immunology have identified many potential options for intratumoural therapy, especially combination immunotherapies. Herein, we review advances in the development of novel bronchoscopic treatments for NSCLC over the past decade with a focus on the potential of intratumoural immunotherapy alone or in combination with systemic treatments.",
+    "abstract_source": "metadata",
+    "url": "https://publications.ersnet.org/lookup/doi/10.1183/16000617.0028-2020"
+  },
+  "source_file": "Eur Respir Rev-2020-DeMaio-200028.json",
+  "sections": [
+    {
+      "title": "Bronchoscopic intratumoural therapies for non-small cell lung cancer",
+      "content": "Andrew DeMaio and Daniel Sterman\nNumber 1 in the Series ' Interventional pulmonology ' Edited by David Feller-Kopman and Hervé Dutau\nAffiliation : NYU PORT (Pulmonary Oncology Research Team), Division of Pulmonary, Critical Care, and Sleep Medicine, NYU Langone Health/NYU Grossman School of Medicine, New York, NY, United States.\nCorrespondence : Daniel H. Sterman, MD, FCCP, ATSF, Thomas and Suzanne Murphy Professor of Pulmonary and Critical Care Medicine, Departments of Medicine and Cardiothoracic Surgery, Director, Division of Pulmonary, Critical Care & Sleep Medicine, Principal Investigator, NYU Pulmonary Oncology Research Team (NYU PORT), NYU Langone Health/NYU Grossman School of Medicine. E-mail: daniel.sterman@nyulangone.org",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "@ERSpublications",
+      "content": "Bronchoscopic intratumoural injection of novel therapies holds remarkable potential for targeted treatment of non-small cell lung cancer with a reduced risk of toxicities https://bit.ly/36xraX7\nCite this article as: DeMaio A, Sterman D. Bronchoscopic intratumoural therapies for non-small cell lung cancer. Eur Respir Rev 2020; 29: 200028 [https://doi.org/10.1183/16000617.0028-2020].\nABSTRACT The past decade has brought remarkable improvements in the treatment of non-small cell lung cancer (Non-small cell lung cancer (NSCLC)) with novel therapies, such as immune checkpoint inhibitors, although response rates remain suboptimal. Direct intratumoural injection of therapeutic agents via bronchoscopic approaches poses the unique ability to directly target the tumour microenvironment and offers several theoretical advantages over systemic delivery including decreased toxicity. Increases in understanding of the tumour microenvironment and cancer immunology have identified many potential options for intratumoural therapy, especially combination immunotherapies. Herein, we review advances in the development of novel bronchoscopic treatments for Non-small cell lung cancer (NSCLC) over the past decade with a focus on the potential of intratumoural immunotherapy alone or in combination with systemic treatments.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Introduction",
+      "content": "Despite remarkable advances in treatment over the past decade, lung cancer remains the leading cause of cancer-related mortality worldwide [1]. The latest treatments, including antibodies to immune checkpoints such as programmed death receptor-1 (PD-1) have improved overall survival, although response rates remain suboptimal with only about 20% of patients responding in clinical trials [2, 3]. Further, immune checkpoint inhibitors are associated with immune-related adverse events (irAEs), which are occasionally serious or life threatening [4]. Intratumoural therapies, which have shown efficacy in other cancers, such as melanoma [5], have been proposed as a way to overcome resistance to checkpoint blockade and minimise side effects.\nBronchoscopy provides unique access to the airways and mediastinum and is frequently employed in the diagnosis, staging and palliation of lung cancer. Tools and techniques in bronchoscopy have advanced significantly in recent years with improvement in navigation adding to its diagnostic and therapeutic potential [6]. There has been increasing experience with endobronchial intratumoural chemotherapy (EITC) over the past decade, which supports its potential use as part of a multi-modality approach to\nCopyright ©ERS 2020. This article is open access and distributed under the terms of the Creative Commons Attribution Non-Commercial Licence 4.0.\nThis article has an editorial commentary: https://doi.org/10.1183/1600617.0146-2020\nProvenance: Commissioned article, peer reviewed.\nReceived: 30 Jan 2020 | Accepted: 7 March 2020\nmalignant airway obstruction. Further, local delivery may provide the most effective route of delivery for several immunotherapies under development, such as oncolytic viruses.\nIn this review article, we will explore the advances in intratumoural therapies for non-small cell lung cancer (Non-small cell lung cancer (NSCLC)) delivered via bronchoscopy, with a focus on the past decade. Although many of the therapies may be injected by both percutaneous and bronchoscopic routes, we excluded trials using only percutaneous delivery, as this is outside the scope of this review.",
+      "category": "introduction",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "History of intratumoural therapies for cancer",
+      "content": "The first successful report of intratumoural therapy for cancer was published in 1893 when William Coley, a surgeon and cancer researcher, famously described regressions of sarcoma after injecting live cultures of Streptococcus pyogenes directly into the tumours [7]. The mechanism underlying these regressions was not understood at the time, and Coley ' s work was generally shunned until after his death [8]. Only years later was he credited with the discovery of cancer immunotherapy, which has since revolutionised the treatment of malignancy.\nIntratumoural injections for the treatment of cancer were revisited in the 1950s, shortly after the development of chemotherapy. For example, in 1958, investigators reported a series of patients treated with intratumoural injections of NN ' N ' -triethylene thiophosphoromide (Thio-TEPA), a phosphoramide chemotherapy agent, into tumours of patients with advanced solid tumours [9]. It was noted that Thio-TEPA was effective when given by intratumoural injection, and a higher dose could be used without side effects compared with systemic administration. Local treatment of tumours was limited to those that were accessible by percutaneous needle injection under direct visualisation. Although several investigators reported regressions of injected lesions, intratumoural chemotherapy never gained widespread acceptance [10].\nThe development of the flexible bronchoscope by Professor Ikeda in 1967 improved access to the airways and mediastinum [11]. In the early 1970s, a needle passed through the working channel of the flexible bronchoscope was used to inject Bacillus Calmette-Guérin (BCG) into lung cancers with endobronchial extension in an early study of immunotherapy [12]. These bronchoscopic injections were demonstrated to be safe and feasible, and necrosis of injected tumours was reported [13, 14]. A possible mechanism of immune stimulation has since been proposed: BCG activates pattern recognition receptors (especially toll-like receptors) to induce release of several inflammatory cytokines including interleukin-12 and promote adaptive immunity through the maturation of dendritic cells [15].\nSince then, many different experimental agents have been delivered to lung tumours via transbronchial needle injection (TBNI) including chemotherapy [16 -34], gene therapies [35 -44], and other immune adjuvants [13, 14, 45, 46] (see table 1). These studies have established feasibility of local injection, and side effects have overall been minimal. With further understanding of the tumour microenvironment and\ndevelopment of new immunotherapies for lung cancer, there are now more opportunities to explore TBNI in clinical practice.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Advantages of local therapies for cancer",
+      "content": "Local injection has a number of theoretical advantages over systemic ( i.e. intravenous) administration of cancer therapies, the most commonly used route of delivery. First, the local concentration of drug can be much higher than what may be achieved when an agent is delivered systemically. Studies have suggested that intratumoural injections of chemotherapy are able to achieve a 10to 30-fold higher local concentration than could be achieved with systemic delivery [24, 52, 53]. These elevated concentrations may persist at the injection site for significantly longer than if the agent were delivered systemically. For example, injection of paclitaxel into the airway wall of a porcine model using a novel microcatheter produced local concentrations that were maintained above the therapeutic systemic concentration for 28 days [54]. Elevated local drug concentrations may be further prolonged using liposomal or microsphere drug formulations [24]. The ability to deliver such drug concentrations to the tumour site has clear utility for cytotoxic drugs such as chemotherapy (classically bound by the ' log-kill ' hypothesis), as a higher dose will kill a greater proportion of neoplastic cells [55]. The implications of the ability to achieve higher local concentrations of drugs with other mechanisms, such as immunotherapies, is not yet clear and warrants further investigation. In theory, there is also a risk of induction of immune tolerance with excessive local concentration of immunotherapeutic agents.\nBecause of decreased systemic concentration of the intratumourally injected agent, many side effects may be avoided [56]. As current immunotherapy regimens, particularly combination therapies, are limited by irAE, this may allow for combinations of two (or more) drugs to stimulate a systemic anti-tumour immune response [57, 58].\nIn addition, local injection of a drug may be able to uniquely target draining lymph nodes. Lymphatic drainage patterns of the lung have been well characterised and serve as frequent pathways for lung cancer metastasis [59]. Presumably, a higher concentration of the intratumourally injected agent may reach the draining lymph nodes than if the drug were administered systemically. If so, this may treat regional micrometastases with higher efficacy than current treatments [53]. The delivery of higher concentrations of a drug, especially an immunotherapy, to areas of T-cell priming and activation within lymph nodes may bring additional benefits [60 -62, 63].",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Understanding the tumour microenvironment",
+      "content": "A tumour is composed not only of malignant cells, but also stromal cells including cancer-associated fibroblasts, vascular cells and infiltrating immune cells [64]. These cells interact with the tumour and host in several ways to create an immunosuppressive microenvironment and promote cancer growth. First, cancer-associated fibroblasts may provide a physical barrier that prevents immune cell infiltration and evasion of host responses. Additionally, cancer-associated fibroblasts, myeloid-derived suppressor cells and regulatory T cells secrete cytokines, such as transforming growth factor (TGF)β and various interleukins which contribute to neoplastic cell growth and local immunosuppression [64]. Tumour cells often upregulate immune checkpoint molecules such as programmed death ligand-1 (PD-L1), further facilitating immune evasion [65].\nBy targeting molecules involved in immune evasion, such as programmed cell death protein 1 (PD-1) or its ligand, PD-L1, systemic immunotherapies have provided clinical improvement across many cancer types [3]. Many tumours, however, have primary or acquired resistance to checkpoint inhibitors [66]. Thus, combination immunotherapies have been proposed with different mechanisms of action to overcome resistance to immune checkpoint blockade and re-invigorate immunosurveillance. Because locally delivered agents in theory have fewer side effects than systemic therapies, immunotherapy combinations may be implemented intratumourally that would be intolerable systemically due to adverse effects.\nSeveral characteristics of the immune contexture and tumour microenvironment have implications in the prognosis and treatment of cancer [65, 67]. For example, so-called ' hot ' tumours are infiltrated with a high number of cytotoxic T lymphocytes and are associated with an improved prognosis. ' Cold ' tumours, on the other hand, are characterised by a lack of immune infiltration (specifically the absence of T cells), and typically portend a worse prognosis [67]. Additionally, the presence of tertiary lymphoid structures (TLS), ectopic lymphoid-like organs located in the tumour microenvironment, confer a better prognosis in patients with Non-small cell lung cancer (NSCLC) [68]. As sites of tumour antigen presentation and T and B cell activation, TLS may serve as both biomarkers and targets of therapy [69]. One of the overarching goals of immunotherapy is conversion of an immune-poor (cold) tumour microenvironment to one that is immune-infiltrated (hot). Direct intratumoural injection by bronchoscopy holds unique potential to achieve this goal based on local\ndelivery of immunostimulatory agents to the tumour microenvironment and low side effect profile which may allow for novel immunotherapy combinations.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Transbronchial needle",
+      "content": "A conventional transbronchial needle has been used for decades for injection into the airways, lung parenchyma and surrounding tissues. These needles range in size from 18 to 25 gauge and fit through the working channels of flexible bronchoscopes (see figs 1 and 2). Aside from delivery of cancer therapies, transbronchial needles have been utilised for the injection of corticosteroids [71 -73], anti-microbials [74 -77], tranexamic acid [78], dyes [79, 80] and radioisotopes [81] for localisation of lung lesions, and tissue sealants for the closure of bronchopleural fistulae [82, 83]. The technique of TBNI has been previously reviewed [84]. A conventional transbronchial needle may be used through standard mechanisms with flexible video bronchoscopes, but TBNI could also be accomplished via an extended working channel of\nthe bronchoscope utilising electromagnetic navigation and, in the future, through the working channel of robotic bronchoscopes. Various forms of navigation-guided tumour localisation will be necessary for the development of bronchoscopic intralesional therapies in the lung periphery.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Transbronchial needle with endobronchial ultrasound guidance",
+      "content": "The use of convex probe endobronchial ultrasound (Endobronchial ultrasound (EBUS)) to guide TBNI is a significant advance in the field. This poses the distinct advantage of direct visualisation of drug delivery (decreasing echotexture and tissue swelling seen on ultrasound images following injection) and avoidance of injection into blood vessels or other mediastinal structures [29]. Endobronchial ultrasound (EBUS) TBNI was first reported in 2013 [26] and has since been described by several investigators [29, 30, 34, 48 -50, 85]. Endobronchial ultrasound (EBUS) TBNI in particular, facilitates improved access to target metastatic lymph nodes, as has been examined in several clinical series [26, 30] or to treat locoregional recurrence of lung cancer in a previously irradiated field [29, 48 -50, 85]. Endobronchial ultrasound (EBUS) TBNI is currently unable to deliver therapies to small peripheral lung nodules because the reach of the standard Endobronchial ultrasound (EBUS) bronchoscope is limited by its outer diameter. A fine-needle aspiration catheter using real-time radial probe Endobronchial ultrasound (EBUS) guidance to sample peripheral pulmonary lesions is currently under development and could potentially be adapted for injection [86]. A dedicated convex probe Endobronchial ultrasound (EBUS) bronchoscope with a thinner diameter would also be highly beneficial for this purpose.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Transbronchial microneedle injection catheter",
+      "content": "A novel device for endobronchial injection of chemotherapy through a transbronchial microneedle (Blowfish catheter; Mercator MedSystems Inc, Emeryville, CA, USA), was recently developed for submucosal injection into the airway wall [33, 54, 87]. The balloon-tipped catheter with retractable 34-gauge needle can inject an agent perpendicularly into the airway wall after the balloon is inflated (see fig. 1). In a recent study by YARMUS et al. [33], this device was used to inject paclitaxel into tumours in 19 patients with Non-small cell lung cancer (NSCLC) complicated by malignant airway obstruction. After relief of airway obstruction using standard bronchoscopic techniques, multiple injections of paclitaxel (average 3.4 per patient) were performed into the bronchus circumferentially at the site of recanalisation. This technique was proven to be safe and feasible with no clinically significant adverse events due to the procedure. The improved airway patency established during the index procedure remained stable on repeat bronchoscopy after 6 weeks, and no patient required repeat intervention during the study period. This technique holds promise as part of a multi-modality strategy for relief of malignant airway obstruction, specifically to prolong the durability of response. Further investigations are necessary to evaluate the magnitude and duration of clinical effect. Although this device has only been investigated for injection of chemotherapy, the catheter could in theory be utilised to inject other therapies (including immunotherapies) into endobronchial lesions.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Recent trials in bronchoscopic intratumoural injection",
+      "content": "Endobronchial intratumoural chemotherapy\nEndobronchial intratumoural chemotherapy (EITC) has been reported by multiple investigators since 1982 [16 -34]. Agents delivered by endobronchial injection include 99.5% ethanol, cisplatin, 5-fluorouracil, methotrexate, bleomycin and others (see table 1). Overall, studies have reported safety and efficacy with adverse events limited mostly to fever, myalgia, cough and minor bleeding. It is difficult to measure the effects of EITC in isolation because this technique has typically been employed in patients with advanced malignancy receiving multiple other treatments including systemic chemotherapy and radiation therapy. Commonly reported endpoints include improvement in airway patency and adverse events. For example, CELIKOGLU et al. [19] repeated bronchoscopy with EITC every week until airway patency was improved by at least 25%, which was reached in 88% of patients.\nMEHTA et al. [27] also implemented EITC in a series of 22 patients with Non-small cell lung cancer (NSCLC) and malignant airway obstruction to deliver cisplatin to endobronchial lesions with large tumour bulk and rapid recurrence after ablative therapy. The investigators delivered 40 mg of cisplatin in 40 mL of 0.9% saline by 19-gauge flexible transbronchial needle. Injections were repeated weekly, up to four times, until relief of symptoms. Response, defined as at least a 50% increase in airway patency, was reported in 71% of patients. No severe treatment-related adverse effects occurred. Notably, the requirement for repeat bronchoscopy for removal of necrotic tissue and repeat injection somewhat limits the use of EITC as a complement to systemic therapy.\nIn a pilot trial, HOHENFORST-SCHMIDT et al. [26] were first to report the utility of Endobronchial ultrasound (EBUS) TBNI for the delivery of chemotherapy to lymph node metastases following a protocol involving multimodal delivery of chemotherapy in five patients with advanced Non-small cell lung cancer (NSCLC) unfit for surgery, radiation and chemotherapy. They combined direct intratumoural injection (either by bronchoscopy or transthoracic needle), injection of involved lymph nodes by Endobronchial ultrasound (EBUS) TBNI, and intravenous administration of platinum-doublet regimen which\nwas dose-reduced to 70% of the standard systemic dose. Intratumoural chemotherapy sessions were repeated weekly for 3 weeks followed by a week where chemotherapy was given only intravenously. A total of 22 sessions of intratumoural chemotherapy were performed across the cohort. For the nodal delivery, up to six different injections (each with different angulation) were performed with the goal to diffuse cisplatin throughout the nodal metastasis. If any leakage was noted, the injection was stopped and the needle position was changed. Mean dose of cisplatin was 24 mg (range 10 to 100 mg). Bleeding was reported in one patient after one intratumoural injection, but it appears to have related to the tumour itself rather than the injection and resolved after repeat injection suggesting that EITC may have a haemostatic effect. An additional patient developed mild myelosuppression from intratumoural injection of 100 mg of cisplatin (the highest reported dose delivered by TBNI), likely due to systemic dissemination. The series was able to demonstrate safety and feasibility of Endobronchial ultrasound (EBUS) TBNI and laid the groundwork for future studies.\nLI et al. [31] performed intratumoural injections of para-toulenesulfonamide (PTS), a novel cytotoxic drug with activity against several cancers, in a series of 90 patients with unresectable Non-small cell lung cancer (NSCLC) complicated by malignant airway obstruction. Repeated intratumoural injections of PTS in 30% ethanol were performed two to three times weekly until the tumour was reduced by 50%. Four to six injections per session were performed into the tumour using a conventional transbronchial needle. At 30 days, there was relief of obstruction in 69% of patients by computed tomography imaging and 69% by bronchoscopy. Improvements in forced vital capacity (by 0.35 L), forced expiratory volume in 1 s (by 0.27 L) and baseline dyspnoea index were also noted. The most commonly reported adverse events included fever (4.5%), cough (12.5%), and injection site haemorrhage (10.1%). One patient developed respiratory failure due to worsening airway obstruction 3 days following PTS injection, which was attributed to the study drug, suggesting caution in its use for severe malignant airway obstruction. The side effect profile was otherwise tolerable and the study confirmed the anti-tumour effect of PTS in Non-small cell lung cancer (NSCLC). A 5-year follow up study analysing a subset of these patients with adenoid cystic carcinoma of the lung suggested similar safety and clinical benefits of intratumoural PTS [32].",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Gene therapies",
+      "content": "Over the past few decades, a number of studies evaluating endobronchial gene therapy have been performed [35 -44], and have been reviewed elsewhere [88 -91]. Many trials involved injection of adenoviral vector with the wild-type p53 tumour suppressor gene injected via bronchoscopic or percutaneous injection into tumours with absent or mutated p53. Safety and feasibility of gene transfer to lung tumours was demonstrated, although the efficiency of gene transfer was limited ( i.e. only a fraction of tumour cells expressed the transgene). There were minimal side effects and evidence of local tumour responses at the injection sites, but no study showed an increase in overall survival. One of the limiting factors to the success of endobronchial gene therapies may have been the absence of a significant bystander effect, i.e. the potential for both transduced and non-transduced cells to be killed. Future studies may be designed with vectors that carry a stronger bystander effect that can generate systemic anti-tumour responses.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Immunogene therapies",
+      "content": "Immunogene therapy has been defined as a treatment which genetically modifies human cells to generate anti-tumour immunity [92]. Dendritic cells are a commonly investigated target of immunogene therapy because they are the most potent antigen-presenting cells in humans and are essential for the generation of the adaptive immune response against cancer [93, 94].\nA recent trial performed by LEE et al. [51] exemplifies the use of improved understanding of immunology and the tumour microenvironment for rational trial design. These investigators performed intratumoural injection of CCL21 gene-modified dendritic cells in patients with inoperable Non-small cell lung cancer (NSCLC). Autologous dendritic cells were transduced with an adenoviral vector expressing the CCL21 gene (Ad-CCL21-DC) ex vivo, and subsequently injected into the tumour. CCL21 was chosen as the transgene of interest for its ability to attract dendritic cells and T lymphocytes; it is localised to high endothelial venules of lymph nodes and the spleen and by binding with CCR7 guides naïve T cells to the T-cell zone [95]. In theory, by increasing CCL21 secretion at the tumour site, increasing T-cell infiltration may result in the conversion of a cold tumour microenvironment to hot. The investigators performed two injections via percutaneous or bronchoscopic approaches on day 0 and 7. Importantly, they also performed core needle biopsies of the tumour on day 0 and 7 to assess local immune responses. At 7 days, immunohistochemistry was able to show increased CD8+ T cell infiltration and PD-L1 expression, suggesting induction of anti-tumour immunity. Other evidence of anti-tumour immunity included detection antibody responses to tumour-associated antigens in six out of 16 patients, and by increased tumour-specific autologous T-cell interferonγ responses and increased PD-L1 expression by PCR following vaccination. One-quarter of patients had stable disease at day 56 with median overall survival of 3.9 months. This study demonstrated",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "TABLE 2 Ongoing trials of intratumoural therapies for non-small cell lung cancer listed on ClinicalTrials.gov",
+      "content": "Continued\nthe safety and feasibility of intratumoural Ad-CCL21-DC administration, but also showed an impressive induction of anti-tumour immunity and serves as a model for design and implementation of future tumour-directed immunotherapies.\nA phase I study has paired this therapy with intravenous pembrolizumab for patients with treatment-naïve metastatic Non-small cell lung cancer (NSCLC) (NCT03546361) and is currently enrolling patients (see table 2). There is a theoretic basis for synergy of these therapies, as the dendritic-cell vaccination can stimulate antigen presentation and T-cell infiltration, while immune checkpoint inhibitors may stimulate activation and proliferation of T lymphocytes and may rescue exhausted T cells. Combining these distinct mechanisms may address the multiple immunological defects to promote anti-tumour immunity: antigen presentation, tumour-specific T cell activation and proliferation, and reversal of the immunosuppressive tumour microenvironment [96].\nAn additional novel intratumoural immunogene therapy trial evaluates neoadjuvant delivery of a replication-deficient recombinant adenoviral vector modified to carry the herpes simplex virus (HSV) thymidine kinase gene (AdHSVtk) delivered via bronchoscopy or direct needle injection to patients with early-stage Non-small cell lung cancer (NSCLC) prior to lung resection (NCT03131037). After intratumoural injection, patients receive 2 weeks of oral valacyclovir which is converted into a toxic metabolite in tumour cells that express HSVtk, generating a significant immunological bystander effect. Patients then undergo lung cancer resection as per standard of care. Peripheral blood samples are obtained before and after intratumoural injection and valacyclovir administration, and baseline tumour biopsies are compared with specimens from the resected lung.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Immunotherapies",
+      "content": "Over the past decade, systemic immunotherapies, especially immune checkpoint inhibitors, have revolutionised the treatment of multiple cancer types. Many types of immunotherapy are currently under pre-clinical investigation and several of these are uniquely suited for intratumoural delivery, such as oncolytic virus therapies and potentially chimeric antigen receptor (CAR) T cells [97]. Other immunotherapies such as intratumoural cytokine-based therapies may synergise with systemic immune checkpoint inhibitors as part of a strategy to increase T-cell infiltration into tumours. To date, there have not been any clinical trials of bronchoscopic intratumoural or intranodal checkpoint inhibitor administration.\nRecently, oncolytic virus therapies have been investigated as potent anti-cancer agents. Local delivery of these viruses into tumours can cause selective destruction of tumour cells. Specifically, tumour cells are more vulnerable to infection by some viruses due to deficient interferon production and the tumour suppressive microenvironment [98]. After local injection, immunogenic cell death and release of damage associated molecular patterns (DAMPs) stimulate innate immunity, while the presentation and processing of viral and tumour antigens augments adaptive immunity [99]. Because of their action on tumour-specific immunity, these agents are potentially synergistic with immune checkpoint inhibitors [98].\nThe first oncolytic viral therapy in humans, talimogene laherparepvec (T-VEC), was approved by the US Food and Drug Administration for melanoma in 2015 [99]. In fact, a recent study in melanoma that combined T-VEC with pembrolizumab, an immune checkpoint inhibitor, showed higher response rates\nNon-small cell lung cancer (NSCLC): non-small cell lung cancer; PFS: progression-free survival; OS: overall survival; RECIST: Response Evaluation Criteria In Solid Tumours. # : Method of intratumoural injection not specified or includes percutaneous injection.\n(overall response rate 62%) than either agent alone without any additional toxicities from the oncolytic virus [100]. Additionally, there were responses noted in both injected and uninjected lesions, suggesting induction of systemic anti-tumour immunity. This provides discrete evidence of converting an immunologically cold tumour to hot using combination immunotherapy with intralesional injection. Melanoma has the advantage of easy accessibility of target lesions to local injection. Oncolytic viral therapies may also be delivered via bronchoscopic injection and are currently being evaluated in Non-small cell lung cancer (NSCLC) (table 2).\nDevelopment of an optimal immunotherapy combination will likely target multiple mechanisms. For example, one such combination may reverse tumour microenvironment immunosuppression through targeting myeloid-derived suppressor cells (MDSC) and regulatory T cells and increase cytotoxicity through T-cell activation or priming [57].",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Pharmacokinetics and pharmacodynamics",
+      "content": "Intratumoural therapy poses unique pharmacokinetic and pharmacodynamic challenges because distribution and absorption are often more variable than systemic administration. For example, the distribution of a drug within a tumour may rely on including tumour volume, interstitial pressure, concentration and lipophilicity of the injected agent, tumour vasculature and variation in injection technique [58].\nTo study the diffusion of an agent following intratumoural injection, VIGNAUD et al. [101] injected the tumours of 16 patients with Non-small cell lung cancer (NSCLC) with methylene blue using TBNI with a 21-gauge needle just prior to lung resection. On pathologic examination of the resected specimen, the tumour was infiltrated with dye in 29±15% of the tumour volume. Dye accumulated more significantly in the stromal versus the tumour compartment, and some areas of the tumour were completely spared of dye infiltration. In two (13%) out of 16 patients, dye was injected into normal lung, highlighting current limitations in delivery to peripheral lung lesions (although no navigation system was used in this study). Thus, it may be difficult to reach the entirety of the tumour via bronchoscopic injection. This may not be necessary, however, for gene or immunotherapies if the injected agent is accompanied by a significant bystander effect.\nMore recently, MORI et al. [34] studied cisplatin pharmacodynamics following Endobronchial ultrasound (EBUS) TBNI into lung tumours. They created a computational model of the tumour based on a patient ' s computed tomography scan and compared results with drug levels obtained by phlebotomy. Five intratumoural injections of cisplatin at a dose of 8 mg each were performed over 18 min. Peripheral blood was drawn at 5, 15, 30, 60 and 120 min following the final injection to monitor systemic drug levels. The actual measured levels in peripheral blood closely matched their computational model. Several interesting observations were noted; for example, the dose of cisplatin required using five individual injections could be three orders of magnitude less than required for a single injection. Multiple injections, therefore, should be used to achieve better distribution through the tumour if diffusion throughout the entire lesion is required. Notably, most studies have already utilised multiple injection sites to achieve this goal.\nOptimal dosing of intratumourally injected agents is not known. In theory, the dose may be chosen based on the number of lesions, the volume of tumour, or weight of the patient; the dose-limiting toxicity profile (either local or systemic) may dictate the most appropriate regimen [58]. Doses of injected agents used in studies thus far have been derived empirically. For example, investigators have proposed using 2 mg of cisplatin per mL of tumour because it is a dose that showed efficacy in their clinical experience without significant toxicity [22]. Further study should evaluate optimal dosing regimens for intratumoural injection. Both drug escalation strategies ( i.e. how to add additional drugs in combination) and the effect of repeated injections ( ' boosting ' effect) should also be investigated [58].\nNotably, traditional pharmacokinetic analyses regarding drug absorption, distribution and elimination are not relevant in intratumoural oncolytic viral therapies, as their effect is mediated by the immune response to the viral infection in vivo , rather than the effect of local drug accumulation [58]. Therefore, in studies of intratumoural oncolytic virus administration, researchers should focus on viral replication, shedding and clearance using various techniques. The efficacy of oncolytic virus administration should be assessed with biomarkers of immune activation ( e.g. regulatory T cell depletion, increase in tumour-specific T cells) [58].",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Safety",
+      "content": "Endobronchial ultrasound (EBUS) TBNA is a common procedure performed by pulmonologists and has a low incidence of complications [102]. Rare adverse events include mediastinitis, fistula formation, bleeding and pneumothorax. Endobronchial ultrasound (EBUS) TBNI poses an additional theoretical risk of damage to nearby structures or extravasation related to the injected agent; however, this has not emerged as a significant issue in the reported experience of EITC to date. When reported in clinical series, effects from extravasation into the airway have been limited to cough even with irritant solutions such as 99.5% ethanol and cisplatin [17, 47]. Airway irritation caused by extravasation may be minimised by aggressive suctioning and careful\ninjection. The dead space within commonly used Endobronchial ultrasound (EBUS) transbronchial needles has been measured to ensure appropriate dose and further minimise risk of extravasation [103].\nThere has been one published report of pericarditis associated with conventional TBNI of gene therapy [104]; this potentially could have been avoided if Endobronchial ultrasound (EBUS) guidance was utilised. Immunotherapies pose a risk of systemic side effects related to the drug or vector, although studies thus far have shown mostly minor symptoms such as fever and myalgia. As with systemic immunotherapy combinations, there is a potential for an increase in irAE when multiple immunotherapies are delivered via bronchoscopic injection. Theoretically, with lower associated systemic drug concentrations, the incidence of adverse events with TBNI should be decreased than if the same drug combinations were delivered systemically [56, 105]. Future trials and experiences are needed for more in-depth evaluation of this hypothetical advantage.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Future directions",
+      "content": "Local delivery of immunotherapy holds great promise to improve the outcome of patients with Non-small cell lung cancer (NSCLC). Many immunotherapy combinations have been evaluated in pre-clinical models and await translation to human testing. Ongoing studies include the use of gene-mediated cytotoxic immunotherapy (NCT03131037), gene-modified dendritic cells (NCT03546361) and adoptive cell therapy, such as chimeric antigen receptor T cells (NCT03740256), among others (see table 2). Many trials focus on combination immunotherapies to increase response rates and overcome resistance to checkpoint blockade. In addition, repurposing vaccines as local immunotherapy for cancer using intratumoural delivery has shown potential to increase immune infiltration into tumours in several pre-clinical models and may be adapted to lung cancer [106, 107].\nAnother attractive, but largely unexplored, form of therapy is the use of intranodal immunotherapy. Because lymph nodes are thought to be the location of T-cell priming and are essential to the formation of a systemic anti-tumour response, the tumour-draining lymph node may be the ideal site for delivery of immunotherapies [96]. Recent pre-clinical studies have suggested the importance of tumour-draining lymph nodes to response to PD-1/PD-L1 checkpoint therapy [108], and clinical studies in Non-small cell lung cancer (NSCLC) have demonstrated differences in immune phenotype in tumour-draining versus non-draining lymph nodes [109, 110]. As only a fraction of a drug administered systemically is expected to reach the tumour-draining lymph node, direct intranodal injection may be more effective for generation of anti-tumour immunity than systemic administration [111]. Lung cancer is a favourable target for this approach as tumour-draining lymph nodes are accessible by Endobronchial ultrasound (EBUS) TBNI.\nAn additional area of intense investigation is the use of RNA interference for cancer therapy. These therapies have been complicated by delivery issues and off-target effects [112]. A recent pre-clinical study of human lung cancer cells transplanted into mice established the feasibility of using small interfering RNA (siRNA) to eliminate residual lung cancer after incomplete microwave ablation [113]. Although further investigation is needed before this can be translated to humans, the technique showed significant potential. Specifically, by directly injecting lesions with siRNA -polymer conjugates, some of the delivery issues that have plagued trials in siRNA were minimised.\nOngoing research is required to make local delivery of immunotherapy a reality for patients with Non-small cell lung cancer (NSCLC). First, improved bronchoscopic localisation is essential to ensure appropriate delivery of therapies to peripheral lung lesions. Robotic bronchoscopy, among other technologies, will hopefully improve our ability to reach peripheral lesions. Novel immunotherapies or immunotherapy combinations provide another avenue of potential therapy. For their development, increasing knowledge in basic science remains paramount, including detailed understanding of the tumour microenvironment and mechanisms of resistance to immunotherapy [58, 114].",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Conclusions",
+      "content": "Immunotherapies, most notably immune checkpoint inhibitors, have revolutionised the treatment of multiple cancers in the past decade but are limited by suboptimal response rates and irAE. Intratumoural therapies have the potential to increase efficacy and decrease toxicity in patients with Non-small cell lung cancer (NSCLC), and the bronchoscope is apt to deliver these therapies. Recent advances in the field include endobronchial ultrasound guidance of transbronchial injections, further experience with EITC, and development of novel tools for safer and more consistent drug delivery. Development of new immunotherapy combinations, especially immune checkpoint inhibitors combined with oncolytic viral therapies, have enticing pre-clinical evidence as well as clinical evidence in other cancer types. Ongoing work continues to translate investigational therapies, such as chimeric antigen receptor T cells and siRNA into human trials.\nConflict of interest: None declared.",
+      "category": "conclusion",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "References",
+      "content": "1 Bray F, Ferlay J, Soerjomataram I, et al. Global cancer statistics 2018: GLOBOCAN estimates of incidence and mortality worldwide for 36 cancers in 185 countries. CA Cancer J Clin 2018; 68: 394 -424.\n2 Lievense LA, Sterman DH, Cornelissen R, et al. Checkpoint blockade in lung cancer and mesothelioma. Am J Respir Crit Care Med 2017; 196: 274 -282.\n3 Ribas A, Wolchok JD. Cancer immunotherapy using checkpoint blockade. Science 2018; 359: 1350 -1355.\n4 Postow MA, Sidlow R, Hellmann MD. Immune-related adverse events associated with immune checkpoint blockade. N Engl J Med 2018; 378: 158 -168.\n5 Hamid O, Ismail R, Puzanov I. Intratumoural immunotherapy-update 2019. Oncologist 2020; 25: e423 -e438.\n6 Harris K, Puchalski J, Sterman DH. Recent advances in bronchoscopic treatment of peripheral lung cancers. Chest 2017; 151: 674 -685.\n7 Coley WB. The treatment of malignant tumours by repeated inoculations of erysipelas: with a report of 10 original cases. Am J Med 1893; 105: 487 -510.\n8 McCarthy EF. The toxins of William B. Coley and the treatment of bone and soft-tissue sarcomas. Iowa Orthop J 2006; 26: 154 -158.\n9 Bateman JC. Palliation of cancer in human patients by maintenance therapy with NN ' N ' -triethylene thiophosphoramide and N-(3-oxapentamethylene)-N ' N ' -diethylene phosphoramide. Ann N Y Acad Sci 1958; 68: 1057 -1071.\n10 Brincker H. Direct intratumoural chemotherapy. Crit Rev Oncol Hematol 1993; 15: 91 -98.\n11 Miller RJ, Casal RF, Lazarus DR, et al. Flexible bronchoscopy. Clin Chest Med 2018; 39: 1 -16.\n12 Hayata Y, Ohbo K, Ogawa I, et al. Immunotherapy for lung cancer cases using BCG or BCG cell-wall skeleton: intratumoural injections. Gann Monogr Cancer Res 1978; 21: 51.\n13 Holmes EC. BCG immunotherapy of lung cancer. Jpn J Surg 1980; 10: 1 -6.\n14\nMatthay\nRA,\nMahler\nDA, Beck\nGJ,\net\nal.\nIntratumoural\nBacillus\nCalmette-Guérin\nimmunotherapy\nprior\nto\nsurgery for carcinoma of the lung: results of a prospective randomized trial.\nCancer Res\n1986; 46: 5963\n-\n5968.\n15 Krutzik SR, Modlin RL. The role of Toll-like receptors in combating mycobacteria. Semin Immunol 2004; 16: 35 -41.\n16 Wagai F, Kinoshita M, Shiraki R, et al. The direct injection of several anti-cancer drugs into the primary lung cancer lesion through a fiberoptic bronchoscope. Jpn J Thorac Dis 1982; 20: 170 -175.\n17 Celikoglu SI, Karayel T, Demirci S, et al. Direct injection of anti-cancer drugs into endobronchial tumours for palliation of major airway obstruction. Postgrad Med J 1997; 73: 159 -162.\n18 Liu M, Ma P, Lu Z. Local chemotherapy by fibrobronchoscopy for advanced bronchogenic carcinoma. Chin J Tuberc Respir Dis 2000; 23: 550 -551.\n19 Celikoglu F, Celikoglu SI. Intratumoural chemotherapy with 5-fluorouracil for palliation of bronchial cancer in patients with severe airway obstruction. J Pharm Pharmacol 2003; 55: 1441 -1448.\n20 Celikoglu F, Celikoglu SI, York AM, et al. Intratumoural administration of cisplatin through a bronchoscope followed by irradiation for treatment of inoperable non-small cell obstructive lung cancer. Lung Cancer 2006; 51: 225 -236.\n21 Celikoglu SI, Celikoglu F, Goldberg EP. Endobronchial intratumoural chemotherapy (EITC) followed by surgery in early non-small cell lung cancer with polypoid growth causing erroneous impression of advanced disease. Lung Cancer 2006; 54: 339 -346.\n22 Celikoglu SI, Celikoglu F, Goldberg EP. Intratumoural cancer chemotherapy through a flexible bronchoscope. J Bronchol 2004; 11: 260 -265.\n23 Jabbardarjani H, Kharabian S, Masjedi MR. Endobronchial chemotherapy in malignant airway lesions of the lung: report of 3 years experience. J Bronchol 2007; 14: 242 -245.\n24 Celikoglu F, Celikoglu SI, Goldberg EP. Bronchoscopic intratumoural chemotherapy of lung cancer. Lung Cancer 2008; 61: 1 -12.\n25 Nader D, Flynn J, Stark J. Intratumoural chemotherapy as an adjuvant to endobronchial brachytherapy. J Thorac Oncol 2010; 5: Suppl. 7, S541 -S542.\n26 Hohenforst-Schmidt W, Zarogoulidis P, Darwiche K, et al. Intratumoural chemotherapy for lung cancer: re-challenge current targeted therapies. Drug Des Devel Ther 2013; 7: 571 -583.\n27 Mehta HJ, Begnaud A, Penley AM, et al. Restoration of patency to central airways occluded by malignant endobronchial tumours using intratumoural injection of cisplatin. Ann Am Thorac Soc 2015; 12: 1345 -1350.\n28 Kebbe J, Dhillon SS, Harris K. Treatment of malignant airway obstruction with intratumoural injection of chemotherapy with cisplatin. Ann Am Thorac Soc 2015; 12: 1736 -1737.\n29 Khan F, Anker CJ, Garrison G, et al. Endobronchial ultrasound-guided transbronchial needle injection for local control of recurrent non-small cell lung cancer. Ann Am Thorac Soc 2015; 12: 101 -104.\n30 Lu B, Sun L, Yan X, et al. Intratumoural chemotherapy with paclitaxel liposome combined with systemic chemotherapy: a new method of neoadjuvant chemotherapy for stage III unresectable non-small cell lung cancer. Med Oncol 2015; 32: 345.\n31 Li SY, Li Q, Guan WJ, et al. Effects of para-toluenesulfonamide intratumoural injection on non-small cell lung carcinoma with severe central airway obstruction: A multi-center, non-randomized, single-arm, open-label trial. Lung Cancer 2016; 98: 43 -50.\n32 Guan WJ, Li SY, Zhong NS. Effects of para-toluenesulfonamide intratumoural injection on pulmonary adenoid cystic carcinoma complicating with severe central airway obstruction: a 5-year follow-up study. J Thorac Dis 2018; 10: 2448 -2455.\n33 Yarmus L, Mallow C, Akulian J, et al. Prospective multicentered safety and feasibility pilot for endobronchial intratumoural chemotherapy. Chest 2019; 156: 562 -570.\n34 Mori V, Roy GS, Bates JHT, et al. Cisplatin pharmacodynamics following endobronchial ultrasound-guided transbronchial needle injection into lung tumours. Sci Rep 2019; 9: 6819.\n35 Roth JA, Nguyen D, Lawrence DD, et al. Retrovirus-mediated wild-type p53 gene transfer to tumours of patients with lung cancer. Nat Med 1996; 2: 985 -991.\n36 Schuler M, Rochlitz C, Horowitz JA, et al. A phase I study of adenovirus-mediated wild-type p53 gene transfer in patients with advanced non-small cell lung cancer. Hum Gene Ther 1998; 9: 2075 -2082.\n37 Swisher SG, Roth JA, Nemunaitis J, et al. Adenovirus-mediated p53 gene transfer in advanced non-small-cell lung cancer. J Natl Cancer Inst 1999; 91: 763 -771.\n38 Tursz T, Cesne AL, Baldeyrou P, et al. Phase I study of a recombinant adenovirus-mediated gene transfer in lung cancer patients. J Natl Cancer Inst 1996; 88: 1857 -1863.\n39 Griscelli F, Opolon P, Saulnier P, et al. Recombinant adenovirus shedding after intratumoural gene transfer in lung cancer patients. Gene Ther 2003; 10: 386 -395.\n40 Nemunaitis J, Swisher SG, Timmons T, et al. Adenovirus-mediated p53 gene transfer in sequence with cisplatin to tumours of patients with non-small-cell lung cancer. J Clin Oncol 2000; 18: 609 -622.\n41 Weill D, Mack M, Roth J, et al. Adenoviral-mediated p53 gene transfer to non-small cell lung cancer through endobronchial injection. Chest 2000; 118: 966 -970.\n42 Schuler M, Herrmann R, De Greve JL, et al. Adenovirus-mediated wild-type p53 gene transfer in patients receiving chemotherapy for advanced non-small-cell lung cancer: results of a multicenter phase II study. J Clin Oncol 2001; 19: 1750 -1758.\n43 Swisher SG, Roth JA, Komaki R, et al. Induction of p53-regulated genes and tumour regression in lung cancer patients after intratumoural delivery of adenoviral p53 (INGN 201) and radiation therapy. Clin Cancer Res 2003; 9: 93 -101.\n44 Fujiwara T, Tanaka N, Kanazawa S, et al. Multicenter phase I study of repeated intratumoural delivery of adenoviral p53 in patients with advanced non-small-cell lung cancer. J Clin Oncol 2006; 24: 1689 -1699.\n45 Yamamura Y, Ogura T, Sakatani M, et al. Randomized controlled study of adjuvant immunotherapy with Nocardia rubra cell wall skeleton for inoperable lung cancer. Cancer Res 1983; 43: 5575 -5579.\n46 Onodera A, Miura K, Sasaki M, et al. A case of bronchial carcinoma showing regression upon intratumoural administration of OK-432. Gan To Kagaku Ryoho 1988; 15: 341 -344.\n47 Fujisawa T, Hongo H, Yamaguchi Y, et al. Intratumoural ethanol injection for malignant tracheobronchial lesions: a new bronchofiberscopic procedure. Endoscopy 1986; 18: 188 -191.\n48 Mehta HJ, Begnaud A, Penley AM, et al. Treatment of isolated mediastinal and hilar recurrence of lung cancer with bronchoscopic endobronchial ultrasound guided intratumoural injection of chemotherapy with cisplatin. Lung Cancer 2015; 90: 542 -547.\n49 Li X, Liu X, Rao X, et al. A case report of local treatment of inoperable squamous cell lung carcinoma with convex-probe endobronchial ultrasound-guided intratumoural injection of cisplatin in a patient with severe Chronic obstructive pulmonary disease (COPD). Medicine (Baltimore) 2017; 96: e7070.\n50 Mehta HJ, Jantz MA. Endobronchial ultrasound-guided intratumoural injection of cisplatin for the treatment of isolated mediastinal recurrence of lung cancer. J Vis Exp 2017; 120: 54855.\n51 Lee JM, Lee MH, Garon E, et al. Phase I trial of intratumoural injection of CCL21 gene-modified dendritic cells in lung cancer elicits tumour-specific immune responses and CD8(+) T-cell infiltration. Clin Cancer Res 2017; 23: 4556 -4568.\n52 Goldberg EP, Hadba AR, Almond BA, et al. Intratumoural cancer chemotherapy and immunotherapy: opportunities for nonsystemic preoperative drug delivery. J Pharm Pharmacol 2002; 54: 159 -180.\n53 Celikoglu F, Celikoglu SI, Goldberg EP. Intratumoural chemotherapy of lung cancer for diagnosis and treatment of draining lymph node metastasis. J Pharm Pharmacol 2010; 62: 287 -295.\n54 Tsukada H, Entcheva-Dimitrov P, Ernst A, et al. Pharmacokinetics and safety of paclitaxel delivery into porcine airway walls by a new endobronchial drug delivery catheter. Respirology 2018; 23: 399 -405.\n55 Chu E. Cancer chemotherapy. In: BG Katzung, ed. Basic and clinical pharmacology. 14th Edn New York, McGraw-Hill Education, 2018; pp. 948 -976.\n56 Marabelle A, Tselikas L, de Baere T, et al. Intratumoural immunotherapy: using the tumour as the remedy. Ann Oncol 2017; 28: xii33 -xii43.\n57\nMarabelle A, Kohrt H, Caux C,\net\nal.\nIntratumoural immunization: a new paradigm for cancer therapy.\nClin\nCancer Res\n2014; 20: 1747\n-\n1756.\n58 Marabelle A, Andtbacka R, Harrington K, et al. Starting the fight in the tumour: expert recommendations for the development of human intratumoural immunotherapy (HIT-IT). Ann Oncol 2018; 29: 2163 -2174.\n59 Kim AW. Lymph node drainage patterns and micrometastasis in lung cancer. Semin Thorac Cardiovasc Surg 2009; 21: 298 -308.\n60 Fransen MF, Arens R, Melief CJM. Local targets for immune therapy to cancer: tumour draining lymph nodes and tumour microenvironment. Int J Cancer 2013; 132: 1971 -1976.\n61 Ellmark P, Mangsbo SM, Furebring C, et al. Tumour-directed immunotherapy can generate tumour-specific T cell responses through localized co-stimulation. Cancer Immunol Immunother 2017; 66: 1 -7.\n62 Aznar MA, Tinari N, Rullan AJ, et al. Intratumoural delivery of immunotherapy-act locally, think globally. J Immunol 2017; 198: 31 -39.\n63 Murthy V, Minehart J, Sterman DH. Local immunotherapy of cancer: innovative approaches to harnessing tumour-specific immune responses. J Natl Cancer Inst 2017; 109: djx097.\n64 Hanahan D, Coussens LM. Accessories to the crime: functions of cells recruited to the tumour microenvironment. Cancer Cell 2012; 21: 309 -322.\n65 Binnewies M, Roberts EW, Kersten K, et al. Understanding the tumour immune microenvironment (TIME) for effective therapy. Nat Med 2018; 24: 541 -550.\n66 Sharma P, Hu-Lieskovan S, Wargo JA, et al. Primary, adaptive, and acquired resistance to cancer immunotherapy. Cell 2017; 168: 707 -723.\n67 Fridman WH, Zitvogel L, Sautès-Fridman C, et al. The immune contexture in cancer prognosis and treatment. Nat Rev Clin Oncol 2017; 14: 717 -734.\n68 Dieu-Nosjean MC, Antoine M, Danel C, et al. Long-term survival for patients with non-small-cell lung cancer with intratumoural lymphoid structures. J Clin Oncol 2008; 26: 4410 -4417.\n69 Sautès-Fridman C, Petitprez F, Calderaro J, et al. Tertiary lymphoid structures in the era of cancer immunotherapy. Nat Rev Cancer 2019; 19: 307 -325.\n70 Lynch PJ, Jaffe CC. Lungs diagram simple. Wikimedia Commons. https://commons.wikimedia.org/wiki/File: Lungs_diagram_simple.svg. Published December 23, 2006. Modified under Creative Commons Attribution 2.5 License. https://creativecommons.org/licenses/by/2.5/. Date last accessed: October 27, 2019.\n71 Langford CA, Sneller MC, Hallahan CW, et al. Clinical features and therapeutic management of subglottic stenosis in patients with Wegener ' s granulomatosis. Arthritis Rheum 1996; 39: 1754 -1760.\n72 Utzig MJ, Warzelhan J, Wertzel H, et al. Role of thoracic surgery and interventional bronchoscopy in Wegener ' s granulomatosis. Ann Thorac Surg 2002; 74: 1948 -1952.\n73 Verhaeghe W, Noppen M, Meysman M, et al. Rapid healing of endobronchial tuberculosis by local endoscopic injection of corticosteroids. Monaldi Arch Chest Dis 1996; 51: 391 -393.\n74 Snoeck R, Wellens W, Desloovere C, et al. Treatment of severe laryngeal papillomatosis with intralesional injections of cidofovir. J Med Virol 1998; 54: 219 -225.\n75 Derkay CS, Volsky PG, Rosen CA, et al. Current use of intralesional cidofovir for recurrent respiratory papillomatosis. Laryngoscope 2013; 123: 705 -712.\n76 Takeda T, Itano H, Kakehashi R, et al. Direct transbronchial administration of liposomal amphotericin B into a pulmonary aspergilloma. Respir Med Case Rep 2014; 11: 7 -11.\n77 Parikh MS, Seeley E, Nguyen-Tran E, et al. Endobronchial ultrasound-guided transbronchial needle injection of liposomal amphotericin B for the treatment of symptomatic aspergilloma. J Bronchology Interv Pulmonol 2017; 24: 330 -333.\n78 Zamani A. Bronchoscopic intratumoural injection of tranexamic acid: a new technique for control of biopsy-induced bleeding. Blood Coagul Fibrinolysis 2011; 22: 440 -442.\n79 Sakamoto T, Takada Y, Endoh M, et al. Bronchoscopic dye injection for localization of small pulmonary nodules in thoracoscopic surgery. Ann Thorac Surg 2001; 72: 296 -297.\n80 Abbas A, Kadakia S, Ambur V, et al. Intraoperative electromagnetic navigational bronchoscopic localization of small, deep, or subsolid pulmonary nodules. J Thorac Cardiovasc Surg 2017; 153: 1581 -1590.\n81 Lardinois D, Brack T, Gaspert A, et al. Bronchoscopic radioisotope injection for sentinel lymph-node mapping in potentially resectable non-small-cell lung cancer. Eur J Cardiothorac Surg 2003; 23: 824 -827.\n82 Varoli F, Roviaro G, Grignani F, et al. Endoscopic treatment of bronchopleural fistulas. Ann Thorac Surg 1998; 65: 807 -809.\n83 Takaoka K, Inoue S, Ohira S. Central bronchopleural fistulas closed by bronchoscopic injection of absolute ethanol. Chest 2002; 122: 374 -378.\n84 Seymour CW, Krimsky WS, Sager J, et al. Transbronchial needle injection: a systematic review of a new diagnostic and therapeutic paradigm. Respiration 2006; 73: 78 -89.\n85 Kinsey CM. Endobronchial ultrasound-guided-transbronchial needle injection for direct therapy of lung cancer. AME Med J 2018; 3: 2 -6.\n86 Yarmus LB, Mallow C, Pastis N, et al. First-in-human use of a hybrid real-time ultrasound-guided fine-needle acquisition system for peripheral pulmonary lesions: a multicenter pilot study. Respiration 2019; 98: 527 -533.\n87 Tsukada H, Seward KP, Rafeq S, et al. Experimental pilot study of a novel endobronchial drug delivery catheter. J Bronchology Interv Pulmonol 2015; 22: 312 -318.\n88 Kruklitis RJ, Sterman DH. Endobronchial gene therapy. Semin Respir Crit Care Med 2004; 25: 433 -442.\n89 Lara-Guerra H, Roth JA. Gene therapy for lung cancer. Crit Rev Oncog 2016; 21: 115 -124.\n90 Vachani A, Moon E, Wakeam E, et al. Gene therapy for lung neoplasms. Clin Chest Med 2011; 32: 865 -885.\n91 Vachani A, Moon E, Wakeam E, et al. Gene therapy for mesothelioma and lung cancer. Am J Respir Cell Mol Biol 2010; 42: 385 -393.\n92 Parney IF, Chang LJ. Cancer immunogene therapy: a review. J Biomed Sci 2003; 10: 37 -43.\n93 Gardner A, Ruffell B. Dendritic cells and cancer immunity. Trends Immunol 2016; 37: 855 -865.\n94 Anguille S, Smits EL, Bryant C, et al. Dendritic cells as pharmacologic tools for cancer immunotherapy. Pharmacol Rev 2015; 67: 731 -753.\n95 Mueller SN, Germain RN. Stromal cell contributions to the homeostasis and functionality of the immune system. Nat Rev Immunol 2009; 9: 618 -629.\n96 Mellman I, Coukos G, Dranoff G. Cancer immunotherapy comes of age. Nature 2011; 480: 480 -489.\n97 da Silva JL, Dos Santos ALS, Nunes NCC, et al. Cancer immunotherapy: the art of targeting the tumour immune microenvironment. Cancer Chemother Pharmacol 2019; 84: 227 -240.\n98 Russell SJ, Barber GN. Oncolytic viruses as antigen-agnostic cancer vaccines. Cancer Cell 2018; 33: 599 -605.\n99 Lawler SE, Speranza MC, Cho CF, et al. Oncolytic viruses in cancer treatment: A review. JAMA Oncol 2017; 3: 841 -849.\n100 Ribas A, Dummer R, Puzanov I, et al. Oncolytic virotherapy promotes intratumoural T cell infiltration and improves anti-PD-1 immunotherapy. Cell 2017; 170: 1109 -1119.e10.\n101 Vignaud JM, Menard O, Weinbreck N, et al. Evaluation of the spatial diffusion of methylene blue injected in vivo by bronchoscopy into non-small cell lung carcinoma. Respiration 2006; 73: 658 -663.\n102 Eapen GA, Shah AM, Lei X, et al. Complications, consequences, and practice patterns of endobronchial ultrasound-guided transbronchial needle aspiration: Results of the AQuIRE registry. Chest 2013; 143: 1044 -1053.\n103 Kinsey CM, Garrison G. Endobronchial ultrasound transbronchial needle injection: ex vivo measurement of dead space volume of the needle assembly. Ann Am Thorac Soc 2015; 12: 1253 -1254.\n104 Mitchell JH, Fraizer MC, Thet LA, et al. Purulent pericarditis induced by endobronchial needle injection of adenoviral-mediated gene therapy. Can J Cardiol 2003; 19: 1421 -1423.\n105 Marabelle A, Kohrt H, Levy R. Intratumoural anti-CTLA-4 therapy: enhancing efficacy while avoiding toxicity. Clin Cancer Res 2013; 19: 5261 -5263.\n106 Newman JH, Chesson CB, Herzog NL, et al. Intratumoural injection of the seasonal flu shot converts immunologically cold tumours to hot and serves as an immunotherapy for cancer. Proc Natl Acad Sci USA 2020; 117: 1119 -1128.\n107 Shekarian T, Sivado E, Jallas AC, et al. Repurposing rotavirus vaccines for intratumoural immunotherapy can overcome resistance to immune checkpoint blockade. Sci Transl Med 2019; 11: eaat5025.\n108 Fransen MF, Schoonderwoerd M, Knopf P, et al. Tumour-draining lymph nodes are pivotal in PD-1/PD-L1 checkpoint therapy. JCI Insight 2018; 3: 124507.\n109 van de Ven R, Niemeijer AN, Stam AGM, et al. High PD-1 expression on regulatory and effector T-cells in lung cancer draining lymph nodes. ERJ Open Res 2017; 3: 00110-2016.\n110 Murthy V, Katzman DP, Tsay JJ, et al. Tumour-draining lymph nodes demonstrate a suppressive immunophenotype in patients with non-small cell lung cancer assessed by endobronchial ultrasound-guided transbronchial needle aspiration: a pilot study. Lung Cancer 2019; 137: 94 -99.\n111 Rotman J, Koster BD, Jordanova ES, et al. Unlocking the therapeutic potential of primary tumour-draining lymph nodes. Cancer Immunol Immunother 2019; 68: 1681 -1688.\n112 Setten RL, Rossi JJ, Han SP. The current state and future directions of RNAi-based therapeutics. Nat Rev Drug Discov 2019; 18: 421 -446.\n113 Cao F, Wan C, Xie L, et al. Localized RNA interference therapy to eliminate residual lung cancer after incomplete microwave ablation. Thorac Cancer 2019; 10: 1369 -1377.\n114 Ost DE, Sterman DH. Interventional Bronchoscopy in 2015. Removing Endoluminal and Methodological Obstructions. Ann Am Thorac Soc 2015; 12: 1265 -1266.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    }
+  ],
+  "tables": [
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/29'}",
+      "headers": [
+        "Therapy",
+        "References"
+      ],
+      "rows": [
+        [
+          "Bacillus Calmette - Guerin (BCG) # Nocardia rubra cell wall cytoskeleton # OK-432 Ethanol (99.5%) 5-Fluorouracil Mitomycin Methotrexate Bleomycin Mitoxantrone Cisplatin # Carboplatin Paclitaxel Para-toluenesulfonamide Recombinant viral vector #",
+          "[12 - 14] [45] [46] [47] [17, 19] [17] [17] [17] [17] [20, 21, 25 - 29, 34, 48 - 50] [18] [30, 33] [31, 32] [35 - 44]"
+        ]
+      ],
+      "footnotes": [
+        {
+          "cref": "#/texts/30"
+        }
+      ],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "",
+      "headers": [
+        "Therapy",
+        "Phase",
+        "Site",
+        "Tumour types",
+        "Key outcome(s)",
+        "ClinicalTrials. gov ID",
+        "Title"
+      ],
+      "rows": [
+        [
+          "AdV-tk (aglatimagene besadenovec) +valacyclovir",
+          "I",
+          "Intratumoural bronchoscopic injection",
+          "NSCLC",
+          "Primary: Safety Secondary: Immunologic changes, PFS, OS",
+          "NCT03131037",
+          "Intratumoural gene-mediated cytotoxic immunotherapy in patients with"
+        ],
+        [
+          "CCL21 gene-modified dendritic cell with pembrolizumab",
+          "I",
+          "Bronchoscopic or CT-guided intratumoural injection",
+          "NSCLC",
+          "Primary: Maximum tolerated dose, objective response rate Secondary: Adverse events, PD-L1 expression",
+          "NCT03546361",
+          "resectable NSCLC Intratumoural administration of CCL21 gene-modified dendritic cell with intravenous pembrolizumab for advanced NSCLC"
+        ],
+        [
+          "Intratumoural G100 with atezolizumab and radiotherapy",
+          "II",
+          "Intratumoural bronchoscopic injection",
+          "NSCLC Pancreatic cancer Virus-associated tumours Melanoma Bladder cancer Triple-negative",
+          "Primary: Response by RECIST 1.1 Secondary: Adverse events, tumour immune cells, blood cytokines, lymphocytes and kynurenine",
+          "NCT03915678",
+          "Atezolizumab combined with intratumoural G100 And immunogenic radiotherapy in patients with advanced solid tumours (AGADIR)"
+        ],
+        [
+          "Intratumoural ilixadencel with pembrolizumab",
+          "I/II",
+          "Intratumoural #",
+          "breast cancer NSCLC Squamous cell carcinoma of head and neck Gastric adenocarcinoma",
+          "Primary: Adverse events, objective response rate Secondary: Objective response rate, CD8 T cell response by flow cytometry, overall survival, progression free survival",
+          "NCT03735290",
+          "Study to evaluate the safety and effectiveness of ilIxadencel administered into tumours in combination with checkpoint inhibitor in patients with advanced cancer"
+        ],
+        [
+          "Oncolytic adenovirus (CAdVEC) and T cells (HER2-AdVST)",
+          "I",
+          "Intratumoural #",
+          "Lung cancer Bladder cancer Squamous cell carcinoma of head and neck Cancer of the salivary gland Breast cancer Gastric cancer Oesophageal cancer Colorectal cancer",
+          "Primary: Maximum tolerated dose Secondary: Response by RECIST 1.1, PFS, OS, adverse events",
+          "NCT03740256",
+          "(ILIAD) Binary oncolytic adenovirus in combination with HER2-specific chimeric antigen receptor modified cytotoxic T cells in advanced HER2 positive solid tumours (VISTA)"
+        ],
+        [
+          "INT230-6",
+          "I/II",
+          "Intratumoural #",
+          "Lung cancer Melanoma Head and neck cancer Lymphoma Breast cancer Pancreatic cancer Liver cancer Colon cancer Glioblastoma Bile duct cancer Ovarian cancer Sarcoma Squamous cell carcinoma",
+          "Primary: Adverse events Secondary: Efficacy, pharmacokinetics and pharmacodynamics",
+          "NCT03058289",
+          "Phase 1/2 safety study of intratumourally dosed INT230-6 (IT-01)"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/104'}",
+      "headers": [
+        "Therapy",
+        "Phase",
+        "Site",
+        "Tumour types",
+        "Key outcome(s)",
+        "ClinicalTrials. gov ID",
+        "Title"
+      ],
+      "rows": [
+        [
+          "Intratumoural ABBV-927 with or without ABBV-181",
+          "I",
+          "Intratumoural #",
+          "NSCLC Squamous cell carcinoma of head and neck Advanced solid tumours",
+          "Primary: Maximum tolerated dose, pharmacokinetics and pharmacodynamics Secondary: Clinical benefit rate, objective response rate, PFS",
+          "NCT02988960",
+          "Study of ABBV-927 and ABBV-181, an immunotherapy, in subjects with advanced solid tumours"
+        ],
+        [
+          "Clostridium novyi-NT",
+          "I",
+          "Intratumoural #",
+          "Advanced solid tumours",
+          "Primary: Maximum tolerated dose Secondary: Response by RECIST 1.1",
+          "NCT03435952",
+          "Pembrolizumab with intratumoural injection of Clostridium novyi-NT"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    }
+  ],
+  "figures": [
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/48'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/68'}",
+      "page": null
+    }
+  ],
+  "references": [
+    {
+      "title": "Global cancer statistics 2018: GLOBOCAN estimates of incidence and mortality worldwide for 36 cancers in 185 countries"
+    },
+    {
+      "title": "CA Cancer J Clin",
+      "year": 2018
+    },
+    {
+      "title": "Checkpoint blockade in lung cancer and mesothelioma",
+      "year": 2018
+    },
+    {
+      "title": "Am J Respir Crit Care Med",
+      "year": 2017
+    },
+    {
+      "title": "Cancer immunotherapy using checkpoint blockade",
+      "year": 2017
+    },
+    {
+      "title": "Science",
+      "year": 2018
+    },
+    {
+      "title": "Immune-related adverse events associated with immune checkpoint blockade",
+      "year": 2018
+    },
+    {
+      "title": "N Engl J Med",
+      "year": 2018
+    },
+    {
+      "title": "Intratumoural immunotherapy-update 2019",
+      "year": 2018
+    },
+    {
+      "title": "Oncologist",
+      "year": 2020
+    },
+    {
+      "title": "Recent advances in bronchoscopic treatment of peripheral lung cancers",
+      "year": 2020
+    },
+    {
+      "title": "Chest",
+      "year": 2017
+    },
+    {
+      "title": "The treatment of malignant tumours by repeated inoculations of erysipelas: with a report of 10 original cases",
+      "year": 2017
+    },
+    {
+      "title": "Am J Med",
+      "year": 2017
+    },
+    {
+      "title": "The toxins of William B. Coley and the treatment of bone and soft-tissue sarcomas",
+      "year": 1893
+    },
+    {
+      "title": "Iowa Orthop J",
+      "year": 1893
+    },
+    {
+      "title": "Palliation of cancer in human patients by maintenance therapy with NN&apos;N&quot;-triethylene thiophosphoramide and N-(3-oxapentamethylene)-N&apos;N&quot;-diethylene phosphoramide",
+      "year": 2006
+    },
+    {
+      "title": "Ann N Y Acad Sci",
+      "year": 1958
+    },
+    {
+      "title": "Direct intratumoural chemotherapy",
+      "year": 1958
+    },
+    {
+      "title": "Crit Rev Oncol Hematol",
+      "year": 1958
+    },
+    {
+      "title": "Flexible bronchoscopy",
+      "year": 1993
+    },
+    {
+      "title": "Clin Chest Med",
+      "year": 2018
+    },
+    {
+      "title": "Immunotherapy for lung cancer cases using BCG or BCG cell-wall skeleton: intratumoural injections",
+      "year": 2018
+    },
+    {
+      "title": "Gann Monogr Cancer Res"
+    },
+    {
+      "title": "Intratumoural Bacillus Calmette-Guérin immunotherapy prior to surgery for carcinoma of the lung: results of a prospective randomized trial"
+    },
+    {
+      "title": "Cancer Res"
+    },
+    {
+      "title": "The role of Toll-like receptors in combating mycobacteria",
+      "year": 1986
+    },
+    {
+      "title": "Semin Immunol",
+      "year": 2004
+    },
+    {
+      "title": "The direct injection of several anti-cancer drugs into the primary lung cancer lesion through a fiberoptic bronchoscope",
+      "year": 2004
+    },
+    {
+      "title": "Jpn J Thorac Dis",
+      "year": 1982
+    },
+    {
+      "title": "Direct injection of anti-cancer drugs into endobronchial tumours for palliation of major airway obstruction",
+      "year": 1982
+    },
+    {
+      "title": "Postgrad Med J",
+      "year": 1997
+    },
+    {
+      "title": "Local chemotherapy by fibrobronchoscopy for advanced bronchogenic carcinoma",
+      "year": 1997
+    },
+    {
+      "title": "Chin J Tuberc Respir Dis",
+      "year": 2000
+    },
+    {
+      "title": "Intratumoural chemotherapy with 5-fluorouracil for palliation of bronchial cancer in patients with severe airway obstruction",
+      "year": 2000
+    },
+    {
+      "title": "J Pharm Pharmacol",
+      "year": 2003
+    },
+    {
+      "title": "Intratumoural administration of cisplatin through a bronchoscope followed by irradiation for treatment of inoperable non-small cell obstructive lung cancer",
+      "year": 2003
+    },
+    {
+      "title": "Lung Cancer",
+      "year": 2006
+    },
+    {
+      "title": "Endobronchial intratumoural chemotherapy (EITC) followed by surgery in early non-small cell lung cancer with polypoid growth causing erroneous impression of advanced disease",
+      "year": 2006
+    },
+    {
+      "title": "Intratumoural cancer chemotherapy through a flexible bronchoscope",
+      "year": 2006
+    },
+    {
+      "title": "J Bronchol",
+      "year": 2004
+    },
+    {
+      "title": "Endobronchial chemotherapy in malignant airway lesions of the lung: report of 3 years experience",
+      "year": 2004
+    },
+    {
+      "title": "Bronchoscopic intratumoural chemotherapy of lung cancer",
+      "year": 2007
+    },
+    {
+      "title": "Intratumoural chemotherapy as an adjuvant to endobronchial brachytherapy",
+      "year": 2008
+    },
+    {
+      "title": "J Thorac Oncol",
+      "year": 2010
+    },
+    {
+      "title": "Intratumoural chemotherapy for lung cancer: re-challenge current targeted therapies",
+      "year": 2010
+    },
+    {
+      "title": "Drug Des Devel Ther",
+      "year": 2013
+    },
+    {
+      "title": "Restoration of patency to central airways occluded by malignant endobronchial tumours using intratumoural injection of cisplatin",
+      "year": 2013
+    },
+    {
+      "title": "Ann Am Thorac Soc",
+      "year": 2015
+    },
+    {
+      "title": "Treatment of malignant airway obstruction with intratumoural injection of chemotherapy with cisplatin",
+      "year": 2015
+    },
+    {
+      "title": "Endobronchial ultrasound-guided transbronchial needle injection for local control of recurrent non-small cell lung cancer",
+      "year": 2015
+    },
+    {
+      "title": "Intratumoural chemotherapy with paclitaxel liposome combined with systemic chemotherapy: a new method of neoadjuvant chemotherapy for stage III unresectable non-small cell lung cancer",
+      "year": 2015
+    },
+    {
+      "title": "Med Oncol",
+      "year": 2015
+    },
+    {
+      "title": "Effects of para-toluenesulfonamide intratumoural injection on non-small cell lung carcinoma with severe central airway obstruction: A multi-center, non-randomized, single-arm, open-label trial",
+      "year": 2015
+    },
+    {
+      "title": "Effects of para-toluenesulfonamide intratumoural injection on pulmonary adenoid cystic carcinoma complicating with severe central airway obstruction: a 5-year follow-up study",
+      "year": 2016
+    },
+    {
+      "title": "J Thorac Dis",
+      "year": 1982
+    },
+    {
+      "title": "Prospective multicentered safety and feasibility pilot for endobronchial intratumoural chemotherapy",
+      "year": 2018
+    },
+    {
+      "title": "Cisplatin pharmacodynamics following endobronchial ultrasound-guided transbronchial needle injection into lung tumours",
+      "year": 2019
+    },
+    {
+      "title": "Sci Rep",
+      "year": 2019
+    },
+    {
+      "title": "Retrovirus-mediated wild-type p53 gene transfer to tumours of patients with lung cancer",
+      "year": 2019
+    },
+    {
+      "title": "Nat Med",
+      "year": 1996
+    },
+    {
+      "title": "A phase I study of adenovirus-mediated wild-type p53 gene transfer in patients with advanced non-small cell lung cancer",
+      "year": 1996
+    },
+    {
+      "title": "Hum Gene Ther",
+      "year": 1998
+    },
+    {
+      "title": "Adenovirus-mediated p53 gene transfer in advanced non-small-cell lung cancer",
+      "year": 1998
+    },
+    {
+      "title": "J Natl Cancer Inst",
+      "year": 1999
+    },
+    {
+      "title": "Phase I study of a recombinant adenovirus-mediated gene transfer in lung cancer patients",
+      "year": 1999
+    },
+    {
+      "title": "Recombinant adenovirus shedding after intratumoural gene transfer in lung cancer patients",
+      "year": 1996
+    },
+    {
+      "title": "Gene Ther",
+      "year": 1998
+    },
+    {
+      "title": "Adenovirus-mediated p53 gene transfer in sequence with cisplatin to tumours of patients with non-small-cell lung cancer",
+      "year": 2003
+    },
+    {
+      "title": "J Clin Oncol",
+      "year": 2000
+    },
+    {
+      "title": "Adenoviral-mediated p53 gene transfer to non-small cell lung cancer through endobronchial injection",
+      "year": 2000
+    },
+    {
+      "title": "Adenovirus-mediated wild-type p53 gene transfer in patients receiving chemotherapy for advanced non-small-cell lung cancer: results of a multicenter phase II study",
+      "year": 2000
+    },
+    {
+      "title": "Induction of p53-regulated genes and tumour regression in lung cancer patients after intratumoural delivery of adenoviral p53 (INGN 201) and radiation therapy",
+      "year": 2001
+    },
+    {
+      "title": "Clin Cancer Res",
+      "year": 2003
+    },
+    {
+      "title": "Multicenter phase I study of repeated intratumoural delivery of adenoviral p53 in patients with advanced non-small-cell lung cancer",
+      "year": 2003
+    },
+    {
+      "title": "Randomized controlled study of adjuvant immunotherapy with Nocardia rubra cell wall skeleton for inoperable lung cancer",
+      "year": 2006
+    },
+    {
+      "title": "A case of bronchial carcinoma showing regression upon intratumoural administration of OK-432",
+      "year": 1983
+    },
+    {
+      "title": "Gan To Kagaku Ryoho",
+      "year": 1988
+    },
+    {
+      "title": "Intratumoural ethanol injection for malignant tracheobronchial lesions: a new bronchofiberscopic procedure",
+      "year": 1988
+    },
+    {
+      "title": "Endoscopy",
+      "year": 1986
+    },
+    {
+      "title": "Treatment of isolated mediastinal and hilar recurrence of lung cancer with bronchoscopic endobronchial ultrasound guided intratumoural injection of chemotherapy with cisplatin",
+      "year": 1986
+    },
+    {
+      "title": "A case report of local treatment of inoperable squamous cell lung carcinoma with convex-probe endobronchial ultrasound-guided intratumoural injection of cisplatin in a patient with severe COPD",
+      "year": 2015
+    },
+    {
+      "title": "Medicine",
+      "year": 2017
+    },
+    {
+      "title": "Endobronchial ultrasound-guided intratumoural injection of cisplatin for the treatment of isolated mediastinal recurrence of lung cancer",
+      "year": 2017
+    },
+    {
+      "title": "J Vis Exp",
+      "year": 2017
+    },
+    {
+      "title": "Phase I trial of intratumoural injection of CCL21 gene-modified dendritic cells in lung cancer elicits tumour-specific immune responses and CD8(+) T-cell infiltration",
+      "year": 2017
+    }
+  ],
+  "quality": {
+    "completeness_score": 0,
+    "has_abstract": true,
+    "abstract_source": "metadata",
+    "has_doi": true,
+    "has_full_text": true,
+    "num_sections": 19,
+    "num_tables": 3,
+    "num_figures": 5,
+    "num_references": 86
+  }
+}

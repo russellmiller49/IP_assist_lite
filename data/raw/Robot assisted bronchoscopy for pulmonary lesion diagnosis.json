@@ -1,0 +1,859 @@
+{
+  "metadata": {
+    "document_id": "10_1186_s12890_019_1010_8",
+    "title": "Robot-assisted bronchoscopy for pulmonary lesion diagnosis: results from the initial multicenter experience",
+    "authors": [
+      "Udit Chaddha",
+      "Stephen P. Kovacs",
+      "Christopher Manley",
+      "D. Kyle Hogarth",
+      "Gustavo Cumbo-Nacheli",
+      "Sivasubramanium V. Bhavani",
+      "Rohit Kumar",
+      "Manisha Shende",
+      "John P. Egan",
+      "Septimiu Murgu"
+    ],
+    "year": 2019,
+    "journal": "BMC Pulmonary Medicine",
+    "doi": "10.1186/s12890-019-1010-8",
+    "volume": "19",
+    "issue": "1",
+    "pages": "243",
+    "citation": "Chaddha, et al. (2019). Robot-assisted bronchoscopy for pulmonary lesion diagnosis: results from the initial multicenter experience. BMC Pulmonary Medicine, 19(1), 243. https://doi.org/10.1186/s12890-019-1010-8",
+    "abstract": "Background: The Robotic Endoscopic System (Auris Health, Inc., Redwood City, CA) has the potential to overcome several limitations of contemporary guided-bronchoscopic technologies for the diagnosis of lung lesions. Our objective is to report on the initial post-marketing feasibility, safety and diagnostic yield of this technology. Methods: We retrospectively reviewed data on consecutive cases in which robot-assisted bronchoscopy was used to sample lung lesions at four centers in the US (academic and community) from June 15th, 2018 to December 15th, 2018. Results: One hundred and sixty-seven lesions in 165 patients were included in the analysis, with an average followup of 185 ± 55 days. The average size of target lesions was 25.0 ± 15.0 mm. Seventy-one percent were located in the peripheral third of the lung. Pneumothorax and airway bleeding occurred in 3.6 and 2.4% cases, respectively. Navigation was successful in 88.6% of cases. Tissue samples were successfully obtained in 98.8%. The diagnostic yield estimates ranged from 69.1 to 77% assuming the cases of biopsy-proven inflammation without any follow-up information ( N = 13) were non-diagnostic and diagnostic, respectively. The yield was 81.5, 71.7 and 26.9% for concentric, eccentric and absent r-Endobronchial ultrasound (EBUS) views, respectively. Diagnostic yield was not affected by lesion size, density, lobar location or centrality. Conclusions: RAB implementation in community and academic centers is safe and feasible, with an initial diagnostic yield of 69.1 -77% in patients with lung lesions that require diagnostic bronchoscopy. Comparative trials with the existing bronchoscopic technologies are needed to determine cost-effectiveness of this technology",
+    "abstract_source": "metadata",
+    "url": "https://bmcpulmmed.biomedcentral.com/articles/10.1186/s12890-019-1010-8"
+  },
+  "source_file": "Robot assisted bronchoscopy for pulmonary lesion diagnosis.json",
+  "sections": [
+    {
+      "title": "Robot-assisted bronchoscopy for pulmonary lesion diagnosis: results from the initial multicenter experience",
+      "content": "Udit Chaddha 1* † , Stephen P. Kovacs 2 † , Christopher Manley 3 , D. Kyle Hogarth 4 , Gustavo Cumbo-Nacheli 5 , Sivasubramanium V. Bhavani 6 , Rohit Kumar 7 , Manisha Shende 8 , John P. Egan III 9 and Septimiu Murgu 6",
+      "category": "results",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Abstract",
+      "content": "Background: The Robotic Endoscopic System (Auris Health, Inc., Redwood City, CA) has the potential to overcome several limitations of contemporary guided-bronchoscopic technologies for the diagnosis of lung lesions. Our objective is to report on the initial post-marketing feasibility, safety and diagnostic yield of this technology.\nMethods: We retrospectively reviewed data on consecutive cases in which robot-assisted bronchoscopy was used to sample lung lesions at four centers in the US (academic and community) from June 15th, 2018 to December 15th, 2018.\nResults: One hundred and sixty-seven lesions in 165 patients were included in the analysis, with an average followup of 185 ± 55 days. The average size of target lesions was 25.0 ± 15.0 mm. Seventy-one percent were located in the peripheral third of the lung. Pneumothorax and airway bleeding occurred in 3.6 and 2.4% cases, respectively. Navigation was successful in 88.6% of cases. Tissue samples were successfully obtained in 98.8%. The diagnostic yield estimates ranged from 69.1 to 77% assuming the cases of biopsy-proven inflammation without any follow-up information ( N = 13) were non-diagnostic and diagnostic, respectively. The yield was 81.5, 71.7 and 26.9% for concentric, eccentric and absent r-Endobronchial ultrasound (EBUS) views, respectively. Diagnostic yield was not affected by lesion size, density, lobar location or centrality.\nConclusions: RAB implementation in community and academic centers is safe and feasible, with an initial diagnostic yield of 69.1 -77% in patients with lung lesions that require diagnostic bronchoscopy. Comparative trials with the existing bronchoscopic technologies are needed to determine cost-effectiveness of this technology.\nKeywords: Robotic bronchoscopy, Biopsy, Electromagnetic navigation, Lung cancer, Lung lesion",
+      "category": "abstract",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Background",
+      "content": "The increasing need to efficiently and safely sample lung lesions has led to the development of virtual bronchoscopy (VB), radial endobronchial ultrasound (r-Endobronchial ultrasound (EBUS)), electromagnetic navigation (EMN), fluoroscopy-based navigation, bronchoscopic trans-parenchymal nodule access (BTPNA), ultrathin bronchoscopes, and cone-beam computed tomography (CBCT) guided-bronchoscopy. The diagnostic yield for lung lesions using these modern\nbronchoscopic techniques continues to be suboptimal and is 40 -70% [1 -7].\nThe now commercially available robotic endoscopic system (RES; Auris Health, Inc., Redwood City, CA) has been recently FDA-approved for sampling lung lesions. In cadaveric models, robot-assisted bronchoscopy (RAB) was shown to have improved reach in the periphery of the lung in all segments when compared with 4.2 mm OD conventional thin bronchoscopes (by average generation count: 8.7 vs 5.6) [8]. This may be explained by 1) the improved structural support provided by the outer sheath, that is usually locked in the target segment (usually 3rd-4th generation) before advancing the scope, and 2) the improved ability to make subtle turns due to 4-\n* Correspondence: drudit@gmail.com; udit.chaddha@mssm.edu\nUdit Chaddha and Stephen P. Kovacs are co-principle investigators.\n1\nDivision of Pulmonary, Critical Care and Sleep Medicine, Icahn School of\nMedicine at Mount Sinai, One Gustave L. Levy Place, Box 1232, New York, NY\n10029, USA\nFull list of author information is available at the end of the article\nway steering and a distal section capable of achieving articulation in pitch and/ or yaw. RAB also allows direct visualization of peripheral airways and of the biopsy tools as they are advanced outside the working channel, thereby enabling the operator to better steer the tools towards the target. The scope can be locked in position and the instruments advanced through the working channel without exertion of torque onto the bronchoscope, minimizing airway distortion. This, along with the better column strength and telescoping design, could enable higher diagnostic yields of peripheral lesions.\nTo date, only a small feasibility study that enrolled 15 patients using the RES was performed and showed no pneumothoraces or significant bleeding [9]. The aim of our study is to report on the initial post-marketing feasibility, safety and diagnostic yield of this technology implemented at four US-based university and community centers.",
+      "category": "introduction",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Patients",
+      "content": "We retrospectively reviewed data on consecutive cases in which RAB was used to diagnose lung lesions from the very beginning of our experience with this technology (June 15th, 2018) until December 15th, 2018, at four centers in the US (University of Chicago Medical Center, Chicago, IL; University of Pittsburgh Medical Center Hamot, Erie, PA; Fox Chase Cancer Center, Philadelphia, PA; Spectrum Health, Grand Rapids, MI). The medical records of consecutive patients who were considered to require a guided bronchoscopy (EMN, VB with or without r-Endobronchial ultrasound (EBUS)) and underwent RAB to diagnose lung lesions, were reviewed and included in the analysis.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Inclusion and exclusion criteria Inclusion criteria",
+      "content": "Consecutive patients evaluated for diagnosis of lung lesions considered to require guided bronchoscopy and underwent robotic bronchoscopy (must include 1, 2, and one of 3, 4, 5 or 6):\n1. 18 years of age or older\n2. Acceptable candidate for an elective bronchoscopic procedure under general anesthesia\n3. Pulmonary lesions suspected of being primary lung cancers identified on thin-slice CT scan, requiring bronchoscopic biopsy for diagnosis based on the guidelines [10, 11]\n4. Patients with a history of lung cancer presenting with new or growing lung lesions requiring tissue diagnosis for confirming recurrence or progression of disease\n5. Pulmonary lesions requiring tissue diagnosis in patients with a history of extrathoracic malignancy\n6. Patients with lung lesions suspected of being due to mycobacterial or fungal infection for which a tissue diagnosis was required prior to antimicrobial therapy",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Exclusion criteria",
+      "content": "If inspection bronchoscopy demonstrated an endobronchial lesion that can be easily biopsied using a conventional white light bronchoscope.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Endpoints",
+      "content": "Device or procedure-related complications: pneumothorax (any size, even if asymptomatic), significant airway bleeding (when the robotic bronchoscope was withdrawn and a flexible bronchoscope was used for cold saline, epinephrine or endobronchial blockers), respiratory failure within 24 h of procedure (defined as new or increased requirement of supplemental oxygen or need for post-procedure ventilatory support, invasive or non-invasive).\nSuccessful navigation: evidenced by obtaining an eccentric or concentric r-Endobronchial ultrasound (EBUS) view, or diagnostic tissue on final pathology.\nDiagnostic yield: Defined as the percentage of procedures yielding a diagnosis based on final pathology. If follow-up diagnostic tests confirmed a different diagnosis, or lesion growth, new lymphadenopathy or metastatic spread was detected, the procedure was considered as non-diagnostic [12]. Additionally, if the patient received treatment for lung cancer without a confirmed diagnosis or received a new diagnoses of lung cancer from any site (including from non-index lesions, or from lymph nodes by Endobronchial ultrasound (EBUS), during or after the index procedure), the procedure was considered as non-diagnostic. Diagnostic yield based on lesion characteristics (size, centrality, density, location, bronchus sign, r-Endobronchial ultrasound (EBUS) view obtained) are reported considering that cases with biopsy proven inflammation for which no follow-up was available, are non-diagnostic (conservative estimates).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Study design",
+      "content": "Multi-center, retrospective, consecutive case series\nProcedure The Monarch Endoscopy Platform is an FDA cleared medical device (510 K #: 173760) intended to provide bronchoscopic visualization of and access to patient ' s peripheral airways for diagnostic and potentially for therapeutic procedures. General anesthesia with an indwelling endotracheal tube was used for all procedures, with a tidal volume of 6 -8 cc/kg and a positive end-expiratory pressure of 5 -10 cm H2O. Airway inspection using a conventional white light bronchoscope\nwas performed prior to RAB to rule out an obvious endobronchial lesion and to clear out sections from the airways. When mediastinal staging was indicated, EBUSguided transbronchial needle aspiration (TBNA) was performed prior to RAB.\nDuring RAB navigation, the physician uses a controller to move the robotic arms that contain rotatory pulleys to drive the bronchoscope. The bronchoscope is comprised of an outer sheath (6.0 mm) and inner scope (4.2 mm). Usually, once at a segmental bronchus, the sheath is locked in position and the scope is advanced into the smaller peripheral airways. The system uses an electromagnetic field generator and reference sensors much like other EMN bronchoscopy systems. r-Endobronchial ultrasound (EBUS) was used as a confirmatory tool to verify proximity to the target. CBCT was not used in any of the cases. Biopsy tools are advanced through the working channel (2.1 mm), to biopsy the target lesion under fluoroscopy.",
+      "category": "methods",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Statistical analysis",
+      "content": "Mean and standard deviation are reported for continuous variables; categorical variables are reported as percentage and counts. Associations between lesion characteristics and diagnostic yield were calculated using chi-squared tests. Multivariable logistic regression was performed to determine the odds ratio of diagnostic yield adjusted for the following characteristics: lesion location, centrality, density and size, bronchus sign and rEBUS view. Two-tailed p -values of less than 0.05 were considered statistically significant for all comparisons, and analyses were performed using Stata version 14.1 (StataCorp, College Station, TX).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Results",
+      "content": "During the study period at the four study centers, 167 lesions were biopsied in 165 patients. Two lesions were biopsied in the same procedure in two cases. The average follow-up was 185 ± 55 days.",
+      "category": "results",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Baseline and clinical characteristics of study patients",
+      "content": "The study population consisted of 75 (46%) females. The average age at the time of the procedure was 66.5 ± 10.9 years; 77% were smokers. None of the biopsies were performed on dual anti-platelet therapy or anti-coagulants. The baseline and disease-related characteristics of the study population are presented in Table 1.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Lesion characteristics",
+      "content": "The average size of targeted lesions based on the largest measurable diameter was 25.0 ± 15.0 mm; 71.3% were ≤ 30 mm (Table 2) and 70.7% were located in the peripheral third of the lung. Bronchus-sign on the preprocedure CT scan was observed in 106 (63.5%) lesions and 68.8% lesions were solid.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Procedure data",
+      "content": "Navigation was successful in 148 (88.6%) lesions. In one case (0.6%), the RAB procedure was aborted due to a\nValues are means ± standard deviation or counts (%)\nValues are means ± standard deviation or counts (%)\na Central lesions were defined as being located within the inner 2/3rd of the hemithorax and peripheral as those within the outer third of the hemithorax, as delineated by concentric lines around the hilum\nsoftware failure. The average navigation and procedure time were 17.8 ± 19.1 min and 58.6 ± 31.4 min, respectively (this data was not available for 46 cases). The targeted lesions were detected with r-Endobronchial ultrasound (EBUS) in 141 (84.4%) (eccentric view in 42.5% and concentric view in 57.5%).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Biopsy data",
+      "content": "Tissue samples were successfully obtained in 161 (97.6%) patients. Samples were not obtained in 4 (2.4%) cases (1 software failure, 3 unsuccessful navigation). These 4 cases were included in the analyses as failures. The overall diagnostic yield ranged from 69.1 -77% assuming all the cases with biopsy proven inflammation without available follow-up ( N = 13) were non-diagnostic and diagnostic, respectively.\nThe yield was 81.5, 71.7 and 26.9% for concentric, eccentric and absent r-Endobronchial ultrasound (EBUS) views, respectively ( p < 0.001). Diagnostic yield was higher for lesions with a ' bronchus sign ' (78.3% v 54.1%, P = 0.001). Yield was not different for solid versus ground glass nodules (68.8% v 70.6%, P = 0.74), central versus peripheral location (73.5% vs 67.8%, p = 0.47) and did not depend upon lesion size (45.5% for < 1 cm vs 68.5% for 1 -3 cm vs 77.1% for ≥ 3 cm, p = 0.11). Outcomes based on the various nodule characteristics are shown in Tables 3 and 4. Lung adenocarcinoma accounted for 40.4% of diagnosed lesions. The pathological findings in the 114 diagnostic cases are presented in Table 5.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Safety",
+      "content": "Pneumothorax occurred in 6 (3.6%) cases, requiring chest tube placement in 4 (2.4%). Significant bleeding post-biopsies was reported in 4 (2.4%) cases. There was no need for blood transfusion, open thoracotomy or use of endobronchial blockers in any case. There were no reports of respiratory failure, deaths or any other procedure-related complications.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Discussion",
+      "content": "This is the first study after the market release of robotic bronchoscopy in March 2018. Our study ' s patients ' characteristics and average lesion size are similar to published EMN studies [12 -14]. Navigation success was achieved in 88.6% with 69.1 -77% overall diagnostic yield (conservative and maximum estimate). There were 13 cases in which pathology showed inflammation for which follow-up was not available. These cases were considered as non-diagnostic to provide conservative estimates of navigation success and yield based on various lesion characteristics. We provide an overall diagnostic yield range as some of these lesions could have resolved with time and have been diagnostic, if we had long-term follow-up on them [12]. We believe our definition of navigation success is meaningful for clinicians as it\nconsists of the presence of diagnostic material on final pathology, or r-Endobronchial ultrasound (EBUS) image confirmation. We did not rely only on the target image generated by the EMN software, which could be prone to multiple errors [15]. However, our definition may be subject to overestimation as it is possible that atelectasis or alveolar filling may have resulted in false positive r-Endobronchial ultrasound (EBUS) images. In the absence of CBCT and confirmation of tool-in-target, it is difficult to precisely define true navigation success.\nValues are counts/counts (%). P values represent significance of association between lesion characteristic and diagnostic yield using chi-squared tests\nOn multivariable logistic regression adjusting for the following characteristics (lesion location, centrality, endobronchial visibility, lesion appearance and size, bronchus sign and r-Endobronchial ultrasound (EBUS) view), only the presence of bronchus sign and rEBUS view were significant determinants of diagnostic yield\nIn this series, diagnostic yield did not depend on lesion lobar location, centrality or size. The diagnostic yield did not depend on lesion density as well; however, we only had 17 lesions that were pure ground-glass density. The yield was better when a concentric r-Endobronchial ultrasound (EBUS) view was obtained compared to an eccentric view (81.5 and 71.7%). The high yield even when an eccentric view was obtained compares favorably to previously reported rates of 48% in such cases [16]. This is likely because RAB allows stability, visualization of the point of contact of the radial probe with the airway wall and enables directional targeting of instruments [17] (Fig. 1). Biopsies were obtained in 84.6% (22/26) of cases in which r-Endobronchial ultrasound (EBUS) confirmation was not obtained. The majority of these lesions (73%) were solid. The decision to biopsy was at the discretion of the operator when it was believed that the robotic scope was in the target ' s proximity but in an\nadjacent airway based on the EM-generated target view. Our yield of 54% in the absence of bronchus sign is higher than previously reported rates of 31 -44% [18, 19] but is lower than a recently published multi-center EMN study [12].\nProcedure-related complications are comparable to those from other guided bronchoscopy studies, with a 3.6% pneumothorax and 2.4% bleeding rate [2, 4, 12]. While bleeding during RAB can be managed with injection of cold saline through the working channel of the robotic scope, in cases of suspected significant bleed, we have decided to disconnect the robotic scope and introduce a therapeutic flexible bronchoscope (2.8 mm working channel) to evaluate and potentially control the hemorrhage. While switching of scopes runs the risk of losing a wedged position and anatomical orientation in situations with major bleeding, we have not yet encountered such bleeding in any of our cases, likely because the robotic scope locked in a wedged position in a small peripheral airway allows containment and clotting of biopsy-related bleeding. All our cases of bleeding were controlled with just cold saline. Given that we injected cold saline prior to suctioning out the blood, we were not able to accurately quantify the volume of blood loss in each case by just looking at the return in the suction canister. There were no cases of respiratory failure or death in our study.\nOur case series has several limitations. Our average follow-up period of 6 months is not sufficient to determine the true diagnostic yield and in fact large studies usually report outcomes at 12 months [2, 12]. However, as highlighted above, for the purposes of all calculations, cases that required follow-up that had not been done yet were considered as non-diagnostic. Needles and forceps were used in 100 and 96% of cases, respectively. The order in which they were used was per operators ' discretion and not captured in this analysis. In addition, the tool-specific diagnostic yield was not possible to analyze as the touch prep from forceps biopsies are reported under the cytology section and not labeled as distinct from the needle specimens. We believe that prospective studies should address the independent diagnostic yield for needles, brushes and forceps biopsies. Amongst the 71 patients diagnosed with lung cancer, adequacy of tissue obtained for genetic testing was not reported consistently in the four centers, as the practice of molecular testing for early stage lung cancer remains institutiondependent. Our definition of significant bleeding is unconventional. Unfortunately, with the robotic scope positioned in distal airway, it is very difficult to accurately assess the severity of bleeding. Future prospective studies may be able to better elucidate the true bleeding rate with RAB, without withdrawing the robotic scope. Bronchoscopy room set up, navigation and procedure times\nValues are counts (%). In four cases tissue was not acquired due to navigation failure\na Atypical cells were labeled as diagnostic when they were considered sufficient to manage a nodule (with no further biopsy or follow-up required) on multi-disciplinary consensus. E.g. In a patient with head & neck cancer with lung nodules, if the lung biopsy revealed atypical cells that were considered sufficient to consider the disease as metastatic to the lung (requiring no further work-up), it was considered as a diagnostic procedure. If the finding of atypical cells required further work-up or biopsy to better characterize this, the procedure was considered non-diagnostic. E.g. A patient with suspected lung cancer, in whom a biopsy showed just atypical cells would be considered non-diagnostic\nb Necrotic material on pathology was found in a patient whose presentation and course was consistent with a lung abscess, and in another patient with a lung lesion with newly-diagnosed histoplasmosis (on serology)\nc These included chronic or granulomatous inflammation with or without giant cells that decreased in size on follow-up imaging\nwere not prospectively recorded in all cases; in the cases wherein this was documented in the medical records, the mean navigation and procedure times were 17.8 and 58.6 min, respectively. Our procedure time only reflects the robotic bronchoscopy portion of a procedure and does not include the time it took to stage the mediastinum with Endobronchial ultrasound (EBUS). Based on these data, duration of navigation and biopsy seem to be similar to other EMNguided procedures [12].\nDespite our results not demonstrating superior diagnostic yield compared to some other recent EMNguided bronchoscopy studies [12], we believe that in the future, robotic bronchoscopy platforms may eventually enable operators to more precisely navigate to the periphery of the lung and potentially allow for bronchoscopic therapeutic ablation of malignant lesions. As of now, in our opinion, when available, robotic bronchoscopy should be offered to all patients\nwith suspicious peripheral lung lesions that also require 1) concurrent guidelines-recommended EBUSTBNA lymph node staging for CT-PET normal mediastinum or prior to SBRT; or 2) preoperative tissue diagnosis based on questionable operability, patient or surgeon ' s preference.",
+      "category": "discussion",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Conclusion",
+      "content": "The results of this analysis suggest that in patients with lung lesions requiring biopsy, post-marketing RAB implementation in community and academic centers is safe with initial diagnostic yield and complication rates similar to existing technologies. Long-term follow-up is required to better establish the true diagnostic yield and delineate the factors affecting it. Comparative trials with existing guided bronchoscopy platforms are warranted for determining cost-effectiveness of this technology in diagnosing lung nodules.",
+      "category": "conclusion",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Abbreviations",
+      "content": "ACCP: American College of Chest Physicians; BTPNA: Bronchoscopic Transparenchymal Nodule Access; CBCT: Cone beam computed tomography; CT: Computed tomorgraphy; Endobronchial ultrasound (EBUS): Endobronchial ultrasound; EMN: Electromagnetic navigation; NCCN: National Comprehensive Cancer Network; OD: Outer diameter; PET: Positron emission tomography; POE: Point of entry; RAB: Robot-assisted bronchoscopy; r-Endobronchial ultrasound (EBUS): Radial endobronchial ultrasound; RES: Robotic endoscopic system; TBNA: Transbronchial needle aspiration; VB: Virtual bronchoscopy",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Acknowledgements",
+      "content": "Not Applicable.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Authors ' contributions",
+      "content": "All authors had full access to the data in the study and take responsibility for the integrity of the data gathered at their institutions and the accuracy of the data analysis. Conception, outline, and design of the study: UC, SPK, CM, DKH and SM. Data acquisition: UC, SPK, MS, CM, RK, GC-N, JPE. Data analysis: SVB. Drafting the article and substantial involvement in its revision prior to submission: UC, SM, DKH, SPK, CM, GC-N. All authors have read and approved the manuscript.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Funding",
+      "content": "None.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Availability of data and materials",
+      "content": "The datasets used and analysed during the current study are available from the corresponding author on reasonable request.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Ethics approval and consent to participate",
+      "content": "The protocol was approved by all participating sites (University of Chicago Institutional Review Board 19 -0011, Fox Chase Institutional Review Board 19 -9008, Spectrum Health: Institutional Review Board 2019 -014, University of Pittsburgh Medical Center Hamot: EXEMPT.19 -RAB).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Consent for publication",
+      "content": "Not Applicable.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Competing interests",
+      "content": "Dr. Murgu has acted as a paid educational consultant for Olympus, Cook Inc., Pinnacle Biologics and Boston Scientific. Dr. Kovacs, Dr. Manley, Dr. CumboNacheli and Dr. Egan are consultants for Auris and have received consulting fees. Dr. Hogarth has received honoraria for preceptorships, lectures, and consulting from Boston Scientific. He has also received unrestricted education grants from Boston Scientific. He has received honorarium from Biodesix and Veracyte for lectures and consulting. He has received unrestricted education grants from Biodesix. He has been part of contracted research studies for Veracyte. He is a consultant for Auris and also a stock holder. Dr. Chaddha, Dr. Bhavani, Dr. Kumar and Dr. Shende have nothing to declare.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Author details",
+      "content": "1 Division of Pulmonary, Critical Care and Sleep Medicine, Icahn School of Medicine at Mount Sinai, One Gustave L. Levy Place, Box 1232, New York, NY 10029, USA. 2 UPMC Hamot Pulmonology, UPMC Hamot, Pittsburgh, USA. 3 Section of Pulmonary Medicine, Fox Chase Cancer Center, Philadelphia, USA. 4 Section of Pulmonary and Critical Care Medicine, University of Chicago Medicine, Chicago, USA. 5 Interventional Pulmonology, Michigan State University College of Human Medicine Spectrum Health, East Lansing, USA. 6 Section of Pulmonary and Critical Care Medicine, University of Chicago Medicine, Chicago, USA. 7 Section of Pulmonary Medicine, Fox Chase Cancer Center, Philadelphia, USA. 8 Department of Cardiothoracic Surgery, UPMC Hamot, Erie, USA. 9 Interventional Pulmonology, Michigan State University College of Human Medicine Spectrum Health, East Lansing, USA.\nReceived: 17 October 2019 Accepted: 25 November 2019",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "References",
+      "content": "1. Rivera MP, Mehta AC, Wahidi MM. Establishing the diagnosis of lung cancer: diagnosis and management of lung cancer, 3rd ed: American College of\nChest Physicians evidencebased clinical practice guidelines. Chest. 2013; 143(5 Suppl):e142S -65S.\n2. Ost DE, Ernst A, Lei X, et al. Diagnostic yield and complications of bronchoscopy for peripheral lung lesions. Results of the AQuIRE registry. Am J Respir Crit Care Med. 2016;193(1):68 -77.\n3. Wang Memoli JS, Nietert PJ, Silvestri GA. Meta-analysis of guided bronchoscopy for the evaluation of the pulmonary nodule. Chest. 2012; 142(2):385 -93.\n4. Mehta AC, Hood KL, Schwarz Y, Solomon SB. The evolutional history of electromagnetic navigation bronchoscopy: state of the art. Chest. 2018; 154(4):935 -47.\n5. Herth FJF, Eberhardt R, Sterman D, Silvestri GA, Hoffmann H, Shah PL. Bronchoscopic transparenchymal nodule access (BTPNA): first in human trial of a novel procedure for sampling solitary pulmonary nodules. Thorax. 2015; 70(4):326 -32.\n6. Hohenforst-Schmidt W, Zarogoulidis P, Vogl T, et al. Cone Beam Computertomography (CBCT) in interventional chest medicine - high feasibility for endobronchial realtime navigation. J Cancer. 2014;5(3):231 -41.\n7. Park SC, Kim CJ, Han CH, Lee SM. Factors associated with the diagnostic yield of computed tomography-guided transbronchial lung biopsy. Thorac Cancer. 2017;8(3):153 -8.\n8. Chen AC, Gillespie CT. Robotic endoscopic airway challenge: REACH assessment. Ann Thorac Surg. 2018;106(1):293 -7.\n9. Rojas-solano JR, Ugalde-gamboa L, Machuzak M. Robotic bronchoscopy for diagnosis of suspected lung cancer: a feasibility study. J Bronchology Interv Pulmonol. 2018;25(3):168 -75.\n10. Gould MK, Donington J, Lynch WR, et al. Evaluation of individuals with pulmonary nodules: when is it lung cancer? Diagnosis and management of lung cancer, 3rd ed: American College of Chest Physicians evidence-based clinical practice guidelines. Chest. 2013;143(5 Suppl):e93S -e120S.\n11. Callister ME, Baldwin DR, Akram AR, et al. British Thoracic Society guidelines for the investigation and management of pulmonary nodules. Thorax. 2015; 70(Suppl 2):ii1 -ii54.\n12. Folch EE, Pritchett MA, Nead MA, et al. Electromagnetic navigation bronchoscopy for peripheral pulmonary lesions: one-year results of the prospective, multicenter NAVIGATE study. J Thorac Oncol. 2019;14(3):445 -58.\n13. Gex G, Pralong JA, Combescure C, Seijo L, Rochat T, Soccal PM. Diagnostic yield and safety of electromagnetic navigation bronchoscopy for lung nodules: a systematic review and meta-analysis. Respiration. 2014;87(2):165 -76.\n14. Tanner NT, Yarmus L, Chen A, et al. Standard bronchoscopy with fluoroscopy vs thin bronchoscopy and radial endobronchial ultrasound for biopsy of pulmonary lesions: a multicenter, prospective, randomized trial. Chest. 2018;154(5):1035 -43.\n15. Chen A, Pastis N, Furukawa B, Silvestri GA. The effect of respiratory motion on pulmonary nodule location during electromagnetic navigation bronchoscopy. Chest. 2015;147(5):1275 -81.\n16. Chen A, Chenna P, Loiselle A, Massoni J, Mayse M, Misselhorn D. Radial probe endobronchial ultrasound for peripheral pulmonary lesions. A 5-year institutional experience. Ann Am Thorac Soc. 2014;11(4):578 -82.\n17. Murgu SD. Robotic assisted-bronchoscopy: technical tips and lessons learned from the initial experience with sampling peripheral lung lesions. BMC Pulm Med. 2019;19(1):89.\n18. Balbo PE, Bodini BD, Patrucco F, et al. Electromagnetic navigation bronchoscopy and rapid on site evaluation added to fluoroscopy-guided assisted bronchoscopy and rapid on site evaluation: improved yield in pulmonary nodules. Minerva Chir. 2013;68(6):57985.\n19. Seijo LM, De Torres JP, Lozano MD, et al. Diagnostic yield of electromagnetic navigation bronchoscopy is highly dependent on the presence of a bronchus sign on CT imaging: results from a prospective study. Chest. 2010;138(6):1316 -21.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Publisher ' s Note",
+      "content": "Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    }
+  ],
+  "tables": [
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/62'}",
+      "headers": null,
+      "rows": [
+        [
+          "Female",
+          "75/165 (45.5)"
+        ],
+        [
+          "Age, years",
+          "66.5± 10.9"
+        ],
+        [
+          "<55 years",
+          "14/165 (8.5)"
+        ],
+        [
+          "55 to 65 years",
+          "51/165 (30.9)"
+        ],
+        [
+          ">65 years",
+          "100/165 (60.6)"
+        ],
+        [
+          "Body mass index, kg/m 2",
+          "28.6± 9.2"
+        ],
+        [
+          "<25 kg/m 2",
+          "60/151 (40.4)"
+        ],
+        [
+          "25 to 30 kg/m 2",
+          "38/151 (25.2)"
+        ],
+        [
+          ">30 kg/m 2",
+          "53/151 (35.1)"
+        ],
+        [
+          "Family history of lung cancer",
+          "29/165 (17.6)"
+        ],
+        [
+          "History of other cancers",
+          "50/165 (30.3)"
+        ],
+        [
+          "History of Interstitial Lung Disease",
+          "3/165 (1.8)"
+        ],
+        [
+          "History of Chronic Obstructive Pulmonary Disease",
+          "70/165 (42.4)"
+        ],
+        [
+          "History of Pulmonary Hypertension",
+          "5/165 (3.0)"
+        ],
+        [
+          "Smoking history",
+          ""
+        ],
+        [
+          "Never",
+          "36/165 (21.8)"
+        ],
+        [
+          "Former",
+          "75/165 (45.5)"
+        ],
+        [
+          "Current",
+          "54/165 (32.7)"
+        ],
+        [
+          "On aspirin at the time of the procedure",
+          "40/165 (24.2)"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "",
+      "headers": null,
+      "rows": [
+        [
+          "Table 2 Lesion characteristics",
+          ""
+        ],
+        [
+          "Size, mm",
+          "25.0± 15.0"
+        ],
+        [
+          "<10",
+          "11/167 (6.6)"
+        ],
+        [
+          "10 - 30",
+          "108/167 (64.7)"
+        ],
+        [
+          ">30",
+          "48/167 (28.7)"
+        ],
+        [
+          "Location",
+          ""
+        ],
+        [
+          "Right Upper Lobe",
+          "46/167 (27.5)"
+        ],
+        [
+          "Right Middle Lobe",
+          "21/167 (12.6)"
+        ],
+        [
+          "Right Lower Lobe",
+          "32/167 (19.2)"
+        ],
+        [
+          "Left Upper Division",
+          "40/167 (24.0)"
+        ],
+        [
+          "Lingula",
+          "1/167 (0.6)"
+        ],
+        [
+          "Left Lower Lobe",
+          "27/167 (16.2)"
+        ],
+        [
+          "Peripheral lesion a",
+          "118/167 (70.7)"
+        ],
+        [
+          "Lesion appearance",
+          ""
+        ],
+        [
+          "Solid",
+          "125/167 (74.9)"
+        ],
+        [
+          "Ground Glass",
+          "17/167 (10.2)"
+        ],
+        [
+          "Mixed",
+          "15/167 (9.0)"
+        ],
+        [
+          "Cavity",
+          "10/167 (6.0)"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/79'}",
+      "headers": [
+        "",
+        "Diagnostic yield",
+        "P -value"
+      ],
+      "rows": [
+        [
+          "Location",
+          "",
+          "0.72"
+        ],
+        [
+          "Right Upper Lobe",
+          "35/46 (76.1)",
+          ""
+        ],
+        [
+          "Right Middle Lobe",
+          "14/21 (66.7)",
+          ""
+        ],
+        [
+          "Right Lower Lobe",
+          "20/32 (62.5)",
+          ""
+        ],
+        [
+          "Left Upper Division",
+          "26/40 (65.0)",
+          ""
+        ],
+        [
+          "Lingula",
+          "1/1 (100)",
+          ""
+        ],
+        [
+          "Left Lower Lobe",
+          "20/27 (74.1)",
+          ""
+        ],
+        [
+          "Peripheral lesion",
+          "80/118 (67.8)",
+          "0.47"
+        ],
+        [
+          "Bronchus sign",
+          "83/106 (78.3)",
+          "0.001"
+        ],
+        [
+          "r-EBUS view",
+          "",
+          "<0.001"
+        ],
+        [
+          "No view",
+          "7/26 (26.9)",
+          ""
+        ],
+        [
+          "Eccentric view",
+          "43/60 (71.7)",
+          ""
+        ],
+        [
+          "Concentric view",
+          "66/81 (81.5)",
+          ""
+        ],
+        [
+          "Lesion endobronchial visibility",
+          "40/50 (80.0)",
+          "0.053"
+        ],
+        [
+          "Lesion appearance",
+          "",
+          "0.74"
+        ],
+        [
+          "Solid",
+          "86/125 (68.8)",
+          ""
+        ],
+        [
+          "Ground Glass",
+          "12/17 (70.6)",
+          ""
+        ],
+        [
+          "Mixed",
+          "12/15 (80.0)",
+          ""
+        ],
+        [
+          "Cavity",
+          "6/10 (60.0)",
+          ""
+        ],
+        [
+          "Size",
+          "",
+          "0.11"
+        ],
+        [
+          "<10",
+          "5/11 (45.5)",
+          ""
+        ],
+        [
+          "10 - 30",
+          "74/108 (68.5)",
+          ""
+        ],
+        [
+          ">30",
+          "37/48 (77.1)",
+          ""
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/81'}",
+      "headers": [
+        "",
+        "Odds ratio (95% confidence interval)",
+        "P -value"
+      ],
+      "rows": [
+        [
+          "Bronchus sign",
+          "2.3 (1.0 - 5.3)",
+          "0.04"
+        ],
+        [
+          "r-EBUS view",
+          "",
+          ""
+        ],
+        [
+          "No view",
+          "1",
+          "-"
+        ],
+        [
+          "Eccentric",
+          "7.4 (2.4 - 22.9)",
+          "<0.001"
+        ],
+        [
+          "Concentric",
+          "10.0 (3.2 - 31.1)",
+          "<0.001"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/86'}",
+      "headers": null,
+      "rows": [
+        [
+          "Adenocarcinoma",
+          "46 (40.4)"
+        ],
+        [
+          "Small cell carcinoma",
+          "4 (3.5)"
+        ],
+        [
+          "Squamous cells carcinoma",
+          "13 (11.4)"
+        ],
+        [
+          "Neuroendocrine tumor",
+          "6 (5.3)"
+        ],
+        [
+          "Hamartoma",
+          "2 (1.8)"
+        ],
+        [
+          "Poorly differentiated lung cancer",
+          "2 (1.8)"
+        ],
+        [
+          "Melanoma",
+          "1 (0.9)"
+        ],
+        [
+          "Atypical cells a",
+          "13 (11.4)"
+        ],
+        [
+          "Fungal",
+          "2 (1.8)"
+        ],
+        [
+          "Appendiceal adenocarcinoma",
+          "1 (0.9)"
+        ],
+        [
+          "Ovarian cancer",
+          "1 (0.9)"
+        ],
+        [
+          "Non-necrotizing granuloma",
+          "3 (2.6)"
+        ],
+        [
+          "Prostate cancer",
+          "3 (2.6)"
+        ],
+        [
+          "Organizing pneumonia",
+          "1 (0.9)"
+        ],
+        [
+          "Necrotic material b",
+          "2 (1.8)"
+        ],
+        [
+          "Colorectal",
+          "2 (1.8)"
+        ],
+        [
+          "Renal",
+          "1 (0.9)"
+        ],
+        [
+          "Lymphoma",
+          "1 (0.9)"
+        ],
+        [
+          "Other Benign Diagnoses c",
+          "10 (8.8)"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    }
+  ],
+  "figures": [
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/96'}",
+      "page": null
+    }
+  ],
+  "references": [
+    {
+      "title": "Establishing the diagnosis of lung cancer: diagnosis and management of lung cancer, 3rd ed: American College of Chest Physicians evidencebased clinical practice guidelines"
+    },
+    {
+      "title": "Chest"
+    },
+    {
+      "title": "Diagnostic yield and complications of bronchoscopy for peripheral lung lesions. Results of the AQuIRE registry",
+      "year": 2013
+    },
+    {
+      "title": "Am J Respir Crit Care Med",
+      "year": 2016
+    },
+    {
+      "title": "Meta-analysis of guided bronchoscopy for the evaluation of the pulmonary nodule",
+      "year": 2016
+    },
+    {
+      "title": "The evolutional history of electromagnetic navigation bronchoscopy: state of the art",
+      "year": 2012
+    },
+    {
+      "title": "Bronchoscopic transparenchymal nodule access (BTPNA): first in human trial of a novel procedure for sampling solitary pulmonary nodules",
+      "year": 2018
+    },
+    {
+      "title": "Thorax",
+      "year": 2015
+    },
+    {
+      "title": "Cone Beam Computertomography (CBCT) in interventional chest medicine -high feasibility for endobronchial realtime navigation",
+      "year": 2015
+    },
+    {
+      "title": "J Cancer",
+      "year": 2014
+    },
+    {
+      "title": "Factors associated with the diagnostic yield of computed tomography-guided transbronchial lung biopsy",
+      "year": 2014
+    },
+    {
+      "title": "Thorac Cancer",
+      "year": 2017
+    },
+    {
+      "title": "Robotic endoscopic airway challenge: REACH assessment",
+      "year": 2017
+    },
+    {
+      "title": "Ann Thorac Surg",
+      "year": 2018
+    },
+    {
+      "title": "Robotic bronchoscopy for diagnosis of suspected lung cancer: a feasibility study",
+      "year": 2018
+    },
+    {
+      "title": "J Bronchology Interv Pulmonol",
+      "year": 2018
+    },
+    {
+      "title": "Evaluation of individuals with pulmonary nodules: when is it lung cancer? Diagnosis and management of lung cancer, 3rd ed: American College of Chest Physicians evidence-based clinical practice guidelines",
+      "year": 2018
+    },
+    {
+      "title": "British Thoracic Society guidelines for the investigation and management of pulmonary nodules",
+      "year": 2013
+    },
+    {
+      "title": "Electromagnetic navigation bronchoscopy for peripheral pulmonary lesions: one-year results of the prospective, multicenter NAVIGATE study",
+      "year": 2015
+    },
+    {
+      "title": "J Thorac Oncol",
+      "year": 2019
+    },
+    {
+      "title": "Diagnostic yield and safety of electromagnetic navigation bronchoscopy for lung nodules: a systematic review and meta-analysis",
+      "year": 2019
+    },
+    {
+      "title": "Respiration",
+      "year": 2014
+    },
+    {
+      "title": "Standard bronchoscopy with fluoroscopy vs thin bronchoscopy and radial endobronchial ultrasound for biopsy of pulmonary lesions: a multicenter, prospective, randomized trial",
+      "year": 2014
+    },
+    {
+      "title": "The effect of respiratory motion on pulmonary nodule location during electromagnetic navigation bronchoscopy",
+      "year": 2018
+    },
+    {
+      "title": "Radial probe endobronchial ultrasound for peripheral pulmonary lesions. A 5-year institutional experience",
+      "year": 2015
+    },
+    {
+      "title": "Ann Am Thorac Soc",
+      "year": 2014
+    },
+    {
+      "title": "Robotic assisted-bronchoscopy: technical tips and lessons learned from the initial experience with sampling peripheral lung lesions",
+      "year": 2014
+    },
+    {
+      "title": "BMC Pulm Med",
+      "year": 2014
+    },
+    {
+      "title": "Electromagnetic navigation bronchoscopy and rapid on site evaluation added to fluoroscopy-guided assisted bronchoscopy and rapid on site evaluation: improved yield in pulmonary nodules",
+      "year": 2019
+    },
+    {
+      "title": "Minerva Chir",
+      "year": 2013
+    },
+    {
+      "title": "Diagnostic yield of electromagnetic navigation bronchoscopy is highly dependent on the presence of a bronchus sign on CT imaging: results from a prospective study",
+      "year": 2013
+    }
+  ],
+  "quality": {
+    "completeness_score": 0,
+    "has_abstract": true,
+    "abstract_source": "metadata",
+    "has_doi": true,
+    "has_full_text": true,
+    "num_sections": 28,
+    "num_tables": 5,
+    "num_figures": 4,
+    "num_references": 31
+  }
+}

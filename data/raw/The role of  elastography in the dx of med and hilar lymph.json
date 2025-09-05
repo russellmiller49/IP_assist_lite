@@ -1,0 +1,517 @@
+{
+  "metadata": {
+    "document_id": "10_18632_oncotarget_19031",
+    "title": "The role of endobronchial ultrasound elastography in the diagnosis of mediastinal and hilar lymph nodes",
+    "authors": [
+      "Ye Gu",
+      "Hong Shi",
+      "Chunxia Su",
+      "Xiaoxia Chen",
+      "Shijia Zhang",
+      "Wei Li",
+      "Fengying Wu",
+      "Guanghui Gao",
+      "Hao Wang",
+      "Haiqing Chu",
+      "Caicun Zhou",
+      "Fei Zhou",
+      "Shengxiang Ren"
+    ],
+    "year": 2017,
+    "journal": "Oncotarget",
+    "doi": "10.18632/oncotarget.19031",
+    "volume": "8",
+    "issue": "51",
+    "pages": "89194-89202",
+    "citation": "Gu, et al. (2017). The role of endobronchial ultrasound elastography in the diagnosis of mediastinal and hilar lymph nodes. Oncotarget, 8(51), 89194-89202. https://doi.org/10.18632/oncotarget.19031",
+    "abstract": "Endobronchial ultrasound-guided transbronchial needle aspiration (Endobronchial ultrasound (EBUS)-TBNA) has been widely used for diagnosis and mediastinal lymph nodes staging in patients with suspicious lung cancer. Ultrasound elastography is a novel sonographical technique that can evaluate tissue compressibility. The aim of the present study was to investigate the diagnostic yield of elastography for differentiating malignant and benign mediastinal lymph nodes. Conventional Endobronchial ultrasound (EBUS) B-mode features, including size, shape, border distinction, echogenicity, central hilar structure with central blood vessel and coagulation necrosis were also evaluated. The ultrasonic features were compared with the pathological results from Endobronchial ultrasound (EBUS)-TBNA. 133 lymph nodes in 60 patients were assessed. Elastography displayed the highest area under the curve (AUC) (type 3 versus type 1: AUC, 0.825; 95% confidence interval [CI], 0.7070.910) with an impressive sensitivity (100%) and an acceptable specificity (65%). The combined model covering the four positive criteria (elastography, heterogeneity, size, and shape) showed that the odds ratio for malignance is 9.44 with a 95% CI of 3.99 to 22.32 ( p <0.0001). The combined model was superior to elastography alone (AUC, 0.851; sensitivity, 89.89%; specificity, 72.73%; p <0.0001). This prospective study showed that elastography is a feasible technique for classifying mediastinal lymph nodes, especially in combination with conventional Endobronchial ultrasound (EBUS) imaging",
+    "abstract_source": "metadata",
+    "url": "https://www.oncotarget.com/lookup/doi/10.18632/oncotarget.19031"
+  },
+  "source_file": "The role of  elastography in the dx of med and hilar lymph.json",
+  "sections": [
+    {
+      "title": "The  role  of  endobronchial  ultrasound  elastography  in  the diagnosis of mediastinal and hilar lymph nodes",
+      "content": "Ye Gu 1,* , Hong Shi 2,* , Chunxia Su 3 , Xiaoxia Chen 3 , Shijia Zhang 3 , Wei Li 3 , Fengying Wu 3 ,  Guanghui  Gao 3 ,  Hao  Wang 1 ,  Haiqing  Chu 4 ,  Caicun  Zhou 3 ,  Fei  Zhou 3   and Shengxiang Ren 3\n1 Department of Endoscopy, Shanghai Pulmonary Hospital, Tongji University School of Medicine, Shanghai, China\n2 Department of Anesthesiology, Shanghai Pulmonary Hospital, Tongji University School of Medicine, Shanghai, China\n3 Department of Medical Oncology, Shanghai Pulmonary Hospital, Tongji University School of Medicine & Tongji University School of Medicine Thoracic Cancer Institute, Shanghai, China\n4 Department of Respirology, Shanghai Pulmonary Hospital, Tongji University School of Medicine, Shanghai, China\n* These authors have contributed equally to this work\nCorrespondence to : Shengxiang Ren, email : harry_ren@126.com\nCorrespondence to\n: Fei Zhou, email : leozhoudr@163.com\nCopyright: Gu et al. This is an open-access article distributed under the terms of the Creative Commons Attribution License 3.0 (CC BY 3.0), which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "ABSTRACT",
+      "content": "Endobronchial ultrasound-guided transbronchial needle aspiration (Endobronchial ultrasound (EBUS)-TBNA) has been widely used for diagnosis and mediastinal lymph nodes staging in patients with  suspicious  lung  cancer.  Ultrasound  elastography  is  a  novel  sonographical technique that can evaluate tissue compressibility. The aim of the present study was to investigate the diagnostic yield of elastography for differentiating malignant and benign mediastinal lymph nodes. Conventional Endobronchial ultrasound (EBUS) B-mode features, including size, shape, border distinction, echogenicity, central hilar structure with central blood vessel and coagulation necrosis were also evaluated. The ultrasonic features were compared with the pathological results from Endobronchial ultrasound (EBUS)-TBNA. 133 lymph nodes in 60 patients were assessed. Elastography displayed the highest area under the curve (AUC) (type 3 versus type 1: AUC, 0.825; 95% confidence interval [CI], 0.7070.910) with an impressive sensitivity (100%) and an acceptable specificity (65%). The combined model covering the four positive criteria (elastography, heterogeneity, size, and shape) showed that the odds ratio for malignance is 9.44 with a 95% CI of 3.99 to 22.32 ( p <0.0001). The combined model was superior to elastography alone (AUC, 0.851; sensitivity, 89.89%; specificity, 72.73%; p <0.0001). This prospective study showed that elastography is a feasible technique for classifying mediastinal lymph nodes, especially in combination with conventional Endobronchial ultrasound (EBUS) imaging.",
+      "category": "abstract",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "INTRODUCTION",
+      "content": "Lung cancer is one of the most common diagnosed malignant  tumors  and  the  leading  cause  of  cancerrelated deaths worldwide, with a dismal 5-year survival rate  of  only  16%  [1].  Optimal  treatment  strategies  for patients  with  this  malignance  rely  on  accurate  staging and  diagnosis.  For  the  majority  of  patients  who  are diagnosed at advanced stage, systematic chemotherapy has been the only treatment choice for a long time [2]. In recent years, the presence of epidermal growth factor receptor  ( EGFR )  activating  mutations  and  anaplastic\nlymphoma kinase  ( ALK )  chromosomic  rearrangements with corresponding tyrosine kinase inhibitors (TKIs) has revolutionized  the  treatment  strategies  of  patients  with advanced non-small cell lung cancer (Non-small cell lung cancer (NSCLC)) [3, 4]. It is noteworthy that precise molecular testing for genetic alterations needs adequate specimens. For these inoperable patients, endobronchial ultrasound-guided transbronchial needle aspiration (Endobronchial ultrasound (EBUS)-TBNA) has been demonstrated to be a minimally invasive technique for mediastinal node sampling and Endobronchial ultrasound (EBUS)-TBNA specimens show high clinical utility for molecular testing, including EGFR mutations, KRAS mutations and ALK rearrangements [5-12].\nClinical Research Paper\nOn  the other hand,  mediastinal  lymph  nodes staging  is  essential  for  treatment  choices  for  patients without  distant  metastases.  Cervical  mediastinoscopy is  the  'golden  standard'  for  mediastinal  nodal  staging but  this  procedure  is  time-consuming  and  may  cause serious  complications  [13].  As  a  minimally  invasive technique, Endobronchial ultrasound (EBUS)-TBNA has revealed satisfied diagnostic yield  for  mediastinal  nodal  staging  as  compared  with mediastinoscopy [14, 15]. However,  the diagnostic accuracy  of  Endobronchial ultrasound (EBUS)-TBNA  depends  on  the  appropriate selection  of  lymph  nodes,  thus,  it  is  still  crucial  to identify  the  potentially  malignant  lymph  nodes  when performing EUBS-TBNA to reduce unnecessary biopsies. Our previous study has identified several sonographical ultrasonic features that are associated with the malignance of  lymph  nodes  but  with  varying  diagnostic  accuracy ranging from 40% to 80% [16], including round shape, distinct margin, heterogeneous echogenicity, presence of coagulation necrosis sign and so on.\nUltrasound elastography is a novel sonographical technique that can evaluate tissue compressibility [17]. In brief, softer tissues deform easier under compression than  harder  tissues  do  and  neoplastic  infiltration  may alter  the  elasticity  of  tissues  and  make  the  infiltrated tissue  stiffer.  Hence,  this  technique  has  potential  to distinguish malignant lymph nodes from benign ones. To investigate the diagnostic yield of ultrasound elastography for  differentiating  malignant  and  benign  mediastinal lymph nodes, we prospectively analyzed the features of\nultrasound elastography in 60 patients with 133 lymph nodes  who  underwent  Endobronchial ultrasound (EBUS)-TBNA  examination  in Shanghai Pulmonary Hospital from 1 May 2015 and 31 May 2015.",
+      "category": "introduction",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Patients and lymph nodes",
+      "content": "A  total  of  60  patients  that  were  candidates  for Endobronchial ultrasound (EBUS)-TBNA examination were enrolled in the current study at Shanghai Pulmonary Hospital, Tongji University. In brief, median age of the study population was 62 years (range from 26 to 82), 81.7% (49/60) of patients were male and 31.7% (19/60) of patients were non-smokers.\n133 lymph nodes in 60 patients were assessed by ultrasound. Among the evaluated lymph nodes, 39 were located in group 7 (subcarinal), 33 were located in group 4R, 20 were located in group 4L, others (41) were located in hilar lymph nodes or lesions. Histologic examinations of  the  Endobronchial ultrasound (EBUS)-TBNA  specimens  revealed  that  66.9% (89/133) of the lymph nodes were malignant (20 were adenocarcinoma, 17 were squamous cell carcinoma, 17 were small cell lung cancer, 10 were Non-small cell lung cancer (NSCLC) and 25 were Non-small cell lung cancer (NSCLC)-not otherwise specific [Non-small cell lung cancer (NSCLC)-NOS]) and 33.1% (44/133)  were  benign  lymph  nodes.  The  pathological results  and  distributions  of  evaluated  lymph  nodes  are shown in Figure 1.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Diagnostic efficacy of EBUS B-mode features and elastography",
+      "content": "The diagnostic efficacies of the six Endobronchial ultrasound (EBUS) B-mode features  and  elastography,  including  the  area  under the  curves  (AUCs)  with  95%  confidence  interval  (CI), sensitivity,  specificity,  positive  predictive  value  (PPV), negative predictive value (NPV), and diagnosis accuracy in the diagnosis of malignant lymph nodes are shown in Table 1. Receiver operating characteristic (ROC) analysis shows that elastography, heterogeneity, shape and border margin are positive criteria in the detection of malignant lymph nodes (Table 1).\nAmong the investigated ultrasonic criteria, elastography displayed the highest AUC (type 3 versus type  1:  AUC,  0.825;  95%  CI,  0.707-0.910)  with  an impressive sensitivity (100%) and an acceptable specificity (65%). The PPV, NPV and diagnosis accuracy were 0,857, 1.000 and 0.887, respectively. Consistent with our previous study [16], echogenicity heterogeneity also showed a good diagnostic  efficacy  in  distinguishing  malignant  lymph nodes, with a moderate AUC of 0.665, a high sensitivity\nof 0.876 and a moderate specificity of 0.591. Short axis and shape as discriminators showed a diagnosis accuracy of 0.737 and 0.669, indicating a high sensitivity (0.876 and 0.798, respectively) but low specificity (0.455 and 0.409, respectively). Meanwhile, for the variates central hilar structure with central blood vessel (CHS-CBV) and coagulation  necrosis,  the  specificity  is  low  (0.281  and 0.326, respectively), companying with a low diagnosis accuracy (0.406 and 0.489, respectively). Table 2 reveals the  correlation  between  Endobronchial ultrasound (EBUS)  elastography  types  and ultrasonic  criteria  of  B-mode  features.  Notably,  when the investigated lymph nodes presented as elastography type 2 or type 3 and any other B-mode features, including short  axis  >  10mm,  round  shape,  distinct  margin  and heterogeneous echogenicity, the risk of malignance is over 70% (Table 2).\nIn  order  to  improve  the  diagnostic  efficacy  of positive  criteria  in  the  detection  of  malignant  lymph nodes, we investigated a model of grading scores where the number of positive criteria is counted (elastography, heterogeneity,  size,  and  shape)  (Figure  2).  Figure  2A shows number of patients with accordant number of the current six conventional Endobronchial ultrasound (EBUS) B-mode features. When\nAbbreviations: AUC, area under curve; CI, confidence interval; PPV, positive predictive value; NPV, negative predictive value; CHS, central hilar structure.\nindicating grading score of 3-6 as 'high risk' and 1-2 as 'low risk', the odds ratio (Odds ratio (OR)) for malignance is 5.99 with a 95% CI of 2.09 to 17.19 ( p < 0.0001). Figure 2B shows number of patients with accordant number of only positive ultrasonic criteria including elastography. Similarly, when indicating grading score of 3-4 as 'high risk' and 1-2 as 'low risk', the Odds ratio (OR) for malignance is 9.44 with a 95% CI of 3.99 to 22.32 ( p < 0.0001), suggesting that the presence\nof more than two positive criteria indicates malignancy of a lymph node and the model only including positive criteria is simple and adequate in distinguishing malignant lymph nodes. Further ROC analysis demonstrated that the combined model covering the four positive criteria is superior to elastography alone (AUC, 0.851; sensitivity, 89.89%; specificity, 72.73%; p < 0.0001) (Figure 3).",
+      "category": "results",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "DISCUSSION",
+      "content": "At present, National Comprehensive Cancer Network (NCCN) suggests mediastinoscopy or EBUSTBNA as recommended procedures  for  the  evaluation of  mediastinal  lymph  nodes  for  patients  with  lung cancer who are candidates for surgery [18]. Additionally, Endobronchial ultrasound (EBUS)-TBNA is also presented as a minimally invasive technique  for  the  accurate  diagnosis  of  patients  with lung cancer [14, 15]. Although Endobronchial ultrasound (EBUS)-TBNA reveals a high specificity and PPV for the diagnosis of malignant lymph  nodes  [14],  the diagnostic accuracy  of this procedure depends on the accurate selection of targeted lymph  nodes.  Conventionally,  the  selection  of  target lesions  during  Endobronchial ultrasound (EBUS)-TBNA  is  based  on  insensitive size and morphologic criteria [16], such as size, shape, border  distinction,  echogenicity,  central  hilar  structure and coagulation necrosis, thus, lacking desired accuracy for  differentiating  malignant  and  benign  lymph  nodes. PET shows promising clinical utility but still has some limitations for classifying small nodal metastases [19]. In contrast, ultrasound elastography, designed to evaluate the stiffness of target tissues, has been established as a novel  sonographical  technique  for  the  characterizing lymph nodes. Previous meta-analysis has demonstrated that Endobronchial ultrasound (EBUS) elastography display a sensitivity of 88% and a specificity of 85% in differentiating malignant and benign lymph nodes [20]. To date, Endobronchial ultrasound (EBUS) elastography has been proved to be a useful tool for the diagnosis and assessment\nof breast cancer [21], thyroid nodules [22], prostate cancer [23], and esophagogastric cancer staging et al. [24].\nInterestingly,  previous  studies  also  evaluated  the clinical utility of Endobronchial ultrasound (EBUS) elastography for the diagnosis of mediastinal and hilar lymph nodes [25-28]. In the study by Izumo et al. [25], qualitative elastographic pattern analysis showed that in 75 evaluated lymph nodes, the sensitivity, specificity, PPV, NPV and diagnostic accuracy rates were 100%, 92.3%, 94.6%, 100% and 96.7%, respectively for malignance prediction. A recent study by Rozman et al. assessed the diagnostic value of elastography strain ratio of  mediastinal  lymph  nodes  in  patients  with  suspicion of  lung  cancer  [26].  In  32  patients  with  80  suspicious mediastinal lymph nodes, the diagnostic accuracy, sensitivity, specificity, PPV and NPV for differentiating malignant and benign lymph nodes were 86.25%, 88.24%, 84.78%, 81.08%, and 90.70%, respectively. Consistent with the findings from above studies, our study including 60 patients with 133 evaluated lymph nodes, the largest sample  size  to  our  knowledge,  also  demonstrated  the significantly  clinical  utility  of  Endobronchial ultrasound (EBUS)  elastography  for classifying suspicious mediastinal lymph nodes. Our study proved Endobronchial ultrasound (EBUS) elastography as a non-invasive and reliable method that adds complementary information to current conventional  Endobronchial ultrasound (EBUS)  imaging  and  help  differentiating benign and malignant lymph nodes.\nThe high diagnostic accuracy (88.7%), PPV (85.7%), and NPV (100%) of Endobronchial ultrasound (EBUS) elastography in our study has two aspects of clinical implications. For patients\nwith lung cancer who are candidates for surgery, if the evaluated lymph nodes imaging present as elastography Type 3, Endobronchial ultrasound (EBUS)-TBNA should be performed even the short axis is less than 10mm or presenting with other benign signs. In case of negative-TBNA or in situations where the puncture is not available, cautions should be taken when patients with Type 3 lymph nodes and other methods such as PET should be used to help characterizing the evaluated lymph nodes. On the other hand, for patients with inoperable and advanced lung cancer, duo to the high NPV, Endobronchial ultrasound (EBUS)-TBNA should be performed to in Type 3 lymph nodes to reduce unnecessary damage and shorten the  duration  of  procedures.  Additionally,  elastography can also help to guide the puncture area in a non-necrotic part of the suspicious lymph nodes (blue area) to improve diagnostic accuracy and specimen quality for diagnosis or further molecular testing.\nIn the present study, we also evaluated the diagnostic value of Endobronchial ultrasound (EBUS) B-mode features for mediastinal lymph nodes  as  compared  with  elastography.  In  concordance with  our  previous  study  [16],  heterogeneity,  size  and shape also showed a relatively good diagnostic accuracy ( > 60%) for the diagnosis of lymph nodes, except for CHSCBV and coagulation necrosis. Although the specificity in our study is lower than that in previous studies [2528]  (Supplementary  Table  1),  the  PPV  is  comparable. Furthermore,  the  sensitivity  and  NPV  is  100%  in  our study, which is higher than previous studies except for the study by Izumo et al [25]. In order to improve the diagnostic efficacy, we introduced a grading score model of  the  four  positive  criteria  to  assess  lymph  nodes.  In this model, if the evaluated lymph nodes met all the four positive criteria, all of the 23 lymph nodes were malignant. The model suggested that the presence of more than two positive criteria indicates an OR for malignancy is as high as 9.44 and the model only including the four positive criteria is simple and adequate in distinguishing malignant lymph  nodes.  Further  ROC  analysis  of  the  combined model can improve the specificity from 65% to 72.7%.\nSeveral  limitations  should  be  mentioned  in  the present study. First, the sample size was still limited and relatively small. Second, previous studies suggested that strain ratio of elastography may be an objective indicator for  the  classification  of  lymph  nodes  [26,  27].  The diagnostic value of strain ratio needs to be evaluated in our center. However, the strain ratio was determined from 'frozen' Endobronchial ultrasound (EBUS) images, selection bias cannot be ignored when selecting reference area. The dynamic evaluation of region of interest may have some advantages. Finally, although the elastography data was collected prospectively and the movies of elastography and pathological results were blinded to raters in our study, prospective and multicenter  trials  are  needed  to  confirm  the  findings  in  the future.\nIn  conclusion,  this  prospective  study  showed  a significantly clinical utility of elastography for classifying\nsuspicious  mediastinal  lymph  nodes  with  a  high  PPV, NPV and diagnostic accuracy. Our study also showed that the  diagnostic  yield  will  be  improved  when  combined Endobronchial ultrasound (EBUS) elastography with the current conventional Endobronchial ultrasound (EBUS) imaging, such as heterogeneity, size, and shape.",
+      "category": "discussion",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Patient selection",
+      "content": "This  single-center  study  prospectively  enrolled consecutive  patients  with  5-mm  slice,  single  contrast injection  chest  computed  tomography  (CT)  who  had mediastinal lymphadenopathy between 1 May 2015 and 31 May 5 2015 at Shanghai Pulmonary Hospital. Exclusive criteria included distant metastases, severe co-morbidities unable to tolerate surgical procedures (severe coronary heart  disease,  uncontrolled  hypertension  or  malignant arrhythmia et al.) and mediastinal tumor infiltration. This study was approved by the Ethics Committee of Shanghai Pulmonary Hospital, Tongji University and all patients who participated in this study signed an informed consent before any study related procedure.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "EBUS procedure",
+      "content": "All  examinations  were  carried  out  by  the  same experienced bronchoscopist (Y.G). Endobronchial ultrasound (EBUS) procedures were performed with a convex probe Endobronchial ultrasound (EBUS) (BF-UC260FOL8; Olympus, Tokyo,  Japan,  7.5  MHz)  and  the  ultrasound processor EU-C2000 (Olympus). After local anesthesia to the pharynx with 4% lidocaine spray (10ml), the convex probe Endobronchial ultrasound (EBUS) was inserted through the nasal cavity or oral route, with intermittent instillation of 2% lidocaine (2-4ml per time).\nReal-time Endobronchial ultrasound (EBUS) B-mode and elastography were  recorded  as  digital  movies  prospectively.  Strain elastography was used to evaluate lymph nodes in our study. Ultrasonic criteria of Endobronchial ultrasound (EBUS) B-mode and vascular pattern  on  power  Doppler  included  size,  shape,  border distinction,  echogenicity,  CHS-CBV  and  coagulation necrosis, sighs that have been previously demonstrated to  predict  malignancy  or  benign  mediastinal  lymph nodes [16]. After recording the movies of Endobronchial ultrasound (EBUS) B-mode ultrasound criteria, the procedure was  switched to strain elastography mode and all lymph nodes that were candidates  for  Endobronchial ultrasound (EBUS)-TBNA  were  evaluated  by  strain elastography.  The  elastography  image  was  generated by vascular pulsations and respiratory movement as the result of tissue compression. After comparing the scanned area  with  the  surrounding  normal  tissue,  elastography images  were  reconstructed  and  translated  into  a  color signal  that  was  overlaid  on  the  B-mode  image.  Blue was indicated to represent hard tissue; otherwise, green\nand yellow/red were indicated to represent mediate, soft tissue,  respectively.  Based  on  the  dominant  colors  and their distributions in the target lymph nodes, elastographic patterns were  classified into 3 types as  previously described and shown in Figure 4 [25]: Type 1 (Figure 4A), dominant colors were green, yellow or red; Type 2 (Figure 4B), part blue, part green, yellow or red; Type 3 (Figure 4C), dominant color was blue.\nAfter non-invasive evaluation, Endobronchial ultrasound (EBUS)-TBNA was performed  using  a  22-gauge  needle  (NA-201SX-4022; Olympus).  The  puncture  with  negative  pressure  was performed for about 10-20 passes a time, and 3 aspirations per lymph node under the guidance of real-time Endobronchial ultrasound (EBUS). The  aspirated  material  was  smeared  onto  glass  slides, afterwards were air-dried for immediate evaluation by an on-site cytopathologist to confirm adequate cell materials. Additional  aspirated  materials  were  collected  in  liquid formalin for further pathological evaluation or molecular testing. The cytological analysis was afterwards performed by an experienced pathologist who was blinded to Endobronchial ultrasound (EBUS) B-mode features and elastography types.\nTwo  raters  (F.Z,  S.R)  evaluated  independently the  blinded  movies  of  Endobronchial ultrasound (EBUS)  B-mode  features  and elastography (baseline characteristics and final pathological  results  of  evaluated  patients  were  blinded to the two raters). Any disagreements were resolved by consensus.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Statistical analysis",
+      "content": "ROC  analysis  was  performed  to  compare  the specificity/sensitivity  of  Endobronchial ultrasound (EBUS)  B-mode  features  and elastography with pathological results of Endobronchial ultrasound (EBUS)-TBNA in  distinguishing  malignant  lymph  nodes.  The  AUCs were calculated. Sensitivity, specificity, accuracy, PPVs, and NPVs of ultrasonic criteria  of  Endobronchial ultrasound (EBUS)  B-mode and elastography were calculated. Binary logistic regression analysis was used to determine whether elastography could improve  the  diagnostic  accuracy  when  in  combination with the conventional Endobronchial ultrasound (EBUS) B-mode features. Statistical analysis was performed using SPSS software (18.0, SPSS Inc., Chicago, IL) and MedCalc (version 13.0.0). All p values were based on two-sided testing, where p values less than 0.05 were considered significant.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "CONFLICTS OF INTEREST",
+      "content": "There are no potential conflicts to declare.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "FUNDING",
+      "content": "This study was supported in part by grants from  Medical  Guide  Program  of  Shanghai  Science and Technology Committee (No. 14411962900), Outstanding Young Doctor Program of Shanghai\nMunicipal Commission of Health and Family Planning (No.  XYQ2013097)  and  Shanghai  Sailing  Program (16YF1409600).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "REFERENCES",
+      "content": "1. Goldstraw  P,  Chansky  K,  Crowley  J,  Rami-Porta  R, Asamura  H,  Eberhardt  WE,  Nicholson  AG,  Groome  P, Mitchell  A,  Bolejack  V,  Goldstraw  P,  Rami-Porta  R, Asamura H, et  al,  and  International  Association  for  the Study  of  Lung  Cancer  Staging  and  Prognostic  Factors Committee Advisory Boards and Participating Institutions. The IASLC Lung Cancer Staging Project: Proposals for Revision of the TNM Stage Groupings in the Forthcoming (Eighth)  Edition  of  the  TNM  Classification  for  Lung Cancer. J Thorac Oncol. 2016; 11: 39-51. doi: 10.1016/j. jtho.2015.09.009.\n2. Schiller JH, Harrington D, Belani CP, Langer C, Sandler A,  Krook  J,  Zhu  J,  Johnson  DH,  Eastern  Cooperative Oncology G. Comparison of four chemotherapy regimens for advanced non-small-cell lung cancer. N Engl J Med. 2002; 346: 92-8. doi: 10.1056/NEJMoa011954.\n3. Zhou C, Wu YL, Chen G, Feng J, Liu XQ, Wang C, Zhang S, Wang J, Zhou S, Ren S, Lu S, Zhang L, Hu C, et al. Erlotinib versus chemotherapy as first-line treatment for patients with advanced EGFR mutation-positive non-smallcell lung cancer (OPTIMAL, CTONG-0802): a multicentre, open-label, randomised, phase 3 study. Lancet Oncol. 2011; 12: 735-42. doi: 10.1016/S1470-2045(11)70184-X.\n4. Solomon BJ, Mok T, Kim DW, Wu YL, Nakagawa K, Mekhail T, Felip E, Cappuzzo F, Paolini J, Usari T, Iyer S, Reisman A, Wilner KD, et al. First-line crizotinib versus chemotherapy in ALK-positive lung cancer. N Engl J Med. 2014; 371: 2167-77. doi: 10.1056/NEJMoa1408440.\n5. Ravaioli S, Bravaccini S, Tumedei MM, Pironi F, Candoli P, Puccetti M. Easily detectable cytomorphological features to evaluate during ROSE for rapid lung cancer diagnosis: from cytology to histology. Oncotarget. 2017; 8:1119911205. doi: 10.18632/oncotarget.13204.\n6. Hwangbo  B,  Lee  GK,  Lee  HS,  Lim  KY,  Lee  SH, Kim HY, Lee HS, Kim MS, Lee JM, Nam BH, Zo JI. Transbronchial and transesophageal fine-needle aspiration using an ultrasound bronchoscope in mediastinal staging of potentially operable lung cancer. Chest. 2010; 138: 795802. doi: 10.1378/chest.09-2100.\n7. Omark  Petersen  H,  Eckardt  J,  Hakami  A,  Olsen  KE, Jorgensen  OD.  The  value  of  mediastinal  staging  with endobronchial  ultrasound-guided  transbronchial  needle aspiration in patients with lung cancer. Eur J Cardiothorac Surg. 2009; 36: 465-8. doi: 10.1016/j.ejcts.2009.03.052.\n8. Nakajima T, Yasufuku K, Suzuki M, Hiroshima K, Kubo R,  Mohammed  S,  Miyagi  Y,  Matsukuma  S,  Sekine  Y, Fujisawa  T.  Assessment  of  epidermal  growth  factor receptor  mutation  by  endobronchial  ultrasound-guided transbronchial needle aspiration. Chest. 2007; 132: 597-\n602. doi: 10.1378/chest.07-0095.\n9. Nakajima  T,  Yasufuku  K,  Nakagawara  A,  Kimura  H, Yoshino  I.  Multigene  mutation  analysis  of  metastatic lymph nodes in non-small cell lung cancer diagnosed by endobronchial  ultrasound-guided  transbronchial  needle aspiration.  Chest.  2011;  140:  1319-24.  doi:  10.1378/ chest.10-3186.\n10. Jeyabalan A, Bhatt N, Plummeridge MJ, Medford AR. Adequacy of endobronchial ultrasound-guided transbronchial  needle  aspiration  samples  processed  as histopathological samples for genetic mutation analysis in lung adenocarcinoma. Mol Clin Oncol. 2016; 4: 119-25. doi: 10.3892/mco.2015.672.\n11. Schmid-Bindert G, Wang Y, Jiang H, Sun H, Henzler T, Wang H, Pilz LR, Ren S, Zhou C. Endobronchial ultrasound (EBUS)-TBNA provides highest  RNA  yield  for  multiple  biomarker  testing  from routinely  obtained  small  biopsies  in  non-small  cell  lung cancer  patients  -  a  comparative  study  of  three  different minimal invasive sampling methods. PLoS One. 2013; 8: e77948. doi: 10.1371/journal.pone.0077948.\n12. Zhang L, Jiang T, Zhao C, Li W, Li X, Zhao S, Liu X, Jia Y, Yang H, Ren S, Zhou C. Efficacy of crizotinib and pemetrexed-based chemotherapy in Chinese  Non-small cell lung cancer (NSCLC) patients with ROS1 rearrangement. Oncotarget. 2016; 7: 75145-54. doi: 10.18632/oncotarget.12612.\n13. Gilbert C, Yarmus L, Feller-Kopman D. Use of endobronchial  ultrasound  and  endoscopic  ultrasound  to stage the mediastinum in early-stage lung cancer. J Natl Compr Canc Netw. 2012; 10: 1277-82.\n14. Berania I, Kazakov J, Khereba M, Goudie E, Ferraro P, Thiffault V, Liberman M. Endoscopic Mediastinal Staging in Lung Cancer Is Superior to 'Gold Standard' Surgical Staging.  Ann  Thorac  Surg.  2016;  101:  547-50.  doi: 10.1016/j.athoracsur.2015.08.070.\n15. Defranchi SA, Edell ES, Daniels CE, Prakash UB, Swanson KL, Utz JP, Allen MS, Cassivi SD, Deschamps C, Nichols FC 3rd, Shen KR, Wigle DA. Mediastinoscopy in patients with lung cancer and negative endobronchial ultrasound guided needle aspiration. Ann Thorac Surg. 2010; 90: 17537. doi: 10.1016/j.athoracsur.2010.06.052.\n16. Schmid-Bindert G, Jiang H, Kahler G, Saur J, Henzler T, Wang H, Ren S, Zhou C, Pilz LR. Predicting malignancy in mediastinal lymph nodes by endobronchial ultrasound: a new ultrasound scoring system. Respirology. 2012; 17: 1190-8. doi: 10.1111/j.1440-1843.2012.02223.x.\n17. Dietrich  CF,  Jenssen  C,  Arcidiacono  PG,  Cui  XW, Giovannini M, Hocke M, Iglesias-Garcia J, Saftoiu A, Sun S, Chiorean L. Endoscopic ultrasound: Elastographic lymph node evaluation. Endosc Ultrasound. 2015; 4: 176-90. doi: 10.4103/2303-9027.162995.\n18. Ettinger  DS,  Wood  DE,  Akerley  W,  Bazhenova  LA, Borghaei  H,  Camidge  DR,  Cheney  RT,  Chirieac  LR,\nD'Amico TA, Demmy TL, Dilling TJ, Dobelbower MC, Govindan R, et al. Non-Small Cell Lung Cancer, Version 6.2015. J Natl Compr Canc Netw. 2015; 13: 515-24.\n19. Shingyoji  M,  Nakajima  T,  Yoshino  M,  Yoshida  Y, Ashinuma H, Itakura M, Tatsumi K, Iizasa T. Endobronchial ultrasonography  for  positron  emission  tomography  and computed tomography-negative lymph node staging in nonsmall cell lung cancer. Ann Thorac Surg. 2014; 98: 1762-7. doi: 10.1016/j.athoracsur.2014.05.078.\n20. Xu W, Shi J, Zeng X, Li X, Xie WF, Guo J, Lin Y. EUS elastography for the differentiation of benign and malignant lymph nodes: a meta-analysis. Gastrointest Endosc. 2011; 74: 1001-9; quiz 115 e1-4. doi: 10.1016/j.gie.2011.07.026.\n21. Youk  JH,  Gweon  HM,  Son  EJ,  Han  KH,  Kim  JA. Diagnostic  value  of  commercially  available  shear-wave elastography for breast cancers: integration into BI-RADS classification with subcategories of category 4. Eur Radiol. 2013; 23: 2695-704. doi: 10.1007/s00330-013-2873-3.\n22. Dighe M, Luo S, Cuevas C, Kim Y. Efficacy of thyroid ultrasound elastography in differential diagnosis of small thyroid  nodules.  Eur  J  Radiol.  2013;  82:  e274-80.  doi: 10.1016/j.ejrad.2013.01.009.\n23. Miyagawa  T,  Tsutsumi  M,  Matsumura  T,  Kawazoe  N, Ishikawa S, Shimokama T, Miyanaga N, Akaza H. Realtime  elastography  for  the  diagnosis  of  prostate  cancer: evaluation  of  elastographic  moving  images.  Jpn  J  Clin Oncol. 2009; 39: 394-8. doi: 10.1093/jjco/hyp026.\n24. Knabe M, Gunter E, Ell C, Pech O. Can EUS elastography improve lymph node staging in esophageal cancer? Surg Endosc.  2013;  27:  1196-202.  doi:  10.1007/s00464-0122575-y.\n25. Izumo T, Sasada S, Chavez C, Matsumoto Y, Tsuchida T. Endobronchial ultrasound elastography in the diagnosis of mediastinal and hilar lymph nodes. Jpn J Clin Oncol. 2014; 44: 956-62. doi: 10.1093/jjco/hyu105.\n26. Rozman A, Malovrh MM, Adamic K, Subic T, Kovac V, Flezar  M.  Endobronchial  ultrasound  elastography  strain ratio for mediastinal lymph node diagnosis. Radiol Oncol. 2015; 49: 334-40. doi: 10.1515/raon-2015-0020.\n27. He HY, Huang M, Zhu J, Ma H, Lyu XD. Endobronchial Ultrasound Elastography for Diagnosing Mediastinal and Hilar Lymph Nodes. Chin Med J (Engl). 2015; 128: 2720-5. doi: 10.4103/0366-6999.167296.\n28. Okasha HH, Mansour M, Attia KA, Khattab HM, Sakr AY, Naguib M, Aref W, Al-Naggar AA, Ezzat R. Role of high resolution ultrasound/endosonography and elastography in predicting  lymph  node  malignancy.  Endosc  Ultrasound. 2014; 3: 58-62. doi: 10.4103/2303-9027.121252.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    }
+  ],
+  "tables": [
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/56'}",
+      "headers": [
+        "Lymph node variate",
+        "AUC (95%CI)",
+        "Sensitivity (95%CI)",
+        "Specificity (95%CI)",
+        "PPV",
+        "NPV",
+        "Diagnosis accuracy",
+        "P"
+      ],
+      "rows": [
+        [
+          "Short axis ≥10mm",
+          "0.665 (0.579-0.745)",
+          "0.876 (0.808-0.944)",
+          "0.455 (0.307-0.602)",
+          "0.765",
+          "0.645",
+          "0.737",
+          "0.002"
+        ],
+        [
+          "Round shape",
+          "0.603 (0.515-0.687)",
+          "0.798 (0.714-0.881)",
+          "0.409 (0.264-0.554)",
+          "0.732",
+          "0.500",
+          "0.669",
+          "0.017"
+        ],
+        [
+          "Margin distinct",
+          "0.598 (0.509-0.682)",
+          "0.831 (0.754-0.909)",
+          "0.364 (0.221-0.506)",
+          "0.725",
+          "0.516",
+          "0.677",
+          "0.068"
+        ],
+        [
+          "Echogenicity heterogeneity",
+          "0.711 (0.626-0.786)",
+          "0.831 (0.754-0.909)",
+          "0.591 (0.446-0.736)",
+          "0.804",
+          "0.634",
+          "0.752",
+          "<0.001"
+        ],
+        [
+          "Coagulation necrosis sigh",
+          "0.572 (0.483-0.657)",
+          "0.326 (0.228-0.423)",
+          "0.818 (0.704-0.932)",
+          "0.784",
+          "0.375",
+          "0.489",
+          "0.177"
+        ],
+        [
+          "CHS with central blood vessel",
+          "0.530 (0.442-0.617)",
+          "0.281 (0.188-0.374)",
+          "0.659 (0.519-0.799)",
+          "0.625",
+          "0.312",
+          "0.406",
+          "0.574"
+        ],
+        [
+          "Elastography type",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "3 versus 1",
+          "0.825 (0.707-0.910)",
+          "1.000 (0.916-1.000)",
+          "0.650 (0.408-0.846)",
+          "0.857",
+          "1.000",
+          "0.887",
+          "<0.001"
+        ],
+        [
+          "2 versus 1",
+          "0.676 (0.565-0.774)",
+          "1.000 (0.925-1.000)",
+          "0.351 (0.202-0.525)",
+          "0.662",
+          "1.000",
+          "0.714",
+          "<0.001"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/58'}",
+      "headers": [
+        "",
+        "Short axis >10 mm",
+        "Round shape",
+        "Distinct margin",
+        "Heterogeneous echogenicity",
+        "Coagulation necrosis sigh",
+        "CHS with central blood Vessel"
+      ],
+      "rows": [
+        [
+          "Elastography Type 1 ( n =13)",
+          "6/13 (46.2%)",
+          "7/13 (53.8%)",
+          "11/13 (84.6%)",
+          "6/13 (46.2%)",
+          "3/13 (23.1%)",
+          "3/13 (23.1%)"
+        ],
+        [
+          "Elastography Type 2 ( n =71)",
+          "56/71 (78.9%)",
+          "48/71(71.8%)",
+          "51/71 (71.8%)",
+          "50/71 (70.4%)",
+          "15/71 (21.1%)",
+          "23/71 (32.4%)"
+        ],
+        [
+          "Elastography Type 3 ( n =49)",
+          "40/49 (85.7%)",
+          "42/49 (85.7%)",
+          "40/49 (81.6%)",
+          "36/49 (73.5%)",
+          "19/49 (38.8%)",
+          "14/49 (28.6%)"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    }
+  ],
+  "figures": [
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/31'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/67'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/142'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/159'}",
+      "page": null
+    }
+  ],
+  "references": [
+    {
+      "title": "International Association for the Study of Lung Cancer Staging and Prognostic Factors Committee Advisory Boards and Participating Institutions. The IASLC Lung Cancer Staging Project: Proposals for Revision of the TNM Stage Groupings in the Forthcoming (Eighth) Edition of the TNM Classification for Lung Cancer"
+    },
+    {
+      "title": "J Thorac Oncol",
+      "year": 2016
+    },
+    {
+      "title": "Comparison of four chemotherapy regimens for advanced non-small-cell lung cancer",
+      "year": 2016
+    },
+    {
+      "title": "N Engl J Med",
+      "year": 2002
+    },
+    {
+      "title": "Erlotinib versus chemotherapy as first-line treatment for patients with advanced EGFR mutation-positive non-smallcell lung cancer (OPTIMAL, CTONG-0802): a multicentre, open-label, randomised, phase 3 study",
+      "year": 2002
+    },
+    {
+      "title": "Lancet Oncol",
+      "year": 2011
+    },
+    {
+      "title": "First-line crizotinib versus chemotherapy in ALK-positive lung cancer",
+      "year": 2011
+    },
+    {
+      "title": "Easily detectable cytomorphological features to evaluate during ROSE for rapid lung cancer diagnosis: from cytology to histology",
+      "year": 2014
+    },
+    {
+      "title": "Oncotarget",
+      "year": 2017
+    },
+    {
+      "title": "Transbronchial and transesophageal fine-needle aspiration using an ultrasound bronchoscope in mediastinal staging of potentially operable lung cancer",
+      "year": 2017
+    },
+    {
+      "title": "Chest",
+      "year": 2010
+    },
+    {
+      "title": "The value of mediastinal staging with endobronchial ultrasound-guided transbronchial needle aspiration in patients with lung cancer",
+      "year": 2010
+    },
+    {
+      "title": "Eur J Cardiothorac Surg",
+      "year": 2009
+    },
+    {
+      "title": "Assessment of epidermal growth factor receptor mutation by endobronchial ultrasound-guided transbronchial needle aspiration",
+      "year": 2009
+    },
+    {
+      "title": "Multigene mutation analysis of metastatic lymph nodes in non-small cell lung cancer diagnosed by endobronchial ultrasound-guided transbronchial needle aspiration",
+      "year": 2007
+    },
+    {
+      "title": "Adequacy of endobronchial ultrasound-guided transbronchial needle aspiration samples processed as histopathological samples for genetic mutation analysis in lung adenocarcinoma",
+      "year": 2011
+    },
+    {
+      "title": "Mol Clin Oncol",
+      "year": 2016
+    },
+    {
+      "title": "EBUS-TBNA provides highest RNA yield for multiple biomarker testing from routinely obtained small biopsies in non-small cell lung cancer patients -a comparative study of three different minimal invasive sampling methods",
+      "year": 2016
+    },
+    {
+      "title": "PLoS One",
+      "year": 2013
+    },
+    {
+      "title": "Efficacy of crizotinib and pemetrexed-based chemotherapy in Chinese NSCLC patients with ROS1 rearrangement",
+      "year": 2013
+    },
+    {
+      "title": "Use of endobronchial ultrasound and endoscopic ultrasound to stage the mediastinum in early-stage lung cancer",
+      "year": 2016
+    },
+    {
+      "title": "J Natl Compr Canc Netw",
+      "year": 2012
+    },
+    {
+      "title": "Endoscopic Mediastinal Staging in Lung Cancer Is Superior to &quot;Gold Standard&quot; Surgical Staging",
+      "year": 2012
+    },
+    {
+      "title": "Ann Thorac Surg",
+      "year": 2016
+    },
+    {
+      "title": "Mediastinoscopy in patients with lung cancer and negative endobronchial ultrasound guided needle aspiration",
+      "year": 2016
+    },
+    {
+      "title": "Predicting malignancy in mediastinal lymph nodes by endobronchial ultrasound: a new ultrasound scoring system",
+      "year": 2010
+    },
+    {
+      "title": "Respirology",
+      "year": 2012
+    },
+    {
+      "title": "Endoscopic ultrasound: Elastographic lymph node evaluation",
+      "year": 2012
+    },
+    {
+      "title": "Endosc Ultrasound",
+      "year": 2015
+    },
+    {
+      "title": "Non-Small Cell Lung Cancer, Version 6",
+      "year": 2015
+    },
+    {
+      "title": "Endobronchial ultrasonography for positron emission tomography and computed tomography-negative lymph node staging in nonsmall cell lung cancer"
+    },
+    {
+      "title": "EUS elastography for the differentiation of benign and malignant lymph nodes: a meta-analysis",
+      "year": 2014
+    },
+    {
+      "title": "Gastrointest Endosc",
+      "year": 2011
+    },
+    {
+      "title": "Diagnostic value of commercially available shear-wave elastography for breast cancers: integration into BI-RADS classification with subcategories of category 4",
+      "year": 2011
+    },
+    {
+      "title": "Eur Radiol",
+      "year": 2013
+    },
+    {
+      "title": "Efficacy of thyroid ultrasound elastography in differential diagnosis of small thyroid nodules",
+      "year": 2013
+    },
+    {
+      "title": "Eur J Radiol",
+      "year": 2013
+    },
+    {
+      "title": "Realtime elastography for the diagnosis of prostate cancer: evaluation of elastographic moving images",
+      "year": 2013
+    },
+    {
+      "title": "Jpn J Clin Oncol",
+      "year": 2009
+    },
+    {
+      "title": "Can EUS elastography improve lymph node staging in esophageal cancer?",
+      "year": 2009
+    },
+    {
+      "title": "Surg Endosc",
+      "year": 2013
+    },
+    {
+      "title": "Endobronchial ultrasound elastography in the diagnosis of mediastinal and hilar lymph nodes",
+      "year": 2013
+    },
+    {
+      "title": "Endobronchial ultrasound elastography strain ratio for mediastinal lymph node diagnosis",
+      "year": 2014
+    },
+    {
+      "title": "Radiol Oncol",
+      "year": 2015
+    },
+    {
+      "title": "Endobronchial Ultrasound Elastography for Diagnosing Mediastinal and Hilar Lymph Nodes",
+      "year": 2015
+    },
+    {
+      "title": "Chin Med J (Engl)",
+      "year": 2015
+    },
+    {
+      "title": "Role of high resolution ultrasound/endosonography and elastography in predicting lymph node malignancy",
+      "year": 2015
+    }
+  ],
+  "quality": {
+    "completeness_score": 0,
+    "has_abstract": true,
+    "abstract_source": "metadata",
+    "has_doi": true,
+    "has_full_text": true,
+    "num_sections": 12,
+    "num_tables": 2,
+    "num_figures": 4,
+    "num_references": 47
+  }
+}

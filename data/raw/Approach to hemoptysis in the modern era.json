@@ -1,0 +1,821 @@
+{
+  "metadata": {
+    "document_id": "10_1155_2017_1565030",
+    "title": "Approach to Hemoptysis in the Modern Era",
+    "authors": [
+      "Sébastien Gagnon",
+      "Nicholas Quigley",
+      "Hervé Dutau",
+      "Antoine Delage",
+      "Marc Fortin"
+    ],
+    "year": 2017,
+    "journal": "Canadian Respiratory Journal",
+    "doi": "10.1155/2017/1565030",
+    "volume": "2017",
+    "issue": "",
+    "pages": "1-11",
+    "citation": "Gagnon, et al. (2017). Approach to Hemoptysis in the Modern Era. Canadian Respiratory Journal, 2017, 1-11. https://doi.org/10.1155/2017/1565030",
+    "abstract": "Hemoptysis is a frequent manifestation of a wide variety of diseases, with mild to life-threatening presentations. The diagnostic workup and the management of severe hemoptysis are often challenging. Advances in endoscopic techniques have led to different new therapeutic approaches. Cold saline, vasoconstrictive and antifibrinolytic agents, oxidized regenerated cellulose, biocompatible glue, laser photocoagulation, argon plasma coagulation, and endobronchial stents and valves are amongst the tools available to the bronchoscopist. In this article, we review the evidence regarding the definition, etiology, diagnostic modalities, and treatment of severe hemoptysis in the modern era with emphasis on bronchoscopic techniques.",
+    "abstract_source": "metadata",
+    "url": "https://www.hindawi.com/journals/crj/2017/1565030/"
+  },
+  "source_file": "Approach to hemoptysis in the modern era.json",
+  "sections": [
+    {
+      "title": "S´ ebastien Gagnon, 1 Nicholas Quigley, 1 Herv´ e Dutau, 2 Antoine Delage, 1 and Marc Fortin 1",
+      "content": "1 Institut Universitaire de Pneumologie et de Cardiologie de Qu´ ebec, 2725 Ch Ste-Foy, Quebec City, QC, Canada G1V 4G5 2 Hˆ opital Nord Marseille, Assistance Publique des Hˆ opitaux de Marseille, 13915 Chemin des Bourrely, Marseille, France\nCorrespondence should be addressed to S´ ebastien Gagnon; sebastien.gagnon.17@ulaval.ca\nReceived 19 August 2017; Accepted 14 November 2017; Published 21 December 2017\nAcademic Editor: Akiteru Goto\nCopyright © 2017 S´ ebastien Gagnon et al. This is an open access article distributed under the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is properly cited.\nHemoptysis is a frequent manifestation of a wide variety of diseases, with mild to life-threatening presentations. The diagnostic workup and the management of severe hemoptysis are often challenging. Advances in endoscopic techniques have led to different new therapeutic approaches. Cold saline, vasoconstrictive and antifibrinolytic agents, oxidized regenerated cellulose, biocompatible glue, laser photocoagulation, argon plasma coagulation, and endobronchial stents and valves are amongst the tools available to the bronchoscopist. In this article, we review the evidence regarding the definition, etiology, diagnostic modalities, and treatment of severe hemoptysis in the modern era with emphasis on bronchoscopic techniques.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "1. Introduction",
+      "content": "Hemoptysis is often an alarming and worrisome symptom for the patient and the physician. Although massive hemoptysis occurs in less than 20% of the cases [1], it can have devastating consequences. Technological advances have enabled a more effective management, especially with the introduction of bronchial artery embolization and the improvements in computed tomography and bronchoscopy. Bronchoscopy remains an important diagnostic and therapeutic procedure in hemoptysis. New techniques to control bleeding have been reported with interesting results, and older approaches have been improved. This review addresses the approach of hemoptysis in the modern era, with particular emphasis on bronchoscopy.",
+      "category": "introduction",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "2. Definition",
+      "content": "Hemoptysis can be of variable severity ranging from slightly blood-streaked sputum to life-threatening hemorrhage [2, 3]. Severe hemoptysis should be promptly identified as it presents a significant mortality risk which has been reported to be as high as 80% without appropriate management [4-8]. Nearly all definitions of severe or massive hemoptysis in the literature rely on the reported volume of expectorated blood\nin a 24-hour period. There is no consensus on a specific volume threshold for an hemoptysis to be considered massive [9, 10]. Studies use different thresholds ranging from 100 mL [11] to over 1000 mL [12]. Definitions relying on selfreported volumes are imperfect as patients may overestimate or underestimate volume as massive hemoptysis, understandably, causes significant stress [10]. We recommend to measure hemoptysis volume when patients are admitted to the hospital to have an objective assessment of clinical evolution, but unfortunately, such precise measures are seldom available on initial presentation.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "3. Etiology",
+      "content": "All hemoptysis etiologies can potentially cause massive hemoptysis. A broad differential diagnosis of hemoptysis is summarized in Table 1 [4, 13-27]. The most frequent causes of hemoptysis vary significantly geographically and depending on the clinical setting. Certain causes of hemoptysis have a greater tendency to be massive [18], while others are seldom massive. The five most frequent causes of massive hemoptysis worldwide, in random order, remain bronchiectasis, lung cancer, tuberculosis [4], lower respiratory tract infections, and mycetomas [16]. Their prevalence will vary from center to center because of demographic reasons as is demonstrated in\nHindawi Canadian Respiratory Journal Volume 2017, Article ID 1565030, 11 pages https://doi.org/10.1155/2017/1565030\nTable 2 [28-37]. However, despite a thorough investigation, an important proportion of hemoptysis remains cryptogenic-up to 50%-as reported by a recent 5-year retrospective study of the French nationwide hospital database [38].",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "4. Diagnosis",
+      "content": "The investigations of choice to diagnose the cause and localize the source of hemoptysis will vary depending on the past medical history and current presentation of a patient. Chest X-ray (CXR) remains the initial test performed in the majority of cases [39]. It determines the site of bleeding in 45 to 65% of the cases and the cause in 25 to 35% [32, 40, 41]. However, as much as 10% of pulmonary malignancies are occult on CXR, 96% of which will be detected by computed tomography (CT) [42]. For this reason, in the presence of\na normal CXR, further investigation is often necessary, especially in the context of lung cancer risk factors [39]. Whether bronchoscopy or CTshould be performed next has been a subject of controversy, but recent studies tend to demonstrate the superiority of CT to diagnose the cause of hemoptysis. In a prospective series including 87 patients with severe hemoptysis, Chalumeau-Lemoine et al. [43] demonstrated equivalence between flexible bronchoscopy and CT to localize the source of bleeding. However, CT was significantly better to determine the cause of hemoptysis (86% versus 70%, p � 0 . 007) and resulted in a change in treatment approach in 22%. Nielsen et al. [44] showed that bronchoscopy does not add significant benefit to CT sensitivity when performed to rule out cancer after an episode of hemoptysis (0.97 versus 0.92, p � 0 . 58). Bønløkke et al. [45] obtained similar results in a retrospective review of 379 patients. CT is also an important tool to help guide an embolization procedure [46-48].\nDuring diagnostic testing for severe hemoptysis, it is important to remember that securing the patient's airway is always the priority. Performing a CT requires the patient to be transported into a setting where the clinician may be suboptimally equipped to manage a massive bleed. In certain situations, it is preferable to prophylactically secure the patient's airway prior to transportation to the radiology department, but cases need to be evaluated individually. Although CTis superior in identifying the cause of bleeding, bronchoscopy has several advantages over CT. Bronchoscopy can be performed at the bedside and does not require the patient to be transported. It can be a useful tool to help secure the airway if the bronchoscopist is experienced with pulmonary isolation techniques, and it can allow endobronchial treatments as mentioned later in this review. However, when there is active hemoptysis, bronchoscopy can stimulate coughing and therefore increase bleeding. For that reason, it is often safer to delay the bronchoscopy until initial bronchial artery embolization has been performed when the patient presents with severe hemoptysis.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "5. Treatment",
+      "content": "5.1. Bronchial Artery Embolization. Bronchial artery embolization (BAE) was first described by R´ emy et al. [49] in 1974. Since then, the procedure has been improved and has become an essential tool for the management of hemoptysis. It is important to remember that most hemoptysis originate from the bronchial circulation, but in rare cases, hemoptysis may originate from the pulmonary circulation. Recent studies have shown the effectiveness of BAE in a wide array of pathologies including tuberculosis, bronchiectasis, aspergilloma, and malignancy [50-53]. Embolizing agents are numerous, but polyvinyl alcohol (usually 300-600 µ m)is the most frequently used, having the advantage of being nonabsorbable and available in different sizes [54, 55].\nThe most feared complication of BAE is embolization of the anterior spinal arteries, resulting in spinal cord ischemia. Over the last years, with the introduction of superselective catheterization, this complication is now uncommon (0-1%) [51-53].\nBAE has proved its efficacy in hemoptysis of all degrees of severity, with a reported immediate clinical success rate of 82 to 98% [52, 53]. However, the longer term recurrence rate remains high, with reported values of 10 to 57% in recent studies [56, 57]. Recurrence can be secondary to incomplete embolization of all abnormal arteries, recanalization of previously embolized arteries, or recruitment of new collaterals [54]. Many factors have been associated with a higher risk of recurrence: malignant diseases [58], aspergilloma [59, 60], idiopathic bronchiectasis [57], and oozing or active bleeding on flexible bronchoscopy [1]. No data of quality assess the short- and long-term success rate of repeat embolization to our knowledge.\n5.2. Endoscopic Treatment. The role of bronchoscopy in severe hemoptysis is not limited to a diagnostic role. Bronchoscopists may need to intervene on iatrogenic bleeding caused during a procedure since they perform procedures such as transbronchial biopsies which are associated with significant bleeding in 2.8% of the cases [61]. For noniatrogenic hemoptysis, flexible bronchoscopy is an essential procedure allowing at the same time identification of the source of bleeding, endoscopic treatment, and performance of pulmonary isolation to protect the unaffected lung. In recent years, manybronchoscopic techniques have been reported to manage significant hemorrhages with an interesting success rate [16].\nFor bronchoscopy to be safely performed in severe hemoptysis, an experienced bronchoscopic team and adequate equipment are needed. As previously mentioned, maintaining airway patency is a priority, requiring in some situations endotracheal intubation prior to a procedure or rigid bronchoscopy. If endotracheal intubation is performed, one must remember to use a large endotracheal tube to allow the passage of a therapeutic flexible bronchoscope which is preferred in case of hemoptysis because of its larger working channel which provides better suction. Rigid\nbronchoscopy allows bronchoscopists to perform local tamponade of the bleeding if the source is central and to use a wide variety of endoscopic techniques. Rigid bronchoscopy also allows selective intubation for pulmonary isolation in case of catastrophic bleeding.\n5.2.1. Cold Saline. In 1980, Conlan and Hurwitz [62] reported the successful use of cold saline lavage to control bleeding in 23 patients with massive hemoptysis ( ≥ 600mL/24h). Through a rigid bronchoscope, they performed a lavage with an average volume of 500 ml of 4 ° C normal saline. One patient presented sinus bradycardia and two subjects had rebleeding which required further lavage. After subsequent medical or surgical treatment, all patients were discharged free of hemoptysis. Large-volume cold saline lavages have not been studied again in more recent trials. However, smaller volume of cold saline is frequently used to control bleeding during bronchoscopy. To our knowledge, the efficacity of small-volume endobronchial cold saline to control endobronchial bleeding has never been studied.\n5.2.2. Vasoconstrictive Agents. The use of vasopressin analogs to control hemoptysis was first reported in 1989 by Breuer et al. [63] who compared the efficacy of intravenous and endobronchial glypressin during diagnostic bronchoscopy. The hemostatic effect was similar, but intravenous administration was associated with a plasma concentration 251 times higher than endobronchial administration, resulting in a significantly higher diastolic pressure. In 2004, T¨ uller et al. [64] demonstrated in a retrospective study that terlipressin or ornipressin stopped bleeding in 30 patients with persistent bleeding after 2 minutes of suctioning or with major bleeding. There was no short-term recurrence. Terlipressin was associated with a small but statistically significant impact on heart rate and blood pressure.\nNS � not specified; ∗ 98% of the patients had more than 100 mL/day [33].\n5.2.3. Bronchoscopy-Guided Topical Hemostatic. Oxidized regenerated cellulose (ORC) is an absorbable water-insoluble derivative of cellulose recognized for its hemostatic and wound-healing properties. Valipour et al. [31] described in 2005 its use in bronchoscopy as a topical hemostatic agent in a cohort of 57 patients with massive hemoptysis and persistent bleeding despite bronchoscopic wedging, cold saline lavage, and local administration of epinephrine. A sterile ORC mesh was grasped with biopsy forceps through the working channel of a bronchoscope and then pulled back into the working channel prior to intubating the patient. The mesh was then placed selectively into the bleeding bronchus as peripherally as possible but within the endobronchial view. Immediate control of hemorrhage was achieved in 56 of 57 patients (98%). The patient with persistent bleeding underwent successful surgical treatment. The ORC mesh was absorbed in all patients, but 9% of the patients developed postobstructive pneumonia. No bleeding recurrences were observed. Two other recent smaller studies showed similar good results, without infectious complications [65, 66].\n5.2.4. Endobronchial Biocompatible Glue. Endobronchial n -butyl cyanoacrylate glue is a biocompatible product which is adhesive and solidifies on contact with humidity. Its efficacy has been evaluated in three case series to our knowledge [67-69], with interesting results. Bhattacharyya et al. [69] obtained immediate response in six patients. One patient required a repeat procedure on the day of the initial procedure. One long-term recurrence was noted after a mean follow-up of 127 ± 67 days. This patient with bronchiectasis was observed without further intervention and evolved favorably. Coiffard et al. [68] described the case of a 76-year-old woman with a metastatic pulmonary adenocarcinoma who had persistent hemoptysis despite two attempts of BAE and failure of endobronchial spigot placement. Cyanoacrylate-based glue was mixed with iodinated contrast to allow fluoroscopic guidance and followup imaging of the position of the glue. The immediate response rate was good, and no recurrence was observed at 48 hours. Chawla et al. [70] reported retrospectively the use of glue in 168 cases of mild or moderate hemoptysis persisting after 7 days of medical treatment or severe hemoptysis. Immediate control of hemoptysis was achieved in 151 patients (89.9%). All 17 patients without immediate control demonstrated very short-term recurrences, and they all underwent repeat glue application. Thirteen of them (7.7%) responded to a second glue application for an overall response rate of 97.6%. No recurrences were noted in a 6-month follow-up during which patients could be treated for conditions causing their hemoptysis.\n5.2.5. Endobronchial Stents. Endobronchial stents have been successfully used to treat hemoptysis secondary to endobronchial lesions. This technique has been described mainly as a palliative treatment in the context of advanced lung cancer. All reported cases showed good immediate outcomes [71-73]. Cases were published with silicone and covered selfexpandable metal stents.\n5.2.6. Endobronchial Embolization Using Silicone Spigots. Endobronchial embolization using silicone spigots (EESS) was first described by Dutau et al. [74]. EESS is used to occlude segmental airways from which bleeding originates. After the bleeding segment has been identified, the spigot is grasped with biopsy forceps that are already inserted through the working channel of a flexible bronchoscope. Some authors stabilize the airway first with a rigid bronchoscope before performing flexible bronchoscopy [75]. The spigot is then positioned to occlude the segmental airway from which the bleeding originates. Multiple case reports have described this technique in a variety of conditions [75-77]. An interesting case report of successful EESS after failed BAE was published by Kho et al. [76]. The spigots were removed 4 days later, without further recurrence. A retrospective review by Bylicki et al. [75] included 9 patients and demonstrated a success rate of 78%. EESS was a temporary technique in a majority of cases, with 7 patients referred next to BAE and 2 patients referred for thoracic surgery. One patient had EESS as a definitive treatment. Spigots were removed after a median of 4 days, and 2 patients had late recurrence of hemoptysis.\n5.2.7. Fibrinogen-Thrombin. The injection of the prothrombotic fibrinogen-thrombin (FT) combination via flexible bronchoscopy was first reported by Tsukamoto et al. [78]. They retrospectively reported 19 cases in which thrombin was used alone. Thrombin alone was very effective in 15 cases, partially effective in one case, and ineffective in 4 cases. The FT combination was used in 14 cases, which demonstrated a very good response in 11 cases and a partial response in 3 cases. In a prospective study of 11 patients with severe hemoptysis, de Gracia et al. [79] obtained immediate control of bleeding in all patients with the injection of an FT combination. Two patients had a short-term severe hemoptysis relapse, and one had a long-term recurrence. Other case reports and small series demonstrated similar results [80, 81].\n5.2.8. Laser Photocoagulation. Laser photocoagulation was introduced by Dumon et al. [82] in 1982. Multiple types of medical lasers are now available. The main difference between lasers is their wavelength. With different wavelengths, the effect of the laser on the treated tissue will vary. Nd : YAG and Nd : YAP lasers, with respective wavelengths of 1060 and 1340 nm, are the most frequently used lasers in bronchoscopy as they provide a better coagulation effect. On the other hand, lasers such as CO 2 lasers have a far greater wavelength, 10,600 nm, and will provide more of a cutting effect.\nHan et al. [83] described in a retrospective review the efficacy of laser treatment for symptomatic palliation in a population of patients with central airway tumor. Out of 110 patients, 52 presented with hemoptysis. Hemoptysis completely resolved in 77% after laser treatment and partially improved in 17%. There was no procedure-related mortality. Another review of endoscopic palliative treatment of tracheobronchial tumors [84] showed a lower relatively short-term efficacy rate, with 58% of the patients\nbeing free of hemoptysis for 1 month or more following laser treatment. In other case reports, laser was also efficient in treating significant hemoptysis secondary to large central lesions [85, 86].\n5.2.9. Argon Plasma Coagulation. Plasma is a term used to describe an electrically conducting medium produced when the atoms in a gas become ionized. Argon plasma can be used to conduct an electric current from a probe inserted through the working channel of a flexible bronchoscope to an airway lesion. This electric current will then transform to thermal energy on contact with the tumor and coagulates its surface. Once coagulation of an area of the lesion is complete, the bronchial wall becomes less conductive and prevents deeper penetration of the electrical current in the airway wall which could lead to perforation [87]. Compared to laser photocoagulation during which the laser fiber needs to be aimed perpendicularly to the treated tissue, argon plasma coagulation can treat lesions that are parallel or perpendicular to the probe as the electrical current will travel through the plasma to the closest mucosal area which is the path of least resistance [88]. In a retrospective review of patients with endobronchial lesions and hemoptysis, Morice et al. demonstrated an immediate bleeding control rate of 100% with argon plasma, without recurrence on a mean follow-up period of 97 ± 92 days. Apart from its use on endobronchial tumors, argon plasma coagulation was also used in cases of hemangioma [89-91] and endobronchial endometriosis [92].\n5.2.10. Endobronchial Valves. Endobronchial valves were developed for endoscopic lung volume reduction in severely emphysematous patients with pulmonary hyperinflation [93]. These one-way valves allow air to escape from a pulmonary lobe but not enter it, therefore inducing atelectasis if there is no collateral ventilation. For management of massive hemoptysis, two case reports were published [94, 95] in patients with sequelae of tuberculosis\nwho were successfully treated with endobronchial valves. This approach remains anecdotic. It is important to remember that there is a significant proportion of pneumothorax after positioning endobronchial valves [96]. This can lead to dramatic outcomes in the context of severe hemoptysis.\n5.3. Pulmonary Isolation. The objective of pulmonary isolation techniques in hemoptysis is to prevent blood from the bleeding lung to enter the normal lung and, consequently, to maintain ventilation and oxygenation of the patient. A first simple maneuver is to place the bleeding source in a dependent position by turning the patient on the side of the bleeding. Trendelenburg and reverse Trendelenburg positions may also be useful depending on the position of the source of bleeding. Although elegant, positioning is not always sufficient to control blood in the bleeding lung and is not a practical solution for further management; hence, formal pulmonary isolation is occasionally needed for severe hemoptysis cases. Available pulmonary isolation techniques include selective endobronchial intubation (SEI), placement of a bronchial blocker (BB) after endotracheal intubation, and intubation with a double-lumen endotracheal tube (DLT) (Figure 1). Pulmonary isolation is not to be taken lightly, especially in an unstable patient with active severe hemoptysis. This was demonstrated by a prospective study [97] during which anesthesiologists with limited thoracic experience were asked to insert a double-lumen endotracheal tube, a Univent bronchial blocker (Fuji ™ , Tokyo, Japan), and an Arndt bronchial blocker (Cook Medical ™ , Bloomington, IN, USA) in an elective surgery setting. Twenty-two procedures were attempted with each device for a total of 66. Twenty-five (38%) attempts resulted in failures. Failure rates were similar with all the three devices. Six minutes after passage of the vocal cords with the endotracheal tube, less than half of the devices were positioned properly, while after ten minutes, more than one-third of the devices were not successfully positioned.\n5.3.1. Selective Endobronchial Intubation. SEI involves advancing an endotracheal tube into the mainstem bronchus contralateral to the bleeding site. This technique is generally performed under direct visualization with the bronchoscope guiding the tube into the mainstem bronchus before inflating the balloon. This technique is, in our opinion, the easiest to perform, requires no special equipment, and has the lowest cost. The main disadvantage of this technique is the risk of migration of the tube proximally. This risk is especially significant when the right mainstem bronchus, which is shorter, needs to be intubated. In this situation, the bronchoscopist must be careful not to occlude the right upper lobe.\n5.3.2. Bronchial Blocker. Various devices can be passed through or beside an endotracheal tube to isolate the source of bleeding. The most frequently used devices include the Cohen tip-deflecting BB (Cook Medical, Bloomington, IN, USA), the Arndt BB (Cook Medical, Bloomington, IN, USA), and the Univent BB (Fuji, Tokyo, Japan) (Figure 2). The Cohen BB is advanced through an endotracheal tube\nand has a wheel to direct its tip. The Arndt BB is guided into position by passing a bronchoscope through a loop at the end of the BB and using the bronchoscope as a guide to slide the blocker in place. The Univent BB is an endotracheal tube with a channel embedded in its wall. Once the endotracheal tube is in place, the BB can be advanced into proper position under bronchoscopic guidance. Its distal tip is curved, and rotation of the proximal end of the BB allows to guide its distal end into the desired mainstem. The main advantage of the BB is that they can be used to isolate a lobe or even a segment and they simply need to be deflated to explore the bleeding source distally.\n5.3.3. Double-Lumen Tube. The DLT consists of two single lumens bounded together, with the longer lumen positioned in the mainstem bronchus, while a shorter lumen is positioned in the trachea to ventilate the other lung (Figure 1). The two main advantages of the DLT are that it allows ventilation of both lungs and that its positioning does not require to know the side from which the bleeding originates. The main disadvantages of the DLT include the technical\nˆap\ndifficulty in properly positioning and the small size of the two lumens which do not allow the passage of a therapeutic bronchoscope.\n5.4. Tranexamic Acid. Tranexamic acid (TXA) is a lysine derivative that inhibits fibrinolysis through the blockage of lysine-binding sites on plasminogen [98]. Traditionally, it has been used to diminish blood loss following trauma [99], in the treatment of heavy vaginal bleeding [100] and in the perioperative management of major surgeries [101]. A limited number of trials have studied the efficacy of the administration of TXA in hemoptysis.\nIn 2013, Moen et al. reviewed 13 articles representing the best available evidence to address the question, 'Does tranexamic acid stop hemoptysis?' [102]. Although heterogeneous in design, study population, and quality of evidence, the papers indicated that TXA may reduce both the duration and volume of hemoptysis. However, development of pulmonary embolism was described in two different case reports of patients receiving TXA. A Cochrane systematic review including two randomized controlled trials (RCTs) evaluating the effectiveness and safety of antifibrinolytic agents in hemoptysis of all causes was also published in 2012 and revised in 2016 [103]. The pooled results of the 2 RCTs from Thailand [104] (46 patients, oral administration of TXA) and Ruiz [105] (24 patients, intravenous TXA) showed a significant reduction in bleeding time in favor of the TXA group but no effect on the remission of hemoptysis at seven days.\nBellam et al. [106] conducted a randomized, controlled pilot study in 2016 comparing IV perfusion of TXA to placebo in 66 patients with submassive hemoptysis. Results showed a nonsignificant trend favoring TXA over placebo in terms of frequency and quantity of hemoptysis, need for intervention and blood transfusion, and duration of hospital stay. No adverse event was noted in the treatment arm.\nWhile oral and intravenous routes have been the most commonly used for the administration of tranexamic acid, novel approaches have received clinical attention. In a small number of cases, aerosolized TXA and endobronchial instillation of TXA during bronchoscopy showed promising results in the treatment of hemoptysis [57, 107-111].\nEven though limited research is available on the administration of tranexamic acid as a therapeutic option for hemoptysis, existing evidence appears consistent with a reduction in bleeding quantity and duration. Further clinical studies are needed, but TXA deserves consideration and may prove to be a valuable option for the treatment of severe hemoptysis. Future studies should consider that tranexamic acid has a very short half-life and, at that time, did not demonstrate effectiveness in trauma until administered as a continuous perfusion.\n5.5. Surgery. Surgery is an effective modality to control hemoptysis in patients with localized disease [4], but patients undergoing surgery have reported mortality rates between 2% and 18% which may be a marker of severity of the underlying disease [29, 112, 113]. The mortality rate increases further when the surgery is extensive or performed in an\nemergency setting, reaching up to 50% [29, 114]. However, in survivors, recurrence rates are relatively low. Kiral et al. reported a 4% mortality rate with a mean follow-up of 23 months [29]. Surgery is also especially useful for conditions with a high risk of recurrence after bronchial artery embolization. For patients in whom surgery is the treatment of choice but who are not candidates on presentation, BAE can be a useful temporizing measure [115]. A multidisciplinary discussion including the surgeon, respirologist, and radiologist is often necessary in order to determine optimal management.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "6. Conclusion",
+      "content": "Hemoptysis remains an important and sometimes challenging medical issue. No diagnostic modality is universally superior, and each case needs to be individually approached. While bronchial artery embolization remains the cornerstone of the management of severe or persistent hemoptysis, many new endoscopic procedures have demonstrated signs of efficacy in recent years. Further data need to be obtained about the longer term results of these procedures. Comparison to placebo in addition to standard of care is also necessary, since hemoptysis frequently resolves spontaneously. Larger placebo-controlled trials of tranexamic acid perfusion in hemoptysis would also be of interest. Little is known about hemoptysis, and it remains an area of interest for future research.",
+      "category": "conclusion",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Conflicts of Interest",
+      "content": "The authors declare that they have no conflicts of interest.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "References",
+      "content": "[1] M. K. Lee, S.-H. Kim, S. J. Yong et al., 'Moderate hemoptysis: recurrent hemoptysis and mortality according to bronchial artery embolization,' Clinical Respiratory Journal , vol. 9, no. 1, pp. 53-64, 2014.\n[2] M. Dudha, S. Lehrman, and W. S. Aronow, 'Hemoptysis: diagnosis and treatment,' Comprehensive Therapy , vol. 35, no. 3-4, pp. 139-149, 2009.\n[3] H. Ittrich, M. Bockhorn, H. Klose, and M. Simon, 'The diagnosis and treatment of hemoptysis,' Deutsches Arzteblatt International , vol. 114, no. 21, pp. 371-381, 2017.\n[4] C. J. Knott, 'Management and prognosis of massive hemoptysis. Recent experience with 120 patients,' Journal of Thoracic and Cardiovascular Surgery , vol. 105, no. 3, pp. 394-397, 1993.\n[5] E. Jean, 'Clinical assessment and management of massive hemoptysis,' Critical Care Medicine , vol. 29, no. 5, p. 1098, 2000.\n[6] A. A. Garzon, M. M. Cerruti, and M. E. Golding, 'Exsanguinating hemoptysis,' Journal of Thoracic and Cardiovascular Surgery , vol. 84, no. 6, pp. 829-833, 1982.\n[7] J. A. Crocco, J. J. Rooney, and D. S. Fankushen, 'Massive hemoptysis,' Archives of Internal Medicine , vol. 121, no. 6, pp. 495-498, 1968.\n[8] S. Sehhat, M. Oreizie, and K. Moinedine, 'Massive pulmonary hemorrhage: surgical approach as choice of treatment,' Annals of Thoracic Surgery , vol. 25, no. 1, pp. 12-15, 1978.\n[9] R. Coder, 'Hemoptysis,' Emergency Medicine Clinics of North America , vol. 21, no. 2, pp. 421-435, 2003.\n[10] W. H. Ibrahim, 'Massive haemoptysis: the definition should be revised,' European Respiratory Journal , vol. 32, no. 4, pp. 1131-1132, 2008.\n[11] M. Amirana, R. Frater, P. Tirschwell, and M. Janis, 'An Aggressive surgical approach to significant hemoptysis in patients with pulmonary tuberculosis 1, 2, 3,' American Review of Respiratory Disease , vol. 77, no. 2, 1968.\n[12] R. Corey and K. M. Hla, 'Major and massive hemoptysis: reassessment of conservative management,' American Journal of the Medical Sciences , vol. 294, no. 5, pp. 301-309, 1987.\n[13] I. Tsiligianni, G. Maltezakis, N. M. Siafakas, N. Tzanakis, M. Tsoumakidou, and G. Chrysofakis, 'A prospective analysis of 184 hemoptysis cases-diagnostic impact of chest X-ray, computed tomography, bronchoscopy,' Respiration , vol. 73, no. 6, pp. 808-814, 2006.\n[14] G. McGuinness, J. R. Beacher, T. J. Harkin, S. M. Garay, W. N. Rom, and D. P. Naidich, 'Hemoptysis: prospective high-resolution CT/bronchoscopic correlation,' Chest , vol. 105, no. 4, pp. 1155-1162, 1994.\n[15] S. M. Vizcaya, L. J. Jim´ enez, and M. A. Tornero, 'Etiology of hemoptysis: prospective analysis of 752 cases,' Revista Cl´ ınica Española , vol. 201, no. 12, pp. 696-700, 2001.\n[16] L. Sakr and H. Dutau, 'Massive hemoptysis: an update on the role of bronchoscopy in diagnosis and management,' Respiration , vol. 80, no. 1, p. 38, 2010.\n[17] S. Vanni, S. Bianchi, S. Bigiarini et al., 'Management of patients presenting with haemoptysis to a Tertiary Care Italian Emergency Department: the Florence Haemoptysis Score (FLHASc),' Internal and Emergency Medicine , 2017.\n[18] A. E. Stebbings and T. K. Lim, 'Cause, treatment and outcome of patients with life-threatening haemoptysis,' Singapore Medical Journal , vol. 40, no. 2, pp. 67-69, 1999.\n[19] E. Unsal, D. K¨ oksal, F. Cimen, N. TaciHoca, and T. Sipit, 'Analysis of patients with hemoptysis in a reference hospital for chest diseases,' Tuberk Toraks , vol. 7, no. 2, p. 44, 2006.\n[20] B. Hirshberg, I. Biran, M. Glazer, and M. R. Kramer, 'Hemoptysis: etiology, evaluation, and outcome in a tertiary referral hospital,' Chest , vol. 112, no. 2, pp. 440-444, 1997.\n[21] R. Jones, J. Charlton, R. Latinovic, and M. C. Gulliford, 'Alarm symptoms and identification of non-cancer diagnoses in primary care: cohort study,' BMJ , vol. 339, p. b3094, 2009.\n[22] D. R. Simon, S. C. Aronoff, and M. T. Del Vecchio, 'Etiologies of hemoptysis in children: a systematic review of 171 patients,' Pediatric Pulmonology , vol. 52, no. 2, pp. 255-259, 2016.\n[23] S. ¨ Ozdo˘ gan, ¨ O. Oruc, B. Salepci, Z. ¨ Ocal, and B. Ca˘ glayan, 'Hemoptysis: a retrospective analysis of 108 cases,' Respiratory Medicine , vol. 96, no. 9, pp. 677-680, 2002.\n[24] S. K. Singh and K. K. Tiwari, 'Etiology of hemoptysis: a retrospective study from a tertiary care hospital from northern Madhya Pradesh, India,' Indian Journal of Tuberculosis , vol. 63, no. 1, pp. 44-47, 2016.\n[25] J. S. Earwood and T. D. Thompson, 'Hemoptysis: evaluation and management,' American Family Physician , vol. 91, no. 4, pp. 243-249, 2015.\n[26] J. Serra, 'Have the causes of hemoptysis changed? An analysis of 213 patients undergoing fiber bronchoscopic exploration,' Archivos de Bronconeumologia , vol. 31, no. 7, pp. 323-327, 1994.\n[27] B. C. Cahill and D. H. Ingbar, 'Massive hemoptysis. Assessment and management,' Clinical Chest Medicine , vol. 15, no. 1, pp. 147-167, 1994.\n[28] T. W. Lee, S. Wan, D. K. Choy, M. Chan, and A. Arifi, 'Management of massive hemoptysis: a single institution experience,' Annals of Thoracic and Cardiovascular Surgery , vol. 6, no. 4, pp. 232-235, 2000.\n[29] H. Kiral, S. Evman, C. Tezel et al., 'Pulmonary resection in the treatment of life-threatening hemoptysis,' Annals of Thoracic and Cardiovascular Surgery , vol. 21, no. 2, pp. 125-131, 2015.\n[30] E. I. Hsiao, C. M. Kirsch, F. T. Kagawa, J. H. Wehner, W. A. Jensen, and R. B. Baxter, 'Utility of fiberoptic bronchoscopy before bronchial artery embolization for massive hemoptysis,' American Journal of Roentgenology , vol. 177, no. 4, pp. 861-867, 2001.\n[31] A. Valipour, A. Kreuzer, H. Koller, and W. Koessler, 'Bronchoscopy-guided topical hemostatic tamponade therapy for the management of life-threatening hemoptysis,' Chest , vol. 127, no. 6, pp. 2113-2118, 2005.\n[32] M. P. Revel, L. S. Fournier, A. S. Hennebicque et al., 'Can CT replace bronchoscopy in the detection of the site and cause of bleeding in patients with large or massive hemoptysis?,' American Journal of Roentgenology , vol. 179, no. 5, pp. 1217-1224, 2002.\n[33] A. Bhalla, A. K. Pannu, and V. Suri, 'Etiology and outcome of moderate-to-massive hemoptysis: experience from a tertiary care center of North India,' International Journal of Mycobacteriology , vol. 6, no. 3, pp. 307-310, 2017.\n[34] M. Fartoukh, B. Khoshnood, A. Parrot et al., 'Early prediction of in-hospital mortality of patients with hemoptysis: an approach to defining severe hemoptysis,' Respiration , vol. 83, no. 2, pp. 106-114, 2012.\n[35] V. L. Chan, L. So, J. Lam et al., 'Major haemoptysis in Hong Kong: aetiologies, angiographic findings and outcomes of bronchial artery embolisation,' International Journal of Tuberculosis and Lung Disease , vol. 13, no. 9, pp. 1167-1173, 2009.\n[36] N. Shigemura, I. Y. Wan, C. H. Simon et al., 'Multidisciplinary management of life-threatening massive hemoptysis: a 10-year experience,' Annals of Thoracic Surgery , vol. 87, no. 3, pp. 849-853, 2009.\n[37] T. H. Ong and P. Eng, 'Massive hemoptysis requiring intensive care,' Intensive Care Medicine , vol. 29, no. 2, p. 317, 2003.\n[38] C. Abdulmalak, J. Cottenet, G. Beltramo et al., 'Haemoptysis in adults: a 5-year study using the French nationwide hospital administrative database,' European Respiratory Journal , vol. 46, no. 2, pp. 503-511, 2015.\n[39] L. H. Ketai, T.-L. H. Mohammed, J. Kirsch et al., 'ACR appropriateness criteria ® hemoptysis,' Journal of Thoracic Imaging , vol. 29, no. 3, pp. W19-W22, 2014.\n[40] E. F. Haponik, E. J. Britt, P. L. Smith, and E. R. Bleecker, 'Computed chest tomography in the evaluation of hemoptysis: impact on diagnosis and treatment,' Chest , vol. 91, no. 1, pp. 80-85, 1987.\n[41] M. Davoodi, M. Kordi, M. M. Gharibvand, M. H. Shoushtari, H. Borsi, and M. Bahadoram, 'Hemoptysis: comparison of diagnostic accuracy of multi detector CT scan and bronchoscopy,' Global Journal of Health Science , vol. 7, no. 3, 2015.\n[42] M. Thirumaran, R. Sundar, I. M. Sutcliffe, and D. C. Currie, 'Is investigation of patients with haemoptysis and normal chest radiograph justified?,' Thorax , vol. 64, no. 10, pp. 854-856, 2009.\n[43] L. Chalumeau-Lemoine, A. Khalil, H. Prigent, M.-F. Carette, M. Fartoukh, and A. Parrot, 'Impact of multidetector\nCT-angiography on the emergency management of severe hemoptysis,' European Journal of Radiology , vol. 82, no. 11, pp. e742-e747, 2013.\n[44] K. Nielsen, M. Gottlieb, S. Colella, Z. Saghir, K. R. Larsen, and P. F. Clementsen, 'Bronchoscopy as a supplement to computed tomography in patients with haemoptysis may be unnecessary,' European Clinical Respiratory Journal , vol. 3, no. 1, p. 31802, 2016.\n[45] S. Bønløkke, L. M. Guldbrandt, and T. R. Rasmussen, 'Bronchoscopy in patients with haemoptysis and normal computed tomography of the chest is unlikely to result in significant findings,' Danish Medical Journal , vol. 81, p. 186, 2015.\n[46] A. Khalil, A. Parrot, C. Nedelcu, M. Fartoukh, and C. Marsault, 'Severe hemoptysis of pulmonary arterial origin: signs and role of multidetector row CT angiography,' Chest , vol. 133, no. 1, pp. 212-219, 2008.\n[47] C. Spinu, E. Castañer, X. Gallardo, M. Andreu, and A. Alguersuari, 'Multidetector computed tomography in life-threatening hemoptysis,' Radiologia , vol. 55, no. 6, pp. 483-498, 2013.\n[48] G. D. No¨ e, S. M. Jaff´ e, and M. P. Molan, 'CT and CT angiography in massive haemoptysis with emphasis on pre-embolization assessment,' Clinical Radiology , vol. 66, no. 9, p. 869, 2011.\n[49] J. R´ emy, C. Voisin, C. Dupuis et al., 'Treatment of hemoptysis by embolization of the systemic circulation,' Annales de Radiologie , vol. 17, no. 1, pp. 5-16, 1974.\n[50] A. Bhalla, D. Kandasamy, P. Veedu, A. Mohan, and S. Gamanagatti, 'A retrospective analysis of 334 cases of hemoptysis treated by bronchial artery embolization,' Oman Medical Journal , vol. 30, no. 2, pp. 119-128, 2015.\n[51] H. Shao, J. Wu, Q. Wu et al., 'Bronchial artery embolization for hemoptysis: a retrospective observational study of 344 patients,' Chinese Medical Journal , vol. 128, no. 1, pp. 58-62, 2015.\n[52] L. M. Tom, H. I. Palevsky, D. S. Holsclaw et al., 'Recurrent bleeding, survival, and longitudinal pulmonary function following bronchial artery embolization for hemoptysis in a U.S. adult population,' Journal of Vascular and Interventional Radiology , vol. 26, no. 12, pp. 1806-1813.e1, 2015.\n[53] H. Dab´ o, R. Gomes, A. Marinho, M. Madureira, J. Paquete, and P. Morgado, 'Bronchial artery embolisation in management of hemoptysis-a retrospective analysis in a tertiary university hospital,' Revista Portuguesa de Pneumologia , vol. 22, no. 1, pp. 34-38, 2006.\n[54] A. Panda, A. S. Bhalla, and A. Goyal, 'Bronchial artery embolization in hemoptysis: a systematic review,' Diagnostic and Interventional Radiology , vol. 23, no. 4, pp. 307-317, 2017.\n[55] J. J. Leyon, T. Littlehales, B. Rangarajan, E. T. Hoey, and A. Ganeshan, 'Endovascular embolization: review of currently available embolization agents,' Current Problems in Diagnostic Radiology , vol. 43, no. 1, pp. 35-53, 2013.\n[56] G. M. Agmy, S. M. Wafy, and S. Mohamed, 'Bronchial and nonbronchial systemic artery embolization in management of hemoptysis: experience with 348 patients,' Chest , vol. 138, no. 4, p. 265A, 2013.\n[57] O. Fruchter, S. Schneer, V. Rusanov, A. Belenky, and M. R. Kramer, 'Bronchial artery embolization for massive hemoptysis: long-term follow-up,' Asian Cardiovascular and Thoracic Annals , vol. 23, no. 1, pp. 55-60, 2014.\n[58] R. Syha, T. Benz, J. Hetzel et al., 'Bronchial artery embolization in hemoptysis: 10-year survival and recurrence-free survival in benign and malignant etiologies - a retrospective study,' R¨ oFo , vol. 188, no. 11, pp. 1061-1066, 2016.\n[59] H. Racil, H. Rajhi, R. B. Naceur, A. Chabbou, H. Bouecha, and N. Mnif, 'Endovascular treatment of haemoptysis: medium and long-term assessment,' Diagnostic and Interventional Imaging , vol. 94, no. 1, pp. 38-44, 2012.\n[60] M. M. van den Heuvel, Z. Els, C. F. Koegelenberg, K. M. Naidu, C. T. Bolliger, and A. H. Diacon, 'Risk factors for recurrence of haemoptysis following bronchial artery embolisation for life-threatening haemoptysis,' International Journal of Tuberculosis and Lung Disease , vol. 11, no. 8, pp. 909-914, 2007.\n[61] C. A. Pue and E. R. Pacht, 'Complications of fiberoptic bronchoscopy at a university hospital,' Chest , vol. 107, no. 2, pp. 430-432, 1995.\n[62] A. A. Conlan and S. S. Hurwitz, 'Management of massive haemoptysis with the rigid bronchoscope and cold saline lavage,' Thorax , vol. 35, no. 12, pp. 901-904, 1980.\n[63] H. W. Breuer, S. Charchut, and H. Worth, 'Endobronchial versus intravenous application of the vasopressin derivative glypressin during diagnostic bronchoscopy,' European Respiratory Journal , vol. 2, no. 3, pp. 225-228, 1989.\n[64] C. T¨ uller, D. T¨ uller, M. Tamm, and M. H. Brutsche, 'Hemodynamic effects of endobronchial application of ornipressin versus terlipressin,' Respiration , vol. 71, no. 4, p. 397, 2004.\n[65] K. K. Sakata, D. R. Nelson, and D. E. Midthun, 'Pulmonary hemorrhage treated with oxidized regenerated cellulose,' Journal of Bronchology & Interventional Pulmonology , vol. 24, no. 3, pp. 42-44, 2017.\n[66] C. C. Nogueira, S. Ferreira, A. Oliveira et al., 'Bronchoscopic hemostatic tamponade with oxidized regenerated cellulose for major hemoptysis control: two case reports,' Revista Portuguesa de Pneumologia , vol. 16, no. 6, pp. 917-920, 2006.\n[67] R. K. Chawla, A. Madan, D. Mehta, and A. Chawla, 'Glue therapy in hemoptysis: a new technique,' Lung India : Official Organ of Indian Chest Society , vol. 29, no. 3, pp. 293-294, 2012.\n[68] B. Coiffard, H. Dutau, S. Laroumagne, J. Plojoux, and P. Astoul, 'Endobronchial sealing with glue for malignant hemoptysis,' Journal of Bronchology & Interventional Pulmonology , vol. 21, no. 4, pp. 373-375, 2014.\n[69] P. Bhattacharyya, A. Dutta, A. N. Samanta, and S. R. Chowdhury, 'New procedure: bronchoscopic endobronchial sealing: a new mode of managing hemoptysis,' Chest , vol. 121, no. 6, pp. 2066-2069, 2002.\n[70] R. K. Chawla, A. Madan, and C. Aditya, 'Glue in hemoptysis,' Journal of Bronchology & Interventional Pulmonology , vol. 23, no. 4, pp. e40-e42, 2016.\n[71] J. C. Brandes, E. Schmidt, and R. Yung, 'Occlusive endobronchial stent placement as a novel management approach to massive hemoptysis from lung cancer,' Journal of Thoracic Oncology , vol. 3, no. 9, p. 1071, 2008.\n[72] I. H. Chung, M. Park, D. H. Kim, and G. S. Jeon, 'Endobronchial stent insertion to manage hemoptysis caused by lung cancer,' Journal of Korean Medical Science , vol. 25, no. 8, p. 1253, 2010.\n[73] E. Barisione, C. Genova, M. Grosso et al., 'Palliative treatment of life-threatening hemoptysis with silicone stent insertion in advanced lung cancer,' Monaldi Archives for Chest Disease , vol. 87, no. 1, 2017.\n[74] H. Dutau, A. Palot, A. Haas, I. Decamps, and O. Durieux, 'Endobronchial embolization with a silicone spigot as a temporary treatment for massive hemoptysis,' Respiration , vol. 73, no. 6, pp. 830-832, 2006.\n[75] O. Bylicki, T. Vandemoortele, S. Laroumagne, P. Astoul, and H. Dutau, 'Temporary endobronchial embolization with\nsilicone spigots for moderate hemoptysis: a retrospective study,' Respiration , vol. 84, no. 3, pp. 225-230, 2012.\n[76] S. S. Kho, S. K. Chan, M. C. Yong, and S. T. Tie, 'Endobronchial embolization for life-threatening hemoptysis with Endobronchial Watanabe Spigot,' BMC Research Notes , vol. 10, no. 1, p. 304, 2017.\n[77] T. Adachi, K. Ogawa, N. Yamada et al., 'Bronchial occlusion with Endobronchial Watanabe Spigots for massive hemoptysis in a patient with pulmonary Mycobacterium avium complex infection,' Respiratory Investigation , vol. 54, no. 2, pp. 121-124, 2016.\n[78] T. Tsukamoto, H. Sasaki, and H. Nakamura, 'Treatment of hemoptysis patients by thrombin and fibrinogen-thrombin infusion therapy using a fiberoptic bronchoscope,' Chest , vol. 96, no. 3, pp. 473-476, 1989.\n[79] J. de Gracia, D. la Rosa de, E. Catal´ an, A. Alvarez, C. Bravo, and F. Morell, 'Use of endoscopic fibrinogen-thrombin in the treatment of severe hemoptysis,' Respiratory Medicine , vol. 97, no. 7, pp. 790-795, 2003.\n[80] L. Bense, 'Intrabronchial selective coagulative treatment of hemoptysis: report of three cases,' Chest , vol. 97, no. 4, pp. 990-996, 1990.\n[81] R. Lorusso, G. De Cicco, E. Vizzardi, and S. Gelsomino, 'Human fibrinogen/thrombin-coated collagen patch to control intraoperative severe pulmonary hemorrhage and air leakage after correction of a ruptured thoracic aortic aneurysm,' Annals of Thoracic Surgery , vol. 91, no. 3, pp. 917-919, 2011.\n[82] J. F. Dumon, E. Reboud, L. Garbe, F. Aucomte, and B. Meric, 'Treatment of tracheobronchial lesions by laser photoresection,' Chest , vol. 81, no. 3, pp. 278-284, 1982.\n[83] C. C. Han, D. Prasetyo, and G. M. Wright, 'Endobronchial palliation using Nd:YAG laser is associated with improved survival when combined with multimodal adjuvant treatments,' Journal of Thoracic Oncology , vol. 2, no. 1, pp. 59-64, 2007.\n[84] M. R. Hetzel and S. G. Smith, 'Endoscopic palliation of tracheobronchial malignancies,' Thorax , vol. 46, no. 5, pp. 325-333, 1991.\n[85] W. M. Edmondstone, E. M. Nanson, A. A. Woodcock, F. J. Millard, and M. R. Hetzel, 'Life threatening haemoptysis controlled by laser photocoagulation,' Thorax , vol. 38, no. 10, pp. 788-789, 1983.\n[86] A. Hermes, D. Heigener, U. Gatzemeier, J. Schatz, and M. Reck, 'Efficacy and safety of bronchoscopic laser therapy in patients with tracheal and bronchial obstruction: a retrospective single institution report,' Clinical Respiratory Journal , vol. 6, no. 2, p. 67, 2012.\n[87] L. Freitag, 'Interventional endoscopic treatment,' Lung Cancer , vol. 45, no. 2, pp. S235-S238, 2004.\n[88] R. C. Morice, T. Ece, F. Ece, and L. Keus, 'Endobronchial argon plasma coagulation for treatment of hemoptysis and neoplastic airway obstruction,' Chest , vol. 1 19, no. 3, p. 781, 2001.\n[89] A. Sharifi, M. Nazemieh, and M. Moghadaszadeh, 'Supraglottic hemangioma as a rare cause of recurrent hemoptysis: a new treatment modality with argon plasma coagulation (APC),' Tanaffos , vol. 11, no. 4, p. 254, 2014.\n[90] D. R. deKeratry, 'Argon plasma coagulation for endobronchial hemangioma: a new treatment option for a rare cause of hemoptysis,' Journal of Bronchology , vol. 11, no. 4, pp. 254-256, 2004.\n[91] A. S. Rose and P. N. Mathur, 'Endobronchial capillary hemangioma: case report and review of the literature,' Respiration , vol. 76, no. 2, p. 221, 2008.\n[92] M. K. Ozvaran, R. Baran, O. So˘ gukpmar et al., 'Histopathological diagnosis of endobronchial endometriosis treated with argon laser,' Respirology , vol. 11, no. 3, pp. 348-350, 2006.\n[93] F. C. Sciurba, A. Ernst, F. J. F. Herth et al., 'A randomized study of endobronchial valves for advanced emphysema,' New England Journal of Medicine , vol. 363, no. 13, pp. 1233-1244, 2010.\n[94] C. Koegelenberg, J. W. Bruwer, and C. T. Bolliger, 'Endobronchial valves in the management of recurrent haemoptysis,' Respiration , vol. 87, no. 1, p. 84, 2014.\n[95] U. Lalla, B. W. Allwood, S. S. Roy, E. M. Irusen, and C. F. N. Koegelenberg, 'Endobronchial valve used as salvage therapy in a mechanically ventilated patient with intractable life-threatening haemoptysis,' Respiration , vol. 93, no. 6, pp. 436-440, 2017.\n[96] D.-J. Slebos, P. L. Shah, F. J. F. Herth, and A. Valipour, 'Endobronchial valves for endoscopic lung volume reduction: best practice recommendations from expert panel on endoscopic lung volume reduction,' Respiration , vol. 93, no. 2, p. 138, 2017.\n[97] J. H. Campos, E. A. Hallam, T. Van Natta, and K. H. Kernstine, 'Devices for lung isolation used by anesthesiologists with limited thoracic experience: comparison of double-lumen endotracheal tube, Univent torque control blocker, and Arndt wire-guided endobronchial blocker,' Anesthesiology , vol. 104, no. 2, pp. 261-266, 2006.\n[98] C. J. Dunn and K. L. Goa, 'Tranexamic acid: a review of its use in surgery and other indications,' Drugs , vol. 57, no. 6, pp. 1005-1032, 1999.\n[99] L. M. Napolitano, M. J. Cohen, B. A. Cotton, M. A. Schreiber, and E. E. Moore, 'Tranexamic acid in trauma: how should we use it?,' Journal of Trauma and Acute Care Surgery , vol. 74, no. 6, pp. 1575-1586, 2013.\n[100] A. S. Lukes, K. A. Moore, K. N. Muse et al., 'Tranexamic acid treatment for heavy menstrual bleeding: a randomized controlled trial,' Obstetrics & Gynecology , vol. 116, no. 4, pp. 865-875, 2010.\n[101] P. S. Myles, J. A. Smith, and T. Painter, 'Tranexamic acid in patients undergoing coronary-artery surgery,' New England Journal of Medicine , vol. 376, no. 19, pp. 1891-1893, 2017.\n[102] C. A. Moen, A. Burrell, and J. Dunning, 'Does tranexamic acid stop haemoptysis?,' Interactive CardioVascular and Thoracic Surgery , vol. 17, no. 6, pp. 991-994, 2013.\n[103] G. Prutsky, J. P. Domecq, C. A. Salazar, and R. Accinelli, 'Antifibrinolytic therapy to reduce haemoptysis from any cause,' Cochrane Database Systematic Reviews , vol. 18, no. 4, p. CD008711, 2016.\n[104] J. Tscheikuna, B. Chvaychoo, C. Naruman, and N. Maranetra, 'Tranexamic acid in patients with hemoptysis,' Journal of the Medical Association of Thailand , vol. 85, no. 4, pp. 399-404, 2002.\n[105] W. Ruiz, Acido Tranexamico vs Placebo en Hemoptisis Por TBC Pulmonar: Estudio Pilato Double Ciego , Ph.D. thesis. Lima, Peru, p. 1, 1994.\n[106] B. L. Bellam, D. P. Dhibar, V. Suri et al., 'Efficacy of tranexamic acid in haemoptysis: a randomized, controlled pilot study,' Pulmonary Pharmacology & Therapeutics , vol. 40, pp. 80-83, 2016.\n[107] A. Solomonov, O. Fruchter, T. Zuckerman, B. Brenner, and M. Yigla, 'Pulmonary hemorrhage: a novel mode of therapy,' Respiratory Medicine , vol. 103, no. 8, pp. 1 196-1200, 2009.\n[108] G. S. Calvo, I. De Granda-Orive, and D. L. Padilla, 'Inhaled tranexamic acid as an alternative for hemoptysis treatment,' Chest , vol. 149, no. 2, p. 604, 2016.\n[109] S. Parrish, W. Krimsky, R. Browning, and M. Alabrash, 'Novel approaches to the patient with massive hemoptysis,' Journal of Community Hospital Internal Medicine Perspectives , vol. 2, no. 1, p. 14784, 2012.\n[110] M. S. Fekri, S. M. Hashemi-Bajgani, A. Shafahi, and R. Zarshenas, 'Comparing adrenaline with tranexamic acid to control acute endobronchial bleeding: a randomized controlled trial,' Iranian Journal of Medical Sciences , vol. 42, no. 2, pp. 129-135, 2017.\n[111] E. M´ arquez-Mart´ ın, D. G. Vergara, J. Mart´ ın-Juan, A. R. Flac´ on, J. L. Lopez-Campos, and F. Rodr´ ıguez-Panadero, 'Endobronchial administration of tranexamic acid for controlling pulmonary bleeding: a pilot study,' Journal of Bronchology & Interventional Pulmonology , vol. 17, no. 2, pp. 122-125, 2010.\n[112] A. Gourin and A. A. Garzon, 'Operative treatment of massive hemoptysis,' Annals of Thoracic Surgery , vol. 18, no. 1, pp. 52-60, 1974.\n[113] Y. Zhang, C. Chen, and G.-N. Jiang, 'Surgery of massive hemoptysis in pulmonary tuberculosis: immediate and longterm outcomes,' Journal of Thoracic and Cardiovascular Surgery , vol. 148, no. 2, pp. 651-656, 2014.\n[114] C. Andr´ ejak, A. Parrot, B. Bazelly et al., 'Surgical lung resection for severe hemoptysis,' Annals of Thoracic Surgery , vol. 88, no. 5, pp. 1556-1565, 2009.\n[115] G. R. Alexander, 'A retrospective review comparing the treatment outcomes of emergency lung resection for massive haemoptysis with and without preoperative bronchial artery embolization,' European Journal of Cardio-Thoracic Surgery , vol. 45, no. 2, pp. 251-255, 2013.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    }
+  ],
+  "tables": [
+    {
+      "id": "table",
+      "caption": "",
+      "headers": null,
+      "rows": [
+        [
+          "",
+          "Neoplasm ∗"
+        ],
+        [
+          "",
+          "Bronchitis ∗"
+        ],
+        [
+          "Pulmonary-airway",
+          "Bronchiectasis ∗"
+        ],
+        [
+          "",
+          "Airway trauma"
+        ],
+        [
+          "",
+          "Foreign body"
+        ],
+        [
+          "",
+          "Bronchovascular fistula"
+        ],
+        [
+          "",
+          "Pneumonia ∗"
+        ],
+        [
+          "",
+          "Tuberculosis ∗"
+        ],
+        [
+          "",
+          "Mycetomas ∗ (aspergillosis)/fungal"
+        ],
+        [
+          "",
+          "infections"
+        ],
+        [
+          "",
+          "Lung abcess"
+        ],
+        [
+          "",
+          "Parasitic diseases"
+        ],
+        [
+          "Pulmonary-",
+          "Leptospirosis"
+        ],
+        [
+          "parenchymal",
+          "Cocaine inhalation"
+        ],
+        [
+          "",
+          "Lung contusion"
+        ],
+        [
+          "",
+          "Vasculitis (Wegener, etc.)"
+        ],
+        [
+          "",
+          "Systemic lupus erythematosus"
+        ],
+        [
+          "",
+          "Behcet's disease"
+        ],
+        [
+          "",
+          "Goodpasture syndrome"
+        ],
+        [
+          "",
+          "Idiopathic pulmonary hemosiderosis"
+        ],
+        [
+          "",
+          "Pulmonary embolism ∗"
+        ],
+        [
+          "",
+          "Arteriovenous malformation"
+        ],
+        [
+          "Pulmonary-vascular",
+          "Pulmonary artery pseudoaneurysm Dieulafoy's disease"
+        ],
+        [
+          "",
+          "Pulmonary veno-occlusive disease"
+        ],
+        [
+          "",
+          "Bronchial telangiectasia"
+        ],
+        [
+          "Cardiac",
+          "Mitral stenosis"
+        ],
+        [
+          "",
+          "Congenital heart disease"
+        ],
+        [
+          "",
+          "Anticoagulant and antiplatelet"
+        ],
+        [
+          "",
+          "medications"
+        ],
+        [
+          "",
+          "Pulmonary artery catheter"
+        ],
+        [
+          "Iatrogenic",
+          "Biopsy"
+        ],
+        [
+          "",
+          "Bronchoscopy"
+        ],
+        [
+          "",
+          "Endotracheal tube erosion"
+        ],
+        [
+          "",
+          "Bevacizumab treatment"
+        ],
+        [
+          "",
+          "Idiopathic ∗"
+        ],
+        [
+          "Others",
+          "Disorders of coagulation Thoracic endometriosis (catamenial"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/29'}",
+      "headers": [
+        "",
+        "",
+        "",
+        "",
+        "Etiology",
+        "Etiology",
+        "Etiology",
+        "Etiology",
+        "Etiology",
+        "Etiology",
+        "Etiology"
+      ],
+      "rows": [
+        [
+          "Study",
+          "Hemoptysis inclusion criteria",
+          "Location",
+          "n",
+          "TB",
+          "Bronchiectasis",
+          "Lung CA",
+          "of Mycetoma",
+          "hemoptysis, % Pneumonia",
+          "Others",
+          "Idiopathic"
+        ],
+        [
+          "Bhalla et al. [33]",
+          "> 30mL/d ∗",
+          "India",
+          "64",
+          "65",
+          "9",
+          "7",
+          "NS",
+          "11",
+          "9",
+          "NS"
+        ],
+        [
+          "Kiral et al. [29]",
+          "> 200mL/d",
+          "Turkey",
+          "203",
+          "21",
+          "15",
+          "20",
+          "3",
+          "NS",
+          "19",
+          "22"
+        ],
+        [
+          "Fartoukh et al. [34]",
+          "ICU admission",
+          "France",
+          "1087",
+          "25",
+          "20",
+          "17",
+          "6",
+          "NS",
+          "20",
+          "18"
+        ],
+        [
+          "Chan et al. [35]",
+          "> 200mL/d",
+          "Hong Kong",
+          "251",
+          "42",
+          "32",
+          "8.5",
+          "4.5",
+          "5",
+          "5",
+          "3"
+        ],
+        [
+          "Shigemura et al. [36]",
+          "> 600mL/d",
+          "China",
+          "62",
+          "55",
+          "23",
+          "6",
+          "8",
+          "6",
+          "2",
+          "NS"
+        ],
+        [
+          "Valipour et al. [31]",
+          "> 150mL/h",
+          "Austria",
+          "57",
+          "23",
+          "8.5",
+          "35",
+          "NS",
+          "NS",
+          "17.5",
+          "16"
+        ],
+        [
+          "Ong and Eng [37]",
+          "> 300mL/d or intubation",
+          "Singapore",
+          "29",
+          "10",
+          "66",
+          "7",
+          "14",
+          "NS",
+          "3",
+          "NS"
+        ],
+        [
+          "Revel et al. [32]",
+          "> 150mL/d",
+          "France",
+          "80",
+          "19",
+          "31",
+          "11",
+          "7.5",
+          "NS",
+          "21.5",
+          "10"
+        ],
+        [
+          "Hsiao et al. [30]",
+          "Requiring bronchial arteriography",
+          "USA",
+          "28",
+          "7",
+          "57",
+          "14",
+          "NS",
+          "NS",
+          "14",
+          "7"
+        ],
+        [
+          "Lee et al. [28]",
+          "Surgical resection considered",
+          "Hong Kong",
+          "54",
+          "17",
+          "57",
+          "4",
+          "NS",
+          "NS",
+          "7.3",
+          "NS"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    }
+  ],
+  "figures": [
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/47'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/62'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    }
+  ],
+  "references": [
+    {
+      "title": "Moderate hemoptysis: recurrent hemoptysis and mortality according to bronchial artery embolization"
+    },
+    {
+      "title": "Clinical Respiratory Journal",
+      "year": 2014
+    },
+    {
+      "title": "Hemoptysis: diagnosis and treatment",
+      "year": 2014
+    },
+    {
+      "title": "Comprehensive erapy",
+      "year": 2009
+    },
+    {
+      "title": "e diagnosis and treatment of hemoptysis",
+      "year": 2009
+    },
+    {
+      "title": "Deutsches Arzteblatt International",
+      "year": 2017
+    },
+    {
+      "title": "Management and prognosis of massive hemoptysis. Recent experience with 120 patients",
+      "year": 2017
+    },
+    {
+      "title": "Journal of oracic and Cardiovascular Surgery",
+      "year": 2017
+    },
+    {
+      "title": "Clinical assessment and management of massive hemoptysis",
+      "year": 1993
+    },
+    {
+      "title": "Critical Care Medicine",
+      "year": 1993
+    },
+    {
+      "title": "Exsanguinating hemoptysis",
+      "year": 2000
+    },
+    {
+      "title": "Massive hemoptysis",
+      "year": 1982
+    },
+    {
+      "title": "Archives of Internal Medicine",
+      "year": 1968
+    },
+    {
+      "title": "Massive pulmonary hemorrhage: surgical approach as choice of treatment",
+      "year": 1968
+    },
+    {
+      "title": "Annals of oracic Surgery",
+      "year": 1978
+    },
+    {
+      "title": "Hemoptysis",
+      "year": 2014
+    },
+    {
+      "title": "Emergency Medicine Clinics of North America",
+      "year": 1978
+    },
+    {
+      "title": "Massive haemoptysis: the definition should be revised",
+      "year": 2003
+    },
+    {
+      "title": "European Respiratory Journal",
+      "year": 2003
+    },
+    {
+      "title": "An Aggressive surgical approach to significant hemoptysis in patients with pulmonary tuberculosis 1, 2, 3",
+      "year": 2008
+    },
+    {
+      "title": "American Review of Respiratory Disease",
+      "year": 1968
+    },
+    {
+      "title": "Major and massive hemoptysis: reassessment of conservative management",
+      "year": 1968
+    },
+    {
+      "title": "American Journal of the Medical Sciences",
+      "year": 1987
+    },
+    {
+      "title": "A prospective analysis of 184 hemoptysis cases-diagnostic impact of chest X-ray, computed tomography, bronchoscopy",
+      "year": 1987
+    },
+    {
+      "title": "Respiration",
+      "year": 2006
+    },
+    {
+      "title": "Hemoptysis: prospective high-resolution CT/bronchoscopic correlation",
+      "year": 2006
+    },
+    {
+      "title": "Chest",
+      "year": 1994
+    },
+    {
+      "title": "Etiology of hemoptysis: prospective analysis of 752 cases",
+      "year": 1994
+    },
+    {
+      "title": "Revista Clínica Española",
+      "year": 2001
+    },
+    {
+      "title": "Massive hemoptysis: an update on the role of bronchoscopy in diagnosis and management",
+      "year": 2001
+    },
+    {
+      "title": "Management of patients presenting with haemoptysis to a Tertiary Care Italian Emergency Department: the Florence Haemoptysis Score (FLHASc)",
+      "year": 2010
+    },
+    {
+      "title": "Cause, treatment and outcome of patients with life-threatening haemoptysis",
+      "year": 2017
+    },
+    {
+      "title": "Singapore Medical Journal",
+      "year": 1999
+    },
+    {
+      "title": "Analysis of patients with hemoptysis in a reference hospital for chest diseases",
+      "year": 1999
+    },
+    {
+      "title": "Tuberk Toraks",
+      "year": 2006
+    },
+    {
+      "title": "Hemoptysis: etiology, evaluation, and outcome in a tertiary referral hospital",
+      "year": 2006
+    },
+    {
+      "title": "Alarm symptoms and identification of non-cancer diagnoses in primary care: cohort study",
+      "year": 1997
+    },
+    {
+      "title": "BMJ",
+      "year": 2009
+    },
+    {
+      "title": "Etiologies of hemoptysis in children: a systematic review of 171 patients",
+      "year": 2009
+    },
+    {
+      "title": "Pediatric Pulmonology",
+      "year": 2016
+    },
+    {
+      "title": "Hemoptysis: a retrospective analysis of 108 cases",
+      "year": 2016
+    },
+    {
+      "title": "Respiratory Medicine",
+      "year": 2002
+    },
+    {
+      "title": "Etiology of hemoptysis: a retrospective study from a tertiary care hospital from northern Madhya Pradesh, India",
+      "year": 2002
+    },
+    {
+      "title": "Indian Journal of Tuberculosis",
+      "year": 2016
+    },
+    {
+      "title": "Hemoptysis: evaluation and management",
+      "year": 2016
+    },
+    {
+      "title": "American Family Physician",
+      "year": 2015
+    },
+    {
+      "title": "Have the causes of hemoptysis changed? An analysis of 213 patients undergoing fiber bronchoscopic exploration",
+      "year": 2015
+    },
+    {
+      "title": "Archivos de Bronconeumologia",
+      "year": 2015
+    },
+    {
+      "title": "Massive hemoptysis. Assessment and management",
+      "year": 1994
+    },
+    {
+      "title": "Clinical Chest Medicine",
+      "year": 1994
+    },
+    {
+      "title": "Management of massive hemoptysis: a single institution experience",
+      "year": 1994
+    },
+    {
+      "title": "Annals of oracic and Cardiovascular Surgery",
+      "year": 2000
+    },
+    {
+      "title": "Pulmonary resection in the treatment of life-threatening hemoptysis",
+      "year": 2000
+    },
+    {
+      "title": "Utility of fiberoptic bronchoscopy before bronchial artery embolization for massive hemoptysis",
+      "year": 2015
+    },
+    {
+      "title": "American Journal of Roentgenology",
+      "year": 2001
+    },
+    {
+      "title": "Bronchoscopy-guided topical hemostatic tamponade therapy for the management of life-threatening hemoptysis",
+      "year": 2001
+    },
+    {
+      "title": "Can CT replace bronchoscopy in the detection of the site and cause of bleeding in patients with large or massive hemoptysis?",
+      "year": 2005
+    },
+    {
+      "title": "Etiology and outcome of moderate-to-massive hemoptysis: experience from a tertiary care center of North India",
+      "year": 2002
+    },
+    {
+      "title": "International Journal of Mycobacteriology",
+      "year": 2017
+    },
+    {
+      "title": "Early prediction of in-hospital mortality of patients with hemoptysis: an approach to defining severe hemoptysis",
+      "year": 2017
+    },
+    {
+      "title": "Major haemoptysis in Hong Kong: aetiologies, angiographic findings and outcomes of bronchial artery embolisation",
+      "year": 2012
+    },
+    {
+      "title": "International Journal of Tuberculosis and Lung Disease",
+      "year": 2009
+    },
+    {
+      "title": "Multidisciplinary management of life-threatening massive hemoptysis: a 10-year experience",
+      "year": 2009
+    },
+    {
+      "title": "Massive hemoptysis requiring intensive care",
+      "year": 2009
+    },
+    {
+      "title": "Intensive Care Medicine",
+      "year": 2009
+    },
+    {
+      "title": "Haemoptysis in adults: a 5-year study using the French nationwide hospital administrative database",
+      "year": 2003
+    },
+    {
+      "title": "ACR appropriateness criteria ® hemoptysis",
+      "year": 2015
+    },
+    {
+      "title": "Journal of oracic Imaging",
+      "year": 2014
+    },
+    {
+      "title": "Computed chest tomography in the evaluation of hemoptysis: impact on diagnosis and treatment",
+      "year": 2014
+    },
+    {
+      "title": "Hemoptysis: comparison of diagnostic accuracy of multi detector CT scan and bronchoscopy",
+      "year": 1987
+    },
+    {
+      "title": "Global Journal of Health Science",
+      "year": 2015
+    },
+    {
+      "title": "Is investigation of patients with haemoptysis and normal chest radiograph justified?",
+      "year": 2015
+    },
+    {
+      "title": "orax",
+      "year": 2009
+    },
+    {
+      "title": "Impact of multidetector CT-angiography on the emergency management of severe hemoptysis",
+      "year": 2009
+    },
+    {
+      "title": "European Journal of Radiology",
+      "year": 2013
+    },
+    {
+      "title": "Bronchoscopy as a supplement to computed tomography in patients with haemoptysis may be unnecessary",
+      "year": 2013
+    },
+    {
+      "title": "European Clinical Respiratory Journal",
+      "year": 2016
+    },
+    {
+      "title": "Bronchoscopy in patients with haemoptysis and normal computed tomography of the chest is unlikely to result in significant findings",
+      "year": 2016
+    },
+    {
+      "title": "Danish Medical Journal",
+      "year": 2015
+    },
+    {
+      "title": "Severe hemoptysis of pulmonary arterial origin: signs and role of multidetector row CT angiography",
+      "year": 2015
+    },
+    {
+      "title": "Multidetector computed tomography in life-threatening hemoptysis",
+      "year": 2008
+    },
+    {
+      "title": "Radiologia",
+      "year": 2013
+    },
+    {
+      "title": "CT and CT angiography in massive haemoptysis with emphasis on pre-embolization assessment",
+      "year": 2013
+    },
+    {
+      "title": "Clinical Radiology",
+      "year": 2011
+    },
+    {
+      "title": "Treatment of hemoptysis by embolization of the systemic circulation",
+      "year": 2011
+    },
+    {
+      "title": "Annales de Radiologie",
+      "year": 1974
+    },
+    {
+      "title": "A retrospective analysis of 334 cases of hemoptysis treated by bronchial artery embolization",
+      "year": 1974
+    },
+    {
+      "title": "Oman Medical Journal",
+      "year": 2015
+    },
+    {
+      "title": "Bronchial artery embolization for hemoptysis: a retrospective observational study of 344 patients",
+      "year": 2015
+    }
+  ],
+  "quality": {
+    "completeness_score": 0,
+    "has_abstract": true,
+    "abstract_source": "metadata",
+    "has_doi": true,
+    "has_full_text": true,
+    "num_sections": 9,
+    "num_tables": 2,
+    "num_figures": 5,
+    "num_references": 89
+  }
+}

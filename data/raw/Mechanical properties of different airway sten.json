@@ -1,0 +1,710 @@
+{
+  "metadata": {
+    "document_id": "10_1016_j_medengphy_2015_02_008",
+    "title": "Mechanical properties of different airway stents",
+    "authors": [
+      "Anat Ratnovsky",
+      "Noa Regev",
+      "Shaily Wald",
+      "Mordechai Kramer",
+      "Sara Naftali"
+    ],
+    "year": 2015,
+    "journal": "Medical Engineering & Physics",
+    "doi": "10.1016/j.medengphy.2015.02.008",
+    "volume": "37",
+    "issue": "4",
+    "pages": "408-415",
+    "citation": "Ratnovsky, et al. (2015). Mechanical properties of different airway stents. Medical Engineering & Physics, 37(4), 408-415. https://doi.org/10.1016/j.medengphy.2015.02.008",
+    "abstract": "Airway stents improve pulmonary function and quality of life in patients suffering from airway obstruction. The aim of this study was to compare main types of stents (silicone, balloon-dilated metal, self-expanding metal, and covered self-expanding metal) in terms of their mechanical properties and the radial forces they exert on the trachea. Mechanical measurements were carried out using a force gauge and specially designed adaptors fabricated in our lab. Numerical simulations were performed for eight different stent geometries, inserted into trachea models. The results show a clear correlation between stent diameter (oversizing) and the levels of stress it exerts on the trachea. Compared with uncovered metal stents, metal stents that are covered with less stiff material exert signiﬁcantly less stress on the trachea while still maintaining strong contact with it. The use of such stents may reduce formation of mucosa necrosis and ﬁstulas while still preventing stent migration. Silicone stents produce the lowest levels of stress, which may be due to weak contact between the stent and the trachea and can explain their propensity for migration. Unexpectedly, stents made of the same materials exerted different stresses due to differences in their structure. Stenosis signiﬁcantly increases stress levels in all stents.",
+    "abstract_source": "metadata",
+    "url": "https://linkinghub.elsevier.com/retrieve/pii/S1350453315000429"
+  },
+  "source_file": "Mechanical properties of different airway sten.json",
+  "sections": [
+    {
+      "title": "Medical Engineering and Physics",
+      "content": "journal homepage: www.elsevier.com/locate/medengphy",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Anat Ratnovsky a, ∗ , Noa Regev a , Shaily Wald a , Mordechai Kramer b , Sara Naftali a",
+      "content": "a Afeka, Tel-Aviv Academic College of Engineering, Medical Engineering Department, Tel Aviv 69107, Israel b Rabin Medical Center, Pulmonary Institute, Petach Tikva, Israel",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "a r t i c l e i n f o",
+      "content": "Article history: Received 28 July 2014 Revised 29 January 2015 Accepted 16 February 2015",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "a b s t r a c t",
+      "content": "Airway stents improve pulmonary function and quality of life in patients suffering from airway obstruction. The aim of this study was to compare main types of stents (silicone, balloon-dilated metal, self-expanding metal, and covered self-expanding metal) in terms of their mechanical properties and the radial forces they exert on the trachea. Mechanical measurements were carried out using a force gauge and specially designed adaptors fabricated in our lab. Numerical simulations were performed for eight different stent geometries, inserted into trachea models. The results show a clear correlation between stent diameter (oversizing) and the levels of stress it exerts on the trachea. Compared with uncovered metal stents, metal stents that are covered with less stiff material exert significantly less stress on the trachea while still maintaining strong contact with it. The use of such stents may reduce formation of mucosa necrosis and fistulas while still preventing stent migration. Silicone stents produce the lowest levels of stress, which may be due to weak contact between the stent and the trachea and can explain their propensity for migration. Unexpectedly, stents made of the same materials exerted different stresses due to differences in their structure. Stenosis significantly increases stress levels in all stents.\n©2015 IPEM. Published by Elsevier Ltd. All rights reserved.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "1. Introduction",
+      "content": "Airway stents can improve the pulmonary function of patients suffering from central airway obstruction and have the potential to save or prolong patients' lives. Airway stents are designed to restore airway patency and to mimic normal airway anatomy and physiology [1].\nIn general, airway stents can be classified into four types: silicone, balloon-expandable metal, uncovered self-expanding metal and covered self-expanding metal. When selecting a stent for a given patient, the clinician must take into account several considerations: whether the stent is permanent or temporary, whether the procedure requires general or local anesthetic, the stent's likelihood of migration, and whether it encourages tissue growth [1].\nEach type of stent is associated with advantages as well as disadvantages [2], and, thus far, no data have indicated clear superiority of one type over another [3]. Silicone stents can be easily removed and replaced as needed [4,5]. However, they have several major drawbacks, including a high migration rate, a low lumen-to-wall thickness ratio, difficulty in clearing secretions, and the need to carry out rigid bronchoscopy for their apposition [5-8]. Metallic stents, usually made of steel or nitinol, can be placed via flexible bronchoscopy,\nunder local anesthesia [6]. Balloon-expandable metallic stents are dilated by a balloon to the correct diameter at the target site. These stents lack the capacity for elastic re-expansion and therefore risk being crushed or becoming deformed with coughing; thus, they are not recommended for use in the central airways. However, they are often used in children, since they are available in sizes suitable for pediatric application [9]. Self-expanding metal stents have a shape memory that enables them to be restored to a predetermined configuration when released from a constraining delivery catheter [6]. These stents can be made of steel or nitinol and can either be uncovered or covered with thin polyurethane membranes. They are associated with lower likelihood of migration and less interface with cilia, and their walls are thinner, so their inner diameter is wider. However, they are difficult to remove due to the growth of airway epithelium around them, they can impair mucociliary clearance, are associated with recurrent lumen obstruction, with greater bacterial colonization and are also susceptible to metal fatigue and fracture over time [6,10,11]. Covered self-expanding metal stents are associated with a lower risk of tumor in-growth and granulation tissue formation. A disadvantage of this type of stent is that radial forces acting on the stent may cause necrosis of mucosa and fistula formation. These stents even collapse if the external force is too high, and granulation tissue at the uncovered ends may block the bronchus [10,3].\nIn order to be suitable for long-term use, stents must be able to respond to cough pressures by undergoing reversible reduction of the cross-sectional area [12]. A numerical study on the human healthy\ntrachea has shown that the trachea wall is subjected to maximal stress levels of 3.3 kPa in tension (inspiration) and 5.25 kPa in compression (expiration). During coughing these maximal and minimal values increase to 6 kPa and 7.25 kPa, respectively [12]. In the same study, stent-trachea models, silicone (Dumon) and metallic (Ultraflex), revealed that the presence of a stent prevents tracheal muscle deflections, especially during coughing. In addition, compared with the metallic stent-model, the silicone stent-model was shown to contain larger regions that are predisposed to sliding, leading to the conclusion that stent type selection plays an important role in improving clinical outcomes. Several numerical studies examined changes in airway flow and pressure during airway obstruction [13,14] and after stent placement [15]. Other studies employed finite element analysis to evaluate flow pattern, wall stress and deformation in healthy and stenosis trachea [16], to evaluate the influence of silicon stent-model on the trachea wall during inspiration and expiration [17] and to examine the influence of the same silicone stent-model on the trachea movement during swallowing [18].\nHowever, while airway stents can be life-saving and life prolonging, numerical and mechanical evaluation of mutual stress relationships between different airway stents and the trachea, has gained little attention. Of this relationship, the effect of the radial forces exerted by the different stents on the airways is of particular importance since radial forces are known to cause tissue growth around and inside the stent, a main drawback of airway stents [3,10].\nThe main objective of this study, therefore, was to evaluate, based on numerical simulation, the radial forces exerted on the trachea by different airway stents. This comparison might assist in selecting, for a given procedure, the most suitable commercially available airway stent. In addition, the mechanical functions of the four main types of airway stents were compared through mechanical measurements of radial stresses and strains.",
+      "category": "introduction",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "2.1. Mechanical measurements",
+      "content": "The mechanical properties of several different airway stents (A-E; summarized in Table 1) have been measured using an experimental setup consisted of a force gauge (Mark 10) and specially designed polyester film adaptors produced in our lab (Fig. 1). An adaptor was fitted to each stent such that its dimensions corresponded to the stent's circumference (Table 1). A stress-strain curve was obtained for each stent under evaluation, under a range of radially applied forces. Specifically, each of the tested stents was placed with its adaptor in the force gauge, and a gradually increasing radial force was applied to the stent until the adaptor tore. The measured parameters were vertical forces and vertical displacements. The radial stress σ was calculated based on the force data as follows:\nwhere Fy is the applied vertical force, and r and l are, respectively, the external radius and the length of the stent. The strain ε wascalculated as follows:\nwhere /Delta1 ly is the vertical displacement. Since, the adaptor was stiffer than the stent, its stretching was neglected. Once the stress-strain curves were plotted, their linear regions were extracted and compared. The measured mechanical properties of the smooth silicone stent were also compared to the properties obtained by the numerical simulations described in Section 2.2 below.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "2.2. Numerical simulations",
+      "content": "Numerical simulations of about 100 different cases were carried out on a combined model of airway stent within the trachea. The simulations were done to investigate the influence of different stent diameters, geometries and materials on the radial stress levels that the stent exerts on different trachea models.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "2.2.1. Modeled stents types",
+      "content": "Eight different types of stents were examined (Table 1): internallycovered self-expanding metal stent (A); externally-covered selfexpanding metal stent (B); two uncovered self-expanding metal stents (zigzag (C) and wallstent (D)); studded silicone (E) and smooth silicone (F) stents; and two balloon-expandable metal stents (G and H).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "2.2.2. Stent models dimensions and materials",
+      "content": "The dimensions, geometries and materials of the modeled stents were comparable to those of existing stents. To allow comparison amongthedifferent stents, a length of 50 mm and a diameter either of 14mm,15mmor16mmwereassignedforeachstent.Thestentswere assumed to be composed of various types of materials, as detailed in Table 2. The materials were: nitinol (55Ni-45Ti) austenite, cobalt alloy (elgiloy), cobalt alloy (40Co-20Cr), stainless steel (316 L), and silicone\n(a)\n(b)\nwith two different Young's moduli (1 MPa and 160 GPa). The covers for the metal stents were assumed to be composed of silicone or polytetrafluoroethylene (PTFE).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "2.2.3. Trachea models",
+      "content": "The basic geometrical model of the trachea consisted of two main layers: smooth muscle and cartilage. The muscle layer was modeled as a hollow cylinder. The cartilage layer was composed of 20 c-shaped rings. Three different types of tracheas were modeled: (i) healthy\ntrachea, (ii) trachea with 30% symmetric stenosis, and (iii) trachea with 30% non-symmetric stenosis (Fig. 2). The trachea materials were modeled as linear elastic materials. The elastic modulus and Poisson's ratio were, respectively, 3.33 MPa and 0.49 MPa for the cartilage [18], and 0.7 MPa and 0.49 MPa for the smooth muscle [19].",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "2.2.4. Assumptions and simplifications",
+      "content": "The modeled assumed homogeneous and isotropic stent materials with no temperature dependence, linear ranges of stresses and\ndisplacements, and uniform surface load distribution. The simulations were carried out on a stent which was in an open state within the trachea. The stent-opening procedure was not simulated in this study. Fluid structure interaction of the airflow on the trachea was neglected.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "2.2.5. Governing equations",
+      "content": "The governing equation, assuming steady-state, was as follows (Eq. (3)):\nwhere u represents the displacement vector, k is the structure's stiffness, and F is the applied external force. The investigated parameter was the effective stress, which was calculated, for each vertex of the model, using Von-Mises criteria (Eq. (4)):\nwhere σ xx , σ yy , σ zz , τ xy , τ xz , τ yz are the components of the stress tensor for the respective Cartesian direction.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "2.2.6. Boundary conditions",
+      "content": "The boundary conditions were as follows: The force ( F ) on the external wall of the stent is equal to the force on the inner wall of the trachea (Eq. (5)), radial displacements ( u ) on the external wall of the stent are equal to radial displacements on the inner wall of the trachea (Eq. (6)), and no displacements at the harnessed edges of the trachea (Eqs. (7) and (8)).\nu\ntrachea\n=\nu\nstent\n(6)",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "2.2.7. Mesh type and simulation solution method",
+      "content": "The simulations were performed using the SolidWorks Simulation package Ver. 2011, which is commercial software of finite element (FEM) methods using the Shrink-Fit feature. As a local contact condition, the shrink fit assembly (stent inside trachea) was applied\nsuch that the outer radius of the stent was slightly larger than the inner radius of the trachea. This means that there were over closures between the stent and the trachea. The mesh type was defined as a Lagrangian,comprising40,000-180,000three-dimensionalelements, which were set as tetrahedral with 4 nodes each (Fig. 3).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "3.1. Validity of the numerical simulations",
+      "content": "To validate the results obtained from the numerical simulations, themeasuredmechanicalpropertiesofthesmoothsiliconestentwere compared with the properties obtained by the numerical simulations of this stent. The linear region of the simulated stress-strain curve was almost identical to the measured region (maximal strain values of 0.175 in the simulations, 0.2 in the measurements). The elastic moduli obtained from the mechanical measurements and the simulations were of the same order of magnitude (0.3 MPa and 1 MPa, respectively).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "3.2. Experimental measurements",
+      "content": "The stress-strain curves of the internally-covered metal stent (A), externally-covered metal stent (B) and the two types of uncovered self-expanding stents (zigzag (C) and wallstent (D)) are shown in Fig. 4a. As shown, the stiffness was higher for the covered metal stents than for the uncovered metal stents. The internally-covered metal stent (A) is slightly stiffer than the externally-covered metal stent (yield stress levels of 15.7 kPa versus 12.3 kPa, respectively). The silicone stent (E) has a relatively narrow linear region but higher stiffness compared with the other stents. At the end of the linear region, the radial forces distort the stent shape (Fig. 4b and c).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "3.3.1. Stent diameter",
+      "content": "The effect of stent diameter on the distribution of stress along the length of the stent was investigated in the three modeled trachea types (healthy trachea, trachea with 30% non-symmetric stenosis, trachea with 30% symmetric stenosis). In each type of stent, a correlation was observed between the diameter of the stent and the stress distribution. Fig. 5 shows an example of the stress distribution along the length of an uncovered metal stent (A). For this type of stent, the stress values in a healthy trachea were about 50 MPa, 100 MPa and\n150 MPa for stent diameters of 14 mm, 15 mm and 16 mm, respectively (Fig. 4a). Obstruction of the trachea by both non-symmetrical and symmetrical stenosis caused a significant increase in stress, with maximum stress levels reaching values of about 400 MPa, 700 MPa and1000MPa,forstentdiametersof14mm,15mmand16mmstent, respectively (Fig 5b and c). A similar correlation for all stent types was observed. In addition, for each type of stent, obstruction was\naccompanied by a significant increase in the average circumference stress levels along the length of the stent (Fig. 6). For most stent types, the highest values of circumference stress were observed in the trachea with non-symmetric stenosis.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "3.3.2. Stent material and geometry",
+      "content": "Analysis of the effect of stent material (Table 2) on stress distribution revealed that stents composed of stiff materials generate higher\nstress levels (Fig. 7a-e), thus, the exerted stress levels were higher for metal stents composed of cobalt alloy or stainless steel 316 L than for those composedofnitinol (Young moduli, E = 190GPaand E = 83GPa, respectively). Both the studded silicone and the smooth silicone stents exerted lower stress levels compared to the metal stents (Fig. 7c and d). In both categories of stents, stents composed of stiffer silicone exerted higher stress levels ( E = 160 GPa and E = 1 MPa, respectively). The stress levels exerted by the covered stents (Fig. 7e) were lower than those of the uncovered stents. Stents covered with PTFE exerted higher stress levels than did those with a silicone cover ( E = 410 MPa and E = 2.5 MPa, respectively).\nFor the uncovered self-expandable metal stents, the exerted stress levels were higher for the zigzag stent (C) than for the wallstent (D), (Fig. 7a and b), for all three trachea types. The studded and smooth silicone stents (E and F, respectively) produced similar stress levels in the healthy trachea, whereas in the trachea with symmetric stenosis the exerted stress levels were higher for the studded silicone stent than for the smooth silicone stent. For the silicone-covered selfexpandable metal stents, in the healthy trachea, the exerted stress levels were higher for the externally-covered stent (wallstent, B) than for the internally-covered stent (triangle A; Fig. 7f).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "4. Discussion",
+      "content": "Stent placement can rapidly relieve the acute stress cause by airway obstruction. When considering stent placement, it is important to select a correctly-sized stent. An undersized stent is subject to excessive friction with the wall of the airway, which may cause excessive tissue hyperplasia. In a clinical study, an oversized stent\nwas found to cause excessive radial pressure against the trachea mucosa and weakens microcirculation [20]. The airway stents simulated in the present study were oversized by 10-12% in the healthy trachea and by 15-17% in the stenotic tracheas. For each type of airway stent tested herein, the radial stress increased significantly with diameter. Although, stress level at 10% oversizing was the lowest observed in all stent types, the stress level is sufficient to ensure their apposition. Theseresults are comparable with blood vessel stent studies, in which there is a tendency to select stents that are oversized by 10% in order to ensure apposition without creating substantial wall stress [21].\nSignificantly higher stress levels were observed in stents composed of stiffer materials (higher Young's modulus), such as cobalt alloy and stainless steel 316 L, than in stents composed of nitinol or silicone (Fig. 7). Previous studies, which investigated the influence of dumon silicon stent on the trachea wall during inspiration and expiration and during swallowing, found similar maximal stresses at peak flow [17,18]. Studies on blood vessel stents obtained similar results, showing that less-stiff stents exert less stress on artery walls [22]. Additionally, the relatively low stress levels observed in silicone airway stents may indicate weak contact with the trachea and can explain these stents' known propensity for migration along the airway paths. This proposition is supported by studies on arterial stents, which claimed that compliant stents may not provide adequate support and might be more susceptible to migration [23].\nIn this study, the material properties of both cartilage and smooth muscles were assumed to be linear and isotropic. These assumptions turned to be justified in view of similar maximal stresses during peak flow obtained in previous studies [17,18] assuming anisotropic properties for the smooth muscle. It is suggested that the reason of the\nnegligibility of the anisotropy is the small deformations of the trachea that are induced during steady-state.\nA priori , one might expect that stents composed of materials with similar Young's modulus values should exhibit similar stress levels. However, the results of the present study indicate that the stresses exerted by a stent, are greatly influenced by the stent's structure. A continuous geometric structure, type D (wallstent), was associated with lower stress levels compared with type C stents (zigzag; Fig. 7a and b) and types G and H stents (both square and triangle) even though all these stents were composed of the same stent material. An opposite phenomenon was observed in the case of covered metal stents: the stresses exerted on healthy trachea were significantly lower for the internally-covered metal stent (triangle, A) than for the externally-covered metal stent (wallstent, B). This unexpected outcome probably resulted from the positioning of the cover, which affects the stiffness of the stent. The externally-covered metal stent has a smoother surface and thus fewer areas of concentrated stress, however, it is denser and therefore stiffer, which increases the stress on the trachea. Nevertheless, this type of stent is still more recommended for use, since its contact with the trachea is uniform, and contact stresses are evenly distributed. The even distributions of the contacts and the stresses eliminate localized stresses, which may promote tissue growth around the stent [24].\nStenosis of the trachea increases pressure on the inserted stent and thus increases the stresses that act both on the stent and on\nthe trachea. The fact that the stress levels under symmetric stenosis did not differ significantly from those under non-symmetric stenosis (Fig. 4) may be due to the relatively low percentage of stenosis modeled in the present study. A higher percentage of stenosis would most likely increase the differences in stress levels between the symmetric and asymmetric cases [25].\nTheelastic modulus (the slope of the curve in Fig. 4a and b) and the yield stresses of the metal stents calculated from the mechanical measurements (uncovered self-expandable metal stent, C: σ y = 5 . 3 kPa , E = 15.6 kPa) did not match the values associated with the material itself (nitinol: σ y = 280 MPa, E = 83 GPa). However, since the stents under evaluation either contain voids or are covered by silicone, their mechanical properties are affected not only by the stent material, but also by the voids and, in the covered stents, by the covering material. The combined effect makes the stents less stiff and with lower Young's moduli compared with the metal itself. Similarly, the results of the experiment clearly showed that elastic moduli were higher in covered metal stents than in uncovered metal stents; this finding can also be explained by the difference between the contribution of the voids to the stiffness when the voids are left empty and when they are filled by the covering material (silicone or PTFE). Accordingly, the covered stents are stiffer and have higher Young's modulus values. The silicone stent was distorted due to the radial forces; thus, a sharp reduction in stress was measured at the end of the stent's linear range (Fig. 4b and c).",
+      "category": "discussion",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "5. Limitation",
+      "content": "While the present study presented extensive simulations and the integration of their results with those of mechanical measurements, some issues remain to be addressed. Firstly, the trachea was modeled as a simple elongated cylinder, and the material properties of both cartilage and smooth muscles were assumed to be linear and isotropic. Although this assumption was justified, further research directed to anisotropic property should not be excluded. The present study focused on the stent-trachea contact during steady-state phase thus, although the process of stent-opening influences the developed stresses on the trachea, the procedure was not simulated.\nThe present study did not examine the developed stresses on the trachea due to different breathing patterns such as, varied flow rates, coughing, etc. Future studies should integrate simulations of radial forces with the effect of airflow on the stress distribution.\nIn many cases, airway stents are inserted under conditions of malignant neoplasm, benign airway disease such as fibrotic scar or bottleneck stricture, or tracheobronchomalacia [6]. Here we study the effect of only 30% symmetric and non-symmetric stenosis. Future study should design a patient-specific trachea model.\nManagement of obstruction in children is challenging because of the specific characteristics of the lesions and the airways small dimensions [26]. Thus, it would be of interest to expand the numerical simulations presented in the present study so as to investigate the characteristics of different airway stents in small airways.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Conflict of interest",
+      "content": "None declared.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Funding",
+      "content": "None declared.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Ethical approval",
+      "content": "Not required.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "References",
+      "content": "[1] Ranu H, Madden BP. Endobronchial stenting in the management of large airway pathology. Postgrad Med J 2009;85:682-7.\n[2] DoomsC, De Keukeleire T, Janssens A, Carron K. Performance of fully covered selfexpandingmetallicstentsinbenignairwaystrictures.Respiration2009;77:420-6.\n[3] Chin CS, Litle V, Yun J, Weiser T, Swanson SJ. Airway stents. Ann Thorac Surg 2008;85:S792-6.\n[4] Miyazawa T, Yamakido M, Ikeda S, Furukawa K, Takiguchi Y, Tada H, et al. Implantation of ultraflex nitinol stents in malignant tracheobronchial stenosis. Chest 2000;118:959-65.\n[5] Bolliger CT, Probst R, Tschopp K, Solèr M, Perruchoud AP. Silicone stents in the management of inoperable tracheobronchial stenoses. Indications and limitations. Chest 1993;104(6):1653-9.\n[6] Lee P, Kupeli E, Mehta AC. Airway stents. Clin Chest Med 2010;31:141-50.\n[7] Chawla RK, Madan A, Singh I, Mudoiya R, Chawla A, Gupta R, et al. Removal of self expandable metallic airway stent: a rare case report. Lung India 2013;30:64-6.\n[8] Saito Y, Imamura H. Airway stenting. Surg Today 2005;35:265-70.\n[9] Nicolai T. Airway stents in children. Pediatr Pulmonol 2008;43(4):330-44.\n[10] Charokopos N, Foroulis CN, Rouska E, Sileli MN, Papadopoulos N, Papakonstantinou C. The management of post-intubation tracheal stenoses with self-expandable stents: Early and long-term results in 11 cases. Eur J Cardiothorac Surg 2011;40:919-25.\n[11] Noppen M, Stratakos G, D'Haese J, Meysman M, Vinken W. Removal of covered self-expandable metallic airway stents in benign disorders: indications, technique, and outcomes. Chest 2005;127:482-7.\n[12] Malvè M, del Palomar AP, Mena A, Trabelsi O, López-Villalobos JL, Ginel A, et al. Numerical modeling of a human stented trachea under different stent designs. Int Commun Heat Mass Transfer 2011;38:855-62.\n[13] Xu C, Sin S, McDonough JM, Udupa JK, Guez A, Arens R, et al. Computational fluid dynamics modeling of the upper airway of children with obstructive sleep apnea syndrome in steady flow. J Biomech 2006;39:2043-54.\n[14] Liu Y, So RMC, Zhang CH. Modeling the bifurcating flow in an asymmetric human lung airway. J Biomech 2003;36:951-9.\n[15] Ho CY, Liao HM, Tu CY, Huang CY, Shih CM, Su MYL, et al. Numerical analysis of airflow alteration in central airways following tracheobronchial stent placement. Breast Cancer 2012;1:1.\n[16] Malvè M, del Palomar AP, Chandra S, López-Villalobos JL, Mena A, Finol EA, et al. FSI analysis of a healthy and a stenotic human trachea under impedance-based boundary conditions. J Biomech Eng 2011;133(2) 021001-1-11.\n[17] MalvèM,delPalomarAP,ChandraS,López-VillalobosJL,Finol EA, Ginel A, et al. FSI analysis of a human trachea before and after prosthesis implantation. J Biomech Eng 2011;133(7) 071003-1-12.\n[18] Trablsi O, del Palomar AP, Mena Tobar A, López-Villalobos JL, Ginel A, Doblaré M. FE simulation of human trachea swallowing movement before and after the implantation of an endoprothesis. Appl Math Modell 2011;35:4902-12.\n[19] Fung YC. Biomechanics: mechanical properties of living tissues. Springer; 1993.\n[20] Kim JH, Shin JH, Song HY, Shim TS, Yoon CJ, Ko GY. Benign tracheobronchial strictures: long-term results and factors affecting airway patency after temporary stent placement. Am J Roentgenol 2007;188:1033-8.\n[21] ChenHY,HermillerJ,SinhaAK,SturekM,ZhuL,KassabGS.Effectsofstentsizingon endothelial and vessel wall stress: potential mechanisms for in-stent restenosis. J Appl Physiol 2009;106:1686-91.\n[22] Timmins LH, Meyer CA, Moreno MR, Moore Jr JE. Mechanical modeling of stents deployed in tapered arteries. Ann Biomed Eng 2008;36:2042-50.\n[23] Tan T, Phani A, Douglas GR, Bond T. Compliance and longitudinal strain of cardiovascular stents: influence of cell geometry. J Med Devices 2011;5:0410021-6.\n[24] Siewiorek GM, Finol EA, Wholey MH. Clinical significance and technical assessment of stent cell geometry in carotid artery stenting. J Endovasc Ther 2009;16:178-88.\n[25] Gu L, Muttyam AK, Hammel JM, Zhao S. The relation between the arterial stress and restenosis rate after coronary stenting. J Med Device 2010;4:031005.\n[26] Antón-Pacheco JL, Cabezalí D, Tejedor R, López M, Luna C, Comas JV, de Miguel E. The role of airway stenting in pediatric tracheobronchial obstruction. Eur J Cardiothorac Surg 2008;33:1069-75.\n[27] Lévesque J, Dubé D, Fiset M, Mantovani D. Material and properties for coronary stents. Adv Mater Processes 2004;162:45-8.\n[28] Hopcroft MA, Nix WD, Kenny TW. What is the Young's modulus of silicon? J Microelectromech Syst 2010;19:229-38.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    }
+  ],
+  "tables": [
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/56'}",
+      "headers": [
+        "",
+        "Stent type",
+        "Geometry",
+        "Width (mm)",
+        "c (mm)",
+        "d (mm)"
+      ],
+      "rows": [
+        [
+          "A",
+          "Internally-covered metal stent (triangle)",
+          "",
+          "Metal - 0.15 Cover - 0.1",
+          "25",
+          "10"
+        ],
+        [
+          "B",
+          "Externally-covered metal stent (wallstent)",
+          "",
+          "Metal - 0.17 Cover - 0.1",
+          "26",
+          "40"
+        ],
+        [
+          "C",
+          "Uncovered self-expandable metal stent (zigzag)",
+          "",
+          "0.15",
+          "26",
+          "40"
+        ],
+        [
+          "D",
+          "Uncovered self-expandable stent metal (wallstent)",
+          "",
+          "0.17",
+          "27",
+          "10"
+        ],
+        [
+          "E",
+          "Studded silicone",
+          "",
+          "1.5",
+          "10",
+          "40"
+        ],
+        [
+          "F",
+          "Smooth silicone",
+          "",
+          "1.5",
+          "",
+          ""
+        ],
+        [
+          "G",
+          "Balloon-expandable metal stent (square)",
+          "",
+          "0.15",
+          "",
+          ""
+        ],
+        [
+          "H",
+          "Balloon-expandable metal stent (triangle)",
+          "",
+          "0.15",
+          "",
+          ""
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/57'}",
+      "headers": [
+        "",
+        "Stent type",
+        "Material 1",
+        "Material 2",
+        "Material 3"
+      ],
+      "rows": [
+        [
+          "A",
+          "Internally-covered metal stent (triangle)",
+          "Nitinol austenite (55Ni-45Ti) + silicone cover",
+          "Nitinol austenite (55Ni-45Ti) + PTFE cover",
+          "Cobalt alloy (elgiloy) + silicone cover"
+        ],
+        [
+          "B",
+          "Externally-covered metal stent (wallstent)",
+          "",
+          "Cobalt alloy (elgiloy) + PTFE cover",
+          "Cobalt alloy (elgiloy) + silicone cover"
+        ],
+        [
+          "C",
+          "Uncovered self-expandable metal stent (zigzag)",
+          "Nitinol austenite (55Ni-45Ti)",
+          "Cobalt alloy (elgiloy)",
+          ""
+        ],
+        [
+          "D",
+          "Uncovered self-expandable metal stent (wallstent)",
+          "Nitinol austenite (55Ni-45Ti)",
+          "Cobalt alloy (elgiloy)",
+          "Cobalt alloy (40Co-20Cr)"
+        ],
+        [
+          "E",
+          "Studded silicone",
+          "Silicone #1 ( E = 1 MPa)",
+          "Silicone #2 ( E = 160 GPa)",
+          ""
+        ],
+        [
+          "F",
+          "Smooth silicone",
+          "Silicone #1 ( E = 1 MPa)",
+          "Silicone #2 ( E = 160 GPa)",
+          ""
+        ],
+        [
+          "G",
+          "Balloon-expandable metallic stent (square)",
+          "Nitinol austenite (55Ni-45Ti)",
+          "Stainless steel (316 L)",
+          ""
+        ],
+        [
+          "H",
+          "Balloon-expandable metallic stent (triangle)",
+          "Nitinol austenite (55Ni-45Ti)",
+          "Stainless steel (316 L)",
+          ""
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    }
+  ],
+  "figures": [
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/44'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/66'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/104'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/123'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/156'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/202'}",
+      "page": null
+    }
+  ],
+  "references": [
+    {
+      "title": "Endobronchial stenting in the management of large airway pathology"
+    },
+    {
+      "title": "Postgrad Med J",
+      "year": 2009
+    },
+    {
+      "title": "Performance of fully covered selfexpanding metallic stents in benign airway strictures",
+      "year": 2009
+    },
+    {
+      "title": "Respiration",
+      "year": 2009
+    },
+    {
+      "title": "Airway stents",
+      "year": 2009
+    },
+    {
+      "title": "Ann Thorac Surg",
+      "year": 2008
+    },
+    {
+      "title": "Implantation of ultraflex nitinol stents in malignant tracheobronchial stenosis",
+      "year": 2008
+    },
+    {
+      "title": "Chest",
+      "year": 2000
+    },
+    {
+      "title": "Silicone stents in the management of inoperable tracheobronchial stenoses. Indications and limitations",
+      "year": 2000
+    },
+    {
+      "title": "Clin Chest Med",
+      "year": 2010
+    },
+    {
+      "title": "Removal of self expandable metallic airway stent: a rare case report",
+      "year": 2010
+    },
+    {
+      "title": "Lung India",
+      "year": 2013
+    },
+    {
+      "title": "Airway stenting",
+      "year": 2013
+    },
+    {
+      "title": "Surg Today",
+      "year": 2013
+    },
+    {
+      "title": "Airway stents in children",
+      "year": 2005
+    },
+    {
+      "title": "Pediatr Pulmonol",
+      "year": 2005
+    },
+    {
+      "title": "The management of post-intubation tracheal stenoses with self-expandable stents: Early and long-term results in 11 cases",
+      "year": 2008
+    },
+    {
+      "title": "Eur J Cardiothorac Surg",
+      "year": 2011
+    },
+    {
+      "title": "Removal of covered self-expandable metallic airway stents in benign disorders: indications, technique, and outcomes",
+      "year": 2011
+    },
+    {
+      "title": "Numerical modeling of a human stented trachea under different stent designs",
+      "year": 2005
+    },
+    {
+      "title": "Int Commun Heat Mass Transfer",
+      "year": 2011
+    },
+    {
+      "title": "Computational fluid dynamics modeling of the upper airway of children with obstructive sleep apnea syndrome in steady flow",
+      "year": 2011
+    },
+    {
+      "title": "J Biomech",
+      "year": 2006
+    },
+    {
+      "title": "Modeling the bifurcating flow in an asymmetric human lung airway",
+      "year": 2006
+    },
+    {
+      "title": "Numerical analysis of airflow alteration in central airways following tracheobronchial stent placement",
+      "year": 2003
+    },
+    {
+      "title": "Breast Cancer",
+      "year": 2012
+    },
+    {
+      "title": "FSI analysis of a healthy and a stenotic human trachea under impedance-based boundary conditions",
+      "year": 2012
+    },
+    {
+      "title": "J Biomech Eng",
+      "year": 2011
+    },
+    {
+      "title": "FSI analysis of a human trachea before and after prosthesis implantation",
+      "year": 2011
+    },
+    {
+      "title": "FE simulation of human trachea swallowing movement before and after the implantation of an endoprothesis",
+      "year": 2011
+    },
+    {
+      "title": "Appl Math Modell",
+      "year": 2011
+    },
+    {
+      "title": "Biomechanics: mechanical properties of living tissues",
+      "year": 2011
+    },
+    {
+      "title": "Benign tracheobronchial strictures: long-term results and factors affecting airway patency after temporary stent placement",
+      "year": 1993
+    },
+    {
+      "title": "Am J Roentgenol",
+      "year": 2007
+    },
+    {
+      "title": "Effects of stent sizing on endothelial and vessel wall stress: potential mechanisms for in-stent restenosis",
+      "year": 2007
+    },
+    {
+      "title": "J Appl Physiol",
+      "year": 2009
+    },
+    {
+      "title": "Mechanical modeling of stents deployed in tapered arteries",
+      "year": 2009
+    },
+    {
+      "title": "Ann Biomed Eng",
+      "year": 2008
+    },
+    {
+      "title": "Compliance and longitudinal strain of cardiovascular stents: influence of cell geometry",
+      "year": 2008
+    },
+    {
+      "title": "J Med Devices",
+      "year": 2011
+    },
+    {
+      "title": "Clinical significance and technical assessment of stent cell geometry in carotid artery stenting",
+      "year": 2011
+    },
+    {
+      "title": "J Endovasc Ther",
+      "year": 2009
+    },
+    {
+      "title": "The relation between the arterial stress and restenosis rate after coronary stenting",
+      "year": 2009
+    },
+    {
+      "title": "J Med Device",
+      "year": 2011
+    },
+    {
+      "title": "The role of airway stenting in pediatric tracheobronchial obstruction",
+      "year": 2010
+    },
+    {
+      "title": "Material and properties for coronary stents",
+      "year": 2008
+    },
+    {
+      "title": "Adv Mater Processes",
+      "year": 2004
+    },
+    {
+      "title": "What is the Young&apos;s modulus of silicon?",
+      "year": 2004
+    },
+    {
+      "title": "J Microelectromech Syst",
+      "year": 2010
+    }
+  ],
+  "quality": {
+    "completeness_score": 0,
+    "has_abstract": true,
+    "abstract_source": "metadata",
+    "has_doi": true,
+    "has_full_text": true,
+    "num_sections": 24,
+    "num_tables": 2,
+    "num_figures": 21,
+    "num_references": 49
+  }
+}

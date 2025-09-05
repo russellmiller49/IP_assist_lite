@@ -1,0 +1,35 @@
+guideline_title_hints:
+  - guideline
+  - consensus
+  - consensus statement
+  - expert panel
+  - position statement
+  - practice guideline
+  - evidence-informed
+  - recommendation
+guideline_body_hints:
+  - multidisciplinary panel
+  - evidence grade
+  - gRADE recommendations
+  - consensus-based
+  - best practice statement
+rct_hints:
+  - randomized
+  - randomised
+  - randomized controlled
+  - double-blind
+  - placebo-controlled
+  - trial
+authority_map:
+  A1:
+    book_substrings:
+      - principles and practice of interventional pulmonology
+    filename_prefixes: [ "papoip_" ]
+  A2:
+    book_substrings:
+      - practical guide to interventional pulmonology
+    filename_prefixes: [ "practical_" ]
+  A3:
+    book_substrings:
+      - bronchoscopy and central airway disorders
+    filename_prefixes: [ "bacada_" ]

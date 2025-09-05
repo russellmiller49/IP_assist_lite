@@ -1,0 +1,702 @@
+{
+  "metadata": {
+    "document_id": "10_21037_jtd_2019_09_72",
+    "title": "The utility of bronchoscopy in immunocompromised patients: a review",
+    "authors": [
+      "Christopher Morton",
+      "Jonathan Puchalski"
+    ],
+    "year": 2019,
+    "journal": "Journal of Thoracic Disease",
+    "doi": "10.21037/jtd.2019.09.72",
+    "volume": "11",
+    "issue": "12",
+    "pages": "5603-5612",
+    "citation": "Morton, C.; Puchalski, J. (2019). The utility of bronchoscopy in immunocompromised patients: a review. Journal of Thoracic Disease, 11(12), 5603-5612. https://doi.org/10.21037/jtd.2019.09.72",
+    "abstract": "Bronchoscopy is an important tool for the diagnosis of pulmonary disorders in immunocompromised patients. The addition of biopsies to bronchoalveolar lavage improves the diagnostic yield of non-infectious etiologies, although the underlying etiology of the immunocompromised state must be considered and may be influential. Certain unknowns remain, including timing of bronchoscopy and its impact on medical management and mortality. The ongoing role of non-invasive testing for infectious complications prior to bronchoscopy also remains to be defined. This review addresses the role of bronchoscopy in immunocompromised states related to underlying hematologic malignancies, prescription drug use or chemotherapy, and other disorders that predispose patients to infectious or non-infectious pulmonary diseases.",
+    "abstract_source": "metadata",
+    "url": "http://jtd.amegroups.com/article/view/32524/html"
+  },
+  "source_file": "The utility of bronchoscopy in immunocompromised patients.json",
+  "sections": [
+    {
+      "title": "Introduction",
+      "content": "In its 2013 consensus guidelines on vaccine recommendations for human hosts, the Infectious Disease Society of America outlined definitions for patients who are considered highly immunocompromised. The patient populations they highlighted include those individuals with the following: Infections [human immunodeficiency virus (HIV) and CD4 T-lymphocyte counts <200 cells/mm 3 ],  those  on certain medications [chemotherapy, ≥ 20 mg prednisone (or equivalent corticosteroid) for ≥ 14 days, and those on biologic immune modulator therapy (e.g., rituximab or tumor-necrosis-factor alpha blockers)] and those individuals who previously received a solid organ or hematologic transplant (1).  Other  underlying conditions include those patients with neutropenia and/or a hematologic malignancy, those with immunoglobulin or complement deficiencies,  those  with  phagocytic  cell  deficiencies\n(chronic granulomatous disease, leukocyte adhesion deficiency, Chediak-Higashi syndrome), and other disorders (DiGeorge syndrome, Wiskott-Aldrich, severe combined immunodeficiency disorder), to name a few.\nPulmonary complications are extremely common in  immunocompromised patients with invasive tissue infection being the most frequent (2-4). Although infection comprises the majority of radiographic abnormalities in this population, up to 30% can be from an alternative etiology (e.g., drug toxicity, organizing pneumonia, others) (3,5) ( Figure 1 ). These cause significant morbidity and mortality when compared to hosts with intact immune systems (5-7).\nBronchoscopy remains a cornerstone in helping identify the etiology of pulmonary radiographic abnormalities, although much remains unknown regarding timing, extent of the procedure (biopsies, for example), and impact on morbidity or mortality. Establishing an early diagnosis in",
+      "category": "introduction",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Christopher Morton, Jonathan Puchalski",
+      "content": "Division of Pulmonary, Critical Care and Sleep Medicine, Yale University School of Medicine, New Haven, CT, USA\nContributions: (I) Conception and design: All authors; (II) Administrative support: None; (III) Provision of study materials or patients: None; (IV) Collection and assembly of data: All authors; (V) Data analysis and interpretation: All authors; (VI) Manuscript writing: All authors; (VII) Final approval of manuscript: All authors.\nCorrespondence to: Jonathan Puchalski, MD. Division of Pulmonary, Critical Care and Sleep Medicine, Yale University School of Medicine, 15 York Street, LCI 100, New Haven, CT 06510, USA. Email: jonathan.puchalski@yale.edu.\nAbstract: Bronchoscopy is  an  important  tool  for  the  diagnosis  of  pulmonary  disorders  in immunocompromised patients. The addition of biopsies to bronchoalveolar lavage improves the diagnostic yield of non-infectious etiologies, although the underlying etiology of the immunocompromised state must be considered and may be influential. Certain unknowns remain, including timing of bronchoscopy and its impact on medical management and mortality. The ongoing role of non-invasive testing for infectious complications prior to bronchoscopy also remains to be defined. This review addresses the role of bronchoscopy in immunocompromised states related to underlying hematologic malignancies, prescription drug use or chemotherapy, and other disorders that predispose patients to infectious or non-infectious pulmonary diseases.\nKeywords: Bronchoscopy; immunocompromised; next generation sequencing; metagenomics; opportunistic infections; bronchoalveolar lavage\nimmunocompromised patients with pulmonary infiltrates has been shown to improve survival (6). Bronchoscopy becomes especially important in patients that have persistent computed tomography (CT) findings and those that are unable to produce sputum (8,9). The diagnostic yield from bronchoscopy in these patients varies but can approach 70% ( Table 1 ).  Despite its high utility in this population, complications of bronchoscopy may occur in up to 50% of patients (10,32). As the use of organ and hematopoietic stem cell transplants (HSCTs) expand and the repertoire of  chemotherapy  agents  and  immune  modulating therapies changes, the population of patients that are considered immunocompromised is anticipated to grow. The bronchoscopist must balance the benefits, potential diagnostic yield and complication rates when determining whether to proceed with bronchoalveolar lavage (BAL), transbronchial biopsies (TBB) or other approaches. In this paper, we will review the utility of bronchoscopy in specific populations of immunocompromised patients.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Solid organ transplant recipients",
+      "content": "There is a wide range of pulmonary complications after solid organ transplant. Infection by a host of organisms remains the most common but consideration needs to be given to non-infectious complications such as acute transplant rejection, post-transplant lymphoproliferative disorder  and  drug-induced  lung  disease  (33).  The epidemiology of these complications is outside of the scope of this paper but some of the factors that determine the most likely diagnoses include the type of transplant, degree of immunosuppression and time since transplant (34).\nThe overall diagnostic rate of bronchoscopy for patients with solid organ transplant and pulmonary disease is between 27-70% (35). When performed in conjunction with BAL, TBB yield a higher diagnostic rate in this population (11). In one study that included 27 renal transplant patients, TBB with BAL had a diagnostic rate of 57.5% compared to BAL alone (27.2%) (24). Additionally, there were significantly increased rates of detecting fungal and viral infections as well as hematologic malignancies involving the lung. Other studies have replicated this finding when the underlying etiology was secondary to  invasive  fungal  and  viral  infections,  malignancy, and interstitial diseases (e.g., organizing pneumonia) (11,24,34).\nOther tests beyond BAL and TBB may be needed. The role of mucosal brushing in patients with solid organ\ntransplant is not clear. In one retrospective study of 83 patients following lung-transplant, the use of mucosal brushing was shown to increase the diagnostic yield for bacterial pneumonia compared to BAL alone (17). These results have not reliably been extrapolated to other solid organ transplants or immunocompromised patients and in some cases, has even led to worsened outcomes (12,19). If only peripheral lung parenchymal disease is present, nonbronchoscopic techniques such as imaging (CT) guided biopsies may be considered (36).\nIn patients who have undergone lung transplant and documented acute rejection, bronchoscopy remains important for disease monitoring and grading (18). Its role for surveillance of acute rejection after lung transplant is debated (37).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Patients with hematopoietic stem-cell transplants, hematologic malignancy or prolonged neutropenia",
+      "content": "Pulmonary complications occur in up to 60% of patients with forms of hematologic immunodeficiencies (7,38). Much like solid organ transplant patients, infection remains the most common pulmonary complication in this group. These patients can remain neutropenic for months, either undetected because of brewing malignancy or as a consequence of planning and engraftment during HSCT (39). Morbidity and mortality can be pronounced. Patients after HSCT with pulmonary infiltrates requiring mechanical ventilation have a mortality rate that can reach 90% (12,40). Not surprisingly, early recognition of the specific etiology of pneumonia in patients after HSCT improves survival (6,12).\nThe diagnostic rates of bronchoscopy in this patient population ranges from 42-65% (34). The highest diagnostic yield was seen in patients that undergo bronchoscopy within 24 hours of presentation (13). In one retrospective study of patients with hematologic malignancy and/or neutropenia, diagnostic yields for bronchoscopy increased if  the  patient had not yet received antimicrobials (20). Diagnostic rates overall appear to be improved when TBB are performed in addition to BAL for patients with HSCT and hematologic malignancy (11,24), but these can be a source of increased complication rates (14).\nA recently published study involved a pre-planned secondary analysis of a  prospective,  multinational, observational analysis of 1,611 immunocompromised patients with acute respiratory failure admitted to the\nintensive  care  unit  (ICU).  Patients  who  underwent bronchoscopy were compared to those with non-invasive testing. Bronchoscopy was performed in 618 patients who were more likely to have a hematologic malignancy and higher severity of illness score. Bronchoscopy alone achieved a diagnosis in 165 patients (27% adjusted diagnostic yield) and in management change in 236 patients (38% therapeutic yield). However, it was associated with worsening respiratory status in 69 (11%), higher ICU mortality (40% vs .  28%, P<0.0001) and hospital mortality (49 vs. 41%, P=0.003). The authors urged individualization of patients selected to undergo bronchoscopy given these findings (21).\nThe impact of bronchoscopy on medical management varies widely. Changes in medical management have been reported in 20-70% of patients who underwent HSCT or presented with febrile neutropenia (13,22). These changes include the addition or removal of antimicrobial agents, steroid dosing and anti-viral therapy. In many cases, however, despite the establishment of a specific diagnosis, management was not altered overall (15,16). In one study of 130 TBB's in patients having received a HSCT, biopsy results impacted the\nodds of a change in steroid dosing however had no overall changes in patients' management (15).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Patients with HIV",
+      "content": "The use of anti-retroviral therapy has dramatically increased the life expectancy for patients living with HIV. In patients with HIV and T-lymphocyte CD4 counts <200 cells/mm 3 that  present with pulmonary infiltrates, infection remains the most common etiology, occurring in up to 80% of patients in a 1-year period of lymphopenia (41). A majority of these patients are located in a geographically and economically different parts of the world (e.g., SubSaharan Africa) that make them susceptible to different types of pulmonary infections (42) compared to HSCT, which happens most frequently in countries with higher gross national incomes (43). Up to 70% of patients with HIV will develop a pulmonary complication during their disease course (44).\nThe diagnostic yield of bronchoscopy for these patients remains high, especially for infectious etiologies (45). The yield of BAL for the diagnosis of bacterial infections\ncan be as high as 96% and is increased if performed prior  to  antibiotic  use  (46,47).  In  a  mixed  group  of immunocompromised patients presenting with fever, respiratory  symptoms  and/or  infiltrates  on  chest imaging, the overall diagnostic yield for patients with HIV was 48%, which was higher than the other groups of  immunocompromised patients studied (26). The diagnosis of fungal infections also remains high, with rates of Pneumocystis jirovecii pneumonia (PJP) detection on BAL between 96-98%, without significant benefit from TBB (48). TBB and endobronchial ultrasound (Endobronchial ultrasound (EBUS)) remain important in diagnosing patients with noninfectious pulmonary disease, like Kaposi's sarcoma, and should be utilized in the appropriate scenario of mediastinal or hilar lymphadenopathy. In one observational study of HIV infected patients with mediastinal lymphadenopathy, TBB biopsies and Endobronchial ultrasound (EBUS) had a diagnostic yield of almost 98% (25).\nDespite its high diagnostic yields, one center in the United Kingdom found a 60% decrease in the rates of bronchoscopy over a 10-year period in patients with HIV (49). This likely reflects both a decrease in pulmonary infections  and  as  well  as  improved  awareness  about opportunistic infections leading to empiric treatments. Despite this decrease, the utility of bronchoscopy in this group of patients remains relevant.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Patients on medications or chemotherapy causing immunosuppression",
+      "content": "High-dose steroids  (prednisone  daily  equivalents ≥ 20 mg) and biologic immune modulators have effects on the immune system, leaving patients on these regimens at risk for infection (50,51). For patients on tumor necrosis factor (TNF)-targeted therapy, a variety of pulmonary manifestations exist. Pulmonary infection remains a common side effect (52). Additionally, these patients are at  risk  for  developing pulmonary nodules, fibrosis and pneumonitis (52-54). Patients receiving chemotherapy also have disruptions in their cell mediated immunity, similar to those who are on high-dose steroids, and can develop neutropenia (55). Overall for these patients, infection is the most common pulmonary complication (50,52,55).\nThe overall diagnostic yield for bronchoscopy in this group of patients is approximately 50% (23,27,55). In one cohort of patients receiving chemotherapy or highdose steroids for malignancy, the diagnostic yield for bronchoscopy with BAL was ~55% (55). TBB was also\nutilized with an increased number of diagnoses made, however the impact that it had on increasing diagnostic yield was not reported. In another prospective observational study that included patients with neutropenia from chemotherapy who were admitted to the ICU with pulmonary infiltrates, bronchoscopy had a 49% yield (23). Bronchoscopy changed management in only 28% of patients overall, but 62% of patients with proven infection. The diagnostic yield did not appear to be different for patients receiving chemotherapy or other immunosuppressing drugs, including steroids (27).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Patients with immunodeficiency disorders",
+      "content": "Combined immunodeficiency disorders, also known as primary immunodeficiency disorders, describe a set of inherited diseases in which one or multiple parts of the innate immune system are affected (56). It is primarily a diagnosis found in children although can sometimes present in adults. This group of diseases can present with an array of pulmonary disease. Unique to the other patient populations studied  in  this  review,  up  to  60%  of  patients  with immunodeficiency disease can have structural changes in the pulmonary tract (57). These changes include bronchial wall thickening and bronchiectasis, along with chronic airflow obstruction (58). This leads to increased rates of infection, specifically bacterial pneumonia, which remains the most common pulmonary complication affecting up to 86% of patients (58). Some less common causes of pulmonary disease in these patients include chronic inflammatory disease (e.g., sarcoidosis and interstitial pneumonias), lymphoproliferative disease and malignancy (57).\nData on the role of bronchoscopy in these patients is scarce. In one study of patients with immunodeficiency disorders presenting with pulmonary disease, an etiology was determined in 83% of cases (28). Infection was found to be the leading cause of disease with approximately 75% of patients having this as the primary etiology. TBB appears to be helpful in identifying causes not due to infection, including chronic inflammatory disease and benign disease (59). It  is  unclear  to  what  degree  bronchoscopy  changes management in this patient population.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Timing of bronchoscopy",
+      "content": "There is scarce prospective data regarding the timing of bronchoscopy in patients who are immunocompromised with pulmonary disease. Much of the data is retrospective and furthermore, the definition of early vs .  late is not well\nTable 1 Published studies evaluating bronchoscopy in immunocompromised patients\nTable 1 ( continued )\nTable 1 ( continued )\nStudy, year of\npublication\nStudy design,\nnumber of\nprocedures\nDiagnostic yield\nPopulation studied",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Other significant findings",
+      "content": "Major conclusions\ndefined or standardized. In one study of 501 patients after HSCT, the yield of bronchoscopy was 2.5 times higher when performed within the first 4 days of presentation and highest when done within 24 hours (up to 75%) (13). Additionally, mortality was almost three times higher in the group that received bronchoscopy after 4 days. In another study, when antibiotic therapy was changed because of bronchoscopy results within 7 days of initiating treatment, mortality was significantly lower than those in whom a change was made after 7 days (29% vs .  71%, respectively) (29). This suggests a benefit of bronchoscopy when performed before 7 days of antibiotic therapy.\nDespite this data, pause may be prudent in patients presenting with acute respiratory failure who have received HSCT. In one prospective observational study of 15 ICUs in France, patients who had received HSCT that presented with acute respiratory failure underwent bronchoscopy (30). Acute respiratory failure was defined as tachypnea with a respiratory rate >30 breaths per minute or other signs of respiratory distress, a PaO2  <60 mmHg or the need for  mechanical ventilation. In this cohort, there was no difference in mortality, however greater than 1/3 of patients required mechanical ventilation after undergoing bronchoscopy. These results might suggest a more judicious and non-invasive approach in patients who have received HSCT that present with acute respiratory failure.",
+      "category": "results",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Non-invasive testing for infectious etiologies",
+      "content": "Non-invasive strategies for diagnosing infectious etiologies of immunocompromised patients is important, as results from these tests may prevent the need for more invasive testing such as bronchoscopy. These tests may include sputum cultures, nasal swabs for MRSA (methicillinresistant Staphylococcus aureus ), urine testing for Legionella, Streptococcus pneumonia ,  and fungal disease (histoplasmosis), blood testing for various fungal pathogens, tuberculin skin tests or interferon gamma release assays, among others. Sputum PCR for pneumocystis, exhaled breath condensate Aspergillus galactomannan detection, and other promising techniques are beyond the scope of this review, but remain of critical importance when determining the timing, and importantly, whether bronchoscopy should be performed, in light of potential complications.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Complications",
+      "content": "Bronchoscopy remains a safe procedure for the diagnosis\nof pulmonary complications in the general population. Reported rates of complications range between <0.1% and 11%, with mortality from the procedure exceedingly rare at <0.1% (60). The most common complications are bleeding, pneumothorax and hypoxemia. The highest rates of complications are seen in patients who have TBB or other more invasive procedures than BAL during bronchoscopy (61,62). The rates of complications in patients who are immunocompromised appear to be similar or slightly higher than the general population. In one retrospective review of greater than 4,000 bronchoscopies, the rate of bleeding after TBB was ~2.8% (61). Comparatively, the range of bleeding after TBB in immunocompromised patients ranged from 4-15% (11,31,34). Pneumothorax after TBB is  approximately 4% (61) and appears to be similar for immunocompromised patients (31). Hypoxemia is generally transient after the procedure, although rates might be slightly increased in immunocompromised patients who have undergone bronchoscopy (1.8% vs . <0.1%) (34,60). As noted previously, in some immunocompromised patients presenting with respiratory failure, bronchoscopy led to patients being intubated with a greater frequency than the general population (30).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "A future for next generation sequencing?",
+      "content": "There have been significant and rapid advances in sequencing technology and bioinformatics that have made metagenomic next-generation sequencing (mNGS) plausible for clinical diagnostics, but data is limited. With this technique, culture-independent screening for pathogens requires only a small amount of DNA from the sample. A bioinformatics tool can link sequencing reads to an accurate reference genome database to identify pathogens. Li et  al. (63)  analyzed 20 patients who underwent CTguided biopsies for disorders suggesting possible infection. Potential infectious pathogens were identified by mNGS in 15 patients with comparison to culture yielding sensitivities and specificities of 100% and 76.5% for bacteria and 57.1% and 61.5% for fungi. There was a negative predictive value of 100% for bacteria and 72.7% for fungi in mNGS versus culture. In a separate study of immunocompromised children, investigators identified a pulmonary microbiome that contained bacteria, fungi, RNA and DNA viruses in 41 lower respiratory tract samples from 34 patients. There was a statistically greater sensitivity for detecting potential pulmonary pathogens using mNGS (64). Ongoing innovations in the field promise to improve culture-\n5610",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Morton and Puchalski. Bronchoscopy in immunocompromised patients",
+      "content": "independent diagnostic tools that may improve detection of pulmonary pathogens in immunocompromised hosts.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Conclusions",
+      "content": "Pulmonary complications remain a significant cause of morbidity and mortality in immunocompromised patients. Making a timely and accurate diagnosis is critical for ensuring proper treatment. Bronchoscopy is often an important tool in determining the etiology of pulmonary disease, although its yield varies across the spectrum of  immunocompromised patients. The benefits of bronchoscopy in these patient populations are likely most apparent when completed as early as possible to facilitate diagnosis, even if it does not always lead to a change in management. Complications largely mirror that of the general population and should not prevent a bronchoscopic approach, including biopsies, when appropriate. However, individualized therapy weighing potential risks is essential. Additional studies evaluating the impact of non-invasive testing on bronchoscopy, such as sputum, blood or urine tests, are warranted.",
+      "category": "conclusion",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Acknowledgments",
+      "content": "None.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Footnote",
+      "content": "Conflicts of Interest: The authors have no conflicts of interest to declare.\nEthical Statement: The authors are accountable for all aspects of the work in ensuring that questions related to the accuracy or integrity of any part of the work are appropriately investigated and resolved.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "References",
+      "content": "1. Rubin LG, Levin MJ, Ljungman P , et al. 2013 IDSA clinical practice guideline for vaccination of the immunocompromised host. Clin Infect Dis 2014;58:e44-100.\n2. Fishman JA, Rubin RH. Infection in organ-transplant recipients. N Engl J Med 1998;338:1741-51.\n3. Rosenow EC 3rd. Diffuse pulmonary infiltrates in the immunocompromised host. Clin Chest Med 1990;11:55-64.\n4. Winston DJ, Emmanouilides C, Busuttil RW. Infections in liver transplant recipients. Clin Infect Dis 1995;21:1077-\n89; quiz 1090-1.\n5. Jepson SL, Pakkal M, Bajaj A, et al. Pulmonary complications in the non-HIV immunocompromised patient. Clin Radiol 2012;67:1001-10.\n6. Rañó A, Agusti C, Benito N, et al. Prognostic factors of non-HIV immunocompromised patients with pulmonary infiltrates. Chest 2002;122:253-61.\n7. Soubani AO, Miller KB, Hassoun PM. Pulmonary complications of bone marrow transplantation. Chest 1996;109:1066-77.\n8. van der Eerden MM, Vlaspolder F, de Graaff CS, et al. Value of intensive diagnostic microbiological investigation in low- and high-risk patients with community-acquired pneumonia. Eur J Clin Microbiol Infect Dis 2005;24:241-9.\n9. Feinsilver SH, Fein AM, Niederman MS, et al. Utility of fiberoptic bronchoscopy in nonresolving pneumonia. Chest 1990;98:1322-6.\n10.  Burger CD. Utility of positive bronchoalveolar lavage in predicting respiratory failure after hematopoietic stem cell transplantation: a retrospective analysis. T ransplant Proc 2007;39:1623-5.\n11.  Patel NR, Lee PS, Kim JH, et al. The influence of diagnostic bronchoscopy on clinical outcomes comparing adult autologous and allogeneic bone marrow transplant patients. Chest 2005;127:1388-96.\n12.  Dunagan DP, Baker AM, Hurd DD, et al. Bronchoscopic evaluation of pulmonary infiltrates following bone marrow transplantation. Chest 1997;111:135-41.\n13.  Shannon VR, Andersson BS, Lei X, et al. Utility of early versus late fiberoptic bronchoscopy in the evaluation of new pulmonary infiltrates following hematopoietic stem cell transplantation. Bone Marrow Transplant 2010;45:647-55.\n14.  Hofmeister CC, Czerlanis C, Forsythe S, et al. Retrospective utility of bronchoscopy after hematopoietic stem cell transplant. Bone Marrow Transplant 2006;38:693-8.\n15.  O'Dwyer DN, Duvall AS, Xia M, et al. Transbronchial biopsy in the management of pulmonary complications of hematopoietic stem cell transplantation. Bone Marrow Transplant 2018;53:193-8.\n16.  Feinstein MB, Mokhtari M, Ferreiro R, et al. Fiberoptic bronchoscopy in allogeneic bone marrow transplantation: findings in the era of serum cytomegalovirus antigen surveillance. Chest 2001;120:1094-100.\n17.  Chan CC, Abi-Saleh WJ, Arroliga AC, et al. Diagnostic yield and therapeutic impact of flexible bronchoscopy in lung transplant recipients. J Heart Lung T ransplant",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "1996;15:196-205.",
+      "content": "18.  Aboyoun CL, Tamm M, Chhajed PN, et al. Diagnostic value of follow-up transbronchial lung biopsy after lung rejection. Am J Respir Crit Care Med 2001;164:460-3.\n19.  Boersma WG, Erjavec Z, van der Werf TS, et al. Bronchoscopic diagnosis of pulmonary infiltrates in granulocytopenic patients with hematologic malignancies: BAL versus PSB and PBAL. Respir Med 2007;101:317-25.\n20.  Hohenadel IA, Kiworr M, Genitsariotis R, et al. Role of bronchoalveolar lavage in immunocompromised patients with pneumonia treated with a broad spectrum antibiotic and antifungal regimen. Thorax 2001;56:115-20.\n21.  Bauer PR, Chevret S, Yadav H, et al. Diagnosis and outcome of acute respiratory failure in immunocompromised patients after bronchoscopy. Eur Respir J 2019. doi: 10.1183/13993003.02442-2018.\n22.  Seneviratna A, O'Carroll M, Lewis CA, et al. Diagnostic yield of bronchoscopic sampling in febrile neutropenic patients with pulmonary infiltrate and haematological disorders. Intern Med J 2012;42:536-41.\n23.  Gruson D, Hilbert G, Valentino R, et al. Utility of fiberoptic bronchoscopy in neutropenic patients admitted to the intensive care unit with pulmonary infiltrates. Crit Care Med 2000;28:2224-30.\n24.  Cazzadori A, Di Perri G, T odeschini G, et al. Transbronchial biopsy in the diagnosis of pulmonary infiltrates in immunocompromised patients. Chest 1995;107:101-6.\n25.  Sánchez-Cabral O, Martínez-Mendoza D, FernandezBussy S, et al. Usefulness of Endobronchial Ultrasound in Patients with Human Immunodeficiency Virus Infection and Mediastinal Lymphadenopathy. Respiration 2017;93:424-9.\n26.  Joos L, Chhajed PN, Wallner J, et al. Pulmonary infections diagnosed by BAL: a 12-year experience in 1066 immunocompromised patients. Respir Med 2007;101:93-7.\n27.  Brownback KR, Simpson SQ. Association of bronchoalveolar lavage yield with chest computed tomography findings and symptoms in immunocompromised patients. Ann Thorac Med 2013;8:153-9.\n28.  Efrati O, Gonik U, Bielorai B, et al. Fiberoptic bronchoscopy and bronchoalveolar lavage for the evaluation of pulmonary disease in children with primary immunodeficiency and cancer. Pediatr Blood Cancer 2007;48:324-9.\n29.  Rañó A, Agusti C, Jimenez P , et al. Pulmonary infiltrates in non-HIV immunocompromised patients: a diagnostic\napproach using non-invasive and bronchoscopic procedures. Thorax 2001;56:379-87.\n30.  Azoulay E, Mokart D, Rabbat A, et al. Diagnostic bronchoscopy in hematology and oncology patients with acute respiratory failure: prospective multicenter data. Crit Care Med 2008;36:100-7.\n31.  Jain P , Sandur S, Meli Y, et al. Role of flexible bronchoscopy in immunocompromised patients with lung infiltrates. Chest 2004;125:712-22.\n32.  Choo R, Naser NSH, Nadkarni NV, et al. Utility of bronchoalveolar lavage in the management of immunocompromised patients presenting with lung infiltrates. BMC Pulm Med 2019;19:51.\n33.  Kotloff RM, Ahya VN, Crawford SW. Pulmonary complications of solid organ and hematopoietic stem cell transplantation. Am J Respir Crit Care Med 2004;170:22-48.\n34.  Harris B, Lowy FD, Stover DE, et al. Diagnostic bronchoscopy in solid-organ and hematopoietic stem cell transplantation. Ann Am Thorac Soc 2013;10:39-49.\n35.  Sakpal SV, Donahue S, Crespo HS, et al. Utility of fiber-optic bronchoscopy in pulmonary infections among abdominal solid-organ transplant patients: A comprehensive review. Respir Med 2019;146:81-6.\n36.  Hsu JL, Kuschner WG, Paik J, et al. The diagnostic yield of CT-guided percutaneous lung biopsy in solid organ transplant recipients. Clin T ransplant 2012;26:615-21.\n37.  Sandrini A, Glanville AR. The controversial role of surveillance bronchoscopy after lung transplantation. Curr Opin Organ Transplant 2009;14:494-8.\n38.  Noble PW. The pulmonary complications of bone marrow transplantation in adults. West J Med 1989;150:443-9.\n39.  Gasink LB, Blumberg EA. Bacterial and mycobacterial pneumonia in transplant recipients. Clin Chest Med 2005;26:647-59, vii.\n40.  Shorr AF, Moores LK, Edenfield WJ, et al. Mechanical ventilation in hematopoietic stem cell transplantation: can We effectively predict outcomes? Chest 1999;116:1012-8.\n41.  Wallace JM, Hansen NI, Lavange L, et al. Respiratory disease trends in the Pulmonary Complications of HIV Infection Study cohort. Pulmonary Complications of HIV Infection Study Group. Am J Respir Crit Care Med 1997;155:72-80.\n42.  Fettig J, Swaminathan M, Murrill CS, et al. Global epidemiology of HIV. Infect Dis Clin North Am 2014;28:323-37.\n43.  Gratwohl A, Baldomero H, Aljurf M, et al. Hematopoietic stem cell transplantation: a global perspective. JAMA 2010;303:1617-24.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Morton and Puchalski. Bronchoscopy in immunocompromised patients",
+      "content": "44.  Benito N, Moreno A, Miro JM, et al. Pulmonary infections in HIV-infected patients: an update in the 21st century. Eur Respir J 2012;39:730-45.\n45.  Narayanswami G, Salzman SH. Bronchoscopy in the human immunodeficiency virus-infected patient. Semin Respir Infect 2003;18:80-6.\n46.  Meduri GU, Beals DH, Maijub AG, et al. Protected bronchoalveolar lavage. A new bronchoscopic technique to retrieve uncontaminated distal airway secretions. Am Rev Respir Dis 1991;143:855-64.\n47.  Thorpe JE, Baughman RP, Frame PT, et al. Bronchoalveolar lavage for diagnosing acute bacterial pneumonia. J Infect Dis 1987;155:855-61.\n48.  Salzman SH. Bronchoscopic techniques for the diagnosis of pulmonary complications of HIV infection. Semin Respir Infect 1999;14:318-26.\n49.  T aggart S, Breen R, Goldsack N, et al. The changing pattern of bronchoscopy in an HIV-infected population. Chest 2002;122:878-85.\n50.  Dixon WG, Abrahamowicz M, Beauchamp ME, et al. Immediate and delayed impact of oral glucocorticoid therapy on risk of serious infection in older patients with rheumatoid arthritis: a nested case-control analysis. Ann Rheum Dis 2012;71:1128-33.\n51.  Grijalva CG, Chen L, Delzell E, et al. Initiation of tumor necrosis factor-alpha antagonists and the risk of hospitalization for infection in patients with autoimmune diseases. JAMA 2011;306:2331-9.\n52.  Thavarajah K, Wu P, Rhew EJ, et al. Pulmonary complications of tumor necrosis factor-targeted therapy. Respir Med 2009;103:661-9.\n53.  Ostör AJ, Chilvers ER, Somerville MF, et al. Pulmonary complications of infliximab therapy in patients with rheumatoid arthritis. J Rheumatol 2006;33:622-8.\n54.  van Ede A, den Broeder A, Wagenaar M, et al. Etanerceptrelated extensive pulmonary nodulosis in a patient with rheumatoid arthritis. J Rheumatol 2007;34:1590-2.\n55.  Stover DE, Kaner RJ. Pulmonary complications in cancer patients. CA Cancer J Clin 1996;46:303-20.\n56.  Jesenak M, Banovcin P , Jesenakova B, et al. Pulmonary manifestations of primary immunodeficiency disorders in children. Front Pediatr 2014;2:77.\n57.  Bierry G, Boileau J, Barnig C, et al. Thoracic manifestations of primary humoral immunodeficiency: a comprehensive review. Radiographics 2009;29:1909-20.\n58.  Cadranel J, Bouvry D, Wislez M. Respiratory manifestations of common variable immunodeficiency in adults. Rev Mal Respir 2003;20:126-33.\n59.  Nelson D, Moua T, Midthun D, et al. Pulmonary Manifestations in Patients with Common Variable Immunodeficiency. Chest 2011;140:613A.\n60.  Stahl DL, Richard KM, Papadimos TJ. Complications of bronchoscopy: A concise synopsis. Int J Crit Illn Inj Sci 2015;5:189-95.\n61.  Pue CA, Pacht ER. Complications of fiberoptic bronchoscopy at a university hospital. Chest 1995;107:430-2.\n62.  Eapen GA, Shah AM, Lei X, et al. Complications, consequences, and practice patterns of endobronchial ultrasound-guided transbronchial needle aspiration: Results of the AQuIRE registry. Chest 2013;143:1044-53.\n63.  Li H, Gao H, Meng H, et al. Detection of Pulmonary Infectious Pathogens From Lung Biopsy Tissues by Metagenomic Next-Generation Sequencing. Front Cell Infect Microbiol 2018;8:205.\n64.  Zinter MS, Dvorak CC, Mayday MY, et al. Pulmonary Metagenomic Sequencing Suggests Missed Infections in Immunocompromised Children. Clin Infect Dis 2019;68:1847-55.\nCite this article as: Morton C, Puchalski J. The utility of bronchoscopy in immunocompromised patients: a review. J Thorac Dis 2019;11(12):5603-5612. doi: 10.21037/jtd.2019.09.72",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    }
+  ],
+  "tables": [
+    {
+      "id": "table",
+      "caption": "",
+      "headers": null,
+      "rows": [
+        [
+          "Major conclusions",
+          "BAL not predictive of mortality",
+          "No change in therapy: 64% auto- and 50% allo-SCT",
+          "Significant change in management only when infectious organism found (65%), not overall (41%)",
+          "No change in therapy (51%), earlier bronchoscopy recommended",
+          "5% No change in management (20%)",
+          "No change in management (28-47%) or improvement in diagnosis",
+          "yield No change in management (31.6%)",
+          "Recommended BAL and TBB for post-lung transplant patients",
+          "Recommended follow-up TBB in lung transplant recipients with previously",
+          "diagnosed rejection No difference between BAL and PSB-PBAL",
+          "BAL recommended for patients on broad spectrum antibiotics",
+          "5% Bronchoscopy improved diagnosis and changed therapy but was associated with",
+          "higher mortality",
+          "No change in management (38.4%)"
+        ],
+        [
+          "Other significant findings",
+          "TBB not done/reported",
+          "TBB non-specific findings (82% allo- and auto-SCT)",
+          "-",
+          "BAL done <24 hours-74% yield; BAL done >5 days-40% yield",
+          "TBB provided diagnosis only of time when BAL negative",
+          "6-fold increase in complications compared to BAL alone",
+          "TBB increased diagnostic by 2.6%",
+          "TBB yielded additional 30.2% diagnoses",
+          "-",
+          "PSB-PBAL 29% micro yield",
+          "-",
+          "BAL in 90%; distal protected sampling in 14% and TBB in",
+          "",
+          "-"
+        ],
+        [
+          "Population studied",
+          "HSCT",
+          "yield HSCT",
+          "HSCT",
+          "HSCT",
+          "HSCT",
+          "HSCT",
+          "HSCT",
+          "Lung transplant recipients",
+          "Lung transplant recipients",
+          "Active hematologic malignancy",
+          "Hematologic disorder/ Malignancies",
+          "ICU patients more likely to have hematologic malignancy and",
+          "higher severity of illness",
+          "Hematologic disorder with neutropenia"
+        ],
+        [
+          "Diagnostic yield",
+          "BAL 52% microbiology yield",
+          "BAL 51% microbiology yield allo-HSCT, BAL 41% microbiology auto-HSCT",
+          "BAL yield 46%",
+          "BAL yield 55%",
+          "BAL 49% microbiology",
+          "yield TBB yield 47%",
+          "BAL yield 42.1%",
+          "BAL 41.2% yield",
+          "TBB 52% yield",
+          "BAL 26% microbiology yield",
+          "BAL 65% microbiology yield",
+          "27% adjusted diagnostic yield; 38% therapeutic",
+          "adjusted yield",
+          "BAL 23% microbiology yield"
+        ],
+        [
+          "Study design, number of procedures",
+          "Retrospective, 21 bronchoscopies",
+          "Retrospective, 169 bronchoscopies",
+          "., Retrospective, 305 bronchoscopies",
+          "., Retrospective, 598 bronchoscopies",
+          "al ., Retrospective, 91 bronchoscopies",
+          "Retrospective, 130 bronchoscopies",
+          "., Retrospective, 76 bronchoscopies",
+          "Retrospective, 320 bronchoscopies",
+          "Retrospective, 173 bronchoscopies",
+          "., Prospective, 63 bronchoscopies",
+          "al ., Retrospective, 95 bronchoscopies",
+          "Secondary analysis of Prospective study,",
+          "618 bronchoscopies",
+          "Retrospective, 26 bronchoscopies"
+        ],
+        [
+          "Study, year of publication",
+          "Burger et al ., 2007 (10)",
+          "Patel et al ., 2005 (11)",
+          "Dunagan et al 1997 (12)",
+          "Shannon et al 2010 (13)",
+          "Hofmeister et 2006 (14)",
+          "O'Dwyer et al ., 2018 (15)",
+          "Feinstein et al 2001 (16)",
+          "Chan et al ., 1996 (17)",
+          "Aboyoun et al ., 2001 (18)",
+          "Boersma et al 2007 (19)",
+          "Hohenadel et 2001 (20)",
+          "Bauer et al ., 2019 (21)",
+          "",
+          "Seneviratna et al., 2012 (22)"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "",
+      "headers": null,
+      "rows": [
+        [
+          "No difference in mortality in group that changed therapy",
+          "heme Recommended routine TBB during",
+          "EBUS-TBNA Recommend TBB and EBUS-TBNA",
+          "Recommended bronchoscopy Diagnostic yield increased in symptomatic",
+          "No change in management (23.9%)",
+          "provided No change in management (46%); early changes in management had improved outcomes",
+          "66.7% Recommended considering non-invasive testing over BAL",
+          "Recommended BAL with TBB"
+        ],
+        [
+          "Therapy changed in 62% of patients",
+          "Mixed etiology TBB 67.5% yield (HIV,",
+          "TBB yield 61.9%, yield 60.5%",
+          "Highest yields seen in HIV patients -",
+          "Mixed etiology -",
+          "Mixed etiology Non-invasive testing diagnosis 41% of the time",
+          "Mixed etiology Non-invasive testing yield",
+          "etiology TBB yield 37.7%; combined BAL and TBB yield 70.1%"
+        ],
+        [
+          "yield 49% Neutropenia",
+          "36.3% yield",
+          "HIV",
+          "microbiology Mixed etiology 52.6% Mixed etiology",
+          "",
+          "",
+          "",
+          "38.4% Mixed"
+        ],
+        [
+          "93 BAL",
+          "BAL",
+          "43 BAL yield 50%",
+          "1,066 BAL 87% yield 150 BAL yield",
+          "335 BAL yield 79%",
+          "BAL yield 51%",
+          "101 BAL yield 50.5%",
+          "104 BAL yield"
+        ],
+        [
+          "Gruson et al ., 2000 (23) Prospective, bronchoscopies",
+          "Cazzadori et al ., Retrospective, 157",
+          "Sánchez-Cabral et al ., 2017 (25) Retrospective, bronchoscopies",
+          "Joos et al ., 2007 (26) Retrospective, bronchoscopies Brownback and Retrospective,",
+          "Efrati et al ., 2007 (28) Retrospective, bronchoscopies",
+          "Rañó et al ., 2001 (29) Prospective",
+          "Azoulay et al ., 2008 (30) Prospective, bronchoscopies",
+          "Jain et al ., 2004 (31) Prospective, bronchoscopies"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    }
+  ],
+  "figures": [
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/34'}",
+      "page": null
+    }
+  ],
+  "references": [
+    {
+      "title": "IDSA clinical practice guideline for vaccination of the immunocompromised host"
+    },
+    {
+      "title": "Clin Infect Dis"
+    },
+    {
+      "title": "Infection in organ-transplant recipients"
+    },
+    {
+      "title": "N Engl J Med",
+      "year": 1998
+    },
+    {
+      "title": "Diffuse pulmonary infiltrates in the immunocompromised host",
+      "year": 1998
+    },
+    {
+      "title": "Clin Chest Med",
+      "year": 1998
+    },
+    {
+      "title": "Infections in liver transplant recipients",
+      "year": 1990
+    },
+    {
+      "title": "Pulmonary complications in the non-HIV immunocompromised patient",
+      "year": 1995
+    },
+    {
+      "title": "Clin Radiol",
+      "year": 2012
+    },
+    {
+      "title": "Prognostic factors of non-HIV immunocompromised patients with pulmonary infiltrates",
+      "year": 2012
+    },
+    {
+      "title": "Chest",
+      "year": 1998
+    },
+    {
+      "title": "Pulmonary complications of bone marrow transplantation",
+      "year": 2002
+    },
+    {
+      "title": "Value of intensive diagnostic microbiological investigation in low-and high-risk patients with community-acquired pneumonia",
+      "year": 1996
+    },
+    {
+      "title": "Eur J Clin Microbiol Infect Dis",
+      "year": 2005
+    },
+    {
+      "title": "Utility of fiberoptic bronchoscopy in nonresolving pneumonia",
+      "year": 2005
+    },
+    {
+      "title": "Utility of positive bronchoalveolar lavage in predicting respiratory failure after hematopoietic stem cell transplantation: a retrospective analysis",
+      "year": 1990
+    },
+    {
+      "title": "Transplant Proc",
+      "year": 1990
+    },
+    {
+      "title": "The influence of diagnostic bronchoscopy on clinical outcomes comparing adult autologous and allogeneic bone marrow transplant patients",
+      "year": 2007
+    },
+    {
+      "title": "Bronchoscopic evaluation of pulmonary infiltrates following bone marrow transplantation",
+      "year": 2005
+    },
+    {
+      "title": "Utility of early versus late fiberoptic bronchoscopy in the evaluation of new pulmonary infiltrates following hematopoietic stem cell transplantation",
+      "year": 1997
+    },
+    {
+      "title": "Bone Marrow Transplant",
+      "year": 2010
+    },
+    {
+      "title": "Retrospective utility of bronchoscopy after hematopoietic stem cell transplant",
+      "year": 2010
+    },
+    {
+      "title": "Transbronchial biopsy in the management of pulmonary complications of hematopoietic stem cell transplantation",
+      "year": 2006
+    },
+    {
+      "title": "Fiberoptic bronchoscopy in allogeneic bone marrow transplantation: findings in the era of serum cytomegalovirus antigen surveillance",
+      "year": 2018
+    },
+    {
+      "title": "Diagnostic yield and therapeutic impact of flexible bronchoscopy in lung transplant recipients",
+      "year": 2001
+    },
+    {
+      "title": "J Heart Lung Transplant J Thorac Dis",
+      "year": 2019
+    },
+    {
+      "title": "Diagnostic value of follow-up transbronchial lung biopsy after lung rejection",
+      "year": 2019
+    },
+    {
+      "title": "Am J Respir Crit Care Med",
+      "year": 2001
+    },
+    {
+      "title": "Bronchoscopic diagnosis of pulmonary infiltrates in granulocytopenic patients with hematologic malignancies: BAL versus PSB and PBAL",
+      "year": 2001
+    },
+    {
+      "title": "Respir Med",
+      "year": 2007
+    },
+    {
+      "title": "Role of bronchoalveolar lavage in immunocompromised patients with pneumonia treated with a broad spectrum antibiotic and antifungal regimen",
+      "year": 2007
+    },
+    {
+      "title": "Thorax",
+      "year": 2001
+    },
+    {
+      "title": "Diagnosis and outcome of acute respiratory failure in immunocompromised patients after bronchoscopy",
+      "year": 2001
+    },
+    {
+      "title": "Eur Respir J",
+      "year": 2019
+    },
+    {
+      "title": "Diagnostic yield of bronchoscopic sampling in febrile neutropenic patients with pulmonary infiltrate and haematological disorders",
+      "year": 2019
+    },
+    {
+      "title": "Intern Med J",
+      "year": 2012
+    },
+    {
+      "title": "Utility of fiberoptic bronchoscopy in neutropenic patients admitted to the intensive care unit with pulmonary infiltrates",
+      "year": 2012
+    },
+    {
+      "title": "Crit Care Med",
+      "year": 2001
+    },
+    {
+      "title": "Transbronchial biopsy in the diagnosis of pulmonary infiltrates in immunocompromised patients",
+      "year": 2000
+    },
+    {
+      "title": "Usefulness of Endobronchial Ultrasound in Patients with Human Immunodeficiency Virus Infection and Mediastinal Lymphadenopathy",
+      "year": 1995
+    },
+    {
+      "title": "Respiration",
+      "year": 2017
+    },
+    {
+      "title": "Pulmonary infections diagnosed by BAL: a 12-year experience in 1066 immunocompromised patients",
+      "year": 2017
+    },
+    {
+      "title": "Association of bronchoalveolar lavage yield with chest computed tomography findings and symptoms in immunocompromised patients",
+      "year": 2007
+    },
+    {
+      "title": "Ann Thorac Med",
+      "year": 2013
+    },
+    {
+      "title": "Fiberoptic bronchoscopy and bronchoalveolar lavage for the evaluation of pulmonary disease in children with primary immunodeficiency and cancer",
+      "year": 2013
+    },
+    {
+      "title": "Pediatr Blood Cancer",
+      "year": 2007
+    },
+    {
+      "title": "Pulmonary infiltrates in non-HIV immunocompromised patients: a diagnostic approach using non-invasive and bronchoscopic procedures",
+      "year": 2007
+    },
+    {
+      "title": "Diagnostic bronchoscopy in hematology and oncology patients with acute respiratory failure: prospective multicenter data",
+      "year": 2001
+    },
+    {
+      "title": "Role of flexible bronchoscopy in immunocompromised patients with lung infiltrates",
+      "year": 2008
+    },
+    {
+      "title": "Utility of bronchoalveolar lavage in the management of immunocompromised patients presenting with lung infiltrates",
+      "year": 2004
+    },
+    {
+      "title": "BMC Pulm Med",
+      "year": 2019
+    },
+    {
+      "title": "Pulmonary complications of solid organ and hematopoietic stem cell transplantation",
+      "year": 2019
+    },
+    {
+      "title": "Diagnostic bronchoscopy in solid-organ and hematopoietic stem cell transplantation",
+      "year": 2004
+    },
+    {
+      "title": "Ann Am Thorac Soc",
+      "year": 2013
+    },
+    {
+      "title": "Utility of fiber-optic bronchoscopy in pulmonary infections among abdominal solid-organ transplant patients: A comprehensive review",
+      "year": 2013
+    },
+    {
+      "title": "The diagnostic yield of CT-guided percutaneous lung biopsy in solid organ transplant recipients",
+      "year": 2019
+    },
+    {
+      "title": "Clin Transplant",
+      "year": 2012
+    },
+    {
+      "title": "The controversial role of surveillance bronchoscopy after lung transplantation",
+      "year": 2012
+    },
+    {
+      "title": "Curr Opin Organ Transplant",
+      "year": 2009
+    },
+    {
+      "title": "The pulmonary complications of bone marrow transplantation in adults",
+      "year": 2009
+    },
+    {
+      "title": "West J Med",
+      "year": 2009
+    },
+    {
+      "title": "Bacterial and mycobacterial pneumonia in transplant recipients",
+      "year": 1989
+    },
+    {
+      "title": "Mechanical ventilation in hematopoietic stem cell transplantation: can We effectively predict outcomes?",
+      "year": 2005
+    },
+    {
+      "title": "Respiratory disease trends in the Pulmonary Complications of HIV Infection Study cohort. Pulmonary Complications of HIV Infection Study Group",
+      "year": 1999
+    },
+    {
+      "title": "Global epidemiology of HIV",
+      "year": 1997
+    },
+    {
+      "title": "Infect Dis Clin North Am",
+      "year": 2014
+    },
+    {
+      "title": "Hematopoietic stem cell transplantation: a global perspective",
+      "year": 2014
+    },
+    {
+      "title": "Journal of Thoracic Disease. All rights reserved. J Thorac Dis"
+    },
+    {
+      "title": "Pulmonary infections in HIV-infected patients: an update in the 21st century"
+    },
+    {
+      "title": "Bronchoscopy in the human immunodeficiency virus-infected patient",
+      "year": 2012
+    },
+    {
+      "title": "Semin Respir Infect",
+      "year": 2003
+    },
+    {
+      "title": "Protected bronchoalveolar lavage. A new bronchoscopic technique to retrieve uncontaminated distal airway secretions",
+      "year": 2003
+    },
+    {
+      "title": "Am Rev Respir Dis",
+      "year": 1991
+    },
+    {
+      "title": "Bronchoalveolar lavage for diagnosing acute bacterial pneumonia",
+      "year": 1991
+    },
+    {
+      "title": "J Infect Dis",
+      "year": 1987
+    },
+    {
+      "title": "Bronchoscopic techniques for the diagnosis of pulmonary complications of HIV infection",
+      "year": 1987
+    },
+    {
+      "title": "The changing pattern of bronchoscopy in an HIV-infected population",
+      "year": 1999
+    },
+    {
+      "title": "Immediate and delayed impact of oral glucocorticoid therapy on risk of serious infection in older patients with rheumatoid arthritis: a nested case-control analysis",
+      "year": 2002
+    },
+    {
+      "title": "Ann Rheum Dis",
+      "year": 2012
+    }
+  ],
+  "quality": {
+    "completeness_score": 0,
+    "has_abstract": true,
+    "abstract_source": "metadata",
+    "has_doi": true,
+    "has_full_text": true,
+    "num_sections": 19,
+    "num_tables": 2,
+    "num_figures": 2,
+    "num_references": 79
+  }
+}

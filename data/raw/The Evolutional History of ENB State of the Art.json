@@ -1,0 +1,556 @@
+{
+  "metadata": {
+    "document_id": "10_1016_j_chest_2018_04_029",
+    "title": "The Evolutional History of Electromagnetic Navigation Bronchoscopy",
+    "authors": [
+      "Atul C. Mehta",
+      "Kristin L. Hood",
+      "Yehuda Schwarz",
+      "Stephen B. Solomon"
+    ],
+    "year": 2018,
+    "journal": "Chest",
+    "doi": "10.1016/j.chest.2018.04.029",
+    "volume": "154",
+    "issue": "4",
+    "pages": "935-947",
+    "citation": "Mehta, et al. (2018). The Evolutional History of Electromagnetic Navigation Bronchoscopy. Chest, 154(4), 935-947. https://doi.org/10.1016/j.chest.2018.04.029",
+    "abstract": "Electromagnetic navigation bronchoscopy (ENB) has come a long way from the early roots of electromagnetic theory. Current ENB devices have the potential to change the way lung cancer is detected and treated. This paper provides an overview of the history, current state, and future of ENB.",
+    "abstract_source": "pubmed",
+    "url": "https://linkinghub.elsevier.com/retrieve/pii/S001236921830655X",
+    "pubmed_id": "29723514"
+  },
+  "source_file": "The Evolutional History of ENB State of the Art.json",
+  "sections": [
+    {
+      "title": "The Evolutional History of Electromagnetic Navigation Bronchoscopy State of the Art",
+      "content": "Atul C. Mehta, MD; Kristin L. Hood, PhD; Yehuda Schwarz, MD; and Stephen B. Solomon, MD\nElectromagnetic navigation bronchoscopy (ENB) has come a long way from the early roots of electromagnetic theory. Current ENB devices have the potential to change the way lung cancer is detected and treated. This paper provides an overview of the history, current state, and future of ENB. CHEST 2018; 154(4):935-947\nKEYWORDS: biopsy; electromagnetic navigation bronchoscopy; localization; lung cancer; SPiN thoracic navigation system; superDimension navigation system\n' The best way to predict the future is to create it. '\n-Abraham Lincoln\nCancers of the lung and bronchus account for more than one-quarter of all cancerrelated deaths. 1 Although reductions in smoking have led to a general decline in lung cancer incidence rates, 1 one United States study has reported evidence of increased lung adenocarcinoma rates among women between 2008 and 2012 compared with between 1998 and 2002, particularly among low socioeconomic groups. 2\nIncreased adoption of lung cancer screening in indicated risk groups may contribute to lower mortality 3 ; however, a high proportion of false-positive nodules on low-dose CT scans necessitates a carefully implemented follow-up plan made on the basis of the patient ' s probability of malignancy and risk pro /uniFB01 le. 4 Furthermore, although molecular\ntesting is recommended for late-stage nonsmall cell lung cancer, 5 adherence to guidelines is generally not good. 6 This may be partially because of the challenge of obtaining adequate tissue for broad molecular pro /uniFB01 ling, particularly in community centers. 7 A high proportion of patients with poor lung function are also at risk for complications following surgical or percutaneous biopsy. These factors contribute to an increased need for minimally invasive devices and procedures able to obtain diagnostic tissue and facilitate a quick path to treatment.\nElectromagnetic navigation bronchoscopy (ENB) displays images of the tracheobronchial tree to aid the physician in guiding specialized endoscopic tools to lung targets. 8 ENB has been used to aid in the biopsy of peripheral lung lesions and lymph nodes and in placing /uniFB01 ducial markers or\nABBREVIATIONS: Endobronchial ultrasound (EBUS) = endobronchial ultrasound; ENB = electromagnetic navigation bronchoscopy; ENB-SD = electromagnetic navigation bronchoscopy-superDimension navigation system; ENB-VM = Veran Medical Technologies ' electromagnetic navigation system; TTNA = transthoracic needle aspiration\nAFFILIATIONS: From The Department of Pulmonary Medicine (Dr Mehta), Respiratory Institute, Cleveland Clinic, Cleveland, OH; Medical Affairs (Dr Hood), Medtronic, Minneapolis, MN; Pulmonary Institute (Dr Schwarz), Tel-Aviv Sourasky Medical Center, Tel Aviv,\nIsrael; and the Department of Radiology (Dr Solomon), Memorial Sloan Kettering Cancer Center, New York, NY.\nCORRESPONDENCE TO: Atul C. Mehta, MD, Lerner College of Medicine, Department of Pulmonary Medicine, Respiratory Institute, Cleveland Clinic, Desk A90, 9500 Euclid Ave, Cleveland, OH 44195; e-mail: MEHTAA1@ccf.org\nCopyright /C211 2018 American College of Chest Physicians. Published by Elsevier Inc. All rights reserved.\nDOI: https://doi.org/10.1016/j.chest.2018.04.029\n[\n]\npleural dye in preparation for stereotactic body radiation therapy or surgical resection, respectively. 9,10 This review article describes the conception and historical development of ENB as well as the current state of the technology and clinical evidence of its use.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "The History of Intraprocedural Image Navigation",
+      "content": "Before there was electromagnetic navigation, the /uniFB01 eld of image-guided surgery was mostly developed using mechanical and optical systems that would track surgical instruments and display them on previously acquired images. With mechanical systems, position was judged on the basis of the joint position of an articulated, surgical arm or a coordinate-based frame. 11-15 With optical systems, re /uniFB02 ectors were attached to surgical instruments and their positions were triangulated by optical cameras located in the room (passive tracking) or light-emitting diodes that were attached to the patient and instruments and then detected by a camera (active tracking). 16 This work was mostly done in the neurosurgical realm where the skull was /uniFB01 xed and motion concerns with respiration or heart beats were not at issue.\nAlthough optical and mechanical tracking systems are still used today in certain clinical situations, there were two limitations that have made them not as useful with /uniFB02 exible-type instruments such as a bronchoscope. The /uniFB01 rst limitation was that with the tools had to be rigid. Both systems used knowledge of the proximal part of the instrument to determine where the instrument tip was located. With the mechanical tracking system, it was the angulation of the joint that located the proximal end; with the optical system, it was where the re /uniFB02 ectors were located on the surgical instrument. The second limitation was that optical systems required a direct line of sight to the instrumentation, which obviously limited internal instrumentation where the external cameras could not ' see ' them.\nThe initial electromagnetic tracking systems were applied in neurosurgery and sinus surgery; however, the electromagnetic sensor size was not well suited for endoscope tips. 17,18 It was not until miniature sensors were developed that applications that relied on /uniFB02 exible instruments such as catheters and endoscopes could be applied.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Historical Roots in Electromagnetic Theory",
+      "content": "Electromagnetic tracking devices are used in a variety of applications in medicine, such as neurosurgery, urology,\nendonasal procedures, and cardiac procedures. 19 The basic concept consists of a /uniFB01 eld generator that generates a spatially changing (varying in magnitude and direction multiple times per second) electromagnetic /uniFB01 eld, and a sensory probe containing coiled wire(s) or other magnetometers. When the sensory probe is introduced into the magnetic /uniFB01 eld, it induces a voltage whose strength and polarity re /uniFB02 ect the probe ' s position and orientation within the electromagnetic /uniFB01 eld. 19-21\nAlthough it is impossible to brie /uniFB02 y describe the centuries of scienti /uniFB01 c discoveries leading up to this technology, the ability to generate and detect electromagnetic /uniFB01 elds is largely made on the basis of the collective works of Ampère, Biot and Savart, and Faraday. To track the position of the sensor probe, one must /uniFB01 rst understand the geometry of the electromagnetic /uniFB01 eld. This was made possible by André-Marie Ampère (1820), who described the electromagnetic effect as the force that one current exerts upon another. Biot and Savart further de /uniFB01 ned this effect in 1824 by mathematically modeling the magnetic /uniFB01 eld generated by an electric current. 22 Also, once the reference /uniFB01 eld is known, one must be able to detect it via the sensor probe through magnetic induction. It was Michael Faraday in 1831 who proved empirically that a changing magnetic /uniFB01 eld induces an electric current inside a coil that can be detected. 22 In 1832, Joseph Henry further developed the practical application of Faraday ' s work. 22",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "The Origins of Electromagnetic Navigation in the Lung",
+      "content": "The /uniFB01 rst electromagnetic navigation in the lung was developed by a Johns Hopkins radiology resident, Stephen Solomon, and colleagues. Solomon (Fig 1A) was developing an intrabody navigation system that used electromagnetic /uniFB01 elds to track sensors attached to the tip of surgical instruments. This work was done with a small company called Biosense that was later purchased by Johnson & Johnson. The sensor detected the real-time location, orientation, and movement of the instrument and displayed it on a previously acquired CT, MRI, or /uniFB02 uoroscopic image. The method was /uniFB01 rst applied in hepatic shunt procedures 23,24 and cardiac catheters. 20\nSolomon adapted the technology for use in pulmonology and published the /uniFB01 rst conceptual study in swine in 1998, noting that real-time bronchoscopic positioning by ENB could complement CT-guided transbronchial needle aspiration (Fig 1B). 21 His work led to his being awarded the Young Investigator Award\n]\nand the Cecile Lehman Mayer Finalist award at the XIX World Congress on Diseases of the Chest and the 64th Annual International Scienti /uniFB01 c Assembly of the American College of Chest Physicians in 1998. Work with Dr Ko Pen Wang optimized the registration method, the process of aligning the patient ' s anatomy with the previously acquired images, using a technique of touching the wall of the trachea with the bronchoscope, which was found to be more accurate than the previous method that used metallic skin markers (Fig 1C, 1D). 25\nThe /uniFB01 rst commercial ENB system was developed in Herzliya, Israel, by Pinchas Gilboa. 26 Gilboa had designed electromagnetic navigation systems for Israeli defense systems and established superDimension in 1995 as a toy company using an enhanced version of the navigation technology for computer-active games. 26 Gilboa joined with David Tolkowsky (son of Dan Tolkowsky, commander of the Israeli Air Force from 1953 to 1958) in 1996 (Fig 2); in 1998, they shifted the\nfocus of the technology to image-guided interventional cardiology. 26\nIn 2001, Gilboa and Tolkowsky moved the technology into interventional pulmonology, adding steerable catheter, three-dimensional image processing, and image-to-body algorithmic registration to their system. 26",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Preclinical Studies",
+      "content": "The /uniFB01 rst preclinical study of the superDimension ENB (ENB-SD) system was conducted at the Sheba Medical Center Hospital in Ramat Gan, Israel, on October 31, 2002, by Yehuda Schwarz (Tel-Aviv Sourasky Medical Center, Tel-Aviv, Israel) et al (Fig 3). Ten arti /uniFB01 cial lesions were created in four animals. The procedure was a technical success with all anatomical landmarks identi /uniFB01 ed and all targets successfully reached, and no animal complications. The average procedure time was 2 min for the mapping component and 5 min for the navigation component. The paper was published in 2003, 27 paving the way for clinical studies.\n]",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "First Human Studies",
+      "content": "The /uniFB01 rst use in man of an electromagnetic bronchoscope was performed with the Solomon group. Next, a clinical team including Atul Mehta, Ko Pen Wang, Praveen Mathur, Peter White, and Charlie Wiener were assembled to design a multicenter trial. The lack of funding limited further study with this sensor. The /uniFB01 rst human study with the ENB-SD system was performed in Israel in June 2003. A few weeks later, the /uniFB01 rst clinical study was initiated in Thoraxklinic, Heidelberg, Germany (July 28-29, 2003), under the guidance of Drs Yehuda Schwarz and Heinrich Becker (Fig 4). Thirteen subjects were included. Positive biopsy diagnoses were obtained in 9/13 cases, and there were no complications. The average navigation accuracy was 5.7 mm. 28 A second study of 30 subjects was subsequently conducted, with conclusive biopsies in 20/29 cases and only one pneumothorax. 29\nDuring the same timeframe, a second electromagnetic navigations system, the Aurora electromagnetic tracking device (Northern Digital, Waterloo, ON, Canada), was described by Dr Hubert Hautmann at the Medizinische Klinik in 2005 (Fig 5). Dr Hautmann and colleagues 30 conducted a study in 16 patients and reported that the system was able to identify all lesions, supporting the ability of ENB to improve the yield of bronchoscopic procedures.\nThe /uniFB01 rst large-scale prospective clinical study using the ENB-SD system was published from the Cleveland Clinic, Cleveland, OH, in 2006. 31 This was a prospective study of 60 subjects with peripheral lung lesions (n ¼ 54) or lymph nodes (n ¼ 31). More than one-half (57%)\nof the lesions were < 2 cm in diameter. ENB was conducted in 58 subjects with a diagnostic yield of 74% for lung lesions and 100% for lymph nodes. Pneumothorax occurred in two subjects (3.5%). The /uniFB01 rst generation of the ENB-SD system was cleared for use in both Europe (2002) and the United States (2004).\nA third system, developed by Veran Medical Technologies, originated with the SPiN Interventional Radiology device in May 2006. This was followed by\nboth percutaneous and bronchoscopic (Fig 6) electromagnetic tracking systems (ENB-Veran Medical [VM]) that use real-time procedure scans to account for respiratory gating. 32 A 2016 pilot study of the ENB-VM system for transthoracic needle aspiration (TTNA) guidance was published in 2016 and demonstrated that ENB-guided TTNA was feasible, with no bleeding events and a 21% pneumothorax rate (8% requiring chest tube). The diagnostic yield was 33% for navigational bronchoscopy alone, 83% for ENB-guided TTNA alone, and 87% when the two technologies were combined. 33 A second study by Flenaugh and Mohammed 34 enrolled 44 patients and reported a diagnostic yield of 37/41 (90.2%) using the bronchoscopic ENB-VM system.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "ENB Technology Takes Off",
+      "content": "Following publication of the initial clinical studies in 2006, clinical research into the safety and ef /uniFB01 cacy of ENB increased at a rapid rate. To date, there have been 63 clinical research studies published on the ENB-SD system 28,29,31,35-93 and eight clinical studies published on ENB-VM systems. 33,94-100\nDiagnostic yield of ENB to aid in the sampling of suspicious lung lesions had been examined in > 30 clinical studies and ranges from 33% to 97% (Fig 7), 28,29,31,33,35-39,41,43-62,64,66,94,95 with most\nstudies reporting diagnostic yields between 67% and 84% (quartile 1-quartile 3). Diagnostic yield of navigated bronchoscopy is similar between the two commercially available systems (Fig 7). One large retrospective registry observed lower diagnostic yield rates than typically reported, but this study used a different de /uniFB01 nition of diagnostic yield than most studies and did not include follow-up of true-negative diagnoses over time. 58\nAdverse events following ENB procedures are uncommon. Pneumothorax is the most frequently reported complication, with pooled rates typically around 3% 101 and much lower than the 20% rate reported for transthoracic needle biopsy 102 and ENBguided TTNA. 33 These results were corroborated by the recently reported Clinical Evaluation of superDimension Navigation System for Electromagnetic Navigation Bronchoscopy study, the largest prospective, multicenter ENB study conducted to date. In 1,000 patients, the ENB-related pneumothorax rates were 4.9% overall and 3.2% for pneumothorax requiring chest tube or hospitalization. 89,92 The safety of ENB has also been demonstrated in high-risk patients with severe Chronic obstructive pulmonary disease (COPD). 93\nAn increasing body of literature has also been published on the use of the ENB-SD system (Fig 8) to aid in /uniFB01 ducial marker placement to guide stereotactic body radiation therapy, 76-86,103-106 pleural dye marking in\n]\npreparation for surgical resection, 67-75,107,108 tissue collection for molecular pro /uniFB01 ling, 87,90 and mediastinal lymph node sampling. 42 Because ENB can be done in the operating room at the time of resection, it can allow greater /uniFB02 exibility and ef /uniFB01 ciency. One study compared ENB-SD -guided dye localization to CT-guided wire localization before minimally invasive video-assisted or robot-assisted thoracic surgery. Although localization time was similar between methods, the time from localization to surgery was signi /uniFB01 cantly shorter for\nENB-guided localization because of shorter down time (189 mi vs 26 min). 109 The ENB-VM system has also been investigated for navigated percutaneous thermal ablation 98 and ENB-guided TTNA. 33,97 The learning curve of ENB has also shown to be acceptable. In a study of the ENB-VM system, diagnostic yield was 80% in the /uniFB01 rst 25 patients enrolled compared with 87% in the last 23 subjects enrolled. 95 Very similar results were reported using the ENB-SD system, with diagnostic yields of 80% vs 87.5% in the /uniFB01 rst 30 and last 30 subjects,\nrespectively. 51 In this way, ENB provides a user-friendly, integrated approach to aid in the diagnosis of suspicious lung lesions and prepare for treatment in the same minimally invasive setting. Some studies have suggested that the ability of ENB to diagnose smaller, more peripheral lesions may aid physicians in diagnosing lung cancer at earlier stages of disease, when it is more amenable to treatment. 46,88 Lung cancer diagnosis at earlier stages of disease has also been associated with signi /uniFB01 cantly lower treatment costs. 110\nIn recent years, increased user experience, knowledge into the factors contributing to improved diagnostic yield, and product advancements have provided better performance of the technology in a variety of clinical settings. Lesion size, 37,38,47,55,58 lesion location, 36,44,53,58 use of rapid on-site pathology evaluation, 36,48,52 presence of a bronchus sign on CT scan, 36,62 concurrent use of radial endobronchial ultrasound (Endobronchial ultrasound (EBUS)) to con /uniFB01 rm lesion location, 43,45 use of catheter aspiration, 45,58 and user experience and volume 47 have all shown to be predictors of better ENB outcomes.\nAlthough improved user experience has resulted in ENB diagnostic yields in the high 80% 55,60 and mid90% 48,52,56 range in some single-center studies, the diagnostic yield of ENB is generally lower than that of transthoracic needle biopsy (range, 75% to 97%; pooled\nrate, 92% across 48 studies). 102 Although complication rates are higher with transthoracic biopsy, 111 the lower diagnostic yield has limited the adoption of ENB by some centers. For this reason, technology improvements in both of the two major ENB systems have been introduced to improve yield and performance. 8,10,112 The ENB-VM system includes sensory tracking tips built into biopsy instruments to allow real-time tracking of biopsy tools. It has also introduced upgrades to its thoracic navigation system to track moving targets during respiration. In addition, the ENB-VM system includes the ability to switch to navigated TTNA in the same procedure as navigated bronchoscopy, as well as simultaneous navigation with radial Endobronchial ultrasound (EBUS). The ENB-SD system has introduced seven upgrades to the operating system or software since 2004, including a /uniFB01 ducial marker guidance system. 113 The ENB-SD system also has a transbronchial access tool to reach lesions outside the bronchial airways. 65,114 The newest version of the ENB-SD system adds software algorithms to enhance the visibility of the target region with three-dimensional /uniFB02 uoroscopy and to compensate for CT-to-body divergence (Fig 9). Novel robotic technologies, such as the Monarch (Auris Health) and ION (Intuitive Surgical) 115 robotic endoscopy platforms, use a /uniFB02 exible robotic endoscopy system to reach peripheral lung lesions and are in the early stages of clinical evaluation.\n]",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Guidelines",
+      "content": "ENB has been recommended in the guidelines of the American College of Chest Physicians as follows, with a 1C recommendation grade. 116\n3.4.2.1. In patients with peripheral lung lesions dif /uniFB01 cult to reach with conventional bronchoscopy, electromagnetic navigation guidance is recommended if the equipment and the expertise are available (Grade 1C).\nRemark: The procedure can be performed with or without /uniFB02 uoroscopic guidance and it has been found complementary to radial probe ultrasound.\nRemark: If electromagnetic navigation is not available, TTNA is recommended.\nENB has been mentioned, along with endobronchial ultrasound and TTNA, in the most recent version of the National Comprehensive Cancer Network guidelines for non-small cell lung cancer. The guidelines recommend the least invasive method with the highest diagnostic yield possible and note that patients with nodules in the outer one-third of the lung would bene /uniFB01 t most from ENB, radial Endobronchial ultrasound (EBUS), or TTNA as a /uniFB01 rst diagnostic study. 5\nENB was also recently added to the interventional pulmonology fellowship accreditation standards. 117",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "The Future",
+      "content": "Since the initial inception of the technology in the mid1990s, research into the ideal patient, lesion, user, and technological factors in /uniFB02 uencing ENB performance have come far. Going forward, continued unmet needs include continuous guidance, real-time con /uniFB01 rmation and visualization of lesion location, advanced tools and imaging to locate and access challenging lesions, and seamless integration of concurrent imaging such as CT /uniFB02 uoroscopy and cone-beam CT scans. 10 Technological advancements to enable bronchoscopic ENB-guided ablation are also being explored. Improved technology will allow a more accurate, ef /uniFB01 cient, and streamlined procedure with a shorter time to pro /uniFB01 ciency. ENB will be an invaluable adjunct to transparenchymal lung biopsy, robotic bronchoscopy, and use of cone-beam CT scans. 65,109,118\nIn addition, a better understanding is needed of the patient and lesion characteristics most ideally suited to ENB-aided biopsy. Despite the publication of > 60 clinical studies on ENB use, most studies to date have been single-center, retrospective, and included generally < 100 patients. The prospective, multicenter Clinical Evaluation of superDimension Navigation System for Electromagnetic Navigation Bronchoscopy study, which will enroll up to 1,500 patients at 37 sites in the United States and Europe, will help to answer many of these questions. 89 The study has currently published preliminary 1-month safety data on the /uniFB01 rst 1,000 subjects enrolled 92 and will publish 1-year diagnostic yield data in 2018. Planned multivariate and subgroup analyses on the predictors of diagnostic yield, as well as ENB use for /uniFB01 ducial marker placement, pleural dye marking, and tissue capture for molecular pro /uniFB01 ling, will help de /uniFB01 ne the ideal ENB patient. The cost of the technology could be prohibitive in certain parts of the world; however, increasing expertise will improve both diagnostic yield and cost effectiveness. Initial studies in Asia have been promising, 75,119 with an acceptable learning curve. 66",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Acknowledgments",
+      "content": "Author contributions: All authors made substantial contributions to all aspects of manuscript development beginning with the initial conception (A. C. M.), content outline (A. C. M.), /uniFB01 rst draft (K. L. H.), interpretation (A. C. M., Y. S.), /uniFB01 nal draft (A. C. M.), critical revisions (A. C. M., Y. S., and S. B. S.), and /uniFB01 nal approval of the manuscript for submission (all authors). Medical writing support was provided by Kristin L. Hood, PhD, of Medtronic (Minneapolis, MN), a coauthor on this paper, in accordance with Good Publication Practice guidelines. 120\nFinancial/non /uniFB01 nancial disclosures: The authors have reported to CHEST the following: A. C. M. has received travel expenses and an honorarium from Medtronic. K. L. H. is a full-time employee and\nstockholder of Medtronic; outside the submitted work, K. L. H. is a stockholder of Boston Scienti /uniFB01 c. S. B. S. has received a research grant from GE Healthcare. He serves as a consultant to AstraZeneca, Medtronic, Johnson & Johnson, Adgero, and BTG and is a shareholder in Johnson & Johnson and Progenics. Y. S. has received fees for speaking and advisory committee activity.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "References",
+      "content": "1. Siegel RL, Miller KD, Jemal A. Cancer statistics, 2018. CA Cancer J Clin . 2018;68(1):7-30.\n2. Patel MI, McKinley M, Cheng I, et al. Lung cancer incidence trends in California by race/ethnicity, histology, sex, and neighborhood socioeconomic status: an analysis spanning 28 years. Lung Cancer . 2017;108:140-149.\n3. Aberle DR, Adams AM, Berg CD, et al. Reduced lung-cancer mortality with low-dose computed tomographic screening. N Engl J Med . 2011;365(5):395-409.\n4. MacMahon H, Naidich DP, Goo JM, et al. Guidelines for management of incidental pulmonary nodules detected on CT images: from the Fleischner Society 2017. Radiology . 2017;284(1): 228-243.\n5. National Comprehensive Cancer Network. Non -small cell lung cancer, version 2.2018, NCCN Clinical Practice Guidelines in Oncology.\n6. Tanner NT, Porter A, Gould M, et al. Physician assessment of pretest probability of malignancy and adherence with guidelines for pulmonary nodule evaluation. Chest . 2017;152(2):263-270.\n7. Gutierrez ME, Choi K, Lanman RB, et al. Genomic pro /uniFB01 ling of advanced non-small cell lung cancer in community settings: gaps and opportunities. Clin Lung Cancer . 2017;18(6):651-659.\n8. Khemasuwan D, Küpeli E, Mehta AC. Electromagnetic Navigation: A Review. Interventions in Pulmonary Medicine. New York, NY: Springer International Publishing; 2018:281-297.\n9. Muñoz-Largacha JA, Litle VR, Fernando HC. Navigation bronchoscopy for diagnosis and small nodule location. J Thorac Dis . 2017;9(S2):S98-S103.\n10. Bowling MR, Anciano CJ. Updates in advanced diagnostic bronchoscopy: electromagnetic navigational bronchoscopy chasing the solitary pulmonary nodule. Clin Pulm Med . 2017;24(2):60-65.\n11. Kaminsky J, Brinker T, Samii A, et al. Technical considerations regarding accuracy of the MKM navigation system. An experimental study on impact factors. Neurol Res . 1999;21(4): 420-424.\n12. Solomon SB, Patriciu A, Bohlman ME, et al. Robotically driven interventions: a method of using CT /uniFB02 uoroscopy without radiation exposure to the physician. Radiology . 2002;225(1):277-282.\n13. Eljamel MS. Accuracy, ef /uniFB01 cacy, and clinical applications of the Radionics Operating Arm System. Comput Aided Surg . 1997;2(5): 292-297.\n14. Grunert P, Charalampaki K, Kassem M, et al. Frame-based and frameless stereotaxy in the localization of cavernous angiomas. Neurosurg Rev . 2003;26(1):53-61.\n15. Solomon SB. Interactive images in the operating room. J Endourol . 1999;13(7):471-475.\n16. Strong EB, Ra /uniFB01 i A, Holhweg-Majert B, et al. Comparison of 3 optical navigation systems for computer-aided maxillofacial surgery. Arch Otolaryngol Head Neck Surg . 2008;134(10): 1080-1084.\n17. Reardon EJ. The impact of image-guidance systems on sinus surgery. Otolaryngol Clin North Am . 2005;38(3):515-525.\n18. Zaaroor M, Bejerano Y, Weinfeld Z, et al. Novel magnetic technology for intraoperative intracranial frameless navigation: in vivo and in vitro results. Neurosurgery . 2001;48(5):1100-1108.\n19. Franz AM, Haidegger T, Birkfellner W, et al. Electromagnetic tracking in medicine -a review of technology, validation, and applications. IEEE Trans Med Imaging . 2014;33(8):1702-1725.\n]\n20. Ben-Haim SA, Osadchy D, Schuster I, et al. Non /uniFB02 uoroscopic, in vivo navigation and mapping technology. Nat Med . 1996;2(12): 1393-1395.\n21. Solomon SB, White P Jr, Acker DE, et al. Real-time bronchoscope tip localization enables three-dimensional CT image guidance for transbronchial needle aspiration in swine. Chest . 1998;114(5): 1405-1410.\n22. Elliott RS. Electromagnetics: History, Theory and Applications . New York, NY: The Institute of Electrical and Electronics Engineers, Inc.; 1993.\n23. Solomon SB, Magee C, Acker DE, et al. TIPS placement in swine, guided by electromagnetic real-time needle tip localization displayed on previously acquired 3-D CT. Cardiovasc Intervent Radiol . 1999;22(5):411-414.\n24. Solomon SB, Venbrux AC, Acker DE. Real-time needle tip localization technology enables 3D CT image guidance for transjugular intrahepatic portosystemic shunt formation [abstract]. Radiology . 1997;202(58A).\n25. Solomon SB, White P Jr, Wiener CM, et al. Three-dimensional CT-guided bronchoscopy with a real-time electromagnetic position sensor. Chest . 2000;118(6):1783-1787.\n26. Dvorin N. superDimension: guided bronchoscopy to the lungs ' periphery. Start-Up: Windhover ' s Review of Emerging Medical Ventures . 2005;10(2).\n27. Schwarz Y, Mehta AC, Ernst A, et al. Electromagnetic navigation during /uniFB02 exible bronchoscopy. Respiration . 2003;70(5):516-522.\n28. Schwarz Y, Greif J, Becker HD, et al. Real-time electromagnetic navigation bronchoscopy to peripheral lung lesions using overlaid CT images: the /uniFB01 rst human study. Chest . 2006;129(4):988-994.\n29. Becker HD, Herth F, Ernst A, et al. Bronchoscopic biopsy of peripheral lung lesions under electromagnetic guidance: a pilot study. J Bronchology Interv Pulmonol . 2005;12(1):9-13.\n30. Hautmann H, Schneider A, Pinkau T, et al. Electromagnetic catheter navigation during bronchoscopy: validation of a novel method by conventional /uniFB02 uoroscopy. Chest . 2005;128(1):382-387.\n31. Gildea TR, Mazzone PJ, Karnak D, et al. Electromagnetic navigation diagnostic bronchoscopy: a prospective study. Am J Respir Crit Care Med . 2006;174(9):982-989.\n32. Gilbert C, Akulian J, Ortiz R, et al. Novel bronchoscopic strategies for the diagnosis of peripheral lung lesions: present techniques and future directions. Respirology . 2014;19(5):636-644.\n33. Yarmus LB, Arias S, Feller-Kopman D, et al. Electromagnetic navigation transthoracic needle aspiration for the diagnosis of pulmonary nodules: a safety and feasibility pilot study. J Thorac Dis . 2016;8(1):186-194.\n34. Flenaugh E, Mohammed K. Initial experience using 4D electromagnetic navigation bronchoscopy system with tip tracked instruments for localization of peripheral lung nodules. Int J Pulm Med . 2016;18(1):1-7.\n35. Al-Jaghbeer M, Marcus M, Durkin M, et al. Diagnostic yield of electromagnetic navigational bronchoscopy. Ther Adv Respir Dis . 2016;10(4):295-299.\n36. Balbo PE, Bodini BD, Patrucco F, et al. Electromagnetic navigation bronchoscopy and rapid on site evaluation added to /uniFB02 uoroscopyguided assisted bronchoscopy and rapid on site evaluation: improved yield in pulmonary nodules. Minerva Chir . 2013;68(6):579-585.\n37. Bertoletti L, Robert A, Cottier M, et al. Accuracy and feasibility of electromagnetic navigated bronchoscopy under nitrous oxide sedation for pulmonary peripheral opacities: an outpatient study. Respiration . 2009;78(3):293-300.\n38. Bowling MR, Kohan MW, Walker P, et al. The effect of general anesthesia versus intravenous sedation on diagnostic yield and success in electromagnetic navigation bronchoscopy. J Bronchology Interv Pulmonol . 2015;22(1):5-13.\n39. Brownback KR, Quijano F, Latham HE, et al. Electromagnetic navigational bronchoscopy in the diagnosis of lung lesions. J Bronchology Interv Pulmonol . 2012;19(2):91-97.\n40. Chee A, Stather DR, Maceachern P, et al. Diagnostic utility of peripheral endobronchial ultrasound with electromagnetic navigation bronchoscopy in peripheral lung nodules. Respirology . 2013;18(5):784-789.\n41. Copeland S, Kambali S, Berdine G, et al. Electromagnetic navigational bronchoscopy in patients with solitary pulmonary nodules. Southwest Respir Crit Care Chron . 2017;5(17):12-16.\n42. Diken ÖE, Karnak D, Çileda /C21 g A, et al. Electromagnetic navigationguided TBNA vs conventional TBNA in the diagnosis of mediastinal lymphadenopathy. Clin Respir J . 2015;9(2):214-220.\n43. Eberhardt R, Anantham D, Ernst A, et al. Multimodality bronchoscopic diagnosis of peripheral lung lesions: a randomized controlled trial. Am J Respir Crit Care Med . 2007;176(1):36-41.\n44. Eberhardt R, Anantham D, Herth F, et al. Electromagnetic navigation diagnostic bronchoscopy in peripheral lung lesions. Chest . 2007;131(6):1800-1805.\n45. Eberhardt R, Morgan RK, Ernst A, et al. Comparison of suction catheter versus forceps biopsy for sampling of solitary pulmonary nodules guided by electromagnetic navigational bronchoscopy. Respiration . 2010;79(1):54-60.\n46. Garwood SK, ClenDening P, Hevelone ND, et al. Navigational bronchoscopy at a community hospital: clinical and economic outcomes. Lung Cancer Management . 2016;5(3):131-140.\n47. Jensen KW, Hsia DW, Seijo LM, et al. Multicenter experience with electromagnetic navigation bronchoscopy for the diagnosis of pulmonary nodules. J Bronchology Interv Pulmonol . 2012;19(3): 195-199.\n48. Karnak D, Ciledag A, Ceyhan K, et al. Rapid on-site evaluation and low registration error enhance the success of electromagnetic navigation bronchoscopy. Ann Thorac Med . 2013;8(1):28-32.\n49. Khan AY, Berkowitz D, Krimsky WS, et al. Safety of pacemakers and de /uniFB01 brillators in electromagnetic navigation bronchoscopy. Chest . 2013;143(1):75-81.\n50. Lamprecht B, Porsch P, Pirich C, et al. Electromagnetic navigation bronchoscopy in combination with PET-CT and rapid on-site cytopathologic examination for diagnosis of peripheral lung lesions. Lung . 2009;187(1):55-59.\n51. Lamprecht B, Porsch P, Wegleitner B, et al. Electromagnetic navigation bronchoscopy (ENB): increasing diagnostic yield. Respir Med . 2012;106(5):710-715.\n52. Loo FL, Halligan AM, Port JL, et al. The emerging technique of electromagnetic navigation bronchoscopy-guided /uniFB01 ne-needle aspiration of peripheral lung lesions: promising results in 50 lesions. Cancer Cytopathol . 2014;122(3):191-199.\n53. Mahajan AK, Patel S, Hogarth DK, et al. Electromagnetic navigational bronchoscopy: an effective and safe approach to diagnose peripheral lung lesions unreachable by conventional bronchoscopy in high-risk patients. J Bronchology Interv Pulmonol . 2011;18(2):133-137.\n54. Makris D, Scherpereel A, Leroy S, et al. Electromagnetic navigation diagnostic bronchoscopy for small peripheral lung lesions. Eur Respir J . 2007;29(6):1187-1192.\n55. Mohanasundaram U, Ho LA, Kuschner WG, et al. The diagnostic yield of navigational bronchoscopy performed with propofol deep sedation. ISRN Endosc . 2013;2013:1-5.\n56. Mukherjee S, Chacey M. Diagnostic yield of electromagnetic navigation bronchoscopy using a curved-tip catheter to aid in the diagnosis of pulmonary lesions. J Bronchology Interv Pulmonol . 2017;24(1):35-39.\n57. Odronic SI, Gildea TR, Chute DJ. Electromagnetic navigation bronchoscopy-guided /uniFB01 ne needle aspiration for the diagnosis of lung lesions. Diagn Cytopathol . 2014;42(12):1045-1050.\n58. Ost DE, Ernst A, Lei X, et al. Diagnostic yield and complications of bronchoscopy for peripheral lung lesions. Results of the AQuIRE Registry. Am J Respir Crit Care Med . 2016;193(1):68-77.\n59. Ozgul G, Cetinkaya E, Ozgul MA, et al. Ef /uniFB01 cacy and safety of electromagnetic navigation bronchoscopy with or without radial endobronchial ultrasound for peripheral lung lesions. Endosc Ultrasound . 2016;5(3):189-195.\n60. Pearlstein DP, Quinn CC, Burtis CC, et al. Electromagnetic navigation bronchoscopy performed by thoracic surgeons: one center ' s early success. Ann Thorac Surg . 2012;93(3):944-950.\n61. Saenghirunvattana S, Bechara R, Saenghirunvattana C, et al. Electromagnetic navigation bronchoscopy. BKK Med J . 2017;13(1): 37-40.\n62. Seijo LM, de Torres JP, Lozano MD, et al. Diagnostic yield of electromagnetic navigation bronchoscopy is highly dependent on the presence of a bronchus sign on CT imaging: results from a prospective study. Chest . 2010;138(6):1316-1321.\n63. Steinfort DP, Bonney A, See K, et al. Sequential multimodality bronchoscopic investigation of peripheral pulmonary lesions. Eur Respir J . 2016;47(2):607-614.\n64. Wilson DS, Bartlett RJ. Improved diagnostic yield of bronchoscopy in a community practice: combination of electromagnetic navigation system and rapid on-site evaluation. J Bronchology Interv Pulmonol . 2007;14(4):227-232.\n65. Bowling MR, Brown C, Anciano CJ. Feasibility and safety of the transbronchial access tool for peripheral pulmonary nodule and mass. Ann Thorac Surg . 2017;104(2):443-449.\n66. Sun J, Xie F, Zheng X, et al. Learning curve of electromagnetic navigation bronchoscopy for diagnosing peripheral pulmonary nodules in a single institution. Translational Cancer Research . 2017;6(3):541-551.\n67. Abbas A, Kadakia S, Ambur V, et al. Intraoperative electromagnetic navigational bronchoscopic localization of small, deep, or subsolid pulmonary nodules. J Thorac Cardiovasc Surg . 2017;153(6): 1581-1590.\n68. Awais O, Reidy MR, Mehta K, et al. Electromagnetic navigation bronchoscopy-guided dye marking for thoracoscopic resection of pulmonary nodules. Ann Thorac Surg . 2016;102(1):223-229.\n69. Bolton WD, Howe H III, Stephenson JE. The utility of electromagnetic navigational bronchoscopy as a localization tool for robotic resection of small pulmonary nodules. Ann Thorac Surg . 2014;98(2):471-476.\n70. Brown J, Lee TJ, Joiner T, et al. Using electromagnetic navigation bronchoscopy and dye injection to aid in video-assisted lung resection. Am Surg . 2016;82(11):1052-1054.\n71. Krimsky WS, Minnich DJ, Cattaneo SM, et al. Thoracoscopic detection of occult indeterminate pulmonary nodules using bronchoscopic pleural dye marking. J Community Hosp Intern Med Perspect . 2014;4(1):1-5.\n72. Marino KA, Sullivan JL, Weksler B. Electromagnetic navigation bronchoscopy for identifying lung nodules for thoracoscopic resection. Ann Thorac Surg . 2016;102(2):454-457.\n73. Muñoz-Largacha JA, Ebright MI, Litle VR, et al. Electromagnetic navigational bronchoscopy with dye marking for identi /uniFB01 cation of small peripheral lung nodules during minimally invasive surgical resection. J Thorac Dis . 2017;9(3):802-808.\n74. Tay JH, Wallbridge PD, Larobina M, et al. Electromagnetic navigation bronchoscopy-directed pleural tattoo to aid surgical resection of peripheral pulmonary lesions. J Bronchology Interv Pulmonol . 2016;23(3):245-250.\n75. Luo K, Lin Y, Lin X, et al. Localization of peripheral pulmonary lesions to aid surgical resection: a novel approach for electromagnetic navigation bronchoscopic dye marking. Eu J Cardiothorac Surg . 2017;52(3):516-521.\n76. Anantham D, Feller-Kopman D, Shanmugham LN, et al. Electromagnetic navigation bronchoscopy-guided /uniFB01 ducial placement for robotic stereotactic radiosurgery of lung tumors: a feasibility study. Chest . 2007;132(3):930-935.\n77. Bolton WD, Richey J, Ben-Or S, et al. Electromagnetic navigational bronchoscopy: a safe and effective method for /uniFB01 ducial marker placement in lung cancer patients. Am Surg . 2015;81(7):659-662.\n78. Hagmeyer L, Priegnitz C, Kocher M, et al. Fiducial marker placement via conventional or electromagnetic navigation bronchoscopy (ENB): an interdisciplinary approach to the curative management of lung cancer. Clin Respir J . 2016;10(3):291-297.\n79. Kupelian PA, Forbes A, Willoughby TR, et al. Implantation and stability of metallic /uniFB01 ducials within pulmonary lesions. Int J Radiat Oncol Biol Phys . 2007;69(3):777-785.\n80. Minnich DJ, Bryant AS, Wei B, et al. Retention rate of electromagnetic navigation bronchoscopic placed /uniFB01 ducial markers for lung radiosurgery. Ann Thorac Surg . 2015;100(4):1163-1166.\n81. Rong Y, Bazan JG, Sekhon A, et al. Minimal inter-fractional /uniFB01 ducial migration during image-guided lung stereotactic body radiotherapy using SuperLock Nitinol Coil Fiducial Markers. PloS one . 2015;10(7):e0131945.\n82. Schroeder C, Hejal R, Linden PA. Coil spring /uniFB01 ducial markers placed safely using navigation bronchoscopy in inoperable patients allows accurate delivery of CyberKnife stereotactic radiosurgery. J Thorac Cardiovasc Surg . 2010;140(5):1137-1142.\n83. Harley DP, Krimsky WS, Sarkar S, et al. Fiducial marker placement using endobronchial ultrasound and navigational bronchoscopy for stereotactic radiosurgery: an alternative strategy. Ann Thorac Surg . 2010;89(2):368-374.\n84. Kular H, Mudambi L, Lazarus DR, et al. Safety and feasibility of prolonged bronchoscopy involving diagnosis of lung cancer, systematic nodal staging, and /uniFB01 ducial marker placement in a highrisk population. J Thorac Dis . 2016;8(6):1132-1138.\n85. Lischalk JW, Woo SM, Kataria S, et al. Long-term outcomes of stereotactic body radiation therapy (SBRT) with /uniFB01 ducial tracking for inoperable stage I non-small cell lung cancer (Non-small cell lung cancer (NSCLC)). J Radiat Oncol . 2016;5(4):379-387.\n86. Nabavizadeh N, Zhang J, Elliott DA, et al. Electromagnetic navigational bronchoscopy-guided /uniFB01 ducial markers for lung stereotactic body radiation therapy: analysis of safety, feasibility, and interfraction stability. J Bronchology Interv Pulmonol . 2014;21(2):123-130.\n87. Anderson JC, Minnich DJ, Dobelbower MC, et al. Kinomic pro /uniFB01 ling of electromagnetic navigational bronchoscopy specimens: a new approach for personalized medicine. PloS one . 2014;9(12): e116388.\n88. Brown C, Ben-Or S, Walker P, et al. The impact of electromagnetic navigational bronchoscopy on a multidisciplinary thoracic oncology program. J Natl Compr Canc Netw . 2016;14(2):181-184.\n89. Folch EE, Bowling MR, Gildea TR, et al. Design of a prospective, multicenter, global, cohort study of electromagnetic navigation bronchoscopy. BMC Pulm Med . 2016;16(1):60.\n90. Ha D, Choi H, Almeida FA, et al. Histologic and molecular characterization of lung cancer with tissue obtained by electromagnetic navigation bronchoscopy. J Bronchology Interv Pulmonol . 2013;20(1):10-15.\n91. Hachey KJ, Digesu CS, Armstrong KW, et al. A novel technique for tumor localization and targeted lymphatic mapping in early stage lung cancer. J Thorac Cardiovasc Surg . 2017;154(3):1110-1118.\n92. Khandhar SJ, Bowling MR, Flandes J, et al. Electromagnetic navigation bronchoscopy to access lung lesions in 1,000 subjects: /uniFB01 rst results of the prospective, multicenter NAVIGATE study. BMC Pulm Med . 2017;17(1):59.\n93. Towe CW, Ho VP, Kazakov J, et al. Severe chronic obstructive pulmonary disease is not associated with complications after navigational bronchoscopy procedures. Ann Thorac Surg . 2017;104(1):290-295.\n94. Flenaugh E, Mohammed K. Initial experience using 4D electromagnetic navigation bronchoscopy system with tip tracked instruments for localization of peripheral lung nodules. Int J Pulm Med . 2016;18(1):1.\n95. Raval AA, Amir L. Community hospital experience using electromagnetic navigation bronchoscopy system integrating tidal volume computed tomography mapping. Lung Cancer Management . 2016;5(1):9-19.\n96. Santos RS, Gupta A, Ebright MI, et al. Electromagnetic navigation to aid radiofrequency ablation and biopsy of lung tumors. Ann Thorac Surg . 2010;89(1):265-268.\n97. Grand DJ, Atalay MA, Cronan JJ, et al. CT-guided percutaneous lung biopsy: comparison of conventional CT /uniFB02 uoroscopy to CT\n]\n/uniFB02 uoroscopy with electromagnetic navigation system in 60 consecutive patients. Eur J Radiol . 2011;79(2):e133-e136.\n98. Narsule CK, Sales Dos Santos R, Gupta A, et al. The ef /uniFB01 cacy of electromagnetic navigation to assist with computed tomographyguided percutaneous thermal ablation of lung tumors. Innovations . 2012;7(3):187-190.\n99. Semaan RW, Lee HJ, Feller-Kopman D, et al. Same-day computed tomographic chest imaging for pulmonary nodule targeting with electromagnetic navigation bronchoscopy may decrease unnecessary procedures. Ann Am Thorac Soc . 2016;13(12):2223-2228.\n100. Furukawa BS, Pastis NJ, Tanner NT, et al. Comparing pulmonary nodule location during electromagnetic bronchoscopy with predicted location based on two virtual airway maps at different phases of respiration. Chest . 2018;153(1):181-186.\n101. Gex G, Pralong JA, Combescure C, et al. Diagnostic yield and safety of electromagnetic navigation bronchoscopy for lung nodules: a systematic review and meta-analysis. Respiration . 2014;87(2): 165-176.\n102. DiBardino DM, Yarmus LB, Semaan RW. Transthoracic needle biopsy of the lung. J Thorac Dis . 2015;7(Suppl 4):S304-S316.\n103. Andrade RS. Electromagnetic navigation bronchoscopy-guided thoracoscopic wedge resection of small pulmonary nodules. Semin Thorac Cardiovasc Surg . 2010;22(3):262-265.\n104. McGuire FR, Michael Kerley J, Ochran T, et al. Radiotherapy monitoring device implantation into peripheral lung cancers: a therapeutic utility of electromagnetic navigational bronchoscopy. J Bronchology Interv Pulmonol . 2007;14(3):173-176.\n105. Quinn CC. Diagnostic approach to pulmonary nodules in the postpneumonectomy patient. Semin Thorac Cardiovasc Surg . 2010;22(4):345-348.\n106. Steinfort DP, Siva S, Kron T, et al. Multimodality guidance for accurate bronchoscopic insertion of /uniFB01 ducial markers. J Thorac Oncol . 2015;10(2):324-330.\n107. Sun J, Mao X, Xie F, et al. Electromagnetic navigation bronchoscopy guided injection of methylene blue combined with hookwire for preoperative localization of small pulmonary lesions in thoracoscopic surgery. J Thorac Dis . 2015;7(12):E652-E656.\n108. Speicher JE, Bowling MR, Anciano CJ. Bronchoscopically placed dye marking for minimally invasive thoracic surgery: a surgeon ' s perspective. Clin Pulm Med . 2017;24(6):239-249.\n109. Bolton WD, Cochran T, Ben-Or S, et al. Electromagnetic navigational bronchoscopy reduces the time required for localization and resection of lung nodules. Innovations . 2017;12(5): 333-337.\n110. Gildea TR, DaCosta By /uniFB01 eld S, Hogarth DK, et al. A retrospective analysis of delays in the diagnosis of lung cancer and associated costs. ClinicoEcon Outcomes Res . 2017;9:261-269.\n111. Heerink WJ, de Bock GH, de Jonge GJ, et al. Complication rates of CT-guided transthoracic lung biopsy: meta-analysis. Eur Radiol . 2017;27(1):138-148.\n112. Belanger AR, Akulian JA. An update on the role of advanced diagnostic bronchoscopy in the evaluation and staging of lung cancer. Ther Adv Respir Dis . 2017;11(5):1-11.\n113. Stowe HB, Ogake S, Sunil S, et al. Improved respiratory motion tracking through a novel /uniFB01 ducial marker placement guidance system during electromagnetic navigational bronchoscopy. Int J Radiat Oncol Biol Phys . 2017;99(2):E675-E676.\n114. Anciano C, Brown C, Bowling M. Going off road: the /uniFB01 rst case reports of the use of the transbronchial access tool with electromagnetic navigational bronchoscopy. J Bronchology Interv Pulmonol . 2017;24(3):253-256.\n115. Fielding D, Bashirzadeh F, Son JH, et al. First human use of a new robotic-assisted navigation system for small peripheral pulmonary nodules demonstrates good safety pro /uniFB01 le and high diagnostic yield. Chest . 2017;152(4):A858.\n116. Rivera MP, Mehta AC, Wahidi MM. Establishing the diagnosis of lung cancer: Diagnosis and management of lung cancer, 3rd ed: American College of Chest Physicians evidence-based clinical practice guidelines. Chest . 2013;143(5 Suppl):e142S-e165.\n117. Mullon JJ, Burkart KM, Silvestri G, et al. Interventional pulmonology fellowship accreditation standards: executive summary of the multi-society interventional pulmonology fellowship accreditation committee. Chest . 2017;151(5):1114-1121.\n118. Zhao ZR, Lau RW, Ng CS. Hybrid theatre and alternative localization techniques in conventional and single-port videoassisted thoracoscopic surgery. J Thorac Dis . 2016;8(Suppl 3): S319-S327.\n119. Gu Y, Chen S, Shi J, et al. The introduction of electromagnetic navigation bronchoscopy for the diagnosis of small pulmonary peripheral lesions in an Asian population. J Thorac Dis . 2017;9(9): 2959-2965.\n120. Battisti WP, Wager E, Baltzer L, et al. Good publication practice for communicating company-sponsored medical research: GPP3. Ann Intern Med . 2015;163(6):461-464.\n121. Panchabhai TS, Mehta AC. Historical perspectives of bronchoscopy. Connecting the dots. Ann Am Thorac Soc . 2015;12(5):631-641.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    }
+  ],
+  "figures": [
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/35'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/44'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/46'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/76'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/90'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/102'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/112'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/237'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/290'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    }
+  ],
+  "references": [
+    {
+      "title": "Cancer statistics"
+    },
+    {
+      "title": "CA Cancer J Clin"
+    },
+    {
+      "title": "Lung cancer incidence trends in California by race/ethnicity, histology, sex, and neighborhood socioeconomic status: an analysis spanning 28 years"
+    },
+    {
+      "title": "Lung Cancer",
+      "year": 2017
+    },
+    {
+      "title": "Reduced lung-cancer mortality with low-dose computed tomographic screening",
+      "year": 2017
+    },
+    {
+      "title": "N Engl J Med",
+      "year": 2011
+    },
+    {
+      "title": "Guidelines for management of incidental pulmonary nodules detected on CT images: from the Fleischner Society",
+      "year": 2011
+    },
+    {
+      "title": "Radiology"
+    },
+    {
+      "title": "Non-small cell lung cancer, version 2",
+      "year": 2018
+    },
+    {
+      "title": "NCCN Clinical Practice Guidelines in Oncology",
+      "year": 2018
+    },
+    {
+      "title": "Physician assessment of pretest probability of malignancy and adherence with guidelines for pulmonary nodule evaluation",
+      "year": 2018
+    },
+    {
+      "title": "Chest",
+      "year": 2017
+    },
+    {
+      "title": "Genomic profiling of advanced non-small cell lung cancer in community settings: gaps and opportunities",
+      "year": 2017
+    },
+    {
+      "title": "Clin Lung Cancer",
+      "year": 2017
+    },
+    {
+      "title": "Electromagnetic Navigation: A Review. Interventions in Pulmonary Medicine",
+      "year": 2017
+    },
+    {
+      "title": "Navigation bronchoscopy for diagnosis and small nodule location",
+      "year": 2018
+    },
+    {
+      "title": "J Thorac Dis",
+      "year": 2017
+    },
+    {
+      "title": "Updates in advanced diagnostic bronchoscopy: electromagnetic navigational bronchoscopy chasing the solitary pulmonary nodule",
+      "year": 2017
+    },
+    {
+      "title": "Clin Pulm Med",
+      "year": 2017
+    },
+    {
+      "title": "Technical considerations regarding accuracy of the MKM navigation system. An experimental study on impact factors",
+      "year": 2017
+    },
+    {
+      "title": "Neurol Res",
+      "year": 1999
+    },
+    {
+      "title": "Robotically driven interventions: a method of using CT fluoroscopy without radiation exposure to the physician",
+      "year": 1999
+    },
+    {
+      "title": "Accuracy, efficacy, and clinical applications of the Radionics Operating Arm System",
+      "year": 2002
+    },
+    {
+      "title": "Comput Aided Surg",
+      "year": 2002
+    },
+    {
+      "title": "Frame-based and frameless stereotaxy in the localization of cavernous angiomas",
+      "year": 1997
+    },
+    {
+      "title": "Neurosurg Rev",
+      "year": 2003
+    },
+    {
+      "title": "Interactive images in the operating room",
+      "year": 2003
+    },
+    {
+      "title": "J Endourol",
+      "year": 2003
+    },
+    {
+      "title": "Comparison of 3 optical navigation systems for computer-aided maxillofacial surgery",
+      "year": 1999
+    },
+    {
+      "title": "Arch Otolaryngol Head Neck Surg",
+      "year": 2008
+    },
+    {
+      "title": "The impact of image-guidance systems on sinus surgery",
+      "year": 2008
+    },
+    {
+      "title": "Otolaryngol Clin North Am",
+      "year": 2008
+    },
+    {
+      "title": "Novel magnetic technology for intraoperative intracranial frameless navigation: in vivo and in vitro results",
+      "year": 2005
+    },
+    {
+      "title": "Neurosurgery",
+      "year": 2001
+    },
+    {
+      "title": "Electromagnetic tracking in medicine-a review of technology, validation, and applications",
+      "year": 2001
+    },
+    {
+      "title": "IEEE Trans Med Imaging",
+      "year": 2014
+    },
+    {
+      "title": "Nonfluoroscopic, in vivo navigation and mapping technology",
+      "year": 2014
+    },
+    {
+      "title": "Nat Med",
+      "year": 1996
+    },
+    {
+      "title": "Real-time bronchoscope tip localization enables three-dimensional CT image guidance for transbronchial needle aspiration in swine",
+      "year": 1996
+    },
+    {
+      "title": "Electromagnetics: History, Theory and Applications",
+      "year": 1998
+    },
+    {
+      "title": "TIPS placement in swine, guided by electromagnetic real-time needle tip localization displayed on previously acquired 3-D CT",
+      "year": 1993
+    },
+    {
+      "title": "Cardiovasc Intervent Radiol",
+      "year": 1999
+    },
+    {
+      "title": "Real-time needle tip localization technology enables 3D CT image guidance for transjugular intrahepatic portosystemic shunt formation",
+      "year": 1999
+    },
+    {
+      "title": "Three-dimensional CT-guided bronchoscopy with a real-time electromagnetic position sensor",
+      "year": 1997
+    },
+    {
+      "title": "superDimension: guided bronchoscopy to the lungs&apos; periphery. Start-Up",
+      "year": 2000
+    },
+    {
+      "title": "Windhover&apos;s Review of Emerging Medical Ventures",
+      "year": 2000
+    },
+    {
+      "title": "Electromagnetic navigation during flexible bronchoscopy",
+      "year": 2005
+    },
+    {
+      "title": "Respiration",
+      "year": 2003
+    },
+    {
+      "title": "Real-time electromagnetic navigation bronchoscopy to peripheral lung lesions using overlaid CT images: the first human study",
+      "year": 2003
+    },
+    {
+      "title": "Bronchoscopic biopsy of peripheral lung lesions under electromagnetic guidance: a pilot study",
+      "year": 2006
+    },
+    {
+      "title": "J Bronchology Interv Pulmonol",
+      "year": 2005
+    },
+    {
+      "title": "Electromagnetic catheter navigation during bronchoscopy: validation of a novel method by conventional fluoroscopy",
+      "year": 2005
+    },
+    {
+      "title": "Electromagnetic navigation diagnostic bronchoscopy: a prospective study",
+      "year": 2005
+    },
+    {
+      "title": "Am J Respir Crit Care Med",
+      "year": 2006
+    },
+    {
+      "title": "Novel bronchoscopic strategies for the diagnosis of peripheral lung lesions: present techniques and future directions",
+      "year": 2006
+    },
+    {
+      "title": "Respirology",
+      "year": 2014
+    },
+    {
+      "title": "Electromagnetic navigation transthoracic needle aspiration for the diagnosis of pulmonary nodules: a safety and feasibility pilot study",
+      "year": 2014
+    },
+    {
+      "title": "Initial experience using 4D electromagnetic navigation bronchoscopy system with tip tracked instruments for localization of peripheral lung nodules",
+      "year": 2016
+    },
+    {
+      "title": "Int J Pulm Med",
+      "year": 2016
+    },
+    {
+      "title": "Diagnostic yield of electromagnetic navigational bronchoscopy",
+      "year": 2016
+    },
+    {
+      "title": "Ther Adv Respir Dis",
+      "year": 2016
+    },
+    {
+      "title": "Electromagnetic navigation bronchoscopy and rapid on site evaluation added to fluoroscopyguided assisted bronchoscopy and rapid on site evaluation: improved yield in pulmonary nodules",
+      "year": 2016
+    },
+    {
+      "title": "Minerva Chir",
+      "year": 2013
+    },
+    {
+      "title": "Accuracy and feasibility of electromagnetic navigated bronchoscopy under nitrous oxide sedation for pulmonary peripheral opacities: an outpatient study",
+      "year": 2013
+    },
+    {
+      "title": "The effect of general anesthesia versus intravenous sedation on diagnostic yield and success in electromagnetic navigation bronchoscopy",
+      "year": 2009
+    },
+    {
+      "title": "Electromagnetic navigational bronchoscopy in the diagnosis of lung lesions",
+      "year": 2015
+    },
+    {
+      "title": "Diagnostic utility of peripheral endobronchial ultrasound with electromagnetic navigation bronchoscopy in peripheral lung nodules",
+      "year": 2012
+    },
+    {
+      "title": "Electromagnetic navigational bronchoscopy in patients with solitary pulmonary nodules",
+      "year": 2013
+    },
+    {
+      "title": "Southwest Respir Crit Care Chron",
+      "year": 2017
+    },
+    {
+      "title": "Electromagnetic navigationguided TBNA vs conventional TBNA in the diagnosis of mediastinal lymphadenopathy",
+      "year": 2017
+    },
+    {
+      "title": "Clin Respir J",
+      "year": 2015
+    },
+    {
+      "title": "Multimodality bronchoscopic diagnosis of peripheral lung lesions: a randomized controlled trial",
+      "year": 2015
+    },
+    {
+      "title": "Electromagnetic navigation diagnostic bronchoscopy in peripheral lung lesions",
+      "year": 2007
+    },
+    {
+      "title": "Comparison of suction catheter versus forceps biopsy for sampling of solitary pulmonary nodules guided by electromagnetic navigational bronchoscopy",
+      "year": 2007
+    },
+    {
+      "title": "Navigational bronchoscopy at a community hospital: clinical and economic outcomes",
+      "year": 2010
+    },
+    {
+      "title": "Lung Cancer Management",
+      "year": 2016
+    },
+    {
+      "title": "Multicenter experience with electromagnetic navigation bronchoscopy for the diagnosis of pulmonary nodules",
+      "year": 2016
+    },
+    {
+      "title": "Rapid on-site evaluation and low registration error enhance the success of electromagnetic navigation bronchoscopy",
+      "year": 2012
+    },
+    {
+      "title": "Ann Thorac Med",
+      "year": 2013
+    },
+    {
+      "title": "Safety of pacemakers and defibrillators in electromagnetic navigation bronchoscopy",
+      "year": 2013
+    },
+    {
+      "title": "Electromagnetic navigation bronchoscopy in combination with PET-CT and rapid on-site cytopathologic examination for diagnosis of peripheral lung lesions",
+      "year": 2013
+    },
+    {
+      "title": "Lung"
+    },
+    {
+      "title": "Electromagnetic navigation bronchoscopy (ENB): increasing diagnostic yield",
+      "year": 2009
+    },
+    {
+      "title": "Respir Med",
+      "year": 2012
+    }
+  ],
+  "quality": {
+    "completeness_score": 61,
+    "has_abstract": true,
+    "abstract_source": "pubmed",
+    "has_doi": true,
+    "has_full_text": true,
+    "num_sections": 11,
+    "num_tables": 0,
+    "num_figures": 17,
+    "num_references": 84
+  }
+}

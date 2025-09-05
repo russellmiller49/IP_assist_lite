@@ -1,0 +1,554 @@
+{
+  "metadata": {
+    "document_id": "10_1016_j_lungcan_2013_10_008",
+    "title": "Audit of the autoantibody test, EarlyCDT®-Lung, in 1600 patients: An evaluation of its performance in routine clinical practice",
+    "authors": [
+      "James R. Jett",
+      "Laura J. Peek",
+      "Lynn Fredericks",
+      "William Jewell",
+      "William W. Pingleton",
+      "John F.R. Robertson"
+    ],
+    "year": 2014,
+    "journal": "Lung Cancer",
+    "doi": "10.1016/j.lungcan.2013.10.008",
+    "volume": "83",
+    "issue": "1",
+    "pages": "51-55",
+    "citation": "Jett, et al. (2014). Audit of the autoantibody test, EarlyCDT®-Lung, in 1600 patients: An evaluation of its performance in routine clinical practice. Lung Cancer, 83(1), 51-55. https://doi.org/10.1016/j.lungcan.2013.10.008",
+    "abstract": "Objectives: EarlyCDT®-Lung may enhance detection of early stage lung cancer by aiding physicians in assessing high-risk patients through measurement of biological markers (i.e., autoantibodies). The test’s performance characteristics in routine clinical practice were evaluated by auditing clinical outcomes of 1613 US patients deemed at high risk for lung cancer by their physician, who ordered the EarlyCDT-Lung test for their patient.\nMethods: Clinical outcomes for all 1613 patients who provided HIPAA authorization are reported. Clinical data were collected from each patient’s treating physician. Pathology reports when available were reviewed for diagnostic classiﬁcation. Staging was assessed on histology, otherwise on imaging.\nResults: Six month follow-up for the positives/negatives was 99%/93%. Sixty-one patients (4%) were identiﬁed with lung cancer, 25 of whom tested positive by EarlyCDT-Lung (sensitivity = 41%). A positive EarlyCDT-Lung test on the current panel was associated with a 5.4-fold increase in lung cancer incidence versus a negative. Importantly, 57% (8/14) of non-small cell lung cancers detected as positive (where stage was known) were stage I or II.\nConclusions: EarlyCDT-Lung has been extensively tested and validated in case–control settings and has now been shown in this audit to perform in routine clinical practice as predicted. EarlyCDT-Lung may be a complementary tool to CT for detection of early lung cancer.",
+    "abstract_source": "metadata",
+    "url": "https://linkinghub.elsevier.com/retrieve/pii/S0169500213004522"
+  },
+  "source_file": "Audit of the autoantibody test, EarlyCDT.json",
+  "sections": [
+    {
+      "title": "",
+      "content": "Contents lists available at ScienceDirect",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Lung Cancer",
+      "content": "j o u r n a l homepage: www.elsevier.com/locate/lungcan",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Audit of the autoantibody test, EarlyCDT ® -Lung, in 1600 patients: An evaluation of its performance in routine clinical practice",
+      "content": "James R. Jett a , Laura J. Peek b , Lynn Fredericks b , William Jewell b , William W. Pingleton b , John F.R. Robertson c , d , ∗\na National Jewish Health, Denver, CO, USA\nb Oncimmune USA LLC, De Soto, KS, USA\nc University of Nottingham, Nottingham, UK\nd Oncimmune Ltd., Nottingham, UK",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "a b s t r a c t",
+      "content": "Objectives: EarlyCDT ® -Lung may enhance detection of early stage lung cancer by aiding physicians in assessing high-risk patients through measurement of biological markers (i.e., autoantibodies). The test's performance characteristics in routine clinical practice were evaluated by auditing clinical outcomes of 1613 US patients deemed at high risk for lung cancer by their physician, who ordered the EarlyCDT-Lung test for their patient.\nMethods: Clinical outcomes for all 1613 patients who provided HIPAA authorization are reported. Clinical data were collected from each patient's treating physician. Pathology reports when available were reviewed for diagnostic classification. Staging was assessed on histology, otherwise on imaging.\nResults: Six month follow-up for the positives/negatives was 99%/93%. Sixty-one patients (4%) were identified with lung cancer, 25 of whom tested positive by EarlyCDT-Lung (sensitivity=41%). A positive EarlyCDT-Lung test on the current panel was associated with a 5.4-fold increase in lung cancer incidence versus a negative. Importantly, 57% (8/14) of non-small cell lung cancers detected as positive (where stage was known) were stage I or II.\nConclusions: EarlyCDT-Lung has been extensively tested and validated in case-control settings and has now been shown in this audit to perform in routine clinical practice as predicted. EarlyCDT-Lung may be a complementary tool to CT for detection of early lung cancer.\n©2013 The Authors. Published by Elsevier Ireland Ltd. Open access under CC BY-NC-ND license.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "1. Introduction",
+      "content": "Lung cancer currently causes more deaths from cancer in the world than any other tumor type, and projections over the next 20 years indicate this is likely to continue unless substantial progress is made in areas such as screening, early detection, treatment and prevention. The National Lung Screening Trial (NLST) addressed the question of CT screening and early detection in a large randomized trial and reported a 20% reduction in lung cancer mortality [1]. This provided level 1 evidence and confirmation of previous non-randomized trials of CT screening [2-5] that reported more detection of early stage disease and prolonged survival.\nE-mail address: John.Robertson@nottingham.ac.uk (J.F.R. Robertson).\nThe fact that we now know that screening and early detection saves lives from lung cancer is in many ways only the start of the process of developing a cost effective early detection program. A screening program based only upon CT as demonstrated by the NLST study has numerous problems, including a high number of benign nodules identified (i.e., false positives; e.g., 96.4% of the positive results in the NLST study were benign) [1,2,6,7], the lingering question of what to do after 3 annual screens, and the fact that only ∼ 30%of all lung cancer patients would meet the NLST entry criteria (i.e., 55-74 years of age, ≥ 30 pack-years smoking history, and if an ex-smoker, must have quit within the last 15 years) [1]. One recent publication from a single US center focused on patients presenting with early stage lung cancers and aimed to address the question of thepercentageofpatientswithearlystagelungcancerwhofulfilled the NLST criteria. Based on 267 patients with early stage disease, less than half met the NLST high risk criteria. Since the majority of these patients were not considered high-risk by the NLST criteria, they would not be covered under current screening paradigms [8].\nIt therefore seems that a requirement for an effective early detection program would be a biological test that would increase\nBreakdown of age, gender and 5-year lung cancer risk [10] for the groups tested on the 6AAB and 7AAB EarlyCDT-Lung panels.\nthe pre-test probability of lung cancer in a high risk population the pre-test probability being based either on demographic factors (e.g., age and smoking history), imaging findings (e.g., lung nodules) or both. A biological test that is performed on a peripheral blood samplewouldhaveclearadvantages,includingpatientcompliance, convenience and cost savings. EarlyCDT-Lung is a blood test that measuresautoantibodies to lung cancer-associated antigens. It was developed to aid physicians in the early detection of lung cancer in a high-risk population. EarlyCDT-Lung was introduced clinically in a limited manner; as part of the limited release of the test a clinical audit programwasestablishedforindividualswhogaveconsentfor follow-up in accordance with the HIPAA Privacy Rule. The primary purpose of the audit was to confirm that the characteristics of the test, as reported in the training and validation case-control studies, were reproducible in routine clinical practice. This manuscript reports clinical outcomes at 6 months following EarlyCDT-Lung for the first ∼ 1600 patients whose physicians ordered the test and where the patient gave informed consent to be part of the audit program.",
+      "category": "introduction",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "2.1. Audit population",
+      "content": "The first 1699 patients for whom US physicians ordered EarlyCDT ® -Lung are described here. The tests were ordered by 810 unique physicians in 720 different practices throughout 48 US states. As this is an audit of clinical practice, we are reporting the physicians' use of the test and not a prospective study in a population defined by inclusion and exclusion factors. Of these 1699 patients, 1613 (95%) signed a HIPAA authorization permitting the ordering physician to disclose health information to Oncimmune ® , and it is this group that has been followed in this audit for clinical outcomes to confirm EarlyCDT-Lung test characteristics in routine practice.\nThe EarlyCDT-Lung panel was modified in November 2010 from a 6 autoantibody (6AAB) panel to a panel measuring 7 autoantibodies (7AAB) to improve specificity of the test, which has been previously reported [9]. This report does not focus again on this point, but the inclusion of patients tested on both the 6AAB and 7AAB panels in this dataset does allow comparison of these two sub-groups in routine practice. The patient demographics of the overall audit population ( n =1613)andthe6AAB( n =752)and7AAB ( n =861) panel groups are shown in Table 1 along with the 5-year lung cancer risk for each group, which was calculated using a modified version of the Spitz model that takes into account demographic risk factors such as gender, age and smoking history [10].",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "2.2. EarlyCDT-Lung assay",
+      "content": "EarlyCDT ® -Lung is a physician-ordered blood test that serves as a tool to aid in early detection of lung cancer in high-risk patients. The test is performed only in Oncimmune's CLIA laboratory (De Soto, KS). The technology has been extensively validated and\nhas been shown to be technically and clinically robust [9,11-13]. EarlyCDT-Lung detects the presence of AABs to a panel of lung cancer-associated antigens using a semi-automated indirect ELISAbased method. A test result was reported as positive if the antigen titration series showed a dose response and any one or more AAB levels were elevated above the clinical cut-off.\nTesting of all patient specimens by EarlyCDT-Lung was performed in Oncimmune's CLIA laboratory, including the data handling and calculation of the test result, which was performed by the Oncimmune laboratory information management system (LIMS); final test results were generated and reported to individual physicians. All EarlyCDT-Lung tests were performed prospectively upon receiving the physician's order, and the results were reported back to the physician without knowledge of the patient's clinical outcome, which was subsequently obtained as part of this audit.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "2.3. Audit plan",
+      "content": "Demographic data were requested as part of the EarlyCDT-Lung test requisition form. These data were considered in the audit. Additionally, clinical follow-up data on patients who provided HIPAA authorization were collected from their treating physician. In patients with a positive EarlyCDT-Lung test, contact was made with physicians immediately following the reporting of the EarlyCDT-Lung result and maintained until the physician indicated that a diagnosis had been reached or a follow-up plan decided (i.e., anticipated timing of imaging, biopsy, surgery, etc.); this was usually within 2-3 months of the EarlyCDT-Lung test. Subsequent follow-up on patients with a positive EarlyCDT-Lung test was then structured around the physician-described follow-up plan. Information concerning whether a patient was diagnosed with cancer was requested from physicians for all individuals regardless of test result at 6 months after the test. This timeframe was chosen (i) because it was felt to represent a timeframe within which the immediate value of a positive test result could be assessed, (ii) it allowed time for all patients with a negative EarlyCDT-Lung test to present with lung cancer in order to reduce the chance of observer bias in preferentially following up individuals with a positive EarlyCDT-Lung test result. One patient with a positive test was diagnosed just outside the 6 month period: this patient has been included since they were being actively investigated during the six month period for a lesion identified on imaging as being suspicious of lung cancer. The overall percentage of individuals followed-up at six months in the positive and negative EarlyCDT-Lung groups was 99% and 93%, respectively (Table 2); these data are also further broken down by the 6AAB and 7AAB groups (Table 2).\nThis report, therefore, focuses on the initial presentation and outcomes of all patients within 6 months following testing by EarlyCDT-Lung. Wherever possible, histology/cytology reports were reviewed and considered for diagnostic classification; some patients did not have a tissue diagnosis but were diagnosed, for example, based on imaging reports. It was decided from the start of the audit that if a physician diagnosed a lung cancer, then only in circumstances where there was specific proof to the contrary, and this was confirmed by an external expert, would the diagnosis by the treating physician not be accepted; this rule was applied for all patients regardless of EarlyCDT-Lung result.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "2.4. Statistical analyses",
+      "content": "The EarlyCDT-Lung test performance is presented in terms of standard test characteristics, such as sensitivity (the percentage of true positives) and specificity (the percentage of true negatives). Positive predictive value (PPV; the probability of cancer given a positive test result) was also calculated. These analyses were performed using Microsoft Excel. Comparison of sensitivity and specificity of EarlyCDT-Lung for the 6AAB and 7AAB groups is also presented; these comparisons were made using chi-squared tests.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "3. Results",
+      "content": "Of the 1613 test results, there were 14 patients where the test result was declared 'Invalid' (by pre-determined criteria, as outlined in the laboratory's standard operating procedures) on the report sent to the treating physician. There were 222 patients who tested positive (14%) and 1377 tested negative (86%) (Fig. 1). The percent positive for the 6AAB and 7AAB panels was 18% ( n =139) and 10% ( n =83), respectively.\nSixty-one patients (4%) were diagnosed with lung cancer within 6 months following EarlyCDT-Lung, 25 of whom tested positive by EarlyCDT-Lung (i.e., 25 true positives and 36 false negatives; sensitivity = 41%). There were 1341/1538 patients not diagnosed with lung cancer who tested negative (i.e., 1341 true negatives and 197 false positives; specificity = 87%). The correlation between the EarlyCDT-Lung result and clinical outcome in terms of diagnosis\nClinical performance of the 6AAB and 7AAB panels, calculated from the clinical audit dataset with 6 month follow-up for all patients.\n95% CI: 95% confidence interval, calculated in SAS using the Clopper-Pearson exact method.\nwithin six months after having taken the EarlyCDT-Lung test is shown in Fig. 1 and Table 3. Comparing performance of the two panels, the 7AAB panel showed highly statistically significant ( p <0.0001) improvements in specificity over the 6AAB panel with 91% specificity for the 7AAB panel (i.e., 742 true negatives and 70 false positives) and 83% specificity for the 6AAB panel (i.e., 599 true negatives and 127 false positives). The sensitivities of the 6AAB and 7AAB panels were not statistically different ( p =0.5): 46% (i.e., 12 true positives and 14 false negatives) versus 37% (i.e., 13 true positives and 22 false negatives), respectively. The improvement in PPV offered by the 7AAB panel was nearly 2 × better than the previous 6AAB panel: 16% (1 in 6.4) for the 7AAB panel versus 9% (1 in 11.6) for the 6AAB panel (Table 3).\nOf the 61 lung cancer cases diagnosed, 46 (75%) were non-small cell lung cancer (Non-small cell lung cancer (NSCLC)), 4 (7%) were small cell lung cancer (SCLC), 1 (2%) was mixed Non-small cell lung cancer (NSCLC)-SCLC, and type was unknown for 10 (16%) cases (Table 4). Of the 46 NSCLCs with a histologic diagnosis, 26 (57%) were early-stage (stage I or II), 16 (35%) were late-stage (stage III or IV) and 4 (9%) were stage unknown (Table 4). Importantly, 57% (8/14) of NSCLCs detected as positive by EarlyCDT-Lung (where stage was known) were early-stage. Stage was unknown for an additional 2 NSCLCs detected by EarlyCDT-Lung. Thirty-two NSCLCs were adenocarcinoma and 14 were squamous cell carcinoma. Only four cases of small cell lung cancer were diagnosed, which is too few to allow for further evaluation. Of the 10 patients with unknown type of lung cancer (Table 4), 9 were diagnosed clinically due to the patient's condition being too fragile for biopsy\n( n =4), an inconclusive biopsy ( n =3) or the patient refused diagnostic procedures ( n =2), and in 1 case the information was not accessible due to the patient's records being in storage.",
+      "category": "results",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "4. Discussion",
+      "content": "The performance characteristics of the EarlyCDT-Lung test in clinical practice, as demonstrated by this prospective audit, mirrors that of the extensive case-control training and validation studies previously reported [9,12-14]. This audit has confirmed that EarlyCDT-Lung detects all types of lung cancer, all stages of the disease, and performs in clinical practice with the same sensitivity and specificity measured in the case-control studies. This is, therefore, the first autoantibody test that detects early stage lung cancer as shown with prospective validation data on a large number of individuals from a routine clinical practice setting.\nFurthermore, the previously reported change that was made to the panel in November 2010 (6AAB panel to 7AAB panel) [9] has proven in routine clinical practice to have reduced the number of false positives (i.e., increased specificity), while maintaining the same ability to detect lung cancers (i.e., sensitivity). This resulted in an increased PPV of EarlyCDT-Lung in routine clinical practice from 9% (1 in 11.6) with the 6AAB panel to 16% (1 in 6.4) with the 7AAB panel (Table 3). For patients with a negative EarlyCDT-Lung result on the current 7AAB panel, 22/764 (3%) were found to have a lung cancer (i.e., 1 in 34.7). Thus, a positive result on the current 7AAB EarlyCDT-Lung test panel represents, on average, a 5.4-fold increased incidence of lung cancer within 6 months.\nAccording to the National Cancer Institute's SEER statistics, 39% of lung cancers are adenocarcinoma, 21% are squamous cell, and 14% are SCLC [15]. With the exception of a slightly higher proportion of adenocarcinoma (52%) and lower proportion of SCLC (7%) in our group, our audit findings are in line with the SEER statistics' breakdown by histological sub-type, confirming that the cohort presented here is representative of a high-risk (for lung cancer) population and is not heavily biased toward any particular type of lung cancer. These audit data also confirm the case-control validation results that EarlyCDT-Lung detects all sub-types of lung cancer.\nEarlyCDT-Lunghasbeenshownincase-controlstudiesandnow in this clinical audit to also detect early-stage lung cancer. In the group evaluated for this audit where stage was known, 57% (8/14) of NSCLCs detected by EarlyCDT-Lung were early-stage.\nTheresultspresentedontheoverallperformancecharacteristics of the test (e.g., specificity and sensitivity) confirm that in routine clinical practice EarlyCDT-Lungperformsaspredictedfromourpreviously reported large case-control studies. The audit results have\nhighlighted the value of the test to physicians as an aid to detection of early lung cancer.\nUntil recently, there were no significant biological markers related to the individual or the lung cancer that could be measured as a blood test and used in clinical practice. EarlyCDT-Lung measures AABs to lung cancer-associated antigens; it is biologically based and has been reported to be independent of a patient's demographics and smoking history [16]. Its high specificity and PPV make it a potentially complementary tool for use in conjunction with CT to evaluate a patient at high risk for lung cancer. For example, if a pulmonary nodule is identified on a CT scan and the EarlyCDT-Lung test is positive, the probability of malignancy is significantly increased (manuscript in preparation). In addition, if a patient whofalls just outside the NLST criteria for CT screening tests positive by EarlyCDT-Lung, then their risk of lung cancer would be increased to a level that would now make them appropriate for CT screening. However, it is important to note that due to the relatively low sensitivity ( ∼ 41%) of EarlyCDT-Lung, a negative test result does not rule out lung cancer in either scenario; in the case of the pulmonary nodule and a negative EarlyCDT-Lung result, the physician would continue to follow the current recommendations for follow-up CT scanning per the Fleischner Guidelines [17], and in the second scenario with a negative EarlyCDT-Lung result, the physician would continue monitoring the patient's health according to standard procedures, as they would have done in the absence of the EarlyCDT-Lung test.\nTwo prospective clinical trials are currently on-going - one in the US (assessing the value of the test in conjunction with CT) and a second in the UK (assessing the value of the test as a pre-CT screening tool).",
+      "category": "discussion",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "5. Summary",
+      "content": "This is the first biologically based blood test for lung cancer detection that has been extensively tested and validated in case-control settings and has now been shown to perform as predicted in clinical practice. The population on whom the test was used was high risk with 4% diagnosed with lung cancer within 6 months following EarlyCDT-Lung. A positive result on the current 7AAB EarlyCDT-Lung test was associated with a 5.4-fold increase in incidence of lung cancer compared to a negative test.",
+      "category": "abstract",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Conflict of interest statement",
+      "content": "J.R. Jett has a research grant from Oncimmune. L.J. Peek is an employee of Oncimmune USA LLC. L. Fredericks, W. Jewell and W.W. Pingleton are consultants to Oncimmune USA LLC. J.F.R.\nRobertson is Chief Scientific Officer and a shareholder of Oncimmune Ltd., a University of Nottingham spinout company.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Acknowledgements",
+      "content": "The authors wish to acknowledge and thank the physicians and office staff who were an integral part of this project.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "References",
+      "content": "[1] The National Lung Screening Trial Research Team. Reduced lung-cancer mortality with low-dose computed tomographic screening. N Engl J Med 2011;365:395-409.\n[2] Swensen SJ, Jett JR, Hartman TE, Midthun DE, Mandrekar SJ, Hillman SL, et al. CT screening for lung cancer: five-year prospective experience. Radiology 2005;235(1):259-65.\n[3] Henschke CI, McCauley DI, Yankelevitz DF, Naidich DP, McGuinness G, Miettinen OS, et al. Early Lung Cancer Action Project: overall design and findings from baseline screening. Lancet 1999;354(9173):99-105.\n[4] Henschke CI, Naidich DP, Yankelevitz DF, McGuinness G, McCauley DI, Smith JP, et al. Early lung cancer action project: initial findings on repeat screenings. Cancer 2001;92(1):153-9.\n[5] Sobue T, Moriyama N, Kaneko M, Kusumoto M, Kobayashi T, Tsuchiya R, et al. Screening for lung cancer with low-dose helical computed tomography: antilung cancer association project. J Clin Oncol 2002;20(4):911-20.\n[6] Van Klaveren RJ, Oudkerk M, Prokop M, Scholten ET, Nackaerts K, Vernhout R, et al. Management of lung nodules detected by volume CT scanning. N Engl J Med 2009;361:2221-9.\n[7] Swensen SJ, Jett JR, Sloan JA, Scholten ET, Nackaerts K, Vernhout R, et al. Screening for lung cancer with low-dose spiral computed tomography. Am J Respir Crit Care Med 2002;165(4):508-13.\n[8] Taiwo EO, Yorio JT, Yan J, Gerber DE. How have we diagnosed early-stage lung cancer without radiographic screening? A contemporary single-center experience. PLOS ONE 2012;7(12):e52313.\n[9] Chapman CJ, Healey GF, Murray A, Boyle P, Robertson C, Peek LJ, et al. EarlyCDT ® -Lungtest:improvedclinicalutilitythroughadditionalautoantibody assays. Tumour Biol 2012;33(5):1319-26.\n[10] Spitz MR, Hong WK, Amos CI, Wu X, Schabath MB, Dong Q, et al. A risk model for prediction of lung cancer. J Natl Cancer Inst 2007;99:715-26.\n[11] Murray A, Chapman CJ, Healey G, Peek LJ, Parsons G, Baldwin D, et al. Technical validation of an autoantibody test for lung cancer. Ann Oncol 2010;21(8):1687-93.\n[12] Boyle P, Chapman CJ, Holdenrieder S, Murray A, Robertson C, Wood WC, et al. Clinical validation of an autoantibody test for lung cancer. Ann Oncol 2011;22(2):383-9.\n[13] Lam S, Boyle P, Healey G, Maddison P, Peek L, Murray A, et al. EarlyCDT-Lung: an immuno-biomarker test as an aid to early detection of lung cancer. Cancer Prev Res 2011;4(7):1126-34.\n[14] Chapman CJ, Thorpe AJ, Murray A, Parsy-Kowalska CB, Allen J, Stafford K, et al. Immuno-biomarkers in small cell lung cancer: potential early clinical signals. Clin Cancer Res 2011;17(6):1474-80.\n[15] Howlader N, Noone AM, Krapcho M, Neyman N, Aminou R, Waldron W, et al., editors. SEER cancer statistics review, 1975-2009 (vintage 2009 populations). Bethesda, MD: National Cancer Institute; 2012. http://seer.cancer. gov/csr/1975 2009 pops09/, based on November 2011 SEER data submission, posted to the SEER web site, April 2012.\n[16] Healey G, Peek L, Fredericks L, Hamilton-Fairley G, Robertson J. The additive effect of the stratified EarlyCDT ® -Lung serum autoantibody test on the assessment of lung cancer risk. Chest 2012;142(4 Meeting Abstracts): 638A.\n[17] MacMahonH, Austin JHM, Gamsu G, et al. Guidelines for management of small pulmonary nodules detected on CT scans: a statement from the Fleischner Society. Radiology 2005;237(2):395-400.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    }
+  ],
+  "tables": [
+    {
+      "id": "table",
+      "caption": "",
+      "headers": [
+        "",
+        "Overall",
+        "",
+        "Mean 5-year lung cancer risk (number a",
+        "6AAB",
+        "",
+        "",
+        "7AAB Total",
+        "Age (median; range)",
+        "Mean lung cancer risk a"
+      ],
+      "rows": [
+        [
+          "",
+          "Total number of patients",
+          "Age (median; range)",
+          "assessable )",
+          "Total number of patients",
+          "Age (median; range)",
+          "Mean 5-year lung cancer risk (number assessable a )",
+          "number of patients",
+          "",
+          "5-year (number assessable )"
+        ],
+        [
+          "Male",
+          "676 (42%)",
+          "63; 30-95",
+          "4.4% (613)",
+          "363 (48%)",
+          "63; 30-85",
+          "4.5% (332)",
+          "313 (36%)",
+          "62; 38-95",
+          "4.1% (281)"
+        ],
+        [
+          "Female",
+          "937 (58%)",
+          "61; 31-92",
+          "2.2% (868)",
+          "389 (52%)",
+          "62; 31-92",
+          "2.5% (350)",
+          "548 (64%)",
+          "60; 35-89",
+          "1.9% (518)"
+        ]
+      ],
+      "footnotes": [
+        {
+          "cref": "#/texts/38"
+        }
+      ],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/47'}",
+      "headers": [
+        "",
+        "Positive follow-up %",
+        "Negative follow-up %"
+      ],
+      "rows": [
+        [
+          "Overall",
+          "99",
+          "93"
+        ],
+        [
+          "6AAB",
+          "100",
+          "97"
+        ],
+        [
+          "7AAB",
+          "98",
+          "91"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "",
+      "headers": [
+        "",
+        "Specificity (%; 95% CI) a",
+        "Sensitivity (%; 95% CI) b",
+        "PPV"
+      ],
+      "rows": [
+        [
+          "Overall",
+          "1341/1538 (87%; 85-89%)",
+          "25/61 (41%; 29-54%)",
+          "1 in 8.9 (11%)"
+        ],
+        [
+          "6AAB",
+          "599/726 (83%; 79-85%)",
+          "12/26 (46%; 27-67%)",
+          "1 in 11.6 (9%)"
+        ],
+        [
+          "7AAB",
+          "742/812 (91%; 89-93%)",
+          "13/35 (37%; 21-55%)",
+          "1 in 6.4 (16%)"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/123'}",
+      "headers": [
+        "Lung cancer type/sub-type",
+        "Number",
+        "Stage",
+        "Stage",
+        "Stage",
+        "Stage",
+        "Stage"
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "I",
+          "II",
+          "III",
+          "IV",
+          "N/A"
+        ],
+        [
+          "NSCLC",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Adenocarcinoma",
+          "32 (52%)",
+          "13 (41%)",
+          "1 (3%)",
+          "8 (25%)",
+          "7 (22%)",
+          "3 (9%)"
+        ],
+        [
+          "Squamous",
+          "14 (23%)",
+          "8 (57%)",
+          "4 (29%)",
+          "1 (7%)",
+          "-",
+          "1 (7%)"
+        ],
+        [
+          "Total (NSCLC)",
+          "46",
+          "21 (46%)",
+          "5 (11%)",
+          "9 (20%)",
+          "7 (15%)",
+          "4 (9%)"
+        ],
+        [
+          "SCLC",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Small cell lung cancer (SCLC)",
+          "4 (7%)",
+          "-",
+          "-",
+          "3 (75%)",
+          "1 (25%)",
+          "-"
+        ],
+        [
+          "Other",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Mixed SCLC+NSCLC",
+          "1 (2%)",
+          "-",
+          "-",
+          "1 (100%)",
+          "-",
+          "-"
+        ],
+        [
+          "Unknown type a",
+          "10 (16%)",
+          "3 (30%)",
+          "2 (20%)",
+          "-",
+          "1 (10%)",
+          "4 (40%)"
+        ],
+        [
+          "Overall total",
+          "61",
+          "24 (39%)",
+          "7 (11%)",
+          "13 (21%)",
+          "9 (15%)",
+          "8 (13%)"
+        ]
+      ],
+      "footnotes": [
+        {
+          "cref": "#/texts/124"
+        }
+      ],
+      "page": null
+    }
+  ],
+  "figures": [
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/54'}",
+      "page": null
+    }
+  ],
+  "references": [
+    {
+      "title": "Reduced lung-cancer mortality with low-dose computed tomographic screening"
+    },
+    {
+      "title": "N Engl J Med",
+      "year": 2011
+    },
+    {
+      "title": "CT screening for lung cancer: five-year prospective experience",
+      "year": 2011
+    },
+    {
+      "title": "Radiology",
+      "year": 2005
+    },
+    {
+      "title": "Early Lung Cancer Action Project: overall design and findings from baseline screening",
+      "year": 2005
+    },
+    {
+      "title": "Lancet"
+    },
+    {
+      "title": "Early lung cancer action project: initial findings on repeat screenings"
+    },
+    {
+      "title": "Cancer",
+      "year": 2005
+    },
+    {
+      "title": "Screening for lung cancer with low-dose helical computed tomography: antilung cancer association project",
+      "year": 2001
+    },
+    {
+      "title": "J Clin Oncol",
+      "year": 2002
+    },
+    {
+      "title": "Management of lung nodules detected by volume CT scanning",
+      "year": 2002
+    },
+    {
+      "title": "Screening for lung cancer with low-dose spiral computed tomography",
+      "year": 2009
+    },
+    {
+      "title": "Am J Respir Crit Care Med",
+      "year": 2002
+    },
+    {
+      "title": "How have we diagnosed early-stage lung cancer without radiographic screening? A contemporary single-center experience",
+      "year": 2002
+    },
+    {
+      "title": "PLOS ONE",
+      "year": 2012
+    },
+    {
+      "title": "EarlyCDT ® -Lung test: improved clinical utility through additional autoantibody assays",
+      "year": 2012
+    },
+    {
+      "title": "Tumour Biol",
+      "year": 2012
+    },
+    {
+      "title": "A risk model for prediction of lung cancer",
+      "year": 2012
+    },
+    {
+      "title": "J Natl Cancer Inst",
+      "year": 2007
+    },
+    {
+      "title": "Technical validation of an autoantibody test for lung cancer",
+      "year": 2007
+    },
+    {
+      "title": "Ann Oncol",
+      "year": 2010
+    },
+    {
+      "title": "Clinical validation of an autoantibody test for lung cancer",
+      "year": 2010
+    },
+    {
+      "title": "EarlyCDT-Lung: an immuno-biomarker test as an aid to early detection of lung cancer",
+      "year": 2011
+    },
+    {
+      "title": "Cancer Prev Res",
+      "year": 2011
+    },
+    {
+      "title": "Immuno-biomarkers in small cell lung cancer: potential early clinical signals",
+      "year": 2011
+    },
+    {
+      "title": "Clin Cancer Res",
+      "year": 2011
+    },
+    {
+      "title": "SEER cancer statistics review, 1975-2009 (vintage 2009 populations)"
+    },
+    {
+      "title": "The additive effect of the stratified EarlyCDT ® -Lung serum autoantibody test on the assessment of lung cancer risk"
+    },
+    {
+      "title": "Chest",
+      "year": 2012
+    },
+    {
+      "title": "Guidelines for management of small pulmonary nodules detected on CT scans: a statement from the Fleischner Society",
+      "year": 2012
+    }
+  ],
+  "quality": {
+    "completeness_score": 0,
+    "has_abstract": true,
+    "abstract_source": "metadata",
+    "has_doi": true,
+    "has_full_text": true,
+    "num_sections": 15,
+    "num_tables": 4,
+    "num_figures": 4,
+    "num_references": 30
+  }
+}

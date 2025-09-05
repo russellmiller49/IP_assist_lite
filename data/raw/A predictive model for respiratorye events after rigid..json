@@ -1,0 +1,1038 @@
+{
+  "metadata": {
+    "document_id": "10_3390_jcm12175552",
+    "title": "A Predictive Model of Major Postoperative Respiratory Adverse Events in Pediatric Patients Undergoing Rigid Bronchoscopy for Exploration and Foreign Body Removal",
+    "authors": [
+      "Xiuwen Yi",
+      "Wenwen Ni",
+      "Yuan Han",
+      "Wenxian Li"
+    ],
+    "year": 2023,
+    "journal": "Journal of Clinical Medicine",
+    "doi": "10.3390/jcm12175552",
+    "volume": "12",
+    "issue": "17",
+    "pages": "5552",
+    "citation": "Yi, et al. (2023). A Predictive Model of Major Postoperative Respiratory Adverse Events in Pediatric Patients Undergoing Rigid Bronchoscopy for Exploration and Foreign Body Removal. Journal of Clinical Medicine, 12(17), 5552. https://doi.org/10.3390/jcm12175552",
+    "abstract": "Background: No nomogram has been established to predict the incidence of major postoperative respiratory adverse events (mPRAEs) in children undergoing rigid bronchoscopy for airway foreign bodies (AFB) removal and exploration of the airway, though some studies have conﬁrmed the risk factors. Methods: 1214 pediatric patients (≤3 years old) undergoing rigid bronchoscopy for AFB from June 2014 to December 2020 were enrolled in this study. The primary outcome was the occurrence of mPRAEs, including laryngospasm and bronchospasm. Following that, a nomogram prediction model for the mPRAEs was developed. Results: The incidence of mPRAEs was 84 (6.9%) among 1214 subjects. American Society of Anesthesiologists physical status (ASA-PS), intraoperative desaturation (SpO2 < 90%), procedural duration and ventilatory approach were all independent risk factors of mPRAEs. The area under the receiver operating characteristic curve (AUC) value of the nomogram for predicting mPRAEs was 0.815 (95% CI: 0.770–0.861), and the average AUC for ten-fold cross-validation was 0.799. These nomograms were well calibrated by Hosmer-Lemshow (p = 0.607). Decision curve analysis showed that the nomogram prediction model is effective in clinical settings. Conclusions: Combining ASA-PS, intraoperative desaturation, procedural duration, and ventilatory approach, the nomogram model is adequate for predicting the risk of developing mPRAEs, followed by rigid bronchoscopy for AFB removal and exploration.",
+    "abstract_source": "metadata",
+    "url": "https://www.mdpi.com/2077-0383/12/17/5552"
+  },
+  "source_file": "A predictive model for respiratorye events after rigid..json",
+  "sections": [
+    {
+      "title": "",
+      "content": "Citation: Yi, X.; Ni, W.; Han, Y.; Li, W. APredictive Model of Major Postoperative Respiratory Adverse Events in Pediatric Patients Undergoing Rigid Bronchoscopy for Exploration and Foreign Body Removal. J. Clin. Med. 2023 , 12 , 5552. https://doi.org/10.3390/ jcm12175552\nAcademic Editors: Kazuyoshi Imaizumi and Davide Alberto Chiumello\nCopyright: © 2023 by the authors. Licensee MDPI, Basel, Switzerland. This article is an open access article distributed under the terms and conditions of the Creative Commons Attribution (CC BY) license (https:// creativecommons.org/licenses/by/ 4.0/).\nArticle",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "APredictive Model of Major Postoperative Respiratory Adverse Events in Pediatric Patients Undergoing Rigid Bronchoscopy for Exploration and Foreign Body Removal",
+      "content": "Department of Anesthesiology, Eye & ENT Hospital of Fudan University, No. 83 Fenyang Road, Shanghai 200031, China; yixiuwen@eentanesthesia.com (X.Y.); niwenwen@eentanesthesia.com (W.N.)\n* Correspondence: yuan.han@fdeent.org (Y.H.); wenxian.li@fdeent.org (W.L.)\n† These authors contributed equally to this work.\nAbstract: Background: No nomogram has been established to predict the incidence of major postoperative respiratory adverse events (mPRAEs) in children undergoing rigid bronchoscopy for airway foreign bodies (AFB) removal and exploration of the airway, though some studies have confirmed the risk factors. Methods: 1214 pediatric patients ( ≤ 3 years old) undergoing rigid bronchoscopy for AFB from June 2014 to December 2020 were enrolled in this study. The primary outcome was the occurrence of mPRAEs, including laryngospasm and bronchospasm. Following that, a nomogram prediction model for the mPRAEs was developed. Results: The incidence of mPRAEs was 84 (6.9%) among 1214 subjects. American Society of Anesthesiologists physical status (ASA-PS), intraoperative desaturation (SpO2 < 90%), procedural duration and ventilatory approach were all independent risk factors of mPRAEs. The area under the receiver operating characteristic curve (AUC) value of the nomogram for predicting mPRAEs was 0.815 (95% CI: 0.770-0.861), and the average AUC for ten-fold cross-validation was 0.799. These nomograms were well calibrated by Hosmer-Lemshow ( p = 0.607). Decision curve analysis showed that the nomogram prediction model is effective in clinical settings. Conclusions: Combining ASA-PS, intraoperative desaturation, procedural duration, and ventilatory approach, the nomogram model is adequate for predicting the risk of developing mPRAEs, followed by rigid bronchoscopy for AFB removal and exploration.\nKeywords: nomograms; LASSO regression; foreign body; respiratory tract diseases; anaesthesia; complications",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "1. Introduction",
+      "content": "Rigid bronchoscopy performed under general anesthesia is commonly performed for airway exploration and removal of the foreign body [1]. Anesthetic management could be challenging, especially in pediatric patients and toddlers aged 0-3 years, because of the shared airway. This can lead to a high occurrence of major postoperative respiratory adverse events (mPRAEs) like laryngospasm and bronchospasm, with severe rapid desaturation, hypoxic cardiac arrest or even death [2,3]. Therefore, there is a high need to identify the patients at an increased risk of developing these detrimental events to make the treatment plan more effective. Many studies focused on perioperative respiratory adverse events, but fewer studies have been done on postoperative respiratory adverse events [4-6]. Our study focuses more on adverse respiratory events, as postoperative laryngospasm or bronchospasm are more challenging to deal with and more likely to lead to severe consequences.\nSeveral studies indicate that the risk factors regarding surgical factors, anesthetic induction and management, AFB type, intrinsic elements and the stability of pediatric patients all contribute to the mPRAEs. Anton-Pacheco JL et al. reported a longer procedural duration regarding the extraction of foreign bodies, or the patients of a relatively young age\nwere at high risk of developing respiratory adverse events [7]. Meanwhile, the choice of anesthetic and ventilation mode may also be related to mPRAEs [8]. In this regard, a metaanalysis indicated that controlled ventilation reduces the occurrence of laryngospasm [9]. No nomogram has been established to predict the incidence of mPRAEs, although some studies have confirmed the risk factors of postoperative mPRAEs in children with AFB. However, it's difficult to assess the occurrence of mPRAEs entirely by briefly relying on only a few risk factors, which may lead to misjudgment. Therefore, prediction models had a vital importance for accurately evaluating the mPRAEs. of anesthetic and ventilation mode may also be related to mPRAEs [8]. In this regar meta-analysis  indicated  that  controlled  ventilation  reduces  the  occurrence  of  lar gospasm [9]. No nomogram has been established to predict the incidence of mPR although some studies have con fi rmed the risk factors of postoperative mPRAEs in c dren with AFB. However, it's di ffi cult to assess the occurrence of mPRAEs entirely brie fl y relying on only a few risk factors, which may lead to misjudgment. Therefore, diction models had a vital importance for accurately evaluating the mPRAEs. Our study focuses more on preoperative and intraoperative factors of pediatric\nOur study focuses more on preoperative and intraoperative factors of pediatric patients undergoing airway foreign body removal. We also proposed that the various factors may contribute to the occurrence of mPRAEs; following this, we developed a prediction model based on the LASSO machine learning method to provide a reference for anesthesiologists in predicting any risk factors which may lead to the occurrence of mPRAEs. tients undergoing airway foreign body removal. We also proposed that the various fact may contribute to the occurrence of mPRAEs; following this, we developed a predict model based on the LASSO machine learning method to provide a reference for anest siologists in predicting any risk factors which may lead to the occurrence of mPRAEs.",
+      "category": "introduction",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "2.1. Study Design and Population",
+      "content": "This retrospective observational study was approved by the institutional research ethics committee of the Eye & ENT Hospital of Fudan University (Approval number: 2022109, Clinical Registration: ChiCTR2200064392), with informed consent to be obtained from all subjects involved in the study. The study adhered to the guidelines of Transparent Reporting of a multivariable prediction model for Individual Prognosis or Diagnosis (TRIPOD) [10]. To develop the prediction model, we analyze the data from all pediatric patients aged 0 to 3 years old who underwent AFB surgery under general anesthesia between June 2014 to December 2020 at the Eye & ENT Hospital of Fudan University. Exclusion criteria were ASA-PS of 4-6, missing data of mPRAEs (Figure 1). The pediatric patients with a high score of ASA-PS, with the occurrence of a vital emergency, differed from most children's treatment plans in this study and were excluded. This retrospective observational study was approved by the institutional resea ethics  commi tt ee  of  the  Eye  &  ENT  Hospital  of  Fudan  University  (Approval  num 2022109, Clinical Registration: ChiCTR2200064392), with informed consent to be waiv The study adhered to the guidelines of Transparent Reporting of a multivariable pre tion model for Individual Prognosis or Diagnosis (TRIPOD) [10]. To develop the pre tion model, we analyze the data from all pediatric patients aged 0 to 3 years old who derwent AFB surgery under general anesthesia between June 2014 to December 202 the Eye & ENT Hospital of Fudan University. Exclusion criteria were ASA-PS of 4-6, m ing data of mPRAEs (Figure 1). The pediatric patients with a high score of ASA-PS, the occurrence of a vital emergency, di ff ered from most children's treatment plans in study and were excluded.\nJ. Clin. Med.\n2023\n,\n12\n, x FOR PEER REVIEW\n2  o\nduration regarding the extraction of foreign bodies, or the patients of a relatively yo\nage were at high risk of developing respiratory adverse events [7]. Meanwhile, the ch\n2. Methods\n2.1. Study Design and Population\nFigure 1. Numbers of participants enrolled and outcomes in the datasets. Data were extracted every 24 h by Lex Clinical Data Application 3.2 (Hangzhou L Healthcare Technology Co., Ltd, Hangzhou, China.) from the EMR (electronic med record) to a designated clinical data warehouse, including admission/transfer/discha timings, laboratory orders/results, medication orders, administration events, fl ow s entries, the sequence of laboratory test and fi ndings, performed procedures, medical ports, admission notes, treatment plans during the hospital stay, discharge sheet s Data were extracted every 24 h by Lex Clinical Data Application 3.2 (Hangzhou Lejiu Healthcare Technology Co., Ltd., Hangzhou, China.) from the EMR (electronic medical record) to a designated clinical data warehouse, including admission/transfer/discharge timings, laboratory orders/results, medication orders, administration events, flow sheet entries, the sequence of laboratory test and findings, performed procedures, medical reports, admission notes, treatment plans during the hospital stay, discharge sheet summary etc. All original data (i.e., pathology report, radiology report, progress notes, admit/discharge summary etc.) was sorted before the data analysis. Core elements of the data warehouse were de-identified entirely so that all queries and analytics could be carried out without exposing confidential health data and to maintain patient privacy.",
+      "category": "methods",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "2.2. Anesthetic Protocol",
+      "content": "AFB removal operation with rigid bronchoscopy was performed under general anesthesia on all the patients with a routine anesthetic management protocol. The description of the protocol is defined as:\n1. After entering the operating room, routine monitoring was performed for Electrocardiograph (ECG), blood pressure, and SpO2, followed by the introduction of inhaled anesthetic gas.\n2. When the patient was slightly sedated and relaxed, peripheral venipuncture was performed, and the intravenous drug was injected to pursue anesthetic induction.\n3. The ventilatory approach was based on the different conditions of children and the judgment of several senior anesthesiologists before surgery. If oxygenation were poor, the ventilatory approach would be changed accordingly.\n· The first was spontaneous respiration (Spont). Only sedatives and analgesics were used during the operation, not muscle relaxants. The anaesthesia was maintained by total intravenous anesthesia (TIVA) of propofol and remifentanil, depending on the individual's respiratory rate.\n· The second was bronchoscopic lateral ventilation (BV), during which the sedative, analgesic and muscle relaxants were given intraoperatively. Oxygenation was maintained by intermittent manual ventilation through the lateral aperture by squeezing the reservoir bag. The anaesthesia was also maintained by total intravenous anesthesia (TIVA) of propofol and remifentanil, depending on the individual's blood pressure and heart rate.\n· The third approach was manual jet ventilation (jet), in which sedatives, analgesics and muscle relaxants were also given intraoperatively, and children were given manual intermittent jet ventilation with the jet catheter tip placed 2 cm below the glottis. The anesthesia maintenance protocol was the same as above.\n· The fourth method was endotracheal tube ventilation (ETT), in which sedative, analgesic and muscle relaxant drugs were given intraoperatively, and children were ventilator-assisted through the endotracheal tube. The anesthesia maintenance protocol was the same as above.\n4. After AFB was removed, the jet catheter would be replaced by the laryngeal mask airway immediately for recovery in the bronchoscopic lateral ventilation and manual jet ventilation groups, and the child would be placed in the lateral decubitus position simultaneously on the operating table. The child would be resuscitated in the operating room.\n5. The children in spontaneous respiration and endotracheal tube ventilation groups would be resuscitated with mask ventilation and the original endotracheal tube without laryngeal mask airway replacement.\n6. After removing the laryngeal mask or endotracheal tube, the children would be sent back to the ward when sufficient oxygenation could be maintained in the supine state with air inhalation.\n7. Postoperative oxygen inhalation and nebulization therapy were given according to the patient's condition.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "2.3. Predictor Variables",
+      "content": "Demographic, foreign body-related, symptom-related, imaging, surgical and anesthetic variables were recorded as candidate predictors. Demographic characteristics [gender, age, height, weight, body mass index (BMI)] were recorded using a standard protocol. Foreign body-related variables (AFB type, location of AFB, retention time of AFB) and symptom-related variables (cough, wheeze, asthma, stridor, dyspnea, cyanosis, fever) were derived from EMR. Imaging-related variables (Pneumonia, atelectasis, emphysema, pneumothorax) were identified through radiological examinations. Surgical-related variables (procedural duration) and anaesthetic-related variables (duration of anesthetic period,\nASA-PS, ventilatory approach, change of ventilatory approach, intraoperative desaturation) were also recorded.\nAFB type was defined as no AFB, organic and inorganic ones. The size of the foreign body was not considered because some foreign bodies may dissolve by the infiltration of secretions and be coughed out of the trachea through the coughing reflex. The location of AFB included the trachea, left bronchus, right bronchus, bilateral bronchus, and no foreign body. The retention time of AFB was divided into three layers, respectively ≤ 24 h, >24 h and ≤ 3 days, >3 days, just like the division method commonly used in previous studies [7]. The ventilatory approach was based on the anesthesiologist's judgment. Change of ventilatory approach was defined as the patient needing to switch from one type of ventilation to another during the procedure. Intraoperative desaturation refers to SpO2 < 90% at any time during the procedure.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "2.4. Primary Outcome",
+      "content": "The outcome variable was defined as the occurrence of mPRAEs. Major PRAEs refer to laryngospasm and bronchospasm from the end of the procedure to back to the ward or Intensive Care Unit. Laryngospasm was defined as complete airway obstruction with associated rigidity of the abdominal and chest walls. Bronchospasm mean increased respiratory effort, particularly during expiration and wheezing on auscultation [3].",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "2.5. Statistical Analysis",
+      "content": "The sample size for this prediction model was based on the theory of vanSmeden et al., which depended on the number of predictors, MAPE (mean absolute prediction error) and the proportion of the outcome event [11]. After preliminary data analysis, the incidence of the mPRAEs was 6.9% with four potential predictors, and the MAPE was set as 0.02, so the required sample size was 532. In our study, the number of enrolled patients was 1214, above the required sample size calculated.\nBivariate analysis was examined using the Mann-Whitney U test for continuous and Fisher's exact chi-squared test for categorical variables. Samples with missing rates of less than 50% were imputed. Multiple imputations of missing data were processed with the chain equations [12]. All the collected data were used to develop the prediction model. LASSO logistic regression model was used to screen out the potential risk factors from the abovementioned variables. The LASSO can eliminate and reduce the impacts of comparatively irrelevant variables by constructing a penalty function with a hyperparameter λ to minimize their coefficients. Through 10-fold cross-validation, the λ that minimizes the mean squared error was chose, and the largest λ with a mean squared error within one standard deviation can also be chosen. For the final model, the variable corresponding to the optimal λ was selected. Then, the algorithm and corresponding intercept estimates were obtained from the maximum likelihood estimates according to the multiple logistic regression analysis, and the odds ratios and 95% confidence intervals (95% CIs) were calculated for these risk factors. A nomogram was constructed with the 'rms' R package. The internal validation of the model was performed using 10-fold cross-validation without splitting the sample. Discrimination of the model was evaluated via the receiver operating characteristic (ROC) curve and the AUC. The model's calibration was assessed by the Hosmer-Lemeshow test and was visualized through the calibration curve. Decision curve analysis was conducted to determine the clinical usefulness of the nomogram by quantifying the net benefits at different threshold probabilities in the dataset. All statistical tests were two-sided, and p < 0.05 was considered significant. LASSO feature selection was applied with the 'glmnet' R package. Statistical analysis was performed in R version 3.6.1 (R Foundation for Statistical Computing) and STATA software version 15.0 for Windows (StataCorp, College Station, TX, USA).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "3.1. Baseline Characteristics",
+      "content": "The flow chart of the study design is shown in Figure 1. A total of 1367 children were enrolled in the study. Among those, 1214 pediatric patients fulfilled the inclusion criteria. In the cohort, 6.9% ( n = 84) of patients presented with mPRAEs, including 28 incidents of bronchospasm and 56 laryngospasms. Patient characteristics in the dataset are given in (Table 1).\nAFB, Airway foreign body; ASA, American Society of Anesthesiologists; ETT, endotracheal tube; BMI, body mass index; IQR, interquartile range.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "3.2. Development of the Model",
+      "content": "LASSO regression analysis proposed that procedural duration, ASA-PS, ventilatory approach, and intraoperative desaturation could be identified as predictors (Table 2). The process of variable selection by LASSO regression is shown in (Figure 2). The model incorporating the above independent predictors is developed and presented as the nomogram (Figure 3).\nASA, American Society of Anesthesiologists; ETT, endotracheal tube.\nManual jet ventilation\n-\n1.086\n<0.001\n0.338 (0.199-0.578)\n0.114\nControlled ventilation by ETT\n-\n0.85\n0.106\n0.427 (0.141-1.133)\n0.183\nASA-PS 2-3\n1.34\n<0.001\n3.821 (2.011-7.909)\n14.598\n1.105\n<0.001\n3.019 (1.829-4.979)\n9.114\nASA, American Society of Anesthesiologists; ETT, endotracheal tube.\nASA-PS 2-3\n1.34\n<0.001\n3.821 (2.011-7.909)\n14.598\nIntraoperative desaturation\n1.105\n<0.001\n3.019 (1.829-4.979)\n9.114\nASA, American Society of Anesthesiologists; ETT, endotracheal tube.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "3.3.1. Discrimination The AUC is plo",
+      "content": "The AUC is plotted in (Figure 4). This model has excellent discriminative power with an AUC of 0.815 (95% CI: 0.770-0.861) in the dataset (Figure 4a). The model's ROC curve analysis shows that the predicted value's best cut-off point is 0.084, according to the Youden index (Figure 4a). As internal validation, ten-fold cross-validation shows that the average AUC of the model is high (mean AUC = 0.799 (95% CI: 0.769-0.811)), indicating that it has good discrimination (Figure 4b). an AUC of 0.815 (95% CI: 0.770-0.861) in the dataset (Figure 4a). The model's ROC curv analysis  shows  that  the  predicted  value's  best  cut-o ff point  is  0.084,  according  to  th Youden index (Figure 4a). As internal validation, ten-fold cross-validation shows that th average AUC of the model is high (mean AUC = 0.799 (95% CI: 0.769-0.811)), indicatin that it has good discrimination (Figure 4b).\nFind the predictor points on the uppermost point scale that correspond to each patient variable an\nadd them up. The total points projected to the bo\ntt\nom scale indicate the probability of mPRAEs\nETT, endotracheal tube; jet, manual jet ventilation; BV, bronchoscopy ventilation; Spont, spontane\nous respiration.\n3.3. Validation of the Model\ntt\ned in (Figure 4). This model has excellent discriminative power wit",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "The y 3.3.2. Calibration",
+      "content": "-axis represented the average AUC for each ten-fold cross-validation.\n3.3.2. Calibration The calibration curve was plo tt ed in (Figure 5), which was evaluated with the Hos mer-Lemeshow test in the dataset ( p = 0.607). When the probability of the prediction mode is low, it shows a high consistency, which is consistent with our data. This model was wel calibrated, with no signi fi cant di ff erence between the predicted and the actual probability The sensitivity and speci fi city of the prediction model for mPRAEs were respectively 0.76 (0.671-0.853) and 0.776 (0.752-0.800). And the positive predictive value and negative pre The calibration curve was plotted in (Figure 5), which was evaluated with the HosmerLemeshow test in the dataset ( p = 0.607). When the probability of the prediction model is low, it shows a high consistency, which is consistent with our data. This model was well calibrated, with no significant difference between the predicted and the actual probability. The sensitivity and specificity of the prediction model for mPRAEs were respectively 0.762 (0.671-0.853) and 0.776 (0.752-0.800). And the positive predictive value and negative predictive value were respectively 0.202 (0.158-0.246) and 0.978 (0.968-0.987). The positive and negative likelihood ratios were respectively 3.403 (2.896-3.999) and 0.307 (0.209-0.450).\ndictive value were respectively 0.202 (0.158-0.246) and 0.978 (0.968-0.987). The positiv\nand  negative  likelihood  ratios  were  respectively  3.403  (2.896-3.999)  and  0.307  (0.209 0.450). The model's decision curve analysis (DCA) is presented in (Figure 6). We did DCA on our prediction model to assess the net benefit that patients could receive. As the decision curve indicates, the model has an apparent net benefit for almost all threshold probabilities, especially in 10-70% thresholds (Figure 6). However, if the threshold probability were less than 10%, the net benefit of the nomogram was equivalent to predicting positive results for all patients.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "3.3.3. Clinical Use",
+      "content": "J. Clin. Med.\n2023\n,\n12\n, x FOR PEER REVIEW\n9  of  14\nThe model's decision curve analysis (DCA) is presented in (Figure 6). We did DCA\nt that patients could receive. As the deci-\nt for almost all threshold prob-\nabilities, especially in 10-70% thresholds (Figure 6). However, if the threshold probability\nt of the nomogram was equivalent to predicting positive\nJ. Clin. Med.\n2023\n,\n12\nIn the present study, the incidence of mPRAEs is 6.9%, lower than the 17.6% and\n17.4% rates reported in the other two retrospective studies of airway foreign bodies in\nChina[2,13]. This may be related to the fact that the medical centre of this study is a spe-\ncialized hospital for Eye and ENT cases and has more operations of ARB removal and\nexperience in anesthesia management. The procedural duration, ASA-PS, ventilatory ap-\nproach, and intraoperative desaturation were identi\nfi\ned as the risk factors for predicting",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "4. Discussion",
+      "content": "In the present study, the incidence of mPRAEs is 6.9%, lower than the 17.6% and 17.4% rates reported in the other two retrospective studies of airway foreign bodies in China [2,13]. This may be related to the fact that the medical centre of this study is a specialized hospital for Eye and ENT cases and has more operations of ARB removal and experience in anesthesia management. The procedural duration, ASA-PS, ventilatory approach, and intraoperative desaturation were identified as the risk factors for predicting mPRAEs in AFB removal in children. Pediatric patients with longer procedural duration, higher ASA-PS, preserved spontaneous respiration, and intraoperative desaturation is more likely to induce post-operation laryngospasm and bronchospasm. Furthermore, the prediction model of the nomogram is established. It is well-calibrated and discriminated for individualized prediction and facilitates individual treatment. Our model will benefit the clinician in making a more suitable surgical and anesthetic plan by improving the preoperative pulmonary condition of the children, using controlled ventilation, and reducing the procedural duration. For example, if the child's ASA-PS is 2 or 3, and the procedural duration is expected to be long, desaturation could occur during the operation, and the anaesthetist may have proceeded with a pre-surgery plan for the ventilation approach. As the occurrence probability of the mPRAEs can be found in the nomogram of this study, the corresponding predictive factors would help in designing a more accurate approach pre-surgery, such as shortening the procedural duration as much as possible, using bronchoscopy ventilation, manual jet ventilation, and ETT to maintain intraoperative oxygenation and prevent intraoperative desaturation, thereby reducing the probability of mPRAEs in children. If none of the above intraoperative predictors can be changed, it can also guide us to make adequate preparations during recovery to prevent mPRAEs.\nAFB removal in infants has a high incidence of RAEs and often leads to severe consequences, such as suffocation, cardiac arrest, and rare cases of mortality [14-16]. However, developing an appropriate and optimal anesthetic plan for these children with complex respiratory conditions and severe pulmonary complications is hard. Moreover, the prognosis of children may be affected by many risk factors. Therefore, this study's prediction model helps solve these problems.\nPrevious reports have elucidated the risk factors for the prognosis of children with AFB, including retrospective studies, meta-analyses, and reviews. Some studies have found that the retention time of AFB with prolonged procedural duration could cause perioperative complications in children [13,17]. Various meta-analyses and reviews reported laryngospasm and bronchospasm had a lower incidence when controlled ventilation was performed [9,18,19]. Additional clinical studies were required to substantiate this issue. However, the present study found that procedural duration, ASA-PS, ventilatory approach, and intraoperative desaturation were independent risk factors for predicting laryngospasm and bronchospasm in pediatric AFB removal, which was constant with the findings of studies being done previously.\nThe results show that intraoperative desaturation is a reliable predictor for mPRAEs. As we all know, desaturation often occurs along with laryngospasm and bronchospasm or attributes to them [20,21]. We also found that airway obstruction and respiratory infection may cause desaturation. Airway obstruction is a common risk factor for laryngospasm and bronchospasm, consistent with previous studies [22,23]. Foreign bodies stranded in the bronchus for a long time often cause respiratory tract infection, which is one of the risk factors for laryngospasm and bronchospasm [21,24]. Therefore, desaturation resulting from airway obstruction and respiratory disease is also associated with mPRAEs.\nThis model also indicates that ASA-PS 2 and 3 may be risk factors for laryngospasm and bronchospasm, confirmed by previous studies [4,25]. They also show that ASA-PS is related to high incidences of laryngospasm and bronchospasm and is a variable contributing to the condition [21]. Our validated nomogram indicates that the children's severe condition may lead to laryngospasm and bronchospasm. For these children, effective preventive measures should be taken to reduce the occurrence of laryngospasm and bronchospasm.\nIn addition, variables related to procedural duration and ventilatory approach seem to have a connection with a high incidence of laryngospasm and bronchospasm. The longer the surgical procedure duration, the higher the incidence of laryngospasm and bronchospasm, similar to the conclusion of Yu Cui et al. and Maddali et al. [13,26]. Compared to spontaneous breathing, bronchoscopy ventilation, manual jet ventilation, and controlled ventilation with endotracheal tube predict lower incidences of laryngospasm and bronchospasm. This is somewhat similar to the theory of Yuqi Liu et al., which showed a lower incidence of laryngospasm and bronchospasm with controlled ventilation [9]. It might be challenging to reach a suitable sedation level to prevent harmful reflexes, such as laryngospasm, bronchospasm, body movement or bucking, and simultaneously maintain spontaneous respiration [27]. Maintaining a deeper depth of anesthesia in a controlled ventilation group is often necessary; this precaution may lead to fewer mPRAEs.\nIn recent years, other risk factors or predictors of laryngospasm and bronchospasm have been identified, such as age, retention time of AFB, AFB type, and preoperative pneumonia [7,13,21]. These factors are also included in our study. Still, they are not turned out to be the independent risk factors due to the different definitions of the primary outcome, the different age ranges of the enrolled children, and the difference in science popularization for foreign body aspiration in the respective study location.\nThis study is one of the first to establish a predictive model for postoperative complications of AFB surgery according to preoperative and intraoperative factors, which allows anesthesiologists to evaluate the risks of complications and actively take preventive measures to avoid adverse events in children. The AUC of the model (0.815) and the p value of the Hosmer Lemeshow test (0.607) show that the model has excellent discrimination and calibration. The prediction model's positive likelihood ratio (3.403) and negative likelihood ratio (0.307) show good accuracy.\nDCAis an effective method to evaluate the clinical benefit of the model [28,29]. The horizontal line in the graph shows that if all the samples are negative with no mPRAEs, the net benefit is 0. The diagonal line indicates that all samples are positive, all occurred mPRAEs, and the net benefit is a backslash with a negative slope. The curve from the model is compared with these two lines. The curve of the training set is higher than the extreme curves within a large threshold range, especially in threshold probabilities of 10-70%, indicating that the model has an obvious net benefit rate and good fitting. The decision curve showed that if the threshold probability of a patient or doctor is >10%, using the nomogram in the current study to predict the rate of mPRAEs adds more benefit than the all-occurred-mPRAEs scheme or the none-occurred-mPRAEs scheme.\nThis study has several limitations. First, this study is a retrospective study based on the extraction of database information, and there could be a presence of recorded bias. Then, no external validation was performed, which could be supplemented in our future studies. However, the sample size of our research is significant, and ten-fold crossvalidation indicated it might provide a good validation effect. Anesthesiologists were not included in the model as a risk factor, which is one of the limitations of this study. Several anesthesiologists decided on each child's ventilation plan before surgery, which may have little impact on mPRAEs.",
+      "category": "discussion",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "5. Conclusions",
+      "content": "In summary, we found that procedural duration, ASA-PS, ventilatory approach and intraoperative desaturation were identified as the risk factors of mPRAEs during AFB removal. Further, we developed a predictive model and nomogram, verified in predicting mPRAEs. It could facilitate the individualized prediction of mPRAEs of children undergoing rigid bronchoscopy for AFB diagnosis and removal.\nAuthor Contributions: Conceptualization, W.L.; methodology, W.N.; validation, W.N.; formal analysis, Y.H.; investigation, X.Y.; data curation, X.Y.; writing-original draft preparation, X.Y.; writingreview and editing, Y.H.; supervision, W.L.; project administration, Y.H.; funding acquisition, W.L. All authors have read and agreed to the published version of the manuscript.\nFunding: This study was supported by grants-in-aid for scientific research from the Science and Technology Commission of Shanghai Municipality (21511102000) to W.L. The sponsors do not influence the study design, data collection and interpretation, writing of the manuscript, and the decision to submit the manuscript for publication.\nInstitutional Review Board Statement: The institutional research ethics committee of the Eye & ENT Hospital of Fudan University approved this retrospective observational study and waived the need to obtain written informed consent for the collection, analysis, and publication of data (Approval number: 2022109).\nInformed Consent Statement: Informed consent was obtained from all subjects involved in the study.\nData Availability Statement: The data that support the findings of this study are available from the corresponding author [W.L.], upon reasonable request.\nAcknowledgments: We thank our colleagues in the anaesthesia department of the Eye and ENT Hospital of Fudan University for their assistance.\nConflicts of Interest: The authors declare no conflict of interest.",
+      "category": "conclusion",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "References",
+      "content": "1. Guazzo, E.; Burns, H. Paediatric inhaled airway foreign bodies: An&nbsp;update. Aust. J. Gen. Pract. 2019 , 48 , 171-174. [CrossRef] [PubMed]\n2. Chai, J.; Wu, X.-Y.; Han, N.; Wang, L.-Y.; Chen, W.-M. A retrospective study of anesthesia during rigid bronchoscopy for airway foreign body removal in children: Propofol and sevoflurane with spontaneous ventilation. Paediatr. Anaesth. 2014 , 24 , 1031-1036. [CrossRef] [PubMed]\n3. Drake-Brockman, T.F.; Ramgolam, A.; Zhang, G.; Hall, G.L.; von Ungern-Sternberg, B.S. The effect of endotracheal tubes versus laryngeal mask airways on perioperative respiratory adverse events in infants: A randomised controlled trial. Lancet 2017 , 389 , 701-708. [CrossRef]\n4. Wudineh, D.M.; Berhe, Y.W.; Chekol, W.B.; Adane, H.; Workie, M.M. Perioperative Respiratory Adverse Events Among Pediatric Surgical Patients in University Hospitals in Northwest Ethiopia; A Prospective Observational Study. Front. Pediatr. 2022 , 10 , 827663. [CrossRef] [PubMed]\n5. Huerta, J.; Taleu, H.; Norton, R.; Gries, H.; Yun, P.; Lam, D. Use of the Snoring, Trouble Breathing, Un-Refreshed questionnaire to predict perioperative respiratory adverse events in children. J. Clin. Sleep Med. 2022 , 18 , 695-701. [CrossRef] [PubMed]\n6. Shen, F.; Wei, Q.; Liu, H.; Li, B.; Zhang, Q.; Zhang, Y. Development and Validation of a Risk Nomogram Model for Perioperative Respiratory Adverse Events in Children Undergoing Airway Surgery: An Observational Prospective Cohort Study. Risk Manag. Healthc. Policy 2022 , 15 , 1-12. [CrossRef]\n7. Ant ó n-Pacheco, J.L.; Mart í n-Alel ú , R.; L ó pez, M.; Morante, R.; Merino-Mateo, L.; Barrero, S.; Castilla, R.; Cano, I.; Garc í a, A.; G ó mez, A.; et al. Foreign body aspiration in children: Treatment timing and related complications. Int. J. Pediatr. Otorhinolaryngol. 2021 , 144 , 110690. [CrossRef] [PubMed]\n8. Fidkowski, C.W.; Zheng, H.; Firth, P.G. The anesthetic considerations of tracheobronchial foreign bodies in children: A literature review of 12, 979 cases. Anesth. Analg. 2010 , 111 , 1016-1025. [CrossRef]\n9. Liu, Y.; Chen, L.; Li, S. Controlled ventilation or spontaneous respiration in anesthesia for tracheobronchial foreign body removal: Ameta-analysis. Paediatr. Anaesth. 2014 , 24 , 1023-1030. [CrossRef]\n10. Collins, G.S.; Reitsma, J.B.; Altman, D.G.; Moons, K.G.M. Transparent reporting of a multivariable prediction model for individual prognosis or diagnosis (TRIPOD): The TRIPOD statement. BMJ 2015 , 350 , g7594. [CrossRef]\n11. van Smeden, M.; Moons, K.G.; de Groot, J.A.; Collins, G.S.; Altman, D.G.; Eijkemans, M.J.; Reitsma, J.B. Sample size for binary logistic prediction models: Beyond events per variable criteria. Stat. Methods Med. Res. 2019 , 28 , 2455-2474. [CrossRef] [PubMed]\n12. Samad, M.D.; Abrar, S.; Diawara, N. Missing Value Estimation using Clustering and Deep Learning within Multiple Imputation Framework. Knowl. Based Syst. 2022 , 249 , 108968. [CrossRef] [PubMed]\n13. Cui, Y.; Shao, J.; Sun, H.; Wang, X.; Zhu, Z. Risk factor analysis of bronchospasm after tracheobronchial foreign body removal: Cases report and literature review (STROBE). Medicine 2020 , 99 , e23170. [CrossRef]\n14. Mishra, P.; Bhakta, P.; Kumar, S.; Al Abri, R.; Burad, J. Sudden near-fatal tracheal aspiration of an undiagnosed nasal foreign body in a small child. Emerg. Med. Australas. 2011 , 23 , 776-778. [CrossRef] [PubMed]\n15. Qureshi, S.; Mink, R. Aspiration of fruit gel snacks. Pediatrics 2003 , 111 , 687-689. [CrossRef]\n16. Brown, K.L.; Shefler, A.; Cohen, G.; DeMunter, C.; Pigott, N.; Goldman, A.P. Near-fatal grape aspiration with complicating acute lung injury successfully treated with extracorporeal membrane oxygenation. Pediatr. Crit. Care Med. 2003 , 4 , 243-245. [CrossRef]\n17. Karaaslan, E.; Yildiz, T. Management of anesthesia and complications in children with Tracheobronchial Foreign Body Aspiration. Pak. J. Med. Sci. 2019 , 35 , 1592-1597. [CrossRef]\n18. Kendigelen, P. The anaesthetic consideration of tracheobronchial foreign body aspiration in children. J. Thorac. Dis. 2016 , 8 , 3803-3807. [CrossRef]\n19. Zhang, X.; Li, W.X.; Cai, Y.R. A time series observation of Chinese children undergoing rigid bronchoscopy for an inhaled foreign body: 3, 149 cases in 1991-2010. Chin. Med. J. 2015 , 128 , 504-509. [CrossRef]\n20. Heard, C.; Creighton, P.; Lerman, J. Intranasal flumazenil and naloxone to reverse over-sedation in a child undergoing dental restorations. Paediatr. Anaesth. 2009 , 19 , 795-797; discussion 798-799. [CrossRef]\n21. Cosgrove, P.; Krauss, B.S.; Cravero, J.P.; Fleegler, E.W. Predictors of Laryngospasm During 276, 832 Episodes of Pediatric Procedural Sedation. Ann. Emerg. Med. 2022 , 80 , 485-496. [CrossRef] [PubMed]\n22. Blum, R.H.; McGowan, F.X., Jr. Chronic upper airway obstruction and cardiac dysfunction: Anatomy, pathophysiology and anesthetic implications. Paediatr. Anaesth. 2004 , 14 , 75-83. [CrossRef]\n23. Flick, R.P.; Wilder, R.T.; Pieper, S.F.; Vankoeverden, K.; Ellison, K.M.; Marienau, M.E.; Hanson, A.C.; Schroeder, D.R.; Sprung, J. Risk factors for laryngospasm in children during general anesthesia. Paediatr. Anaesth. 2008 , 18 , 289-296. [CrossRef] [PubMed]\n24. von Ungern-Sternberg, B.S.; Boda, K.; A Chambers, N.; Rebmann, C.; Johnson, C.; Sly, P.D.; Habre, W. Risk assessment for respiratory complications in paediatric anaesthesia: A prospective cohort study. Lancet 2010 , 376 , 773-783. [CrossRef] [PubMed]\n25. Hamilton, T.B.; Thung, A.; Tobias, J.D.; Jatana, K.R.; Raman, V.T. Adenotonsillectomy and postoperative respiratory adverse events: A retrospective study. Laryngoscope Investig. Otolaryngol. 2020 , 5 , 168-174. [CrossRef]\n26. Maddali, M.M.; Mathew, M.; Chandwani, J.; Alsajwani, M.J.; Ganguly, S.S. Outcomes after rigid bronchoscopy in children with suspected or confirmed foreign body aspiration: A retrospective study. J. Cardiothorac. Vasc. Anesth. 2011 , 25 , 1005-1008. [CrossRef]\n27. Farrell, P.T. Rigid bronchoscopy for foreign body removal: Anaesthesia and ventilation. Paediatr. Anaesth. 2004 , 14 , 84-89. [CrossRef]\n28. Van Calster, B.; Wynants, L.; Verbeek, J.F.; Verbakel, J.Y.; Christodoulou, E.; Vickers, A.J.; Roobol, M.J.; Steyerberg, E.W. Reporting and Interpreting Decision Curve Analysis: A Guide for Investigators. Eur. Urol. 2018 , 74 , 796-804. [CrossRef]\n29. Vickers, A.J.; Holland, F. Decision curve analysis to evaluate the clinical benefit of prediction models. Spine J. 2021 , 21 , 1643-1648. [CrossRef]\nDisclaimer/Publisher's Note: The statements, opinions and data contained in all publications are solely those of the individual author(s) and contributor(s) and not of MDPI and/or the editor(s). MDPI and/or the editor(s) disclaim responsibility for any injury to people or property resulting from any ideas, methods, instructions or products referred to in the content.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    }
+  ],
+  "tables": [
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/79'}",
+      "headers": [
+        "Variables",
+        "Non-Major PRAEs Group ( n = 1130)",
+        "Major PRAEs Group ( n = 84)",
+        "Z Value",
+        "p Value"
+      ],
+      "rows": [
+        [
+          "Gender, n (%)",
+          "",
+          "",
+          "0.161",
+          "0.688"
+        ],
+        [
+          "Male",
+          "771 (68.2)",
+          "55 (65.5)",
+          "",
+          ""
+        ],
+        [
+          "Female",
+          "359 (31.8)",
+          "29 (34.5)",
+          "",
+          ""
+        ],
+        [
+          "Age, Median (IQR) (months)",
+          "18 (14, 23)",
+          "17.5 (14, 21)",
+          "0.929",
+          "0.335"
+        ],
+        [
+          "Duration of anesthesia, Median (IQR) (min)",
+          "24 (18, 33)",
+          "46 (32.5, 68)",
+          "105.28",
+          "<0.001"
+        ],
+        [
+          "AFB type, n (%)",
+          "",
+          "",
+          "1.557",
+          "0.459"
+        ],
+        [
+          "No AFB",
+          "77 (6.8)",
+          "3 (3.6)",
+          "",
+          ""
+        ],
+        [
+          "Inorganic",
+          "8 (0.7)",
+          "1 (1.2)",
+          "",
+          ""
+        ],
+        [
+          "Organic",
+          "1045 (92.5)",
+          "80 (95.2)",
+          "",
+          ""
+        ],
+        [
+          "Cough, n (%)",
+          "",
+          "",
+          "0.546",
+          "0.289"
+        ],
+        [
+          "No",
+          "30 (2.7)",
+          "4 (4.8)",
+          "",
+          ""
+        ],
+        [
+          "Yes",
+          "1100 (97.3)",
+          "80 (95.2)",
+          "",
+          ""
+        ],
+        [
+          "Asthma, n (%)",
+          "",
+          "",
+          "5.722",
+          "0.017"
+        ],
+        [
+          "No",
+          "720 (63.7)",
+          "42 (50)",
+          "",
+          ""
+        ],
+        [
+          "Yes",
+          "410 (36.3)",
+          "42 (50)",
+          "",
+          ""
+        ],
+        [
+          "Dyspnea, n (%)",
+          "",
+          "",
+          "0.239",
+          "0.625"
+        ],
+        [
+          "No",
+          "995 (88.1)",
+          "76 (90.5)",
+          "",
+          ""
+        ],
+        [
+          "Yes",
+          "135 (11.9)",
+          "8 (9.5)",
+          "",
+          ""
+        ],
+        [
+          "Wheeze, n (%)",
+          "",
+          "",
+          "1.812",
+          "0.331"
+        ],
+        [
+          "No",
+          "1115 (98.7)",
+          "82 (97.6)",
+          "",
+          ""
+        ],
+        [
+          "Yes",
+          "15 (1.3)",
+          "2 (2.4)",
+          "",
+          ""
+        ],
+        [
+          "Cyanosis, n (%)",
+          "",
+          "",
+          "0.235",
+          "0.628"
+        ],
+        [
+          "No",
+          "1046 (92.6)",
+          "76 (90.5)",
+          "",
+          ""
+        ],
+        [
+          "Yes",
+          "84 (7.4)",
+          "8 (9.5)",
+          "",
+          ""
+        ],
+        [
+          "Stridor, n (%)",
+          "",
+          "",
+          "1.124",
+          "0.7"
+        ],
+        [
+          "No",
+          "1106 (97.9)",
+          "82 (97.6)",
+          "",
+          ""
+        ],
+        [
+          "Yes",
+          "24 (2.1)",
+          "2 (2.4)",
+          "",
+          ""
+        ],
+        [
+          "Fever, n (%)",
+          "",
+          "",
+          "0.041",
+          "0.84"
+        ],
+        [
+          "No",
+          "945 (83.6)",
+          "69 (82.1)",
+          "",
+          ""
+        ],
+        [
+          "Yes",
+          "185 (16.4)",
+          "15 (17.9)",
+          "",
+          ""
+        ],
+        [
+          "Location of AFB, n (%)",
+          "",
+          "",
+          "8.609",
+          "0.072"
+        ],
+        [
+          "No AFB",
+          "137 (12.1)",
+          "5 (6)",
+          "",
+          ""
+        ],
+        [
+          "Bilateral bronchus",
+          "10 (0.9)",
+          "2 (2.4)",
+          "",
+          ""
+        ],
+        [
+          "Right bronchus",
+          "419 (37.1)",
+          "31 (36.9)",
+          "",
+          ""
+        ],
+        [
+          "Left bronchus",
+          "466 (41.2)",
+          "43 (51.2)",
+          "",
+          ""
+        ],
+        [
+          "Main trachea",
+          "98 (8.7)",
+          "3 (3.6)",
+          "",
+          ""
+        ],
+        [
+          "Emphysema, n (%)",
+          "",
+          "",
+          "0.155",
+          "0.694"
+        ],
+        [
+          "No",
+          "408 (36.1)",
+          "28 (33.3)",
+          "",
+          ""
+        ],
+        [
+          "Yes",
+          "722 (63.9)",
+          "56 (66.7)",
+          "",
+          ""
+        ],
+        [
+          "Atelectasis, n (%)",
+          "",
+          "",
+          "0.024",
+          "0.877"
+        ],
+        [
+          "No",
+          "1022 (90.4)",
+          "75 (89.3)",
+          "",
+          ""
+        ],
+        [
+          "Yes Pneumonia, n (%)",
+          "108 (9.6)",
+          "9 (10.7)",
+          "5.802",
+          "0.016"
+        ],
+        [
+          "No",
+          "854 (75.6)",
+          "53 (63.1)",
+          "",
+          ""
+        ],
+        [
+          "Yes",
+          "276 (24.4)",
+          "31 (36.9)",
+          "",
+          ""
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/82'}",
+      "headers": [
+        "Variables",
+        "Non-Major PRAEs Group ( n = 1130)",
+        "Major PRAEs Group ( n = 84)",
+        "Z Value",
+        "p Value"
+      ],
+      "rows": [
+        [
+          "Pneumothorax, n (%)",
+          "",
+          "",
+          "3.386",
+          "0.302"
+        ],
+        [
+          "No",
+          "1126 (99.6)",
+          "83 (98.8)",
+          "",
+          ""
+        ],
+        [
+          "Yes",
+          "4 (0.4)",
+          "1 (1.2)",
+          "",
+          ""
+        ],
+        [
+          "Weight, Median (IQR) (kg)",
+          "12 (10, 13)",
+          "11.3 (10, 12.6)",
+          "1.94",
+          "0.164"
+        ],
+        [
+          "Height, Median (IQR) (cm)",
+          "83 (80, 90)",
+          "80 (77.5, 86)",
+          "5.425",
+          "0.02"
+        ],
+        [
+          "BMI, Median (IQR) (kg/m 2 )",
+          "16.9 (15.4, 18.8)",
+          "17.4 (16.0, 18.8)",
+          "2.913",
+          "0.088"
+        ],
+        [
+          "Ventilatory approach, n (%)",
+          "",
+          "",
+          "27.217",
+          "<0.001"
+        ],
+        [
+          "Spontaneous respiration",
+          "175 (15.5)",
+          "30 (35.7)",
+          "",
+          ""
+        ],
+        [
+          "Bronchoscopy ventilation",
+          "125 (11.1)",
+          "4 (4.8)",
+          "",
+          ""
+        ],
+        [
+          "Manual jet ventilation",
+          "752 (66.5)",
+          "41 (48.8)",
+          "",
+          ""
+        ],
+        [
+          "Controlled ventilation by ETT",
+          "78 (6.9)",
+          "9 (10.7)",
+          "",
+          ""
+        ],
+        [
+          "Change of ventilatory approach, n",
+          "",
+          "",
+          "87.231",
+          "<0.001"
+        ],
+        [
+          "(%)",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "No",
+          "1111 (98.3)",
+          "67 (79.8)",
+          "",
+          ""
+        ],
+        [
+          "Yes",
+          "19 (1.7)",
+          "17 (20.2)",
+          "",
+          ""
+        ],
+        [
+          "ASA-PS, n (%)",
+          "",
+          "",
+          "27.66",
+          "<0.001"
+        ],
+        [
+          "1",
+          "484 (42.8)",
+          "12 (14.3)",
+          "",
+          ""
+        ],
+        [
+          "2",
+          "580 (51.3)",
+          "62 (73.8)",
+          "",
+          ""
+        ],
+        [
+          "3",
+          "66 (5.8)",
+          "10 (11.9)",
+          "",
+          ""
+        ],
+        [
+          "Procedural duration, Median (IQR) (min)",
+          "14 (9, 21)",
+          "20 (14, 35.5)",
+          "40.428",
+          "<0.001"
+        ],
+        [
+          "Retention time of AFB, n (%)",
+          "",
+          "",
+          "0.875",
+          "0.646"
+        ],
+        [
+          "≤ 24 h",
+          "307 (27.2)",
+          "22 (26.2)",
+          "",
+          ""
+        ],
+        [
+          "24 h~3 days",
+          "381 (33.7)",
+          "25 (29.8)",
+          "",
+          ""
+        ],
+        [
+          ">3 days",
+          "442 (39.1)",
+          "37 (44)",
+          "",
+          ""
+        ],
+        [
+          "Intraoperative desaturation, n (%)",
+          "",
+          "",
+          "42.083",
+          "<0.001"
+        ],
+        [
+          "No",
+          "876 (77.5)",
+          "38 (45.2)",
+          "",
+          ""
+        ],
+        [
+          "Yes",
+          "254 (22.5)",
+          "46 (54.8)",
+          "",
+          ""
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/86'}",
+      "headers": [
+        "Predictors",
+        "Estimate",
+        "p Value",
+        "OR(95% CI)",
+        "Wald"
+      ],
+      "rows": [
+        [
+          "(Intercept)",
+          "- 4.079",
+          "<0.001",
+          "0.017 (0.007-0.036)",
+          "0"
+        ],
+        [
+          "Procedural duration",
+          "0.041",
+          "<0.001",
+          "1.042 (1.028-1.057)",
+          "1.086"
+        ],
+        [
+          "Bronchoscopy ventilation",
+          "- 1.439",
+          "0.021",
+          "0.237 (0.059-0.717)",
+          "0.056"
+        ],
+        [
+          "Manual jet ventilation",
+          "- 1.086",
+          "<0.001",
+          "0.338 (0.199-0.578)",
+          "0.114"
+        ],
+        [
+          "Controlled ventilation by ETT",
+          "- 0.85",
+          "0.106",
+          "0.427 (0.141-1.133)",
+          "0.183"
+        ],
+        [
+          "ASA-PS 2-3",
+          "1.34",
+          "<0.001",
+          "3.821 (2.011-7.909)",
+          "14.598"
+        ],
+        [
+          "Intraoperative desaturation",
+          "1.105",
+          "<0.001",
+          "3.019 (1.829-4.979)",
+          "9.114"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    }
+  ],
+  "figures": [
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/37'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/121'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/147'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/214'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/280'}",
+      "page": null
+    }
+  ],
+  "references": [
+    {
+      "title": "Paediatric inhaled airway foreign bodies: An&amp;nbsp;update"
+    },
+    {
+      "title": "Aust. J. Gen. Pract",
+      "year": 2019
+    },
+    {
+      "title": "A retrospective study of anesthesia during rigid bronchoscopy for airway foreign body removal in children: Propofol and sevoflurane with spontaneous ventilation",
+      "year": 2019
+    },
+    {
+      "title": "Paediatr. Anaesth",
+      "year": 2014
+    },
+    {
+      "title": "The effect of endotracheal tubes versus laryngeal mask airways on perioperative respiratory adverse events in infants: A randomised controlled trial",
+      "year": 2014
+    },
+    {
+      "title": "Lancet",
+      "year": 2017
+    },
+    {
+      "title": "Perioperative Respiratory Adverse Events Among Pediatric Surgical Patients in University Hospitals in Northwest Ethiopia; A Prospective Observational Study",
+      "year": 2017
+    },
+    {
+      "title": "Front. Pediatr",
+      "year": 2022
+    },
+    {
+      "title": "Use of the Snoring, Trouble Breathing, Un-Refreshed questionnaire to predict perioperative respiratory adverse events in children",
+      "year": 2022
+    },
+    {
+      "title": "J. Clin. Sleep Med",
+      "year": 2022
+    },
+    {
+      "title": "Development and Validation of a Risk Nomogram Model for Perioperative Respiratory Adverse Events in Children Undergoing Airway Surgery: An Observational Prospective Cohort Study",
+      "year": 2022
+    },
+    {
+      "title": "Risk Manag. Healthc. Policy",
+      "year": 2022
+    },
+    {
+      "title": "Foreign body aspiration in children: Treatment timing and related complications",
+      "year": 2022
+    },
+    {
+      "title": "Int. J. Pediatr. Otorhinolaryngol",
+      "year": 2021
+    },
+    {
+      "title": "The anesthetic considerations of tracheobronchial foreign bodies in children: A literature review of 12, 979 cases",
+      "year": 2021
+    },
+    {
+      "title": "Anesth. Analg",
+      "year": 2010
+    },
+    {
+      "title": "Controlled ventilation or spontaneous respiration in anesthesia for tracheobronchial foreign body removal: A meta-analysis",
+      "year": 2010
+    },
+    {
+      "title": "Transparent reporting of a multivariable prediction model for individual prognosis or diagnosis (TRIPOD): The TRIPOD statement",
+      "year": 2014
+    },
+    {
+      "title": "BMJ",
+      "year": 2015
+    },
+    {
+      "title": "Sample size for binary logistic prediction models: Beyond events per variable criteria",
+      "year": 2015
+    },
+    {
+      "title": "Stat. Methods Med. Res",
+      "year": 2019
+    },
+    {
+      "title": "Missing Value Estimation using Clustering and Deep Learning within Multiple Imputation Framework",
+      "year": 2019
+    },
+    {
+      "title": "Knowl. Based Syst",
+      "year": 2022
+    },
+    {
+      "title": "Risk factor analysis of bronchospasm after tracheobronchial foreign body removal: Cases report and literature review (STROBE)",
+      "year": 2022
+    },
+    {
+      "title": "Medicine",
+      "year": 2020
+    },
+    {
+      "title": "Sudden near-fatal tracheal aspiration of an undiagnosed nasal foreign body in a small child",
+      "year": 2020
+    },
+    {
+      "title": "Emerg. Med. Australas",
+      "year": 2011
+    },
+    {
+      "title": "Aspiration of fruit gel snacks",
+      "year": 2011
+    },
+    {
+      "title": "Pediatrics",
+      "year": 2011
+    },
+    {
+      "title": "Near-fatal grape aspiration with complicating acute lung injury successfully treated with extracorporeal membrane oxygenation",
+      "year": 2003
+    },
+    {
+      "title": "Pediatr. Crit. Care Med",
+      "year": 2003
+    },
+    {
+      "title": "Management of anesthesia and complications in children with Tracheobronchial Foreign Body Aspiration",
+      "year": 2003
+    },
+    {
+      "title": "Pak. J. Med. Sci",
+      "year": 2019
+    },
+    {
+      "title": "The anaesthetic consideration of tracheobronchial foreign body aspiration in children",
+      "year": 2019
+    },
+    {
+      "title": "J. Thorac. Dis",
+      "year": 2019
+    },
+    {
+      "title": "A time series observation of Chinese children undergoing rigid bronchoscopy for an inhaled foreign body: 3, 149 cases in 1991-2010",
+      "year": 2016
+    },
+    {
+      "title": "Chin. Med. J",
+      "year": 2015
+    },
+    {
+      "title": "Intranasal flumazenil and naloxone to reverse over-sedation in a child undergoing dental restorations",
+      "year": 2015
+    },
+    {
+      "title": "Predictors of Laryngospasm During 276, 832 Episodes of Pediatric Procedural Sedation",
+      "year": 2009
+    },
+    {
+      "title": "Ann. Emerg. Med",
+      "year": 2022
+    },
+    {
+      "title": "Chronic upper airway obstruction and cardiac dysfunction: Anatomy, pathophysiology and anesthetic implications",
+      "year": 2022
+    },
+    {
+      "title": "Risk factors for laryngospasm in children during general anesthesia",
+      "year": 2004
+    },
+    {
+      "title": "Risk assessment for respiratory complications in paediatric anaesthesia: A prospective cohort study",
+      "year": 2008
+    },
+    {
+      "title": "Adenotonsillectomy and postoperative respiratory adverse events: A retrospective study",
+      "year": 2010
+    },
+    {
+      "title": "Laryngoscope Investig. Otolaryngol",
+      "year": 2020
+    },
+    {
+      "title": "Outcomes after rigid bronchoscopy in children with suspected or confirmed foreign body aspiration: A retrospective study",
+      "year": 2020
+    },
+    {
+      "title": "J. Cardiothorac. Vasc. Anesth",
+      "year": 2011
+    },
+    {
+      "title": "Rigid bronchoscopy for foreign body removal: Anaesthesia and ventilation",
+      "year": 2011
+    },
+    {
+      "title": "Reporting and Interpreting Decision Curve Analysis: A Guide for Investigators",
+      "year": 2004
+    },
+    {
+      "title": "Eur. Urol",
+      "year": 2018
+    },
+    {
+      "title": "Decision curve analysis to evaluate the clinical benefit of prediction models",
+      "year": 2018
+    },
+    {
+      "title": "Spine J",
+      "year": 2021
+    },
+    {
+      "title": "The statements, opinions and data contained in all publications are solely those of the individual author(s) and contributor(s) and not of",
+      "year": 2021
+    }
+  ],
+  "quality": {
+    "completeness_score": 0,
+    "has_abstract": true,
+    "abstract_source": "metadata",
+    "has_doi": true,
+    "has_full_text": true,
+    "num_sections": 16,
+    "num_tables": 3,
+    "num_figures": 10,
+    "num_references": 53
+  }
+}

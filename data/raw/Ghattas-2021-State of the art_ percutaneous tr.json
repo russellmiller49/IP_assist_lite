@@ -1,0 +1,721 @@
+{
+  "metadata": {
+    "document_id": "10_21037_jtd_19_4121",
+    "title": "State of the art: percutaneous tracheostomy in the intensive care unit",
+    "authors": [
+      "Christian Ghattas",
+      "Sammar Alsunaid",
+      "Edward M. Pickering",
+      "Van K. Holden"
+    ],
+    "year": 2021,
+    "journal": "Journal of Thoracic Disease",
+    "doi": "10.21037/jtd-19-4121",
+    "volume": "13",
+    "issue": "8",
+    "pages": "5261-5276",
+    "citation": "Ghattas, et al. (2021). State of the art: percutaneous tracheostomy in the intensive care unit. Journal of Thoracic Disease, 13(8), 5261-5276. https://doi.org/10.21037/jtd-19-4121",
+    "abstract": "Percutaneous tracheostomy is a commonly performed procedure for patients in the intensive care unit (ICU) and offers many benefits, including decreasing ICU length of stay and need for sedation while improving patient comfort, effective communication, and airway clearance. However, there is no consensus on the optimal timing of tracheostomy in ICU patients. Ultrasound (US) and bronchoscopy are useful adjunct tools to optimize procedural performance. US can be used pre-procedurally to identify vascular structures and to select the optimal puncture site, intra-procedurally to assist with accurate placement of the introducer needle, and post-procedurally to evaluate for a pneumothorax. Bronchoscopy provides real-time visual guidance from within the tracheal lumen and can reduce complications, such as paratracheal puncture and injury to the posterior tracheal wall. A step-by-step detailed procedural guide, including preparation and procedural technique, is provided with a team-based approach. Technical aspects, such as recommended equipment and selection of appropriate tracheostomy tube type and size, are discussed. Certain procedural considerations to minimize the risk of complications should be given in circumstances of patient obesity, coagulopathy, or neurologic illness. Herein, we provide a practical state of the art review of percutaneous tracheostomy in ICU patients. Specifically, we will address pre-procedural preparation, procedural technique, and post-tracheostomy management.",
+    "abstract_source": "metadata",
+    "url": "https://jtd.amegroups.com/article/view/40596/html"
+  },
+  "source_file": "Ghattas-2021-State of the art_ percutaneous tr.json",
+  "sections": [
+    {
+      "title": "Introduction",
+      "content": "Tracheostomy is one of the oldest surgical procedures and is usually performed in patients requiring prolonged mechanical ventilatory support. In 1957, Sheldon and Pudenz described a Seldinger method of percutaneous tracheostomy placement (1). However, the procedure did not become popularized until the introduction of the percutaneous dilatational method by Ciaglia in 1985 (2). Percutaneous dilatational tracheostomy (PDT) uses the insertion of a tracheal cannula by a modified Seldinger approach through the anterior tracheal wall,\npreferably between the 2 nd and 3 rd tracheal rings. This is followed by the insertion of a guidewire, and dilation is performed until the created stoma is large enough for the tracheostomy tube to be placed. The Ciaglia method is the most widely used PDT technique. Originally, it was described using serial dilators (2) but has since been modified to a single conical dilator, such as the Ciaglia Blue Rhino ® , and radial balloon dilation technique with the Ciaglia Blue Dolphin ® Percutaneous Tracheostomy Tray (Cook Medical, Bloomington, IN, USA). PDT is now recognized as a safe and cost-effective alternative to surgical tracheostomy (ST)",
+      "category": "introduction",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Tracheostomy in the ICU",
+      "content": "Tracheostomy has many benefits compared to endotracheal intubation, including improved patient comfort, decreased need for sedation, effective communication, airway clearance, and oral care (5). It also shortens the ICU length of stay and provides physiologic benefits by decreasing the work of breathing compared to endotracheal tubes (ETTs). The resistance to laminar gas flow through a tube is represented by Poiseuille's equation, R α (viscosity × length)/r 4 .  Tracheostomy tubes are shorter in length than ETTs, thus decreasing airway resistance. A variety of tracheostomy tubes are available, and those with a longer radius of curvature and smoother inner surface contribute to lower flow resistance (6). They are also more rigid and less likely to be kinked (7). A higher tracheostomy tube diameter also decreases the work of breathing (8) .",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Surgical versus percutaneous tracheostomy",
+      "content": "Both STs and PDTs can be performed safely in critically ill patients with a low incidence of complications. A metaanalysis of 22 studies (1,608 patients) demonstrated no significant difference in rates of mortality, intraoperative hemorrhage, and postoperative bleeding between the two procedures (9). Another meta-analysis that included 1,795 procedures found no significant difference in the risk of a potentially life-threatening event (3). There was also no significant difference in complications of false passage or subglottic stenosis in another large meta-analysis (10).\nIn addition to comparable safety, PDT offers several benefits compared to ST. PDT has been shown to have a lower rate of wound infection and stomatitis (3,9,11,12), shorter procedural time (9,10,13,14) and decreased costs (4,10). One prospective observational study identified significantly lower rates of tracheal tube obstruction (1.0% vs. 3.6%, P=0.007) and displacement (1.3% vs. 4.8%, P=0.002) with PDT compared to ST (15). There is  also  a  lower  rate  of  unfavorable scarring with PDT; although, the evidence for this is of low quality (11). PDT should be considered the procedure of choice for elective tracheostomies in eligible critically ill patients.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Timing of tracheostomy",
+      "content": "There  is  no  consensus  on  the  optimal  timing  of\ntracheostomy in ICU patients, and available studies are heterogenous. A Cochrane review that included 8 studies totaling 1,977 patients evaluated clinical outcomes of early ( ≤ 10 days of mechanical ventilation) versus late (>10 days) tracheostomy. The early tracheostomy group had a lower mortality risk with a risk ratio 0.83 (95% CI, 0.70-0.98, P=0.03); however, the authors indicated that the results are only suggestive due to the lack of high quality evidence for specific subgroups (16). Other studies have demonstrated no mortality benefit of early tracheostomy (17-21). A metaanalysis of 13 trials (2,434 patients) demonstrated that allcause mortality was not significantly lower in patients with an early ( ≤ 7 days of mechanical ventilation) versus late (>7 days) tracheostomy (17).\nThe effect of early tracheostomy on lowering the risk of ventilator-associated pneumonia is similarly unclear, with some studies demonstrating a risk reduction (17,22) and others, none (19-21). Data on the impact of early tracheostomy on ICU-free days and duration of mechanical ventilation are also conflicting (16,18-23). Thus, it is understandable why the timing of tracheostomy significantly varies in practice (24). With no clear superior benefit of early tracheostomy, the clinical decision should consider the patient's prognosis, ability to wean, comorbidities, and risks associated with prolonged endotracheal intubation.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Ultrasound (US) use in PDT",
+      "content": "Ultrasonography is a useful adjunct in PDT for the pre-procedural evaluation,  intraoperative  use,  and post-procedure assessment of complications. US is an inexpensive, noninvasive tool that is readily available in most ICUs, and its use may improve the safety of PDT. It has been used prior to the procedure to select the puncture site  and avoid injury to aberrant blood vessels (25,26) and during the procedure as real-time guidance at the puncture site and to monitor for cranial misplacement of the tracheostomy tube (27-30). One of the limitations of intraoperative use of US alone is the inability to visualize the posterior wall of the trachea due to intraluminal air;  thus,  injury  to  the  posterior  membrane cannot be completely avoided (31).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Pre-procedure use",
+      "content": "A linear array US probe can be used to identify the thyroid and cricoid cartilages, tracheal rings, thyroid gland, and the carotid and jugular vessels. Vascular structures can be\nfurther evaluated by doppler. US can help ensure accurate placement of the introducer needle, estimate the distance from the skin to the trachea, identify important vascular anatomical locations, and prevent vascular complications (32). A small study evaluated the use of US prior to PDT in 72 patients, and the planned puncture site was changed in 17 patients (24%) to avoid injury to subcutaneous vessels (25). Forty-one percent of patients in one study were found to have a vessel, most commonly veins, overlying the planned percutaneous tracheostomy insertion site on neck US (33).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Intraoperative use",
+      "content": "Real-time use of US in a randomized controlled trial resulted in a higher proportion of accurate tracheal puncture (87% vs. 50%, P=0.006) and first-pass success rates (87% vs. 58%, P=0.028) compared to the use of traditional anatomical landmarks (27). A randomized prospective study of 80 patients compared the use of bronchoscopy- versus US-guided PDT. The bronchoscopy group did not have a pre-procedure US. The entry location was changed in 15% of patients in the US-guided PDT group. This group also had lower rates of hemorrhage (2.5% vs. 20%,  P=0.014)  and  significantly  shorter procedure time (7.92±1.00 vs. 10.0±1.41 min, P=0.001). Hemorrhage included minor (resolved with pressure) and major events (bleeding despite compression, requiring transfusions or surgical intervention) (34). A systematic review of 4 studies including 588 patients found that USguided PDT had similar rates of procedural-related and clinical complications compared to bronchoscopy-guided PDT but reduced the rates of minor complications when compared to anatomical landmark-guided PDT (35).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Post-procedure use",
+      "content": "US can also be used post-procedurally to evaluate for a pneumothorax; however, there have been no studies to date specifically evaluating its use post-PDT. More prospective studies are needed to determine the impact of US use for PDT.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Bronchoscopy use in PDT",
+      "content": "Flexible bronchoscopy provides real-time visual guidance from within the tracheal lumen and is used in about 8398% of tracheostomies performed in the ICU (36,37). Its use has shown to reduce the risk of paratracheal puncture\nand injury to the posterior tracheal wall, and it confirms proper positioning of the tracheostomy tube above the carina (38). In one study, bronchoscopy-guided PDT was associated with lower rates of accidental extubation, pneumomediastinum, pneumothorax, and false passage (39). Although a prospective trial by Berrouschot et  al. found no difference in the rate of perioperative complications with and without bronchoscopy-guidance (7% vs. 6%, respectively), the more severe complications occurred in the group without bronchoscopy-guidance, including one death due to tension pneumothorax and two cases of perforation of the posterior tracheal wall (40).\nSeveral retrospective studies evaluated the use of bronchoscopy-guided PDT versus no use of bronchoscopy and found no difference in the rate of complications, but there was potential decreased costs in the no-bronchoscopy group (41,42). Although bronchoscopy guidance cannot completely avoid injury to the airways, it may help in early detection of a complication. It is also important to use in patients who have a difficult anatomy, limited neck extension, or obesity. Nevertheless, bronchoscopic transillumination of the puncture site may help avoid major vascular structures, such as the thyroid isthmus and the anterior jugular vein (43).\nThe use of bronchoscopy in PDT has been associated with transient respiratory acidosis from an increase in hypercarbia secondary to the partial occlusion of the ETT lumen by the bronchoscope (44-46). This can be overcome with appropriate ventilator setting changes, the use of a smaller diameter bronchoscope, minimizing suctioning during bronchoscopy, and shortening the length of time the bronchoscope is in the ETT (47). Although transient hypercarbia is usually tolerable, special attention needs to be given to patients with intracranial injury/surgery, in which this acidosis can lead to elevated intracranial pressure and decreased cerebral perfusion pressure (44,47). For patients with an unstable neurological condition or significant hypoxia with high FiO2 and positive end-expiratory pressure (PEEP) requirements, end-tidal CO 2 monitoring and short bronchoscopy cycles are essential. In addition, the needle entry could be performed with US-guidance, then subsequently confirmed with bronchoscopy to mitigate risks of hypercarbia. Otherwise, we recommend the use of bronchoscopy-guidance when possible. Ensuring that the inside diameter of the ETT is ≥ 2.0 mm larger than the outside diameter of the bronchoscope will help to maintain delivery of tidal volume and minimize the development of auto-PEEP (48).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Preparation",
+      "content": "The patient's medical history, vital signs, coagulation profile (PT, INR, aPTT, platelet count), available imaging (CT/ US neck), prior endotracheal intubation procedural details, ventilator settings, and suctioning needs are assessed. Indications and any contraindications to PDT are identified.\nExamination of the neck is performed after appropriate patient positioning. Placing a roll beneath the patient's shoulders improves neck extension, which increases the suprasternal length of the trachea and facilitates identification of landmarks by palpation. The suprasternal\nlength can be reduced in patients with limited neck mobility, morbid obesity, or kyphosis. The hyoid cartilage is  identified first when palpating from the chin down in midline. Then, the thyroid cartilage, cricothyroid membrane, and cricoid cartilage are identified in order. The tracheal rings are palpated distal to the cricoid. A good practice is to use a skin marker to label the thyroid and cricoid cartilages, the incision site, and the suprasternal notch ( Figure 1 ). US can be used to identify structures and vessels ( Figure 2 ). Ideally, there should be a space of at least 3-4 cm between the cricoid cartilage and the sternal notch, and the incision is typically located halfway between the two (49).\nMechanical ventilation should be adjusted to deliver 100% FiO2 and ensure adequate minute ventilation to account for changes during bronchoscopy. Blood pressure should be monitored every 2-3 minutes with continuous pulse oximetry, capnography, and ECG. It is often helpful to turn the volume on for the pulse oximetry and to make sure that the blood pressure cuff is not on the same extremity as the oximeter. A functional intravenous access should be identified. For bedside PDT, the hospital mattress can be placed on maximum inflate to facilitate neck extension with a shoulder roll and the bed height adjusted based on the preference of the physician performing the tracheostomy.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Equipment and team",
+      "content": "A list of recommended equipment for PDT is listed in Table 1 . The positioning of team members and location of equipment for a bedside bronchoscopy-guided PDT is illustrated in Figure 3, if  the  physician performing the tracheostomy is right-handed. It is important that the vital signs monitor and bronchoscopy images are easily viewable for all team members. The physician performing the bronchoscopy stands at the head of the bed, should be proficient in airway management, and can also direct the administration of sedation and medications. The bronchoscopist's role during the procedure is to provide optimal intra-tracheal visualization for real-time PDT guidance. The physician performing the tracheostomy stands on the patient's right with equipment easily accessible. This operator's role includes providing clear instructions to the multidisciplinary team members during the procedure. The respiratory therapist is in a position to adjust the ventilator and the ETT , and the nurse is able to administer medications through a working intravenous line. Closed-loop communication is essential to optimize teamwork.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Selection of tracheostomy size and type",
+      "content": "The selection of appropriate tracheostomy tube size and type depends on the patient's sex, weight, current ETT size, suctioning needs, and careful review of available neck CT or US imaging to estimate lengths. Measurements to consider on a CT chest are distance from the skin to trachea, tracheal diameter, and angle of curvature; however, the CT is usually obtained without neck extension. Tracheostomy tube dimensions to consider include inner diameter (ID), outer diameter (OD), length, and curvature. The published ID of the tube is the functional ID, so it includes the inner canula if it is required for connection to the ventilator. If the ID is too small, then airway clearance may be impaired, and a higher cuff pressure may be required to create a seal in the trachea. If the OD is too large, it can hinder the ability to speak when the cuff is deflated.\nTracheostomy tubes can be angled (straight and curved portions) or curved (uniform angle of curvature). If a curved tube is too short, it can obstruct against the posterior tracheal wall. The shape should be selected to most approximate the patient's airway anatomy. Tracheostomy tubes also come in standard length or extra length. The proximal (horizontal) extra length tubes may be required in patients with large necks while the distal (vertical) extra length tubes are used in patients with tracheal malacia (50). The tracheostomy should fulfill its function but without causing undue pressure on the tracheal wall (51). The available tracheostomies that can be placed via PDT are listed in Table 2 and Figure 4 . It is important to have several options available for the procedure.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Procedure technique with Ciaglia Blue Rhino",
+      "content": "The Blue Rhino technique is a modification by Ciaglia in 1999 of his original percutaneous approach-the rigid serial dilators were replaced with a single long flexible conical dilator with a hydrophilic coating (2,52). This modification shortened the dilation process to one step and minimized the risk of major bleeding and injury to the posterior membrane (53). We describe the procedure technique with the Ciaglia Blue Rhino, recognizing that there are different variations in actual practice.\nThe  patient  is  adequately  sedated,  and  then neuromuscular blockade is given at the discretion of the proceduralist. The authors recommend the use of paralytics to decrease the risk of inadvertent extubation, especially when the ETT is high. The bronchoscopist performs\nan airway inspection with therapeutic aspiration of any secretions. The operator preps and drapes the neck and prepares the tray ( Figure 5 ).  The selected tracheostomy should be checked for any air leaks, ideally under sterile saline or water. During deflation of the tracheostomy cuff, flattening of the balloon towards the flange can assist with making it more streamlined in preparation for placement. It is also important that the appropriate size introducer is used, and the tracheostomy is flush with the tapered tip ( Figure 6 ).\nIdeally,  the  skin  incision  and  blunt  dissection  are performed prior to pulling up the ETT to minimize the loss of ventilation. The operator provides local anesthesia to the\nskin and subcutaneous tissues at the incision site with 10 cc of 1% lidocaine with 1:100,000 epinephrine (available in the tray), which also causes vasoconstriction. Then, a 1-1.5 cm vertical or transverse skin incision is made. In most cases, blunt dissection of the pre-tracheal tissue down to the strap muscles using a mosquito clamp is performed to prepare the site for the introducer needle and to avoid injury to blood vessels and the thyroid isthmus. The dissection is performed with the dominant hand, while the other hand stabilizes the trachea ( Figure 7 ). Gentle pressure with the clamps helps to identify the tracheal rings.\nThen, the respiratory therapist partially deflates the cuff of the ETT and withdraws the tube under bronchoscopic\n*, the inner diameter is 1.0 mm less with the inner cannula.\nguidance until the distal end is in the subglottic space and the 1 st and 2 nd tracheal rings are visible. The ideal puncture site  and authors' preference is between the 2 nd and 3 rd tracheal rings. Puncture below the 4 th ring can be associated with higher bleeding risk and development of tracheainnominate artery fistulae (54), whereas a higher entry site increases the risk of subglottic stenosis.\nThe bronchoscopist then drives the bronchoscope down to the main carina and orients the scope such that the carina is vertical, pointing towards 12 o'clock. Then, the bronchoscope is pulled straight back without rotation to the distal end of the ETT. This allows the operator to orient the introducer needle insertion, which should be between 11 o'clock and 1 o'clock. In the authors' opinion, this is an important concept to avoid lateralization of the forces during dilation and to prevent cartilage injury which\ncould result in subsequent deformity or stenosis. Once the needle is inserted in appropriate position between the tracheal rings under direct bronchoscopic visualization, the needle is removed, and the catheter is left in place. Using the Seldinger technique, the J-tipped guidewire is inserted through the catheter. (Some users may opt to use an introducer needle without the catheter and thread the guidewire directly through the needle.) The catheter is  then removed over the wire, and a short 14 Fr dilator (4.5 cm) is used to dilate the track. It is important that the non-dominant hand stabilizes the trachea during any dilation to provide counter-traction ( Figure 8 ).\nThe conical large dilator, which should be covered with sterile saline or water, is advanced over the guiding 8Fr bolstering catheter to the knob. Then, the conical large dilator with the catheter is advanced over the guidewire\nB\nC\n1\nuntil the black skin line is just visible inside the trachea. The stoma should be dilated using a curved motion with the dominant hand while the non-dominant hand stabilizes the trachea for counter-traction. Care should be given to avoid injury to the posterior membrane, especially in patients with tracheomalacia. T o avoid posterior tracheal wall injury, the guidewire and bolstering catheter should be firmly stabilized during PDT (55). The dilator is removed, and the tracheostomy tube with introducer is advanced over the guiding catheter. It is important that the guiding catheter, introducer, and tracheostomy are all flushed\nagainst each other to minimize kinking of the tracheostomy, especially for the Shiley ® PERCs. Lubrication is applied to the outside of the tracheostomy tube tip. Once the tracheostomy is placed, the guidewire, guiding catheter, and introducer are all removed. The bronchoscopist then confirms the tracheostomy tube is in the airway and disconnects the mechanical ventilator circuit from the ETT. Thereafter, the tracheostomy cuff is inflated, the inner cannula is placed, and the mechanical ventilator circuit is  connected via a bronchoscope adapter. It is important that ventilation is not performed through the ETT with the tracheostomy cuff inflated to minimize the risk of developing pneumomediastinum.\nThrough the ETT, the bronchoscope is used to visualize adequate apposition of the cuff. Then, it is removed and inserted through the tracheostomy. The distal end of the tracheostomy should be at least 1-2 cm above the main carina. It may be helpful to visualize the distal end of the tracheostomy with the patient's head flexed with a pillow and the neck in the neutral position. This allows for assessment of co-axiality of the tracheostomy. If the distal end is facing the posterior membrane or anterior trachea, then it may need to be exchanged. After the bronchoscope is removed from the tracheostomy, the tracheostomy tube is secured with a neck tie, with or without sutures per institutional policy, and an appropriate dressing is applied.\nDifficulties commonly encountered during the procedure may be due to the skin incision being too small, inadequate neck extension, suboptimal dilation, incorrect selected tracheostomy tube size, or lack of enough lubrication for tracheostomy tube placement.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Procedure technique with Ciaglia Blue Dolphin",
+      "content": "The Ciaglia Blue Dolphin tracheostomy technique, a balloon-assisted tracheostomy, was introduced in 2008, but it has been discontinued    by the manufacturer. It utilizes a saline-filled balloon dilator that comes with an inflation syringe, and inflation pressures correlating to balloon size are available in the kit. The balloon is made of a noncompliant nylon that retains its shape under pressure. It is recommended to maintain the pressure for 15 seconds to achieve the desired stoma size. The tracheostomy tube, which is loaded directly onto the device, is then advanced through the stoma over the guidewire. Then, the guidewire and the balloon dilator are removed, and the tracheostomy tube is secured in place (56-58).\nSanabria published a systematic review including 14 randomized controlled trials comparing the different PDT methods (59). Only one study compared the Ciaglia Blue Rhino versus the Ciaglia Blue Dolphin. The median procedure time in the Blue Rhino group was shorter (1.5 vs. 4 min, P=0.035). In addition, the presence of intra-tracheal minor bleeding at bronchoscopy examination 6 hours postprocedure was more frequently seen in the Blue Dolphin group (68.8% vs. 34.3%, P=0.008). No major bleeding occurred in either group (60).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Neurocritical care patients",
+      "content": "Tracheostomy in neurocritical care patients carries the\nrisk of hypoventilation, hypercarbia, increased intracranial pressure, and decreased cerebral perfusion pressure, which can lead to secondary brain injury in an already injured brain (47,61,62). As mentioned earlier, techniques to help mitigate these risks include appropriate ventilator setting changes, the use of a smaller diameter bronchoscope, minimizing suctioning  during  bronchoscopy,  and shortening the time the bronchoscope is in the ETT. It is  also  important that the procedure be performed in a controlled environment with an institutional protocol that includes close intracranial pressure (62) and end-tidal CO 2 monitoring. PDT can be safe and well-tolerated in patients with brain injury.\nThe timing of tracheostomy (early vs. late)  has  been investigated in several large retrospective and small prospective studies in patients with brain injuries. Several studies have demonstrated a reduction in the duration of mechanical ventilation (63-67). Three small randomized studies that included a total of 81 patients with brain injuries also found a reduction in the duration of mechanical ventilation with early ( ≤ 7 days) tracheostomy; however, there was no difference in the rates of ventilator-associated pneumonia (64,66,68). A meta-analysis of 5 retrospective studies that included 1,691 patients with brain injuries demonstrated higher hospital mortality rates in patients who received early tracheostomy (15.6%) compared to late tracheostomy (8.8%) (Odds ratio (OR) 1.97; P<0.0001) (66).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Obesity",
+      "content": "Given the high prevalence of obesity in the USA (34% of adults) (69), a significant number of tracheostomies in the ICU are performed on obese patients. The safety of  PDT in this population has been investigated in several retrospective studies. One study of 4 different PT techniques in 73 obese patients (BMI ≥ 27.5 Kg/m 2 ) found a 4.9-fold increased risk for serious complications in the obese group compared to those with a BMI <27.5 (44% vs. 18%). Seven serious complications were reported, including bleeding, posterior membrane tear, and loss of the airways. Four of the reported complications occurred when using the Griggs method, including a fatal bleeding case (70).\nAnother study of  500  consecutive  patients  who underwent PDT included 86 (17%) obese patients (BMI ≥ 30) and found a significant increase in complication rates  in  this  group  compared to those with BMI <30 (15% vs. 8%; P<0.05). Complications included oxygen desaturation, accidental extubation, posterior tracheal\nwall injury and non-fatal bleeding. Four of the 5 cases of accidental decannulation occurred in the obese group, thus highlighting another post-operative risk in this patient population (39). Similarly, in a comparative study of ST in 89 morbidly obese patients (BMI ≥ 40), complication rates were higher in the obese group (25% vs. 14%; P=0.03). Morbid obesity was found to be an independent variable associated with increased risk of tracheostomy-related complications (71). However, other studies deemed PDT safe in obese patients (72-74).\nA cohort of 143 patients with BMI ≥ 35 was assessed\nfor procedural and 30-day post-procedural complications. Eighty-nine patients underwent PDT using the Ciaglia Blue Rhino technique, and 53 patients, ST. There was no significant difference in the complication rates between the two groups (6.5% in each group) with no reported deaths (73). PDT in obese patients may carry a higher risk than nonobese patients given the large neck circumference and short suprasternal part of the trachea; however, studies evaluating this are limited to retrospective studies. The adjunct use of bronchoscopy and proper sizing of the tracheostomy tube, such as extra length tubes, when indicated can help\nminimize complications, especially loss of the airways and accidental decannulation (39,73).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Coagulopathy",
+      "content": "Candidates  for  PDT  should  be  evaluated  for  risk factors for bleeding, including coagulopathies, uremia, thrombocytopenia, and use of anticoagulation and antiplatelet  medications.  Coagulation disorders and thrombocytopenia are common findings in critically ill patients and might be associated with an increased risk of periprocedural bleeding. A large study analyzed the risk of bleeding in 1,001 patients undergoing bronchoscopyguided PDT using the Ciaglia Blue Rhino technique. Four hundred and forty-one patients (44%) had severe coagulopathy (INR >1.5 or PTT >50 seconds) and/or thrombocytopenia (platelet count <50,000/microL). There was no significant difference in the incidence of moderate periprocedural bleeding between the group with severe coagulopathy and the control group (9.7% vs. 7.3%). Severe procedure-related bleeding (requiring blood transfusion and/or surgery) occurred in two patients in each group: one laceration of the brachiocephalic trunk, one venous bleeding, and two hemorrhages from a thyroid vessel injury. There were no deaths associated with PDT (75). This study found that low fibrinogen levels, difficult PDT, less experienced operators, and a Simplified Acute Physiology Score >40 are independent predictors of moderate to major bleeding complications after PDT. The overall incidence of moderate and severe bleeding events in this series was 8.8% (76).\nIn a study of 415 patients who underwent PDT, intraprocedural bleeding was not significantly higher in patients with underlying coagulopathy; however, the risk of persistent stomal bleeding for ≥ 24 hours afterwards was five-fold higher in patients with thrombocytopenia (platelet count <50,000/microL) (77). Platelet transfusions with adjunct use of bronchoscopy was found to minimize the risk of bleeding in patients with severe thrombocytopenia (78). Ernst et  al. demonstrated a significantly higher risk of bleeding in patients receiving clopidogrel (79). If antiplatelet therapy cannot be discontinued, then precautions should be taken. A study of 20 patients receiving clopidogrel who underwent PDT were compared to a control group of 137 patients. No major bleeding occurred in either group, and there was no significant difference in rates of minor bleeding (5% vs. 3.5%) (80).\nThe safety of PDT was evaluated in patients with liver disease and refractory coagulopathy (platelet count ≤ 50,000/microL\nor INR >1.5) despite blood product transfusion. T wentyfive out of 60 patients undergoing PDT fulfilled the criteria, and there was no significant difference in the rate of adverse events between the two groups. Only one patient in the refractory coagulopathy group experienced severe bleeding that was controlled without surgical intervention. There was no reported death in either group (81).\nI n   p a t i e n t s   w i t h   t h r o m b o c y t o p e n i a ,   p l a t e l e t transfusion should be provided to achieve a platelet count >50,000/microL. Prophylactic low-dose heparin does not increase the risk of bleeding; however, therapeutic heparin should be held prior to the planned procedure (77,78). Uremia can cause platelet dysfunction, which could increase the risk of perioperative bleeding; thus, patients with endstage kidney disease should undergo dialysis as close as possible prior to the scheduled procedure time. One dose of desmopressin may be given one hour prior to the procedure to decrease the risk of uremic bleeding (82,83).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Post-tracheostomy management",
+      "content": "Obtaining a post-tracheostomy chest radiograph had previously been common practice. A systematic review of 7 studies that included 1,271 cases evaluated the outcomes of  post-percutaneous tracheostomy chest X-rays in adults.  Forty  cases  (3.2%)  developed  complications detected on chest X-ray, which included atelectasis (n=24), pneumothorax (n=6), subcutaneous emphysema (n=6), pneumomediastinum (n=3), and tracheostomy tube malposition (n=1). However, only 22 patients (1.8%) required intervention. A significant number of patients that developed post-procedure complications had signs and symptoms, and a significantly lower complication rate was reported in PDT performed with bronchoscopic guidance (1.6% vs. 9.3%). Thus, obtaining a routine X-ray post-tracheostomy has low impact on clinical management, especially if the procedure was under bronchoscopic guidance. It may be considered for highrisk patients or those who had a difficult or emergent tracheostomy (84).\nPost tracheostomy-related acquired pressure ulcers (TRAPUs) are not uncommon and are multifactorial in etiology. Some risk factors are related to impaired mobility and suboptimal nutritional status of these critically ill patients. Other factors are related to the procedure and post-tracheostomy care, such as the proximity of the tracheostomy tube flange to the clavicle, continuous moisture from tracheal secretions, and immobility of the\nflange when secured by sutures (85,86). Tight sutures can lead to prolonged pressure under the tracheostomy flange after insertion and lead to pressure ulcers. The number of sutures to be placed and the timing of suture removal are not well studied, and surgeons have anecdotally adopted the 4-quadrant technique (2 sutures on each side) to secure the tracheostomy tube and prevent its dislodgment (86).\nO'Toole et  al. implemented a protocol for ST care wherein they placed a hydrocolloid dressing under the tracheostomy tube flange immediately after insertion, then replaced it with a polyurethane foam dressing after suture removal. They shortened the duration of sutures from 7-10 to 7 days and enforced keeping the neck in a neutral position with frequent skin assessment performed by the nursing staff. Their protocol led to a decrease in  the  incidence of TRAPUs from 10.9% (20/183) to 1.3% (2/155). Similar results were replicated by Dixon et  al. They implemented a protocol for both surgical and percutaneous tracheostomy care and shortened the duration of sutures to 5 days. An 80% decline in TRAPUs was observed. A loose suturing technique by tightening square knots down onto the short dilator or the mosquito clamps has also been used (86).\nAll supplies to replace a tracheostomy tube should be at bedside, including a replacement tracheostomy tube of the same size and one of a smaller size, flexible suction tubing and suction apparatus, scissors, gloves, replacement ties, water-based lubricant, an oral ETT, and emergency supplies such as a bag valve mask. An experienced physician should ideally be present for the first tube change (51). A bedside tracheostomy sign ( Figure 9 )  that  includes  important procedural details and operator contact information can be utilized per institutional guidelines.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Multidisciplinary team approach",
+      "content": "Five factors have been identified to improve the quality of care for tracheostomy patients: multidisciplinary ward rounds, standardization of care protocols, appropriate interdisciplinary education, patient and family involvement, and use of data to drive improvement (87). Quality improvement projects including these components have been shown to reduce adverse events and improve patient safety (88). The use of a post-tracheostomy care bundle in a study of 393 patients significantly improved rates of decannulation and tolerance of an oral diet. The bundle included (I) an electronic postoperative tracheostomy order set (including automatic respiratory therapy and speech consultations; tracheostomy care; team contact information), (II) tracking and following system, (III) decannulation protocol that empowers RT and SLP, and (IV) tracheostomy rounds (89). A meta-analysis of 7 studies evaluating multidisciplinary tracheostomy teams identified a reduction in the total tracheostomy time with a mean difference of 8 days (90). Similarly, the time to decannulation after ICU discharge decreased from an average of 14 to 7 days in a study of an intensivist-led tracheostomy team in a study of 280 patients (91).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Conclusions",
+      "content": "PDT is a commonly performed procedure for ICU patients and offers many benefits; however, there is no consensus on its optimal timing. US can be used to assist with accurate placement of the introducer needle while avoiding vascular structures but does not allow for identification of the posterior membrane. Thus, bronchoscopy provides real-time visual guidance from within the tracheal lumen to decrease the risk of posterior membrane injury. The selection of appropriate tracheostomy type and size can minimize complications. Certain additional procedural considerations should be given in circumstances of patient obesity, coagulopathy, or neurologic illness to mitigate risks. A multidisciplinary team-based approach to posttracheostomy care decreases the time to decannulation.",
+      "category": "conclusion",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Acknowledgments",
+      "content": "Funding: None.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Footnote",
+      "content": "Provenance and Peer Review: This article was commissioned\nby the Guest Editors (Jonathan S. Kurman, Ashutosh Sachdeva and Rahul Nanchal) for the series 'Interventional Pulmonology in the Intensive Care Unit Environment' published in Journal of Thoracic Disease .  The article has undergone external peer review.\nConflicts of Interest: All authors have completed the ICMJE uniform disclosure form (available at: http://dx.doi. org/10.21037/jtd-19-4121). The series 'Interventional Pulmonology in the Intensive Care Unit Environment' was commissioned by the editorial office without any funding sponsorship . The authors have no other conflicts of interest to declare.\nEthical Statement: The authors are accountable for all aspects of the work in ensuring that questions related to the accuracy or integrity of any part of the work are appropriately investigated and resolved.\nOpen Access Statement: This  is  an  Open  Access article distributed in accordance with the Creative Commons Attribution-NonCommercial-NoDerivs 4.0 International License (CC BY-NC-ND 4.0), which permits the noncommercial replication and distribution of the article with the strict proviso that no changes or edits are made and the original work is properly cited (including links to both the formal publication through the relevant DOI and the license). See: https://creativecommons.org/licenses/by-nc-nd/4.0/.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "References",
+      "content": "1. Shelden CH, Pudenz RH, Tichy FY. Percutaneous tracheotomy. J Am Med Assoc 1957;165:2068-70.\n2. Ciaglia P , Firsching R, Syniec C. Elective percutaneous dilatational tracheostomy. A new simple bedside procedure; preliminary report. Chest 1985;87:715-9.\n3. Klotz R, Probst P , Deininger M, et al. Percutaneous versus surgical strategy for tracheostomy: a systematic review and meta-analysis of perioperative and postoperative complications. Langenbecks Arch Surg 2018;403:137-49.\n4. Bacchetta MD, Girardi LN, Southard EJ, et al. Comparison of open versus bedside percutaneous dilatational tracheostomy in the cardiothoracic surgical patient: outcomes and financial analysis. Ann Thorac Surg 2005;79:1879-85.\n5. Astrachan DI, Kirchner JC, Goodwin WJ. Prolonged intubation vs. tracheotomy: complications, practical and psychological considerations. Laryngoscope\n1988;98:1165-9.\n6. Yung MW, Snowdon SL. Respiratory resistance of tracheostomy tubes. Arch Otolaryngol 1984;110:591-5.\n7. Epstein SK. Anatomy and physiology of tracheostomy. Respir Care 2005;50:476-82.\n8. Mullins JB, T empler JW, Kong J, et al. Airway resistance and work of breathing in tracheostomy tubes. Laryngoscope 1993;103:1367-72.\n9. Johnson-Obaseki S, Veljkovic A, Javidnia H. Complication rates of open surgical versus percutaneous tracheostomy in critically ill patients. Laryngoscope 2016;126:2459-67.\n10.  Higgins KM, Punthakee X. Meta-analysis comparison of open versus percutaneous tracheostomy. Laryngoscope 2007;117:447-54.\n11.  Brass P , Hellmich M, Ladra A, et al. Percutaneous techniques versus surgical techniques for tracheostomy. Cochrane Database Syst Rev 2016;7:CD008045.\n12.  Delaney A, Bagshaw SM, Nalos M. Percutaneous dilatational tracheostomy versus surgical tracheostomy in critically ill patients: a systematic review and meta-analysis. Crit Care 2006;10:R55.\n13.  Iftikhar IH, T eng S, Schimmel M, et al. A Network Comparative Meta-analysis of Percutaneous Dilatational Tracheostomies Using Anatomic Landmarks, Bronchoscopic, and Ultrasound Guidance Versus Open Surgical Tracheostomy. Lung 2019;197:267-75.\n14.  Oggiano M, Ewig S, Hecker E. A comparison of percutaneous dilatational tracheostomy versus conventional surgical tracheostomy. Pneumologie 2014;68:322-8.\n15.  Barbetti JK, Nichol AD, Choate KR, et al. Prospective observational study of postoperative complications after percutaneous dilatational or surgical tracheostomy in critically ill patients. Crit Care Resusc 2009;11:244-9.\n16.  Andriolo BNG, Andriolo RB, Saconato H, et al. Early versus late tracheostomy for critically ill patients. Cochrane Database Syst Rev 2015;1:CD007271.\n17.  Siempos II, Ntaidou TK, Filippidis FT, et al. Effect of early versus late or no tracheostomy on mortality and pneumonia of critically ill patients receiving mechanical ventilation: a systematic review and meta-analysis. Lancet Respir Med 2015;3:150-8.\n18.  Dochi H, Nojima M, Matsumura M, et al. Effect of early tracheostomy in mechanically ventilated patients. Laryngoscope Investig Otolaryngol 2019;4:292-9.\n19.  T erragni PP , Antonelli M, Fumagalli R, et al. Early vs late tracheotomy for prevention of pneumonia in mechanically ventilated adult ICU patients: a randomized controlled trial. JAMA 2010;303:1483-9.\n20.  Meng L, Wang C, Li J, et al. Early vs late tracheostomy in critically ill patients: a systematic review and meta-analysis. Clin Respir J 2016;10:684-92.\n21.  Szakmany T, Russell P , Wilkes AR, et al. Effect of early tracheostomy on resource utilization and clinical outcomes in critically ill patients: meta-analysis of randomized controlled trials. Br J Anaesth 2015;114:396-405.\n22.  Zheng Y, Sui F, Chen XK, et al. Early versus late percutaneous dilational tracheostomy in critically ill patients anticipated requiring prolonged mechanical ventilation. Chin Med J (Engl) 2012;125:1925-30.\n23.  Liu CC, Livingstone D, Dixon E, et al. Early versus late tracheostomy: a systematic review and meta-analysis. Otolaryngol Head Neck Surg 2015;152:219-27.\n24.  Mehta AB, Cooke CR, Wiener RS, et al. Hospital Variation in Early Tracheostomy in the United States: A Population-Based Study. Crit Care Med 2016;44:1506-14.\n25.  Kollig E, Heydenreich U, Roetman B, et al. Ultrasound and bronchoscopic controlled percutaneous tracheostomy on trauma ICU. Injury 2000;31:663-8.\n26.  Bonde J, Nørgaard N, Antonsen K, et al. Implementation of percutaneous dilation tracheotomy--value of preincisional ultrasonic examination? Acta Anaesthesiol Scand 1999;43:163-6.\n27.  Rudas M, Seppelt I, Herkes R, et al. T raditional landmark versus ultrasound guided tracheal puncture during percutaneous dilatational tracheostomy in adult intensive care patients: a randomised controlled trial. Crit Care 2014;18:514.\n28.  Rajajee V , Fletcher JJ, Rochlen LR, et al. Real-time ultrasound-guided percutaneous dilatational tracheostomy: a feasibility study. Crit Care 2011;15:R67.\n29.  Guinot PG, Zogheib E, Petiot S, et al. Ultrasound-guided percutaneous tracheostomy in critically ill obese patients. Crit Care 2012;16:R40.\n30.  Susti ć A, Kovac D, Zgaljardi ć Z, et al. Ultrasound-guided percutaneous dilatational tracheostomy: a safe method to avoid cranial misplacement of the tracheostomy tube. Intensive Care Med 2000;26:1379-81.\n31.  Alansari M, Alotair H, Al Aseri Z, et al. Use of ultrasound guidance to improve the safety of percutaneous dilatational tracheostomy: a literature review. Crit Care 2015;19:229.\n32.  Rudas M, Seppelt I. Safety and efficacy of ultrasonography before and during percutaneous dilatational tracheostomy in adult patients: a systematic review. Crit Care Resusc 2012;14:297-301.\n33.  Rees J, Haroon Y, Hogan C, et al. The ultrasound neck imaging for tracheostomy study: A study prompting\nultrasound screening prior to percutaneous tracheostomy procedures to improve patient outcomes. J Intensive Care Soc 2018;19:107-13.\n34.  Sarıta ş A, Kurnaz MM. Comparison of BronchoscopyGuided and Real-Time Ultrasound-Guided Percutaneous Dilatational Tracheostomy: Safety, Complications, and Effectiveness in Critically Ill Patients. J Intensive Care Med 2017:885066617705641.\n35.  Gobatto ALN, Besen BAMP, Cestari M, et al. UltrasoundGuided Percutaneous Dilational Tracheostomy: A Systematic Review of Randomized Controlled Trials and Meta-Analysis. J Intensive Care Med 2020;35:445-52.\n36.  Kluge S, Baumann HJ, Maier C, et al. Tracheostomy in the intensive care unit: a nationwide survey. Anesth Analg 2008;107:1639-43.\n37.  Krishnan K, Elliot SC, Mallick A. The current practice of tracheostomy in the United Kingdom: a postal survey. Anaesthesia 2005;60:360-4.\n38.  Winkler WB, Karnik R, Seelmann O, et al. Bedside percutaneous dilational tracheostomy with endoscopic guidance: experience with 71 ICU patients. Intensive Care Med 1994;20:476-9.\n39.  Kost KM. Endoscopic percutaneous dilatational tracheotomy: a prospective evaluation of 500 consecutive cases. Laryngoscope 2005;115:1-30.\n40.  Berrouschot J, Oeken J, Steiniger L, et al. Perioperative complications of percutaneous dilational tracheostomy. Laryngoscope 1997;107:1538-44.\n41.  Gadkaree SK, Schwartz D, Gerold K, et al. Use of Bronchoscopy in Percutaneous Dilational Tracheostomy. JAMA Otolaryngol Head Neck Surg 2016;142:143-9.\n42.  Jackson LSM, Davis JW, Kaups KL, et al. Percutaneous tracheostomy: to bronch or not to bronch--that is the question. J Trauma 2011;71:1553-6.\n43.  Bhatti N, Mirski M, T atlipinar A, et al. Reduction of complication rate in percutaneous dilation tracheostomies. Laryngoscope 2007;117:172-5.\n44.  Reilly PM, Anderson HL, Sing RF, et al. Occult hypercarbia. An unrecognized phenomenon during percutaneous endoscopic tracheostomy. Chest 1995;107:1760-3.\n45.  Kaiser E, Cantais E, Goutorbe P , et al. Prospective randomized comparison of progressive dilational vs forceps dilational percutaneous tracheostomy. Anaesth Intensive Care 2006;34:51-4.\n46.  Cantais E, Kaiser E, Le-Goff Y, et al. Percutaneous tracheostomy: prospective comparison of the translaryngeal technique versus the forceps-dilational technique in 100",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Journal of Thoracic Disease, Vol 13, No 8 August 2021",
+      "content": "critically ill adults. Crit Care Med 2002;30:815-9.\n47.  Reilly PM, Sing RF, Giberson FA, et al. Hypercarbia during tracheostomy: a comparison of percutaneous endoscopic, percutaneous Doppler, and standard surgical tracheostomy. Intensive Care Med 1997;23:859-64.\n48.  Lawson RW, Peters JI, Shelledy DC. Effects of Fiberoptic Bronchoscopy During Mechanical Ventilation in a Lung Model. Chest 2000;118:824-31.\n49.  Mehta C, Mehta Y. Percutaneous tracheostomy. Ann Card Anaesth 2017;20:S19-25.\n50.  Hess DR. Tracheostomy tubes and related appliances. Respir Care 2005;50:497-510.\n51.  Mitchell RB, Hussey HM, Setzen G, et al. Clinical consensus statement: tracheostomy care. Otolaryngol-Head Neck Surg Off J Am Acad Otolaryngol-Head Neck Surg 2013;148:6-20.\n52.  T echnique, complications, and improvements in percutaneous dilatational tracheostomy. - PubMed - NCBI [Internet]. [cited 2019 Nov 11]. Available online: https:// www-ncbi-nlm-nih-gov.proxy-hs.researchport.umd.edu/ pubmed/?term=ciaglia+technique+complications+and+imp rovements\n53.  Single-dilator percutaneous tracheostomy: a comparison of PercuT wist and Ciaglia Blue Rhino techniques. - PubMed - NCBI [Internet]. [cited 2019 Nov 11]. Available online: https://www-ncbi-nlm-nih-gov.proxy-hs.researchport. umd.edu/pubmed/12209274\n54.  Muhammad JK, Major E, Wood A, et al. Percutaneous dilatational tracheostomy: haemorrhagic complications and the vascular anatomy of the anterior neck. A review based on 497 cases. Int J Oral Maxillofac Surg 2000;29:217-22.\n55.  Trottier SJ, Hazard PB, Sakabu SA, et al. Posterior tracheal wall perforation during percutaneous dilational tracheostomy: an investigation into its mechanism and prevention. Chest 1999;115:1383-9.\n56.  Gromann TW, Birkelbach O, Hetzer R. Ballon dilatational tracheostomy. T echnique and first clinical experience with the Ciaglia Blue Dolphin method. Chirurg 2009;80:622-7.\n57.  Aslan E, Gokcinar D, Kahveci K, et al. A comparison between blue rhino and balloon-assisted tracheostomy in intensive care units. Acta Medica Mediterranea 2014;30:371.\n58.  Araujo JB, Añón JM, García-Fernández AM, et al. Percutaneous tracheostomy through dilatation with the Ciaglia Blue Dolphin(®) method. Med Intensiva 2015;39:76-83.\n59.  Sanabria A. Which Percutaneous Tracheostomy Method Is Better? A Systematic Review. Respir Care\n2014;59:1660-70.\n60.  Cianchi G, Zagli G, Bonizzoli M, et al. Comparison between single-step and balloon dilatational tracheostomy in intensive care unit: a single-centre, randomized controlled study. Br J Anaesth 2010;104:728-32.\n61.  Stocchetti N, Parma A, Lamperti M, et al. Neurophysiological consequences of three tracheostomy techniques: a randomized study in neurosurgical patients. J Neurosurg Anesthesiol 2000;12:307-13.\n62.  Kocaeli H, Korfali E, T a ş kapilio ğ lu O, et al. Analysis of intracranial pressure changes during early versus late percutaneous tracheostomy in a neuro-intensive care unit. Acta Neurochir (Wien) 2008;150:1263-7; discussion 1267.\n63.  Gandía-Martínez F, Martínez-Gil I, Andaluz-Ojeda D, et al. Analysis of early tracheostomy and its impact on development of pneumonia, use of resources and mortality in neurocritically ill patients. Neurocirugia (Astur) 2010;21:211-21.\n64.  Bouderka MA, Fakhir B, Bouaggad A, et al. Early tracheostomy versus prolonged endotracheal intubation in severe head injury. J T rauma 2004;57:251-4.\n65.  Ahmed N, Kuo YH. Early versus late tracheostomy in patients with severe traumatic head injury. Surg Infect (Larchmt) 2007;8:343-7.\n66.  Dunham CM, Cutrona AF, Gruber BS, et al. Early tracheostomy in severe traumatic brain injury: evidence for decreased mechanical ventilation and increased hospital mortality. Int J Burns T rauma 2014;4:14-24.\n67.  Huang YH, Lee TC, Liao CC, et al. Tracheostomy in craniectomised survivors after traumatic brain injury: a cross-sectional analytical study. Injury 2013;44:1226-31.\n68.  Sugerman HJ, Wolfe L, Pasquale MD, et al. Multicenter, randomized, prospective trial of early tracheostomy. J Trauma 1997;43:741-7.\n69.  Flegal KM, Carroll MD, Ogden CL, et al. Prevalence and trends in obesity among US adults, 1999-2008. JAMA 2010;303:235-41.\n70.  Byhahn C, Lischke V, Meininger D, et al. Peri-operative complications during percutaneous tracheostomy in obese patients. Anaesthesia 2005;60:12-5.\n71.  El Solh AA, Jaafar W. A comparative study of the complications of surgical tracheostomy in morbidly obese critically ill patients. Crit Care 2007;11:R3.\n72.  Mansharamani NG, Koziel H, Garland R, et al. Safety of bedside percutaneous dilatational tracheostomy in obese patients in the ICU. Chest 2000;117:1426-9.\n73.  Heyrosa MG, Melniczek DM, Rovito P, et al. Percutaneous tracheostomy: a safe procedure in the",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Ghattas et al. Percutaneous tracheostomy in ICU",
+      "content": "morbidly obese. J Am Coll Surg 2006;202:618-22.\n74.  Aldawood AS, Arabi YM, Haddad S. Safety of percutaneous tracheostomy in obese critically ill patients: a prospective cohort study. Anaesth Intensive Care 2008;36:69-73.\n75.  Pilarczyk K, Dusse F, Marggraf G, et al. Percutaneous dilatational tracheostomy in patients with severe coagulopathy or thrombocytopenia. Crit Care 2014;18:P326.\n76.  Pilarczyk K, Haake N, Dudasova M, et al. Risk factors for bleeding complications after percutaneous dilatational tracheostomy: a ten-year institutional analysis. Anaesth Intensive Care 2016;44:227-36.\n77.  Beiderlinden M, Eikermann M, Lehmann N, et al. Risk factors associated with bleeding during and after percutaneous dilational tracheostomy. Anaesthesia 2007;62:342-6.\n78.  Kluge S, Meyer A, Kühnelt P , et al. Percutaneous tracheostomy is safe in patients with severe thrombocytopenia. Chest 2004;126:547-51.\n79.  Ernst A, Eberhardt R, Wahidi M, et al. Effect of routine clopidogrel use on bleeding complications after transbronchial biopsy in humans. Chest 2006;129:734-7.\n80.  Abouzgheib W, Meena N, Jagtap P, et al. Percutaneous dilational tracheostomy in patients receiving antiplatelet therapy: is it safe? J Bronchology Interv Pulmonol 2013;20:322-5.\n81.  Auzinger G, O'Callaghan GP, Bernal W, et al. Percutaneous tracheostomy in patients with severe liver disease and a high incidence of refractory coagulopathy: a prospective trial. Crit Care 2007;11:R110.\n82.  Hedges SJ, Dehoney SB, Hooper JS, et al. Evidence-based treatment recommendations for uremic bleeding. Nat Clin Pract Nephrol 2007;3:138-53.\n83.  Kim JH, Baek CH, Min JY, et al. Desmopressin improves platelet function in uremic patients taking antiplatelet agents who require emergent invasive procedures. Ann Hematol 2015;94:1457-61.\n84.  Yeo WX, Phua CQ, Lo S. Is routine chest X-ray after surgical and percutaneous tracheostomy necessary in adults: a systemic review of the current literature. Clin Otolaryngol 2014;39:79-88.\n85.  O'T oole TR, Jacobs N, Hondorp B, et al. Prevention of Tracheostomy-Related Hospital-Acquired Pressure Ulcers. Otolaryngol Head Neck Surg 2017;156:642-51.\n86.  Dixon LM, Mascioli S, Mixell JH, et al. Reducing Tracheostomy-Related Pressure Injuries. AACN Adv Crit Care 2018;29:426-31.\n87.  Bedwell JR, Pandian V, Roberson DW, et al. Multidisciplinary Tracheostomy Care: How Collaboratives Drive Quality Improvement. Otolaryngol Clin North Am 2019;52:135-47.\n88.  T wose P , Jones G, Lowes J, et al. Enhancing care of patients requiring a tracheostomy: A sustained quality improvement project. J Crit Care 2019;54:191-6.\n89.  Mah JW, Staff II, Fisher SR, et al. Improving Decannulation and Swallowing Function: A Comprehensive, Multidisciplinary Approach to PostTracheostomy Care. Respir Care 2017;62:137-43.\n90.  Speed L, Harding KE. Tracheostomy teams reduce total tracheostomy time and increase speaking valve use: a systematic review and meta-analysis. J Crit Care 2013;28:216.e1-10.\n91.  T obin AE, Santamaria JD. An intensivist-led tracheostomy review team is associated with shorter decannulation time and length of stay: a prospective cohort study. Crit Care 2008;12:R48.\nCite this article as: Ghattas C, Alsunaid S, Pickering EM, Holden VK. State of the art: percutaneous tracheostomy in the intensive care unit. J Thorac Dis 2021;13(8):5261-5276. doi: 10.21037/jtd-19-4121",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    }
+  ],
+  "tables": [
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/121'}",
+      "headers": [
+        "Type",
+        "Inner diameter (mm)",
+        "Outer diameter (mm)",
+        "Length (mm)",
+        "Introducer size (Fr)"
+      ],
+      "rows": [
+        [
+          "Portex Per-fit 7",
+          "7.0*",
+          "9.6",
+          "82",
+          ""
+        ],
+        [
+          "Portex Per-fit 8",
+          "8.0*",
+          "10.9",
+          "86",
+          "24"
+        ],
+        [
+          "Portex Per-fit 9",
+          "9.0*",
+          "12.3",
+          "93",
+          "24"
+        ],
+        [
+          "Shiley 6 PERC",
+          "6.4",
+          "10.8",
+          "74",
+          "26"
+        ],
+        [
+          "Shiley 8 PERC",
+          "7.6",
+          "12.2",
+          "79",
+          "28"
+        ],
+        [
+          "Shiley 8 SCT",
+          "8.0",
+          "10.9",
+          "89",
+          "24"
+        ],
+        [
+          "Shiley 6 XLT",
+          "6.0",
+          "11.0",
+          "95",
+          "24"
+        ],
+        [
+          "Shiley 7 XLT",
+          "7.0",
+          "12.3",
+          "100",
+          "26"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    }
+  ],
+  "figures": [
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/45'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/50'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/108'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/143'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/147'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/155'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/170'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/200'}",
+      "page": null
+    }
+  ],
+  "references": [
+    {
+      "title": "Percutaneous tracheotomy"
+    },
+    {
+      "title": "J Am Med Assoc",
+      "year": 1957
+    },
+    {
+      "title": "Elective percutaneous dilatational tracheostomy. A new simple bedside procedure; preliminary report",
+      "year": 1957
+    },
+    {
+      "title": "Chest",
+      "year": 1985
+    },
+    {
+      "title": "Percutaneous versus surgical strategy for tracheostomy: a systematic review and meta-analysis of perioperative and postoperative complications",
+      "year": 1985
+    },
+    {
+      "title": "Langenbecks Arch Surg",
+      "year": 2018
+    },
+    {
+      "title": "Comparison of open versus bedside percutaneous dilatational tracheostomy in the cardiothoracic surgical patient: outcomes and financial analysis",
+      "year": 2018
+    },
+    {
+      "title": "Ann Thorac Surg",
+      "year": 2005
+    },
+    {
+      "title": "Prolonged intubation vs. tracheotomy: complications, practical and psychological considerations",
+      "year": 2005
+    },
+    {
+      "title": "Laryngoscope",
+      "year": 1988
+    },
+    {
+      "title": "Respiratory resistance of tracheostomy tubes",
+      "year": 1988
+    },
+    {
+      "title": "Arch Otolaryngol",
+      "year": 1984
+    },
+    {
+      "title": "Anatomy and physiology of tracheostomy",
+      "year": 1984
+    },
+    {
+      "title": "Respir Care",
+      "year": 1984
+    },
+    {
+      "title": "Airway resistance and work of breathing in tracheostomy tubes",
+      "year": 2005
+    },
+    {
+      "title": "Complication rates of open surgical versus percutaneous tracheostomy in critically ill patients",
+      "year": 1993
+    },
+    {
+      "title": "Meta-analysis comparison of open versus percutaneous tracheostomy",
+      "year": 2016
+    },
+    {
+      "title": "Percutaneous techniques versus surgical techniques for tracheostomy",
+      "year": 2007
+    },
+    {
+      "title": "Cochrane Database Syst Rev",
+      "year": 2016
+    },
+    {
+      "title": "Percutaneous dilatational tracheostomy versus surgical tracheostomy in critically ill patients: a systematic review and meta-analysis",
+      "year": 2016
+    },
+    {
+      "title": "Crit Care",
+      "year": 2006
+    },
+    {
+      "title": "A Network Comparative Meta-analysis of Percutaneous Dilatational Tracheostomies Using Anatomic Landmarks, Bronchoscopic, and Ultrasound Guidance Versus Open Surgical Tracheostomy",
+      "year": 2006
+    },
+    {
+      "title": "Lung",
+      "year": 2019
+    },
+    {
+      "title": "A comparison of percutaneous dilatational tracheostomy versus conventional surgical tracheostomy",
+      "year": 2019
+    },
+    {
+      "title": "Pneumologie",
+      "year": 2014
+    },
+    {
+      "title": "Prospective observational study of postoperative complications after percutaneous dilatational or surgical tracheostomy in critically ill patients",
+      "year": 2014
+    },
+    {
+      "title": "Crit Care Resusc",
+      "year": 2009
+    },
+    {
+      "title": "Early versus late tracheostomy for critically ill patients",
+      "year": 2009
+    },
+    {
+      "title": "Effect of early versus late or no tracheostomy on mortality and pneumonia of critically ill patients receiving mechanical ventilation: a systematic review and meta-analysis",
+      "year": 2015
+    },
+    {
+      "title": "Lancet Respir Med",
+      "year": 2015
+    },
+    {
+      "title": "Effect of early tracheostomy in mechanically ventilated patients",
+      "year": 2015
+    },
+    {
+      "title": "Laryngoscope Investig Otolaryngol",
+      "year": 2019
+    },
+    {
+      "title": "Early vs late tracheotomy for prevention of pneumonia in mechanically ventilated adult ICU patients: a randomized controlled trial",
+      "year": 2019
+    },
+    {
+      "title": "JAMA",
+      "year": 2010
+    },
+    {
+      "title": "Early vs late tracheostomy in critically ill patients: a systematic review and meta-analysis",
+      "year": 2010
+    },
+    {
+      "title": "Clin Respir J",
+      "year": 2016
+    },
+    {
+      "title": "Effect of early tracheostomy on resource utilization and clinical outcomes in critically ill patients: meta-analysis of randomized controlled trials",
+      "year": 2016
+    },
+    {
+      "title": "Br J Anaesth",
+      "year": 2015
+    },
+    {
+      "title": "Early versus late percutaneous dilational tracheostomy in critically ill patients anticipated requiring prolonged mechanical ventilation",
+      "year": 2015
+    },
+    {
+      "title": "Chin Med J (Engl)",
+      "year": 2012
+    },
+    {
+      "title": "Early versus late tracheostomy: a systematic review and meta-analysis",
+      "year": 2012
+    },
+    {
+      "title": "Otolaryngol Head Neck Surg",
+      "year": 2015
+    },
+    {
+      "title": "Hospital Variation in Early Tracheostomy in the United States: A Population-Based Study",
+      "year": 2015
+    },
+    {
+      "title": "Crit Care Med",
+      "year": 2016
+    },
+    {
+      "title": "Ultrasound and bronchoscopic controlled percutaneous tracheostomy on trauma ICU",
+      "year": 2016
+    },
+    {
+      "title": "Injury",
+      "year": 2000
+    },
+    {
+      "title": "Implementation of percutaneous dilation tracheotomy--value of preincisional ultrasonic examination?",
+      "year": 2000
+    },
+    {
+      "title": "Acta Anaesthesiol Scand",
+      "year": 1999
+    },
+    {
+      "title": "Traditional landmark versus ultrasound guided tracheal puncture during percutaneous dilatational tracheostomy in adult intensive care patients: a randomised controlled trial",
+      "year": 1999
+    },
+    {
+      "title": "Real-time ultrasound-guided percutaneous dilatational tracheostomy: a feasibility study",
+      "year": 2014
+    },
+    {
+      "title": "Ultrasound-guided percutaneous tracheostomy in critically ill obese patients",
+      "year": 2011
+    },
+    {
+      "title": "Ultrasound-guided percutaneous dilatational tracheostomy: a safe method to avoid cranial misplacement of the tracheostomy tube",
+      "year": 2012
+    },
+    {
+      "title": "Intensive Care Med",
+      "year": 2000
+    },
+    {
+      "title": "Use of ultrasound guidance to improve the safety of percutaneous dilatational tracheostomy: a literature review",
+      "year": 2000
+    },
+    {
+      "title": "Safety and efficacy of ultrasonography before and during percutaneous dilatational tracheostomy in adult patients: a systematic review",
+      "year": 2015
+    },
+    {
+      "title": "The ultrasound neck imaging for tracheostomy study: A study prompting ultrasound screening prior to percutaneous tracheostomy procedures to improve patient outcomes",
+      "year": 2012
+    },
+    {
+      "title": "J Intensive Care Soc",
+      "year": 2018
+    },
+    {
+      "title": "Comparison of Bronchoscopy-Guided and Real-Time Ultrasound-Guided Percutaneous Dilatational Tracheostomy: Safety, Complications, and Effectiveness in Critically Ill Patients",
+      "year": 2018
+    },
+    {
+      "title": "J Intensive Care Med",
+      "year": 2017
+    },
+    {
+      "title": "Ultrasound-Guided Percutaneous Dilational Tracheostomy: A Systematic Review of Randomized Controlled Trials and Meta-Analysis",
+      "year": 2017
+    },
+    {
+      "title": "Tracheostomy in the intensive care unit: a nationwide survey",
+      "year": 2020
+    },
+    {
+      "title": "Anesth Analg",
+      "year": 2008
+    },
+    {
+      "title": "The current practice of tracheostomy in the United Kingdom: a postal survey",
+      "year": 2008
+    },
+    {
+      "title": "Anaesthesia",
+      "year": 2005
+    },
+    {
+      "title": "Bedside percutaneous dilational tracheostomy with endoscopic guidance: experience with 71 ICU patients",
+      "year": 2005
+    },
+    {
+      "title": "Endoscopic percutaneous dilatational tracheotomy: a prospective evaluation of 500 consecutive cases",
+      "year": 1994
+    },
+    {
+      "title": "Perioperative complications of percutaneous dilational tracheostomy",
+      "year": 2005
+    },
+    {
+      "title": "Use of Bronchoscopy in Percutaneous Dilational Tracheostomy",
+      "year": 1997
+    },
+    {
+      "title": "JAMA Otolaryngol Head Neck Surg",
+      "year": 2016
+    },
+    {
+      "title": "Percutaneous tracheostomy: to bronch or not to bronch--that is the question",
+      "year": 2016
+    },
+    {
+      "title": "J Trauma",
+      "year": 2011
+    },
+    {
+      "title": "Reduction of complication rate in percutaneous dilation tracheostomies",
+      "year": 2011
+    },
+    {
+      "title": "Occult hypercarbia. An unrecognized phenomenon during percutaneous endoscopic tracheostomy",
+      "year": 2007
+    },
+    {
+      "title": "Prospective randomized comparison of progressive dilational vs forceps dilational percutaneous tracheostomy",
+      "year": 1995
+    },
+    {
+      "title": "Anaesth Intensive Care",
+      "year": 2006
+    },
+    {
+      "title": "Percutaneous tracheostomy: prospective comparison of the translaryngeal technique versus the forceps-dilational technique in 100 critically ill adults",
+      "year": 2006
+    },
+    {
+      "title": "Hypercarbia during tracheostomy: a comparison of percutaneous endoscopic, percutaneous Doppler, and standard surgical tracheostomy",
+      "year": 2002
+    },
+    {
+      "title": "Effects of Fiberoptic Bronchoscopy During Mechanical Ventilation in a Lung Model",
+      "year": 1997
+    },
+    {
+      "title": "Percutaneous tracheostomy",
+      "year": 2016
+    },
+    {
+      "title": "Ann Card Anaesth",
+      "year": 2000
+    },
+    {
+      "title": "Tracheostomy tubes and related appliances",
+      "year": 2017
+    }
+  ],
+  "quality": {
+    "completeness_score": 0,
+    "has_abstract": true,
+    "abstract_source": "metadata",
+    "has_doi": true,
+    "has_full_text": true,
+    "num_sections": 25,
+    "num_tables": 1,
+    "num_figures": 12,
+    "num_references": 81
+  }
+}

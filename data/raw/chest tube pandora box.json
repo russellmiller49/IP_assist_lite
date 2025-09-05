@@ -1,0 +1,1105 @@
+{
+  "metadata": {
+    "document_id": "10_3390_jcm11185311",
+    "title": "Chest Drainage Therapy: What Comes out of Pandora’s Box Can Affect Patient Outcomes",
+    "authors": [
+      "Alberto Antonicelli",
+      "Fabrizio Monaco",
+      "Angelo Carretta",
+      "Bryan M. Burt",
+      "Joshua R. Sonett",
+      "Giulia Veronesi"
+    ],
+    "year": 2022,
+    "journal": "Journal of Clinical Medicine",
+    "doi": "10.3390/jcm11185311",
+    "volume": "11",
+    "issue": "18",
+    "pages": "5311",
+    "citation": "Antonicelli, et al. (2022). Chest Drainage Therapy: What Comes out of Pandora’s Box Can Affect Patient Outcomes. Journal of Clinical Medicine, 11(18), 5311. https://doi.org/10.3390/jcm11185311",
+    "abstract": "Background: Over the last 100 years, the original three-bottle chest drainage system has been variously engineered into compact disposables and electronic units. Clinicians are now surrounded by a plethora of different types of systems, but little is known about the way that they work and perform. Thus, we sought to test the performance of the most commonly used chest drainage units under conditions that are relevant to clinical practice. Methods: A pleural space environment simulator was built. Thirty-two units were tested under four clinical scenarios: air leak interpretation during quiet breathing and after obstructed inspiration (−5 to −150 cmH2O), a buildup of negative pressure (−100 cmH2O), a bronchopleural ﬁstula (10 L/min) and the need for effective external suction in the presence of air leakage. Twenty-ﬁve units were “traditional” thoracic drainages, ﬁve were “digital” low-ﬂow/low-vacuum pumps and two were hybrids (a combination of the two). According to the design of the seal and of the suction control, the units were classiﬁed as wet-wet, wet-dry and dry-dry. Results: All wet units showed reverse air ﬂow, with the potential to mimic an air leak when there was none. Ten wet units showed no automatic negative pressure relief features, while ﬁve dry-dry did but were slow to react. Ten wet and ﬁve dry-dry units showed no capability to handle a 10 L/min leak, as they were restrictive to ﬂow (peak pressure up to 55 cmH2O). Only seven dry-suction units were able to maintain the set suction at high airﬂow rates (>20 L/min). Conclusions: Different chest drainage unit designs lead to different performances, some of which may negatively impact patient outcomes. This sounds the call to tailor our clinical practice for the individual patient. A paradigm shift to better understand all components of pleural physiology post-surgical intervention on this relatively neglected topic is needed to improve our daily practice.",
+    "abstract_source": "metadata",
+    "url": "https://www.mdpi.com/2077-0383/11/18/5311"
+  },
+  "source_file": "chest tube pandora box.json",
+  "sections": [
+    {
+      "title": "",
+      "content": "Citation: Antonicelli, A.; Monaco, F.; Carretta, A.; Burt, B.M.; Sonett, J.R.; Veronesi, G. Chest Drainage Therapy: What Comes out of Pandora's Box Can Affect Patient Outcomes. J. Clin. Med. 2022 , 11 , 5311. https:// doi.org/10.3390/jcm11185311\nAcademic Editor: Tao Jiang\nPublisher's Note: MDPI stays neutral with regard to jurisdictional claims in published maps and institutional affiliations.\nCopyright: © 2022 by the authors. Licensee MDPI, Basel, Switzerland. This article is an open access article distributed under the terms and conditions of the Creative Commons Attribution (CC BY) license (https:// creativecommons.org/licenses/by/ 4.0/).\nArticle",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Chest Drainage Therapy: What Comes out of Pandora's Box Can Affect Patient Outcomes",
+      "content": "1 Thoracic Surgery Department, IRCCS San Raffaele Hospital, 20132 Milan, Italy\n2 The National Coalition of Independent Scholars (NCIS), Brattleboro, VT 05301, USA\n3 Cardiothoracic Intensive Care Unit, IRCCS San Raffaele Hospital, 20132 Milan, Italy\n4 Division of Thoracic Surgery, Baylor College of Medicine, Houston, TX 77030, USA\n5 Section of General Thoracic Surgery, Columbia University Irving Medical Center, New York, NY 10032, USA\n* Correspondence: antonicelli.alberto@hsr.it or antonicelli.alberto@gmail.com; Tel.: +39-327-0349271\nAbstract: Background: Over the last 100 years, the original three-bottle chest drainage system has been variously engineered into compact disposables and electronic units. Clinicians are now surrounded by a plethora of different types of systems, but little is known about the way that they work and perform. Thus, we sought to test the performance of the most commonly used chest drainage units under conditions that are relevant to clinical practice. Methods: A pleural space environment simulator was built. Thirty-two units were tested under four clinical scenarios: air leak interpretation during quiet breathing and after obstructed inspiration ( -5 to -150 cmH2O), a buildup of negative pressure ( -100 cmH2O), a bronchopleural fistula (10 L/min) and the need for effective external suction in the presence of air leakage. Twenty-five units were 'traditional' thoracic drainages, five were 'digital' low-flow/low-vacuum pumps and two were hybrids (a combination of the two). According to the design of the seal and of the suction control, the units were classified as wet-wet, wet-dry and dry-dry. Results: All wet units showed reverse air flow, with the potential to mimic an air leak when there was none. Ten wet units showed no automatic negative pressure relief features, while five dry-dry did but were slow to react. Ten wet and five dry-dry units showed no capability to handle a 10 L/min leak, as they were restrictive to flow (peak pressure up to 55 cmH2 O). Only seven dry-suction units were able to maintain the set suction at high airflow rates (>20 L/min). Conclusions: Different chest drainage unit designs lead to different performances, some of which may negatively impact patient outcomes. This sounds the call to tailor our clinical practice for the individual patient. A paradigm shift to better understand all components of pleural physiology post-surgical intervention on this relatively neglected topic is needed to improve our daily practice.\nKeywords: chest drainage unit; intrapleural pressure; air leaks; complication; target therapy",
+      "category": "results",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "1. Introduction",
+      "content": "Adequate drainage of the pleural space is the cornerstone of good post-operative management [1]. Several types of chest drainage systems are commercially available but systematic investigation of how they work is relatively sparse [2-4].\nChest drainage units (CDUs) that rely on water to make a seal and therefore are called wet-systems, or simply underwater sealed drains (UWSD), are very common. Although they exist in various shapes, all of them are based upon the Bülau-principle. The Bülauprinciple is a therapeutic drain using a permanent siphon generated by a Heber-drain within a closed system. The Heber-drain works according to the Heber-principle using hydrostatic pressure [5]: the vertical height between the chest and the CDU (hydrostatic column) determines the level of sub-atmospheric pressure applied to the patient.\nCDUs that do not rely on water to make a seal are called dry systems. In theory, the shift from 'wet' to 'dry' seal technology was intended to introduce a standardized\nframework to support patient recovery. In reality, dry seals have an entirely different structure and mechanism of function. Miniaturized Heimlich and electronic valves are indeed variously integrated in 'analogue' and 'digital' CDUs, respectively. This undesirable variability is an example of noise, the ubiquitous and often-ignored burden in clinical decision-making.\nThe choice of a medical device requires evidence which can be scarce and not fully available [6,7]. In addition, a 'one size fits all' CDU does not yet exist and therefore it is reasonable that one design can be adequate for one patient and not for another. Thus, it is important for clinicians to be aware of the pros and cons of the most common CDUs available on the market to improve patient outcomes [8,9].\nClinicians shall expect the following basic characteristics from the CDUs they use: to be designed to facilitate correct interpretation of changes in clinical status; to provide pressure protection, quickly and automatically; and to evacuate the highest airflow at the lowest pressure (low resistance).\nThis review is focused on two aspects: (1) rational choosing of the model of CDU among those commercially available and (2) understanding the use of all models along with data interpretation. Finally, we analyzed a new device capable of helping in removing barriers to rational choosing and optimal use of CDUs.",
+      "category": "introduction",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "2. Materials and Methods",
+      "content": "Thirty-two CDUs from ten manufacturers were collected. Relevant design characteristics were observed by sawing them apart (Table 1).\nCDUs were classified based on their mechanism of function (Table 2): 'wet-wet', where water is used to establish the seal (wet-seal) and to set the amount of wall suction (wet-suction); 'wet-dry', where water is used to establish the seal while a mechanical component is used to set the amount of wall suction (dry-suction); 'dry-dry', where mechanical or electronic components are built-in to create the seal (dry-seal) and to set the amount of wall or independent suction, respectively. UWSD were subclassified depending on the number of chambers as in one-bottle systems the Heber pipe is in direct continuity with the connecting tube (hence water can potentially rise all the way up to the pleural space), in multi-bottle systems the water seal is physically separated from the fluid collection chamber (but water can be siphoned out of the water seal chamber and into the collection chamber) and in compact systems a float valve on top of the water column prevents water from spilling over.\nTo test the CDUs, a pleural space environment simulator was built (Figure 1a). The experimental setup is illustrated in Figure 1b. A custom motherboard was engineered to assemble a programmable logic controller (PLC) interconnected with two independent pumps (0 to 3 L and 3 to 20 L/min), solenoid electro-valves, alloy-buffer chambers, two flow meters (0.07 and 0.12 psid pressure drop at full scale flow, response time 10 ms) and two pressure sensors (accuracy = 0.2 and 0.04% at full-scale range, respectively). The pneumatic circuit was made by tubing with a minimum internal lumen diameter of 8 mm. Hospital in-wall suction was recreated building a digitally controlled high-flow highvacuum pump with dedicated flow and pressure sensors. An ad hoc software interface was developed to create various breathing patterns. Normal and pathological conditions observed in the real life with unassisted spontaneous breathing or mechanical ventilation were simulated. A laser sensor was added to detect air bubbles when testing UWSD. BreatheCore TM gray-box testing was chosen for two reasons: (i) because it is a method that can be used to search for the defects, if any, due to improper structure or improper usage of applications and (ii) because our knowledge of how each of the CDUs worked was limited. Reliability was tested through five repetitions (test-retest reliability coefficient >0.9). Proper granularity of the measurements was guaranteed by high-resolution data logging (17 per second). Built-in controls included machine checks to automatically detect errors caused by equipment malfunctioning. Every CDU was tested under three conditions which have clinical implications. (i) Air movements through UWSD were simulated, breathing at 15 acts per minute at an intrapleural pressure from -5 to -150 cmH2O. (ii) Negative and positive pressure build up, which can be encountered in the event of obstructed inspiration and/or bronchopleural fistula, was simulated with an air pocket of 0.75 L at -100 cmH2O and a free airflow from 3 to 15 L/min, respectively. (iii) External applied suction generation and the ability to maintain this through the CDU even in the presence of air leaks was tested applying a vacuum from -20 to -400 cmH2O to the suction outlet of wet-wet and wet-dry thoracic drainages. pumps (0 to 3 L and 3 to 20 L/min), solenoid electro-valves, alloy-buffer chambers, two flow meters (0.07 and 0.12 psid pressure drop at full scale flow, response time 10 ms) and two pressure sensors (accuracy = 0.2 and 0.04% at full-scale range, respectively). The pneumatic circuit was made by tubing with a minimum internal lumen diameter of 8 mm. Hospital in-wall suction was recreated building a digitally controlled high-flow high-vacuum pump with dedicated flow and pressure sensors. An ad hoc software interface was developed to create various breathing patterns. Normal and pathological conditions observed in the real life with unassisted spontaneous breathing or mechanical ventilation were simulated. A laser sensor was added to detect air bubbles when testing UWSD. BreatheCore TM  gray-box testing was chosen for two reasons: (i) because it is a method that can be used to search for the defects, if any, due to improper structure or improper usage of applications and (ii) because our knowledge of how each of the CDUs worked was limited. Reliability was tested through five repetitions (test-retest reliability coefficient >0.9). Proper granularity of the measurements was guaranteed by high-resolution data logging (17 per second). Built-in controls included machine checks to automatically detect errors caused by equipment malfunctioning. Every CDU was tested under three conditions which have clinical implications. (i) Air movements through UWSD were simulated, breathing at 15 acts per minute at an intrapleural pressure from -5 to -150 cmH2O. (ii) Negative and positive pressure build up, which can be encountered in the event of obstructed inspiration and/or bronchopleural fistula, was simulated with an air pocket of 0.75 L at -100 cmH2O and a free airflow from 3 to 15 L/min, respectively. (iii) External applied suction generation and the ability to maintain this through the CDU even in the presence of air leaks was tested applying a vacuum from -20 to -400 cmH2O to the suction outlet of wet-wet and wet-dry thoracic drainages.\nTable 2.\nCDUs classification based on their mechanism of function.\nSeal\nSuction\nClassification\nWet\nWet\nWet\nDry\nexperimental setup is illustrated in Figure 1b. A custom motherboard was engineered to\nassemble a programmable logic controller (PLC) interconnected with two independent\n, x FOR PEER REVIEW\n5 of 16",
+      "category": "methods",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "3.1. How Air Moves along the Entire UWSD System (Wet-Wet and Wet-Dry CDUs) 3.1. How Air Moves along the Entire UWSD System (Wet-Wet and Wet-Dry CDUs)",
+      "content": "The blue water rose and fell in the analogue manometer synchronously with the simulated patient's breathing, reflecting air moving at different pressures. During inspiration, atmospheric air could backflow becoming visible as bubbles, a situation known as reverseairflow (RAF). Two mechanisms were observed (Table 3). In five CDU designs (High capacity by Bio-Thorametrix, Aquaseal and Thoraseal III by Covidien, Rome/Venice by Eurosets, Compact/Variant/Simple3/Simple and Simple plus by Redax), RAF occurred during each inspiration by bending of the water surface, despite maintaining water in the reservoir. In all CDUs (except for the Altitude and the Sentinel Seal), backflow of air ocThe blue water rose and fell in the analogue manometer synchronously with the simulated patient's breathing, reflecting air moving at different pressures. During inspiration, atmospheric air could backflow becoming visible as bubbles, a situation known as reverse-airflow (RAF). Two mechanisms were observed (Table 3). In five CDU designs (High capacity by Bio-Thorametrix, Aquaseal and Thoraseal III by Covidien, Rome/Venice by Eurosets, Compact/Variant/Simple3/Simple and Simple plus by Redax), RAF occurred during each inspiration by bending of the water surface, despite maintaining water in the reservoir. In all CDUs (except for the Altitude and the Sentinel Seal), backflow of air occurred as a result of complete emptying of the reservoir.\ncurred as a result of complete emptying of the reservoir.\nTable 3.\nVacuum conditions and mechanisms to initiate reverse air flow in UWSD.\nManufacturer\nVacuum Conditions\nPermitting\nReverse Air Flow\nMechanisms\nCircumference\nnotched\nLevel\n(cmH2O)\nDuration\n(Seconds)\nEmptying\nReservoir\nBending\nSurface\nAtrium/Maquet\n25\n64\nX\nYes\nBio-Thorametrix\n28\n29\nX\nYes\n80\n1\nX\nCovidien Aquaseal\n30\n20\nX\nNo\n35\n3\nX\nCovidien Thoraseal III\n24\n18\nX",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "3.2. How CDUs Manage the Build-Up of Large Negative Intrapleural Pressure",
+      "content": "In a one-bottle UWSD (Single by Bio-Thorametrix, One bottle and Thora-Seal I and II by Covidien, Thoraflow by Meditea, Chest by Redax), water was raised real-time and unrestricted, to the point that it could be sucked into the simulated pleural space at pressures exceeding the vertical length of the Heber pipe plus the connecting tube (~170 cm).\nIn a compact UWSD (Oasis/Ocean by Atrium-Maquet, High capacity by Bio-thorametrix, Altitude/Sentinel Seal/Aqua-Seal/Thora-Seal III by Covidien, Rome/Venice by Eurosets, Compact/Variant/Simple3/Simple/Simple Plus by Redax, and Pleur-evac A6000 Cactus/A7000 by Teleflex), water was raised real-time and unrestricted for the length of the water column manometer (which varied between 15 and 25 cmH2O), on top of which a float valve shut-offed. Float valves were shaped like a cone or a ball. The former would always provide a hermetic seal, preserving the water seal but contributing to the build-up of large intrapleural pressure (Altitude/Sentinel and Aqua-Seal by Covidien). The latter would plug in the circumference of a plastic hole and, only if a notch was present would it still allow water to raise, until emptying of the reservoir with consequent RAF (Oasis/Ocean by Atrium-Maquet, Pleur-evac A6000 Cactus/A7000 by Teleflex) (Figure 2).\nThe higher the negativity, the shorter the time needed to break the water seal, achieving, therefore, pressure build-up protection. High capacity by Bio-thorametrix, Rome/Venice by Eurosets and Thora-Seal III by Covidien allowed RAF at relatively low levels of intrapleural pressure (24 to 28 cmH2O) maintained for an average of 35 s. Compact/Variant/Simple3/Simple/Simple Plus by Redax allowed RAF at a much higher level of intrapleural pressure (131 cmH2O) maintained for 244 s.\nIn those CDUs where the seal was made by a rubber flutter one-way valve or by an electronic vacuum pump (dry-dry), two automatic different vacuum release technologies were observed. In the former, an analogue pressure relief valve remained closed until -70 cmH2O, when it cracked open to the atmosphere and remained, so allowing flow as over pressure increased; the valve closed back again at -50 cmH2O, showing an operating hysteresis of 20 cmH2O. In the latter, a sensor had to detect the negativity first. Then, software had to operate an electronic pressure relief valve to cyclically open and close until system pressure was reduced to the set pressure. Dry-dry CDUs marked as thoracic drainage did not provide any pressure relief until -70 cmH2O, beyond which they were quick to react, providing continued pressure relief with a relatively low restriction to flow. The Express by Atrium-Maquet was quicker than the Pleur-evac Sahara 1100 by Teleflex (Figure 3). Dry-dry CDUs marked as low-flow/low-vacuum pumps provide pressure relief\n7 of 17 a float valve shut-offed. Float valves were shaped like a cone or a ball. The former would\nat any value beyond the set pressure, but are slow to react and highly restrictive to flow (Figure 4). Proper changes to CDU designs led to instant pressure protection, lowering an initial -100 cmH2O to a safer -30 cmH2O in 0.5 s (Figure 5). would plug in the circumference of a plastic hole and, only if a notch was present would it  still  allow  water  to  raise,  until  emptying  of  the  reservoir  with  consequent RAF (Oasis/Ocean by Atrium-Maquet, Pleur-evac A6000 Cactus/A7000 by Teleflex) (Figure 2).\nmetrix, Altitude/Sentinel Seal/Aqua-Seal/Thora-Seal III by Covidien, Rome/Venice by Eu-\nrosets,  Compact/Variant/Simple3/Simple/Simple  Plus  by  Redax,  and  Pleur-evac  A6000\nCactus/A7000 by Teleflex), water was raised real-time and unrestricted for the length of\nthe water column manometer (which varied between 15 and 25 cmH2O), on top of which\nalways provide a hermetic seal, preserving the water seal but contributing to the build-up\nof large intrapleural pressure (Altitude/Sentinel and Aqua-Seal by Covidien). The latter\nTime (sec)\nproviding continued pressure relief with a relatively low restriction to flow. The Express\nby Atrium-Maquet was quicker than the Pleur-evac Sahara 1100 by Teleflex (Figure 3).\nDry-dry CDUs marked as low-flow/low-vacuum pumps provide pressure relief at any\nvalue beyond the set pressure, but are slow to react and highly restrictive to flow (Figure\nProper changes to CDU designs led to instant pressure protection, lowering an initial\n-\n100 cmH2O to a safer\n-\n30 cmH2O in 0.5 s (Figure 5).\nJ. Clin. Med.\n2022\n,\n11\n8 of 16\nFigure 4.\nPatterns and time needed to reestablish physiologic intrapleural pressures values (\n-\n20 +/\n-\n5 cmH2O, green line) in five different CDUs simulating a build-up of\n-\n100 cmH2O. One hybrid CDU\n(Drentech EVO by Redax, black line) and four electronic systems (Thopaz and Thopaz+ by Medela,\nlight and dark red lines; C051 and S201 by ATMOS, light and dark blue lines) are shown.\n3.3. How CDUs Manage the Accumulation of Positive Intrapleural Pressure With a free airflow rate of 10 L/min at an external applied suction set at -20 cmH2O, CDUs classified  as  thoracic  drainage  developed  a  peak-pressure  ranging  from  5  to  8 cmH2O while 'hybrids' and those classified as low-flow/low pressure pumps developed a peak-pressure ranging from 35 to 55 cmH2O (Figure 6). All electronic CDUs allowed the With a free airflow rate of 10 L/min at an external applied suction set at -20 cmH2O, CDUsclassified as thoracic drainage developed a peak-pressure ranging from 5 to 8 cmH2O while 'hybrids' and those classified as low-flow/low pressure pumps developed a peakpressure ranging from 35 to 55 cmH2O (Figure 6). All electronic CDUs allowed the normally negative pressure intrapleural space to instead remain positive at length (>40 sec). The only electronic CDU capable to evacuate a 10/min leak was the S201 by ATMOS.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "3.3. How CDUs Manage the Accumulation of Positive Intrapleural Pressure",
+      "content": "Time (sec)\nJ. Clin. Med.\n2022\n,\n11\n, x FOR PEER REVIEW\n9 of 16\nnormally negative pressure intrapleural space to instead remain positive at length (>40\nsec). The only electronic CDU capable to evacuate a 10/min leak was the S201 by ATMOS.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "5. Conclusions",
+      "content": "Chest drainage unit design and performance differ dramatically among devices, and this has implications after thoracic surgery. Changes to CDUs' mechanism of function may lead to better results, as we demonstrated with a digitally controlled high-flow lowresistance valve providing instant help to a simulated patient with obstructed breathing.\nThe optimal management of post-lung resection patients is still unclear and we think that this is also due to CDUs not being totally understood. Unfamiliarity with heterogeneous technologies can lead to misinterpretation of the clinical data, hence misdiagnosis, ultimately ending in CDUs failing to support clinical decision making. This also creates a formidable barrier to tailoring chest drainage therapy to each individual patient.\nThere is a need for better safety and performance requirements and for clinical testing of new designs against traditional ones, as new technology emerges. This may enable personalized medicine concepts applied to chest tube drainage.",
+      "category": "conclusion",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "6. Patents",
+      "content": "Title: 'Device: system and method to customize chest drainage therapy'. Applications no. 3,017,252 (Canada) and 261,603 (Israel): granted. Applications no. 16/082,091 (USA), 17,763,899.6 (Europe), 2018/010731 (Mexico) and 2018-548094 (Japan): pending.\nAuthor Contributions: Conceptualization, A.A., B.M.B. and J.R.S.; methodology, A.A.; software, A.A.; validation, A.A., B.M.B. and J.R.S.; formal analysis, A.A.; investigation, A.A.; resources, A.A. self-funding; data curation, A.A.; writing-original draft preparation, A.A.; writing-review and editing, all authors; visualization, all authors; supervision, A.A., B.M.B. and J.R.S. All authors have read and agreed to the published version of the manuscript.\nFunding: This research received no external funding.\nInstitutional Review Board Statement: Not applicable.\nInformed Consent Statement: Not applicable.\nAcknowledgments: We deeply thank Maurizio Schiavini, Giovanni Bona, Alessandro Testa, Manuel Loreti, Pierluigi Scarparo, Gianfranco Papini, Simone Bollini, Giacomo Vito Asaro, Paolo Lazzaroni, Leif Dernevik, Carlo Capra, Brandon Martin, Edward Horan, Jeffrey McGill, Nicholas Want, Alessandro Pioli, Christoph Schmitz and Zachariah Brien for their continued intellectual support, pro bono work, know-how and friendship. This paper is dedicated to the memory of Massimo Zonescuti.\nConflicts of Interest: The authors declare no conflict of interest.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "References",
+      "content": "1. Batchelder, T.L.; Morris, K.A. Critical factors in determining adequate pleural drainage in both the operated and non-operated chest. Am. Surg. 1962 , 2 , 296-302.\n2. Enerson, D.M.; McIntyre, R.N. A comparative study of the physiology and physics of pleural drainage systems. J. Thorac. Cardiovasc. Surg. 1966 , 5 , 40-46. [CrossRef]\n3. Rusch, V.W.; Capps, J.S.; Tyler, M.L.; Pierson, D.L. The Performance of Four Pleural Drainage Systems in an Animal Model of Bronchopleural Fistula. Chest 1988 , 93 , 859-863. [CrossRef] [PubMed]\n4. Baumann, M.H.; Patel, P.B.; Roney, C.W.; Petrini, M.F. Comparison of Function of Commercially Available Pleural Drainage Units and Catheters. Chest 2003 , 123 , 1878-1886. [CrossRef] [PubMed]\n5. Munnell, E.R. Thoracic Drainage. Ann. Thorac. Surg. 1997 , 63 , 1497-1502. [CrossRef]\n6. WHO(World Health Organization). Medical Devices: Managing the Mismatch. An Outcome of the Priority Medical Devices Project ; WHO(World Health Organization): Geneva, Switzerland, 2010.\n7. ISO 10079-1 ; Medical Suction Equipment-Part 1: Electrically Powered Suction Equipment. ISO: Geneva, Switzerland, 2022.\n8. Zisis, C.; Tsirgogianni, K.; Lazaridis, G.; Lampaki, S.; Baka, S.; Mpoukovinas, I.; Karavasilis, V.; Kioumis, I.; Pitsiou, G.; Katsikogiannis, N.; et al. Chest Drainage Systems in Use. Ann. Trasl Med. 2015 , 3 , 43.\n9. FDA. Make Sure the Medical Device You Choose Is Designed for You ; FDA: Silver Spring, MD, USA, 2017.\n10. Dernevik, L. Extreme Negative Intrathoracis Pressure. Eur. J. Cardiothorac. Surg. 1999 , 15 , 225-226.\n11. Barnas, G.M.; Gilbert, T.B.; Krasna, M.J.; McGinley, M.J.; Fiocco, M.; Orens, J.B. Acute Effects of Bilateral Lung Volume Reduction Surgery on Lung and Chest Wall Mechanical Properties. Chest 1998 , 114 , 61-68. [CrossRef]\n12. Gattinoni, L.; Marini, J.J.; Collino, F.; Maiolo, G.; Rapetti, F.; Tonetti, T.; Vasques, F.; Quintel, M. The future of mechanical ventilation: Lessons from the present and the past. Critical. Care. 2017 , 21 , 183. [CrossRef]\n13. Bar-El, Y.; Ross, A.; Kablawi, A.; Egenburg, S. Potentially Dangerous Negative Intrapleural Pressures Generated by Ordinary Pleural Drainage Systems. Chest 2001 , 119 , 511-514. [CrossRef]\n14. Duncan, C.; Erickson, R. Pressures Associated with Chest Tube Stripping. Heart Lung 1982 , 11 , 166-171. [PubMed]\n15. Stouby, A.; Neckelmann, K.; Licht, P.B. Reverse airflow in certain chest drains may be misinterpreted as prolonged air leakage. World J. Surg. 2011 , 35 , 596-599. [CrossRef] [PubMed]\n16. Eckardt, J.; Lijkendijk, M.; Licht, P.B.; Stenger, M. New chest drainage unit with integrated CO2 -detector demonstrates false air leak. Surg. Innov. 2021 , 29 , 385-389. [CrossRef] [PubMed]\n17. Roe, B.B. Physiologic Principles of Drainage of the Pleural Space. With Special Reference to High Flow, High Vacuum Suction. Am. J. Surg. 1958 , 96 , 246-253. [CrossRef]\n18. Kam, A.C.; O'Brien, M.; Kam, P.C.A. Pleural Drainage Systems. Anaesthesia 1993 , 48 , 154-161. [CrossRef] [PubMed]\n19. Dernevik, L.; Belboul, A.; Rådberg, G. Initial Experience with the World's First Digital Drainage System. The Benefits of Recording Air Leaks with Graphic Representation. Eur. J. Cardiothorac. Surg. 2007 , 31 , 209-213. [CrossRef]\n20. Cerfolio, R. Clinical Use of a Digital Air Leak System. 2008. Available online: https://www.ctsnet.org/article/clinical-use-digitalair-leak-system (accessed on 4 July 2022).\n21. Marasco, R.D.; Giudice, G.; Lequaglie, C. How to distinguish an active air leak from a pleural space effect. Asian Cardiovasc Thorac Ann. 2012 , 20 , 682-688. [CrossRef]\n22. Miller, K.S.; Sahn, S.A. Chest Tubes. Indications, Technique, Management and Complications. Chest 1987 , 91 , 258-264. [CrossRef]\n23. Boggs, D.; Kinasewitz, G.T. Pathophysiology of the Pleural Space. Am. J. Med. Sci. 1995 , 309 , 53-59. [CrossRef]\n24. Poledna, M. A mercury manometer with a signal device for control of negative pressure in the pleural cavity after lung operations. Rozhl Chir. 1962 , 41 , 410-412.\n25. Capps, J.S.; Tyler, M.L.; Rusch, V.W.; Pierson, D.J. Potential of chest drainage units to evacuate bronchopleural air leaks. Chest 1985 , 88 , 57S.\n26. Powner, D.J.; Cline, C.D.; Rodman, G.H., Jr. Effect of chest-tube suction on gas flow through a bronchopleural fistula. Crit. Care Med. 1985 , 13 , 99-101. [CrossRef] [PubMed]\n27. Manzanet, G.; Vela, A.; Corell, R.; Mor ó n, R.; Calder ó n, R.; Suelves, C. A Hydrodynamic Study of Pleural Drainage Systems. Some Practical Consequences. Chest 2005 , 127 , 2211-2221. [CrossRef] [PubMed]\n28. Dernevik, L. Kniven i Bröstet igen: Äventyr med Thoraxkirurgi ; Books on Demand Gmbh: Norderstedt, Germany, 2021.\n29. Walcott-Sapp, S.; Sukumar, M.; A History of Thoracic Drainage: From Ancient Greeks to Wound Sucking Drummers to Digital Monitoring. CTSNet 2015. Available online: https://www.ctsnet.org/article/history-thoracic-drainage-ancient-greeks-woundsucking-drummers-digital-monitoring (accessed on 4 July 2022).\n30. Gr è goire, J.; Deslauriers, J. Surgical techniques in the pleura. Closed drainage and suction systems. In Thoracic Surgery , 2nd ed.; Griffith Pearson, F., Ed.; Churchill Livingstone: New York, NY, USA, 2002; pp. 1281-1300.\n31. Woolf, S.H.; Grol, R.; Hutchinson, A.; Eccles, M.; Grimshaw, J. Potential benefits, limitations, and harms of clinical guidelines. BMJ 1999 , 318 , 527-530. [CrossRef]\n32. Correa, V.C.; Lugo-Agudelo, L.H.; Aguirre-Acevedo, D.C.; Contreras, J.A.; Borrero, A.M.; Patiño-Lugo, D.F.; Valencia, D.A. Individual, health system, and contextual barriers and facilitators for the implementation of clinical practice guidelines: A systematic metareview. Health Res. Policy Syst. 2020 , 18 , 74. [CrossRef]\n33. French, D.G.; Dilena, M.; LaPlante, S.; Shamji, F.; Sundaresan, S.; Villeneuve, J.; Seely, A.; Maziak, D.; Gilbert, S. Optimizing postoperative care protocols in thoracic surgery: Best evidence and new technology. J. Thorac. Dis. 2016 , 8 (Suppl. 1), S3-S11.\n34. Hashmi, U.; Nadeem, M.; Aleem, A.; Khan, F.U.; Gull, R.; Ullah, K.; Khan, I.H. Dysfunctional Closed Chest Drainage-Common Causative Factors and Recommendations for Prevention. Cureus 2018 , 10 , e2295. [CrossRef]\n35. U.S. Food and Drug Administration. MAUDEAdverse Event Report: Covidien Aqua-Seal CDU Chest Drainage Kit ; U.S. Food and Drug Administration: Silver Spring, MD, USA, 2018.\n36. Brunelli, A.; Beretta, E.; Cassivi, S.D.; Cerfolio, R.J.; Detterbeck, F.; Kiefer, T.; Miserocchi, G.; Shrager, J.; Singhal, S.; Van Raemdonck, D.; et al. Consensus definitions to promote an evidence-based approach to management of the pleural space. A collaborative proposal by ESTS, AATS, STS, and GTSC. Eur. J. Cardiothorac. Surg. 2011 , 40 , 291-297. [CrossRef]\n37. Detsky, A.S. Sources of bias for authors of clinical practice guidelines. CMAJ 2006 , 175 , 1033. [CrossRef]\n38. Jureidini, J.; McHenry, L.B. The illusion of evidence based medicine. BMJ 2022 , 376 , o702. [CrossRef]\n39. Novella, S. Announcing the Science-Based Medicine Blog. 2008. Available online: https://sciencebasedmedicine.org/helloworld/ (accessed on 4 July 2022).\n40. Gorski, S. 'Hard science' and Medical School. 2010. Available online: https://sciencebasedmedicine.org/hard-science-andmedical-school/ (accessed on 4 July 2022).\n41. Ingraham, P. Why 'Science'-Based Instead of 'Evidence'-Based? 2014. Available online: https://www.painscience.com/articles/ ebm-vs-sbm.php (accessed on 4 July 2022).\n42. Lijkendijk, M.; Licht, P.B.; Neckelmann, K. Electronic versus traditional chest tube drainage following lobectomy: A randomized trial. Eur. J. Cardiothorac. Surg. 2015 , 48 , 893-898. [CrossRef]\n43. Gao, S.; Zhang, Z.; Arag ó n, J.; Brunelli, A.; Cassivi, S.; Chai, Y.; Chen, C.; Chen, C.; Chen, G.; Chen, H.; et al. The Society for Translational Medicine: Clinical practice guidelines for the postoperative management of chest tube for patients undergoing lobectomy. J. Thorac. Dis. 2017 , 9 , 3255-3264. [CrossRef]\n44. Batchelor, T.J.P.; Rasburn, N.J.; Abdelnour-Berchtold, E.; Brunelli, A.; Cerfolio, R.J.; Gonzalez, M.; Ljungqvist, O.; Petersen, R.H.; Popescu, W.M.; Slinger, P.D.; et al. Guidelines for enhanced recovery after lung surgery: Recommendations of the Enhanced Recovery After Surgery (ERAS ® ) Society and the European Society of Thoracic Surgeons (ESTS). Eur. J. Cardiothorac. Surg. 2019 , 55 , 91-115. [CrossRef] [PubMed]\n45. Chopra, A.; Hu, K.; Judson, M.A.; Fabian, T.; Nabagiez, J.P.; Feustel, P.J.; Fantauzzi, J.; Chieng, H.; Austin, A.; Vancavage, R.; et al. Association between Drainage-Dependent Prolonged Air Leak after Partial Lung Resection and Clinical Outcomes: A Prospective Cohort Study. Ann. Thorac. Surg. 2021 , 19 , 389-398. [CrossRef]\n46. Kaya, G.K. Rational Decision-Making in Purchasing Medical Devices. 2021. Available online: http://ieomsociety.org/ proceedings/2021rome/384.pdf (accessed on 4 July 2022).\n47. Salmasi, S.; Ming, L.C.; Khan, T.M. Interaction and medical inducement between pharmaceutical representatives and physicians: Ameta-synthesis. J. Pharm. Policy Pract. 2016 , 9 , 37. [CrossRef] [PubMed]\n48. Fickweiler, F.; Fickweiler, W.; Urbach, E. Interactions between physicians and the pharmaceutical industry generally and sales representatives specifically and their association with physicians' attitudes and prescribing habits: A systematic review. BMJ 2017 , 7 , e016408. [CrossRef] [PubMed]\n49. Grundy, Q.; Hutchison, K.; Johnson, J.; Blakely, B.; Clay-Wlliams, R.; Richards, B.; Rogers, W.A. Device representatives in hospitals: Are commercial imperatives driving clinical decision-making? J. Med. Ethics 2018 , 44 , 589-592. [CrossRef] [PubMed]\n50. Aramal-Gracia, S. Medical Device Companies and Doctors: Do Their Interactions Affect Medical Treatments? ECARES Working Paper, European Center for Advanced Research in Economics and Statistics. 2020. Available online: https://ideas.repec.org/p/yor/ hectdg/22-10.html (accessed on 4 July 2022).\n51. Pecchia, L.; Pallikarakis, N.; Magjarevic, R.; Iadanza, E. Health Technology Assessment and Biomedical Engineering: Global trends, gaps and opportunities. Med. Eng. Phys. 2019 , 72 , 19-26. [CrossRef] [PubMed]\n52. Sanger, T. Health, Technology and Engineering. University of Southern California. Available online: https://catalogue.usc.edu/ preview_program.php?catoid=11&poid=10864 (accessed on 4 July 2022).\n53. Beckmann, J.S.; Lew, D. Reconciling evidence-based medicine and precision medicine in the era of big data: Challenges and opportunities. Genome Med. 2016 , 8 , 134. [CrossRef]\n54. Elemento, O. The future of precision medicine: Towards a more predictive personalized medicine. Emerg Top. Life Sci. 2020 , 4 , 175-177.\n55. Kohler, S. Precision Medicine-Moving away from one-size-fits-all. In Quest: Science for South Africa ; Academy of Science of South Africa: Pretoria, South Africa, 2018; Volume 14.\n56. CDC Features Precision Medicine: What Does it Mean for Your Health? 2018. Available online: https://www.cdc.gov/features/ precision-medicine/index.html (accessed on 4 July 2022).\n57. Maier, M. Personalized medicine-A tradition in general practice! Eur J. Gen. Pract. 2019 , 25 , 63-64. [CrossRef] [PubMed]\n58. Wolverton, M. One Size Does not Fit All. 2016. Available online: https://www.pennmedicine.org/news/publications-andspecial-projects/penn-medicine-magazine/archived-issues/2016/summer-2016/size (accessed on 4 July 2022).\n59. Greenhalgh, P. Rethinking One-Size-Fits-All. 2013. Available online: https://www.team-consulting.com/insights/rethinkingone-size-fits-all/ (accessed on 4 July 2022).\n60. QMEDStaff. Why Size Matters When It Comes Down to Medical Devices. 2015. Available online: https://www.mddionline. com/why-size-matters-when-it-comes-medical-devices (accessed on 4 July 2022).\n61. Sheridan, D. When It Comes to Medical Equipment, One Size Doesn't Fit All. OHSUNews . 2018. Available online: https://news. ohsu.edu/2018/12/18/releases-20181218 (accessed on 4 July 2022).\n62. Rodwin, M.A. Conflict of Interests and the Future of Medicine: The United States, France and Japan ; Oxford University Press: Oxford, UK, 2011.\n63. Medical devices must be carefully validated. Nat. Biomed. Eng. 2018 , 2 , 625-626. [CrossRef]\n64. Sezdi, M. Performance analysis for medical devices. Biomed. Eng. Res. 2013 , 2 , 139-146. [CrossRef]\n65. Smith, V.; Warty, R.; Nair, A.; Krishnan, S.; Sursas, J.A.; Costa, F.D.; Vollenhoven, B.; Wallace, E.M. Defining the clinician's role in early health technology assessment during medical device innovation-A systematic review. BMC Health Serv Res. 2019 , 19 , 514. [CrossRef] [PubMed]\n66. Feldman, M.D.; Petersen, A.J.; Karliner, L.S.; Tice, J.A. Who is Responsible for Evaluating the Safety and Effectiveness of Medical\nDevices? The Role of Independent Technology Assessment. J. Gen. Intern. Med. 2008 , 23 (Suppl. 1), 57-63. [CrossRef] [PubMed]\n67. Medical Device Coordination Group (MDCG). Guidance on Significant Changes Regarding the Transitional Provision under Article 120 of the MDR with Regard to Devices Covered by Certificates According to MDD or AIMDD. 2020. Available online: https://health.ec.europa.eu/system/files/2020-09/md_mdcg_guidance_significant_changes_annexes_en_0.pdf (accessed on 4 July 2022).\n68. IEC (International Electrotechnical Commission). Medical Electrical Equipment ; 60601-1:2022 SER Series; IEC: Geneva, Switzerland, 2022; Available online: https://webstore.iec.ch/publication/2603 (accessed on 4 July 2022).\n69. Klessascheck, M. Essential Performance in Medical Devices ; Johner Institute: Konstanz, Germany, 2021; Available online: https://www. johner-institute.com/articles/johner-institute/essential-performance-in-medical-devices/ (accessed on 4 July 2022).\n70. Longstaffe, C. Users of Poorly Designed Medical Devices May Work Inefficiently or Contribute to Unintended Harm. Nursing Times . 2021. Available online: https://www.nursingtimes.net/opinion/users-of-poorly-designed-medical-devices-may-workinefficiently-or-contribute-to-unintended-harm-12-10-2021/ (accessed on 4 July 2022).\n71. Micl ă u¸ s, T.; Valla, V .; Koukoura, A.; Nielsen, A.A.; Dahlerup, B.; Tsianos, G.I.; Vassiliadis, E. Impact of Design on Medical Device Safety. Ther. Innov. Regul. Sci. 2020 , 54 , 839-849. [CrossRef]",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    }
+  ],
+  "tables": [
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/37'}",
+      "headers": [
+        "",
+        "",
+        "",
+        "Water-Seal Chamber",
+        "Water-Seal Chamber",
+        "Water-Seal Chamber",
+        "Water-Seal Chamber",
+        "",
+        ""
+      ],
+      "rows": [
+        [
+          "Manufacturer",
+          "Unit Name",
+          "Canister Chambers (n)",
+          "",
+          "Water Manometer ≥ 20 cmH 2 O",
+          "Delaying Mechanism",
+          "Delaying Mechanism",
+          "Suction",
+          "CDU"
+        ],
+        [
+          "",
+          "",
+          "",
+          "Reservoir Size (mL)",
+          "",
+          "Float Valve",
+          "Notch",
+          "Control",
+          "Type"
+        ],
+        [
+          "Atrium/Maquet (Getinge Group) (Gothenburg, Sweden)",
+          "Express",
+          "",
+          "Optional",
+          "-",
+          "-",
+          "-",
+          "Dial",
+          "Dry-Dry"
+        ],
+        [
+          "Atrium/Maquet (Getinge Group) (Gothenburg, Sweden)",
+          "Oasis",
+          "3",
+          "",
+          "",
+          "",
+          "",
+          "Dial",
+          "Wet-Dry"
+        ],
+        [
+          "Atrium/Maquet (Getinge Group) (Gothenburg, Sweden)",
+          "Ocean",
+          "",
+          "45",
+          "Yes",
+          "Yes",
+          "Yes",
+          "Water level",
+          "Wet-Wet"
+        ],
+        [
+          "Bio-Thorametrix (Gronsveld, The Netherlands)",
+          "High capacity",
+          "3",
+          "60",
+          "Yes",
+          "No",
+          "No",
+          "Water level Dial",
+          "Wet-Wet Wet-Dry"
+        ],
+        [
+          "Bio-Thorametrix (Gronsveld, The Netherlands)",
+          "Single",
+          "1",
+          "100",
+          "Yes",
+          "-",
+          "-",
+          "3rd bottle",
+          "Wet-Wet"
+        ],
+        [
+          "Cardinal Health/Covidien (Argyle line) (Dublin, OH, USA)",
+          "Altitude",
+          "3",
+          "80",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Cardinal Health/Covidien (Argyle line) (Dublin, OH, USA)",
+          "Sentinel Seal",
+          "4",
+          "90",
+          "",
+          "Yes",
+          "No",
+          "Dial",
+          "Wet-Dry"
+        ],
+        [
+          "Cardinal Health/Covidien (Argyle line) (Dublin, OH, USA)",
+          "Aqua-Seal",
+          "3",
+          "45",
+          "",
+          "",
+          "",
+          "Water level",
+          "Wet-Wet"
+        ],
+        [
+          "Cardinal Health/Covidien (Argyle line) (Dublin, OH, USA)",
+          "One Bottle",
+          "1",
+          "400",
+          "Yes",
+          "-",
+          "-",
+          "3rd bottle",
+          "Wet-Wet"
+        ],
+        [
+          "Cardinal Health/Covidien (Argyle line) (Dublin, OH, USA)",
+          "Thora-Seal I",
+          "1",
+          "370",
+          "",
+          "-",
+          "-",
+          "2nd CDU",
+          "Wet-Wet"
+        ],
+        [
+          "Cardinal Health/Covidien (Argyle line) (Dublin, OH, USA)",
+          "Thora-Seal II",
+          "2 (in series)",
+          "120",
+          "",
+          "-",
+          "-",
+          "Water level",
+          "Wet-Wet"
+        ],
+        [
+          "Cardinal Health/Covidien (Argyle line) (Dublin, OH, USA)",
+          "Thora-Seal III",
+          "3",
+          "110",
+          "",
+          "No",
+          "No",
+          "Water level",
+          "Wet-Wet"
+        ],
+        [
+          "Eurosets (Medolla, Italy)",
+          "Rome",
+          "",
+          "45",
+          "",
+          "",
+          "",
+          "Dial",
+          "Wet-Dry"
+        ],
+        [
+          "Eurosets (Medolla, Italy)",
+          "Venice",
+          "3",
+          "",
+          "Yes",
+          "Yes",
+          "Yes",
+          "Water level",
+          "Wet-Wet"
+        ],
+        [
+          "Meditea/HMC (Mirandola, Italy)",
+          "Thoraflow Chest",
+          "1 1",
+          "200 500",
+          "Yes Yes",
+          "- -",
+          "- -",
+          "3rd bottle 2nd CDU",
+          "Wet-Wet Wet-Wet"
+        ],
+        [
+          "Meditea/HMC (Mirandola, Italy)",
+          "Compact",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "Water level",
+          "Wet-Wet"
+        ],
+        [
+          "Redax",
+          "",
+          "3",
+          "",
+          "No",
+          "Yes",
+          "No",
+          "",
+          ""
+        ],
+        [
+          "(Drentech line)",
+          "Variant dry",
+          "",
+          "45",
+          "",
+          "",
+          "",
+          "Dial",
+          "Wet-Dry"
+        ],
+        [
+          "(Poggio Rusco, Italy)",
+          "Simple 3 Mobile",
+          "2",
+          "",
+          "",
+          "",
+          "",
+          "Add-on PSU",
+          "Wet-Dry"
+        ],
+        [
+          "Meditea/HMC (Mirandola, Italy)",
+          "Dune",
+          "3",
+          "Optional",
+          "-",
+          "-",
+          "-",
+          "Dial",
+          "Dry-Dry"
+        ],
+        [
+          "Meditea/HMC (Mirandola, Italy)",
+          "Simple Simple Plus",
+          "2",
+          "70",
+          "No",
+          "Yes",
+          "No",
+          "Add-on PSU",
+          "Wet-Dry"
+        ],
+        [
+          "Rocket medical (Washington, UK)",
+          "Rocket BLUE",
+          "1",
+          "500",
+          "Yes",
+          "-",
+          "-",
+          "Add-on PSU",
+          "Wet-Dry"
+        ],
+        [
+          "Teleflex (Pleur-evac line) (Wayne, PA, USA)",
+          "A6000 Cactus",
+          "",
+          "",
+          "",
+          "",
+          "Yes",
+          "Dial",
+          "Wet-Dry"
+        ],
+        [
+          "Teleflex (Pleur-evac line) (Wayne, PA, USA)",
+          "A7000",
+          "3",
+          "70",
+          "Yes",
+          "Yes",
+          "",
+          "Water level",
+          "Wet-Wet"
+        ],
+        [
+          "Teleflex (Pleur-evac line) (Wayne, PA, USA)",
+          "Sahara 1100",
+          "",
+          "Optional",
+          "-",
+          "-",
+          "-",
+          "Dial",
+          "Dry-Dry"
+        ],
+        [
+          "ATMOS (Lenzkirch, Germany)",
+          "S201",
+          "",
+          "Optional",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "ATMOS (Lenzkirch, Germany)",
+          "S201 re-style",
+          "1",
+          "",
+          "-",
+          "-",
+          "-",
+          "Electronic pump",
+          "Dry-Dry"
+        ],
+        [
+          "ATMOS (Lenzkirch, Germany)",
+          "C051",
+          "",
+          "No",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "(Baar, Switzerland)",
+          "Thopaz+",
+          "1",
+          "No",
+          "-",
+          "-",
+          "-",
+          "Electronic pump",
+          "Dry-Dry"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "",
+      "headers": [
+        "Seal Dry",
+        "Suction",
+        "Classification pump"
+      ],
+      "rows": [
+        [
+          "Wet",
+          "Wet Low flow/low-pressure",
+          "Thoracic drainage"
+        ],
+        [
+          "Wet",
+          "Dry",
+          "Thoracic drainage"
+        ],
+        [
+          "Dry CDUs, a pleural",
+          "Dry environment simulator was",
+          "Low-flow/low-vacuum pump built (Figure 1a). The"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/128'}",
+      "headers": [
+        "",
+        "",
+        "Vacuum Conditions Permitting Reverse Air Flow",
+        "Vacuum Conditions Permitting Reverse Air Flow",
+        "Mechanisms",
+        "Mechanisms",
+        "Circumference Notched"
+      ],
+      "rows": [
+        [
+          "Manufacturer",
+          "Manufacturer",
+          "Level (cmH 2 O)",
+          "Duration (Seconds)",
+          "Emptying Reservoir",
+          "Bending Surface",
+          ""
+        ],
+        [
+          "Atrium/Maquet",
+          "Atrium/Maquet",
+          "25",
+          "64",
+          "X",
+          "",
+          "Yes"
+        ],
+        [
+          "",
+          "",
+          "28",
+          "29",
+          "X",
+          "",
+          "Yes"
+        ],
+        [
+          "Bio-Thorametrix",
+          "Bio-Thorametrix",
+          "80",
+          "1",
+          "",
+          "X",
+          "Yes"
+        ],
+        [
+          "Cardinal Health/ Covidien",
+          "Aquaseal",
+          "30",
+          "20",
+          "X",
+          "",
+          "No"
+        ],
+        [
+          "Cardinal Health/ Covidien",
+          "",
+          "35",
+          "3",
+          "",
+          "X",
+          "No"
+        ],
+        [
+          "Cardinal Health/ Covidien",
+          "Thoraseal III",
+          "24",
+          "18",
+          "X",
+          "",
+          "No"
+        ],
+        [
+          "Cardinal Health/ Covidien",
+          "",
+          "40",
+          "7",
+          "",
+          "X",
+          "No"
+        ],
+        [
+          "",
+          "",
+          "24",
+          "42",
+          "X",
+          "",
+          "Yes"
+        ],
+        [
+          "",
+          "",
+          "63",
+          "1",
+          "",
+          "X",
+          "Yes"
+        ],
+        [
+          "",
+          "",
+          "131",
+          "244",
+          "X",
+          "X",
+          "No"
+        ],
+        [
+          "Redax",
+          "Redax",
+          "25",
+          "1",
+          "X",
+          "",
+          "No"
+        ],
+        [
+          "Teleflex",
+          "Teleflex",
+          "29",
+          "119",
+          "X",
+          "",
+          "Yes"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/290'}",
+      "headers": null,
+      "rows": [
+        [
+          "To include the functions of the three-bottle system"
+        ],
+        [
+          "To integrate a dedicated patient assessment manometer (the 'fourth bottle')"
+        ],
+        [
+          "To have automatic positive and negative pressure relief valves"
+        ],
+        [
+          "To quickly compensate for pressure changes"
+        ],
+        [
+          "To allow high-flow rates at low-pressures"
+        ],
+        [
+          "To display real-time data on air leaks and intrapleural pressures for instant clinical use, and to store them for clinical multi-disciplinary discussion and future research purposes"
+        ],
+        [
+          "To warn medical personnel of any sudden intrapleural change"
+        ],
+        [
+          "To adjust therapy as patients recover"
+        ],
+        [
+          "To work in synchrony with mechanical ventilators"
+        ],
+        [
+          "To allow direct assessment of 'true' or 'false' air leakage"
+        ],
+        [
+          "To include an automated line-clearing chest tube system"
+        ],
+        [
+          "To include an independent source of vacuum"
+        ],
+        [
+          "To be portable"
+        ],
+        [
+          "To be a 'home medical device' with remote control"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    }
+  ],
+  "figures": [
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/52'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/63'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/188'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/240'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/267'}",
+      "page": null
+    }
+  ],
+  "references": [
+    {
+      "title": "Critical factors in determining adequate pleural drainage in both the operated and non-operated chest"
+    },
+    {
+      "title": "Am. Surg",
+      "year": 1962
+    },
+    {
+      "title": "A comparative study of the physiology and physics of pleural drainage systems",
+      "year": 1962
+    },
+    {
+      "title": "J. Thorac. Cardiovasc. Surg",
+      "year": 1966
+    },
+    {
+      "title": "The Performance of Four Pleural Drainage Systems in an Animal Model of Bronchopleural Fistula",
+      "year": 1966
+    },
+    {
+      "title": "Chest",
+      "year": 1988
+    },
+    {
+      "title": "Comparison of Function of Commercially Available Pleural Drainage Units and Catheters",
+      "year": 1988
+    },
+    {
+      "title": "Ann. Thorac. Surg",
+      "year": 2003
+    },
+    {
+      "title": "Medical Devices: Managing the Mismatch. An Outcome of the Priority Medical Devices Project",
+      "year": 1997
+    },
+    {
+      "title": "Medical Suction Equipment-Part 1: Electrically Powered Suction Equipment",
+      "year": 2010
+    },
+    {
+      "title": "Chest Drainage Systems in Use",
+      "year": 2022
+    },
+    {
+      "title": "Ann. Trasl Med",
+      "year": 2015
+    },
+    {
+      "title": "Make Sure the Medical Device You Choose Is Designed for You",
+      "year": 2015
+    },
+    {
+      "title": "Extreme Negative Intrathoracis Pressure",
+      "year": 2017
+    },
+    {
+      "title": "Eur. J. Cardiothorac. Surg",
+      "year": 2017
+    },
+    {
+      "title": "Acute Effects of Bilateral Lung Volume Reduction Surgery on Lung and Chest Wall Mechanical Properties",
+      "year": 1999
+    },
+    {
+      "title": "The future of mechanical ventilation: Lessons from the present and the past",
+      "year": 1998
+    },
+    {
+      "title": "Critical. Care",
+      "year": 2017
+    },
+    {
+      "title": "Potentially Dangerous Negative Intrapleural Pressures Generated by Ordinary Pleural Drainage Systems",
+      "year": 2017
+    },
+    {
+      "title": "Pressures Associated with Chest Tube Stripping",
+      "year": 2001
+    },
+    {
+      "title": "Heart Lung",
+      "year": 2001
+    },
+    {
+      "title": "Reverse airflow in certain chest drains may be misinterpreted as prolonged air leakage",
+      "year": 1982
+    },
+    {
+      "title": "World J. Surg",
+      "year": 2011
+    },
+    {
+      "title": "New chest drainage unit with integrated CO 2 -detector demonstrates false air leak",
+      "year": 2011
+    },
+    {
+      "title": "Surg. Innov",
+      "year": 2021
+    },
+    {
+      "title": "Physiologic Principles of Drainage of the Pleural Space. With Special Reference to High Flow, High Vacuum Suction",
+      "year": 2021
+    },
+    {
+      "title": "Am. J. Surg",
+      "year": 1958
+    },
+    {
+      "title": "Pleural Drainage Systems",
+      "year": 1966
+    },
+    {
+      "title": "Anaesthesia",
+      "year": 1993
+    },
+    {
+      "title": "Initial Experience with the World&apos;s First Digital Drainage System. The Benefits of Recording Air Leaks with Graphic Representation",
+      "year": 1993
+    },
+    {
+      "title": "Clinical Use of a Digital Air Leak System",
+      "year": 2007
+    },
+    {
+      "title": "How to distinguish an active air leak from a pleural space effect"
+    },
+    {
+      "title": "Asian Cardiovasc Thorac Ann",
+      "year": 2012
+    },
+    {
+      "title": "Chest Tubes. Indications, Technique, Management and Complications",
+      "year": 2012
+    },
+    {
+      "title": "Pathophysiology of the Pleural Space",
+      "year": 1987
+    },
+    {
+      "title": "Am. J. Med. Sci",
+      "year": 1995
+    },
+    {
+      "title": "A mercury manometer with a signal device for control of negative pressure in the pleural cavity after lung operations",
+      "year": 1995
+    },
+    {
+      "title": "Rozhl Chir",
+      "year": 1995
+    },
+    {
+      "title": "Potential of chest drainage units to evacuate bronchopleural air leaks",
+      "year": 1962
+    },
+    {
+      "title": "Effect of chest-tube suction on gas flow through a bronchopleural fistula",
+      "year": 1985
+    },
+    {
+      "title": "Crit. Care Med",
+      "year": 1985
+    },
+    {
+      "title": "A Hydrodynamic Study of Pleural Drainage Systems. Some Practical Consequences",
+      "year": 1985
+    },
+    {
+      "title": "igen: Äventyr med Thoraxkirurgi",
+      "year": 2005
+    },
+    {
+      "title": "A History of Thoracic Drainage: From Ancient Greeks to Wound Sucking Drummers to Digital Monitoring"
+    },
+    {
+      "title": "Surgical techniques in the pleura. Closed drainage and suction systems"
+    },
+    {
+      "title": "Thoracic Surgery",
+      "year": 2002
+    },
+    {
+      "title": "Churchill Livingstone",
+      "year": 2002
+    },
+    {
+      "title": "Potential benefits, limitations, and harms of clinical guidelines",
+      "year": 2002
+    },
+    {
+      "title": "BMJ",
+      "year": 1999
+    },
+    {
+      "title": "health system, and contextual barriers and facilitators for the implementation of clinical practice guidelines: A systematic metareview",
+      "year": 1999
+    },
+    {
+      "title": "Health Res. Policy Syst",
+      "year": 2020
+    },
+    {
+      "title": "Optimizing postoperative care protocols in thoracic surgery: Best evidence and new technology",
+      "year": 2020
+    },
+    {
+      "title": "J. Thorac. Dis",
+      "year": 2016
+    },
+    {
+      "title": "Dysfunctional Closed Chest Drainage-Common Causative Factors and Recommendations for Prevention",
+      "year": 2016
+    },
+    {
+      "title": "Cureus"
+    },
+    {
+      "title": "MAUDE Adverse Event Report: Covidien Aqua-Seal CDU Chest Drainage Kit",
+      "year": 2018
+    },
+    {
+      "title": "Consensus definitions to promote an evidence-based approach to management of the pleural space. A collaborative proposal by ESTS, AATS, STS, and GTSC",
+      "year": 2018
+    },
+    {
+      "title": "Sources of bias for authors of clinical practice guidelines",
+      "year": 2011
+    },
+    {
+      "title": "CMAJ",
+      "year": 2011
+    },
+    {
+      "title": "The illusion of evidence based medicine",
+      "year": 2006
+    },
+    {
+      "title": "Announcing the Science-Based Medicine Blog",
+      "year": 2022
+    },
+    {
+      "title": "Hard science&quot; and Medical School"
+    },
+    {
+      "title": "Why &quot;Science&quot;-Based Instead of &quot;Evidence&quot;-Based?"
+    },
+    {
+      "title": "Electronic versus traditional chest tube drainage following lobectomy: A randomized trial"
+    },
+    {
+      "title": "The Society for Translational Medicine: Clinical practice guidelines for the postoperative management of chest tube for patients undergoing lobectomy",
+      "year": 2015
+    },
+    {
+      "title": "Guidelines for enhanced recovery after lung surgery: Recommendations of the Enhanced Recovery After Surgery (ERAS ® ) Society and the European Society of Thoracic Surgeons (ESTS)",
+      "year": 2017
+    },
+    {
+      "title": "Association between Drainage-Dependent Prolonged Air Leak after Partial Lung Resection and Clinical Outcomes: A Prospective Cohort Study",
+      "year": 2019
+    },
+    {
+      "title": "Rational Decision-Making in Purchasing Medical Devices",
+      "year": 2021
+    },
+    {
+      "title": "Interaction and medical inducement between pharmaceutical representatives and physicians: A meta-synthesis"
+    },
+    {
+      "title": "J. Pharm. Policy Pract",
+      "year": 2016
+    },
+    {
+      "title": "Interactions between physicians and the pharmaceutical industry generally and sales representatives specifically and their association with physicians&apos; attitudes and prescribing habits: A systematic review",
+      "year": 2016
+    },
+    {
+      "title": "Device representatives in hospitals: Are commercial imperatives driving clinical decision-making?",
+      "year": 2017
+    },
+    {
+      "title": "J. Med. Ethics",
+      "year": 2018
+    },
+    {
+      "title": "Medical Device Companies and Doctors: Do Their Interactions Affect Medical Treatments?",
+      "year": 2018
+    },
+    {
+      "title": "Health Technology Assessment and Biomedical Engineering: Global trends, gaps and opportunities"
+    },
+    {
+      "title": "Med. Eng. Phys",
+      "year": 2019
+    },
+    {
+      "title": "Reconciling evidence-based medicine and precision medicine in the era of big data: Challenges and opportunities"
+    },
+    {
+      "title": "Genome Med",
+      "year": 2016
+    },
+    {
+      "title": "The future of precision medicine: Towards a more predictive personalized medicine",
+      "year": 2016
+    },
+    {
+      "title": "Emerg Top. Life Sci",
+      "year": 2016
+    },
+    {
+      "title": "Precision Medicine-Moving away from one-size-fits-all",
+      "year": 2020
+    },
+    {
+      "title": "Quest: Science for South Africa",
+      "year": 2020
+    },
+    {
+      "title": "Medicine: What Does it Mean for Your Health?",
+      "year": 2018
+    },
+    {
+      "title": "Personalized medicine-A tradition in general practice!",
+      "year": 2019
+    },
+    {
+      "title": "Eur J. Gen. Pract",
+      "year": 2019
+    },
+    {
+      "title": "One Size Does not Fit All",
+      "year": 2019
+    }
+  ],
+  "quality": {
+    "completeness_score": 0,
+    "has_abstract": true,
+    "abstract_source": "metadata",
+    "has_doi": true,
+    "has_full_text": true,
+    "num_sections": 10,
+    "num_tables": 4,
+    "num_figures": 13,
+    "num_references": 86
+  }
+}

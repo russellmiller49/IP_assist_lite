@@ -1,0 +1,905 @@
+{
+  "metadata": {
+    "document_id": "10_1016_j_jtho_2024_04_002",
+    "title": "Validation Study for the N Descriptor of the Newly Proposed Ninth Edition of the TNM Staging System Proposed by the International Association for the Study of Lung Cancer",
+    "authors": [
+      "In Ha Kim",
+      "Geun Dong Lee",
+      "Sehoon Choi",
+      "Hyeong Ryul Kim",
+      "Yong-Hee Kim",
+      "Dong Kwan Kim",
+      "Seung-Il Park",
+      "Jae Kwang Yun"
+    ],
+    "year": 2024,
+    "journal": "Journal of Thoracic Oncology",
+    "doi": "10.1016/j.jtho.2024.04.002",
+    "volume": "19",
+    "issue": "8",
+    "pages": "1218-1227",
+    "citation": "Kim, et al. (2024). Validation Study for the N Descriptor of the Newly Proposed Ninth Edition of the TNM Staging System Proposed by the International Association for the Study of Lung Cancer. Journal of Thoracic Oncology, 19(8), 1218-1227. https://doi.org/10.1016/j.jtho.2024.04.002",
+    "abstract": "Introduction: The aim of this study was to validate the discriminatory ability and clinical utility of the N descriptor of the newly proposed ninth edition of the TNM staging system for lung cancer in a large independent cohort. Methods: We retrospectively analyzed patients who underwent curative surgery for Non-small cell lung cancer (NSCLC) between January 2004 and December 2019. The N descriptor of patients included in this study was retrospectively reclassi /uniFB01 ed based on the ninth edition of the TNM classi /uniFB01 cation. Survival analysis was performed using the log-rank test and Cox proportional hazard model to compare adjacent N categories. Results: A total of 6649 patients were included in this study. The median follow-up period was 54 months. According to the newly proposed ninth edition N classi /uniFB01 cation, 5573 patients (83.8%), 639 patients (9.6%), 268 patients (4.0%), and 169 patients (2.5%) were classi /uniFB01 ed into the clinical N0, N1, N2a, and N2b categories and 4957 patients (74.6%), 744 patients (11.2%), 567 patients (8.5%), and 381 patients (5.7%) were classi /uniFB01 ed into the pathologic N0, N1, N2a, and N2b categories, respectively. The prognostic differences between all adjacent clinical and pathologic N categories were highly signi /uniFB01 cant in terms of both overall survival and recurrence-free survival. Conclusions: We validated the clinical utility of the newly proposed ninth edition N classi /uniFB01 cation for both clinical and pathologic stages in Non-small cell lung cancer (NSCLC). The new N classi /uniFB01 cation revealed clear prognostic separation between all categories (N0, N1, N2a, and N2b) in terms of both overall survival and recurrence-free survival. /C211 2024 International Association for the Study of Lung Cancer. Published by Elsevier Inc. All rights reserved",
+    "abstract_source": "metadata",
+    "url": "https://linkinghub.elsevier.com/retrieve/pii/S1556086424001606"
+  },
+  "source_file": "Validation Study for the N Descriptor.json",
+  "sections": [
+    {
+      "title": "Validation Study for the N Descriptor of the Newly Proposed Ninth Edition of the TNM Staging System Proposed by the International Association for the Study of Lung Cancer",
+      "content": "In Ha Kim, MD, Geun Dong Lee, MD, PhD, Sehoon Choi, MD, PhD, Hyeong Ryul Kim, MD, PhD, Yong-Hee Kim, MD, PhD, Dong Kwan Kim, MD, PhD, Seung-Il Park, MD, PhD, Jae Kwang Yun, MD, PhD*\nDepartment of Thoracic and Cardiovascular Surgery, Asan Medical Center, Ulsan University College of Medicine, Seoul, Republic of Korea",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "ABSTRACT",
+      "content": "Introduction: The aim of this study was to validate the discriminatory ability and clinical utility of the N descriptor of the newly proposed ninth edition of the TNM staging system for lung cancer in a large independent cohort.\nMethods: We retrospectively analyzed patients who underwent curative surgery for Non-small cell lung cancer (NSCLC) between January 2004 and December 2019. The N descriptor of patients included in this study was retrospectively reclassi /uniFB01 ed based on the ninth edition of the TNM classi /uniFB01 cation. Survival analysis was performed using the log-rank test and Cox proportional hazard model to compare adjacent N categories.\nResults: A total of 6649 patients were included in this study. The median follow-up period was 54 months. According to the newly proposed ninth edition N classi /uniFB01 cation, 5573 patients (83.8%), 639 patients (9.6%), 268 patients (4.0%), and 169 patients (2.5%) were classi /uniFB01 ed into the clinical N0, N1, N2a, and N2b categories and 4957 patients (74.6%), 744 patients (11.2%), 567 patients (8.5%), and 381 patients (5.7%) were classi /uniFB01 ed into the pathologic N0, N1, N2a, and N2b categories, respectively. The prognostic differences between all adjacent clinical and pathologic N categories were highly signi /uniFB01 cant in terms of both overall survival and recurrence-free survival.\nConclusions: We validated the clinical utility of the newly proposed ninth edition N classi /uniFB01 cation for both clinical and pathologic stages in Non-small cell lung cancer (NSCLC). The new N classi /uniFB01 cation revealed clear prognostic separation between all categories (N0, N1, N2a, and N2b) in terms of both overall survival and recurrence-free survival.\n/C211 2024 International Association for the Study of Lung Cancer. Published by Elsevier Inc. All rights reserved.\nKeywords: Lung cancer; Staging; TNM classi /uniFB01 cation; N descriptor",
+      "category": "abstract",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Introduction",
+      "content": "Accurate evaluation of lymph node (LN) metastasis is a key component in cancer staging, which allows clinicians to communicate effectively, provide standard treatments, assess prognosis, and perform clinical trials. 1 Since the N descriptor of the TNM staging system for Non-small cell lung cancer (NSCLC) was de /uniFB01 ned as N0, N1, N2, and N3 in 1987 in the fourth edition, 2 this classi /uniFB01 cation has remained unchanged. 3 -5 Nevertheless, these four categories are based solely on the anatomical location of metastatic LNs and do not consider disease burden quanti /uniFB01 cation. Thus, questions have consistently been raised about this nodal classi /uniFB01 cation system not adequately re /uniFB02 ecting the burden of metastatic LNs, which is known to be a prognostic factor for many other solid malignancies. 6\nSubsequently, this concept of disease quanti /uniFB01 cation was /uniFB01 rst evaluated in the seventh edition of the TNM staging system for lung cancer and re-explored in the eighth edition by subclassifying according to the number\n*Corresponding author.\nAddress for correspondence: Jae Kwang Yun, MD, PhD, Department of Thoracic and Cardiovascular Surgery, Asan Medical Center, Ulsan University College of Medicine, 88 Olympic-ro 43-gil, Songpa-gu, Seoul 05505, Republic of Korea. E-mail: drjkyun@gmail.com\nª 2024 International Association for the Study of Lung Cancer. Published by Elsevier Inc. All rights reserved.\nof involved LN stations and single versus multiple. 4,5 In addition, the concept of ' skip ' metastases was newly proposed (a single positive N2 nodal station in the absence of positive N1 nodes). 5 Considering that most data (75.7%) for pathologic N status in the eighth edition were from Japan, various studies were performed for external validation and did provide some evidence of clinical relevance. 7,8 Nonetheless, these subclassi /uniFB01 ed N categories had a critical problem which could only be adopted in pathologic staging.\nThe Staging and Prognostic Factors Committee (SPFC) of the International Association for the Study of Lung Cancer (IASLC) recently proposed the N descriptor for the ninth edition of the TNM staging system. 9 Compared with the eighth edition, the IASLC recommended subdivision into the simpler single- versus multiple-station metastasis (without a separate ' skip ' metastasis subgroup) in the ninth edition, as it provided much clearer separation at the N2 level not only in pathologic staging but also in clinical staging. Nevertheless, an apparent gap still exists, in that the study lacks detailed information on patient history or comorbidities that might affect survival outcomes. In addition, this study lacked information on recurrence or progression and did not include the relevant survival analyses, which are important for interpreting oncological outcomes. Thus, there is a need for external validation of the new N descriptors proposed by the IASLC in a large, independent, single-center database.\nOur study aimed to evaluate the discriminatory ability and prognostic performance of the proposed N classi /uniFB01 cation in the ninth edition of the TNM staging system based on a large, independent cohort.",
+      "category": "introduction",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Patients",
+      "content": "This study included patients who underwent curative surgery for Non-small cell lung cancer (NSCLC) at the Asan Medical Center in Seoul between January 2004 and December 2019. Surgical treatment included lung parenchymal resection and appropriate lymphadenectomy. Clinicopathologic data of included patients were extracted from electronic medical records stored in a prospective database. Survival information was updated through November 2023. Exclusion criteria were as follows: (1) age below 18 years, (2) SCLC, (3) previous malignancy, (4) concurrent malignancy, (5) neoadjuvant therapy, (6) double primary lung cancer, (7) pathologic M1, (8) number of resected LNs less than six, (9) clinical or pathologic N3, (10) incomplete resection, (11) 30-day mortality, and (12) follow-up loss (Fig. 1). At our institution, the Mountain -Dresler modi /uniFB01 cation of the American Thoracic Society (MD-ATS) and IASLC LN maps have been used for LN station nomenclature until 2009 and from 2009 onward, respectively. 10,11 After a thorough review of the data, experienced surgeons retrospectively reclassi /uniFB01 ed the N descriptor of included patients based on the newly\nproposed ninth edition of the TNM classi /uniFB01 cation. This study was approved by the Institutional Review Board of Asan Medical Center (approval no. 2024-0097).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Perioperative Evaluations and Follow-Up",
+      "content": "All patients underwent imaging studies such as computed tomography (CT), positron emission tomography -CT (PET-CT), and brain magnetic resonance imaging (MRI). On chest CT, mediastinal and hilar LN enlargement was de /uniFB01 ned as greater than or equal to 10 mm on the largest short axis. Positive LN uptake on PET-CT was de /uniFB01 ned as LN uptake greater than mediastinal blood pool. In cases of borderline tumor size or metabolic uptake of mediastinal LNs on CT or PET, biopsies of the involved LNs were selectively conducted with mediastinoscopy, endobronchial ultrasound, or endoscopic ultrasound. Until 2010, before the introduction of endobronchial ultrasound, mediastinoscopy was performed to con /uniFB01 rm N2 or N3 nodes. Subsequently, endobronchial ultrasound was primarily used to identify LN metastasis instead of mediastinoscopy. After surgery, adjuvant therapy was provided if indicated. All patients underwent regular outpatient follow-up at 3- or 6-month intervals after surgery. If recurrence was suspected, further evaluation, including laboratory tests, chest CT, and PET-CT, was performed, followed by histologic con /uniFB01 rmation if necessary. The date of recurrence was de /uniFB01 ned as the date of /uniFB01 rst detection based on imaging studies.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "De /uniFB01 nition of Variables",
+      "content": "As proposed by Asamura et al., 5 the following N categories were assigned according to the location of metastatic LN station, number of metastatic LN stations, and presence or absence of skip metastasis: N1a (singlestation N1 metastasis), N1b (multiple-station N1 metastasis), N2a1 (single-station N2 metastasis without N1 metastasis), N2a2 (single-station N2 metastasis with N1 metastasis), and N2b (ipsilateral multiple-station N2 metastasis). According to the ninth edition N classi /uniFB01 cation, however, N2 disease was simply divided into singlestation (N2a) or multiple-station (N2b) metastasis. 9\nThe de /uniFB01 nition of complete resection was based on the Union for International Cancer Control classi /uniFB01 cation for residual tumors, which includes complete resection with no residual tumor (R0) and incomplete resection with microscopic (R1) or macroscopic (R2) residual tumor and continues to be widely used for the intuitive representation of the completeness of surgical resection. 12\nOverall survival (OS) was de /uniFB01 ned as the period from the date of diagnosis (clinical) or surgery (pathologic) to the date of death from any cause or last follow-up. Recurrence-free survival (RFS) was de /uniFB01 ned as the\nperiod from the date of diagnosis or surgery to the date of recurrence or last follow-up.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Statistical Analysis",
+      "content": "Continuous data are presented as mean and SD values; categorical data are presented as frequencies and percentages. OS and RFS were calculated using the Kaplan -Meier method to account for time to death and recurrence, respectively, and compared using the logrank test; pairwise differences in survival between adjacent N categories were assessed using the log-rank test. Additional sensitivity analyses were performed to con /uniFB01 rm the reproducibility of the ninth edition N classi /uniFB01 cation in subgroups according to histology, T descriptor, and year of surgery. As suggested by the IASLC SPFC, a 5-year survival difference of 5% or more between adjacent N categories is considered clinically meaningful. 1 The multivariable Cox proportional hazards model was used to compare N categories after adjusting for age, sex, histology, comorbidity, and year of surgery. Given that the purpose of this study was validation, the variables included in the Cox regression model were selected as suggested by the IASLC SPFC. Furthermore, because the study period was long and improvements in diagnostic and treatment modalities over time may affect survival, we added the year of surgery as a factor to the /uniFB01 nal COX regression model. R version 4.3.2 (The R Foundation for Statistical Computing, Vienna, Austria) was used for all statistical analyses. Two-sided tests were used for all analyses. p values less than 0.05 were considered statistically signi /uniFB01 cant.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Patient Characteristics",
+      "content": "From 2004 to 2019, 6649 patients were included in this study. The median follow-up period was 54 months (interquartile range, 31 -77 months). The characteristics of the enrolled patients are summarized in Tables 1 and 2. The mean age was 62.3 ± 9.9 years, and 3955 patients (59.5%) were male. Invasive mediastinal staging was performed for 852 patients (12.8%), of which 641 (9.6%) underwent endobronchial ultrasound. Minimally invasive surgery was performed in 4583 cases (68.9%) -4568 patients (68.7%) underwent videoassisted thoracic surgery and 15 patients (0.2%) underwent robot-assisted thoracic surgery. A total of 5218 patients (78.5%) underwent lobectomy, and 900 patients (13.5%) underwent sublobar resection. The average number of harvested LNs was 26.5 ± 11.1. Adjuvant therapy was provided for 1846 patients (27.8%). The clinicopathologic characteristics of the patients according to the ninth edition N classi /uniFB01 cation are summarized in Supplementary Table 1.\nAccording to the newly proposed N classi /uniFB01 cation, 5573 patients (83.8%), 639 patients (9.6%), 268 patients (4.0%), and 169 patients (2.5%) were classi /uniFB01 ed into the clinical N0, N1, N2a, and N2b categories and 4957 patients (74.6%), 744 patients (11.2%), 567 patients (8.5%), and 381 patients (5.7%) into the\npathologic N0, N1, N2a, and N2b categories, respectively. The relationships between pathologic T and pathologic N categories are found in Supplementary Table 2. The relationships between clinical N and pathologic N categories are found in Supplementary Table 3. The concordance rates between the clinical and pathologic N categories were 79.6%, 83.6%, 42.3%, 58.8%, and 75.3% for overall, N0, N1, N2a, and N2b, respectively.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Survival According to the Eighth and Ninth Edition Clinical N Classi /uniFB01 cations and the Classi /uniFB01 cation Proposed by Asamura et al. 5",
+      "content": "Survival curves and the corresponding median survival time and 5-year survival rates according to the eighth and ninth edition clinical N classi /uniFB01 cations and the classi /uniFB01 cation proposed by Asamura et al. are presented\nNote: Data are presented as numbers (%) or mean ± SD values unless otherwise indicated.\nNote: Data are presented as numbers (%) or mean ± SD values unless otherwise indicated.\nLN, lymph node.\nin Figure 2 and Supplementary Figure 1. OS was well strati /uniFB01 ed according to both the eighth and ninth edition clinical N classi /uniFB01 cations (Fig. 2 A and Supplementary Fig. 1A), with stepwise deterioration from N0 to N2b (5-y OS: N0, 82.7%; N1, 59.9%; N2, 44.5%; N2a, 51.5%; and N2b, 33.7%). Nevertheless, the OS curves for the classi /uniFB01 cation proposed by Asamura et al. had various overlaps between adjacent N categories, and there were no signi /uniFB01 cant differences except between the N0 and N1a ( p < 0.001) categories (Fig. 2 C ). Similarly, there was phased degradation in RFS according to both the eighth and ninth edition clinical N classi /uniFB01 cations (Fig. 2 B and Supplementary Fig. 1B). Nevertheless, there were several overlaps in RFS between the N1a and N1b ( p ¼ 0.137), N1b and N2a1 ( p ¼ 0.577), and N2a2 and N2b ( p ¼ 0.214) categories of the classi /uniFB01 cation proposed by Asamura et al. Furthermore, phased degradation was inconsistently observed, suggesting that 5-year survival\nrate of N2a1 was better than that of N1b (31.0% versus 39.1%) (Fig. 2 D ).\nThe multivariable Cox proportional hazards model was used to calculate the hazard ratios (HRs) for adjacent N categories after adjustments for age, sex, histology, comorbidity, and year of surgery, as suggested by the IASLC SPFC. In the clinical stages, the HRs for OS and RFS between adjacent N categories were higher than 1.0, suggesting phased degradation of prognosis according to both the eighth and ninth edition N classi /uniFB01 cations, with considerable differences (Table 3 and Supplementary Table 4). With regard to the clinical N classi /uniFB01 cation suggested by Asamura et al., although all HRs for OS were higher than 1.0, there were no differences in OS between the N1a and N1b ( p ¼ 0.758), N1b and N2a1 ( p ¼ 0.626), and N2a1 and N2a2 ( p ¼ 0.193) categories. Furthermore, the Hazard ratio (HR) for RFS between N1b and N2a1 was less than 1.0, which was not an order of survival\nOS, overall survival; RFS, recurrence-free survival; Hazard ratio (HR), hazard ratio; CI, con /uniFB01 dence interval.\noutcomes among N categories, and there was no significant survival difference between N1b and N2a1 categories ( p ¼ 0.801) (Table 3).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Survival According to the Eighth and Ninth Edition Pathologic N Classi /uniFB01 cations and the Classi /uniFB01 cation Proposed by Asamura et al. 5",
+      "content": "Survival curves according to all three pathologic N classi /uniFB01 cations are presented in Figure 3 and in Supplementary Figure 1. Clear stepwise separations in OS and RFS curves were observed between adjacent N categories according to the eighth and ninth edition pathologic N classi /uniFB01 cations (Fig. 3 A and B , Supplementary Fig. 1C and D). Nevertheless, there were no differences in OS between the N1b and N2a1 ( p ¼ 0.607) and N2a1 and N2a2 ( p ¼ 0.432) categories according to the classi /uniFB01 cation proposed by Asamura et al.\n(Fig. 3 C ). In addition, there were no differences in RFS between the N1b and N2a1 ( p ¼ 0.211) and N2a1 and N2a2 ( p ¼ 0.139) categories. The 5-year survival rate of N1b was worse than that of N2a1 and N2a2, indicating that phased degradation was not observed (Fig. 3 D ).\nIn the pathologic stages, the HRs for OS and RFS between adjacent N categories were higher than 1.0, indicating stepwise degradation of prognosis according to both the eighth and ninth edition N classi /uniFB01 cations, with considerable differences (Table 3 and Supplementary Table 4). The HRs for OS and RFS between N1b and N2a1 were 0.97 and 0.79, respectively, according to the classi /uniFB01 cation proposed by Asamura et al., suggesting that the survival outcome of N2a1 tended to be better than that of N1b. Furthermore, there were no signi /uniFB01 cant differences between N1b and N2a1 ( p ¼ 0.838) regarding OS and between N1b and N2a1 ( p ¼ 0.066) regarding RFS.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Additional Sensitivity Analyses for Histology, T Descriptor, and Year of Surgery",
+      "content": "Various subgroup analyses were performed to con /uniFB01 rm the reproducibility of the ninth edition N classi /uniFB01 cation. The survival curves for all subgroup analyses revealed a similar pattern, with a consistent order of survival outcomes among the N descriptors, although some log-rank test p values were not statistically signi /uniFB01 cant, which could have been due to the small sample sizes. In addition, the difference in 5-year OS between the N2a and N2b categories was less than 5% only in the T4 subgroup, whereas in all other subgroups, the survival differences between adjacent N categories were greater than 5% (Supplementary Figs. 2, 3, and 4).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Discussion",
+      "content": "The /uniFB01 ndings of this study revealed the clinical relevance of the newly proposed N descriptor of the ninth edition TNM staging system with patients who underwent curative surgery for Non-small cell lung cancer (NSCLC). We found a clear and consistent prognostic difference between subgroups of patients with N2 disease, namely those with N2a and N2b. In addition, N2a status was associated with worse survival than N1 status, which allowed for a much clearer prognostic separation between all categories compared with that with the eighth edition N classi /uniFB01 -cation. The differences between all categories, both clinical and pathologic, remained statistically signi /uniFB01 cant even after adjustment for various cofactors. Moreover, using detailed information from a single large cohort, we validated the clinical utility of the ninth edition N descriptor for RFS and OS.\nThe N classi /uniFB01 cation of lung cancer is exclusively determined by the anatomical location of the LNs and has no concept of disease burden. Nevertheless, over the years, many studies have reported the disease burden of metastatic LNs and heterogeneity in the N1 and N2 categories. 7,8,13,14 To improve the prognostic discrimination ability based on nodal status, exploratory analyses have been performed before each TNM classi /uniFB01 cation revision. In the seventh edition analysis, disease burden of metastatic LNs at the N1 and N2 levels was evaluated by subdividing into single and multiple LN zones. This categorizing of LN stations into LN zones was introduced to reconcile discrepancies between the MD-ATS and Naruke-Japanese LN maps. 4,10,15 Although the results of this analysis revealed prognostic differences between adjacent N categories, small sample sizes precluded validation of each N category across T categories. In the eighth edition analysis, the disease burden of involved LNs was evaluated according to the number of metastatic LN stations, single versus multiple, and the presence of ' skip ' metastases. Although the pathologic N\nclassi /uniFB01 cation was observed to have prognostic ability, there was no difference in survival between the N1b and N2a1 categories, and the N1b and N2a2 survival curves overlapped. Furthermore, most of the information for pathologic N status was derived from Japan, and there was still dichotomization of LN maps among the collected data. 5\nConsidering these limitations, this classi /uniFB01 cation was re-evaluated with the ninth edition database, which included a larger and more detailed data set obtained through the Electronic Data Capture and adoption of the IASLC LN map as the accepted standard. 16 Nevertheless, there was a still lack of clear separation between adjacent categories. Furthermore, the N2a1 category had no survival difference compared with adjacent categories, increasing the complexity of the staging system. Finally, the IASLC concluded that the proposal did not suf /uniFB01 -ciently stratify prognostic groups in either clinical or pathologic staging. Nevertheless, clearer prognostic separation between categories was observed when the N1 category was retained and N2 was subdivided on the basis of single (N2a) and multiple (N2b) stations. 9\nIn this study, a signi /uniFB01 cant survival difference was observed in terms of pathologic staging between N1a and N1b (Hazard ratio (HR) ¼ 1.65, p < 0.001 for OS) (Table 3), which has been consistently reported in other studies including the ninth edition data set. 5,7 -9 Nevertheless, the difference between N1a and N1b no longer remained signi /uniFB01 cant when it was applied to clinical staging (Hazard ratio (HR) ¼ 1.05, p ¼ 0.758 for OS) (Table 3), which is similar to the results of the survival analysis by the IASLC that used the ninth edition data set. 9 Previously, the IASLC de /uniFB01 ned the threshold for considering alternative changes in revising the N classi /uniFB01 cation of lung cancer, noting that the ordering of prognostic differences should be maintained in clinical and pathologic staging. 1 This means that clinical N descriptors should be achievable and reasonably capable of discriminating prognosis, regardless of surgical or nonsurgical treatment, even though the magnitude of the difference between survival curves may differ between clinical and pathologic staging. In fact, it is dif /uniFB01 cult to distinguish and con /uniFB01 rm the number of involved N1 LN stations using radiologic and invasive clinical staging procedures. 5,9,17 Thus, we agree with the IASLC ' s proposal to simply retain the N1 category without separating it into N1a and N1b in the ninth edition N classi /uniFB01 cation.\nSimilarly, it is reasonable to consolidate into simpler singleversus multiple-station metastasis categories (N2a and N2b) without separating according to the ' skip ' metastasis (N2a1 and N2a2). Various studies have revealed that the N2a1 category does not have any considerable survival differences compared with adjacent categories, which increases the complexity of the staging system. 4,5,7 -9 The same result was obtained in\nour study, where there was no signi /uniFB01 cant survival difference between the N1b and N2a1 ( p ¼ 0.838 for OS) categories. Nevertheless, when N2a1 and N2a2 were combined into N2a in the ninth edition of the TNM staging system, we detected much clearer prognostic separations between all categories (N0, N1, N2a, and N2b) in terms of both clinical and pathologic staging. Notably, in contrast to the N1 category, splitting the N2 category into the N2a and N2b categories was clinically relevant in clinical staging. This is because it is relatively easier to distinguish the number of involved N2 LN stations than that of N1 nodes through imaging tests or invasive staging procedures.\nThe multivariable Cox proportional hazards model revealed considerable differences between N categories of the ninth edition classi /uniFB01 cation in terms of both clinical and pathologic staging after adjusting for age, sex, histology, comorbidity, and year of surgery. The subgroup analyses survival curves were consistently observed in the order of N descriptors, although some differences between N categories were not statistically signi /uniFB01 cant. Excluding those between the N2a and N2b categories in the T4 subgroup, differences in 5-year survival rates between N categories were consistently observed to be greater than 5%, revealing that the prognostic discriminatory ability is well maintained even across subgroups. Consequently, the ninth edition N classi /uniFB01 cation appropriately re /uniFB02 ected the long-standing requirement of integrating a measure of disease burden into the solely location-based system. Moreover, this system did not disrupt the eighth edition classi /uniFB01 cation and is backward compatible. Most importantly, the survival differences between these subgroups were consistent across clinical and pathologic classi /uniFB01 cations, which may facilitate greater precision from radiologists, practitioners involved in invasive staging procedures, surgeons, and pathologists.\nWe acknowledge that this study has several limitations. First, information and selection biases are inevitable in a single-center, retrospective study, although the data used in this study were collected prospectively in our database. Second, there was no survival analysis for clinical or pathologic N3 subgroup patients -this study included only patients who underwent surgical treatment, and patients with clinical or pathologic N3 could not be included due to their rarity. Third, patients who underwent neoadjuvant therapy were excluded from this study. Surgical resection after neoadjuvant therapy has become the preferred approach in cases of advanced lung cancer in many institutions. The use of immunotherapy or target agents is also rapidly increasing, and the neoadjuvant chemoimmunotherapy paradigm is rapidly developing. 18,19 Given this trend, even though the proposed N classi /uniFB01 cation was found to have prognostic discrimination ability in the ninth edition data set, 9 it will be necessary to\nexternally validate whether it retains this ability for patients who undergo neoadjuvant therapy. Fourth, performance status and mutation markers are known to be associated with the prognosis of lung cancer. Nevertheless, given the retrospective nature of this study and incomplete data, we could not add these factors to the Cox regression model. Fifth, as only patients who underwent surgical treatment were included in this analysis, the results could differ from those of the overall Non-small cell lung cancer (NSCLC) patient population. Finally, our study has a relatively small sample size compared with the IASLC ninth edition data set. Therefore, it may lack statistical power, especially when the N categories are subdivided, as the classi /uniFB01 cation proposed by Asamura et al. In addition, the sample size for various subgroup analyses was relatively small; although there might be clinical differences, statistically signi /uniFB01 cant differences might not be observed.\nIn summary, we validated the clinical utility of the ninth edition N classi /uniFB01 cation for both clinical and pathologic stages in Non-small cell lung cancer (NSCLC). The newly proposed N classi /uniFB01 -cation revealed clear prognostic separation between all categories (N0, N1, N2a, and N2b) in terms of RFS and OS. Thus, it is expected to provide key insights into the heterogeneity of nodal involvement and facilitate the evolution of adequate treatment-related decisions.",
+      "category": "discussion",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "CRediT Authorship Contribution Statement",
+      "content": "In Ha Kim: Conceptualization, Data curation, Investigation, Formal analysis, Writing - original draft, Writing review & editing, Visualization.\nJae Kwang Yun: Conceptualization, Methodology, Writing -original draft, Writing -review & editing, Supervision.\nGeun Dong Lee: Investigation, Formal analysis, Writing - review & editing, Supervision.\nSehoon Choi: Data curation, Writing -review & editing, Supervision.\nHyeong Ryul Kim: Methodology, Writing - review & editing, Supervision.\nYong-Hee Kim: Writing -review & editing, Supervision.\nDong Kwan Kim: Writing -review & editing, Supervision.\nSeung-Il Park: Writing -review & editing, Supervision.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Disclosure",
+      "content": "The authors declare no con /uniFB01 ct of interest.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Acknowledgments",
+      "content": "We thank Editage (www.editage.co.kr) for English language editing.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Supplementary Data",
+      "content": "Note: To access the supplementary material accompanying this article, visit the online version of the Journal of Thoracic Oncology at www.jto.org and at https://doi. org/10.1016/j.jtho.2024.04.002.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "References",
+      "content": "1. Osarogiagbon RU, Van Schil P , Giroux DJ, et al. The International Association for the Study of Lung Cancer lung cancer staging project: overview of challenges and opportunities in revising the nodal classi /uniFB01 cation of lung cancer. J Thorac Oncol . 2023;18:410 -418.\n2. Mountain CF . A new international staging system for lung cancer. Chest . 1986;89:225S -233S.\n3. Mountain CF . Revisions in the international system for staging lung cancer. Chest . 1997;111:1710 -1717.\n4. Rusch VW, Crowley J, Giroux DJ, et al. The IASLC Lung Cancer Staging Project: proposals for the revision of the N descriptors in the forthcoming seventh edition of the TNM classi /uniFB01 cation for lung cancer. J Thorac Oncol . 2007;2:603 -612.\n5. Asamura H, Chansky K, Crowley J, et al. The International Association for the Study of Lung Cancer Lung Cancer Staging Project: proposals for the revision of the N descriptors in the forthcoming 8th edition of the TNM classi /uniFB01 cation for lung cancer. J Thorac Oncol . 2015;10:1675 -1684.\n6. Goldstraw P . The history of TNM staging in lung cancer. In: Goldstraw P , ed. Staging Manual in Thoracic Oncology . Orange Park, FL: Editorial Rx Press; 2009.\n7. Yun JK, Lee GD, Choi S, et al. Comparison between lymph node station- and zone-based classi /uniFB01 cation for the future revision of node descriptors proposed by the International Association for the Study of Lung Cancer in surgically resected patients with non-small-cell lung cancer. Eur J Cardiothorac Surg . 2019;56:849 -857.\n8. Park BJ, Kim TH, Shin S, et al. Recommended change in the N descriptor proposed by the International Association for the Study of Lung Cancer: a validation study. J Thorac Oncol . 2019;14:1962 -1969.\n9. Huang J, Osarogiagbon RU, Giroux DJ, et al. The International Association for the Study of Lung Cancer Staging\nProject for Lung Cancer: proposals for the revision of the N descriptors in the forthcoming Ninth Edition of the TNM classi /uniFB01 cation for lung cancer. J Thorac Oncol . 2024;19:766 -785.\n10. Mountain CF , Dresler CM. Regional lymph node classi /uniFB01 -cation for lung cancer staging. Chest . 1997;111:1718 -1723.\n11. Rusch VW, Asamura H, Watanabe H, et al. The IASLC lung cancer staging project: a proposal for a new international lymph node map in the forthcoming seventh edition of the TNM classi /uniFB01 cation for lung cancer. J Thorac Oncol . 2009;4:568 -577.\n12. Brierley JD, Gospodarowicz MK, Wittekind C. TNM Classi /uniFB01 cation of Malignant Tumours . Chichester, UK: John Wiley & Sons; 2017.\n13. Caldarella A, Crocetti E, Comin CE, Janni A, Pegna AL, Paci E. Prognostic variability among nonsmall cell lung cancer patients with pathologic N1 lymph node involvement. Epidemiological /uniFB01 gures with strong clinical implications. Cancer . 2006;107:793 -798.\n14. Sakao Y, Okumura S, Mun M, Uehara H, Ishikawa Y, Nakagawa K. Prognostic heterogeneity in multilevel N2 non-small cell lung cancer patients: importance of lymphadenopathy and occult intrapulmonary metastases. Ann Thorac Surg . 2010;89:1060 -1063.\n15. Naruke T, Suemasu K, Ishikawa S. Lymph node mapping and curability at various levels of metastasis in resected lung cancer. J Thorac Cardiovasc Surg . 1978;76:832 -839.\n16. Asamura H, Nishimura KK, Giroux DJ, et al. IASLC lung cancer staging project: the new database to inform revisions in the ninth edition of the TNM classi /uniFB01 cation of lung cancer. J Thorac Oncol . 2023;18:564 -575.\n17. Saji H, Tsuboi M, Shimada Y, et al. A proposal for combination of total number and anatomical location of involved lymph nodes for nodal classi /uniFB01 cation in nonsmall cell lung cancer. Chest . 2013;143:1618 -1625.\n18. Forde PM, Spicer J, Lu S, et al. Neoadjuvant nivolumab plus chemotherapy in resectable lung cancer. N Engl J Med . 2022;386:1973 -1985.\n19. Lv C, Fang W, Wu N, et al. Osimertinib as neoadjuvant therapy in patients with EGFR-mutant resectable stage II-IIIB lung adenocarcinoma (Neos): a multicenter , single-arm, open-label phase 2b trial. Lung Cancer . 2023;178:151 -156.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    }
+  ],
+  "tables": [
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/66'}",
+      "headers": [
+        "Variable",
+        "Value"
+      ],
+      "rows": [
+        [
+          "Age, y",
+          "62.3 ± 9.9"
+        ],
+        [
+          "Sex",
+          ""
+        ],
+        [
+          "Male",
+          "3955 (59.5%)"
+        ],
+        [
+          "Female",
+          "2694 (40.5%)"
+        ],
+        [
+          "Smoking history",
+          ""
+        ],
+        [
+          "Current",
+          "821 (12.3%)"
+        ],
+        [
+          "Ex-smoker",
+          "2757 (41.5%)"
+        ],
+        [
+          "Nonsmoker",
+          "3071 (46.2%)"
+        ],
+        [
+          "Number of comorbidities",
+          ""
+        ],
+        [
+          "0 - 1",
+          "5315 (79.9%)"
+        ],
+        [
+          "2",
+          "1028 (15.5%)"
+        ],
+        [
+          "/C21 3",
+          "306 (4.6%)"
+        ],
+        [
+          "Tumor location",
+          ""
+        ],
+        [
+          "Right",
+          "3990 (60.0%)"
+        ],
+        [
+          "Left",
+          "2659 (40.0%)"
+        ],
+        [
+          "Invasive mediastinal staging technique",
+          "852 (12.8%)"
+        ],
+        [
+          "Endobronchial ultrasound",
+          "641 (9.6%)"
+        ],
+        [
+          "Mediastinoscopy",
+          "250 (3.8%)"
+        ],
+        [
+          "Clinical T category",
+          ""
+        ],
+        [
+          "cT1",
+          "3582 (53.9%)"
+        ],
+        [
+          "cT2",
+          "2207 (33.2%)"
+        ],
+        [
+          "cT3",
+          "581 (8.7%)"
+        ],
+        [
+          "cT4",
+          "279 (4.2%)"
+        ],
+        [
+          "Clinical N category (eighth edition)",
+          ""
+        ],
+        [
+          "cN0",
+          "5573 (83.8%)"
+        ],
+        [
+          "cN1",
+          "639 (9.6%)"
+        ],
+        [
+          "cN2",
+          "437 (6.6%)"
+        ],
+        [
+          "Clinical N category (ninth edition)",
+          ""
+        ],
+        [
+          "cN0",
+          "5573 (83.8%)"
+        ],
+        [
+          "cN1",
+          "639 (9.6%)"
+        ],
+        [
+          "cN2a",
+          "268 (4.0%)"
+        ],
+        [
+          "cN2b",
+          "169 (2.5%)"
+        ],
+        [
+          "Surgical approach",
+          ""
+        ],
+        [
+          "Minimally invasive",
+          "4583 (68.9%)"
+        ],
+        [
+          "Open thoracotomy",
+          "1835 (27.6%)"
+        ],
+        [
+          "Thoracotomy conversion",
+          "231 (3.5%)"
+        ],
+        [
+          "Surgical extent",
+          ""
+        ],
+        [
+          "Sublobar resection",
+          "900 (13.5%)"
+        ],
+        [
+          "Lobectomy",
+          "5218 (78.5%)"
+        ],
+        [
+          "Sleeve lobectomy",
+          "125 (1.9%)"
+        ],
+        [
+          "Bilobectomy",
+          "237 (3.6%)"
+        ],
+        [
+          "Pneumonectomy",
+          "169 (2.5%)"
+        ],
+        [
+          "Adjuvant therapy",
+          "1846 (27.8%)"
+        ],
+        [
+          "Chemoradiation therapy",
+          "618 (9.3%)"
+        ],
+        [
+          "Chemotherapy only",
+          "968 (14.6%)"
+        ],
+        [
+          "Radiotherapy only",
+          "256 (3.9%)"
+        ],
+        [
+          "None",
+          "4803 (72.2%)"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "",
+      "headers": [
+        "Table 2. Pathologic Characteristics of Included (n ¼ 6649)",
+        "Patients Value"
+      ],
+      "rows": [
+        [
+          "Histologic subtype",
+          ""
+        ],
+        [
+          "Adenocarcinoma",
+          "4826 (72.6)"
+        ],
+        [
+          "Squamous cell carcinoma",
+          "1427 (21.5)"
+        ],
+        [
+          "Others",
+          "396 (6.0)"
+        ],
+        [
+          "Pathologic T category",
+          ""
+        ],
+        [
+          "pT1",
+          "3139 (47.2)"
+        ],
+        [
+          "pT2",
+          "2357 (35.4)"
+        ],
+        [
+          "pT3",
+          "809 (12.2)"
+        ],
+        [
+          "pT4",
+          "344 (5.2)"
+        ],
+        [
+          "Pathologic N category (eighth edition)",
+          ""
+        ],
+        [
+          "pN0",
+          "4957 (74.6)"
+        ],
+        [
+          "pN1",
+          "744 (11.2)"
+        ],
+        [
+          "pN2",
+          "948 (14.3)"
+        ],
+        [
+          "Pathologic N category (Asamura et al.)",
+          ""
+        ],
+        [
+          "pN0",
+          "4957 (74.6)"
+        ],
+        [
+          "pN1a",
+          "588 (8.8)"
+        ],
+        [
+          "pN1b",
+          "156 (2.3)"
+        ],
+        [
+          "pN2a1",
+          "201 (3.0)"
+        ],
+        [
+          "pN2a2",
+          "366 (5.5)"
+        ],
+        [
+          "pN2b",
+          "381 (5.7)"
+        ],
+        [
+          "Pathologic N category (ninth edition)",
+          ""
+        ],
+        [
+          "pN0",
+          "4957 (74.6)"
+        ],
+        [
+          "pN1",
+          "744 (11.2)"
+        ],
+        [
+          "pN2a",
+          "567 (8.5)"
+        ],
+        [
+          "pN2b",
+          "381 (5.7)"
+        ],
+        [
+          "Histologic grade",
+          ""
+        ],
+        [
+          "Grade I",
+          "867 (13.0)"
+        ],
+        [
+          "Grade II",
+          "4286 (64.5)"
+        ],
+        [
+          "Grade III",
+          "941 (14.2)"
+        ],
+        [
+          "Not assessable",
+          "555 (8.3)"
+        ],
+        [
+          "Pathologic tumor size (mm)",
+          "31.5 ± 18.4"
+        ],
+        [
+          "Visceral pleural invasion",
+          "1520 (22.9)"
+        ],
+        [
+          "Lymphovascular invasion",
+          "1738 (26.1)"
+        ],
+        [
+          "Number of harvested LNs",
+          "26.5 ± 11.1"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "",
+      "headers": [
+        "Using the Cox Proportional Hazards Model Adjusted With Age, Sex, Histology, Comorbidity, and Year of Surgery (Clinical and Pathologic Stages)",
+        "Using the Cox Proportional Hazards Model Adjusted With Age, Sex, Histology, Comorbidity, and Year of Surgery (Clinical and Pathologic Stages)",
+        "Using the Cox Proportional Hazards Model Adjusted With Age, Sex, Histology, Comorbidity, and Year of Surgery (Clinical and Pathologic Stages)",
+        "Using the Cox Proportional Hazards Model Adjusted With Age, Sex, Histology, Comorbidity, and Year of Surgery (Clinical and Pathologic Stages)",
+        "Using the Cox Proportional Hazards Model Adjusted With Age, Sex, Histology, Comorbidity, and Year of Surgery (Clinical and Pathologic Stages)",
+        "Using the Cox Proportional Hazards Model Adjusted With Age, Sex, Histology, Comorbidity, and Year of Surgery (Clinical and Pathologic Stages)",
+        "Using the Cox Proportional Hazards Model Adjusted With Age, Sex, Histology, Comorbidity, and Year of Surgery (Clinical and Pathologic Stages)",
+        "Using the Cox Proportional Hazards Model Adjusted With Age, Sex, Histology, Comorbidity, and Year of Surgery (Clinical and Pathologic Stages)",
+        "Using the Cox Proportional Hazards Model Adjusted With Age, Sex, Histology, Comorbidity, and Year of Surgery (Clinical and Pathologic Stages)",
+        "Using the Cox Proportional Hazards Model Adjusted With Age, Sex, Histology, Comorbidity, and Year of Surgery (Clinical and Pathologic Stages)"
+      ],
+      "rows": [
+        [
+          "Ninth edition",
+          "",
+          "",
+          "",
+          "",
+          "Asamura et al.",
+          "Asamura et al.",
+          "Asamura et al.",
+          "",
+          ""
+        ],
+        [
+          "",
+          "OS",
+          "OS",
+          "RFS",
+          "RFS",
+          "",
+          "OS",
+          "OS",
+          "RFS",
+          "RFS"
+        ],
+        [
+          "",
+          "HR (95% CI)",
+          "p value",
+          "HR (95% CI)",
+          "p value",
+          "",
+          "HR (95% CI)",
+          "p value",
+          "HR (95% CI)",
+          "p value"
+        ],
+        [
+          "N1 vs. N0",
+          "2.04 (1.79 - 2.32)",
+          "< 0.001",
+          "2.14 (1.91 - 2.40)",
+          "< 0.001",
+          "N1a vs. N0",
+          "2.02 (1.76 - 2.32)",
+          "< 0.001",
+          "2.07 (1.83 - 2.34)",
+          "< 0.001"
+        ],
+        [
+          "N2a vs. N1",
+          "1.37 (1.13 - 1.66)",
+          "< 0.001",
+          "1.49 (1.26 - 1.77)",
+          "< 0.001",
+          "N1b vs. N1a",
+          "1.05 (0.75 - 1.48)",
+          "0.758",
+          "1.30 (0.97 - 1.73)",
+          "0.08"
+        ],
+        [
+          "N2b vs. N2a",
+          "1.55 (1.22 - 1.98)",
+          "< 0.001",
+          "1.41 (1.13 - 1.75)",
+          "0.002",
+          "N2a1 vs. N1b",
+          "1.11 (0.72 - 1.72)",
+          "0.626",
+          "0.95 (0.65 - 1.39)",
+          "0.801"
+        ],
+        [
+          "N2b vs. N2a",
+          "",
+          "",
+          "",
+          "",
+          "N2a2 vs. N2a1",
+          "1.26 (0.89 - 1.79)",
+          "0.193",
+          "1.39 (1.02 - 1.89)",
+          "0.04"
+        ],
+        [
+          "N2b vs. N2a",
+          "",
+          "",
+          "",
+          "",
+          "N2b vs. N2a2",
+          "1.44 (1.11 - 1.88)",
+          "0.006",
+          "1.27 (1.00 - 1.60)",
+          "0.048"
+        ],
+        [
+          "Pathologic Stage",
+          "Pathologic Stage",
+          "Pathologic Stage",
+          "Pathologic Stage",
+          "Pathologic Stage",
+          "Pathologic Stage",
+          "Pathologic Stage",
+          "Pathologic Stage",
+          "Pathologic Stage",
+          "Pathologic Stage"
+        ],
+        [
+          "Ninth edition",
+          "",
+          "",
+          "",
+          "",
+          "Asamura et al.",
+          "Asamura et al.",
+          "Asamura et al.",
+          "",
+          ""
+        ],
+        [
+          "",
+          "OS",
+          "OS",
+          "RFS",
+          "RFS",
+          "OS",
+          "",
+          "",
+          "RFS",
+          "RFS"
+        ],
+        [
+          "",
+          "HR (95% CI)",
+          "p value",
+          "HR (95% CI)",
+          "p value",
+          "",
+          "HR (95% CI)",
+          "p value",
+          "HR (95% CI)",
+          "p value"
+        ],
+        [
+          "N1 vs. N0",
+          "2.05 (1.80 - 2.34)",
+          "< 0.001",
+          "2.38 (2.13 - 2.66)",
+          "< 0.001",
+          "N1a vs. N0",
+          "1.86 (1.61 - 2.15)",
+          "< 0.001",
+          "2.11 (1.87 - 2.40)",
+          "< 0.001"
+        ],
+        [
+          "N2a vs. N1",
+          "1.69 (1.44 - 1.98)",
+          "< 0.001",
+          "1.46 (1.27 - 1.68)",
+          "< 0.001",
+          "N1b vs. N1a",
+          "1.65 (1.27 - 2.14)",
+          "< 0.001",
+          "1.78 (1.43 - 2.21)",
+          "< 0.001"
+        ],
+        [
+          "N2b vs. N2a",
+          "1.51 (1.27 - 1.80)",
+          "< 0.001",
+          "1.62 (1.39 - 1.88)",
+          "< 0.001",
+          "N2a1 vs. N1b",
+          "0.97 (0.72 - 1.31)",
+          "0.838",
+          "0.79 (0.61 - 1.02)",
+          "0.066"
+        ],
+        [
+          "N2b vs. N2a",
+          "",
+          "",
+          "",
+          "",
+          "N2a2 vs. N2a1",
+          "1.28 (1.00 - 1.63)",
+          "0.048",
+          "1.30 (1.05 - 1.61)",
+          "0.016"
+        ],
+        [
+          "N2b vs. N2a",
+          "",
+          "",
+          "",
+          "",
+          "N2b vs. N2a2",
+          "1.39 (1.14 - 1.68)",
+          "0.001",
+          "1.48 (1.25 - 1.75)",
+          "< 0.001"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    }
+  ],
+  "figures": [
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/30'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/78'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/315'}",
+      "page": null
+    }
+  ],
+  "references": [
+    {
+      "title": "The International Association for the Study of Lung Cancer lung cancer staging project: overview of challenges and opportunities in revising the nodal classification of lung cancer"
+    },
+    {
+      "title": "J Thorac Oncol",
+      "year": 2023
+    },
+    {
+      "title": "A new international staging system for lung cancer",
+      "year": 2023
+    },
+    {
+      "title": "Chest",
+      "year": 2023
+    },
+    {
+      "title": "Revisions in the international system for staging lung cancer",
+      "year": 1986
+    },
+    {
+      "title": "The IASLC Lung Cancer Staging Project: proposals for the revision of the N descriptors in the forthcoming seventh edition of the TNM classification for lung cancer",
+      "year": 1997
+    },
+    {
+      "title": "The International Association for the Study of Lung Cancer Lung Cancer Staging Project: proposals for the revision of the N descriptors in the forthcoming 8th edition of the TNM classification for lung cancer",
+      "year": 2007
+    },
+    {
+      "title": "The history of TNM staging in lung cancer",
+      "year": 2015
+    },
+    {
+      "title": "Staging Manual in Thoracic Oncology",
+      "year": 2015
+    },
+    {
+      "title": "Comparison between lymph node station-and zone-based classification for the future revision of node descriptors proposed by the International Association for the Study of Lung Cancer in surgically resected patients with non-small-cell lung cancer",
+      "year": 2009
+    },
+    {
+      "title": "Eur J Cardiothorac Surg",
+      "year": 2019
+    },
+    {
+      "title": "Recommended change in the N descriptor proposed by the International Association for the Study of Lung Cancer: a validation study",
+      "year": 2019
+    },
+    {
+      "title": "The International Association for the Study of Lung Cancer Staging Project for Lung Cancer: proposals for the revision of the N descriptors in the forthcoming Ninth Edition of the TNM classification for lung cancer",
+      "year": 2019
+    },
+    {
+      "title": "Regional lymph node classification for lung cancer staging",
+      "year": 2024
+    },
+    {
+      "title": "The IASLC lung cancer staging project: a proposal for a new international lymph node map in the forthcoming seventh edition of the TNM classification for lung cancer",
+      "year": 1997
+    },
+    {
+      "title": "TNM Classification of Malignant Tumours",
+      "year": 2017
+    },
+    {
+      "title": "Prognostic variability among nonsmall cell lung cancer patients with pathologic N1 lymph node involvement. Epidemiological figures with strong clinical implications",
+      "year": 2017
+    },
+    {
+      "title": "Cancer"
+    },
+    {
+      "title": "Prognostic heterogeneity in multilevel N2 non-small cell lung cancer patients: importance of lymphadenopathy and occult intrapulmonary metastases",
+      "year": 2006
+    },
+    {
+      "title": "Ann Thorac Surg",
+      "year": 2010
+    },
+    {
+      "title": "Lymph node mapping and curability at various levels of metastasis in resected lung cancer",
+      "year": 2010
+    },
+    {
+      "title": "J Thorac Cardiovasc Surg",
+      "year": 1978
+    },
+    {
+      "title": "IASLC lung cancer staging project: the new database to inform revisions in the ninth edition of the TNM classification of lung cancer",
+      "year": 1978
+    },
+    {
+      "title": "A proposal for combination of total number and anatomical location of involved lymph nodes for nodal classification in nonsmall cell lung cancer",
+      "year": 2023
+    },
+    {
+      "title": "Neoadjuvant nivolumab plus chemotherapy in resectable lung cancer",
+      "year": 2013
+    },
+    {
+      "title": "N Engl J Med",
+      "year": 2022
+    },
+    {
+      "title": "Osimertinib as neoadjuvant therapy in patients with EGFR-mutant resectable stage II-IIIB lung adenocarcinoma (Neos): a multicenter, single-arm, open-label phase 2b trial",
+      "year": 2022
+    },
+    {
+      "title": "Lung Cancer"
+    }
+  ],
+  "quality": {
+    "completeness_score": 0,
+    "has_abstract": true,
+    "abstract_source": "metadata",
+    "has_doi": true,
+    "has_full_text": true,
+    "num_sections": 17,
+    "num_tables": 3,
+    "num_figures": 5,
+    "num_references": 28
+  }
+}

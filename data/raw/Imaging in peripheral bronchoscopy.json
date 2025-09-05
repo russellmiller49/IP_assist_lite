@@ -1,0 +1,516 @@
+{
+  "metadata": {
+    "document_id": "10_1097_mcp_0000000000001028",
+    "title": "Imaging in peripheral bronchoscopy",
+    "authors": [
+      "Brian D. Shaller",
+      "Sonali Sethi",
+      "Joseph Cicenia"
+    ],
+    "year": 2023,
+    "journal": "Current Opinion in Pulmonary Medicine",
+    "doi": "10.1097/mcp.0000000000001028",
+    "volume": "30",
+    "issue": "1",
+    "pages": "17-24",
+    "citation": "Shaller, B.; Sethi, S.; Cicenia, J. (2023). Imaging in peripheral bronchoscopy. Current Opinion in Pulmonary Medicine, 30(1), 17-24. https://doi.org/10.1097/mcp.0000000000001028",
+    "abstract": "The incorporation of advanced imaging is an essential step in the improvement of peripheral bronchoscopic procedures.",
+    "abstract_source": "metadata",
+    "url": "https://journals.lww.com/10.1097/MCP.0000000000001028"
+  },
+  "source_file": "Imaging in peripheral bronchoscopy.json",
+  "sections": [
+    {
+      "title": "Imaging in peripheral bronchoscopy",
+      "content": "Brian D. Shaller a , Sonali Sethi b and Joseph Cicenia b",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Purpose of review",
+      "content": "Historically the sampling of peripheral lung lesions via bronchoscopy has suffered from inferior diagnostic outcomes relative to transthoracic needle aspiration, and neither a successful bronchoscopic navigation nor a promising radial ultrasonographic image of one ' s target lesion guarantees a successful biopsy. Fortunately, many of peripheral bronchoscopy ' s shortcomings -- including an inability to detect and compensate for computed tomography (CT)-body divergence, and the absence of tool-in-lesion confirmation -- are potentially remediable through the use of improved intraprocedural imaging techniques.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Recent findings",
+      "content": "Recent advances in intraprocedural imaging, including the integration of cone beam CT, digital tomosynthesis, and augmented fluoroscopy into bronchoscopic procedures have yielded promising results. These advanced imaging modalities may improve the outcomes of peripheral bronchoscopy through the detection and correction of navigational errors, CT-body divergence, and malpositioned biopsy instruments.",
+      "category": "results",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Summary",
+      "content": "The incorporation of advanced imaging is an essential step in the improvement of peripheral bronchoscopic procedures.",
+      "category": "abstract",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Keywords",
+      "content": "augmented fluoroscopy, cone beam computed tomography, computed tomography-body divergence, digital tomosynthesis, lung nodule",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "INTRODUCTION",
+      "content": "Despite the development of ultrathin bronchoscopes, the proliferation of navigational technologies, and the advent of robotic-assisted bronchoscopy platforms (RAB), the diagnostic yield of peripheral bronchoscopy continues to lag behind that of computed tomography (CT)-guided transthoracic needle aspiration (TTNA) [1-3]. One critical shortcoming of diagnostic bronchoscopy is the relative lack of image-guidance: whereas interventional radiologists use high-fidelity intraprocedural imaging to guide their instruments and confirm technical success of their biopsy procedures, the majority of bronchoscopists continue to rely on historical scans, knowledge of airway anatomy, virtual roadmaps, and two-dimensional fluoroscopy that fails to render the majority of lung nodules. In an attempt to improve diagnostic outcomes, many bronchoscopists utilize radial endobronchial ultrasonography (rEBUS) - whether in conjunction with other navigational technologies or as a primary means of lesion-localization -in an attempt to visualize their target lesion prior to biopsy. Nonetheless, even a favorable ultrasound image does not necessarily mean that tissue-sampling will render a definitive diagnosis, as rEBUS alone does\nnot provide sufficient information to guide instrument adjustments or definitively confirm placement of biopsy tools within the target lesion [4]. Herein, we review the latest advances in intraprocedural imaging for bronchoscopy, with a particular focus on how advanced imaging technologies assist the proceduralist in overcoming some of the perennial challenges of peripheral bronchoscopy to help maximize procedural outcomes.",
+      "category": "introduction",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "LIMITATIONS OF PERIPHERAL BRONCHOSCOPY",
+      "content": "There are a number of obstacles to successful bronchoscopic sampling of peripheral pulmonary lesions (PPLs), many of which relate either directly or\na Division of Pulmonary, Allergy and Critical Care Medicine, Stanford University School of Medicine, Stanford, California and b Respiratory Institute, Cleveland Clinic, Cleveland, Ohio, USA\nCorrespondence to Brian D. Shaller, MD, 300 Pasteur Dr Rm JC007, Stanford, CA 94305, USA. Tel: +1 650 725 5071;\nfax: +1 650 725 8381; e-mail: bshaller@stanford.edu\nDOI:10.1097/MCP.0000000000001028\nwww.co-pulmonarymedicine.com\nindirectly to a lack of adequate intraprocedural imaging. Most advanced imaging technologies aim to improve the success of peripheral bronchoscopy by addressing one or more of the following limitations, although it should be noted that while the imaging modalities discussed herein have been shown to improve the diagnostic outcomes of\nperipheral bronchoscopic procedures, there is no single technology that fully overcomes all barriers to a successful biopsy. Indeed, even when various state-of-the-art technologies are combined (for example, robotic-assisted bronchoscopy with cone beam CT and augmented fluoroscopy), absolute success is by no means guaranteed.",
+      "category": "limitations",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Computed tomography-body divergence",
+      "content": "In contrast to the relatively static central airways and adjacent mediastinal structures, the peripheral lung is a highly dynamic andmobile environment.During breathing, nodules within the parenchyma may undergo significant changes in positioning relative to fixed structures: these oscillations in three spatial dimensions as well as over the time course of the respiratory cycle has been termed nodule hysteresis [5-7]. In the context of peripheral bronchoscopy, the difference in the intraprocedural position of a lung nodulerelativetoitslocation on preprocedural imaging is termed CT-body divergence (CTBD) (Fig. 1). CTBD occurs due to changes in lung volumes, the development of dependent atelectasis, and even smalldegreesofdiaphragmaticexcursion.Thedegree of CTBD tends to be greatest for nodules near the diaphragm or in dependent portions of the lungs due to airway displacement and the development of atelectasis, with one study demonstrating average degrees of divergence of over 1cm for upper lobe lesions and over 2 cm for lower lobe lesions [5,8].\nTo account and accommodate for nodule hysteresis, radiation oncologists make use of a variety of technologies specifically developed for stereotactic radiation-delivery, such as respiratory gating and",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "KEY POINTS",
+      "content": "/C15 Shortcomings of peripheral bronchoscopic techniques include the inability to detect or compensate for computed tomography (CT)-body divergence, a lack of tool-in-lesion confirmation, and limitations due to airway anatomy.\n/C15 Cone beam CT provides intraprocedural multiplanar images that may be used to adjust for navigational errors, compensate for CT-body divergence, and obtain tool-in-lesion confirmation.\n/C15 Augmented fluoroscopy (AF) -- a feature of most cone beam CT (CBCT) systems and some digital tomosynthesis-based platforms -- provides an additional layer of intraprocedural guidance through the superimposition of a target lesion onto live twodimensional fluoroscopy.\n/C15 Digital tomosynthesis (DT) is an advanced imaging technique that uses a conventional C-arm fluoroscope to detect and correct for navigational errors that may occur due to CT-body divergence.\n/C15 Studies of peripheral bronchoscopy using CBCT, DT, and AF have shown promising results, often with superior diagnostic outcomes as compared to nonimage-guided techniques.\nreal-time tracking. When performing percutaneous lung nodule biopsies, interventional radiologists use frequent re-imaging and intermittent breath-holds to detect and minimize lung nodule excursion [911]. Many bronchoscopists have begun to adopt specialized anesthetic and ventilatory strategies to control for CTBD: these include rapid intubation with an endotracheal tube, using muscle relaxation, utilization of higher tidal volumes and higher positive end-expiratory pressure (PEEP) to prevent derecruitment, and application the lowest tolerable fraction of inspired oxygen (FiO2) to help prevent resorption atelectasis [12,13 && ]. Yet, even with implementation of these techniques, some amount of CTBD is almost inevitable, and navigational platforms that utilize historic CT images for planning purposes may provide the proceduralist with a false sense of accomplishment: one might conduct a seemingly successful navigation under virtual guidance, but may in reality be at an unsuitable distance or orientation relative to the target's in vivo location owing to CTBD, and yet it may be difficult or impossible to detect and compensate for such navigational errors without advanced intraprocedural imaging.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Bronchus sign",
+      "content": "The efficacy of catheter-based navigational techniques is dependent to some extent on a direct luminal pathway to the target lesion (a 'bronchus sign' when visible on diagnostic imaging). Numerous studies have demonstrated how the absence of a bronchus sign is associated with inferior diagnostic yield, with one recent meta-analysis comprising over 2000 PPLs showing a difference in diagnostic yield of > 20% between lesions with or without a bronchus sign [14]. Even in the case of PPLs with a clear bronchus sign and successful localization via rEBUS, a conclusive diagnostic result is not always obtained: even if the navigational tools and biopsy instruments may be successfully directed down the airway to the target PPL, they may not be able to achieve the correct orientation relative to their target so as to penetrate the lesion and obtain a diagnostic specimen. In bronchus sign-negative lesions, plotting a transparenchymal course that defies the airways without intraprocedural imaging to confirm the spatial relationship between the bronchoscope and the target PPL may not be possible [4]. Although there are specialized tools and navigational platforms designed to overcome airway limitations by facilitating transparenchymal access to PPLs, efficacy and safety data remain limited, and confirmation of successful tunneling through tissue to the target lesion is not feasible without the use of adjunctive imaging [15-17].",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Tool-in-lesion confirmation",
+      "content": "The literature on bronchoscopic navigation platforms has consistently shown a high rate of navigational success (the ability to drive to within a suitably close range of one's target). Yet, fewer lesions are successfully visualized using rEBUS, and far fewer still are successfully diagnosed on biopsy. In the prospective multicenter NAVIGATE study of over 1000 EMN-guided peripheral bronchoscopies, successful navigation and tissue-sampling was achieved in 94.4% of cases; however, the overall diagnostic yield was 67.8% at 24 months' follow-up (and perhaps even lower with the application of more conservative diagnostic criteria) [18,19 && ]. The stepwise decline from successful navigation and tissue acquisition to successful rEBUSvisualization and successful diagnosis occurs -at least in part - because there is no way to confirm that the biopsy tool actually penetrated its target without confirmatory imaging. Without the ability to obtain tool-in-lesion confirmation (TIL), one cannot be certain that the biopsy instrument was placed within their target (until a tissue diagnosis is made), and one is therefore significantly limited in their ability to make rational adjustments to achieve TIL. It is worth mentioning that while advanced imaging technologies may enable the proceduralist to confirm the relationship between the biopsy instrument and target lesion, achieving TIL is perhaps more closely tied to the bronchoscopic modality itself; whether using a catheter-based technique, a robotic-assisted platform, an ultrathin bronchoscope, or any other tool or platform, TIL is not always achievable.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "CONE BEAM COMPUTED TOMOGRAPHY",
+      "content": "Cone beam computed tomography (CBCT) is an imaging modality in which a specialized fluoroscopic C-arm acquires continuous images while rotating roughly 190 8 around a point of interest. The images are then processed into axial, coronal, and sagittal renderings. Unlike conventional diagnostic (fan beam) CT, which obtains multiple image slices as the patient moves through the scanner, CBCT acquires multiple 'slices' over a single spin while the patient is static. Although the quality of CBCT images is inferior to that of fan beam CT, a significant portion of the patient's thorax may be rendered in a single spin, which generally takes between 6 and 10s to complete [20]. CBCT C-arms also function as conventional two-dimensional fluoroscopes, and many systems are capable to generating augmented fluoroscopy: after a CBCT spin, a target of interest is demarcated on three-dimensional imaging and then superimposed onto live\nwww.co-pulmonarymedicine.com\ntwo-dimensional fluoroscopy for added intraprocedural guidance [21].\nA variety of CBCT systems are available, including fixed systems that are built-in components of procedural suites, and mobile systems that may be moved between rooms. While fixed systems are much more costly, they acquire images more quickly, have superior imaging quality, and have more sophisticated user-interfaces. Mobile systems are much more affordable but they take longer to perform a single spin (around 30s), have inferior imaging quality, and are not equipped with augmented fluoroscopy at present. As an adjunctive imaging tool, CBCT is compatible with all bronchoscopic modalities, including robotic platforms, and can therefore be integrated into one's preferred procedural workflow.\nThe ability to obtain intraprocedural CT images enables the bronchoscopist to see the exact location of their target, bronchoscope, and biopsy instruments, thus providing the necessary information to adjust for CTBD and navigational errors. The proceduralist may also perform a CBCT spin after deploying a biopsy tool to confirm TIL (or detect and compensate for tool-malpositioning) (Fig. 2a and b). CBCT may aid the bronchoscopist in overcoming limitations of the bronchus sign (be it its absence, or an inability to obtain a diagnostic specimen despite its presence) by providing images by which to guide and confirm the alignment of the bronchoscope tip with the target lesion, thereby enabling the proceduralist to deploy a biopsy instrument in transparenchymal fashion to reach their target (Fig. 2c). CBCT may also improve upon the safety of\nperipheral bronchoscopy by demonstrating the relationships between biopsy instruments, target PPLs, and nearby critical structures such as larger blood vessels and pleural surfaces (Fig. 2d and e).\nReal-world data on CBCT-guided bronchoscopy have consistently shown superior diagnostic outcomes(orsimilaroutcomesdespitemorechallenging targets) and a comparable safety profile to other peripheral bronchoscopic methods, with published diagnostic yields up to 94% [22-24]. Most publications on CBCT-guidedbronchoscopyemployedfixed CBCT systems, however, data on bronchoscopy specifically using mobile CBCT guidance are similarly promising [24,25]. The success of CBCT-guided bronchoscopy does not appear to be associated with target-specific factors, such as lobar location or absence of a bronchus sign [26,27,28 & ]. Although studies directly comparing CBCT-guided bronchoscopy to other bronchoscopic methods are limited in number, single-centerstudieshavedemonstratedsignificantly better diagnostic outcomes when CBCT guidance is addedtoEMNorultrathinbronchoscopywithrEBUS than with either EMN or rEBUS alone [28 & ,29,30]. In addition, several recent case series of both fixed and mobile CBCT-guided robotic-assisted bronchoscopy furnished promising results, with diagnostic yields of up to 94% [23,24,31-33].\nAs with all technologies, there is a learning curve associated with adoption of CBCT [34]. Additionally, CBCT-guided bronchoscopy procedures undoubtedly use more ionizing radiation than those performed with conventional two-dimensional fluoroscopy; that said, radiation doses may be lower than those of CT-guided TTNA, and limited data suggest that radiation-use decreases as operatorexperience increases [26,34]. Other barriers to using CBCT include cost and access: CBCT fixed systems are expensive and require a dedicated room, and although many hospitals may already have CBCT procedural suites, bronchoscopists may have to compete with other interventional services for time. Although one study conducted in the Netherlands suggested that CBCT-guided bronchoscopy may be cost-effective relative to TTNA, no comparable studies have been carried out elsewhere [35 & ]. Lastly, as with all peripheral bronchoscopy methods, the use of a suitable anesthetic and ventilatory protocol is essential to maximizing procedural success: in one study of CBCT-guided bronchoscopy performed under conventional versus specialized ventilatory settings (including recruitment breaths, higher PEEP, lower FIO2, and higher tidal volumes), there was more atelectasis, more obscurement of the target lesion, and a lower diagnostic yield (although not reaching statistical significance) in the conventional ventilation group [13 && ].",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "DIGITAL TOMOSYNTHESIS AND C-ARM BASED COMPUTATIONAL TOMOGRAPHY",
+      "content": "Similar to how a CT scanner uses a computer algorithm to create tomographic images from a series of X-ray images, digital tomosynthesis (DT) and C-arm based computational tomography (CABT) utilizes computer-based reconstruction algorithms to create images with depth of field from multiple singleplane X-ray images (Fig. 3). Images are obtained over a limited range of angles with an X-ray tube and detector circling around an object, after which computer processing algorithms reduce the blur effects of synthesized images, resulting in 3D tomographic imaging along three planes that is functionally similar to that of CBCT [36]. DT enables realtime intraoperative imaging of both small lesions and biopsy tools [37]. Unlike conventional CT, where images are obtained over 180-360 8 , digital tomosynthesis utilizes X-ray images obtained over limited angles of rotation as small as 50 8 [38]. Since image acquisition occurs over smaller angle sweeps, the cumulative radiation dose of DT and CABT is a fraction of the radiation dose used in CT imaging. These smaller angles also allow for imaging to be done in smaller procedural suites utilizing mobile CBCT or conventional C-arm fluoroscopes. The quality of image reconstructions can vary, and depends on several factors: these include the ability to accurately isocenter the nodule within the image sweep, the speed of the image sweep itself, the quality of the fluoroscope detector, and the reconstruction algorithm (although machine learning has been used to improve upon these algorithms and provide better quality imaging). Even though images may not be of similar quality to CT or CBCT, if done properly they may still relay sufficient information to correlate the position of biopsy tools and provide TIL confirmation [39 && ].",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "AUGMENTED FLUOROSCOPY-GUIDED BIOPSY",
+      "content": "Augmented imaging refers to the modification or enhancement of any real-time imaging through the incorporation of information from other imaging sources. One such example of this is augmented fluoroscopy (AF), where real-time fluoroscopic images are augmented with information from historic CT images. In AF used during bronchoscopy, a digital representation of a target lesion - as visualized either on historic CT images or on intraprocedural CBCT images - is overlaid onto real-time 2D fluoroscopic imaging (Fig. 4). AF is available on some fixed CBCT systems: after performing a CBCT spin, the proceduralist demarcates a target lesion on the CBCT images, and built-in software algorithms\ngenerate the image-overlay. Some independent commercial technologies also allow for AF to be generated from DT and historic CT imaging. In these cases, DT is utilized to localize the lesion in real time\nand correlate its position with historic CT images, which is then used to generate an overlay onto realtime 2D fluoroscopy [40]. Independent AF systems use a board with tungsten beads arranged in\nwww.co-pulmonarymedicine.com\nmultiple planes that is placed under the patient's thorax, which can be used to generate the AF overlay in any plane, thus providing an added layer of image-guidance [39 && ]. The use of AF may potentially enable the proceduralist to reduce radiation exposure by minimizing the need for subsequent CBCT scans or C-arm sweeps. Limited data suggest a higher diagnostic yield for AF-assisted biopsies compared to historical data, although these studies also made use of intraprocedural CBCT imaging in addition to AF [26,41].",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "CONCLUSION",
+      "content": "Advances in intraprocedural imaging are helping bronchoscopists to overcome their historical lack of real-time imaging guidance and confirmation of technical success. The integration of advanced imaging into bronchoscopy is associated with better procedural outcomes, including superior diagnostic yield in many studies. Barriers to more widespread adoption of advanced imaging modalities include cost and access to new technologies, as well as comfort and familiarity with competing techniques. Fortunately, most advanced imaging platforms may be integrated into existing peripheral bronchoscopic routines, thus potentially easing the learning curve and lowering the bar for entry. Ultimately, it is our opinion that incorporation of advanced imaging modalities into peripheral bronchoscopy is an essential step in overcoming the procedure's existing diagnostic limitations.",
+      "category": "conclusion",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Acknowledgements",
+      "content": "None.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Financial support and sponsorship",
+      "content": "None.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Conflicts of interest",
+      "content": "B..D.S. has no relevant conflicts of interest. S.S. has no relevant conflicts of interest. J.C. has no relevant conflicts of interest.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "REFERENCES AND RECOMMENDED READING",
+      "content": "Papers of particular interest, published within the annual period of review, have been highlighted as:\n& of special interest\n&& of outstanding interest\n1. Gasparini S, Bonifazi M, Wang KP. Transbronchial needle aspirations vs. percutaneous needle aspirations. J Thorac Dis 2015; 7(Suppl 4):S300-S303.\n2. Yang W, Sun W, Li Q, et al. Diagnostic accuracy of CT-guided transthoracic needle biopsy for solitary pulmonary nodules. PLoS One 2015; 10:e0131373.\n3. Xie F, Wagh A, Wu R, et al. Robotic-assisted bronchoscopy in the diagnosis of peripheral pulmonary lesions. Chinese Med J Pulmon Crit Care Med 2023; 1:30-35.\n4. Gildea TR. Lung lesion localization and the diagnostic drop. Annals ATS 2016; 13:1450-1452.\n5. Chen A, Pastis N, Furukawa B, Silvestri GA. The effect of respiratory motion on pulmonary nodule location during electromagnetic navigation bronchoscopy. Chest 2015; 147:1275-1281.\n6. Furukawa BS, Pastis NJ, Tanner NT, et al. Comparing pulmonary nodule location during electromagnetic bronchoscopy with predicted location on the basis of two virtual airway maps at different phases of respiration. Chest 2018; 153:181-186.\n7. Pickering EM, Kalchiem-Dekel O, Sachdeva A. Electromagnetic navigation bronchoscopy: a comprehensive review. AME Med J 2018; 3:117.\n8. Pritchett MA, Bhadra K, Calcutt M, Folch E. Virtual or reality: divergence between preprocedural computed tomography scans and lung anatomy during guided bronchoscopy. J Thorac Dis 2020; 12:1595-1611.\n9. Prunaretty J, Boisselier P, Aill /C18 eres N, et al. Tracking, gating, free-breathing, which technique to use for lung stereotactic treatments? A dosimetric comparison. Rep Pract Oncol Radiother 2019; 24:97-104.\n10. Brandner ED, Chetty IJ, Giaddui TG, et al. Motion management strategies and technical issues associated with stereotactic body radiotherapy of thoracic and upper abdominal tumors: a review from NRG oncology. Med Phys 2017; 44:2595-2612.\n11. Dhont J, Harden SV, Chee LYS, et al. Image-guided radiotherapy to manage respiratory motion: lung and liver. Clin Oncol (R Coll Radiol) 2020; 32:792-804.\n12. Pritchett MA, Lau K, Skibo S, et al. Anesthesia considerations to reduce motion and atelectasis during advanced guided bronchoscopy. BMC Pulm Med 2021; 21:240.\n13. Bhadra K, Setser RM, Condra W, Pritchett MA. Lung navigation ventilation\n&& protocol to optimize biopsy of peripheral lung lesions. J Bronchol Interv Pulmonol 2022; 29:7-17.\nThis study demonstrates the necessity of implementing an optimized ventilatory strategy to improve visualization of lung nodules -and, ultimately, diagnostic outcomes - during navigational bronchoscopy. The study is predicated on the well established principle of CT-to-body divergence, which may result in drastic variation in the location of a lung nodule from static preprocedural imaging to the dynamic intraprocedural lung.\n14. Ali MS, Sethi J, Taneja A, et al. Computed tomography bronchus sign and the diagnostic yield of guided bronchoscopy for peripheral pulmonary lesions. A systematic review and meta-analysis. Ann ATS 2018; 15:978-987.\n15. Harzheim D, Sterman D, Shah PL, et al. Bronchoscopic transparenchymal nodule access: feasibility and safety in an endoscopic unit. Respiration 2016; 91:302-306.\n16. Bowling MR, Brown C, Anciano CJ. Feasibility and safety of the transbronchial access tool for peripheral pulmonary nodule and mass. Ann Thorac Surg 2017; 104:443-449.\n17. Sun J, Criner GJ, Dibardino D, et al. Efficacy and safety of virtual bronchoscopic navigation with fused fluoroscopy and vessel mapping for access of pulmonary lesions. Respirology 2022; 27:357-365.\n18. Folch EE, Pritchett MA, Nead MA, et al. Electromagnetic navigation bronchoscopy for peripheral pulmonary lesions: one-year results of the prospective, multicenter NAVIGATE study. J Thorac Oncol 2019; 14:445-458.\n19. Folch EE, Bowling MR, Pritchett MA, et al. NAVIGATE 24-month results:\n&& electromagnetic navigation bronchoscopy for pulmonary lesions at 37 centers in Europe and the United States. J Thorac Oncol 2022; 17:519-531.\nThe multicenter prospective NAVIGATE study provided 2-year diagnostic followup data on patients who underwent electromagnetic navigational bronchoscopy for the diagnosis of peripheral lung nodules. The results of NAVIGATE highlighted the significant limitations of what is one the most widely-used platforms for peripheral bronchoscopic guidance.\n20. Lechuga L, Weidlich GA. Cone beam CT vs. fan beam CT: a comparison of image quality and dose delivered between two differing ct imaging modalities. Cureus 2016; 8:e778.\n21. Setser R, Chintalapani G, Bhadra K, Casal RF. Cone beam CT imaging for bronchoscopy: a technical review. J Thorac Dis 2020; 12:7416-7428.\n22. Cheng GZ, Liu L, Nobari M, et al. Cone beam navigation bronchoscopy: the next frontier. J Thorac Dis 2020; 12:3272-3278.\n23. Pritchett M, Muller L, Ost D, et al. Integration of shape-sensing roboticassisted bronchoscopy and cone-beam CT for the biopsy of pulmonary nodules. Chest 2021; 160:A1622-A1624.\n24. Reisenauer J, Duke JD, Kern R, et al. Combining shape-sensing robotic bronchoscopy with mobile three-dimensional imaging to verify tool-in-lesion and overcome divergence: a pilot study. Mayo Clin Proc Innov Qual Outcomes 2022; 6:177-185.\n25. Salahuddin M, Bashour SI, Khan A, et al. Mobile cone-beam CT-assisted bronchoscopy for peripheral lung lesions. Diagnostics (Basel) 2023; 13:827.\n26. Pritchett MA, Schampaert S, de Groot JAH, et al. Cone-beam CT with augmented fluoroscopy combined with electromagnetic navigation bronchoscopy for biopsy of pulmonary nodules. J Bronchol Interv Pulmonol 2018; 25:274-282.\n27. Podder S, Chaudry S, Singh H, et al. Efficacy and safety of cone-beam CT augmented electromagnetic navigation guided bronchoscopic biopsies of indeterminate pulmonary nodules. Tomography 2022; 8:2049-2058.\n28.\n& augmented fluoroscopy and ultrathin bronchoscopy versus conventional navigational bronchoscopy techniques. J Bronchol Interv Pulmonol 2023; 30:335-345.\nDiBardino DM, Kim RY, Cao Y,\net al.\nDiagnostic yield of cone-beam-derived\nIn this study comparing several different diagnostic modalities for peripheral bronchoscopy, procedures performed with the addition of cone beam CT guidance were found to have significantly higher diagnostic yield. This study adds to the growing volume of literature supporting the use of cone beam CT intraprocedural imaging in peripheral bronchoscopy.\n29. Verhoeven RLJ, F € utterer JJ, Hoefsloot W, van der Heijden EHFM. Cone-beam CT image guidance with and without electromagnetic navigation bronchoscopy for biopsy of peripheral pulmonary lesions. J Bronchol Interv Pulmonol 2021; 28:60-69.\n30. Kheir F, Thakore SR, Uribe Becerra JP, et al. Cone-beam computed tomography-guided electromagnetic navigation for peripheral lung nodules. Respiration 2021; 100:44-51.\n31. Benn BS, Romero AO, Lum M, Krishna G. Robotic-assisted navigation bronchoscopy as a paradigm shift in peripheral lung access. Lung 2021; 199:177-186.\n32. Styrvoky K, Schwalk A, Pham D, et al. Shape-sensing robotic-assisted bronchoscopy with concurrent use of radial endobronchial ultrasound and cone beam computed tomography in the evaluation of pulmonary lesions. Lung 2022; 200:755-761.\n33. Cumbo-Nacheli G, Velagapudi RK, Enter M, et al. Robotic-assisted bronchoscopy and cone-beam CT: a retrospective series. J Bronchol Interv Pulmonol 2022; 29:303-306.\n34. Verhoeven RLJ, van der Sterren W, Kong W, et al. Cone-beam CT and augmented fluoroscopy-guided navigation bronchoscopy: radiation exposure and diagnostic accuracy learning curves. J Bronchol Interv Pulmonol 2021; 28:262-271.\n35. & Kops SEP, Verhoeven RLJ, Vermeulen RJ, et al. Cone beam CT-guided navigation bronchoscopy: a cost-effective alternative to CT-guided transthoracic biopsy for diagnosis of peripheral pulmonary nodules. BMJ Open Respir Res 2022; 9:e001280.\nAlthough data comparing bronchoscopic and transthoracic biopsy techniques are lacking, this study demonstrated the potential cost-effectiveness of cone beam CTguided bronchoscopic biopsy as compared to CT-guided transthoracic biopsy.\n36. Machida H, Yuhara T, Tamura M, et al. Whole-body clinical applications of digital tomosynthesis. RadioGraphics 2016; 36:735-750.\n37. Ghosh Roy DN, Kruger RA, Yih B, Del Rio P. Selective plane removal in limited angle tomographic imaging. Med Phys 1985; 12:65-70.\n38. Dobbins JT, Godfrey DJ. Digital x-ray tomosynthesis: current state of the art and clinical potential. Phys Med Biol 2003; 48:R65-R106.\n39. Cicenia J, Bhadra K, Sethi S, et al. Augmented fluoroscopy: a new and novel\n&& navigation platform for peripheral bronchoscopy. J Bronchol Interv Pulmon 2021; 28:116-123.\nThis prospective multicenter study provided early data on diagnostic outcomes of bronchoscopic lung nodule biopsy procedures using C-arm based tomography with augmented fluoroscopic guidance. The study demonstrates the significant potential of augmented fluoroscopic technologies is achieving high diagnostic yields in peripheral bronchoscopy.\n40. Piro R, Fontana M, Casalini E, et al. Cone beam CT augmented fluoroscopy allows safe and efficient diagnosis of a difficult lung nodule. BMC Pulm Med 2021; 21:327.\n41. Yu KL, Yang SM, Ko HJ, et al. Efficacy and safety of cone-beam computed tomography-derived augmented fluoroscopy combined with endobronchial ultrasound in peripheral pulmonary lesions. Respiration 2021; 100:538-546.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    }
+  ],
+  "figures": [
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/35'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/56'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/77'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/93'}",
+      "page": null
+    }
+  ],
+  "references": [
+    {
+      "title": "Transbronchial needle aspirations vs. percutaneous needle aspirations"
+    },
+    {
+      "title": "J Thorac Dis",
+      "year": 2015
+    },
+    {
+      "title": "Diagnostic accuracy of CT-guided transthoracic needle biopsy for solitary pulmonary nodules",
+      "year": 2015
+    },
+    {
+      "title": "PLoS One",
+      "year": 2015
+    },
+    {
+      "title": "Robotic-assisted bronchoscopy in the diagnosis of peripheral pulmonary lesions",
+      "year": 2015
+    },
+    {
+      "title": "Chinese Med J Pulmon Crit Care Med",
+      "year": 2023
+    },
+    {
+      "title": "Lung lesion localization and the diagnostic drop",
+      "year": 2023
+    },
+    {
+      "title": "Annals ATS",
+      "year": 2023
+    },
+    {
+      "title": "The effect of respiratory motion on pulmonary nodule location during electromagnetic navigation bronchoscopy",
+      "year": 2016
+    },
+    {
+      "title": "Chest",
+      "year": 2015
+    },
+    {
+      "title": "Comparing pulmonary nodule location during electromagnetic bronchoscopy with predicted location on the basis of two virtual airway maps at different phases of respiration",
+      "year": 2015
+    },
+    {
+      "title": "Electromagnetic navigation bronchoscopy: a comprehensive review",
+      "year": 2018
+    },
+    {
+      "title": "AME Med J",
+      "year": 2018
+    },
+    {
+      "title": "Virtual or reality: divergence between preprocedural computed tomography scans and lung anatomy during guided bronchoscopy",
+      "year": 2018
+    },
+    {
+      "title": "Tracking, gating, free-breathing, which technique to use for lung stereotactic treatments? A dosimetric comparison",
+      "year": 2020
+    },
+    {
+      "title": "Rep Pract Oncol Radiother",
+      "year": 2019
+    },
+    {
+      "title": "Motion management strategies and technical issues associated with stereotactic body radiotherapy of thoracic and upper abdominal tumors: a review from NRG oncology",
+      "year": 2019
+    },
+    {
+      "title": "Med Phys",
+      "year": 2017
+    },
+    {
+      "title": "Image-guided radiotherapy to manage respiratory motion: lung and liver",
+      "year": 2017
+    },
+    {
+      "title": "Clin Oncol (R Coll Radiol)",
+      "year": 2020
+    },
+    {
+      "title": "Anesthesia considerations to reduce motion and atelectasis during advanced guided bronchoscopy",
+      "year": 2020
+    },
+    {
+      "title": "BMC Pulm Med",
+      "year": 2021
+    },
+    {
+      "title": "Lung navigation ventilation protocol to optimize biopsy of peripheral lung lesions",
+      "year": 2021
+    },
+    {
+      "title": "J Bronchol Interv Pulmonol",
+      "year": 2022
+    },
+    {
+      "title": "ventilatory strategy to improve visualization of lung nodules -and, ultimately, diagnostic outcomes -during navigational bronchoscopy",
+      "year": 2022
+    },
+    {
+      "title": "Computed tomography bronchus sign and the diagnostic yield of guided bronchoscopy for peripheral pulmonary lesions. A systematic review and meta-analysis"
+    },
+    {
+      "title": "Ann ATS",
+      "year": 2018
+    },
+    {
+      "title": "Bronchoscopic transparenchymal nodule access: feasibility and safety in an endoscopic unit",
+      "year": 2018
+    },
+    {
+      "title": "Respiration",
+      "year": 2016
+    },
+    {
+      "title": "Feasibility and safety of the transbronchial access tool for peripheral pulmonary nodule and mass",
+      "year": 2016
+    },
+    {
+      "title": "Ann Thorac Surg",
+      "year": 2017
+    },
+    {
+      "title": "Efficacy and safety of virtual bronchoscopic navigation with fused fluoroscopy and vessel mapping for access of pulmonary lesions",
+      "year": 2017
+    },
+    {
+      "title": "Respirology",
+      "year": 2022
+    },
+    {
+      "title": "Electromagnetic navigation bronchoscopy for peripheral pulmonary lesions: one-year results of the prospective, multicenter NAVIGATE study",
+      "year": 2022
+    },
+    {
+      "title": "J Thorac Oncol",
+      "year": 2019
+    },
+    {
+      "title": "NAVIGATE 24-month results: electromagnetic navigation bronchoscopy for pulmonary lesions at 37 centers in Europe and the United States",
+      "year": 2019
+    },
+    {
+      "title": "most widely-used platforms for peripheral bronchoscopic guidance",
+      "year": 2022
+    },
+    {
+      "title": "The multicenter prospective NAVIGATE study provided 2-year diagnostic followup data on patients who underwent electromagnetic navigational bronchoscopy for the diagnosis of peripheral lung nodules",
+      "year": 2022
+    },
+    {
+      "title": "Cone beam CT vs. fan beam CT: a comparison of image quality and dose delivered between two differing ct imaging modalities"
+    },
+    {
+      "title": "Cureus",
+      "year": 2016
+    },
+    {
+      "title": "Cone beam CT imaging for bronchoscopy: a technical review",
+      "year": 2016
+    },
+    {
+      "title": "Cone beam navigation bronchoscopy: the next frontier",
+      "year": 2020
+    },
+    {
+      "title": "Integration of shape-sensing roboticassisted bronchoscopy and cone-beam CT for the biopsy of pulmonary nodules",
+      "year": 2020
+    },
+    {
+      "title": "Combining shape-sensing robotic bronchoscopy with mobile three-dimensional imaging to verify tool-in-lesion and overcome divergence: a pilot study",
+      "year": 2021
+    },
+    {
+      "title": "Mayo Clin Proc Innov Qual Outcomes",
+      "year": 2022
+    },
+    {
+      "title": "Mobile cone-beam CT-assisted bronchoscopy for peripheral lung lesions",
+      "year": 2022
+    },
+    {
+      "title": "Diagnostics",
+      "year": 2023
+    },
+    {
+      "title": "Cone-beam CT with augmented fluoroscopy combined with electromagnetic navigation bronchoscopy for biopsy of pulmonary nodules",
+      "year": 2023
+    },
+    {
+      "title": "Efficacy and safety of cone-beam CT augmented electromagnetic navigation guided bronchoscopic biopsies of indeterminate pulmonary nodules",
+      "year": 2018
+    },
+    {
+      "title": "Tomography",
+      "year": 2022
+    },
+    {
+      "title": "Diagnostic yield of cone-beam-derived augmented fluoroscopy and ultrathin bronchoscopy versus conventional navigational bronchoscopy techniques",
+      "year": 2022
+    },
+    {
+      "title": "Cone-beam CT image guidance with and without electromagnetic navigation bronchoscopy for biopsy of peripheral pulmonary lesions",
+      "year": 2023
+    },
+    {
+      "title": "Cone-beam computed tomography-guided electromagnetic navigation for peripheral lung nodules",
+      "year": 2021
+    },
+    {
+      "title": "Robotic-assisted navigation bronchoscopy as a paradigm shift in peripheral lung access",
+      "year": 2021
+    },
+    {
+      "title": "Lung",
+      "year": 2023
+    },
+    {
+      "title": "Shape-sensing robotic-assisted bronchoscopy with concurrent use of radial endobronchial ultrasound and cone beam computed tomography in the evaluation of pulmonary lesions",
+      "year": 2021
+    },
+    {
+      "title": "Robotic-assisted bronchoscopy and cone-beam CT: a retrospective series",
+      "year": 2022
+    },
+    {
+      "title": "Cone-beam CT and augmented fluoroscopy-guided navigation bronchoscopy: radiation exposure and diagnostic accuracy learning curves",
+      "year": 2022
+    },
+    {
+      "title": "Cone beam CT-guided navigation bronchoscopy: a cost-effective alternative to CT-guided transthoracic biopsy for diagnosis of peripheral pulmonary nodules",
+      "year": 2021
+    },
+    {
+      "title": "BMJ Open Respir Res",
+      "year": 2022
+    },
+    {
+      "title": "Whole-body clinical applications of digital tomosynthesis",
+      "year": 2022
+    },
+    {
+      "title": "RadioGraphics",
+      "year": 2016
+    },
+    {
+      "title": "Selective plane removal in limited angle tomographic imaging",
+      "year": 2016
+    },
+    {
+      "title": "Digital x-ray tomosynthesis: current state of the art and clinical potential",
+      "year": 1985
+    },
+    {
+      "title": "Phys Med Biol",
+      "year": 2003
+    },
+    {
+      "title": "Augmented fluoroscopy: a new and novel navigation platform for peripheral bronchoscopy",
+      "year": 2003
+    },
+    {
+      "title": "J Bronchol Interv Pulmon",
+      "year": 2022
+    },
+    {
+      "title": "bronchoscopic lung nodule biopsy procedures using C-arm based tomography with augmented fluoroscopic guidance. The study demonstrates the significant potential of augmented fluoroscopic technologies is achieving high diagnostic yields in peripheral bronchoscopy",
+      "year": 2021
+    },
+    {
+      "title": "Cone beam CT augmented fluoroscopy allows safe and efficient diagnosis of a difficult lung nodule"
+    },
+    {
+      "title": "Efficacy and safety of cone-beam computed tomography-derived augmented fluoroscopy combined with endobronchial ultrasound in peripheral pulmonary lesions",
+      "year": 2021
+    }
+  ],
+  "quality": {
+    "completeness_score": 61,
+    "has_abstract": true,
+    "abstract_source": "metadata",
+    "has_doi": true,
+    "has_full_text": true,
+    "num_sections": 19,
+    "num_tables": 0,
+    "num_figures": 6,
+    "num_references": 70
+  }
+}

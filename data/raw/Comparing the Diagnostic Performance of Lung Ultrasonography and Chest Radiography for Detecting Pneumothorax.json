@@ -1,0 +1,1598 @@
+{
+  "metadata": {
+    "document_id": "10_1159_000540777",
+    "title": "Comparing the Diagnostic Performance of Lung Ultrasonography and Chest Radiography for Detecting Pneumothorax in Patients with Trauma: A Meta-Analysis",
+    "authors": [
+      "Bo Sheng",
+      "Lili Tao",
+      "Congbing Zhong",
+      "Ling Gao"
+    ],
+    "year": 2024,
+    "journal": "Respiration",
+    "doi": "10.1159/000540777",
+    "volume": "",
+    "issue": "",
+    "pages": "1-15",
+    "citation": "Sheng, et al. (2024). Comparing the Diagnostic Performance of Lung Ultrasonography and Chest Radiography for Detecting Pneumothorax in Patients with Trauma: A Meta-Analysis. Respiration, 1-15. https://doi.org/10.1159/000540777",
+    "abstract": "Introduction: The objective of this study was to compare the diagnostic performance of ultrasonography (US) and chest radiography for detecting pneumothorax in patients with trauma using a meta-analytic approach. Methods: PubMed, Embase, and the Cochrane Library were systematically searched to identify eligible studies until March 2023. The diagnostic performance of US and chest radiography was assessed using sensitivity, speci /uniFB01 city, positive likelihood ratio (PLR), negative likelihood ratio (NLR), diagnostic score, diagnostic odds ratio (DOR), and area under the receiver operating characteristic curve (AUC). Results: Overall, 21 studies involving 4,087 patients with trauma were included. The overall sensitivity, speci /uniFB01 city, PLR, NLR, diagnostic score, DOR, and AUC of US for detecting pneumothorax were 0.83, 0.99, 73.72, 0.17, 6.06, 427.80, and 0.99, respectively. The corresponding values of chest radiography for detecting pneumothorax were 0.37, 1.00, 175.59, 0.63, 5.63, 279.97, and 0.86. US was associated with a higher sensitivity (ratio: 2.24; 95% con /uniFB01 dence interval [CI]: 1.70 -2.95; p < 0.001) Odds ratio (or) AUC (ratio: 1.15; 95% CI: 1.11 -1.19; p < 0.001) and lower NLR (ratio: 0.27; 95% CI: 0.17 -0.43; p < 0.001) compared with chest radiography. Conclusion: Lung US was associated with better diagnostic performance than chest radiography for detecting pneumothorax in patients with trauma",
+    "abstract_source": "metadata",
+    "url": "https://karger.com/article/doi/10.1159/000540777"
+  },
+  "source_file": "Comparing the Diagnostic Performance of Lung Ultrasonography and Chest Radiography for Detecting Pneumothorax.json",
+  "sections": [
+    {
+      "title": "Comparing the Diagnostic Performance of Lung Ultrasonography and Chest Radiography for Detecting Pneumothorax in Patients with Trauma: A Meta-Analysis",
+      "content": "Bo Sheng Lili Tao Congbing Zhong Ling Gao\nDepartment of Ultrasound, Wuxi Hospital of Traditional Chinese Medicine, Wuxi, China",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Keywords",
+      "content": "Ultrasonography · Chest radiography · Pneumothorax · Patients with trauma · Meta-analysis",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Abstract",
+      "content": "Introduction: The objective of this study was to compare the diagnostic performance of ultrasonography (US) and chest radiography for detecting pneumothorax in patients with trauma using a meta-analytic approach. Methods: PubMed, Embase, and the Cochrane Library were systematically searched to identify eligible studies until March 2023. The diagnostic performance of US and chest radiography was assessed using sensitivity, speci /uniFB01 city, positive likelihood ratio (PLR), negative likelihood ratio (NLR), diagnostic score, diagnostic odds ratio (DOR), and area under the receiver operating characteristic curve (AUC). Results: Overall, 21 studies involving 4,087 patients with trauma were included. The overall sensitivity, speci /uniFB01 city, PLR, NLR, diagnostic score, DOR, and AUC of US for detecting pneumothorax were 0.83, 0.99, 73.72, 0.17, 6.06, 427.80, and 0.99, respectively. The corresponding values of chest radiography for detecting pneumothorax were 0.37, 1.00, 175.59, 0.63, 5.63, 279.97, and 0.86. US was associated with a higher sensitivity (ratio: 2.24; 95% con /uniFB01 dence interval [CI]: 1.70 -2.95; p < 0.001) Odds ratio (or) AUC (ratio: 1.15; 95% CI: 1.11 -1.19; p < 0.001) and lower NLR (ratio: 0.27; 95% CI: 0.17 -0.43; p < 0.001) compared with\nchest radiography. Conclusion: Lung US was associated with better diagnostic performance than chest radiography for detecting pneumothorax in patients with trauma.",
+      "category": "abstract",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Introduction",
+      "content": "Pneumothorax, characterized by the accumulation of air within the pleural cavity, represents a serious medical emergency that can severely compromise respiratory function [1, 2]. Pneumothorax is a common condition, with a primary spontaneous incidence of 7.4/100,000 per year in males and 1.2/100,000 per year in females. The incidence of secondary spontaneous pneumothorax is 6.3/100,000 per year in males and 2.0/100,000 per year in females [3]. Traumatic pneumothorax can occur as a result of penetrating injuries (such as stabs or gunshot wounds) or blunt chest trauma [4]. Regardless of the cause, timely and accurate detection followed by immediate treatment is crucial in preventing catastrophic outcomes [5].\nBo Sheng and Lili Tao are co/uniFB01 rst authors and contributed equally to this work.\nTraditionally, chest radiography is performed on patients with chest trauma to look for pneumothorax. However, due to overlapping spinal structures and other injuries, the characteristic features of pneumothorax may not always be clearly discernible on chest radiography taken in the supine position [6, 7]. Although appropriate screening for pneumothorax via chest radiography is a crucial treatment intervention, the signs of pneumothorax on chest radiography are subtle, resulting in missed diagnoses in up to 20% of cases [8]. The reasons for these missed diagnoses may include low interobserver consistency in the interpretation of chest radiography /uniFB01 ndings and a clinical chest radiography workload that far exceeds the number of radiologists available [9, 10].\nCurrently, lung ultrasonography (US) is considered effective in detecting pneumothorax in clinical practice, especially in emergency and bedside examinations, US can quickly and noninvasively provide diagnostic information. Moreover, US exams do not involve ionizing radiation, making them safer for patients, particularly those who require frequent monitoring or speci /uniFB01 c groups such as pregnant women and children [11]. The characteristic ultrasound features of pneumothorax include the absence of lung sliding, absence of B lines, and presence of lung points, which can help diagnose pneumothorax more accurately [11]. However, whether the diagnostic performance of US is superior to that of chest radiography for detecting pneumothorax remains controversial. Thus, this systematic review and meta-analysis aimed to compare the diagnostic performance of US and chest radiography for detecting pneumothorax in patients with trauma.",
+      "category": "introduction",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Methods",
+      "content": "Data Sources, Search Strategy, and Selection Criteria This systematic review and meta-analysis was conducted according to the Preferred Reporting Items for Systematic Reviews and Meta-Analysis Statement issued in 2009 [12]. Studies investigating the diagnostic performance of US and chest radiography for detecting pneumothorax were included, and the publication language was restricted to English. PubMed, Embase, and the Cochrane Library were systematically searched to identify potential eligible studies from their inception until March 2023. The following search terms were used: ( ' ultrasound ' or ' sonography ' or ' ultrasonography ' or ' radiography ' or ' chest /uniFB01 lm ' or ' chest radiograph ' ) and ( ' pneumothorax ' or ' aerothorax ' ) and ( ' sensitivity ' and ' speci /uniFB01 city ' ). The reference lists of relevant studies and reviews were manually reviewed to identify further eligible studies.\nTwo reviewers independently performed the literature search and study selection, and con /uniFB02 icts between reviewers were resolved via mutual discussion until a consensus was reached. Studies were included if they met the following criteria: (1) patients: trauma patients at risk of pneumothorax in the emergency department setting; (2) diagnostic tool: US and chest radiography; (3) outcomes: true- and false-positive data and true- and falsenegative data; and (4) study design: not restricted.",
+      "category": "methods",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Data Collection and Quality Assessment",
+      "content": "Two reviewers independently extracted the following information: /uniFB01 rst author ' s surname, publication year, region, sample size, mean age, male proportion, operator, sampling, disease status, diagnostic tool, true- and false-positive data, and true- and false-negative data. Then, these two reviewers assessed the quality of the included studies using the 14-item QUADAS-2 tool based on patient selection, index tests, reference standards, and /uniFB02 ow and timing. Each item was divided into low, high, and unclear risks [13]. Any disagreement between the reviewers was resolved by another reviewer by referring to the original article.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Statistical Analysis",
+      "content": "The sensitivity, speci /uniFB01 city, positive likelihood ratio (PLR), negative likelihood ratio (NLR), diagnostic score, diagnostic odds ratio (DOR), and area under the receiver operating characteristic curve (AUC) were calculated based on true- and false-positive data and true- and false-negative data. Furthermore, the bivariate generalized linear mixed model and random-effects model were used in pooled analyses [14, 15]. I 2 and Q statistics were used to assess the heterogeneity across included studies, and signi /uniFB01 cant heterogeneity was de /uniFB01 ned as an I 2 value of ≥ 50.0% or p value of < 0.10 [16, 17]. Subsequently, the ratio of diagnostic parameters for detecting pneumothorax using US and chest radiography was calculated using the random-effects model [14, 15, 18]. Subgroup analyses were performed for sensitivity, speci /uniFB01 city, PLR, NLR, DOR, and AUC based on region (Eastern and Western countries), operator (physician, radiologist, and surgeon), and sampling (consecutive and nonconsecutive sampling). Publication bias was assessed using funnel plots and Deeks ' asymmetry tests [19]. The p value for pooled conclusions was two-sided, and the inspection level was set at 0.05. All analyses were performed using STATA version 14.0 (StataCorp, TX, USA).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Ethics Statement",
+      "content": "This study is a meta-analysis, which does not involve any examination of patients. Thus, ethics approval and informed consent are not applicable.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Literature Search",
+      "content": "In total, 1,546 articles were identi /uniFB01 ed from the initial electronic search, and 1,052 studies were retained after the removal of duplicate articles. In addition, 976 studies were removed owing to irrelevant titles and abstracts, and the remaining 76 studies were retrieved for full-text evaluations. After detailed evaluations, 55 studies were removed because of the following reasons: other disease status ( n = 27), use of single diagnostic tool ( n = 21), and insuf /uniFB01 cient data ( n = 7). Reviewing the reference lists of relevant articles did not yield any new eligible study that met the inclusion criteria. Finally, the remaining 21 studies were included in the /uniFB01 nal meta-analysis (Fig. 1) [20 -40].",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Study Characteristics",
+      "content": "The characteristics of the included studies and involved patients are summarized in Table 1. From the 21 included studies, 4,087 patients with trauma were identi /uniFB01 ed, and the sample size ranged from 27 to 756. Overall, 11 studies were performed in western countries, and the remaining 10 were conducted in eastern countries. Pneumothorax was diagnosed by radiologists in 7 studies, emergency physicians in 12 studies, and surgeons in the remaining 2 studies. In total, 9 studies used consecutive sampling, whereas the remaining 12 used nonconsecutive sampling. The methodological quality of the identi /uniFB01 ed studies is presented in Table 2, and the overall quality was determined as moderate-to-high.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Sensitivity and Speci /uniFB01 city",
+      "content": "The sensitivity and speci /uniFB01 city of US for detecting pneumothorax were 0.83 (95% con /uniFB01 dence interval [CI]: 0.74 -0.89) and 0.99 (95% CI: 0.98 -1.00), respectively. Signi /uniFB01 cant heterogeneity was observed in the sensitivity ( I 2 = 90.96%; p < 0.01) and speci /uniFB01 city ( I 2 = 82.09%; p < 0.01) of US across all included studies (Fig. 2a). Furthermore, the overall sensitivity and speci /uniFB01 city of chest radiography for detecting pneumothorax were 0.37 (95% CI: 0.28 -0.47) and 1.00 (95% CI: 0.99 -1.00), respectively. Signi /uniFB01 cant heterogeneity was observed in the sensitivity ( I 2 =87.13%; p < 0.01) and speci /uniFB01 city ( I 2 = 89.52%; p < 0.01) of chest radiography across the included studies (Fig. 2b). In addition, the sensitivity of US was signi /uniFB01 cantly higher than that of chest radiography for detecting pneumothorax (ratio: 2.24; 95% CI: 1.70 -2.95; p < 0.001), whereas the speci /uniFB01 cities of US and chest radiography for detecting pneumothorax showed no statistically signi /uniFB01 cant difference (ratio: 0.99; 95% CI: 0.98 -1.00; p = 0.162). Finally, US were associated with high sensitivity than chest radiography in all subgroups, whereas no signi /uniFB01 cant difference in speci /uniFB01 city was observed between USandchest radiography in the subgroup analysis (Table 3).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "PLR and NLR",
+      "content": "The pooled PLR and NLR of US for detecting pneumothorax were 73.72 (95% CI: 44.75 -121.46) and 0.17 (95% CI: 0.11 -0.27), respectively, and signi /uniFB01 cant heterogeneity\nwas observed in PLR ( I 2 = 73.81%; p < 0.01) and NLR ( I 2 = 93.38%; p < 0.01) of US across the included studies (Fig. 3a). Moreover, the PLR and NLR of chest radiography for detecting pneumothorax were 175.59 (95% CI: 38.77 -795.28) and 0.63 (95% CI: 0.54 -0.73), respectively, and signi /uniFB01 cant heterogeneity was observed in the PLR ( I 2 = 70.72%; p < 0.01) and NLR ( I 2 = 89.67%; p < 0.01) of chest radiography across the included studies (Fig. 3b). In addition, no signi /uniFB01 cant difference in PLR was noted between US and chest radiography (ratio: 0.42; 95% CI: 0.09 -2.06; p = 0.285), whereas US was associated with lower NLR compared with chest radiography (ratio: 0.27; 95% CI: 0.17 -0.43; p < 0.001). Finally, in the subgroup analysis, no signi /uniFB01 cant difference in PLR was noted between US and chest radiography in all subgroups, whereas US was associated with lower NLR compared with chest radiography in all subgroups (Table 3).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Diagnostic Score and DOR",
+      "content": "The overall diagnostic score and DOR of US for detecting pneumothorax were 6.06 (95% CI: 5.25 -6.86) and 427.80 (95% CI: 191.13 -957.54), respectively, and signi /uniFB01 cant heterogeneity was observed in the diagnostic score ( I 2 = 84.35%; p < 0.01) and DOR ( I 2 = 100.00%; p < 0.01) of US (Fig. 4a). Furthermore, the diagnostic score and DOR of chest radiography for detecting pneumothorax were 5.63 (95% CI: 4.10 -7.17) and 279.97 (95% CI: 60.18 -1,302.39), respectively. Signi /uniFB01 cant heterogeneity was observed in the diagnostic score\nC, consecutive sampling; FN, false negative; FP, false positive; NA, not available; NC, nonconsecutive sampling; TN, true negative; TP, true positive.\n( I 2 = 71.03%; p < 0.01) and DOR ( I 2 = 100.00%; p < 0.01) of chest radiography (Fig. 4b). In addition, no signi /uniFB01 cant differences were noted in the diagnostic score (ratio: 1.08; 95% CI: 0.79 -1.47; p = 0.641) and DOR (ratio: 1.53; 95% CI: 0.27 -8.67; p = 0.632) of US and chest radiography. Finally, the results of subgroup analyses revealed that US was associated with a higher DOR than chest radiography when the studies were pooled based on eastern countries (region) and radiologists (operator) (Table 3).\nAUC\nThe AUC of US and chest radiography for detecting pneumothorax were 0.99 (95% CI: 0.98 -1.00) and 0.86 (95% CI: 0.83 -0.89), respectively (Fig. 5). The AUC of US was signi /uniFB01 cantly higher than that of chest radiography (ratio: 1.15; 95% CI: 1.11 -1.19; p < 0.001). Results of subgroup analyses revealed that compared with chest radiography, US was associated with higher AUCs in all subgroups (Table 3).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Publication Bias",
+      "content": "Reviewing the funnel plot could not rule out potential publication bias (Fig. 6). Deeks ' asymmetry tests indicated no signi /uniFB01 cant publication bias for\nthe diagnostic performance of US ( p = 0.47), whereas potential signi /uniFB01 cant publication bias was noted for the diagnostic performance of chest radiography ( p = 0.01).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Discussion",
+      "content": "This study compared the diagnostic performance of US and chest radiography for detecting pneumothorax. The overall methodological quality of the included studies was\nmoderate-to-high, and computed tomography was considered the gold standard for the diagnosis of pneumothorax [20 -40]. In total, 4,087 patients with trauma were identi /uniFB01 ed from 21 studies, and the characteristics of the patients varied across the studies. This study revealed that\nUS was associated with a higher sensitivity and AUC for detecting pneumothorax compared with chest radiography. Moreover, the NLR of US was lower than that of chest radiography. However, the speci /uniFB01 city, PLR, diagnostic score, and DOR of US and chest radiography for detecting pneumothorax showed no statistically signi /uniFB01 cant difference.\nSeveral systematic reviews and meta-analyses have previously addressed the diagnostic performance of US and chest radiography for detecting pneumothorax [41 -43]. Alrajab et al. [41] conducted a meta-analysis involving 13 articles and reported that US was more accurate than chest radiography for detecting pneumothorax; however, this study analyzed patients in trauma and nontrauma settings. A Cochrane review included nine studies and reported that the diagnostic performance of US by frontline nonradiologist physicians was better than via supine chest radiography for detecting pneumothorax in patients with trauma admitted to the emergency department [42]. Ron et al. [43] analyzed 17 studies and revealed that US showed improved sensitivity for detecting pneumothorax compared with chest radiography. However, several limitations of these previous meta-analyses must be addressed: (1) the disease states varied across the studies, including both trauma and nontrauma settings, and (2) all included studies did not provide direct comparison results for the diagnostic performance of US and chest radiography for detecting pneumothorax.\nThe current study revealed that the diagnostic performance of US was better than that of chest radiography for detecting pneumothorax in patients with trauma, revealing higher sensitivity, higher AUC, and lower NLR of the former method. The diagnostic value of US and chest radiography for detecting pneumothorax varied across the included studies, which could be explained by operator expertise and physicians employed at different academic institutions [44]. Moreover, pneumothorax could be misdiagnosed via chest radiography, especially in patients with severe injuries and those who could not be placed in an erect position.\nSubgroup analyses revealed that the sensitivity and AUC of US were higher than those of chest radiography, whereas the NLR of US was lower than that of chest radiography for detecting pneumothorax in all subgroups. Moreover, US had a higher DOR than chest radiography when studies were pooled according to location (eastern countries) and operator (radiologists). These results may be due to the following reasons: (1) signi /uniFB01 cant variability in diagnostic performance across the included studies in speci /uniFB01 c subgroups could affect the 95% CI of the pooled-effect estimates; (2) the number of studies in different subgroups varied, and the robustness of the pooled conclusions may be affected; (3) operator expertise and disease status varied across countries; and (4) the accuracy of US and chest radiography was higher when assessed by radiologists.\nThis study has several limitations. First, it included both prospective and retrospective studies, and the results may have been affected by selection and confounding biases. Second, the disease status was different across the included studies, which could affect the diagnostic performance of US and chest radiography. Third, substantial heterogeneity was noted across the included studies, which was not fully explained via subgroup analyses. Fourth, the analysis was based on published articles and previously pooled data, leading to restricted detailed analyses and inevitable publication bias.\nIn conclusion, this study revealed that the diagnostic performance of US is relatively better than that of chest radiography for detecting pneumothorax in patients with trauma, with a higher sensitivity, AUC, and lower NLR. Moreover, the DOR of US and chest radiography for detecting pneumothorax could be affected by the region and operator, and the detection rate is highly dependent on the technical expertise of the operator. Therefore, after appropriate operator training, US may be recommended for diagnosing pneumothorax in patients with trauma in clinical practice.",
+      "category": "discussion",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Statement of Ethics",
+      "content": "An ethics statement is not applicable because this study is based exclusively on published literature.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Con /uniFB02 ict of Interest Statement",
+      "content": "The authors have no con /uniFB02 icts of interest to declare.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Funding Sources",
+      "content": "This study was not supported by any sponsor or funder.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Author Contributions",
+      "content": "B.S. contributed to study design. L.T. contributed to data collection and statistical analysis. C.Z. and L.G. contributed to drafting of the manuscript and reviewing and editing of the manuscript. All authors have read and approved the /uniFB01 nal manuscript.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Data Availability Statement",
+      "content": "The authors con /uniFB01 rm that the data supporting the /uniFB01 ndings of this study are available within the article.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "References",
+      "content": "1 O ' Connor AR, Morgan WE. Radiological review of pneumothorax. BMJ. 2005; 330(7506):1493 -7. https://doi.org/10.1136/ bmj.330.7506.1493\n2 Laspas F, Roussakis A, Efthimiadou R, Papaioannou D, Papadopoulos S, Andreou J. Percutaneous CT-guided /uniFB01 ne-needle aspiration of pulmonary lesions: results and complications in 409 patients. J Med Imaging Radiat Oncol. 2008;52(5):458 -62. https://doi. org/10.1111/j.1440-1673.2008.01990.x\n3 Sugibayashi T, Walston SL, Matsumoto T, Mitsuyama Y, Miki Y, Ueda D. Deep learning for pneumothorax diagnosis: a systematic review and meta-analysis. Eur Respir Rev. 2023;32(168):220259. https://doi.org/10. 1183/16000617.0259-2022\n4 Zarogoulidis P, Kioumis I, Pitsiou G, Porpodis K, Lampaki S, Papaiwannou A, et al. Pneumothorax: from de /uniFB01 nition to diagnosis and treatment. J Thorac Dis. 2014;6(Suppl 4): S372 -6. https://doi.org/10.3978/j.issn.20721439.2014.09.24\n5 Ince A, Ozucelik DN, Avci A, Nizam O, Dogan H, Topal MA. Management of pneumothorax in emergency medicine departments: multicenter trial. Iran Red Crescent Med J. 2013;15(12):e11586. https://doi. org/10.5812/ircmj.11586\n6 Expert Panel on Thoracic Imaging; McComb BL, Chung JH, Crabtree TD, Heitkamp DE, Iannettoni MD, et al. ACR appropriateness Criteria ® routine chest radiography. J Thorac Imaging. 2016;31(2):W13 -5. https://doi.org/ 10.1097/RTI.0000000000000200\n7 Sahn SA, Heffner JE. Spontaneous pneumothorax. N Engl J Med. 2000;342(12): 8 6 8 -7 4 . htt p s : / / d o i . o r g / 1 0 . 1 0 5 6 / NEJM200003233421207\n8 Brar MS, Bains I, Brunet G, Nicolaou S, Ball CG, Kirkpatrick AW. Occult pneumothoraces truly occult or simply missed: redux. J Trauma. 2010;69(6):1335 -7. https://doi.org/ 10.1097/TA.0b013e3181f6f525\n9 Moncada DC, Rueda ZV, Macías A, Suárez T, Ortega H, Vélez LA. Reading and interpretation of chest X-ray in adults with community-acquired pneumonia. Braz J Infect Dis. 2011;15(6):540 -6. https://doi.org/10. 1016/s1413-8670(11)70248-3\n10 de Groot PM, Carter BW, Abbott GF, Wu CC. Pitfalls in chest radiographic interpretation: blind spots. Semin Roentgenol. 2015; 50(3):197 -209. https://doi.org/10.1053/j.ro. 2015.01.008\n11 Husain LF, Hagopian L, Wayman D, Baker WE, Carmody KA. Sonographic diagnosis of pneumothorax. J Emerg Trauma Shock. 2012; 5(1):76 -81. https://doi.org/10.4103/09742700.93116\n12 Moher D, Liberati A, Tetzlaff J, Altman DG; PRISMA Group. Preferred reporting items for systematic reviews and meta-analyses: the PRISMA statement. PLoS Med. 2009;6(7):\ne1000097. https://doi.org/10.1371/journal. pmed.1000097\n13 Whiting PF, Rutjes AW, Westwood ME, Mallett S, Deeks JJ, Reitsma JB, et al. QUADAS-2: a revised tool for the quality assessment of diagnostic accuracy studies. Ann Intern Med. 2011;155(8):529 -36. https://doi.org/10.7326/0003-4819-155-8201110180-00009\n14 DerSimonian R, Laird N. Meta-analysis in clinical trials. Control Clin Trials. 1986;7(3): 177 -88. https://doi.org/10.1016/01972456(86)90046-2\n15 Walter SD. Properties of the summary receiver operating characteristic (SROC) curve for diagnostic test data. Stat Med. 2002;21(9): 1237 -56. https://doi.org/10.1002/sim.1099\n16 Deeks JJ, Fellow JPHSSV, Altman DG. Analyzing data and undertaking meta-analyses. In: Higgins J, Green S, editors. Cochrane handbook for systematic reviews of interventions 501. Oxford, UK; 2008.\n17 Higgins JP, Thompson SG, Deeks JJ, Altman DG. Measuring inconsistency in metaanalyses. Bmj. 2003;327(7414):557 -60. https://doi.org/10.1136/bmj.327.7414.557\n18 Huxley Relative risk (RR), Woodward M. Cigarette smoking as a risk factor for coronary heart disease in women compared with men: a systematic review and meta-analysis of prospective cohort studies. Lancet. 2011;378(9799): 1297 -305. https://doi.org/10.1016/S01406736(11)60781-2\n19 Deeks JJ, Macaskill P, Irwig L. The performance of tests of publication bias and other sample size effects in systematic reviews of diagnostic test accuracy was assessed. J Clin Epidemiol. 2005;58(9):882 -93. https://doi. org/10.1016/j.jclinepi.2005.01.016\n20 Rowan KR, Kirkpatrick AW, Liu D, Forkheim KE, Mayo JR, Nicolaou S. Traumatic pneumothorax detection with thoracic US: correlation with chest radiography and CT-initial experience. Radiology. 2002;225(1): 210 -4. https://doi.org/10.1148/radiol. 2251011102\n21 Kirkpatrick AW, Sirois M, Laupland KB, Liu D, Rowan K, Ball CG, et al. Hand-held thoracic sonography for detecting posttraumatic pneumothoraces: the extended focused assessment with sonography for trauma (EFAST). J Trauma. 2004;57(2): 288 -95. https://doi.org/10.1097/01.ta. 0000133565.88871.e4\n22 Blaivas M, Lyon M, Duggal S. A prospective comparison of supine chest radiography and bedside ultrasound for the diagnosis of traumatic pneumothorax. Acad Emerg Med. 2005;12(9):844 -9. https://doi.org/10.1197/j. aem.2005.05.005\n23 Soldati G, Testa A, Pignataro G, Portale G, Biasucci DG, Leone A, et al. The ultrasonographic deep sulcus sign in traumatic pneumothorax. Ultrasound Med Biol. 2006;32(8):\n1157 -63. https://doi.org/10.1016/j. ultrasmedbio.2006.04.006\n24 Zhang M, Liu ZH, Yang JX, Gan JX, Xu SW, You XD, et al. Rapid detection of pneumothorax by ultrasonography in patients with multiple trauma. Crit Care. 2006;10(4):R112. https://doi.org/10.1186/cc5004\n25 Soldati G, Testa A, Sher S, Pignataro G, La Sala M, Silveri NG. Occult traumatic pneumothorax: diagnostic accuracy of lung ultrasonography in the emergency department. Chest. 2008;133(1):204 -11. https://doi.org/ 10.1378/chest.07-1595\n26 Brook OR, Beck-Razi N, Abadi S, Filatov J, Ilivitzki A, Litmanovich D, et al. Sonographic detection of pneumothorax by radiology residents as part of extended focused assessment with sonography for trauma. J Ultrasound Med. 2009;28(6):749 -55. https://doi.org/10.7863/jum.2009.28.6.749\n27 Nandipati KC, Allamaneni S, Kakarla R, Wong A, Richards N, Satter /uniFB01 eld J, et al. Extended focused assessment with sonography for trauma (EFAST) in the diagnosis of pneumothorax: experience at a community based level I trauma center. Injury. 2011; 42(5):511 -4. https://doi.org/10.1016/j.injury. 2010.01.105\n28 Nagarsheth K, Kurek S. Ultrasound detection of pneumothorax compared with chest X-ray and computed tomography scan. Am Surg. 2011;77(4):480 -3. https://doi.org/10.1177/ 000313481107700427\n29 Hyacinthe AC, Broux C, Francony G, Genty C, Bouzat P, Jacquot C, et al. Diagnostic accuracy of ultrasonography in the acute assessment of common thoracic lesions after trauma. Chest. 2012;141(5):1177 -83. https:// doi.org/10.1378/chest.11-0208\n30 Donmez H, Tokmak TT, Yildirim A, Buyukoglan H, Ozturk M, Ya ş ar Ayaz U, et al. Should bedside sonography be used /uniFB01 rst to diagnose pneumothorax secondary to blunt trauma? J Clin Ultrasound. 2012;40(3):142 -6. https://doi.org/10.1002/jcu.21884\n31 Abbasi S, Farsi D, Hafezimoghadam P, Fathi M, Zare MA. Accuracy of emergency physician-performed ultrasound in detecting traumatic pneumothorax after a 2-h training course. Eur J Emerg Med. 2013;20(3):173 -7. h t t p s : / / d o i . o r g / 1 0 . 1 0 9 7 / M E J . 0b013e328356f754\n32 Ku BS, Fields JM, Carr B, Everett WW, Gracias VH, Dean AJ. Clinician-performed beside ultrasound for the diagnosis of traumatic pneumothorax. West J Emerg Med. 2013;14(2):103 -8. https://doi.org/10.5811/ westjem.2012.12.12663\n33 Ojaghi Haghighi SH, Adimi I, Shams Vahdati S, Sarkhoshi Khiavi R. Ultrasonographic diagnosis of suspected hemopneumothorax in trauma patients. Trauma Mon. 2014;19(4): e17498. https://doi.org/10.5812/traumamon. 17498\n34 Abdulrahman Y, Musthafa S, Hakim SY, Nabir S, Qanbar A, Mahmood I, et al. Utility of extended FAST in blunt chest trauma: is it the time to be used in the ATLS algorithm? World J Surg. 2015;39(1):172 -8. https://doi. org/10.1007/s00268-014-2781-y\n35 Ziapour B, Haji HS. ' Anterior convergent ' chest probing in rapid ultrasound transducer positioning versus formal chest ultrasonography to detect pneumothorax during the primary survey of hospital trauma patients: a diagnostic accuracy study. J Trauma Manag Outcomes. 2015;9:9. https://doi.org/10.1186/ s13032-015-0030-5\n36 Kaya Ş , Çevik AA, Acar N, Döner E, Sivrikoz C, Özkan R. A study on the evaluation of pneumothorax by imaging methods in patients presenting to the emergency department for blunt thoracic trauma. Ulus Travma Acil Cerrahi Derg. 2015;21(5):366 -72. https://doi.org/10.5505/tjtes.2015.91650\n37 Vafaei A, Hatamabadi Hazard ratio (HR), Heidary K, Alimohammadi H, Tarbiyat M. Diagnostic accuracy of ultrasonography and radiography in initial evaluation of chest trauma patients. Emerg. 2016;4(1):29 -33.\n38 Subramaniam C, Chakaravarthy D A. Utility of extended focused assessment with sonography in blunt chest trauma-its clinical implication and its sensitivity compared with chest x-ray and clinical examination. J Evol Med Dent Sci. 2017; 6(04):328 -33. https://doi.org/10.14260/ jemds/2017/73\n39 Zieleskiewicz L, Fresco R, Duclos G, Antonini F, Mathieu C, Medam S, et al. Integrating extended focused assessment with sonography for trauma (eFAST) in the initial assessment of severe trauma: impact on the management of 756 patients. Injury. 2018; 49(10):1774 -80. https://doi.org/10.1016/j. injury.2018.07.002\n40 Attia YZ, Elgeleel NMA, El-Hariri HM, Ellabban GM, El-Setouhy M, Hirshon JM, et al. Comparative study of National Emergency X-Radiography Utilization Study (NEXUS) chest algorithm and extended focused assessment with sonography for trauma (E-FAST) in the early detection of blunt chest injuries in polytrauma patients. Afr J Emerg Med. 2023;13(2):52 -7. https://doi.org/10. 1016/j.afjem.2023.02.003\n41 Alrajab S, Youssef AM, Akkus NI, Caldito G. Pleural ultrasonography versus chest radiography for the diagnosis of pneumothorax: review of the literature and meta-analysis. Crit Care. 2013;17(5):R208. https://doi.org/ 10.1186/cc13016\n42 Chan KK, Joo DA, McRae AD, Takwoingi Y, Premji ZA, Lang E, et al. Chest ultrasonography versus supine chest radiography for diagnosis of pneumothorax in trauma patients in the emergency department. Cochrane Database Syst Rev. 2020;7(7): Cd013031. https://doi.org/10.1002/ 14651858.CD013031.pub2\n43 Ron E, Alattar Z, Hoebee S, Kang P, vanSonnenberg E. Current trends in the use of ultrasound over chest X-ray to identify pneumothoraces in ICU, trauma, and Acute respiratory distress syndrome (ARDS) patients. J Intensive Care Med. 2022;37(1): 5 -1 1 . h t t p s : / / d o i . o r g / 1 0 . 1 1 7 7 / 0885066620987813\n44 Ding W, Shen Y, Yang J, He X, Zhang M. Diagnosis of pneumothorax by radiography and ultrasonography: a meta-analysis. Chest. 2011;140(4):859 -66. https://doi.org/10.1378/ chest.10-2946",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    }
+  ],
+  "tables": [
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/61'}",
+      "headers": [
+        "Study",
+        "Region",
+        "Sample size",
+        "Age, years",
+        "Male, %",
+        "Operator",
+        "Sampling",
+        "Disease status",
+        "Diagnostic tool",
+        "TP",
+        "FP",
+        "FN",
+        "TN"
+      ],
+      "rows": [
+        [
+          "Rowan et al. [20] (2002)",
+          "Canada",
+          "27",
+          "42.0",
+          "92.6",
+          "Radiologist",
+          "NC",
+          "Trauma",
+          "US Chest radiography",
+          "11 4",
+          "1 0",
+          "0 7",
+          "15 16"
+        ],
+        [
+          "Kirkpatrick et al. [21] (2004)",
+          "Canada and USA",
+          "225",
+          "37.0",
+          "74.0",
+          "Surgeon",
+          "NC",
+          "Trauma",
+          "US Chest radiography",
+          "33 12",
+          "3 1",
+          "23 44",
+          "205 207"
+        ],
+        [
+          "Blaivas et al. [22] (2005)",
+          "USA",
+          "176",
+          "> 17.0",
+          "57.0",
+          "Emergency physician",
+          "NC",
+          "Trauma",
+          "US Chest radiography",
+          "52 40",
+          "1 0",
+          "1 13",
+          "122 123"
+        ],
+        [
+          "Soldati et al. [23] (2006)",
+          "Italy",
+          "186",
+          "52.4",
+          "62.9",
+          "Emergency physician",
+          "C",
+          "Trauma",
+          "US Chest radiography",
+          "55 30",
+          "0 0",
+          "1 26",
+          "130 130"
+        ],
+        [
+          "Zhang et al. [24] (2006)",
+          "China",
+          "135",
+          "45.0",
+          "84.4",
+          "Emergency physician",
+          "NC",
+          "Trauma",
+          "US Chest radiography",
+          "25 8",
+          "3 0",
+          "4 21",
+          "103 106"
+        ],
+        [
+          "Soldati et al. [25] (2008)",
+          "Italy",
+          "109",
+          "41.4",
+          "62.9",
+          "Emergency physician",
+          "C",
+          "Trauma",
+          "US Chest radiography",
+          "23 13",
+          "1 0",
+          "2 12",
+          "83 84"
+        ],
+        [
+          "Brook et al. [26] (2009)",
+          "Israel",
+          "169",
+          "31.0",
+          "85.0",
+          "Radiologist",
+          "C",
+          "Trauma",
+          "US Chest radiography",
+          "20 7",
+          "1 0",
+          "23 36",
+          "125 126"
+        ],
+        [
+          "Nandipati et al. [27] (2011)",
+          "USA",
+          "204",
+          "43.0",
+          "74.5",
+          "Emergency physician",
+          "C",
+          "Trauma",
+          "US Chest radiography",
+          "20 15",
+          "1 1",
+          "1 4",
+          "182 182"
+        ],
+        [
+          "Nagarsheth and Kurek [28] (2011)",
+          "USA",
+          "125",
+          "44.5",
+          "66.4",
+          "Surgeon",
+          "NC",
+          "Trauma",
+          "US Chest radiography",
+          "18 7",
+          "0 0",
+          "4 15",
+          "57 57"
+        ],
+        [
+          "Hyacinthe et al. [29] (2012)",
+          "France",
+          "119",
+          "39.0",
+          "82.0",
+          "Emergency physician",
+          "NC",
+          "Trauma",
+          "US Chest radiography",
+          "28 10",
+          "3 0",
+          "25 43",
+          "63 66"
+        ],
+        [
+          "Donmez et al. [30] (2012)",
+          "Turkey",
+          "68",
+          "> 18.0",
+          "NA",
+          "Radiologist",
+          "NC",
+          "Trauma",
+          "US Chest radiography",
+          "32 24",
+          "3 5",
+          "3 11",
+          "98 96"
+        ],
+        [
+          "Abbasi et al. [31] (2013)",
+          "Iran",
+          "146",
+          "37.0",
+          "87.6",
+          "Emergency physician",
+          "NC",
+          "Trauma",
+          "US Chest radiography",
+          "32 18",
+          "0 0",
+          "5 19",
+          "109 109"
+        ],
+        [
+          "Ku et al. [32] (2013)",
+          "USA",
+          "549",
+          "38.0",
+          "75.0",
+          "Emergency physician",
+          "C",
+          "Trauma",
+          "US Chest radiography",
+          "27 19",
+          "3 0",
+          "20 28",
+          "499 502"
+        ],
+        [
+          "Ojaghi Haghighi et al. [33] (2014)",
+          "Iran",
+          "150",
+          "NA",
+          "82.7",
+          "Emergency physician",
+          "NC",
+          "Trauma",
+          "US Chest radiography",
+          "50 18",
+          "0 2",
+          "2 34",
+          "98 96"
+        ],
+        [
+          "Abdulrahman et al. [34] (2015)",
+          "Qatar",
+          "305",
+          "34.0",
+          "98.0",
+          "Radiologist",
+          "C",
+          "Trauma",
+          "US Chest radiography",
+          "32 8",
+          "10 6",
+          "43 67",
+          "525 529"
+        ],
+        [
+          "Ziapour and Haji [35] (2015)",
+          "Iran",
+          "84",
+          "NA",
+          "NA",
+          "Radiologist",
+          "NC",
+          "Trauma",
+          "US Chest radiography",
+          "14 4",
+          "5 1",
+          "4 7",
+          "61 48"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/66'}",
+      "headers": [
+        "Study",
+        "Region",
+        "Sample size",
+        "Age, years",
+        "Male, %",
+        "Operator",
+        "Sampling",
+        "Disease status",
+        "Diagnostic tool",
+        "TP",
+        "FP",
+        "FN",
+        "TN"
+      ],
+      "rows": [
+        [
+          "Kaya et al. [36] (2015)",
+          "Turkey",
+          "212",
+          "45.8",
+          "67.9",
+          "Emergency physician",
+          "C",
+          "Trauma",
+          "US Chest radiography",
+          "22 8",
+          "1 0",
+          "3 15",
+          "186 187"
+        ],
+        [
+          "Vafaei et al. [37] (2016)",
+          "Iran",
+          "152",
+          "31.4",
+          "77.6",
+          "Radiologist",
+          "C",
+          "Trauma",
+          "US Chest radiography",
+          "46 37",
+          "2 7",
+          "9 18",
+          "95 90"
+        ],
+        [
+          "Subramaniam and Chakaravarthy [38] (2017)",
+          "India",
+          "140",
+          "NA",
+          "88.6",
+          "Radiologist",
+          "NC",
+          "Trauma",
+          "US Chest radiography",
+          "42 10",
+          "0 0",
+          "16 48",
+          "82 82"
+        ],
+        [
+          "Zieleskiewicz et al. [39] (2018)",
+          "France",
+          "756",
+          "37.0",
+          "82.0",
+          "Emergency physician",
+          "C",
+          "Trauma",
+          "US Chest radiography",
+          "137 73",
+          "13 0",
+          "61 125",
+          "1,284 1,290"
+        ],
+        [
+          "Attia et al. [40] (2023)",
+          "Egypt",
+          "50",
+          "37.7",
+          "82.0",
+          "Emergency physician",
+          "NC",
+          "Trauma",
+          "US Chest radiography",
+          "14 3",
+          "1 2",
+          "6 17",
+          "29 28"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/78'}",
+      "headers": [
+        "Study",
+        "Risk of bias",
+        "Risk of bias",
+        "Risk of bias",
+        "Risk of bias",
+        "Risk of bias",
+        "Applicability concerns",
+        "Applicability concerns",
+        "Applicability concerns",
+        "Applicability concerns"
+      ],
+      "rows": [
+        [
+          "Study",
+          "patient selection",
+          "index test: US",
+          "index test: CXR",
+          "reference standard",
+          "/uniFB02 ow and timing",
+          "patient selection",
+          "index test: US",
+          "index test: CXR",
+          "reference standard"
+        ],
+        [
+          "Rowan et al. [20] (2002)",
+          "High",
+          "Low",
+          "Low",
+          "Unclear",
+          "Unclear",
+          "High",
+          "Low",
+          "Low",
+          "Low"
+        ],
+        [
+          "Kirkpatrick et al. [21] (2004)",
+          "Unclear",
+          "Unclear",
+          "Unclear",
+          "Unclear",
+          "High",
+          "Low",
+          "Low",
+          "Low",
+          "Unclear"
+        ],
+        [
+          "Blaivas et al. [22] (2005)",
+          "High",
+          "Low",
+          "Low",
+          "Low",
+          "Unclear",
+          "Low",
+          "Low",
+          "Low",
+          "Low"
+        ],
+        [
+          "Soldati et al. [23] (2006)",
+          "High",
+          "Low",
+          "Unclear",
+          "Unclear",
+          "Unclear",
+          "Low",
+          "Low",
+          "Low",
+          "Low"
+        ],
+        [
+          "Zhang et al. [24] (2006)",
+          "Unclear",
+          "Low",
+          "Unclear",
+          "Unclear",
+          "High",
+          "Low",
+          "Low",
+          "Low",
+          "Low"
+        ],
+        [
+          "Soldati et al. [25] (2008)",
+          "High",
+          "Unclear",
+          "High",
+          "High",
+          "Low",
+          "High",
+          "Low",
+          "Low",
+          "Low"
+        ],
+        [
+          "Brook et al. [26] (2009)",
+          "Low",
+          "Low",
+          "Unclear",
+          "Unclear",
+          "Unclear",
+          "Low",
+          "Low",
+          "Low",
+          "Low"
+        ],
+        [
+          "Nandipati et al. [27] (2011)",
+          "Unclear",
+          "Low",
+          "Unclear",
+          "Unclear",
+          "Unclear",
+          "Low",
+          "Low",
+          "Low",
+          "Low"
+        ],
+        [
+          "Nagarsheth and Kurek [28] (2011)",
+          "High",
+          "Low",
+          "Unclear",
+          "Unclear",
+          "High",
+          "Low",
+          "Low",
+          "Low",
+          "Low"
+        ],
+        [
+          "Hyacinthe et al. [29] (2012)",
+          "Unclear",
+          "Low",
+          "Low",
+          "Low",
+          "Low",
+          "Unclear",
+          "Low",
+          "Low",
+          "Low"
+        ],
+        [
+          "Donmez et al. [30] (2012)",
+          "Unclear",
+          "Low",
+          "Unclear",
+          "Unclear",
+          "High",
+          "Unclear",
+          "Low",
+          "Low",
+          "Low"
+        ],
+        [
+          "Abbasi et al. [31] (2013)",
+          "High",
+          "Unclear",
+          "Unclear",
+          "Unclear",
+          "High",
+          "High",
+          "Low",
+          "Low",
+          "Low"
+        ],
+        [
+          "Ku et al. [32] (2013)",
+          "Low",
+          "Low",
+          "Unclear",
+          "Unclear",
+          "Unclear",
+          "Low",
+          "Low",
+          "Low",
+          "Low"
+        ],
+        [
+          "Ojaghi Haghighi et al. [33] (2014)",
+          "High",
+          "Low",
+          "Unclear",
+          "Unclear",
+          "Unclear",
+          "High",
+          "Low",
+          "Low",
+          "Low"
+        ],
+        [
+          "Abdulrahman [34] (2015)",
+          "Low",
+          "Low",
+          "Unclear",
+          "Unclear",
+          "High",
+          "Low",
+          "Low",
+          "Low",
+          "Low"
+        ],
+        [
+          "Ziapour and Haji [35] (2015)",
+          "High",
+          "Unclear",
+          "Unclear",
+          "Unclear",
+          "Unclear",
+          "Unclear",
+          "Low",
+          "Low",
+          "Low"
+        ],
+        [
+          "Kaya et al. [36] (2015)",
+          "High",
+          "Unclear",
+          "Unclear",
+          "Unclear",
+          "Unclear",
+          "Low",
+          "Low",
+          "Low",
+          "Low"
+        ],
+        [
+          "Vafaei et al. [37] (2016)",
+          "Low",
+          "High",
+          "Low",
+          "Low",
+          "Low",
+          "Low",
+          "Low",
+          "Low",
+          "Low"
+        ],
+        [
+          "Subramaniam and Chakaravarthy [38] (2017)",
+          "Unclear",
+          "Low",
+          "Unclear",
+          "Unclear",
+          "Unclear",
+          "Unclear",
+          "Low",
+          "Low",
+          "Low"
+        ],
+        [
+          "Zieleskiewicz et al. [39] (2018)",
+          "Low",
+          "Unclear",
+          "Unclear",
+          "Low",
+          "Unclear",
+          "Low",
+          "Low",
+          "Low",
+          "Low"
+        ],
+        [
+          "Attia et al. [40] (2023)",
+          "High",
+          "Low",
+          "Unclear",
+          "Unclear",
+          "Unclear",
+          "High",
+          "Low",
+          "Low",
+          "Low"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/282'}",
+      "headers": [
+        "Parameters",
+        "Factors",
+        "Subgroups",
+        "US",
+        "Chest radiography",
+        "US versus chest radiography"
+      ],
+      "rows": [
+        [
+          "Sensitivity",
+          "Region",
+          "Eastern",
+          "0.81 (0.68 - 0.89)",
+          "0.33 (0.22 - 0.48)",
+          "2.45 (1.62 - 3.71)"
+        ],
+        [
+          "Sensitivity",
+          "",
+          "Western",
+          "0.74 (0.71 - 0.78)",
+          "0.40 (0.28 - 0.54)",
+          "1.85 (1.33 - 2.58)"
+        ],
+        [
+          "Sensitivity",
+          "Operator",
+          "Physician",
+          "0.88 (0.77 - 0.94)",
+          "0.42 (0.31 - 0.54)",
+          "2.10 (1.56 - 2.81)"
+        ],
+        [
+          "Sensitivity",
+          "",
+          "Radiologist",
+          "0.77 (0.58 - 0.89)",
+          "0.32 (0.17 - 0.53)",
+          "2.41 (1.31 - 4.42)"
+        ],
+        [
+          "Sensitivity",
+          "",
+          "Surgeon",
+          "0.65 (0.54 - 0.76)",
+          "0.24 (0.15 - 0.35)",
+          "2.71 (1.72 - 4.28)"
+        ],
+        [
+          "Sensitivity",
+          "Sampling",
+          "Consecutive",
+          "0.70 (0.66 - 0.74)",
+          "0.41 (0.27 - 0.57)",
+          "1.71 (1.17 - 2.49)"
+        ],
+        [
+          "Sensitivity",
+          "",
+          "Nonconsecutive",
+          "0.84 (0.74 - 0.91)",
+          "0.35 (0.24 - 0.47)",
+          "2.40 (1.69 - 3.41)"
+        ],
+        [
+          "Speci /uniFB01 city",
+          "Region",
+          "Eastern",
+          "0.99 (0.97 -",
+          "0.99 (0.97 - 1.00)",
+          "1.00 (0.98 - 1.01)"
+        ],
+        [
+          "Speci /uniFB01 city",
+          "",
+          "Western",
+          "0.99) 0.99 (0.99 - 0.99)",
+          "1.00 (0.99 - 1.00)",
+          "0.99 (0.99 - 1.00)"
+        ],
+        [
+          "Speci /uniFB01 city",
+          "Operator",
+          "Physician",
+          "0.99 (0.99 - 1.00)",
+          "1.00 (0.99 - 1.00)",
+          "1.00 (0.99 - 1.00)"
+        ],
+        [
+          "Speci /uniFB01 city",
+          "",
+          "Radiologist",
+          "0.97 (0.96 - 0.98)",
+          "0.98 (0.96 - 0.99)",
+          "0.99 (0.97 - 1.01)"
+        ],
+        [
+          "Speci /uniFB01 city",
+          "",
+          "Surgeon",
+          "1.00 (0.94 - 1.00)",
+          "1.00 (0.98 - 1.00)",
+          "1.00 (0.97 - 1.03)"
+        ],
+        [
+          "Speci /uniFB01 city",
+          "Sampling",
+          "Consecutive",
+          "0.99 (0.99 - 0.99)",
+          "1.00 (0.98 - 1.00)",
+          "0.99 (0.98 - 1.00)"
+        ],
+        [
+          "Speci /uniFB01 city",
+          "",
+          "Nonconsecutive",
+          "0.98 (0.97 - 0.99)",
+          "0.99 (0.98 - 1.00)",
+          "0.99 (0.98 - 1.00)"
+        ],
+        [
+          "PLR",
+          "Region",
+          "Eastern",
+          "61.25 (27.69 - 135.47)",
+          "34.98 (12.40 - 98.68)",
+          "1.75 (0.47 - 6.46)"
+        ],
+        [
+          "PLR",
+          "",
+          "Western",
+          "49.60 (27.76 - 88.64)",
+          "555.73 (41.57 - 7,429.92)",
+          "0.09 (0.01 - 1.27)"
+        ],
+        [
+          "PLR",
+          "Operator",
+          "Physician",
+          "118.00 (63.31 - 219.92)",
+          "825.75 (38.10 - 17,895.20)",
+          "0.14 (0.01 - 3.30)"
+        ],
+        [
+          "PLR",
+          "",
+          "Radiologist",
+          "29.50 (18.62 - 46.74)",
+          "16.78 (9.68 - 29.09)",
+          "1.76 (0.86 - 3.60)"
+        ],
+        [
+          "PLR",
+          "",
+          "Surgeon",
+          "46.09 (16.01 - 132.73)",
+          "42.16 (8.16 - 217.73)",
+          "1.09 (0.16 - 7.71)"
+        ],
+        [
+          "PLR",
+          "Sampling",
+          "Consecutive",
+          "62.15 (36.09 - 107.04)",
+          "586.62 (27.50 - 12,512.66)",
+          "0.11 (0.00 - 2.37)"
+        ],
+        [
+          "PLR",
+          "",
+          "Nonconsecutive",
+          "53.95 (25.33 - 114.93)",
+          "61.19 (14.98 - 250.00)",
+          "0.88 (0.48 - 4.36)"
+        ],
+        [
+          "NLR",
+          "Region",
+          "Eastern",
+          "0.20 (0.11 - 0.34)",
+          "0.67 (0.55 - 0.82)",
+          "0.30 (0.16 - 0.54)"
+        ],
+        [
+          "NLR",
+          "",
+          "Western",
+          "0.23 (0.15 - 0.35)",
+          "0.60 (0.48 - 0.75)",
+          "0.38 (0.24 - 0.62)"
+        ],
+        [
+          "NLR",
+          "Operator",
+          "Physician",
+          "0.13 (0.06 - 0.25)",
+          "0.58 (0.48 - 0.71)",
+          "0.22 (0.11 - 0.47)"
+        ],
+        [
+          "NLR",
+          "",
+          "Radiologist",
+          "0.24 (0.12 - 0.47)",
+          "0.69 (0.53 - 0.90)",
+          "0.35 (0.17 - 0.72)"
+        ],
+        [
+          "NLR",
+          "",
+          "Surgeon",
+          "0.32 (0.15 - 0.66)",
+          "0.77 (0.68 - 0.87)",
+          "0.42 (0.20 - 0.88)"
+        ],
+        [
+          "NLR",
+          "Sampling",
+          "Consecutive",
+          "0.24 (0.15 - 0.39)",
+          "0.59 (0.45 - 0.77)",
+          "0.41 (0.24 - 0.70)"
+        ],
+        [
+          "NLR",
+          "",
+          "Nonconsecutive",
+          "0.16 (0.09 - 0.28)",
+          "0.66 (0.55 - 0.79)",
+          "0.24 (0.13 - 0.44)"
+        ],
+        [
+          "DOR",
+          "Region",
+          "Eastern",
+          "312.14 (105.73 - 921.51)",
+          "52.10 (18.23 - 148.84)",
+          "5.99 (1.33 - 27.07)"
+        ],
+        [
+          "DOR",
+          "",
+          "Western",
+          "298.52 (117.21 - 760.27)",
+          "930.88 (63.76 - 13,591.28)",
+          "0.32 (0.02 - 5.49)"
+        ],
+        [
+          "DOR",
+          "Operator",
+          "Physician",
+          "939.72 (311.26 - 2,837.08)",
+          "1,424.77 (62.25 - 32,607.96)",
+          "0.66 (0.02 - 18.24)"
+        ],
+        [
+          "DOR",
+          "",
+          "Radiologist",
+          "124.51 (56.49 - 274.47)",
+          "24.25 (13.10 - 44.90)",
+          "5.13 (1.89 - 13.99)"
+        ],
+        [
+          "DOR",
+          "",
+          "Surgeon",
+          "124.58 (39.12 - 396.74)",
+          "56.18 (10.41 - 303.23)",
+          "2.22 (0.29 - 17.15)"
+        ],
+        [
+          "DOR",
+          "Sampling",
+          "Consecutive",
+          "323.37 (122.23 - 855.51)",
+          "995.85 (45.82 - 21,644.62)",
+          "0.32 (0.01 - 8.20)"
+        ],
+        [
+          "DOR",
+          "",
+          "Nonconsecutive",
+          "340.39 (113.02 - 1,025.21)",
+          "93.11 (21.70 - 399.47)",
+          "3.66 (0.59 - 22.71)"
+        ],
+        [
+          "AUC",
+          "Region",
+          "Eastern",
+          "0.99 (0.97 - 0.99)",
+          "0.90 (0.87 - 0.93)",
+          "1.10 (1.06 - 1.14)"
+        ],
+        [
+          "AUC",
+          "",
+          "Western",
+          "1.00 (0.99 - 1.00)",
+          "0.91 (0.88 - 0.93)",
+          "1.09 (1.06 - 1.13)"
+        ],
+        [
+          "AUC",
+          "Operator",
+          "Physician",
+          "1.00 (0.98 - 1.00)",
+          "0.86 (0.82 - 0.88)",
+          "1.16 (1.12 - 1.20)"
+        ],
+        [
+          "AUC",
+          "",
+          "Radiologist",
+          "(0.96 - 0.99) -",
+          "0.93 (0.91 - 0.95) -",
+          "1.05 (1.03 - 1.08) -"
+        ],
+        [
+          "AUC",
+          "",
+          "Surgeon",
+          "0.98",
+          "",
+          ""
+        ],
+        [
+          "AUC",
+          "Sampling",
+          "Consecutive",
+          "1.00 (1.00 - 1.00)",
+          "0.88 (0.85 - 0.90)",
+          "1.13 (1.10 - 1.17)"
+        ],
+        [
+          "AUC",
+          "",
+          "Nonconsecutive",
+          "0.99 (0.97 - 0.99)",
+          "0.89 (0.86 - 0.92)",
+          "1.11 (1.07 - 1.15)"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    }
+  ],
+  "figures": [
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/83'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/290'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/482'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/732'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/779'}",
+      "page": null
+    }
+  ],
+  "references": [
+    {
+      "title": "Radiological review of pneumothorax"
+    },
+    {
+      "title": "BMJ",
+      "year": 2005
+    },
+    {
+      "title": "Percutaneous CT-guided fine-needle aspiration of pulmonary lesions: results and complications in 409 patients",
+      "year": 2005
+    },
+    {
+      "title": "J Med Imaging Radiat Oncol",
+      "year": 2008
+    },
+    {
+      "title": "Deep learning for pneumothorax diagnosis: a systematic review and meta-analysis",
+      "year": 2008
+    },
+    {
+      "title": "Eur Respir Rev",
+      "year": 2023
+    },
+    {
+      "title": "Pneumothorax: from definition to diagnosis and treatment",
+      "year": 2023
+    },
+    {
+      "title": "J Thorac Dis",
+      "year": 2014
+    },
+    {
+      "title": "Management of pneumothorax in emergency medicine departments: multicenter trial",
+      "year": 2014
+    },
+    {
+      "title": "Iran Red Crescent Med J",
+      "year": 2013
+    },
+    {
+      "title": "ACR appropriateness Criteria® routine chest radiography",
+      "year": 2013
+    },
+    {
+      "title": "J Thorac Imaging",
+      "year": 2016
+    },
+    {
+      "title": "Spontaneous pneumothorax",
+      "year": 2016
+    },
+    {
+      "title": "N Engl J Med",
+      "year": 2000
+    },
+    {
+      "title": "Occult pneumothoraces truly occult or simply missed: redux",
+      "year": 2000
+    },
+    {
+      "title": "J Trauma",
+      "year": 2010
+    },
+    {
+      "title": "Reading and interpretation of chest X-ray in adults with community-acquired pneumonia",
+      "year": 2010
+    },
+    {
+      "title": "Braz J Infect Dis",
+      "year": 2011
+    },
+    {
+      "title": "Pitfalls in chest radiographic interpretation: blind spots",
+      "year": 2011
+    },
+    {
+      "title": "Semin Roentgenol",
+      "year": 2015
+    },
+    {
+      "title": "Sonographic diagnosis of pneumothorax",
+      "year": 2015
+    },
+    {
+      "title": "J Emerg Trauma Shock",
+      "year": 2012
+    },
+    {
+      "title": "Preferred reporting items for systematic reviews and meta-analyses: the PRISMA statement",
+      "year": 2012
+    },
+    {
+      "title": "PLoS Med",
+      "year": 2009
+    },
+    {
+      "title": "QUADAS-2: a revised tool for the quality assessment of diagnostic accuracy studies",
+      "year": 2009
+    },
+    {
+      "title": "Ann Intern Med",
+      "year": 2011
+    },
+    {
+      "title": "Meta-analysis in clinical trials",
+      "year": 2011
+    },
+    {
+      "title": "Control Clin Trials",
+      "year": 1986
+    },
+    {
+      "title": "Properties of the summary receiver operating characteristic (SROC) curve for diagnostic test data",
+      "year": 1986
+    },
+    {
+      "title": "Stat Med",
+      "year": 2002
+    },
+    {
+      "title": "Analyzing data and undertaking meta-analyses",
+      "year": 2002
+    },
+    {
+      "title": "Cochrane handbook for systematic reviews of interventions 501",
+      "year": 2008
+    },
+    {
+      "title": "Measuring inconsistency in metaanalyses",
+      "year": 2008
+    },
+    {
+      "title": "Bmj",
+      "year": 2003
+    },
+    {
+      "title": "Cigarette smoking as a risk factor for coronary heart disease in women compared with men: a systematic review and meta-analysis of prospective cohort studies",
+      "year": 2003
+    },
+    {
+      "title": "Lancet"
+    },
+    {
+      "title": "The performance of tests of publication bias and other sample size effects in systematic reviews of diagnostic test accuracy was assessed"
+    },
+    {
+      "title": "J Clin Epidemiol",
+      "year": 2005
+    },
+    {
+      "title": "Traumatic pneumothorax detection with thoracic US: correlation with chest radiography and CT-initial experience",
+      "year": 2005
+    },
+    {
+      "title": "Radiology",
+      "year": 2002
+    },
+    {
+      "title": "Hand-held thoracic sonography for detecting posttraumatic pneumothoraces: the extended focused assessment with sonography for trauma (EFAST)",
+      "year": 2002
+    },
+    {
+      "title": "A prospective comparison of supine chest radiography and bedside ultrasound for the diagnosis of traumatic pneumothorax",
+      "year": 2004
+    },
+    {
+      "title": "Acad Emerg Med",
+      "year": 2005
+    },
+    {
+      "title": "The ultrasonographic deep sulcus sign in traumatic pneumothorax",
+      "year": 2005
+    },
+    {
+      "title": "Ultrasound Med Biol",
+      "year": 2006
+    },
+    {
+      "title": "Rapid detection of pneumothorax by ultrasonography in patients with multiple trauma",
+      "year": 2006
+    },
+    {
+      "title": "Crit Care",
+      "year": 2006
+    },
+    {
+      "title": "Occult traumatic pneumothorax: diagnostic accuracy of lung ultrasonography in the emergency department",
+      "year": 2006
+    },
+    {
+      "title": "Chest",
+      "year": 2008
+    },
+    {
+      "title": "Sonographic detection of pneumothorax by radiology residents as part of extended focused assessment with sonography for trauma",
+      "year": 2008
+    },
+    {
+      "title": "J Ultrasound Med",
+      "year": 2009
+    },
+    {
+      "title": "Extended focused assessment with sonography for trauma (EFAST) in the diagnosis of pneumothorax: experience at a community based level I trauma center",
+      "year": 2009
+    },
+    {
+      "title": "Injury",
+      "year": 2011
+    },
+    {
+      "title": "Ultrasound detection of pneumothorax compared with chest X-ray and computed tomography scan",
+      "year": 2011
+    },
+    {
+      "title": "Am Surg",
+      "year": 2011
+    },
+    {
+      "title": "Diagnostic accuracy of ultrasonography in the acute assessment of common thoracic lesions after trauma",
+      "year": 2011
+    },
+    {
+      "title": "Should bedside sonography be used first to diagnose pneumothorax secondary to blunt trauma?",
+      "year": 2012
+    },
+    {
+      "title": "J Clin Ultrasound",
+      "year": 2012
+    },
+    {
+      "title": "Accuracy of emergency physician-performed ultrasound in detecting traumatic pneumothorax after a 2-h training course",
+      "year": 2012
+    },
+    {
+      "title": "Eur J Emerg Med",
+      "year": 2013
+    },
+    {
+      "title": "M E J",
+      "year": 2013
+    },
+    {
+      "title": "Clinician-performed beside ultrasound for the diagnosis of traumatic pneumothorax"
+    },
+    {
+      "title": "West J Emerg Med",
+      "year": 2013
+    },
+    {
+      "title": "Ultrasonographic diagnosis of suspected hemopneumothorax in trauma patients",
+      "year": 2013
+    },
+    {
+      "title": "Trauma Mon",
+      "year": 2014
+    },
+    {
+      "title": "Utility of extended FAST in blunt chest trauma: is it the time to be used in the ATLS algorithm?",
+      "year": 2014
+    },
+    {
+      "title": "World J Surg",
+      "year": 2014
+    },
+    {
+      "title": "Anterior convergent&quot; chest probing in rapid ultrasound transducer positioning versus formal chest ultrasonography to detect pneumothorax during the primary survey of hospital trauma patients: a diagnostic accuracy study",
+      "year": 2015
+    },
+    {
+      "title": "J Trauma Manag Outcomes",
+      "year": 2015
+    },
+    {
+      "title": "A study on the evaluation of pneumothorax by imaging methods in patients presenting to the emergency department for blunt thoracic trauma",
+      "year": 2015
+    },
+    {
+      "title": "Ulus Travma Acil Cerrahi Derg",
+      "year": 2015
+    },
+    {
+      "title": "Diagnostic accuracy of ultrasonography and radiography in initial evaluation of chest trauma patients",
+      "year": 2015
+    },
+    {
+      "title": "Emerg",
+      "year": 2012
+    },
+    {
+      "title": "Utility of extended focused assessment with sonography in blunt chest trauma-its clinical implication and its sensitivity compared with chest x-ray and clinical examination",
+      "year": 2016
+    },
+    {
+      "title": "J Evol Med Dent Sci",
+      "year": 2017
+    },
+    {
+      "title": "Integrating extended focused assessment with sonography for trauma (eFAST) in the initial assessment of severe trauma: impact on the management of 756 patients",
+      "year": 2017
+    },
+    {
+      "title": "Comparative study of National Emergency X-Radiography Utilization Study (NEXUS) chest algorithm and extended focused assessment with sonography for trauma (E-FAST) in the early detection of blunt chest injuries in polytrauma patients",
+      "year": 2018
+    },
+    {
+      "title": "Afr J Emerg Med",
+      "year": 2023
+    },
+    {
+      "title": "Pleural ultrasonography versus chest radiography for the diagnosis of pneumothorax: review of the literature and meta-analysis",
+      "year": 2023
+    },
+    {
+      "title": "Chest ultrasonography versus supine chest radiography for diagnosis of pneumothorax in trauma patients in the emergency department",
+      "year": 2013
+    },
+    {
+      "title": "Cochrane Database Syst Rev",
+      "year": 2020
+    },
+    {
+      "title": "Current trends in the use of ultrasound over chest X-ray to identify pneumothoraces in ICU, trauma, and ARDS patients",
+      "year": 2020
+    },
+    {
+      "title": "J Intensive Care Med",
+      "year": 2022
+    },
+    {
+      "title": "Diagnosis of pneumothorax by radiography and ultrasonography: a meta-analysis",
+      "year": 2022
+    },
+    {
+      "title": "Lung US and Chest Radiography Respiration"
+    }
+  ],
+  "quality": {
+    "completeness_score": 0,
+    "has_abstract": true,
+    "abstract_source": "metadata",
+    "has_doi": true,
+    "has_full_text": true,
+    "num_sections": 21,
+    "num_tables": 4,
+    "num_figures": 7,
+    "num_references": 85
+  }
+}

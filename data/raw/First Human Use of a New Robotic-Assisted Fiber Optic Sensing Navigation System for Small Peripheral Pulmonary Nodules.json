@@ -1,0 +1,712 @@
+{
+  "metadata": {
+    "document_id": "10_1159_000498951",
+    "title": "First Human Use of a New Robotic-Assisted Fiber Optic Sensing Navigation System for Small Peripheral Pulmonary Nodules",
+    "authors": [
+      "David I.K. Fielding",
+      "Farzad Bashirzadeh",
+      "Jung Hwa Son",
+      "Maryann Todman",
+      "Adrian Chin",
+      "Lionel Tan",
+      "Karin Steinke",
+      "Morgan N. Windsor",
+      "Arthur Wai Sung"
+    ],
+    "year": 2019,
+    "journal": "Respiration",
+    "doi": "10.1159/000498951",
+    "volume": "98",
+    "issue": "2",
+    "pages": "142-150",
+    "citation": "Fielding, et al. (2019). First Human Use of a New Robotic-Assisted Fiber Optic Sensing Navigation System for Small Peripheral Pulmonary Nodules. Respiration, 98(2), 142-150. https://doi.org/10.1159/000498951",
+    "abstract": "Background: We tested a new, investigational robotic-assisted bronchoscope system with a remotely controlled catheter to access small peripheral bronchi with real-time driving under live visualization and distal tip articulation of the catheter. The unique catheter remains stationary once located at the biopsy position. Objectives: The primary objectives of this study were to evaluate the safety and feasibility of a new shape-sensing robotic bronchoscope system to bronchoscopically approach and facilitate the sampling of small peripheral pulmonary nodules of 1-3 cm. Secondary objectives included evaluating procedural characteristics and early performance trends associated with the use of the new robotic bronchoscope system. Methods: Subjects were enrolled according to study eligibility criteria at a single center. Navigation pathways were semi-automatically created using pre-procedure CT scans. Simultaneous (real-time) viewing of actual and virtual bronchi was used real time during navigation to the displayed target. An endobronchial ul- trasound mini-probe was used to confirm lesion location. Flexible 19- to 23-G needles specifically designed to accommodate tight bend radii in transbronchial needle aspiration were used along with conventional biopsy tools. Enrolled subjects completed follow-up visits up to 6 months after the procedure. Results: The study included 29 subjects with a mean lesion size of 12.2 ± 4.2, 12.3 ± 3.3, and 11.7 ± 4.1 mm in the axial, coronal, and sagittal planes, respectively. The CT bronchus sign was absent in 41.4% of cases. In 96.6% of cases, the target was reached, and samples were obtained. No device-related adverse events and no instances of pneumothorax or excessive bleeding were observed during the procedure. Early performance trends demonstrated an overall diagnostic yield of 79.3% and a diagnostic yield for malignancy of 88%. Conclusion: This new robotic-assisted bronchoscope system safely navigated to very small peripheral airways under continuous visualization, and through maintenance of a static position, it provides a unique sampling capability for the biopsy of small solitary pulmonary nodules. © 2019 S. Karger AG, Basel Results from this study were presented at the annual CHEST Meeting on November 1, 2017, as an original investigation during the Interventional Pulmonary Procedures Session by D.I.K. Fielding",
+    "abstract_source": "metadata",
+    "url": "https://karger.com/article/doi/10.1159/000498951"
+  },
+  "source_file": "First Human Use of a New Robotic-Assisted Fiber Optic Sensing Navigation System for Small Peripheral Pulmonary Nodules.json",
+  "sections": [
+    {
+      "title": "First Human Use of a New Robotic-Assisted Fiber Optic Sensing Navigation System for Small Peripheral Pulmonary Nodules",
+      "content": "David I.K. Fielding a Farzad Bashirzadeh a     Jung Hwa Son a     Maryann Todman a Adrian Chin a Lionel Tan a Karin Steinke a     Morgan N. Windsor a     Arthur Wai Sung b\na Royal Brisbane and Women's Hospital, Brisbane, QLD, Australia;  b Stanford University Medical Center, Stanford, CA, USA\nReceived: November 25, 2018 Accepted after revision: February 15, 2019 Published online: July 26, 2019",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Keywords",
+      "content": "Lung biopsy · Solitary pulmonary nodule · Robotic bronchoscopy · Lung cancer",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Abstract",
+      "content": "Background: We  tested  a  new,  investigational  robotic-assisted  bronchoscope  system  with  a  remotely  controlled catheter to access small peripheral bronchi with real-time driving under live visualization and distal tip articulation of the catheter. The unique catheter remains stationary once located at the biopsy position. Objectives: The primary objectives of this study were to evaluate the safety and feasibility of a new shape-sensing robotic bronchoscope system to bronchoscopically approach and facilitate the sampling of small peripheral pulmonary nodules of 1-3 cm. Secondary objectives  included  evaluating  procedural  characteristics and early performance trends associated with the use of the new robotic bronchoscope system. Methods: Subjects were enrolled according to study eligibility criteria at a single center.  Navigation pathways were semi-automatically created using  pre-procedure  CT  scans.  Simultaneous  (real-time) viewing of actual and virtual bronchi was used real time during navigation to the displayed target. An endobronchial ul-\ntrasound mini-probe was used to confirm lesion location. Flexible 19- to 23-G needles specifically designed to accommodate tight bend radii in transbronchial needle aspiration were used along with conventional biopsy tools. Enrolled subjects completed follow-up visits up to 6 months after the procedure. Results: The study included 29 subjects with a mean lesion size of 12.2 ± 4.2, 12.3 ± 3.3, and 11.7 ± 4.1 mm in the axial, coronal, and sagittal planes, respectively. The CT bronchus sign was absent in 41.4% of cases. In 96.6% of cases, the target was reached, and samples were obtained. No device-related adverse events and no instances of pneumothorax or excessive bleeding were observed during the procedure. Early performance trends demonstrated an overall diagnostic yield of 79.3% and a diagnostic yield for malignancy of 88%. Conclusion: This new robotic-assisted bronchoscope system safely navigated to very small peripheral airways under continuous visualization, and through maintenance of a static position, it provides a unique sampling capability for the biopsy of small solitary pulmonary nodules.\n© 2019 S. Karger AG, Basel\nResults from this study were presented at the annual CHEST Meeting on November 1, 2017, as an original investigation during the Interventional Pulmonary Procedures Session by D.I.K. Fielding.",
+      "category": "abstract",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Introduction",
+      "content": "Lung cancer remains the most common cause of cancer death in the industrialized world [1]. Recent studies prompted an uptake of CT screening for lung cancer resulting in an increasing incidence of pulmonary nodules [2,  3].  Guidelines  recommend  tissue  diagnosis  for  lesions ≥8 mm - either bronchoscopically or by CT needle sampling [4]. Bronchoscopic methods for sampling peripheral  nodules  have  improved  in  terms  of  diagnosis, progressing from X-ray fluoroscopic guidance to radial endobronchial  ultrasound  (rEBUS)  mini-probe  with guide sheath, virtual bronchoscopy, and systems combining specific biopsy instruments aligned to virtual pathways (75-80% yield) [5-7]. Electromagnetic Navigation (ENB) and ultrathin bronchoscopy are important aspects of improvements that address navigation and peripheral access difficulties [8].\nAlthough  technology  has  progressed,  the  diagnostic yield of bronchoscopic methods remains low (40-60%) compared to CT fine needle aspiration, particularly for lesions < 2 cm [7, 9]. Conversely, bronchoscopic methods of sampling small peripheral nodules have an excellent safety profile with negligible pneumothorax and bleeding risk [10]. This compares to higher pneumothorax, chest tube insertion, and admission rates after CT-guided needle sampling. Hence, there is a need for bronchoscopic approaches which improve diagnostic rates with a favorable risk profile.\nThis  first-in-human  study  evaluated  the  safety  and clinical  feasibility  of  a  novel  robotic-assisted  bronchoscope system designed to mitigate current limitations to sample solitary peripheral nodules. This system combines a robotically controlled catheter, with direct airway visualization,  navigated  through the airways along a virtual pathway to a target nodule. The robotic components allow controlled advancement of the catheter as well as fine directional movements in all planes at the catheter tip. When not being advanced, the catheter maintains a single position and angulation, with a sufficiently large internal diameter (2 mm) to allow passage of biopsy instruments.",
+      "category": "introduction",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Materials and Methods",
+      "content": "This prospective study was registered (ANZCTR: ACTRN12616001185459) and received Ethics Board approval; it was conducted at the Royal Brisbane and Women's Hospital from September 2016 to July 2017 (HREC/16/QRBW/274). Subject eligibility was based on study criteria (online suppl. 1; for all online suppl. material, see www.karger.com/doi/10.1159/000498951). The Intu-\nitive Robotic Bronchoscope System (Intuitive Surgical,   Sunnyvale, CA, USA) evaluated was the first version for human use, and it includes a planning station, a system cart with monitor to display real-time visualization (Fig. 1a), and instruments, including an articulating, flexible catheter instrument (outer diameter ∼ 3.4 mm) (Fig. 1d). The catheter incorporates a shape-sensing fiber along its entire length which provides positional and shape feedback. A video probe is used for live visualization while driving the catheter. A flexible biopsy needle (Fig. 1c), extendable up to 3 cm, was developed for the use within the periphery, and the catheter allows the use of conventional biopsy forceps, biopsy brushes, and mini-lavage compatible with a 2-mm tool channel. Once the vision probe is  removed, the operator still receives feedback through the displayed catheter shape in real time confirming non-slippage. The provided distance from the catheter tip to the lesion allows for controlled  transbronchial  needle  aspiration  (TBNA)  needle  stroke length setting and extension distance of biopsy forceps and brush. When close to the pleura, the software provides the optimal angle for  fluoroscopy,  facilitating  an  accurate  planar  view  for  perpendicular views of needle advancement. The biopsy needle can be visualized along its length, and its length can be set not only to miss the pleura but also to reach the middle of the nodule.\nThe primary feasibility endpoint evaluated the ability to access pulmonary nodule(s)  and  retrieve  tissue  sample(s)  from  a  preplanned location based on CT and identified by the planning station,  characterized  by  a  histological  or  cytological  feature  other than bronchial epithelial cells or lung parenchyma. The primary safety  endpoint  included  peri-procedure  pneumothorax  and bleeding requiring intervention. Bleeding was considered mild if suctioning  was  sufficient,  moderate  if  intervention  including wedging of the catheter or saline administration was required, and severe  if  an  intervention  including  the  placement  of  a  balloon blocker, fibrin sealant, or transfusion was required. Complications were reviewed for severity and their potential relationship to the system by an independent physician with an extensive background in interventional pulmonology.\nCategorical variables are summarized by percentage; continuous variables are summarized by mean, standard deviation, and range. Early performance trends including yield for malignancy and specificity for follow-ups up to 6 months were evaluated [11, 12]. For the comparison of branch points reached with the study system  and  conventional  bronchoscope  during  the  survey  performed, a paired t test was used with p ≤ 0.05 considered significant. The statistical software package SAS ® version 9.4 (SAS Institute, Cary, NC, USA) was used.",
+      "category": "methods",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Procedure",
+      "content": "A pre-procedure CT (non-contrast, axial volumetric acquisition  with  1-mm  reconstruction  slices  in  the  lung  window)  allowed virtual planning through semiautomatic pathway creation using Apollo ® software (Vida Diagnostics, Coralville, IA, USA). If the pathway did not reach the target, manual segmentation of all airways in the vicinity of the lesion was performed. The procedures were performed by 2 experienced interventional pulmonologists  with  23  and  15  years  of  experience,  respectively.  All cases were performed with endotracheal intubation under general anesthesia; in most cases, muscle relaxants were also administered. The size of the endotracheal tube used ranged from 7.5 to 9 mm, with 8 mm being the most common size used. Conventional bronchoscopy (P180; Olympus Medical Systems, To-\nkyo, Japan; 4.4 mm) was performed prior to catheter insertion to inspect airways and clear secretions. The system was docked on  the  housing  of  a  swivel  connector  connected  to  a  conventional endotracheal tube. The catheter passed through the swivel connector and endotracheal tube into the trachea. The robotic catheter was manipulated with a trackball/scroll wheel user interface.  To  align  actual  and  virtual  bronchi,  registration  was performed  by  driving  the  catheter  through  segments  of  both bronchial tree sides. Navigation followed the virtual pathway using live visualization of the airways, which was simultaneously displayed next to the virtual pathway on the system cart monitor (Fig. 2a). Prior to sampling, the catheter was locked in a stationary position, and the optic was removed; a 1.7-mm rEBUS miniprobe (Olympus Australia Pty Ltd, Victoria, Australia) was deployed after navigation was completed to refine biopsy positioning.  Sampling  at  the  discretion  of  the  physician  included TBNA using system-specific needles as well as conventional biopsy tools.  ROSE was available for TBNA, forceps, and brush samples [13]. Catheter tip redirection enabled directed sampling from different parts of the lesion as shown by the virtual view (Fig. 2b, c).\nFluoroscopy was used during biopsies and to assess for pneumothorax during and at the end of the procedure. Prior to extubation, the airways were visually inspected for bleeding or injury. A chest X-ray was performed at least 2 h after the procedure to assess delayed pneumothorax. All subjects were required to complete 3\npre-specified follow-up visits (7 days, 3 months and 6 months) unless a subsequent diagnostic or therapeutic intervention was performed. Disease assessment used pathology from the sample obtained through the study procedure and confirmed through up to 6 months per standard of care.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Results",
+      "content": "Thirty subjects underwent a biopsy attempt; 1 subject was later found to be ineligible due to previous radiotherapy  and  was  excluded  from  the  analysis.  The mean patient  age  was  63.2  years  ±  9.7  years,  with  an almost even distribution of gender. The most commonly reported comorbidities included chronic obstructive pulmonary disease, prior history of extrapulmonary  malignancy,  and  hypertension.  Eleven  subjects (36.7%)  had  previously  undergone  biopsy  attempts (Table 1).\nCharacteristics  of  target  solitary  peripheral  nodules are provided in Table 2; notably, in the axial dimension, 23 nodules (79.3%) were < 2 cm in the largest diameter.\nThe majority of nodules were in the upper lobes (69%) (online suppl. Fig. 1). rEBUS visualization was reported for 27 (93.1%) subjects with 1 additional subject visualized on rEBUS; however, the image pattern was not recorded. Only 17 (58.6%) lesions had a bronchus sign visible on CT, and approximately half of the cases had an eccentric  rEBUS  image.  When  catheter  advancement was  challenging  in  very  small  peripheral  airways  in  a small number of cases and the target was reachable per virtual distance, the rEBUS probe was extended, and the best angle of the catheter giving the best rEBUS image was held.\nProcedure characteristics are provided in Table 3. Procedure time, defined as catheter insertion to removal, was 63.9 ± 24.4 min; mean procedure time of the first and last 5 cases was approximately 95 and 61 min, respectively. The mean number of biopsy attempts, characterized by a series of tool passes and subsequent repositioning of the catheter, was 2.6 ± 1.8. The most common needles sizes\nwere 21 + 23 G (24.1%) and 19 + 21 G (24.1%). Furthermore, the catheter instrument reached significantly further than the standard bronchoscope used; a comparison of  branch  points  reached  yielded  a  mean  difference  of 2.21 ± 1.2 (95% confidence interval, CI: 1.76-2.67, p < 0.001).\nThere were no instances of pneumothorax Odds ratio (or) bleeding requiring  intervention  observed  (95%  CI:  0.0-11.9%), and no airway injury was reported. No instances of unexpected bleeding, which included any type of bleeding that required prolonged or continuous suction, were reported. Although the vision probe is removed to facilitate the introduction of biopsy tools through the catheter, there were no concerns regarding the absence of live visualization during the biopsy as fluoroscopy provided feedback over the tool-tissue and tool-catheter interaction. No complications were related to the study system; 2 subjects experienced procedure-related complications (CTCAE > 2): 1 subject experienced an adverse reaction\nTarget guidance view\nLive camera view\nDistance 18.4 mm\n1\n0\n2\nDistance\n9.9 mm\nControl modes\nControl\nPark\nPositive\n8\nControl modes\nActuation information\nControl modes\nActuation information\nLive camera view\na\nc\nb\nwith shape-sensing fiber displaying the position of the catheter in the airways. Real-time fluoroscopy view demonstrates the catheter position through tortuous airways with a system-specific biopsy needle extended during the biopsy attempt.\nto  a  muscle  relaxant  resulting  in  delayed  re-paralysis, which resolved with additional administration of a muscle  relaxant  reversal  agent  and  overnight  observation. After being discharged, another subject developed contralateral bronchopneumonia the day following the procedure,  which  resolved  after  hospital  admission  and standard  treatment  including  intravenous  antibiotics, nebulized  bronchodilators,  oral  steroids,  and  physiotherapy (Table 3). Most subjects (86.2%) were discharged the same day with a mean length of stay of 5.2 ± 0.6 h; with regard to the 4 overnight hospital admissions, only 1  was  for  a  clinical  observation  of  the  muscle  relaxant\ncomplication,  while  the  other  3  admissions  were  preplanned.\nThe primary feasibility  endpoint  (Table  4)  was  achieved in 28 (96.6%) cases where the target nodule was reached with a tissue sample supportive of a histological or cytological  assessment with feature(s) other than bronchial epithelial cells or lung parenchyma obtained. The nodule in the first case (11.1 mm in diameter in the apical segment of the right upper lobe) was not reached, likely due to system acclimation and a challenging nodule location. Early performance trends through the 6-month followup  demonstrated  an  overall  diagnostic  yield  of  79.3% (95% CI: 60.3-92.0%), with a diagnostic yield for malignancy  (sensitivity)  trending  towards  88.2%  (95%  CI: 63.6-98.5%) and specificity trending towards 63.6% (95% CI: 30.8-89.1%). However, it should be noted that this was not designed as a performance study.",
+      "category": "results",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Discussion/Conclusion",
+      "content": "The results of the first-in-human evaluation of a novel robotic bronchoscope system in a cohort of very small peripheral  nodules  are  very  encouraging.  The  system demonstrated a strong safety profile, with no instances of pneumothorax or bleeding observed. The majority of the procedure-related complications reported are commonly associated with the use of an endotracheal tube or general anesthesia.\nRegarding safety, the non-slippage of the catheter, the combination with fluoroscopy, and a continuous virtual display of the actual catheter position confirmed that no inadvertent movement of the catheter occurred. No bronchial injury occurred because forward movement of the catheter was only possible when the visualizing optic was in situ. Of note, while no bleeding was observed, bleeding management  training  in  a  preclinical  setting  is  worth mentioning. This experience confirmed the catheter can stop bleeding by tamponading the airway where it sits, similar  to  the  guide  sheath  used  in  rEBUS  procedures, which  have  a  low  incidence  of  bleeding  [14].  Airway bleeding can be detected when the vision probe is reinserted  during  repositioning  throughout  the  procedure. The absence of bleeding was confirmed by visual inspection at the end of the procedure. If bleeding had occurred, it could have been managed through the deployment of an endoluminal tamponade balloon through the catheter or through quick system disengagement allowing access for intervention. Additionally, while the observed pneumothorax rate in this first human use experience is 0%,\nData are numbers (%) unless indicated otherwise. The ECOG performance status describes, on a scale from 0 to 5, a patient's activity level in terms of their ability to care for themselves, daily activity, and physical ability [25]. Comorbidities are not mutually exclusive as subjects may have had >1 comorbidity. Chronic obstructive pulmonary disease (COPD), chronic obstructive pulmonary disease; SPN, solitary peripheral nodules\nwhich is  consistent  with  the  expected  rate  for  biopsies performed bronchoscopically, it is important to note that lesions for enrolled subjects were at least 15 mm from the visceral pleura, which may have influenced the observed pneumothorax incidence.\nThe methodology is similar to the principles of virtual bronchoscopy [15], enabling good decision making at peripheral branch points. Navigating the thin catheter into  the  periphery  under  real-time  visualization  displayed several smaller airways not visible on CT. Also, we could visualize subtle endobronchial disease in very peripheral parts of the lung and directly take endobronchial brushes and biopsies. As shown in the rEBUS images, half of the lesions were extrinsic to the bronchus, so\nit was important that peripheral airway visualization enabled better decision making for the TBNA needle deployment site, specifically the most perpendicular location to facilitate the exit of the needle from the bronchus towards the lesion. The controlled articulation provided by the system facilitated optimal rEBUS operation, refining the technique described by Kurimoto et al. [16] to find the best bronchoscope angulation for the best Endobronchial ultrasound (EBUS) image,  after  which  samples  are  taken  through  a  guide sheath. Other dedicated navigational methods [17, 18] rely on virtual redirection of the catheter, theoretically making subtle  adjustments  of  the  catheter  position  in small airways more difficult. The facilitation of these fine adjustments enabled the biopsy of different areas of the same target with subtle distal tip adjustments or movements, or a cloud biopsy approach, which was utilized to obtain tissue samples from locations around the target nodule location.\nThrough CT planning, we could segment a path to the nodule in all cases, even for very peripheral lesions. The eligibility criteria required pulmonary nodules to be bronchoscopically accessible within 3 cm on CT reconstruction through the planning software, which was visually assessed by the physician planning and performing the procedure, and may have provided the physician with an initial idea as to the virtual proximity of the nodule. The ability to perform manual segmentation was helpful for bronchus signnegative lesions as landmarks including pulmonary vasculature  were  used  to  complete  segmentation  of  the  path. Therefore, despite CT bronchus sign absence in more than 40% of subjects, over 93% of the nodules were visible using rEBUS.\nWang-Memoli et al. [7] reported a meta-analysis of studies utilizing complementary technologies in the diagnosis of peripheral nodules , establishing the weighted yield  as  significantly  better  than  that  of  conventional bronchoscopy, but the yield still remains lower than that of  transthoracic  needle  aspiration  [9].  The  diagnostic yields of lesions ≤20 mm were reported as 60.9% (95% CI,  54.0-67.7%)  and  82.5%  (95%  CI,  78.6-86.4%)  respectively,  although  it  should  be  noted  that  the  metaanalysis included both benign and malignant yields. Although this current series was a first-in-human use of novel technology with a mean lesion size < 2 cm, early performance trends in a population of mostly small peripheral lesions demonstrated a diagnostic yield for malignancy > 85%. Of note, the population enrolled in this study had a moderate likelihood of malignancy or suspicion of metastatic disease, as the highest likelihood for malignancy was 67.4%. More so than with nonactuated\nTarget nodule size (mean ± SD) [range], mm\nAxial diameter\nCoronal diameter\nSagittal diameter\nLargest diameter in any dimension\n12.2±4.2 [ 6.7-22.0 ]\n12.3±3.3 [ 5.9-21.1 ]\n11.7±4.1 [ 4.5-26.4 ]\n14.8±4.5 [ 10.0-26.4 ]\nNodule/lesion location, n (%)\nLeft upper lobe\nLeft lower lobe\nRight upper lobe\nRight middle lobe\nRight lower lobe\n9 (31.0)\n2 (6.9)\n11 (37.9)\n2 (6.9)\n5 (17.2)\nendoluminal  devices,  distal  tip  articulation  facilitated orientation of instruments by gently deforming the airway towards the target which may contribute to these performance trends.\nFurthermore, studies by Minezawa et al. [19] and Nakai et al. [20] have described the impact of a bronchus sign as an influential factor for the diagnostic yield in nonnavigational  bronchoscopic  cases.  Electromagnetic  navigation has been described elsewhere. One study [21] showed that the diagnostic yield of rEBUS combined with ENB (88%) was greater than that of rEBUS (69%) Odds ratio (or) ENB alone (59%; p = 0.02). The yield of the combined procedure was independent of lesion size Odds ratio (or) lobar distribution. In another  study  [22]  utilizing  electromagnetic  navigation  with Endobronchial ultrasound (EBUS) at completion of navigation, the diagnostic yield was 93% when Endobronchial ultrasound (EBUS) verified the lesion location but only 48% when the location was not confirmed in lesions with a mean diameter of 23.3 mm. Notably, many studies evaluating ENB required subjects to have a bronchus sign or to be of much larger nodule size, which have been shown\nOTS, off the shelf; BAL, bronchoalveolar lavage; CI, confidence interval.\n1 The excluded subject was included in the safety analysis due to the design of this study.\n2 Defined as time from catheter in to catheter out.\n3 One subject may have more than 1 response, so overall counts and percentages may not add up.\n4 Complications included sore throat/throat pain, unrelated chest infection, headache, or nausea. Unrelated chest  infections  include  pseudomonas  in  a  bronchus  unrelated  to  the  nodule  in  1  subject  with  a  previous tracheostomy and 1 subject reporting a self-limiting respiratory infection approximately 5.5 months after the procedure.\n1 When the pathologic size was not available, the largest diameter of the target nodule was used as approximation of the tumor size. Tumor size was  provided  for  all  nodules  with  malignant  assessment  through  the follow-up.\nto  be  factors  influencing  the  diagnostic  yield  [11],  and these results have not been able to be reproduced consistently outside of a controlled research setting [23].\nOf note, Rojas-Solano et al. [24] published a first human use case series evaluating the feasibility of a different robotic bronchoscopy system with an outer diameter of 3.2 mm and a 1.2-mm working channel. A total of 15 subjects underwent bronchoscopy with the robotic system, and no instances of pneumothorax or bleeding requiring intervention were reported for tissue acquired in 93% of the subjects. While the initial safety and feasibility results are similar in the current series, it should be noted that median lesion size was 26 mm with a range up to 63 mm, and subjects  were  selected  based  on  the  presence  of  a bronchus sign ,whereas in the current series subjects had both bronchus sign present and absent, and a mean nodule size of approximately 14.8 mm and a range up to 26.6 mm.\nSome potential limitations are worth mentioning. rEBUS was used for lesion location confirmation at the end of  navigation;  most  studies  of  dedicated  navigational bronchoscopy utilize rEBUS, and the catheter design facilitated quick deployment of the rEBUS probe to allow the choice of needle aspiration in cases where there was an  eccentric  image.  Secondly,  the  procedures  required general anesthesia and endotracheal intubation to allow stabilization of the robotic catheter insertion. Many bronchoscopy units  perform  general  anesthetic  procedures; however, the requirement for a deeper level of anesthesia may limit applicability to patients with higher ASA status or for units that perform peripheral bronchoscopy under conscious sedation. With regard to the study, this was a single center study with 2 experienced operators and a controlled population. However, selection was in accordance with bronchoscopy guidelines and not based on lesion location or bronchus sign. Lastly, the 6-month follow-up period of this study was to ensure safety and feasibility;  studies which focus on diagnostic performance may require a longer follow-up.\nIn conclusion, this new robotic bronchoscopy system shows great promise for safe and effective sampling of small peripheral pulmonary nodules. Multicenter studies are planned to assess its performance in a larger cohort and confirm the results of this study.",
+      "category": "discussion",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Acknowledgment",
+      "content": "The authors thank Dr. Oksana Kozlova, PhD, for conducting the statistical analysis. The authors also thank Intuitive Surgical for sponsoring  this  study  and  acknowledge  Oliver  Wagner,  MD\n(Medical Officer and Vice President, Endoluminal- Intuitive Surgical) and Sundeep Master (Manager, Clinical Affairs - Intuitive Surgical) for supporting this study.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Statement of Ethics",
+      "content": "This  study  was  conducted  in  accordance  with  the  amended Declaration of Helsinki. The Royal Brisbane and Women's Human Research Ethics Committee (HREC) approved the protocol, and written informed consent was obtained from all participating subjects.\nThis study was registered at the Australian New Zealand Clinical Trial Registry (ACTRN12616001185459).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Disclosure Statement",
+      "content": "The authors report no conflict of interest for any author related to this effort with the exception of sponsorship for study planning and execution by Intuitive Surgical.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Funding Sources",
+      "content": "This study was sponsored by Intuitive Surgical Inc., Sunnyvale, CA, USA, with local sponsorship in Australia provided by the Pacific Clinical Research Group, Inc. Intuitive Surgical reviewed this manuscript to confirm the technical details about the studied device.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Author Contributions",
+      "content": "All authors made substantial contributions to the study conduct  and  manuscript  review,  including  study  design  (D.I.K.F., F.B.), data acquisition (D.I.K.F., F.B., J.H.S., M.T., A.C., L.T., K.S., M.N.W.), data interpretation (D.I.K.F., F.B.), safety review (A.W.S.), radiographic image review and data acquisition (K.S.), manuscript  writing  (D.I.K.F.),  critical  revisions  (D.I.K.F.,  F.B., K.S., A.C., A.W.S., M.N.W.), and study oversight, review of and approval of the manuscript (all authors). The corresponding author  (D.I.K.F.)  is  accountable  for  accuracy  and  integrity  of  the work.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "References",
+      "content": "1  Cheng TY, Cramb SM, Baade PD, Youlden DR, Nwogu C, Reid ME. The International Epidemiology of Lung Cancer: Latest Trends, Disparities, and  Tumor  Characteristics. J Thorac Oncol. 2016; 11(10): 1653-71.\n2  Aberle DR, Adams AM, Berg CD, Black WC, Clapp  JD,  Fagerstrom  RM,  et  al.;  National Lung  Screening  Trial  Research  Team.  Reduced  lung-cancer  mortality  with  low-dose computed tomographic screening. N Engl J Med. 2011 Aug; 365(5): 395-409.\n3  Fintelmann  FJ,  Gottumukkala  RV,  McDermott S, Gilman MD, Lennes IT, Shepard JO. Lung  Cancer  Screening:  Why,  When,  and How? Radiol Clin North Am. 2017 Nov; 55(6): 1163-81.\n4  Rivera MP, Mehta AC, Wahidi MM. Establishing the diagnosis of lung cancer: Diagnosis and management of lung cancer, 3rd ed: American  College  of  Chest  Physicians  evidence-based clinical practice guidelines. Chest. 2013; 143(5 Suppl):e142S-e165S.\n5  Ishida T, Asano F, Yamazaki K, Shinagawa N, Oizumi S, Moriya H, et al.; Virtual Navigation in Japan Trial Group. Virtual bronchoscopic navigation combined with endobronchial ultrasound to diagnose small peripheral pulmonary lesions: a randomised trial. Thorax. 2011 Dec; 66(12): 1072-7.\n6  Asano F. Advanced bronchoscopy for the diagnosis of peripheral pulmonary  lesions. Respir Investig. 2016 Jul; 54(4): 224-9.\n7  Wang  Memoli  JS,  Nietert  PJ,  Silvestri  GA. Meta-analysis of guided bronchoscopy for the evaluation of the pulmonary nodule. Chest. 2012 Aug; 142(2): 385-93.\n8  Oki M, Saka H, Ando M, Asano F, Kurimoto N, Morita K, et al. Ultrathin Bronchoscopy with Multimodal Devices for Peripheral Pulmonary Lesions. A Randomized Trial. Am J Respir Crit Care Med. 2015 Aug; 192(4): 468-76.\n9  Wong KY, Tse HN, Pak KK, Wong CC, Lok PS, Chan KC, et al. Integrated use of virtual bronchoscopy  and  endobronchial  ultrasonography on the diagnosis of peripheral lung lesions. J Bronchology Interv Pulmonol. 2014 Jan; 21(1): 14-20.\n10  Asano F, Aoe M, Ohsaki Y, Okada Y, Sasada S, Sato S, et al. Complications associated with endobronchial ultrasound-guided transbronchial needle aspiration: a nationwide survey by the Japan Society for Respiratory Endoscopy. Respir Res. 2013 May; 14(1): 50.\n11  Gex G, Pralong JA, Combescure C, Seijo L, Rochat  T,  Soccal  PM.  Diagnostic  yield  and safety  of  electromagnetic  navigation  bronchoscopy for lung nodules: a systematic review  and  meta-analysis.  Respiration.  2014; 87(2): 165-76.\n12  MedCalc Statistical Software version 18.5. Ostend:  MedCalc  Software  bvba;  2018.  http:// www.medcalc.org.\n13  Izumo T, Matsumoto Y, Sasada S, Chavez C, Nakai T, Tsuchida T. Utility of rapid on-site cytologic  evaluation  during  endobronchial ultrasound with a guide sheath for peripheral pulmonary  lesions.  Jpn  J  Clin  Oncol.  2017 Mar; 47(3): 221-5.\n14  Hayama M, Izumo T, Matsumoto Y, Chavez C, Tsuchida T, Sasada S. Complications with Endobronchial Ultrasound with a Guide Sheath for the Diagnosis of Peripheral Pulmonary  Lesions.  Respiration.  2015; 90(2): 12935.\n15  Oshige M, Shirakawa T, Nakamura M, Mineshita M, Kurimoto N, Miyazawa T, et al. Clinical application of virtual bronchoscopic navigation system for peripheral lung lesions. J Bronchology  Interv  Pulmonol.  2011  Apr; 18(2): 196-202.\n16  Kurimoto N, Miyazawa T, Okimasa S, Maeda A, Oiwa H, Miyazu Y, et al. Endobronchial ultrasonography using a guide sheath increases the ability to diagnose peripheral pulmonary lesions endoscopically. Chest. 2004 Sep; 126(3): 959-65.\n17  Eberhardt R, Anantham D, Ernst A, FellerKopman D, Herth F. Multimodality bronchoscopic diagnosis of peripheral lung lesions: a randomized controlled trial. Am J Respir Crit Care Med. 2007 Jul; 176(1): 36-41.\n18  Krochmal R, Arias S, Yarmus L, Feller-Kopman D, Lee H. Diagnosis and management of pulmonary nodules. Expert Rev Respir Med. 2014 Dec; 8(6): 677-91.\n19  Minezawa T, Okamura T, Yatsuya H, Yamamoto  N,  Morikawa  S,  Yamaguchi  T,  et  al. Bronchus sign on thin-section computed tomography is a powerful predictive factor for successful transbronchial biopsy using endobronchial ultrasound with a guide sheath for small peripheral lung lesions: a retrospective observational  study.  BMC  Med  Imaging. 2015 Jun; 15(1): 21.\n20  Nakai T, Matsumoto Y, Suzuk F, Tsuchida T, Izumo T. Predictive factors for a successful diagnostic bronchoscopy of ground-glass nodules.  Ann  Thorac  Med.  2017  Jul-Sep; 12(3): 171-6.\n21  Herth FJ, Eberhardt R. Endobronchial ultrasound and electromagnetic navigation bronchoscopy in the diagnosis of peripheral lung lesions. Expert Opin Med Diagn. 2008 May; 2(5): 461-6.\n22  Eberhardt R, Morgan RK, Ernst A, Beyer T, Herth FJ. Comparison of suction catheter versus  forceps  biopsy  for  sampling  of  solitary pulmonary nodules guided by electromagnetic  navigational  bronchoscopy.  Respiration. 2010; 79(1): 54-60.\n23  Ost DE, Ernst A, Lei X, Kovitz KL, Benzaquen S, Diaz-Mendoza J, et al.; AQuIRE Bronchoscopy Registry. Diagnostic Yield and Complications of Bronchoscopy for Peripheral Lung Lesions. Results of the AQuIRE Registry. Am J Respir Crit Care Med. 2016 Jan; 193(1): 6877.\n24  Rojas-Solano JR, Ugalde-Gamboa L, Machuzak M. Robotic Bronchoscopy for Diagnosis of Suspected Lung  Cancer:  A  Feasibility Study. J Bronchology Interv Pulmonol. 2018 Jul; 25(3): 168-75.\n25  Oken M, Creech R, Tormey D, Horton J, Davis TE, McFadden ET, et al. Toxicity and response  criteria  of  the  Eastern  Cooperative Oncology  Group.  Am  J  Clin  Oncol.  1982 Dec(6); 5: 649-55.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    }
+  ],
+  "tables": [
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/110'}",
+      "headers": null,
+      "rows": [
+        [
+          "Age (mean ± SD), years",
+          "63.2±9.7"
+        ],
+        [
+          "Range",
+          "41.0-79.0"
+        ],
+        [
+          "BMI (mean ± SD), kg/m 2",
+          "26.7±6.6"
+        ],
+        [
+          "Range",
+          "16.3-41.1"
+        ],
+        [
+          "Gender",
+          ""
+        ],
+        [
+          "Male:female ratio",
+          "14:15"
+        ],
+        [
+          "ECOG performance status",
+          ""
+        ],
+        [
+          "Grade 0",
+          "16 (55.2)"
+        ],
+        [
+          "Grade 1",
+          "12 (43.3)"
+        ],
+        [
+          "Grade 2",
+          "1 (3.3)"
+        ],
+        [
+          "American Society of Anesthesiologists",
+          ""
+        ],
+        [
+          "Class 2",
+          "21 (72.4)"
+        ],
+        [
+          "Class 3",
+          "8 (27.6)"
+        ],
+        [
+          "Subjects with comorbidities",
+          "29 (100.0)"
+        ],
+        [
+          "COPD",
+          "13 (44.8)"
+        ],
+        [
+          "Prior cancer/history of other malignancy",
+          "13 (44.8)"
+        ],
+        [
+          "Hypertension",
+          "12 (41.4)"
+        ],
+        [
+          "Emphysema",
+          "9 (31.0)"
+        ],
+        [
+          "Cardiovascular disease",
+          "7 (24.1)"
+        ],
+        [
+          "Diabetes",
+          "4 (13.8)"
+        ],
+        [
+          "Family history of lung cancer",
+          "2 (6.9)"
+        ],
+        [
+          "Esophageal stricture",
+          "1 (3.4)"
+        ],
+        [
+          "Other nonrespiratory comorbidities",
+          "11 (36.7)"
+        ],
+        [
+          "Other respiratory comorbidities",
+          "5 (16.6)"
+        ],
+        [
+          "Smoking status",
+          ""
+        ],
+        [
+          "Current smokers",
+          "11 (37.9)"
+        ],
+        [
+          "Previous smokers",
+          "15 (51.7)"
+        ],
+        [
+          "No history of smoking",
+          "3 (10.3)"
+        ],
+        [
+          "Likelihood of SPN (mean ± SD)",
+          "24.8±17.4"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "",
+      "headers": null,
+      "rows": [
+        [
+          "Lesion position by number of airway generations",
+          "Lesion position by number of airway generations"
+        ],
+        [
+          "Mean ± SD [ range ]",
+          "6.7±1.4 [ 3.0-9.0 ]"
+        ],
+        [
+          "Nodule edge characteristics, n (%)",
+          ""
+        ],
+        [
+          "Smooth",
+          "4 (13.8)"
+        ],
+        [
+          "Lobulated",
+          "8 (27.6)"
+        ],
+        [
+          "Spiculated",
+          ""
+        ],
+        [
+          "Slightly irregular",
+          "10 (34.5)"
+        ],
+        [
+          "Grossly irregular",
+          "5 (17.2)"
+        ],
+        [
+          "Other",
+          "2 (6.9)"
+        ],
+        [
+          "Irregular, feature of subsegmental",
+          ""
+        ],
+        [
+          "atelectasis",
+          "1"
+        ],
+        [
+          "Smooth and lobulated",
+          "1"
+        ],
+        [
+          "Nodule type, n (%)",
+          ""
+        ],
+        [
+          "Solid",
+          "23 (79.3)"
+        ],
+        [
+          "Semisolid/partly solid",
+          "5 (17.2)"
+        ],
+        [
+          "Ground glass/nonsolid",
+          "1 (3.4)"
+        ],
+        [
+          "CT bronchus sign, n (%)",
+          ""
+        ],
+        [
+          "Present",
+          "17 (58.6)"
+        ],
+        [
+          "Absent",
+          "12 (41.4)"
+        ],
+        [
+          "EBUS characteristic, n (%)",
+          ""
+        ],
+        [
+          "Concentric",
+          "14 (48.3)"
+        ],
+        [
+          "Eccentric",
+          "13 (44.8)"
+        ],
+        [
+          "Not visible",
+          "1 (3.3)"
+        ],
+        [
+          "Not reported",
+          "1 (3.3)"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/150'}",
+      "headers": null,
+      "rows": [
+        [
+          "Means ± SD (ranges)",
+          ""
+        ],
+        [
+          "Bronchoscopy suite time, min",
+          "103.6±33.5 (60.0-209.0)"
+        ],
+        [
+          "Procedure time 2 , min",
+          "63.9±24.4 (26.0-141.0)"
+        ],
+        [
+          "Anesthesia time, min",
+          "93.8±30.1 (46.0-193.0)"
+        ],
+        [
+          "Fluoroscopy time, min",
+          "11.0±4.8 (2.0-22.0)"
+        ],
+        [
+          "Biopsy attempts, n",
+          "2.6±1.8 (1.0-7.0)"
+        ],
+        [
+          "Sampling method - overall, n 3",
+          ""
+        ],
+        [
+          "System-specific biopsy needle",
+          "28 (96.6%)"
+        ],
+        [
+          "OTS brush",
+          "22 (75.9%)"
+        ],
+        [
+          "OTS forceps",
+          "20 (69.0%)"
+        ],
+        [
+          "OTS BAL/wash",
+          "25 (86.2%)"
+        ],
+        [
+          "Periprocedural pneumothorax, all grades, n",
+          "0 (0%)"
+        ],
+        [
+          "95% exact Clopper-Pearson binomial CI",
+          "0.0-11.9%"
+        ],
+        [
+          "Periprocedural bleeding, all grades, n",
+          "0 (0%)"
+        ],
+        [
+          "95% exact Clopper-Pearson binomial CI",
+          "0.0-11.9%"
+        ],
+        [
+          "Device-related complications, n",
+          "0 (0%)"
+        ],
+        [
+          "CTCAE >2 complications reported, n",
+          "2"
+        ],
+        [
+          "Adverse reaction to anesthesia",
+          "1"
+        ],
+        [
+          "Contralateral pneumonia",
+          "1"
+        ],
+        [
+          "CTCAE ≤2 complications reported, n 4",
+          "8"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/156'}",
+      "headers": [
+        "Target nodule reached and sample obtained, n (%) 95% CI",
+        "28 (96.6) 82.2-99.9%"
+      ],
+      "rows": [
+        [
+          "Diagnostic yield trend - sample obtained by system, n (%)",
+          "23 (79.3)"
+        ],
+        [
+          "Malignant",
+          "15 (51.7)"
+        ],
+        [
+          "Benign",
+          "08 (27.6)"
+        ],
+        [
+          "Inconclusive",
+          "06 (20.7)"
+        ],
+        [
+          "Physician-assessed disease status through 6 months, n (%)",
+          ""
+        ],
+        [
+          "Malignant",
+          "17 (58.6)"
+        ],
+        [
+          "Benign",
+          "11 (37.9)"
+        ],
+        [
+          "Indeterminate",
+          "1 (3.4)"
+        ],
+        [
+          "Reported tumor characteristics",
+          ""
+        ],
+        [
+          "Tumor size (mean ± SD),mm 1",
+          "15.4±6.3"
+        ],
+        [
+          "Primary lung cancer, n (%)",
+          "15 (83.3)"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    }
+  ],
+  "figures": [
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/31'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    }
+  ],
+  "references": [
+    {
+      "title": "The International Epidemiology of Lung Cancer: Latest Trends, Disparities, and Tumor Characteristics"
+    },
+    {
+      "title": "J Thorac Oncol",
+      "year": 2016
+    },
+    {
+      "title": "National Lung Screening Trial Research Team. Reduced lung-cancer mortality with low-dose computed tomographic screening",
+      "year": 2016
+    },
+    {
+      "title": "N Engl J Med"
+    },
+    {
+      "title": "Son/Todman/Chin/ Tan/Steinke/Windsor",
+      "year": 2019
+    },
+    {
+      "title": "Sung Respiration",
+      "year": 2019
+    },
+    {
+      "title": "Lung Cancer Screening: Why, When, and How?",
+      "year": 2019
+    },
+    {
+      "title": "Radiol Clin North Am"
+    },
+    {
+      "title": "Establishing the diagnosis of lung cancer: Diagnosis and management of lung cancer, 3rd ed: American College of Chest Physicians evidence-based clinical practice guidelines"
+    },
+    {
+      "title": "Chest"
+    },
+    {
+      "title": "Virtual Navigation in Japan Trial Group. Virtual bronchoscopic navigation combined with endobronchial ultrasound to diagnose small peripheral pulmonary lesions: a randomised trial",
+      "year": 2013
+    },
+    {
+      "title": "Thorax"
+    },
+    {
+      "title": "Advanced bronchoscopy for the diagnosis of peripheral pulmonary lesions"
+    },
+    {
+      "title": "Respir Investig"
+    },
+    {
+      "title": "Meta-analysis of guided bronchoscopy for the evaluation of the pulmonary nodule"
+    },
+    {
+      "title": "Ultrathin Bronchoscopy with Multimodal Devices for Peripheral Pulmonary Lesions. A Randomized Trial"
+    },
+    {
+      "title": "Am J Respir Crit Care Med"
+    },
+    {
+      "title": "Integrated use of virtual bronchoscopy and endobronchial ultrasonography on the diagnosis of peripheral lung lesions"
+    },
+    {
+      "title": "J Bronchology Interv Pulmonol"
+    },
+    {
+      "title": "Complications associated with endobronchial ultrasound-guided transbronchial needle aspiration: a nationwide survey by the Japan Society for Respiratory Endoscopy"
+    },
+    {
+      "title": "Respir Res"
+    },
+    {
+      "title": "Diagnostic yield and safety of electromagnetic navigation bronchoscopy for lung nodules: a systematic review and meta-analysis"
+    },
+    {
+      "title": "Respiration",
+      "year": 2019
+    },
+    {
+      "title": "MedCalc Statistical Software version",
+      "year": 2014
+    },
+    {
+      "title": "Ostend: MedCalc Software bvba",
+      "year": 2014
+    },
+    {
+      "title": "Utility of rapid on-site cytologic evaluation during endobronchial ultrasound with a guide sheath for peripheral pulmonary lesions",
+      "year": 2018
+    },
+    {
+      "title": "Jpn J Clin Oncol"
+    },
+    {
+      "title": "Complications with Endobronchial Ultrasound with a Guide Sheath for the Diagnosis of Peripheral Pulmonary Lesions"
+    },
+    {
+      "title": "Clinical application of virtual bronchoscopic navigation system for peripheral lung lesions",
+      "year": 2015
+    },
+    {
+      "title": "Endobronchial ultrasonography using a guide sheath increases the ability to diagnose peripheral pulmonary lesions endoscopically"
+    },
+    {
+      "title": "Multimodality bronchoscopic diagnosis of peripheral lung lesions: a randomized controlled trial"
+    },
+    {
+      "title": "Diagnosis and management of pulmonary nodules"
+    },
+    {
+      "title": "Expert Rev Respir Med"
+    },
+    {
+      "title": "Bronchus sign on thin-section computed tomography is a powerful predictive factor for successful transbronchial biopsy using endobronchial ultrasound with a guide sheath for small peripheral lung lesions: a retrospective observational study"
+    },
+    {
+      "title": "BMC Med Imaging"
+    },
+    {
+      "title": "Predictive factors for a successful diagnostic bronchoscopy of ground-glass nodules"
+    },
+    {
+      "title": "Ann Thorac Med"
+    },
+    {
+      "title": "Endobronchial ultrasound and electromagnetic navigation bronchoscopy in the diagnosis of peripheral lung lesions"
+    },
+    {
+      "title": "Expert Opin Med Diagn"
+    },
+    {
+      "title": "Comparison of suction catheter versus forceps biopsy for sampling of solitary pulmonary nodules guided by electromagnetic navigational bronchoscopy"
+    },
+    {
+      "title": "AQuIRE Bronchoscopy Registry. Diagnostic Yield and Complications of Bronchoscopy for Peripheral Lung Lesions. Results of the AQuIRE Registry",
+      "year": 2010
+    },
+    {
+      "title": "Robotic Bronchoscopy for Diagnosis of Suspected Lung Cancer: A Feasibility Study"
+    },
+    {
+      "title": "Toxicity and response criteria of the Eastern Cooperative Oncology Group"
+    },
+    {
+      "title": "Am J Clin Oncol"
+    }
+  ],
+  "quality": {
+    "completeness_score": 0,
+    "has_abstract": true,
+    "abstract_source": "metadata",
+    "has_doi": true,
+    "has_full_text": true,
+    "num_sections": 14,
+    "num_tables": 4,
+    "num_figures": 4,
+    "num_references": 44
+  }
+}

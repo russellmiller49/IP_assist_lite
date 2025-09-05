@@ -1,0 +1,977 @@
+{
+  "metadata": {
+    "document_id": "10_3390_cancers13040803",
+    "title": "Survival Outcomes with Photodynamic Therapy, Chemotherapy and Radiation in Patients with Stage III or Stage IV Non-Small Cell Lung Cancer",
+    "authors": [
+      "Sumedha Chhatre",
+      "Anil Vachani",
+      "Ron R. Allison",
+      "Ravishankar Jayadevappa"
+    ],
+    "year": 2021,
+    "journal": "Cancers",
+    "doi": "10.3390/cancers13040803",
+    "volume": "13",
+    "issue": "4",
+    "pages": "803",
+    "citation": "Chhatre, et al. (2021). Survival Outcomes with Photodynamic Therapy, Chemotherapy and Radiation in Patients with Stage III or Stage IV Non-Small Cell Lung Cancer. Cancers, 13(4), 803. https://doi.org/10.3390/cancers13040803",
+    "abstract": "Data regarding the association between photodynamic therapy (PDT) and mortality in lung cancer patients are limited. We analyzed the association between PDT and mortality in patients with stage III or IV non-small cell lung cancer (NSCLC) using data from the National Cancer Database (NCDB) between 2004 and 2016. From the NCDB, we identiﬁed patients receiving laser ablation/cryosurgery or local tumor destruction/excision (which includes PDT). From Medicare and Medicaid claims between 2000 and 2013, we identiﬁed NSCLC patients receiving PDT and those receiving bronchoscopy, then used these to conﬁrm the PDT treatment. From NCDB, we extracted NSCLC patients who received radiation with chemotherapy, radiation alone or chemotherapy alone. We used survival analysis to determine the association between PDT and mortality. Between 2004 and 2016, 457,556 NSCLC patients with stage III or stage IV were identiﬁed, of which 147 received PDT with radiation and chemotherapy, 227,629 received radiation with chemotherapy, 106,667 had radiation therapy alone and 122,193 received chemotherapy alone. Compared to the radiation alone group, the PDT group and radiation with chemotherapy group had lower hazard of mortality (50% and 53% lower, respectively). Among the NSCLC patients with stage III or stage IV disease, the addition of PDT to radiation therapy offers survival beneﬁt over radiation therapy alone.",
+    "abstract_source": "metadata",
+    "url": "https://www.mdpi.com/2072-6694/13/4/803"
+  },
+  "source_file": "Chhatre-2021-Survival Outcomes with Photodynam.json",
+  "sections": [
+    {
+      "title": "Survival Outcomes with Photodynamic Therapy, Chemotherapy and Radiation in Patients with Stage III or Stage IV Non-Small Cell Lung Cancer",
+      "content": "Sumedha Chhatre 1,2 , Anil Vachani 1 , Ron R. Allison 3 and Ravishankar Jayadevappa 1,2, *",
+      "category": "results",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "/gid00030/gid00035/gid00032/gid00030/gid00038 /gid00001 /gid00033/gid00042/gid00045 /gid00048 /gid00043 /gid00031 /gid00028 /gid00047 /gid00032 /gid00046",
+      "content": "/gid00001\nCitation: Chhatre, S.; Vachani, A.; Allison, R.R.; Jayadevappa, R. Survival Outcomes with Photodynamic Therapy, Chemotherapy and Radiation in Patients with Stage III or Stage IV Non-Small Cell Lung Cancer. Cancers 2021 , 13 , 803. https://doi.org/ 10.3390/cancers13040803\nAcademic Editors: Kevin Camphausen and Nagio Takigawa Received: 31 December 2020 Accepted: 9 February 2021 Published: 15 February 2021\nPublisher's Note: MDPI stays neutral with regard to jurisdictional claims in published maps and institutional affiliations.\nCopyright: © 2021 by the authors. Licensee MDPI, Basel, Switzerland. This article is an open access article distributed under the terms and conditions of the Creative Commons Attribution (CC BY) license (https:// creativecommons.org/licenses/by/ 4.0/).\n1 Perlman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA; rasu@pennmedicine.upenn.edu (S.C.); avachani@pennmedicine.upenn.edu (A.V.)\n2 Leonard Davis Institute of Health Economics, Perlman School of Medicine, University of Pennsylvania, Philadelphia, PA 19104, USA\n3 Department of Radiation Oncology, Federal Medical Center, Butner, NC 27509, USA; ronrallison@gmail.com\n* Correspondence: jravi@pennmedicine.upenn.edu; Tel.: +1-215-898-3798; Fax: +1-215-573-8684\nSimple Summary: The association between photodynamic therapy (PDT) and mortality in lung cancer patients remains unclear. We studied the association between PDT and mortality in patients with stage III/IV non-small cell lung cancer (Non-small cell lung cancer (NSCLC)) using the National Cancer Database (NCDB) between 2004 and 2016. From the NCDB, we identified patients whose treatment code was ablation (including PDT). From Medicare and Medicaid data between 2000 and 2013, we identified Non-small cell lung cancer (NSCLC) patients receiving PDT and used these to confirm PDT treatment. We assessed the association between PDT and mortality. Study groups consisted of 147 patients with PDT + radiation + chemotherapy, 227,629 with radiation + chemotherapy, 106,667 with radiation therapy alone and 122,193 with chemotherapy alone. Compared to the radiation alone group, the PDT group and radiation with chemotherapy group had lower risk of mortality (50% and 53% lower, respectively). Among the Non-small cell lung cancer (NSCLC) patients with stage III or stage IV disease not eligible for surgery, the addition of PDT to chemotherapy and radiation therapy offers survival benefit over radiation therapy alone.\nAbstract: Data regarding the association between photodynamic therapy (PDT) and mortality in lung cancer patients are limited. We analyzed the association between PDT and mortality in patients with stage III or IV non-small cell lung cancer (Non-small cell lung cancer (NSCLC)) using data from the National Cancer Database (NCDB) between 2004 and 2016. From the NCDB, we identified patients receiving laser ablation/cryosurgery or local tumor destruction/excision (which includes PDT). From Medicare and Medicaid claims between 2000 and 2013, we identified Non-small cell lung cancer (NSCLC) patients receiving PDT and those receiving bronchoscopy, then used these to confirm the PDT treatment. From NCDB, we extracted Non-small cell lung cancer (NSCLC) patients who received radiation with chemotherapy, radiation alone or chemotherapy alone. We used survival analysis to determine the association between PDT and mortality. Between 2004 and 2016, 457,556 Non-small cell lung cancer (NSCLC) patients with stage III or stage IV were identified, of which 147 received PDT with radiation and chemotherapy, 227,629 received radiation with chemotherapy, 106,667 had radiation therapy alone and 122,193 received chemotherapy alone. Compared to the radiation alone group, the PDT group and radiation with chemotherapy group had lower hazard of mortality (50% and 53% lower, respectively). Among the Non-small cell lung cancer (NSCLC) patients with stage III or stage IV disease, the addition of PDT to radiation therapy offers survival benefit over radiation therapy alone.\nKeywords: non-small cell lung cancer (Non-small cell lung cancer (NSCLC)); photodynamic therapy (PDT); National Cancer Database (NCDB); radiation therapy; chemotherapy; mortality",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "1. Introduction",
+      "content": "In 2020, lung cancer was expected to be one of the top three cancers for both men and women in the US [1]. A total of 228,820 new cases of lung cancer were diagnosed\n(116,300 in men and 112,520 in women), and approximately 135,720 deaths from lung cancer occurred (72,500 in men and 63,220 in women) in the year 2020 [1]. Lung cancer is generally classified as small-cell or non-small cell lung cancer (Non-small cell lung cancer (NSCLC)), with the latter being more frequent. Patients with Non-small cell lung cancer (NSCLC) tend to be older and therefore experience several comorbidities [2]. Severity of Non-small cell lung cancer (NSCLC) has resulted in the development of multiple treatment options, both therapeutic and palliative. Lung cancer screening using low-dose CT scan imaging has demonstrated improved survival, as many screens detect relatively early stage of disease, with a high potential for cure.\nAlthough surgical resection offers a strong opportunity for cure in early stage Non-small cell lung cancer (NSCLC) cases, the presence of comorbid conditions can deem a patient to be medically inoperable. One option for these patients is radiosurgery, which is the precise delivery of radiation therapy to a limited tumor volume [3,4]. Additionally, other types of ablation therapies, such as photodynamic therapy (PDT), are promising. Used alone or as part of multi-modal therapy, PDT can help decrease the probability of disease progression and/or mortality in Non-small cell lung cancer (NSCLC) patients who present with high-risk localized disease, as well as for locally advanced, recurrent, or metastatic disease [5-9].\nLate-stage disease mostly renders patients unsuitable to receive curative surgery, largely due to extent of disease. Treatments, such as radiation therapy, chemotherapy, immunotherapy, and ablation therapies, such as PDT, cryotherapy, argon plasma coagulation and ND:YAG laser, either alone or in combination, have demonstrated improved outcomes [5-11]. Among Non-small cell lung cancer (NSCLC) patients, many types of ablation therapies, either as monotherapy or as part of the multimodal treatment approach, have shown favorable results, irrespective of the intent of treatment (curative or palliative).\nPDT is an FDA-approved treatment and has a long history of clinical success in treating lung cancer. It involves systemic administration of the light-sensitive drug (i.e., photosensitizer), Photofrin ® , which then preferentially accumulates in the target tissue and is cleared from surrounding normal tissues. After 48 h, target tissue is illuminated with laser light at a red wavelength of 630 nm, which activates Photofrin to generate toxic reactive oxygen species, notably singlet oxygen [6], and thus leading to tumor destruction. The process via which tumor is destructed is a combination of direct cellular and secondary vascular effects [7]. In addition to local tumor ablation, PDT can improve antitumor immunity as shown in pre-clinical and clinical settings. For Non-small cell lung cancer (NSCLC), PDT has been used historically as monotherapy or as combination therapy along with surgery, chemotherapy, or standard radiation therapy [5,12-17].\nFor early and advanced stage Non-small cell lung cancer (NSCLC), PDT has been approved for symptom management, curative and palliative intent, especially in cases with tumors that are ineligible for standard surgery and radiation therapy. Overall, severe toxicities are uncommon in PDT and it is well tolerated [5,12,16,17]. At the same time, in spite of its potential to be a promising treatment option, PDT remains underutilized mostly due to the lack of randomized trials comparing PDT and conventional therapies.\nSystemic therapy is viewed as the cornerstone of disease treatment in Non-small cell lung cancer (NSCLC) patients with stage III or IV disease [4,18]. A randomized, prospective study among patients with oligometastatic Non-small cell lung cancer (NSCLC) observed improved progression-free survival with local therapy (surgery or radiation), compared to systemic therapy alone [19]. However, PDT can be an option both for palliation and survival enhancement for many of these patients with symptomatic progression to airway compromise. Additionally, several of these patients may either not be candidates for or consent for chemotherapy. Radiation therapy alone may be employed in these cases, although it may not offer substantial rates or prolonged ability to generate disease control. This may be due to widespread disease or lack of ability to achieve ablative dose of radiation due to bulk of disease. In situations such as these, PDT may also offer enhanced and prolonged palliation to patients with airway obstruction. However, we know very little about how PDT can be incorporated with chemotherapy and radiation therapy. Therefore, in this study, we assess the association between PDT along with radiation and chemotherapy with radiation alone as reference\ngroup, among Non-small cell lung cancer (NSCLC) patients with stage III or stage IV disease. Our hypothesis is that after adjusting for covariates, PDT demonstrates a survival benefit among patients with stage III or stage IV of Non-small cell lung cancer (NSCLC).",
+      "category": "introduction",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "2.1. Sample Characteristics",
+      "content": "Between 2004 and 2016, 1,048,113 patients with Non-small cell lung cancer (NSCLC) were identified, of which 667,527 patients had stage III or stage IV disease. Of these, 147 patients received PDT with radiation and chemotherapy, 227,629 patients received radiation with chemotherapy, 106,667 patients received radiation therapy alone and 122,193 patients received chemotherapy alone.\nAsshowninTable 1, radiation with chemotherapy group was younger (mean 63.6 years) compared to PDT group, radiation alone group and chemotherapy alone group (65.4, 68.3 and 66.3 years, respectively, p value < 0.0001). PDT group had lower proportion of whites, compared to radiation with chemotherapy, radiation alone and chemotherapy alone groups (79.6% vs. 83.2%, 82.5%, and 81.9%, respectively, p value < 0.0001). Almost half of the patients from the PDT group had at least one comorbidity (49.7%), compared to 33.5% of radiation with chemotherapy patients, 40.4% of radiation alone patients and 35.5% of chemotherapy alone patients ( p value < 0.0001). Facility type differed across the four groups. For example, 41.5% of PDT patients were treated at academic programs, compared to 31.3%, 32.8%, and 33.9% from the radiation with chemotherapy group, radiation alone group, and chemotherapy group, respectively ( p value < 0.0001). A higher proportion of PDTgroup patients had stage III disease (60.5%), compared to radiation with chemotherapy group, radiation alone group, and chemotherapy alone group (44.2%, 21.7%, and 20.7%, respectively; p value < 0.0001).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "2.2. Overall Mortality",
+      "content": "As reported in Table 1, overall mortality for PDT groups was 90.8%. This number was 87.9% for radiation with chemotherapy group, 95.6% for radiation alone group, and 91.3% for chemotherapy alone group ( p value < 0.0001). The mean number of survival months was 18.6 for PDT group, 18.0 for radiation with chemotherapy group, 7.3 for radiation alone group, and 16.9 for chemotherapy alone group ( p value < 0.0001). Multiple comparison using Tukey statistics showed that PDT group mean was different than that of the radiation alone group, and chemotherapy alone group. The mean for the radiation with chemotherapy group was also different from that of the radiation alone group, and chemotherapy alone group (all p values < 0.05).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "2.3. Survival Analysis",
+      "content": "Survival analyses evaluated the hazard of overall mortality and PDT exposure (Table 2) for Non-small cell lung cancer (NSCLC) patients with stage III or stage IV disease. Compared to the radiation alone group, the PDT (with radiation and chemo) group and the radiation with chemotherapy group had lower hazard of overall mortality (50% lower and 53% lower, respectively; Hazard ratio (HR) = 0.50, 95% CI = 0.42, 0.60; Hazard ratio (HR) = 0.47, 95% CI = 0.46, 0.50, respectively). The adjusted survival curve is presented in Figure 1.\nWe also observed that the hazard of mortality associated with PDT exposure was comparable with chemotherapy alone as the reference group as shown in Table 2 (Hazard ratio (HR) = 1.03, 95% CI = 0.86, 1.23). A similar observation was made for the hazard associated with the radiation with chemotherapy group, compared to the chemotherapy alone group (Hazard ratio (HR) = 0.98, 95% CI = 0.98, 1.02). The adjusted survival curve is presented in Figure 2.\n, x FOR PEER REVIEW\nPDT (+radiation + chemo)\n1.03 (0.86, 1.23)\nIV (Ref)\n-\n-\n, x FOR PEER REVIEW",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "3. Discussion 3. Discussion",
+      "content": "For advanced Non-small cell lung cancer (NSCLC), PDT is currently being used in combination with other treatment options such as chemotherapy, radiotherapy, and surgery. We observed that PDT, along  with  radiation  and  chemotherapy,  is  associated  with  enhanced  overall  survival among Non-small cell lung cancer (NSCLC) patients with stage III or stage IV disease, compared to treatment with radiation alone. To our knowledge, this is the largest study that examines the association between PDT and mortality in a US cohort of patients with stage III or stage IV Non-small cell lung cancer (NSCLC). At the same time, PDT is more appropriate for Non-small cell lung cancer (NSCLC) patients with endoluminal tumor growth represented by tumor infiltration of the trachea or the bronchi.    Studies are underway to assess if PDT can reach tumors that are located in the peripheral lung parenFor advanced Non-small cell lung cancer (NSCLC), PDT is currently being used in combination with other treatment options such as chemotherapy, radiotherapy, and surgery. We observed that PDT, along with radiation and chemotherapy, is associated with enhanced overall survival among Non-small cell lung cancer (NSCLC) patients with stage III or stage IV disease, compared to treatment with radiation alone. To our knowledge, this is the largest study that examines the association between PDT and mortality in a US cohort of patients with stage III or stage IV Non-small cell lung cancer (NSCLC). At the same time, PDT is more appropriate for Non-small cell lung cancer (NSCLC) patients with endoluminal tumor growth represented by tumor infiltration of the trachea or the bronchi. Studies are underway to assess if PDT can reach tumors that are located in the peripheral lung parenchyma, and thus be a treatment for peripheral Non-small cell lung cancer (NSCLC).\nchyma, and thus be a treatment for peripheral Non-small cell lung cancer (NSCLC). For patients with advanced disease, PDT in part can offer prolonged maintenance of a  patent  airway,  which  in  turn  can  enhance  the  quality  of  life.  A  large  series  recently showed that PDT, as a means to maintain airway patency, offers better outcomes compared with other interventional modalities such as YAG Laser, Argon Plasma Coagulation, and Cryotherapy [20]. Additionally, an up-regulation of the immune response that occurs with PDT helps in improving durability of tumor response and survival [21]. Especially advanced disease patients treated with PDT, chemotherapy and radiation therapy report most favorable outcomes in terms of disease control and survival advantage, For patients with advanced disease, PDT in part can offer prolonged maintenance of a patent airway, which in turn can enhance the quality of life. A large series recently showed that PDT, as a means to maintain airway patency, offers better outcomes compared with other interventional modalities such as YAG Laser, Argon Plasma Coagulation, and Cryotherapy [20]. Additionally, an up-regulation of the immune response that occurs with PDT helps in improving durability of tumor response and survival [21]. Especially advanced disease patients treated with PDT, chemotherapy and radiation therapy report most favorable outcomes in terms of disease control and survival advantage, thus emphasizing the need for multi-modal intervention in these patients.\nthus emphasizing the need for multi-modal intervention in these patients. In general, the better outcomes associated with PDT may be due to local control that is more sustained. Alternately, similar to radiation therapy, this may be due to abscopal effect as a result of the immunogenic properties induced by PDT [22]. Studies have shown that local PDT treatment can result in systemic neutrophilia, induction of acute phase reactants, as well as systemic release of inflammatory cytokines [23]. Research has demonstrated that, in addition to the direct effects on tumor cell, PDT can enhance the antitumor In general, the better outcomes associated with PDT may be due to local control that is more sustained. Alternately, similar to radiation therapy, this may be due to abscopal effect as a result of the immunogenic properties induced by PDT [22]. Studies have shown that local PDT treatment can result in systemic neutrophilia, induction of acute phase reactants, as well as systemic release of inflammatory cytokines [23]. Research has demonstrated that, in addition to the direct effects on tumor cell, PDT can enhance the antitumor immunity and thereby improve the tumor cell immunogenicity [22-25].\nimmunity and thereby improve the tumor cell immunogenicity [22-25]. Certain disadvantages of PDT remain, such as complex scheduling, necessity of multiple procedures, higher initial cost due to Photofrin infusion, repeat bronchoscopies and inpatient observation following the procedure, and finally potential negative effects on Certain disadvantages of PDT remain, such as complex scheduling, necessity of multiple procedures, higher initial cost due to Photofrin infusion, repeat bronchoscopies and inpatient observation following the procedure, and finally potential negative effects on patient's quality of life due to photosensitivity issues during the weeks post-procedure [22-25].\nPrior studies have reported beneficial outcomes of multimodal therapy (combination of local and systemic therapy) [26]. In a study of NCDB data of patients with stage IV Non-small cell lung cancer (NSCLC), surgical resection plus systemic therapy or EBRT/thermal ablation plus systemic therapy was shown to be beneficial compared to systemic therapy alone [27]. Among the selected patients with limited metastases, benefits of local therapy in conjunction with systemic therapy have been observed [28]. Studies in patients with oligometastatic Non-small cell lung cancer (NSCLC) have shown the benefit of local consolidative therapy (surgical resection or chemo/radiotherapy) [19,29].\nResults of a SEER-Medicare analysis showed that for stage III Non-small cell lung cancer (NSCLC), intensity modulated radiation therapy was associated with similar overall and cancer-specific survival and maintained similar toxicity risks compared with 3D-CRT [30]. Elderly patients with advanced Non-small cell lung cancer (NSCLC) showed improved survival outcomes with use of chemotherapy [31]. In addition, for advanced Non-small cell lung cancer (NSCLC), adjuvant chemotherapy was associated with improved survival [32]. Multimodal therapy of systemic and local therapy (radiation or surgery) showed improved survival [3,33-35]. However, many patients diagnosed with Non-small cell lung cancer (NSCLC) are elderly have medical comorbidities, poor functional status or notable preexisting weight loss and may not be able to tolerate chemotherapy with radiation. Patients who refuse or are not candidates for chemotherapy or surgery often receive radiation therapy alone. Arecent NCDB study showed that hypofractionated radiation therapy is a viable option for locally advanced Non-small cell lung cancer (NSCLC) [36]. Given the heterogeneity of the Non-small cell lung cancer (NSCLC), many systemic and local therapy options are available. However, optimal management for patients with T3 and T4 Non-small cell lung cancer (NSCLC) remains unclear.\nAn earlier randomized controlled study compared the safety and efficacy of PDT plus external beam radiation vs. external beam radiation alone among 41 patients with inoperable non-small cell bronchogenic carcinoma obstructing a central airway. It was noted that, compared to radiation alone, the addition of PDT prior to radiation therapy resulted in significantly favorable and longer lasting local control of the disease [11]. In another study, the safety and effectiveness of combined brachytherapy and PDT were evaluated in patients with bulky endobronchial lung cancer. Of the 32 patients in the study, 15 were technically inoperable and 17 had recurrent bronchogenic carcinomas. The complete histological response rate of PDT with brachytherapy was 97%, leading to the conclusion that the combination of PDT with brachytherapy was safe with strong therapeutic efficacy in this group of patients with lung cancer [10]. Additional clinical studies have also demonstrated the effectiveness of PDT as a palliative therapy to relieve airway obstruction resulting from Non-small cell lung cancer (NSCLC).\nOur study has several limitations. First, our study uses secondary data and consists of persons who were at least 18 years of age. We did not have data related to smoking status, pulmonary function tests, tumor location and type of chemotherapy.\nPerformance status is an important measure of the effects of tumor symptoms, with other comorbidities, on a patient's day-to-day function, such as ability to self-care. However, in the NCDB database, this information is not available. At the same time the CharlsonDeyo comorbidity index score, which is a good predictor of mortality, is available and we have adjusted our analysis using this score. Thus, our comparison between treatments can be considered as exploratory, and future prospective studies using performance status data can validate our findings.\nWhile usefulness of NCDB in examining cancer diagnosis and primary cancer treatment is well documented, it must be noted that NCDB is not a population-based database, as NCDB cases are identified from the hospitals where they present for cancer diagnosis and/or its treatment. At the same time, NCDB captures about 75% of all incident cancers in the United States, and thus has an advantage over other cancer registry data. Additionally, NCDBincludes more comprehensive data on certain treatments such as chemotherapy [37]. Despite these limitations, PDT appears to offer improved disease control and survival benefit for advanced Non-small cell lung cancer (NSCLC) patients. It should be considered more often as part of multidisciplinary thoracic oncology care.",
+      "category": "discussion",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "4.1. Data Sources and Study Cohort",
+      "content": "We used retrospective data from the National Cancer Database (NCDB). The NCDB is a national hospital-based cancer registry that is co-sponsored by the American College of Surgeons (ACoS) and the American Cancer Society. Established in 1989, NCDB houses data from more than 1500 hospitals with ACoS-accredited cancer treatment programs, accounting for almost 70% of all newly diagnosed cancer cases in the United States with accumulated data on 29 million cancer cases. Records of patients with biopsy-proven non-small cell lung cancer diagnosed between January 2004 and December 2016, and with stage III or stage IV disease were obtained from the NCDB. The analyses were conducted between 1 January 2019 and 31 December 2019, and all data were de-identified. This study was approved by the University of Pennsylvania institutional review board.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "4.2.1. Overall Mortality",
+      "content": "Key dependent variable for the study was overall mortality and was obtained from NCDB's vital status variable, which is status of the patient at the last contact. Time to death was defined as number of days between date of diagnosis and date of death. Patients who were alive at last contact were censored.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "4.2.2. Treatment Type",
+      "content": "From the NCDB database, we first created a cohort of patients whose treatment was coded as 'Laser ablation or cryosurgery' or as 'Local tumor destruction or excision, NOS' (which includes PDT). From Medicare and Medicaid claims between 2000 and 2013, we identified those Non-small cell lung cancer (NSCLC) patients who received PDT with Photofrin (Jcode: J9600) and also those who received bronchoscopy (CPT code 31641); we then used these to confirm PDT treatment. Next, from the NCDB database, we extracted groups of Non-small cell lung cancer (NSCLC) patients who received radiation with chemotherapy, radiation therapy alone or chemotherapy alone.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "4.2.3. Covariates",
+      "content": "We used sociodemographic, disease severity, and medical comorbidity data from NCDB to adjust our measures of association between PDT treatment and overall mortality. Sociodemographic variables were age, race, gender, insurance status, income, and education. Disease severity was measured using cancer grade and stage, and the T and N categories were based on clinical assessment. Medical comorbidity was measured using Charlson-Deyo comorbidity score. Charlson-Deyo score is an age-independent, comorbidity score index used to predict long-term survival. It is mapped from as many as ten reported ICD-9-CM or ICD-10 diagnosis codes (comorbidities) typically from discharge abstracts or billing face sheets [38-41].\nIt must be recognized that treatment for Non-small cell lung cancer (NSCLC) is not randomly assigned, and sociodemographic characteristics can affect the type of treatment that a patient receives. Therefore, we determined the propensity (i.e., probability) of receiving PDT treatment as a function of socioeconomic characteristics. We then adjusted our analysis for propensity score, along with other covariates.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "4.3. Statistical Analysis",
+      "content": "To begin with, we used appropriate tests ( χ 2 and t -test) to compare the sociodemographic characteristics, disease severity and comorbidity. In all analyses, a two-sided p < 0.05 was considered statistically significant. Survival analysis was used to study the association between treatment groups and overall mortality. The key independent variable was exposure to PDT, with radiation therapy alone as reference category. We also carried out similar analysis with chemotherapy alone as the reference category. The models were adjusted for sociodemographic characteristics (age, gender, race and ethnicity, education, income, geographic area, insurance status), disease severity (cancer stage), medical comor-\nbidity, and propensity score. We used Statistical Analysis System (SAS), Version 9.2 (SAS Institute, Cary, NC, USA), for analysis.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "5. Conclusions",
+      "content": "Future research in Non-small cell lung cancer (NSCLC) patients with stage III or stage IV disease can identify the pathways via which PDT helps in improving patient survival. In addition, the impact of this association on the health-related quality of life among Non-small cell lung cancer (NSCLC) patients needs to be addressed. In summary, our hospital registry-based study spanning up to 12 years following the diagnosis of stage III or stage IV Non-small cell lung cancer (NSCLC) shows that PDT, in combination with other systemic therapy and local therapy, was associated with significantly improved overall survival. Thus, providers need to assess the incremental benefits of PDT in Non-small cell lung cancer (NSCLC) patients with stage III or stage IV disease.\nAuthor Contributions: Conceptualization, R.J., and S.C.; methodology, R.J. and S.C.; software, R.J. and S.C.; validation, R.J. and S.C.; formal analysis, R.J. and S.C.; investigation, R.J. and S.C.; resources, R.J.; data curation, R.J. and S.C.; writing-original draft preparation, R.J. and S.C.; writingreview and editing, R.J., S.C., A.V. and R.R.A.; visualization, R.J. and S.C.; supervision, R.J.; project administration, R.J.; funding acquisition, R.J. All authors have read and agreed to the published version of the manuscript.\nFunding: This research was funded in part by the PINNACLE Research/Educational grant, and the APC was funded by the PINNACLE Research/Educational grant.\nInstitutional Review Board Statement: This study was approved by the University of Pennsylvania institutional review board (protocol number 822119, date of approval 13 March 2015). This study used secondary data that was completely de-identified.\nInformed Consent Statement: Patient consent was waived due to the fact that this study used secondary data that was completely de-identified.\nData Availability Statement: Publicly available datasets were analyzed in this study. These data can be found here: https://www.facs.org/Quality-Programs/Cancer/NCDB (accessed on 1 January 2019), link/accession number.\nAcknowledgments: The authors acknowledge the efforts of the NCDB program tumor registries and Centers for Medicare and Medicaid Services (CMS). The interpretation and reporting of these data are the sole responsibility of the authors.\nConflicts of Interest: The authors declare no conflict of interest. The sponsors had no role in the design, execution, interpretation, or writing of the study.",
+      "category": "conclusion",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "References",
+      "content": "1. Siegel, R.L.; Miller, K.D.; Jemal, A. Cancer statistics 2020. CA Cancer J. Clin. 2020 , 70 , 7-30.\n2. Morgensztern, D.; Waqar, S.; Subramanian, J.; GRGao, F. Improving survival for stage IV non-small cell lung cancer: A Surveillance, Epidemiology, and End Results survey from 1990 to 2005. J. Thorac. Oncol. 2009 , 4 , 1524-1529. [CrossRef] [PubMed]\n3. Varlotto, J.M.; Emmerick, I.; Voland, R.; DeCamp, M.M.; Flickinger, J.C.; Maddox, D.J.; Herbert, C.; Griffin, M.; Rava, P.; Fitzgerald, T.J.; et al. The Incidence of Node-Positive Non-small-Cell Lung Cancer Undergoing Sublobar Resection and the Role of Radiation in Its Management. Front. Oncol. 2020 , 10 , 417. [CrossRef]\n4. Reck, M.; Rabe, K.F. Precision Diagnosis and Treatment for Advanced Non-Small-Cell Lung Cancer. N. Engl. J. Med. 2017 , 377 , 849-861. [CrossRef]\n5. Agostinis, P.; Berg, K.; Cengel, K.A.; Foster, T.H.; Girotti, A.W.; Gollnick, S.O.; Hahn, S.M.; Hamblin, M.R.; Juzeniene, A.; Kessel, D.; et al. Photodynamic therapy of cancer: An update. CA Cancer J. Clin. 2011 , 61 , 250-281. [CrossRef]\n6. Detterbeck, F.C.; Lewis, S.Z.; Diekemper, R.; Addrizzo-Harris, D.J.; Alberts, W.M. Execuative Summary-Diagnosis and Management of Lung Cancer, 3rd ed: American College of Chest Physicians Evidence-Based Clinical Practice Guidelines. Chest 2013 , 143 (Suppl. 5), 7S-37S. [CrossRef]\n7. Dolmans, D.E.J.G.J.; Fukumura, D.; Jain, R.K. Photodynamic therapy for cancer. Nature 2003 , 3 , 380-387. [CrossRef] [PubMed]\n8. Qiao, X.; Tullgren, O.; Lax, I.; Sirzen, F.; Lewensohn, R. The role of radiotherapy in treatment of stage I non-small cell lung cancer. Lung Cancer 2003 , 43 , 1-11. [CrossRef]\n9. Shafirstein, G.; Battoo, A.; Harris, K.; Baumann, H.; Gollnick, S.O.; Lindenmann, J.; Nwogu, C.E. Photodynamic Therapy of Non-Small Cell Lung Cancer Narrative Review and Future Directions. Ann. Am. Thorac. Soc. 2016 , 13 , 265-275. [CrossRef] [PubMed]\n10. Freitag, L.; Ernst, A.; Thomas, M.; Prenzel, R.; Wahlers, B.; Macha, H. Sequential photodynamic therapy (PDT) and high dose brachytherapy for endobronchial tumour control in patients with limited bronchogenic carcinoma. Thorax 2004 , 59 , 790-793. [CrossRef]\n11. Lam, S.; Grafton, C.; Coy, P.; Voss, N.; Fairey, R. Combinedphotodynamic therapy (PDT) using photofrin and radiother-apy (XRT) versus radiotherapy alone in patients with inop-erable obstructive non-small cell bronchogenic carcinoma. SPIE 1991 , 1616 , 20-28.\n12. Allison, R.; Moghissi, K.; Downie, G.; Dixon, K. Photodynamic therapy (PDT) for lung cancer. Photodiagn. Photodyn. 2011 , 8 , 231-239. [CrossRef]\n13. Cortese, D.A.; Edell, E.S.; Kinsey, J.H. Photodynamic therapy for early stage squamous cell carcinoma of the lung. Mayo Clin. Proc. 1997 , 72 , 595-602. [CrossRef]\n14. Corti, L.; Toniolo, L.; Boso, C.; Colaut, F.; Fiore, D.; Muzzio, P.C.; Koukourakis, M.I.; Mazzarotto, R.; Pignataro, M.; Loreggian, L.; et al. Long-term survival of patients treated with photodynamic therapy for carcinoma in situ and early non-small-cell lung carcinoma. Lasers Surg. Med. 2007 , 39 , 394-402.\n15. Moghissi, K.; Dixon, K.; Thorpe, J.A.; Stringer, M. Photodynamic therapy (PDT) in early central lung cancer: A treatment option for patients ineligible for surgical resection. Thorax 2007 , 62 , 391-395. [CrossRef]\n16. Simone, C.B.I.I.; Friedberg, J.S.; Glatstein, E.; Stevenson, J.P.; Sterman, D.H.; Hahn, S.M.; Cengel, K.A. Photodynamic therapy for the treatment of non-small cell lung cancer. J. Thorac. Dis. 2011 , 4 , 63-75.\n17. Usuda, J.; Kato, H.; Okunaka, T.; Furukawa, K.; Tsutsui, H.; Yamada, K.; Suga, Y.; Honda, H.; Nagatsuka, Y.; Ohira, T.; et al. Photodynamic Therapy (PDT) for Lung Cancers. J. Thorac. Oncol. 2006 , 1 , 489-493. [CrossRef]\n18. Hanna, N.; Johnson, D.; Temin, S.; Baker, S., Jr.; Brahmer, J.; Ellis, P.M.; Giaccone, G.; Hesketh, P.J.; Jaiyesimi, I.; Leighl, N.B.; et al. Systemic therapy for stage IV non-small-cell lung cancer: American Society of Clinical Oncology clinical practice guideline update. J. Clin. Oncol. 2017 , 35 , 3484-3515. [PubMed]\n19. Gomez, D.R.; Blumenschein, G.R., Jr.; Lee, J.J.; Hernandez, M.; Ye, R.; Camidge, D.R.; Doebele, R.C.; Skoulidis, F.; Gaspar, L.E.; Gibbons, D.L.; et al. Local consolidative therapy versus maintenance therapy or observation for patients with oligometastatic non-small-cell lung cancer without progression after first-line systemic therapy: A multicentre, randomised, controlled, phase 2 study. Lancet Oncol. 2016 , 17 , 1672-1682. [CrossRef]\n20. Jayadevappa, R.; Chhatre, S.; Soukiasian, H.J.; Murgu, S. Outcomes of patients with advanced non-small cell lung cancer and airway obstruction treated with photodynamic therapy and non-photodynamic therapy ablation modalities. J. Thorac. Dis. 2019 , 11 , 4389-4399. [CrossRef] [PubMed]\n21. Reginato, E.; Lindenmann, J.; Langner, C.; Schweintzger, N.; Bambach, I.; Smolle-Jüttner, F.; Wolf, P. Photodynamic therapy downregulates the function of regulatory T cells in patients with esophageal squamous cell carcinoma. Photochem. Photobiol. Sci. 2014 , 13 , 1281-1289. [CrossRef] [PubMed]\n22. Reynders, K.; Illidge, T.; Siva, S.; Chang, J.Y.; De Ruyssche, D. The abscopal effect of local radiotherapy: Using immunotherapy to make a rare event clinically relevant. Cancer Treat. Rev. 2015 , 41 , 503-510. [CrossRef] [PubMed]\n23. Gollnick, S.O.; Brackett, C.M. Enhancement of anti-tumor immunity by photodynamic therapy. Immunol. Res. 2010 , 46 , 216-226. [CrossRef]\n24. Lindenmann, J.; Matzi, V.; Neubock, N.; Maier, A.; Smolle-Juttner, F.M. The clinical impact of photodynamic therapy in thoracic surgery. Eur. Surg. 2010 , 42 , 220-228. [CrossRef]\n25. Maier, A.; Tomaselli, F.; Matzi, V.; Woltsche, M.; Anegg, U.; Fell, B.; Rehak, P.; Pinter, H.; Smolle-Jüttner, F.M. Comparison of 5-aminolaevulinic acid and porphyrin photosensitization for photodynamic therapy of malignant bronchial stenosis: A clinical pilot study. Lasers Surg. Med. 2002 , 30 , 12-17. [CrossRef]\n26. Bhalla, N.; Brooker, R.; Brada, M. Combining immunotherapy and radiotherapy in lung cancer. J. Thorac. Dis. 2018 , 10 (Suppl. 13), S1447-S1460. [CrossRef] [PubMed]\n27. Uhlig, J.; Case, M.D.; Blasberg, J.D.; Boffa, D.J.; Chiang, A.; Gettinger, S.N.; Kim, H.S. Comparison of Survival Rates After a Combination of Local Treatment and Systemic Therapy vs Systemic Therapy Alone for Treatment of Stage IV Non-Small Cell Lung Cancer. JAMA Netw. Open 2019 , 2 , e199702. [CrossRef]\n28. Boffa, D.J. The objective of local therapy in oligometastatic cancer is amoving target. JAMA Oncol. 2018 , 4 , 1296.\n29. Iyengar, P.; Kavanagh, B.D.; Wardak, Z.; Smith, I.; Ahn, C.; Gerber, D.E.; Dowell, J.; Hughes, R.; Abdulrahman, R.; Camidge, D.R.; et al. Phase II trial of stereotactic body radiation therapy combined with erlotinib for patients with limited but progressivemetastatic non-small-cell lung cancer. J. Clin. Oncol. 2014 , 32 , 3824-3830. [CrossRef]\n30. Harris, J.P.; Murphy, J.D.; Hanlon, A.L.; Le, Q.; Loo, B.W., Jr.; Diehn, M. A population-based comparative effectiveness study of radiation therapy techniques in stage III non-small cell lung cancer. Int. J. Radiat. Oncol. Biol. Phys. 2014 , 88 , 872-884. [CrossRef]\n31. Davidoff, A.J.; Tang, M.; Seal, B.; Edelman, M.J. Chemotherapy and survival benefit in elderly patients with advanced non-smallcell lung cancer. J. Clin. Oncol. 2010 , 28 , 2191-2197. [CrossRef] [PubMed]\n32. Salazar, M.C.; Rosen, J.E.; Arnold, B.N.; Thomas, D.C.; Kim, A.W.; Detterbeck, F.C.; Blasberg, J.D.; Boffa, D.J. Adjuvant Chemotherapy for T3 Non-Small Cell Lung Cancer with Additional Tumor Nodules in the Same Lobe. J. Thorac. Oncol. 2016 , 11 , 1090-1100. [CrossRef] [PubMed]\n33. Ramnath, N.; Dilling, T.J.; Harris, L.J.; Kim, A.W.; Michaud, G.C.; Balekian, A.A.; Diekemper, R.; Detterbeck, F.C. Treatment of stage III non-small cell lung cancer: Diagnosis and management of lung cancer, 3rd ed: American College of Chest Physicians evidence-based clinical practice guidelines. Chest 2013 , 143 , e314S-e340S. [CrossRef] [PubMed]\n34. Bott, M.J.; Patel, A.P.; Crabtree, T.D.; Morgensztern, D.; Robinson, C.G.; Colditz, G.A.; Waqar, S.; Kreisel, D.; Krupnick, A.S.; Patterson, G.A.; et al. Role for Surgical Resection in the Multi-Disciplinary Treatment of Stage IIIB Non-Small Cell Lung Cancer. Ann. Thorac. Surg. 2015 , 99 , 1921-1928. [CrossRef]\n35. Postmus, P.E.; Kerr, K.M.; Oudkerk, M.; Senan, S.; Waller, D.A.; Vansteenkiste, J.; Escriu, C.; Peters, S. Early and locally advanced non-small-cell lung cancer (Non-small cell lung cancer (NSCLC)): ESMO Clinical Practice Guidelines for diagnosis, treatment and follow-up Clinical Practice Guidelines. Ann. Oncol. 2017 , 28 (Suppl. 4), iv1-iv21.\n36. Iocolanoa, M.; Wildb, A.T.; Hannumc, M.; Zhangc, Z.; Simone, I.I.C.B.; Gelblumb, D.; Wub, A.J.; Shepherdb, A.F. Hypofractionated vs. conventional radiation therapy for stage III non-small cell lung cancer treated without chemotherapy. Acta Oncol. 2020 , 59 , 164-170. [CrossRef]\n37. Warren, J.L.; Klabunder, C.N.; Schrag, D.; Bach, P.B.; Riley, G.F. Overview of the SEER-Medicare data-content, research application and generalizability to the United States elderly population. Med. Care 2002 , 40 , 3-18. [CrossRef]\n38. Klabunde, C.N.; Warren, J.L.; Legler, J.M.L. Assessing comorbidity using claims data-an overview. Med. Care 2002 , 40 (Suppl. 4), 26-35. [CrossRef]\n39. Deyo, R.A.; Cherkin, D.C.; Ciol, M.A. Adapting a clinical comorbidity index for use with ICD-9-CM administrative databases. J. Clin. Epidemiol. 1992 , 45 , 613-619. [CrossRef]\n40. Ladha, K.S.; Zhao, K.; Quraishi, S.A.; Kurth, T.; Eikermann, M.; Kaafarani, H.M.; Klein, E.N.; Seethala, R.; Lee, J. The DeyoCharlson and Elixhauser-van Walraven Comorbidity Indices as predictors of mortality in critically ill patients. BMJ Open 2015 , 5 , e008990. [CrossRef]\n41. Melisa, L.; Wong, M.L.; McMurry, T.L.; Schumacher Hu, C.; Stukenborg, G.J.; Francescatti, A.B.; Greenberg, C.C.; Chang, G.J.; McKellar, D.P.; Walter, L.C.; et al. Comorbidity Assessment in the National Cancer Database for Patients With Surgically Resected Breast, Colorectal, or Lung Cancer (AFT-01, -02, -03). J. Oncol. Pract. 2018 , 14 , e631-e643.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    }
+  ],
+  "tables": [
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/36'}",
+      "headers": [
+        "Covariates",
+        "PDT (+Radiation + Chemo) n = 147, n (%)",
+        "Radiation + Chemo n = 227,629, n (%)",
+        "Radiation n = 106,667, n (%)",
+        "Chemo n = 122,193, n (%)",
+        "p Value"
+      ],
+      "rows": [
+        [
+          "Mean age (std)",
+          "65.4 (8.9)",
+          "63.6 (10.3)",
+          "68.3 (11.1)",
+          "66.3 (10.9)",
+          "<0.0001"
+        ],
+        [
+          "Male gender",
+          "92 (62.6)",
+          "128,376 (56.4)",
+          "60,373 (56.6)",
+          "66,123 (54.1)",
+          "<0.0001"
+        ],
+        [
+          "Race White",
+          "117 (79.6)",
+          "189,487 (83.2)",
+          "87,967 (82.5)",
+          "100,119 (81.9)",
+          "<0.0001"
+        ],
+        [
+          "African American and other",
+          "28 (20.4)",
+          "381,42 (16.8)",
+          "187,00 (17.5)",
+          "22,074 (18.1)",
+          ""
+        ],
+        [
+          "Insurance status Not Insured/Other",
+          "11 (6.4)",
+          "15,261 (6.7)",
+          "8082 (7.6)",
+          "6523 (5.3)",
+          ""
+        ],
+        [
+          "Private/MCO",
+          "44 (30.3)",
+          "84,061 (36.9)",
+          "24,489 (22.9)",
+          "39,924 (32.7)",
+          "<0.0001"
+        ],
+        [
+          "Medicaid/Medicare",
+          "92 (63.5)",
+          "128,307 (5642)",
+          "74,096 (69.5)",
+          "75,746 (61.9)",
+          ""
+        ],
+        [
+          "Education * ≥ 29%",
+          "31 (21.1)",
+          "43,236 (19.1)",
+          "22,303 (21.0)",
+          "23,007 (18.9)",
+          ""
+        ],
+        [
+          "20% to 28.9%",
+          "35 (23.8)",
+          "59,710 (26.3)",
+          "28,134 (26.5)",
+          "29,909 (24.6)",
+          "<0.0001"
+        ],
+        [
+          "14% to 19.9%",
+          "38 (25.9)",
+          "56,024 (24.7)",
+          "25,507 (24.0)",
+          "29,535 (24.3)",
+          ""
+        ],
+        [
+          "<14%",
+          "43 (29.3)",
+          "67,774 (29.9)",
+          "30,284 (28.5)",
+          "39,223 (232.2)",
+          ""
+        ],
+        [
+          "Income Less than USD 38,000",
+          "19 (12.9)",
+          "36,425 (16.1)",
+          "19,201 (18.1)",
+          "18,607 (15.3)",
+          ""
+        ],
+        [
+          "USD 38,000-USD 47,999",
+          "27 (18.4)",
+          "45,079 (19.9)",
+          "21,963 (20.7)",
+          "22,900 (18.8)",
+          "<0.0001"
+        ],
+        [
+          "USD 48,000-USD 62,999",
+          "45 (30.6)",
+          "65,545 (28.9)",
+          "30,556 (28.8)",
+          "34,021 (27.9)",
+          ""
+        ],
+        [
+          "USD 63,000+",
+          "56 (38.1)",
+          "79,632 (35.1)",
+          "34,432 (32.4)",
+          "46,126 (37.9)",
+          ""
+        ],
+        [
+          "Geographic area Metro",
+          "115 (78.2)",
+          "179,826 (79.0)",
+          "84,350 (79.1)",
+          "99,092 (81.1)",
+          "0.3093"
+        ],
+        [
+          "Non metro",
+          "32 (21.8)",
+          "53,803 (21.0)",
+          "22,317(20.9)",
+          "23,101 (18.9)",
+          ""
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/39'}",
+      "headers": [
+        "Covariates",
+        "PDT (+Radiation + Chemo) n = 147, n (%)",
+        "Radiation + Chemo n = 227,629, n (%)",
+        "Radiation n = 106,667, n (%)",
+        "Chemo n = 122,193, n (%)",
+        "p Value"
+      ],
+      "rows": [
+        [
+          "Cancer program",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Community/Comprehensive",
+          "59 (40.1)",
+          "124,324 (55.2)",
+          "56,788 (53.5)",
+          "65,351 (54.1)",
+          "<0.0001"
+        ],
+        [
+          "Academic/Research",
+          "61 (41.5)",
+          "70,605 (31.3)",
+          "34,823 (32.8)",
+          "40,960 (33.9)",
+          "<0.0001"
+        ],
+        [
+          "Integrated Network",
+          "27 (18.4)",
+          "30,438 (13.5)",
+          "14,627 (13.8)",
+          "14,555 (12.0)",
+          "<0.0001"
+        ],
+        [
+          "Charlson/Deyo score",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "0",
+          "74 (50.3)",
+          "151,490 (66.6)",
+          "63,469 (59.9)",
+          "78,834 (64.5)",
+          "<0.0001"
+        ],
+        [
+          "1",
+          "46 (31.3)",
+          "53,722 (23.6)",
+          "27,624 (25.9)",
+          "29,722 (24.3)",
+          "<0.0001"
+        ],
+        [
+          "≥ 2",
+          "27 (18.4)",
+          "22,417 (9.9)",
+          "15,574 (14.5)",
+          "13,637 (11.1)",
+          "<0.0001"
+        ],
+        [
+          "Stage",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "III",
+          "89 (60.5)",
+          "100,507 (44.2)",
+          "23,185 (21.7)",
+          "24,503 (20.1)",
+          "<0.0001"
+        ],
+        [
+          "IV",
+          "58 (39.5)",
+          "127,122 (55.9)",
+          "83,482 (78.3)",
+          "97,690 (79.9)",
+          "<0.0001"
+        ],
+        [
+          "Histology",
+          "40 (27.2)",
+          "95,874 (42.1)",
+          "43,011 (40.3)",
+          "63,637 (52.1)",
+          ""
+        ],
+        [
+          "Adeno Carcinoma",
+          "19 (12.9)",
+          "42,921 (18.9)",
+          "22,503 (21.1)",
+          "19.905 (16.3)",
+          ""
+        ],
+        [
+          "Non-Small Cell Squamous Cell",
+          "74 (50.3)",
+          "61,996 (27.2)",
+          "26,066 (24.4)",
+          "20,936 (17.1)",
+          "<0.0001"
+        ],
+        [
+          "Other",
+          "14 (9.6)",
+          "26,838 (11.8)",
+          "15,087 (14.2)",
+          "17,715 (14.5)",
+          ""
+        ],
+        [
+          "Mortality",
+          "n = 130",
+          "n = 209,390",
+          "n = 98,534",
+          "",
+          ""
+        ],
+        [
+          "Overall",
+          "118 (90.8)",
+          "183,956 (87.9)",
+          "94,239 (95.6)",
+          "103,265 (91.3)",
+          "<0.0001"
+        ],
+        [
+          "Mean time to death in months (std)",
+          "18.6 (23.9)",
+          "18.0 (21.1)",
+          "7.3 (12.6)",
+          "14.7 (16.9)",
+          "<0.0001"
+        ]
+      ],
+      "footnotes": [
+        {
+          "cref": "#/texts/40"
+        }
+      ],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "",
+      "headers": [
+        "Covariates Radiation + chemo",
+        "Hazard Ratio (HR), 95% Confidence Interval (95% CI) -",
+        "Hazard Ratio (HR), 95% Confidence Interval (95% CI) 0.98 (0.98, 1.02)"
+      ],
+      "rows": [
+        [
+          "Treatment Chemo therapy only (Ref)",
+          "",
+          "-"
+        ],
+        [
+          "PDT (+radiation + chemo) Age at diagnosis",
+          "0.50 (0.42, 0.60) 1.02 (1.01, 1.04)",
+          "-"
+        ],
+        [
+          "Radiation + chemo",
+          "0.47 (0.46, 0.50)",
+          "1.03 (1.01, 1.06)"
+        ],
+        [
+          "Radiation only (Ref) Gender",
+          "-",
+          ""
+        ],
+        [
+          "Treatment Male",
+          "1.19 (1.17, 1.21)",
+          "1.24 (1.21, 1.26)"
+        ],
+        [
+          "PDT (+radiation + chemo) Female (Ref)",
+          "-",
+          "1.03 (0.86, 1.23) -"
+        ],
+        [
+          "Radiation + chemo",
+          "-",
+          "0.98 (0.98, 1.02)"
+        ],
+        [
+          "Chemo therapy only (Ref) Race",
+          "",
+          "- -"
+        ],
+        [
+          "Age at diagnosis White",
+          "1.02 (1.01, 1.04) 1.32 (1.29, 1.35)",
+          "1.03 (1.01, 1.06) 1.37 (1.34, 1.40)"
+        ],
+        [
+          "Gender African American",
+          "1.22 (1.19, 1.25)",
+          "1.28 (1.24, 1.31)"
+        ],
+        [
+          "Male Other (Ref)",
+          "1.19 (1.17, 1.21) -",
+          "1.24 (1.21, 1.26)"
+        ],
+        [
+          "Female (Ref) Insurance status",
+          "-",
+          "-"
+        ],
+        [
+          "Race",
+          "",
+          "-"
+        ],
+        [
+          "White Insured/Other Government",
+          "1.32 (1.29, 1.35) 1.01 (0.99, 1.05)",
+          "1.37 (1.34, 1.40) 1.04 (1.01, 1.08)"
+        ],
+        [
+          "African American Private/Managed Care",
+          "1.22 (1.19, 1.25) 0.92 (0.90, 0.96)",
+          "0.97)"
+        ],
+        [
+          "",
+          "",
+          "1.28 (1.24, 1.31) 0.92 (0.89,"
+        ],
+        [
+          "Other (Ref) Medicaid/Medicare (Ref)",
+          "- -",
+          "-"
+        ],
+        [
+          "Insurance status",
+          "",
+          ""
+        ],
+        [
+          "Not Insured/Other Government Income",
+          "1.01 (0.99, 1.05)",
+          "1.04 (1.01, 1.08)"
+        ],
+        [
+          "Private/Managed Care Less than USD 38,000",
+          "0.92 (0.90, 0.96) 1.02 (1.01, 1.07)",
+          "0.92 (0.89, 0.97) 1.06 (1.04, 1.09)"
+        ],
+        [
+          "Medicaid/Medicare (Ref) USD 38,000-USD 47,999",
+          "-",
+          "-"
+        ],
+        [
+          "Income",
+          "1.04 (1.02, 1.09)",
+          "1.06 (1.01, 1.08)"
+        ],
+        [
+          "Less than USD 38,000 USD 48,000-USD 62,999",
+          "1.02 (1.01, 1.07) 1.03 (1.01, 1.10)",
+          "1.06 (1.04, 1.09) 1.04 (1.02, 1.10)"
+        ],
+        [
+          "USD 38,000-USD 47,999 USD 63,000 + (Ref)",
+          "1.04 (1.02, 1.09) -",
+          "1.06 (1.01, 1.08) -"
+        ],
+        [
+          "USD 48,000-USD 62,999",
+          "1.03 (1.01, 1.10)",
+          "1.04 (1.02, 1.10)"
+        ],
+        [
+          "USD 63,000 + (Ref) Urban",
+          "-",
+          "-"
+        ],
+        [
+          "Urban Metro",
+          "0.99 (0.97, 1.04)",
+          "0.99 (0.96, 1.05)"
+        ],
+        [
+          "Metro Urban",
+          "0.99 (0.97, 1.04) 1.02 (0.99, 1.08)",
+          "0.99 (0.96, 1.05) 1.01 (0.97, 1.07)"
+        ],
+        [
+          "Urban",
+          "1.02 (0.99, 1.08)",
+          "1.01 (0.97, 1.07)"
+        ],
+        [
+          "Rural (Ref) Rural (Ref)",
+          "- -",
+          "- -"
+        ],
+        [
+          "Charlson-Deyo score Charlson-Deyo score",
+          "1.15 (1.12, 1.18) 1.15 (1.12, 1.18)",
+          "1.17 (1.15, 1.21) 1.17 (1.15, 1.21)"
+        ],
+        [
+          "Stage Stage",
+          "",
+          ""
+        ],
+        [
+          "III III",
+          "0.55 (0.52, 0.59) 0.55 (0.52, 0.59)",
+          "0.62 (0.58, 0.68) 0.62 (0.58, 0.68)"
+        ],
+        [
+          "IV (Ref)",
+          "-",
+          "-"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    }
+  ],
+  "figures": [
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/55'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/92'}",
+      "page": null
+    }
+  ],
+  "references": [
+    {
+      "title": "Cancer statistics"
+    },
+    {
+      "title": "CA Cancer J. Clin"
+    },
+    {
+      "title": "Improving survival for stage IV non-small cell lung cancer: A Surveillance, Epidemiology, and End Results survey from 1990 to 2005"
+    },
+    {
+      "title": "J. Thorac. Oncol",
+      "year": 2009
+    },
+    {
+      "title": "The Incidence of Node-Positive Non-small-Cell Lung Cancer Undergoing Sublobar Resection and the Role of Radiation in Its Management",
+      "year": 2009
+    },
+    {
+      "title": "Front. Oncol",
+      "year": 2020
+    },
+    {
+      "title": "Precision Diagnosis and Treatment for Advanced Non-Small-Cell Lung Cancer",
+      "year": 2020
+    },
+    {
+      "title": "N. Engl. J. Med",
+      "year": 2017
+    },
+    {
+      "title": "Photodynamic therapy of cancer: An update",
+      "year": 2017
+    },
+    {
+      "title": "Execuative Summary-Diagnosis and Management of Lung Cancer, 3rd ed: American College of Chest Physicians Evidence-Based Clinical Practice Guidelines",
+      "year": 2011
+    },
+    {
+      "title": "Chest",
+      "year": 2011
+    },
+    {
+      "title": "Photodynamic therapy for cancer",
+      "year": 2013
+    },
+    {
+      "title": "Nature",
+      "year": 2003
+    },
+    {
+      "title": "The role of radiotherapy in treatment of stage I non-small cell lung cancer",
+      "year": 2003
+    },
+    {
+      "title": "Lung Cancer",
+      "year": 2009
+    },
+    {
+      "title": "Photodynamic Therapy of Non-Small Cell Lung Cancer Narrative Review and Future Directions",
+      "year": 2003
+    },
+    {
+      "title": "Ann. Am. Thorac. Soc",
+      "year": 2016
+    },
+    {
+      "title": "Sequential photodynamic therapy (PDT) and high dose brachytherapy for endobronchial tumour control in patients with limited bronchogenic carcinoma",
+      "year": 2016
+    },
+    {
+      "title": "Thorax",
+      "year": 2004
+    },
+    {
+      "title": "Combinedphotodynamic therapy (PDT) using photofrin and radiother-apy (XRT) versus radiotherapy alone in patients with inop-erable obstructive non-small cell bronchogenic carcinoma",
+      "year": 2004
+    },
+    {
+      "title": "SPIE",
+      "year": 1991
+    },
+    {
+      "title": "Photodynamic therapy (PDT) for lung cancer",
+      "year": 1991
+    },
+    {
+      "title": "Photodiagn. Photodyn",
+      "year": 2011
+    },
+    {
+      "title": "Photodynamic therapy for early stage squamous cell carcinoma of the lung",
+      "year": 2011
+    },
+    {
+      "title": "Mayo Clin. Proc",
+      "year": 1997
+    },
+    {
+      "title": "Long-term survival of patients treated with photodynamic therapy for carcinoma in situ and early non-small-cell lung carcinoma",
+      "year": 1997
+    },
+    {
+      "title": "Lasers Surg. Med",
+      "year": 2007
+    },
+    {
+      "title": "Photodynamic therapy (PDT) in early central lung cancer: A treatment option for patients ineligible for surgical resection",
+      "year": 2007
+    },
+    {
+      "title": "Photodynamic therapy for the treatment of non-small cell lung cancer",
+      "year": 2007
+    },
+    {
+      "title": "J. Thorac. Dis",
+      "year": 2011
+    },
+    {
+      "title": "Photodynamic Therapy (PDT) for Lung Cancers",
+      "year": 2011
+    },
+    {
+      "title": "Systemic therapy for stage IV non-small-cell lung cancer: American Society of Clinical Oncology clinical practice guideline update",
+      "year": 2006
+    },
+    {
+      "title": "J. Clin. Oncol",
+      "year": 2017
+    },
+    {
+      "title": "Local consolidative therapy versus maintenance therapy or observation for patients with oligometastatic non-small-cell lung cancer without progression after first-line systemic therapy: A multicentre, randomised, controlled, phase 2 study",
+      "year": 2017
+    },
+    {
+      "title": "Lancet Oncol",
+      "year": 2016
+    },
+    {
+      "title": "Outcomes of patients with advanced non-small cell lung cancer and airway obstruction treated with photodynamic therapy and non-photodynamic therapy ablation modalities",
+      "year": 2016
+    },
+    {
+      "title": "Photodynamic therapy downregulates the function of regulatory T cells in patients with esophageal squamous cell carcinoma",
+      "year": 2019
+    },
+    {
+      "title": "Photochem. Photobiol. Sci",
+      "year": 2014
+    },
+    {
+      "title": "The abscopal effect of local radiotherapy: Using immunotherapy to make a rare event clinically relevant",
+      "year": 2014
+    },
+    {
+      "title": "Cancer Treat. Rev",
+      "year": 2015
+    },
+    {
+      "title": "Enhancement of anti-tumor immunity by photodynamic therapy",
+      "year": 2015
+    },
+    {
+      "title": "Immunol. Res",
+      "year": 2010
+    },
+    {
+      "title": "The clinical impact of photodynamic therapy in thoracic surgery",
+      "year": 2010
+    },
+    {
+      "title": "Eur. Surg",
+      "year": 2010
+    },
+    {
+      "title": "Comparison of 5-aminolaevulinic acid and porphyrin photosensitization for photodynamic therapy of malignant bronchial stenosis: A clinical pilot study",
+      "year": 2010
+    },
+    {
+      "title": "Combining immunotherapy and radiotherapy in lung cancer",
+      "year": 2002
+    },
+    {
+      "title": "Comparison of Survival Rates After a Combination of Local Treatment and Systemic Therapy vs Systemic Therapy Alone for Treatment of Stage IV Non-Small Cell Lung Cancer",
+      "year": 2018
+    },
+    {
+      "title": "JAMA Netw. Open",
+      "year": 2019
+    },
+    {
+      "title": "The objective of local therapy in oligometastatic cancer is amoving target",
+      "year": 2019
+    },
+    {
+      "title": "JAMA Oncol",
+      "year": 2019
+    },
+    {
+      "title": "Phase II trial of stereotactic body radiation therapy combined with erlotinib for patients with limited but progressivemetastatic non-small-cell lung cancer"
+    },
+    {
+      "title": "A population-based comparative effectiveness study of radiation therapy techniques in stage III non-small cell lung cancer",
+      "year": 2014
+    },
+    {
+      "title": "Int. J. Radiat. Oncol. Biol. Phys",
+      "year": 2014
+    },
+    {
+      "title": "Chemotherapy and survival benefit in elderly patients with advanced non-smallcell lung cancer",
+      "year": 2014
+    },
+    {
+      "title": "Adjuvant Chemotherapy for T3 Non-Small Cell Lung Cancer with Additional Tumor Nodules in the Same Lobe",
+      "year": 2010
+    },
+    {
+      "title": "Treatment of stage III non-small cell lung cancer: Diagnosis and management of lung cancer, 3rd ed: American College of Chest Physicians evidence-based clinical practice guidelines",
+      "year": 2016
+    },
+    {
+      "title": "Role for Surgical Resection in the Multi-Disciplinary Treatment of Stage IIIB Non-Small Cell Lung Cancer",
+      "year": 2013
+    },
+    {
+      "title": "Ann. Thorac. Surg",
+      "year": 2015
+    },
+    {
+      "title": "Early and locally advanced non-small-cell lung cancer (NSCLC): ESMO Clinical Practice Guidelines for diagnosis, treatment and follow-up Clinical Practice Guidelines",
+      "year": 2015
+    },
+    {
+      "title": "Ann. Oncol",
+      "year": 2017
+    },
+    {
+      "title": "Hypofractionated vs. conventional radiation therapy for stage III non-small cell lung cancer treated without chemotherapy",
+      "year": 2017
+    },
+    {
+      "title": "Acta Oncol",
+      "year": 2020
+    },
+    {
+      "title": "Overview of the SEER-Medicare data-content, research application and generalizability to the United States elderly population",
+      "year": 2020
+    },
+    {
+      "title": "Med. Care",
+      "year": 2002
+    },
+    {
+      "title": "Assessing comorbidity using claims data-an overview",
+      "year": 2002
+    },
+    {
+      "title": "Adapting a clinical comorbidity index for use with ICD-9-CM administrative databases",
+      "year": 2002
+    },
+    {
+      "title": "J. Clin. Epidemiol",
+      "year": 1992
+    },
+    {
+      "title": "Comorbidity Indices as predictors of mortality in critically ill patients",
+      "year": 1992
+    },
+    {
+      "title": "BMJ Open",
+      "year": 2015
+    },
+    {
+      "title": "Comorbidity Assessment in the National Cancer Database for Patients With Surgically Resected Breast, Colorectal, or Lung Cancer (AFT-01, -02, -03",
+      "year": 2015
+    },
+    {
+      "title": "J. Oncol. Pract",
+      "year": 2018
+    }
+  ],
+  "quality": {
+    "completeness_score": 0,
+    "has_abstract": true,
+    "abstract_source": "metadata",
+    "has_doi": true,
+    "has_full_text": true,
+    "num_sections": 14,
+    "num_tables": 3,
+    "num_figures": 6,
+    "num_references": 71
+  }
+}

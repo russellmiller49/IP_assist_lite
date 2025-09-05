@@ -1,0 +1,660 @@
+{
+  "metadata": {
+    "document_id": "10_1016_j_jacr_2023_09_009",
+    "title": "ACR Lung-RADS v2022: Assessment Categories and Management Recommendations",
+    "authors": [
+      "Jared Christensen",
+      "Ashley Elizabeth Prosper",
+      "Carol C. Wu",
+      "Jonathan Chung",
+      "Elizabeth Lee",
+      "Brett Elicker",
+      "Andetta R. Hunsaker",
+      "Milena Petranovic",
+      "Kim L. Sandler",
+      "Brendon Stiles",
+      "Peter Mazzone",
+      "David Yankelevitz",
+      "Denise Aberle",
+      "Caroline Chiles",
+      "Ella Kazerooni"
+    ],
+    "year": 2024,
+    "journal": "Journal of the American College of Radiology",
+    "doi": "10.1016/j.jacr.2023.09.009",
+    "volume": "21",
+    "issue": "3",
+    "pages": "473-488",
+    "citation": "Christensen, et al. (2024). ACR Lung-RADS v2022: Assessment Categories and Management Recommendations. Journal of the American College of Radiology, 21(3), 473-488. https://doi.org/10.1016/j.jacr.2023.09.009",
+    "abstract": "The ACR created the Lung CT Screening Reporting and Data System (Lung-RADS) in 2014 to standardize the reporting and management of screen-detected pulmonary nodules. Lung-RADS was updated to version 1.1 in 2019 and revised size thresholds for nonsolid nodules, added classi /uniFB01 cation criteria for peri /uniFB01 ssural nodules, and allowed for short-interval follow-up of rapidly enlarging nodules that may a Vice Chair and Professor of Radiology, Department of Radiology, Duke University, Durham, North Carolina; Chair, ACR Lung-RADS Committee. b Assistant Professor and Section Chief of Cardiothoracic Imaging, Department of Radiological Sciences, University of California, Los Angeles, California. d Professor of Radiology Vice Chair of Quality Section Chief of Cardiopulmonary Imaging, University of Chicago, Chicago, Illinois. e Clinical Associate Professor, Radiology, Michigan Medicine, Ann Arbor, Michigan. f Chief of the Cardiac & Pulmonary Imaging Section, University of California, San Francisco, California. g Brigham and Women ' s Hospital, Boston, Massachusetts; Associate Professor Harvard Medical School Chief Division of Thoracic Imaging. h Instructor, Radiology, Harvard Medical School Divisional Quality Director, Thoracic Imaging and Intervention, Radiology, Massachusetts General Hospital, Boston, Massachusetts. i Associate Professor, Vanderbilt University Medical Center, Nashville, Tennessee. j Professor and Chair, Thoracic Surgery and Surgical Oncology, Monte /uniFB01 ore Health System, Albert Einstein College of Medicine, Bronx, New York. k Cleveland Clinic, Cleveland, Ohio. l Professor, Icahn School of Medicine, New York, New York. m Professor of Radiology, Department of Radiological Sciences; David Geffen School of Medicine at UCLA, Los Angeles, California. n Professor of Radiology Director, Lung Screening Program, Atrium Health Wake Forest, Winston-Salem, North Carolina. o Professor of Radiology & Internal Medicine and Associate Chief Clinical Of /uniFB01 cer for Diagnostics, Michigan Medicine/University of Michigan Medical School, Ann Arbor, Michigan; Clinical Information Management, University of Michigan Medical Group. Corresponding author and reprints: Jared Christensen, MD, MBA, Duke University, Department of Radiology; Box 3808, Durham, NC 27710; e-mail: jared.christensen@duke.edu. Dr Aberle reports relationships with the National Cancer Institute and Johnson and Johnson that include funding grants. Dr Chiles reports administrative support provided by the ACR and a consulting or advisory relationship with Optellum Ltd. Dr Stiles reports consulting or advisory relationships with P /uniFB01 zer Inc., AstraZeneca Pharmaceuticals LP, Genentech Inc., Regeneron Pharmaceuticals Inc., Merck & Co Inc., Medtronic Inc., Galvanize Therapeutics Inc., and Arcus Biosciences Inc.; has patent #TARGETING ART1 FOR CANCER IMMUNOTHERAPYpending to Assignee; and is on the board, Lung Cancer Research Foundation SAB, LUNGevity. Dr Yankelevitz reports a consulting or advisory relationship with HeartLung that includes equity or stocks; reports consulting or advisory relationships with Median Technologies, Carestream Health Inc., and Accumetra that include equity or stocks; has a patent licensed to General Electric; is a named inventor on a number of patents and patent applications related to the evaluation of chest diseases including measurements of chest nodules; and has received /uniFB01 nancial compensation for the licensing of these patents. Dr Mazzone reports relationships with Adela, Biodesix Inc., DELFI, Exact Sciences Corporation, Nucleix Ltd., ProgNomIQ, and Veracyte Inc. that include funding grants and is editor-in-chief of the journal Chest. Dr Christensen reports a relationship with Riverain Technologies, LLC, that includes an advisory role, and administrative support provided by the ACR. Dr Prosper reports a relationship with the ACR that includes grant funding. Dr Sandler reports relationships with Reveal-Dx and Aidence that include consulting or advisory roles. The other authors state that they have no con /uniFB02 ict of interest related to the material discussed in this article. All authors are non-partner/non-partnership track/employees. This paper was jointly developed by Journal of the American College of Radiology and CHEST /C210 and jointly published by Elsevier Inc. The articles are identical except for minor stylistic and spelling differences in keeping with each journal ' s style. Either citation can be used when citing this article. Credits awarded for this enduring activity are designated ' CME ' by the American Board of Radiology (ABR) and qualify toward ful /uniFB01 lling requirements for Maintenance of Certi /uniFB01 cation (MOC) Part II: Lifelong Learning and Self-assessment. To access the CME activity visit https://cortex.acr.org/Presenters/CaseScript/CaseView?Info=YhKbZav%2bQ03bsM%2fv9E52bON0dbUZfcIMJ% 2bGTrbnrMZU%253d. CME credit for this article expires March 1, 2027. All CME articles can be found on JACR.org by navigating to CME on the dropdown menu. be infectious in etiology. Lung-RADS v2022, released in November 2022, provides several updates including guidance on the classi /uniFB01 cation and management of atypical pulmonary cysts, juxtapleural nodules, airway-centered nodules, and potentially infectious /uniFB01 ndings. This new release also provides clari /uniFB01 cation for determining nodule growth and introduces stepped management for nodules that are stable or decreasing in size. This article summarizes the current evidence and expert consensus supporting Lung-RADS v2022. J Am Coll Radiol 2024;21:473-488. ª 2024 American College of Radiology and American College of Chest Physicians. Published by Elsevier Inc on behalf of American College of Radiology and American College of Chest Physicians. All rights reserved.",
+    "abstract_source": "metadata",
+    "url": "https://linkinghub.elsevier.com/retrieve/pii/S1546144023007615"
+  },
+  "source_file": "LungRADSAssessmentCategoriesv1-1.json",
+  "sections": [
+    {
+      "title": "ACR Lung-RADS v2022: Assessment Categories and Management Recommendations",
+      "content": "Jared Christensen, MD, MBA a , Ashley Elizabeth Prosper, MD b , Carol C. Wu, MD c , Jonathan Chung, MD d , Elizabeth Lee, MD e , Brett Elicker, MD f , Andetta R. Hunsaker, MD g , Milena Petranovic, MD h , Kim L. Sandler, MD i , Brendon Stiles, MD j , Peter Mazzone, MD, MPH k , David Yankelevitz, MD l , Denise Aberle, MD m , Caroline Chiles, MD n , Ella Kazerooni, MD o",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Abstract",
+      "content": "The ACR created the Lung CT Screening Reporting and Data System (Lung-RADS) in 2014 to standardize the reporting and management of screen-detected pulmonary nodules. Lung-RADS was updated to version 1.1 in 2019 and revised size thresholds for nonsolid nodules, added classi /uniFB01 cation criteria for peri /uniFB01 ssural nodules, and allowed for short-interval follow-up of rapidly enlarging nodules that may\na Vice Chair and Professor of Radiology, Department of Radiology, Duke University, Durham, North Carolina; Chair, ACR Lung-RADS Committee.\nb\nAssistant Professor and Section Chief of Cardiothoracic Imaging, Department\nof Radiological Sciences, University of California, Los Angeles, California.\nd Professor of Radiology Vice Chair of Quality Section Chief of Cardiopulmonary Imaging, University of Chicago, Chicago, Illinois.\ne Clinical Associate Professor, Radiology, Michigan Medicine, Ann Arbor, Michigan. f Chief of the Cardiac & Pulmonary Imaging Section, University of California, San Francisco, California.\ng Brigham and Women ' s Hospital, Boston, Massachusetts; Associate Professor Harvard Medical School Chief Division of Thoracic Imaging.\nh Instructor, Radiology, Harvard Medical School Divisional Quality Director, Thoracic Imaging and Intervention, Radiology, Massachusetts General Hospital, Boston, Massachusetts.\ni Associate Professor, Vanderbilt University Medical Center, Nashville, Tennessee. j Professor and Chair, Thoracic Surgery and Surgical Oncology, Monte /uniFB01 ore Health System, Albert Einstein College of Medicine, Bronx, New York. k Cleveland Clinic, Cleveland, Ohio.\nl Professor, Icahn School of Medicine, New York, New York.\nm Professor of Radiology, Department of Radiological Sciences; David Geffen School of Medicine at UCLA, Los Angeles, California.\nn Professor of Radiology Director, Lung Screening Program, Atrium Health Wake Forest, Winston-Salem, North Carolina.\no Professor of Radiology & Internal Medicine and Associate Chief Clinical Of /uniFB01 cer for Diagnostics, Michigan Medicine/University of Michigan Medical School, Ann Arbor, Michigan; Clinical Information Management, University of Michigan Medical Group.\nCorresponding author and reprints: Jared Christensen, MD, MBA, Duke University, Department of Radiology; Box 3808, Durham, NC 27710; e-mail: jared.christensen@duke.edu.\nDr Aberle reports relationships with the National Cancer Institute and Johnson and Johnson that include funding grants. Dr Chiles reports administrative support provided by the ACR and a consulting or advisory relationship with Optellum Ltd. Dr Stiles reports consulting or advisory relationships with P /uniFB01 zer Inc., AstraZeneca Pharmaceuticals LP, Genentech Inc., Regeneron Pharmaceuticals Inc., Merck & Co Inc., Medtronic Inc., Galvanize Therapeutics Inc., and Arcus Biosciences Inc.; has patent #TARGETING ART1 FOR CANCER IMMUNOTHERAPYpending to Assignee; and is on the board, Lung Cancer Research Foundation SAB, LUNGevity. Dr Yankelevitz reports a consulting or advisory relationship with HeartLung that includes equity or stocks; reports consulting or advisory relationships with Median Technologies, Carestream Health Inc., and Accumetra that include equity or stocks; has a patent licensed to General Electric; is a named inventor on a number of patents and patent applications related to the evaluation of chest diseases including measurements of chest nodules; and has received /uniFB01 nancial compensation for the licensing of these patents. Dr Mazzone reports relationships with Adela, Biodesix Inc., DELFI, Exact Sciences Corporation, Nucleix Ltd., ProgNomIQ, and Veracyte Inc. that include funding grants and is editor-in-chief of the journal Chest. Dr Christensen reports a relationship with Riverain Technologies, LLC, that includes an advisory role, and administrative support provided by the ACR. Dr Prosper reports a relationship with the ACR that includes grant funding. Dr Sandler reports relationships with Reveal-Dx and Aidence that include consulting or advisory roles. The other authors state that they have no con /uniFB02 ict of interest related to the material discussed in this article. All authors are non-partner/non-partnership track/employees.\nThis paper was jointly developed by Journal of the American College of Radiology and CHEST /C210 and jointly published by Elsevier Inc. The articles are identical except for minor stylistic and spelling differences in keeping with each journal ' s style. Either citation can be used when citing this article.\nCredits awarded for this enduring activity are designated ' CME ' by the American Board of Radiology (ABR) and qualify toward ful /uniFB01 lling requirements for Maintenance of Certi /uniFB01 cation (MOC) Part II: Lifelong Learning and Self-assessment. To access the CME activity visit https://cortex.acr.org/Presenters/CaseScript/CaseView?Info=YhKbZav%2bQ03bsM%2fv9E52bON0dbUZfcIMJ% 2bGTrbnrMZU%253d. CME credit for this article expires March 1, 2027. All CME articles can be found on JACR.org by navigating to CME on the dropdown menu.\nbe infectious in etiology. Lung-RADS v2022, released in November 2022, provides several updates including guidance on the classi /uniFB01 cation and management of atypical pulmonary cysts, juxtapleural nodules, airway-centered nodules, and potentially infectious /uniFB01 ndings. This new release also provides clari /uniFB01 cation for determining nodule growth and introduces stepped management for nodules that are stable or decreasing in size. This article summarizes the current evidence and expert consensus supporting Lung-RADS v2022.\nJ Am Coll Radiol 2024;21:473-488. ª 2024 American College of Radiology and American College of Chest Physicians. Published by Elsevier Inc on behalf of American College of Radiology and American College of Chest Physicians. All rights reserved.",
+      "category": "abstract",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "INTRODUCTION",
+      "content": "Lung cancer is the most common cause of cancer-related death in the United States and worldwide. The National Lung Screening Trial (NLST) demonstrated a 20% reduction in lung-cancer-related mortality with the use of lowdose lung cancer screening (LCS) CT in high-risk patients [1,2]. More recent data from the randomized controlled Dutch-Belgian Randomized Lung Cancer Screening Trial (NELSON) and Multicentric Italian Lung Detection trial reaf /uniFB01 rm the utility of LCS CT, reporting lung-cancerspeci /uniFB01 c mortality reductions of up to 26% and 39%, respectively [3,4]. In conjunction with the CMS approval for coverage of LCS CT in eligible patients, the ACR released the Lung CT Screening Reporting and Data System (Lung-RADS) v1.0 in 2014 to standardize LCS CT reporting, provide consistent management guidance, and facilitate outcomes monitoring [5].\nSpeci /uniFB01 c aspects of Lung-RADS have been validated in numerous studies with the primary bene /uniFB01 ts of survival associated with a shift to earlier-stage lung cancer detection (stage shift) and reducing false-positive screens and unnecessary follow-up [6-14]. There has been widespread adoption of Lung-RADS for LCS CT reporting throughout the United States as the only CMS-approved reporting and classi /uniFB01 cation system for LCS. Lung-RADS has also been implemented in other countries or used as a foundation for international reporting systems [15,16].\nLung-RADS was updated to v1.1 in 2019 adding classi/uniFB01 cation criteria for peri /uniFB01 ssural nodules, new size criteria for nonsolid nodules, and revised measurement criteria, among other updates [17,18]. The newest version, Lung-RADS v2022, was released in November 2022, coinciding with National Lung Cancer Awareness month [19]. This release was prepared by the ACR Lung-RADS Committee, composed of 15 content experts from the /uniFB01 elds of diagnostic radiology, thoracic surgery, and pulmonary medicine representing a range of clinical practice settings. The updates were informed by new science, questions raised by practicing radiologists, and insights from committee members. Each topic underwent a systematic review of the literature, resulting in evidence-based updates when supported, including new assessment criteria for atypical pulmonary cysts and juxtapleural nodules, as well as revised assessment criteria for\nairway nodules and potentially infectious or in /uniFB02 ammatory /uniFB01 ndings at LCS. For topics of clinical importance lacking suf /uniFB01 cient data, expert consensus was obtained through nominal group methodology to establish best practice guidance for commonly encountered clinical scenarios in LCS CT practice. This article, authored by the ACR Lung-RADS Committee, details the updates along with the evidence and rationale for changes introduced in Lung-RADS v2022 (Table 1).",
+      "category": "introduction",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "NEW CLASSIFICATION CRITERIA Atypical Pulmonary Cysts",
+      "content": "The incidence of lung cancers associated with atypical pulmonary cysts is overall low, with the largest study indicating a rate of 1.1% for new lung cancer diagnoses [20]. However, the incidence of cystic lung cancers in high-risk populations is much higher. In evaluating International Early Lung Cancer Action Program data, Farooqi et al found that of 706 patients with lung cancers, 3.6% were associated with cysts at either baseline or follow-up LCS [21]. A study of 441 patients diagnosed with primary lung cancer found that 9.3% were associated with cystic components at initial CT imaging [22]. Furthermore, cancers associated with cysts are more likely to be missed at initial screening than those presenting as isolated nodules. In a NELSON analysis, 22% of missed cancers at initial screening were associated with cystic spaces [23].\nPrecursor lesions of cystic lung cancers are often represented by unilocular thick-walled cysts, cysts with associated nodularity, or multilocular cysts [22]. A meta-analysis of eight studies evaluating lung cancers associated with cystic airspaces in 341 patients found that the most common cystic imaging features were nonuniform shape (91.2%), associated nodular component (64.0%), unilocular cyst (63.6%), wall thickening (37.4%), and irregular margins (37.3%) [24]. Over time, imaging demonstrated nodule growth (68.5%), an increase in wall thickening (48.3%), enlargement of the cystic component (40.4%), or transformation to a completely solid nodule (12.4%). When associated with lung cancer, unilocular cysts typically present with additional features, such as wall thickening or nodularity [24-26]. Multilocular cysts have a\nhigh probability of malignancy and are reported to account for up to 20% of cystic lung cancers [25]. Given these /uniFB01 ndings, Lung-RADS v2022 introduces classi /uniFB01 cation and management recommendations for atypical pulmonary cysts detected at LCS (Table 2). Key principles are as follows:\n1. Thin-walled cysts, de /uniFB01 ned as unilocular cysts with wall thickness < 2 mm, are considered benign and are not classi /uniFB01 ed or managed in Lung-RADS [27]. Multiple pulmonary cysts may indicate a diffuse cystic lung disease; however, these conditions are not classi /uniFB01 ed in Lung-RADS unless a cyst with concerning features is identi /uniFB01 ed (Fig. 1).\n2. Thick-walled cysts are unilocular with a wall thickness 2 mm or larger, which may be uniform, asymmetric, or manifest as focal wall nodularity (Fig. 2).\n3. Multilocular cysts contain internal septations and may have associated ground glass or solid components (Fig. 3).\n4. Thick-walled and multilocular cysts are classi /uniFB01 ed as Lung-RADS 4A with recommended management of 3month low-dose CT (LDCT) or PET/CT if there is a solid component of at least 8 mm.\n5. Growing wall thickness or nodularity of a thick-walled cyst, increasing loculation of a multilocular cyst, or new or increasing opacity (nodular, ground glass, or consolidation) within or adjacent to a multilocular cyst merits a 4B classi /uniFB01 cation with a recommendation for appropriate diagnostic evaluation (Fig. 3).\n6. Atypical pulmonary cysts with an associated nodule that is within the cyst lumen (endophytic) or adjacent to the wall (exophytic) are classi /uniFB01 ed and managed by the most suspicious /uniFB01 nding. It can be dif /uniFB01 cult to distinguish between a cyst with nodular wall thickening (eg, a thick-walled cyst, LungRADS 4A) and a thin-walled cyst with an adjacent nodule (managed by nodule size and composition). When in doubt, choose the higher Lung-RADS classi /uniFB01 cation (Fig. 4).\n*Refer to the complete Lung-RADS v2022 Assessment Category table and notes: https://www.acr.org/-/media/ACR/Files/RADS/Lung-RADS/ Lung-RADS-2022.pdf.\nThe precise risk of malignancy for atypical pulmonary cysts is not well de /uniFB01 ned. The ACR Lung-RADS Committee therefore chose to remove the Risk of Malignancy column from the Lung-RADS table. Risk assessment is typically lesion speci /uniFB01 c and, with the exception of category 4B lesions, is not routinely used in Lung-RADS management recommendations.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Juxtapleural Nodules",
+      "content": "Lung-RADS v1.1 introduced new classi /uniFB01 cation and management recommendations for screen-detected peri /uniFB01 ssural nodules meeting the following size and morphologic criteria: solid; triangular, ovoid, or lentiform in shape; and measuring < 10 mm in maximum diameter. Such nodules are considered benign and likely to represent intrapulmonary lymph nodes with several studies indicating a 0% incidence of malignancy [28,29]. New studies indicate that up to 32% of solid nodules 6 to 10 mm in mean diameter are juxtapleural (peri /uniFB01 ssural, costal pleural, perimediastinal, or peridiaphragmatic) and that no juxtapleural nodules were malignant when applying similar size and morphologic criteria as those used for peri /uniFB01 ssural nodules [30-32]. Of note, some of the analyses used a 10mm mean diameter (average of longand short-axis diameters) rather than a single maximum diameter threshold; Lung-RADS v2022 criteria have been updated accordingly. Available data indicate that expanding peri /uniFB01 ssural classi /uniFB01 -cation and management recommendations to all juxtapleural nodules, regardless of location, reduces false-positive rates and increases Lung-RADS speci /uniFB01 city without a decrease in sensitivity (Fig. 5).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "In /uniFB02 ammatory or Infectious Findings",
+      "content": "Classi /uniFB01 cation and management of potentially infectious or in /uniFB02 ammatory /uniFB01 ndings were not addressed in Lung-RADS v1.0. Lung-RADS v1.1 introduced a new management\nrecommendation of 1-month LDCT for ' new large nodules that develop on an annual repeat screening CT ' to address potentially infectious or in /uniFB02 ammatory conditions. Precise size and composition guidance were not speci /uniFB01 ed, but the management recommendation was provided under category 4B, suggesting that nodules meeting classi /uniFB01 cation criteria for new 4B nodules may apply. Lung-RADS v2022 provides new guidance on /uniFB01 ndings that are likely to be in /uniFB02 ammatory or infectious, how to classify them, and what constitutes appropriate management (Fig. 6).\nThe precise incidence of in /uniFB02 ammatory or infectious pulmonary pathology at LCS is unknown; however, one series of 3,800 patients found that 8.1% of LCS examinations had /uniFB01 ndings attributable to in /uniFB02 ammatory or infectious etiologies and that most resolved at follow-up imaging with a < 1% incidence of malignancy [33]. This same series found that in /uniFB02 ammatory or infectious /uniFB01 ndings were predominantly multifocal (78.5%) and comprised of ground glass (46.8%), clustered opacities (20.2%), tree-inbud nodules (16.9%), or consolidation (12.4%). In addition, segmental or lobar consolidation, multiple new nodules (more than six), large solid nodules ( /C21 8 mm) appearing in a short interval, and new nodules in certain clinical contexts (eg, immunocompromised patient) are likely to be infectious or in /uniFB02 ammatory [34-36]. Because the appearance of potentially infectious or in /uniFB02 ammatory pulmonary conditions is heterogeneous, the data do not dictate a single classi /uniFB01 cation and management recommendation. Lung-RADS v2022 provides the following guidance:\n1. Findings at LCS suggesting an indeterminate infectious or in /uniFB02 ammatory process, as previously noted, or /uniFB01 ndings that obscure portions of the lungs, such as segmental or lobar consolidation, should be classi /uniFB01 ed as Lung-RADS 0 with a recommendation for 1- to 3-month follow-up LDCT to allow time for resolution and to exclude an underlying suspicious nodule. At follow-up, the study\nshould be reclassi /uniFB01 ed based on the most concerning /uniFB01 nding.\n2. Findings at LCS in which malignancy seems more likely than an infectious or in /uniFB02 ammatory process should be classi /uniFB01 ed based on size and composition. Such /uniFB01 ndings are often new solid or part-solid nodules that meet LungRADS 4B size criteria with recommended management of diagnostic or clinical evaluation.\n3. Some /uniFB01 ndings at LCS indicative of an infectious process may not warrant short-term follow-up (eg, tree-in-bud nodules or new < 3-cm ground glass nodules). These nodules may be evaluated using existing size and composition criteria with a Lung-RADS classi /uniFB01 cation and management recommendation based on the most suspicious /uniFB01 nding, often corresponding to Lung-RADS 2 with a recommendation for 12-month LDCT.",
+      "category": "results",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Airway Nodules",
+      "content": "Although rare, patients eligible for LCS have risk factors for developing primary airway squamous cell carcinoma. Scrutiny of the airways at LCS is an important component of a comprehensive imaging evaluation. Data characterizing airway /uniFB01 ndings at LCS are limited. In the largest study to date, Kim et al evaluated 50,036 patients undergoing LCS CT and found that only 0.6% had airway nodules [37]. The majority of endobronchial opacities resolved at repeat imaging (96.2%); of those that did not resolve, bronchoscopic evaluation found that all represented benign pathology with no cases of malignancy identi /uniFB01 ed. A smaller study found airway nodules in 0.5% of LCS examinations, and 97.8% of these were benign [38]. Although the incidence of airway malignancies at screening is very low, an analysis\nof the NELSON data found that 22% of cancers missed at initial screening presented as central endobronchial lesions, indicating that attention to airway /uniFB01 ndings is clinically important [23].\nLung-RADS v1.0 and v1.1 categorized the presence of an endobronchial nodule as category 4A with a 3month follow-up LDCT recommended; however, no additional management guidance was provided for persistent nodules at the time of follow-up imaging. In some instances, persistent nodules were being downgraded to Lung-RADS 2 as recommended for ' Category 3 or 4 nodules unchanged for /C21 3 months '-management intended for pulmonary nodules rather than airway nodules. Lung-RADS v2022 provides additional\nguidance on the classi /uniFB01 cation and management of airway /uniFB01 ndings at LCS, taking into consideration location, morphology, number, and persistence at follow-up imaging (Table 3).\n1. Location: Large airways are de /uniFB01 ned as segmental or more proximal in nature and have diameters > 3 mm [39]. Such airway nodules may be classi /uniFB01 ed as Lung-RADS 4A with a management recommendation of 3-month LDCT follow-up to assess for resolution versus persistence. Evaluation of the small airways (subsegmental and more distal) is limited at LCS but can manifest as postobstructive atelectasis or other secondary imaging /uniFB01 ndings not readily assessed on screening CT, such as air\ntrapping. Subsegmental airway nodules often represent mucous plugging or are associated with infectious or in /uniFB02 ammatory conditions and can be classi /uniFB01 ed as LungRADS 2 with a management recommendation of 12month screening LDCT (Fig. 7).\n2. Morphology: Although differentiating between airway neoplasms and secretions at initial imaging can be challenging, shape and density are important morphologic features that can be considered before assigning a Lung-RADS category. CT /uniFB01 ndings that favor secretions include complex or tubular shape, the absence of soft tissue, the presence of air, or Houns/uniFB01 eld unit < 21.7 and may be classi /uniFB01 ed as Lung-RADS 2 with a recommendation for 12-month screening LDCT [40]. Other CT features are indeterminate and may be classi /uniFB01 ed as Lung-RADS 4A with a\nrecommendation for 3-month LDCT follow-up to ensure resolution (Fig. 7).\n3. Number: Most malignant airway nodules are solitary [41]. Multiple airway opacities, such as new tree-in-bud nodules or multifocal mucoid impaction, favor a nonneoplastic process, may not necessarily warrant a LungRADS 4A classi /uniFB01 cation, and could be managed as a potentially infectious or in /uniFB02 ammatory process as previously outlined (Fig. 7).\n4. Persistence: Most benign central airway /uniFB01 ndings resolve at short-term follow-up; therefore, segmental or more proximal airway nodules that persist at 3-month LDCT follow-up are potentially concerning and should not be downgraded to a lower Lung-RADS category as is recommended for other stable 4A /uniFB01 ndings. Persistent segmental or more proximal airway nodules require\nadditional evaluation and are upgraded to category 4B for diagnostic assessment by PET/CT (if a solid component /C21 8 mm) or referral for clinical evaluation and bronchoscopy (Fig. 7).\nOf note, the National Comprehensive Cancer Network management guidelines for airway nodules found at LCS recommend a 1-month follow-up CT instead of a 3-month follow-up CT as recommended by Lung-RADS v2022 [42]. Both recommend subsequent bronchoscopy for persistent nodules. Given the low incidence of malignancy in airway lesions found at LCS and the relative minimal difference in timing, there is currently insuf /uniFB01 cient data to indicate which management recommendation may be preferable.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "CLARIFICATIONS Volumetrics",
+      "content": "The ef /uniFB01 cacy of volumetric analysis of pulmonary nodules in LCS was validated by the NELSON trial, which used volumes to quantify size and growth for risk strati /uniFB01 cation and management [4,43]. However, the NELSON study was highly controlled, with all examinations performed on the same scanner make and model and centralized\nvolumetric analysis performed with the same software -all factors that do not accurately re /uniFB02 ect clinical practice. Additional studies have identi /uniFB01 ed the potential bene /uniFB01 ts of nodule volumetrics in LCS, including automation, reproducibility, and increased sensitivity [30,44,45]. Lung-RADS v1.1 introduced nodule volume measurements corresponding to mean diameters for each category but did not include a volume threshold de /uniFB01 ning growth. Despite the potential bene /uniFB01 ts, there are currently no data to suggest that the use of volumetrics leads to improved patient outcomes over mean diameter measurement methodologies. In fact, in the only study to date comparing the performance of Lung-RADS versus the NELSON classi /uniFB01 cation and management criteria, LungRADS mean diameter assessment outperformed volumetrics at lung cancer detection [46]. Lung-RADS will appropriately evolve as new data regarding the utility and impact of volumetrics become available.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Growth",
+      "content": "Nodule growth in both Lung-RADS v1.0 and 1.1 was de /uniFB01 ned as an increase in size > 1.5 mm but did not specify whether this was in any dimension, total diameter, or mean diameter, and Lung-RADS v1.0 and 1.1 did not specify a time interval (eg, growth rate) [17]. In practice, growth rate is an important consideration; for example, an increase in size of 2.0 mm over 6 months is potentially more concerning than over 2 years. Likewise, slowgrowing nodules that increase in size < 1.5 mm each year may be missed by prior Lung-RADS criteria. However, using a /uniFB01 xed dimension and time interval for assessing growth is not without limitations. For example, an increase of > 1.5 mm can represent a more signi /uniFB01 cant increase in size and volume in a small nodule than for similar growth in a large nodule; notwithstanding, growing small nodules are often still typically below the size threshold for biopsy or PET/CT characterization and may be safely managed by current Lung-RADS criteria. For larger nodules, the updated growth de /uniFB01 nition captures nodules that fall within concerning volume doubling times with 3and 6-month follow-up intervals. Volumetric analysis may more accurately detect subtle changes in nodule size than mean diameter measurements, leading to earlier intervention or diagnosis, but whether such /uniFB01 ndings lead to improved patient outcomes remain in question.\nThe ACR Lung-RADS Committee reviewed several methods and thresholds for assessing nodule growth but ultimately decided to maintain the > 1.5-mm marker while specifying a growth interval within 12 months. When modeled for nodules of varying size, this de /uniFB01 nition approximates other methodologies for quantifying\ngrowth, including those from the International Early Lung Cancer Action Program and the NELSON trial [47-49]. In addition, Lung-RADS v2022 provides\nadditional clarity for clinical application, particularly for slow-growing nodules. The following guidance is provided:\n1. Growth is de /uniFB01 ned as > 1.5-mm mean diameter increase within a /C20 12-month interval.\n2. Nodules with a /C20 1.5-mm increase in size in a > 12-month interval are de /uniFB01 ned as slow-growing, meaning they do not meet growth criteria from one annual screen to the next.\n3. Slow-growing nodules may be appropriately classi /uniFB01 ed as stable until reaching a new size threshold when they should be reclassi /uniFB01 ed and managed accordingly.\n4. Radiologists are advised to always compare the current examination with the oldest available chest CT (diagnostic or screening) to determine a nodule ' s characteristics over time.\n5. Slow-growing nonsolid (ground glass) nodules: A slowgrowing nonsolid nodule may be classi /uniFB01 ed as LungRADS 2 until the nodule meets criteria of another category, such as developing a solid component (then manage per part-solid nodule criteria).\nFig. 6. Infectious or in /uniFB02 ammatory /uniFB01 ndings. (A) Findings at lung cancer screening (LCS) that suggest an infectious or in /uniFB02 ammatory process include new segmental or lobar consolidation (A1, arrow), large new nodules ( /C21 8 mm) appearing within a short interval (A2, arrow), or multiple new nodules (A3). Such /uniFB01 ndings may be classi /uniFB01 ed as Lung CT Screening Reporting and Data System (Lung-RADS) 0 based on clinical suspicion of an infectious or in /uniFB02 ammatory process with a recommendation for follow-up low-dose CT (LDCT) in 1 to 3 months to ensure resolution. The study is then reclassi /uniFB01 ed at follow-up according to the most concerning /uniFB01 nding. (B) A 55-year-old patient had a baseline LCS CT classi /uniFB01 ed as Lung-RADS 3 (not shown) and presents for 6month follow-up LDCT. There is a new lobular 28-mm mean diameter soft tissue nodule in the left lower lobe (B1, arrow). Given the size and lack of an abnormality in this area on the prior examination, the study was classi /uniFB01 ed as Lung-RADS 0 for a likely infectious process. The patient returned for follow-up LDCT at 3 months, which showed a marked decrease in size but not complete resolution (B2, arrow). No new /uniFB01 ndings were identi /uniFB01 ed, and other nodules were stable. The examination was reclassi /uniFB01 ed as Lung-RADS 2 with a management recommendation of a 12-month LCS CT from the date of the current study. Had the nodule remained stable, increased, or only slightly decreased in size, an infectious or in /uniFB02 ammatory process would be less likely; the examination would be reclassi /uniFB01 ed as Lung-RADS 4B based on size and composition with a recommendation for diagnostic evaluation. (C) A 61-year-old patient presenting for annual LCS CT is found to have multiple new tree-in-bud nodules bilaterally with a basilar predominance (C2) relative to the prior annual LCS examination (C1). Although an infectious process is most likely, a Lung-RADS 0 classi /uniFB01 cation with 1- to 3-month follow-up LDCT is unnecessary. In this case, the examination may be classi /uniFB01 ed based on the size and composition of the new nodules (solid, < 4 mm), corresponding to Lung-RADS 2.\n6. Slow-growing solid or part-solid nodules: A solid or part-solid nodule demonstrating slow growth over multiple screening examinations is suspicious and may be classi /uniFB01 ed as Lung-RADS 4B. Slow-growing nodules may not have increased metabolic activity on PET/CT; therefore, biopsy, if feasible, or surgical evaluation may be the most appropriate management recommendation.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "S Modi /uniFB01 er",
+      "content": "Signi /uniFB01 cant or potentially signi /uniFB01 cant /uniFB01 ndings unrelated to lung cancer at LCS may be indicated by the addition of an S modi /uniFB01 er to Lung-RADS categories 0 to 4. Such /uniFB01 ndings are common with 19.6% of NLST study participants having potentially signi /uniFB01 cant pathology, although other studies have reported an incidence of 10% to 45% [33,50-52]. Unlike the highly structured classi /uniFB01 cation for lung nodules at LCS, /uniFB01 ndings that warrant an S modi /uniFB01 er and associated management are not prescribed by Lung-\nRADS and are left to the discretion of the interpreting radiologist. Although some authors have proposed more de /uniFB01 ned criteria, the classi /uniFB01 cation and management of incidental /uniFB01 ndings unrelated to lung cancer are beyond the purview of Lung-RADS [53]. Notwithstanding, LungRADS v2022 provides additional guidance and clari /uniFB01 cation for reporting signi /uniFB01 cant or potentially signi /uniFB01 cant /uniFB01 ndings.\n1. The interpreting radiologist determines which /uniFB01 ndings constitute a signi /uniFB01 cant or potentially signi /uniFB01 cant /uniFB01 nding (S modi /uniFB01 er). The reporting and communication of such /uniFB01 ndings should adhere to ACR practice standards.\n2. Management recommendations for the S modi /uniFB01 er should be included in the report impression and conform to established ACR Incidental Findings recommendations, when available. A reference guide summarizing ACR management recommendations for commonly encountered incidental /uniFB01 ndings at LCS is available [54,55].\nFig. 7. Airway nodules. (A) Airway nodules in Lung CT Screening Reporting and Data System (Lung-RADS) v2022 are characterized by location, morphology, number, and persistence. New segmental or more proximal airway nodules with a lack of benign features are classi /uniFB01 ed as Lung-RADS 4A with a recommendation of 3-month low-dose CT (LDCT) to assess for resolution (A1: left main stem nodule [arrow], A2: left lower lobe segmental bronchus nodule [arrow]). Subsegmental airway nodules are classi /uniFB01 ed as LungRADS 2 (A3: baseline lung cancer screening [LCS] with patent subsegmental airway [arrow], A4: annual LCS CT with new subsegmental airway nodule [arrow]). (B) The presence of air within an airway nodule, speci /uniFB01 cally in the absence of a soft tissue component, with mean attenuation < 21 Houns /uniFB01 eld units favors secretions (B1, B2, B3 [arrows]). Multiple tubular airway opacities favor mucous plugging (B4, arrows). These /uniFB01 ndings may be classi /uniFB01 ed as Lung-RADS 2. (C) A 70-year-old patient with a left main stem bronchus soft tissue nodule at annual LCS (C1, arrow) is classi /uniFB01 ed as Lung-RADS 4A and is stable at 3-month LDCT (C2, arrow). Airway nodules that persist at follow-up remain suspicious and are upgraded to Lung-RADS 4B with a recommendation for diagnostic evaluation, typically referral for clinical evaluation and bronchoscopy.\n3. Signi /uniFB01 cant or potentially signi /uniFB01 cant /uniFB01 ndings that are already known, treated, or in the process of clinical evaluation do not require an S modi /uniFB01 er (for example, a patient with severe coronary artery disease who has already undergone percutaneous coronary intervention). However, any evidence of change in a known /uniFB01 nding that is unexpected warrants an S modi /uniFB01 er, such as interval enlargement of a known ascending aortic aneurysm. It is not always evident whether a signi /uniFB01 cant or potentially signi /uniFB01 cant /uniFB01 nding is already known; therefore, radiologists should exercise judgment in reporting and communicating such /uniFB01 ndings and associated management recommendations.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Stepped Management",
+      "content": "The concept of stepped management was /uniFB01 rst introduced in Lung-RADS v1.0 as category 3 or 4A nodules ' unchanged for /C21 3 months ' were downgraded to Lung-RADS category 2 with a management recommendation to ' continue annual screening with LDCT in 12 months ' [18]. Some radiologists interpreted this recommendation as 12 months from the current examination, but others adhered to 12 months from the baseline or annual LCS study. The\noriginal intent was for annual LCS to be performed 12 months from the date of the baseline examination, as the NLST validated this protocol in reducing lung cancer mortality with LCS CT [1]. With this approach, a baseline Lung-RADS 3 nodule stable at 6-month followup is reclassi /uniFB01 ed to category 2 with a return to annual screening in 6 months from the current examination (12 months from the baseline study). In practice, targeting follow-up recommendations from the baseline or annual screening examination can be problematic. Patients may not always comply with follow-up recommendations, and some were being imaged at later time points, such as 9 months from baseline. In such a case, a patient reclassi /uniFB01 ed as LungRADS 2 would be expected to return in 3 months for annual LCS. Similar dif /uniFB01 culties were encountered in managing category 4A (suspicious) nodules stable at 3-month follow-up CT. Such nodules were reclassi /uniFB01 ed as category 2, and patients would not return to imaging for 9 months -a longer follow-up interval than that recommended for stable probably benign category 3 nodules (return to imaging at 6 months), which was paradoxical.\nThere are limited data on the impact of screening intervals. As previously noted, the reduction in lung cancer mortality in the NLST was predicated on annual CT screening. The NELSON study examined staggered\nLDCT ¼ low-dose CT; Lung-RADS ¼ Lung CT Screening Reporting and Data System.\nLDCT ¼ low-dose CT; Lung-RADS ¼ Lung CT Screening Reporting and Data System. *Classi\n/uniFB01 cation and management are based on the most concerning nodule at follow-up. The classi /uniFB01 cation and management recommendations above assume no new or growing nodules are identi /uniFB01 ed.\nscreening follow-up at 1, 3, and 5.5 years from baseline (1-, 2-, and 2.5-year intervals) and found an increase in cancers at longer screening intervals, with a statistically signi /uniFB01 cant reduction in LCS ef /uniFB01 cacy at the 2.5-year interval [56]. At least two studies have been performed evaluating the Lung-RADS management follow-up intervals for 4A nodules /uniFB01 nding the initial 3-month recommendation is optimal, but downgrading stable 4A nodules to Lung-RADS 2 is potentially problematic, as previously discussed [14,57]. To address these concerns, Lung-RADS v2022 modi /uniFB01 es stepped management using the following guidelines:\n1. Nodules that are stable or decreased at follow-up are downgraded to the next lower Lung-RADS category.\n2. Nodules that completely resolve or are proven benign after an appropriate diagnostic evaluation are reclassi /uniFB01 ed based on the most concerning /uniFB01 nding.\n3. Follow-up recommendations are timed from the current examination.\nStepped management recommendations are listed in Table 4 with comparative management between LungRADS v1.1 and Lung-RADS v2022 outlined in Fig. 8. In application, a category 3 nodule that is stable or smaller at 6-month follow-up CT will be reclassi /uniFB01 ed as category 2, with a 12-month screening CT from the date of the current examination. Therefore, in Lung-RADS v2022, the patient is imaged 6 months later than in Lung-RADS v1.1 (Fig. 8A). In the small percentage of these nodules representing lung cancer, stepped management still allows for early detection and is unlikely to affect patient outcomes.\nStepped management for a category 4A nodule that is stable or smaller at 3-month follow-up CT results in reclassi /uniFB01 cation to category 3, with a 6-month LDCT from the date of the current study. If the nodule is stable or smaller at the 6-month examination, it is reclassi /uniFB01 ed as category 2 with a recommendation for 12-month screening LDCT from the date of the current examination (Fig. 8B). If the nodule resolves at the initial 3-month follow-up CT, and no new or growing nodules are identi /uniFB01 ed, then the\nstudy is reclassi /uniFB01 ed as category 1 or 2, without an intervening stepped management to category 3. Likewise, category 4B lesions that are proven benign after diagnostic evaluation can be reclassi /uniFB01 ed as category 1 or 2 depending on the presence of other stable nodules. As LCS and followup examinations are classi /uniFB01 ed in Lung-RADS according to the most concerning /uniFB01 nding, new or growing nodules supersede this approach. Stepped management in Lung-RADS v2022 provides consistent recommendations for the followup of category 3 and 4A nodules and addresses the 4A timing paradox of more concerning nodules.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Interval Diagnostic CTs",
+      "content": "Patients participating in annual LCS may receive diagnostic chest CT (DCT) imaging evaluation outside of recommended LCS management. Although follow-up LDCT examinations obtained from Lung-RADS category 0 (1-3 month), 3 (6-month), and 4A (3-month) /uniFB01 ndings are considered DCTs based on current procedural terminology billing codes, for the purposes of this discussion, interval DCT refers to chest CT imaging performed outside LCS follow-up recommendations. To date, there has been no formal guidance on how to account for interval DCTs obtained in screening patients. Given that the /uniFB01 ndings on DCT are potentially relevant and may impact the timing of annual LCS, we offer the following guidance:\n1. Use of prior diagnostic CTs when evaluating a baseline LCS CT: Information from prior DCTs should be evaluated when interpreting baseline LCS and determining classi/uniFB01 cation and management recommendations. For example, an 8-mm solid nodule on baseline screening CT would typically be classi /uniFB01 ed as Lung-RADS 4A; however, if a prior diagnostic CT is available from 1 year ago documenting stability, then the baseline LCS examination can appropriately be classi /uniFB01 ed as Lung-RADS 2. Likewise, if the 8-mm nodule is new from 1 year ago, then the appropriate classi /uniFB01 cation would be Lung-RADS 4B (new /C21 8-mm solid nodule).\n2. Use of prior (interval) diagnostic CTs when evaluating an annual LCS or follow-up LDCT: Information from interval DCTs should be evaluated in conjunction with prior LCS and follow-up LDCT examinations for interpretation and determining classi /uniFB01 cation and management recommendations.\n3. Use of interval diagnostic CT as a substitute for annual LCS CT: A DCT may be used as a substitute for annual (not baseline) LCS if the examination is of suf /uniFB01 cient diagnostic quality and meets technical parameters of LCS CT with the exception of dose. If known prospectively, the DCT report should indicate that the study is also being performed as an annual LCS assessment and include a\nLung-RADS classi /uniFB01 cation and management recommendation. Alternatively, a DCT can include a Lung-RADS classi /uniFB01 cation and management recommendation as an addendum, with follow-up imaging timed from the date of the study. The diagnostic study can also be recorded in the ACR National Lung Cancer Screening Registry for quality measures and program review.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Patients No Longer Eligible for LCS",
+      "content": "Current US Preventative Services Task Force guidelines recommend LCS CT in high-risk patients until the age of 80 or until they are otherwise no longer eligible for LCS [58,59]. CMS eligibility criteria exclude patients beyond the age of 77 [60]. Patients who initially quali /uniFB01 ed for annual LCS may eventually be ineligible as a result of age or smoking quit time longer than 15 years [60]. Patients who are no longer able or willing to receive treatment if a cancer is diagnosed, or whose life expectancy is limited, are also no longer eligible for LCS CT. Continued eligibility is best determined by the ordering provider. For patients who are no longer eligible for continued LCS, expert consensus among the ACR Lung-RADS Committee recommends the following:\n1. The interpreting radiologist should assign an appropriate Lung-RADS classi /uniFB01 cation and corresponding management recommendation based on the current examination, even if the patient may not be eligible for continued screening (eg, aging out, quit smoking > 15 years).\n2. We recommend adding a statement to LCS reporting templates indicating that the management recommendation is based on continued patient eligibility for annual LCS. This approach should avoid the need for addended reports and, more importantly, facilitate shared decision-making discussions between patients and providers in situations in which a recommendation for continued screening is made in the report, yet the patient no longer meets eligibility criteria or no longer quali /uniFB01 es for other reasons.\nThere are currently no consensus guidelines on subsequent management for patients who no longer qualify for annual LCS but have known lung nodules; however, many practices apply Fleischner Society nodule management recommendations for high-risk patients. For example, solid nodules stable for /C21 2 years may no longer require followup, whereas a nodule that is new on the last screening CT may warrant continued diagnostic CT evaluation [61].",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "TAKE-HOME POINTS",
+      "content": "-ACR Lung-RADS v2022 introduces important evidence-based updates to the classi /uniFB01 cation and\nmanagement of /uniFB01 ndings at LCS CT including criteria for atypical pulmonary cysts, juxtapleural nodules, infectious or in /uniFB02 ammatory /uniFB01 ndings, and airway nodules.\n-Lung-RADS v2022 provides additional clarity through data and expert consensus on the role of volumetrics, the de /uniFB01 nition of nodule growth, the classi /uniFB01 cation and management of slow-growing nodules, and use of the S modi /uniFB01 er.\n-Lung-RADS v2022 introduces the concept of stepped management for Lung-RADS category 3 and 4A nodules while clarifying that follow-up LDCT management recommendations are from the date of the current examination.\n-Additional guidance is provided for addressing the role of interval diagnostic CTs in LCS patients and the management of nodules in patients no longer eligible for LCS.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "ACKNOWLEDGMENTS",
+      "content": "With the release of Lung-RADS v2022, the ACR LungRADS Committee recognizes in memoriam the signi /uniFB01 cant contributions to medicine and lung cancer screening by our friend and colleague, Brady McKee, M.D. His pioneering work on the development and validation of Lung-RADS will be an enduring legacy.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "REFERENCES",
+      "content": "1. National Lung Screening Trial Research Team, Aberle DR, Adams AM, et al. Reduced lung-cancer mortality with low-dose computed tomographic screening. N Engl J Med 2011;365:395-409.\n2. National Lung Screening Trial Research Team, Aberle DR, Berg CD, et al. The National Lung Screening Trial: overview and study design. Radiology 2011;258:243-53.\n3. Pastorino U, Silva M, Sestini S, et al. Prolonged lung cancer screening reduced 10-year mortality in the MILD trial: new con /uniFB01 rmation of lung cancer screening ef /uniFB01 cacy. Ann Oncol 2019;30:1162-9.\n4. de Koning HJ, van der Aalst CM, de Jong PA, et al. Reduced lungcancer mortality with volume CT screening in a randomized trial. N Engl J Med 2020;382:503-13.\n5. Centers for Medicare & Medicaid Services. Screening for lung cancer with low dose computed tomography (LDCT). https://www.cms.gov/ medicare-coverage-database/view/ncacal-decision-memo.aspx?proposed ¼ Y&NCAId ¼ 274&bc ¼ 0. Accessed October 18, 2022.\n6. Kim H, Kim HY, Goo JM, Kim Y. External validation and comparison of the Brock model and Lung-RADS for the baseline lung cancer CT screening using data from the Korean Lung Cancer Screening Project. Eur Radiol 2021;31:4004-15.\n7. Pinsky PF, Gierada DS, Black W, et al. Performance of Lung-RADS in the National Lung Screening Trial: a retrospective assessment. Ann Intern Med 2015;162:485-91.\n8. Kastner J, Hossain R, Jeudy J, et al. Lung-RADS Version 1.0 versus Lung-RADS version 1.1: comparison of categories using nodules from the National Lung Screening Trial. Radiology 2021;300:199-206.\n9. McKee BJ, Regis SM, McKee AB, Flacke S, Wald C. Performance of ACR Lung-RADS in a clinical CT lung screening program. J Am Coll Radiol 2015;12:273-6.\n10. Dyer SC, Bartholmai BJ, Koo CW. Implications of the updated Lung CT Screening Reporting and Data System (Lung-RADS version 1.1) for lung cancer screening. J Thorac Dis 2020;12:6966-77.\n11. Xu DM, Yip R, Smith JP, Yankelevitz DF, Henschke CI, I-ELCAP Investigators. Retrospective review of lung cancers diagnosed in annual rounds of CT screening. AJR Am J Roentgenol 2014;203:965-72.\n12. Tremblay A, Taghizadeh N, MacGregor J-H, et al. Application of lung-screening reporting and data system versus pan-Canadian early detection of lung cancer nodule risk calculation in the Alberta Lung Cancer Screening Study. J Am Coll Radiol 2019;16:1425-32.\n13. Potter AL, Rosenstein AL, Kiang MV, et al. Association of computed tomography screening with lung cancer stage shift and survival in the United States: quasi-experimental study. BMJ 2022;376:e069008.\n14. Bastani M, Toumazis I, Hedou ' J, Leung A, Plevritis SK. Evaluation of alternative diagnostic follow-up intervals for lung reporting and data system criteria on the effectiveness of lung cancer screening. J Am Coll Radiol 2021;18:1614-23.\n15. Jang SH. Korean national lung cancer screening. Korean J Med 2020;95:95-103.\n16. Canadian Association of Radiologists. Guide on CT screening for lung cancer. Available at: https://car.ca/wp-content/uploads/CT-Screeningfor-Lung-Cancer-2017.pdf. Accessed January 12, 2023.\n17. Chelala L, Hossain R, Kazerooni EA, Christensen JD, Dyer DS, White CS. Lung-RADS Version 1.1: challenges and a look ahead, from the AJR special series on radiology reporting and data systems. AJR Am J Roentgenol 2021;216:1411-22.\n18. American College of Radiology. Lung-RADS /C210 version 1.1 Available at: https://www.acr.org/-/media/ACR/Files/RADS/Lung-RADS/LungRAD SAssessmentCategoriesv1-1.pdf ¼ la ¼ en. Accessed October 18, 2022.\n19. American College of Radiology. Lung CT Screening Reporting & Data System (Lung-RADS /C210 ) Available at: https://www.acr.org/ Clinical-Resources/Reporting-and-Data-Systems/Lung-Rads. Accessed October 18, 2022.\n20. Shen Y, Xu X, Zhang Y, et al. Lung cancers associated with cystic airspaces: CT features and pathologic correlation. Lung Cancer 2019;135:110-5.\n21. Farooqi AO, Cham M, Zhang L, et al. Lung cancer associated with cystic airspaces. AJR Am J Roentgenol 2012;199:781-6.\n22. Byrne D, English JC, Atkar-Khattra S, et al. Cystic primary lung cancer: evolution of computed tomography imaging morphology over time. J Thorac Imaging 2021;36:373-81.\n23. Scholten ET, Horeweg N, de Koning HJ, et al. Computed tomographic characteristics of interval and post screen carcinomas in lung cancer screening. Eur Radiol 2015;25:81-8.\n24. Mendoza DP, Heeger A, Mino-Kenudson M, et al. Clinicopathologic and longitudinal imaging features of lung cancer associated with cystic airspaces: a systematic review and meta-analysis. AJR Am J Roentgenol 2021;216:318-29.\n25. Fintelmann FJ, Brinkmann JK, Jeck WR, et al. Lung cancers associated with cystic airspaces: natural history, pathologic correlation, and mutational analysis. J Thorac Imaging 2017;32:176.\n26. Sheard S, Moser J, Sayer C, Stefanidis K, Devaraj A, Vlahos I. Lung cancers associated with cystic airspaces: underrecognized features of early disease. Radiographics 2018;38:704-17.\n27. Hansell DM, Bankier AA, MacMahon H, McLoud TC, Müller NL, Remy J. Fleischner Society: glossary of terms for thoracic imaging. Radiology 2008;246:697-722.\n28. de Hoop B, van Ginneken B, Gietema H, Prokop M. Pulmonary peri /uniFB01 ssural nodules on CT scans: rapid growth is not a predictor of malignancy. Radiology 2012;265:611-6.\n29. Ahn MI, Gleeson TG, Chan IH, et al. Peri /uniFB01 ssural nodules seen at CT screening for lung cancer. Radiology 2010;254:949-56.\n30. Hammer MM, Hunsaker AR. Strategies for reducing false-positive screening results for intermediate-size nodules evaluated using Lung-\nRADS: a secondary analysis of National Lung Screening Trial Data. AJR Am J Roentgenol 2022;219:397-405.\n31. Zhu Y, Yip R, You N, Henschke CI, Yankelevitz DF. Management of nodules attached to the costal pleura at low-dose CT screening for lung cancer. Radiology 2020;297:710-8.\n32. Zhu Y, Yip R, You N, et al. Characterization of newly detected costal pleura-attached noncalci /uniFB01 ed nodules at annual low-dose CT screenings. Radiology 2021;301:724-31.\n33. Mendoza DP, Chintanapakdee W, Zhang EW, et al. Management and outcomes of suspected infectious and in /uniFB02 ammatory lung abnormalities identi /uniFB01 ed on lung cancer screening CT. AJR Am J Roentgenol 2021;217:1083-92.\n34. Expert Panel on Thoracic Imaging, Lee C, Colletti PM, et al. ACR Appropriateness Criteria /C210 acute respiratory illness in immunocompromised patients. J Am Coll Radiol 2019;16:S331-9.\n35. Heuvelmans MA, Walter JE, Peters RB, et al. Relationship between nodule count and lung cancer probability in baseline CT lung cancer screening: the NELSON study. Lung Cancer Amst Neth 2017;113: 45-50.\n36. McWilliams A, Tammemagi MC, Mayo JR, et al. Probability of cancer in pulmonary nodules detected on /uniFB01 rst screening CT. N Engl J Med 2013;369:910-9.\n37. Kim H-J, Kim DK, Kim YW, et al. Outcome of incidentally detected airway nodules. Eur Respir J 2016;47:1510-7.\n38. Mendoza DP, Petranovic M, Som A, et al. Lung-RADS category 3 and 4 nodules on lung cancer screening in clinical practice. AJR Am J Roentgenol 2022;219:55-65.\n39. Heidinger BH, Occhipinti M, Eisenberg RL, Bankier AA. Imaging of large airways disorders. AJR Am J Roentgenol 2015;205:41-56.\n40. Hong SR, Lee YJ, Hong YJ, et al. Differentiation between mucus secretion and endoluminal tumors in the airway: analysis and comparison of CT /uniFB01 ndings. AJR Am J Roentgenol 2014;202: 982-8.\n41. Ngo A-VH, Walker CM, Chung JH, et al. Tumors and tumorlike conditions of the large airways. AJR Am J Roentgenol 2013;201: 301-13.\n42. Wood DE, Kazerooni EA, Aberle D, et al. NCCN Guidelines /C210 insights: lung cancer screening, version 1.2022. J Natl Compr Cancer Netw 2022;20:754-64.\n43. Horeweg N, Aalst CM van der, Vliegenthart R, et al. Volumetric computed tomography screening for lung cancer: three rounds of the NELSON trial. Eur Respir J 2013;42:1659-67.\n44. Heuvelmans MA, Walter JE, Vliegenthart R, et al. Disagreement of diameter and volume measurements for pulmonary nodule size estimation in CT lung cancer screening. Thorax 2018;73:779-81.\n45. Han D, Heuvelmans MA, Oudkerk M. Volume versus diameter assessment of small pulmonary nodules in CT lung cancer screening. Transl Lung Cancer Res 2017;6:52-61.\n46. Hammer MM, Byrne SC. Cancer risk in nodules detected at follow-up lung cancer screening CT. AJR Am J Roentgenol 2022;218:634-41.\n47. Xu DM, Gietema H, de Koning H, et al. Nodule management protocol of the NELSON randomised lung cancer screening trial. Lung Cancer 2006;54:177-84.\n48. Henschke CI, Yankelevitz DF, Yip R, et al. Lung cancers diagnosed at annual CT screening: volume doubling times. Radiology 2012;263: 578-83.\n49. Henschke CI, Yip R, Shaham D, et al. The regimen of computed tomography screening for lung cancer: lessons learned over 25 years from the international early lung cancer action program. J Thorac Imaging 2021;36:6-23.\n50. Pinsky PF, Lynch DA, Gierada DS. Incidental /uniFB01 ndings on low-dose CT scan lung cancer screenings and deaths from respiratory diseases. Chest 2022;161:1092-100.\n51. Nguyen XV, Davies L, Eastwood JD, Hoang JK. Extrapulmonary /uniFB01 ndings and malignancies in participants screened with chest CT in the National Lung Screening Trial. J Am Coll Radiol 2017;14:324-30.\n52. Reiter MJ, Nemesure A, Madu E, Reagan L, Plank A. Frequency and distribution of incidental /uniFB01 ndings deemed appropriate for S modi /uniFB01 er designation on low-dose CT in a lung cancer screening program. Lung Cancer 2018;120:1-6.\n53. Tanoue LT, Sather P, Cortopassi I, et al. Standardizing the reporting of incidental, non-lung cancer (category S) /uniFB01 ndings identi /uniFB01 ed on lung cancer screening low-dose CT imaging. Chest 2022;161:1697-706.\n54. Dyer DS, White C, Conley Thomson C, et al. A quick reference guide for incidental /uniFB01 ndings on lung cancer screening CT examinations. J Am Coll Radiol 2022;20:162-72.\n55. American College of Radiology. Lung Cancer Screening CT Incidental Findings Quick Reference Guide. https://www.acr.org/-/media/ACR/ Files/Lung-Cancer-Screening-Resources/LCS-Incidental-FindingsQuick-Guide.pdf. Accessed October 18, 2022.\n56. Yousaf-Khan U, van der Aalst C, de Jong PA, et al. Final screening round of the NELSON lung cancer screening trial: the effect of a 2.5year screening interval. Thorax 2017;72:48-56.\n57. Byrne SC, Hammer MM. Malignant nodules detected on lung cancer screening CT: yield of short-term follow-up CT in showing nodule growth. AJR Am J Roentgenol 2022;219:735-41.\n58. US Preventive Services Task Force, Krist AH, Davidson KW, et al. Screening for lung cancer: US Preventive Services Task Force recommendation statement. JAMA 2021;325:962-70.\n59. US Preventive Services Taskforce. Final recommendation statement. Lung cancer: screening. Available at: https://www.uspreventiveservicestaskforce. org/uspstf/recommendation/lung-cancer-screening. Accessed October 21, 2022.\n60. Centers for Medicare & Medicaid Services. Screening for lung cancer with low dose computed tomography (LDCT). CAG-00439R. National Coverage Analysis (NCA). Decision memo. Available at: https:// www.cms.gov/medicare-coverage-database/view/ncacal-decision-memo. aspx?proposed ¼ N&ncaid ¼ 304&bc ¼ 0. Accessed October 21, 2022.\n61. MacMahon H, Naidich DP, Goo JM, et al. Guidelines for management of incidental pulmonary nodules detected on CT images: from the Fleischner Society 2017. Radiology 2017;284:228-43.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    }
+  ],
+  "tables": [
+    {
+      "id": "table",
+      "caption": "",
+      "headers": [
+        "Classi /uniFB01 cation criteria",
+        "Description"
+      ],
+      "rows": [
+        [
+          "Atypical pulmonary cysts",
+          "New classi /uniFB01 cation and management recommendations for thick-walled, multilocular cysts, and cysts with associated nodules"
+        ],
+        [
+          "Juxtapleural nodules",
+          "Updated classi /uniFB01 cation and management recommendations for juxtapleural nodules (peri /uniFB01 ssural, costal pleural, perimediastinal, and peridiaphragmatic)"
+        ],
+        [
+          "In /uniFB02 ammatory or infectious /uniFB01 ndings",
+          "Updated classi /uniFB01 cation and management recommendations for /uniFB01 ndings that may represent an infectious or in /uniFB02 ammatory process: segmental or lobar consolidation, multiple new nodules (more than six in number), large solid nodules ( /C21 8 mm) appearing in a short interval, or new nodules in certain clinical contexts (eg, immunocompromised patient) /uniFB01"
+        ],
+        [
+          "Airway nodules",
+          "Updated classi cation and management recommendations for airway nodules based on location, morphology, number, and persistence"
+        ],
+        [
+          "Clari /uniFB01 cations",
+          "Description"
+        ],
+        [
+          "Growth",
+          "Updated de /uniFB01 nition: An increase > 1.5-mm in mean diameter within a 12-month interval"
+        ],
+        [
+          "Slow growing",
+          "New de /uniFB01 nitions for slow-growing solid, part-solid, and ground glass nodules with associated management recommendations"
+        ],
+        [
+          "S modi /uniFB01 er",
+          "New guidance for when to use and discontinue use of the S modi /uniFB01 er for potentially signi /uniFB01 cant or signi /uniFB01 cant /uniFB01 ndings"
+        ],
+        [
+          "Management considerations",
+          "Description"
+        ],
+        [
+          "Stepped management",
+          "New stepped management approach for Lung-RADS categories 3 and 4A nodules that are stable or decreasing in size at follow-up"
+        ],
+        [
+          "Interval diagnostic CTs",
+          "New guidance on managing interval diagnostic CTs obtained in LCS patients, including when a diagnostic CT may substitute for a LCS examination and whether the timing of subsequent LCS imaging should be modi /uniFB01 ed based on an interval diagnostic chest CT"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/46'}",
+      "headers": [
+        "Lung-RADS",
+        "Description",
+        "Management"
+      ],
+      "rows": [
+        [
+          "3",
+          "Growing cystic component (mean diameter) of a thick-walled cyst",
+          "6-month LDCT"
+        ],
+        [
+          "4A",
+          "Thick-walled cyst OR Multilocular cyst at baseline OR Thin- or thick-walled cyst that becomes multilocular",
+          "3-month LDCT; PET/CT may be considered if there is a /C21 8 mm ( /C21 268 mm 3 ) solid nodule or solid component"
+        ],
+        [
+          "4B",
+          "Thick-walled cyst with growing wall thickness/ nodularity OR Growing multilocular cyst (mean diameter) OR Multilocular cyst with increased loculation or new or increased opacity (nodular, ground glass, or consolidation)",
+          "Diagnostic chest CT with or without contrast; PET/CT may be considered if there is a /C21 8 mm ( /C21 268 mm 3 ) solid nodule or solid component; tissue sampling; and/or referral for further clinical evaluation"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/165'}",
+      "headers": [
+        "Lung-RADS",
+        "Description",
+        "Management"
+      ],
+      "rows": [
+        [
+          "2",
+          "Subsegmental - at baseline, new, or stable",
+          "12-month screening LDCT"
+        ],
+        [
+          "4A",
+          "Segmental or more proximal - at baseline",
+          "3-month LDCT; PET/CT may be considered if there is a /C21 8 mm ( /C21 268 mm 3 ) solid nodule or solid component"
+        ],
+        [
+          "4B",
+          "Segmental or more proximal - stable or growing",
+          "Referral for further clinical evaluation*"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/173'}",
+      "headers": [
+        "Lung-RADS*",
+        "Description",
+        "Management"
+      ],
+      "rows": [
+        [
+          "3",
+          "Category 4A lesions stable or decreased on 3-month follow-up CT",
+          "6-month LDCT (from the date of the current examination)"
+        ],
+        [
+          "2",
+          "Category 3 lesions stable or decreased on 6-month follow-up CT Category 3 or 4A lesions that resolve on follow-up CT Category 4B lesions proven benign after workup or that resolve on follow-up CT",
+          "12-month screening LDCT (from the date of the current examination)"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    }
+  ],
+  "figures": [
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/57'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/71'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/82'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/100'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/110'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/178'}",
+      "page": null
+    }
+  ],
+  "references": [
+    {
+      "title": "Reduced lung-cancer mortality with low-dose computed tomographic screening"
+    },
+    {
+      "title": "N Engl J Med",
+      "year": 2011
+    },
+    {
+      "title": "The National Lung Screening Trial: overview and study design",
+      "year": 2011
+    },
+    {
+      "title": "Radiology",
+      "year": 2011
+    },
+    {
+      "title": "Prolonged lung cancer screening reduced 10-year mortality in the MILD trial: new confirmation of lung cancer screening efficacy",
+      "year": 2011
+    },
+    {
+      "title": "Ann Oncol",
+      "year": 2019
+    },
+    {
+      "title": "Reduced lungcancer mortality with volume CT screening in a randomized trial",
+      "year": 2019
+    },
+    {
+      "title": "Screening for lung cancer with low dose computed tomography (LDCT)",
+      "year": 2020
+    },
+    {
+      "title": "External validation and comparison of the Brock model and Lung-RADS for the baseline lung cancer CT screening using data from the Korean Lung Cancer Screening Project"
+    },
+    {
+      "title": "Eur Radiol",
+      "year": 2021
+    },
+    {
+      "title": "Performance of Lung-RADS in the National Lung Screening Trial: a retrospective assessment",
+      "year": 2021
+    },
+    {
+      "title": "Ann Intern Med",
+      "year": 2015
+    },
+    {
+      "title": "Lung-RADS Version 1.0 versus Lung-RADS version 1.1: comparison of categories using nodules from the National Lung Screening Trial",
+      "year": 2015
+    },
+    {
+      "title": "Performance of ACR Lung-RADS in a clinical CT lung screening program",
+      "year": 2021
+    },
+    {
+      "title": "J Am Coll Radiol",
+      "year": 2015
+    },
+    {
+      "title": "Implications of the updated Lung CT Screening Reporting and Data System (Lung-RADS version 1.1) for lung cancer screening",
+      "year": 2015
+    },
+    {
+      "title": "J Thorac Dis",
+      "year": 2020
+    },
+    {
+      "title": "Retrospective review of lung cancers diagnosed in annual rounds of CT screening",
+      "year": 2020
+    },
+    {
+      "title": "AJR Am J Roentgenol",
+      "year": 2014
+    },
+    {
+      "title": "Application of lung-screening reporting and data system versus pan-Canadian early detection of lung cancer nodule risk calculation in the Alberta Lung Cancer Screening Study",
+      "year": 2014
+    },
+    {
+      "title": "Association of computed tomography screening with lung cancer stage shift and survival in the United States: quasi-experimental study",
+      "year": 2019
+    },
+    {
+      "title": "BMJ",
+      "year": 2022
+    },
+    {
+      "title": "Evaluation of alternative diagnostic follow-up intervals for lung reporting and data system criteria on the effectiveness of lung cancer screening",
+      "year": 2022
+    },
+    {
+      "title": "Korean national lung cancer screening",
+      "year": 2021
+    },
+    {
+      "title": "Korean J Med",
+      "year": 2021
+    },
+    {
+      "title": "Guide on CT screening for lung cancer",
+      "year": 2020
+    },
+    {
+      "title": "Lung-RADS Version 1.1: challenges and a look ahead, from the AJR special series on radiology reporting and data systems"
+    },
+    {
+      "title": "Lung-RADS Ò version 1.1",
+      "year": 2021
+    },
+    {
+      "title": "Lung CT Screening Reporting &amp; Data System (Lung-RADS Ò"
+    },
+    {
+      "title": "Lung cancers associated with cystic airspaces: CT features and pathologic correlation"
+    },
+    {
+      "title": "Lung Cancer"
+    },
+    {
+      "title": "Lung cancer associated with cystic airspaces",
+      "year": 2019
+    },
+    {
+      "title": "Cystic primary lung cancer: evolution of computed tomography imaging morphology over time",
+      "year": 2012
+    },
+    {
+      "title": "J Thorac Imaging",
+      "year": 2021
+    },
+    {
+      "title": "Computed tomographic characteristics of interval and post screen carcinomas in lung cancer screening",
+      "year": 2021
+    },
+    {
+      "title": "Clinicopathologic and longitudinal imaging features of lung cancer associated with cystic airspaces: a systematic review and meta-analysis",
+      "year": 2015
+    },
+    {
+      "title": "Lung cancers associated with cystic airspaces: natural history, pathologic correlation, and mutational analysis",
+      "year": 2021
+    },
+    {
+      "title": "Lung cancers associated with cystic airspaces: underrecognized features of early disease",
+      "year": 2017
+    },
+    {
+      "title": "Radiographics",
+      "year": 2018
+    },
+    {
+      "title": "Fleischner Society: glossary of terms for thoracic imaging",
+      "year": 2018
+    },
+    {
+      "title": "Pulmonary perifissural nodules on CT scans: rapid growth is not a predictor of malignancy",
+      "year": 2008
+    },
+    {
+      "title": "Perifissural nodules seen at CT screening for lung cancer",
+      "year": 2012
+    },
+    {
+      "title": "Strategies for reducing false-positive screening results for intermediate-size nodules evaluated using Lung-RADS: a secondary analysis of National Lung Screening Trial Data",
+      "year": 2010
+    },
+    {
+      "title": "Management of nodules attached to the costal pleura at low-dose CT screening for lung cancer",
+      "year": 2022
+    },
+    {
+      "title": "Characterization of newly detected costal pleura-attached noncalcified nodules at annual low-dose CT screenings",
+      "year": 2020
+    },
+    {
+      "title": "Management and outcomes of suspected infectious and inflammatory lung abnormalities identified on lung cancer screening CT",
+      "year": 2021
+    },
+    {
+      "title": "ACR Appropriateness Criteria Ò acute respiratory illness in immunocompromised patients",
+      "year": 2021
+    },
+    {
+      "title": "Relationship between nodule count and lung cancer probability in baseline CT lung cancer screening: the NELSON study",
+      "year": 2019
+    },
+    {
+      "title": "Lung Cancer Amst Neth",
+      "year": 2017
+    },
+    {
+      "title": "Probability of cancer in pulmonary nodules detected on first screening CT",
+      "year": 2017
+    },
+    {
+      "title": "Outcome of incidentally detected airway nodules",
+      "year": 2013
+    },
+    {
+      "title": "Eur Respir J",
+      "year": 2016
+    },
+    {
+      "title": "Lung-RADS category 3 and 4 nodules on lung cancer screening in clinical practice",
+      "year": 2016
+    },
+    {
+      "title": "Imaging of large airways disorders",
+      "year": 2022
+    },
+    {
+      "title": "Differentiation between mucus secretion and endoluminal tumors in the airway: analysis and comparison of CT findings",
+      "year": 2015
+    },
+    {
+      "title": "Tumors and tumorlike conditions of the large airways",
+      "year": 2014
+    },
+    {
+      "title": "NCCN Guidelines Ò insights: lung cancer screening, version 1.2022",
+      "year": 2013
+    },
+    {
+      "title": "J Natl Compr Cancer Netw",
+      "year": 2022
+    },
+    {
+      "title": "Volumetric computed tomography screening for lung cancer: three rounds of the NELSON trial",
+      "year": 2022
+    },
+    {
+      "title": "Disagreement of diameter and volume measurements for pulmonary nodule size estimation in CT lung cancer screening",
+      "year": 2013
+    },
+    {
+      "title": "Thorax",
+      "year": 2018
+    },
+    {
+      "title": "Volume versus diameter assessment of small pulmonary nodules in CT lung cancer screening",
+      "year": 2018
+    },
+    {
+      "title": "Transl Lung Cancer Res",
+      "year": 2017
+    },
+    {
+      "title": "Cancer risk in nodules detected at follow-up lung cancer screening CT",
+      "year": 2017
+    },
+    {
+      "title": "Nodule management protocol of the NELSON randomised lung cancer screening trial",
+      "year": 2022
+    },
+    {
+      "title": "Lung cancers diagnosed at annual CT screening: volume doubling times",
+      "year": 2006
+    },
+    {
+      "title": "The regimen of computed tomography screening for lung cancer: lessons learned over 25 years from the international early lung cancer action program",
+      "year": 2012
+    },
+    {
+      "title": "Incidental findings on low-dose CT scan lung cancer screenings and deaths from respiratory diseases",
+      "year": 2021
+    },
+    {
+      "title": "Chest",
+      "year": 2022
+    },
+    {
+      "title": "Extrapulmonary findings and malignancies in participants screened with chest CT in the National Lung Screening Trial",
+      "year": 2022
+    },
+    {
+      "title": "Frequency and distribution of incidental findings deemed appropriate for S modifier designation on low-dose CT in a lung cancer screening program",
+      "year": 2017
+    }
+  ],
+  "quality": {
+    "completeness_score": 0,
+    "has_abstract": true,
+    "abstract_source": "metadata",
+    "has_doi": true,
+    "has_full_text": true,
+    "num_sections": 16,
+    "num_tables": 4,
+    "num_figures": 10,
+    "num_references": 71
+  }
+}

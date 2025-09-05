@@ -1,0 +1,889 @@
+{
+  "metadata": {
+    "document_id": "10_21037_amj_2018_11_04",
+    "title": "Electromagnetic navigation bronchoscopy: a comprehensive review",
+    "authors": [
+      "Edward M. Pickering",
+      "Or Kalchiem-Dekel",
+      "Ashutosh Sachdeva"
+    ],
+    "year": 2018,
+    "journal": "AME Medical Journal",
+    "doi": "10.21037/amj.2018.11.04",
+    "volume": "3",
+    "issue": "",
+    "pages": "117-117",
+    "citation": "Pickering, E.; Kalchiem-Dekel, O.; Sachdeva, A. (2018). Electromagnetic navigation bronchoscopy: a comprehensive review. AME Medical Journal, 3, 117-117. https://doi.org/10.21037/amj.2018.11.04",
+    "abstract": "The concept of navigation bronchoscopy is not new, but has evolved over past few decades. Clinicians performing bronchoscopy have utilized various forms of navigation technology ranging from fluoroscopy or computed tomography (CT)-aided guidance in earlier years, now to virtual bronchoscopy and real-time tracking using electromagnetic navigation (EMN) platforms. EMN bronchoscopy relies on a pre-procedural CT of the chest to create a three-dimensional (3D) virtual airway map. This approach is utilized for diagnostic sampling of lung and mediastinal lesions, placement of fiducial markers, or dye marking of the overlying pleura. The diagnostic yield, using this technology, is superior to conventional bronchoscopy techniques and is discussed. The respiratory motion of the airways, lung, and nodule hysteresis creates unique challenges for targeting the lesion. Use of fluoroscopy and radial-probe ultrasound provide meaningful information and additional confirmation with difficult lesions. We continue to evolve in our understanding of how best to utilize the technology, modify diagnostic tools, and improve nextgeneration platforms. Even so, EMN bronchoscopy has changed the landscape of tissue acquisition for peripheral lung lesions. This review provides important principles and practical aspects of pre-procedure preparation, assessment of airway-lesion relationships, procedural workflow and performance, and points for consideration when contemplating acquisition of an EMN system. The future is in development of intuitive platforms that will allow consistent targeting with higher accuracy so ablation techniques could be performed safely via the endobronchial approach.",
+    "abstract_source": "metadata",
+    "url": "http://amj.amegroups.com/article/view/4758/html"
+  },
+  "source_file": "Electromagnetic navigation bronchoscopy a comprehensive review.json",
+  "sections": [
+    {
+      "title": "Introduction",
+      "content": "Electromagnetic navigation (EMN) technology first became available over two decades ago. The ability to reconstruct two-dimensional (2D) CT and magnetic resonance imaging (MRI) into a 3D model delivered a platform for interactive tracking of surgical instruments. This first emerged in the early 1990s and the initial application of the technology was limited to accurately sampling brain lesions using stereotactic platforms (1,2). Its successful application was later reported in other surgical fields including urology and otorhinolaryngology (3,4). The development of 3D\nCT scan of the thoracic cavity, along with mathematical morphological tools to perform registration algorithms and a model-based shape-form-shading algorithm led to successful synthesis in near real-time of a CT-derived virtual view that corresponded to actual endoscopic views (5). Reconstruction of the airways to generate a 'road map' allowed its application for real-time electromagnetic (EM) tracking and subsequently navigation of the bronchoscope and endobronchial tools via the working channel into the peripheral lesions (6,7). The success of real-time EMN bronchoscopy was demonstrated in first human study",
+      "category": "introduction",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Clinical challenge",
+      "content": "Small peripheral pulmonary opacities are being increasingly identified due to growing use of CT imaging of the chest. Also, the propensity of smaller filtered cigarette smoke particles to penetrate deeper in the tracheobronchial tree is likely contributory to the increase in relative proportion of peripheral lung lesions (9). This upsurge requires an ever-increasing amount of resources for the evaluation, follow-up, and management of radiographic pulmonary findings (10). Further, lung cancer remains a leading cause of cancer-related mortality and this is projected to increase by 2020 (11,12). The National Lung Cancer Screening Trial demonstrated relative risk reduction in mortality by 20% with the application of lung cancer screening by low-dose CT to a pre-specified target population of highrisk patients (13). Based on this trial, the United States Preventive Service Task Force endorsed low-dose CT for lung cancer screening with a Grade B recommendation in high-risk patients (14). As a natural consequence of adaptation of low-dose CT by professional societies as a\nscreening tool (15-17), there has been an increase in the number of patients referred for further diagnostic work up of lung nodules. In this context, it is behooving for the institutions offering lung cancer screening to have a formal multi-disciplinary program to risk-stratify patients with radiographic abnormalities and have the ability to offer, if necessary, a timely and minimally invasive diagnostic evaluation for lung lesions.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "EMN",
+      "content": "EMN relies on the ability of the charged particles (electric current) to generate an EM field. A field generator emits a low-strength (<0.0001 T esla) EM field that passes through the patient's body. Once a dedicated sensor is placed into the field, current is generated within the sensor coils allowing for determination of their x, y, and z coordinate positions, as well as, orientation including roll, yaw, and pitch. As illustrated in Figure 1, a multitude of sensor coils are embedded in the EM sensor to provide accurate spatial position within the EM field. Importantly, the EM field can be distorted due to the induction of electric currents in ferromagnetic materials close to, or within the field. To counter this issue, one of the commercially available platforms (superDimension TM ) recommends mapping of the procedure bed and the room. Other commercially available platforms require placing the field generator over the patient's body, preferably on the side of the lesion, and\nB\ndo not require bed or room mapping. Regardless, the ability to track a sensor in spatial context is but one half of the equation.\nMuch of the application of EMN technology depends upon CT imaging techniques. A standard CT scan contains a set of 2D slices, consisting of 512×512 pixels. Based upon density of the imaged structure, each point is assigned a numeric value. This scale measured in Hounsfield units (HU), ranges from -1,000 to +3,000. Air has the lowest density at -1,000 HU and bone the highest at +3,000 HU (aside from metallic foreign bodies), with fat, water, blood, and tissue in between at -100, 0, 20, and 30-150 respectively. A 3D volume can then be generated as each pixel actually represents an average of a defined slice thickness or depth.\nFrom these data, both segmentation of the airways, and a virtual bronchoscopic (VB) image can be generated. Segmentation refers to the process of extracting anatomic structures from CT images. Each pixel is assigned a label according to certain visual characteristics. Through the use of propriety software algorithms, structures such as airways, nodules, blood vessels, and lung parenchyma can be added or removed from a reconstructed image. Accurate airway reconstruction allows generation of a reliable VB image, which can then be utilized concomitantly with the real-time bronchoscopy view. This allows the operator to follow the 'road map' during the procedure while the EM sensor provides real-time feedback on the path, as well as, relationship with the target lesion. Importantly, certain VB navigation platforms, e.g., Archimedes TM , have a different algorithm that integrates CT data, bronchoscopy and fused fluoroscopy, which provides a 3D, real-time airway, and proprietary parenchymal navigation without the use of EM field generator, or sensor.\nImplementation of any new technology requires a streamlined workflow, training of all team members, and understanding of nuances at individual institutions. A procedural overview and practical work flow that could be adopted by the users of EM technology platforms is discussed in the following section.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Procedure overview",
+      "content": "EMN bronchoscopy is a multi-disciplinary team procedure that involves careful review of the clinical history, delineation of the intent of the procedure, pre-procedure planning including thorough review of CT imaging, selection of type of sedation based on patient and/or\noperator factors, utilization of ancillary equipment such as fluoroscopy and r-Endobronchial ultrasound (EBUS), and discussion with pathology team on sample processing to maximize yield.\nAn important aspect of pre-procedure planning is to meticulously review the CT imaging including coronal, sagittal, and axial sections to identify the target segment or sub-segment, and importantly to assess airway-lesion relationship. Accurate pre-procedure mapping and identification of pathways leading to the target lesion depend on the quality of input CT images. Many digital imaging networks upload lower fidelity thick-cuts of 4-5 mm which compromises a full assessment of bronchial anatomy via 3D reconstruction. Thin-cut CT images on the order of 1 mm provide the bronchoscopist with a better sense of the aforementioned variables and therefore need to be requested. For instance, small airways leading to the target and its relationship to the lesion may become more apparent on a thin-cut CT. Additionally, one can assess the acuity of sub-segmental branch points, the number of bifurcations of a given pathway to the lesion, and an estimate of the trajectory of sampling tools needed to access the lesion. This is likely to assist the operator in optimal tools selection, e.g., extended working channels (EWC), needles, cytology brushes, and biopsy forceps, thus developing a meticulous approach to sampling.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "CT workflow",
+      "content": "Currently available EMN systems require CT acquisition and subsequent uploading into the hardware unit using proprietary software and in a specific format that allows for optimal 3D airway reconstruction and navigation. CT protocols recommended by some of the widely available commercial navigation platforms in North America are reviewed below and in Table 1 .",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Veran TM",
+      "content": "Same day imaging is recommended and prior to CT acquisition, proprietary sensors or vPad TM are placed over the anterior chest in an inverted L formation with the tail opposite the side of lesion. Once these are securely attached, an inspiratory scan is obtained with arms above the head followed by an expiratory scan with the arms by the patient's side.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "superDimension TM",
+      "content": "Inspiratory scan only as per manufacturer's recommended\nprotocol and preferably within 30 days of the procedure.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Archimedes TM",
+      "content": "CT imaging is acquired at functional residual capacity (FRC) preferably within 30 days of the procedure. Image acquisition is performed after placing a positioning board with a headrest, cushion, and a knee wedge underneath the patient in a fashion that is similar to the patient positioning during the actual procedure. Patient is coached to hold their breath at FRC.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Planning phase",
+      "content": "Digital Imaging and Communications in Medicine (DICOM) formatted images can be loaded onto a planning station by either a media CD/DVD or via a direct network feed. The planning phase can be performed using standard axial, coronal, and sagittal views, or any combination of those where one can essentially pivot around the target to identify an airway closest to it, or with a tracheobronchial tree obtained via segmentation as previously discussed. Additional functions such as contrast, zoom, pan, and measurements are available via toolbars. Subtle differences exist depending upon which commercial system is used, however, the concept of identifying the target lesion and closest immediate airway while working back to the more central airway, so called 'the breadcrumb method', is conceptually similar. The view offering the best alignment is determined by the bronchoscopist. However, by using different views, one can identify airways and paths that would otherwise not be obvious in single views. Once the preliminary plan has been outlined, the plotted route can be visualized via a VB tour, replicating the view that will be seen during the procedure. This allows for adjustment, especially in those lesions for which two leading pathways\nare identified. In addition, manual registration points that are easily identifiable, such as main and lobar carinas, can also be labelled should automatic registration be unsuccessful.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Bronchoscopy set up",
+      "content": "Systematic bronchoscopy set-up prior to initiating EMN is key to a successful procedure. The SPiN System™ from Veran has a mobile field generator that can be placed in a number of orientations and does not require a mapped patient bed or room. For procedures performed with superDimension™ EMN System, ensuring a field free of ferromagnetic materials within approximately 60 cm (2 feet) radius reduces system errors. The location board, which contains the EM field generator, is placed under the patient's mattress. Both systems include a set of pads placed on the anterior-lateral thorax to allow for automatic registration and precise tracking of the sensor. The Archimedes TM system does not have an EM field generator. Even so, a patient position board and proper positioning of fluoroscopy is required for optimal results. Figure 2 illustrates three main commercially available platforms in North America.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Registration",
+      "content": "Following an initial inspection bronchoscopy for secretion clearance and assessment for occult endobronchial lesions or abnormalities, registration is performed.\nThe superDimension™ Navigation System version 7 contains an EWC and locatable guide (LG), containing the EM sensor, that are inserted together through a bronchoscope with a minimum working channel of 2.8 mm until roughly 10 mm of the LG is visible endoscopically.\nB",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Page 6 of 18",
+      "content": "The EM sensor feedbacks its location within the EM field. The bronchoscopist then performs a balanced inspection whereby the software can 'automatically' register the airways. Once enough data has been collected to correlate the patient's anatomy with the CT-generated model, a VB image appears on the screen. Should this process fail, manual registration is required. For this, the operator is required to touch the LG to the pre-determined registration points, including main carina and lobar carinas.\nThe SPiN System™ from Veran differs in that the software automatically registers the patient and tracheobronchial tree via a CT scan that was performed on the same day with respiratory sensors in place. The operator selects which tool or catheter will be used for the system to register the device prior to the navigation phase. In essence, the patient's real-life anatomy and CT images are automatically linked to generate a VB image, thereby avoiding a step and potentially decreasing procedural time. For CT images obtained from referral scans, manual registration similar to that described above is required.\nThe registration process with Archimedes TM VB platform requires aligning of 3D CT view with live 2D fluoroscopy view. Three fluoroscopy images of the patient's thorax are obtained using C-Arm, each alternating with the software prompt to match up with the virtual fluoroscopic image of the same target area. The fused fluoroscopy essentially uses body fiducial points to minimize the CT-to-body divergence.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Navigation",
+      "content": "The initial navigation phase is similar across platforms. All systems can display multiple screens simultaneously at the discretion of the bronchoscopist including axial, sagittal, and coronal CT images, 3D map, video bronchoscope, VB, and a local or 'tip view' where the sensor is overlaid on a planar CT. Other information available to the bronchoscopist is the selected target, pre-planned pathway, and distance to the center of the target. The method by which the bronchoscopist navigates to the lesion is where the systems diverge.\nThe superDimension TM Navigation System utilizes the Edge TM EWC along with LG to reach the target lesion. The catheter comes in various pre-formed curves, ranging from 45° to 270°. The decision of which angulation to use is at the discretion of the bronchoscopist and pre-planning, as previously described, plays a key role. For example, lesions located in the superior segment or medial sub-segments\nof the lower lobes, as well as, those with acute airway branching points are likely to need a greater curvature. During navigation, the catheter is rotated so that in the ideal situation, the planned pathway is bright and on the right-hand side of the screen. Most of the navigation occurs beyond the endoscopic view of the bronchoscopist and in the 'peripheral view' window of the software. Once the lesion is reached, the EWC is locked, the LG is withdrawn, and sampling tools are sequentially inserted through the EWC.\nThe SPiN System TM from Veran, in contrast, utilizes a continuous monitoring system. In this system, the navigation sensor is embedded within each sampling tools, such as needles, brushes, and forceps. The use of tracked instruments relies on the bronchoscopist to visualize and access the appropriate pathway leading to the lesion in conjunction with the virtual image and pathway. Should the bronchoscopic navigation be unsuccessful, EM transthoracic needle aspiration (ETTNA) or SPiN Perc TM can be utilized. An example of EMN guided TTNA is shown in Figure 3 . In this configuration, the operator chooses a pre-planned pathway from an entry site on the chest wall using a percutaneous needle with an inner stylet containing the navigation sensor. Tissue sampling is performed after removing the inner stylet and using the needle as co-axial system to pass smaller gauge needle biopsy tools.\nThe Archimedes TM system from Broncus ® integrates CT data, bronchoscopy, and fused fluoroscopy to provide 3D, real-time airway and proprietary parenchymal navigation, commonly referred to as bronchoscopic trans-parenchymal nodule access (BTPNA). The segmentation tools allow for nodule, vessel, and airway mapping with virtual pathway guidance. The system does not utilize an EM sensor or tracker during the procedure to confirm the position of the catheter. It is important for the user of EM technology to understand the principles of fused fluoroscopy and BTPNA as there is good bit of overlap exists with competing platforms.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Airway-lesion relationship: impact on sampling tools",
+      "content": "The importance of understanding airway-lesion relationship cannot be overstated. In their seminal study, Tsuboi et al. carefully reviewed the tumor mass morphology in surgically resected specimens and described four types of relationships between the bronchus and tumor mass. Type I: bronchial lumen patent up to the mass and tumor tissue exposed",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Page 7 of 18",
+      "content": "into the lumen; type II: bronchus appeared to be caught in the growing lesion and the tumor tissue exposed into the narrowed lumen; type III: bronchus compressed by the tumor with narrowed lumen and tumor tissue not exposed; and type IV: complete obstruction of the bronchus preventing passage of tools via the stenotic airway (18). In the aforementioned study, tissue sampling was performed using a rotatable biopsy curet advanced via modified Metras' catheter under fluoroscopic guidance. In current authors' opinion, this pioneering work exemplifies the importance of understanding the crucial relationship between scrutinizing review of the CT image and selection of tools deployed for successful specimen acquisition.\nThe role of CT in delineating airway-lesion relationship was described by Naidich et al. (19). The 'bronchus sign' or 'CT-bronchus sign' is the finding of an airway leading to or contained within the lesion (nodule or mass). Its value in predicting success of diagnostic bronchoscopy has been well studied (20,21). The success rate of diagnostic sampling increased for both the peripheral and central lung lesions when bronchus sign was present. Further increase in diagnostic yield was noted when transbronchial needle aspiration (TBNA) was performed in addition to transbronchial biopsies, signifying the utility of sampling tool with penetrating ability across the bronchus unlike brushes and biopsy forceps (22-24).\nAs illustrated in Figure 4, attention to the airway-lesion relationship not only helps with tool selection but may also provide valuable information on the need for steerable catheter to better align the distal tip of the EWC or guide sheath to the target lesion.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Sampling tools: impact on targeting the lesion",
+      "content": "The choice of sampling tools is an important aspect of the procedure and may impact the diagnostic yield, thus resulting in success or failure of EMN. Commonly used diagnostic tools include cytology brushes, cupped or serrated forceps, and 'standard' TBNA catheters (25-27). As illustrated in Figure 5, for fluoroscopically visible lesions, intra-procedure fluoroscopy is valuable in selection of sampling tools. Other tools that are available, but less widely studied include modifications to TBNA needles including SPiN Flex TM , Arcpoint™, GenCut™, and superDimension TM triple needle cytology brush.\nIn situations where a curved EWC is used and the catheter maintains a significant degree of curvature for appropriate alignment with the lesion, a more flexible tool that is less likely to deflect the catheter should be considered. The flexible cytology brush or GenCut TM are examples of such tools. This concept is illustrated in Figure 6 .\nFlexible peripheral TBNA needles are also commercially available, however, there is paucity of data on use of these needles. In the authors' personal experience these tools may be helpful in select circumstances. In contrast, a curved catheter may be needed to navigate into proximal acute angles, e.g., left or right upper lobe apical or posterior segments, but the catheter may not be in direct alignment with the lesion distally. In such situations use of a stiffer tool such as a needle or forceps may be required to purposefully deflect the catheter into an appropriate alignment. When a direct communication between the airway and nodule is not present, as in T suboi type III and IV lesions, TBNA is usually necessary to achieve diagnostic sampling.\nCombining other technologies with ENB can augment and refine the navigation and position of the sampling tools and catheters. Use of the planning CT and 3D reconstructed pathway provides the bronchoscopist a sense of the trajectory of the sampling tools/catheters needed to successfully access a lesion. Radial-probe Endobronchial ultrasound (EBUS) can delineate airway-lesion relationship and provide positioning in real-time as demonstrated in Figure 7 . By using fluoroscopy, one can make subtle adjustments based upon the spatial relationship above. If using a catheterbased system, fluoroscopy is helpful to assess the degree of deflection by individual tools. Some limitations to this\ninclude the inability to see small nodules on fluoroscopy, the cumbersome nature of fluoroscopy, additional radiation dose, and the need for larger procedural space. Another adjunct technology is the use of cone beam CT or 3D fluoroscopy to confirm successful navigation or catheter/ tool-nodule relationship and anticipated biopsy trajectory. This requires a dedicated machine and personnel time that may be challenging to secure at some institutions. Also, cone-beam CT is associated with a higher radiation dose than standard fluoroscopy though much lower than lowdose CT for lung cancer screening (28). Further, the value of intra-procedure 3D imaging is diminished in the case of procedural hemorrhage, which may obscure the lesion.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Diagnostic yield: review of clinical studies",
+      "content": "The diagnostic yield for EMN bronchoscopy is quite variable, ranging from 33-88%. Three recent meta-analyses have pooled diagnostic yields of 65-70% (25,26,29). Since the release of the first EMN system, numerous updates have occurred. These include evolution in the technology, as well as catheters and biopsy tools. The platform offered by superDimension TM is now in its second generation with seventh generation software, while a majority of the\npublished studies were performed with earlier versions. Additionally, navigation catheters have undergone extensive modification and greater number of devices are available. Clinical studies with other commercially available systems are currently limited but early data is promising. Factors including the use of rapid on-site cytology evaluation (ROSE) and fluoroscopy are difficult to account for across studies though in authors' experience, both are valuable.\nLobar location has not been shown to definitely effect yield (30-35) although right middle lobe lesions are likely to be more accessible (31). Technically, the upper lobe segments have acute angles to negotiate and require flexible tools despite use of curved catheter. Likewise, the medial sub-segments of the lower lobes offer limited freedom due to tool displacement given acute bends of the tracheobronchial tree. Lesions located in lower lobes, especially those in proximity to the diaphragm, are more likely to be affected by respiratory variation (36). Attention to branching points and anticipation of challenges will help the operator to be better prepared.\nAlthough both conscious sedation and general anesthesia (GA) have been used in published studies, an optimal method has not been identified. In two of the earlier EMN bronchoscopy studies by Eberhardt et al. (31,37), no\nFigure 6 Deflection of the extended working channel (EWC) with different sampling tools in an attempt to sample a lesion in the posterior segment of the left upper lobe. (A) Curved Edge TM EWC in position after withdrawal of the LG. Image in inset shows the tip of curved Edge TM EWC; (B) flexible radial probe passing through the established Edge TM EWC without significant deflection and eccentric view of the lesion, which is shown inset; (C) deployment of cytology brush without significant deflection of the EWC. An example of cytology brush is shown inset; (D) use of a flexible GenCut TM needle penetrating the lesion without much deflection. Distal tip of GenCut TM is shown in inset; (E) significant deflection of the EWC when superDimension TM aspiration needle catheter was passed via EWC; (F) significant deflection with partial straightening of the EWC with passage of a rigid biopsy forceps tool, illustrating the value of fluoroscopy in assessing real-time tool alignment; (G,H) illustration of the degree of deflection of the EWC with passage of a stiffer biopsy forceps.\nstatistically significant differences in diagnostic yield were noted and similar findings were noted by Bowling et al. (33). A meta-analysis of 15 studies by Gex et al. suggested a better diagnostic yield with GA (69% vs. 58%) (26). Until optimal anesthetic modality is ascertained, the decision on which anesthetic modality to use depends on operator preference, patient co-morbidities, anticipated procedure time, lesion characteristics, and need for procedures such as concurrent mediastinal staging, and available institutional resources.\nLesion size has an impact on the yield. Yield has been shown to be significantly reduced for lesions <2 cm (61% vs. 83%) despite the ability to navigate within 1 cm of a target lesion in 93% of cases (34,38). Various factors including real-time navigation error and nodule hysteresis during respiratory cycle could possibly explain this finding\n(36,39). Additionally, catheter deflection as a result of variable rigidity of sampling tools could result in alteration of catheter-lesion alignment during real-time sampling and reduce the diagnostic yield.\nThe importance of the bronchus sign in predicting success of bronchoscopy procedures has been studied extensively and discussed in an earlier section (20,21). While intuitively this should be applicable to EMN bronchoscopy, only one study has evaluated this systematically. In a prospective study by Seijo et al. , lesions with a bronchus sign were accurately diagnosed in 79% of cases versus 31% in those without (40). Other studies have indicated a trend toward increased yields with the bronchus sign (41). Importantly, confirmation with r-Endobronchial ultrasound (EBUS) prior to sampling has also been shown to be associated with a higher",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Page 12 of 18",
+      "content": "diagnostic yield (42). Important to note here is that lack of r-Endobronchial ultrasound (EBUS) image could also mean complete occlusion of the airway, although the navigated catheter may be in good alignment with the lesion. This and other types of r-Endobronchial ultrasound (EBUS) relationship are shown in Figure 7 .\nLastly, while most of the interest and research has been focused upon diagnosis of peripheral pulmonary lesions, EMN is also applicable to central lesions, including lymph node sampling and is reported to have a high diagnostic yield (43). In these instances, the software can be used to make the airway wall appear more transparent making the lesion of interest more visible. By using the navigation VB image in conjunction with an endoscopic view, the needle entry site and trajectory can be determined. The LG is used to make an indentation on the mucosa and TBNA is performed via the marked entry site. Availability of convexprobe Endobronchial ultrasound (EBUS) bronchoscopes at most centers with EM technology limits its use for sampling central lesions.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "EMN for lesion marking",
+      "content": "In addition to diagnostic sampling, EMN bronchoscopy has been used successfully to mark pulmonary lesions to facilitate radiotherapy as well as surgical resection of nonpalpable lesions. Tumor marking can be performed by a transthoracic approach under CT guidance albeit with a relatively higher complication rate, namely pneumothorax and hemothorax (44), both of which may not be a major issue if surgical resection is planned the same day (45). Rare adverse events such as air or marker embolization to coronary artery have been reported as well and carry high morbidity (46). In that respect and in the hands of an experienced operator, EMN allows accurate localization and marking of the lesion endobronchially with low risk of complications.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Fiducial marker placement",
+      "content": "Fiducials are radiographically visible markers made of dense metal, gold or platinum, which are deployed inside or in the vicinity of the tumor to allow precise identification and tracking for stereotactic body radiation therapy (SBRT). Commercially available fiducial markers come in various shapes and sizes, and can be linear or coil-springed. These are illustrated in Figure 8 . The marker can be deployed either by retrograde technique of fitting into the distal tip of a brush or transbronchial needle catheter or by dedicated catheter where the fiducial is inserted through the proximal\nhub of the catheter. The catheter is then advanced via the working channel of the bronchoscope to the target lesion and fiducial is deployed by gently pushing it out with the brush, needle, or stylet wire. Depending upon the type of SBRT system and software enhancements, between 1 and 6 fiducial markers are required per target lesion. The accuracy of bronchoscopic placement of fiducials for peripheral pulmonary lesions is greatly enhanced by EMN. In experienced centers, rates of success for placement by EMN guidance are between 90% and 100% (47,48).\nA major limitation of bronchoscopic fiducial placement is marker migration, the incidence of which approaches 10% (47-49). Lower displacement rates may be achieved with coilspring markers (50) or use of vascular embolization coils as markers (51). Lack of a leading airway is rarely a barrier, since deploying fiducials directly inside the target is not necessary for successful stereotactic delivery of radiation therapy. The major complication of the procedure is pneumothorax, reported to occur at a rate of approximately 6% (50,51). However, since transbronchial biopsies, brushings, and needle aspiration are also frequently performed at the time of fiducial placement, direct causality is difficult to attribute to fiducial deployment alone.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Embolization coils",
+      "content": "Tumor marking can also be performed using embolization coils that are deployed using VB navigation relying on the airway mapping and fluoroscopic or CT guidance. This is done without the use of EM sensor or tracker and typically requires ultra-thin bronchoscope. One to two coils can be placed per lesion at the discretion of the operator. In experienced centers and following careful patient selection, the success rate for tumor marking with embolization coils using VB navigation guidance approaches 100% with a 30-day retention rate of 100% (52,53). The overall cost of coil marking is similar to that of EMN bronchoscopy and requires intra-operative fluoroscopy to identify the lesion.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Dye marking or 'Tattooing'",
+      "content": "EMN bronchoscopy is able to localize surgically 'invisible' and non-palpable lesions during open, video-assisted, or robotic assisted thoracic surgery (54). Such lesions are usually smaller than 10 mm, appear as ground-glass nodules on CT, or located deep from the pleural surface. Ability to generate 3D airway road map using high quality thinslice CT images allows for accurate localization and direct\naccess to the lesion for marking to facilitate surgical biopsy or resection. As illustrated in Figure 9, dye marking can be achieved by lesion infiltration and extension of the 'tattoo' to the overlying pleura with methylene blue or indigo\ncarmine. Colored collagen (55), lipidol (56), or barium (57) are used less often.\nDye marking can be performed as a separate procedure prior to the surgery or under 'live' conditions during surgery, allowing direct feedback from surgeon. If the tissue samples are to be obtained bronchoscopically for cytopathology review, these should be done prior to dye infiltration. Dye injection is achieved with a 25-gauge needle and volumes of 0.25 to 1.0 mL of methylene blue or indigo carmine are usually sufficient. The volume of dye injected also depends on the distance from the pleural surface (54,58). The choice of dye depends upon the timing of surgery as indigo carmine has an advantage of being visible to the surgeon ≥ 3 days after marking (59). Penetration of the visceral pleura and dye dispersion into the pleural space can be a potential consequence (60). As such, reported success of the dye marking ranges between 80% and 100% (58,61).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Safety profile",
+      "content": "Given the minimal invasive nature of EMN bronchoscopy, the safety profile is reasonable. The risk of complications is similar to that of performing a needle or forceps biopsy sampling with routine bronchoscopy. The overall complication rate ranges from 0-10% with a pooled range of 4.2-7.2% in 2 recent meta-analyses (26,29). These include pneumothorax, hemoptysis, bleeding, and post-\nA\nB",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Page 14 of 18",
+      "content": "procedure respiratory failure.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Pneumothorax",
+      "content": "Pneumothorax is the most common complication with a pooled rate of 3.1% in a recent meta-analysis (26). Of these, roughly half required tube thoracostomy for drainage. The recently published NAVIGATE study included 964 cases of peripheral lung lesions and reported a slightly higher rate of 4.9%, of which 3.2% required intervention (27). Literature examining TTNA may provide some insights as to mechanisms and risk factors. Longer needle passes, emphysema, smaller nodules, traversing fissure, and repeated pleural punctures, are all associated with increased risk of pneumothorax from TTNA (62-64). Shared characteristics that may increase the risk for EMN bronchoscopy related pneumothoraces include small nodules in close proximity to the pleura and proximity to the fissure. In both cases there is a greater risk of violating the visceral pleura. Chino et al. illustrated this relationship and risk of pneumothorax in a retrospective study of 991 patients (65). T arget lesions located near interlobular pleura were 5 times more frequently associated with pneumothorax after bronchoscopy.\nProcedural aspects may also impact the incidence of pneumothorax. An important component of EMN is the virtual nature of technology. CT-based planning is done at total lung capacity (TLC) in most commercially available platforms. During EMN bronchoscopy, the patient is breathing much closer to FRC independent of sedation modality. Chen et  al. noted that nodules can move up to 4 cm or more during respiration (36). Also, the nodule movement is significantly more accentuated in the lower lobes compared to the upper lobes. For peripheral nodules as small as 1 cm, difference due to registration and/or navigation error can result in puncture of the visceral pleura by overshooting the lesion. In the authors' experiences, use of fluoroscopy may mitigate this by visualization of the biopsy catheter and tools in relation to fluoroscopically visible nodules and the periphery combined with tactile feedback.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Hemoptysis",
+      "content": "The incidence of hemoptysis during EMN bronchoscopy is quite low and this may be due to the use of an EWC in majority of the existing literature. When wedged into the periphery, it acts to tamponade any intra-procedural\nbleeding by occupying most, if not all, of the distal airways. While there is no evidence to suggest that topical therapies reduce bleeding, solutions such as cold saline or recombinant thrombin can be delivered through the EWC directly to the source. Reports of fatal arrhythmia complicating application of diluted epinephrine through EWC to control bleeding should probably discourage its future use (66). In contrast, when bleeding is more brisk, the catheter occupies most of the working channel of the bronchoscope, thereby significantly reducing suction capability. In order to effectively aspirate the resultant blood, the catheter must then be removed. Management principles are as in the case of bleeding with any other type of bronchoscopy.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "EM interference",
+      "content": "During early implementation of EMN technology, theoretical concerns of interaction with EM field generator and automated implantable cardioverter defibrillator (AICD) or permanent pacemaker (PPM) were present. Suggested interactions included interfering with device function, damage, overheating, and lead displacement. This led to an initial recommendation that EMN bronchoscopy is relatively contraindicated in patients with these devices. This is despite the extremely low magnetic field of <0.0001 T with an established safety profile of AICD/PPM in MRI of up to 3 T. Subsequently, a study of 24 patients showed no adverse cardiac events or navigation errors (67). Another study showed that not only was there no negative effect on AICD function, but it would still detect a tachyarrhythmia and deliver an appropriate shock (68). While cardiac monitoring is recommended, EMN bronchoscopy appears to be safe to use in patients with AICD and PPM.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Education and training in EMN technology",
+      "content": "The growth of technology has resulted in increasing number of procedures available to clinicians. The vendors for each technology platform provide training to physicians though none is validated for competency development. An education and training program must be competencybased and milestones driven. Recently, a multi-society guideline was published outlining required procedures and their quantity to each accreditation (69). However, many of the required number of procedures were reached by expert opinion rather than direct evidence. Well-designed studies are needed to characterize the learning curve of physicians\nin achieving competency in performing EMN bronchoscopy using validated assessment tools. In the context of EMN bronchoscopy, an effective training program must not only meet the learning needs of the proceduralist but also address the barriers in learners' environment.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Other considerations",
+      "content": "Since the introduction of the first EMN system into the market in 2006 (superDimension TM ), several other commercial systems and technologies have been developed, thus expanding the market and opening it for competition. Prominent among them are Veran SpinDrive TM and Archimedes TM . Additional systems are emerging to the market or are in different stages of research and development.\nAs with many new technologies, the cost of EMN bronchoscopy is high. While the exact cost of a system is variable, the initial capital purchase can be easily more than 100,000 US dollars. The list price for the Veran SpinDrive TM is $225,000 with a $30,000/year service contract that includes procedural support, software upgrades, and hardware damage. In comparison the list price for superDimension TM is approximately $250,000 with an annual service contract pricing ranging from 14,000 to 32,000 $. In addition to the upfront capital outlay, the two commercially available systems use a number of proprietary biopsy tools and catheters. While a direct per procedure comparison is not possible due to variance in individual provider practices, one can expect to use at least 1,000-2,000 $ worth of disposables per case.\nThe Archimedes TM system is currently priced around $325,000. Although upfront price of capital purchase is high, it does not require dedicated catheters for lesions not requiring BTPNA. This possibly offsets the higher purchase cost over the life span of the equipment.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Future",
+      "content": "It is an exciting time for the field of bronchoscopy. The industry continues to learn from the limitations of existing platforms. Their partnership with the clinicians has resulted in introduction of enhanced software algorithms and sampling tools. Newer platforms have integrated fluoroscopy to mitigate CT-body divergence error, and the lesions are more visible with newer algorithms. Also, growth of competing technologies has helped with innovation. Recently, there has been a great interest in\nrobotic bronchoscopy. Auris Health, Inc. (Redwood City, CA) recently received FDA approval for its Monarch TM robotic platform. This platform integrates advancements in robotics, micro-instrumentation, endoscope design, and sensing, while using the airway map generation software and EM tracker real-time during bronchoscopy. A recent study using the Monarch TM platform demonstrated greater accessibility to the periphery of the lung, as well as, the ability to obtain tissue biopsies for small lung lesions (70). Whether these advances will translate into higher diagnostic yield and better patient outcomes remains to be seen.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Conclusions",
+      "content": "In summary, EMN is an indispensable technology in assisting with diagnosis of peripheral lung lesions. It has transformed the landscape of bronchoscopy and opened avenues for innovation in the diagnosis and treatment of early stage lung cancer. As the technology advances, we anticipate intuitive platforms with improved accuracy and greater efficiency. Successful application of technology requires proper education and training of the operator, focus on program development, institutional support, and multi-disciplinary teams to engage, interact, and communicate effectively.",
+      "category": "conclusion",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Acknowledgements",
+      "content": "Funding: None.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Footnote",
+      "content": "Provenance and Peer Review: This article was commissioned by the Guest Editors (Amit Mahajan, Sandeep J. Khandhar and Erik E. Folch) for the series 'Management of Complex Airway and Pleural Diseases' published in AME Medical Journal . The article has undergone external peer review.\nConflicts  of  Interest: The authors have completed the ICMJE uniform disclosure form (available at http://dx.doi. org/10.21037/amj.2018.11.04). The series 'Management of Complex Airway and Pleural Diseases' was commissioned by the editorial office without any funding or sponsorship. The authors have no other conflicts of interest to declare.\nEthical Statement: The authors are accountable for all aspects of the work in ensuring that questions related to the accuracy or integrity of any part of the work are",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Page 16 of 18",
+      "content": "appropriately investigated and resolved.\nOpen Access Statement: This is an Open Access article distributed in accordance with the Creative Commons Attribution-NonCommercial-NoDerivs 4.0 International License (CC BY-NC-ND 4.0), which permits the noncommercial replication and distribution of the article with the strict proviso that no changes or edits are made and the original work is properly cited (including links to both the formal publication through the relevant DOI and the license). See: https://creativecommons.org/licenses/by-nc-nd/4.0/.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "References",
+      "content": "1. Friets EM, Strohbehn JW, Hatch JF, et al. A frameless stereotaxic operating microscope for neurosurgery. IEEE Trans Biomed Eng 1989;36:608-17.\n2. Takizawa T, Soto S, Sanou A, et al. Frameless isocentric stereotactic laser beam guide for image-directed microsurgery. Acta neurochirurgica 1993;125:177-80.\n3. Solomon SB. Interactive images in the operating room. J Endourol 1999;13:471-5.\n4. Grevers G, Menauer F, Leunig A, et al. Navigation surgery in diseases of the paranasal sinuses. Laryngorhinootologie 1999;78:41-6.\n5. Bricault I, Ferretti G, Cinquin P . Registration of real and CT-derived virtual bronchoscopic images to assist transbronchial biopsy. IEEE Trans Med Imaging 1998;17:703-14.\n6. Solomon SB, White P Jr, Wiener CM, et al. Threedimensional CT-guided bronchoscopy with a real-time electromagnetic position sensor: a comparison of two image registration methods. Chest 2000;118:1783-7.\n7. Schwarz Y, Mehta AC, Ernst A, et al. Electromagnetic navigation during flexible bronchoscopy. Respiration 2003;70:516-22.\n8. Schwarz Y, Greif J, Becker HD, et al. Real-time electromagnetic navigation bronchoscopy to peripheral lung lesions using overlaid CT images: the first human study. Chest 2006;129:988-94.\n9. Wynder EL, Muscat JE. The changing epidemiology of smoking and lung cancer histology. Environ Health Perspect 1995;103 Suppl 8:143-8.\n10.  Korst RJ. Systematic approach to the management of the newly found nodule on screening computed tomography: role of dedicated pulmonary nodule clinics. Thorac Surg Clin 2013;23:141-52.\n11.  US Cancer Statistics (USCS) Working Group. US Cancer\nStatistics; 1999-2013 Incidence and Mortality Web-Based Report. US Department of Health and Human Services, Centers for Disease Control and Prevention, National Cancer Institute. Atlanta, GA, 2016. Accessed May 5, 2018. Available online: https://www.cdc.gov/cancer/uscs/\n12.  Weir HK, Thompson TD, Soman A, et al. The past, present, and future of cancer incidence in the United States: 1975 through 2020. Cancer 2015;121:1827-37.\n13.  National Lung Screening Trial Research T eam, Aberle DR, Adams AM, et al. Reduced lung-cancer mortality with low-dose computed tomographic screening. N Engl J Med 2011;365:395-409.\n14.  Moyer VA; U.S. Preventive Services T ask Force. Screening for lung cancer: U.S. Preventive Services Task Force recommendation statement. Ann Intern Med 2014;160:330-8.\n15.  Mazzone PJ, Silvestri GA, Patel S, et al. Screening for Lung Cancer: CHEST Guideline and Expert Panel Report. Chest 2018;153:954-85.\n16.  Wood DE, Kazerooni E, Baum SL, et al. Lung cancer screening, version 1.2015: featured updates to the NCCN guidelines. J Natl Compr Canc Netw 2015;13:23-34; quiz 34.\n17.  Kauczor HU, Bonomo L, Gaga M, et al. ESR/ERS white paper on lung cancer screening. Eur Respir J 2015;46:28-39.\n18.  T suboi E, Ikeda S, T ajima M, et al. T ransbronchial biopsy smear for diagnosis of peripheral pulmonary carcinomas. Cancer 1967;20:687-98.\n19.  Naidich DP, Sussman R, Kutcher WL, et al. Solitary pulmonary nodules. CT-bronchoscopic correlation. Chest 1988;93:595-8.\n20.  Gaeta M, Pandolfo I, Volta S, et al. Bronchus sign on CT in peripheral carcinoma of the lung: value in predicting results of transbronchial biopsy. AJR Am J Roentgenol 1991;157:1181-5.\n21.  Gaeta M, Barone M, Russi EG, et al. Carcinomatous solitary pulmonary nodules: evaluation of the tumorbronchi relationship with thin-section CT. Radiology 1993;187:535-9.\n22.  Shure D, Fedullo PF. Transbronchial needle aspiration of peripheral masses. Am Rev Respir Dis 1983;128:1090-2.\n23.  Wang KP, Haponik EF, Britt EJ, et al. Transbronchial needle aspiration of peripheral pulmonary nodules. Chest 1984;86:819-23.\n24.  Shure D, Fedullo PF. Transbronchial needle aspiration in the diagnosis of submucosal and peribronchial bronchogenic carcinoma. Chest 1985;88:49-51.\n25.  Wang Memoli JS, Nietert PJ, Silvestri GA. Metaanalysis of guided bronchoscopy for the evaluation of the pulmonary nodule. Chest 2012;142:385-93.\n26.  Gex G, Pralong JA, Combescure C, et al. Diagnostic yield and safety of electromagnetic navigation bronchoscopy for lung nodules: a systematic review and meta-analysis. Respiration 2014;87:165-76.\n27.  Khandhar SJ, Bowling MR, Flandes J, et al. Electromagnetic navigation bronchoscopy to access lung lesions in 1,000 subjects: first results of the prospective, multicenter NAVIGATE study. BMC Pulm Med 2017;17:59.\n28.  Hohenforst-Schmidt W, Banckwitz R, Zarogoulidis P, et al Radiation Exposure of Patients by Cone Beam CT during Endobronchial Navigation - A Phantom Study. J Cancer 2014;5:192-202.\n29.  Zhang W, Chen S, Dong X, et al. Meta-analysis of the diagnostic yield and safety of electromagnetic navigation bronchoscopy for lung nodules. J Thorac Dis 2015;7:799-809.\n30.  Gildea TR, Mazzone PJ, Karnak D, et al. Electromagnetic navigation diagnostic bronchoscopy: a prospective study. Am J Respir Crit Care Med 2006;174:982-9.\n31.  Eberhardt R, Anantham D, Herth F, et al. Electromagnetic navigation diagnostic bronchoscopy in peripheral lung lesions. Chest 2007;131:1800-5.\n32.  Jensen KW, Hsia DW, Seijo LM, et al. Multicenter experience with electromagnetic navigation bronchoscopy for the diagnosis of pulmonary nodules. J Bronchology Interv Pulmonol 2012;19:195-9.\n33.  Bowling MR, Kohan MW, Walker P, et al. The effect of general anesthesia versus intravenous sedation on diagnostic yield and success in electromagnetic navigation bronchoscopy. J Bronchology Interv Pulmonol 2015;22:5-13.\n34.  Chee A, Stather DR, Maceachern P, et al. Diagnostic utility of peripheral endobronchial ultrasound with electromagnetic navigation bronchoscopy in peripheral lung nodules. Respirology 2013;18:784-9.\n35.  Ost DE, Ernst A, Lei X, et al. Diagnostic Yield and Complications of Bronchoscopy for Peripheral Lung Lesions. Results of the AQuIRE Registry. Am J Respir Crit Care Med 2016;193:68-77.\n36.  Chen A, Pastis N, Furukawa B, et al. The effect of respiratory motion on pulmonary nodule location during electromagnetic navigation bronchoscopy. Chest 2015;147:1275-81.\n37.  Eberhardt R, Anantham D, Ernst A, et al. Multimodality\nbronchoscopic diagnosis of peripheral lung lesions: a randomized controlled trial. Am J Respir Crit Care Med 2007;176:36-41.\n38.  Wilson DS, Ellis R. Improved Diagnostic Yield of Bronchoscopy in a Community Practice: Combination of Electromagnetic Navigation System and Rapid Onsite Evaluation. J Bronchology Interv Pulmonol 2007;14:227-32.\n39.  Furukawa BS, Pastis NJ, T anner NT, et al. Comparing Pulmonary Nodule Location During Electromagnetic Bronchoscopy With Predicted Location on the Basis of T wo Virtual Airway Maps at Different Phases of Respiration. Chest 2018;153:181-6.\n40.  Seijo LM, de T orres JP , Lozano MD, et al. Diagnostic yield of electromagnetic navigation bronchoscopy is highly dependent on the presence of a Bronchus sign on CT imaging: results from a prospective study. Chest 2010;138:1316-21.\n41.  Brownback KR, Quijano F, Latham HE, et al. Electromagnetic navigational bronchoscopy in the diagnosis of lung lesions. J Bronchology Interv Pulmonol 2012;19:91-7.\n42.  Chen A, Chenna P, Loiselle A, et al. Radial probe endobronchial ultrasound for peripheral pulmonary lesions. A 5-year institutional experience. Ann Am Thorac Soc 2014;11:578-82.\n43.  Diken ÖE, Karnak D, Ciledag A, et al. Electromagnetic navigation-guided TBNA vs conventional TBNA in the diagnosis of mediastinal lymphadenopathy. Clin Respir J 2015;9:214-20.\n44.  Mendiratta-Lala M, Sheiman R, Brook OR, et al. CTguided core biopsy and percutaneous fiducial seed placement in the lung: can these procedures be combined without an increase in complication rate or decrease in technical success? Eur J Radiol 2014;83:720-5.\n45.  Olaiya B, Gilliland CA, Force SD, et al. Preoperative Computed Tomography-Guided Pulmonary Lesion Marking in Preparation for Fluoroscopic Wedge Resection-Rates of Success, Complications, and Pathology Outcomes. Curr Probl Diagn Radiol 2019;48:27-31.\n46.  Farkas EA, Stoeckel DA, Nassif AS, et al. Intracoronary fiducial embolization after percutaneous placement for stereotactic radiosurgery. Ann Thorac Surg 2012;93:1715-7.\n47.  Anantham D, Feller-Kopman D, Shanmugham LN, et al. Electromagnetic navigation bronchoscopy-guided fiducial placement for robotic stereotactic radiosurgery of lung tumors: a feasibility study. Chest 2007;132:930-5.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Page 18 of 18",
+      "content": "48.  Harley DP , Krimsky WS, Sarkar S, et al. Fiducial marker placement using endobronchial ultrasound and navigational bronchoscopy for stereotactic radiosurgery: an alternative strategy. Ann Thorac Surg 2010;89:368-73; discussion 373-4.\n49.  Harada T, Shirato H, Ogura S, et al. Real-time tumortracking radiation therapy for lung carcinoma by the aid of insertion of a gold marker using bronchofiberscopy. Cancer 2002;95:1720-7.\n50.  Schroeder C, Hejal R, Linden PA. Coil spring fiducial markers placed safely using navigation bronchoscopy in inoperable patients allows accurate delivery of CyberKnife stereotactic radiosurgery. J Thorac Cardiovasc Surg 2010;140:1137-42.\n51.  Nabavizadeh N, Zhang J, Elliott DA, et al. Electromagnetic navigational bronchoscopy-guided fiducial markers for lung stereotactic body radiation therapy: analysis of safety, feasibility, and interfraction stability. J Bronchology Interv Pulmonol 2014;21:123-30.\n52.  T oba H, Kondo K, Miyoshi T, et al. Fluoroscopy-assisted thoracoscopic resection after computed tomographyguided bronchoscopic metallic coil marking for small peripheral pulmonary lesions. Eur J Cardiothorac Surg 2013;44:e126-32.\n53.  Miyoshi T, Kondo K, T akizawa H, et al. Fluoroscopyassisted thoracoscopic resection of pulmonary nodules after computed tomography--guided bronchoscopic metallic coil marking. J Thorac Cardiovasc Surg 2006;131:704-10.\n54.  Bolton WD, Howe H 3rd, Stephenson JE. The utility of electromagnetic navigational bronchoscopy as a localization tool for robotic resection of small pulmonary nodules. Ann Thorac Surg 2014;98:471-5; discussion 475-6.\n55.  Nomori H, Horio H. Colored collagen is a long-lasting point marker for small pulmonary nodules in thoracoscopic operations. Ann Thorac Surg 1996;61:1070-3.\n56.  Nomori H, Horio H, Naruke T, et al. Fluoroscopyassisted thoracoscopic resection of lung nodules marked with lipiodol. Ann Thorac Surg 2002;74:170-3.\n57.  Okumura T, Kondo H, Suzuki K, et al. Fluoroscopyassisted thoracoscopic surgery after computed tomography-guided bronchoscopic barium marking. Ann Thorac Surg 2001;71:439-42.\n58.  Krimsky WS, Minnich DJ, Cattaneo SM, et al. Thoracoscopic detection of occult indeterminate pulmonary nodules using bronchoscopic pleural dye marking. J Community Hosp Intern Med Perspect 2014;4. doi: 10.3402/jchimp.v4.23084.\n59.  Sakamoto T, T akada Y, Endoh M, et al. Bronchoscopic dye injection for localization of small pulmonary nodules in\nthoracoscopic surgery. Ann Thorac Surg 2001;72:296-7.\n60.  Muñoz-Largacha JA, Ebright MI, Litle VR, et al. Electromagnetic navigational bronchoscopy with dye marking for identification of small peripheral lung nodules during minimally invasive surgical resection. J Thorac Dis 2017;9:802-8.\n61.  Luo K, Lin Y, Lin X, et al. Localization of peripheral pulmonary lesions to aid surgical resection: a novel approach for electromagnetic navigation bronchoscopic dye marking. Eur J Cardiothorac Surg 2017;52:516-21.\n62.  Dennie CJ, Matzinger FR, Marriner JR, et al. Transthoracic needle biopsy of the lung: results of early discharge in 506 outpatients. Radiology 2001;219:247-51.\n63.  Khan MF, Straub R, Moghaddam SR, et al. Variables affecting the risk of pneumothorax and intrapulmonal hemorrhage in CT-guided transthoracic biopsy. Eur Radiol 2008;18:1356-63.\n64.  Boskovic T, Stanic J, Pena-Karan S, et al. Pneumothorax after transthoracic needle biopsy of lung lesions under CT guidance. J Thorac Dis 2014;6 Suppl 1:S99-107.\n65.  Chino H, Iikura M, Saito N, et al. Subinterlobular Pleural Location Is a Risk Factor for Pneumothorax After Bronchoscopy. Respir Care 2016;61:1664-70.\n66.  Steinfort DP , Herth FJ, Eberhardt R, et al. Potentially fatal arrhythmia complicating endobronchial epinephrine for control of iatrogenic bleeding. Am J Respir Crit Care Med 2012;185:1028-30.\n67.  Khan AY, Berkowitz D, Krimsky WS, et al. Safety of pacemakers and defibrillators in electromagnetic navigation bronchoscopy. Chest 2013;143:75-81.\n68.  Magnani A, Balbo P , Facchini E, et al. Lack of interference of electromagnetic navigation bronchoscopy to implanted cardioverter-defibrillator: in-vivo study. Europace 2014;16:1767-71.\n69.  Mullon JJ, Burkart KM, Silvestri G, et al. Interventional Pulmonology Fellowship Accreditation Standards: Executive Summary of the Multisociety Interventional Pulmonology Fellowship Accreditation Committee. Chest 2017;151:1114-21.\n70.  Chen AC, Gillespie CT. Robotic Endoscopic Airway Challenge: REACH Assessment. Ann Thorac Surg 2018;106:293-7.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "doi: 10.21037/amj.2018.11.04",
+      "content": "Cite this article as: Pickering EM, Kalchiem-Dekel O, Sachdeva A. Electromagnetic navigation bronchoscopy: a comprehensive review. AME Med J 2018;3:117.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    }
+  ],
+  "tables": [
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/51'}",
+      "headers": [
+        "",
+        "Veran TM",
+        "Veran TM",
+        "Veran TM",
+        "superDimension TM",
+        "superDimension TM",
+        "superDimension TM",
+        "Archimedes TM",
+        "Archimedes TM",
+        "Archimedes TM"
+      ],
+      "rows": [
+        [
+          "CT manufacturer",
+          "Slice thickness (mm)",
+          "Slice interval (mm)",
+          "Kernel",
+          "Slice thickness (mm)",
+          "Slice interval (mm)",
+          "Kernel",
+          "Slice thickness (mm)",
+          "Slice interval (mm)",
+          "Kernel"
+        ],
+        [
+          "GE TM",
+          "0.625",
+          "0.5",
+          "Standard",
+          "1.25",
+          "1",
+          "Standard",
+          "0.625-1.25",
+          "0.6-1.0",
+          "Bone"
+        ],
+        [
+          "Philips TM",
+          "0.67",
+          "0.5",
+          "B",
+          "1",
+          "0.8",
+          "C",
+          "0.625-0.75",
+          "0.625-0.75",
+          "B"
+        ],
+        [
+          "Siemens TM",
+          "0.75",
+          "0.5",
+          "B35",
+          "1",
+          "0.8",
+          "B31f",
+          "0.6",
+          "0.5",
+          "B45f, B50f"
+        ],
+        [
+          "",
+          "1",
+          "0.5",
+          "FC01",
+          "1",
+          "0.8",
+          "FC05",
+          "0.5-1",
+          "0.5-0.75",
+          "FC10"
+        ],
+        [
+          "Toshiba TM",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    }
+  ],
+  "figures": [
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/75'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/104'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/142'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/160'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/192'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    }
+  ],
+  "references": [
+    {
+      "title": "A frameless stereotaxic operating microscope for neurosurgery"
+    },
+    {
+      "title": "IEEE Trans Biomed Eng",
+      "year": 1989
+    },
+    {
+      "title": "Frameless isocentric stereotactic laser beam guide for image-directed microsurgery",
+      "year": 1989
+    },
+    {
+      "title": "Acta neurochirurgica",
+      "year": 1993
+    },
+    {
+      "title": "Interactive images in the operating room",
+      "year": 1993
+    },
+    {
+      "title": "J Endourol",
+      "year": 1993
+    },
+    {
+      "title": "Navigation surgery in diseases of the paranasal sinuses",
+      "year": 1999
+    },
+    {
+      "title": "Laryngorhinootologie",
+      "year": 1999
+    },
+    {
+      "title": "Registration of real and CT-derived virtual bronchoscopic images to assist transbronchial biopsy",
+      "year": 1999
+    },
+    {
+      "title": "IEEE Trans Med Imaging",
+      "year": 1998
+    },
+    {
+      "title": "Threedimensional CT-guided bronchoscopy with a real-time electromagnetic position sensor: a comparison of two image registration methods",
+      "year": 1998
+    },
+    {
+      "title": "Chest",
+      "year": 2000
+    },
+    {
+      "title": "Electromagnetic navigation during flexible bronchoscopy",
+      "year": 2000
+    },
+    {
+      "title": "Respiration",
+      "year": 2003
+    },
+    {
+      "title": "Real-time electromagnetic navigation bronchoscopy to peripheral lung lesions using overlaid CT images: the first human study",
+      "year": 2003
+    },
+    {
+      "title": "The changing epidemiology of smoking and lung cancer histology",
+      "year": 2006
+    },
+    {
+      "title": "Environ Health Perspect",
+      "year": 1995
+    },
+    {
+      "title": "Systematic approach to the management of the newly found nodule on screening computed tomography: role of dedicated pulmonary nodule clinics",
+      "year": 1995
+    },
+    {
+      "title": "Thorac Surg Clin",
+      "year": 1995
+    },
+    {
+      "title": "US Cancer Statistics; 1999-2013 Incidence and Mortality Web-Based Report",
+      "year": 2013
+    },
+    {
+      "title": "The past, present, and future of cancer incidence in the United States: 1975 through 2020"
+    },
+    {
+      "title": "Cancer",
+      "year": 2013
+    },
+    {
+      "title": "Reduced lung-cancer mortality with low-dose computed tomographic screening",
+      "year": 2015
+    },
+    {
+      "title": "N Engl J Med",
+      "year": 2011
+    },
+    {
+      "title": "Screening for lung cancer: U.S. Preventive Services Task Force recommendation statement",
+      "year": 2011
+    },
+    {
+      "title": "Ann Intern Med",
+      "year": 2014
+    },
+    {
+      "title": "Screening for Lung Cancer: CHEST Guideline and Expert Panel Report",
+      "year": 2014
+    },
+    {
+      "title": "Lung cancer screening, version 1.2015: featured updates to the NCCN guidelines",
+      "year": 2018
+    },
+    {
+      "title": "J Natl Compr Canc Netw",
+      "year": 2015
+    },
+    {
+      "title": "ESR/ERS white paper on lung cancer screening",
+      "year": 2015
+    },
+    {
+      "title": "Eur Respir J",
+      "year": 2015
+    },
+    {
+      "title": "Transbronchial biopsy smear for diagnosis of peripheral pulmonary carcinomas",
+      "year": 2015
+    },
+    {
+      "title": "Solitary pulmonary nodules. CT-bronchoscopic correlation",
+      "year": 1967
+    },
+    {
+      "title": "Bronchus sign on CT in peripheral carcinoma of the lung: value in predicting results of transbronchial biopsy",
+      "year": 1988
+    },
+    {
+      "title": "AJR Am J Roentgenol",
+      "year": 1991
+    },
+    {
+      "title": "Carcinomatous solitary pulmonary nodules: evaluation of the tumorbronchi relationship with thin-section CT",
+      "year": 1991
+    },
+    {
+      "title": "Radiology",
+      "year": 1993
+    },
+    {
+      "title": "Transbronchial needle aspiration of peripheral masses",
+      "year": 1993
+    },
+    {
+      "title": "Am Rev Respir Dis",
+      "year": 1983
+    },
+    {
+      "title": "Transbronchial needle aspiration of peripheral pulmonary nodules",
+      "year": 1983
+    },
+    {
+      "title": "Transbronchial needle aspiration in the diagnosis of submucosal and peribronchial bronchogenic carcinoma",
+      "year": 1984
+    },
+    {
+      "title": "Metaanalysis of guided bronchoscopy for the evaluation of the pulmonary nodule",
+      "year": 1985
+    },
+    {
+      "title": "Diagnostic yield and safety of electromagnetic navigation bronchoscopy for lung nodules: a systematic review and meta-analysis",
+      "year": 2012
+    },
+    {
+      "title": "Electromagnetic navigation bronchoscopy to access lung lesions in 1,000 subjects: first results of the prospective, multicenter NAVIGATE study",
+      "year": 2014
+    },
+    {
+      "title": "BMC Pulm Med",
+      "year": 2017
+    },
+    {
+      "title": "Radiation Exposure of Patients by Cone Beam CT during Endobronchial Navigation -A Phantom Study",
+      "year": 2017
+    },
+    {
+      "title": "J Cancer",
+      "year": 2014
+    },
+    {
+      "title": "Meta-analysis of the diagnostic yield and safety of electromagnetic navigation bronchoscopy for lung nodules",
+      "year": 2014
+    },
+    {
+      "title": "J Thorac Dis",
+      "year": 2015
+    },
+    {
+      "title": "Electromagnetic navigation diagnostic bronchoscopy: a prospective study",
+      "year": 2015
+    },
+    {
+      "title": "Am J Respir Crit Care Med",
+      "year": 2006
+    },
+    {
+      "title": "Electromagnetic navigation diagnostic bronchoscopy in peripheral lung lesions",
+      "year": 2006
+    },
+    {
+      "title": "Multicenter experience with electromagnetic navigation bronchoscopy for the diagnosis of pulmonary nodules",
+      "year": 2007
+    },
+    {
+      "title": "J Bronchology Interv Pulmonol",
+      "year": 2012
+    },
+    {
+      "title": "The effect of general anesthesia versus intravenous sedation on diagnostic yield and success in electromagnetic navigation bronchoscopy",
+      "year": 2012
+    },
+    {
+      "title": "Diagnostic utility of peripheral endobronchial ultrasound with electromagnetic navigation bronchoscopy in peripheral lung nodules",
+      "year": 2015
+    },
+    {
+      "title": "Respirology",
+      "year": 2013
+    },
+    {
+      "title": "Diagnostic Yield and Complications of Bronchoscopy for Peripheral Lung Lesions. Results of the AQuIRE Registry",
+      "year": 2013
+    },
+    {
+      "title": "The effect of respiratory motion on pulmonary nodule location during electromagnetic navigation bronchoscopy",
+      "year": 2016
+    },
+    {
+      "title": "Multimodality bronchoscopic diagnosis of peripheral lung lesions: a randomized controlled trial",
+      "year": 2015
+    },
+    {
+      "title": "Improved Diagnostic Yield of Bronchoscopy in a Community Practice: Combination of Electromagnetic Navigation System and Rapid Onsite Evaluation",
+      "year": 2007
+    },
+    {
+      "title": "Comparing Pulmonary Nodule Location During Electromagnetic Bronchoscopy With Predicted Location on the Basis of Two Virtual Airway Maps at Different Phases of Respiration",
+      "year": 2007
+    },
+    {
+      "title": "Diagnostic yield of electromagnetic navigation bronchoscopy is highly dependent on the presence of a Bronchus sign on CT imaging: results from a prospective study",
+      "year": 2018
+    },
+    {
+      "title": "Electromagnetic navigational bronchoscopy in the diagnosis of lung lesions",
+      "year": 2010
+    },
+    {
+      "title": "Radial probe endobronchial ultrasound for peripheral pulmonary lesions. A 5-year institutional experience",
+      "year": 2012
+    },
+    {
+      "title": "Ann Am Thorac Soc",
+      "year": 2014
+    },
+    {
+      "title": "Electromagnetic navigation-guided TBNA vs conventional TBNA in the diagnosis of mediastinal lymphadenopathy",
+      "year": 2014
+    },
+    {
+      "title": "Clin Respir J",
+      "year": 2015
+    },
+    {
+      "title": "CTguided core biopsy and percutaneous fiducial seed placement in the lung: can these procedures be combined without an increase in complication rate or decrease in technical success?",
+      "year": 2015
+    },
+    {
+      "title": "Eur J Radiol",
+      "year": 2014
+    },
+    {
+      "title": "Preoperative Computed Tomography-Guided Pulmonary Lesion Marking in Preparation for Fluoroscopic Wedge Resection-Rates of Success, Complications, and Pathology Outcomes",
+      "year": 2014
+    },
+    {
+      "title": "Curr Probl Diagn Radiol",
+      "year": 2019
+    },
+    {
+      "title": "Intracoronary fiducial embolization after percutaneous placement for stereotactic radiosurgery",
+      "year": 2019
+    },
+    {
+      "title": "Ann Thorac Surg",
+      "year": 2012
+    },
+    {
+      "title": "Electromagnetic navigation bronchoscopy-guided fiducial placement for robotic stereotactic radiosurgery of lung tumors: a feasibility study",
+      "year": 2012
+    },
+    {
+      "title": "Fiducial marker placement using endobronchial ultrasound and navigational bronchoscopy for stereotactic radiosurgery: an alternative strategy",
+      "year": 2007
+    },
+    {
+      "title": "Real-time tumortracking radiation therapy for lung carcinoma by the aid of insertion of a gold marker using bronchofiberscopy",
+      "year": 2010
+    },
+    {
+      "title": "Coil spring fiducial markers placed safely using navigation bronchoscopy in inoperable patients allows accurate delivery of CyberKnife stereotactic radiosurgery",
+      "year": 2002
+    },
+    {
+      "title": "J Thorac Cardiovasc Surg",
+      "year": 2010
+    },
+    {
+      "title": "Electromagnetic navigational bronchoscopy-guided fiducial markers for lung stereotactic body radiation therapy: analysis of safety, feasibility, and interfraction stability",
+      "year": 2010
+    }
+  ],
+  "quality": {
+    "completeness_score": 0,
+    "has_abstract": true,
+    "abstract_source": "metadata",
+    "has_doi": true,
+    "has_full_text": true,
+    "num_sections": 37,
+    "num_tables": 1,
+    "num_figures": 21,
+    "num_references": 80
+  }
+}

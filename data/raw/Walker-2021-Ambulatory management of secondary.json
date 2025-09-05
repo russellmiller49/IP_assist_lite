@@ -1,0 +1,742 @@
+{
+  "metadata": {
+    "document_id": "10_1183_13993003_03375_2020",
+    "title": "Ambulatory management of secondary spontaneous pneumothorax: a randomised controlled trial",
+    "authors": [
+      "Steven P. Walker",
+      "Emma Keenan",
+      "Oliver Bintcliffe",
+      "Andrew E. Stanton",
+      "Mark Roberts",
+      "Justin Pepperell",
+      "Ian Fairbairn",
+      "Edward McKeown",
+      "James Goldring",
+      "Nadeem Maddekar",
+      "James Walters",
+      "Alex West",
+      "Amrithraj Bhatta",
+      "Matthew Knight",
+      "Rachel Mercer",
+      "Rob Hallifax",
+      "Paul White",
+      "Robert F. Miller",
+      "Najib M. Rahman",
+      "Nick A. Maskell"
+    ],
+    "year": 2021,
+    "journal": "European Respiratory Journal",
+    "doi": "10.1183/13993003.03375-2020",
+    "volume": "57",
+    "issue": "6",
+    "pages": "2003375",
+    "citation": "Walker, et al. (2021). Ambulatory management of secondary spontaneous pneumothorax: a randomised controlled trial. European Respiratory Journal, 57(6), 2003375. https://doi.org/10.1183/13993003.03375-2020",
+    "abstract": "Secondary spontaneous pneumothorax (SSP) is traditionally managed with an intercostal chest tube attached to an underwater seal. We investigated whether use of a one-way flutter valve shortened patients’ length of stay (LoS).",
+    "abstract_source": "metadata",
+    "url": "https://publications.ersnet.org/lookup/doi/10.1183/13993003.03375-2020"
+  },
+  "source_file": "Walker-2021-Ambulatory management of secondary.json",
+  "sections": [
+    {
+      "title": "Ambulatory management of secondary spontaneous pneumothorax: a randomised controlled trial",
+      "content": "Steven P. Walker 1 , Emma Keenan 1 , Oliver Bintcliffe 1 , Andrew E. Stanton 2 , Mark Roberts 3 , Justin Pepperell 4 , Ian Fairbairn 5 , Edward McKeown 6 , James Goldring 7 , Nadeem Maddekar 8 , James Walters 9 , Alex West 10 , Amrithraj Bhatta 11 , Matthew Knight 12 , Rachel Mercer 13 , Rob Hallifax 13 , Paul White 14 , Robert F. Miller 15 , Najib M. Rahman 13 and Nick A. Maskell 1\nAffiliations : 1 Academic Respiratory Unit Bristol, Westbury on Trym, UK. 2 Great Western Hospital, Swindon, UK. 3 Kingsmill Hospital, Mansfield, UK. 4 Musgrove Hospital, Taunton, UK. 5 Victoria Hospital, Kirkcaldy, UK. 6 Royal Berkshire Hospital, Reading, UK. 7 Royal Free Hospital, London, UK. 8 Royal Stoke University Hospital, Stoke, UK. 9 Royal United Hospital, Bath, UK. 10 Guy ' s and St Thomas ' Hospital, London, UK. 11 Victoria Hospital, Blackpool, UK. 12 Watford General Hospital, Watford, UK. 13 Churchill Hospital, Oxford, UK. 14 Applied Statistics Group, University of West of England, Bristol, UK. 15 Institute for Global Health, University College London, London, UK.\nCorrespondence : Steven P. Walker, University of Bristol, Academic Respiratory Unit, School of Clinical Sciences, Southmead Hospital, Westbury on Trym, BS10 5NB, UK. E-mail: Steven.walker@nbt.nhs.uk",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "@ERSpublications",
+      "content": "Ambulatory management with a flutter valve does not shorten overall length of stay in patients with secondary spontaneous pneumothoraces compared to standard management. This was due to increased risk of treatment failure with ambulatory management. https://bit.ly/2JEd3YC\nCite this article as: Walker SP, Keenan E, Bintcliffe O, et al . Ambulatory management of secondary spontaneous pneumothorax: a randomised controlled trial. Eur Respir J 2021; 57: 2003375 [https://doi.org/ 10.1183/13993003.03375-2020].\nABSTRACT Secondary spontaneous pneumothorax (SSP) is traditionally managed with an intercostal chest tube attached to an underwater seal. We investigated whether use of a one-way flutter valve shortened patients ' length of stay (LoS).\nThis open-label randomised controlled trial enrolled patients presenting with SSP and randomised to either a chest tube and underwater seal (standard care: SC) or ambulatory care (AC) with a flutter valve. The type of flutter valve used depended on whether at randomisation the patient already had a chest tube in place: in those without a chest tube a pleural vent (PV) was used; in those with a chest tube in situ , an Atrium Pneumostat (AP) valve was attached. The primary end-point was LoS.\nBetween March 2017 and March 2020, 41 patients underwent randomisation: 20 to SC and 21 to AC (13=PV, 8=AP). There was no difference in LoS in the first 30 days following treatment intervention: AC (median=6 days, IQR 14.5) and SC (median=6 days, IQR 13.3). In patients treated with PV there was a high rate of early treatment failure (6/13; 46%), compared to patients receiving SC (3/20; 15%) (p=0.11) Patients treated with AP had no (0/8 0%) early treatment failures and a median LoS of 1.5 days (IQR 23.8).\nThere was no difference in LoS between ambulatory and standard care. Pleural Vents had high rates of treatment failure and should not be used in SSP. Atrium Pneumostats are a safer alternative, with a trend towards lower LoS.\nReceived: 16 Sept 2020 | Accepted: 30 Nov 2020\nCopyright ©ERS 2021. For reproduction rights and permissions contact permissions@ersnet.org",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Introduction",
+      "content": "Secondary spontaneous pneumothorax (SSP) is defined as a pneumothorax in the presence of known underlying lung disease. Many diffuse lung diseases are associated with SSP, with chronic obstructive pulmonary disease (Chronic obstructive pulmonary disease (COPD)) present in approximately 70% of cases [1]. In the UK, SSP is the leading cause of admission in patients with spontaneous pneumothorax, accounting for over 60% of admissions [2]. A French epidemiological study has demonstrated that the duration of hospitalisation in SSP is twice that of patients with primary spontaneous pneumothorax (PSP) [3]. The duration of air-leak is longer, and the in-hospital mortality greater when SSP and PSP are compared [4, 5]. Using a one-way flutter valve, rather than current standard management of a chest tube attached to an underwater seal chamber, may increase mobilisation and shorten hospital length of stay (LoS). The one-way flutter valve can either be attached to the end of a chest tube, as with the Atrium Pneumostat (Atrium Medical, Merrimack, NH, USA) chest tube valve, or integrated into an ' all in one ' ambulatory device that does not require prior chest tube insertion, such as the Pleural Vent (Rocket Medical PLC, Watford, UK). There are no published prospective studies describing use of flutter valves in patients with SSP. Pooled results from retrospective studies suggest that flutter valves may reduce hospital LoS in this patient cohort [6]. This study tested the hypothesis that ambulatory care with flutter valves in management of SSP shortens the length of hospitalisation compared with standard care.",
+      "category": "introduction",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Material and methods Study design",
+      "content": "This was a multi-centre open-label randomised controlled trial comparing ambulatory management with a flutter valve to standard care (chest tube attached to an underwater seal chamber) in patients with SSP. The trial was supported by an unrestricted research grant by Rocket Medical UK, who supplied Pleural Vents for study participants. Trial design, implementation, data collection, analysis and writing of the manuscript were performed by the trial investigators without commercial involvement.",
+      "category": "methods",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Study subjects",
+      "content": "The trial recruited patients with SSP from 13 secondary and tertiary care centres in the UK. SSP was defined as a pneumothorax in a patient with known underlying lung disease or in a patient older than 50 years old with a significant smoking history or computed tomography scan evidence of smoking-related emphysema. Potential patients were identified on admission to hospital and eligible if they had a diagnosis of SSP confirmed by chest radiograph or computed tomography scan, and if chest tube drainage was clinically indicated and technically possible as per British Thoracic Society guidelines 2010 [7]. Patients were eligible if they had a chest tube placed for SSP within the last 36 h and there was evidence of ongoing air-leak.\nExclusion criteria were iatrogenic or traumatic pneumothorax, a chest tube in situ , current or past tension pneumothorax, significant hydropneumothorax ( ⩾ 25% lung field), bed-bound patients, patients aged less than 18 years of age, contraindication to chest drain insertion, females who were pregnant or lactating, participants with no access to a phone, or were unable to comply with trial requirements or provide informed consent. All patients provided written informed consent. After enrolment, patients underwent randomisation using a centralised, web-based system (RedPill; Sealed Envelope, Clerkenwell, UK). Trial-group assignments were made in a 1:1 ratio, in random permuted blocks [8]. Both participants and investigators were not blinded to trial assignment. North Bristol NHS Trust provided trial oversight, and ethics approval for recruitment was obtained from the South West Exeter Research Ethics Committee (REC 16/SW/0023) The trial was prospectively registered with the International Standard Randomised Clinical Trials Number (ISRCTN79956557). The study protocol is available in the supplementary material.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Standard care",
+      "content": "Patients allocated to standard care underwent 12F Seldinger chest tube insertion and this was attached to an underwater seal. Resolution of pneumothorax was identified by full lung expansion on chest radiograph and cessation of bubbling of the underwater seal bottle. Decisions to remove chest tubes were made by the treating physician, with guidance that chest drains should be removed at the earliest opportunity following clarifying the absence of an ongoing air leak.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Ambulatory care",
+      "content": "Patients allocated to ambulatory care received a flutter valve. Initially the flutter valve used for ambulatory care was the Pleural Vent (Rocket Medical, Watford, UK) (figure 1a) (ambulatory pneumothorax device, 8F pig-tailed catheter mounted on an 18G needle, self-contained one-way valve and vent). The Pleural Vent was cutaneously fixed in place with a hydrocolloid fixation device. After 12 months of recruitment,\ndue to high proportions of potential eligible patients excluded from trial entry due to prior chest drain placement in the emergency room, an ethical amendment was submitted to allow the use of Atrium Pneumostat for patients with a chest tube already in situ . For these patients, the Atrium Pneumostat chest tube valve (Atrium Medical, Merrimack, New Hampshire, USA) was attached to their 12F chest tube (one-way flutter valve which attaches to the end of a standard chest tube, 30-mL collection capacity chamber for secretions) (figure 1b). The study exclusion criteria were changed to only exclude patients with a chest tube in situ for over 36 h\nResolution of pneumothorax was confirmed by a chest radiograph and cessation of air-leak through the device. The decision to remove flutter valve device was decided by the treating physician, with guidance that device should be removed at the earliest opportunity following clarifying the absence of an ongoing air leak. Patients were able to be discharged from hospital with the ambulatory device in situ at the treating physician ' s discretion on the following criteria: 1) patient deemed to be clinically stable (haemodynamic stability, stability of clinical observations and patients symptoms have returned to baseline level prior to pneumothorax); 2) the pneumothorax was stable (pneumothorax not increasing in size on imaging, functioning ambulatory device and no requirement for thoracic suction); and 3) the patient understood the care and function of ambulatory device and there was a responsible person at home able to assist patient or call for help if required.\nUse of thoracic suction and referral for thoracic surgery was permitted in both treatment arms at the treating physician ' s discretion.\nPatients were followed up until 26 weeks after randomisation, or until death. Face-to-face follow-up consultations took place at 4 and 12 weeks, with a clinical assessment, chest radiograph, and a self-completed patient questionnaire. Spirometry was conducted at week 8. At week 26, the final follow up consultation was by telephone.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Primary",
+      "content": "The primary outcome was a patient ' s total number of hospital bed days due to SSP during the first 30 days from randomisation, including readmissions. Patients remaining in hospital overnight were regarded as 1 day hospitalisation; for those discharged on the same day this was recorded as a 0-day LoS. Otherwise partial days of hospitalisation were rounded up to the nearest complete day.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Secondary",
+      "content": "Secondary outcomes included participant-related outcome measures with difference in daily breathless score and chest pain as assessed by visual analogue scale (VAS) over 28 days, with outcomes reported over the first seven and 28 days. The VAS breathlessness consists of a 100 mm horizontal line, labelled from 0 mm for ' Not breathless at all ' to 100 mm for ' Worst possible breathlessness ' , marked by the participant and measured by two assessors independently [9]. Quality of life was assessed using the EuroQoL Group 5-Dimensions 5-Level Questionnaire (EQ-5D-5L) questionnaire daily over first 14 days, and at 4 and 12 weeks after randomisation [10].\nHospital LoS was assessed for the patient ' s first admission, from admission date until discharge. Additionally, length of hospitalisation until classified medically fit for discharge, as based on pre-determined criteria, and length of hospitalisation from randomisation were recorded. Time from randomisation until pneumothorax resolution, drain removal and until further pleural intervention was recorded. Failure of initially randomised treatment, defined as requiring an additional pleural intervention, within the first week was recorded. The timing of any thoracic surgical intervention following the initial presentation with SSP was documented. The date of any ipsilateral pneumothorax recurrence within the first 6 months was recorded. Recurrence was recorded from randomisation to event. Recurrence was defined as an ipsilateral pneumothorax identified on a chest radiograph, after a chest radiograph had confirmed complete resolution for at least 24 h following the removal of any catheter or drain at the patient ' s initial presentation with SSP. Serious adverse events (SAE) and adverse events related to trial interventions were recorded.\nA priori sub-group analysis was performed for the primary outcomes using an interaction test and considered statistically significant at the 5% level. Sub-group analysis was performed comparing Atrium Pneumostat with standard care and severity of Chronic obstructive pulmonary disease (COPD) (as expressed by forced expiratory volume in 1 s (FEV1)).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Statistical analysis and power calculation",
+      "content": "British Thoracic Society pleural disease audit data (2011, unpublished) for 115 patients with SSP showed a mean±SD LoS of 12.3±9.89 days and median (interquartile range) LoS of 8 (4 -17.5) days. Assuming 90% power and 5% significance, the sample size is determined by the coefficient of variation and the effect size. The coefficient of variation was 0.8. Detecting an effect size of 0.5 with a coefficient of variation of 1 would require 30 patients per group [11]. The calculated coefficient of variation within the audit data was lower, suggesting a smaller sample size is necessary. However, a study size of 60 patients allows for a margin for error in relation to the effect size, including a 10% loss to follow up rate, suggesting a total required sample size of 66.\nAnalyses were performed using IBM SPSS, Version 23.0 (SPSS Inc. Chicago, IL, USA). The primary analysis for each outcome was intention-to-treat, meaning that all patients in whom an outcome was available were included in analysis, and were analysed according to their randomised treatment group. Descriptive statistics were used to summarise patient characteristics and clinical data. Median (interquartile range) was calculated for hospital LoS. Continuous non-parametric variables were analysed using Mann -Whitney test and categorical data was analysed using Chi-squared test. All tests were two-sided and considered statistically significant at the 5% level.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Urgent safety review",
+      "content": "In January 2019, 22 months after the first patient was enrolled, an urgent safety review was conducted by the Trial Steering Committee (TSC), due to reports from trial investigators of SAEs in patients receiving ambulatory care. On TSC review, a majority of SAEs appeared to be causally related to use of the Pleural Vent. Six (46%) out of 13 patients managed with this device required an additional chest tube insertion within the first week due to treatment failure. The TSC felt this was an unacceptably high risk of device failure, and stopped use of the Pleural Vent, but continued use of the Atrium Pneumostat in those randomised to ambulatory care.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Recruitment and population characteristics",
+      "content": "Recruitment and follow-up of participants took place from March 2017 to March 2020. Of potential participants, 186 were screened/recruited and 41 were randomised (figure 2). Of these, 21 were randomised to ambulatory care and 20 to standard care. Of patients receiving ambulatory care, 13 were managed with a Pleural Vent and 8 with an Atrium Pneumostat. The two groups were well matched at baseline (table 1). All patients were included in the primary analysis. The study did not reach the target sample size of 66 in the pre-defined study period due to slower than anticipated recruitment.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Primary analysis",
+      "content": "Total hospitalisation in the first 30 days was 6 days (IQR 1 -15.5) in those who received ambulatory care and 6 days (IQR 2.25 -15.5) in those who received standard care (p=0.77) (table 2) (figure 3).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Secondary analysis",
+      "content": "The hospital LoS for the initial admission was 1 day (IQR 1 -14) for ambulatory care versus 3.5 days (IQR 2 -7) for standard care (p=0.122). The median time until medically fit for hospital discharge in those who received ambulatory care was 1 day (IQR 1 -1) versus 2 days (IQR 2 -6) in those who received standard\ncare (p=0.001). The time to chest tube removal was 3 days (IQR 1.5 -9) for ambulatory care versus 2 days (IQR 1 -6) for standard care (p=0.36). Failure of initial treatment within the first week occurred in six (28%) of the 21 patients receiving ambulatory care versus three (15%) of the 20 patients receiving standard care (p=0.29). Of those 21 patients receiving ambulatory care, eight (38%) required an additional pleural procedure within 3 months from randomisation, compared with six (30%) of the 20 patients who received standard care (p=0.59).\nThere was no difference in the percentage of patients who required thoracic surgery (ambulatory care: six (29%) out of 21, standard care six (30%) out of 20) between the two groups. There was no difference in the percentage of patients who received medical pleurodesis (ambulatory care: two (10%) out of 21, standard care two (10%) out of 20) between the two groups, nor was there a difference in 6-month recurrence rates (ambulatory care: four (19%) out of 21, standard care four (20%) out of 20).\nIn patients receiving ambulatory care, the hospital LoS in the first 30 days was 1.5 days (IQR 1 -24.8) for those managed with the Atrium Pneumostat, and 9 days (IQR 2 -15.5) for those managed with a pleural\nvalve (p=0.374) (table 3). In the first week after randomisation there were no treatment failures with the Pneumostat, but there were six out of 13 (46%) failures with the pleural vent (p=0.046).\nMean breathlessness and pain VAS scores improved during the first 30 days in both groups (figure 4). Whilst there was no difference in overall VAS breathlessness between standard care and ambulatory care,",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "TABLE 1 Baseline characteristics by treatment allocation",
+      "content": "Data are presented as n, mean±SD or n (%). Chronic obstructive pulmonary disease (COPD): chronic obstructive pulmonary disease; CF: cystic fibrosis.\nthe trend over time for VAS breathlessness was group dependent (p<0.05). In those who received ambulatory care there was progressive improvement in VAS breathless, whilst for those who received standard care there was an initial sharp decrease. There was no significant difference In VAS pain scores between study group using the linear mixed model (p=0.093).\nQuality of life scores improved throughout the study in both patients receiving ambulatory and standard care, with significant improvement in both mean EQ-5D-5L and EuroQoL Group 5-Dimensions VAS Questionnaire (EQ5D VAS) (figure 5). Mean EQ5D VAS improved between baseline and week four (p<0.001) in both groups and did not differ between groups at baseline (p=0.10), at week four (p=0.48), Odds ratio (or) week 12 (p=0.21). Mean EQ-5D-5L improved between baseline and week four (p=0.02 and 0.01, respectively) in both randomised arms and then did not differ between groups at baseline (p=0.85), at week 4 (p=0.44) Odds ratio (or) week 12 (p=0.50).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Adverse events",
+      "content": "Ambulatory care accounted for 33 (56%) out of the total 59 adverse events. Patients in standard care arm had 26 (44%) of the total 59 adverse events (table 4). Rates of treatment failure were high in those treated with the pleural vent, with six patients requiring an additional chest tube within the first week at a median time of 2 days from randomisation. These six cases included three instances where the pneumothorax\nincreased in size and two instances where the pleural vent blocked resulting in subcutaneous emphysema. There were two cases where the pleura vent was dislodged, one where the vent was attached to a suction device due to subcutaneous emphysema, with the resultant increased pull on drain leading to dislodgement, and another case where it was accidentally dislodged overnight.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Discussion",
+      "content": "This randomised controlled trial compared ambulatory management using two types of flutter valves with standard care using a chest tube attached to an underwater seal chamber, in patients with SSP. The trial found no difference in total length of hospitalisation, including readmissions, in the first 30 days after randomisation between the two groups. While the length of hospitalisation for the initial admission was non-significantly shorter in those receiving ambulatory care, high rates of early treatment failure in this",
+      "category": "discussion",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "TABLE 4 Adverse events",
+      "content": "Data are presented as n.\ngroup, with subsequent readmission, increased the overall LoS. This, combined with a lower than anticipated length of hospital stay for participants who received standard care, at less than a third of that observed in epidemiological studies, likely contributed to the similar LoS in the two groups in the present study [2].\nThis is the first randomised study to investigate ambulatory management strategies in SSP. In 2015, a systematic review of ambulatory treatment in management of pneumothorax identified 16 non-randomised studies, seven of which included patients with SSP. No study looked exclusively at SSP, and this patient group formed only 10% of the review population [6]. The review cited high rates of success in patients with SSP, defined as use of a flutter valve with a chest tube to manage pneumothorax. A subsequently published prospective case series of a selected cohort of patients with SSP reported that 32 (65%) out of 49 were successfully managed with the Atrium Pneumostat attached to a 12F chest drain [12]. However, non-randomised case-series are subject to high risk of selection bias, with sick and complex patients at greater risk of exclusion. Three randomised controlled trials have examined use of flutter valves in patients with primary spontaneous pneumothorax (PSP) with reported success [13 -15]. The most recent, and largest, randomised 236 patients with PSP to either a chest drain attached to under water seal or to ambulatory management using the Rocket pleural vent. It found significantly shorter LoS in patients managed with the pleural vent compared with standard care [15]. Patients with a pleural vent were, however, at higher risk of serious adverse events, with the ambulatory cohort experiencing all 14 severe adverse events. Whilst, 21% patients in the pleural vent arm required a further pleural procedure, the early failure rate seen in our trial was rare in PSP. Only 3% of the 117 patients receiving pleural vent for PSP had an enlarging pneumothorax at outpatient review requiring chest tube insertion and only two (2%) patients with PSP suffered a device malfunction.\nIn this study of SSP patients, rates of treatment failure with the pleural vent, presenting as either increasing pneumothorax size or surgical emphysema, were higher, with more than half requiring an additional chest tube within the first week for pneumothorax management. This difference in success of the pleural vent in PSP and SSP likely reflects their distinct disease processes, with SSP associated with higher rates of persistent air-leak and broncho-pleural fistula formation than PSP [5]. Patients with SSP, typically also have poorer respiratory reserve and therefore less able to tolerate an undrained pneumothorax. Interestingly, results from this trial suggest this high failure rate in ambulatory care may be device specific, with large differences in hospital LoS and rates of complications seen in patients who received the two types of flutter valves. In contrast with the high treatment failure rates in patients with a pleural vent, there were no early treatment failures and a trend towards a shorter LoS in those managed with the Atrium Pneumostat. A plausible explanation for the observed increased failure rate with the pleural vent is its smaller 8F gauge catheter, compared with the larger 12F used with the Pneumostat. The 8F catheter may potentially not be of sufficient calibre to manage the large volume air-leak that can occur with SSP or may be at a higher risk of partial or complete obstruction from luminal secretions.\nThis is the first study to demonstrate that pleural intervention in SSP improves patient related outcomes, with early and maintained improvements in breathlessness, chest pain and quality of life in both ambulatory and standard care. Ambulatory care, however, did not demonstrate superiority over standard care in these patient related outcomes. This is similar to the results in the recent trial of the pleural vent in patients with PSP, which found no differences in VAS pain or breathlessness scores between ambulatory and standard care [15].\nLong-term follow up at 6-months after presentation with SSP showed pneumothorax recurrence rates slightly lower than rates in previous publications [2, 3, 16 -18]. This likely reflects the high rates of surgical and medical pleurodesis in this study and the duration of follow-up.\nThere are limitations to our trial. The trial did not meet the intended recruitment target and the failure to reject the null hypothesis may be a result of the small sample size. Under recruitment was primarily due to high numbers excluded due to urgent treatment being required before randomisation could be performed. It was not feasible to blind the study participants and clinicians to the study intervention, therefore a primary end-point was selected that was easily measurable and objective.\nIn conclusion there was no difference in LoS between patients managed with ambulatory care compared to chest drain attached to underwater seal. This may be related to high rates of treatment failure with the pleural vent and a shorter LoS in the standard arm than previously cited. We do not advise use of pleural vent in patients with SSP, and the encouraging results with pleural vent in PSP are not translatable to this population. Our study has, however, shown early supportive evidence of safety in the attachment of an Atrium Pneumostat to an existing chest drain to ambulate patients with SSP. A dedicated trial using this device is now warranted.\nThis study is registered as a randomised controlled trial as ISRCTN79956557. Individual participant data that underlie the results reported in this articles after de-identification (text, tables, figures and appendices) will be available, along with the study protocol and statistical analysis plan, beginning 3 months and ending 36 months following article publication, to researchers who provide a methodologically sound proposal. Proposals should be directed to the corresponding author. To gain access, data requesters will need to sign a data access agreement.\nConflict of interest: S.P. Walker reports grants from Rocket Medical, during the conduct of the study. E. Keenan has nothing to disclose. O. Bintcliffe has nothing to disclose. A.E. Stanton has nothing to disclose. M. Roberts has nothing to disclose. J. Pepperell has nothing to disclose. I. Fairbairn has nothing to disclose. E. McKeown has nothing to disclose. J. Goldring has nothing to disclose. N. Maddekar has nothing to disclose. J. Walters has nothing to disclose. A. West has nothing to disclose. A. Bhatta has nothing to disclose. M. Knight has nothing to disclose. R. Mercer has nothing to disclose. R. Hallifax has nothing to disclose. P. White has nothing to disclose. R.F. Miller reports personal fees for lectures from Gilead, outside the submitted work. N.M. Rahman reports personal fees for consultancy from Rocket Medical, outside the submitted work. N.A. Maskell reports grants from Rocket Medical, during the conduct of the study; personal fees from BD Carefusion and Cook Medical, outside the submitted work.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "References",
+      "content": "1 Guo Y, Xie C, Rodriguez RM, et al. Factors related to recurrence of spontaneous pneumothorax. Respirology 2005; 10: 378 -384.\n2 Hallifax RJ, Goldacre R, Landray MJ, et al. Trends in the incidence and recurrence of inpatient-treated spontaneous pneumothorax, 1968 -2016. JAMA 2018; 320: 1471 -1480.\n3 Bobbio A, Dechartres A, Bouam S, et al. Epidemiology of spontaneous pneumothorax: gender-related differences.\nThorax 2015; 70: 653 -658.\n4 Onuki T, Ueda S, Yamaoka M, et al. Primary and secondary spontaneous pneumothorax: prevalence, clinical features, and in-hospital mortality. Can Respir J 2017; 2017: 6014967.\n5 Chee CBE, Abisheganaden J, Yeo JKS, et al. Persistent air-leak in spontaneous pneumothorax -clinical course and outcome. Respir Med 1998; 92: 757 -761.\n6 Brims FJ, Maskell NA. Ambulatory treatment in the management of pneumothorax: a systematic review of the literature. Thorax 2013; 68: 664 -669.\n7 MacDuff A, Arnold A, Harvey J. Management of spontaneous pneumothorax: British Thoracic Society Pleural Disease Guideline 2010. Thorax 2010; 65: Suppl 2, ii18 -ii31.\n8 Pocock SJ. Clinical trials: a practical approach. Chichester, John Wiley & Sons, 2013.\n9 Mishra EK, Corcoran JP, Hallifax RJ, et al. Defining the minimal important difference for the visual analogue scale assessing dyspnea in patients with malignant pleural effusions. PLoS One 2015; 10: e0123798.\n10 Herdman M, Gudex C, Lloyd A, et al. Development and preliminary testing of the new five-level version of EQ-5D (EQ-5D-5L). Qual Life Res 2011; 20: 1727 -1736.\n11 Wittes J. Sample size calculations for randomized controlled trials. Epidemiol Rev 2002; 24: 39 -53.\n12 Khan F, Vali Y, Naeem M, et al. Safety and efficacy of ambulatory management of secondary spontaneous pneumothorax: a case series. BMJ Open Respir Res 2019; 6: e000373.\n13 Röggla M, Wagner A, Brunner C, et al. The management of pneumothorax with the thoracic vent versus conventional intercostal tube drainage. Wien klin Wochenschr 1995; 108: 330 -333.\n14 Ho KK, Ong MEH, Koh MS, et al. A randomized controlled trial comparing minichest tube and needle aspiration in outpatient management of primary spontaneous pneumothorax. Am J Emerg Med 2011; 29: 1152 -1157.\n15 Hallifax RJ, McKeown E, Sivakumar P, et al. Ambulatory management of primary spontaneous pneumothorax: an open-label, randomised controlled trial. Lancet 2020; 396: 39 -49.\n16 Lippert H, Lund O, Blegvad S, et al. Independent risk factors for cumulative recurrence rate after first spontaneous pneumothorax. Eur Respir J 1991; 4: 324 -331.\n17 Light RW, O ' Hara VS, Moritz TE, et al. Intrapleural tetracycline for the prevention of recurrent spontaneous pneumothorax. Results of a Department of Veterans Affairs Cooperative Study. JAMA 1990; 264: 2224 -2230.\n18 Videm V, Pillgram-Larsen J, Ellingsen O, et al. Spontaneous pneumothorax in chronic obstructive pulmonary disease: complications, treatment and recurrences. Eur J Respir Dis 1987; 71: 365 -371.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    }
+  ],
+  "tables": [
+    {
+      "id": "table",
+      "caption": "",
+      "headers": [
+        "",
+        "Ambulatory care",
+        "Standard care"
+      ],
+      "rows": [
+        [
+          "Subjects n",
+          "21",
+          "20"
+        ],
+        [
+          "Age years",
+          "63.4±12.6",
+          "68.1±9.2"
+        ],
+        [
+          "Male",
+          "14 (67)",
+          "17 (85)"
+        ],
+        [
+          "Side of pneumothorax",
+          "",
+          ""
+        ],
+        [
+          "Right",
+          "10 (48)",
+          "11 (55)"
+        ],
+        [
+          "Size of pneumothorax at presentation",
+          "",
+          ""
+        ],
+        [
+          "Interpleural distance at hilar point cm",
+          "3.1±2.0",
+          "4.8±2.8"
+        ],
+        [
+          "Size ⩾ 2 cm at hilum",
+          "15 (71)",
+          "17 (85)"
+        ],
+        [
+          "Smoking status",
+          "",
+          ""
+        ],
+        [
+          "Current smoker",
+          "8 (38)",
+          "5 (25)"
+        ],
+        [
+          "Ex-smoker",
+          "11 (52)",
+          "15 (75)"
+        ],
+        [
+          "Never-smoker",
+          "2 (10)",
+          "0"
+        ],
+        [
+          "Pack-year history",
+          "30.9±12.8",
+          "37.6±15.9"
+        ],
+        [
+          "Previous pneumothorax",
+          "6 (29)",
+          "8 (40)"
+        ],
+        [
+          "Respiratory history",
+          "",
+          ""
+        ],
+        [
+          "COPD",
+          "15 (71)",
+          "12 (60)"
+        ],
+        [
+          "Asthma",
+          "3 (14)",
+          "4 (20)"
+        ],
+        [
+          "Interstitial lung disease",
+          "1 (5)",
+          "0"
+        ],
+        [
+          "Non-CF bronchiectasis",
+          "0",
+          "0"
+        ],
+        [
+          "Lung cancer",
+          "0",
+          "2 (10)"
+        ],
+        [
+          "Intercurrent pulmonary infection",
+          "0",
+          "1 (5)"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "",
+      "headers": [
+        "",
+        "Ambulatory care (flutter valve)",
+        "Standard care (chest tube)",
+        "p value"
+      ],
+      "rows": [
+        [
+          "Subjects n",
+          "21",
+          "20",
+          ""
+        ],
+        [
+          "Length of hospital stay",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Mean",
+          "11.57",
+          "8.70",
+          "0.77"
+        ],
+        [
+          "Median",
+          "6.00",
+          "6.00",
+          ""
+        ],
+        [
+          "Interquartile range",
+          "1.00 - 15.50",
+          "2.25 - 15.50",
+          ""
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/172'}",
+      "headers": null,
+      "rows": [
+        [
+          "TABLE 3 Length of stay of Atrium Pneumostat versus Pleural Vent",
+          "TABLE 3 Length of stay of Atrium Pneumostat versus Pleural Vent",
+          "TABLE 3 Length of stay of Atrium Pneumostat versus Pleural Vent",
+          "TABLE 3 Length of stay of Atrium Pneumostat versus Pleural Vent"
+        ],
+        [
+          "",
+          "Atrium Pneumostat",
+          "Pleural Vent",
+          "p-value"
+        ],
+        [
+          "Subjects n",
+          "8",
+          "13",
+          ""
+        ],
+        [
+          "Length of hospital stay (first 30 days)",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Median",
+          "1.5",
+          "9.0",
+          ""
+        ],
+        [
+          "Interquartile range",
+          "1.00 - 24.75",
+          "2.00 - 15.50",
+          "0.37"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "",
+      "headers": [
+        "Event",
+        "Ambulatory care",
+        "Ambulatory care - Pleural Vent",
+        "Ambulatory care - Atrium Pneumostat",
+        "Standard care",
+        "Total"
+      ],
+      "rows": [
+        [
+          "Subjects",
+          "21",
+          "13",
+          "8",
+          "20",
+          "41"
+        ],
+        [
+          "Chest pain",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Related to insertion of device",
+          "0",
+          "0",
+          "0",
+          "1",
+          "1"
+        ],
+        [
+          "While device in situ",
+          "3",
+          "1",
+          "2",
+          "1",
+          "4"
+        ],
+        [
+          "Subcutaneous emphysema",
+          "6",
+          "6",
+          "0",
+          "3",
+          "9"
+        ],
+        [
+          "Infection",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Pleural",
+          "2",
+          "1",
+          "1",
+          "2",
+          "4"
+        ],
+        [
+          "Subcutaneous",
+          "0",
+          "",
+          "0",
+          "1",
+          "1"
+        ],
+        [
+          "Pneumonia/chest infection",
+          "7",
+          "3",
+          "4",
+          "1",
+          "8"
+        ],
+        [
+          "Device dislodgement",
+          "2",
+          "2",
+          "0",
+          "1",
+          "3"
+        ],
+        [
+          "Device blockage/enlarging pneumothorax",
+          "4",
+          "4",
+          "0",
+          "1",
+          "5"
+        ],
+        [
+          "Death due to underlying respiratory disease",
+          "1",
+          "1",
+          "0",
+          "0",
+          "1"
+        ],
+        [
+          "Death due to pneumothorax",
+          "0",
+          "0",
+          "0",
+          "1",
+          "1"
+        ],
+        [
+          "Readmission due to pneumothorax",
+          "5",
+          "3",
+          "2",
+          "7",
+          "12"
+        ],
+        [
+          "Other",
+          "3",
+          "2",
+          "1",
+          "7",
+          "10"
+        ],
+        [
+          "Total adverse events",
+          "33",
+          "23",
+          "10",
+          "26",
+          "59"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    }
+  ],
+  "figures": [
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/34'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/66'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/121'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/177'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/216'}",
+      "page": null
+    }
+  ],
+  "references": [
+    {
+      "title": "Factors related to recurrence of spontaneous pneumothorax"
+    },
+    {
+      "title": "Respirology",
+      "year": 2005
+    },
+    {
+      "title": "Trends in the incidence and recurrence of inpatient-treated spontaneous pneumothorax, 1968-2016",
+      "year": 2005
+    },
+    {
+      "title": "JAMA",
+      "year": 2018
+    },
+    {
+      "title": "Epidemiology of spontaneous pneumothorax: gender-related differences",
+      "year": 2018
+    },
+    {
+      "title": "Thorax",
+      "year": 2015
+    },
+    {
+      "title": "Primary and secondary spontaneous pneumothorax: prevalence, clinical features, and in-hospital mortality",
+      "year": 2015
+    },
+    {
+      "title": "Can Respir J",
+      "year": 2017
+    },
+    {
+      "title": "Persistent air-leak in spontaneous pneumothoraxclinical course and outcome",
+      "year": 2017
+    },
+    {
+      "title": "Respir Med",
+      "year": 1998
+    },
+    {
+      "title": "Ambulatory treatment in the management of pneumothorax: a systematic review of the literature",
+      "year": 1998
+    },
+    {
+      "title": "Management of spontaneous pneumothorax: British Thoracic Society Pleural Disease Guideline 2010",
+      "year": 2013
+    },
+    {
+      "title": "Clinical trials: a practical approach",
+      "year": 2010
+    },
+    {
+      "title": "Defining the minimal important difference for the visual analogue scale assessing dyspnea in patients with malignant pleural effusions",
+      "year": 2013
+    },
+    {
+      "title": "PLoS One",
+      "year": 2015
+    },
+    {
+      "title": "Development and preliminary testing of the new five-level version of EQ-5D (EQ-5D-5L)",
+      "year": 2015
+    },
+    {
+      "title": "Qual Life Res",
+      "year": 2011
+    },
+    {
+      "title": "Sample size calculations for randomized controlled trials",
+      "year": 2011
+    },
+    {
+      "title": "Epidemiol Rev",
+      "year": 2011
+    },
+    {
+      "title": "Safety and efficacy of ambulatory management of secondary spontaneous pneumothorax: a case series",
+      "year": 2002
+    },
+    {
+      "title": "BMJ Open Respir Res",
+      "year": 2019
+    },
+    {
+      "title": "The management of pneumothorax with the thoracic vent versus conventional intercostal tube drainage",
+      "year": 2019
+    },
+    {
+      "title": "Wien klin Wochenschr",
+      "year": 1995
+    },
+    {
+      "title": "A randomized controlled trial comparing minichest tube and needle aspiration in outpatient management of primary spontaneous pneumothorax",
+      "year": 1995
+    },
+    {
+      "title": "Am J Emerg Med",
+      "year": 2011
+    },
+    {
+      "title": "Ambulatory management of primary spontaneous pneumothorax: an open-label, randomised controlled trial",
+      "year": 2011
+    },
+    {
+      "title": "Lancet",
+      "year": 2020
+    },
+    {
+      "title": "Independent risk factors for cumulative recurrence rate after first spontaneous pneumothorax",
+      "year": 2020
+    },
+    {
+      "title": "Eur Respir J",
+      "year": 1991
+    },
+    {
+      "title": "Intrapleural tetracycline for the prevention of recurrent spontaneous pneumothorax. Results of a Department of Veterans Affairs Cooperative Study",
+      "year": 1991
+    },
+    {
+      "title": "Spontaneous pneumothorax in chronic obstructive pulmonary disease: complications, treatment and recurrences",
+      "year": 1990
+    },
+    {
+      "title": "Eur J Respir Dis",
+      "year": 1987
+    }
+  ],
+  "quality": {
+    "completeness_score": 0,
+    "has_abstract": true,
+    "abstract_source": "metadata",
+    "has_doi": true,
+    "has_full_text": true,
+    "num_sections": 19,
+    "num_tables": 4,
+    "num_figures": 7,
+    "num_references": 32
+  }
+}

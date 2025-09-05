@@ -1,0 +1,881 @@
+{
+  "metadata": {
+    "document_id": "10_1136_thorax_2023_220304",
+    "title": "British Thoracic Society Guideline for pleural disease",
+    "authors": [
+      "Mark E Roberts",
+      "Najib M Rahman",
+      "Nick A Maskell",
+      "Anna C Bibby",
+      "Kevin G Blyth",
+      "John P Corcoran",
+      "Anthony Edey",
+      "Matthew Evison",
+      "Duneesha De Fonseka",
+      "Rob Hallifax",
+      "Susan Harden",
+      "Iain Lawrie",
+      "Eric Lim",
+      "David McCracken",
+      "Rachel Mercer",
+      "Eleanor K Mishra",
+      "Andrew G Nicholson",
+      "Farinaz Noorzad",
+      "Kirstie S Opstad",
+      "Maria Parsonage",
+      "Andrew E Stanton",
+      "Steven Walker"
+    ],
+    "year": 2025,
+    "journal": "Thorax",
+    "doi": "10.1136/thorax-2023-220304",
+    "volume": "78",
+    "issue": "11",
+    "pages": "1143-1156",
+    "citation": "Roberts, et al. (2025). British Thoracic Society Guideline for pleural disease. Thorax, 78(11), 1143-1156. https://doi.org/10.1136/thorax-2023-220304",
+    "abstract": "This guideline synthesizes contemporary, GRADE-based recommendations across four domains—spontaneous pneumothorax, undiagnosed unilateral pleural effusion, pleural infection, and pleural malignancy—reflecting major evidence shifts since 2010. It details diagnostic pathways (e.g., mandatory image-guided thoracentesis; optimized pleural fluid sampling volumes) and treatment algorithms (e.g., small-bore drainage first-line in pleural infection, tPA+DNase for residual collections). For malignant pleural effusion, it advises not postponing definitive pleural intervention until after systemic therapy and offers either IPC or pleurodesis when lung is expandable; imaging recommendations clarify the complementary roles of ultrasound and CT. Keywords: pleural effusion, pneumothorax, pleural infection, malignant pleural effusion, GRADE, guideline.",
+    "abstract_source": "manual_curation",
+    "url": "https://thorax.bmj.com/lookup/doi/10.1136/thorax-2023-220304"
+  },
+  "source_file": "BTS pleural guidelines2.json",
+  "sections": [
+    {
+      "title": "British Thoracic Society Guideline for pleural disease",
+      "content": "Mark E Roberts, 1 Najib M Rahman , 2,3,4 Nick A Maskell, 5 Anna C Bibby, 5 Kevin G Blyth , 6,7 John P Corcoran , 8 Anthony Edey, 9 Matthew Evison , 10 Duneesha de Fonseka , 11 Rob Hallifax, 12 Susan Harden, 13 Iain Lawrie, 14 Eric Lim, 15 David McCracken, 16 Rachel Mercer, 17 Eleanor K Mishra , 18 Andrew G Nicholson, 19 Farinaz Noorzad, 20 Kirstie S Opstad, 21 Maria Parsonage, 22 Andrew E Stanton , 23 Steven Walker 5\nTo cite: Roberts ME, Rahman NM, Maskell NA, et al . Thorax 2023; 78 :1143-1156.\nFor numbered affiliations see end of article.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Correspondence to",
+      "content": "Dr Mark E Roberts, Department of Respiratory Medicine, King's Mill Hospital, Sutton-  in-  Ashfield, UK;   mark.  roberts@  nhs.  net\nPublished Online First 8 August 2023\n► http://  dx.  doi.  org/  10.  1136/ thorax-  2022-  219630\n© Author(s) (or their employer(s)) 2023. No commercial re-  use. See rights and permissions. Published by BMJ.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "InTroduCTIon",
+      "content": "The following is a summary of the British Thoracic Society  (BTS)  Guideline  for  pleural  disease  and includes  a  summary  of  the  guideline  recommendations and good practice points (GPPs). The full guideline is published as a separate Thorax Supplement 1 and is available from the BTS website. 2 Please refer to the full guideline for full information about each section. 1 All  online  supplemental  appendices are also available via the BTS website. 2",
+      "category": "introduction",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "BaCkGround",
+      "content": "The aim of the guideline was to provide evidence-  based  guidance  on  the  investigation and  management  of  pleural  disease. Pleural disease  is  common  and  represents  a  major  and rapidly developing subspecialty that presents to many different  hospital  services.  Since  the  last BTS Guideline for pleural  disease  published  in 2010, 3-9 many high quality and practice changing studies,  using  patient  centred  outcomes,  have been published. The paradigms for the investigation and management of pleural disease have therefore  shifted,  so  this  guideline  aimed  to capture  this  evidence  and  use  it  to  answer  the most  important  questions  relevant  to  today's practice.",
+      "category": "introduction",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Target audience for the guideline",
+      "content": "The  guideline  will  be  of  interest  to  UK  based clinicians caring for adults with pleural disease, including chest physicians, respiratory trainees, specialist respiratory nurses, specialist lung cancer  nurses,  specialist  pleural  disease  nurses, pathologists, thoracic surgeons, thoracic surgeon trainees,  acute  physicians,  oncologists,  emergency  physicians,  hospital  practitioners,  intensive  care  physicians,  palliative  care  physicians, radiologists, other allied health professional and patients and carers.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "areas covered by the guideline",
+      "content": "The  guideline  focuses  on  the  investigation  and management of pleural disease in adults and covers four broad areas of pleural disease:\na. Spontaneous pneumothorax\nb. Undiagnosed unilateral pleural effusion\nc. Pleural infection\nd.  Pleural malignancy\nAdult patients in both inpatient and ambulatory settings are considered.\nThe guideline does not cover mesothelioma (as alternative  guidance  is  available 10 ),  benign  (noninfectious,  non-  pneumothorax)  pleural  disease  or rare pleural diseases. Guidance on pleural interventions is also covered in the BTS Clinical Statement on Pleural Procedures. 11",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Methodology",
+      "content": "BTS guidelines use the GRADE (Grading of Recommendations, Assessment, Development and Evaluations)  methodology for guideline development. 12 GRADE is a systematic and transparent process for assessing  the  quality  of  the  evidence  and  the  full GRADE process involves:\ni. Systematic review,\nii. Critical appraisal; and\niii. GRADE analysis.\nFull  details  of  the  BTS  process  are  available  in the  BTS  Guideline  production  manual  (https:// www.brit-thoracic.org.uk/quality-improvement/ guidelines/).",
+      "category": "methods",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Clinical questions, patient-centred outcomes and literature search",
+      "content": "Clinical questions were defined from the scope of the  guideline  formulated  into  PICO  (population, intervention, comparator, and outcome) style framework  diagnostic  accuracy,  intervention  or  prognostic  review  formats.  Patient-  centred  outcomes were agreed by the group for each question.\nThe PICO framework formed the basis of the literature  search.  The  initial  searches  were  completed by the University of York, and the latter stages by BTS  Head  Office.  Systematic  electronic  database searches were conducted to identify all papers that may be relevant to the guideline. For each question, the  following  databases  were  searched:  Cochrane Database of Systematic Reviews (CDSR), Cochrane Central Register of Controlled Trials (CENTRAL), MEDLINE  and  EMBASE.  The  search  strategy  is available for review in Online Appendix 1 (accessible via the full guideline).",
+      "category": "results",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Critical appraisal and GradE analysis of the evidence",
+      "content": "After an initial screening to determine relevance to the clinical questions, each paper was assessed to determine if it addressed:\ni. The clinical question population.\nii. The index test and reference standard (for diagnostic  accuracy  questions),  the  intervention  and  comparator  (for intervention questions), or the exposure and referent (for prognostic questions).\niii. The study type(s) defined in the clinical question protocol; and\niv. The clinical question outcome(s).\nEach  full  paper  fulfilling  the  above  criteria  was  'accepted' for  inclusion.  In  circumstances  where  there  was  little,  or  no supporting  evidence  that  fulfilled  the  above  criteria,  the  full paper inclusion strategy was widened to include evidence that partially addressed the clinical question.\nFollowing  data  extraction  from  the  'accepted'  papers, evidence  profiles  were  generated  for  each  of  the  clinical questions and the quality of the evidence was assessed using the  GRADE  principles. 12 Where  GRADE  analysis  was  not possible, but the evidence was deemed important enough to be  included  in  the  guideline,  the  evidence  has  been  listed as  (Ungraded),  denoting  that  inclusion  was  reached  by consensus of the guideline development group. A definition of the GRADE scores is shown in table 1.\nThe direction and strength of the recommendations are then based on the quality of the evidence, the balance of desirable and undesirable outcomes and the values and preferences of patients/ carers. GRADE specifies two categories of strength for a recommendation as shown in table 2.\nFrom the outset, it was acknowledged that there would be little high-  quality evidence for some of the clinical questions identified. In this instance, low grade evidence was considered, along with the expert opinion of the GDG via consensus at the meetings.\nGood practice points (GPPs) were also developed by informal consensus in areas where there was no quality evidence, but the GDG felt that some guidance, based on the clinical experience of the GDG, might be helpful to the reader. These are indicated as shown below:\n✓ Advised best practice based on the clinical experience of the GDG.\nIn  some  instances  where  evidence  was  limited,  but  GDG members felt that it was important to include a recommendation rather than a GPP , recommendations were agreed by informal consensus  and  categorised  as  (Conditional  -  by  consensus), based on the same criteria detailed in table 1.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Stakeholders",
+      "content": "Stakeholders were identified at the start of the process. All stakeholder organisations were notified when the guideline was available for public consultation and a list of all stakeholders is listed in Appendix 4 to the full guideline.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Spontaneous pneumothorax",
+      "content": "Acute management for spontaneous pneumothorax\nRecommendations\n► Conservative management can be considered for the treatment of minimally symptomatic (ie, no significant pain or breathlessness and no physiological compromise) or asymptomatic primary spontaneous pneumothorax in adults regardless of size. (Conditional - by consensus)\n► Ambulatory management should be considered for the initial treatment of primary spontaneous pneumothorax in adults with good support and in centres with available expertise and follow-  up facilities. (Conditional)\n► In patients not deemed suitable for conservative or ambulatory management, needle aspiration or tube drainage should be  considered  for  the  initial  treatment  of  primary  spontaneous pneumothorax in adults. (Conditional)\n► Chemical pleurodesis can be considered for the prevention of  recurrence  of  secondary  spontaneous  pneumothorax  in adults  (eg,  patients  with  severe  Chronic obstructive pulmonary disease (COPD)  who  significantly decompensated  in  the  presence  of  a  pneumothorax,  even during / after the first episode). (Conditional)\n► Thoracic  surgery  can  be  considered  for  the  treatment  of pneumothorax in adults at initial presentation if recurrence prevention  is  deemed  important  (eg,  patients  presenting with tension pneumothorax, or those in high risk occupations). (Conditional)",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Good practice points",
+      "content": "✓ When  establishing  local  ambulatory  treatment  pathways, planning  and  coordination  between  with  the  emergency department,  general  medicine  and  respiratory  medicine  is vital.\n✓ When  performing  chemical  pleurodesis  for  the  treatment of  pneumothorax  in  adults,  adequate  analgesia  should  be provided before and after treatment.\n✓ All treatment options should be discussed with the patient to determine their main priority, with consideration for the least invasive option.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Good practice points",
+      "content": "✓ Elective  surgery  may  be  considered  for  patients  in  whom recurrence  prevention  is  deemed  important  (eg,  at  risk professionals (divers, airline pilots, military  personnel), or  those  who  developed  a  tension  pneumothorax  at  first episode).\n✓ Elective  surgery  should  be  considered  for  patients  with  a second ipsilateral or first contralateral pneumothorax.\n✓ Discharge and activity advice should be given to all patients post pneumothorax.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Good practice point",
+      "content": "✓ If a patient is not considered fit for surgery, autologous blood pleurodesis or endobronchial therapies should be considered for the treatment of pneumothorax with persistent air leak in adults.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Recommendations",
+      "content": "► Video-  assisted  thoracoscopy  access  can  be  considered  for surgical pleurodesis in the general management of pneumothorax in adults. (Conditional)\n► Thoracotomy  access  and  surgical  pleurodesis  should  be considered for the lowest level of recurrence risk required for specific (eg, high risk) occupations. (Conditional)\n► Surgical pleurodesis and/or bullectomy should be considered for the treatment of spontaneous pneumothorax in adults. (Conditional)",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Good practice points",
+      "content": "✓ Imaging findings of a unilateral pleural effusion should be interpreted in the context of clinical history and knowledge of pleural fluid characteristics.\n✓ CT follow-  up should be considered for patients presenting with pleural infection to exclude occult malignancy if there are  ongoing symptoms,  or other clinically concerning features.\n✓ PET-  CT  should  not  be  used  in  the  assessment  of  pleural infection.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Recommendation",
+      "content": "► Image-  guided thoracentesis should always be used to reduce the risk of complications. (Strong - by consensus)",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Optimal volume and container for pleural aspiration samples Recommendations",
+      "content": "► 25-50 mL of pleural fluid should be submitted for cytological  analysis  in  patients  with  suspected  malignant  pleural effusion (MPE). (Strong - by consensus)\n► Pleural fluid should be sent in both plain and blood culture bottle  tubes  in  patients  with  suspected  pleural  infection. (Strong - by consensus)",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Good practice points",
+      "content": "✓ At least 25  mL, and where possible 50  mL, of pleural fluid should be sent for initial cytological examination.\n✓ If volumes of ≥25  mL cannot be achieved, smaller volumes should also be sent, but clinicians should be aware of the reduced sensitivity.\n✓ If small volume aspirate (<25 mL) has been nondiagnostic, a larger volume should be sent, if achievable, except when there is high suspicion of a tumour type associated  with  low  pleural  fluid  cytology  sensitivity  (especially mesothelioma).\n✓ Pleural  fluid  samples  should  be  processed  by  direct  smear and cell block preparation.\n✓ In  patients  with  an  undiagnosed  pleural  effusion  where pleural  infection  is  possible  and  volume  of  fluid  sample available allows, microbiological samples should be sent in both white top containers and volumes of 5-10  mL inoculated into (aerobic and anaerobic) blood culture bottles.\n✓ In  cases  where  volume  available  does  not  allow  5-10  mL inoculation,  volumes  of  2-5  mL  should  be  prioritised  to blood culture bottles rather than a plain, sterile container.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Recommendations",
+      "content": "► Pleural fluid cytology should be used as an initial diagnostic test in patients with suspected secondary pleural malignancy, accepting that a negative cytology should lead to consideration of further investigation. (Conditional)\n► Pleural fluid biomarkers should not be used for diagnosing secondary pleural malignancy. (Conditional)\n► In  high  prevalence  populations,  pleural  fluid  adenosine deaminase  (ADA)  and/or  interferon  gamma  (IFN-  gamma) test(s) can be considered for diagnosing tuberculous pleural effusion. (Conditional)\n► In  low  prevalence  populations,  pleural  fluid  adenosine deaminase (ADA) can be considered as an exclusion test for tuberculous pleural effusion. (Conditional)\n► Tissue  sampling  for  culture  and  sensitivity  should  be  the preferred option for all patients with suspected tuberculous pleural effusion. (Strong - by consensus)\n► Pleural fluid antinuclear antibody (ANA) should be considered to support a diagnosis of lupus pleuritis. (Conditional)",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Good practice points",
+      "content": "✓ The  clinical  utility  of  pleural  fluid  cytology  varies  by tumour  sub-  type, including diagnostic sensitivity and predictive value for response to subsequent cancer therapies. This should be taken into consideration when planning  the  most  suitable  diagnostic  strategy  (for  example, direct biopsies in those with a likely low cytological yield can be considered).\n✓ Pleural fluid N-  terminal pro brain natriuretic peptide (NT-  proBNP)  is  useful  when  considering  heart  failure  as a  cause  in  unilateral  pleural  effusions  but  not  superior  to serum  NT-  proBNP  and  therefore  should  not  be  ordered routinely.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Serum biomarkers for diagnosing unilateral pleural effusion Recommendations",
+      "content": "► Serum NT-  proBNP should be considered to support a diagnosis of heart failure in patients with unilateral pleural effusion suspected of having heart failure. (Conditional)\n7\n8",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Good practice points",
+      "content": "✓ Serum biomarkers should not currently be used to diagnose secondary pleural malignancy, pleural infection or autoimmune pleuritis.\n✓ Serum biomarkers should not routinely be used to diagnosis tuberculous pleural effusion, but may be considered in high prevalence areas.\n✓ Serum  biomarkers,  including  NT-  proBNP ,  should  not  be used in isolation for diagnosing unilateral pleural effusion, as multiple conditions may co-  exist.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Recommendations",
+      "content": "► Thoracoscopic or image-  guided pleural biopsy may be used depending  on  the  clinical  indication  and  local  availability of techniques (including need for control of pleural fluid). (Strong)\n► Blind  (non-  image  guided)  pleural  biopsies  should  not  be conducted. (Strong - by consensus)",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Predicting clinical outcomes of pleural infection Recommendation",
+      "content": "► RAPID  (renal,  age,  purulence,  infection  source,  dietary factors)  scoring  should  be  considered  for  risk  stratifying adults  with  pleural  infection  and  can  be  used  to  inform discussions with patients regarding potential outcome from infection. (Conditional)",
+      "category": "results",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Recommendations",
+      "content": "► For patients with parapneumonic effusion (PPE) or suspected pleural infection, where diagnostic aspiration does not yield frank  pus,  immediate  pH  analysis  should  be  performed. (Strong - by consensus)\n► For patients with suspected complex parapneumonic effusion (CPPE):\n-If pleural fluid pH ≤7.2  this implies a high risk of CPPE or  pleural  infection  and  an  intercostal  drain  (ICD) should  be  inserted  if  the  volume  of  accessible  pleural fluid on ultrasound makes it safe to do so. (Strong - by consensus)\n-If pleural fluid pH is >7.2  and <7.4  this implies an intermediate risk of CPPE or pleural infection. Pleural fluid lactate  dehydrogenase  (LDH)  should  be  measured  and if >900 IU/L intercostal drainage should be considered, especially if other clinical parameters support CPPE (specifically ongoing temperature, high pleural fluid volume, low pleural fluid glucose (72  mg/dL ≤4.0 mmol/L), pleural  contrast enhancement on CT or septation on ultrasound. (Strong - by consensus)\n-If pleural fluid pH ≥7.4  this implies a low risk of CPPE or pleural infection and there is no indication for immediate drain. (Strong - by consensus)\n► In the absence of readily available immediate pleural fluid pH measurement, an initial pleural fluid glucose <3.3  mmol/L may be used as an indicator of high probability of CPPE/ pleural infection and can be used to inform decision to insert intercostal drain in the appropriate clinical context. (Strong - by consensus)",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Good practice points",
+      "content": "✓ Clinicians  should  be  mindful  of  alternative  diagnoses  that can mimic parapneumonic effusion (PPE) with a low pH and potential for loculations (eg, rheumatoid effusion, effusions due to advanced malignancy/mesothelioma).\n✓ Pleural fluid samples taken for pH measurement should not be  contaminated  with  local  anaesthetic  or  heparin  (eg,  by extruding all heparin from an arterial blood gas syringe) as this lowers pleural fluid pH. Delays in obtaining a pleural fluid pH will also increase pleural fluid pH.\n✓ In patients where a clinical decision is made not to insert an ICD at initial diagnostic aspiration, regular clinical reviews should be performed and repeat thoracocentesis considered to ensure that CPPE is not missed.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Optimal initial drainage strategy for established pleural infection Recommendation",
+      "content": "► Initial  drainage  of  pleural  infection  should  be  undertaken using a small bore chest tube (14F or smaller). (Conditional - by consensus)",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Good practice points",
+      "content": "✓ Due  to  the  lack  of  supporting  evidence,  early  surgical drainage under video-  assisted thoracoscopy surgery (VATS) or  thoracotomy should not be considered over chest tube ('medical')  drainage  for  the  initial  treatment  of  pleural infection.\n✓ Due to lack of supporting evidence, medical thoracoscopy should  not  be  considered  as  initial  treatment  for  pleural infection.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Recommendations",
+      "content": "► Combination tissue plasminogen activator (TPA) and DNAse should be considered for the treatment of pleural infection, where  initial  chest  tube  drainage  has  ceased  and  leaves  a residual pleural collection. (Conditional - by consensus)\n► Saline  irrigation  can  be  considered  for  the  treatment  of pleural infection when intrapleural TPA and DNase therapy or surgery is not suitable. (Conditional - by consensus)\n► Single agent tissue plasminogen activator (TPA) or DNAse should not be considered for treatment of pleural infection. (Conditional - by consensus)\n► Streptokinase  should  not  be  considered  for  treatment  of pleural infection. (Conditional)",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Good practice points",
+      "content": "✓ Patient consent should be taken when using TPA and DNase as there is a potential risk of bleeding.\n✓ When administering TPA plus DNase the regime should be 10 mg TPA twice daily (10 mg two times per day)+5 mg DNase two times per day for 3 days, based on randomised controlled trial data. Based on retrospective case series data, lower dose 5 mg TPA two times per day+5 mg DNase two times per day for 3 days may be as effective, and can be used if considered necessary.\n✓ Reduced doses of TPA may be considered in those with a potentially  higher  bleeding  risk  (eg,  those  on  therapeutic anticoagulation which cannot be temporarily ceased).\n✓ For  details  on  administration  of  intrapleural  treatments, please  refer  to  the  BTS  Clinical  Statement  on  Pleural Procedures. 11",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Recommendation",
+      "content": "► VATS  access  should  be  considered  over  thoracotomy  for adults  in  the  surgical  management  of  pleural  infection. (Conditional)",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Good practice points",
+      "content": "✓ When selecting a surgical access for the treatment of pleural infection in adults, it is important to ensure the technique can  facilitate  optimal  clearance  of  infected  material  and achieve lung re-  expansion where appropriate.\n✓ Extent  of  surgery  should  be  tailored  according  to  patient and empyema stage when the lung is not completely trapped (drainage vs debridement)\n✓ Decortication  should  be  a  decision  that  is  individualised to the patient with a trapped lung based on assessment of patient fitness and empyema stage.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Optimal imaging modality for diagnosing pleural malignancy Recommendations",
+      "content": "► Ultrasound may be a useful tool at presentation to support a diagnosis of pleural malignancy, particularly in the context of a pleural effusion, where appropriate sonographic skills are present. (Conditional)\n► CT  allows  assessment  of  the  entire  thorax,  and  positive findings may support a clinical diagnosis of pleural malignancy when biopsy is not an option (Conditional), however a  negative  CT  does  not  exclude  malignancy.  (Strong  -  by consensus)\n► PET-  CT can be considered to support a diagnosis of pleural malignancy in adults when there are suspicious CT or clinical features and negative histological results, or when invasive sampling is not an option. (Conditional)",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Good practice points",
+      "content": "✓ Imaging  can  play  an  important  role  in  the  assessment  of pleural malignancy, but results should be interpreted in the context of clinical, histological and biochemical markers.\n✓ Features of malignancy may not be present on imaging at presentation.  Unless  a  clear  diagnosis  is  reached  by  other means (eg, biopsy), monitoring with follow-  up imaging of patients presenting with pleural thickening and unexplained unilateral pleural effusion should be considered to exclude occult malignancy.\n✓ MRI has potential as a diagnostic tool in pleural malignancy. Its clinical value has yet to be determined and its use should be limited to highly selected cases and research studies at the present time.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Recommendation",
+      "content": "► Definitive pleural intervention should not be deferred until after systemic anti-  cancer therapy (SACT). (Conditional - by consensus)",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Managing malignant pleural effusion",
+      "content": "Pleural aspiration with no pleurodesis agent versus talc slurry pleurodesis",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Recommendation",
+      "content": "► Management  of  malignant  pleural  effusion  (MPE)  using talc  pleurodesis  (or  another  method)  is  recommended  in\npreference to repeated aspiration especially in those with a better prognosis, but the relative risks and benefits should be discussed with the patient. (Conditional - by consensus)",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Good practice points",
+      "content": "✓ Decisions on the best treatment modality should be based on patient choice.\n✓ Informed decision making should include the role of inpatient  vs  ambulatory  management and the potential risk of requiring further pleural interventions.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Recommendation",
+      "content": "► Patients without known  non-  expandable lung should be  offered  a  choice  of  indwelling  pleural  catheter  (IPC) or  pleurodesis  as  first  line  intervention  in  the  management  of  MPE.  The  relative  risks  and  benefits  should  be discussed with patients to individualise treatment choice. (Conditional)",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Good practice points",
+      "content": "✓ The psychological implications and potential altered body image aspects of having a semi-  permanent tube drain in situ should not be underestimated and must be considered prior to insertion.\n✓ All patients who have had an IPC inserted should be referred to  the  community  nursing  team  on  discharge  for  an  early assessment  of  the  wound  site,  symptom  control,  support with IPC drainage and removal of sutures.\n✓ Patients and their relatives should be supported to perform community  drainage  and  complete  a  drainage  diary  if they  feel  able  to  do  so,  to  promote  independence  and self-  management.\n✓ Complications  such  as  infection  refractory  to  community  management,  suspected  drain  fracture,  loculations  or blockage  with  persistent  breathlessness  should  be  referred back to the primary pleural team for further assessment.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Thoracoscopy and talc poudrage pleurodesis versus chest drain and talc slurry pleurodesis",
+      "content": "Recommendation\n► Talc slurry or talc poudrage may be offered to patients with MPE  to  control  fluid  and  reduce  the  need  for  repeated procedures. (Conditional)",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Good practice point",
+      "content": "✓ Where a diagnostic procedure is being conducted at thoracoscopy (pleural biopsies), if talc pleurodesis is reasonable, this  should  be  conducted  during  the  same  procedure  via poudrage.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Recommendation",
+      "content": "► In selected patients considered fit enough for surgery, either surgical talc pleurodesis or medical talc slurry can be considered for the management of patients with MPE. The relative risks, benefits and availability of both techniques should be discussed  with  patients  to  individualise  treatment  choice. (Conditional - by consensus)\n7\n8",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Good practice points",
+      "content": "✓ Informed decision-  making should include the role of surgery versus ambulatory management with an IPC for the management of MPE in selected patients.\n✓ Decortication  surgery  may  improve  pleurodesis  success  in malignant  pleural  effusion  patients  with  non-  expandable lung, but the risks and benefits of IPC and surgical treatment should be discussed with patients, and treatment individualised  according  to  circumstances  (for  example,  fitness  to undergo thoracic surgery).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Pleural aspiration, talc slurry pleurodesis, talc poudrage pleurodesis, decortication surgery or indwelling pleural catheter (IPC) Good practice points",
+      "content": "✓ Decisions on treatment modality for malignant pleural effusion  and  non-  expanded  lung  should  be  based  on  patient choice, with the relative risks and benefits of each modality discussed  with  the  patient,  but  patients  should  be  made aware  of  the  limited  evidence  base  regarding  treatment options for non-  expandable lung.\n✓ IPCs are effective at controlling symptoms in non-  expandable lung and should be considered, but it may be appropriate to undertake pleural aspiration first to assess symptomatic response.\n✓ Pleural aspiration may result in a need for multiple procedures so alternatives should be discussed with the patient.\n✓ In  patients  with  radiologically  significant  (>25%)  nonexpandable lung requiring intervention for a symptomatic MPE,  current  evidence  suggests  the  use  of  an  indwelling pleural catheter rather than talc pleurodesis.\n✓ In MPE patients with less than 25% non-  expandable lung, talc  slurry  pleurodesis  may  improve  quality  of  life,  chest pain, breathlessness and pleurodesis rates.\n✓ Decortication  surgery  may  improve  pleurodesis  success  in selected  MPE  patients  with  non-  expanded  lung,  but  the risks  and  benefits  of  IPC  and  surgical  treatment  should be  discussed  with  patients,  and  treatment  individualised according to circumstances (for example, fitness to undergo thoracic surgery).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Managing malignant pleural effusion and septated effusion (on radiology)",
+      "content": "Intrapleural enzymes versus surgery, or no treatment Good practice points\n✓ Intrapleural fibrinolytics can be considered in highly selected symptomatic patients with MPE to try to improve breathlessness.\n✓ Intrapleural fibrinolytics may be used in patients with MPE and  septated  effusion  and  an  indwelling  pleural  catheter (IPC) to improve drainage if flushing the IPC with normal saline or heparinised saline does not improve drainage.\n✓ Surgery  can  be  considered  for  palliation  of  symptoms  in  a minority of patients with significantly septated MPE and associated symptoms and otherwise good prognosis and performance status.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Managing malignant pleural effusion treated with an indwelling pleural catheter (IPC)",
+      "content": "Symptom-based/conservative drainage versus daily drainage Recommendations\n► Where  IPC  removal  is  a  priority,  daily  IPC  drainages  are recommended to offer increased rates of pleurodesis when\ncompared with less frequent drainages of symptom-  guided or alternate drainage regimes. (Conditional)\n► Patients  should  be  advised  that  they  do  not  require  daily drainage  to  control  symptoms  of  breathlessness  and  chest pain if they wish to opt for a less intensive regime. (Strong - by consensus)",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Good practice points",
+      "content": "✓ Decisions  on  the  optimal  drainage  should  be  based  on patient choice.\n✓ Informed decision making should include the explanation of the effect of drainage regimes on the patient-  centre outcomes such as breathlessness and the possibility of auto-  pleurodesis during the disease course.\n✓ Although daily drainage may result in earlier removal of IPC, there may be an associated cost associated with the increased number of drainage events (both to the healthcare system, and to the patient). This has been addressed in a modelling study 13 and should be considered.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Intrapleural agents (talc or other pleurodesis agents) Recommendation",
+      "content": "► Instillation of talc via an indwelling pleural catheter (IPC) should be offered to patients with expandable lung where the clinician or patient deems achieving pleurodesis and IPC removal to be important. (Conditional - by consensus)",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Intrapleural chemotherapy versus systemic treatment for treating pleural malignancy",
+      "content": "Recommendation\n► Intrapleural chemotherapy should not be routinely used for the treatment of MPE. (Conditional - by consensus)",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Good practice point",
+      "content": "✓ All  patients  of  good  performance  status  with  metastatic malignancy  should  be  considered  for  systemic  anti-  cancer therapy (SACT) as standard of care as per national guidelines.\nUsing prognostic or predictive scores to provide prognostic information for patients with malignant pleural effusion Good practice points\n✓ Clinicians  may  consider  using  a  validated  risk  score  for malignant  pleural  effusion  if  the  information  is  of  use  in planning treatments or in discussion with patients.\n✓ Patients  with  pleural  malignancy  should  be  managed  in  a multi-  disciplinary way, including referral to specialist palliative care services where appropriate.\nHealthcare providers need to use clinical judgement, knowledge and expertise when deciding whether it is appropriate to apply  recommendations  for  the  management  of  patients.  The recommendations cited here are a guide and may not be appropriate for use in all situations. The guidance provided does not override the responsibility of healthcare professionals to make decisions  appropriate  to  the  circumstances  of  each  patient,  in consultation with the patient and/or their guardian or carer.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "author affiliations",
+      "content": "1 Respiratory Medicine, Sherwood Forest Hospitals NHS Foundation Trust,\nNottinghamshire, UK\n2 University of Oxford, Oxford Respiratory Trials Unit, Oxford, UK\n4 Oxford Pleural Unit, Churchill Hospital, Oxford, UK\n5\nAcademic Respiratory Unit, University of Brisol and North Bristol NHS Trust, UK 6 Glasgow Pleural Disease Unit, Queen Elizabeth University Hospital, Glasgow, UK\n7 School of Cancer Sciences, University of Glasgow/Cancer Research UK Beatson Institute, Glasgow, UK\n8 Interventional Pulmonology Service, University Hospitals Plymouth NHS Trust,\nPlymouth, UK\n9 North Bristol NHS Trust, Westbury on Trym, UK\n10 North West Lung Centre, Manchester University NHS Foundation Trust, Manchester, UK\n11 Sheffield Teaching Hospitals NHS Foundation Trust, Sheffield, UK\n12 Oxford Centre for Respiratory Medicine, Oxford University Hospitals NHS Foundation Trust, Oxford, UK\n13 Peter MacCallum Cancer Centre, Melbourne, Victoria, Australia\n14 Manchester University NHS Foundation Trust, Manchester, UK\n15 Academic Division of Thoracic Surgery, The Royal Brompton Hospital and Imperial College London, London, UK\n16 Regional Respiratory Centre, Belfast Health and Social Care Trust, Belfast, UK 17 Portsmouth Hospitals University NHS Trust, Portsmouth, UK\n18 Norfolk and Norwich University Hospitals NHS Foundation Trust, Norwich, UK 19 Department of Histopathology, Royal Brompton and Harefield Hospitals, Guy's and St Thomas' NHS Foundation Trust and National Heart and Lung Institute, London, UK\n23\nFreeman Hospital, Newcastle Upon Tyne Hospitals NHS Foundation Trust,\nNewcastle Upon Tyne, UK\nTwitter Nick A Maskell @BristolARU, Anna C Bibby @BristolARU, Kevin G Blyth @ kevingblyth, Matthew Evison @matthewevison1, Duneesha de Fonseka @defonseka, Eleanor K Mishra @EleanorKMishra, Maria Parsonage @Parsonage and Andrew E Stanton @andrewestanton\nContributors MER, NMR and NAM were the lead authors responsible for the final document. All authors agreed the outline and content of the document and authored sections of the document and the clinical question reviews.\nfunding The authors have not declared a specific grant for this research from any funding agency in the public, commercial or not-  for-  profit sectors.\nCompeting interests None declared. BTS Declarations of Interest forms have been completed by all members for each year they were part of the GDG. Details of these forms can be obtained from BTS Head Office. 'Declarations of Interests' was a standing item at each GDG meeting.\nPatient consent for publication Not applicable.\nProvenance and peer review Commissioned; internally peer reviewed.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "rEfErEnCES",
+      "content": "1 British Thoracic Society. Pleural disease guideline. Thorax. Forthcoming; 2023.\n2 British Thoracic Society (BTS). Quality improvement: pleural disease. Available: https:// www.brit-thoracic.org.uk/quality-improvement/guidelines/pleural-disease/ [Accessed 01 Mar 2023].\n3 Du Rand I, Maskell N. Introduction and methods: British thoracic society pleural disease guideline 2010. Thorax 2010;65 Suppl 2:ii1-3.\n4 Hooper C, Lee YCG, Maskell N, et al . Investigation of a unilateral pleural effusion in adults: British thoracic society pleural disease guideline. Thorax 2010;65 Suppl 2:ii4-17.\n5 MacDuff A, Arnold A, Harvey J, et al . Management of spontaneous Pneumothorax: British thoracic society pleural disease guideline. Thorax 2010;65 Suppl 2:ii18-31.\n6 Roberts ME, Neville E, Berrisford RG, et al . Management of a malignant pleural effusion: British thoracic society pleural disease guideline. Thorax 2010;65 Suppl 2:ii32-40.\n7 Davies HE, Davies RJO, Davies CWH, et al . Management of pleural infection in adults: British thoracic society pleural disease guideline. Thorax 2010;65 Suppl 2:ii41-53.\n8 Rahman NM, Ali NJ, Brown G, et al . Local anaesthetic thoracoscopy: British thoracic society pleural disease guideline. Thorax 2010;65 Suppl 2:ii54-60.\n9 Havelock T, Teoh R, Laws D, et al . Pleural procedures and thoracic ultrasound: British thoracic society pleural disease guideline 2010. Thorax 2010;65 Suppl 2:ii61-76.\n10 Woolhouse I, Bishop L, Darlison L, et al . British thoracic society guideline for the investigation and management of malignant pleural Mesothelioma. Thorax 2018;73:i1-30.\n11 British Thoracic Society. Clinical statement on pleural procedures. Thorax 2023. Forthcoming; 2023.\n12 BMJ Best Practice. What is GRADE? 2022. Available: https://bestpractice.bmj.com/ info/toolkit/learn-ebm/what-is-grade/ [Accessed 01 Mar 2023].\n13 Shafiq M, Simkovich S, Hossen S, et al . Indwelling pleural catheter drainage strategy for malignant effusion: a cost-  effectiveness analysis. Ann Am Thorac Soc 2020;17:746-53.\n7\n8",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Pneumothorax Pathway",
+      "content": "CXR, chest X-  ray; Chronic obstructive pulmonary disease (COPD), chronic obstructive pulmonary disease; OPD, outpatient department; PSP , primary spontaneous pneumothorax; SSP , secondary spontaneous pneumothorax.\nPneumothorax of sufficient size to intervene depends on clinical context but, in general, usually > 2cm laterally apically on CXR; or any size on CT scan which can be safely accessed with radiological support.\nt If ambulatory pathway available locally.\nAt review; if enlarging pneumothorax or symptoms consider chest drain insertion and admission.\n$ Success: improvement in symptoms and sustained improvement on CXR.\nTalc pleurodesis can be considered on the first episode of pneumothorax in high risk patients in whom repeat pneumothorax would be hazardous severe Chronic obstructive pulmonary disease (COPD)) (eg,",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "unilateral pleural effusion diagnostic pathway",
+      "content": "CXR,  chest  X-  ray;  FBC,  full  blood  count;  LDH,  lactate  dehydrogenase;  NT-  proBNP ,  N-  terminal  prohormone  brain  natriuretic peptide; PE, pulmonary embolism; TB, tuberculosis; TUS, thoracic ultrasound.\nIf not already performed consider a radiology guided pleural biopsy or thoracoscopy",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Box 1: Additional pleural fluid tests and blood tests",
+      "content": "PET imaging in selected cases might help with management\nRe-consider treatable conditions such as PE, TB; chronic heart failure and lymphoma.\nIf felt to be a benign cause but malignancy not fully excluded interval CT imaging advised",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "light's criteria",
+      "content": "Pleural fluid is an exudate if one or more of the following criteria are met:\n· Pleural fluid protein divided by serum protein is >0.5\n· Pleural fluid lactate dehydrogenase (LDH) divided by serum LDH is >0.6\n· Pleural fluid LDH >2/3 the upper limits of laboratory normal value for serum LDH",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Causes of bilateral pleural effusions",
+      "content": "Congestive cardiac failure\nHypoalbuminaemia\nRenal failure\nLiver failure\nSLE and other autoimmune diseases\nWidespread malignancy including abdominal/pelvic malignancy\nBilateral pulmonary embolus",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Chylothorax:",
+      "content": "· Triglycerides\n· Cholesterol\n· Cholesterol crystals\n· Chylomicrons\n- high >1.24 mmol/L (110 mg/dL)\n- low\n- absent\n- usually present",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Pseudochylothorax:",
+      "content": "· Triglycerides\n· Cholesterol\n· Cholesterol crystals\n· Chylomicrons\n- low\n- high >5.18 mmol/L (200 mg/dL)\n- often present\n- absent",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Chylothorax:",
+      "content": "· Trauma:\n· Neoplasm:\n· Miscellaneous:\n· Idiopathic (about 10%)\nthoracic surgery (especially if involving posterior mediastinum, for example, oesophagectomy), thoracic injuries lymphoma or metastatic carcinoma\ndisorders of lymphatics (including lymphangioleiomyomatosis), tuberculosis, cirrhosis, obstruction of the central veins, chyloascites",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Pseudochylothorax:",
+      "content": "· Tuberculosis\n· Rheumatoid arthritis",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Suspected pleural infection, non-purulent fluid - initial decision tree",
+      "content": "CPPE, complex parapneumonic effusion; LDH, lactate dehydrogenase; ICD, intercostal drain.\nAssuming ultrasound demonstrates safe volume of accessible pleural fluid.\nAs evidenced by ongoing temperature; persisting elevation of inflammatory markers. Those with septations and pleural pH >7.4 should also be considered for drainage.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Pleural infection treatment pathway",
+      "content": "ICD, intercostal drain; TPA, tissue plasminogen activator; VATS, video-  assisted thoracoscopy surgery.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Malignant pleural effusion pathway",
+      "content": "IPC, indwelling pleural catheter.\nReview of imaging, possible trial of benefit of aspiration before final decision.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    }
+  ],
+  "tables": [
+    {
+      "id": "table",
+      "caption": "",
+      "headers": null,
+      "rows": [
+        [
+          "Table 1",
+          "GRADE score definitions",
+          "GRADE score definitions"
+        ],
+        [
+          "Grade",
+          "Grade",
+          "definition"
+        ],
+        [
+          "High",
+          "",
+          "High confidence that the true effect is close to the estimated effect"
+        ],
+        [
+          "Moderate",
+          "",
+          "Moderate confidence that the true effect is close to the estimated effect"
+        ],
+        [
+          "Low",
+          "",
+          "Low confidence that the true effect is close to the estimated effect"
+        ],
+        [
+          "Very Low",
+          "",
+          "Very low confidence that the true effect is close to the estimated effect"
+        ],
+        [
+          "Ungraded",
+          "Ungraded",
+          "GRADE analysis not possible, but evidence deemed important"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/66'}",
+      "headers": [
+        "Strength",
+        "Benefits and risks",
+        "Implications"
+      ],
+      "rows": [
+        [
+          "Strong Recommended, so 'offer'",
+          "Benefits appear to outweigh the risks (or vice versa) for the majority of the target group",
+          "Most service users would want to, or should receive this intervention"
+        ],
+        [
+          "Conditional Suggested, so 'consider'",
+          "Risks and benefits are more closely balanced, or there is more uncertainty in likely service users' values and preferences their",
+          "Service users should be supported to arrive at a decision based on values and preferences"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "",
+      "headers": [
+        "Transudates",
+        "Exudates"
+      ],
+      "rows": [
+        [
+          "Common • Congestive cardiac failure • Liver cirrhosis • Hypoalbuminaemia • Nephrotic syndrome less common • Nephrotic syndrome • Mitral stenosis • Peritoneal dialysis • Chronic hypothyroidism • Constrictive pericarditis",
+          "Common • Malignancy • Pleural infection • Pulmonary embolism • Autoimmune pleuritis less common • Drugs • Lymphatic disorders • Meigs syndrome • Post-coronary artery bypass graft • Benign asbestos related pleural effusion"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "",
+      "headers": [
+        "Causes of lymphocytic pleural effusion"
+      ],
+      "rows": [
+        [
+          "Malignancy Tuberculosis Lymphoma Congestive cardiac failure Post-coronary bypass graft Rheumatoid arthritis Chylothorax Yellow nail syndrome"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "",
+      "headers": [
+        "Initial pH",
+        "Level of risk for CPPE pleural infection",
+        "Initial action regarding drainage"
+      ],
+      "rows": [
+        [
+          "> 7.2 to < 7.4",
+          "Intermediate risk",
+          ""
+        ],
+        [
+          "",
+          "low risk",
+          "Check LDH and review other parameters which may support CPPE pleural infection:. Consider ICD insertion if LDH > 900, especially if any of the following: Large pleural fluid volume Low pleural fluid glucose (72 mgldL / < 4.0 mmollL) Pleural contrast enhancement on CT Septation on ultrasound"
+        ],
+        [
+          "27.4",
+          "Very",
+          "No indication for immediate ICD"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    }
+  ],
+  "figures": [
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    }
+  ],
+  "references": [
+    {
+      "title": "Pleural disease guideline",
+      "year": 2023
+    },
+    {
+      "title": "Quality improvement: pleural disease",
+      "year": 2023
+    },
+    {
+      "title": "Introduction and methods: British thoracic society pleural disease guideline 2010"
+    },
+    {
+      "title": "Thorax",
+      "year": 2023
+    },
+    {
+      "title": "Investigation of a unilateral pleural effusion in adults: British thoracic society pleural disease guideline",
+      "year": 2010
+    },
+    {
+      "title": "Management of spontaneous Pneumothorax: British thoracic society pleural disease guideline",
+      "year": 2010
+    },
+    {
+      "title": "Management of a malignant pleural effusion: British thoracic society pleural disease guideline",
+      "year": 2010
+    },
+    {
+      "title": "Management of pleural infection in adults: British thoracic society pleural disease guideline",
+      "year": 2010
+    },
+    {
+      "title": "Local anaesthetic thoracoscopy: British thoracic society pleural disease guideline",
+      "year": 2010
+    },
+    {
+      "title": "Pleural procedures and thoracic ultrasound: British thoracic society pleural disease guideline 2010",
+      "year": 2010
+    },
+    {
+      "title": "British thoracic society guideline for the investigation and management of malignant pleural Mesothelioma",
+      "year": 2010
+    },
+    {
+      "title": "Clinical statement on pleural procedures",
+      "year": 2018
+    },
+    {
+      "title": "What is GRADE?"
+    },
+    {
+      "title": "Indwelling pleural catheter drainage strategy for malignant effusion: a cost-effectiveness analysis"
+    },
+    {
+      "title": "Ann Am Thorac Soc",
+      "year": 2020
+    }
+  ],
+  "quality": {
+    "completeness_score": 0,
+    "has_abstract": true,
+    "abstract_source": "manual_curation",
+    "has_doi": true,
+    "has_full_text": true,
+    "num_sections": 66,
+    "num_tables": 5,
+    "num_figures": 9,
+    "num_references": 15
+  }
+}

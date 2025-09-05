@@ -1,0 +1,626 @@
+{
+  "metadata": {
+    "document_id": "10_1186_s12931_019_1204_x",
+    "title": "Chemical pleurodesis – a review of mechanisms involved in pleural space obliteration",
+    "authors": [
+      "Michal Mierzejewski",
+      "Piotr Korczynski",
+      "Rafal Krenke",
+      "Julius P. Janssen"
+    ],
+    "year": 2019,
+    "journal": "Respiratory Research",
+    "doi": "10.1186/s12931-019-1204-x",
+    "volume": "20",
+    "issue": "1",
+    "pages": "247",
+    "citation": "Mierzejewski, et al. (2019). Chemical pleurodesis – a review of mechanisms involved in pleural space obliteration. Respiratory Research, 20(1), 247. https://doi.org/10.1186/s12931-019-1204-x",
+    "abstract": "Chemical pleurodesis is a therapeutic procedure applied to create the symphysis between the parietal and visceral pleura by intrapleural administration of various chemical agents (e.g. talk, tetracycline, iodopovidone, etc.). The two major clinical conditions treated with chemical pleurodesis are recurrent pleural effusion (PE) and recurrent spontaneous pneumothorax. Although the history of chemical pleurodesis began over a century ago, detailed data on the mechanisms of action of sclerosing agents are highly incomplete. The following article aims to present the state of knowledge on this subject. It is believed that mesothelial cells are the main structural axis of pleurodesis. In response to sclerosing agents they secrete a variety of mediators including chemokines such as interleukin 8 (IL-8) and monocyte chemoattractant protein (MCP-1), as well as growth factors - vascular endothelial growth factor (VEGF), platelet-derived growth factor (PDGF), basic fibroblast growth factor (bFGF) and transforming growth factorβ (TGFβ ). Numerous data suggest that intact mesothelial cells and the above cytokines play a crucial role in the initiation and maintenance of different pathways of pleural inflammation and pleural space obliteration. It seems that the process of pleurodesis is largely nonspecific to the sclerosant and involves the same ultimate pathways including activation of pleural cells, coagulation cascade, fibrin chain formation, fibroblast proliferation and production of collagen and extracellular matrix components. Of these processes, the coagulation cascade with decreased fibrinolytic activity and increased fibrinogenesis probably plays a pivotal role, at least during the early response to sclerosant administration. A better understanding of various pathways involved in pleurodesis may be a prerequisite for more effective and safe use of various sclerosants and for the development of new, perhaps more personalized therapeutic approaches",
+    "abstract_source": "metadata",
+    "url": "https://respiratory-research.biomedcentral.com/articles/10.1186/s12931-019-1204-x"
+  },
+  "source_file": "Chemical pleurodesis.json",
+  "sections": [
+    {
+      "title": "Chemical pleurodesis -a review of mechanisms involved in pleural space obliteration",
+      "content": "Michal Mierzejewski 1 , Piotr Korczynski 1 , Rafal Krenke 1* and Julius P. Janssen 2",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Abstract",
+      "content": "Chemical pleurodesis is a therapeutic procedure applied to create the symphysis between the parietal and visceral\npleura by intrapleural administration of various chemical agents (e.g. talk, tetracycline, iodopovidone, etc.). The two major clinical conditions treated with chemical pleurodesis are recurrent pleural effusion (PE) and recurrent spontaneous pneumothorax. Although the history of chemical pleurodesis began over a century ago, detailed data on the mechanisms of action of sclerosing agents are highly incomplete. The following article aims to present the state of knowledge on this subject.\nIt is believed that mesothelial cells are the main structural axis of pleurodesis. In response to sclerosing agents they secrete a variety of mediators including chemokines such as interleukin 8 (IL-8) and monocyte chemoattractant protein (MCP-1), as well as growth factors - vascular endothelial growth factor (VEGF), platelet-derived growth factor (PDGF), basic fibroblast growth factor (bFGF) and transforming growth factorβ (TGFβ ). Numerous data suggest that intact mesothelial cells and the above cytokines play a crucial role in the initiation and maintenance of different pathways of pleural inflammation and pleural space obliteration.\nIt seems that the process of pleurodesis is largely nonspecific to the sclerosant and involves the same ultimate pathways including activation of pleural cells, coagulation cascade, fibrin chain formation, fibroblast proliferation and production of collagen and extracellular matrix components. Of these processes, the coagulation cascade with decreased fibrinolytic activity and increased fibrinogenesis probably plays a pivotal role, at least during the early response to sclerosant administration.\nA better understanding of various pathways involved in pleurodesis may be a prerequisite for more effective and safe use of various sclerosants and for the development of new, perhaps more personalized therapeutic approaches.\nKeywords: Pleural effusion, Pleural fluid, Spontaneous pneumothorax, Pleurodesis, Sclerosing agents, Talc",
+      "category": "abstract",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Background and clinical aspects of pleurodesis",
+      "content": "The term ' pleurodesis ' comes from the Greek words pleurá (pleura) and desmos (bond) and refers to a procedure undertaken to create the symphysis between the parietal and visceral pleura in order to eliminate the pleural space. The procedure is applied to prevent the recurrence of spontaneous pneumothorax or pleural effusion.\nTwo major methods can be used to achieve pleurodesis: 1) direct injury to the pleura with mechanical or physical\nmethods (e.g. mechanical abrasion, laser or argon beam coagulation) during video-assisted thoracoscopic surgery (VATS) or 2) intrapleural administration of various agents (e.g. talk, bleomycin, tetracycline, iodopovidone, Corynebacterium parvum ) that induce formation of pleural adhesions. As the vast majority of these agents are chemicals, the term ' chemical pleurodesis ' is commonly used. Since chemical sclerosants can be administered to the pleural space by a pleural catheter or single point entry medical thoracoscopy, chemical pleurodesis is a less demanding and less invasive procedure than VATS and is therefore more commonly used.\nThe two major clinical conditions that can be treated with chemical pleurodesis are recurrent pleural effusion\n* Correspondence: rkrenke@wum.edu.pl\n1\nDepartment of Internal Medicine, Pulmonary Diseases & Allergy, Medical\nUniversity of Warsaw, Warsaw, Poland\nFull list of author information is available at the end of the article\nand recurrent spontaneous pneumothorax. The concept of applying chemical pleurodesis in these two entities is slightly different. In patients with recurrent pleural effusion, pleurodesis is a symptomatic treatment that prevents dyspnea related to relatively rapid reaccumulation of pleural fluid after its earlier withdrawal. Thus, the beneficial effect of pleurodesis in patients with pleural effusion can be observed within weeks or months after the procedure. In recurrent spontaneous pneumothorax, pleurodesis has a more delayed effect (months, years), as it is not applied to treat the current pneumothorax episode, but it is aimed to prevent future pneumothorax recurrences.\nSymptomatic treatment of recurrent pleural effusion is by far the most common indication for pleurodesis. Though it mainly refers to malignant pleural effusion (MPE), chemical pleurodesis can also be applied in patients with other underlying diseases. In developed countries, MPE is probably the third leading cause of pleural effusion, with approximately 200,000 new cases diagnosed each year in the United States [1]. Almost 75% of all MPEs are associated with three common malignancies: lung cancer, breast cancer and lymphoma. According to literature data as many as 30% of lung cancer patients and 7 -11% of breast cancer patients develop pleural effusion [2]. Furthermore, it is estimated that malignant pleural effusion may occur in nearly 50% of all patients with metastatic cancers [3]. Since MPE usually reflects advanced (metastatic) disease, curative treatment is only occasionally possible and effective. Thus, although chemical pleurodesis is a palliative treatment that should be applied only in patients who cannot be offered effective causative treatment, or in those in whom causal treatment was found to be ineffective, the number of patients who require symptomatic treatment due to dyspnea related to MPE is substantial. The number of pleurodeses performed in the United States approximates 100,000 per year [4]. The treatment strategy in patients with symptomatic MPE is complex but pleural interventions play a pivotal role. The choice of therapeutic procedure should be based on several determinants, including life expectancy and patient preferences [5]. In terms of prognosis in patients with MPE the first validated prognostic scores to predict survival in patients with MPE has been developed in recent years, and they seems to be very helpful in selecting patients who might benefit from pleurodesis [6, 7]. Large volume therapeutic thoracentesis may bring an immediate therapeutic effect but it does not prevent pleural fluid reaccumulation. Therefore, repeated therapeutic thoracenteses might be recommended only for patients with a slow rate of pleural fluid reaccumulation (> 1 month), patients with a short-expected survival time (< 3 months) [8], and some patients who will undergo chemotherapy or targeted therapy which is expected to be\neffective against reaccumulation of pleural effusion, like in small cell lung cancer, lymphoma, or adenocarcinoma with EGFR mutation. In the remaining patients, procedures that reduce the future risk of pleural effusion recurrence should be considered, with chemical pleurodesis being the major therapeutic option. It must be emphasized, however, that not all patients with recurrent malignant pleural effusion are suitable candidates for chemical pleurodesis. The two major contraindications to the procedure are an unexpandable lung ( ' trapped lung ' ) and inability to remove pleural fluid, e.g. due to multiple loculations. This is because the formation of effective pleural adhesions after administration of sclerosing agent requires a close and direct contact between the parietal and visceral pleura. Thus, an effective withdrawal of pleural effusion and the ability of the lung to reexpand are important prerequisites for efficient pleurodesis. The overall effectiveness of chemical pleurodesis in prevention of reaccumulation of MPE ranges between 41.3 and 100% and depends on different factors, including cancer type, extension of pleural involvement and the sclerosant used for pleurodesis [9 -11]. Another increasingly popular therapeutic option that might also be offered to patients with unexpandable lung is chest tube insertion to permanently drain the pleural fluid (indwelling or tunneled pleural catheter, IPC). Pleuroperitoneal [12] or pleuro-venal [13, 14] shunts are hardly ever used anymore, because of the invasive character of the procedure and the high complication rate. With IPC, symptomatic relief can be achieved in 70 -94.2% patients with MPE [15, 16]. Moreover, it has been shown that drainage of the pleural cavity may lead to spontaneous pleurodesis [17].\nRecurrent spontaneous pneumothorax is the second most common indication for chemical pleurodesis. Data on the incidence of spontaneous pneumothorax are rather scarce. The results of one recent study that used an English national dataset showed the overall annual incidence for both primary and secondary spontaneous pneumothorax of 14.1 per 100,000 population [18]. This number seems to be consistent with the data from earlier studies [19 -21]. Most authors agree that pleurodesis should be offered to patients with the first recurrence (i.e. the second episode) of spontaneous pneumothorax. However, the definitive treatment aimed to prevent recurrence of pneumothorax is not limited to chemical pleurodesis, but also includes other therapeutic options [22, 23]. Bearing in mind the above considerations, it is easy to understand that the number of patients with spontaneous pneumothorax who are treated with chemical pleurodesis might be lower than the respective number of patients with pleural effusion. Nevertheless, chemical pleurodesis is a widely used, cost-effective\nmethod preventing recurrence of primary spontaneous pneumothorax. The effectiveness of chemical and mechanical pleurodesis in this group of patients is high and estimated to reach 90 -99% [22, 23].\nAvailable data indicate that chemical pleurodesis is an important treatment option for both patients with pleural effusion and spontaneous pneumothorax. Hence, the importance of understanding the mechanisms of action of sclerosing agents and further studies on new effective and safe sclerosants.",
+      "category": "introduction",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "History, agents and basic mechanisms involved in chemical pleurodesis",
+      "content": "The history of pleurodesis dates back to 1901, when a Swiss surgeon, Lucius Spengler performed the first procedure intended to produce adhesion between the visceral and parietal pleura. However, the results of intrapleural instillation of a hypertonic glucose solution were unsatisfactory. Thus, as early as in 1906, the same author suggested the use of 0.5% silver nitrate solution instead of hypertonic glucose [24, 25]. In 1935, Norman Bethune proposed intrapleural application of iodized talc to create pleural adhesions in patients with bronchiectasis prior to lobectomy [26]. The use of talc for palliative treatment of MPE was first described by John Chambers in 1958 [27]. To date, it remains one of the most effective and widely used sclerosing agents [28].\nIn the over a hundred-year history of pleurodesis, a variety of methods have been proposed and tested to achieve effective pleural symphysis. These include both mechanical abrasion (first performed by an American surgeon, Edward Delos Churchill in 1941 [29]) and different chemical sclerosants, i.e. antibiotics (tetracycline [30], erythromycin [31], minocycline [32], doxycycline [33]), antiseptics (silver nitrate [34], iodopovidone [35]), cytostatic agents (mitomycin C [36], bleomycin [37], cytarabine [38], doxorubicin [39], etoposide [40], mitoxantrone [41], nitrogen mustard [42]), radioactive colloidal gold [43], quinacrine [44], transforming growth factor β (TGFβ ) [45], autologic blood [46], lipoteichoic acid-T [47] or even bacteria ( Corynebacterium parvum [48] , Streptococcus pyogenes A3 (OK-432) [39]. The search for the ideal sclerosing agent is still ongoing.\nCurrently, it seems that formation of fibrin adhesions and fibrosis are necessary processes to create a permanent symphysis between the visceral and parietal pleura [49]. Although different pathways can lead to formation of pleural adhesions, inflammation is the most important and common mechanism involved in pleurodesis. This mechanism includes the production and release of cytokines as well as adhesion molecules leading to activation of the coagulation cascade and an imbalance between fibrinolysis and fibrinogenesis in favor of the latter. A further consequence of these processes is fibroblast\nrecruitment and proliferation. Nearly all sclerosants used for pleurodesis act as local irritants [50] that induce local inflammation eventually resulting in creation of pleural adhesions. In fact, the involvement of inflammation in the formation of pleural adhesions is disadvantageous because it is associated with side effects, including pain. However, to date there is no easily available and efficient sclerosant that shows strong pro-adhesive but no pro-inflammatory activity. It is believed that the ideal pleural sclerosant should produce durable adhesions with as little as possible or even no inflammation.\nAlthough used for many years, detailed data on the mechanisms of action of various sclerosing agents are highly incomplete. This refers, for example, to iodopovidone which still seems to be an interesting and promising sclerosant [51]. The pro-inflammatory effect of this agent was tested only in animal models [52, 53]. Most of the studies performed to date focused on the agents which gained most popularity in different periods throughout the history of pleurodesis, e.g. talc, doxycycline and silver nitrate.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Inflammation",
+      "content": "Almost all sclerosing agents induce a nonspecific organizing fibrinous pleuritis, that leads to pleural fibrosis. Additionally, talc elicits a histiocytic and granulomatous foreign body reaction [54].\nThe significant role of the inflammatory process as a key pathway of pleurodesis has been demonstrated in animal studies which showed reduced efficacy of sclerosants when used together with nonsteroidal anti-inflammatory drugs (NSAIDs) [55]. However, a recent clinical study in humans showed that use of NSAIDs versus opiates resulted in non-inferior rates of pleurodesis [56]. Studies on animal models of talc and doxycycline pleurodesis demonstrated a significantly increased risk of pleurodesis failure during corticosteroid therapy [57, 58]. The same effect of corticosteroids was found for iodopovidone pleurodesis [52]. Interestingly, this phenomenon was not observed in the animal model when TGFβ was used as a sclerosing agent [59]. This raised hope for the future possibility to perform pleurodesis with selected cytokines with no side effects associated with inflammation and without a significant risk of pleurodesis failure in patients receiving anti-inflammatory therapies. However, there still have been no adequate clinical trials with TGFβ and therefore the use of this cytokine cannot be recommended for routine clinical practice.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "The role of mesothelial cells",
+      "content": "Originally, it was supposed that pleurodesis is closely related to massive damage of the surface of mesothelium caused by the sclerosing agent [60]. Meanwhile, more data were gathered pointing to the role of mesothelial cells as the major target for sclerosing agents and the\nkey structure initiating the chain of inflammatory reactions. Thus, it is believed that mesothelial cells are the main structural axis of the inflammatory process. In response to sclerosing agents, mesothelial cells secrete variety of mediators which play a crucial role in different pathways of inflammation (Fig. 1). These include: chemokines, such as interleukin 8 (IL-8) and monocyte chemoattractant protein (MCP-1), growth factors - vascular endothelial growth factor (VEGF), platelet-derived growth factor (PDGF) and basic fibroblast growth factor (bFGF), transforming growth factor β (TGFβ ) [61], and other mediators. Hence, the close contact between the sclerosing agent and a possibly large number of intact mesothelial cells seems to be crucial for effective pleurodesis. It is important to realize that although the mesothelial cells are the key player in the initiation of pleurodesis,\nthe process is very complex and also involves other cells, including neutrophils, endothelial cells, fibroblasts, macrophages and cancer cells as well as various mediators.\nInterleukin 8 is a potent chemokine, which induces neutrophil influx into the pleural space [62]. Under normal conditions, IL-8 is produced by mesothelial cells and its production significantly increases in response to inflammatory stimuli [63]. Marchi et al. assessed the response of pleural mesothelial cells (PMCs) to talc in an experimental model and found that pleural fluid IL-8 concentration peaked at 6 h after intrapleural talc injection [64]. Thus, sclerosing agents may induce neutrophil influx to the pleural cavity, particularly during the first 24 h after administration [65]. The neutrophil count correlates with IL-8 concentration [66]. It has been demonstrated that neutrophil chemotactic activity in the\npleural space is mainly related to IL-8, and it can be blocked by anti-IL8 antibodies [67]. Pleura migrating neutrophils produce and release a variety of other cytokines responsible for maintaining an already activated inflammatory pathway [50]. These include tumor necrosis factor α (TNFα ), IL-1 α , Interleukin-6 (IL-6), IL-1 β and IL-12.\nTNFα is a proinflammatory cytokine derived from different sources, including PMCs. In vitro, it stimulates mesothelial cells to produce other cytokines e.g. IL-8 and VEGF [62]. In animal model, polyclonal anti-TNFα Fab (antigen-binding fragment) decreased the effect of pleurodesis with talc. This observation emphasizes the role of TNFα in talc induced pleurodesis. Interestingly, the same antibody did not affect pleurodesis with doxycycline [68].\nTGFβ belongs to a family of growth factors that can modulate an inflammatory process. It acts as a chemoattractant for fibroblasts and shows both profibrotic and anti-inflammatory properties. Animal studies have shown that TGFβ stimulates fibroblasts and PMCs to synthesize collagen and induces pleurodesis but these effects are not associated with IL-8 release and an acute inflammatory response [69]. Injecting TGFβ into the rabbit pleural cavity increases the level of VEGF in the pleural fluid; in vitro studies have shown that TGFβ stimulates mesothelial cell VEGF production [45]. As to date TGFβ has been tested only in experimental animal models, its future use in clinical practice must be preceded by further research.\nMesothelial cells are also the source of other mediators that may be involved in formation of pleural symphysis. The role of these factors is discussed in the next sections of the paper.\nThe pivotal role of PMCs in pleurodesis is consistent with the hypothesis and observations on the relationship between the number of the mesothelial cells that can respond to a sclerosant and the efficacy of pleurodesis. This phenomenon is probably related to the quantitative characteristics of inflammatory reaction induced by sclerosant instillation. Although there has been no direct evidence on the relationship between the number of intact mesothelial cells and the efficacy of pleurodesis, several studies provided data that may be construed as an indirect confirmation of such a relationship. RodriguezPanadero et al. showed that tumor burden in the pleural space (resulting in the reduction of normal mesothelium) significantly correlated with low values of pleural fluid pH [70]. Further, the success rate of talc pleurodesis in MPE was significantly associated with pleural fluid pH (and possibly with the amount of normal mesothelium). Effective pleurodesis was achieved in 79% of patients with pleural fluid pH equal or higher than 7.30, in 40% of those with pH lower than 7.20, while failed in all patients with pH lower than 7.15. The results might indicate that an insufficient amount of unchanged\nPMCs, (in case of extensive pleural involvement by cancer) may result in ineffective pleurodesis. On the other hand, it must be admitted that pleural fluid pH in MPE is associated with the risk of lung entrapment and increased mortality. Also, it was suggested, that it is not only associated with impaired lung re-expansion, but also with inhibition of the biological processes leading to pleurodesis [71]. The role of the PMC count may be confirmed by the observation that pleurodesis in spontaneous pneumothorax which is characterized by a large number of intact mesothelial cells requires smaller doses of the sclerosing agents [50].",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Coagulation cascade",
+      "content": "Under normal physiological conditions there is a balance between fibrinogenesis and fibrinolysis in the pleural space. This depends on a sustainable release of a potent anticoagulant factor - tissue plasminogen activator (tPA) and plasminogen activator inhibitor-1 (PAI 1) that acts as a procoagulant. Both factors are secreted by mesothelial cells [72, 73]. The general effect of intrapleural application of the sclerosing agents can be seen as a decrease in activity of fibrinolysis and an increase in activity of intrapleural coagulation (Fig. 2).\nRodriguez-Panadero et al. demonstrated that successful pleurodesis was associated with significant reduction of the fibrinolytic activity expressed as pleural fluid D-dimer concentration 1 day after the administration of powdered talc ( p < 0.001). Interestingly, pleural D-dimer level did not decrease in patients with treatment failure [74]. On the contrary, a significant increase in fibrinolysis was observed 3 h after intrapleural talc administration in those patients. This phenomenon was reported only after talc pleurodesis and it is not known whether other sclerosants produce the same effect.\nThe plasminogen activator inhibitor (PAI) pathway is another important mechanism evaluated in the context of pleurodesis. PAI reduces fibrinolytic activity in the pleural cavity by inhibiting the action of urokinase and tPA which, in turn, convert plasminogen into plasmin. PAI production by mesothelial cells is strongly stimulated by TGFβ [72].\nKarandashova et al. [75] used a rabbit model with overexpression of human PAI-1 in the pleural mesothelium to study the mechanisms of tetracycline pleurodesis. The target gene was delivered by recombinant adenovirus and followed by tetracycline induced pleural injury. The PAI-1 overexpression itself was not a cause of pleural injury, effusion or fibrosis but significantly enhanced pleural injury, adhesion formation and density (number of adhesions) induced by tetracycline.\nTucker et al. [76] investigated pleural injury induced with carbon black/bleomycin in animal models including wild-type C57Bl/6j mice, PAI-1 -/ -mice and PAI-1\ntransgenic mice overexpressing human PAI-1 (PAI-1 Tg ). In this study, fibrinous strands in the pleural cavity were found only in animals overexpressing PAI-1. All groups were positive for pleural fibrin antigen at 14 days after injury, however PAI-1 TG mice were found to have a significantly higher fibrin thickness in comparison to other groups. Interestingly, PAI-1 -/ -mice exhibited significantly\ngreater pleural thickening and more severe injury than the two other groups.\nIn the human study by Agrenius et al., PAI-1 activity was investigated in 10 patients undergoing pleurodesis with quinacrine (antimalarial drug) [77]. Pleural fluid PAI-1 level before pleurodesis was 21.7 +/ -12.0 (mean +/ -SD) AU/ml and increased to 86.9 +/ -25.9 AU/ml 6\nh after drug instillation. Furthermore, high D-dimer concentrations before treatment (62.7 +/ -25.5 mcg/ml) rapidly decreased 6 h after the procedure (12.2 +/ -7.9 mcg/ml). This observation confirms that fibrinolytic activity decreases and coagulation activity increases after intrapleural drug instillation. The limitation of the study was the lack of a control group.\nThe use of control groups in the studies on pleurodesis seems to be a relevant issue. This is because the possible changes in intrapleural fibrinolytic activity may be non-specific and may not be related to the sclerosing agent. Rodriguez-Panadero et al. [74] assessed PAI-1 activity in 75 patients who underwent thoracoscopy with or without talc instillation. Increased PAI-1 activity occurred not only after intrapleural talc administration but also after thoracoscopy and pleural drainage without pleurodesis. The reaction was similarly strong in both groups. Therefore, it appears that increased PAI-1 activity might be a non-specific phenomenon unrelated, or at least weakly related to the mechanism of action of the sclerosing agents.\nThe phenomenon of pro- and anticoagulation imbalance after intrapleural administration of chemical sclerosants is probably dependent not only on direct changes in the activity of coagulation cascade factors but also influenced by various cytokines and C-reactive protein which are produced by the mesothelium, endothelium, macrophages and inflammatory cells. Although the mechanisms are not fully understood, it seems that there is a close relationship between the local inflammation initiated by sclerosants and activation of coagulation cascade [78].\nThere is no convincing evidence on systemic activation of coagulation mechanisms in patients undergoing pleurodesis [79]. However, some cases of massive pulmonary embolism associated with pleurodesis have been observed [80]. The relationship between pleurodesis and activation of systemic coagulation was evaluated by Montes-Worboys et al. in 231 patients with MPE submitted to thoracoscopic talc poudrage. Early fatal outcome occurred in 17 patients and thrombotic events were observed in six of these patients. Sudden death occurred in 4 patients, and in all of them acute pulmonary embolism was suspected. It was confirmed in the only patient who underwent a post-mortem examination. Based on the above study, it cannot be excluded that the activation of plasma coagulation factors by inflammatory cytokines (e.g. IL-8) may be responsible for side effects such as systemic thromboembolic events, which may even result in early death of patients undergoing chemical pleurodesis. Higher IL-8 levels were observed in patients with early mortality after pleurodesis, but the difference was not statistically significant [80].\nIrrespective to the mechanisms involved in formation of early fibrin bonds between the visceral and parietal\npleura, it seems that the organization of fibrin mesh - the final product of coagulation cascade - is an indispensable condition for recruitment and subsequent proliferation of fibroblasts. Thus, the phenomenon is a prerequisite for the formation of more permanent adhesions. Impairment of these processes is strongly associated with treatment failure.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Fibrogenesis and fibrolysis",
+      "content": "Fibrogenesis and fibrolysis are processes involved in the regulation of fibrosis and extracellular matrix composition. Fibrogenesis refers to the formation and proliferation of fibers or fibrous tissue associated with wound healing, regeneration and preventing tissues from breaking down due to inflammation, necrosis, and release of lysines [81, 82].\nDuring pleurodesis, fibrogenesis occurs in the late stage of pleural symphysis formation and involves the recruitment and proliferation of fibroblasts producing collagen and extracellular matrix components. This leads to replacement of newly developed and delicate fibrin pleural adhesions formed as an early result of disbalance between coagulation and fibrinolysis (see above) by stronger bond of the dense collagen fibers. The process was elegantly showed by Hurewitz et al. in the study of the rabbit pleurae after the doxycycline pleurodesis [83]. Eventually (and ideally), the process results in the complete obliteration of the pleural cavity. Numerous growth factors affecting fibroblast function have been detected in the pleural cavity of patients treated with pleurodesis. These include: PDGF, bFGF, hepatocyte growth factor (HGF) and TGFβ (Fig. 3).\nPDGF is synthesized by a variety of cell types, however, the major pleural source of PDGF are probably PMCs. In cell models unrelated to pleurodesis, its production was stimulated by low oxygen tension, thrombin, and other cytokines, e.g. IL-1 and IL -6 [84, 85]. PDGF plays an important role in fibroblast division by skipping the G1 checkpoints in the cell cycle. It shows pleiotropic activity, including chemotaxis, proliferation, and acceleration of extracellular matrix and collagen formation [86]. All the above effects might be important for efficient pleurodesis.\nBasic fibroblast growth factor, also known as fibroblast growth factor 2 (FGF-2) is a member of fibroblast growth factor family which may play a considerable role in pleurodesis. It is produced by normal, but also by malignant mesothelial cells. Under physiological conditions, it is binded by proteoglycans, and may be released upon degradation of extracellular matrix by inflammatory cells [49]. In cell models unrelated to pleurodesis, its synthesis was stimulated by TNFα , TGFβ and stem cell factor [87]. It seems that the main biological effect of bFGF is stimulation of the new blood vessel formation. Basic\nfibroblast growth factor also accelerates fibroblast proliferation and migration. However, the mechanism which is involved in regulation of fibroblast migration by bFGF is still unclear [88]. Some data from human studies suggesting that bFGF is important for efficient pleurodesis have been published. Antony et al. showed that patients who underwent successful pleurodesis had significantly higher pleural fluid bFGF levels than patients in whom pleurodesis had failed [49]. The authors hypothesized that lower pleural fluid bFGF levels in patients with extensive malignant involvement of the pleura are associated with a lower number of normal PMCs that can\nrespond to sclerosing agent. Basic fibroblast growth factor production and release is probably an important component of this response. If this is true, higher pleural fluid levels of bFGF can be achieved in patients with less advanced pleural malignancies as more PMCs can be exposed to the sclerosing agent. This may result in a higher successful rate of pleurodesis in those patients.\nHepatocyte growth factor (HGF) has been initially identified as a mitogen for hepatocytes. Further studies showed that its activity is not limited to the liver, but it is also a potent mitogen, morphogen (a compound that\ncontrols tissue architecture) and stimulator of cell mobility in other organs including lungs [89]. The pleural effects of this cytokine were investigated in pleural fibrosis (fibrothorax) complicating pleural empyema [90]. It was demonstrated that HGF can cause opposite effects to those elicited by TGFβ and bFGF. Namely, it prevented adhesion formation and promoted the regeneration of the mesothelium cell layer. Several studies showed that antiHGF antibodies induce fibrosis by neutralizing endogenous HGF. This phenomenon has been observed in animal models in the kidneys [91], liver [92] and lung diseases [93]. To our knowledge, there have been no studies either on the effect of pleurodesis on HGF activity or potentially profibrogenic effects of anti-HGF antibodies in the pleural cavity. However, it can be hypothesized that inhibition of HGF might enhance pleural fibrogenesis initiated by the sclerosing agent. This hypothesis should be tested in future studies. When discussing HGF in the context of MPE, it should be mentioned that one Japanese study showed an anti-tumor effect of anti-HGF and NK4 (a HGF fragment -competitive inhibitor of HGF-Met receptor) on malignant pleural mesothelioma [94].\nMetalloproteinases (MMPs) and their inhibitors are yet another proteins involved in fibrogenesis and fibrolysis. MMPs are proteolytic enzymes, which are constitutively present in the pleura. They are secreted by mesothelial cells, fibroblasts, granulocytes and endothelial cells. Endogenous MMP inhibitors are a family of glycoproteins that is referred to as tissue inhibitors of metalloproteinases (TIMP). In the pleural cavity, TIMP1 is secreted by mononuclear phagocytes [72]. Traditionally the role of MMPs and TIMPs was limited to remodeling of matrix components. Recent data suggest that their role is far more complex and includes intracellular and extracellular signaling [95]. Besides their enzymatic properties, the physiological functions of MMPs include wound healing, angiogenesis, organ morphogenesis and modulation of inflammatory processes. MMP9 activates IL-8 and inactivates IL-1 β and is rapidly expressed as an early response to injury, persists during healing and declines upon reepithelialization [96].\nThe metalloproteinase pathways in pleurodesis seem particularly intriguing because of their role in the development and progression of malignancies. MMPs are frequently overexpressed in malignant tumors and play a role in in situ tumor growth and spread. Moreover, some studies showed the role of MMPs in enhancement of inflammatory process [96]. However, despite the growing knowledge on the biology of MMPs, the understanding of their role in the pathogenesis of pleural effusion and pleurodesis is still limited.\nEickelberg et al. analyzed pleural effusions from 88 patients and suggested that interstitial collagenase\n(MMP-1), gelatinase-A (MMP-2), and TIMP-1 which are constitutively expressed in the lung may also play a role in homeostasis of the pleural space [97]. In a more recent study by Teixeira et al. that included 114 patients with various causes of pleural effusion, pleural fluid concentration of MMP1, MMP2, MMP8, MMP9 and TIMP correlated with other inflammatory mediators. Interestingly, there was a significant correlation between the level of MMP9 and TGFβ 1 [98].\nD ' Agostino et al. demonstrated that talc pleurodesis was associated with the inhibition of MMP1 and TIMP1 synthesis in the pleural cavity. The effect of pleurodesis on MMP9 level varied between patients. In 4 patients, the level increased significantly a few days after pleurodesis, in 5 patients MMP9 levels were initially high and lowered after treatment. Although in all patients pleurodesis was successful, the authors did not discuss the potential relationship between MMPs/TIMPs changes and formation of pleural symphysis [99].\nHurewitz et al. showed that tetracycline and doxycycline inhibit the bioactivity of MMP2 when added to pleural fluid and in high concentrations reduce MMP2 synthesis in the fibrosarcoma cell culture [100]. This inhibitory effect was also observed in lower, subantimicrobal doses, but not in the context of pleurodesis [101]. The inhibition of MMP activity seems to be an attractive target for intrapleural therapy of MPE. Macaulay et al. showed a significant reduction in the number of recuired thoracenteses and better dyspnea scores in a group of 18 patients with MPE treated with intrapleural batimastat which is an anticancer drug with MMP inhibitor activity [102].",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Angiogenesis and angiostasis",
+      "content": "Angiogenesis is a process by which new capillaries are created from pre-existing vessels, while angiostasis is a negative regulatory activity of that process. Both processes play an important role in various physiological and pathological conditions, e.g. wound healing and tumor growth [103]. There is evidence that angiogenesis is involved in both pleurodesis and pleural fluid formation. This effect is mediated by endostatin, a C terminal fragment of collagen XVIII produced by its proteolytic cleavage [104] that specifically inhibits angiogenesis through disrupting endothelial cell migration, inducing cell cycle arrest and apoptosis (Fig. 4) [105].\nThe effect of talc administration on angiogenic balance in PMCs was evaluated by Nasreen et al. The authors used small amounts of pleural fluid collected from patients with MPE after successful talc pleurodesis. In general, the study demonstrated that talc activates endostatin release from PMCs. In fact a bidirectional and dose dependent effect was observed with higher doses\nshowing an inhibitory effect on endostatin production. High concentration of endostatin was also found in pleural fluid collected 24 h after intrapleural talc administration. Both the conditioned media from talc activated PMC cultures and pleural fluid containing elevated level of endostatin induced apoptosis in human umbilical vein endothelial cells. These observations suggest that talc changes the angiogenesis balance in the pleural cavity towards the more angiostatic environment [106]. On the other hand, data from the rabbit model of talc pleurodesis presented by Montes et al. suggests, that pleurodesis produces not only a repair scar, but a well-vascularized and innervated connective tissue that creates a continuity between the two pleurae [107]. In this context, a local increase rather than decrease in angiogenic activity could be expected. To our knowledge, this topic was not\nadequately explored in human studies. Specifically, the changes over time in the pleural angiogenic/angiostatic balance after sclerosing agent administration were not addressed. It seems possible, that the equilibrium changes over time, and is different in an early and late phase of pleural reaction to sclerosants.\nAnother important factor involved in angiogenesis is VEGF. This inflammatory mediator is secreted by a wide range of cells present in the pleural cavity, including mesothelium, inflammatory and cancer cells [108]. Vascular endothelial growth factor is released during inflammatory pleural processes. Higher VEGF concentrations have been observed in complicated pleural effusions and pleural empyema. There are data showing that pleural thickening, low pH and glucose levels correlate with VEGF secretion into the pleural cavity [109]. There are\nno data on the influence of pH on VEGF production by PMCs, however there is evidence that low pH increases VEGF production in rat ' s retinal extracts [110]. It has been shown that VEGF secretion is largely dependent on TGFβ . The use of anti-TGFβ antibodies blocked the production of VEGF by mesothelial cells in vivo and in vitro [111]. VEGF secretion by PMCs is also induced by bFGF [112].\nThe role of VEGF in pleurodesis seems ambiguous. On one hand, it activates endothelial cells stimulating the formation of new vessels and inducing adhesion formation during pleurodesis but on the other, it is one of the most potent cytokines that increase vascular permeability [113], and possibly, pleural fluid formation. Gary Lee et al. found that pleural TGFβ administration resulted in increased fluid formation compared to talc and doxycycline. The authors suggest, that this effect was probably a result of stimulation of VEGF release by TGFβ [111].\nThe effect of VEGF pathway blockage on recurrent pleural effusion was investigated in animal models. Two mechanisms of blockage were applied: the inhibition of VEGF receptor tyrosine kinase phosphorylation [114] and the use of anti-VEGF antibodies (bevacizumab) [115]. Both approaches decreased the permeability of local blood vessels reducing the production of pleural effusion. However, they also deteriorate the effectiveness of pleurodesis by reducing the formation of adhesions [116] and new vessels [117]. Therefore, the effectiveness of pleurodesis in patients receiving anti-VEGF antibodies in the treatment of cancer (such as colorectal cancer [118]) is likely to be reduced. These two opposite effects show that the role of angiogenesis in the pleurodesis process is complex, and so far, insufficiently understood. The therapeutic application of antiVEGF antibodies that may be relevant for palliative treatment by reducing the production MPE will be discussed in the next chapter.\nThere might be an interesting link between pleurodesis and proteins from the angiopoietin group. Angiopoietins are locally produced by pleural endothelial and perivascular cells. They increase angiogenesis, vascular permeability and pleural effusion production. Kalomenidis et al. showed that angiopetin-2, but not angiopoetin-1 level, was elevated in exudative pleural effusions, and that angiopoetin-2 concentration correlated with VEGF level in pleural fluid [119]. The role of angiopoietins in pleurodesis, including inflammation and fibrosis has not been sufficiently studied.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Potential new treatment options for MPE",
+      "content": "An interesting concept of treatment of recurrent MPE is the local use of tissue adhesives to produce pleurodesis. Tissue adhesives are substances used for wound repair\nand closure of skin incisions without suture. They belong to various chemical compounds, including synthetic polymers (e.g. polycyanoacrylates), polysaccharides (e.g. chitin, chitosan) and proteins (e.g. fibrin, sercine) [120]. Data on the usefulness of these chemicals to produce pleural symphysis are still very limited. In the rat study by Cetin et al., fibrin tissue adhesive produced significantly more adhesions compared to tetracycline [121]. Importantly, this was not associated with any significant side effects. Marchi et al. found that in a rabbit model mechanical abrasion with local fibrin sealant instillation was as effective in producing pleurodesis as pleurectomy [122]. Some cases of successful pleurodesis with tissue adhesives were also reported in humans [123, 124]. However, to date, no larger studies have been performed.\nSercine is a natural protein produced by silkworms. The ability of sercine to activate fibroblasts and induce fibrosis in the pleural cavity was demonstrated in a rat study [125]. As no side effects were observed, its use seems to be a promising approach to treatment of MPE.\nAlthough reduction of pleural fluid accumulation rate is a treatment method conceptually different than pleurodesis, this potential therapeutic option should also be mentioned. It must be admitted that the decrease of pleural fluid formation cannot be easily achieved, nevertheless, some studies showed that it is not impossible. The effect of the VEGF pathway blockage by inhibitors of VEGF receptor tyrosine kinases (PTK787) was evaluated in one experimental study by Yano et al. The authors hypothesized that the above therapeutic intervention might reduce the amount of exudate by reducing vascular permeability. Transfer of human lung adenocarcinoma (PC14PE6) cells to nude mice and subsequent treatment with different doses of PTK787 significantly reduced the incidence and volume of MPE, but did not affect the number of lung metastases. The effect on MPE was observed only with higher doses of PTK787 [126].\nRecently, a significant pathobiological role of MCP-1 in MPE has been postulated. The expression of MCP-1 and its receptor CCR2 have been previously described in PMCs [127]. Thomas et al. showed that pleural fluid MCP1 level increased significantly over time with progression of tumor stage [128]. In a study by Lansley et al. who used an animal model of benign pleurisy induced by λ -carrageenan, the blockage of MCP-1 and CCR2 resulted in a significant decrease in pleural effusion volume [129]. The same authors reported an increase of MCP-1 expression and release in both in vitro, and in vivo mouse model in response to tPA [130]. The level of MCP-1 in pleural fluid correlated positively with the fluid volume. Interestingly, blockage of the MCP-1 pathway significantly decreased the pleural fluid formation after stimulation with tPA.\nTherefore, the MCP-1 pathway seems to be a promising target for some new therapeutic approaches.\nPichelmayer et al. reported a reduction of MPE in one patient and reduction of malignant ascites in two patients after treatment with high doses of bevacizumab (Avastin ™ ), a humanized VEGF neutralizing antibody [131]. Data on the blockage of other cytokine pathways are still scarce.\nAn indwelling pleural catheter (IPC) is increasingly used as a therapeutic option in patients with MPE and the amount of data on this treatment is rapidly growing. Although IPC was initially intended to provide an effective, long-term pleural fluid drainage, it has been shown that this treatment may eventually result in spontaneous pleurodesis. Recently, two large multicenter trials (ASAP and AMPLE-2) demonstrated a significantly higher rate of autopleurodesis in patients treated with IPC and aggressive daily pleural fluid drainage than in patients treated with IPC and every other day drainage (47 vs 24% after 12 weeks and 44.2 vs 15.9% after 6 months in ASAP and AMPLE-2 trial, respectively) [132, 133]. Also, the median time to autopleurodesis was shorter in the former group (54 vs 90 days) [132]. No significant differences in the rate of adverse events, quality of life, and patient satisfaction were found between both groups [132, 133]. Similar results, with shortened time to spontaneous pleurodesis in daily drained patients compared to those drained 2 -3 times per week were recently reported by Raman et al. The use of sclerosants together with tunneled pleural catheter was associated with shorter dwell time, but higher percentage of complications [134]. The AMPLE randomized clinical trial in 146 patients showed that patients in the IPC group had a significantly shorter hospital stay than the talc pleurodesis group, however there were no significant differences in breathlessness or quality of life [135]. Olfert et al. showed that IPC is a cost-effective method when compared with talc, especially in patients with limited survival [136].\nAn exciting new development is the drug-eluting indwelling pleural catheter. A recent study by Bhatnagar et al. showed that the use of an IPC with a slowrelease coating of silver nitrate (SNCIPC) resulted in successful pleurodesis in 8 of 9 patients with expandable lung. The median time to achieve pleurodesis was 4 days. Of the 69 recorded adverse events, 17 were device related, and there was one serious adverse event [137]. Trembley et al. demonstrated that SNCIPC used in animal model was associated with a high success rate of pleurodesis without any significant signs of silver toxicity [138]. The ongoing clinical SWIFT Trial is designed to assess whether SNCIPC enhances rates of autopleurodesis compared with uncoated IPCs [139].\nNew observations on pleural effusion in patients with cancer suggest that cancer cells that form pleural metastases may carry different mutations in comparison with those in the primary tumor. Han et al. demonstrated differences in EGFR and KRAS mutation status in primary and metastatic lung adenocarcinomas [140]. Agalioti et al. hypothesized that discordances may result from tumor evolution under pharmacological pressure [141]. Interestingly, in a group of patients not treated with tyrosine kinase inhibitors, 27% of metastatic tumors had EGFR mutations which had not been previously detected in primary foci [142]. In consequence, MPE therapy can potentially be personalized depending on the mutations present in the pleural metastases. Therapy could be targeted on an oncogene coming from a fusion of two genes: EML 4 (echinoderm microtubule-associated protein-like 4) and ALK (anaplastic lymphoma kinase), and inhibitors of its activity -crizotinib or ceritinib [143]. There have been reports of success in the treatment of MPE with these drugs in patients in whom other treatments have been found to be ineffective [144]. Sun et al. reported a woman with a locally advanced adenocarcinoma of the lung and a bloody pleural effusion treated with a drainage (approximately 1000 ml/ day) that did not respond to chemotherapy. The amount of exudate rapidly reduced after the use of crizotinib. On the sixth day of the treatment the pleural catheter could be removed [145].\nIntrapleural immune stimulation is yet the other research field currently being explored. The immune stimulants may be instilled as both anti-tumor treatment and pleurodesis inducing agents. Lansley et al. showed in a murine model that intratumoral injections of Staphylococcus aureus bio-product mixture induced apoptosis of mesothelioma cells through both direct and T-cell mediated mechanisms [146]. In a small study by Ren et al., patients treated with S. aureus superantigen mediated pleurodesis had a significantly longer survival time than that found in patients treated with talc pleurodesis (7.9 vs. 2.0 months). This difference could possibly be associated with the immunostimulating effect of S. aureus superantigen [147].",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Conclusions",
+      "content": "Although pleurodesis has been used to treat patients with recurrent pleural effusion and spontaneous pneumothorax for many years, the mechanisms involved in the formation of pleural adhesions and pleural symphysis are still not fully understood. This is, at least partially, due to the complexity of the process that involves various cells as well as various mediators. Nevertheless, the majority of data show that intact mesothelial cells play a pivotal role in effective pleurodesis. It also seems that the process is largely non-specific to the type of\nsclerosant and involves the same ultimate pathways including activation of pleural cells, coagulation cascade, fibrin chain formation, and fibroblast proliferation. More detailed understanding of all the pathways may be a prerequisite to more effective and safer use of known sclerosants and to the development of new, perhaps partly personalized, therapeutic approaches.",
+      "category": "conclusion",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Abbreviations",
+      "content": "ALK : Anaplastic lymphoma kinase; bFGF: Basic fibroblast growth factor; EGFR: Epithelial growth factor receptor; EML4 : Echinoderm microtubuleassociated protein-like 4; HGF: Hepatocyte growth factor; IL-1 α , Interleukin-6 (IL-6), IL-1 β , IL8, IL-12: interleukins; IPC: indwelling pleurat catheter; MCP-1: Monocyte chemoattractant protein 1; MMPs: Matrix metalloproteinases; MPE: Malignant pleural effusion; NSAIDs: nonsteroidal anti-inflmmatory drugs; PAI 1: Plasminogen activator inhibitor-1; PDGF: Platelet derived growth factor; PE: Pleural effusion; PMCs: pleural mesothelial cells; TGF β : Transforming growth factor β ; TIMP 1: Tissue inhibitor of metalloproteinase 1; TNFα : Tumor necrosis factor α ; tPA: Tissue plasminogen activator; VATS: Videoassisted thoracoscopic surgery; VEGF: Vascular endothelial growth factor",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Acknowledgements",
+      "content": "The authors thank dr Marta Maskey-Warzechowska for her assistance in the preparation of the final version of the manuscript.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Authors ' contributions",
+      "content": "MM, PK, RK conceived the concept of the review paper. MM, PK, RK, JPJ performed the literature search, data analysis and interpretation. RK, JPJ coordinated the process of selection and systematization of data presented in the manuscript. MM, PK wrote the first draft of the manuscript. All authors critically reviewed the manuscript, contributed to and approved the final version.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Funding",
+      "content": "None.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Availability of data and materials",
+      "content": "All data and publications discussed in the manuscript are available from the corresponding author on reasonable request.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Ethics approval and consent to participate",
+      "content": "Not applicable",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Consent for publication",
+      "content": "Not applicable",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Competing interests",
+      "content": "The authors declare that they have no competing interests.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Author details",
+      "content": "1 Department of Internal Medicine, Pulmonary Diseases & Allergy, Medical University of Warsaw, Warsaw, Poland. 2 Department of Pulmonary Diseases, Canisius-Wilhelmina Hospital, Nijmegen, The Netherlands.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "References",
+      "content": "1. Light RW. Pleural effusions. Med Clin North Am. 2011;95:1055 -70.\n2. Penz E, Watt KN, Hergott CA, et al. Management of malignant pleural effusion: challenges and solutions. Cancer Manag Res. 2017;9:229 -41.\n3. Neragi-Miandoab S. Malignant pleural effusion, current and evolving approaches for its diagnosis and management. Lung Cancer. 2006;54:1 -9.\n4. Gary Lee YC, Light RW. Future directions. In: Light RW, Gary Lee YC eds. Textbook of pleural diseases. London, England: Hodder Arnold. 2003, 536 -541.\n5. Antunes G, Neville E, Duffy J, et al. BTS guidelines for the management of malignant pleural effusions. Thorax. 2003;58:2003 -38.\n6. Clive AO, Kahan BC, Hooper CE, et al. Predicting survival in malignant pleural effusion: development and validation of the LENT prognostic score. Thorax. 2014;69:1098 -104.\n7. Ioannis Psallidas, Nikolaos I Kanellakis, Stephen Gerry, Marie Laëtitia Thézénas, Philip D Charles, Anastasia Samsonova, Herbert B Schiller, Roman Fischer, Rachelle Asciak, Robert J Hallifax, Rachel Mercer, Melissa Dobson, Tao Dong, Ian D Pavord, Gary S Collins, Benedikt M Kessler, Harvey I Pass, Nick Maskell, Georgios T Stathopoulos, Najib M Rahman, (2018) Development and validation of response markers to predict survival and pleurodesis success in patients with malignant pleural effusion (PROMISE): a multicohort analysis. The Lancet Oncology 19 (7):930 -39.\n8. Roberts ME, Neville E, Berrisford RG, et al. Management of a malignant pleural effusion: British Thoracic Society pleural disease guideline 2010. Thorax. 2010;65:32 -40.\n9. Zahid I, Routledge T, Billè A, et al. What is the best treatment for malignant pleural effusions? Interact Cardiovasc Thorac Surg. 2011;12:818 -23.\n10. Kennedy L, Sahn SA. Talk pleurodesis for the treatment of pneumothorax and pleural effusion. Chest. 1994;106:1215 -22.\n11. Huggins JT, Doelken P, Sahn SA. Intrapleural therapy. Respirology. 2011;16: 891 -9.\n12. Shimmyo T, Morita K, Mineshita M, et al. Pleuroperitoneal shunt for chylothorax and chylopericardium in lung cancer: a case report. Ann Thorac Cardiovasc Surg. 2011;17:63 -6.\n13. Artemiou O, Marta GM, Klepetko W, et al. Pleurovenous shunting in the treatment of nonmalignant pleural effusion. Ann Thorac Surg. 2003;76:231.\n14. Schulze M, Boehle AS, Kurdow R, et al. Effective treatment of malignant pleural effusion by minimal invasive thoracic surgery: thoracoscopic talc pleurodesis and pleuroperitoneal shunts in 101 patients. Thorac Surg. 2001; 71:1809.\n15. van den Toorn LM, Schaap E, Surmount VF, et al. Management of recurrent malignant pleural effusions with a chronic indwelling pleural catheter. Lung Cancer. 2005;50:123 -7.\n16. Qureshi RA, Collinson SL, Powell RJ, et al. Management of malignant pleural effusion associated with trapped lung syndrome. Asian Cardiovasc Thorac Ann. 2008;16:120 -3.\n17. Fortin M, Tremblay A. Pleural controversies: indwelling pleural catheter vs. pleurodesis for malignant pleural effusions. J Thorac Dis. 2015;7:1052 -7.\n18. Hallifax RJ, Goldacre R, Landray MJ, et al. Trends in the incidence and recurrence of inpatient-treated spontaneous pneumothorax, 1968-2016. JAMA. 2018;320:1471 -80.\n19. Bense L, Eklund G, Wiman LG. Smoking and the increased risk of contracting spontaneous pneumothorax. Chest. 1987;92:1009 -12.\n20. Gupta D, Hansell A, Nichols T, et al. Epidemiology of pneumothorax in England. Thorax. 2000;55:666 -71.\n21. Bobbio A, Dechartres A, Bouam S, et al. Epidemiology of spontaneous pneumothorax: gender related differences. Thorax. 2015;70:653 -8.\n22. Cardillo G, Facciolo F, Giunti R, et al. Videothoracoscopic treatment of primary spontaneous pneumothorax: a 6-year experience. Ann Thorac Surg. 2000;69:357 -62.\n23. Shaikhrezai K, Thompson AI, Parkin C, et al. Video-assisted thoracoscopic surgery management of spontaneous pneumothorax -long-term results. Eur J Cardiothorac Surg. 2011;40:120 -3.\n24. Spengler L. Zur chirurgie des pneumothorax. Beitr Klin Chir. 1906;49:80.\n25. Maxwell J. The production of pleural adhesions by kaolin injection. Thorax. 1954;9:10 -3.\n26. Bethune N. Pleural poudrage: new technique for the deliberate production of pleural adhesion as preliminary to lobectomy. J Thorac Surg. 1935;4:251 -61.\n27. Chambers JS. Palliative treatment of neoplastic pleural effusion with intercostal intubation and talc instillation. West J Surg. 1958;66:26 -8.\n28. Genofre EH, Marchi E, Vargas FS. Inflammation and clinical repercussions of pleurodesis induced by intrapleural talc administration. Clinics. 2007;62:627 -34.\n29. Tyson MD, Crandall WB. The surgical treatment of recurrent idiopathic spontaneous pneumothorax. J Thorac Surg. 1941;10:566 -70.\n30. Tabatabaei SA, Hashemi SM, Kamali A. Silver nitrate versus tetracycline in pleurodesis for malignant pleural effusions; a prospective randomized trial. Adv Biomed Res. 2015;4:178.\n31. Balassoulis G, Sichletidis L, Spyratos D, et al. Efficacy and safety of erythromycin as sclerosing agent in patients with recurrent malignant pleural effusion. Am J Clin Oncol. 2008;31:384 -9.\n32. Chen JS, Chan WK, Yang PC, et al. Intrapleural minocycline pleurodesis for the treatment of primary spontaneous pneumothorax. Curr Opin Pulm Med. 2014;20:371 -6.\n33. Salomaa ER, Pulkki K, Helenius H. Pleurodesis with doxycycline or Corynebacterium parvum in malignant pleural effusion. Acta Oncol. 1995;34: 117 -21.\n34. Bucknor A, Harrison-Phipps K, Davies T, et al. Is silver nitrate an effective means of pleurodesis? Interact Cardiovasc Thorac Surg. 2015;21:521 -5.\n35. Caglayan B, Torun E, Turan D, et al. Efficacy of iodopovidone pleurodesis and comparison of small-bore catheter versus large-bore chest tube. Ann Surg Oncol. 2008;15:2594 -9.\n36. Luh KT, Yang PC, Kuo SH, et al. Comparison of OK-432 and mitomycin C pleurodesis for malignant pleural effusion caused by lung cancer. A randomized trial. Cancer. 1992;69:674 -9.\n37. Lynch T, Kalish L, Mentzer S, et al. Optimal therapy of malignant pleural effusions. Int J Oncol. 1996;8:183 -90.\n38. Marchi E, Vargas FS, Teixeira LR, et al. Comparison of nitrogen mustard, cytarabine and dacarbazine as pleural sclerosing agents in rabbits. Eur Respir J. 1997;10:598 -602.\n39. Kishi K, Homma S, Sakamoto S, et al. Efficacious pleurodesis with OK432 and doxorubicin against malignant pleural effusions. Eur Respir J. 2004;24:263 -6.\n40. Jones JM, Olman EA, Egorin MJ, et al. A case report and description of the pharmacokinetic behavior of intrapleurally instilled etoposide. Cancer Chemother Pharmacol. 1985;14:172 -4.\n41. Barbetakis N, Antoniadis T, Tsilikas C. Results of chemical pleurodesis with mitoxantrone in malignant pleural effusion from breast cancer. World J Surg Oncol. 2004;2:16.\n42. Mark JB, Goldenberg IS, Montague AC, et al. Intrapleural mechlorethamine hydrochloride therapy for malignant pleural effusion. JAMA. 1964;187:858 -60.\n43. Botsford TW. Experiences with radioactive colloidal gold in the treatment of pleural effusion caused by metastatic cancer of the breast. New Engl J Med. 1964;270:552 -5.\n44. Hickman JA, Jones MC. Treatment of neoplastic pleural effusions with local instillations of quinacrine (mepacrine) hydrochloride. Thorax. 1970;25:226 -9.\n45. Light RW, Cheng DS, Gary Lee YC, et al. A single intrapleural injection of transforming growth factor beta-2 produces an excellent pleurodesis in rabbits. Am J Respir Crit Care Med. 2000;162:98 -104.\n46. Keeratichananont W, Limthon T, Keeratichananont S. Efficacy and safety profile of autologous blood versus tetracycline pleurodesis for malignant pleural effusion. Ther Adv Respir Dis. 2015;9:42 -8.\n47. Rahman NM, Davies HE, Salzberg M, et al. Use of lipoteichoic acid-T for pleurodesis in malignant pleural effusion: a phase I toxicity and doseescalation study. Lancet Oncol. 2008;9:946 -52.\n48. Felletti R, Ravazzoni C. Intrapleural Corynebacterium parvum for malignant pleural effusions. Thorax. 1983;38:22 -4.\n49. Antony VB, Nasreen N, Mohammed KA, et al. Talc pleurodesis: basic fibroblast growth factor mediates pleural fibrosis. Chest. 2004;126:1522 -8.\n50. Rodriguez-Panadero F, Montes-Worboys A. Mechanisms of pleurodesis. Respiration. 2012;83:91 -8.\n51. Agarwal R, Khan A, Aggarwal AN, et al. Efficacy & safety of iodopovidone pleurodesis: a systematic review & meta-analysis. Indian J Med Res. 2012; 135:297 -304.\n52. Guo Y, Tang K, Bilaceroglu S, et al. Iodopovidone is as effective as doxycycline in producing pleurodesis in rabbits. Respirology. 2010;15: 119 -25.\n53. Teixeira LR, Vargas FS, Puka J, et al. Effectiveness and safety of iodopovidone in an experimental pleurodesis model. Clinics (Sao Paulo). 2013;68:557 -62.\n54. Tomashefski JF. Dail and Hammar's pulmonary pathology volume I: nonneoplastic lung disease; 2008.\n55. Ors Kaya S, Bir F, Atalay H, et al. Effect of diclofenac on experimental pleurodesis induced by tetracycline in rabbits. J Investig Med. 2005;53: 267 -70.\n56. Rahman NM, Pepperell J, Rehal S, et al. Effect of opioids vs NSAIDs and larger vs smaller chest tube size on pain control and pleurodesis efficacy among patients with malignant pleural effusion: the TIME1 randomized clinical trial. JAMA. 2015;314:2641 -53.\n57. Xie C, Teixeira LR, McGovern JP, et al. Systemic corticosteroids decrease the effectiveness of talc pleurodesis. Am J Crit Care Med. 1998;157: 1441 -4.\n58. Teixeira LR, Wu W, Chang DS, et al. The effect of corticosteroids on pleurodesis induced by doxycycline in rabbits. Chest. 2002;121:216 -9.\n59. Gary Lee YC, Devin CJ, Teixeira LR. Transforming growth factor beta2 induced pleurodesis is not inhibited by corticosteroids. Thorax. 2001;56: 643 -8.\n60. Rodriguez-Panadero F, Antony VB. Pleurodesis. State of the art. Eur Respir J. 1997;10:1648 -54.\n61. Schwarz Y, Star A. Role of talc modulation on cytokine activation in cancer patients undergoing pleurodesis. Pulm Med. 2012;2012:806183.\n62. Antony VB, Godbey SW, Kunkel SL, et al. Recruitment of inflammatory cells to the pleural space. Chemotactic cytokines, IL-8, and monocyte chemotactic peptide-1 in human pleural fluids. J Immunol. 1993;151: 7216 -23.\n63. Light RW, Gary Lee YC. Textbook of pleural diseases. London, UK: Arnold Press, 2003.\n64. Marchi E, Vargas FS, Acencio MM, et al. Evidence that mesothelial cells regulate the acute inflammatory response in talc pleurodesis. Eur Respir J. 2006;28:929 -32.\n65. Psathakis K, Calderón-Osuna E, Romero-Romero B, et al. The neutrophilic and fibrinolytic response to talc can predict the outcome of pleurodesis. Eur Respir J. 2006;27:817 -21.\n66. van den Heuvel MM, Smit HJ, Barbierato SB, et al. Talc-induced inflammation in the pleural cavity. Eur Respir J. 1998;12:1419 -23.\n67. Broaddus VC, Hébert CA, Vitangcol RV, et al. Interleukin-8 is a major neutrophil chemotactic factor in pleural liquid of patients with empyema. Am Rev Respir Dis. 1992;146:825 -30.\n68. Cheng DS, Rogers J, Wheeler A, et al. The effects of intrapleural polyclonal anti-tumor necrosis factor alpha (TNF alpha) fab fragments on pleurodesis in rabbits. Lung. 2000;178:19 -29.\n69. Gary Lee YC, Lane KB, Zoia O, et al. Transforming growth factor-beta induces collagen synthesis without inducing IL-8 production in mesothelial cells. Eur Respir J. 2003;22:197 -202.\n70. Rodriguez-Panadero F, Lopez MJ. Low glucose and pH levels in malignant pleural effusions: diagnostic significance and prognostic value in respect to pleurodesis. Am Rev Respir Dis. 1989;139:663 -7.\n71. Aelony Y, Yao JF, King Relative risk (RR). Prognostic value of pleural fluid pH in malignant epithelial mesothelioma after talc poudrage. Respiration. 2006;73:334 -9.\n72. Light RW. Pleural Diseases. Lippincott Williams & Wilkins Fifth edition 2007, 50.\n73. Idell S, Zwieb C, Kumar A, et al. Pathways of fibrin turnover of human pleural mesothelial cells in vitro. Am J Respir Cell Mol Biol. 1992;7:414 -26.\n74. Rodriguez-Panadero F, Segado A, Martin Juan J, et al. Failure of talc pleurodesis is associated with increased pleural fibrinolysis. Am J Respir Crit Care Med. 1995;151:785 -90.\n75. Karandashova S, Florova G, Azghani AO, et al. Intrapleural adenoviral delivery of human plasminogen activator inhibitor -1 exacerbates tetracycline-induced pleural injury in rabbits. Am J Respir Cell Mol Biol. 2013; 48:44 -52.\n76. Tucker TA, Ann Jeffers A, Alvarez A, et al. Plasminogen activator inhibitor-1 deficiency augments visceral mesothelial organization, intrapleural coagulation, and lung restriction in mice with carbon black/bleomycin -induced pleural injury. Am J Respir Cell Mol Biol. 2014;50:316 -27.\n77. Agrenius V, Chmielewska J, Widström O, et al. Pleural fibrinolytic activity is decreased in inflammation as demonstrated in quinacrine pleurodesis treatment of malignant pleural effusion. Am Rev Respir Dis. 1989;140:1381 -5.\n78. Levi M, van der Poll T. Inflammation and coagulation. Critical Care Med. 2010;38:26 -34.\n79. Rodriguez-Panadero F, Segado A, Torres I, et al. Thoracoscopy and talc poudrage induce an activation of the systemic coagulation system. Am J Respir Crit Care Med. 1995;151:A357.\n80. Montes-Worboys A, Rodriguez-Portal JA, Arellano-Orden E, et al. Interleukin8 activates coagulation and correlates with survival after talc pleurodesis. Eur Res J. 2010;35:160 -6.\n81. Kisseleva T, Brenner DA. Mechanisms of fibrogenesis. Exp Biol Med. 2008; 233:109 -22.\n82. Karsdal MA, Manon-Jensen T, Genovese F, et al. Novel insights into the function and dynamics of extracellular matrix in liver fibrosis. Am J Physiol Gastrointest Liver Physiol. 2015;308:G807 -30.\n83. Hurewitz AN, Lidonicci K, Wu CL, et al. Histologic changes of doxycycline pleurodesis in rabbits. Effect of concentration and pH. Chest. 1994;106:1241 -5.\n84. Ross R, Raines EW, Bowen-Pope DF. The biology of platelet-derived growth factor. Cell. 1986;46:155 -69.\n85. Ikeda U, Ikeda M, Oohara T, et al. Interleukin 6 stimulates growth of vascular smooth muscle cells in a PDGF-dependent manner. Am J Phys. 1991;260: H1713 -7.\n86. Pierce GF, Mustoe TA, Altrock BW, et al. Role of platelet-derived growth factor in wound healing. J Cell Biochem. 1991;45:319 -26.\n87. Qu Z, Huang X, Ahmadi P, et al. Synthesis of basic fibroblast growth factor by murine mast cells. Regulation by transforming growth factor beta, tumor necrosis factor alpha, and stem cell factor. Int Arch Allergy Immunol. 1998; 115:47 -54.\n88. Zhu ZX, Sun CC, Ting Zhu Y, et al. Hedgehog signaling contributes to basic fibroblast growth factor-regulated fibroblast migration. Exp Cell Res. 2017; 355:83 -94.\n89. Nakamura T. Hepatocyte growth factor as mitogen, motogen and morphogen, and its roles in organ regeneration. Princess Takamatsu Symp. 1994;24:195 -213.\n90. Mutsaers SE, Kalomenidis I, Wilson NA, et al. Growth factors in pleural fibrosis. Curr Opin Pulm Med. 2006;12:251 -8.\n91. Gong R, Rifai A, Tolbert EM, et al. Hepatocyte growth factor ameliorates renal interstitial inflammation in rat remnant kidney by modulating tubular expression of macrophage chemoattractant protein-1 and RANTES. J Am Soc Nephrol. 2004;15:2868 -81.\n92. Enriquez-Cortina C, Almonte-Becerril M, Clavijo-Cornejo D, et al. Hepatocyte growth factor protects against isoniazid/rifampicin-induced oxidative liver damage. Toxicol Sci. 2013;135:26 -36.\n93. Hattori N, Mizuno S, Yoshida Y, et al. The plasminogen activation system reduces fibrosis in the lung by a hepatocyte growth factor -dependent mechanism. Am J Pathol. 2004;164:1091 -8.\n94. Suzuki Y, Sakai K, Ueki J, et al. Inhibition of met/HGF receptor and angiogenesis by NK4 leads to suppression of tumor growth and migration in malignant pleural mesothelioma. Int J Cancer. 2010;127: 1948 -57.\n95. Fingleton B. Matrix metalloproteinases as regulators of inflammatory processes. Biochim Biophys Acta. 1864;2017:2036 -42.\n96. Mittal R, Patel AP, Debs LH, et al. Intricate functions of matrix Metalloproteinases in physiological and pathological conditions. J Cell Physiol. 2016;231:2599 -621.\n97. Eickelberg O, Sommerfeld CO, Wyser C, et al. MMP and TIMP expression pattern in pleural effusions of different origins. Am J Respir Crit Care Med. 1997;156:1987 -92.\n98. Teixeira LR, Dias MB, Sales RK, et al. Profile of metalloproteinases and their association with inflammatory markers in pleural effusions. Lung. 2016;194:1021 -7.\n99. D ' agostino P, Rao Camemi A, Caruso R, et al. Matrix metalloproteinases production in malignant pleural effusions after talc pleurodesis. Clin Exp Immunol. 2003;134:138 -42.\n100. Hurewitz AN, Wu CL, Mancuso P, et al. Tetracycline and doxycycline inhibit pleural fluid metalloproteinases. A possible mechanism for chemical pleurodesis. Chest. 1993;103:1113 -7.\n101. Nieman GF, Zerler BR. A role for the anti-inflammatory properties of tetracyclines in the prevention of acute lung injury. Curr Med Chem. 2001;8: 317 -25.\n102. Macaulay VM, O'Byrne KJ, Saunders MP, et al. Phase I study of intrapleural batimastat (BB-94), a matrix metalloproteinase inhibitor, in the treatment of malignant pleural effusions. Clin Cancer Res. 1999;5:513 -20.\n103. Santulli G. Angiogenesis: insights from a systematic overview. New York: Nova Science; 2013.\n104. Felbor U, Dreier L, Rebecca Bryant RA, et al. Secreted cathepsin L generates endostatin from collagen XVIII. EMBO J. 2000;19:1187 -94.\n105. Shichiri M, Hirata Y. Antiangiogenesis signals by endostatin. FASEB J. 2001; 15:1044 -53.\n106. Nasreen N, Mohammed KA, Brown S, et al. Talc mediates angiostasis in malignant pleural effusions via endostatin induction. Eur Respir J. 2007;29: 761 -9.\n107. Montes JF, Garcia-Valero J, Ferrer J. Evidence of innervation in talc-induced pleural adhesions. Chest. 2006;130:702 -9.\n108. Bradshaw M, Mansfield A, Peikert T. The role of vascular endothelial growth factor in the pathogenesis, diagnosis and treatment of malignant pleural effusion. Curr Oncol Rep. 2013;15:207 -16.\n109. Papaioannou AI, Kostikas K, Tsopa P, et al. Residual pleural thickening is related to vascular endothelial growth factor levels in parapneumonic pleural effusions. Respiration. 2010;80:472 -9.\n110. Zhu D, Xu X, Zheng Z, et al. Regulation of vascular endothelial growth factor and pigment epithelium-derived factor in rat retinal explants under retinal acidification. Eye (Lond). 2009;23:2105 -11.\n111. Gary Lee YC, Melkerneker D, Thompson PJ, et al. Transforming growth factor beta induces vascular endothelial growth factor elaboration from pleural mesothelial cells in vivo and in vitro. Am J Respir Crit Care Med. 2002;165:88 -94.\n112. Strizzi L, Vianale G, Catalano A, et al. Basic fibroblast growth factor in mesothelioma pleural effusions: correlation with patient survival and angiogenesis. Int J Oncol. 2001;18:1093 -8.\n113. Dvorak Heart failure (HF), Brown LF, Detmar M, et al. Vascular permeability factor/vascular endothelial growth factor, microvascular hyperpermeability, and angiogenesis. Am J Pathol. 1995;146:1029 -39.\n114. Yano S, Herbst RS, Shinohara H, et al. Treatment for malignant pleural effusion of human lung adenocarcinoma by inhibition of vascular endothelial growth factor receptor tyrosine kinase phosphorylation. Clin Cancer Res. 2000;6:957 -65.\n115. Ribeiro SC, Vargas FS, Antonangelo L, et al. Monoclonal anti-vascular endothelial growth factor antibody reduces fluid volume in an experimental model of inflammatory pleural effusion. Respirology. 2009;14:1188 -93.\n116. Teixeira LR, Vargas FS, Acencio MM, et al. Blockage of vascular endothelial growth factor (VEGF) reduces experimental pleurodesis. Lung Cancer. 2011; 74:392 -5.\n117. Guo YB, Kalomenidis I, Hawthorne M, et al. Pleurodesis is inhibited by antivascular endothelial growth factor antibody. Chest. 2005;128:1790 -7.\n118. Wojtukiewicz MZ, Sierko E. Leczenie celowane u chorych na raka jelita grubego. Onkologia w Praktyce Klinicznej. 2007;3:286 -97.\n119. Kalomenidis I, Kollintza A, Sigala I, et al. Angiopoietin-2 levels are elevated in exudative pleural effusions. Chest. 2006;129:1259 -66.\n120. Bouten PJ, Zonjee M, Bender J, et al. The chemistry of tissue adhesive materials. Prog Polym Sci. 2014;39:1375 -405.\n121. Cetin B, Atalay C, Arzu Koçkaya E, et al. The efficacy of fibrin tissue adhesives in pleurodesis in rats. Exp Lung Res. 2005;31:713 -8.\n122. Marchi E, de Carvalho MV, Ventureli TR. Abrasion plus local fibrin sealant instillation produces pleurodesis similar to pleurectomy in rabbits. Chest. 2016;150:673 -9.\n123. Nishino T, Takizawa H, Nishioka K. Malignant pleural mesothelioma presenting refractory pneumothorax successfully treated by intrapleural administration of diluted fibrin glue; Report of a case. Kyobu Geka. 2017, 70: 393 -396. Abstract.\n124. Oishi H, Hoshikawa Y, Sado T, et al. A case of successful therapy by intrapleural injection of fibrin glue for chylothorax after lung transplantation for lymphangioleiomyomatosis. Ann Thorac Cardiovasc Surg. 2017;23:40 -4.\n125. Yazicioglu A, Demirag F, Alici IO, et al. Can sericin prove useful as a pleurodesis agent or tissue glue? Thorac Cardiovasc Surg. 2016;65:367 -74.\n126. Yano S, Herbst RS, Shinohara H, et al. Treatment for malignant pleural effusion of human lung adenocarcinoma by inhibition of vascular endothelial growth factor receptor tyrosine kinase phosphorylation. Clin Cancer Res. 2000;6:957 -65.\n127. Nasreen N, Mohammed KA, Galffy G, et al. MCP-1 in pleural injury: CCR2 mediates haptotaxis of pleural mesothelial cells. Am J Physiol Lung Cell Mol Physiol. 2000;278:591 -8.\n128. Thomas R, Cheah HM, Creaney J, et al. Longitudinal measurement of pleural fluid biochemistry and cytokines in malignant pleural effusions. Chest. 2016; 149:1494 -500.\n129. Lansley SM, Cheah HM, Gary Lee YC. Role of MCP-1 in pleural effusion development in a carrageenan-induced murine model of pleurisy. Respirology. 2017;22:758 -63.\n130. Lansley SM, Cheah HM, Varano Della Vergiliana JF, et al. Tissue plasminogen activator potently stimulates pleural effusion via a monocyte chemotacticprotein-1-dependent mechanism. Am J Respir Cell Mol Biol. 2015;53:105 -12.\n131. Pichelmayer O, Gruenberger B, Zielinski C, et al. Bevacizumab is active in malignant effusion. Ann Oncol. 2006;17:1853.\n132. Wahidi MM, Reddy C, Yarmus L, et al. Randomized trial of pleural fluid drainage frequency in patients with malignant pleural effusions. The ASAP trial. Am J Respir Crit Care Med. 2017;195:1050 -7.\n133. Muruganandan S, Azzopardi M, Fitzgerald DB, et al. Aggressive versus symptom-guided drainage of malignant pleural effusion via indwelling pleural catheters (AMPLE-2): an open-label randomised trial. Lancet Respir Med. 2018;6:671 -80.\n134. Raman T, Meena N. A single institution experience for the management of recurrent pleural effusions with tunneled pleural catheter and its evolution. Ther Adv Respir Dis. 2017;11:343 -52.\n135. Thomas R, Fysh ETH, Smith NA, et al. Effect of an indwelling pleural catheter vs talc pleurodesis on hospitalization days in patients with malignant pleural effusion: the AMPLE randomized clinical trial. JAMA. 2017;318:1903 -12.\n136. Olfert JA, Penz ED, Manns BJ, et al. Cost-effectiveness of indwelling pleural catheter compared with talc in malignant pleural effusion. Respirology. 2017;22:764 -70.\n137. Bhatnagar R, Zahan-Evans N, Kearney C, et al. A novel drug-eluting indwelling pleural catheter for the management of malignant effusions. Am J Respir Crit Care Med. 2018;197:136 -8.\n138. Tremblay A, Kearney CT, Hanks C, et al. Local and systemic effects of a silver nitrate coated indwelling pleural catheter in an animal model of pleurodesis. Exp Lung Res. 2017;43:388 -94.\n139. ClinicalTrials.gov Identifier: NCT02649894.\n140. Han HS, Eom DW, Kim JH, et al. EGFR mutation status in primary lung adenocarcinomas and corresponding metastatic lesions: discordance in pleural metastasis. Clin Lung Cancer. 2011;12:380 -6.\n141. Agalioti T, Giannou AD, Stathopoulos GT. Pleural involvement in lung cancer. J Thorac Dis. 2015;7:1021 -30.\n142. Gow CH, Chang YL, Hsu YC, et al. Comparison of epidermal growth factor receptor mutations between primary and corresponding metastatic tumors in tyrosine kinase inhibitor-naive non-small-cell lung cancer. Ann Oncol. 2009;20:696 -702.\n143. Spella M, Giannou AD, Stathopoulos GT. Switching off malignant pleural effusion formation-fantasy or future? Thorac Dis. 2015;7:1009 -20.\n144. Wei H, Du F, Lu Y, et al. Successful ceritinib treatment in a man with MPE and an ALK fusion gene mutation after multiple treatments. Springerplus. 2016;5:2083.\n145. Sun JM, Choi YL, Won JK, et al. A dramatic response to crizotinib in a nonsmall-cell lung cancer patient with IHC-positive and FISH-negative ALK. J Thorac Oncol. 2012;7:36 -8.\n146. Lansley SM, Varano Della Vergiliana JF, Cleaver AL, et al. A commercially available preparation of Staphylococcus aureus bio-products potently inhibits tumour growth in a murine model of mesothelioma. Respirology. 2014;19:1025 -33.\n147. Ren S, Terman DS, Bohach G, et al. Intrapleural staphylococcal superantigen induces resolution of malignant pleural effusions and a survival benefit in non-small cell lung cancer. Chest. 2004;126:1529 -39.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Publisher ' s Note",
+      "content": "Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    }
+  ],
+  "figures": [
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/49'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/84'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/120'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/162'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    }
+  ],
+  "extracted_drugs": [],
+  "clinical_trials": [
+    "NCT02649894"
+  ],
+  "references": [
+    {
+      "title": "Pleural effusions",
+      "year": 2011
+    },
+    {
+      "title": "Med Clin North Am",
+      "year": 2011
+    },
+    {
+      "title": "Management of malignant pleural effusion: challenges and solutions",
+      "year": 2011
+    },
+    {
+      "title": "Cancer Manag Res",
+      "year": 2017
+    },
+    {
+      "title": "Malignant pleural effusion, current and evolving approaches for its diagnosis and management",
+      "year": 2017
+    },
+    {
+      "title": "Lung Cancer",
+      "year": 2017
+    },
+    {
+      "title": "Future directions",
+      "year": 2006
+    },
+    {
+      "title": "Textbook of pleural diseases"
+    },
+    {
+      "title": "BTS guidelines for the management of malignant pleural effusions",
+      "year": 2003
+    },
+    {
+      "title": "Thorax",
+      "year": 2003
+    },
+    {
+      "title": "Predicting survival in malignant pleural effusion: development and validation of the LENT prognostic score",
+      "year": 2003
+    },
+    {
+      "title": "Development and validation of response markers to predict survival and pleurodesis success in patients with malignant pleural effusion (PROMISE): a multicohort analysis",
+      "year": 2014
+    },
+    {
+      "title": "The Lancet Oncology",
+      "year": 2018
+    },
+    {
+      "title": "Management of a malignant pleural effusion: British Thoracic Society pleural disease guideline 2010",
+      "year": 2018
+    },
+    {
+      "title": "What is the best treatment for malignant pleural effusions?",
+      "year": 2010
+    },
+    {
+      "title": "Interact Cardiovasc Thorac Surg",
+      "year": 2011
+    },
+    {
+      "title": "Talk pleurodesis for the treatment of pneumothorax and pleural effusion",
+      "year": 2011
+    },
+    {
+      "title": "Chest",
+      "year": 1994
+    },
+    {
+      "title": "Intrapleural therapy",
+      "year": 1994
+    },
+    {
+      "title": "Respirology",
+      "year": 2011
+    },
+    {
+      "title": "Pleuroperitoneal shunt for chylothorax and chylopericardium in lung cancer: a case report",
+      "year": 2011
+    },
+    {
+      "title": "Ann Thorac Cardiovasc Surg",
+      "year": 2011
+    },
+    {
+      "title": "Pleurovenous shunting in the treatment of nonmalignant pleural effusion",
+      "year": 2011
+    },
+    {
+      "title": "Ann Thorac Surg",
+      "year": 2003
+    },
+    {
+      "title": "Effective treatment of malignant pleural effusion by minimal invasive thoracic surgery: thoracoscopic talc pleurodesis and pleuroperitoneal shunts in 101 patients",
+      "year": 2003
+    },
+    {
+      "title": "Thorac Surg",
+      "year": 2011
+    },
+    {
+      "title": "Management of recurrent malignant pleural effusions with a chronic indwelling pleural catheter",
+      "year": 2001
+    },
+    {
+      "title": "Management of malignant pleural effusion associated with trapped lung syndrome",
+      "year": 2005
+    },
+    {
+      "title": "Asian Cardiovasc Thorac Ann",
+      "year": 2008
+    },
+    {
+      "title": "Pleural controversies: indwelling pleural catheter vs. pleurodesis for malignant pleural effusions",
+      "year": 2008
+    },
+    {
+      "title": "J Thorac Dis",
+      "year": 2015
+    },
+    {
+      "title": "Trends in the incidence and recurrence of inpatient-treated spontaneous pneumothorax, 1968-2016",
+      "year": 2015
+    },
+    {
+      "title": "JAMA",
+      "year": 2018
+    },
+    {
+      "title": "Smoking and the increased risk of contracting spontaneous pneumothorax",
+      "year": 2018
+    },
+    {
+      "title": "Epidemiology of pneumothorax in England",
+      "year": 1987
+    },
+    {
+      "title": "Epidemiology of spontaneous pneumothorax: gender related differences",
+      "year": 2000
+    },
+    {
+      "title": "Videothoracoscopic treatment of primary spontaneous pneumothorax: a 6-year experience",
+      "year": 2015
+    },
+    {
+      "title": "Video-assisted thoracoscopic surgery management of spontaneous pneumothoraxlong-term results",
+      "year": 2000
+    },
+    {
+      "title": "Eur J Cardiothorac Surg",
+      "year": 2011
+    },
+    {
+      "title": "Zur chirurgie des pneumothorax",
+      "year": 2011
+    },
+    {
+      "title": "Beitr Klin Chir",
+      "year": 2011
+    },
+    {
+      "title": "The production of pleural adhesions by kaolin injection",
+      "year": 1906
+    },
+    {
+      "title": "Pleural poudrage: new technique for the deliberate production of pleural adhesion as preliminary to lobectomy",
+      "year": 1954
+    },
+    {
+      "title": "J Thorac Surg",
+      "year": 1954
+    },
+    {
+      "title": "Palliative treatment of neoplastic pleural effusion with intercostal intubation and talc instillation",
+      "year": 1935
+    },
+    {
+      "title": "West J Surg",
+      "year": 1935
+    },
+    {
+      "title": "Inflammation and clinical repercussions of pleurodesis induced by intrapleural talc administration",
+      "year": 1958
+    },
+    {
+      "title": "Clinics",
+      "year": 2007
+    },
+    {
+      "title": "The surgical treatment of recurrent idiopathic spontaneous pneumothorax",
+      "year": 2007
+    },
+    {
+      "title": "Silver nitrate versus tetracycline in pleurodesis for malignant pleural effusions; a prospective randomized trial",
+      "year": 1941
+    },
+    {
+      "title": "Adv Biomed Res",
+      "year": 2015
+    },
+    {
+      "title": "Efficacy and safety of erythromycin as sclerosing agent in patients with recurrent malignant pleural effusion",
+      "year": 2015
+    },
+    {
+      "title": "Am J Clin Oncol",
+      "year": 2008
+    },
+    {
+      "title": "Intrapleural minocycline pleurodesis for the treatment of primary spontaneous pneumothorax",
+      "year": 2008
+    },
+    {
+      "title": "Curr Opin Pulm Med",
+      "year": 2014
+    },
+    {
+      "title": "Pleurodesis with doxycycline or Corynebacterium parvum in malignant pleural effusion",
+      "year": 2014
+    },
+    {
+      "title": "Acta Oncol",
+      "year": 1995
+    },
+    {
+      "title": "Is silver nitrate an effective means of pleurodesis?",
+      "year": 1995
+    },
+    {
+      "title": "Efficacy of iodopovidone pleurodesis and comparison of small-bore catheter versus large-bore chest tube",
+      "year": 2015
+    },
+    {
+      "title": "Ann Surg Oncol",
+      "year": 2008
+    },
+    {
+      "title": "Comparison of OK-432 and mitomycin C pleurodesis for malignant pleural effusion caused by lung cancer. A randomized trial",
+      "year": 2008
+    },
+    {
+      "title": "Cancer",
+      "year": 2017
+    },
+    {
+      "title": "Optimal therapy of malignant pleural effusions",
+      "year": 1992
+    },
+    {
+      "title": "Int J Oncol",
+      "year": 1996
+    },
+    {
+      "title": "Comparison of nitrogen mustard, cytarabine and dacarbazine as pleural sclerosing agents in rabbits",
+      "year": 1996
+    },
+    {
+      "title": "Eur Respir J",
+      "year": 1997
+    },
+    {
+      "title": "Efficacious pleurodesis with OK-432 and doxorubicin against malignant pleural effusions",
+      "year": 1997
+    },
+    {
+      "title": "A case report and description of the pharmacokinetic behavior of intrapleurally instilled etoposide",
+      "year": 2004
+    },
+    {
+      "title": "Cancer Chemother Pharmacol",
+      "year": 1985
+    },
+    {
+      "title": "Results of chemical pleurodesis with mitoxantrone in malignant pleural effusion from breast cancer",
+      "year": 1985
+    },
+    {
+      "title": "World J Surg Oncol",
+      "year": 2004
+    },
+    {
+      "title": "Intrapleural mechlorethamine hydrochloride therapy for malignant pleural effusion",
+      "year": 2004
+    },
+    {
+      "title": "Experiences with radioactive colloidal gold in the treatment of pleural effusion caused by metastatic cancer of the breast",
+      "year": 1964
+    },
+    {
+      "title": "New Engl J Med",
+      "year": 1964
+    },
+    {
+      "title": "Treatment of neoplastic pleural effusions with local instillations of quinacrine (mepacrine) hydrochloride",
+      "year": 1964
+    },
+    {
+      "title": "A single intrapleural injection of transforming growth factor beta-2 produces an excellent pleurodesis in rabbits",
+      "year": 1970
+    },
+    {
+      "title": "Am J Respir Crit Care Med",
+      "year": 2000
+    },
+    {
+      "title": "Efficacy and safety profile of autologous blood versus tetracycline pleurodesis for malignant pleural effusion",
+      "year": 2000
+    },
+    {
+      "title": "Ther Adv Respir Dis",
+      "year": 2015
+    },
+    {
+      "title": "Use of lipoteichoic acid-T for pleurodesis in malignant pleural effusion: a phase I toxicity and doseescalation study",
+      "year": 2015
+    },
+    {
+      "title": "Lancet Oncol",
+      "year": 2018
+    },
+    {
+      "title": "Intrapleural Corynebacterium parvum for malignant pleural effusions",
+      "year": 2008
+    },
+    {
+      "title": "Talc pleurodesis: basic fibroblast growth factor mediates pleural fibrosis",
+      "year": 1983
+    },
+    {
+      "title": "Mechanisms of pleurodesis",
+      "year": 2004
+    },
+    {
+      "title": "Respiration",
+      "year": 2004
+    }
+  ],
+  "quality": {
+    "completeness_score": 61,
+    "has_abstract": true,
+    "abstract_source": "metadata",
+    "has_doi": true,
+    "has_full_text": true,
+    "num_sections": 22,
+    "num_tables": 0,
+    "num_figures": 9,
+    "num_references": 85
+  }
+}

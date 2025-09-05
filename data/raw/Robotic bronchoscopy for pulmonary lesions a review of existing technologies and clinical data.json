@@ -1,0 +1,427 @@
+{
+  "metadata": {
+    "document_id": "10_21037_jtd_2020_03_35",
+    "title": "Robotic bronchoscopy for pulmonary lesions: a review of existing technologies and clinical data",
+    "authors": [
+      "Abhinav Agrawal",
+      "D. Kyle Hogarth",
+      "Septimiu Murgu"
+    ],
+    "year": 2020,
+    "journal": "Journal of Thoracic Disease",
+    "doi": "10.21037/jtd.2020.03.35",
+    "volume": "12",
+    "issue": "6",
+    "pages": "3279-3286",
+    "citation": "Agrawal, A.; Hogarth, D.; Murgu, S. (2020). Robotic bronchoscopy for pulmonary lesions: a review of existing technologies and clinical data. Journal of Thoracic Disease, 12(6), 3279-3286. https://doi.org/10.21037/jtd.2020.03.35",
+    "abstract": "Bronchoscopic interventions are preferred for sampling suspicious pulmonary lesions as they have lower complications and can achieve diagnosis and staging in one single procedure. Limitations in existing guided bronchoscopy platforms has led to developments in robotic assisted technologies. These devices may allow the bronchoscopist to more precisely maneuver the scope and instruments into the periphery of the lungs under direct visualization while also ensuring stability during sampling of the target lesions. These devices have the potential to improve the diagnostic yield in sampling peripheral lung lesions and may play a role in the treatment of non-operable or oligometastatic peripheral tumors using bronchoscopic ablative therapies. In this article, we review the existing robotic bronchoscopy technologies and summarize the available pre-clinical and clinical data supporting their use.",
+    "abstract_source": "metadata",
+    "url": "http://jtd.amegroups.com/article/view/37666/html"
+  },
+  "source_file": "Robotic bronchoscopy for pulmonary lesions a review of existing technologies and clinical data.json",
+  "sections": [
+    {
+      "title": "Introduction",
+      "content": "The detection of lung nodules has increased in the last decade owing to the increasing use of computed tomography (CT) and institution of the lung cancer screening programs. An estimated 1.6 million new pulmonary nodules are predicted to be detected every year in the USA (1). These statistics present a new challenge for physicians caring for these patients. The National Lung Screening and NELSON trials both showed that a significant number of patients had a positive screen, and majority of these nodules (~80%) were located in the periphery of the lung (2-4). The American College of Chest Physicians and National Comprehensive Cancer Network guidelines recommend diagnosis of the primary lesion, staging and obtaining tissue for genomic alterations and PD-L1 status using the least invasive modality and ideally in a single procedure (5,6). In\nmany patients, therefore, an initial bronchoscopic approach facilitates both biopsies of the primary lesion as well as mediastinal staging prior to curative-intent therapy.",
+      "category": "introduction",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Rationale for developing new bronchoscopy platforms for peripheral lung lesions",
+      "content": "The need to safely and effectively sample lung lesions, has led to the development of virtual bronchoscopy (VB), radial endobronchial ultrasound (r-Endobronchial ultrasound (EBUS)) and electromagnetic navigation (EMN). The diagnostic yield of bronchoscopy using EMN ranges from 67-84%, with one study showing a diagnostic yield of 73% after one year of follow up (7). Regardless of the guided bronchoscopy platform, the diagnostic yield of bronchoscopy for lung lesions has generally remained lower than that of image guided transthoracic needle aspiration (92.1%) (8).",
+      "category": "introduction",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Abhinav Agrawal, D. Kyle Hogarth, Septimiu Murgu",
+      "content": "Interventional Pulmonology, Section of Pulmonary & Critical Care Medicine, University of Chicago Medicine, Chicago, IL, USA Contributions: (I)  Conception and design: All authors; (II) Administrative support: All authors; (III) Provision of study materials or patients: All authors; (IV) Collection and assembly of data: A Agrawal; (V) Data analysis and interpretation: A Agrawal; (VI) Manuscript writing: All authors; (VII) Final approval of manuscript: All authors.\nCorrespondence to: Septimiu Murgu, MD, FCCP, DAABIP. Professor of Medicine, Interventional Pulmonology Fellowship Program Director, Co-Director of Bronchoscopy, Section of Pulmonary & Critical Care, Department of Medicine, The University of Chicago Medicine, Chicago, IL, USA. Email: smurgu@medicine.bsd.uchicago.edu.\nAbstract: Bronchoscopic interventions are preferred for sampling suspicious pulmonary lesions as they have lower complications and can achieve diagnosis and staging in one single procedure. Limitations in existing guided bronchoscopy platforms has led to developments in robotic assisted technologies. These devices may allow the bronchoscopist to more precisely maneuver the scope and instruments into the periphery of the lungs under direct visualization while also ensuring stability during sampling of the target lesions. These devices have the potential to improve the diagnostic yield in sampling peripheral lung lesions and may play a role in the treatment of non-operable or oligometastatic peripheral tumors using bronchoscopic ablative therapies. In this article, we review the existing robotic bronchoscopy technologies and summarize the available pre-clinical and clinical data supporting their use.\nKeywords: Robotic bronchoscopy; peripheral lung lesion; lung cancer; biopsy; navigational bronchoscopy\nThe lower  diagnostic  yield  with  conventional bronchoscopy could be explained by 'getting lost' in the peripheral airways (4). EMN was thus introduced to guide navigation to these peripheral pulmonary lesions (PPLs) but lacked direct visualization of the airways. The use of EMN has been combined with r-Endobronchial ultrasound (EBUS) to increase diagnostic yield but continues to be limited by respiratory motion and CT-to-body divergence. These limitations in guided bronchoscopy led to the introduction of the robotic assisted bronchoscopy (RAB) systems that allows the operator to navigate through smaller airways under direct visualization while continuing to offer either EMN guidance  (Monarch TM platform by Auris Health Inc.) or Shape Sensing Technology (Ion TM Endoluminal System by Intuitive Surgical) to find target airways and provide stability during sampling of the target lesion.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Robotic bronchoscopy: a historical perspective",
+      "content": "The first 'robot surgeon' used on human patient was the PUMA 560 robotic system introduced in 1985 to perform CT guided neurosurgical biopsies (9). In the 1990's, the AESOP (Automated Endoscopic System for Optimal Positioning) robotic platform became the first system approved by the FDA for its use during endoscopic surgical procedures. In 2000, the Da Vinci Surgery System was approved by the FDA for general laparoscopic surgery (10). Since then, the use robotics has expanded from the field of general surgery, to gynecologic surgery and urological surgery as well as cardiac and thoracic surgery and has become an integral part of surgical procedures in the United States. The first robotic system to be introduced in the field of bronchoscopy was the Monarch TM platform by Auris Health and received FDA approval in March 2018. Subsequently another robotic bronchoscopy platform, Ion TM Endoluminal System developed by Intuitive Surgical received FDA approval in February 2019. The introduction of robotic bronchoscopy to the field of Interventional Pulmonology has been a source of great excitement in the era of lung cancer screening.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Monarch system: summary of evidence from cadaver and patient studies",
+      "content": "The Monarch TM platform by Auris Health includes an outer sheath and an inner bronchoscope with a 4-way steering control, electromagnetic navigation guidance and continuous peripheral visualization during navigation as\nwell as biopsy ( Figure 1 ). The first study of the Monarch TM platform was performed on cadavers to assess the reach of the RAB platform compared to a conventional thin bronchoscope with a similar outer diameter (4.2 mm). A guidewire was inserted into each segmental bronchi till  it  reached  the  pleura as noted on fluoroscopy. The conventional thin bronchoscope was then advanced over the guidewire as far as possible. The bronchoscope was then removed and the Monarch TM RAB system was advanced over the guidewire to its maximum extent. In each of the segments, the Monarch TM RAB platform had farther access to the periphery of the lung compared to the bronchoscope (9 th vs. 6 th airway generations). This was likely due to the structural support provided by the RAB system while the inner scope was advanced. In comparison, the conventional bronchoscope was noted to prolapse in the trachea when trying to be advanced to the apical segments. Another reason was likely the ability of the RAB system to negotiate subtle turns and bifurcations in the distal airways allowing for further maneuverability (11).\nRojas-Solano et al performed the first feasibility study using the Monarch TM RAB platform in 15 patients with suspicious central lesions or peripheral lesions with a bronchus sign. The average lesion size was noted to be 26 mm (10-63 mm) with 12 patients with peripheral lesions and 3 patients with a central lesion. R-Endobronchial ultrasound (EBUS) was not used to assist sampling. Samples were obtained in 14/15 (93%) patients and none of the patients had a pneumothorax or significant bleeding as a complication (12).\nThe recent ACCESS trial studied the Monarch TM Auris RAB platform in 8 cadavers with artificial tumor targets created using the aqueous solution of a mixture of agar, gelatin, iodinated contrast and colored mica powder which were injected transthoracically into the lung parenchyma using fluoroscopic guidance. The mean nodule size was 20.4  mm (9.6-28.3 mm) with 45/67 (68%) nodules measuring 10-20 mm in diameter. The overall diagnosed yield was noted to be 94% (63/67) using transbronchial needle aspiration (TBNA) which was increased to 97% (65/67) by the use of transbronchial forceps (TBBX) (13). It was interesting to note that the yield for lesions with eccentric ultrasound (r-Endobronchial ultrasound (EBUS)) view in this study was 97% (47/48) which is significantly higher than that is previously published in literature (30-40%) (14). This improvement may be explained by the fact that the RAB systems provide the ability to maneuver and control the distal end of the scope and provide the ability to aim biopsy instruments with greater precision through a uniquely designed catheter and\nscope that provides multiple active articulation points (15).\nA recent retrospective post-marketing multicenter study using the Monarch TM Auris robotic platform in 165 patients with 167 lesions showed successful navigation (acquisition of a r-Endobronchial ultrasound (EBUS) view or diagnostic tissue on pathology) to 88.6% of the lung nodules (70.7% were located in the outer third of the lung) (16). The average lesion size was 25 mm (±15 mm) with 71% of the nodules under 30 mm and 63.5% of the lesions had a bronchus sign. The conservative diagnostic yield was 69.1% (patients with presence of inflammation on biopsy without any follow-up excluded) with a maximum diagnostic yield estimated to be 77%. Consistent with the results of the ACCESS trial, the diagnostic yield even with an eccentric view on r-Endobronchial ultrasound (EBUS) was noted to be 71.1%, which is significantly higher than that previously described in the literature reporting on the various r-Endobronchial ultrasound (EBUS) image patterns and diagnostic yields (14,17). The diagnostic yield of 54% was noted in the absence of the bronchus sign, which is also\nhigher than the previously reported yield of 31-44% (18,19) but lower than that of the NAVIGATE study (7). A 3.6% rate of pneumothorax and 2.4% risk bleeding rate were comparable to other guided bronchoscopy studies. A major limitation of the retrospective series was that follow-up was only available for 6 months as compared to a 12-month follow up noted in major prospective trials.\nA prospective single-arm multicenter post-marketing study  called  BENEFIT  is  currently  assessing  the performance of the Monarch TM Auris RAB platform in human subjects of biopsying peripheral lung lesions (https://clinicaltrials.gov/ct2/show/NCT03727425). The primary outcome measures include successful navigation to target pulmonary lesions and to assess device and procedure related adverse events. The preliminary results from this study were recently presented at the American College of Chest Physicians annual meeting and showed lesion localization in 96% cases in 56 patients enrolled in the\nstudy. Pneumothorax occurred in 2 patients (3.6%) with 1 patient (1.8%) requiring a chest tube (20).\nA  multicenter  prospective  post  marketing  study (TARGET) is currently enrolling patients and aims to enroll 1,200 patients across 30 sites undergoing robotic assisted  transbronchial lung biopsy over a period of 4 years.  The primary endpoint includes device or procedure related complications, with secondary endpoints assessing the diagnostic yield with the patients being followed up to 24 months post-procedure (https://clinicaltrials.gov/ct2/ show/NCT04182815).",
+      "category": "abstract",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Ion system: summary of evidence from cadaver and patient studies",
+      "content": "The Ion TM Endoluminal System by Intuitive Surgical includes an articulating, flexible catheter with shape sensing technology, which provides positional and shape feedback along with a video probe for live visualization while driving the catheter ( Figure 2 ).\nFielding et al recently published the first human study using the Ion TM Endoluminal System by Intuitive that included 29 patients with the mean lesion size of 12.2 mm (±4.2) in the axial plane with majority (68.9%) of the lesions\nbeing located in the upper lobes. Only 17 patients (58.6%) had a bronchus sign visible on CT with approximately half the cases having an eccentric r-Endobronchial ultrasound (EBUS) view. The primary end point of reaching the target and obtaining samples was achieved in 28/29 (96.6%) of the cases. The overall diagnostic yield was 79.3% with a diagnostic yield for malignancy of 88% (21). The high yield, especially for cases with an eccentric r-Endobronchial ultrasound (EBUS) view was attributed to the ability to visualize peripheral airways and the ability to deploy the TBNA needle perpendicular to the airway/bronchus, towards the lesion.\nThe cadaver-based Precision-1 study compared the ultra-thin bronchoscope using radial Endobronchial ultrasound (EBUS) (UTB-rEBUS), EMN and RAB platforms (Ion TM Endoluminal System by Intuitive) in localizing and puncturing of artificially implanted small (<2 cm) peripheral nodules in cadavers. Majority (80%) of the nodules were placed in the periphery with the mean size of 16.5 mm (±1.5 mm) and 50% of the nodules had a positive bronchus sign. Nodule localization was achieved in 100% cases with the RAB platform vs 85% with EMN guidance and 65% with the use of UTBrEBUS. Once the biopsy was performed using a needle, the relationship of the needle to the lesion was studied using cone beam CT. Successful puncture of the nodule (defined as the needle in the nodule or going through the nodule) was noted in 80% cases with the Ion TM RAB platform compared to 45% with EMN (P=0.022) and 25% with the use of UTB-rEBUS (P<0.001). Even in the lesions that were missed, the median needle to miss distance was noted to be 4 mm (3-5 mm) in the RAB platform compared to 7 mm (4-9 mm) with EMN guidance and 13 mm (6-28 mm) with the use of UTB-rEBUS. The authors stated that the Ion TM RAB platform increased the ability to localize and precisely puncture peripheral nodules (22). The study has several limitations. There is no evidence to suggest that implanted lesions mimic real lung tumors, therefore the generalizability of this study's findings is highly questionable. In addition, there are concerns about the validity of the EMN testing, as it appears that industry's standard operating procedures (in regards to room mapping, etc.) were not followed in this study.\nA prospective single-arm multicenter post-marketing study (PRECIsE) assessing the Ion TM RAB platform is currently in progress (https://clinicaltrials.gov/ct2/show/ NCT03893539). This study aims at enrolling 360 patients with the primary outcomes assessing navigation and biopsy success and secondary outcomes assessing the associated complications with the use of this system.",
+      "category": "abstract",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Robotic-assisted bronchoscopy platforms: differences and similarities",
+      "content": "Due to their stability, adjustable angulation and peripheral visualization, the robotic platforms have the ability to potentially overcome some limitations of the currently available guided bronchoscopy systems and increase the diagnostic yield. With one platform, there is increased structural support by the outer sheath that can be locked in the target segments (usually 3 rd or 4 th generation) before advancing the scope into the target airway. The scope itself also has an increased ability to make subtle turns due to the four way steering capability and has been proven to have a farther reach than the conventional bronchoscopy platforms in cadaver studies (11). The scope can be locked in  position,  while  the  instruments are advanced thus\nminimizing airway distortion. The platforms also allow for direct visualization of the peripheral airways, and with one system, direct visualization of the biopsy tools as they are advanced outside the working channel. This can ensure that the bronchoscopist continues to remain in the target airway and also enables the bronchoscopist to steer the tools towards the target ( Figure 1 ). This is relevant for practice as studies to date have shown that the ability to maneuver the scope and precisely guide the instruments can help increase the yield in targets with an eccentric r-Endobronchial ultrasound (EBUS) view.  The small OD of bronchoscope also helps the scope to be wedged and locked in the target segment, which can allow for tamponade and containment of the bleeding. The published evidence, system specifications, accessory tools as well as the potential advantages and disadvantages of both RAB systems currently available commercially are summarized in Table 1 .\nTable 1 ( continued )",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Robotic assisted bronchoscopy: potential future applications",
+      "content": "In addition to their potential for improving diagnostic yield when sampling peripheral lung lesions, the RAB platforms may guide ablative therapies for treating oligometastatic lesions or inoperable peripheral lung tumors. Both animal studies and case studies in humans have already demonstrated the feasibility of guided bronchoscopic ablative therapies such as photodynamic therapy (23), microwave ablation (24), radiofrequency ablation (25), laser interstitial  thermal  therapy (26), cryoablation, and bronchoscopic thermal vapor ablation. RAB platforms may increase the accuracy in guiding the catheters to peripheral lesions and provide a stable platform to deliver ablative therapies (4,27). It is possible that these interventions will be performed by combining the use of RAB platforms and direct imaging guidance such as cone-beam CT for precise application of the probes and for monitoring intra-procedural effect. The feasibility  of  combining  robotic  and  cone  beam  CT technologies in routine clinical practice remains to be determined.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Conclusions",
+      "content": "Based on the results of published evidence and our own experience, we believe that robotic bronchoscopy platforms are a step forward towards improving the diagnostic yield in sampling peripheral lung lesions. They also may have a potential role in the treatment of non-operable or oligometastatic peripheral tumors using bronchoscopic ablative therapy.",
+      "category": "conclusion",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Acknowledgments",
+      "content": "Dr. Michael A. Pritchett, DO, MPH Pinehurst Medical Clinic and FirstHealth Moore Regional Hospital, North Carolina, USA for providing the Images for the ION TM Endoluminal Robotic Bronchoscope.\nFunding: None.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Footnote",
+      "content": "Provenance and Peer Review: This article was commissioned by the Guest Editors (Fabien Maldonado and Robert Lentz) for the series 'Novel Diagnostic Techniques for Lung Cancer' published in Journal of Thoracic Disease . The article\nwas sent for external peer review organized by the Guest Editors and the editorial office.\nConflicts of Interest: All authors have completed the ICMJE uniform disclosure form (available at http://dx.doi. org/10.21037/jtd.2020.03.35). The series 'Novel Diagnostic Techniques for Lung Cancer' was commissioned by the editorial office without any funding or sponsorship. AA has no financial disclosures or conflicts of interest. DKH reports personal fees and other from Auris, personal fees from Ambu, personal fees, non-financial support and other from Body Vision, personal fees and other from Eolo, other from Eon, other from Gravitas, personal fees and other from Noah Medical, personal fees and other from LX-Medical, other from Med-Opsys, other from Monogram Orthopedics, personal fees and other from Preora, other from VIDA, other from Viomics, personal fees from Boston Scientific, personal fees from Johnson and Johnson, personal fees from oncocyte, personal fees from veracyte, personal fees and other from Broncus, grants and personal fees from Gala, personal fees from Heritage Biologics, IDbyDNA, Level-Ex, Medtronic, Neurotronic, Olympus, PulmonX, Astra-Zeneca, Biodesix, Genetech, Grifols, T akeda, CSL, and InhibRX, outside the submitted work; none of these COI have anything to do with this paper or my work on this paper. SM is an educational consultant for Olympus, Boston Scientific, Pinnacle Biologics, Cook Medical and Johnson and Johnson. He has received grants from Medtronic and Pinnacle Biologics. All of these disclosures are outside the submitted work.\nEthical Statement: The authors are accountable for all aspects of the work in ensuring that questions related to the accuracy or integrity of any part of the work are appropriately investigated and resolved.\nOpen Access Statement: This  is  an  Open  Access article distributed in accordance with the Creative Commons Attribution-NonCommercial-NoDerivs 4.0 International License (CC BY-NC-ND 4.0), which permits the noncommercial replication and distribution of the article with the strict proviso that no changes or edits are made and the original work is properly cited (including links to both the formal publication through the relevant DOI and the license). See: https://creativecommons.org/licenses/by-nc-nd/4.0/.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "References",
+      "content": "1. Gould MK, Tang T, Liu IL, et al. Recent Trends in the\nIdentification of Incidental Pulmonary Nodules. Am J Respir Crit Care Med 2015;192:1208-14.\n2. National Lung Screening Trial Research T eam, Aberle DR, Adams AM, et al. Reduced lung-cancer mortality with low-dose computed tomographic screening. N Engl J Med 2011;365:395-409.\n3. Yousaf-Khan U, van der Aalst C, de Jong PA, et al. Final screening round of the NELSON lung cancer screening trial: the effect of a 2.5-year screening interval. Thorax 2017;72:48-56.\n4. Murgu SD. Robotic assisted-bronchoscopy: technical tips and lessons learned from the initial experience with sampling peripheral lung lesions. BMC Pulm Med 2019;19:89.\n5. Gould MK, Donington J, Lynch WR, et al. Evaluation of individuals with pulmonary nodules: when is it lung cancer? Diagnosis and management of lung cancer, 3rd ed: American College of Chest Physicians evidence-based clinical practice guidelines. Chest 2013;143:e93S-e120S.\n6. Ettinger DS, Aisner DL, Wood DE, et al. NCCN Guidelines Insights: Non-Small Cell Lung Cancer, Version 5.2018. J Natl Compr Canc Netw 2018;16:807-21.\n7. Folch EE, Pritchett MA, Nead MA, et al. Electromagnetic Navigation Bronchoscopy for Peripheral Pulmonary Lesions: One-Year Results of the Prospective, Multicenter NAVIGATE Study. J Thorac Oncol 2019;14:445-58.\n8. DiBardino DM, Yarmus LB, Semaan RW. Transthoracic needle biopsy of the lung. J Thorac Dis 2015;7:S304-16.\n9. Leal Ghezzi T, Campos Corleta O. 30 Years of Robotic Surgery. World J Surg 2016;40:2550-7.\n10.  Shah J, Vyas A, Vyas D. The History of Robotics in Surgical Specialties. Am J Robot Surg 2014;1:12-20.\n11.  Chen AC, Gillespie CT. Robotic Endoscopic Airway Challenge: REACH Assessment. Ann Thorac Surg 2018;106:293-7.\n12.  Rojas-Solano JR, Ugalde-Gamboa L, Machuzak M. Robotic Bronchoscopy for Diagnosis of Suspected Lung Cancer: A Feasibility Study. J Bronchology Interv Pulmonol 2018;25:168-75.\n13.  Ruchardt A, Gruber B, Trenkwalder P . Intrapulmonary tumor cell embolism from cancer of the bladder as the cause of a subacute cor pulmonale. Dtsch Med Wochenschr 2001;126:847-50.\n14.  Ali MS, Trick W, Mba BI, et al. Radial endobronchial ultrasound for the diagnosis of peripheral pulmonary lesions: A systematic review and meta-analysis. Respirology 2017;22:443-53.\n15.  Chen AC, Pastis NJ, Machuzak MS, et al. Accuracy of",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Agrawal et al. Robotic bronchoscopy for pulmonary lesions",
+      "content": "a Robotic Endoscopic System in Cadaver Models with Simulated Tumor Targets: ACCESS Study. Respiration 2020;99:56-61.\n16.  Chaddha U, Kovacs SP, Manley C, et al. Robot-assisted bronchoscopy for pulmonary lesion diagnosis: results from the initial multicenter experience. BMC Pulm Med 2019;19:243.\n17.  Chen A, Chenna P, Loiselle A, et al. Radial probe endobronchial ultrasound for peripheral pulmonary lesions. A 5-year institutional experience. Ann Am Thorac Soc 2014;11:578-82.\n18.  Balbo PE, Bodini BD, Patrucco F, et al. Electromagnetic navigation bronchoscopy and rapid on site evaluation added to fluoroscopy-guided assisted bronchoscopy and rapid on site evaluation: improved yield in pulmonary nodules. Minerva Chir 2013;68:579-85.\n19.  Seijo LM, de T orres JP , Lozano MD, et al. Diagnostic yield of electromagnetic navigation bronchoscopy is highly dependent on the presence of a Bronchus sign on CT imaging: results from a prospective study. Chest 2010;138:1316-21.\n20.  Chen A, Silvestri GA, Gildea TR, et al. Robotic Bronchoscopy for Peripheral Pulmonary Lesions: A Multicenter Pilot and Feasibility Study (BENEFIT). Chest New Orleans.\n21.  Fielding DIK, Bashirzadeh F, Son JH, et al. First Human\nUse of a New Robotic-Assisted Fiber Optic Sensing Navigation System for Small Peripheral Pulmonary Nodules. Respiration 2019;98:142-50.\n22.  Yarmus LB, Mallow C, Pastis N, et al. First-in-Human Use of a Hybrid Real-Time Ultrasound-Guided Fine-Needle Acquisition System for Peripheral Pulmonary Lesions: A Multicenter Pilot Study. Respiration 2019;98:527-33.\n23.  Musani AI, Veir JK, Huang Z, et al. Photodynamic therapy via navigational bronchoscopy for peripheral lung cancer in dogs. Lasers Surg Med 2018;50:483-90.\n24.  Howk K, Dickhans W, Rooks K, et al. Characterization of a Bronchoscopic Thermal Ablation Catheter in Porcine Lung. Am J Respir Crit Care Med 2016;193:A6019.\n25.  Koizumi T, Tsushima K, T anabe T, et al. BronchoscopyGuided Cooled Radiofrequency Ablation as a Novel Intervention Therapy for Peripheral Lung Cancer. Respiration 2015;90:47-55.\n26.  Casal RF, Walsh G, McArthur M, et al. Bronchoscopic Laser Interstitial Thermal Therapy: An Experimental Study in Normal Porcine Lung Parenchyma. J Bronchology Interv Pulmonol 2018;25:322-9.\n27.  Chaddha U, Hogarth DK, Murgu S. Bronchoscopic Ablative Therapies for Malignant Central Airway Obstruction and Peripheral Lung Tumors. Ann Am Thorac Soc 2019;16:1220-9.\nCite this article as: Agrawal A, Hogarth DK, Murgu S. Robotic bronchoscopy for pulmonary lesions: a review of  existing  technologies  and  clinical  data.  J  Thorac  Dis 2020;12(6):3279-3286. doi: 10.21037/jtd.2020.03.35",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    }
+  ],
+  "tables": [
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/64'}",
+      "headers": [
+        "",
+        "Robot assisted bronchoscopy platforms",
+        "Robot assisted bronchoscopy platforms"
+      ],
+      "rows": [
+        [
+          "",
+          "The Monarch TM platform Auris Health Inc.",
+          "Ion TM Endoluminal System Intuitive Surgical"
+        ],
+        [
+          "FDA approval",
+          "March, 2018",
+          "February, 2019"
+        ],
+        [
+          "Studies",
+          "• Chen et al. 2018 (REACH Cadaver Study) (11) • Rojas-Solano et al. 2018 (Human Feasibility Study) (12) • Chen et al. 2019 (ACCESS Cadaver Study) (15) • Chaddha et al. 2019 (Retrospective Post Marketing Study) (16) • Ongoing-multicenter prospective BENEFIT trial (https:// clinicaltrials.gov/ct2/show/NCT03727425) • Ongoing-multicenter prospective TARGET trial (https:// clinicaltrials.gov/ct2/show/NCT04182815)",
+          "• Fielding et al. 2019 (Human Feasibility Study) (21); • Yarmus et al. 2019 (Cadaver Study Comparing RAB vs. EMN vs. Conventional bronchoscopy with r-EBUS) (22); • Ongoing-Multicenter prospective PRECIsE Trial (https://clinicaltrials.gov/ct2/show/NCT03893539)"
+        ],
+        [
+          "Bronchoscope specifications",
+          "• Inner bronchoscope (4.2 mm) & Outer sheath (6 mm), both with 4-way steering control; • The sheath can be locked in place and the bronchoscope can be advanced to the airways under EMN guidance and direct visualization; • 2.1 mmworking channel; • Constant peripheral visualization during workflow at the target",
+          "• 3.5 mmouter diameter fully articulating catheter; • 2 mmworking channel; the catheter has a shape- sensing fiber along its entire length which provides positional and shape feedback; • Catheter articulates 180 degrees in any direction; • Integrated vision probe that provides navigation; • Vision probe has to be removed prior to tissue sampling"
+        ],
+        [
+          "Navigation technology",
+          "Relies on Electromagnetic Navigation along with peripheral vision and real time input from the micro-camera at the tip of the bronchoscope",
+          "• Relies on fiber optic sensing technology 'shape sensing' and peripheral vision for navigation; • The shape sensing technology is reportedly not sensitive to metal objects"
+        ],
+        [
+          "Instruments",
+          "• Auris needle (currently not available on the market); • Other needles such as Olympus Periview Flex or Arc Point SuperDimension needles; • Can use R-EBUS, needle, biopsy forceps or brush through the working channel; • The direction and positioning of the R-EBUS, needles, brushes or forceps instruments can be re-oriented under direct guidance",
+          "• Flexible needle-Flexision TM ; • The biopsy needle can be visualized along its length, and its length can be set to avoid the pleura and reach the middle of the nodule; • Can use R-EBUS, needle, biopsy forceps or brush; relies on the fiber optic sensing technology as well as real time positioning during tissue sampling"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/70'}",
+      "headers": [
+        "",
+        "Robot assisted bronchoscopy platforms",
+        "Robot assisted bronchoscopy platforms"
+      ],
+      "rows": [
+        [
+          "",
+          "The Monarch TM platform Auris Health Inc.",
+          "Ion TM Endoluminal System Intuitive Surgical"
+        ],
+        [
+          "Controller",
+          "Two joysticks are used to drive and articulate the bronchoscope while various buttons are used to control irrigation, aspiration and the device state",
+          "Trackball and scroll wheel which control catheter insertion and retraction, and precise distal tip articulation. Also includes a touch screen, which is used to change system settings during the procedure"
+        ],
+        [
+          "Advantages",
+          "• Constant peripheral visualization that allows for directional targeting of instruments, especially in cases of eccentric lesions seen on r-EBUS; • Visualization of possible complications while working at the target-such as bleeding and ability stay wedged in the target segment; • The sheath and bronchoscope can be locked into position to prevent accidental displacement during tissue sampling",
+          "• The fiber optic sensing technology maintains active robotic control of the catheter position and corrects unwanted deflection and secures it into a fixed position during tissue sampling; • The 3.5 mmbronchoscope may provide further access to smaller distal airways"
+        ],
+        [
+          "Limitations",
+          "• Potentially limited by factors affecting electromagnetic navigation (interference with AICD, pacemakers); • The initial EMN software is sensitive to metal objects (e.g., Fluoroscopy C-arm); • Larger size of bronchoscope (4.2 mm) may limit access of the actual scope to smaller airways; however, instruments can still be advanced in the target small airway under direct visualization; • Tactile feedback is not available and thus has potential for airway damage or distortion",
+          "• No direct visualization while performing biopsies may limit the ability for directional targeting of instruments under direct visualization (relevant for cases of eccentric lesions seen on r-EBUS); it is unclear at this time if this limitation has any consequences on diagnostic yield; • Tactile feedback is not available and thus has potential for airway damage or distortion"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    }
+  ],
+  "figures": [
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/29'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/42'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    }
+  ],
+  "references": [
+    {
+      "title": "Recent Trends in the Identification of Incidental Pulmonary Nodules"
+    },
+    {
+      "title": "Am J Respir Crit Care Med",
+      "year": 2015
+    },
+    {
+      "title": "Reduced lung-cancer mortality with low-dose computed tomographic screening",
+      "year": 2015
+    },
+    {
+      "title": "N Engl J Med",
+      "year": 2011
+    },
+    {
+      "title": "Final screening round of the NELSON lung cancer screening trial: the effect of a 2.5-year screening interval",
+      "year": 2011
+    },
+    {
+      "title": "Thorax",
+      "year": 2017
+    },
+    {
+      "title": "Robotic assisted-bronchoscopy: technical tips and lessons learned from the initial experience with sampling peripheral lung lesions",
+      "year": 2017
+    },
+    {
+      "title": "BMC Pulm Med",
+      "year": 2017
+    },
+    {
+      "title": "Evaluation of individuals with pulmonary nodules: when is it lung cancer? Diagnosis and management of lung cancer, 3rd ed: American College of Chest Physicians evidence-based clinical practice guidelines",
+      "year": 2019
+    },
+    {
+      "title": "Chest",
+      "year": 2019
+    },
+    {
+      "title": "NCCN Guidelines Insights: Non-Small Cell Lung Cancer, Version 5",
+      "year": 2013
+    },
+    {
+      "title": "J Natl Compr Canc Netw"
+    },
+    {
+      "title": "Electromagnetic Navigation Bronchoscopy for Peripheral Pulmonary Lesions: One-Year Results of the Prospective, Multicenter NAVIGATE Study"
+    },
+    {
+      "title": "J Thorac Oncol",
+      "year": 2019
+    },
+    {
+      "title": "Transthoracic needle biopsy of the lung",
+      "year": 2019
+    },
+    {
+      "title": "J Thorac Dis",
+      "year": 2015
+    },
+    {
+      "title": "30 Years of Robotic Surgery",
+      "year": 2015
+    },
+    {
+      "title": "World J Surg",
+      "year": 2016
+    },
+    {
+      "title": "The History of Robotics in Surgical Specialties",
+      "year": 2016
+    },
+    {
+      "title": "Am J Robot Surg",
+      "year": 2014
+    },
+    {
+      "title": "Robotic Endoscopic Airway Challenge: REACH Assessment",
+      "year": 2014
+    },
+    {
+      "title": "Ann Thorac Surg",
+      "year": 2018
+    },
+    {
+      "title": "Robotic Bronchoscopy for Diagnosis of Suspected Lung Cancer: A Feasibility Study",
+      "year": 2018
+    },
+    {
+      "title": "J Bronchology Interv Pulmonol",
+      "year": 2018
+    },
+    {
+      "title": "Intrapulmonary tumor cell embolism from cancer of the bladder as the cause of a subacute cor pulmonale",
+      "year": 2018
+    },
+    {
+      "title": "Dtsch Med Wochenschr",
+      "year": 2001
+    },
+    {
+      "title": "Radial endobronchial ultrasound for the diagnosis of peripheral pulmonary lesions: A systematic review and meta-analysis",
+      "year": 2001
+    },
+    {
+      "title": "Respirology",
+      "year": 2017
+    },
+    {
+      "title": "Robotic Endoscopic System in Cadaver Models with Simulated Tumor Targets: ACCESS Study",
+      "year": 2017
+    },
+    {
+      "title": "Robot-assisted bronchoscopy for pulmonary lesion diagnosis: results from the initial multicenter experience"
+    },
+    {
+      "title": "Radial probe endobronchial ultrasound for peripheral pulmonary lesions. A 5-year institutional experience",
+      "year": 2019
+    },
+    {
+      "title": "Ann Am Thorac Soc",
+      "year": 2014
+    },
+    {
+      "title": "Electromagnetic navigation bronchoscopy and rapid on site evaluation added to fluoroscopy-guided assisted bronchoscopy and rapid on site evaluation: improved yield in pulmonary nodules",
+      "year": 2014
+    },
+    {
+      "title": "Minerva Chir",
+      "year": 2013
+    },
+    {
+      "title": "Diagnostic yield of electromagnetic navigation bronchoscopy is highly dependent on the presence of a Bronchus sign on CT imaging: results from a prospective study",
+      "year": 2013
+    },
+    {
+      "title": "Robotic Bronchoscopy for Peripheral Pulmonary Lesions: A Multicenter Pilot and Feasibility Study (BENEFIT)"
+    },
+    {
+      "title": "First Human Use of a New Robotic-Assisted Fiber Optic Sensing Navigation System for Small Peripheral Pulmonary Nodules"
+    },
+    {
+      "title": "Respiration"
+    },
+    {
+      "title": "First-in-Human Use of a Hybrid Real-Time Ultrasound-Guided Fine-Needle Acquisition System for Peripheral Pulmonary Lesions: A Multicenter Pilot Study",
+      "year": 2019
+    },
+    {
+      "title": "Photodynamic therapy via navigational bronchoscopy for peripheral lung cancer in dogs",
+      "year": 2019
+    },
+    {
+      "title": "Lasers Surg Med",
+      "year": 2018
+    },
+    {
+      "title": "Characterization of a Bronchoscopic Thermal Ablation Catheter in Porcine Lung",
+      "year": 2018
+    },
+    {
+      "title": "Bronchoscopy-Guided Cooled Radiofrequency Ablation as a Novel Intervention Therapy for Peripheral Lung Cancer",
+      "year": 2016
+    },
+    {
+      "title": "Bronchoscopic Laser Interstitial Thermal Therapy: An Experimental Study in Normal Porcine Lung Parenchyma",
+      "year": 2015
+    },
+    {
+      "title": "Bronchoscopic Ablative Therapies for Malignant Central Airway Obstruction and Peripheral Lung Tumors",
+      "year": 2018
+    }
+  ],
+  "quality": {
+    "completeness_score": 0,
+    "has_abstract": true,
+    "abstract_source": "metadata",
+    "has_doi": true,
+    "has_full_text": true,
+    "num_sections": 13,
+    "num_tables": 2,
+    "num_figures": 4,
+    "num_references": 45
+  }
+}

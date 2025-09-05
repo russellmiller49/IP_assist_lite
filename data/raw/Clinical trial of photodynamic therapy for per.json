@@ -1,0 +1,533 @@
+{
+  "metadata": {
+    "document_id": "10_1016_j_pdpdt_2020_101698",
+    "title": "Clinical trial of photodynamic therapy for peripheral-type lung cancers using a new laser device in a pilot study",
+    "authors": [
+      "Jitsuo Usuda",
+      "Tatsuya Inoue",
+      "Takaaki Tsuchida",
+      "Keishi Ohtani",
+      "Sachio Maehara",
+      "Norihiko Ikeda",
+      "Yoshinobu Ohsaki",
+      "Takaaki Sasaki",
+      "Kiyoshi Oka"
+    ],
+    "year": 2020,
+    "journal": "Photodiagnosis and Photodynamic Therapy",
+    "doi": "10.1016/j.pdpdt.2020.101698",
+    "volume": "30",
+    "issue": "",
+    "pages": "101698",
+    "citation": "Usuda, et al. (2020). Clinical trial of photodynamic therapy for peripheral-type lung cancers using a new laser device in a pilot study. Photodiagnosis and Photodynamic Therapy, 30, 101698. https://doi.org/10.1016/j.pdpdt.2020.101698",
+    "abstract": "Introduction/Aim: Photodynamic therapy (PDT) involves the use of a tumor-speciﬁc photosensitizer and laser irradiation, and is one of the treatment options recommended for early centrally located lung cancers, but not yet for peripheral-type lung cancers. We developed a new laser probe, the composite-type optical ﬁberscope (COF), which allows accurate laser irradiation of a cancer lesion with simultaneous visualization of the lesion. In this study, we attempted a new endobronchial PDT technique using the new laser probe, and evaluated the eﬀectiveness and feasibility of this novel PDT technique for peripheral lung cancers.\nMethods: This phase I study was conducted in 7 patients with peripheral lung cancers (primary tumor ≤20 mm in diameter). We performed endobronchial PDT for these patients using the new laser probe and talaporﬁn sodium as the photosensitizer.\nResults: We performed PDT for 3 patients with peripheral lung cancer using a laser dose of 50 J/cm2 at 120 mW, and conﬁrmed the feasibility of using this dose. Then, we escalated the laser dose to 100 J/cm2 in 4 additional patients. A total of 7 patients met our inclusion criteria. Evaluation at 2 weeks and 3 months after the PDT revealed no complication such as pneumonia or pneumothorax. At the evaluation conducted 6 months later, we found CR in 3 cases and SD in the remaining 4 cases.\nConclusion: PDT was found to be a feasible and non-invasive treatment modality for early peripheral-type lung cancer. In the future, PDT could become a standard treatment option for peripheral-type lung cancer.",
+    "abstract_source": "metadata",
+    "url": "https://linkinghub.elsevier.com/retrieve/pii/S157210002030051X"
+  },
+  "source_file": "Clinical trial of photodynamic therapy for per.json",
+  "sections": [
+    {
+      "title": "",
+      "content": "Contents lists available at ScienceDirect",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Photodiagnosis and Photodynamic Therapy",
+      "content": "journal homepage: www.elsevier.com/locate/pdpdt",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Clinical trial of photodynamic therapy for peripheral-type lung cancers using a new laser device in a pilot study",
+      "content": "Jitsuo Usuda a, *, Tatsuya Inoue a , Takaaki Tsuchida b , Keishi Ohtani c , Sachio Maehara c , Norihiko Ikeda c , Yoshinobu Ohsaki d , Takaaki Sasaki d , Kiyoshi Oka e\na Department of Thoracic Surgery, Nippon Medical School, Tokyo, Japan\nb Department of Respiratory Endoscopy, National Cancer Center Hospital, Tokyo, Japan\nc Department of Thoracic Surgery, Tokyo Medical University Hospital, Tokyo, Japan\nd Respiratory Center, Asahikawa Medical University Hospital, Asahikawa, Japan\ne Kansai Photon Science Institute, National Institutes for Quantum and Radiological Science and Technology, Kyoto, Japan",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "A B S T R A C T",
+      "content": "Introduction/Aim: Photodynamic therapy (PDT) involves the use of a tumor-speci /uniFB01 c photosensitizer and laser irradiation, and is one of the treatment options recommended for early centrally located lung cancers, but not yet for peripheral-type lung cancers. We developed a new laser probe, the composite-type optical /uniFB01 berscope (COF), which allows accurate laser irradiation of a cancer lesion with simultaneous visualization of the lesion. In this study, we attempted a new endobronchial PDT technique using the new laser probe, and evaluated the e /uniFB00 ectiveness and feasibility of this novel PDT technique for peripheral lung cancers.\nMethods: This phase I study was conducted in 7 patients with peripheral lung cancers (primary tumor ≤ 20 mm in diameter). We performed endobronchial PDT for these patients using the new laser probe and talapor /uniFB01 n sodium as the photosensitizer.\nResults: We performed PDT for 3 patients with peripheral lung cancer using a laser dose of 50 J/cm 2 at 120 mW, and con /uniFB01 rmed the feasibility of using this dose. Then, we escalated the laser dose to 100 J/cm 2 in 4 additional patients. A total of 7 patients met our inclusion criteria. Evaluation at 2 weeks and 3 months after the PDT revealed no complication such as pneumonia or pneumothorax. At the evaluation conducted 6 months later, we found CR in 3 cases and SD in the remaining 4 cases.\nConclusion: PDT was found to be a feasible and non-invasive treatment modality for early peripheral-type lung cancer. In the future, PDT could become a standard treatment option for peripheral-type lung cancer.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "1. Introduction",
+      "content": "Introduction Recently, the number of elderly patients with lung cancer has been increasing, and prompting the need for exploring minimally invasive treatment techniques. New pathological classi /uniFB01 cations for peripheral lung adenocarcinomas have been proposed, and new concepts, such as adenocarcinoma in situ (AIS) and minimally invasive adenocarcinoma (MIA), have been introduced [1,2]. Lung cancers of this type are often visualized as GGOs on chest CT and have a relatively good prognosis. In the future, for the treatment of AIS and MIA, neither surgery nor RT may be required. Minimally invasive treatments, such as endoscopic treatments, are unmet medical needs for such cancers..\nFor de /uniFB01 nitive diagnosis of small nodules in the peripheral lung,\nbronchoscopy using radial endobronchial ultrasound (R-Endobronchial ultrasound (EBUS)) and a combination of this modality with virtual bronchoscopic navigation (VBN) are very useful [3 -5]. Bronchoscopic diagnosis using these new techniques of R-Endobronchial ultrasound (EBUS) and VBN has improved the diagnostic yield for small peripheral pulmonary lesions measuring less than 3.0 cm in diameter [6,7]. Especially, peripheral pulmonary lesions are easy to access by electromagnetic navigation bronchoscopy (ENB), such as that using the superDimension navigation system, and the accessibility and diagnostic rates of peripheral lung cancers have improved [8,9].\nPhotodynamic therapy (PDT) consists of using a tumor-speci /uniFB01 c photosensitizer and laser irradiation to induce the production of reactive oxygen species in cancer cells [10 -12]. Since the /uniFB01 rst modern clinical trial of PDT reported by Dougherty et al., the photosensitizer photofrin has been applied for the treatment of many kinds of cancers\nReceived 20 January 2020; Received in revised form 11 February 2020; Accepted 24 February 2020\nAvailable online 18 March 2020\n1572-1000/ © 2020 Elsevier B.V. All rights reserved.\n[13 -16]. The second-generation photosensitizer, talapor /uniFB01 n sodium (Laserphyrin ® ) well known as mono-L-aspartyl chlorine e6 (NPe6), which has a major absorption band at 664 nm, was approved for the treatment of centrally located early lung cancers (CLELCs) by the Japanese Ministry of Health, Labour and Welfare in 2004 [17,18]. Kato and Furukawa et al. reported, based on a phase II clinical study, that PDT using talapo /uniFB01 n and a diode laser was safe, including being associated with a signi /uniFB01 cantly lower frequency of skin photosensitivity than photofrin-PDT, and showed excellent antitumor e /uniFB00 ect in patients with CLELs [17]. Usuda et al. reported that PDT using talapor /uniFB01 n exerted a strong antitumor e /uniFB00 ect against CLELCs measuring > 1.0 cm in diameter (19). According to their report, the CRs of centrally located lung cancers measuring ≤ 1.0 and > 1.0 cm in diameter were 94 % (66 of 70 cases) and 90.4 % (19 of 21 cases), respectively. We analyzed the relationship between the tumor size and clinical response and found no signi /uniFB01 cant correlation between the tumor size and clinical response [19]. Moreover, there was no signi /uniFB01 cant di /uniFB00 erence in the e /uniFB03 cacy of talapo /uniFB01 n-PDT between tumors ≤ 1.0 and > 1.0 cm in diameter.\nHowever, until now, PDT has only been approved for centrally located lung cancers, but not for peripheral lung cancers, even though the accessibility and diagnosis rate of peripheral lung cancers have improved with the use of R-Endobronchial ultrasound (EBUS) and/or VBN (5 -7). This could be explained as there was no laser probe that could be inserted into peripheral lung lesions.\nIn this study, we report the use of a new laser probe developed by us, the composite-type optical /uniFB01 berscope (COF), which allows accurate laser irradiation with simultaneous visualization of the cancer lesion. Oka et al. reported applying the COF technology to develop a new device for laser surgery to treat twin-to-twin transfusion syndrome [20,21]. In this study, we developed a new minimally invasive laser device using a COF with an external diameter of 1.0 mm, which can be introduced into peripheral lung lesions for laser irradiation. We conducted this phase I clinical study to investigate the feasibility and antitumor e /uniFB00 ect of PDT using talapor /uniFB01 n sodium and the new laser probe for peripheral-type lung cancers.",
+      "category": "introduction",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "2.1. Study design",
+      "content": "This study was a phase-I, single-arm clinical trial conducted with the participation of 4 hospitals (Nippon Medical School Hospital, National Cancer Center Hospital, Tokyo Medical University Hospital, and Asahikawa Medical College Hospital) in Japan (Clinical Trial Japanese Registration URL: www.umin.ac.jp. Unique identi /uniFB01 er: UMIN000021501), after obtaining approval from the ethics committee of each of the participating institutions. The clinical study was supported by Research on Development of New Medical Device, Japan Agency for Medical Research and Development.\nAt /uniFB01 rst, we used a target dose for laser irradiation of 50 J/cm 2 of the lesion on the maximum-section plane on sliced CT in 3 cases. If there were no adverse events of grade 3 or greater severity, the laser dose was to be increased to 100 J/cm 2 of the lesion on the maximum-section plane (Fig. 1). Thus, the dosing conditions for laser irradiation were the same as those used for PDT of centrally located early lung cancers [17 -19]. If the maximum tumor cross-sectional area was greater than 1.0 cm 2 , irradiations were undertaken from multiple directions to irradiate the entire tumor.",
+      "category": "methods",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "2.2. Patients",
+      "content": "Patients with clinical stage IA (7th edition of the TNM classi /uniFB01 cation for lung cancer) were included if they were 20 years of age or older, and had cytologically or histologically con /uniFB01 rmed (by transbronchial lung biopsy (TBLB) diagnosis of non-small cell lung cancer. Other eligibility criteria were presence of measurable disease (lesions were ≤ 20 mm in\ndiameter as measured on CT images), with no metastasis to the hilar/ mediastinal lymph nodes or distant metastasis, patients who were unsuitable candidates for, or did not desire, surgery or radiation therapy, and an Eastern Cooperative Oncology Group performance status of 0 -2. Written informed consent was obtained from each patient prior to his/ her participation in the study.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "2.3. Photosensitizer",
+      "content": "Talapor /uniFB01 n sodium, or NPe6 (Laserphyrin ® , Meiji Seika Pharma Co., Ltd., Tokyo, Japan), is a second-generation, water-soluble photosensitizer with a molecular weight of 799.69 and a chlorine annulus; its highest absorption peak occurs at a wavelength of 407 nm, and a second peak occurs at a wavelength of 664 nm [17 -19]. Talapo /uniFB01 n sodium exhibits superior tumor a /uniFB03 nity, and is excited by visible red light with a longer wavelength of 664 nm.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "2.4. Laser unit",
+      "content": "A diode laser (OK Fiber Technology Co., Kyoto, Japan) emitting continuous-wave laser light at a wavelength of 664 nm was used as the light source for the excitation of NPe6.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "2.5. Laser probe",
+      "content": "We developed the composite-type optical /uniFB01 berscope (COF), a new laser probe, which allows accurate laser irradiation with simultaneous\nFig. 1. Study design of talapor /uniFB01 n-PDT for peripheral-type lung cancers. Patients who were unsuitable candidates for surgery, or not desirous of undergoing surgery or radiation therapy, were enrolled in this study. PDT was to be undertaken for the /uniFB01 rst three patients at a laser dose of 50 J/cm 2 of the lesion on the maximum-section plane on sliced CT; if there were no adverse events of grade 3 or greater severity, the laser dose was to be increased to 100 J/cm 2 of the lesion on the maximum-section plane of sliced CT.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "3 patients eligible Inability to undergo surgery or radiation therapy; or reject",
+      "content": "Laser dose 50 Jlcm?",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "0 case of adverse event of grade 2 or more within 90 days after PDT",
+      "content": "Escalation of the dose of laser irradiation\npatients eligible Inability to undergo surgery or radiation therapy; or reject\nLaser dose 100 Jlcm?\nvisualization of the cancer lesion. Oka et al. reported applying the COF technology to develop a new device for laser surgery to treat twin-totwin transfusion syndrome [20]. For this study, we designed and developed a new minimally invasive laser device using a COF with an external diameter of 1.0 mm, which can be introduced into peripheral lung lesions for laser irradiation (Fig. 2). The COF has one optical /uniFB01 ber with diameter of φ 0.4 mm for laser transmission and the image transmission of approximately 10,000 optical /uniFB01 bers with φ 0.5 mm lens on the tip, which were surrounded by many thin optical /uniFB01 bers for white light transmission (Fig. 2A, B, C).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "2.6. PDT procedure",
+      "content": "The photosensitizer, talapor /uniFB01 n sodium (40 mg/m 2 ), was administered 4 -6 hours prior to the laser irradiation for PDT. First, under general anesthesia, we introduced a guide sheath (GS) into the peripheral lung cancer lesion, and examined the lesion by radial endobronchial ultrasound (R-Endobronchial ultrasound (EBUS)) and chest X-ray. The R-Endobronchial ultrasound (EBUS) probe and laser probe can be introduced repeatedly to the same site with the use of the GS [5 -7].\nBefore inserting the COF, we inject a little of saline bu /uniFB00 er (about 1 ml) into the guide sheath to make it clearly visible. Then, the COF was introduced through the GS into the cancer lesion, followed by laser irradiation at the dose of 50 J/cm 2 (150 mW/cm 2 ) or 100 J/cm 2 (150 mW/cm 2 ). A few days after the PDT, the patient was discharged.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "2.7. Follow-up and endpoints",
+      "content": "This multicenter single-arm study was performed with the objective of investigating the feasibility and e /uniFB03 cacy of PDT for peripheral-type lung cancers. The primary endpoint was the rate of occurrence of grade 2 or more severe adverse events within 90 days after the PDT, because adverse events occurring in the short term after PDT are often more serious and considered more important.\nThe secondary endpoints were as follows: 1) local-progression-free survival (PFS)rate 90 days after the PDT, 2) local-PFS rate 1 year after the PDT, 3) adverse events from the time of the primary assessment to 1 year after the PDT.\nTBLB was performed 3 months after the PDT, to evaluate local control. Chest CT was performed at 3, 6, 9, and 12 months after the PDT.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "2.8. Evaluation of outcomes",
+      "content": "If the cancer lesions were no longer visible on thin-section CT at 90 days after the PDT, it was judged as complete response (CR). Alternatively, a negative transbronchial biopsy/cytology at the same time was also judged as CR. Thereafter, if there was no increase in the tumor size on thin-slice CT, the CR was continued. Even if the tumor was malignant by biopsy after PDT, it was determined to be stable disease (SD) if the tumor size was not increased by chest CT.\nProgressive disease (PD): According to the RECIST guidelines (revised version 1.1), target lesions were evaluated by chest CT. When the sum of the major axes of the target lesion increases by 20 % or more compared to the minimum sum of the major axes up to the evaluation including the baseline, and the absolute value of the sum of the major axes increases by 0.5 cm or more.",
+      "category": "results",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "2.9. Adverse event reporting",
+      "content": "The /uniFB01 rst patient was enrolled in March 2016. Enrolment was closed in April 2017, and last follow-up was performed in April 2018. Adverse events in this protocol were graded according to the National Cancer Institute Common Terminology Criteria for Adverse Events version 4 (CTCAE v4).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "3. Results",
+      "content": "Seven patients, including /uniFB01 ve male and two female patients, were treated by talapor /uniFB01 n-PDT using the new laser probe, COF, which allows accurate laser irradiation of a lung cancer lesion with simultaneous visualization of the lesion (Table 1). We could simultaneously observe and irradiate the cancer lesions in the peripheral regions of the lung. To obtain a de /uniFB01 nitive histopathological/cytological diagnosis, we performed TBLB using a GS and/or R-Endobronchial ultrasound (EBUS) for the peripheral lung tumors.\nThe mean age was 77.1 years (72 -90), and the average size of the nodules was 16.7 mm (13.6 -20). The histological type was adenocarcinoma in 6 patients and squamous cell carcinoma in 1 patient. The tumor lesion was in the upper lobe in 4 patients, and in the lower lobe in the remaining 3 patients.\nFor the /uniFB01 rst three patients, laser irradiation was performed at 50 J/ cm 2 according to the protocol. Ninety days after the PDT, the occurrence rate of adverse events of grade 2 or higher severity was 0%. One\nFig. 2. Composite optical /uniFB01 berscope. Red arrow shows the lens on the tip that focuses the red light laser. Yellow arrow shows the lens on the tip that transmits the images for visualization. A) Tip of the composite-type optical /uniFB01 berscope with an external diameter of 1.0 mm. The red arrow shows the port of the laser irradiation, and the yellow arrow shows the port of image transmission. There are a lot of /uniFB01 bers that pass white light around the two pots. (B) The COF was a straight-type laser probe, not a cylindrical-type.\npatient (Case 2) showed grade 1 skin photosensitivity. We con /uniFB01 rmed that talapor /uniFB01 n-PDT using the new laser probe was feasible after successful treatment of 3 patients at the laser dose 50 J/cm 2 . According to the protocol, we administered PDT at an escalated laser dose of 100 J/ cm 2 to the remaining 4 patients. Of the total of 7 patients in this clinical study, one case (Case 2) showed photosensitivity; no other treatmentrelated complications were encountered (Table 1). There were no major complications such as pneumothorax, hemothorax or pneumonia. Fig. 3 shows the clinical pro /uniFB01 le of Case 1. The patient was a 90-year-old man; the diagnosis was de /uniFB01 nitively established by TBLB as adenocarcinoma, c-T1bN0N0 stage IA in rt S 2 (Fig. 3A). The patient refused surgical resection and SBRT, and desired to undergo PDT using the new laser\nprobe. Talapor /uniFB01 n sodium at the dose of 40 mg/m 2 was administered by intravenous injection 4 h before the PDT. We introduced the guide sheath (GS) into the cancer lesion using superDimensionTM ENB, a bronchoscopic navigation system (Fig. 3B). Using this system, it is easy to determine the distance to the target lesion in real time and accurately introduce the GS. In addition, the ultrasound probe was introduced though the GS and the cancer lesion was located accurately (Fig. 3C). Subsequently, we removed the Endobronchial ultrasound (EBUS) probe from within the GS. A saline bu /uniFB00 er was injected into the peripheral side of the bronchus, and the peripheral bronchus was dilated. We inserted the new laser probe, the COF, into the cancer lesion, visualized the tumor and irradiated the tumor with red laser (664 nm) (Fig. 3D). The endpoint of this study was\nn-PDT using the new laser probe.\nA\nB\nC\nD\nthe occurrence rate at 90 days after the PDT of adverse events of grade 2 or higher severity in the patients, and the rate was 0%. At 3 months after the PDT, 4 patients showed CR, and at 1 year after the PDT also, CR was observed in 4 patients (Table 1). As the secondary endpoint, the local-progression-free survival rate at 90 days and at 1 year after the PDT was 100 %. From these results, we concluded that PDT using the new laser probe for peripheral-type lung cancer is feasible and very e /uniFB00 ective.",
+      "category": "results",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "4. Discussion",
+      "content": "Recently, use of chest CT imaging and implementation of lung cancer screening have expanded, and the detection rate of peripheral lung nodules is increasing [7 -9]. At present, for lung cancer lesions in the lung periphery measuring less than 30 mm in diameter, surgical resection remains the treatment modality of choice. However, the prognosis of small nodules visualized as GGOs may be good, and surgical resection may not be necessary. For these cancers, minimally invasive treatments, such as bronchoscopic treatment, may be desirable. Okunaka et al. reported that percutaneous-PDT for peripheral lung cancer was e /uniFB00 ective and promising [22]. However, the percutaneous approach for PDT may cause pneumothorax, and cerebral infarction by air embolism [7]. Therefore, recently, bronchoscopy-guided radiofrequency ablation (RFA) has been developed and applied for the treatment of peripheral lung cancers [7,23,24]. It has been reported that RFA and microwave treatment generate heat and bubbles around the tumor [7,23,24]. However, lasers used for PDT have low power and do not generate heat, and are safer than RFA. Even if RFA or microwave treatment can be performed, PDT may be more feasible and perhaps better.\nIn this study, 4 of the 7 enrolled patients showed CR, both at 3 months and at 1 year after the PDT, because histopathological examination of TBLB specimens showed no evidence of malignancy. However, no signi /uniFB01 cant reduction of the tumor size was observed on the chest CT images. In a study conducted by our colleagues, Okunaka et al., in which nine patients with peripheral lung cancers were enrolled for treatment of the cancer by PDT using catheters placed percutaneously under CT guidance [22], the tumor size did not change much. It is also di /uniFB03 cult to evaluate the antitumor e /uniFB00 ect of SBRT on the chest CT. Although PET-CT assessment may be an option to determine the e /uniFB03 -cacy of SBRT and PDT, it is not a su /uniFB03 cient assessment.\nThis is because in /uniFB02 ammatory e /uniFB00 ect was induced after PDT, and PETCT does not always re /uniFB02 ect the therapeutic e /uniFB00 ect. It is important to properly evaluate the antitumor e /uniFB00 ect of PDT, so that it can be established as a valid treatment modality for the future.\nTo improve the feasibility and e /uniFB03 cacy of PDT, guidance of the COF, the laser probe, is very important. To guide the probe precisely to the cancer lesion, cylindrical-type rather than straight-type /uniFB01 bers would be more e /uniFB00 ective. In the future, we think that it is necessary to develop these two types of laser probes, and consider how to use them properly for accurate placement at the cancer lesion. Moreover, establishment of the laser irradiation method and simulation of the irradiation dose as in radiation treatment planning are future problems to be addressed.\nThis multicenter clinical trial was the world ' s /uniFB01 rst trial of talapor /uniFB01 nPDT for c-stage IA peripheral lung cancer. PDT was found to be a feasible and non-invasive treatment modality for early peripheral lung cancers. In the future, talapor /uniFB01 n-PDT could become a useful treatment modality for non-invasive adenocarcinomas, such as AIS, MIA, and the standard option for stage IA peripheral lung cancers.",
+      "category": "discussion",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Acknowledgments",
+      "content": "This study was supported by Research on Development of New\nMedical Device, Japan Agency for Medical Research and Development (17hk0102025h0003).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "References",
+      "content": "[1] W.D. Travis, E. Brambilla, M. Noguchi, A.G. Nicholson, K.R. Geisinger, et al., International association for the study of lung cancer/American thoracic society/ European respiratory society international multidisciplinary classi /uniFB01 cation of lung adenocarcinoma, J. Thorac. Oncol. 6 (2011) 244 -285.\n[2] W.D. Travis, H. Asamura, A.A. Bankier, M.B. Beasley, F. Detterbeck, et al., The IASLC Lung Cancer Staging Project: proposals for coding T categories for subsolid nodules and assessment of tumor size in part-solid tumors in the forthcoming eighth edition of the TNM classi /uniFB01 cation of lung cancer, J. Thorac. Oncol. 11 (2016) 1204 -1223.\n[3] M.P. Rivera, A.C. Metha, M.M. Wahidi, Establishing the diagnosis of lung cancer: diagnosis and management of lung cancer, 3 rd ed: american College of Chest Physician evidence-based clinical practice guidelines, Chest 143 (2013) e142S -e165S.\n[4] N. Kurimoto, T. Miyazawa, S. Okimasa, et al., Endobronchial ultrasonography using a guide sheath increase the ability to diagnose peripheral pulmonary lesions endoscopically, Chest 126 (2004) 959 -965.\n[5] F. Asano, Y. Matsuno, A. Tsuzuku, et al., Diagnosis of peripheral pulmonary lesions using a bronchoscope insertion guidance system combined with endobronchial ultrasonography with a guide sheath, Lung Cancer 60 (2008) 366 -373.\n[6] F. Asano, N. Shinagawa, A. Tsuzuku, M. Tachikawa, K. Kanazawa, et al., Virtual bronchoscopic navigation improves the diagnostic yield of radial-endobronchial ultrasound for peripheral pulmonary lesions with involved with bronchi on CT, Intern. Med. 54 (2015) 1021 -1025.\n[7] K. Harris, J. Puchalski, D. Sterman, Recent advances in bronchoscopic treatment of peripheral lung cancers, Chest 151 (2017) 674 -685.\n[8] A. Chen, N. Pastis, B. Furukawa, G.A. Silverstri, The e /uniFB00 ect of respiratory motion on pulmonary nodule location during electromagnetic navigation bronchoscopy, Chest 147 (2015) 1275 -1281.\n[9] A.C. Mehta, K.L. Hood, Y. Schwarz, S.B. Solomon, The evolutional history of electromagnetic navigation bronchoscopy: state of the Art, Chest 154 (2018) 935 -947.\n[10] N.L. Oleinick, R.L. Morris, I. Belichenko, The role of apoptosis in response to photodymanic therapy: what, where, why, and how, Photochem. Photobiol. Sci. 1 (2002) 1 -22.\n[11] T.J. Dougherty, C.J. Gomer, B.W. Henderson, et al., Photodynamic therapy, J. Natl. Cancer Inst. 90 (1998) 889 -902.\n[12] C.J. Gomer, Preclinical examination of /uniFB01 rst and second generation photosensitizers used in photodynamic therapy, Photochem. Photobiol. 54 (1991) 1093 -1107.\n[13] Y. Hayata, H. Kato, C. Konaka, J. Ono, Y. Matsushima, K. Yoneyama, et al., Hematoporphyrin derivative and laser photoradiation in the treatment of lung cancer, Chest 81 (1982) 269 -277.\n[14] H. Kato, T. Okunaka, S. Shimatani, Photodynamic therapy for early stage bronchogenic carcinoma, J. Clin. Laser Med. Surg. 14 (1996) 235 -238.\n[15] K. Furuse, M. Fukuoka, H. Kato, et al., A prospective phase II study on photodynamic therapy with Photofrin II for centrally located early stage lung cancer, J. Clin. Oncol. 11 (1993) 1852 -1857.\n[16] K. Furukawa, H. Kato, C. Konaka, et al., Locally recurrent central-type early stage lung cancer < 1.0 cm in diameter after complete remission by photodynamic therapy, Chest 128 (2005) 3269 -3275.\n[17] H. Kato, K. Furukawa, M. Sato, et al., Phase II clinical study of photodynamic therapy using mono-L-aspartyl chlorine e6 and diode laser for early super /uniFB01 cial squamous cell carcinoma of the lung, Lung Cancer 38 (2003) 516 -521.\n[18] J. Usuda, H. Kato, T. Okunaka, K. Furukawa, H. Tsutsui, et al., Photodynamic therapy (PDT) for lung cancers, J. Thorac. Oncol. 1 (2006) 489 -493.\n[19] J. Usuda, S. Ichinose, T. Ishizumi, H. Hayashi, K. Ohtani, S. Maehara, et al., Outcome of photodynamic therapy using NPe6 for bronchogenic carcinomas in central airways & 1.0 cm in diameter, Clin. Cancer Res. 16 (2010) 2198 -2204.\n[20] K. Oka, T. Seki, A. Naganawa, H. Yamashita, K. Kim, T. Chiba, The development of a composite-type optical /uniFB01 berscope system for fetoscopic laser photocoagulation of chorionic plate anastomosing vessels (FLPC), Minim. Invasive Ther. Allied Technol. 19 (2010) 94 -99.\n[21] K. Oka, T. Seki, A. Naganawa, K. Kim, T. Chiba, A novel ultrasmall composite optical /uniFB01 berscope, Surg. Endosc. 25 (2011) 2368 -2371.\n[22] T. Okunaka, H. Kato, H. Tsutsui, T. Ishizumi, S. Ichinose, Y. Kuroiwa, Photodynamic therapy for peripheral lung cancer, Lung Cancer 43 (2004) 77 -82.\n[23] T. Tanabe, T. Koizumi, K. Tsushima, et al., Comparative study of three di /uniFB00 erent catheters for CT imaging-bronchoscopy-guided radiofrequency ablation as a potential and novel interventional therapy for lung cancer, Chest 137 (2010) 890 -897.\n[24] T. Koizumi, K. Tsushima, T. Tanabe, et al., Bronchoscopy-guided cooled radiofrequency ablation as a novel intervention therapy for peripheral lung cancer, Respiration 90 (2015) 47 -55.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    }
+  ],
+  "tables": [
+    {
+      "id": "table",
+      "caption": "",
+      "headers": [
+        "",
+        "Age",
+        "Gender",
+        "Localization",
+        "Histology",
+        "Size (mm)",
+        "energy (J/cm2)",
+        "3 months",
+        "1year",
+        "adverse event"
+      ],
+      "rows": [
+        [
+          "1",
+          "90",
+          "Man",
+          "Rt.S2",
+          "Adeno Ca",
+          "20",
+          "50",
+          "CR",
+          "CR",
+          "-"
+        ],
+        [
+          "2",
+          "71",
+          "Woman",
+          "Lt. S3",
+          "Adeno Ca",
+          "10",
+          "50",
+          "CR",
+          "CR",
+          "Skin photosensirtivity (Grade 1)"
+        ],
+        [
+          "3",
+          "81",
+          "Man",
+          "Lt. S3",
+          "Squamous cell Ca",
+          "14",
+          "50",
+          "SD",
+          "SD",
+          "-"
+        ],
+        [
+          "4",
+          "76",
+          "man",
+          "Lt. S9",
+          "Adeno Ca",
+          "19",
+          "100",
+          "SD",
+          "SD",
+          "-"
+        ],
+        [
+          "5",
+          "82",
+          "Woman",
+          "Rt. S6",
+          "Adeno Ca",
+          "16",
+          "100",
+          "CR",
+          "CR",
+          "-"
+        ],
+        [
+          "6",
+          "72",
+          "man",
+          "Lt. S1 + 2",
+          "Adeno Ca",
+          "12",
+          "100",
+          "CR",
+          "CR",
+          "-"
+        ],
+        [
+          "7",
+          "73",
+          "man",
+          "Lt.S8",
+          "Adeno Ca",
+          "19",
+          "100",
+          "SD",
+          "SD",
+          "-"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    }
+  ],
+  "figures": [
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/91'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    }
+  ],
+  "references": [
+    {
+      "title": "International association for the study of lung cancer/American thoracic society/ European respiratory society international multidisciplinary classification of lung adenocarcinoma"
+    },
+    {
+      "title": "J. Thorac. Oncol",
+      "year": 2011
+    },
+    {
+      "title": "The IASLC Lung Cancer Staging Project: proposals for coding T categories for subsolid nodules and assessment of tumor size in part-solid tumors in the forthcoming eighth edition of the TNM classification of lung cancer",
+      "year": 2011
+    },
+    {
+      "title": "Establishing the diagnosis of lung cancer: diagnosis and management of lung cancer, 3 rd ed: american College of Chest Physician evidence-based clinical practice guidelines",
+      "year": 2016
+    },
+    {
+      "title": "Chest",
+      "year": 2016
+    },
+    {
+      "title": "Endobronchial ultrasonography using a guide sheath increase the ability to diagnose peripheral pulmonary lesions endoscopically",
+      "year": 2013
+    },
+    {
+      "title": "Diagnosis of peripheral pulmonary lesions using a bronchoscope insertion guidance system combined with endobronchial ultrasonography with a guide sheath",
+      "year": 2004
+    },
+    {
+      "title": "Lung Cancer",
+      "year": 2011
+    },
+    {
+      "title": "Virtual bronchoscopic navigation improves the diagnostic yield of radial-endobronchial ultrasound for peripheral pulmonary lesions with involved with bronchi on CT",
+      "year": 2008
+    },
+    {
+      "title": "Intern. Med",
+      "year": 2015
+    },
+    {
+      "title": "Recent advances in bronchoscopic treatment of peripheral lung cancers",
+      "year": 2015
+    },
+    {
+      "title": "The effect of respiratory motion on pulmonary nodule location during electromagnetic navigation bronchoscopy",
+      "year": 2017
+    },
+    {
+      "title": "The evolutional history of electromagnetic navigation bronchoscopy: state of the Art",
+      "year": 2015
+    },
+    {
+      "title": "The role of apoptosis in response to photodymanic therapy: what, where, why, and how",
+      "year": 2018
+    },
+    {
+      "title": "Photochem. Photobiol. Sci",
+      "year": 2002
+    },
+    {
+      "title": "Photodynamic therapy",
+      "year": 2002
+    },
+    {
+      "title": "J. Natl. Cancer Inst",
+      "year": 1998
+    },
+    {
+      "title": "Preclinical examination of first and second generation photosensitizers used in photodynamic therapy",
+      "year": 1998
+    },
+    {
+      "title": "Photochem. Photobiol",
+      "year": 2002
+    },
+    {
+      "title": "Hematoporphyrin derivative and laser photoradiation in the treatment of lung cancer",
+      "year": 1991
+    },
+    {
+      "title": "Photodynamic therapy for early stage bronchogenic carcinoma",
+      "year": 1982
+    },
+    {
+      "title": "J. Clin. Laser Med. Surg",
+      "year": 1996
+    },
+    {
+      "title": "A prospective phase II study on photodynamic therapy with Photofrin II for centrally located early stage lung cancer",
+      "year": 1996
+    },
+    {
+      "title": "J. Clin. Oncol",
+      "year": 1993
+    },
+    {
+      "title": "Locally recurrent central-type early stage lung cancer &lt; 1.0 cm in diameter after complete remission by photodynamic therapy",
+      "year": 1993
+    },
+    {
+      "title": "Phase II clinical study of photodynamic therapy using mono-L-aspartyl chlorine e6 and diode laser for early superficial squamous cell carcinoma of the lung",
+      "year": 2005
+    },
+    {
+      "title": "Photodynamic therapy (PDT) for lung cancers",
+      "year": 2003
+    },
+    {
+      "title": "Outcome of photodynamic therapy using NPe6 for bronchogenic carcinomas in central airways &amp; 1.0 cm in diameter",
+      "year": 2006
+    },
+    {
+      "title": "Clin. Cancer Res",
+      "year": 2010
+    },
+    {
+      "title": "The development of a composite-type optical fiberscope system for fetoscopic laser photocoagulation of chorionic plate anastomosing vessels (FLPC)",
+      "year": 2010
+    },
+    {
+      "title": "Minim. Invasive Ther. Allied Technol",
+      "year": 2010
+    },
+    {
+      "title": "A novel ultrasmall composite optical fiberscope",
+      "year": 2010
+    },
+    {
+      "title": "Surg. Endosc",
+      "year": 2011
+    },
+    {
+      "title": "Photodynamic therapy for peripheral lung cancer",
+      "year": 2011
+    },
+    {
+      "title": "Comparative study of three different catheters for CT imaging-bronchoscopy-guided radiofrequency ablation as a potential and novel interventional therapy for lung cancer",
+      "year": 2004
+    },
+    {
+      "title": "Bronchoscopy-guided cooled radiofrequency ablation as a novel intervention therapy for peripheral lung cancer",
+      "year": 2010
+    },
+    {
+      "title": "Respiration",
+      "year": 2015
+    }
+  ],
+  "quality": {
+    "completeness_score": 0,
+    "has_abstract": true,
+    "abstract_source": "metadata",
+    "has_doi": true,
+    "has_full_text": true,
+    "num_sections": 20,
+    "num_tables": 1,
+    "num_figures": 11,
+    "num_references": 37
+  }
+}

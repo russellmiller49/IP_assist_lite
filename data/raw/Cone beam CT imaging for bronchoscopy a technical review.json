@@ -1,0 +1,575 @@
+{
+  "metadata": {
+    "document_id": "10_21037_jtd_20_2382",
+    "title": "Cone beam CT imaging for bronchoscopy: a technical review",
+    "authors": [
+      "Randolph Setser",
+      "Gouthami Chintalapani",
+      "Krish Bhadra",
+      "Roberto F. Casal"
+    ],
+    "year": 2020,
+    "journal": "Journal of Thoracic Disease",
+    "doi": "10.21037/jtd-20-2382",
+    "volume": "12",
+    "issue": "12",
+    "pages": "7416-7428",
+    "citation": "Setser, et al. (2020). Cone beam CT imaging for bronchoscopy: a technical review. Journal of Thoracic Disease, 12(12), 7416-7428. https://doi.org/10.21037/jtd-20-2382",
+    "abstract": "Cone beam computed tomography (CBCT) is a well-established imaging modality with numerous proven applications across multiple clinical disciplines. More recently, CBCT has emerged as an important imaging tool for bronchoscopists, primarily used during transbronchial biopsy of peripheral pulmonary lesions (PPLS). For this application CBCT has proved useful in navigating devices to a target lesion, in confirming device tool-in-lesion, as well as during tissue acquisition. In addition, CBCT is poised to play an important role in trials evaluating bronchoscopic ablation by helping to determine the location of the ablative probe relative to the target lesion. Before adopting this technology, it is key for bronchoscopists to learn some basic concepts that will allow them to have a safer and more successful experience with CBCT. Hence, in the current manuscript, we will focus on both technical and practical aspects of CBCT imaging, ranging from systems considerations, image quality, radiation dose and dose-reduction strategies, procedure room set-up, and best practices for CBCT image acquisition.",
+    "abstract_source": "metadata",
+    "url": "http://jtd.amegroups.com/article/view/47261/html"
+  },
+  "source_file": "Cone beam CT imaging for bronchoscopy a technical review.json",
+  "sections": [
+    {
+      "title": "Introduction",
+      "content": "A wide variety of bronchoscopic techniques for sampling of peripheral pulmonary lesions (PPLS) have been developed in the past two decades. Although peripheral bronchoscopy has been established as a safe procedure, its diagnostic yield seems to have plateaued around 70% (1-5). Furthermore, technologies such as ultrathin-bronchoscopes, radialprobe endobronchial ultrasound (RP-Endobronchial ultrasound (EBUS)), virtual navigation, and more recently robotic bronchoscopy, have so far failed to deliver a consistently higher diagnostic yield. Multiple explanations have been postulated for this phenomenon: inadequacy of sampling tools, CT-body divergence misleading navigational bronchoscopy, and the lack of an accurate real-time confirmatory technique. The most commonly utilized confirmatory technique, RP-\nEndobronchial ultrasound (EBUS), has been shown to have false positive results given by the development of atelectasis or hemorrhage during bronchoscopy (6).\nGiven the need to enhance the diagnostic accuracy of  peripheral  bronchoscopy  and  the  willingness  of bronchoscopists to venture into the therapeutic field (i.e., bronchoscopic ablation of peripheral tumors, intra-tumor drug injection), a keen interest in the use of intra-procedural cone beam computed tomography (CBCT) imaging has recently emerged in the bronchoscopy community (6-11). CBCT provides an intra-procedural three-dimensional (3D) image dataset and can potentially impact all phases of diagnostic bronchoscopy: navigation, confirmation and tissue acquisition (12). CBCT is not here to replace our bronchoscopic navigation tools, but to provide additional guidance and accurate real time confirmation that the",
+      "category": "introduction",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Cone beam CT imaging for bronchoscopy: a technical review",
+      "content": "Randolph Setser 1# , Gouthami Chintalapani 1# , Krish Bhadra 2 , Roberto F. Casal 3\n1 Advanced Therapies, Siemens Healthineers, Malvern, PA, USA; 2 Department of Pulmonology and Critical Care, CHI Memorial Medical Group, Chattanooga, TN, USA; 3 Department of Pulmonary Medicine, The University of T exas MD Anderson Cancer Center, Houston, TX, USA Contributions: (I) Conception and design: R Setser, G Chintalapani, RF Casal; (II) Administrative support: RF Casal; (III) Provision of study materials or patients: K Bhadra, RF Casal; (IV) Collection and assembly of data: All authors; (V) Data analysis and interpretation: R Setser, G Chintalapani, RF Casal; (VI) Manuscript writing: All authors; (VII) Final approval of manuscript: All authors.\n#\nThese authors contributed equally to this work.\nCorrespondence to: Roberto F. Casal, MD. Associate Professor of Medicine. Department of Pulmonary Medicine. The University of T exas MD Anderson Cancer Center. 1400 Pressler St. Unit 1462. Houston, TX 77030, USA. Email: rfcasal@mdanderson.org.\nAbstract: Cone beam computed tomography (CBCT) is a well-established imaging modality with numerous proven applications across multiple clinical disciplines. More recently, CBCT has emerged as an important imaging tool for bronchoscopists, primarily used during transbronchial biopsy of peripheral pulmonary lesions (PPLS). For this application CBCT has proved useful in navigating devices to a target lesion, in confirming device tool-in-lesion, as well as during tissue acquisition. In addition, CBCT is poised to play an important role in trials evaluating bronchoscopic ablation by helping to determine the location of the ablative probe relative to the target lesion. Before adopting this technology, it is key for bronchoscopists to learn some basic concepts that will allow them to have a safer and more successful experience with CBCT. Hence, in the current manuscript, we will focus on both technical and practical aspects of CBCT imaging, ranging from systems considerations, image quality, radiation dose and dose-reduction strategies, procedure room set-up, and best practices for CBCT image acquisition.\ntarget has, or has not been reached. Further, bronchoscopic ablation demands accurate knowledge of the position of the ablative probe with regards to the target and vital structures, and CBCT imaging may become the standard technique to play this invaluable role (13).\nThe purpose of this report is  to  familiarize  the reader with basic concepts of CBCT-including system functionality, radiation dose, and image quality-and with the technical aspects that are key for physicians who want to introduce this technology into their bronchoscopy practice.\nWe present the following article/case in accordance with the Narrative Review reporting checklist (available at http:// dx.doi.org/10.21037/jtd-20-2382).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "General principles",
+      "content": "Intraprocedural 3D imaging with C-arm based CBCT was introduced in the early 2000s and quickly gained prominence with a wide variety of accepted clinical applications, including multiple lung interventions (14-17). Advances in CBCT technology followed closely the proliferation of modern angiographic imaging systems equipped with flat panel detectors, which produce higher quality 2D images, and enable better patient access, than comparable image intensifier equipped systems (14).\nCBCT images are obtained by rotating the C-arm approximately 200 degrees around the patient in a circular trajectory and acquiring a series of 2D X-ray projection images at specific angular intervals. Acquisition times range from 3-20 seconds and include up to 600 projection images, depending on the system type and imaging protocol, e.g., a 3-8 second acquisition duration is typical for body and cardiac applications. Projection images are then reconstructed, often on a separate workstation, using standard Feldkamp-based reconstruction algorithms, resulting in a 3D stack of axial images, analogous to conventional multi-slice CT (MSCT) ( Figure 1 ) (14). With current detectors of 30 cm × 40 cm, CBCT acquisition covers a volume of 24×24×18.5 cm 3 resulting in an isotropic volumetric dataset of 0.5 mm voxels in a 512×512 matrix. These reconstructed images can be reformatted into coronal, sagittal, and axial views of arbitrary thickness for reviewing.\nCommon trade names for CBCT include DynaCT (Siemens Healthineers, Germany), Innova CT (GE Healthcare, USA), and XperCT (Philips Healthcare, Netherlands). Although the underlying CBCT technology is  similar across vendors, with comparable image quality\nfor visualizing PPLS, multiple protocols are available. These protocols have been optimized for different clinical applications and vary based on the system type and specific implementation. In general, the angular spacing between projection images, and the total number of images acquired, largely determines both the radiation dose and the degree of soft tissue contrast in reconstructed images. Both image quality and dose increase as the angular spacing between images is decreased.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "System considerations",
+      "content": "Fixed CBCT systems come in several configurations: floor, biplane, ceiling and robotic ( Figure 2 ); and all can be used during bronchoscopy. However, floor and biplane systems seem less desirable because the system base is attached to the floor at the head end of the patient table, where the bronchoscope operator stands. Furthermore, floor and biplane systems perform CBCT only as a propeller acquisition, with the point of rotation directly above the patient's head. Thus, depending on the C-arm depth, this could limit the system's reach and PPLS near the base of the lung might be unreachable during CBCT, especially in taller patients. In contrast, ceiling and robotic systems adapt more easily to standard bronchoscopy workflows, with better patient access and less need of equipment rearrangement when transitioning between fluoroscopy and CBCT. These systems are also more easily moved away from both the operator and patient's chest if desired, e.g., during electromagnetic navigation (EMN) navigation, when presence of the X-ray detector can disrupt the electromagnetic field used for navigation. Robotic systems have an advantage in this regard, as they can be moved away from the patient completely without disturbing either the operator or surrounding equipment. Lastly, ceiling and robotic systems are more commonly found in Interventional Radiology and hybrid operating room settings compared to floor or biplane systems.\nSome mobile C-arm systems such as Cios Spin (Siemens Healthineers) and Vision RFD 3D (Ziehm Imaging, Florida, USA) are also capable of performing CBCT ( Figure 2D ). Compared to fixed systems, mobile c-arms have a smaller field-of-view for CBCT and take longer (30-60 seconds) for image acquisition. However, they do have several advantages such as their mobility (can be utilized in multiple procedure rooms), smaller footprint (similar to a standard 2D C-arm fluoroscope), and lower cost.\nA radiolucent, typically carbon fiber, patient table is a\nrequirement for CBCT imaging for either fixed or mobile C-arms. Although this is standard equipment for fixed CBCT systems, mobile c-arm users must ensure they have access to a carbon fiber table for all X-ray imaging. If a radio-opaque, metallic patient table is used during CBCT, a significant portion of the X-ray photons will be absorbed as the C-arm moves around the patient, resulting in significant artifacts in the reconstructed 3D images. Although this is an additional requirement imposed by the CBCT, these tables are motorized and can be operated in a manner equivalent to existing surgical tables in interventional pulmonology suites.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Comparison of CBCT and MSCT",
+      "content": "There are fundamental differences between CBCT and MSCT acquisitions, as described in Figure 3 .  During\nCBCT, a cone of X-rays is emitted from the X-ray source and collected using a 2D detector array, resulting in a  series  of  2D  images as the C-arm moves around the patient, who is stationary. Thus, the Z-dimension (headfoot) in a cone beam acquisition is dictated by detector size, and a volumetric image is created during one C-arm rotation.  With MSCT, X-rays are emitted in a thin fan-beam geometry and collected in a helical fashion using a 1D detector array as the patient table moves. Thus, the Z-dimension in MSCT imaging is defined by the amount of table movement during acquisition. A full lung scan can be acquired using MSCT in a few seconds, as the CT gantry completes a full rotation in less than 0.4 seconds.\nIn general, CBCT is commercially available as an interventional imaging modality which is not intended for  diagnostic  use.  CBCT  and  MSCT  images  have similar spatial resolution, but CBCT has reduced contrast\nresolution, making it more difficult to discriminate among soft  tissues.  In  addition,  image  intensity  with  CBCT is  non-calibrated gray scale values, as opposed to the calibrated Hounsfield Units (HU) used in MSCT. Thus, a standardized lung window, as is used with MSCT, is not possible with CBCT. Despite these differences in image\nappearance, the ability to use CBCT for intraprocedural guidance is an important advantage for bronchoscopic procedures.\nFrom the practical standpoint, the main disadvantages of MSCT when compared with CBCT are that the head of the patient is typically inside the gantry (making bronchoscopy\ntechnically challenging) and the fact that the patient moves during the scan, and this movement can dislodge our bronchoscopy tools losing contact with the target.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Image quality",
+      "content": "CBCT image appearance depends strongly on the number of acquired projection images, as well as the\ndose per projection image. In general, acquisitions with a  greater  number of projection images provide more data for reconstruction, which results in images with improved signal-to-noise ratio (SNR) and better soft tissue differentiation (18). However, with any increase in projection images there is a concomitant increase in radiation dose, and potentially a longer scan duration, which can lead to worsened motion artifacts.\nCBCT is inherently more susceptible to several types of image artifacts relative to MSCT, primarily resulting from increased scatter radiation with flat panel detectors (14). However, there are methods to mitigate the effects of some CBCT artifacts. For example, streak artifacts from biopsy tools can appear prominently in CBCT datasets but can be reduced by increasing the dose per projection image or the total number of acquired projection images. Also, viewing the reconstructed images as either a multiplanar reconstruction (MPR, 3-5 mm) or thin maximum intensity projection (MIP-thin, 2-3 mm) can reduce the appearance of noise and will often result in a more visually pleasing image.\nBecause of its relatively long acquisition time, CBCT is susceptible to motion artifacts, which manifest as image blurring. These artifacts primarily result from breathing and cardiac motion. For example, lesions near the heart and great vessels can be influenced by motion artifacts due to cardiac motion, which is higher frequency but lower in magnitude than respiration. Current reconstruction algorithms primarily rely on imaging the area of interest in all projection images and triangulating the corresponding 2D pixels from each projection to create a 3D voxel. Any kind of motion will result in inaccurate mapping of these 2D pixels, resulting in blurred 3D image. Algorithms to capture inherent behavior of motion due to breathing or cardiac and to compensate for motion are currently under development.\nLastly, the presence of metal objects within the field-ofview can create artifacts and, if possible, it is recommended to remove them before image acquisition. If complete removal is not possible, they should be positioned as far  from  the  area  of  interest  as  possible  in  order  to minimize their effects. This includes inserted devices (e.g., bronchoscope) as well as external devices, such as ECG leads which could impact image quality of anterior lesions. As mentioned above, when utilizing mobile CBCT systems, removing metal objects from the field-of-view will also entail utilizing a dedicated carbon table that has no metal parts in the half of the bed where the torso and head are located.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Radiation dose",
+      "content": "Radiation dose is an important consideration when incorporating intraprocedural CBCT, and the most significant determinant of total dose is the number of CBCT acquisitions that are performed. Repeated CBCT acquisitions add linearly to the total radiation dose, and\nrecent studies of CBCT-guided bronchoscopy have reported from 1 to 3 CBCT acquisitions per patient (6,11). Similar to image quality, the radiation dose for a single CBCT is  directly  related to the number of projection images acquired as well as the dose per projection image. Thus, it is important to consider these factors when comparing dose values among studies.\nCare must be taken when comparing radiation dose values between CBCT and MSCT as well, as the methods for  reporting  dose  differ  between  these  modalities. As described by Casal et  al. (6),  the  most  appropriate metrics for CBCT radiation dose are the air Kerma (Kar -  Kinetic energy released in matter as a metric for entrance skin dose) and dose area product (DAP), both of  which are reported by commercial C-arm systems following each acquisition. However, many previous studies have reported estimates of effective dose (E) for CBCT, using a range of generalized conversion factors from 0.16 to 0.45 to create their estimates, which makes dose comparisons among studies difficult. The true conversion factor is system-specific and varies with anatomic location but can be measured using a calibrated phantom representative of patient population (19). The effective dose associated with CBCT has been measured using phantoms in several studies, with values of  0.98  mSv, 1.33 mSv and 3.32 mSv per acquisition, using 3 system types (20-22). These effective dose values correspond to acquisitions with 248, 312 and 419 projection images, respectively. These values are similar to those of a low-dose CT of the chest as performed during the National Lung Screening Trial (23).\nDose reduction techniques such as cranio-caudal collimation can result in significant dose savings and allow repeated CBCT imaging, if needed. Radiation dose will be reduced by an amount proportional to the collimated field-ofview, and image quality can also increase as a result of reduced scatter radiation (24). T o date, few studies have reported systematic use of collimation as a dose savings measure during CBCT-guided bronchoscopic procedures (25,26). However, in some cases it may be challenging to ensure the lesion is within the reduced field-of-view due to device-related deformation or atelectasis; thus, collimation might be most suitable for repeat CBCTs acquired after repositioning of devices.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Practical aspects",
+      "content": "CBCT-guided bronchoscopy is most successful and safest when a consistent protocol is followed. It is key to ensure\nadequate image quality without having to repeat the acquisition, thus preventing unnecessary radiation exposure to both patient and staff ( Table 1 ).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Room set-up",
+      "content": "The placement of personnel and ancillary equipment is an important consideration during CBCT-guided bronchoscopy. Protective equipment such as wrap-around lead aprons, thyroid shields and eye protection is particularly helpful for those who may be near the imaging system during the case. During CBCT acquisition, anesthesia, bronchoscopists and staff can relocate to the control room protected by lead glass, or stand behind an in-room radiation protection shield, to further reduce radiation exposure.\nA typical room set-up is shown in Figure 4 . Anesthesia staff and equipment are most commonly set up at the patient's head side, behind or beside the bronchoscope operator, although this will depend on the room configuration. Tubes and wires to the ventilator should be routed so they don't interfere with rotation of the C-arm during CBCT. Additional equipment, including bronchoscope tower and navigation systems, are positioned near the head for ease of viewing by the bronchoscopist but pushed back far enough\nnot to interfere with C-arm movement. However, if room configuration does not allow placement of bronchoscopy cart near enough for easy viewing, signals can be routed to separate in-room monitors.\nAnother important consideration is the need of a method for bronchoscope fixation during CBCT ( Figure 4 ).  This can be accomplished using existing materials, e.g., by taping the bronchoscope to the patient table or anesthesia circuit tree, as previously reported, or by developing a custom solution (8,9). Alternatively, there is a commercially available product that can be attached to the patient table or bronchoscopy cart, with an articulating arm that can be positioned as needed (The Arm, Neuwave Medical Inc., WI, USA) (6). An accessory rail holder can be attached to the patient table (outside the scanning field) which is helpful for attaching bronchoscope holders. In addition to keeping the bronchoscope in a fixed position, additional fixation using tape to secure the biopsy tool to the working channel (or to the extended working channel or guide-sheath if applicable) is often required to maintain stability.\nLastly, the location of monitors for the C-arm system (to view fluoroscopy images during navigation or sampling) will depend on the system type and room configuration. However, the most ergonomically advantageous position\nCBCT, cone beam computed tomography.\nseems to be across the patient's body around waist level (distal to the C-arm) or on a side wall monitor.\nWhen utilizing a mobile CBCT, this unit is placed across the bronchoscopy table on the patient's side (left or right) in a similar fashion as the standard 2D C-arm used for conventional fluoroscopy. Since these units have a similar foot-print as the standard fluoroscopy units, the set-up of the bronchoscopy lab does not necessarily need to change. It  is,  however, important to bear in mind that this unit will need to rotate 200 degrees around the patient. Hence, tubing, arm-boards, and cables should not be in the way of the rotating arm.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Maximizing image quality",
+      "content": "When performing CBCT, the target PPLS should be at isocenter of the CBCT acquisition. This ensures that\nthe anatomy of interest is contained within all acquired projection images, thus avoiding truncation of the lesion in reconstructed images. T o this end, the patient should be positioned on the table so the target PPL is as close as possible to the center of the table. Most commercial systems employ a 2-step process for setting up CBCT: first, the lesion is isocentered in frontal and lateral projections; and second, a test spin is performed (collision check), without radiation, to ensure the C-arm can perform a full rotation without hitting the patient or ancillary equipment. Once the lesion has been isocentered in frontal position, it is important to only move the table up/down for lateral isocentering; otherwise, the frontal plane positioning will need to be repeated.\nIt is imperative to suspend patient respiration during CBCT acquisition to decrease motion artifact and achieve optimal image quality (6-8,20). Some authors advocate the\nuse of higher airway pressures during CBCT to maintain airways open and visualize smaller airways that may lead to the target lung lesion (7,20). In the absence of data, the authors recommend an inspiratory breath-hold during CBCT image acquisition with a tidal volume of 8-10 mL/kg of ideal body weight and a positive end expiratory pressure (PEEP) of at least 10 cm of H 2 O (27). It is of critical importance to maintain adequate paralysis to prevent any diaphragmatic motion/breathing effort during apneic breath hold. Other factors such as post-intubation recruitment maneuvers, use of high levels of PEEP , and avoiding hyperoxia, may play a role in reducing atelectasis (28-31).\nCBCT of the chest and abdomen in Interventional Radiology departments is typically performed with the patient's arms raised above the head, to ensure they are outside the imaging field-of-view, which can improve image quality by avoiding X-ray beam hardening from the arms. In particular, raising the arms during CBCT can be helpful when trying to image lesions in the posterior/ dependent aspect of the lung. However, only one study to date has reported this approach during CBCT-guided bronchoscopy (6). Apart from image quality concerns, raising the arms can help ensure freedom of movement of C-arm in larger patients. However, raising and lowering the arms during the procedure could affect the accuracy of any fluoroscopic overlay being utilized. If this approach is to be utilized, both arms can be brought up above the head with a 90-degree flexion at the elbows and securely fastened with a strap. To minimize the time in this position and potential musculoskeletal injuries, this can performed after bronchoscopic navigation or deployment of biopsy tool, and just before the CBCT scan. If the initial scan shows unsuccessful navigation or biopsy tool positioning and further scanning is expected, the arms can be kept in this position for a few minutes. Nevertheless, the bronchoscopist should be conscious of this and expedite bronchoscopic maneuver as much as possible. If unable, arms should be brought down and re-positioned again just before the next CBCT scan.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Imaging of peripheral pulmonary lesions",
+      "content": "A consistent finding in the literature is that PPLS visible on MSCT images are also visible on CBCT, including small PPLS (<1 cm) and ground glass opacity lesions (16,17,32). Hisano et  al. demonstrated that CBCT can be used to\ndifferentiate 4 lesion types identified on MSCT: solid, pure GGO, mixed solid/GGO and cyst. In 19 patients (25 lesions), they found no significant difference in lesion conspicuity, measured as contrast-to-noise ratio (CNR), between CBCT and MSCT (32). In another study, 23 of 24 PPLS identified on pre-procedural MSCT were also well visualized on intraprocedural CBCT; the lesion not visualized was found to have resolved on follow-up MSCT (16). While CBCT will not be used for the sole purposing of imaging PPLS, it is important to establish that the technique has the ability to detect any potential targets.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "CBCT-guided VATS",
+      "content": "One of the first published lung applications for CBCT was image-guided video assisted thoracic surgery (iVATS) (16,17). In these procedures, CBCT images are used with dedicated needle guidance software to guide percutaneous placement of markers to localize PPLS prior to single-port laparoscopic resection. A major advantage of this approach is that marker placement and resection occur in the same hybrid operating theater, which reduces patient transfer and procedure times, with excellent outcomes reported.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "CBCT-guided diagnostic bronchoscopy",
+      "content": "CBCT has been used in many recent studies to visualize PPLS during bronchoscopy for diagnosis, ablation, and pleural dye marking (6-11,25,26). During peripheral bronchoscopy, CBCT can be used for navigation guidance, to confirm tool-in-lesion prior to biopsy or ablation, or a combination of both (6-11,25,26). CBCT has been utilized in combination with different bronchoscopic technique such as ultrathin scopes, RP-Endobronchial ultrasound (EBUS), transbronchial access tool, and EMN (6-11,25,26). CBCT offers full 3D intraprocedural imaging, which differentiates it from virtual navigation and other novel techniques such as digital tomosynthesis. T omosynthesis is a technology that performs a C-arm sweep and reconstructs the images using a preset algorithm that is not truly 3D. Furthermore, it is limited by interference from other anatomic structures, such as the diaphragm, and lesions typically have to be solid and well defined. In contrast, CBCT offers bronchoscopists full 3D imaging capability not limited to particular types of lung lesions regardless of size or location.\nWhen utilized for planning and navigation, CBCT is  acquired early in the procedure, after anesthesia is administered but typically before the bronchoscope is\ninserted. Images are reviewed and the target PPLS are located, then outlined using dedicated segmentation software ( Figure 5 )  (7,8,11,25). Most systems have either manual and/or semi-automatic segmentation tool that allow the user to outline a lesion on CBCT images (in one or more planes) or perform a volumetric segmentation of a lesion. The segmented lesion can then be overlaid on live fluoroscopic images to provide a target for intraprocedural\nnavigation and sampling.\nAll available segmentation tools provide only a static overlay, although the underlying anatomy they represent will move with respiration. Thus, the overlay only matches the true lesion location at a single point in the respiratory cycle, coincident with the location during CBCT acquisition. This can be misleading, especially in cases where the lesion is not visible on fluoroscopy. PPLS motion has been reported\nto average 1.7 cm over all lung regions, although the range of PPLS motion is more pronounced near the base of the lung, where lesion motion over a breathing cycle averages 2.5 cm (33). Hohenforst-Schmidt and coworkers were the first group to report the use of airways segmentation overlaid on fluoroscopy images during CBCT-guided bronchoscopy in a prospective feasibility study. A larger but retrospective study by Pritchett at al . reported on the use of CBCT and fluoroscopic overlay during navigation with EMN with a diagnostic yield of 84% (11).\nRecent studies have shown that CBCT can be used to  confirm  tool-in-lesion  prior  to  biopsy  with  high confidence, with the potential to improve diagnostic yield ( Figures 1,5 )  (6-10). For tool-in-lesion confirmation, CBCT is performed after the bronchoscopic biopsy tool is thought to have reached the target lesion, immediately prior to biopsy. The bronchoscope is secured and CBCT is performed; the resulting images are reviewed as MPRs or thick MIPs in multiple planes to determine the location of the tool relative to the lesion. In some clinical scenarios, reviewing the volume rendered images can be useful as well. Park et al. (10) found that tool-in-lesion confirmation by CBCT prior to biopsy was the only factor associated with increased diagnostic yield using a multivariate analysis in a single arm study of patients who underwent CBCTguided transbronchial lung biopsy. A small prospective study conducted by Casal et al. reported a 25% increase in navigational success and a 20% increase in diagnostic yield attributed to the tool-in-lesion confirmation CBCT (6). In addition, an interesting finding of their study was the detection of atelectasis in CBCT that was not visible on fluoroscopy alone, which were producing false-positive RPEBUS images and sometimes were completely obscuring the targets. These additional data further supported the utility of intra-procedural CBCT to accurately confirm tool-in-lesion during bronchoscopy for PPLS.\nWith regards to limitations or disadvantages of using CBCT as an aid in diagnostic bronchoscopy, in addition to the radiation exposure described above, the lack of availability in most bronchoscopy rooms and the added time to procedures are worth mentioning. With the advent of mobile CBCT units with similar footprints as standard 2D c-arms, availability may not be an issue in the near future (34). Bronchoscopy time is indeed prolonged, and the number of scans and need for preparation (i.e., arms up) will determine by how much. Having said so, patients are typically under general anesthesia and an extra few minutes is unlikely to result in any harm.\nIn summary, CBCT plays an important role during diagnostic bronchoscopy by identifying the relationship between the biopsy tool and the lesion, preventing the operator from missing the target, and recognizing false positive RP-Endobronchial ultrasound (EBUS) images given by atelectasis. This has the potential of avoiding non-diagnostic samples, reducing total number of samples needed for diagnosis, and reducing thus complications.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "CBCT and bronchoscopic ablation of peripheral lung tumors",
+      "content": "MSCT-guided percutaneous thermal ablation is a local ablative therapy reserved for some selected patients with PPLS who are not eligible for surgery. Percutaneous radiofrequency and microwave ablation, in particular, have been shown to be provide adequate local control (35). Nevertheless, percutaneous ablation inevitably violates the visceral pleura and pneumothorax is a very common complication. With a more favorable safety profile and the ability to provide also diagnosis and nodal staging in one setting, bronchoscopic ablation is hence emerging as a potential future therapeutic alternative for these patients (13). Several bronchoscopic ablation modalities are currently under development, with ongoing clinical trials, and CBCT promises to play a prominent role in this growing field. CBCT can detect in real-time the position of the ablating tools with respect to the target, provide a view of nearby anatomic structures (potentially preventing complications), and it could be utilized to assess for treatment changes and to detect complications in real-time (13,36).",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Conclusions",
+      "content": "CBCT is a relatively newer modality for endobronchial interventions that consists of a compact system mounted on a moving C-arm, thereby allowing the patient to remain stationary during the 3D imaging. In a single orbit around the patient, a complete volumetric dataset covering a large anatomic region of interest is acquired, and from this, a stack of images with submillimeter, isotropic resolution is generated. Given the need to enhance diagnostic yield of peripheral bronchoscopy and the growing interest in bronchoscopic ablation, CBCT has emerged as desirable technology to guide bronchoscopists when they venture into the lung parenchyma. Multiple studies are underway to investigate whether this technology will truly impact the current outcomes of peripheral bronchoscopy.",
+      "category": "conclusion",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Acknowledgments",
+      "content": "The authors would like to thank Julie DiNitto, PhD and William Condra, RTR for their assistance with preparation of the figures used in this manuscript. Funding: None.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Footnote",
+      "content": "Reporting Checklist: The authors have completed the Narrative Review reporting checklist. Available at http:// dx.doi.org/10.21037/jtd-20-2382\nConflicts  of  Interest: All  authors  have  completed  the ICMJE uniform disclosure form (available at http://dx.doi. org/10.21037/jtd-20-2382). RS and GC are full-time employees of Siemens Healthineers. KB reports personal fees  from  Medtronic Interventional Lung Solutions, Philips, Intuitive Surgical, Bodyvision, and Auris, outside the submitted work. RFC reports grants from Concordia, Olympus, Siemens, and personal fees from Intuitive, outside the submitted work; he serves as an unpaid editorial board member of Journal of Thoracic Disease from Apr 2020 to Mar 2022.\nEthical  Statement: The author is accountable for all aspects of the work in ensuring that questions related to the accuracy or integrity of any part of the work are appropriately investigated and resolved.\nOpen Access Statement: This  is  an  Open  Access article distributed in accordance with the Creative Commons Attribution-NonCommercial-NoDerivs 4.0 International License (CC BY-NC-ND 4.0), which permits the noncommercial replication and distribution of the article with the strict proviso that no changes or edits are made and the original work is properly cited (including links to both the formal publication through the relevant DOI and the license). See: https://creativecommons.org/licenses/by-nc-nd/4.0/.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "References",
+      "content": "1. Wang Memoli JS, Nietert PJ, Silvestri GA. Metaanalysis of guided bronchoscopy for the evaluation of the pulmonary nodule. Chest 2012;142:385-93.\n2. Tanner NT, Yarmus L, Chen A, et al. Standard bronchoscopy with fluoroscopy vs thin bronchoscopy and radial endobronchial ultrasound for biopsy of pulmonary\nlesions: A multicenter, prospective, randomized trial. Chest 2018;154:1035-43.\n3. Sainz Zuñiga PV, Vakil E, Molina S, et al. Sensitivity of radial endobronchial ultrasound-guided bronchoscopy for lung cancer in patients with peripheral pulmonary lesions: An Updated Meta-analysis. Chest 2020;157:994-1011.\n4. Khandhar SJ, Bowling MR, Flandes J, et al. Electromagnetic navigation bronchoscopy to access lung lesions in 1,000 subjects: first results of the prospective, multicenter NAVIGATE study. BMC Pulm Med 2017;17:59.\n5. Chaddha U, Kovacs SP, Manley C, et al. Robot-assisted bronchoscopy for pulmonary lesion diagnosis: results from the initial multicenter experience. BMC Pulm Med 2019;19:243.\n6. Casal RF, Sarkiss M, Jones AK, et al. Cone beam computed tomography-guided thin/ultrathin bronchoscopy for diagnosis of peripheral lung nodules: a prospective pilot study. J Thorac Dis 2018;10: 6950-9.\n7. Hohenforst-Schmidt W, Zarogoulidis P , Vogl T , et al. Cone beam computertomography (CBCT) in interventional chest medicine - High feasibility for endobronchial realtime navigation. J Cancer 2014;5:231-41.\n8. Bowling MR, Brown C, Anciano CJ. Feasibility and safety of the transbronchial access tool for peripheral pulmonary nodule and mass. Ann Thorac Surg 2017;104:443-9.\n9. Ng CSH, Yu SCH, Lau RWH, et al. Hybrid DynaCTguided electromagnetic navigational bronchoscopic biopsy. Eur J Cardiothorac Surg 2016;49:i87-8.\n10.  Park SC, Kim CJ, Han CH, et al. Factors associated with the diagnostic yield of computed tomography-guided transbronchial lung biopsy. Thoracic Cancer 2017;8:153-8.\n11.  Pritchett MA, Schampaert S, de Groot JAH, et al. Conebeam CT with augmented fluoroscopy combined with electromagnetic navigation bronchoscopy for biopsy of pulmonary nodules. J Bronchology Interv Pulmonol 2018;25:274-82.\n12.  Casal RF. Cone beam CT-guided bronchoscopy. J Bronchology Interv Pulmonol 2018;25:255-6.\n13.  Sabath BF, Casal RF. Bronchoscopic ablation of peripheral lung tumors. J Thorac Dis 2019;11:2628-38.\n14.  Orth RC, Wallace MJ, Kuo MD. C-arm cone-beam CT: General principles and technical considerations for use in interventional radiology. J Vasc Interv Radiol 2008;19:814-20.\n15.  Glatz AC, Zhu X, Gillespie MJ, et al. Use of angiographic CT imaging in the cardiac catheterization lab for congenital heart disease. JACC Cardiovasc Imaging 2010;3:1149-57.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Setser et al. Cone beam CT technique",
+      "content": "16.  Gill Relative risk (RR), Zheng Y, Barlow JS, et al. Image-guided video assisted thorascopic surgery (iVATS) - phase I-II clinical trial. J Surg Oncol 2015;112:18-25.\n17.  Ng CSH, Chu CM, Kwok MWT, et al. Hybrid DynaCT scan-guided localization single-port lobectomy. Chest 2015;147:e76-8.\n18.  Scarfe WC, Farman AG. What is cone-beam CT and how does it work? Dent Clin N Am 2008;52:707-30.\n19.  Schultz FW, Zoetelief J. Dose conversion coeffecients for interventional procedures. Radiat Prot Dosimetry 2005;117;225-30.\n20.  Hohenforst-Schmidt W, Banckwitz R, Zarogoulidis P, et al. Radiation exposure of patients by cone beam CT during endobronchial navigation - A phantom study. J Cancer 2014;5:192-202.\n21.  Choi JW, Park CM, Goo JM, et al. C-arm cone-beam CT-guided percutaneous transthoracic needle biopsy of small ( ≤ 20 mm) lung nodules: diagnostic accuracy and complications in 161 patients. AJR Am J Roentgenol 2012;199:W322-30.\n22.  Choo JY, Park CM, Lee, NK, et al. Percutaneous transthoracic needle biopsy of small ( ≤ 1 cm) lung nodules under C-arm cone-beam CT virtual navigation guidance. Eur Radiol 2013;23:712-9.\n23.  Larke FJ, Kruger RL, Cagnon CH, et al. Estimated radiation dose associated with low-dose chest CT of average-size participants in the National Lung Screening Trial. AJR Am J Roentgenol 2011;197:1165-9.\n24.  Werncke T, von Falck C, Luepke M, et al. Collimation and image quality of c-arm computed tomography: Potential of radiation dose reduction while maintaining equal image quality. Invest Radiol 2015;50:514-21.\n25.  Yang SM, Yu KL, Lin JH, et al. Cumulative experience of preoperative real-time augmented fluoroscopy-guided endobronchial dye marking for small pulmonary nodules: an analysis of 30 initial patients. J Formos Med Assoc 2019;118:1232-8.\n26.  Yang SM, Yu KL, Lin KH, et al. Localization of small pulmonary nodules using augmented fluoroscopic bronchoscopy: Experience from 100 consecutive cases.\nWorld J Surg 2020;44:2418-25.\n27.  Pritchett MA, Bhadra K, Calcutt M, et al. Virtual or reality: divergence between preprocedural computed tomography scans and lung anatomy during guided bronchoscopy. J Thorac Dis 2020;12:1595-611.\n28.  T okics L, Hedenstierna G, Strandberg A, et al. Lung collapse and gas exchange during general anesthesia: effects of spontaneous breathing, muscle paralysis, and positive end-expiratory pressure. Anesthesiology 1987;66:157-67.\n29.  Klingstedt C, Hedenstierna G, Lundquist H, et al. The influence of body position and differential ventilation on lung dimensions and atelectasis formation in anaesthetized man. Acta Anaesthesiol Scand 1990;34:315-22.\n30.  Rothen HU, Sporre B, Engberg G, et al. Prevention of atelectasis during general anaesthesia. Lancet 1995;345:1387-91.\n31.  Neumann P, Rothen HU, Berglund JE, et al. Positive endexpiratory pressure prevents atelectasis during general anaesthesia even in the presence of a high inspired oxygen concentration. Acta Anaesthesiol Scand 1999;43:295-301.\n32.  Hisano H, Sakuragi T, Kakiuchi Y, et al. Usefulness of intraoperative cone beam CT images on video-assisted thoracic surgery. Nihon Hoshasen Gijutsu Gakkai Zasshi 2017;73:87-95.\n33.  Chen A, Pastis N, Furukawa B, et al. The effect of respiratory motion on pulmonary nodule location during electromagnetic navigation bronchoscopy. Chest 2015;147:1275-81.\n34.  Avasarala SK, Machuzak MS, Gildea TR. Multidimensional precision. Hybrid mobile 2D/3D c-arm assisted biopsy of peripheral lung nodules. J Bronchology Interv Pulmonol 2020;27:153-5.\n35.  Alexander ES, Dupuy DE. Lung cancer ablation: Technologies and techniques. Semin Intervent Radiol 2013;30:141-50.\n36.  Meram E, Longhurst C, Brace CL, et al. Comparison of conventional and cone-beam CT for monitoring and assessing pulmonary microwave ablation in a porcine model. J Vasc Interv Radiol 2018;29:1447-54.\nCite this article as: Setser R, Chintalapani G, Bhadra K, Casal RF . Cone beam CT imaging for bronchoscopy: a technical review. J Thorac Dis 2020;12(12):7416-7428. doi: 10.21037/jtd-20-2382",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    }
+  ],
+  "tables": [
+    {
+      "id": "table",
+      "caption": "{'cref': '#/texts/86'}",
+      "headers": null,
+      "rows": [
+        [
+          "CBCT image-acquisition protocol"
+        ],
+        [
+          "The goal is to achieve sufficient image quality at lowest reasonably achievable dose"
+        ],
+        [
+          "Typically, this entails a 5-8 seconds CBCT, acquiring 250-400 projection images"
+        ],
+        [
+          "Use collimation to reduce patient dose whenever appropriate"
+        ],
+        [
+          "Patient/CBCT arm positioning"
+        ],
+        [
+          "Isocenter patient's lesion in image volume"
+        ],
+        [
+          "Ensure all removable metal objects are outside imaging field-of-view"
+        ],
+        [
+          "Ensure all cables and tubes do not interfere with C-arm rotation"
+        ],
+        [
+          "Elevate arms above the head (out of scanning field)"
+        ],
+        [
+          "If EMN is being used, unplug and remove the electromagnetic field generator from field-of-view, if possible"
+        ],
+        [
+          "Bronchoscope fixation"
+        ],
+        [
+          "Ensure that bronchoscope and cable will not interfere with C-arm motion. If necessary, detach bronchoscope cable from tower"
+        ],
+        [
+          "Confirm that biopsy tool was not moved during fixation process using short fluoroscopy acquisition"
+        ],
+        [
+          "CBCT acquisition"
+        ],
+        [
+          "Ensure all staff have left procedure room, or are safely behind lead shields, prior to CBCT acquisition"
+        ],
+        [
+          "After ensuring adequate patient paralysis, perform an inspiratory breath-hold"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    }
+  ],
+  "figures": [
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/35'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/45'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/57'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/98'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/124'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    }
+  ],
+  "references": [
+    {
+      "title": "Metaanalysis of guided bronchoscopy for the evaluation of the pulmonary nodule"
+    },
+    {
+      "title": "Chest",
+      "year": 2012
+    },
+    {
+      "title": "Standard bronchoscopy with fluoroscopy vs thin bronchoscopy and radial endobronchial ultrasound for biopsy of pulmonary lesions: A multicenter, prospective, randomized trial",
+      "year": 2012
+    },
+    {
+      "title": "Sensitivity of radial endobronchial ultrasound-guided bronchoscopy for lung cancer in patients with peripheral pulmonary lesions: An Updated Meta-analysis",
+      "year": 2018
+    },
+    {
+      "title": "Electromagnetic navigation bronchoscopy to access lung lesions in 1,000 subjects: first results of the prospective, multicenter NAVIGATE study",
+      "year": 2020
+    },
+    {
+      "title": "BMC Pulm Med",
+      "year": 2017
+    },
+    {
+      "title": "Robot-assisted bronchoscopy for pulmonary lesion diagnosis: results from the initial multicenter experience",
+      "year": 2017
+    },
+    {
+      "title": "Cone beam computed tomography-guided thin/ultrathin bronchoscopy for diagnosis of peripheral lung nodules: a prospective pilot study",
+      "year": 2019
+    },
+    {
+      "title": "J Thorac Dis",
+      "year": 2018
+    },
+    {
+      "title": "Cone beam computertomography (CBCT) in interventional chest medicine -High feasibility for endobronchial realtime navigation",
+      "year": 2018
+    },
+    {
+      "title": "J Cancer",
+      "year": 2014
+    },
+    {
+      "title": "Feasibility and safety of the transbronchial access tool for peripheral pulmonary nodule and mass",
+      "year": 2014
+    },
+    {
+      "title": "Ann Thorac Surg",
+      "year": 2017
+    },
+    {
+      "title": "Hybrid DynaCTguided electromagnetic navigational bronchoscopic biopsy",
+      "year": 2017
+    },
+    {
+      "title": "Eur J Cardiothorac Surg",
+      "year": 2016
+    },
+    {
+      "title": "Factors associated with the diagnostic yield of computed tomography-guided transbronchial lung biopsy",
+      "year": 2016
+    },
+    {
+      "title": "Thoracic Cancer",
+      "year": 2017
+    },
+    {
+      "title": "Conebeam CT with augmented fluoroscopy combined with electromagnetic navigation bronchoscopy for biopsy of pulmonary nodules",
+      "year": 2017
+    },
+    {
+      "title": "J Bronchology Interv Pulmonol",
+      "year": 2018
+    },
+    {
+      "title": "Cone beam CT-guided bronchoscopy",
+      "year": 2018
+    },
+    {
+      "title": "Bronchoscopic ablation of peripheral lung tumors",
+      "year": 2018
+    },
+    {
+      "title": "C-arm cone-beam CT: General principles and technical considerations for use in interventional radiology",
+      "year": 2019
+    },
+    {
+      "title": "J Vasc Interv Radiol",
+      "year": 2008
+    },
+    {
+      "title": "Use of angiographic CT imaging in the cardiac catheterization lab for congenital heart disease",
+      "year": 2008
+    },
+    {
+      "title": "JACC Cardiovasc Imaging",
+      "year": 2010
+    },
+    {
+      "title": "Image-guided video assisted thorascopic surgery (iVATS) -phase I-II clinical trial",
+      "year": 2010
+    },
+    {
+      "title": "J Surg Oncol",
+      "year": 2015
+    },
+    {
+      "title": "Hybrid DynaCT scan-guided localization single-port lobectomy",
+      "year": 2015
+    },
+    {
+      "title": "What is cone-beam CT and how does it work?",
+      "year": 2015
+    },
+    {
+      "title": "Dent Clin N Am",
+      "year": 2008
+    },
+    {
+      "title": "Dose conversion coeffecients for interventional procedures",
+      "year": 2008
+    },
+    {
+      "title": "Radiat Prot Dosimetry",
+      "year": 2005
+    },
+    {
+      "title": "Radiation exposure of patients by cone beam CT during endobronchial navigation -A phantom study",
+      "year": 2005
+    },
+    {
+      "title": "C-arm cone-beam CT-guided percutaneous transthoracic needle biopsy of small (≤ 20 mm) lung nodules: diagnostic accuracy and complications in 161 patients",
+      "year": 2014
+    },
+    {
+      "title": "AJR Am J Roentgenol",
+      "year": 2012
+    },
+    {
+      "title": "Percutaneous transthoracic needle biopsy of small (≤1 cm) lung nodules under C-arm cone-beam CT virtual navigation guidance",
+      "year": 2012
+    },
+    {
+      "title": "Eur Radiol",
+      "year": 2013
+    },
+    {
+      "title": "Estimated radiation dose associated with low-dose chest CT of average-size participants in the National Lung Screening Trial",
+      "year": 2013
+    },
+    {
+      "title": "Collimation and image quality of c-arm computed tomography: Potential of radiation dose reduction while maintaining equal image quality",
+      "year": 2011
+    },
+    {
+      "title": "Invest Radiol",
+      "year": 2015
+    },
+    {
+      "title": "Cumulative experience of preoperative real-time augmented fluoroscopy-guided endobronchial dye marking for small pulmonary nodules: an analysis of 30 initial patients",
+      "year": 2015
+    },
+    {
+      "title": "J Formos Med Assoc",
+      "year": 2019
+    },
+    {
+      "title": "Localization of small pulmonary nodules using augmented fluoroscopic bronchoscopy: Experience from 100 consecutive cases",
+      "year": 2019
+    },
+    {
+      "title": "World J Surg",
+      "year": 2020
+    },
+    {
+      "title": "Virtual or reality: divergence between preprocedural computed tomography scans and lung anatomy during guided bronchoscopy",
+      "year": 2020
+    },
+    {
+      "title": "Lung collapse and gas exchange during general anesthesia: effects of spontaneous breathing, muscle paralysis, and positive end-expiratory pressure",
+      "year": 2020
+    },
+    {
+      "title": "Anesthesiology",
+      "year": 1987
+    },
+    {
+      "title": "The influence of body position and differential ventilation on lung dimensions and atelectasis formation in anaesthetized man",
+      "year": 1987
+    },
+    {
+      "title": "Acta Anaesthesiol Scand",
+      "year": 1990
+    },
+    {
+      "title": "Prevention of atelectasis during general anaesthesia",
+      "year": 1990
+    },
+    {
+      "title": "Lancet",
+      "year": 1995
+    },
+    {
+      "title": "Positive endexpiratory pressure prevents atelectasis during general anaesthesia even in the presence of a high inspired oxygen concentration",
+      "year": 1995
+    },
+    {
+      "title": "Usefulness of intraoperative cone beam CT images on video-assisted thoracic surgery",
+      "year": 1999
+    },
+    {
+      "title": "Nihon Hoshasen Gijutsu Gakkai Zasshi",
+      "year": 2017
+    },
+    {
+      "title": "The effect of respiratory motion on pulmonary nodule location during electromagnetic navigation bronchoscopy",
+      "year": 2017
+    },
+    {
+      "title": "Multidimensional precision. Hybrid mobile 2D/3D c-arm assisted biopsy of peripheral lung nodules",
+      "year": 2015
+    },
+    {
+      "title": "Lung cancer ablation: Technologies and techniques",
+      "year": 2020
+    },
+    {
+      "title": "Semin Intervent Radiol",
+      "year": 2013
+    },
+    {
+      "title": "Comparison of conventional and cone-beam CT for monitoring and assessing pulmonary microwave ablation in a porcine model",
+      "year": 2013
+    }
+  ],
+  "quality": {
+    "completeness_score": 0,
+    "has_abstract": true,
+    "abstract_source": "metadata",
+    "has_doi": true,
+    "has_full_text": true,
+    "num_sections": 19,
+    "num_tables": 1,
+    "num_figures": 14,
+    "num_references": 59
+  }
+}

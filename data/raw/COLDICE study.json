@@ -1,0 +1,797 @@
+{
+  "metadata": {
+    "document_id": "10_1016_s2213_2600_19_30342_x",
+    "title": "Diagnostic accuracy of transbronchial lung cryobiopsy for interstitial lung disease diagnosis (COLDICE): a prospective, comparative study",
+    "authors": [
+      "Lauren K Troy",
+      "Christopher Grainge",
+      "Tamera J Corte",
+      "Jonathan P Williamson",
+      "Michael P Vallely",
+      "Wendy A Cooper",
+      "Annabelle Mahar",
+      "Jeffrey L Myers",
+      "Simon Lai",
+      "Ellie Mulyadi",
+      "Paul J Torzillo",
+      "Martin J Phillips",
+      "Helen E Jo",
+      "Susanne E Webster",
+      "Qi T Lin",
+      "Jessica E Rhodes",
+      "Matthew Salamonsen",
+      "Jeremy P Wrobel",
+      "Benjamin Harris",
+      "Garrick Don",
+      "Peter J C Wu",
+      "Benjamin J Ng",
+      "Christopher Oldmeadow",
+      "Ganesh Raghu",
+      "Edmund M T Lau",
+      "David Arnold",
+      "Christopher Cao",
+      "Amy Cashmore",
+      "Shannon Cleary",
+      "Tiffany-Jane Evans",
+      "Bruce French",
+      "Monika Geis",
+      "Laura Glenn",
+      "Michael Hibbert",
+      "Alvin Ing",
+      "Allen James",
+      "Graham Meredith",
+      "Christopher Merry",
+      "Anand Pudipeddi",
+      "Tajalli Saghaie",
+      "Rajesh Thomas",
+      "Claire Thomson",
+      "Scott Twaddell"
+    ],
+    "year": 2020,
+    "journal": "The Lancet Respiratory Medicine",
+    "doi": "10.1016/s2213-2600(19)30342-x",
+    "volume": "8",
+    "issue": "2",
+    "pages": "171-181",
+    "citation": "Troy, et al. (2020). Diagnostic accuracy of transbronchial lung cryobiopsy for interstitial lung disease diagnosis (COLDICE): a prospective, comparative study. The Lancet Respiratory Medicine, 8(2), 171-181. https://doi.org/10.1016/s2213-2600(19)30342-x",
+    "abstract": "Background Transbronchial lung cryobiopsy (TBLC) is a novel technique for sampling lung tissue for interstitial lung disease diagnosis. The aim of this study was to establish the diagnostic accuracy of TBLC compared with surgical lung biopsy (SLB), in the context of increasing use of TBLC in clinical practice as a less invasive biopsy technique.",
+    "abstract_source": "metadata",
+    "url": "https://linkinghub.elsevier.com/retrieve/pii/S221326001930342X"
+  },
+  "source_file": "COLDICE study.json",
+  "sections": [
+    {
+      "title": "Lancet Respir Med 2020; 8: 171-81",
+      "content": "Published Online September 29, 2019 https://doi.org/10.1016/ S2213-2600(19)30342-X\nSee Comment page 129\n*Investigators are listed in the appendix\nRoyal Prince Alfred Hospital, Camperdown, NSW, Australia (L K Troy PhD, T J Corte PhD, W A Cooper PhD, A Mahar MBBS, S Lai MBBS, E Mulyadi MBBS, Prof P J Torzillo MBBS, H E Jo PhD, S E Webster BN, Q T Lin MN, J E Rhodes BN, E M T Lau PhD) ; Sydney Medical School, University of Sydney, Sydney, NSW, Australia (L K Troy, T J Corte, Prof M P Vallely PhD, W A Cooper, Prof P J Torzillo, H E Jo, B Harris PhD, E M T Lau) ; John Hunter Hospital, New Lambton Heights, NSW, Australia (C Grainge PhD) ; Hunter Medical Research Institute, New Lambton Heights, NSW, Australia (C Grainge, C Oldmeadow PhD) ; Liverpool Hospital, Liverpool, NSW, Australia (J P Williamson PhD) ; Macquarie University Hospital, Sydney, NSW, Australia (J P Williamson, Prof M P Vallely, Prof M J Phillips MBBS) ; Michigan Medicine, University of Michigan, Ann Arbour, MI, USA (Prof J L Myers MD) ; Sir Charles Gairdner Hospital, Nedlands, WA, Australia (Prof M J Phillips) ; Fiona Stanley Hospital, Murdoch, WA, Australia (M Salamonsen PhD, J P Wrobel PhD) ; University of Notre Dame Australia, Fremantle, WA, Australia (J P Wrobel) ; Royal North Shore Hospital, Artarmon, NSW, Australia (B Harris, G Don MBBS) ; Westmead Hospital, Westmead, NSW, Australia (P J C Wu MBBS) ; Nepean Hospital, Kingswood,",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Introduction",
+      "content": "Interstitial lung diseases comprise a heterogeneous group of conditions with variable natural history and treatment response.  Through  the  integration  of  comprehensive clinical, serological, and radiological data within a multidisciplinary discussion (MDD), an underlying interstitial lung disease subtype can usually be identified. 1-3 In  particular,  the  high-resolution  CT  scan  can  provide\ndetailed information on the probable disease pattern, with specific clinical context allowing for refinement of potential  di/uniFB00erential  diagnoses.  In  up  to  30%  of  cases, however, the high-resolution CT and clinical findings are not  su/uniFB03cient  to  allow  for  confident  clinical  diagnosis, requiring a surgical lung biopsy (SLB) for histopathological evaluation. 4 The  current  accepted  standard  practice  for obtaining  SLB  is  through  video-assisted  thoracoscopic",
+      "category": "introduction",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Diagnostic accuracy of transbronchial lung cryobiopsy for interstitial lung disease diagnosis (COLDICE): a prospective, comparative study",
+      "content": "Lauren K Troy, Christopher Grainge, Tamera J Corte, Jonathan P Williamson, Michael P Vallely, Wendy A Cooper, Annabelle Mahar, Jeffrey L Myers, Simon Lai, Ellie Mulyadi, Paul J Torzillo, Martin J Phillips, Helen E Jo, Susanne E Webster, Qi T Lin, Jessica E Rhodes, Matthew Salamonsen, Jeremy P Wrobel, Benjamin Harris, Garrick Don, Peter J C Wu, Benjamin J Ng, Christopher Oldmeadow, Ganesh Raghu, Edmund M T Lau, on behalf of the Cryobiopsy versus Open Lung biopsy in the Diagnosis of Interstitial lung disease alliance (COLDICE) Investigators*",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Summary",
+      "content": "Background Transbronchial lung cryobiopsy (TBLC) is a novel technique for sampling lung tissue for interstitial lung disease diagnosis. The aim of this study was to establish the diagnostic accuracy of TBLC compared with surgical lung biopsy (SLB), in the context of increasing use of TBLC in clinical practice as a less invasive biopsy technique.\nMethods COLDICE  was  a  prospective,  multicentre,  diagnostic  accuracy  study  investigating  diagnostic  agreement between TBLC and SLB, across nine Australian tertiary hospitals. Patients with interstitial lung disease aged between 18 and 80 years were eligible for inclusion if they required histopathological evaluation to aid diagnosis, after detailed baseline evaluation. After screening at a centralised multidisciplinary discussion (MDD), patients with interstitial lung disease referred for lung biopsy underwent sequential TBLC and SLB under one anaesthetic. Each tissue sample was assigned a number between 1 and 130, allocated in a computer-generated random sequence. Encoded biopsy samples were then analysed by masked pathologists. At subsequent MDD, de-identified cases were discussed twice with either TBLC or SLB along with clinical and radiological data, in random non-consecutive order. Co-primary endpoints were agreement  of  histopathological  features  in  TBLC  and  SLB  for  patterns  of  definite  or  probable  usual  interstitial pneumonia, indeterminate for usual interstitial pneumonia, and alternative diagnosis; and for agreement of consensus clinical diagnosis using TBLC and SLB at MDD. Concordance and κ values were calculated for each primary endpoint. This study is registered with the Australian New Zealand Clinical Trials Registry, ACTRN12615000718549.\nFindings Between March 15, 2016, and April 15, 2019, we enrolled 65 patients (31 [48%] men, 34 [52%] women; mean age  66·1  years  [SD  9·3];  forced  vital  capacity  83·7%  [SD  14·2];  di/uniFB00using  capacity  for  carbon  monoxide  63·4% [SD 12·8]). TBLC (7·1 mm, SD 1·9) and SLB (46·5 mm, 14·9) samples were each taken from two separate ipsilateral lobes.  Histopathological  agreement  between  TBLC  and  SLB  was  70·8%  (weighted  κ  0·70,  95%  CI  0·55-0·86); diagnostic agreement at MDD was 76·9% (κ 0·62, 0·47-0·78). For TBLC with high or definite diagnostic confidence at MDD (39 [60%] of 65 cases), 37 (95%) were concordant with SLB diagnoses. In the 26 (40%) of 65 cases with lowconfidence or unclassifiable TBLC diagnoses, SLB reclassified six (23%) to alternative high-confidence or definite MDD diagnoses. Mild-moderate airway bleeding occurred in 14 (22%) patients due to TBLC. The 90-day mortality was 2% (one of 65 patients), following acute exacerbation of idiopathic pulmonary fibrosis.\nInterpretation High levels of agreement between TBLC and SLB for both histopathological interpretation and MDD diagnoses were shown. The TBLC MDD diagnoses made with high confidence were particularly reliable, showing excellent concordance with SLB MDD diagnoses. These data support the clinical utility of TBLC in interstitial lung disease diagnostic algorithms. Further studies investigating the safety profile of TBLC are needed.\nFunding University of Sydney, Hunter Medical Research Institute, Erbe Elektromedizin, Medtronic, Cook Medical, Rymed, Karl-Storz, Zeiss, and Olympus.\nCopyright © 2019 Elsevier Ltd. All rights reserved.\nsurgery  (VATS),  done  by  a  thoracic  surgeon  in  the operating room under general anaesthesia. This procedure poses substantial risks, including a reported 1·7% mortality in  patients  subjected  to  elective  SLB. 5 Although  this mortality risk might  be  lower  at centres with sta/uniFB00 experienced in SLB, the decision to proceed with invasive biopsy should not be undertaken lightly. Poor cardiopulmonary  reserve,  advancing  age,  and  comorbid disease often render patients with interstitial lung disease unsuitable  candidates  for  SLB.  Thus,  diagnostic  uncertainty will remain  in  a substantial proportion  of patients with interstitial lung disease. For these patients requiring  histopathological  assessment,  the  benefit  of obtaining the lung biopsy with a less invasive procedure than SLB is evident.\nTransbronchial lung cryobiopsy (TBLC) has emerged over the past decade as an alternative diagnostic technique, with increasing use across many centres. The diagnostic  yield,  accuracy,  potential  safety,  and  health resource use advantages of TBLC over SLB are important considerations that need to be addressed in well designed studies. Before widespread implementation of TBLC can take place, it is necessary to directly compare\nhistopathological interpretation of this small tissue sampling with larger SLB specimens obtained from the same patients. Although it is apparent that the diagnostic yield of TBLC is lower than that of SLB, TBLC might be established as a potentially safer, but reliable substitute if accuracy can be shown. To date, the literature reports a diagnostic  yield  for  an  identifiable  histo  pathological pattern in 73-81% of TBLC specimens, compared with around 95% for SLB specimens. 6-8  Although the TBLC yield is less than that of SLB, there is evidence to suggest a similar clinical utility, at a lower risk to the patient. For example,  TBLC  has  been  shown  to  a/uniFB00ect  diagnostic confidence to a similar degree as SLB, within the context of  MDD. 9 The  diagnostic  accuracy  of  TBLC,  however, has  not  been  addressed  in  a  robust  manner.  This important issue can only be assessed through the direct verification  of  TBLC  findings  against  SLB  specimens, obtained from the same anatomical sites, from the same patients. Romagnoli and colleagues 10 attempted to address  this  issue  in  a  small  interstitial  lung  disease cohort,  observing  poor  agreement  for  TBLC  and  SLB histopathological analyses with a κ-concordance coe/uniFB03cient  of  only  0·22.  Because  of  methodological\nNSW, Australia (B J Ng MBBS) ; and University of Washington, Seattle, WA, USA (Prof G Raghu MD) Correspondence to: Dr Lauren K Troy, Department of Respiratory and Sleep Medicine, Royal Prince Alfred Hospital, Missenden Rd, Camperdown, NSW 2050, Australia ltroy@med.usyd.edu.au See Online for appendix",
+      "category": "abstract",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Evidence before this study",
+      "content": "Transbronchial lung cryobiopsy (TBLC) is an emerging technique to obtain lung tissue for diagnosis of interstitial lung disease. As a minimally invasive technique, TBLC has been adopted into clinical practice in many centres; however, it requires validation as an accurate diagnostic test. Due to an absence of high-quality evidence, diagnostic guidelines for idiopathic pulmonary fibrosis do not recommend for or against TBLC in its diagnostic algorithms. The safety of TBLC has been raised as a potential concern, with varying amounts of reported cases of pneumothorax and airway bleeding. Furthermore, the diagnostic accuracy of TBLC has not been verified in adequately powered prospective studies comparing TBLC against the accepted histopathological standard of surgical lung biopsy (SLB). We searched PubMed using the terms 'cryobiopsy' or 'cryoprobe' and 'interstitial lung disease' or 'diffuse parenchymal lung disease' or 'pulmonary fibrosis', for all clinical trials published from database inception up until July 8, 2019, with no language restrictions. Most of the publications were retrospective single-centre case series. The four systematic reviews of TBLC reported data for diagnostic yield and safety, but none assessed diagnostic accuracy. We identified only one small study that directly compared TBLC and SLB sampled sequentially from the same patients. The study retrospectively used a single pathologist to analyse the histopathological patterns after initial unmasked assessment and multidisciplinary discussion for clinical diagnosis, showing low concordance between the findings of the two forms of biopsy. Because of the very small sample size and other methodological limitations of this study, the issue of diagnostic\naccuracy of TBLC in interstitial lung disease diagnosis remains unresolved.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Added value of this study",
+      "content": "The COLDICE study was a prospective, multicentre, investigator-initiated study designed to evaluate diagnostic accuracy of TBLC in interstitial lung disease diagnosis. The study was adequately powered to compare diagnostic agreement between TBLC and SLB obtained from the same patients at the same time from the same lobes, for both masked histopathological analysis, and for clinical diagnosis at multidisciplinary discussion. The study showed high concordance between the paired biopsy specimens for both histopathological pattern and multidisciplinary discussion diagnosis. The data from TBLC specimens were informative and reliable, particularly when high-confidence patterns were reported by the pathologist. Although our study was not designed to address the true safety aspects of TBLC independent of SLB, we did not find any new safety signals.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Implications of all the available evidence",
+      "content": "To our knowledge, the COLDICE study is the first comparative study showing a high agreement between TBLC and SLB for interstitial lung disease diagnosis. Together with the data from case series, the evidence suggests that TBLC is a valid first-line diagnostic tool for patients with interstitial lung disease deemed to require histopathological diagnosis. Although further studies of a similar design would enrich the existing data, we appreciate that larger studies will be difficult to do in the clinical setting. Studies focusing on safety and standardisation of the TBLC procedure will be important adjuncts to clinical practice.\nlimitations, including underpowering and the use of a single  pathologist  review  after  MDD  diagnosis,  these findings  should  be  interpreted  with  caution.  In  the absence of rigorous direct comparison with the SLB, the role  of  TBLC  in  interstitial  lung  disease  diagnostic algorithms remains unclear. The increasing dichotomy between  the  European  and  North  American  perceived role of TBLC (ie, generally, the technique has been used more in Europe than in North America), highlights the urgent need to settle the issue of the clinical utility of TBLC  for  interstitial lung disease diagnosis. 11,12   We therefore did the cryobiopsy versus open lung biopsy in the diagnosis of interstitial lung disease alliance (COLDICE) study,  designed  to  evaluate  the  agreement between  TBLC  and  SLB  as  a  means  of  assessing diagnostic accuracy, at both histopathological assessment and at MDD.",
+      "category": "discussion",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Study design and participants",
+      "content": "The  COLDICE  study  was  a  comparative,  multicentre, prospective, investigator-initiated, diagnostic  accuracy study done across nine Australian tertiary hospitals with interventional pulmonology and interstitial lung disease expertise.  Eligible  patients  were  aged  between  18  and 80 years, requiring lung biopsy to support their interstitial lung  disease  diagnosis,  were  able  to  give  informed consent,  and  were  without  contraindications  for  lung biopsy.  Key  exclusion  criteria  were  hypoxaemia  while breathing  room  air  (SpO 2 <90%),  di/uniFB00using  capacity  for carbon  monoxide  less  than  40%  predicted,  total  lung capacity less than 50% predicted, excessive or uncorrectable bleeding risk, body-mass index more than 40 kg/m², pulmonary hypertension (with estimated right ventricular systolic pressure >40 mm Hg or signs of right ventricular dysfunction on echocardiogram), or advanced comorbid conditions (appendix p 1). Following baseline assessment  by  referring  specialists,  all  potential  study candidates  were  screened  through  a  centralised  MDD. Participants  were  enrolled  into  the  study  if  the  central MDD deemed that a lung biopsy was indicated. Detailed clinical data including physician-verified history of exposures, connective tissue disease symptoms, disease severity indices, and serology were presented in conjunction  with  standard  high-resolution  CT  imaging (appendix p 1).\nParticipants  gave  fully  informed  written  consent.  All study-related activities followed the International Conference on Harmonisation Guideline for Good Clinical Practice and the principles of the Declaration of Helsinki. The study protocol followed the  STARD guidelines for assessment of diagnostic accuracy. Ethics approval of the trial protocol was provided by an independent ethics committee at each participating site. Both the steering committee and data and safety monitoring  board  provided  trial  oversight,  including contemporaneous review of all safety events.",
+      "category": "methods",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Procedures",
+      "content": "Both TBLC and SLB were done sequentially under a single general  anaesthetic.  Detailed  procedural  protocols  are included in the appendix (p 2) and have previously been published. 13 In  brief,  for  TBLC,  patients  were  intubated with either a rigid bronchoscope or a flexible endotracheal tube. A 1·9 mm or 2·4 mm cryoprobe (Erbe Elektromedizin, Tübingen,  Germany)  was  inserted  through  the  working channel  of  a  therapeutic  bronchoscope  and  advanced under fluoroscopic guidance to a subpleural location and activated  for  3-7  s.  The  cryoprobe,  with  attached  lung parenchyma, and flexible bronchoscope were then removed  en  bloc  and  the  sample  placed  into  formalin. Prophylactic endobronchial balloon blockers were placed in the targeted airways, and inflated after each TBLC until haemostasis was achieved. Between  four and seven specimens  were  obtained  from  two  separate,  ipsilateral lobes.  At  TBLC  completion,  severity  of  bleeding  was recorded  (following  the  grading  defined  by  Hetzel  and colleagues 14 included  in appendix  p  2), and  thoracic ultrasound or fluoroscopy was done to assess for pneumothorax. 14 Following TBLC, two SLB (from the same lobes corresponding to those sampled by TBLC) were done by  a  thoracic  surgeon  using  VATS  with  ventilation  via  a double-lumen endotracheal tube. Patients were managed with  standard  post-operative  practices  for  VATS,  with ongoing assessment according to clinical need. For study purposes,  vital  status  and  postoperative  complications were  ascertained  at  6  weeks  and  3  months  after  the procedure,  and  at  study  completion.  Lung  function  test measurements were done at 6 months after the procedure.\nEach set of slides for the TBLC and SLB tissue samples were  labelled  with  randomly  generated,  de-identifying code numbers of 1-130, unrelated to the other specimen slides  from  the  same  patient.  Three  masked  expert pathologists  reviewed  all  130  sets  of  slides,  recording individual interpretation and then consensus agreement for: (1) international guideline-directed histopathological categories (definite usual interstitial pneumonia, probable  usual  inter  stitial  pneumonia,  indeterminate for  usual  interstitial  pneu  monia,  and  alternative  diagnosis); 1 and  (2)  specific  inter  stitial  lung  disease  histopathological patterns, including usual interstitial pneumonia-idiopathic pulmon  ary fibrosis, non-specific interstitial  pneumonia,  organising  pneumonia,  usual interstitial pneumonia associated with connective tissue disease-interstitial lung disease, lymphocytic interstitial pneumonia,  hyper  sensitivity  pneumonitis,  respiratory bronchiolitis-interstitial lung disease and desquamative interstitial pneumonia, sarcoidosis, lymphangioleiomyomatosis, miscellaneous, and unclassifiable disease. Pathologists'  confidence  in  their  findings  (high,  intermediate, or low) were also recorded.\nFollowing  completion  of  recruitment,  a  centralised MDD team comprised of expert pathologists, radiologists, and clinicians convened to consider each tissue sample in combination with clinical details and radiology\n(figure 1). Each de-identified case (numbered 1-130) was presented in a standardised fashion in three steps (step one  was  clinical  data;  step  two  was  high-resolution CT  findings; and step three was consensus  histopathological interpretation of either TBLC or SLB). After step  two,  MDD  participants  recorded  their  individual diagnosis,  then  convened  to  reach  a  consensus  provisional diagnosis and diagnostic confidence level (definite [90-100% confident], high [70-89% confident], or  low  [51-69%  confident]) . 15 Unclassifiable  cases  were not  assigned  diagnostic  confidence  levels.  Following step  three,  participants  again  recorded  diagnoses  and confidence levels individually, and then reached a final consensus diagnosis and diagnostic confidence level. For step three, participants were masked to the nature of the biopsy, through careful concealment of the dimensions of the specimen by the pathologist. Paired cases were not linked in any way during the process.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Outcomes",
+      "content": "Co-primary  endpoints  were:  (1)  agreement  of  histopathological interpretation between TBLC and SLB for the  2018  guideline-refined  categories  of  definite  or probable  usual  interstitial  pneumonia,  indeterminate for  usual  interstitial  pneumonia,  or  alternative  diagnosis;  and  (2)  agreement  between  final  consensus clinical-radiological-pathological diagnoses for matched TBLC  and  SLB  specimens  at  MDD.  Prespecified  key secondary  endpoints  comprised  agreement  between the specific histopathological patterns, (eg, usual interstitial pneumonia, non-specific interstitial pneumonia, hypersensitivity pneumonitis) identified by pathologists for  TBLC  and  SLB;  interobserver  agreement  between\nthe  three  pathologists  for  each  biopsy  technique  for both guideline-refined interpretation and specific histopatho  logical  patterns;  proportions  of  TBLC  and SLB cases where biopsy led to a change in diagnostic confidence from low to high or definite; or an unanticipated  diagnosis,  (eg,  from  unclassifiable  to respiratory bronchiolitis-interstitial lung disease or idiopathic pulmonary fibrosis); and procedural features predictive of diagnostic agreement.",
+      "category": "results",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Statistical analysis",
+      "content": "A calculated sample size of 65 would enable estimation of a true κ of at least 0·8 with a lower 95% confidence limit of at least 0·6, for histopathological agreement between TBLC  and  SLB  for  the  guideline-refined  categories  of definite  or  probable  for  usual  interstitial  pneumonia pattern,  indeterminate  for  usual  interstitial  pneumonia pattern, or alternative diagnosis. This calculation followed the assumption that of cases in this population, 55%  would  be  classified  as  definite  or  probable  usual interstitial  pneumonia,  15%  as  indeterminate  for  usual interstitial pneumonia, and 30% as an alternative diagnosis. These estimates were based on prevalence data within a specialist interstitial lung disease clinic from one of the participating sites.\nAgreement  between  TBLC  and  SLB  for  MDD  clinical diagnoses was assessed using simple κ statistics, presented with  95%  CIs.  For  agreement  between  TBLC  and  SLB guideline-directed histopathological patterns, weighted κ values using Fleiss-Cohen weights were calculated. Fleiss κ statistics were used for the agreement among all three raters  for  each  biopsy  type.  McNemar's test was used to assess change in proportions of unclassifiable cases before",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Figure 1: Study profile",
+      "content": "and after the addition of histopathological assessment at MDD  (with  separate  tests  done  for  the  two  procedure types). χ² tests and t tests were used to investigate clinical, procedural, and histopathological characteristics that were associated with agreement between diagnostic methods.\nA p value of less than 0·05 was considered statistically significant. A κ value equal to or less than 0·20 indicated poor  agreement;  0·21-0·40  indicated  fair  agreement; 0·41-0·60  indicated  moderate  agreement;  0·61-0·80 indicated  good  agreement;  and  0·81-1·00  indicated excellent agreement. Statistical analyses were done using SAS version 9.4.\nThis study is registered with the Australian New Zealand Clinical Trials Registry, ACTRN12615000718549.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Role of the funding source",
+      "content": "The funders  of  the  study  had  no  role  in  study  design, data  collection,  data  analysis,  data  interpretation,  or writing of the report. Data collection, analysis, and interpretation  were  done  solely  by  the  authors.  All  listed authors contributed to the writing of the manuscript and take responsibility for the integrity of the data presented herein. The corresponding author had full access to all the data in the study and had final responsibility for the decision to submit for publication.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Results",
+      "content": "Between March 15, 2016, and April 15, 2019, of 100 patients assessed for eligibility, we recruited 65 patients (31 [48%]\nmen,  34  [52%]  women;  mean  age  66·1  years [SD 9·3]; figure 2). Baseline characteristics are shown in table 1. All patients had a low-confidence diagnosis or unclassifiable interstitial lung  disease  at initial screening. Patients generally  had  mild  to  moderate  impairment  of  lung function tests. No patients had a pre-existing diagnosis of connective tissue disease that would typically be associated with interstitial lung  disease. During  the  sequential procedures,  the  median  total  number  of  TBLC  samples was  five  (range  3-7),  taken  from  two  separate  lobes.\n38 (59%) of 65 were done via rigid bronchoscopy. In most cases, the 1·9 mm cryoprobe was used (62 [95%] of 65). A mean freeze time of 4·6 s (SD 0·7) was applied, yielding mean tissue samples of 7·1 mm (SD 1·9), by longest axis. Pleura was observed in seven (11%) of 65 TBLC samples. At  VATS,  two  SLB  specimens  were  obtained  from  each patient, with mean long axis of 46·5 mm (14·9). Median length of hospital stay was 4 days (IQR 3-4).\nAt consensus histopathological assessment, raw agreement between TBLC and SLB for guideline-refined patterns was 70·8%, with a weighted κ of 0·70 (95% CI 0·55-0·86). Frequencies of each category are shown in figure  3.  Agreement  for  the  specific  histopathological pattern  identified  by  pathologists  for  paired  TBLC  and SLB was 69·2%, with κ 0·47 (0·30-0·64).\nFor the MDD final diagnoses, raw agreement between TBLC and SLB was 76·9% with a κ of 0·62 (0·47-0·78). The  spectrum  of final  MDD  diagnoses  and  histopathological  patterns  for  each  biopsy  type  is  shown  in table  2  and  figure  4.  High  confidence  or  definite  final MDD diagnoses were reached in 39 (60%) of 65 TBLC cases and in 48 (74%) of 65 SLB cases (p=0·090). In those with high confidence or definite TBLC MDD diagnoses, there  was  concordance  with  the  SLB  MDD  diagnosis in  37  (95%)  of  39  cases,  as  shown  in  figure  5.  In the  26  unclassifiable  or  low-confidence  TBLC  MDD diagnoses,  six  (23%)  were  reclassified  into  alternative high  confidence  or  definite  diagnoses  by  SLB.  Within these  six  cases,  TBLC  MDD  favoured  idiopathic  pulmonary fibrosis in three cases but SLB MDD favoured hypersensitivity  pneumonitis  with  high  confidence  as the diagnosis (for the same three cases); hypersensitivity pneumonitis  was  favoured  with  TBLC,  but  SLB  MDD favoured idiopathic pulmonary fibrosis in one case; and the  other  two  cases  were  unclassifiable  at  TBLC,  but yielded  high  confidence  idiopathic  non-specific  interstitial pneumonia and respiratory bronchiolitis interstitial lung  disease  diagnoses  with  SLB.  The  histopathology and  MDD  findings  of  every  participant,  and  clinical details of discordant cases are included in the appendix (pp 4-6).\nBetween  step  two  (provisional  diagnosis)  and  step three  (final  diagnosis)  at  MDD,  the  addition  of  biopsy information  was  deemed  helpful  if  it  changed  the diagnosis  from  low  to  high  confidence  or  definite,  or provided an unanticipated diagnosis. This was the case in  48  (74%)  of  65  TBLC  samples  and  in  50  (77%)  of 65 SLB samples (p=0·55). The majority of these changes were due to a change  in diagnosis (usually  from unclassifiable  to  a  specific  diagnosis),  rather  than  a change  in  diagnostic  confidence  level.  Of  note,  there were eight individuals (12%) in whom neither the TBLC or SLB provided any further diagnostic certainty.\nNo  specific TBLC  procedural variables (including freeze time, number or size of samples, or site of biopsy) were associated with agreement between TBLC and SLB (appendix p 7).\nSLB=surgical lung biopsy.\nData are n (%). ILD=interstitial lung disease. *One patient had lepidic mucinous adenocarcinoma on both transbronchial lung cryobiopsy and surgical lung biopsy. †Smoking-related ILD comprised respiratory bronchiolitis-ILD or desquamative interstitial pneumonia pattern with an associated smoking history. ‡Connective tissue disease-ILD comprised Usual interstitial pneumonia pattern consistent with connective tissue disease-ILD or Non-specific interstitial pneumonia overlapping with organising pneumonia patterns with associated clinical or serological features of connective tissue disease. Notably, no patients had a definable connective tissue disease syndrome.\nTable 2: Histopathological patterns and multidisciplinary discussion diagnoses for specimens\nFor guideline-refined histopathological patterns, interobserver agreement between the three pathologists was κ 0·53 (95% CI 0·43-0·63) for TBLC, compared with κ 0·64 (0·54-0·75) for SLB. For specific histopathological pattern  interpretation,  the  interobserver  agreement  for each  technique  was  similar  (TBLC  κ  0·52,  95%  CI 0·44-0·60 vs SLB κ 0·50, 0·42-0·58; table 3).\nOver  the  course  of  the  study,  25  adverse  and  serious adverse  events  were  recorded  (table  4).  Because  of  the study design, comparison of safety for each procedure was not  possible.  There  were,  however,  some  adverse  events that could be attributed to TBLC, with 14 (22%) episodes of mild to moderate airway bleeding, and one pneumothorax immediately evident before VATS pro  cedure. There were no  cases  of  severe  airway  bleeding.  Other  procedurerelated adverse events included chest wall wound infection, desaturation  less  than  90%  during  anaesthesia,  intraoperative hypotension, and acute intra  operative bronchospasm.  None  of  these  events  were  associated  with  any long-term consequences for the patients. Included in the serious  adverse  events  were  two  acute  exacerbations  of idiopathic pulmonary  fibrosis (onset of each within 2 weeks of surgery). The 90-day mortality was 2% (one of 65  patients),  including  one  of  the  patients  with  acute exacerbation,  who  died  from  respiratory  failure  50  days after surgery. In 44 patients with 6-month follow-up lung function testing, mean forced vital capacity was 76·5%  (SD  15·1) and di/uniFB00using capacity for carbon monoxide 61·0% (SD 11·6) of the predicted value. At study completion, 56 patients were alive and nine were deceased. Aside  from  the  afore  mentioned  death  following  acute exacerbation  of  idiopathic  pulmonary  fibrosis,  only  one other  death  occurred  within  6  months  of  surgery.  This death was due to cerebrovascular accident 4 months after the procedures. The remaining seven deaths were related to malignancy, progression of interstitial lung disease, and cardiovascular disease.",
+      "category": "results",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Discussion",
+      "content": "Our prospective, multicentre study showed good agreement between TBLC and SLB obtained sequentially from the same patients, supporting the clinical utility of TBLC as an alternative to SLB for patients requiring lung tissue for interstitial lung disease diagnosis. This study is the largest to date, comparing the two techniques for the evaluation of diagnostic  accuracy  of  TBLC.  To  our knowledge,  this  is  the  very  first  prospective  study  that shows good concordance for both the interpretation of histopathological pattern and consensus MDD diagnosis. Importantly,  when  high-confidence  or  definite  TBLC MDD  diagnoses  were  obtained,  SLB  added  minimal diagnostic  value.  For  unclassifiable  or  low  confidence TBLC  MDD  diagnoses,  although  the  agreement  with SLB-MDD  was  lower,  the  SLB  provided  an  alternative definite or high confidence diagnosis in only a minority. These results suggest that if a definite or high-confidence TBLC MDD diagnosis is made, SLB will provide limited\nadditional information for the physician. The same holds true to a lesser extent in the setting of unclassifiable or low confidence TBLC MDD diagnoses.\nOur  study  aimed  to  replicate  clinical  practice.  TBLC specimens were considered independently of the associated  SLB.  Not  only  was  a  masked  assessment  of histopathology done upfront by three expert pathologists before MDD, but the TBLC findings were also subsequently presented with de-identified data at MDD, for  specific  clinical  diagnoses  and  ratings  of  diagnostic confidence. These assessments were made without the influence of SLB, thus minimising potential bias.\nThe Non-ILD diagnosis was adenocarcinoma of the lung, identified by both TBLC and SLB. TBLC=transbronchial lung cryobiopsy. SLB=surgical lung biopsy. IPF=idiopathic pulmonary fibrosis. HP=hypersensitivity pneumonitis. CTD-ILD=connective tissue disease-associated interstitial lung disease. LAM=lymphangioleiomyomatosis.\nOur  findings  contradict  the  results  of  Romagnoli  and colleagues , 10 which showed poor agreement between TBLC and SLB in a smaller cohort of 21 patients. In their study, both TBLC and SLB were presented together at MDD to inform  the  discussion  and  final  diagnosis.  Due  to  their study design, the final MDD diagnosis was a/uniFB00ected by the SLB  data,  introducing  substantial  bias  into  the  process. The subsequent masked assessment of TBLC specimens by a single pathologist had limited agreement with MDD diagnosis.  It  is  unlikely  however,  that  this  aspect  of  the study  design  would  have  a/uniFB00ected  the  masked  biopsy interpretation, with poor histopathological agreement potentially relating to additional factors. 10 Given the smaller sample  size and the limitations discussed, no firm conclusions regarding the diagnostic utility of TBLC could be made from the study by Romagnoli and colleagues. 10\nTo  translate  the  findings  of  the  COLDICE  study  into clinical practice, it is important to understand the role of TBLC currently in the clinical setting. Early retrospective and observational data for TBLC suggested high diagnostic yield and an acceptable safety profile. 17-19 The promise of a minimally invasive technique has led to its uptake  in  many  centres,  arguably  ahead  of  rigorous evidence.  An  example  of  this  is  shown  in  European Registry data in which TBLC has largely supplanted the traditional  VATS-SLB  over  the  past  4  years  for  new diagnoses  of  idiopathic  pulmonary  fibrosis. 4 Perhaps reflecting  the  widespread  usage  of  TBLC,  subsequent studies have shown lower diagnostic yield than initially reported. 8,12,20,21 The safety profile of TBLC has also been brought  into  question,  with  substantial  risks  of  airway bleeding and pneumothorax. 8,12 Accordingly, the updated American Thoracic Society, European Respiratory Society, Japanese Respiratory Society, and Latin American Thoracic Society idiopathic pulmonary fibrosis guidelines do  not  recommend  for  or  against  TBLC  in  suspected idiopathic  pulmonary  fibrosis  cases,  because  of  these ongoing  safety  concerns  and  absence  of  procedural standardisation. 1\nThe technical specifications for TBLC within this study protocol  have  been  shown  as  reliable  for  obtaining  an accurate  diagnosis.  By  taking  a  minimum  of  four specimens from two separate, involved lobes, the TBLC agreed with the SLB more than 70% of the time. In most cases, a 1·9 mm cryoprobe was applied for a mean freeze time  of  4·6  s,  yielding  mean  tissue  samples  of  more than 7 mm. In a 2018 expert statement on the practice of TBLC, a freeze  time  of  7  s  with  a  1·9  mm  probe  was recommended, and a minimum diameter of 5 mm was suggested  as  adequate. 14 Our  study  shows  that  shorter freeze times can achieve biopsies of acceptable size and accuracy.  It  is  possible,  however,  that  sampling  fewer than four specimens might yield less accurate results.\nOur  study  provides  important  information  for  the pathologist. We incorporated the updated 2018 idiopathic pulmonary fibrosis guideline histopathological patterns as a  primary  endpoint.  Although  guideline  criteria  were predicated from studies using SLB, the use of these broad yet  prescriptive  categories  allowed  for  a  standardised approach to interpretation of TBLC specimens. Notably, the  proportion  of  probable  usual  interstitial  pneumonia relative  to  usual  interstitial  pneumonia  was  higher  in TBLC,  and  the  converse  was  seen  with  SLB.  Reflecting what  is  observed  in  clinical  practice,  the  smaller  TBLC samples that were obtained from the centrilobular position did not always display the attributes of the larger SLB specimens, with peripheral structures such as pleura and septae absent or not easily identifiable. 22 This result made  the  confirmation  of  predominant  subpleural  and paraseptal distribution of fibrosis di/uniFB03cult in some cases, and thus a probable usual interstitial pneumonia rather than a definite usual interstitial pneumonia pattern was more likely  to  be  observed  in  TBLC.  It  follows  that  the\nData are Fleiss κ coefficients with 95% CIs. *Guideline-refined patterns comprised definite Odds ratio (or) probable usual interstitial pneumonia, indeterminate for usual interstitial pneumonia, or alternative diagnosis, following the recommendations of Raghu and colleagues. 1\nTable 3: Interobserver agreement of three expert pathologists for histopathological patterns\nData are n (%). VATS=video-assisted thoracoscopic surgery. TBLC=transbronchial lung cryobiopsy. SLB=surgical lung biopsy. NA=not applicable. *Mild to moderate bleeding defined as bleeding controllable with endobronchial balloon or topicalised treatment (or both) without the need for surgical intervention or specific haemodynamic support. †Death at day 50 after the procedure, following acute exacerbation of idiopathic pulmonary fibrosis. ‡Patient required surgical control of chest wall bleeding and transfusion of 2 units packed red blood cells.\nTable 4: Adverse procedure-related events\napplication of guideline criteria, derived from SLB specimens, contributed to the slightly higher interobserver agree  ment between three pathologists for SLB, compared with  TBLC  interpretation.  The  inter  observer  agreement for the varying degrees of diagnostic confidence at histopathology assessment is the subject of secondary analysis in a planned sub-study.\nAt  MDD,  both  guideline-refined  and  specific  histopathological  patterns  were  presented,  along  with  the degree of confidence in the consensus findings and any other di/uniFB00erential diagnoses. Integrating all data into the MDD, the agreement between TBLC and SLB increased to 76·9%. Overall, both TBLC and SLB provided useful information to aid the MDD diagnosis to a similar degree (ie, 48 (74%) of 65 TBLC samples vs 50 (77%) of 65 SLB samples),    highlighting  the  important  contribution  of histopathology in many cases. It is interesting to observe that  diagnostic  uncertainty  (ie,  unclassifiable  or  low confidence) remained in a proportion of patients, both with  representative  TBLC  and  SLB  data  at  MDD.  This finding brings to light the limited role of biopsy in some cases.  It  is  clear  that  specific  labelling  of  a  patient's interstitial lung disease is not always constrained by the adequacy  of  the  tissue  sample,  suggesting  inherent limitations  in  our  current  understanding  of  the  pathobiology of many interstitial lung diseases.\nThese findings emphasise the importance of dynamic multidisciplinary evaluation and discussion for interstitial lung disease diagnosis. Through a process of information sharing between the pathologist, radiologist, and clinician at  every  step,  including  the  degree  of  confidence  in findings, a rational approach  can  be  taken  for  the diagnostic tests of patients with interstitial lung disease.\nOne of the key questions that the COLDICE study could not reconcile because of its design was the safety comparison between SLB and TBLC. This highly selected patient  population  included  only  individuals  deemed suitable for SLB in terms of safety. The amount of serious adverse events was in-keeping with the published data for SLB, however the specific cause for these events cannot be confirmed. 23 For TBLC-specific complications, there were 14  episodes  of  mild  to  moderate  airway  bleeding.  The routine  use  of  an  endobronchial  balloon  to  occlude  the segmental  or  subsegmental  bronchus  after  each  biopsy allowed control of bleeding, with avoidance of hypoxaemia or haemodynamic instability. In published meta-analyses of  TBLC, 6-8 the  reported  range  of  substantial  bleeding is  wide,  at  0·3-26·6%  of  cases.  The  true  incidence is  uncertain  because  of  publication  bias  (ie,  adverse outcomes are underreported), the fact that  standardised definitions for bleeding have only been proposed in 2018, and  that  prophylactic  endobronchial  balloons  have  not been  used  routinely  in  all  studies.  We  were  unable  to accurately assess the pneumothorax prevalence, given that TBLC and SLB were done sequentially.\nWe acknowledge several limitations. Although small, COLDICE represents the largest study to date comparing\nTBLC and SLB samples obtained from the same patient. The complexity of COLDICE constrained the number of participants,  but  our  study  was  appropriately  powered for  the  primary  endpoint.  The  prespecified  strategy  to combine the two categories of usual interstitial pneumonia and probable  usual  interstitial  pneumonia for our analysis was considered clinically appropriate in the context of idiopathic pulmonary fibrosis guidelines, and  the  anticipated  implications  of  these  patterns  at MDD.  However,  it  is  possible  that  in  clinical  practice there  will  be  some  scenarios  in  which  these  histopathological categories do not result in the same MDD diagnosis.  Thus,  it  might  be  appropriate  to  gather further  histopathological  evaluation  with  SLB  when diagnostic uncertainty remains after TBLC.\nNotably, the patient cohort included a high proportion of  idiopathic  pulmonary  fibrosis  and  hypersensitivity pneumonitis  diagnoses.  This  finding  was  probably  a consequence of the higher relative frequencies of these diseases in the general interstitial lung disease population, and the deliberate exclusion of patients with definable  disease  without  biopsy,  such  as  connective tissue disease-interstitial lung disease. Notably, in individuals with discordant diagnoses, a substantial proportion  were  idiopathic  pulmonary  fibrosis  versus chronic  hypersensitivity  pneumonitis,  highlighting  a common challenge in clinical practice. The histopathological di/uniFB00erences for these two disease entities can be subtle. In the discordant cases in which the SLB MDD diagnosis was made with high confidence, the  larger  volume  of  tissue  was  clearly  advantageous, allowing  for  identification  of  disease-specific  features missed in the smaller cryobiopsy specimen.\nA  further  potential  issue  was  the  recall  of  specific clinical details for paired cases at MDD, introducing bias into the process of consensus diagnosis. Many measures were  taken  to  reduce  this  risk,  including  standardised presentation of clinical data, de-identified high-resolution CT discussion,  and  the  separation  of  matched  cases  in time.  The  generalisability  of  study  findings  could  be limited  by  the  involvement  of  expert  pathologists  and MDD  panellists  in  this  study.  It  is  uncertain  if  TBLC accuracy will be similar in the wider clinical setting. As previously mentioned, the study design did not allow for assessment of the safety of TBLC, apart from immediate bleeding after biopsy. The COLDICE population excluded patients with high risk for adverse outcomes from SLB, and thus the study findings do not support the application of  TBLC  in  patients  considered  marginal  or  unsuitable for  SLB.  Procedural  and  technical  practices  that  are endorsed  in  the  expert  consensus  TBLC  statement  by Hetzel and colleagues 14 including  the  routine  use  of  an endobronchial balloon blocker and insertion of a rigid or flexible  airway  under  anaesthesia,  were  used  by  the experienced interventional broncho  scopists in the COLDICE  study.  Moreover,  procedures  took  place  in centres with adequate resources, familiarity, and expertise\nin handling potential complications. Thus, the outcomes reported in our study might not be the same in centres in which these criteria are not routinely followed in clinical practice.  Aside  from  a  standardised,  guideline-driven approach to TBLC, there is a clear need to scientifically evaluate its safety in a rigorous manner beyond what was possible in our study. Unanswered questions include the role  of  TBLC  in  patients  with  advanced  disease,  or  in individuals who are unfit for invasive lung biopsy due to comorbidities or poor lung reserve.\nThe COLDICE trial provides evidence supporting the clinical utility of TBLC  for  interstitial lung disease diagnosis within the context of MDD. Compared with the current  accepted  histopathological  standard  SLB,  TBLC specimens  provide  data  that  are  useful  and  reliable, particularly when high-confidence patterns are reported. These data suggest that TBLC,  when  done  by  an experienced proceduralist, is a valid first-line minimally invasive diagnostic tool for patients with interstitial lung disease deemed to require lung biopsy.",
+      "category": "discussion",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Contributors",
+      "content": "LKT , EMTL, TJC, CG, JPW, PJT, WAC, MPV, MJP, MS, JER, and GR are members of the COLDICE steering committee and have all made contributions to the design and execution of the study. Further major contributions to study design were made by JLM, AM, EM, SL and HEJ. LKT , EMTL, CG, TJC, JPW, MPV, HEJ, MS, JPWr, BH, GD, PJCW, and BJN contributed to participant recruitment. JLM, WAC, and AM did masked pathology analyses. SL and EM did radiological assessment. LKT, EMTL, CG, TJC, JPW, MPV, WAC, AM, HEJ, SEW, QTL, JPWr, BH, GD, and PJCW participated in masked multidisciplinary discussion. LKT, QTL, JER, and SEW were responsible for data entry. LKT, EMTL, HEJ, and CO did data analysis. LKT wrote the manuscript, with input from all authors. All authors reviewed the manuscript and are in agreement with regard to the contents.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Declaration of interests",
+      "content": "LKT reports grants from Erbe Elektromedizin, Medtronic, Rymed, and Olympus; and non-financial support from Cook Medical, Karl-Storz, and Zeiss during the conduct of the study; grants and personal fees from Boehringer Ingelheim and Roche; and personal fees from Menarini, outside of the submitted work. TJC reports grants, personal fees, and non-financial support from Boehringer Ingelheim, grants and personal fees from Roche, grants from Galapagos, Actelion, and Bayer, outside of the submitted work. MPV reports providing consultation for Abbott, Edwards Lifesciences, and The Boston Consulting Group, and sits on the Medtronic pAPAC Structural Heart Board. GR reports personal fees and other from Boehringer Ingelheim, other from BMS, Bellerophon, Fibrogen, Gilead, Nitto, Promedior, Roche, Sanofi, Veracyte, Biogen, Genentech, Avalyn, and Respivant; and grants from National Institutes of Health, outside of the submitted work. EMTL reports grants from Erbe Elektromedizin, Medtronic, Rymed, and Olympus; and non-financial support from Cook Medical, Karl-Storz, and Zeiss, during the conduct of the study; grants and personal fees from Actelion Pharmaceuticals and GlaxoSmithKline, outside of the submitted work. All other authors declare no competing interests.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Data sharing",
+      "content": "Because of restrictions in patient consent and institutional review board, raw data collected for this study will regrettably not be made available for the purposes of data sharing.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "Acknowledgments",
+      "content": "The COLDICE study is an investigator-initiated study that has received inkind or financial support from the following commercial entities: Erbe Elektromedizin, Medtronic, Cook Medical, Rymed, Zeiss, Karl Storz, and Olympus. Institutional research funding has also been\nreceived from The University of Sydney and John Hunter Hospital. The study has the endorsement of both the Australian and New Zealand Interventional Pulmonology (ANZIP) Group and the Pulmonary Fibrosis Australasian Clinical Trials (PACT) network. Administration of trial funding has been undertaken by the Baird Institute.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    },
+    {
+      "title": "References",
+      "content": "1 Raghu G, Remy-Jardin M, Myers JL, et al. Diagnosis of idiopathic pulmonary fibrosis. An o/uniFB03cial ATS/ERS/JRS/ALAT clinical practice guideline. Am J Respir Crit Care Med 2018; 198: e44-68.\n2 Prasad JD, Mahar A, Bleasel J, et al. The interstitial lung disease multidisciplinary meeting: a position statement from the Thoracic Society of Australia and New Zealand and the Lung Foundation Australia. Respirology 2017; 22: 1459-72.\n3 Jo HE, Glaspole IN, Levin KC, et al. Clinical impact of the interstitial lung disease multidisciplinary service. Respirology 2016; 21: 1438-44.\n4 Guenther A, Krauss E, Tello S, et al. The European IPF registry (eurIPFreg): baseline characteristics and survival of patients with idiopathic pulmonary fibrosis. Respir Res 2018; 19: 141.\n5 Hutchinson JP, Fogarty AW, McKeever TM, Hubbard RB. In-hospital mortality after surgical lung biopsy for interstitial lung disease in the United States. 2000 to 2011. Am J Respir Crit Care Med 2016; 193: 1161-67 .\n6 Johannson KA, Marcoux VS, Ronksley PE, Ryerson CJ. Diagnostic yield and complications of transbronchial lung cryobiopsy for interstitial lung disease. A systematic review and metaanalysis. Ann Am Thorac Soc 2016; 13: 1828-38.\n7 Iftikhar IH, Alghothani L, Sardi A, Berkowitz D, Musani AI. Transbronchial lung cryobiopsy and video-assisted thoracoscopic lung biopsy in the diagnosis of di/uniFB00use parenchymal lung disease. A meta-analysis of diagnostic test accuracy. Ann Am Thorac Soc 2017; 14: 1197-211.\n8 Sethi J, Ali MS, Mohananey D, Nanchal R, Maldonado F, Musani A. Are transbronchial cryobiopsies ready for prime time?: a systematic review and meta-analysis. J Bronchology Interv Pulmonol 2019; 26: 22-32.\n9 Tomassetti S, Wells AU, Costabel U, et al. Bronchoscopic lung cryobiopsy increases diagnostic confidence in the multidisciplinary diagnosis of idiopathic pulmonary fibrosis. Am J Respir Crit Care Med 2016; 193: 745-52.\n10 Romagnoli M, Colby TV, Berthet JP, et al. Poor concordance between sequential transbronchial lung cryobiopsy and surgical lung biopsy in the diagnosis of di/uniFB00use interstitial lung diseases. Am J Respir Crit Care Med 2019; 199: 1249-56.\n11 Raghu G, Lederer DJ, Rabe KF. Cryobiopsy for interstitial lung disease: the heat is on. Am J Respir Crit Care Med 2019; 199: 1183-84.\n12 DiBardino DM, Haas AR, Lanfranco AR, Litzky LA, Sterman D, Bessich JL. High complication rate after introduction of transbronchial cryobiopsy into clinical practice at an academic medical center. Ann Am Thorac Soc 2017; 14: 851-57 .\n13 Troy L, Grainge C, Corte T, et al. Cryobiopsy versus open lung biopsy in the diagnosis of interstitial lung disease (COLDICE): protocol of a multi-center study. BMJ Open Respir Res 2019; 6: e000443.\n14 Hetzel J, Maldonado F, Ravaglia C, et al. Transbronchial cryobiopsies for the diagnosis of di/uniFB00use parenchymal lung diseases: expert statement from the cryobiopsy working group on safety and utility and a call for standardization of the procedure. Respiration 2018; 95: 188-200.\n15 Ryerson CJ, Corte TJ, Lee JS, et al. A standardized diagnostic ontology for fibrotic interstitial lung disease. an international working group perspective. Am J Respir Crit Care Med 2017; 196: 1249-54.\n16 Fischer A, Antoniou KM, Brown KK, et al. An o/uniFB03cial European Respiratory Society/American Thoracic Society research statement: interstitial pneumonia with autoimmune features. Eur Respir J 2015; 46: 976-87 .\n17 Babiak A, Hetzel J, Krishna G, et al. Transbronchial cryobiopsy: a new tool for lung biopsies. Respiration 2009; 78: 203-08.\n18 Ravaglia C, Bonifazi M, Wells AU, et al. Safety and diagnostic yield of transbronchial lung cryobiopsy in di/uniFB00use parenchymal lung diseases: a comparative study versus video-assisted thoracoscopic lung biopsy and a systematic review of the literature. Respiration 2016; 91: 215-27 .\n19 Casoni GL, Tomassetti S, Cavazza A, et al. Transbronchial lung cryobiopsy in the diagnosis of fibrotic interstitial lung diseases. PLoS One 2014; 9: e86716.\n20 Ussavarungsi K, Kern RM, Roden AC, Ryu JH, Edell ES. Transbronchial cryobiopsy in di/uniFB00use parenchymal lung disease: retrospective analysis of 74 cases. Chest 2017; 151: 400-08.\n21 Pajares V, Torrego A, Puzo C, Lerma E, Gil De Bernabe MA, Franquet T. Transbronchial lung biopsy using cryoprobes. Arch Bronconeumol 2010; 46: 111-15.\n22 Colby TV, Tomassetti S, Cavazza A, Dubini A, Poletti V. Transbronchial cryobiopsy in di/uniFB00use lung disease: update for the pathologist. Arch Pathol Lab Med 2017; 141: 891-900.\n23 Hutchinson JP, McKeever TM, Fogarty AW, Navaratnam V, Hubbard RB. Surgical lung biopsy for the diagnosis of interstitial lung disease in England: 1997-2008. Eur Respir J 2016; 48: 1453-61.",
+      "category": "other",
+      "level": null,
+      "page_start": null,
+      "page_end": null,
+      "section_id": null
+    }
+  ],
+  "tables": [
+    {
+      "id": "table",
+      "caption": "",
+      "headers": [
+        "",
+        "Value"
+      ],
+      "rows": [
+        [
+          "Sex",
+          ""
+        ],
+        [
+          "Women",
+          "34 (52%)"
+        ],
+        [
+          "Men",
+          "31 (48%)"
+        ],
+        [
+          "Age, years",
+          ""
+        ],
+        [
+          "Mean",
+          "66·1 (9·3)"
+        ],
+        [
+          "Range",
+          "32-79"
+        ],
+        [
+          "Body-mass index, kg/m²",
+          "28·8 (4·2)"
+        ],
+        [
+          "Smoking status",
+          ""
+        ],
+        [
+          "Never",
+          "26 (40%)"
+        ],
+        [
+          "Former",
+          "37 (57%)"
+        ],
+        [
+          "Current",
+          "2 (3%)"
+        ],
+        [
+          "Lung function measurements",
+          ""
+        ],
+        [
+          "Forced vital capacity, %of predicted value",
+          "83·7 (SD 14·2)"
+        ],
+        [
+          "DLCO, %of predicted value",
+          "63·4 (SD 12·8)"
+        ],
+        [
+          "6-min walk test (n=30)",
+          ""
+        ],
+        [
+          "Distance,m",
+          "458·1 (119·1)"
+        ],
+        [
+          "Nadir SpO 2 ,%",
+          "91·9 (SD 5·2)"
+        ],
+        [
+          "Exposure history*",
+          ""
+        ],
+        [
+          "Domestic",
+          "22 (34%)"
+        ],
+        [
+          "Occupational",
+          "18 (28%)"
+        ],
+        [
+          "Iatrogenic",
+          "2 (3%)"
+        ],
+        [
+          "Ancillary clinical features",
+          ""
+        ],
+        [
+          "Family history of ILD",
+          "9 (14%)"
+        ],
+        [
+          "Positive serum autoantibodies†",
+          "12 (19%)"
+        ],
+        [
+          "Connective tissue disease features‡",
+          "8 (12%)"
+        ],
+        [
+          "Comorbid conditions",
+          ""
+        ],
+        [
+          "Gastro-oesophageal reflux disease",
+          "23 (35%)"
+        ],
+        [
+          "Hypertension",
+          "17 (26%)"
+        ],
+        [
+          "Cardiac disease",
+          "14 (22%)"
+        ],
+        [
+          "Airways disease",
+          "11 (17%)"
+        ],
+        [
+          "Previous malignancy",
+          "7 (11%)"
+        ],
+        [
+          "Obstructive sleep apnoea",
+          "6 (9%)"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "",
+      "headers": [
+        "",
+        "Transbronchial lung cryobiopsy",
+        "Surgical lung biopsy"
+      ],
+      "rows": [
+        [
+          "Histopathological patterns",
+          "",
+          ""
+        ],
+        [
+          "Usual interstitial pneumonia pattern consistent with idiopathic pulmonary fibrosis",
+          "41 (63%)",
+          "39 (60%)"
+        ],
+        [
+          "Hypersensitivity pneumonitis",
+          "10 (15%)",
+          "15 (23%)"
+        ],
+        [
+          "Sarcoidosis",
+          "3 (5%)",
+          "2 (3%)"
+        ],
+        [
+          "Respiratory bronchiolitis-ILD or desquamative interstitial pneumonia",
+          "2 (3%)",
+          "2 (3%)"
+        ],
+        [
+          "Non-specific interstitial pneumonia overlapping with organising pneumonia pattern",
+          "2 (3%)",
+          "2 (3%)"
+        ],
+        [
+          "Usual interstitial pneumonia pattern consistent with connective tissue disease-ILD",
+          "0",
+          "2 (3%)"
+        ],
+        [
+          "Unclassifiable",
+          "3 (5%)",
+          "1 (2%)"
+        ],
+        [
+          "Non-diagnostic tissue",
+          "3 (5%)",
+          "1 (2%)"
+        ],
+        [
+          "Non-ILD diagnosis*",
+          "1 (2%)",
+          "1 (2%)"
+        ],
+        [
+          "Multidisciplinary discussion diagnoses",
+          "",
+          ""
+        ],
+        [
+          "Idiopathic pulmonary fibrosis",
+          "38 (58%)",
+          "35 (54%)"
+        ],
+        [
+          "Hypersensitivity pneumonitis",
+          "15 (23%)",
+          "18 (28%)"
+        ],
+        [
+          "Sarcoidosis",
+          "2 (3%)",
+          "2 (3%)"
+        ],
+        [
+          "Smoking-related ILD†",
+          "1 (2%)",
+          "2 (3%)"
+        ],
+        [
+          "Connective tissue disease-ILD‡",
+          "1 (2%)",
+          "2 (3%)"
+        ],
+        [
+          "Lymphangioleiomyomatosis",
+          "1 (2%)",
+          "1 (2%)"
+        ],
+        [
+          "Unclassifiable ILD",
+          "6 (9%)",
+          "3 (5%)"
+        ],
+        [
+          "Non-ILD diagnosis*",
+          "1 (2%)",
+          "1 (2%)"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "",
+      "headers": [
+        "",
+        "κ (95%CI)"
+      ],
+      "rows": [
+        [
+          "Transbronchial lung cryobiopsy guideline-refined pattern*",
+          "0·53 (0·43-0·63)"
+        ],
+        [
+          "Surgical lung biopsy guideline-refined pattern",
+          "0·64 (0·54-0·75)"
+        ],
+        [
+          "Transbronchial lung cryobiopsy specific histopathological pattern",
+          "0·52 (0·44-0·60)"
+        ],
+        [
+          "Surgical lung biopsy specific histopathological pattern",
+          "0·50 (0·42-0·58)"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    },
+    {
+      "id": "table",
+      "caption": "",
+      "headers": [
+        "",
+        "Value (%)",
+        "Attributable cause"
+      ],
+      "rows": [
+        [
+          "Adverse events",
+          "",
+          ""
+        ],
+        [
+          "Airway bleeding, mild-moderate*",
+          "14 (22%)",
+          "TBLC"
+        ],
+        [
+          "Airway bleeding, severe",
+          "0",
+          "NA"
+        ],
+        [
+          "Pneumothorax, evident beforeVATS",
+          "1 (2%)",
+          "TBLC"
+        ],
+        [
+          "Hypotension from anaesthetic",
+          "1 (2%)",
+          "Undetermined"
+        ],
+        [
+          "Desaturation during procedure",
+          "1 (2%)",
+          "Undetermined"
+        ],
+        [
+          "Bronchospasm",
+          "1 (2%)",
+          "Undetermined"
+        ],
+        [
+          "Chest wallwound infection",
+          "1 (2%)",
+          "SLB"
+        ],
+        [
+          "Serious adverse events",
+          "",
+          ""
+        ],
+        [
+          "Acute exacerbation of idiopathic pulmonary fibrosis",
+          "2 (3%)",
+          "Undetermined"
+        ],
+        [
+          "Death within 90days†",
+          "1 (2%)",
+          "Undetermined"
+        ],
+        [
+          "Rehospitalisation, chest wall pain management",
+          "1 (2%)",
+          "SLB"
+        ],
+        [
+          "Rehospitalisation, mild hypoxia",
+          "1 (2%)",
+          "Undetermined"
+        ],
+        [
+          "Bleed atVATS port site requiring intervention‡",
+          "1 (2%)",
+          "SLB"
+        ]
+      ],
+      "footnotes": [],
+      "page": null
+    }
+  ],
+  "figures": [
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/89'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/117'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/183'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/219'}",
+      "page": null
+    },
+    {
+      "id": "picture",
+      "caption": "{'cref': '#/texts/244'}",
+      "page": null
+    }
+  ],
+  "references": [
+    {
+      "title": "Diagnosis of idiopathic pulmonary fibrosis. An official ATS/ERS/JRS/ALAT clinical practice guideline"
+    },
+    {
+      "title": "Am J Respir Crit Care Med",
+      "year": 2018
+    },
+    {
+      "title": "The interstitial lung disease multidisciplinary meeting: a position statement from the Thoracic Society of Australia and New Zealand and the Lung Foundation Australia",
+      "year": 2018
+    },
+    {
+      "title": "Respirology",
+      "year": 2017
+    },
+    {
+      "title": "Clinical impact of the interstitial lung disease multidisciplinary service",
+      "year": 2017
+    },
+    {
+      "title": "The European IPF registry (eurIPFreg): baseline characteristics and survival of patients with idiopathic pulmonary fibrosis",
+      "year": 2016
+    },
+    {
+      "title": "Respir Res",
+      "year": 2018
+    },
+    {
+      "title": "In-hospital mortality after surgical lung biopsy for interstitial lung disease in the United States. 2000 to 2011",
+      "year": 2018
+    },
+    {
+      "title": "Diagnostic yield and complications of transbronchial lung cryobiopsy for interstitial lung disease. A systematic review and metaanalysis",
+      "year": 2016
+    },
+    {
+      "title": "Ann Am Thorac Soc",
+      "year": 2016
+    },
+    {
+      "title": "Transbronchial lung cryobiopsy and video-assisted thoracoscopic lung biopsy in the diagnosis of diffuse parenchymal lung disease. A meta-analysis of diagnostic test accuracy",
+      "year": 2016
+    },
+    {
+      "title": "Are transbronchial cryobiopsies ready for prime time?: a systematic review and meta-analysis",
+      "year": 2017
+    },
+    {
+      "title": "J Bronchology Interv Pulmonol",
+      "year": 2019
+    },
+    {
+      "title": "Bronchoscopic lung cryobiopsy increases diagnostic confidence in the multidisciplinary diagnosis of idiopathic pulmonary fibrosis",
+      "year": 2019
+    },
+    {
+      "title": "Poor concordance between sequential transbronchial lung cryobiopsy and surgical lung biopsy in the diagnosis of diffuse interstitial lung diseases",
+      "year": 2016
+    },
+    {
+      "title": "Cryobiopsy for interstitial lung disease: the heat is on",
+      "year": 2019
+    },
+    {
+      "title": "High complication rate after introduction of transbronchial cryobiopsy into clinical practice at an academic medical center",
+      "year": 2019
+    },
+    {
+      "title": "Cryobiopsy versus open lung biopsy in the diagnosis of interstitial lung disease (COLDICE): protocol of a multi-center study",
+      "year": 2017
+    },
+    {
+      "title": "BMJ Open Respir Res",
+      "year": 2019
+    },
+    {
+      "title": "Transbronchial cryobiopsies for the diagnosis of diffuse parenchymal lung diseases: expert statement from the cryobiopsy working group on safety and utility and a call for standardization of the procedure",
+      "year": 2019
+    },
+    {
+      "title": "Respiration",
+      "year": 2018
+    },
+    {
+      "title": "A standardized diagnostic ontology for fibrotic interstitial lung disease. an international working group perspective",
+      "year": 2018
+    },
+    {
+      "title": "An official European Respiratory Society/American Thoracic Society research statement: interstitial pneumonia with autoimmune features",
+      "year": 2017
+    },
+    {
+      "title": "Eur Respir J",
+      "year": 2015
+    },
+    {
+      "title": "Transbronchial cryobiopsy: a new tool for lung biopsies",
+      "year": 2015
+    },
+    {
+      "title": "Safety and diagnostic yield of transbronchial lung cryobiopsy in diffuse parenchymal lung diseases: a comparative study versus video-assisted thoracoscopic lung biopsy and a systematic review of the literature",
+      "year": 2009
+    },
+    {
+      "title": "Transbronchial lung cryobiopsy in the diagnosis of fibrotic interstitial lung diseases"
+    },
+    {
+      "title": "PLoS One",
+      "year": 2014
+    },
+    {
+      "title": "Transbronchial cryobiopsy in diffuse parenchymal lung disease: retrospective analysis of 74 cases",
+      "year": 2014
+    },
+    {
+      "title": "Chest",
+      "year": 2017
+    },
+    {
+      "title": "Transbronchial lung biopsy using cryoprobes",
+      "year": 2017
+    },
+    {
+      "title": "Arch Bronconeumol",
+      "year": 2010
+    },
+    {
+      "title": "Transbronchial cryobiopsy in diffuse lung disease: update for the pathologist",
+      "year": 2010
+    },
+    {
+      "title": "Arch Pathol Lab Med",
+      "year": 2017
+    },
+    {
+      "title": "Surgical lung biopsy for the diagnosis of interstitial lung disease in England: 1997-2008",
+      "year": 2017
+    },
+    {
+      "title": "NAVAL MEDICAL CENTER SAN DIEGO from ClinicalKey",
+      "year": 2016
+    }
+  ],
+  "quality": {
+    "completeness_score": 0,
+    "has_abstract": true,
+    "abstract_source": "metadata",
+    "has_doi": true,
+    "has_full_text": true,
+    "num_sections": 20,
+    "num_tables": 4,
+    "num_figures": 7,
+    "num_references": 36
+  }
+}
