@@ -12,6 +12,8 @@ from langgraph.prebuilt import ToolExecutor
 from langchain_core.messages import BaseMessage, HumanMessage, AIMessage
 from pydantic import BaseModel, Field
 
+from src.llm.gpt5_medical import GPT5MedicalGenerator, num_tokens, max_input_budget
+
 
 class QueryType(str, Enum):
     """Types of queries that require different handling."""
@@ -397,3 +399,41 @@ if __name__ == "__main__":
         print(result["answer"])
     
     asyncio.run(test_orchestrator())
+
+
+def context_budget_filter(docs, reserved_for_question: int = 2000, max_out: int = 8000):
+    """Keep best-ranked docs while staying under the dynamic prompt budget.""" 
+    budget = max_input_budget(max_out) - reserved_for_question
+    total, kept = 0, []
+    for d in docs:
+        tk = num_tokens(getattr(d, "page_content", ""))
+        if total + tk > budget:
+            break
+        total += tk
+        kept.append(d)
+    return kept
+
+
+def build_gpt5_answer_node():
+    llm = GPT5MedicalGenerator(model=os.getenv("GPT5_MODEL", "gpt-5"),
+                               max_output=8000,
+                               reasoning_effort="medium",
+                               verbosity="medium")
+    def _answer(state: "GraphState") -> "GraphState":
+        # fit retrieved docs to dynamic budget
+        trimmed = context_budget_filter(state.retrieved_docs, max_out=llm.max_out)
+        context = format_context(trimmed)  # assumes your helper exists
+        system = (
+            "You are an expert interventional pulmonology assistant. "
+            "Use only the provided authoritative context. "
+            "Cite sources as [A1-PAPOIP-2025], [A2-Practical-Guide], etc. "
+            "If uncertain, state so explicitly."
+        )
+        user = f"Context:\n{context}\n\nQuestion: {state.question}"
+        out = llm.generate(system=system, user=user)
+        state.answer = out.get("text", "")
+        state.llm_usage = out.get("usage", {})
+        return state
+    return _answer
+
+workflow.add_node("generate_answer", build_gpt5_answer_node())

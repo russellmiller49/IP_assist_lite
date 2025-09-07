@@ -37,3 +37,5 @@ langchain>=0.3.0
 langgraph>=0.2.0  # This will get us 1.0 alpha versions
 langchain-community>=0.3.0
 langchain-core>=0.3.0
+openai>=1.37.0
+tiktoken>=0.7.0

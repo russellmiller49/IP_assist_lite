@@ -139,6 +139,63 @@ Check for: "massive hemoptysis", ">200ml", "foreign body", "tension pneumothorax
 - Keep nodes focused (single responsibility)
 - Use async for all node functions
 
+## GPT-5 Integration Guidelines (2025)
+
+### Model Selection
+- **GPT-5**: Best for complex coding, agentic tasks, and maximum performance (reasoning model)
+- **GPT-5-mini**: Balanced performance vs cost for production deployments
+- **GPT-5-nano**: Optimized for low-latency, high-volume queries
+- **GPT-5-chat-latest**: Non-reasoning model for conversational interfaces
+
+### Key API Features
+- **Verbosity Parameter**: Control response length (use "concise" for medical summaries, "expansive" for patient education)
+- **Context-Free Grammar (CFG)**: Enforce strict output formats for CPT codes, medical terminology
+- **Custom Tool Calling**: Direct Python/SQL execution without JSON wrapping for data analysis
+
+### Medical Domain Optimization
+- Use CFG to enforce medical coding standards (ICD-10, CPT format validation)
+- Leverage 94.6% math accuracy for dosage calculations
+- 46.2% HealthBench Hard score - validate critical medical information against authoritative sources
+- Enable structured output for:
+  - Contraindications lists
+  - Procedure steps (numbered, validated format)
+  - Complication rates (percentage with confidence intervals)
+
+### Implementation Patterns
+```python
+# Example: Structured medical query with GPT-5
+response = openai.chat.completions.create(
+    model="gpt-5",
+    messages=[{"role": "user", "content": query}],
+    verbosity="concise",  # For clinical summaries
+    response_format={
+        "type": "json_schema",
+        "json_schema": {
+            "name": "medical_response",
+            "schema": {
+                "type": "object",
+                "properties": {
+                    "cpt_codes": {"type": "array", "items": {"pattern": "^\\d{5}$"}},
+                    "contraindications": {"type": "array"},
+                    "authority_level": {"enum": ["A1", "A2", "A3", "A4"]}
+                }
+            }
+        }
+    }
+)
+```
+
+### Performance Benchmarks
+- **SWE-bench Verified**: 74.9% (use for complex codebase modifications)
+- **Aider polyglot**: 88% (multi-language medical documentation parsing)
+- **MMMU**: 84.2% (multimodal understanding for radiology/imaging integration)
+
+### Cost Optimization
+- Cache frequently accessed guidelines using cached input tokens ($0.40/1M tokens)
+- Use GPT-5-nano for routine CPT code lookups
+- Reserve GPT-5 full for complex clinical decision support
+- Implement tiered routing based on query complexity
+
 ## Safety First
 - NEVER skip contraindication checks
 - ALWAYS validate doses against multiple sources
