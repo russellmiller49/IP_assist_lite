@@ -1,120 +1,192 @@
 """
 GPT-5 medical answer generator for IP-Assist-Lite
-- Dynamic input budgeting (400k ctx - reserved output - margin)
-- reasoning.effort + text.verbosity
-- temperature <= 0.2 for clinical safety
-- Robust response parsing
+Canonical wrapper supporting both Responses API and Chat Completions
+- JSON-safe serialization via model_dump()
+- Tool forcing support for both APIs
+- Reasoning effort control
 """
-import os, logging
-from typing import List, Dict, Optional
+from __future__ import annotations
+from typing import Any, Dict, List, Optional, Union
+import os
 from dotenv import load_dotenv
-
-import tiktoken
 from openai import OpenAI
 
 # Load environment variables from .env file
 load_dotenv()
 
-MODEL = os.getenv("GPT5_MODEL", "gpt-5")  # gpt-5 | gpt-5-mini | gpt-5-nano
-CTX_MAX = 400_000
-DEFAULT_MAX_OUTPUT = 8_000
-SAFETY_MARGIN = 1_024
+# Configuration from environment
+USE_RESPONSES_API = os.getenv("USE_RESPONSES_API", "1").strip() not in {"0","false","False"}
+REASONING_EFFORT = os.getenv("REASONING_EFFORT", "").strip() or None  # e.g., "medium"
 
-def _get_encoder():
-    try:
-        return tiktoken.encoding_for_model(MODEL)
-    except Exception:
-        try:
-            return tiktoken.get_encoding("o200k_base")
-        except Exception:
-            return tiktoken.get_encoding("cl100k_base")
-
-ENCODER = _get_encoder()
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-
-def num_tokens(s: str) -> int:
-    return len(ENCODER.encode(s or ""))
-
-def truncate_right(text: str, budget: int) -> str:
-    toks = ENCODER.encode(text or "")
-    if len(toks) <= budget:
-        return text
-    return ENCODER.decode(toks[-budget:])
-
-def max_input_budget(max_output_tokens: int) -> int:
-    return max(0, CTX_MAX - max_output_tokens - SAFETY_MARGIN)
-
-class GPT5MedicalGenerator:
+class GPT5Medical:
     def __init__(self,
-                 model: str = MODEL,
-                 max_output: int = DEFAULT_MAX_OUTPUT,
-                 reasoning_effort: str = "medium",  # minimal | low | medium | high
-                 verbosity: str = "medium"):        # low | medium | high
-        self.model = model
-        self.max_out = max_output
-        self.reasoning_effort = reasoning_effort
-        self.verbosity = verbosity
+                 model: Optional[str] = None,
+                 use_responses: Optional[bool] = None,
+                 max_out: int = 800,
+                 reasoning_effort: Optional[str] = None):  # "low"|"medium"|"high"
+        self.client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+        # Use correct GPT-5 model names (gpt-5, gpt-5-mini, gpt-5-nano)
+        self.model = model or os.getenv("IP_GPT5_MODEL", "gpt-5")
+        self.use_responses = use_responses if use_responses is not None else USE_RESPONSES_API
+        self.max_out = max_out
+        self.reasoning_effort = reasoning_effort or REASONING_EFFORT
 
+    def _normalize_messages_for_responses(self, messages: List[Dict[str, str]]):
+        """Map Chat-style messages -> Responses input format.
+        Wrap each message as text content blocks for better compatibility.
+        """
+        output = []
+        for msg in messages:
+            role = msg.get("role", "user")
+            content = msg.get("content", "")
+            output.append({"role": role, "content": [{"type": "text", "text": content}]})
+        return output
+
+    def complete(self,
+                 messages: List[Dict[str, str]],
+                 tools: Optional[List[Dict[str, Any]]] = None,
+                 tool_choice: Optional[Union[str, Dict[str, Any]]] = None,
+                 temperature: Optional[float] = None) -> Dict[str, Any]:
+        """Return a plain dict with `.text`, `.tool_calls`, `.raw` fields.
+        - Uses Responses API by default; falls back to Chat Completions with correct params.
+        - Always returns JSON-serializable structures.
+        """
+        if self.use_responses:
+            try:
+                # Build Responses API call
+                kwargs = {
+                    "model": self.model,
+                    "input": self._normalize_messages_for_responses(messages),
+                    "max_output_tokens": self.max_out,
+                }
+                if self.reasoning_effort:
+                    kwargs["reasoning"] = {"effort": self.reasoning_effort}
+                if tools:
+                    kwargs["tools"] = tools
+                    kwargs["tool_choice"] = tool_choice or "auto"
+                if temperature is not None:
+                    kwargs["temperature"] = temperature
+                    
+                resp = self.client.responses.create(**kwargs)
+                
+                # Extract text from response
+                text = getattr(resp, "output_text", None)
+                if not text and hasattr(resp, "output") and resp.output:
+                    # Try to extract from structured output
+                    if isinstance(resp.output, list) and len(resp.output) > 0:
+                        first_output = resp.output[0]
+                        if hasattr(first_output, "content") and isinstance(first_output.content, list):
+                            for content_item in first_output.content:
+                                if hasattr(content_item, "text"):
+                                    text = content_item.text
+                                    break
+                
+                # Extract tool calls
+                tool_calls = []
+                for item in getattr(resp, "output", []) or []:
+                    if getattr(item, "type", None) == "tool_call":
+                        tool_calls.append({
+                            "name": getattr(item, "tool_name", ""),
+                            "arguments": getattr(item, "arguments", ""),
+                        })
+                
+                # Import serialization helper
+                from utils.serialization import to_jsonable
+                return {
+                    "text": text,
+                    "tool_calls": tool_calls,
+                    "raw": to_jsonable(resp),  # Always JSON-serializable
+                }
+            except Exception as e:
+                # If Responses API not available, fall back to Chat Completions
+                print(f"Responses API failed, falling back to Chat Completions: {e}")
+                self.use_responses = False
+        
+        # Chat Completions path (reasoning models: use max_completion_tokens)
+        # Check if using o1 models or GPT-5 models which have special requirements
+        is_o1_model = self.model and self.model.startswith("o1")
+        is_gpt5_model = self.model and (self.model.startswith("gpt-5") or self.model == "gpt-5")
+        
+        kwargs = {
+            "model": self.model,
+            "messages": messages,
+        }
+        
+        # GPT-5, o1 models, and gpt-4o use max_completion_tokens, others use max_tokens
+        if is_gpt5_model or is_o1_model or self.model.startswith("gpt-4o"):
+            kwargs["max_completion_tokens"] = self.max_out
+        else:
+            kwargs["max_tokens"] = self.max_out
+            
+        # o1 models don't support tools, temperature, or system messages
+        if not is_o1_model:
+            if tools:
+                kwargs["tools"] = tools
+                kwargs["tool_choice"] = tool_choice or "auto"
+            if temperature is not None:
+                kwargs["temperature"] = temperature
+        else:
+            # For o1 models, convert system messages to user messages
+            filtered_messages = []
+            for msg in messages:
+                if msg.get("role") == "system":
+                    filtered_messages.append({"role": "user", "content": f"[System]: {msg['content']}"})
+                else:
+                    filtered_messages.append(msg)
+            kwargs["messages"] = filtered_messages
+            
+        resp = self.client.chat.completions.create(**kwargs)
+        
+        msg = resp.choices[0].message if resp.choices else None
+        text = msg.content if msg else ""
+        
+        # Extract tool calls
+        tool_calls = []
+        if msg and getattr(msg, "tool_calls", None):
+            for tc in msg.tool_calls:
+                tool_calls.append({
+                    "name": tc.function.name if hasattr(tc, "function") else "",
+                    "arguments": tc.function.arguments if hasattr(tc, "function") else "",
+                })
+        
+        # Import serialization helper
+        from utils.serialization import to_jsonable
+        return {
+            "text": text,
+            "tool_calls": tool_calls if tool_calls else None,
+            "raw": to_jsonable(resp),  # Always JSON-serializable
+        }
+
+    # Backward compatibility with old interface
     def generate(self,
                  system: str,
                  user: str,
                  tools: Optional[List[Dict]] = None,
                  tool_choice: Optional[Dict] = None) -> Dict:
-        """
-        Return dict: {"text": str, "tool_calls": list|None, "usage": dict|None}
-        """
-        prompt = f"System:\n{system.strip()}\n\nUser:\n{user.strip()}"
-        prompt = truncate_right(prompt, max_input_budget(self.max_out))
-
-        # Use chat completions API (GPT-5 is available on both APIs)
-        # GPT-5 models only support default temperature (1.0)
-        # If tools are provided, use them; otherwise simple completion
-        if tools:
-            resp = client.chat.completions.create(
-                model=self.model,
-                messages=[
-                    {"role": "system", "content": system.strip()},
-                    {"role": "user", "content": user.strip()}
-                ],
-                max_completion_tokens=self.max_out,
-                # temperature=1.0 is default for GPT-5
-                tools=tools,
-                tool_choice=tool_choice if tool_choice else "auto",
-                # GPT-5 specific parameters
-                reasoning_effort=self.reasoning_effort,
-                verbosity=self.verbosity
-            )
-        else:
-            resp = client.chat.completions.create(
-                model=self.model,
-                messages=[
-                    {"role": "system", "content": system.strip()},
-                    {"role": "user", "content": user.strip()}
-                ],
-                max_completion_tokens=self.max_out,
-                # temperature=1.0 is default for GPT-5
-                # GPT-5 specific parameters
-                reasoning_effort=self.reasoning_effort,
-                verbosity=self.verbosity
-            )
-
-        # Parse response for chat completions API format
-        if hasattr(resp, 'choices') and resp.choices:
-            choice = resp.choices[0]
-            answer = choice.message.content or ""
-            tool_calls = choice.message.tool_calls if hasattr(choice.message, 'tool_calls') else []
-        else:
-            answer = ""
-            tool_calls = []
-
+        """Legacy interface for backward compatibility"""
+        messages = [
+            {"role": "system", "content": system.strip()},
+            {"role": "user", "content": user.strip()}
+        ]
+        result = self.complete(messages, tools, tool_choice)
+        # Map to old format
         return {
-            "text": answer,
-            "tool_calls": tool_calls or None,
-            "usage": dict(resp.usage) if hasattr(resp, 'usage') else {}
+            "text": result["text"],
+            "tool_calls": result["tool_calls"],
+            "usage": result["raw"].get("usage", {})
         }
+    
+    def generate_response(self, prompt: str, messages: Optional[List[Dict]] = None) -> str:
+        """Simple text generation for orchestrator use"""
+        msgs = messages or []
+        msgs.append({"role": "user", "content": prompt})
+        result = self.complete(msgs)
+        return result["text"] or "Unable to generate response."
+
+# Create alias for backward compatibility
+GPT5MedicalGenerator = GPT5Medical
 
 __all__ = [
-    "GPT5MedicalGenerator",
-    "num_tokens",
-    "max_input_budget",
+    "GPT5Medical",
+    "GPT5MedicalGenerator",  # Backward compatibility alias
 ]

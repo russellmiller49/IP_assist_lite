@@ -1,0 +1,49 @@
+version: 2
+default:
+  target_tokens: 300
+  max_tokens: 500
+  min_tokens: 80
+  overlap_tokens: 45
+  ensure_sentence_boundary: true
+  drop_if_short: 15
+  dedupe_normalize: true
+  drop_patterns:
+    - '(?i)doi:\s*10\.'
+    - '(?i)\bissn\b'
+    - '(?i)Springer|Elsevier|Wiley|Taylor & Francis|Cambridge University Press'
+    - '(?i)Downloaded by'
+    - '^Page\s+\d+\s+of\s+\d+'
+    - '^(?:/C\d{2,3}){6,}'
+    
+section_overrides:
+  procedure_steps:
+    target_tokens: 350
+    overlap_tokens: 70
+    keep_section_intact: true
+    
+  table_row:
+    pack_rows: 8
+    target_tokens: 220
+    overlap_tokens: 0
+    
+  eligibility:
+    target_tokens: 260
+    overlap_tokens: 50
+    bullet_join: true
+    
+  complications:
+    target_tokens: 300
+    overlap_tokens: 50
+    
+  coding_billing:
+    target_tokens: 280
+    overlap_tokens: 40
+    keep_section_intact: false
+    
+  ablation:
+    target_tokens: 320
+    overlap_tokens: 60
+    
+  technology_navigation:
+    target_tokens: 340
+    overlap_tokens: 55

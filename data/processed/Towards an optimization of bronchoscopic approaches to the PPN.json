@@ -28,10 +28,10 @@
     ],
     "doc_type": "case_series",
     "aliases": [
-      "tbna",
-      "rp-ebus",
+      "ebus",
       "enb",
-      "ebus"
+      "rp-ebus",
+      "tbna"
     ],
     "temporal": {
       "valid_from": "2018-01-01",

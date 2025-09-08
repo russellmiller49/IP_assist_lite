@@ -22,6 +22,7 @@ from datetime import datetime
 
 from orchestration.langgraph_agent import IPAssistOrchestrator
 from retrieval.hybrid_retriever import HybridRetriever
+from utils.serialization import to_jsonable
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -141,19 +142,19 @@ def format_response_html(result: Dict[str, Any]) -> str:
     
     return "".join(html_parts)
 
-def process_query(query: str, use_reranker: bool = True, top_k: int = 5) -> Tuple[str, str, str]:
+def process_query(query: str, use_reranker: bool = True, top_k: int = 5, model: str = "gpt-5-mini") -> Tuple[str, str, str]:
     """Process a query and return formatted results."""
     query_norm = (query or "").strip()
     if not query_norm:
-        return "", "Please enter a query", json.dumps({}, indent=2)
-
+        return "", "Please enter a query", json.dumps(to_jsonable({}), indent=2)
+    
     # Budget knobs (two-stage)
     retrieve_m = int(os.getenv("RETRIEVE_M", "30"))   # fast retriever fan-out
     rerank_n   = int(os.getenv("RERANK_N", "10"))     # cross-encoder candidates
     k          = max(1, min(int(top_k), rerank_n))    # final results to display
 
-    # Cache key (includes knobs + index version)
-    cache_key = f"{_INDEX_FINGERPRINT}|{query_norm.lower()}|rerank={bool(use_reranker)}|k={k}|M={retrieve_m}|N={rerank_n}"
+    # Cache key (includes knobs + index version + model)
+    cache_key = f"{_INDEX_FINGERPRINT}|{query_norm.lower()}|rerank={bool(use_reranker)}|k={k}|M={retrieve_m}|N={rerank_n}|model={model}"
     cached = _RESULT_CACHE.get(cache_key)
     if cached:
         html, _, meta = cached
@@ -161,6 +162,9 @@ def process_query(query: str, use_reranker: bool = True, top_k: int = 5) -> Tupl
 
     start = time.time()
     orch = get_orchestrator()
+    
+    # Set the model in orchestrator
+    orch.set_model(model)
 
     # Call the orchestrator; try a v2 signature first, then fall back safely
     try:
@@ -202,7 +206,7 @@ def process_query(query: str, use_reranker: bool = True, top_k: int = 5) -> Tupl
         "needs_review": result.get("needs_review", False),
         "citations_count": len(result.get("citations", [])),
     }
-    metadata_json = json.dumps(metadata, indent=2)
+    metadata_json = json.dumps(to_jsonable(metadata), indent=2, ensure_ascii=False)
 
     # Status message
     if result.get("is_emergency"):
@@ -363,6 +367,12 @@ def build_interface():
                         )
                     
                     with gr.Column(scale=1):
+                        model_selector = gr.Dropdown(
+                            choices=["gpt-5-nano", "gpt-5-mini", "gpt-5", "gpt-4o-mini", "gpt-4o"],
+                            value="gpt-5-mini",
+                            label="Model",
+                            info="Select the GPT model (GPT-5 models support Responses API)"
+                        )
                         use_reranker = gr.Checkbox(label="Use Reranker", value=True)
                         top_k = gr.Slider(
                             minimum=1,
@@ -383,7 +393,7 @@ def build_interface():
                 # Connect events
                 submit_btn.click(
                     fn=process_query,
-                    inputs=[query_input, use_reranker, top_k],
+                    inputs=[query_input, use_reranker, top_k, model_selector],
                     outputs=[response_output, status_output, metadata_output]
                 )
                 

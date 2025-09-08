@@ -240,7 +240,7 @@ def main():
     
     print(f"\nTop 5 matches for: '{test_query}'")
     for idx in top_indices:
-        print(f"  Score: {similarities[idx]:.3f} - Chunk: {chunks[idx]['id']}")
+        print(f"  Score: {similarities[idx]:.3f} - Chunk: {chunks[idx].get('chunk_id', chunks[idx].get('doc_id', 'unknown'))}")
 
 
 if __name__ == "__main__":

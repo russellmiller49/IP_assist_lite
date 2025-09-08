@@ -17,6 +17,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 import gradio as gr
 from llm.gpt5_medical import GPT5MedicalGenerator, num_tokens
 from safety.contraindication_tool import CONTRAINDICATION_TOOL, FORCE_DECISION_TOOL
+from utils.serialization import to_jsonable
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -103,7 +104,7 @@ For emergency situations, provide immediate actionable guidance."""
         
         status = f"✅ Generated in {elapsed:.2f}s | Input tokens: {token_count}"
         
-        return response, status, json.dumps(metadata, indent=2)
+        return response, status, json.dumps(to_jsonable(metadata), indent=2, ensure_ascii=False)
         
     except Exception as e:
         logger.error(f"Error processing query: {e}")
@@ -112,7 +113,7 @@ For emergency situations, provide immediate actionable guidance."""
             "error": str(e),
             "timestamp": datetime.now().isoformat()
         }
-        return "", error_msg, json.dumps(error_metadata, indent=2)
+        return "", error_msg, json.dumps(to_jsonable(error_metadata), indent=2, ensure_ascii=False)
 
 def test_safety_decision(
     procedure: str,
@@ -183,7 +184,7 @@ Evaluate if this procedure should proceed based on safety considerations."""
                 "timestamp": datetime.now().isoformat()
             }
         
-        return decision_text, status, json.dumps(metadata, indent=2)
+        return decision_text, status, json.dumps(to_jsonable(metadata), indent=2, ensure_ascii=False)
         
     except Exception as e:
         logger.error(f"Error in safety decision: {e}")

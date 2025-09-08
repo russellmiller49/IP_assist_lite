@@ -109,7 +109,10 @@ class QdrantIndexer:
         with open(chunks_file, "r") as f:
             for line in f:
                 chunk = json.loads(line)
-                chunk_texts[chunk["id"]] = chunk["text"]
+                # Handle both 'chunk_id' and 'id' fields
+                chunk_id = chunk.get("chunk_id", chunk.get("id", chunk.get("doc_id")))
+                if chunk_id:
+                    chunk_texts[chunk_id] = chunk.get("text", "")
         
         # Verify counts match
         assert len(embeddings) == len(metadata_list), \
@@ -123,8 +126,13 @@ class QdrantIndexer:
             metadata = metadata_list[i]
             
             # Add text back to metadata for retrieval
-            if metadata["id"] in chunk_texts:
-                metadata["text"] = chunk_texts[metadata["id"]]
+            # Handle both 'id' and 'chunk_id' in metadata
+            meta_id = metadata.get("id", metadata.get("chunk_id", metadata.get("doc_id")))
+            if meta_id and meta_id in chunk_texts:
+                metadata["text"] = chunk_texts[meta_id]
+            # Also ensure we have an 'id' field for compatibility
+            if "id" not in metadata and "chunk_id" in metadata:
+                metadata["id"] = metadata["chunk_id"]
             
             # Create point
             point = PointStruct(
@@ -151,7 +159,8 @@ class QdrantIndexer:
         
         # Wait for indexing to complete
         print("Waiting for indexing to complete...")
-        self.client.wait_for_indexing(self.collection_name)
+        # Note: wait_for_indexing was removed in newer versions
+        # Collection is immediately available after upsert
         
         # Get collection info
         collection_info = self.client.get_collection(self.collection_name)

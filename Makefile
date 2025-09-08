@@ -13,7 +13,7 @@ help:
 	@echo "Available targets:"
 	@echo "  setup     - Install dependencies and download models"
 	@echo "  prep      - Process raw JSON files (standardize, clean, extract)"
-	@echo "  chunk     - Create variable-sized chunks from processed documents"
+	@echo "  chunk     - Create chunks with v2 chunker (policy-driven + QA gate)"
 	@echo "  embed     - Generate MedCPT embeddings (requires GPU)"
 	@echo "  index     - Build Qdrant index"
 	@echo "  retrieve  - Test retrieval pipeline"
@@ -43,10 +43,18 @@ prep:
 	@echo "Files processed: $$(ls $(DATA_DIR)/processed/*.json | wc -l)"
 	@echo "Registry created: $(DATA_DIR)/registry.jsonl"
 
-# Chunking
+# Chunking with v2 chunker and quality gate
 chunk:
-	@echo "Creating chunks..."
-	cd $(SRC_DIR)/index && $(PYTHON) chunk.py
+	@echo "Consolidating processed documents into JSONL..."
+	$(PYTHON) $(SRC_DIR)/index/consolidate_docs.py
+	@echo "Creating chunks with v2 chunker..."
+	$(PYTHON) -m src.index.chunker_v2 \
+		--in_jsonl $(DATA_DIR)/processed/documents.jsonl \
+		--out_jsonl $(DATA_DIR)/chunks/chunks.jsonl \
+		--policy configs/chunking.yaml \
+		--tokenizer emilyalsentzer/Bio_ClinicalBERT
+	@echo "Running quality gate..."
+	$(PYTHON) -m src.index.chunk_quality_gate $(DATA_DIR)/chunks/chunks.qa.csv
 	@echo "Chunking complete!"
 	@echo "Chunks created: $$(wc -l < $(DATA_DIR)/chunks/chunks.jsonl)"
 
@@ -115,8 +123,13 @@ dev-prep:
 	cd $(SRC_DIR)/prep && $(PYTHON) -c "from data_preparer_v12 import DataPreparerV12; p = DataPreparerV12(); files = list(p.input_dir.glob('*.json'))[:10]; [p.process_file(f) for f in files]"
 
 dev-chunk:
-	@echo "Running chunking in development mode (first 5 documents)..."
-	cd $(SRC_DIR)/index && $(PYTHON) -c "from chunk import VariableChunker; c = VariableChunker(); import json; from pathlib import Path; files = list(Path('../../data/processed').glob('*.json'))[:5]; [c.chunk_document(json.load(open(f))) for f in files]; c._save_term_indexes()"
+	@echo "Running v2 chunking in development mode (first 5 documents)..."
+	$(PYTHON) $(SRC_DIR)/index/consolidate_docs.py --dev
+	$(PYTHON) -m src.index.chunker_v2 \
+		--in_jsonl $(DATA_DIR)/processed/dev_documents.jsonl \
+		--out_jsonl $(DATA_DIR)/chunks/dev_chunks.jsonl \
+		--policy configs/chunking.yaml
+	$(PYTHON) -m src.index.chunk_quality_gate $(DATA_DIR)/chunks/dev_chunks.qa.csv
 
 # Statistics
 stats:

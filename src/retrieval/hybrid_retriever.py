@@ -100,7 +100,10 @@ class HybridRetriever:
                 chunk = json.loads(line)
                 self.chunks.append(chunk)
                 self.chunk_texts.append(chunk['text'])
-                self.chunk_map[chunk['id']] = chunk
+                # Handle both 'chunk_id' and 'id' fields
+                chunk_identifier = chunk.get('chunk_id', chunk.get('id', chunk.get('doc_id')))
+                if chunk_identifier:
+                    self.chunk_map[chunk_identifier] = chunk
         
         # Initialize BM25
         print("Initializing BM25...")
@@ -237,10 +240,12 @@ class HybridRetriever:
             collection_name=self.collection_name,
             query_vector=search_params["vector"],
             limit=search_params["limit"],
-            query_filter=search_params.get("filter", None)
+            query_filter=search_params.get("filter", None),
+            with_payload=True  # Ensure we get payload
         )
         
-        return [(hit.id, hit.score) for hit in results]
+        # Use payload["chunk_id"] or "id" to match chunk_map (canonical ID handling)
+        return [(hit.payload.get("chunk_id", hit.payload.get("id", hit.id)), hit.score) for hit in results]
     
     def bm25_search(self, query: str, top_k: int = 20) -> List[Tuple[str, float]]:
         """
@@ -257,7 +262,7 @@ class HybridRetriever:
         results = []
         for idx in top_indices:
             if scores[idx] > 0:
-                chunk_id = self.chunks[idx]['id']
+                chunk_id = self.chunks[idx].get('chunk_id', self.chunks[idx].get('id', self.chunks[idx].get('doc_id')))
                 results.append((chunk_id, float(scores[idx])))
         
         return results

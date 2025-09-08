@@ -296,7 +296,10 @@ class VariableChunker:
                 # Add to CPT index
                 if cpt_code not in self.term_index["cpt"]:
                     self.term_index["cpt"][cpt_code] = []
-                self.term_index["cpt"][cpt_code].append(chunk["id"])
+                # Use chunk_id if available, otherwise id
+                chunk_identifier = chunk.get("chunk_id", chunk.get("id", chunk.get("doc_id")))
+                if chunk_identifier:
+                    self.term_index["cpt"][cpt_code].append(chunk_identifier)
             
             if wrvu is not None:
                 chunk["wrvu"] = wrvu

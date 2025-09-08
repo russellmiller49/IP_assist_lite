@@ -83,21 +83,26 @@ def main():
             with console.status("[bold green]Processing query...") as status:
                 start_time = time.time()
                 
-                # Call the process_query function
-                result = process_query(query, use_reranker, top_k)
+                # Call the process_query function - returns tuple
+                html, status_msg, meta = process_query(query, use_reranker, top_k)
                 
                 elapsed = time.time() - start_time
             
             # Display results
-            if "⚡ Cached" in result:
+            if "Cached" in status_msg:
                 console.print("[yellow]⚡ Cached result[/yellow]")
             
+            # Display the HTML response (first element of tuple)
             console.print(Panel(
-                Markdown(result),
+                Markdown(html),
                 title=f"Response ({elapsed:.2f}s)",
                 border_style="green",
                 padding=(1, 2)
             ))
+            
+            # Optionally show status
+            if status_msg:
+                console.print(f"[dim]Status: {status_msg}[/dim]")
             
         except KeyboardInterrupt:
             console.print("\n[red]Interrupted[/red]")

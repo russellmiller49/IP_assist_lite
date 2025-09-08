@@ -3,6 +3,7 @@
 LangGraph 1.0 orchestration for IP Assist Lite
 Implements intelligent query routing, safety checks, and hierarchy-aware retrieval
 """
+from __future__ import annotations
 
 import sys
 import json
@@ -16,23 +17,24 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from langgraph.graph import StateGraph, START, END
-from langgraph.graph.message import add_messages
-from langgraph.prebuilt import ToolNode
-from langchain_core.messages import BaseMessage, HumanMessage, AIMessage, SystemMessage
 
 from retrieval.hybrid_retriever import HybridRetriever, RetrievalResult
+from llm.gpt5_medical import GPT5Medical
 
 
-# State definition
-class IPAssistState(TypedDict):
-    """State for the IP Assist graph."""
+# State definition (LangGraph 1.0 canonical)
+class AgentState(TypedDict):
+    """Canonical state for the IP Assist graph."""
+    user_id: str
+    messages: List[Dict[str, str]]  # chat history
     query: str
-    messages: Annotated[List[BaseMessage], add_messages]
-    retrieval_results: List[RetrievalResult]
+    retrieved: List[Dict[str, Any]]
+    draft: str
+    safety: Dict[str, Any]
+    # Additional fields for IP Assist specific needs
     is_emergency: bool
     query_type: str  # 'clinical', 'procedure', 'coding', 'emergency', 'safety'
     safety_flags: List[str]
-    response: str
     citations: List[Dict[str, Any]]
     confidence_score: float
     needs_review: bool
@@ -93,8 +95,13 @@ class SafetyGuard:
 class IPAssistOrchestrator:
     """LangGraph orchestration for IP Assist Lite."""
     
-    def __init__(self, retriever: Optional[HybridRetriever] = None):
-        """Initialize the orchestrator."""
+    def __init__(self, retriever: Optional[HybridRetriever] = None, model: str = "gpt-5-mini"):
+        """Initialize the orchestrator.
+        
+        Args:
+            retriever: Optional HybridRetriever instance
+            model: OpenAI model to use (gpt-5-nano, gpt-5-mini, gpt-5, etc.)
+        """
         # Initialize retriever
         if retriever is None:
             self.retriever = HybridRetriever(
@@ -105,11 +112,35 @@ class IPAssistOrchestrator:
         else:
             self.retriever = retriever
         
+        # Store model for dynamic switching
+        self.current_model = model
+        
+        # Initialize LLM wrapper
+        self.llm = GPT5Medical(
+            model=model,
+            max_out=1000,
+            use_responses=False  # Use chat completions API
+        )
+        
         # Build the graph
         self.graph = self._build_graph()
         self.app = self.graph.compile()
     
-    def _classify_query(self, state: IPAssistState) -> IPAssistState:
+    def set_model(self, model: str):
+        """Switch to a different model dynamically.
+        
+        Args:
+            model: Model name (e.g., 'gpt-4o-mini', 'gpt-4o', 'o1-mini', 'o1-preview')
+        """
+        if model != self.current_model:
+            self.current_model = model
+            self.llm = GPT5Medical(
+                model=model,
+                max_out=1000,
+                use_responses=False
+            )
+    
+    def _classify_query(self, state: AgentState) -> AgentState:
         """Classify the query type and check for emergencies."""
         query = state["query"]
         
@@ -133,14 +164,14 @@ class IPAssistOrchestrator:
         else:
             state["query_type"] = "clinical"
         
-        # Add classification message
+        # Add classification message (canonical format)
         state["messages"].append(
-            AIMessage(content=f"Query classified as: {state['query_type']}")
+            {"role": "assistant", "content": f"Query classified as: {state['query_type']}"}
         )
         
         return state
     
-    def _retrieve_information(self, state: IPAssistState) -> IPAssistState:
+    def _retrieve_information(self, state: AgentState) -> AgentState:
         """Retrieve relevant information based on query type."""
         query = state["query"]
         query_type = state["query_type"]
@@ -170,27 +201,30 @@ class IPAssistOrchestrator:
             filters=filters if query_type in ["emergency", "coding", "safety"] else None
         )
         
-        state["retrieval_results"] = results
+        # Store in canonical 'retrieved' field
+        state["retrieved"] = [r.__dict__ for r in results] if results else []
         
-        # Add retrieval message
+        # Add retrieval message (canonical format)
         if results:
             state["messages"].append(
-                AIMessage(content=f"Retrieved {len(results)} relevant documents")
+                {"role": "assistant", "content": f"Retrieved {len(results)} relevant documents"}
             )
         else:
             state["messages"].append(
-                AIMessage(content="No relevant documents found")
+                {"role": "assistant", "content": "No relevant documents found"}
             )
         
         return state
     
-    def _synthesize_response(self, state: IPAssistState) -> IPAssistState:
+    def _synthesize_response(self, state: AgentState) -> AgentState:
         """Synthesize response from retrieved information."""
-        results = state["retrieval_results"]
+        # Convert back from dict format
+        from types import SimpleNamespace
+        results = [SimpleNamespace(**r) for r in state["retrieved"]]
         query_type = state["query_type"]
         
         if not results:
-            state["response"] = "I couldn't find relevant information for your query. Please try rephrasing or provide more context."
+            state["draft"] = "I couldn't find relevant information for your query. Please try rephrasing or provide more context."
             state["confidence_score"] = 0.0
             return state
         
@@ -202,7 +236,8 @@ class IPAssistOrchestrator:
         if state["is_emergency"]:
             response_parts.append("🚨 **EMERGENCY DETECTED** - Immediate action required\n")
         
-        # Process top results
+        # Collect context from top results
+        context_parts = []
         for i, result in enumerate(results[:3], 1):
             # Build citation
             citation = {
@@ -215,15 +250,35 @@ class IPAssistOrchestrator:
             }
             citations.append(citation)
             
-            # Add to response based on precedence
-            if result.authority_tier == "A1":
-                response_parts.append(f"**[PAPOIP 2025]** {result.text[:300]}...")
-            elif result.authority_tier == "A2":
-                response_parts.append(f"**[Practical Guide 2022]** {result.text[:300]}...")
-            elif result.authority_tier == "A3":
-                response_parts.append(f"**[BACADA 2012]** {result.text[:300]}...")
-            else:
-                response_parts.append(f"**[{result.doc_id[:20]}...]** {result.text[:300]}...")
+            # Add to context for LLM
+            source_label = {
+                "A1": "PAPOIP 2025",
+                "A2": "Practical Guide 2022",
+                "A3": "BACADA 2012"
+            }.get(result.authority_tier, result.doc_id[:30])
+            
+            context_parts.append(f"[{source_label}]: {result.text}")
+        
+        # Use LLM to synthesize response
+        if context_parts:
+            context = "\n\n".join(context_parts)
+            prompt = f"""Based on the following authoritative medical sources, provide a comprehensive answer to: {state['query']}
+
+Sources:
+{context}
+
+Please synthesize this information into a clear, professional response. Prioritize information from higher authority sources (A1 > A2 > A3 > A4). Include specific details like doses, contraindications, and techniques when mentioned."""
+            
+            try:
+                llm_response = self.llm.generate_response(prompt, state.get("messages", []))
+                response_parts.append(llm_response)
+            except Exception as e:
+                # Fallback: Show the raw context if LLM fails
+                response_parts.append("**Retrieved Information:**\n")
+                for i, part in enumerate(context_parts[:3], 1):
+                    response_parts.append(f"\n{i}. {part[:500]}...")
+        else:
+            response_parts.append("No relevant information found for your query.")
         
         # Add safety warnings if needed
         if state["safety_flags"]:
@@ -241,45 +296,49 @@ class IPAssistOrchestrator:
         avg_precedence = sum(r.precedence_score for r in results[:3]) / min(3, len(results))
         
         state["confidence_score"] = (top_score + avg_precedence) / 2
-        state["response"] = "\n\n".join(response_parts)
+        # Store in canonical 'draft' field
+        state["draft"] = "\n\n".join(response_parts)
         state["citations"] = citations
         
         return state
     
-    def _apply_safety_checks(self, state: IPAssistState) -> IPAssistState:
+    def _apply_safety_checks(self, state: AgentState) -> AgentState:
         """Apply final safety checks to the response."""
         validation = SafetyGuard.validate_response(
-            state["response"],
+            state["draft"],
             state["safety_flags"]
         )
         
         if validation["has_warnings"]:
             warnings_text = "\n".join(validation["warnings"])
-            state["response"] += f"\n\n---\n**Safety Notes:**\n{warnings_text}"
+            state["draft"] += f"\n\n---\n**Safety Notes:**\n{warnings_text}"
+        
+        # Store safety information in canonical field
+        state["safety"] = validation
         
         state["needs_review"] = validation["needs_review"]
         
-        # Add safety message
+        # Add safety message (canonical format)
         if state["needs_review"]:
             state["messages"].append(
-                AIMessage(content="⚠️ Response flagged for review due to safety concerns")
+                {"role": "assistant", "content": "⚠️ Response flagged for review due to safety concerns"}
             )
         
         return state
     
-    def _route_after_classification(self, state: IPAssistState) -> str:
+    def _route_after_classification(self, state: AgentState) -> str:
         """Route to appropriate node based on classification."""
         if state["is_emergency"]:
             return "retrieve"  # Skip directly to retrieval for emergencies
         return "retrieve"
     
-    def _route_after_retrieval(self, state: IPAssistState) -> str:
+    def _route_after_retrieval(self, state: AgentState) -> str:
         """Route after retrieval."""
-        if not state["retrieval_results"]:
+        if not state["retrieved"]:
             return "synthesize"  # Will generate "no results" response
         return "synthesize"
     
-    def _route_after_synthesis(self, state: IPAssistState) -> str:
+    def _route_after_synthesis(self, state: AgentState) -> str:
         """Route after synthesis."""
         if state["safety_flags"]:
             return "safety_check"
@@ -287,8 +346,8 @@ class IPAssistOrchestrator:
     
     def _build_graph(self) -> StateGraph:
         """Build the LangGraph workflow."""
-        # Create the graph
-        workflow = StateGraph(IPAssistState)
+        # Create the graph (canonical LangGraph 1.0)
+        workflow = StateGraph(AgentState)
         
         # Add nodes
         workflow.add_node("classify", self._classify_query)
@@ -319,15 +378,18 @@ class IPAssistOrchestrator:
     
     def process_query(self, query: str) -> Dict[str, Any]:
         """Process a query through the orchestration graph."""
-        # Initialize state
+        # Initialize state (canonical format)
         initial_state = {
+            "user_id": "default",  # Can be passed as parameter
+            "messages": [{"role": "user", "content": query}],
             "query": query,
-            "messages": [HumanMessage(content=query)],
-            "retrieval_results": [],
+            "retrieved": [],
+            "draft": "",
+            "safety": {},
+            # IP Assist specific
             "is_emergency": False,
             "query_type": "",
             "safety_flags": [],
-            "response": "",
             "citations": [],
             "confidence_score": 0.0,
             "needs_review": False
@@ -339,7 +401,7 @@ class IPAssistOrchestrator:
         # Format output
         output = {
             "query": query,
-            "response": result["response"],
+            "response": result["draft"],  # Use draft field
             "query_type": result["query_type"],
             "is_emergency": result["is_emergency"],
             "confidence_score": result["confidence_score"],
