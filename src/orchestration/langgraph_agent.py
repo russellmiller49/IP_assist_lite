@@ -98,9 +98,9 @@ class IPAssistOrchestrator:
         # Initialize retriever
         if retriever is None:
             self.retriever = HybridRetriever(
-                chunks_file="../../data/chunks/chunks.jsonl",
-                cpt_index_file="../../data/term_index/cpt_codes.jsonl",
-                alias_index_file="../../data/term_index/aliases.jsonl"
+                chunks_file="data/chunks/chunks.jsonl",
+                cpt_index_file="data/term_index/cpt_codes.jsonl",
+                alias_index_file="data/term_index/aliases.jsonl"
             )
         else:
             self.retriever = retriever

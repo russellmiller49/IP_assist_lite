@@ -5,10 +5,14 @@ Interactive interface for medical information retrieval
 """
 
 import sys
+import os
+import time
+import threading
 from pathlib import Path
 from typing import List, Tuple, Dict, Any
 import json
 import logging
+from collections import OrderedDict
 
 # Add parent directory to path
 sys.path.insert(0, str(Path(__file__).parent.parent))
@@ -23,16 +27,51 @@ from retrieval.hybrid_retriever import HybridRetriever
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-# Initialize orchestrator
-orchestrator = None
+# TTL Cache implementation
+class TTLCache:
+    def __init__(self, maxsize=256, ttl=600):
+        self.maxsize, self.ttl = maxsize, ttl
+        self._data = OrderedDict()
+    def get(self, key):
+        v = self._data.get(key)
+        if not v:
+            return None
+        val, ts = v
+        if time.time() - ts > self.ttl:
+            del self._data[key]
+            return None
+        self._data.move_to_end(key)
+        return val
+    def set(self, key, val):
+        self._data[key] = (val, time.time())
+        self._data.move_to_end(key)
+        if len(self._data) > self.maxsize:
+            self._data.popitem(last=False)
+
+# Initialize caches
+_RESULT_CACHE = TTLCache(
+    maxsize=int(os.getenv("RESULT_CACHE_MAX", "256")),
+    ttl=int(os.getenv("RESULT_TTL_SEC", "600")),
+)
+_INDEX_FINGERPRINT = os.getenv("INDEX_FINGERPRINT", "v1")  # bump to invalidate cache after reindex
+
+# Stats cache
+_STATS_CACHE = {"html": "", "ts": 0.0}
+_STATS_TTL_SEC = int(os.getenv("STATS_TTL_SEC", "900"))
+
+# Thread-safe orchestrator singleton
+_orchestrator = None
+_orch_lock = threading.Lock()
 
 def get_orchestrator():
-    global orchestrator
-    if orchestrator is None:
-        logger.info("Initializing orchestrator...")
-        orchestrator = IPAssistOrchestrator()
-        logger.info("Orchestrator initialized")
-    return orchestrator
+    global _orchestrator
+    if _orchestrator is None:
+        with _orch_lock:
+            if _orchestrator is None:
+                logger.info("Initializing orchestrator...")
+                _orchestrator = IPAssistOrchestrator()
+                logger.info("Orchestrator initialized")
+    return _orchestrator
 
 # Color coding for different elements
 EMERGENCY_COLOR = "#ff4444"
@@ -104,42 +143,77 @@ def format_response_html(result: Dict[str, Any]) -> str:
 
 def process_query(query: str, use_reranker: bool = True, top_k: int = 5) -> Tuple[str, str, str]:
     """Process a query and return formatted results."""
-    if not query.strip():
-        return "", "Please enter a query", ""
-    
+    query_norm = (query or "").strip()
+    if not query_norm:
+        return "", "Please enter a query", json.dumps({}, indent=2)
+
+    # Budget knobs (two-stage)
+    retrieve_m = int(os.getenv("RETRIEVE_M", "30"))   # fast retriever fan-out
+    rerank_n   = int(os.getenv("RERANK_N", "10"))     # cross-encoder candidates
+    k          = max(1, min(int(top_k), rerank_n))    # final results to display
+
+    # Cache key (includes knobs + index version)
+    cache_key = f"{_INDEX_FINGERPRINT}|{query_norm.lower()}|rerank={bool(use_reranker)}|k={k}|M={retrieve_m}|N={rerank_n}"
+    cached = _RESULT_CACHE.get(cache_key)
+    if cached:
+        html, _, meta = cached
+        return html, "⚡ Cached result", meta
+
+    start = time.time()
+    orch = get_orchestrator()
+
+    # Call the orchestrator; try a v2 signature first, then fall back safely
     try:
-        orch = get_orchestrator()
-        result = orch.process_query(query)
-        
-        # Format main response
-        response_html = format_response_html(result)
-        
-        # Format metadata as JSON
-        metadata = {
-            "query_type": result["query_type"],
-            "is_emergency": result["is_emergency"],
-            "confidence_score": f"{result['confidence_score']:.2%}",
-            "safety_flags": result["safety_flags"],
-            "needs_review": result["needs_review"],
-            "citations_count": len(result["citations"]),
-            "timestamp": datetime.now().isoformat()
-        }
-        metadata_json = json.dumps(metadata, indent=2)
-        
-        # Status message
-        if result["is_emergency"]:
-            status = "🚨 Emergency query processed successfully"
-        elif result["needs_review"]:
-            status = "⚠️ Query processed - review recommended"
-        else:
-            status = "✅ Query processed successfully"
-        
-        return response_html, status, metadata_json
-        
-    except Exception as e:
-        logger.error(f"Error processing query: {e}")
-        error_msg = f"❌ Error: {str(e)}"
-        return "", error_msg, ""
+        result = orch.process_query(
+            query_norm,
+            use_reranker=bool(use_reranker),
+            top_k=int(k),
+            retrieve_m=int(retrieve_m),
+            rerank_n=int(rerank_n),
+        )
+    except TypeError:
+        # Older signature: try passing just the basics
+        try:
+            result = orch.process_query(
+                query_norm,
+                use_reranker=bool(use_reranker),
+                top_k=int(k),
+            )
+        except TypeError:
+            # Legacy: last resort
+            result = orch.process_query(query_norm)
+
+    # Format your existing result as before
+    response_html = format_response_html(result)
+
+    # Minimal metadata for quick inspection
+    metadata = {
+        "timestamp": time.strftime("%Y-%m-%dT%H:%M:%S"),
+        "latency_ms": int((time.time() - start) * 1000),
+        "reranker_used": bool(use_reranker),
+        "top_k": int(k),
+        "retrieved_m": int(retrieve_m),
+        "rerank_n": int(rerank_n) if use_reranker else 0,
+        "cache_hit": False,
+        "query_type": result.get("query_type", "unknown"),
+        "is_emergency": result.get("is_emergency", False),
+        "confidence_score": f"{result.get('confidence_score', 0):.2%}",
+        "safety_flags": result.get("safety_flags", []),
+        "needs_review": result.get("needs_review", False),
+        "citations_count": len(result.get("citations", [])),
+    }
+    metadata_json = json.dumps(metadata, indent=2)
+
+    # Status message
+    if result.get("is_emergency"):
+        status = "🚨 Emergency query processed successfully"
+    elif result.get("needs_review"):
+        status = "⚠️ Query processed - review recommended"
+    else:
+        status = "✅ Query processed successfully"
+
+    _RESULT_CACHE.set(cache_key, (response_html, status, metadata_json))
+    return response_html, status, metadata_json
 
 def search_cpt(cpt_code: str) -> str:
     """Search for a specific CPT code."""
@@ -176,8 +250,12 @@ def search_cpt(cpt_code: str) -> str:
         logger.error(f"CPT search error: {e}")
         return f"Error searching for CPT code: {str(e)}"
 
-def get_system_stats() -> str:
+def get_system_stats(force_refresh: bool = False) -> str:
     """Get system statistics."""
+    now = time.time()
+    if not force_refresh and _STATS_CACHE["html"] and now - _STATS_CACHE["ts"] < _STATS_TTL_SEC:
+        return _STATS_CACHE["html"]
+
     try:
         orch = get_orchestrator()
         chunks = orch.retriever.chunks
@@ -224,6 +302,8 @@ def get_system_stats() -> str:
             html += f"<li>{dtype}: {count:,}</li>"
         html += "</ul>"
         
+        _STATS_CACHE["html"] = html
+        _STATS_CACHE["ts"] = now
         return html
         
     except Exception as e:
@@ -365,6 +445,17 @@ def build_interface():
 # Main execution
 if __name__ == "__main__":
     demo = build_interface()
+    
+    # Pre-warm orchestrator on startup
+    print("🔥 Pre-warming orchestrator...")
+    get_orchestrator()
+    print("✅ Orchestrator ready")
+    
+    # Keep UI responsive under concurrency
+    demo.queue(
+        max_size=int(os.getenv("GRADIO_QUEUE_MAX", "128"))
+    )
+    
     demo.launch(
         server_name="0.0.0.0",
         server_port=7860,

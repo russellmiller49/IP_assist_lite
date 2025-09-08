@@ -465,9 +465,9 @@ class HybridRetriever:
 def main():
     """Test the hybrid retriever."""
     retriever = HybridRetriever(
-        chunks_file="../../data/chunks/chunks.jsonl",
-        cpt_index_file="../../data/term_index/cpt_codes.jsonl",
-        alias_index_file="../../data/term_index/aliases.jsonl"
+        chunks_file="data/chunks/chunks.jsonl",
+        cpt_index_file="data/term_index/cpt_codes.jsonl",
+        alias_index_file="data/term_index/aliases.jsonl"
     )
     
     # Test queries
