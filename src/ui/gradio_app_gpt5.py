@@ -81,13 +81,23 @@ For emergency situations, provide immediate actionable guidance."""
         response = result.get("text", "No response generated")
         
         # Create metadata
+        usage = result.get("usage", {})
+        # Convert usage to serializable format
+        serializable_usage = {}
+        if usage:
+            for key, value in usage.items():
+                if hasattr(value, '__dict__'):
+                    serializable_usage[key] = str(value)
+                else:
+                    serializable_usage[key] = value
+        
         metadata = {
             "model": model,
             "reasoning_effort": reasoning_effort,
             "verbosity": verbosity,
             "input_tokens": token_count,
             "response_time_seconds": round(elapsed, 2),
-            "usage": result.get("usage", {}),
+            "usage": serializable_usage,
             "timestamp": datetime.now().isoformat()
         }
         

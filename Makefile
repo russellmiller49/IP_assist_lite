@@ -78,7 +78,7 @@ api:
 # Start Gradio UI
 ui:
 	@echo "Starting Gradio interface..."
-	cd $(SRC_DIR)/ui && $(PYTHON) app.py
+	cd $(SRC_DIR)/ui && $(PYTHON) gradio_app.py
 
 # Run tests
 test:

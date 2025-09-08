@@ -6,7 +6,7 @@ Provides REST API for medical information retrieval
 
 import sys
 from pathlib import Path
-from typing import Optional, List, Dict, Any
+from typing import Optional, List, Dict, Any, Literal
 from datetime import datetime
 import json
 import logging
