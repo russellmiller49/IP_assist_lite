@@ -2023,8 +2023,7 @@
 ● Update(.env)
   ⎿  Updated .env with 5 additions                                                                                                                                                            
         3    # OpenAI API Configuration
-        4    OPENAI_API_KEY=sk-proj-ueBS2k54-mvWubMOVjNaW2GJdGczRTb33FH1kpw7Yeq7SVw4j3CDaHS-Nf5bc9pRE1ightTW-zT3BlbkFJlmrlj9SPl8cmn8ItbT8M22CWm8mtDs66Pqmx7QWizCYFPfXVNRjK4LBTS-LPpYj-iZHEYmX_
-            sA
+        4    OPENAI_API_KEY=            sA
         5    GPT5_MODEL=gpt-5-mini
         6 +  IP_GPT5_MODEL=gpt-5-large
         7    
