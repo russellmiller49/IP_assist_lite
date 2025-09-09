@@ -29,11 +29,16 @@ typer>=0.9.0
 structlog>=23.0.0
 orjson>=3.9.0
 
+# OpenAI API
+openai>=1.37.0,!=1.99.2
+tiktoken>=0.7.0
+
 # LangChain/LangGraph 1.0 alpha pins
 langchain==1.0.0a3
 langgraph==1.0.0a1
 langchain-core==1.0.0a2
 langchain-openai==1.0.0a2
 langchain-community>=0.3.0
-openai>=1.37.0
-tiktoken>=0.7.0
+
+# Authentication
+python-multipart>=0.0.6

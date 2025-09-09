@@ -43,3 +43,7 @@ Thumbs.db
 # Logs
 *.log
 docker/qdrant_storage/
+bronchmonkey2/
+__pycache__/
+*.pyc
+qdrant.pid
