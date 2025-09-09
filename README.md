@@ -41,9 +41,41 @@ This application provides AI-powered medical information retrieval specifically 
 
 This Space requires authentication. Please contact the administrator for access credentials.
 
+## Project Structure
+
+```
+IP_assist_lite/
+├── app.py                 # Main Gradio application
+├── cli_interface.py       # Command-line interface
+├── src/                   # Core source code
+│   ├── llm/              # GPT-5 integration
+│   ├── retrieval/        # Hybrid search implementation
+│   ├── safety/           # Safety checks and contraindications
+│   ├── prep/             # Data preparation pipelines
+│   └── index/            # Embedding and indexing
+├── data/                  # Processed data and embeddings
+├── configs/               # Configuration files
+├── scripts/               # Startup and utility scripts
+├── documentation/         # User guides and project status
+├── tests/                 # Test suites
+└── bronchmonkey2/         # HuggingFace Spaces deployment (separate)
+
 ## Technical Details
 
 - **Models**: GPT-5 family with MedCPT embeddings
 - **Database**: Qdrant vector store with hybrid retrieval
 - **Safety**: Multi-layer safety checks and emergency detection
 - **Performance**: Optimized for medical domain queries
+
+## Running the Application
+
+```bash
+# Start Qdrant database
+./scripts/start_qdrant_local.sh
+
+# Run the Gradio app
+python app.py
+
+# Or use the Makefile
+make all  # Run complete pipeline
+```
