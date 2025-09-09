@@ -38,6 +38,10 @@ class AgentState(TypedDict):
     citations: List[Dict[str, Any]]
     confidence_score: float
     needs_review: bool
+    # LLM telemetry
+    llm_model_used: Optional[str]
+    llm_warning_banner: Optional[str]
+    llm_error: Optional[str]
 
 
 @dataclass
@@ -119,7 +123,7 @@ class IPAssistOrchestrator:
         self.llm = GPT5Medical(
             model=model,
             max_out=1000,
-            use_responses=False  # Use chat completions API
+            use_responses=True  # Prefer Responses API for GPT-5
         )
         
         # Build the graph
@@ -137,7 +141,7 @@ class IPAssistOrchestrator:
             self.llm = GPT5Medical(
                 model=model,
                 max_out=1000,
-                use_responses=False
+                use_responses=True
             )
     
     def _classify_query(self, state: AgentState) -> AgentState:
@@ -270,13 +274,34 @@ Sources:
 Please synthesize this information into a clear, professional response. Prioritize information from higher authority sources (A1 > A2 > A3 > A4). Include specific details like doses, contraindications, and techniques when mentioned."""
             
             try:
-                llm_response = self.llm.generate_response(prompt, state.get("messages", []))
+                # Prepend a clear system instruction for better synthesis quality
+                synth_messages = [
+                    {"role": "system", "content": (
+                        "You are an expert interventional pulmonology assistant. "
+                        "Synthesize a clinically useful answer using only the retrieved Sources. "
+                        "Cite sources inline as [A1], [A2], [A3] where relevant. "
+                        "Be concise but complete; include key complications/contraindications/doses when applicable."
+                    )}
+                ]
+                # Include prior messages if any (classification/status notes)
+                synth_messages.extend(state.get("messages", []))
+                llm_response = self.llm.generate_response(prompt, synth_messages)
                 response_parts.append(llm_response)
+                # Capture LLM telemetry
+                state["llm_model_used"] = getattr(self.llm, "last_used_model", self.current_model)
+                banner = getattr(self.llm, "last_warning_banner", None)
+                if banner:
+                    state["llm_warning_banner"] = banner
             except Exception as e:
                 # Fallback: Show the raw context if LLM fails
                 response_parts.append("**Retrieved Information:**\n")
                 for i, part in enumerate(context_parts[:3], 1):
                     response_parts.append(f"\n{i}. {part[:500]}...")
+                # Surface error details for UI/metadata
+                state["llm_error"] = str(e)
+                banner = getattr(self.llm, "last_warning_banner", None)
+                if banner:
+                    state["llm_warning_banner"] = banner
         else:
             response_parts.append("No relevant information found for your query.")
         
@@ -295,7 +320,9 @@ Please synthesize this information into a clear, professional response. Prioriti
         top_score = results[0].score if results else 0
         avg_precedence = sum(r.precedence_score for r in results[:3]) / min(3, len(results))
         
-        state["confidence_score"] = (top_score + avg_precedence) / 2
+        # Clamp confidence to [0,1]
+        conf = (top_score + avg_precedence) / 2
+        state["confidence_score"] = max(0.0, min(1.0, conf))
         # Store in canonical 'draft' field
         state["draft"] = "\n\n".join(response_parts)
         state["citations"] = citations
@@ -407,7 +434,12 @@ Please synthesize this information into a clear, professional response. Prioriti
             "confidence_score": result["confidence_score"],
             "citations": result["citations"],
             "safety_flags": result["safety_flags"],
-            "needs_review": result["needs_review"]
+            "needs_review": result["needs_review"],
+            # LLM telemetry
+            "model_requested": self.current_model,
+            "model_used": result.get("llm_model_used"),
+            "llm_warning": result.get("llm_warning_banner"),
+            "llm_error": result.get("llm_error"),
         }
         
         return output

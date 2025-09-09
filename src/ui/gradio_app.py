@@ -80,6 +80,13 @@ WARNING_COLOR = "#ff9800"
 SUCCESS_COLOR = "#4caf50"
 INFO_COLOR = "#2196f3"
 
+# Allowed models for local UI (avoid accidental GPT-4 selection)
+ALLOWED_MODELS = ["gpt-5-nano", "gpt-5-mini", "gpt-5"]
+
+def _sanitize_model(selected: str | None) -> str:
+    m = (selected or os.getenv("IP_GPT5_MODEL", "gpt-5-mini")).strip()
+    return m if m in ALLOWED_MODELS else "gpt-5-mini"
+
 def format_response_html(result: Dict[str, Any]) -> str:
     """Format the response with proper HTML styling."""
     html_parts = []
@@ -92,13 +99,30 @@ def format_response_html(result: Dict[str, Any]) -> str:
         </div>
         """)
     
-    # Query type and confidence
+    # Query type, confidence, and model used
+    model_used = result.get("model_used") or result.get("llm_model_used") or "—"
     html_parts.append(f"""
     <div style="background-color: #f5f5f5; padding: 10px; border-radius: 5px; margin-bottom: 10px;">
         <strong>Query Type:</strong> {result['query_type'].replace('_', ' ').title()}<br>
-        <strong>Confidence:</strong> {result['confidence_score']:.1%}
+        <strong>Confidence:</strong> {result['confidence_score']:.1%}<br>
+        <strong>Model:</strong> {model_used}
     </div>
     """)
+
+    # LLM warning banner (e.g., fallback used)
+    if result.get("llm_warning"):
+        html_parts.append(f"""
+        <div style=\"background-color: {WARNING_COLOR}; color: white; padding: 8px; border-radius: 5px; margin-bottom: 10px;\">
+            {result.get('llm_warning')}
+        </div>
+        """)
+    # LLM error banner (e.g., GPT-5 unavailable or auth issue)
+    if result.get("llm_error"):
+        html_parts.append(f"""
+        <div style=\"background-color: {EMERGENCY_COLOR}; color: white; padding: 8px; border-radius: 5px; margin-bottom: 10px;\">
+            ❌ {result.get('llm_error')}
+        </div>
+        """)
     
     # Safety flags if present
     if result["safety_flags"]:
@@ -154,7 +178,8 @@ def process_query(query: str, use_reranker: bool = True, top_k: int = 5, model: 
     k          = max(1, min(int(top_k), rerank_n))    # final results to display
 
     # Cache key (includes knobs + index version + model)
-    cache_key = f"{_INDEX_FINGERPRINT}|{query_norm.lower()}|rerank={bool(use_reranker)}|k={k}|M={retrieve_m}|N={rerank_n}|model={model}"
+    chosen_model = _sanitize_model(model)
+    cache_key = f"{_INDEX_FINGERPRINT}|{query_norm.lower()}|rerank={bool(use_reranker)}|k={k}|M={retrieve_m}|N={rerank_n}|model={chosen_model}"
     cached = _RESULT_CACHE.get(cache_key)
     if cached:
         html, _, meta = cached
@@ -162,9 +187,9 @@ def process_query(query: str, use_reranker: bool = True, top_k: int = 5, model: 
 
     start = time.time()
     orch = get_orchestrator()
-    
-    # Set the model in orchestrator
-    orch.set_model(model)
+
+    # Set sanitized model in orchestrator
+    orch.set_model(chosen_model)
 
     # Call the orchestrator; try a v2 signature first, then fall back safely
     try:
@@ -205,6 +230,11 @@ def process_query(query: str, use_reranker: bool = True, top_k: int = 5, model: 
         "safety_flags": result.get("safety_flags", []),
         "needs_review": result.get("needs_review", False),
         "citations_count": len(result.get("citations", [])),
+        # LLM telemetry
+        "model_requested": chosen_model,
+        "model_used": result.get("model_used"),
+        "llm_warning": result.get("llm_warning"),
+        "llm_error": result.get("llm_error"),
     }
     metadata_json = json.dumps(to_jsonable(metadata), indent=2, ensure_ascii=False)
 
@@ -368,10 +398,10 @@ def build_interface():
                     
                     with gr.Column(scale=1):
                         model_selector = gr.Dropdown(
-                            choices=["gpt-5-nano", "gpt-5-mini", "gpt-5", "gpt-4o-mini", "gpt-4o"],
+                            choices=ALLOWED_MODELS,
                             value="gpt-5-mini",
                             label="Model",
-                            info="Select the GPT model (GPT-5 models support Responses API)"
+                            info="Select the GPT-5 model"
                         )
                         use_reranker = gr.Checkbox(label="Use Reranker", value=True)
                         top_k = gr.Slider(

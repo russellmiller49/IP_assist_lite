@@ -10,6 +10,7 @@ from typing import Any, Dict, List, Optional, Union
 import os
 from dotenv import load_dotenv
 from openai import OpenAI
+import openai
 
 # Load environment variables from .env file
 load_dotenv()
@@ -19,36 +20,45 @@ USE_RESPONSES_API = os.getenv("USE_RESPONSES_API", "1").strip() not in {"0","fal
 REASONING_EFFORT = os.getenv("REASONING_EFFORT", "").strip() or None  # e.g., "medium"
 # Allowed GPT‑5 model family
 ALLOWED_GPT5_MODELS = {"gpt-5", "gpt-5-mini", "gpt-5-nano"}
+ENABLE_GPT4_FALLBACK = os.getenv("ENABLE_GPT4_FALLBACK", "true").strip().lower() == "true"
+FALLBACK_MODEL = os.getenv("FALLBACK_MODEL", "gpt-4o-mini").strip() or "gpt-4o-mini"
 
 class GPT5Medical:
     def _extract_text(self, resp) -> Optional[str]:
         """SDK-agnostic text extractor for Responses API."""
-        # Try direct attribute first
+        # 1) Preferred shortcut (SDK helper)
         if text := getattr(resp, "output_text", None):
             return text
-        
-        # Try various response structures
+
+        # 2) Robust parsing across possible shapes
         try:
             raw = resp.model_dump() if hasattr(resp, "model_dump") else resp.__dict__
-            
-            # Check for output array with different structures
-            for item in raw.get("output", []):
-                # Check for message type
-                if item.get("type") == "message":
-                    for block in item.get("content", []):
-                        if block.get("type") == "text":
-                            return block["text"]
-                
-                # Check for output_text type
-                if item.get("type") == "output_text":
-                    return item["text"]
-                
-                # Check for direct text content
-                if isinstance(item, dict) and "text" in item:
-                    return item["text"]
+
+            # Newer Responses API: output is a list of items; message items have content blocks
+            if isinstance(raw, dict) and isinstance(raw.get("output"), list):
+                collected = []
+                for item in raw.get("output", []):
+                    itype = item.get("type")
+                    # Direct output_text item
+                    if itype == "output_text" and isinstance(item.get("text"), str):
+                        collected.append(item.get("text", ""))
+                        continue
+                    # Message with content blocks
+                    if itype == "message":
+                        for block in item.get("content", []) or []:
+                            btype = block.get("type")
+                            # Blocks may be 'output_text' or other types; prefer text payload
+                            if btype in ("output_text", "text") and isinstance(block.get("text"), str):
+                                collected.append(block.get("text", ""))
+                if collected:
+                    return "\n".join([t for t in collected if t])
+
+            # Fallbacks: sometimes SDK may return a flat 'text' at top level
+            if isinstance(raw, dict) and isinstance(raw.get("text"), str):
+                return raw.get("text")
         except Exception:
             pass
-        
+
         return None
     
     def __init__(self,
@@ -63,6 +73,9 @@ class GPT5Medical:
         self.use_responses = use_responses if use_responses is not None else USE_RESPONSES_API
         self.max_out = max_out
         self.reasoning_effort = reasoning_effort or REASONING_EFFORT
+        # Trace fields for UI/telemetry
+        self.last_used_model: Optional[str] = None
+        self.last_warning_banner: Optional[str] = None
 
     def _coerce_gpt5_model(self, name: str) -> str:
         """Map arbitrary names into the supported GPT‑5 family.
@@ -78,16 +91,10 @@ class GPT5Medical:
         return name
 
     def _normalize_messages_for_responses(self, messages: List[Dict[str, str]]):
-        """Map Chat-style messages -> Responses input format.
-        Wrap each message as text content blocks for better compatibility.
+        """Map Chat-style messages -> Responses input format (role + string content).
+        The Responses API accepts a list of {role, content} where content is a string.
         """
-        output = []
-        for msg in messages:
-            role = msg.get("role", "user")
-            content = msg.get("content", "")
-            # Responses API expects 'input_text' blocks for text input
-            output.append({"role": role, "content": [{"type": "input_text", "text": content}]})
-        return output
+        return [{"role": msg.get("role", "user"), "content": msg.get("content", "")} for msg in messages]
 
     def complete(self,
                  messages: List[Dict[str, str]],
@@ -98,121 +105,218 @@ class GPT5Medical:
         - Uses Responses API by default; falls back to Chat Completions with correct params.
         - Always returns JSON-serializable structures.
         """
-        # Try model candidates for robustness (handles preview names / access errors)
-        model_candidates = []
-        seen = set()
-        for m in [self.model, os.getenv("GPT5_MODEL", "gpt-5"), "gpt-4o-mini", "gpt-4o"]:
-            if m and m not in seen:
-                model_candidates.append(m)
-                seen.add(m)
+        # Reset trace fields
+        self.last_used_model = None
+        self.last_warning_banner = None
 
-        last_error = None
-        for candidate in model_candidates:
-            self.model = candidate
+        # Helper: extract tool calls from Responses API output
+        def _extract_tool_calls_from_responses(resp_obj):
+            tool_calls = []
+            for item in getattr(resp_obj, "output", []) or []:
+                if getattr(item, "type", None) == "tool_call":
+                    tool_calls.append({
+                        "name": getattr(item, "tool_name", ""),
+                        "arguments": getattr(item, "arguments", ""),
+                    })
+            return tool_calls
+
+        # Primary call: Responses API or Chat Completions for the requested model
+        try:
             if self.use_responses:
-                try:
-                    # Build Responses API call
-                    kwargs = {
-                        "model": self.model,
-                        "input": self._normalize_messages_for_responses(messages),
-                        "max_output_tokens": self.max_out,
-                    }
-                    if self.reasoning_effort:
-                        kwargs["reasoning"] = {"effort": self.reasoning_effort}
+                kwargs = {
+                    "model": self.model,
+                    "input": self._normalize_messages_for_responses(messages),
+                    "max_output_tokens": self.max_out,
+                }
+                if self.reasoning_effort:
+                    kwargs["reasoning"] = {"effort": self.reasoning_effort}
+                # Avoid passing non-portable 'verbosity' param; SDKs may not support it yet
+                if tools:
+                    kwargs["tools"] = tools
+                    kwargs["tool_choice"] = tool_choice or "auto"
+                if temperature is not None:
+                    kwargs["temperature"] = temperature
+
+                resp = self.client.responses.create(**kwargs)
+                text = self._extract_text(resp)
+                tool_calls = _extract_tool_calls_from_responses(resp)
+                from utils.serialization import to_jsonable
+                self.last_used_model = getattr(resp, "model", self.model)
+
+                # If Responses returned no text and no tool calls, try a Chat fallback (same model)
+                if not (text and text.strip()) and not tool_calls:
+                    try:
+                        chat_kwargs = {
+                            "model": self.model,
+                            "messages": messages,
+                        }
+                        if self.model and (self.model.startswith("gpt-5") or self.model in ALLOWED_GPT5_MODELS):
+                            chat_kwargs["max_completion_tokens"] = self.max_out
+                        else:
+                            chat_kwargs["max_tokens"] = self.max_out
+                        if tools:
+                            chat_kwargs["tools"] = tools
+                            chat_kwargs["tool_choice"] = tool_choice or "auto"
+                        if temperature is not None:
+                            chat_kwargs["temperature"] = temperature
+
+                        chat_resp = self.client.chat.completions.create(**chat_kwargs)
+                        msg = chat_resp.choices[0].message if chat_resp.choices else None
+                        text = msg.content if msg else ""
+                        tool_calls = []
+                        if msg and getattr(msg, "tool_calls", None):
+                            for tc in msg.tool_calls:
+                                tool_calls.append({
+                                    "name": getattr(tc.function, "name", "") if hasattr(tc, "function") else "",
+                                    "arguments": getattr(tc.function, "arguments", "") if hasattr(tc, "function") else "",
+                                })
+                        self.last_used_model = getattr(chat_resp, "model", self.model)
+                        self.last_warning_banner = "Fetched content via Chat after empty Responses output."
+                        return {
+                            "text": text,
+                            "tool_calls": tool_calls or None,
+                            "raw": to_jsonable(chat_resp),
+                            "used_model": self.last_used_model,
+                        }
+                    except Exception:
+                        # Fall back to returning the original Responses object (even if empty)
+                        pass
+
+                return {
+                    "text": text,
+                    "tool_calls": tool_calls or None,
+                    "raw": to_jsonable(resp),
+                    "used_model": self.last_used_model,
+                }
+            else:
+                # Chat Completions path
+                is_o1_model = self.model and self.model.startswith("o1")
+                kwargs = {
+                    "model": self.model,
+                    "messages": messages,
+                }
+                # Use correct token cap per model family
+                if self.model and (self.model.startswith("gpt-5") or self.model in ALLOWED_GPT5_MODELS):
+                    kwargs["max_completion_tokens"] = self.max_out
+                else:
+                    kwargs["max_tokens"] = self.max_out
+                if not is_o1_model:
                     if tools:
                         kwargs["tools"] = tools
                         kwargs["tool_choice"] = tool_choice or "auto"
                     if temperature is not None:
                         kwargs["temperature"] = temperature
-                    resp = self.client.responses.create(**kwargs)
-                    # Extract text using robust extractor
-                    text = self._extract_text(resp)
-                    # Extract tool calls
-                    tool_calls = []
-                    for item in getattr(resp, "output", []) or []:
-                        if getattr(item, "type", None) == "tool_call":
-                            tool_calls.append({
-                                "name": getattr(item, "tool_name", ""),
-                                "arguments": getattr(item, "arguments", ""),
-                            })
-                    from utils.serialization import to_jsonable
-                    return {
-                        "text": text,
-                        "tool_calls": tool_calls or None,
-                        "raw": to_jsonable(resp),
-                    }
-                except Exception as e:
-                    last_error = e
-                    # If Responses API call fails for this model, try Chat for the same model
-                    pass
-        
-        # Chat Completions path (reasoning models: use max_completion_tokens)
-        # Check if using o1 models or GPT-5 models which have special requirements
-        is_o1_model = self.model and self.model.startswith("o1")
-        is_gpt5_model = self.model and (self.model.startswith("gpt-5") or self.model == "gpt-5")
-        
-        kwargs = {
-            "model": self.model,
-            "messages": messages,
-        }
-        
-        # Chat Completions: use max_tokens universally for compatibility
-        kwargs["max_tokens"] = self.max_out
-            
-        # o1 models don't support tools, temperature, or system messages
-        if not is_o1_model:
-            if tools:
-                kwargs["tools"] = tools
-                kwargs["tool_choice"] = tool_choice or "auto"
-            if temperature is not None:
-                kwargs["temperature"] = temperature
-        else:
-            # For o1 models, convert system messages to user messages
-            filtered_messages = []
-            for msg in messages:
-                if msg.get("role") == "system":
-                    filtered_messages.append({"role": "user", "content": f"[System]: {msg['content']}"})
                 else:
-                    filtered_messages.append(msg)
-            kwargs["messages"] = filtered_messages
-            
-        try:
-            resp = self.client.chat.completions.create(**kwargs)
-        except Exception as e:
-            # Try next model candidate via chat if available
-            last_error = e
-            for candidate in model_candidates:
-                if candidate == self.model:
-                    continue
+                    filtered_messages = []
+                    for msg in messages:
+                        if msg.get("role") == "system":
+                            filtered_messages.append({"role": "user", "content": f"[System]: {msg['content']}"})
+                        else:
+                            filtered_messages.append(msg)
+                    kwargs["messages"] = filtered_messages
+
+                resp = self.client.chat.completions.create(**kwargs)
+                msg = resp.choices[0].message if resp.choices else None
+                text = msg.content if msg else ""
+                tool_calls = []
+                if msg and getattr(msg, "tool_calls", None):
+                    for tc in msg.tool_calls:
+                        tool_calls.append({
+                            "name": getattr(tc.function, "name", "") if hasattr(tc, "function") else "",
+                            "arguments": getattr(tc.function, "arguments", "") if hasattr(tc, "function") else "",
+                        })
+                from utils.serialization import to_jsonable
+                self.last_used_model = getattr(resp, "model", self.model)
+                return {
+                    "text": text,
+                    "tool_calls": tool_calls or None,
+                    "raw": to_jsonable(resp),
+                    "used_model": self.last_used_model,
+                }
+        except (openai.NotFoundError, openai.PermissionDeniedError, openai.AuthenticationError) as e:
+            # Hard failures: do not silently downgrade
+            self.last_warning_banner = (
+                f"Selected model '{self.model}' is unavailable for this API key/project. "
+                "Verify model access in the OpenAI dashboard or choose a different model."
+            )
+            raise
+        except (openai.RateLimitError, openai.APIConnectionError, openai.APIStatusError, TimeoutError) as e:
+            # Transient errors: optionally fallback
+            if ENABLE_GPT4_FALLBACK and FALLBACK_MODEL:
                 try:
-                    kwargs["model"] = candidate
-                    resp = self.client.chat.completions.create(**kwargs)
-                    self.model = candidate
-                    break
-                except Exception as e2:
-                    last_error = e2
-            else:
-                raise last_error
-        
-        msg = resp.choices[0].message if resp.choices else None
-        text = msg.content if msg else ""
-        
-        # Extract tool calls
-        tool_calls = []
-        if msg and getattr(msg, "tool_calls", None):
-            for tc in msg.tool_calls:
-                tool_calls.append({
-                    "name": tc.function.name if hasattr(tc, "function") else "",
-                    "arguments": tc.function.arguments if hasattr(tc, "function") else "",
-                })
-        
-        # Import serialization helper
-        from utils.serialization import to_jsonable
-        return {
-            "text": text,
-            "tool_calls": tool_calls if tool_calls else None,
-            "raw": to_jsonable(resp),  # Always JSON-serializable
-        }
+                    # Retry primary path with fallback model
+                    if self.use_responses:
+                        kwargs = {
+                            "model": FALLBACK_MODEL,
+                            "input": self._normalize_messages_for_responses(messages),
+                            "max_output_tokens": self.max_out,
+                        }
+                        if self.reasoning_effort:
+                            kwargs["reasoning"] = {"effort": self.reasoning_effort}
+                        if tools:
+                            kwargs["tools"] = tools
+                            kwargs["tool_choice"] = tool_choice or "auto"
+                        if temperature is not None:
+                            kwargs["temperature"] = temperature
+                        resp = self.client.responses.create(**kwargs)
+                        text = self._extract_text(resp)
+                        tool_calls = _extract_tool_calls_from_responses(resp)
+                        from utils.serialization import to_jsonable
+                        self.last_used_model = getattr(resp, "model", FALLBACK_MODEL)
+                        self.last_warning_banner = (
+                            f"Fell back to {FALLBACK_MODEL} due to transient error calling '{self.model}': {e.__class__.__name__}."
+                        )
+                        return {
+                            "text": text,
+                            "tool_calls": tool_calls or None,
+                            "raw": to_jsonable(resp),
+                            "used_model": self.last_used_model,
+                        }
+                    else:
+                        is_o1_model = FALLBACK_MODEL.startswith("o1")
+                        kwargs = {
+                            "model": FALLBACK_MODEL,
+                            "messages": messages,
+                        }
+                        if FALLBACK_MODEL.startswith("gpt-5"):
+                            kwargs["max_completion_tokens"] = self.max_out
+                        else:
+                            kwargs["max_tokens"] = self.max_out
+                        if not is_o1_model:
+                            if tools:
+                                kwargs["tools"] = tools
+                                kwargs["tool_choice"] = tool_choice or "auto"
+                            if temperature is not None:
+                                kwargs["temperature"] = temperature
+                        resp = self.client.chat.completions.create(**kwargs)
+                        msg = resp.choices[0].message if resp.choices else None
+                        text = msg.content if msg else ""
+                        tool_calls = []
+                        if msg and getattr(msg, "tool_calls", None):
+                            for tc in msg.tool_calls:
+                                tool_calls.append({
+                                    "name": getattr(tc.function, "name", "") if hasattr(tc, "function") else "",
+                                    "arguments": getattr(tc.function, "arguments", "") if hasattr(tc, "function") else "",
+                                })
+                        from utils.serialization import to_jsonable
+                        self.last_used_model = getattr(resp, "model", FALLBACK_MODEL)
+                        self.last_warning_banner = (
+                            f"Fell back to {FALLBACK_MODEL} due to transient error calling '{self.model}': {e.__class__.__name__}."
+                        )
+                        return {
+                            "text": text,
+                            "tool_calls": tool_calls or None,
+                            "raw": to_jsonable(resp),
+                            "used_model": self.last_used_model,
+                        }
+                except Exception:
+                    # Fall through to generic error
+                    pass
+            # If fallback disabled or also failed, re-raise
+            raise
+        except Exception:
+            # Unknown error, bubble up
+            raise
 
     # Backward compatibility with old interface
     def generate(self,
@@ -238,6 +342,8 @@ class GPT5Medical:
         msgs = messages or []
         msgs.append({"role": "user", "content": prompt})
         result = self.complete(msgs)
+        # Track used model for UI consumption
+        self.last_used_model = result.get("used_model", self.model)
         return result["text"] or "Unable to generate response."
 
 # Create alias for backward compatibility
