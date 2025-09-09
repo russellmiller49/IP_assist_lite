@@ -43,7 +43,46 @@ Thumbs.db
 # Logs
 *.log
 docker/qdrant_storage/
+
+# HuggingFace Spaces repo (separate deployment)
 bronchmonkey2/
-__pycache__/
-*.pyc
+
+# Process files
 qdrant.pid
+*.pid
+
+# Test and temporary files
+test_*.py
+fix_*.py
+*_test.py
+temp_*
+tmp_*
+scratch*
+
+# Streamlit/FastAPI apps (using Gradio instead)
+streamlit_*.py
+fastapi_*.py
+
+# HuggingFace deployment files (kept in bronchmonkey2)
+app_hf_*.py
+requirements_hf_*.txt
+requirements_zerogpu.txt
+deploy_to_hf.sh
+vscode_deploy.sh
+HF_*.md
+CURSOR_*.md
+
+# Gradio cache
+.gradio/
+flagged/
+
+# Old/backup files
+*.bak
+*.old
+*_old.*
+*_backup.*
+
+# CSV/Excel temporary files
+*.csv
+*.xlsx
+~$*
