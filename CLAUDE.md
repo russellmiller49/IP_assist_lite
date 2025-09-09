@@ -141,16 +141,15 @@ Check for: "massive hemoptysis", ">200ml", "foreign body", "tension pneumothorax
 
 ## GPT-5 Integration Guidelines (2025)
 
-### Model Selection
-- **GPT-5**: Best for complex coding, agentic tasks, and maximum performance (reasoning model)
-- **GPT-5-mini**: Balanced performance vs cost for production deployments
-- **GPT-5-nano**: Optimized for low-latency, high-volume queries
-- **GPT-5-chat-latest**: Non-reasoning model for conversational interfaces
+### Model Selection (GPT‑5 Family)
+- Allowed models: `gpt-5`, `gpt-5-mini`, `gpt-5-nano`
+- Use `IP_GPT5_MODEL` (preferred) or `GPT5_MODEL` to configure. Example: `export IP_GPT5_MODEL=gpt-5-mini`.
+- Avoid nonstandard variants (e.g., `gpt-5-turbo`). The wrapper coerces unknown `gpt-5-*` names to `gpt-5`.
 
 ### Key API Features
-- **Verbosity Parameter**: Control response length (use "concise" for medical summaries, "expansive" for patient education)
-- **Context-Free Grammar (CFG)**: Enforce strict output formats for CPT codes, medical terminology
-- **Custom Tool Calling**: Direct Python/SQL execution without JSON wrapping for data analysis
+- Responses API with reasoning (`USE_RESPONSES_API=1`) and `REASONING_EFFORT` (minimal|low|medium|high)
+- Chat Completions fallback with compatible parameters (uses `max_tokens`)
+- Tool calling support across both APIs
 
 ### Medical Domain Optimization
 - Use CFG to enforce medical coding standards (ICD-10, CPT format validation)
@@ -161,29 +160,9 @@ Check for: "massive hemoptysis", ">200ml", "foreign body", "tension pneumothorax
   - Procedure steps (numbered, validated format)
   - Complication rates (percentage with confidence intervals)
 
-### Implementation Patterns
-```python
-# Example: Structured medical query with GPT-5
-response = openai.chat.completions.create(
-    model="gpt-5",
-    messages=[{"role": "user", "content": query}],
-    verbosity="concise",  # For clinical summaries
-    response_format={
-        "type": "json_schema",
-        "json_schema": {
-            "name": "medical_response",
-            "schema": {
-                "type": "object",
-                "properties": {
-                    "cpt_codes": {"type": "array", "items": {"pattern": "^\\d{5}$"}},
-                    "contraindications": {"type": "array"},
-                    "authority_level": {"enum": ["A1", "A2", "A3", "A4"]}
-                }
-            }
-        }
-    }
-)
-```
+### Implementation Notes
+- Prefer the Responses API for GPT‑5 reasoning; wrapper handles text extraction and JSON‑safe output.
+- For Chat Completions, use standard `max_tokens`. The wrapper auto‑selects a compatible path.
 
 ### Performance Benchmarks
 - **SWE-bench Verified**: 74.9% (use for complex codebase modifications)

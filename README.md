@@ -109,6 +109,17 @@ Query → LangGraph Orchestrator → Hybrid Retrieval → Rerank → Safety Chec
 - `src/orchestrator/flow.py` - LangGraph 1.0 retrieval pipeline
 - `src/safety/guards.py` - Safety validation and contraindications
 
+### Models (GPT‑5 Family)
+- Allowed GPT‑5 models: `gpt-5`, `gpt-5-mini`, `gpt-5-nano`
+- Preferred env var: `IP_GPT5_MODEL` (fallback: `GPT5_MODEL`)
+- Example configuration:
+  - `export IP_GPT5_MODEL=gpt-5-mini`
+  - `export USE_RESPONSES_API=1` (enable Responses API for reasoning)
+  - `export REASONING_EFFORT=medium` (optional: minimal|low|medium|high)
+- Notes:
+  - Do not use nonstandard variants like `gpt-5-turbo`; the wrapper coerces unknown `gpt-5-*` names to `gpt-5`.
+  - Chat Completions path uses `max_tokens`; Responses path uses `max_output_tokens`.
+
 ## API Endpoints
 
 - `POST /query` - Main query endpoint
