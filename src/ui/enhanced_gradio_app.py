@@ -120,21 +120,29 @@ def format_response_html(result: Dict[str, Any], include_query: bool = False) ->
         html_parts.append("<h3 style='color: #333; border-bottom: 2px solid #333; padding-bottom: 5px;'>References</h3>")
         html_parts.append("<ol style='padding-left: 20px;'>")
         
-        # Use the ama_format field if available, otherwise construct it
+        # Use the text field from smart citations
         for i, cite in enumerate(result["citations"], 1):
-            if 'ama_format' in cite:
+            # Use 'text' field if available (from smart citations)
+            if 'text' in cite and cite['text']:
+                citation_text = cite['text']
+            elif 'ama_format' in cite:
                 citation_text = cite['ama_format']
             else:
-                # Fallback formatting
+                # Fallback formatting - but clean it up
                 author = cite.get('author', 'Unknown')
                 year = cite.get('year', '')
-                title = cite.get('title', cite.get('doc_id', 'Study'))
+                doc_id = cite.get('doc_id', '')
                 
-                # Clean up author
-                if author and 'et al' not in author:
-                    author = f"{author} et al"
+                # Try to extract clean author from doc_id if author is Unknown
+                if author == 'Unknown' and doc_id:
+                    # Extract author from patterns like "Schweigert-2019-..."
+                    match = re.match(r'^([A-Za-z]+)[-_](\d{4})', doc_id)
+                    if match:
+                        author = match.group(1).capitalize()
+                        if not year:
+                            year = match.group(2)
                 
-                citation_text = f"{author}. {title}. {year}."
+                citation_text = f"{author} et al. ({year})" if year else f"{author} et al."
             
             html_parts.append(f"""
             <li style='margin-bottom: 8px; color: #333;'>

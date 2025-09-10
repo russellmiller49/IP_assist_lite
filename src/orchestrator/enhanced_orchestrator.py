@@ -6,14 +6,82 @@ Conceals hierarchical mechanics while using textbooks as truth source.
 
 import logging
 import re
+import yaml
+from pathlib import Path
 from typing import Dict, List, Optional, Tuple, Any
 from dataclasses import dataclass
 from datetime import datetime
 
 from src.retrieval.hybrid_retriever import HybridRetriever
 from src.llm.gpt5_medical import GPT5Medical
+from src.orchestrator.smart_citations import insert_smart_citations
 
 logger = logging.getLogger(__name__)
+
+# Load citation policy
+_citation_policy = None
+
+def get_citation_policy():
+    """Load citation policy configuration."""
+    global _citation_policy
+    if _citation_policy is None:
+        policy_path = Path("configs/citation_policy.yaml")
+        if policy_path.exists():
+            with open(policy_path) as f:
+                _citation_policy = yaml.safe_load(f)
+        else:
+            # Default policy if config doesn't exist
+            _citation_policy = {
+                "include_doc_types": ["journal_article", "guideline", "systematic_review"],
+                "exclude_doc_types": ["textbook_chapter", "papoip_chapter", "practical_guide_chapter"],
+                "max_citations": 10,
+                "min_pub_year": 2000
+            }
+    return _citation_policy
+
+def filter_for_citation(docs):
+    """Filter documents based on citation policy - hide textbooks."""
+    policy = get_citation_policy()
+    include_types = set(policy.get("include_doc_types", []))
+    exclude_types = set(policy.get("exclude_doc_types", []))
+    min_year = policy.get("min_pub_year", 0)
+    
+    filtered = []
+    for doc in docs:
+        # Check doc_id for textbook patterns
+        doc_id = getattr(doc, 'doc_id', '').lower()
+        
+        # Skip if it's a textbook chapter
+        if any(pattern in doc_id for pattern in ['papoip', 'practical_guide', 'bacada', '_enriched']):
+            continue
+            
+        # Check authority tier - skip A1, A2, A3 (textbooks)
+        if hasattr(doc, 'authority_tier') and doc.authority_tier in ['A1', 'A2', 'A3']:
+            continue
+            
+        # Check doc_type if available
+        doc_type = getattr(doc, 'doc_type', 'journal_article')
+        if doc_type in exclude_types:
+            continue
+        if include_types and doc_type not in include_types:
+            continue
+            
+        # Check year
+        year = getattr(doc, 'year', 2024)
+        if year < min_year:
+            continue
+            
+        filtered.append(doc)
+    
+    # If nothing left, return top non-textbook docs
+    if not filtered and docs:
+        filtered = [d for d in docs 
+                   if not any(p in getattr(d, 'doc_id', '').lower() 
+                             for p in ['papoip', 'practical_guide', 'bacada', '_enriched'])][:5]
+    
+    # Cap at max citations
+    max_citations = policy.get("max_citations", 10)
+    return filtered[:max_citations]
 
 @dataclass
 class ConversationContext:
@@ -166,20 +234,29 @@ class EnhancedOrchestrator:
         else:
             article_sources_for_citations = article_chunks[:10]
         
-        # Phase 4: Extract and format citations (only show articles)
-        citations = self._extract_article_citations(
-            response_text=response['response'],
-            truth_sources=truth_sources,
-            article_sources=article_sources_for_citations
+        # Apply citation filter to hide textbooks and only show articles
+        filtered_citations = filter_for_citation(article_sources_for_citations)
+        
+        # Phase 4: Use smart citation system to add numbered citations
+        logger.info(f"Adding smart citations from {len(filtered_citations)} articles")
+        
+        # Insert citations intelligently based on content matching
+        response_with_citations, citation_list = insert_smart_citations(
+            response['response'],
+            filtered_citations,
+            max_citations=6
         )
         
-        # Replace inline (Author, Year) citations with reference numbers
-        logger.info(f"Processing {len(citations)} citations for number replacement")
-        response_with_numbers = self._replace_citations_with_numbers(
-            response['response'], 
-            citations
-        )
-        logger.info(f"Response processing complete")
+        logger.info(f"Added {len(citation_list)} citations to response")
+        
+        # Format citations for display
+        citations = []
+        for cite in citation_list:
+            citations.append({
+                'number': cite['number'],
+                'text': cite['text'],
+                'doc_id': cite.get('doc_id', '')
+            })
         
         # Update conversation context
         context.query_history.append(query)
@@ -197,7 +274,7 @@ class EnhancedOrchestrator:
         
         return {
             'query': query,
-            'response': response_with_numbers,  # Response with numbered citations
+            'response': response_with_citations,  # Response with smart numbered citations
             'citations': citations,  # Only articles shown
             'query_type': response.get('query_type', 'clinical'),
             'confidence_score': response.get('confidence', 0.85),
@@ -265,8 +342,9 @@ class EnhancedOrchestrator:
         """Generate response using textbook truth, augmented with articles."""
         
         # Build context from truth sources (textbooks)
+        # Don't expose doc_id to avoid leaking textbook names
         truth_context = "\n\n".join([
-            f"[Source: {s.doc_id}]\n{s.text[:500]}"
+            f"[Authoritative Source]\n{s.text[:500]}"
             for s in truth_sources[:5]
         ])
         
@@ -306,9 +384,12 @@ Cite these published articles in your response:
 
 Instructions:
 - Answer based on the authoritative sources
-- Include citations from the articles as (Author, Year) 
-- Use bullet points and clear formatting
-- Aim for 2-3 different article citations
+- DO NOT include any citations in your response
+- Format your response with:
+  • **Bold headers** for main sections
+  • Bullet points for lists (use • or -)
+  • Clear spacing between sections
+  • Numbered steps for procedures
 
 Response:"""
         else:
@@ -323,18 +404,19 @@ Query: {query}
 Primary Sources (use for accuracy, do not cite):
 {truth_context}
 
-Supporting Articles (cite these as (Author, Year) - use at least 2-3 different articles):
+Supporting Articles (for reference only - DO NOT cite these in your response):
 {article_context}
 
 Instructions:
 1. Provide a clear, comprehensive answer based on the authoritative Primary Sources
-2. Include inline citations using (Author, Year) format ONLY for the Supporting Articles
-3. Use multiple different article citations throughout your response (aim for 3+ unique citations)
-4. Format your response with:
-   • Bullet points for lists (use • symbol)
-   • Clear paragraph breaks between sections
-   • Bold headers using **Header** format
-   • Numbered lists where appropriate
+2. DO NOT include any citations or references in your response text
+3. Citations will be added automatically by the system
+4. Format your response with proper structure:
+   • Use **Bold Headers** for main sections
+   • Use bullet points (• or -) for lists
+   • Add blank lines between sections for readability
+   • Use numbered lists (1. 2. 3.) for sequential steps
+   • Indent sub-points properly
 5. Focus on clinically relevant information
 6. Be specific about procedures, contraindications, and safety considerations
 7. If this is a follow-up question, ensure continuity with the previous response

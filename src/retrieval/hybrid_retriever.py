@@ -22,6 +22,14 @@ from qdrant_client.models import Filter, FieldCondition, MatchValue, SearchReque
 from rank_bm25 import BM25Okapi
 from sentence_transformers import SentenceTransformer, CrossEncoder
 
+# Import query normalizer
+try:
+    from .query_normalizer import get_normalizer
+except ImportError:
+    # Fallback if not available
+    def get_normalizer():
+        return None
+
 
 @dataclass
 class RetrievalResult:
@@ -322,18 +330,34 @@ class HybridRetriever:
         Returns:
             List of RetrievalResult objects sorted by final score
         """
+        # Normalize query to fix typos and expand abbreviations
+        normalizer = get_normalizer()
+        normalized_query = query
+        if normalizer:
+            try:
+                normalized_query = normalizer.normalize(query)
+                if normalized_query != query:
+                    print(f"Query normalized: '{query}' -> '{normalized_query}'")
+            except Exception as e:
+                print(f"Query normalization failed: {e}")
+                normalized_query = query
+        
         # Check for emergency
-        is_emergency = self.detect_emergency(query)
+        is_emergency = self.detect_emergency(normalized_query)
         if is_emergency:
             print("⚠️ EMERGENCY DETECTED - Prioritizing urgent content")
         
-        # 1. Encode query
-        query_embedding = self.query_encoder.encode(query, convert_to_numpy=True)
+        # 1. Encode normalized query
+        query_embedding = self.query_encoder.encode(normalized_query, convert_to_numpy=True)
         
         # 2. Get candidates from each method - retrieve more to ensure we get both textbooks and articles
         semantic_results = self.semantic_search(query_embedding, top_k=top_k*8, filters=filters)  # Increased from *5
-        bm25_results = self.bm25_search(query, top_k=top_k*5)  # Increased from *3
-        exact_results = self.exact_match_search(query)
+        # Use both normalized and original query for BM25 to maximize recall
+        bm25_norm = self.bm25_search(normalized_query, top_k=top_k*5)
+        bm25_orig = self.bm25_search(query, top_k=top_k*2) if normalized_query != query else []
+        # Combine BM25 results
+        bm25_results = bm25_norm + bm25_orig
+        exact_results = self.exact_match_search(normalized_query)
         
         # 3. Combine and score candidates
         candidate_scores = defaultdict(lambda: {
