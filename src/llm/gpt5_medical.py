@@ -45,8 +45,13 @@ class GPT5Medical:
         return base
     def _extract_text(self, resp) -> Optional[str]:
         """SDK-agnostic text extractor for Responses API."""
+        # Debug: Log all attributes of the response
+        logger.debug(f"Response type: {type(resp)}")
+        logger.debug(f"Response attributes: {dir(resp)}")
+        
         # 1) Preferred shortcut (SDK helper)
         text = getattr(resp, "output_text", None)
+        logger.debug(f"output_text attribute value: {text}")
         if text and isinstance(text, str):
             logger.debug(f"✅ Found output_text attribute: {len(text)} chars")
             return text
@@ -114,6 +119,23 @@ class GPT5Medical:
                 text = raw.get("text")
                 logger.debug(f"✅ Found text at top level: {len(text)} chars")
                 return text
+            
+            # Additional fallback: if raw is a dict with data, try to extract it
+            if isinstance(raw, dict):
+                # Log what we actually got for debugging
+                logger.debug(f"Raw response dict keys: {list(raw.keys())}")
+                # Check for common response patterns
+                if "choices" in raw and isinstance(raw["choices"], list) and raw["choices"]:
+                    # Chat completions format
+                    choice = raw["choices"][0]
+                    if isinstance(choice, dict) and "message" in choice:
+                        msg = choice["message"]
+                        if isinstance(msg, dict) and "content" in msg:
+                            content = msg["content"]
+                            if isinstance(content, str):
+                                logger.debug(f"✅ Found text in choices[0].message.content: {len(content)} chars")
+                                return content
+                                
         except Exception as e:
             logger.error(f"❌ Error extracting text: {e}")
 
@@ -123,7 +145,7 @@ class GPT5Medical:
     def __init__(self,
                  model: Optional[str] = None,
                  use_responses: Optional[bool] = None,
-                 max_out: int = 800,
+                 max_out: int = 4000,  # Increased to 4000 for comprehensive responses
                  reasoning_effort: Optional[str] = None):  # "low"|"medium"|"high"
         self.client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
         # Normalize to GPT‑5 family if an alias like "gpt-5-turbo" is provided
@@ -190,7 +212,8 @@ class GPT5Medical:
                     "input": self._normalize_messages_for_responses([m for m in messages if m.get("role") != "system"]),
                     "max_output_tokens": self.max_out,
                 }
-                if self.reasoning_effort:
+                # Only add reasoning effort for actual GPT-5 models
+                if self.reasoning_effort and "gpt-5" in self.model:
                     kwargs["reasoning"] = {"effort": self.reasoning_effort}
                 # Avoid passing non-portable 'verbosity' param; SDKs may not support it yet
                 if tools:
@@ -199,19 +222,31 @@ class GPT5Medical:
                 # Note: GPT-5 Responses API doesn't support temperature parameter
                 # Temperature is controlled by the model's internal reasoning
                 
-                logger.debug(f"Request kwargs: {kwargs}")
+                # Log the actual input being sent
+                logger.debug(f"Request model: {kwargs.get('model')}")
+                logger.debug(f"Request instructions length: {len(kwargs.get('instructions', ''))}")
+                logger.debug(f"Request input messages: {len(kwargs.get('input', []))} messages")
+                if kwargs.get('input'):
+                    for i, msg in enumerate(kwargs.get('input', [])[:2]):  # Log first 2 messages
+                        logger.debug(f"  Message {i}: role={msg.get('role')}, content_length={len(msg.get('content', ''))}")
+                
                 resp = self.client.responses.create(**kwargs)
                 logger.debug(f"Response type: {type(resp)}")
                 
                 text = self._extract_text(resp)
                 logger.info(f"📝 Extracted text length: {len(text) if text else 0} chars")
                 
+                # Log the actual text if it's suspiciously short
+                if text and len(text) < 10:
+                    logger.warning(f"⚠️ Very short response from GPT-5: '{text}'")
+                
                 tool_calls = _extract_tool_calls_from_responses(resp)
-                from utils.serialization import to_jsonable
+                from src.utils.serialization import to_jsonable
                 self.last_used_model = getattr(resp, "model", self.model)
 
                 # If Responses returned no text and no tool calls, try a Chat fallback (same model)
-                if not (text and text.strip()) and not tool_calls:
+                # Ensure text is a string before calling strip()
+                if not (text and isinstance(text, str) and text.strip()) and not tool_calls:
                     logger.warning(f"⚠️ Responses API returned empty text. Trying Chat Completions fallback...")
                     try:
                         chat_kwargs = {
@@ -301,7 +336,7 @@ class GPT5Medical:
                             "name": getattr(tc.function, "name", "") if hasattr(tc, "function") else "",
                             "arguments": getattr(tc.function, "arguments", "") if hasattr(tc, "function") else "",
                         })
-                from utils.serialization import to_jsonable
+                from src.utils.serialization import to_jsonable
                 self.last_used_model = getattr(resp, "model", self.model)
                 return {
                     "text": text,
@@ -340,7 +375,7 @@ class GPT5Medical:
                                 "arguments": getattr(tc.function, "arguments", "") if hasattr(tc, "function") else "",
                             })
                     
-                    from utils.serialization import to_jsonable
+                    from src.utils.serialization import to_jsonable
                     self.last_used_model = FALLBACK_MODEL
                     self.last_warning_banner = f"Using fallback model {FALLBACK_MODEL} (GPT-5 not accessible)"
                     
@@ -384,7 +419,7 @@ class GPT5Medical:
                         resp = self.client.responses.create(**kwargs)
                         text = self._extract_text(resp)
                         tool_calls = _extract_tool_calls_from_responses(resp)
-                        from utils.serialization import to_jsonable
+                        from src.utils.serialization import to_jsonable
                         self.last_used_model = getattr(resp, "model", FALLBACK_MODEL)
                         self.last_warning_banner = (
                             f"Fell back to {FALLBACK_MODEL} due to transient error calling '{self.model}': {e.__class__.__name__}."
@@ -421,7 +456,7 @@ class GPT5Medical:
                                     "name": getattr(tc.function, "name", "") if hasattr(tc, "function") else "",
                                     "arguments": getattr(tc.function, "arguments", "") if hasattr(tc, "function") else "",
                                 })
-                        from utils.serialization import to_jsonable
+                        from src.utils.serialization import to_jsonable
                         self.last_used_model = getattr(resp, "model", FALLBACK_MODEL)
                         self.last_warning_banner = (
                             f"Fell back to {FALLBACK_MODEL} due to transient error calling '{self.model}': {e.__class__.__name__}."

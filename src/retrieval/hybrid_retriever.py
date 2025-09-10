@@ -330,9 +330,9 @@ class HybridRetriever:
         # 1. Encode query
         query_embedding = self.query_encoder.encode(query, convert_to_numpy=True)
         
-        # 2. Get candidates from each method - retrieve more to ensure A1 inclusion
-        semantic_results = self.semantic_search(query_embedding, top_k=top_k*5, filters=filters)
-        bm25_results = self.bm25_search(query, top_k=top_k*3)
+        # 2. Get candidates from each method - retrieve more to ensure we get both textbooks and articles
+        semantic_results = self.semantic_search(query_embedding, top_k=top_k*8, filters=filters)  # Increased from *5
+        bm25_results = self.bm25_search(query, top_k=top_k*5)  # Increased from *3
         exact_results = self.exact_match_search(query)
         
         # 3. Combine and score candidates
@@ -381,12 +381,12 @@ class HybridRetriever:
                              0.025 * section_bonus +
                              0.025 * entity_bonus)
             else:
-                # Increase precedence weight to 0.65 to strongly prioritize textbooks
-                final_score = (0.65 * precedence +
-                             0.25 * scores['semantic'] +
-                             0.05 * scores['bm25'] +
-                             0.025 * section_bonus +
-                             0.025 * entity_bonus)
+                # Balanced scoring to allow articles to compete
+                final_score = (0.45 * precedence +  # Reduced from 0.65
+                             0.35 * scores['semantic'] +  # Increased from 0.25
+                             0.10 * scores['bm25'] +  # Increased from 0.05
+                             0.05 * section_bonus +  # Increased from 0.025
+                             0.05 * entity_bonus)  # Increased from 0.025
             
             # Boost for high-value content
             if chunk.get('has_contraindication') and 'contraindication' in query.lower():
@@ -396,11 +396,11 @@ class HybridRetriever:
             if chunk.get('has_dose_setting') and any(term in query.lower() for term in ['dose', 'setting', 'energy']):
                 final_score *= 1.15
             
-            # Additional boost for textbook sources to ensure they appear first
+            # Minimal boost for textbook sources to ensure articles compete
             if chunk.get('authority_tier') == 'A1':
-                final_score *= 1.5  # 50% boost for A1 (PAPOIP 2025)
+                final_score *= 1.1  # Only 10% boost for A1 (PAPOIP 2025)
             elif chunk.get('authority_tier') in ['A2', 'A3']:
-                final_score *= 1.35  # 35% boost for A2/A3 textbooks
+                final_score *= 1.05  # Only 5% boost for A2/A3 textbooks
             
             result = RetrievalResult(
                 chunk_id=chunk_id,
@@ -435,16 +435,16 @@ class HybridRetriever:
             for i, score in enumerate(rerank_scores):
                 if i < len(results):
                     # Blend reranker score with original score
-                    # Give more weight to original score for textbooks to preserve hierarchy
+                    # More balanced blending to allow articles to compete
                     if results[i].authority_tier == 'A1':
-                        # A1: Keep 85% of original score (hierarchy-aware)
-                        results[i].score = 0.85 * results[i].score + 0.15 * score
-                    elif results[i].authority_tier in ['A2', 'A3']:
-                        # A2/A3: Keep 75% of original score
-                        results[i].score = 0.75 * results[i].score + 0.25 * score
-                    else:
-                        # A4: Standard blending
+                        # A1: Balanced blending
                         results[i].score = 0.6 * results[i].score + 0.4 * score
+                    elif results[i].authority_tier in ['A2', 'A3']:
+                        # A2/A3: Balanced blending
+                        results[i].score = 0.55 * results[i].score + 0.45 * score
+                    else:
+                        # A4: Favor reranker for articles
+                        results[i].score = 0.5 * results[i].score + 0.5 * score
         
         # 6. Sort and return top-k
         results.sort(key=lambda x: x.score, reverse=True)
