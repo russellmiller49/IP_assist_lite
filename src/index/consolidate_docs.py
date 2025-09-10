@@ -42,6 +42,9 @@ def consolidate_documents(input_dir="data/processed",
                     # Also add doc_id if missing
                     if 'id' in doc and 'doc_id' not in doc:
                         doc['doc_id'] = doc['id']
+                    # Add metadata as meta field for chunker_v2
+                    if 'metadata' in doc and 'meta' not in doc:
+                        doc['meta'] = doc['metadata']
                     # Ensure doc has text field
                     if 'text' in doc or 'content' in doc:
                         out.write(json.dumps(doc, ensure_ascii=False) + '\n')

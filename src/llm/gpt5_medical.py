@@ -46,12 +46,14 @@ class GPT5Medical:
     def _extract_text(self, resp) -> Optional[str]:
         """SDK-agnostic text extractor for Responses API."""
         # 1) Preferred shortcut (SDK helper)
-        if text := getattr(resp, "output_text", None):
+        text = getattr(resp, "output_text", None)
+        if text and isinstance(text, str):
             logger.debug(f"✅ Found output_text attribute: {len(text)} chars")
             return text
             
         # 1b) Check for direct text attribute (GPT-5 specific)
-        if text := getattr(resp, "text", None):
+        text = getattr(resp, "text", None)
+        if text and isinstance(text, str):
             logger.debug(f"✅ Found text attribute: {len(text)} chars")
             return text
 

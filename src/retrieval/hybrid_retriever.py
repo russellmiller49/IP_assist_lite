@@ -159,11 +159,15 @@ class HybridRetriever:
         """
         Calculate precedence score based on authority, evidence, and recency.
         
-        Precedence = 0.5*recency + 0.3*evidence + 0.2*authority
+        Modified formula to strongly prioritize textbooks (A1-A3) over articles (A4):
+        - For A1-A3: Precedence = 0.6*authority + 0.25*recency + 0.15*evidence
+        - For A4: Precedence = 0.4*recency + 0.35*evidence + 0.25*authority
         """
-        # Authority weights (A1=1.0, A2=0.75, A3=0.5, A4=0.25)
-        authority_weights = {'A1': 1.0, 'A2': 0.75, 'A3': 0.5, 'A4': 0.25}
-        authority_score = authority_weights.get(chunk.get('authority_tier', 'A4'), 0.25)
+        # Authority weights - EXTREME differentiation to ensure A1 dominance
+        # A1 (PAPOIP 2025) = 1.0, A2 (Practical Guide) = 0.85, A3 (BACADA) = 0.7, A4 (Articles) = 0.1
+        authority_weights = {'A1': 1.0, 'A2': 0.85, 'A3': 0.7, 'A4': 0.1}
+        authority_tier = chunk.get('authority_tier', 'A4')
+        authority_score = authority_weights.get(authority_tier, 0.1)
         
         # Evidence weights (H1=1.0, H2=0.75, H3=0.5, H4=0.25)
         evidence_weights = {'H1': 1.0, 'H2': 0.75, 'H3': 0.5, 'H4': 0.25}
@@ -193,10 +197,22 @@ class HybridRetriever:
         if chunk.get('authority_tier') == 'A1':
             recency_score = max(0.7, recency_score)
         
-        # Calculate precedence
-        precedence = (0.5 * recency_score + 
-                     0.3 * evidence_score + 
-                     0.2 * authority_score)
+        # Calculate precedence with different weights for textbooks vs articles
+        if authority_tier == 'A1':
+            # A1 (PAPOIP 2025): Maximum authority weight
+            precedence = (0.7 * authority_score +
+                         0.2 * recency_score + 
+                         0.1 * evidence_score)
+        elif authority_tier in ['A2', 'A3']:
+            # A2/A3 Textbooks: Strong authority weight
+            precedence = (0.6 * authority_score +
+                         0.25 * recency_score + 
+                         0.15 * evidence_score)
+        else:
+            # A4 Articles: Minimal authority weight
+            precedence = (0.3 * recency_score + 
+                         0.3 * evidence_score + 
+                         0.4 * authority_score)  # Still 0.4 * 0.1 = 0.04 contribution
         
         return precedence
     
@@ -314,9 +330,9 @@ class HybridRetriever:
         # 1. Encode query
         query_embedding = self.query_encoder.encode(query, convert_to_numpy=True)
         
-        # 2. Get candidates from each method
-        semantic_results = self.semantic_search(query_embedding, top_k=top_k*2, filters=filters)
-        bm25_results = self.bm25_search(query, top_k=top_k*2)
+        # 2. Get candidates from each method - retrieve more to ensure A1 inclusion
+        semantic_results = self.semantic_search(query_embedding, top_k=top_k*5, filters=filters)
+        bm25_results = self.bm25_search(query, top_k=top_k*3)
         exact_results = self.exact_match_search(query)
         
         # 3. Combine and score candidates
@@ -357,19 +373,20 @@ class HybridRetriever:
             entity_bonus = 0.1 if scores['exact'] > 0 else 0
             
             # Calculate final score
-            # Emergency mode: boost precedence weight
+            # Give much more weight to precedence to prioritize textbooks
             if is_emergency:
-                final_score = (0.6 * precedence +
+                final_score = (0.7 * precedence +
+                             0.20 * scores['semantic'] +
+                             0.05 * scores['bm25'] +
+                             0.025 * section_bonus +
+                             0.025 * entity_bonus)
+            else:
+                # Increase precedence weight to 0.65 to strongly prioritize textbooks
+                final_score = (0.65 * precedence +
                              0.25 * scores['semantic'] +
                              0.05 * scores['bm25'] +
-                             0.05 * section_bonus +
-                             0.05 * entity_bonus)
-            else:
-                final_score = (0.45 * precedence +
-                             0.35 * scores['semantic'] +
-                             0.10 * scores['bm25'] +
-                             0.05 * section_bonus +
-                             0.05 * entity_bonus)
+                             0.025 * section_bonus +
+                             0.025 * entity_bonus)
             
             # Boost for high-value content
             if chunk.get('has_contraindication') and 'contraindication' in query.lower():
@@ -378,6 +395,12 @@ class HybridRetriever:
                 final_score *= 1.15
             if chunk.get('has_dose_setting') and any(term in query.lower() for term in ['dose', 'setting', 'energy']):
                 final_score *= 1.15
+            
+            # Additional boost for textbook sources to ensure they appear first
+            if chunk.get('authority_tier') == 'A1':
+                final_score *= 1.5  # 50% boost for A1 (PAPOIP 2025)
+            elif chunk.get('authority_tier') in ['A2', 'A3']:
+                final_score *= 1.35  # 35% boost for A2/A3 textbooks
             
             result = RetrievalResult(
                 chunk_id=chunk_id,
@@ -412,7 +435,16 @@ class HybridRetriever:
             for i, score in enumerate(rerank_scores):
                 if i < len(results):
                     # Blend reranker score with original score
-                    results[i].score = 0.6 * results[i].score + 0.4 * score
+                    # Give more weight to original score for textbooks to preserve hierarchy
+                    if results[i].authority_tier == 'A1':
+                        # A1: Keep 85% of original score (hierarchy-aware)
+                        results[i].score = 0.85 * results[i].score + 0.15 * score
+                    elif results[i].authority_tier in ['A2', 'A3']:
+                        # A2/A3: Keep 75% of original score
+                        results[i].score = 0.75 * results[i].score + 0.25 * score
+                    else:
+                        # A4: Standard blending
+                        results[i].score = 0.6 * results[i].score + 0.4 * score
         
         # 6. Sort and return top-k
         results.sort(key=lambda x: x.score, reverse=True)

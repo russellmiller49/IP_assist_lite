@@ -84,6 +84,8 @@ def make_sentence_splitter() -> Callable[[str], List[str]]:
         import spacy
         nlp = spacy.blank("en")
         nlp.add_pipe("sentencizer")
+        # Increase max_length to handle large documents
+        nlp.max_length = 2000000  # 2M characters
         return lambda t: [s.text.strip() for s in nlp(t).sents if s.text.strip()]
     except Exception:
         pass
