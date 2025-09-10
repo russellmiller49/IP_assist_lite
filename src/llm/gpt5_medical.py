@@ -49,11 +49,22 @@ class GPT5Medical:
         if text := getattr(resp, "output_text", None):
             logger.debug(f"✅ Found output_text attribute: {len(text)} chars")
             return text
+            
+        # 1b) Check for direct text attribute (GPT-5 specific)
+        if text := getattr(resp, "text", None):
+            logger.debug(f"✅ Found text attribute: {len(text)} chars")
+            return text
 
         # 2) Robust parsing across possible shapes
         try:
             raw = resp.model_dump() if hasattr(resp, "model_dump") else resp.__dict__
             logger.debug(f"Response structure keys: {list(raw.keys()) if isinstance(raw, dict) else 'not a dict'}")
+            
+            # 2a) Check for text field at top level (GPT-5 responses)
+            if isinstance(raw, dict) and "text" in raw and raw["text"]:
+                text = raw["text"]
+                logger.debug(f"✅ Found text field at top level: {len(text)} chars")
+                return text
 
             # Newer Responses API: output is a list of items; message items have content blocks
             if isinstance(raw, dict) and isinstance(raw.get("output"), list):
@@ -62,10 +73,26 @@ class GPT5Medical:
                 for i, item in enumerate(raw.get("output", [])):
                     itype = item.get("type")
                     logger.debug(f"  Item {i}: type={itype}")
+                    
+                    # Handle reasoning type (GPT-5 specific)
+                    if itype == "reasoning":
+                        # Check if there's text in the reasoning
+                        reasoning_text = item.get("text", "")
+                        if reasoning_text:
+                            logger.debug(f"    Found reasoning text: {len(reasoning_text)} chars")
+                            # For now, skip reasoning - we want the actual output
+                        continue
+                        
                     # Direct output_text item
                     if itype == "output_text" and isinstance(item.get("text"), str):
                         collected.append(item.get("text", ""))
                         continue
+                    
+                    # Direct text item
+                    if itype == "text" and isinstance(item.get("text"), str):
+                        collected.append(item.get("text", ""))
+                        continue
+                        
                     # Message with content blocks
                     if itype == "message":
                         content = item.get("content", []) or []
