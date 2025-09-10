@@ -80,12 +80,13 @@ WARNING_COLOR = "#ff9800"
 SUCCESS_COLOR = "#4caf50"
 INFO_COLOR = "#2196f3"
 
-# Allowed models for local UI (avoid accidental GPT-4 selection)
-ALLOWED_MODELS = ["gpt-5-nano", "gpt-5-mini", "gpt-5"]
+# Allowed models for local UI - include GPT-4 as fallback options
+ALLOWED_MODELS = ["gpt-5-nano", "gpt-5-mini", "gpt-5", "gpt-4o-mini", "gpt-4o"]
 
 def _sanitize_model(selected: str | None) -> str:
-    m = (selected or os.getenv("IP_GPT5_MODEL", "gpt-5-mini")).strip()
-    return m if m in ALLOWED_MODELS else "gpt-5-mini"
+    m = (selected or os.getenv("IP_GPT5_MODEL", "gpt-4o-mini")).strip()
+    # Default to gpt-4o-mini for better reliability
+    return m if m in ALLOWED_MODELS else "gpt-4o-mini"
 
 def format_response_html(result: Dict[str, Any]) -> str:
     """Format the response with proper HTML styling."""
@@ -191,7 +192,7 @@ def process_query(query: str, use_reranker: bool = True, top_k: int = 5, model: 
     # Set sanitized model in orchestrator
     orch.set_model(chosen_model)
 
-    # Call the orchestrator; try a v2 signature first, then fall back safely
+    # Call the orchestrator with proper error handling
     try:
         result = orch.process_query(
             query_norm,
@@ -211,6 +212,20 @@ def process_query(query: str, use_reranker: bool = True, top_k: int = 5, model: 
         except TypeError:
             # Legacy: last resort
             result = orch.process_query(query_norm)
+    except Exception as e:
+        logger.error(f"Error processing query: {e}")
+        # Return a helpful error response
+        result = {
+            "response": f"An error occurred while processing your query. Please try again with a different model.\n\nError: {str(e)}",
+            "query_type": "error",
+            "is_emergency": False,
+            "confidence_score": 0.0,
+            "safety_flags": [],
+            "citations": [],
+            "needs_review": True,
+            "llm_error": str(e),
+            "model_used": chosen_model
+        }
 
     # Format your existing result as before
     response_html = format_response_html(result)
@@ -399,9 +414,9 @@ def build_interface():
                     with gr.Column(scale=1):
                         model_selector = gr.Dropdown(
                             choices=ALLOWED_MODELS,
-                            value="gpt-5-mini",
+                            value="gpt-4o-mini",  # Default to GPT-4 for reliability
                             label="Model",
-                            info="Select the GPT-5 model"
+                            info="Select the model (GPT-4 models are more reliable)"
                         )
                         use_reranker = gr.Checkbox(label="Use Reranker", value=True)
                         top_k = gr.Slider(
