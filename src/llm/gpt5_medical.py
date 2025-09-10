@@ -8,9 +8,18 @@ Canonical wrapper supporting both Responses API and Chat Completions
 from __future__ import annotations
 from typing import Any, Dict, List, Optional, Union
 import os
+import logging
 from dotenv import load_dotenv
 from openai import OpenAI
 import openai
+
+# Configure logging
+log_level = os.getenv("LOG_LEVEL", "INFO").upper()
+logging.basicConfig(
+    level=getattr(logging, log_level, logging.INFO),
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
 
 # Load environment variables from .env file
 load_dotenv()
@@ -38,37 +47,48 @@ class GPT5Medical:
         """SDK-agnostic text extractor for Responses API."""
         # 1) Preferred shortcut (SDK helper)
         if text := getattr(resp, "output_text", None):
+            logger.debug(f"✅ Found output_text attribute: {len(text)} chars")
             return text
 
         # 2) Robust parsing across possible shapes
         try:
             raw = resp.model_dump() if hasattr(resp, "model_dump") else resp.__dict__
+            logger.debug(f"Response structure keys: {list(raw.keys()) if isinstance(raw, dict) else 'not a dict'}")
 
             # Newer Responses API: output is a list of items; message items have content blocks
             if isinstance(raw, dict) and isinstance(raw.get("output"), list):
+                logger.debug(f"Found output list with {len(raw.get('output', []))} items")
                 collected = []
-                for item in raw.get("output", []):
+                for i, item in enumerate(raw.get("output", [])):
                     itype = item.get("type")
+                    logger.debug(f"  Item {i}: type={itype}")
                     # Direct output_text item
                     if itype == "output_text" and isinstance(item.get("text"), str):
                         collected.append(item.get("text", ""))
                         continue
                     # Message with content blocks
                     if itype == "message":
-                        for block in item.get("content", []) or []:
+                        content = item.get("content", []) or []
+                        logger.debug(f"    Message has {len(content)} content blocks")
+                        for block in content:
                             btype = block.get("type")
                             # Blocks may be 'output_text' or other types; prefer text payload
                             if btype in ("output_text", "text") and isinstance(block.get("text"), str):
                                 collected.append(block.get("text", ""))
                 if collected:
-                    return "\n".join([t for t in collected if t])
+                    result = "\n".join([t for t in collected if t])
+                    logger.debug(f"✅ Extracted {len(result)} chars from output items")
+                    return result
 
             # Fallbacks: sometimes SDK may return a flat 'text' at top level
             if isinstance(raw, dict) and isinstance(raw.get("text"), str):
-                return raw.get("text")
-        except Exception:
-            pass
+                text = raw.get("text")
+                logger.debug(f"✅ Found text at top level: {len(text)} chars")
+                return text
+        except Exception as e:
+            logger.error(f"❌ Error extracting text: {e}")
 
+        logger.warning("❌ No text extracted from response")
         return None
     
     def __init__(self,
@@ -133,6 +153,7 @@ class GPT5Medical:
         # Primary call: Responses API or Chat Completions for the requested model
         try:
             if self.use_responses:
+                logger.info(f"🔵 Using Responses API for model: {self.model}")
                 kwargs = {
                     "model": self.model,
                     # Extract any system messages into instructions; provide default guidance too
@@ -148,15 +169,21 @@ class GPT5Medical:
                     kwargs["tool_choice"] = tool_choice or "auto"
                 # Note: GPT-5 Responses API doesn't support temperature parameter
                 # Temperature is controlled by the model's internal reasoning
-
+                
+                logger.debug(f"Request kwargs: {kwargs}")
                 resp = self.client.responses.create(**kwargs)
+                logger.debug(f"Response type: {type(resp)}")
+                
                 text = self._extract_text(resp)
+                logger.info(f"📝 Extracted text length: {len(text) if text else 0} chars")
+                
                 tool_calls = _extract_tool_calls_from_responses(resp)
                 from utils.serialization import to_jsonable
                 self.last_used_model = getattr(resp, "model", self.model)
 
                 # If Responses returned no text and no tool calls, try a Chat fallback (same model)
                 if not (text and text.strip()) and not tool_calls:
+                    logger.warning(f"⚠️ Responses API returned empty text. Trying Chat Completions fallback...")
                     try:
                         chat_kwargs = {
                             "model": self.model,
@@ -172,9 +199,16 @@ class GPT5Medical:
                         if temperature is not None:
                             chat_kwargs["temperature"] = temperature
 
+                        logger.info(f"🔄 Trying Chat Completions with model: {self.model}")
                         chat_resp = self.client.chat.completions.create(**chat_kwargs)
                         msg = chat_resp.choices[0].message if chat_resp.choices else None
                         text = msg.content if msg else ""
+                        
+                        if text:
+                            logger.info(f"✅ Chat Completions returned {len(text)} chars")
+                        else:
+                            logger.warning(f"❌ Chat Completions also returned empty")
+                            
                         tool_calls = []
                         if msg and getattr(msg, "tool_calls", None):
                             for tc in msg.tool_calls:
@@ -190,7 +224,8 @@ class GPT5Medical:
                             "raw": to_jsonable(chat_resp),
                             "used_model": self.last_used_model,
                         }
-                    except Exception:
+                    except Exception as e:
+                        logger.error(f"❌ Chat fallback failed: {e}")
                         # Fall back to returning the original Responses object (even if empty)
                         pass
 
@@ -245,7 +280,54 @@ class GPT5Medical:
                     "raw": to_jsonable(resp),
                     "used_model": self.last_used_model,
                 }
-        except (openai.NotFoundError, openai.PermissionDeniedError, openai.AuthenticationError) as e:
+        except (openai.NotFoundError, openai.PermissionDeniedError) as e:
+            logger.warning(f"⚠️ Model {self.model} not accessible: {e}")
+            # Try fallback to GPT-4
+            if ENABLE_GPT4_FALLBACK and self.model.startswith("gpt-5"):
+                logger.info(f"🔄 Falling back to {FALLBACK_MODEL}")
+                try:
+                    fallback_kwargs = {
+                        "model": FALLBACK_MODEL,
+                        "messages": messages,
+                        "max_tokens": self.max_out,
+                    }
+                    if temperature is not None:
+                        fallback_kwargs["temperature"] = temperature
+                    if tools:
+                        fallback_kwargs["tools"] = tools
+                        fallback_kwargs["tool_choice"] = tool_choice or "auto"
+                        
+                    fallback_resp = self.client.chat.completions.create(**fallback_kwargs)
+                    msg = fallback_resp.choices[0].message if fallback_resp.choices else None
+                    text = msg.content if msg else ""
+                    
+                    logger.info(f"✅ Fallback to {FALLBACK_MODEL} succeeded: {len(text)} chars")
+                    
+                    tool_calls = []
+                    if msg and getattr(msg, "tool_calls", None):
+                        for tc in msg.tool_calls:
+                            tool_calls.append({
+                                "name": getattr(tc.function, "name", "") if hasattr(tc, "function") else "",
+                                "arguments": getattr(tc.function, "arguments", "") if hasattr(tc, "function") else "",
+                            })
+                    
+                    from utils.serialization import to_jsonable
+                    self.last_used_model = FALLBACK_MODEL
+                    self.last_warning_banner = f"Using fallback model {FALLBACK_MODEL} (GPT-5 not accessible)"
+                    
+                    return {
+                        "text": text,
+                        "tool_calls": tool_calls or None,
+                        "raw": to_jsonable(fallback_resp),
+                        "used_model": self.last_used_model,
+                    }
+                except Exception as e2:
+                    logger.error(f"❌ Fallback also failed: {e2}")
+                    raise e
+            else:
+                raise e
+        except openai.AuthenticationError as e:
+            logger.error(f"❌ Authentication error: {e}")
             # Hard failures: do not silently downgrade
             self.last_warning_banner = (
                 f"Selected model '{self.model}' is unavailable for this API key/project. "
