@@ -122,8 +122,9 @@ class IPAssistOrchestrator:
         # Initialize LLM wrapper
         self.llm = GPT5Medical(
             model=model,
-            max_out=1000,
-            use_responses=True  # Prefer Responses API for GPT-5
+            max_out=1500,
+            # Use Responses API for GPT-5 family; Chat for others
+            use_responses=str(model or "").startswith("gpt-5")
         )
         
         # Build the graph
@@ -140,8 +141,8 @@ class IPAssistOrchestrator:
             self.current_model = model
             self.llm = GPT5Medical(
                 model=model,
-                max_out=1000,
-                use_responses=True
+                max_out=1500,
+                use_responses=str(model or "").startswith("gpt-5")
             )
     
     def _classify_query(self, state: AgentState) -> AgentState:
@@ -274,7 +275,7 @@ Sources:
 Please synthesize this information into a clear, professional response. Prioritize information from higher authority sources (A1 > A2 > A3 > A4). Include specific details like doses, contraindications, and techniques when mentioned."""
             
             try:
-                # Prepend a clear system instruction for better synthesis quality
+                # Send a clean, minimal context (avoid noisy assistant history)
                 synth_messages = [
                     {"role": "system", "content": (
                         "You are an expert interventional pulmonology assistant. "
@@ -283,8 +284,6 @@ Please synthesize this information into a clear, professional response. Prioriti
                         "Be concise but complete; include key complications/contraindications/doses when applicable."
                     )}
                 ]
-                # Include prior messages if any (classification/status notes)
-                synth_messages.extend(state.get("messages", []))
                 llm_response = self.llm.generate_response(prompt, synth_messages)
                 response_parts.append(llm_response)
                 # Capture LLM telemetry

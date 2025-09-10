@@ -38,5 +38,5 @@ langgraph==1.0.0a1
 langchain-core==1.0.0a2
 langchain-openai==1.0.0a2
 langchain-community>=0.3.0
-openai>=1.50.0,!=1.99.2
+openai>=1.100.0,!=1.99.2
 tiktoken>=0.7.0

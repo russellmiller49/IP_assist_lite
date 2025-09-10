@@ -24,6 +24,16 @@ ENABLE_GPT4_FALLBACK = os.getenv("ENABLE_GPT4_FALLBACK", "true").strip().lower()
 FALLBACK_MODEL = os.getenv("FALLBACK_MODEL", "gpt-4o-mini").strip() or "gpt-4o-mini"
 
 class GPT5Medical:
+    def _compose_instructions(self, messages: List[Dict[str, str]]) -> str:
+        """Compose a single instruction string from any system messages with a sensible default."""
+        sys_parts = [m.get("content", "") for m in messages if m.get("role") == "system"]
+        base = (
+            "You are a careful, thorough interventional pulmonology assistant. "
+            "Use only the provided context when present; cite succinctly. Be specific on doses, contraindications, and steps when applicable."
+        )
+        if sys_parts:
+            return "\n".join(sys_parts + [base]).strip()
+        return base
     def _extract_text(self, resp) -> Optional[str]:
         """SDK-agnostic text extractor for Responses API."""
         # 1) Preferred shortcut (SDK helper)
@@ -125,7 +135,9 @@ class GPT5Medical:
             if self.use_responses:
                 kwargs = {
                     "model": self.model,
-                    "input": self._normalize_messages_for_responses(messages),
+                    # Extract any system messages into instructions; provide default guidance too
+                    "instructions": self._compose_instructions(messages),
+                    "input": self._normalize_messages_for_responses([m for m in messages if m.get("role") != "system"]),
                     "max_output_tokens": self.max_out,
                 }
                 if self.reasoning_effort:
@@ -134,8 +146,8 @@ class GPT5Medical:
                 if tools:
                     kwargs["tools"] = tools
                     kwargs["tool_choice"] = tool_choice or "auto"
-                if temperature is not None:
-                    kwargs["temperature"] = temperature
+                # Note: GPT-5 Responses API doesn't support temperature parameter
+                # Temperature is controlled by the model's internal reasoning
 
                 resp = self.client.responses.create(**kwargs)
                 text = self._extract_text(resp)
@@ -248,7 +260,8 @@ class GPT5Medical:
                     if self.use_responses:
                         kwargs = {
                             "model": FALLBACK_MODEL,
-                            "input": self._normalize_messages_for_responses(messages),
+                            "instructions": self._compose_instructions(messages),
+                            "input": self._normalize_messages_for_responses([m for m in messages if m.get("role") != "system"]),
                             "max_output_tokens": self.max_out,
                         }
                         if self.reasoning_effort:
@@ -256,8 +269,7 @@ class GPT5Medical:
                         if tools:
                             kwargs["tools"] = tools
                             kwargs["tool_choice"] = tool_choice or "auto"
-                        if temperature is not None:
-                            kwargs["temperature"] = temperature
+                        kwargs["temperature"] = 0.2 if temperature is None else temperature
                         resp = self.client.responses.create(**kwargs)
                         text = self._extract_text(resp)
                         tool_calls = _extract_tool_calls_from_responses(resp)
