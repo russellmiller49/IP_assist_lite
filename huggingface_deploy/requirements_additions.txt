@@ -1,4 +1,0 @@
-
-# Add these to requirements.txt if not present:
-rapidfuzz>=3.0.0  # For query normalization
-pyyaml>=6.0  # For configuration files
