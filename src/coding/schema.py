@@ -30,6 +30,10 @@ class PerformedItem(BaseModel):
 
 class Case(BaseModel):
     report_text: str = Field(description="Original procedure report text")
+    patient_age_years: Optional[int] = Field(
+        default=None,
+        description="Patient age in years (used for sedation coding)"
+    )
     sedation: Optional[Sedation] = Field(default=None, description="Sedation information")
     items: List[PerformedItem] = Field(default_factory=list, description="Performed procedures")
     targets: List[SampleTarget] = Field(default_factory=list, description="Sample targets")

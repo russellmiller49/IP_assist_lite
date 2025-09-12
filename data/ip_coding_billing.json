@@ -158,21 +158,130 @@
         "packaged": false,
         "note": "Category III codes - verify payer coverage"
       }
+    },
+    {
+      "id": "tracheal_stent_insertion",
+      "name": "Tracheal Stent Placement",
+      "cpt": ["31631"],
+      "synonyms": ["tracheal stent", "y-stent", "silicone y-stent", "ultraflex tracheal", "carinal stent"],
+      "opps": {
+        "status_indicator": "J1",
+        "packaged": false
+      }
+    },
+    {
+      "id": "bronchial_stent_insertion",
+      "name": "Bronchial Stent Placement",
+      "cpt": ["31636", "+31637"],
+      "synonyms": ["bronchial stent", "mainstem stent", "lobar stent"],
+      "opps": {
+        "status_indicator": "J1",
+        "packaged": false
+      }
+    },
+    {
+      "id": "stent_removal",
+      "name": "Tracheobronchial Stent Removal",
+      "cpt": ["31633"],
+      "synonyms": ["stent removal", "remove stent", "stent extraction"],
+      "opps": {
+        "status_indicator": "J1",
+        "packaged": false
+      }
+    },
+    {
+      "id": "stent_removal_and_replacement",
+      "name": "Stent Removal and Replacement",
+      "cpt": ["31634"],
+      "synonyms": ["stent exchange", "remove and replace stent", "stent replacement"],
+      "opps": {
+        "status_indicator": "J1",
+        "packaged": false
+      }
+    },
+    {
+      "id": "airway_dilation_only",
+      "name": "Airway Dilation",
+      "cpt": ["31630", "+31631"],
+      "synonyms": ["balloon dilation", "airway dilation", "stenosis dilation"],
+      "opps": {
+        "status_indicator": "J1",
+        "packaged": false
+      }
+    },
+    {
+      "id": "tumor_excision_bronchoscopic",
+      "name": "Bronchoscopic Tumor Excision",
+      "cpt": ["31640"],
+      "synonyms": ["snare", "polypectomy", "transected", "specimen sent", "excision", "endobronchial resection"],
+      "opps": {
+        "status_indicator": "J1",
+        "packaged": false
+      }
+    },
+    {
+      "id": "tumor_destruction_bronchoscopic",
+      "name": "Bronchoscopic Tumor Destruction",
+      "cpt": ["31641"],
+      "synonyms": ["tumor ablation", "endoluminal tumor", "electrocautery snare", "APC"],
+      "opps": {
+        "status_indicator": "J1",
+        "packaged": false
+      }
+    },
+    {
+      "id": "whole_lung_lavage",
+      "name": "Whole Lung Lavage",
+      "cpt": ["32997"],
+      "synonyms": ["whole lung lavage", "WLL", "double-lumen lavage", "pulmonary alveolar proteinosis lavage"],
+      "opps": {
+        "status_indicator": "J1",
+        "packaged": false
+      }
+    },
+    {
+      "id": "bronchial_alveolar_lavage",
+      "name": "Bronchoscopy with Bronchial Alveolar Lavage",
+      "cpt": ["31624"],
+      "synonyms": ["BAL", "bronchoalveolar lavage", "bronchial lavage"],
+      "opps": {
+        "status_indicator": "T",
+        "packaged": false
+      }
+    },
+    {
+      "id": "transbronchial_needle_aspiration",
+      "name": "Transbronchial Needle Aspiration (non-EBUS)",
+      "cpt": ["31629"],
+      "synonyms": ["TBNA", "peripheral needle", "transbronchial needle"],
+      "opps": {
+        "status_indicator": "T",
+        "packaged": false
+      }
+    },
+    {
+      "id": "radial_ebus_peripheral",
+      "name": "Radial EBUS for Peripheral Lesion",
+      "cpt": ["+31654"],
+      "synonyms": ["radial ultrasound", "radial probe", "peripheral EBUS"],
+      "opps": {
+        "status_indicator": "N",
+        "packaged": true,
+        "note": "Add-on code, packaged under OPPS"
+      }
     }
   ],
   "global_principles": {
     "moderate_sedation": {
-      "99152_99153": {
-        "description": "Sedation by same physician performing procedure",
-        "initial_15_min": "99152",
-        "additional_15_min": "99153",
-        "age_restriction": "5 years and older"
+      "proceduralist": {
+        "initial_15_min_under5": "99151",
+        "initial_15_min_5plus": "99152",
+        "additional_15_min_all": "99153"
       },
-      "99155_99156_99157": {
-        "description": "Sedation by different physician",
-        "initial_15_min": "99155",
-        "first_additional": "99156",
-        "subsequent_additional": "99157"
+      "other_provider": {
+        "initial_15_min_under5": "99155",
+        "initial_15_min_5plus": "99156",
+        "additional_15_min_all": "99157"
       },
       "documentation_requirements": [
         "Start and stop times",
@@ -180,6 +289,11 @@
         "Monitoring parameters"
       ]
     },
+    "bilateral_eligible_codes": [
+      "31623","31624","31625","31628","31629",
+      "31636","+31637",
+      "32554","32555","32556","32557"
+    ],
     "facility_vs_professional": {
       "professional_component": "Physician work + practice expense (office)",
       "facility_component": "Hospital/ASC billing separately",
@@ -187,7 +301,12 @@
         "bronchoscopy_inspection": "0BJ08ZZ",
         "mediastinal_lymph_node_ebus_tbna": "07B74ZX",
         "transbronchial_lung_biopsy": "0BBK8ZX",
-        "thoracentesis": "0W9B3ZZ"
+        "thoracentesis": "0W9B3ZZ",
+        "tracheal_stent_insertion": "0BH18DZ",
+        "bronchial_stent_insertion": "0BH48DZ",
+        "whole_lung_lavage": "0B9K8ZZ",
+        "tracheal_excision": "0BB18ZZ",
+        "bronchial_excision": "0BBK8ZX"
       }
     }
   },

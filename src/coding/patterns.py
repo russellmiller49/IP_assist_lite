@@ -51,6 +51,7 @@ PATTERNS = {
         r'sedat\w*\s+(?:time|duration)[:\s]*(\d+)\s*min|'
         r'\bsedat\w*\s+(?:for\s+)?(\d+)\s*min|'
         r'(\d+)\s*min\w*\s+(?:of\s+)?sedat|'
+        r'sedat\w*[,:\s]+(\d+)\s*min|'  # Added pattern for "sedation, 45 minutes"
         r'sedat\w*\s+(?:from\s+)?\d{1,2}:\d{2}(?:\s*to\s*|\s*-\s*)\d{1,2}:\d{2}', re.I
     ),
     'hhmm_times': re.compile(r'(\d{1,2}:\d{2})\s*(?:to|-|–|through)\s*(\d{1,2}:\d{2})', re.I),
@@ -58,14 +59,31 @@ PATTERNS = {
     # Special procedures with enhanced detection  
     'chartis': re.compile(r'\b(chartis|collateral\s+ventilat|balloon\s+occlus|assessment\s+catheter)\w*\b', re.I),
     'valves': re.compile(r'\b(zephyr|endobronchial\s+valve|ebv|valve\s+placement|spiration|one.?way\s+valve)\w*\b', re.I),
-    'ablation': re.compile(r'\b(ablat|microwave|mwa|cryo.?ablat|pulsed.?electric|radiofrequency|thermal)\w*\b', re.I),
+    'ablation': re.compile(r'\b(ablat|microwave|mwa|cryo.?(?:ablat|therap)|pulsed.?electric|radiofrequency|thermal\s+(?:ablat|destruct)|apc\b|argon\s+plasma|laser\s+(?:ablat|therap|destruct))\w*\b', re.I),
     'fiducial': re.compile(r'\b(fiducial|marker\s+placement|gold\s+seed|beacon|anchor)\w*\b', re.I),
     
     # Additional procedure patterns
     'stent': re.compile(r'\b(stent|sems|metallic\s+stent|silicone\s+stent|airway\s+stent)\w*\b', re.I),
+    'stent_brand': re.compile(r"""(?xi)
+        \b(
+            bona[\s-]?stent|bonastent|thoracent|micro[\s-]?tech(?:\s+y[- ]?stent)?|
+            aero(?:mini)?\b|merit(?:\s+endotek)?|
+            ultra[\s-]?flex|ultraflex|
+            dumon(?:\s*y)?|dynamic\s*y|
+            poly[\s-]?flex|r[üu]sch|
+            \bhood\b|\bhood\s+labs?\b|\bt[- ]?tube\b|
+            niti[\s-]?s|taewoong
+        )\b
+    """),
+    'y_stent': re.compile(r"(?i)\b(y[-\s]?stent|carinal\s+y[-\s]?stent|dynamic\s*y)\b"),
+    'tracheal_terms': re.compile(r'\b(trachea|tracheal|subglott|cricoid|carinal?|carina)\b', re.I),
+    'bronchial_terms': re.compile(r'\b(bronchus|bronchial|mainstem|main\s+stem|lobar\s+bronchus|segmental\s+bronchus)\b', re.I),
     'dilation': re.compile(r'\b(dilat|balloon\s+dilat|pneumatic\s+dilat|rigid\s+dilat)\w*\b', re.I),
     'foreign_body': re.compile(r'\b(foreign\s+body|fb\s+removal|retrieval|extraction)\b', re.I),
     'wash_brush': re.compile(r'\b(wash|brush|bronchial\s+wash|protected\s+brush|psc)\w*\b', re.I),
+    'whole_lung_lavage': re.compile(r'\b(whole\s+lung\s+lavage|wll|double[- ]lumen\s+tube\s+lavage|bilateral\s+lung\s+lavage)\b', re.I),
+    'snare_excision': re.compile(r'\b(electrocautery\s+snare|snare|polypectomy|excis|transect|resect|specimen\s+(sent|collected|submitted)|lesions?\s+removed\s+with\s+suction|completely\s+removed)\w*\b', re.I),
+    'general_anesthesia': re.compile(r'\b(general\s+anesthesia|ga\b|lma\b|laryngeal\s+mask|endotracheal|ett\b|intubat|muscle\s+relax|paralytic|rocuronium|succinylcholine|vecuronium)\w*\b', re.I),
 }
 
 LOBE_MAP = {
@@ -99,34 +117,53 @@ def extract_stations(text: str) -> set:
     """Extract lymph node stations from text."""
     stations = set()
     
-    # Direct station matches
-    for match in PATTERNS['lymph_stations'].finditer(text):
-        groups = match.groups()
-        for group in groups:
-            if group and group.isdigit():
-                num = int(group)
-                if 1 <= num <= 14:
-                    # Check for laterality indicators
-                    context = text[max(0, match.start()-10):match.end()+10].upper()
-                    if 'R' in context and num in [2, 4, 10, 11, 12, 13, 14]:
-                        stations.add(f"{num}R")
-                    elif 'L' in context and num in [2, 4, 10, 11, 12, 13, 14]:
-                        stations.add(f"{num}L")
-                    else:
-                        stations.add(str(num))
+    # Simple pattern to find station numbers with optional R/L suffix
+    station_pattern = re.compile(r'\b([1-9]|1[0-4])([RLrl])?\b')
     
-    # Anatomic region mappings
-    if PATTERNS['paratracheal_right'].search(text):
+    # Find all station mentions
+    for match in station_pattern.finditer(text):
+        num = match.group(1)
+        laterality = match.group(2)
+        
+        if laterality:
+            # Has explicit laterality
+            laterality = laterality.upper()
+            num_int = int(num)
+            if num_int in [2, 4, 10, 11, 12, 13, 14]:
+                stations.add(f"{num}{laterality}")
+            else:
+                # Station doesn't usually have laterality, just add number
+                stations.add(num)
+        else:
+            # Check if this is actually a station reference by looking at context
+            # Must be preceded by "station", "level", "node" or followed by them
+            before = text[max(0, match.start()-15):match.start()].lower()
+            after = text[match.end():min(len(text), match.end()+15)].lower()
+            
+            # Exclude common false positives like "1/3" or "2/3"
+            if '/' in before[-2:] or '/' in after[:2]:
+                continue
+                
+            if any(word in before for word in ['station', 'level', 'node']) or \
+               any(word in after for word in ['station', 'node', 'level']):
+                stations.add(num)
+            # Also add if in a list like "4R, 7, 11R"
+            elif ',' in before[-3:] or ',' in after[:3]:
+                stations.add(num)
+    
+    # Only add anatomic region mappings if explicitly mentioned (not from station numbers)
+    text_lower = text.lower()
+    if 'paratracheal' in text_lower and 'right' in text_lower:
         stations.update(['2R', '4R'])
-    if PATTERNS['paratracheal_left'].search(text):
+    if 'paratracheal' in text_lower and 'left' in text_lower:
         stations.update(['2L', '4L'])
-    if PATTERNS['subcarinal'].search(text):
+    if 'subcarinal' in text_lower:
         stations.add('7')
-    if PATTERNS['hilar_right'].search(text):
+    if 'hilar' in text_lower and 'right' in text_lower:
         stations.update(['10R', '11R'])
-    if PATTERNS['hilar_left'].search(text):
+    if 'hilar' in text_lower and 'left' in text_lower:
         stations.update(['10L', '11L'])
-    if PATTERNS['aortopulmonary'].search(text):
+    if 'aortopulmonary' in text_lower or 'ap window' in text_lower:
         stations.add('5')
     
     return stations
