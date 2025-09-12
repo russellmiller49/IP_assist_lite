@@ -69,13 +69,56 @@ IP_assist_lite/
 
 ## Running the Application
 
+**Note:** The main `app.py` now includes all enhanced features by default. The basic version is archived as `app_basic.py`.
+
+### Standard Pipeline (Now Enhanced)
 ```bash
-# Start Qdrant database
+# 1. Start Qdrant database
 ./scripts/start_qdrant_local.sh
 
-# Run the Gradio app
+# 2. Run the main app (includes all enhanced features)
 python app.py
 
 # Or use the Makefile
 make all  # Run complete pipeline
 ```
+
+**Features included:**
+- 💬 Multi-turn conversation support
+- 📚 Full AMA format citations
+- 📋 V3 Procedural Coding with Q&A
+- 🔍 Enhanced retrieval with reranking
+
+### Alternative Options
+```bash
+# Run the basic/legacy version (without enhancements)
+python app_basic.py
+
+# Run with specific port
+GRADIO_SERVER_PORT=7861 python app.py
+
+# Use the CLI interface
+python cli_enhanced.py
+
+# Set environment variables (optional)
+export IP_GPT5_MODEL=gpt-4o-mini  # or gpt-5-mini, gpt-5
+export QDRANT_HOST=localhost
+export QDRANT_PORT=6333
+```
+
+The enhanced pipeline provides:
+- **Query Assistant Tab:**
+  - Multi-turn conversation support with context retention
+  - Follow-up questions capability
+  - Full AMA-style citations with journal details
+  - Session management for continuous dialogue
+  - Improved source tracking and confidence scoring
+- **Procedural Coding Tab (V3):**
+  - Automatic CPT/HCPCS code generation
+  - EBUS station counting (31652 vs 31653)
+  - TBLB lobe tracking with add-on codes
+  - Sedation time calculation and family selection
+  - NCCI edit checks and warnings
+  - OPPS packaging notes
+  - ICD-10-PCS suggestions
+  - Documentation gap detection

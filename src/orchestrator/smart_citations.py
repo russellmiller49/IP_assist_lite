@@ -94,14 +94,24 @@ def insert_smart_citations(response_text: str,
     
     # Sort by score and select top articles
     article_scores.sort(key=lambda x: x['score'], reverse=True)
-    selected = article_scores[:max_citations]
+    
+    # Deduplicate articles by doc_id before selecting
+    seen_doc_ids = set()
+    unique_articles = []
+    for item in article_scores:
+        doc_id = getattr(item['article'], 'doc_id', '')
+        if doc_id not in seen_doc_ids:
+            unique_articles.append(item)
+            seen_doc_ids.add(doc_id)
+    
+    selected = unique_articles[:max_citations]
     
     # Filter out zero-score articles
     selected = [a for a in selected if a['score'] > 0]
     
     if not selected:
         # No good matches, just return top articles
-        selected = article_scores[:min(3, len(article_scores))]
+        selected = unique_articles[:min(3, len(unique_articles))]
     
     # Load citation index
     citation_index = load_citation_index()
@@ -109,32 +119,67 @@ def insert_smart_citations(response_text: str,
     # Create citation list
     citations = []
     citation_map = {}
+    doc_id_to_citation_num = {}  # Map doc_id to citation number for deduplication
     
     for i, item in enumerate(selected, 1):
         article = item['article']
         doc_id = getattr(article, 'doc_id', '')
         
-        # Look up in citation index first
-        if doc_id in citation_index:
-            indexed = citation_index[doc_id]
-            author = indexed.get('author', 'Unknown')
-            year = indexed.get('year', 2024)
-            title = indexed.get('title', '')
-        else:
-            # Fallback to extraction if not in index
-            author = extract_author_name(doc_id)
-            year = getattr(article, 'year', 2024)
-            title = ''
+        # Use actual metadata from the article/chunk
+        authors_list = getattr(article, 'authors', [])
+        journal_name = getattr(article, 'journal', '')
+        volume = getattr(article, 'volume', '')
+        pages = getattr(article, 'pages', '')
+        doi = getattr(article, 'doi', '')
+        year = getattr(article, 'year', 2024)
         
-        # Clean up author name
-        if author and author != 'Unknown':
-            citation_text = f"{author} et al. ({year})"
+        # Format authors for AMA citation
+        if authors_list and isinstance(authors_list, list):
+            if len(authors_list) == 1:
+                author_str = format_author_ama(authors_list[0])
+            elif len(authors_list) == 2:
+                author_str = f"{format_author_ama(authors_list[0])}, {format_author_ama(authors_list[1])}"
+            else:
+                # Three or more - use et al after first 3
+                first_three = [format_author_ama(a) for a in authors_list[:3]]
+                if len(authors_list) > 3:
+                    author_str = f"{', '.join(first_three)}, et al"
+                else:
+                    author_str = ', '.join(first_three)
         else:
-            citation_text = f"Study ({year})"
+            # Fallback to extraction from doc_id
+            author_str = extract_author_name(doc_id) + " et al"
+        
+        # Build full AMA citation with proper title
+        title = doc_id.replace('.json', '').replace('.pdf', '')
+        
+        # Special handling for known articles
+        if 'transbronchial ablation Miller' in title:
+            title = "Transbronchial tumor ablation"
+        elif 'NAVABLATE' in title.upper():
+            title = "Transbronchial Microwave Ablation of Peripheral Lung Tumors: The NAVABLATE Study"
+        elif 'BRONC-RFII' in title or 'radiofrequency ablation system' in title.lower():
+            title = "Safety and efficacy of a novel transbronchial radiofrequency ablation system for lung tumours"
+        else:
+            # Clean up underscores and normalize
+            title = title.replace('_', ' ').replace('-', ' ')
+        
+        if journal_name:
+            citation_text = f"{author_str}. {title}. {journal_name}. {year}"
+            if volume and pages:
+                citation_text += f";{volume}:{pages}"
+            elif volume:
+                citation_text += f";{volume}"
+            if doi:
+                citation_text += f". doi:{doi}"
+            citation_text += "."
+        else:
+            # Simplified format if no journal info
+            citation_text = f"{author_str}. {title}. {year}."
         
         citation = {
             'number': str(i),
-            'text': citation_text,
+            'text': citation_text,  # Full AMA format
             'doc_id': doc_id,
             'title': title,
             'concepts': list(item['concepts'])
@@ -219,6 +264,29 @@ def add_citation_numbers(text: str,
                 result = '\n\n'.join(paragraphs)
     
     return result
+
+
+def format_author_ama(author: str) -> str:
+    """Format a single author name for AMA citation."""
+    if not author:
+        return "Unknown"
+    
+    # If already formatted (e.g., "Smith JA"), keep it
+    if re.match(r'^[A-Z][a-z]+ [A-Z]{1,2}$', author):
+        return author
+    
+    # Split name and format as "LastName FirstInitials"
+    parts = author.strip().split()
+    if len(parts) == 1:
+        return parts[0]
+    elif len(parts) == 2:
+        # Assume "First Last" format
+        return f"{parts[1]} {parts[0][0].upper()}"
+    else:
+        # Multiple parts - take last as surname, initials from rest
+        last_name = parts[-1]
+        initials = ''.join([p[0].upper() for p in parts[:-1]])
+        return f"{last_name} {initials}"
 
 
 def extract_author_name(doc_id: str) -> str:

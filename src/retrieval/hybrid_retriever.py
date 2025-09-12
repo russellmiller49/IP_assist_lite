@@ -51,6 +51,14 @@ class RetrievalResult:
     has_contraindication: bool = False
     has_dose_setting: bool = False
     is_emergency: bool = False
+    # Citation metadata
+    authors: List[str] = None
+    journal: str = ""
+    volume: str = ""
+    issue: str = ""
+    pages: str = ""
+    doi: str = ""
+    pmid: str = ""
 
 
 class HybridRetriever:
@@ -443,7 +451,15 @@ class HybridRetriever:
                 has_table=chunk.get('has_table', False),
                 has_contraindication=chunk.get('has_contraindication', False),
                 has_dose_setting=chunk.get('has_dose_setting', False),
-                is_emergency=is_emergency
+                is_emergency=is_emergency,
+                # Add citation metadata
+                authors=chunk.get('authors', []),
+                journal=chunk.get('journal', ''),
+                volume=chunk.get('volume', ''),
+                issue=chunk.get('issue', ''),
+                pages=chunk.get('pages', ''),
+                doi=chunk.get('doi', ''),
+                pmid=chunk.get('pmid', '')
             )
             results.append(result)
         

@@ -27,6 +27,15 @@ from src.retrieval.hybrid_retriever import HybridRetriever
 from src.llm.gpt5_medical import GPT5Medical
 from src.orchestrator.enhanced_orchestrator import EnhancedOrchestrator
 
+# Import V3 coding module
+try:
+    from src.coding.ui_tab import build as build_coding_tab
+except ImportError:
+    # Fallback if coding module not available
+    def build_coding_tab():
+        with gr.Tab("📋 Procedural Coding"):
+            gr.Markdown("Coding module not available")
+
 # Configure logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -114,23 +123,25 @@ def format_response_html(result: Dict[str, Any], include_query: bool = False) ->
     </div>
     """)
     
-    # References in AMA format (only articles shown)
+    # References in full AMA format (only articles shown)
     if result.get("citations"):
         html_parts.append("<div style='margin-top: 20px;'>")
         html_parts.append("<h3 style='color: #333; border-bottom: 2px solid #333; padding-bottom: 5px;'>References</h3>")
-        html_parts.append("<ol style='padding-left: 20px;'>")
+        html_parts.append("<ol style='padding-left: 20px; font-size: 0.95em;'>")
         
-        # Use the text field from smart citations
+        # Display full AMA citations
         for i, cite in enumerate(result["citations"], 1):
-            # Use 'text' field if available (from smart citations)
+            # Use 'text' field if available (this should be the full AMA format)
             if 'text' in cite and cite['text']:
                 citation_text = cite['text']
             elif 'ama_format' in cite:
                 citation_text = cite['ama_format']
             else:
-                # Fallback formatting - but clean it up
+                # Enhanced fallback formatting for full AMA style
                 author = cite.get('author', 'Unknown')
                 year = cite.get('year', '')
+                title = cite.get('title', '')
+                journal = cite.get('journal', '')
                 doc_id = cite.get('doc_id', '')
                 
                 # Try to extract clean author from doc_id if author is Unknown
@@ -138,14 +149,21 @@ def format_response_html(result: Dict[str, Any], include_query: bool = False) ->
                     # Extract author from patterns like "Schweigert-2019-..."
                     match = re.match(r'^([A-Za-z]+)[-_](\d{4})', doc_id)
                     if match:
-                        author = match.group(1).capitalize()
+                        author = match.group(1).capitalize() + " et al"
                         if not year:
                             year = match.group(2)
                 
-                citation_text = f"{author} et al. ({year})" if year else f"{author} et al."
+                # Build full AMA citation if components available
+                if title and journal:
+                    citation_text = f"{author}. {title}. {journal}. {year}."
+                elif title:
+                    citation_text = f"{author}. {title}. {year}."
+                else:
+                    citation_text = f"{author}. Clinical study in interventional pulmonology. {year}." if year else f"{author} et al."
             
+            # Style the citation with hanging indent
             html_parts.append(f"""
-            <li style='margin-bottom: 8px; color: #333;'>
+            <li style='margin-bottom: 10px; color: #333; line-height: 1.5; text-indent: -1.5em; padding-left: 1.5em;'>
                 {citation_text}
             </li>
             """)
@@ -229,48 +247,53 @@ def create_interface():
     """Create the enhanced Gradio interface."""
     
     with gr.Blocks(title="IP Assist Lite - Enhanced", theme=gr.themes.Base()) as app:
-        # Session state
-        session_state = gr.State(str(uuid.uuid4()))
-        conversation_state = gr.State("")
-        
         gr.Markdown("""
         # 🏥 IP Assist Lite - Enhanced Edition
         ### Evidence-Based Interventional Pulmonology Assistant
         *Created by Russell Miller, MD*
-        
-        **Features:**
-        - 💬 Follow-up questions with conversation context
-        - 📚 AMA format citations with inline references
-        - 🔍 Intelligent article augmentation
-        - ⚡ Hierarchical evidence synthesis
         """)
         
-        with gr.Row():
-            with gr.Column(scale=3):
-                query_input = gr.Textbox(
-                    label="Enter your question",
-                    placeholder="e.g., What are the indications for transbronchial ablation?",
-                    lines=3
-                )
+        with gr.Tabs():
+            # Main Query Tab with conversation support
+            with gr.Tab("💬 Enhanced Query Assistant"):
+                # Session state
+                session_state = gr.State(str(uuid.uuid4()))
+                conversation_state = gr.State("")
+                
+                gr.Markdown("""
+                **Features:**
+                - 💬 Follow-up questions with conversation context
+                - 📚 Full AMA format citations
+                - 🔍 Intelligent article augmentation
+                - ⚡ Hierarchical evidence synthesis
+                """)
                 
                 with gr.Row():
-                    submit_btn = gr.Button("🔍 Submit Query", variant="primary")
-                    clear_btn = gr.Button("🔄 New Conversation", variant="secondary")
-                
-                model_dropdown = gr.Dropdown(
-                    choices=["gpt-5-mini", "gpt-5", "gpt-4o-mini", "gpt-4o"],
-                    value="gpt-5-mini",
-                    label="Model Selection"
-                )
-                
-                status_output = gr.Textbox(
-                    label="Status",
-                    interactive=False,
-                    visible=False
-                )
-        
-        with gr.Column(scale=7):
-            response_output = gr.HTML(
+                    with gr.Column(scale=3):
+                        query_input = gr.Textbox(
+                            label="Enter your question",
+                            placeholder="e.g., What are the indications for transbronchial ablation?",
+                            lines=3
+                        )
+                        
+                        with gr.Row():
+                            submit_btn = gr.Button("🔍 Submit Query", variant="primary")
+                            clear_btn = gr.Button("🔄 New Conversation", variant="secondary")
+                        
+                        model_dropdown = gr.Dropdown(
+                            choices=["gpt-5-mini", "gpt-5", "gpt-4o-mini", "gpt-4o"],
+                            value="gpt-5-mini",
+                            label="Model Selection"
+                        )
+                        
+                        status_output = gr.Textbox(
+                            label="Status",
+                            interactive=False,
+                            visible=False
+                        )
+                    
+                    with gr.Column(scale=7):
+                        response_output = gr.HTML(
                 label="Response",
                 value="""
                 <div style='padding: 20px; background: #f9f9f9; border-radius: 10px;'>
@@ -284,11 +307,11 @@ def create_interface():
                     </ul>
                 </div>
                 """
-            )
-        
-        # Examples section
-        with gr.Row():
-            gr.Examples(
+                        )
+                
+                # Examples section
+                with gr.Row():
+                    gr.Examples(
                 examples=[
                     ["What are the indications for transbronchial ablation?"],
                     ["Can you explain more about the contraindications?"],  # Follow-up
@@ -299,10 +322,10 @@ def create_interface():
                 ],
                 inputs=query_input,
                 label="Example Questions (including follow-ups)"
-            )
-        
-        # Event handlers
-        submit_btn.click(
+                    )
+                
+                # Event handlers
+                submit_btn.click(
             fn=process_query,
             inputs=[query_input, session_state, conversation_state, model_dropdown],
             outputs=[response_output, query_input, status_output, session_state]
@@ -310,9 +333,9 @@ def create_interface():
             lambda x: x,  # Update conversation state with new response
             inputs=[response_output],
             outputs=[conversation_state]
-        )
-        
-        clear_btn.click(
+                )
+                
+                clear_btn.click(
             fn=clear_conversation,
             inputs=[],
             outputs=[query_input, response_output, session_state, status_output]
@@ -320,17 +343,28 @@ def create_interface():
             lambda: "",  # Clear conversation state
             inputs=[],
             outputs=[conversation_state]
-        )
-        
-        query_input.submit(
+                )
+                
+                query_input.submit(
             fn=process_query,
             inputs=[query_input, session_state, conversation_state, model_dropdown],
             outputs=[response_output, query_input, status_output, session_state]
-        ).then(
-            lambda x: x,  # Update conversation state with new response
-            inputs=[response_output],
-            outputs=[conversation_state]
-        )
+                ).then(
+                    lambda x: x,  # Update conversation state with new response
+                    inputs=[response_output],
+                    outputs=[conversation_state]
+                )
+            
+            # V3 Procedural Coding Tab
+            build_coding_tab()
+        
+        # Footer
+        gr.Markdown("""
+        ---
+        ### ⚠️ Important Notice
+        This system is for informational purposes only. Always verify medical information with official guidelines 
+        and consult with qualified healthcare professionals before making clinical decisions.
+        """)
     
     return app
 

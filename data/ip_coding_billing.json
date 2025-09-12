@@ -1,0 +1,245 @@
+{
+  "procedures": [
+    {
+      "id": "flexible_bronchoscopy",
+      "name": "Flexible Bronchoscopy",
+      "cpt": ["31622"],
+      "synonyms": ["flexible bronch", "diagnostic bronchoscopy"],
+      "opps": {
+        "status_indicator": "T",
+        "packaged": false
+      }
+    },
+    {
+      "id": "rigid_bronchoscopy",
+      "name": "Rigid Bronchoscopy",
+      "cpt": ["31622"],
+      "synonyms": ["rigid bronch", "rigid tracheoscopy"],
+      "opps": {
+        "status_indicator": "T",
+        "packaged": false
+      }
+    },
+    {
+      "id": "tumor_ablation_bronchoscopic",
+      "name": "Bronchoscopic Tumor Destruction",
+      "cpt": ["31641"],
+      "synonyms": ["tumor ablation", "endoluminal tumor", "electrocautery snare", "APC"],
+      "opps": {
+        "status_indicator": "J1",
+        "packaged": false,
+        "note": "Includes various ablation techniques (electrocautery, APC, laser)"
+      }
+    },
+    {
+      "id": "ebus_tbna",
+      "name": "Linear EBUS with TBNA",
+      "cpt": ["31652", "31653"],
+      "synonyms": ["linear ebus", "ebus-tbna", "endobronchial ultrasound with needle aspiration"],
+      "opps": {
+        "status_indicator": "J1",
+        "packaged": false,
+        "note": "Comprehensive APC payment"
+      },
+      "rules": {
+        "station_based": true,
+        "min_stations_31653": 3
+      }
+    },
+    {
+      "id": "ebus_without_tbna",
+      "name": "Diagnostic/Radial EBUS",
+      "cpt": ["+31654"],
+      "synonyms": ["radial ebus", "diagnostic ebus"],
+      "opps": {
+        "status_indicator": "N",
+        "packaged": true,
+        "note": "Add-on packaged under OPPS"
+      }
+    },
+    {
+      "id": "tblb_forceps_or_cryo",
+      "name": "Transbronchial Lung Biopsy",
+      "cpt": ["31628", "+31632"],
+      "synonyms": ["tblb", "transbronchial biopsy", "forceps biopsy", "cryobiopsy"],
+      "opps": {
+        "status_indicator": "J1",
+        "packaged": false
+      }
+    },
+    {
+      "id": "nav_bronchoscopy",
+      "name": "Computer-Assisted Navigation",
+      "cpt": ["+31627"],
+      "synonyms": ["navigation", "enb", "emn", "ion system", "monarch"],
+      "opps": {
+        "status_indicator": "N",
+        "packaged": true,
+        "note": "Navigation packaged under OPPS (SI=N)"
+      }
+    },
+    {
+      "id": "thoracentesis",
+      "name": "Thoracentesis",
+      "cpt": ["32554", "32555"],
+      "synonyms": ["pleural tap", "pleural aspiration"],
+      "opps": {
+        "status_indicator": "T",
+        "packaged": false
+      }
+    },
+    {
+      "id": "pleural_drainage_catheter_non_tunneled",
+      "name": "Pleural Drainage Catheter (Non-tunneled)",
+      "cpt": ["32556", "32557"],
+      "synonyms": ["chest tube", "pigtail catheter", "pleural drain"],
+      "opps": {
+        "status_indicator": "T",
+        "packaged": false
+      }
+    },
+    {
+      "id": "ipc_tunneled_pleural_catheter",
+      "name": "Tunneled Pleural Catheter (IPC)",
+      "cpt": ["32550"],
+      "synonyms": ["pleurx", "ipc", "indwelling pleural catheter"],
+      "opps": {
+        "status_indicator": "T",
+        "packaged": false
+      }
+    },
+    {
+      "id": "chartis_assessment",
+      "name": "Balloon Occlusion/Chartis",
+      "cpt": ["31634"],
+      "synonyms": ["chartis", "collateral ventilation assessment", "balloon occlusion"],
+      "opps": {
+        "status_indicator": "J1",
+        "packaged": false
+      }
+    },
+    {
+      "id": "endobronchial_valves",
+      "name": "Endobronchial Valve Placement",
+      "cpt": ["31647", "+31651"],
+      "synonyms": ["zephyr valves", "ebv", "valve placement"],
+      "opps": {
+        "status_indicator": "J1",
+        "packaged": false
+      }
+    },
+    {
+      "id": "fiducial_markers",
+      "name": "Fiducial Marker Placement",
+      "cpt": ["31626"],
+      "synonyms": ["fiducial", "marker placement", "gold seed"],
+      "opps": {
+        "status_indicator": "J1",
+        "packaged": false
+      }
+    },
+    {
+      "id": "microwave_ablation_bronchoscopic",
+      "name": "Transbronchial Microwave Ablation",
+      "cpt": ["31641"],
+      "synonyms": ["microwave ablation", "mwa", "bronchoscopic ablation"],
+      "opps": {
+        "status_indicator": "J1",
+        "packaged": false
+      }
+    },
+    {
+      "id": "transbronchial_ablation_pulsed_electric_field",
+      "name": "Transbronchial Pulsed Electric Field Ablation",
+      "cpt": ["0880T", "0881T"],
+      "synonyms": ["pulsed electric field", "pef ablation"],
+      "opps": {
+        "status_indicator": "T",
+        "packaged": false,
+        "note": "Category III codes - verify payer coverage"
+      }
+    }
+  ],
+  "global_principles": {
+    "moderate_sedation": {
+      "99152_99153": {
+        "description": "Sedation by same physician performing procedure",
+        "initial_15_min": "99152",
+        "additional_15_min": "99153",
+        "age_restriction": "5 years and older"
+      },
+      "99155_99156_99157": {
+        "description": "Sedation by different physician",
+        "initial_15_min": "99155",
+        "first_additional": "99156",
+        "subsequent_additional": "99157"
+      },
+      "documentation_requirements": [
+        "Start and stop times",
+        "Independent trained observer",
+        "Monitoring parameters"
+      ]
+    },
+    "facility_vs_professional": {
+      "professional_component": "Physician work + practice expense (office)",
+      "facility_component": "Hospital/ASC billing separately",
+      "icd10_pcs_crosswalk_examples": {
+        "bronchoscopy_inspection": "0BJ08ZZ",
+        "mediastinal_lymph_node_ebus_tbna": "07B74ZX",
+        "transbronchial_lung_biopsy": "0BBK8ZX",
+        "thoracentesis": "0W9B3ZZ"
+      }
+    }
+  },
+  "compliance_and_edits": {
+    "ncci_edits": [
+      {
+        "primary": "31652",
+        "excluded": ["31622"],
+        "note": "Diagnostic bronchoscopy included in EBUS"
+      },
+      {
+        "primary": "31653",
+        "excluded": ["31622", "31652"],
+        "note": "31653 includes all lesser EBUS codes"
+      },
+      {
+        "primary": "31628",
+        "mutually_exclusive": ["31652", "31653"],
+        "note": "TBLB and EBUS-TBNA of same target - allow only if distinct"
+      },
+      {
+        "primary": "31634",
+        "excluded": ["31647", "31651"],
+        "note": "Chartis not separately reportable with valve placement"
+      }
+    ],
+    "documentation_minimums": [
+      "Specific lymph node stations for EBUS",
+      "Lobes biopsied for TBLB",
+      "Sedation start/stop times",
+      "Imaging guidance modality",
+      "Device implants by name/manufacturer"
+    ],
+    "modifier_guidance": {
+      "-59": "Distinct procedural service",
+      "-XS": "Separate structure",
+      "-RT/-LT": "Laterality for paired organs",
+      "-22": "Increased procedural services (requires documentation)"
+    }
+  },
+  "opps_packaging": {
+    "status_indicators": {
+      "J1": "Hospital Part B services paid through comprehensive APC",
+      "T": "Significant procedure, multiple reduction applies",
+      "N": "Packaged APC payment",
+      "S": "Significant procedure, not discounted when multiple"
+    },
+    "commonly_packaged": [
+      "+31627 (Navigation)",
+      "+31654 (Radial EBUS)",
+      "76942 (Ultrasound guidance)",
+      "77002 (Fluoroscopic guidance)"
+    ]
+  }
+}
