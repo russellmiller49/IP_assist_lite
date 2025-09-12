@@ -1,40 +1,108 @@
-"""Gradio tab for V3 coding module with Q&A."""
+"""Gradio tab for V3 coding module with Q&A and copy-ready outputs."""
 
 import gradio as gr
 from .kb import CodingKB
 from .extractors import extract_case
 from .rules import code_case
-from .formatter import to_markdown
+from .formatter import to_markdown, to_copy_string
 from .qa import build_context, answer as answer_q
 
+
 def build():
-    kb = CodingKB()
+    kb = CodingKB()  # load KB (auto-fallback between files)
+
     with gr.Tab("📋 Procedural Coding"):
-        gr.Markdown("Paste a procedure report. You'll get CPT/HCPCS with rationales, OPPS/PCS notes, and doc checks. Ask follow‑ups below.")
+        gr.Markdown(
+            """
+            ### V3 Procedural Coding Assistant
+            Paste a procedure report to extract candidate CPTs, OPPS notes, documentation checks, and PCS suggestions. Use the Q&A box to ask follow‑ups (e.g., "Why 31653?", "OPPS packaging?", "PCS?").
+            """
+        )
 
-        report = gr.Textbox(label="Procedure Report", lines=16, placeholder="Paste full report text...")
-        md_out = gr.Markdown()
-        codes_copy = gr.Textbox(label="Copy‑ready codes")
-        analyze = gr.Button("🔍 Analyze", variant="primary")
+        # Persistent state for follow‑ups
+        ctx_state = gr.State(None)
+        bundle_state = gr.State(None)
 
-        # Simplified Q&A panel
-        qa_chat = gr.Chatbot(label="Ask about the rationale", height=250)
-        qa_in = gr.Textbox(placeholder="e.g., Why 31653? Is +31627 packaged under OPPS?", label="Your question")
-        qa_send = gr.Button("Ask")
+        with gr.Row():
+            with gr.Column(scale=5):
+                report = gr.Textbox(label="Procedure Report", lines=12, placeholder="Paste report text…")
+                with gr.Row():
+                    analyze = gr.Button("🔍 Analyze", variant="primary")
+                    clear_btn = gr.Button("🧹 Clear")
+                gr.Markdown(f"KB: {kb.version_info()}")
 
-        def _analyze(text):
-            import json
-            case = extract_case(text, kb, llm=None)
+                gr.Markdown("""
+                #### Follow‑up Q&A
+                Ask about selected codes, OPPS/facility packaging, documentation, PCS suggestions, or NCCI/modifiers.
+                """)
+                qa_in = gr.Textbox(label="Question", placeholder="Why 31653? What about OPPS packaging?")
+                qa_btn = gr.Button("💬 Answer")
+                qa_out = gr.Markdown(label="Answer")
+
+            with gr.Column(scale=7):
+                analysis_md = gr.Markdown(label="Analysis")
+                with gr.Row():
+                    copy_format = gr.Dropdown(
+                        label="Copy format",
+                        choices=["simple", "detailed", "billing"],
+                        value="simple",
+                        scale=2,
+                    )
+                copy_box = gr.Textbox(label="Copy‑ready codes", lines=3)
+                summary_json = gr.JSON(label="Summary")
+
+        # --- Handlers ---
+        def run_analysis(text: str):
+            text = (text or "").strip()
+            if not text:
+                # No change to states; return empties
+                return "Please paste a report.", "", {}, None, None
+            case = extract_case(text, kb)
             bundle = code_case(case, kb)
-            ctx = build_context(case, bundle, kb=kb)
-            md = to_markdown(bundle) + f"\n\n_KB: {kb.version_info()}_"
-            # Return simplified output without context for now
-            return md, ", ".join(ctx["codes"]), [("System", "Analysis complete. Ask about any code or topic.")]
+            md = to_markdown(bundle)
+            copy_str = to_copy_string(bundle, "simple")
+            ctx = build_context(case, bundle, kb)
+            # Return: analysis_md, copy_box, summary_json, ctx_state, bundle_state
+            summary = {
+                "total_professional": len(bundle.professional),
+                "total_facility": len(bundle.facility),
+                "warnings": len(bundle.warnings),
+                "documentation_gaps": len(bundle.documentation_gaps),
+                "pcs_suggestions": len(bundle.icd10_pcs_suggestions),
+                "codes": [cl.code for cl in bundle.professional] + [cl.code for cl in bundle.facility],
+            }
+            return md, copy_str, summary, ctx, bundle
 
-        def _qa_ask(msg, chat):
-            return chat + [("System", "Q&A temporarily disabled for debugging.")]
+        def update_copy(fmt: str, bundle):
+            if not bundle:
+                return ""
+            return to_copy_string(bundle, fmt or "simple")
 
-        analyze.click(_analyze, inputs=[report], outputs=[md_out, codes_copy, qa_chat])
-        qa_send.click(_qa_ask, inputs=[qa_in, qa_chat], outputs=[qa_chat])
-    
+        def do_qa(q: str, ctx):
+            q = (q or "").strip()
+            if not q:
+                return "Please enter a question."
+            if not ctx:
+                return "Run an analysis first, then ask a follow‑up."
+            try:
+                return answer_q(q, ctx)
+            except Exception as e:
+                return f"Error answering question: {e}"
+
+        def do_clear():
+            return "", "", {}, None, None, "", ""
+
+        analyze.click(
+            run_analysis,
+            inputs=[report],
+            outputs=[analysis_md, copy_box, summary_json, ctx_state, bundle_state],
+        )
+        copy_format.change(update_copy, inputs=[copy_format, bundle_state], outputs=[copy_box])
+        qa_btn.click(do_qa, inputs=[qa_in, ctx_state], outputs=[qa_out])
+        clear_btn.click(
+            do_clear,
+            inputs=[],
+            outputs=[report, analysis_md, summary_json, ctx_state, bundle_state, copy_box, qa_out],
+        )
+
     return None  # Tab is created in place

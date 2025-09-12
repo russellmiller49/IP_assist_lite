@@ -375,7 +375,7 @@ if __name__ == "__main__":
         print("Interface created successfully")
         app.launch(
             server_name="0.0.0.0",
-            server_port=7860,
+            server_port=7862,  # Different port to avoid conflicts
             share=True,  # Use share to bypass localhost issues
             show_error=True,
             show_api=False  # Disable API completely

@@ -104,6 +104,17 @@ class HybridRetriever:
         # Initialize Qdrant client
         self.qdrant = QdrantClient(host=qdrant_host, port=qdrant_port)
         self.collection_name = collection_name
+        self.qdrant_available = True
+        # Quick connectivity check so we can gracefully degrade if Qdrant isn't running
+        try:
+            # Lightweight call; raises if server is unavailable
+            _ = self.qdrant.get_collections()
+        except Exception as e:
+            self.qdrant_available = False
+            warnings.warn(
+                f"Qdrant at {qdrant_host}:{qdrant_port} is unavailable (" \
+                f"{e}). Semantic search will be disabled; falling back to BM25/exact matching."
+            )
         
         # Load chunks for BM25 and metadata
         print("Loading chunks...")
@@ -267,17 +278,26 @@ class HybridRetriever:
             if filter_conditions:
                 search_params['filter'] = Filter(must=filter_conditions)
         
-        # Search Qdrant
-        results = self.qdrant.search(
-            collection_name=self.collection_name,
-            query_vector=search_params["vector"],
-            limit=search_params["limit"],
-            query_filter=search_params.get("filter", None),
-            with_payload=True  # Ensure we get payload
-        )
-        
-        # Use payload["chunk_id"] or "id" to match chunk_map (canonical ID handling)
-        return [(hit.payload.get("chunk_id", hit.payload.get("id", hit.id)), hit.score) for hit in results]
+        # Search Qdrant with graceful degradation
+        if not getattr(self, "qdrant_available", True):
+            return []
+        try:
+            results = self.qdrant.search(
+                collection_name=self.collection_name,
+                query_vector=search_params["vector"],
+                limit=search_params["limit"],
+                query_filter=search_params.get("filter", None),
+                with_payload=True  # Ensure we get payload
+            )
+            # Use payload["chunk_id"] or "id" to match chunk_map (canonical ID handling)
+            return [(hit.payload.get("chunk_id", hit.payload.get("id", hit.id)), hit.score) for hit in results]
+        except Exception as e:
+            warnings.warn(
+                f"Qdrant search failed: {e}. Returning no semantic results and relying on BM25/exact matches."
+            )
+            # Mark unavailable to avoid repeated attempts during this run
+            self.qdrant_available = False
+            return []
     
     def bm25_search(self, query: str, top_k: int = 20) -> List[Tuple[str, float]]:
         """
