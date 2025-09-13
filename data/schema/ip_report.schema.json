@@ -1,0 +1,533 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "IP Procedure Report Schema",
+  "description": "Strict schema for interventional pulmonology procedure reports",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "procedure_key", "patient", "context"],
+  "properties": {
+    "version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "procedure_key": {
+      "type": "string",
+      "enum": [
+        "robotic_ion",
+        "ebus_systematic_staging_ett",
+        "pdt",
+        "tma_mwa",
+        "therapeutic_cryo_airway",
+        "rigid_foreign_body",
+        "talc_pleurodesis",
+        "ipc_fibrinolysis",
+        "bronch_nodule_ablation_generic",
+        "standard_bronchoscopy",
+        "ebus_staging",
+        "navigation_bronchoscopy"
+      ]
+    },
+    "patient": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "dod_id", "dob"],
+      "properties": {
+        "name": {"type": "string"},
+        "dod_id": {"type": "string"},
+        "dob": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        }
+      }
+    },
+    "context": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["date", "location", "elective_vs_emergency"],
+      "properties": {
+        "date": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "location": {"type": "string"},
+        "elective_vs_emergency": {
+          "type": "string",
+          "enum": ["elective", "emergency"]
+        },
+        "asa": {
+          "type": ["string", "null"],
+          "enum": ["I", "II", "III", "IV", "V", null]
+        }
+      }
+    },
+    "anesthesia": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "method": {
+          "type": "string",
+          "enum": ["GA", "Moderate", "Local"]
+        },
+        "airway": {
+          "type": "string",
+          "enum": ["ETT", "LMA", "None"]
+        },
+        "provider": {
+          "type": "string",
+          "enum": ["Anesthesiology", "Proceduralist", "RN"]
+        },
+        "topical_lidocaine": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "ml": {"type": "number"},
+            "percent": {"type": "number"},
+            "mg": {"type": "number"},
+            "mg_per_kg": {"type": "number"}
+          }
+        }
+      }
+    },
+    "findings": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "airway": {"type": "string"},
+        "lesions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "location": {"type": "string"},
+              "size_mm": {"type": "number"},
+              "description": {"type": "string"}
+            }
+          }
+        },
+        "pleura": {"type": "string"},
+        "notes": {"type": "string"}
+      }
+    },
+    "devices": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": ["UC180F", "Q190", "Ion", "Monarch", "Cryoprobe", "EBUS_needle", "Other"]
+          },
+          "size_gauge_mm": {"type": "string"},
+          "details": {"type": "string"}
+        }
+      }
+    },
+    "imaging_guidance": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "fluoro": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "used": {"type": "boolean"},
+            "time_min": {"type": "number"},
+            "air_kerma_mGy": {"type": "number"},
+            "dap_uGy_m2": {"type": "number"}
+          }
+        },
+        "cbct": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "system": {
+              "type": "string",
+              "enum": ["Cios_Spin", "Fixed_CBCT", "Mobile_CBCT"]
+            },
+            "spins": {"type": "integer"},
+            "contrast_ml": {"type": "number"}
+          }
+        },
+        "digital_tomography": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "used": {"type": "boolean"}
+          }
+        },
+        "rebus": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "used": {"type": "boolean"},
+            "view": {
+              "type": "string",
+              "enum": ["concentric", "eccentric", "aerated"]
+            },
+            "echogenicity": {
+              "type": "string",
+              "enum": ["homogeneous", "heterogeneous"]
+            },
+            "air_bronchogram": {"type": "boolean"}
+          }
+        }
+      }
+    },
+    "ebus": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "stations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "station": {
+                "type": "string",
+                "pattern": "^(2R|2L|4R|4L|5|6|7|8|9|10R|10L|11R|11L|12R|12L|13R|13L|14R|14L)$"
+              },
+              "short_axis_mm": {"type": "number"},
+              "shape": {
+                "type": ["string", "null"],
+                "enum": ["oval", "round", "irregular", null]
+              },
+              "margin": {
+                "type": ["string", "null"],
+                "enum": ["distinct", "indistinct", null]
+              },
+              "echotexture": {
+                "type": ["string", "null"],
+                "enum": ["homogeneous", "heterogeneous", null]
+              },
+              "chs": {
+                "type": ["string", "null"],
+                "enum": ["present", "absent", null]
+              },
+              "cns": {
+                "type": ["string", "null"],
+                "enum": ["present", "absent", null]
+              },
+              "doppler": {
+                "type": ["string", "null"],
+                "enum": ["safe", "unsafe", null]
+              },
+              "elastography": {
+                "type": ["string", "null"],
+                "enum": ["predominantly_blue_stiff", "heterogeneous", "mostly_green_soft", null]
+              },
+              "sampled": {"type": "boolean"},
+              "passes": {"type": "integer"},
+              "needle_gauge": {
+                "type": ["string", "null"],
+                "enum": ["21G", "22G", "25G", null]
+              },
+              "rose": {
+                "type": ["string", "null"],
+                "enum": ["adequate", "lymphoid", "malignant", "suspicious", "negative", null]
+              }
+            }
+          }
+        }
+      }
+    },
+    "sampling": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "tbna": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "site": {"type": "string"},
+              "gauge": {"type": "string"},
+              "passes": {"type": "integer"}
+            }
+          }
+        },
+        "tbbx": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "lobe": {"type": "string"},
+              "segments": {
+                "type": "array",
+                "items": {"type": "string"}
+              },
+              "forceps_bites": {"type": "integer"}
+            }
+          }
+        },
+        "cryo_biopsy": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "probe_mm": {"type": "number"},
+              "freezes": {"type": "integer"},
+              "freeze_sec": {"type": "integer"}
+            }
+          }
+        },
+        "brush": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "site": {"type": "string"},
+              "passes": {"type": "integer"}
+            }
+          }
+        },
+        "bal": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "site": {"type": "string"},
+            "instilled_ml": {"type": "number"},
+            "returned_ml": {"type": "number"},
+            "appearance": {
+              "type": "string",
+              "enum": ["clear", "turbid", "bloody"]
+            }
+          }
+        }
+      }
+    },
+    "ablation": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "modality": {
+          "type": ["string", "null"],
+          "enum": ["MWA", "RFA", "Cryoablation", "PEF_IRE", null]
+        },
+        "system": {"type": "string"},
+        "target": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "lobe": {"type": "string"},
+            "segment": {"type": "string"},
+            "distance_to_pleura_mm": {"type": "number"}
+          }
+        },
+        "confirmation": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "cbct": {"type": "boolean"},
+            "rebus": {"type": "boolean"},
+            "tool_in_lesion": {"type": "boolean"}
+          }
+        },
+        "parameters": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "power_w": {"type": "number"},
+            "time_sec": {"type": "number"},
+            "cycles": {"type": "integer"},
+            "freeze_thaw": {
+              "type": "array",
+              "items": {"type": "number"}
+            }
+          }
+        },
+        "ablations": {"type": "integer"},
+        "post_imaging": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "cbct": {"type": "boolean"},
+            "fluoro": {"type": "boolean"}
+          }
+        }
+      }
+    },
+    "pleural": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "thoracentesis": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "side": {"type": "string"},
+            "us_guided": {"type": "boolean"},
+            "volume_ml": {"type": "number"},
+            "manometry_open": {"type": "number"},
+            "manometry_close": {"type": "number"}
+          }
+        },
+        "pigtail": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "indication": {
+              "type": "string",
+              "enum": ["effusion", "ptx"]
+            },
+            "size_fr": {"type": "number"},
+            "suction_cmH2O": {"type": "number"}
+          }
+        },
+        "ipc": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "placed": {"type": "boolean"},
+            "tunneled": {"type": "boolean"},
+            "size_fr": {"type": "number"},
+            "education_delivered": {"type": "boolean"}
+          }
+        },
+        "talc_pleurodesis": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "method": {
+              "type": "string",
+              "enum": ["slurry", "poudrage"]
+            },
+            "dose_g": {"type": "number"},
+            "graded": {"type": "boolean"}
+          }
+        },
+        "ipc_fibrinolysis": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "tpa_mg": {"type": "number"},
+            "diluent_ml": {"type": "number"},
+            "dwell_min": {"type": "number"}
+          }
+        }
+      }
+    },
+    "pdt": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "indication": {
+          "type": "string",
+          "enum": ["prolonged_mechanical_ventilation", "airway_protection", "other"]
+        },
+        "kit": {
+          "type": "string",
+          "enum": ["Ciaglia_Blue_Rhino", "PercuTwist", "others"]
+        },
+        "bronch_guided": {"type": "boolean"},
+        "rings_identified": {"type": "boolean"},
+        "needle_entry_confirmed": {"type": "boolean"},
+        "dilations": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "final_tube_position_cm_above_carina": {"type": "number"}
+      }
+    },
+    "complications": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "pneumothorax": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "present": {"type": "boolean"},
+            "size": {"type": ["string", "null"]},
+            "intervention": {"type": ["string", "null"]}
+          }
+        },
+        "bleeding": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "present": {"type": "boolean"},
+            "severity": {
+              "type": "string",
+              "enum": ["none", "minor", "moderate", "brisk"]
+            },
+            "hemostasis": {
+              "type": ["string", "null"],
+              "enum": ["suction", "tamponade", "APC", "epi", "TXA", null]
+            }
+          }
+        },
+        "hypoxemia_intervention": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "present": {"type": "boolean"},
+            "details": {"type": ["string", "null"]}
+          }
+        },
+        "other": {
+          "type": "array",
+          "items": {"type": "string"}
+        }
+      }
+    },
+    "specimens": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "cell_block": {"type": "boolean"},
+        "molecular": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["EGFR", "ALK", "ROS1", "PDL1", "NGS"]
+          }
+        },
+        "microbiology": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["bacterial", "fungal", "AFB"]
+          }
+        },
+        "flow_cytometry": {"type": "boolean"}
+      }
+    },
+    "postop": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "diagnosis": {"type": "string"},
+        "ebl_ml": {"type": "number"},
+        "disposition": {
+          "type": "string",
+          "enum": ["PACU", "ICU", "Ward"]
+        },
+        "imaging_orders": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["none", "CXR_now", "CXR_in_4h"]
+          }
+        },
+        "followups": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "service": {"type": "string"},
+              "when": {"type": "string"}
+            }
+          }
+        }
+      }
+    }
+  }
+}
