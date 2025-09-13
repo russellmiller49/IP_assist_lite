@@ -36,6 +36,15 @@ except ImportError:
         with gr.Tab("📋 Procedural Coding"):
             gr.Markdown("Coding module not available")
 
+# Import Report Generator module
+try:
+    from src.reporting.ui_tab import build as build_reporter_tab
+except ImportError:
+    # Fallback if reporter module not available
+    def build_reporter_tab():
+        with gr.Tab("📝 Report Generator"):
+            gr.Markdown("Report generator module not available")
+
 # Configure logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -357,6 +366,9 @@ def create_interface():
             
             # V3 Procedural Coding Tab
             build_coding_tab()
+            
+            # Report Generator Tab
+            build_reporter_tab()
         
         # Footer
         gr.Markdown("""
