@@ -1,8 +1,8 @@
 """Adapter to convert IPProcedureReport to coding Case objects."""
 
-from typing import List, Optional
+from typing import List, Optional, Dict
 from ...reporting.schema_contract import IPProcedureReport
-from ..schema import Case, PerformedProcedure, Sedation
+from ..schema import Case, PerformedItem, Sedation
 
 
 def case_from_ip_report(ip: IPProcedureReport) -> Case:
@@ -21,6 +21,9 @@ def case_from_ip_report(ip: IPProcedureReport) -> Case:
         # Could calculate age from DOB if needed
         pass
     
+    # Map procedures as a list of PerformedItems
+    case.items = []
+    
     # Map procedure family
     _map_procedures(case, ip)
     
@@ -33,9 +36,6 @@ def case_from_ip_report(ip: IPProcedureReport) -> Case:
     # Map sedation/anesthesia
     _map_sedation(case, ip)
     
-    # Map complications
-    _map_complications(case, ip)
-    
     return case
 
 def _map_procedures(case: Case, ip: IPProcedureReport) -> None:
@@ -44,85 +44,82 @@ def _map_procedures(case: Case, ip: IPProcedureReport) -> None:
     
     # Bronchoscopy base
     if proc_key != "pdt":  # PDT doesn't have bronch base
-        case.bronchoscopy = PerformedProcedure(
-            name="Flexible bronchoscopy",
-            performed=True
-        )
+        case.items.append(PerformedItem(
+            proc_id="flexible_bronchoscopy",
+            details={}
+        ))
     
     # Navigation procedures
     if "robotic" in proc_key or "enb" in proc_key:
-        case.navigation = PerformedProcedure(
-            name="Computer-assisted navigation",
-            performed=True,
-            details={"platform": "Ion" if "ion" in proc_key else "Monarch" if "monarch" in proc_key else "ENB"}
-        )
+        platform = "Ion" if "ion" in proc_key else "Monarch" if "monarch" in proc_key else "ENB"
+        case.items.append(PerformedItem(
+            proc_id="navigation_bronchoscopy",
+            details={"platform": platform}
+        ))
     
     # EBUS procedures
     if "ebus" in proc_key:
         if "staging" in proc_key:
             # Systematic staging - multiple stations
+            station_count = 0
             if ip.ebus and ip.ebus.stations:
                 station_count = len([s for s in ip.ebus.stations if s.sampled])
-                case.ebus_tbna = PerformedProcedure(
-                    name="EBUS-TBNA",
-                    performed=True,
-                    details={"station_count": station_count}
-                )
+            case.items.append(PerformedItem(
+                proc_id="ebus_tbna",
+                details={"station_count": str(station_count), "type": "staging"}
+            ))
         else:
             # Targeted EBUS
-            case.ebus_tbna = PerformedProcedure(
-                name="EBUS-TBNA targeted",
-                performed=True
-            )
+            case.items.append(PerformedItem(
+                proc_id="ebus_tbna",
+                details={"type": "targeted"}
+            ))
     
     # PDT
     if proc_key == "pdt":
-        case.tracheostomy = PerformedProcedure(
-            name="Percutaneous dilatational tracheostomy",
-            performed=True,
-            details={"bronch_guided": True}
-        )
+        case.items.append(PerformedItem(
+            proc_id="percutaneous_tracheostomy",
+            details={"bronch_guided": "true"}
+        ))
     
     # Ablation procedures
     if "ablation" in proc_key or "mwa" in proc_key:
-        case.ablation = PerformedProcedure(
-            name="Bronchoscopic ablation",
-            performed=True,
+        case.items.append(PerformedItem(
+            proc_id="bronchoscopic_ablation",
             details={"modality": "MWA"}
-        )
+        ))
     
     # Therapeutic procedures
     if "therapeutic_cryo" in proc_key:
-        case.therapeutic = PerformedProcedure(
-            name="Therapeutic cryotherapy",
-            performed=True
-        )
+        case.items.append(PerformedItem(
+            proc_id="therapeutic_cryotherapy",
+            details={}
+        ))
     
     # Foreign body
     if "foreign_body" in proc_key:
-        case.foreign_body = PerformedProcedure(
-            name="Foreign body removal",
-            performed=True,
-            details={"rigid": True}
-        )
+        case.items.append(PerformedItem(
+            proc_id="foreign_body_removal",
+            details={"rigid": "true"}
+        ))
     
     # Pleural procedures
     if "pleurodesis" in proc_key:
-        case.pleurodesis = PerformedProcedure(
-            name="Talc pleurodesis",
-            performed=True
-        )
+        case.items.append(PerformedItem(
+            proc_id="talc_pleurodesis",
+            details={}
+        ))
     elif "ipc" in proc_key:
         if "fibrinolysis" in proc_key:
-            case.ipc_fibrinolysis = PerformedProcedure(
-                name="IPC fibrinolysis",
-                performed=True
-            )
+            case.items.append(PerformedItem(
+                proc_id="ipc_fibrinolysis",
+                details={}
+            ))
         else:
-            case.ipc = PerformedProcedure(
-                name="IPC placement",
-                performed=True
-            )
+            case.items.append(PerformedItem(
+                proc_id="ipc_placement",
+                details={}
+            ))
 
 def _map_imaging(case: Case, ip: IPProcedureReport) -> None:
     """Map imaging guidance to Case."""
@@ -131,30 +128,27 @@ def _map_imaging(case: Case, ip: IPProcedureReport) -> None:
     
     # CBCT/3D spin
     if ip.imaging_guidance.cbct and ip.imaging_guidance.cbct.system:
-        case.cbct = PerformedProcedure(
-            name="CBCT guidance",
-            performed=True,
+        case.items.append(PerformedItem(
+            proc_id="cbct_guidance",
             details={
                 "system": ip.imaging_guidance.cbct.system,
-                "spins": ip.imaging_guidance.cbct.spins
+                "spins": str(ip.imaging_guidance.cbct.spins or 0)
             }
-        )
+        ))
     
     # Radial EBUS
     if ip.imaging_guidance.rebus and ip.imaging_guidance.rebus.used:
-        case.radial_ebus = PerformedProcedure(
-            name="Radial EBUS",
-            performed=True,
-            details={"view": ip.imaging_guidance.rebus.view}
-        )
+        case.items.append(PerformedItem(
+            proc_id="radial_ebus",
+            details={"view": ip.imaging_guidance.rebus.view or ""}
+        ))
     
     # Fluoroscopy
     if ip.imaging_guidance.fluoro and ip.imaging_guidance.fluoro.used:
-        case.fluoroscopy = PerformedProcedure(
-            name="Fluoroscopic guidance",
-            performed=True,
-            details={"time_min": ip.imaging_guidance.fluoro.time_min}
-        )
+        case.items.append(PerformedItem(
+            proc_id="fluoroscopic_guidance",
+            details={"time_min": str(ip.imaging_guidance.fluoro.time_min or 0)}
+        ))
 
 def _map_sampling(case: Case, ip: IPProcedureReport) -> None:
     """Map sampling procedures to Case."""
@@ -174,15 +168,14 @@ def _map_sampling(case: Case, ip: IPProcedureReport) -> None:
             total_passes += tbna.passes or 0
         
         if lobes:
-            case.tbna = PerformedProcedure(
-                name="Transbronchial needle aspiration",
-                performed=True,
+            case.items.append(PerformedItem(
+                proc_id="tbna",
                 details={
-                    "lobes": list(lobes),
-                    "lobe_count": len(lobes),
-                    "total_passes": total_passes
+                    "lobes": ",".join(lobes),
+                    "lobe_count": str(len(lobes)),
+                    "total_passes": str(total_passes)
                 }
-            )
+            ))
     
     # TBBX
     if ip.sampling.tbbx:
@@ -192,35 +185,32 @@ def _map_sampling(case: Case, ip: IPProcedureReport) -> None:
                 lobes.add(tbbx.lobe)
         
         if lobes:
-            case.tbbx = PerformedProcedure(
-                name="Transbronchial biopsy",
-                performed=True,
+            case.items.append(PerformedItem(
+                proc_id="transbronchial_biopsy",
                 details={
-                    "lobes": list(lobes),
-                    "lobe_count": len(lobes)
+                    "lobes": ",".join(lobes),
+                    "lobe_count": str(len(lobes))
                 }
-            )
+            ))
     
     # Cryobiopsy
     if ip.sampling.cryo_biopsy:
-        case.cryobiopsy = PerformedProcedure(
-            name="Cryobiopsy",
-            performed=True,
+        case.items.append(PerformedItem(
+            proc_id="cryobiopsy",
             details={
-                "count": len(ip.sampling.cryo_biopsy),
-                "probe_mm": ip.sampling.cryo_biopsy[0].probe_mm if ip.sampling.cryo_biopsy else None
+                "count": str(len(ip.sampling.cryo_biopsy)),
+                "probe_mm": str(ip.sampling.cryo_biopsy[0].probe_mm) if ip.sampling.cryo_biopsy else ""
             }
-        )
+        ))
     
     # BAL
     if ip.sampling.bal:
-        case.bal = PerformedProcedure(
-            name="Bronchoalveolar lavage",
-            performed=True,
+        case.items.append(PerformedItem(
+            proc_id="bal",
             details={
-                "volume_ml": ip.sampling.bal.returned_ml
+                "volume_ml": str(ip.sampling.bal.returned_ml or 0)
             }
-        )
+        ))
 
 def _map_sedation(case: Case, ip: IPProcedureReport) -> None:
     """Map sedation/anesthesia to Case."""
@@ -234,23 +224,6 @@ def _map_sedation(case: Case, ip: IPProcedureReport) -> None:
             provided_by_proceduralist=ip.anesthesia.provider != "Anesthesiology",
             total_minutes=30  # Default, would need to extract from report
         )
-
-def _map_complications(case: Case, ip: IPProcedureReport) -> None:
-    """Map complications for reference."""
-    if not ip.complications:
-        return
-    
-    # Store as details for reference (doesn't affect CPT coding directly)
-    complications = []
-    
-    if ip.complications.pneumothorax and ip.complications.pneumothorax.present:
-        complications.append("pneumothorax")
-    
-    if ip.complications.bleeding and ip.complications.bleeding.severity not in ["none", "minimal"]:
-        complications.append(f"bleeding_{ip.complications.bleeding.severity}")
-    
-    if complications:
-        case.complications = complications
 
 def _site_to_lobe(site: str) -> Optional[str]:
     """Map anatomical site to lobe.
@@ -290,11 +263,15 @@ def validate_case_mapping(case: Case) -> List[str]:
     issues = []
     
     # Check for basic procedure
-    if not case.bronchoscopy and not case.tracheostomy:
+    has_base = any(item.proc_id in ["flexible_bronchoscopy", "percutaneous_tracheostomy"] 
+                   for item in case.items)
+    if not has_base:
         issues.append("No base procedure identified")
     
     # Check navigation consistency
-    if case.navigation and not case.radial_ebus and not case.cbct:
+    has_nav = any(item.proc_id == "navigation_bronchoscopy" for item in case.items)
+    has_confirm = any(item.proc_id in ["radial_ebus", "cbct_guidance"] for item in case.items)
+    if has_nav and not has_confirm:
         issues.append("Navigation without confirmation imaging")
     
     return issues

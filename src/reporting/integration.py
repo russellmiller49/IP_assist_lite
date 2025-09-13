@@ -6,8 +6,8 @@ from .reporter_engine import render_report
 from .llm_structurer import structure_to_json, MockLLMClient
 from .quality import run_all_validators, get_validation_summary, auto_fill_defaults
 from ..coding.adapters.reporting_adapter import case_from_ip_report
-from ..coding.rules import apply_coding_rules
-from ..coding.kb import load_kb
+from ..coding.rules import code_case
+from ..coding.kb import CodingKB
 
 logger = logging.getLogger(__name__)
 
@@ -73,8 +73,8 @@ def generate_report_and_codes(
         # Step 5: Generate CPT codes
         logger.info("Generating CPT codes")
         case = case_from_ip_report(ip_report)
-        kb = load_kb()
-        coding_result = apply_coding_rules(case, kb)
+        kb = CodingKB()
+        coding_result = code_case(case, kb)
         
         # Compile results
         return {
