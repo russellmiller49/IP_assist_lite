@@ -1,0 +1,26 @@
+planner:
+  enable_anonymizer: true
+  model: ${IP_GPT5_MODEL:-gpt-5-mini}
+
+verification:
+  enable_sentence_guard: true
+  min_confidence_supported: 0.70
+  min_confidence_critical: 0.90
+
+retrieval:
+  collection_name_v2: ip_docs_v2
+  use_named_vectors: true
+  router:
+    fallback_topk: 8
+    score_threshold: 0.32
+
+graph:
+  max_replans: 3
+
+evaluation:
+  ragas_thresholds:
+    faithfulness: 0.75
+    answer_relevancy: 0.70
+    context_recall: 0.70
+  numeric_tolerance_pct: 5.0
+  allow_gauge_off_by_one: true

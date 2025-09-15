@@ -1,0 +1,88 @@
+Patient: [Name]
+DoD ID: [DoD ID]
+Date: [Date]
+Location: [Location]
+Procedure: Robotic Navigational Bronchoscopy (Ion){% if d.ebus.performed %} with linear EBUS staging{% endif %}
+Status: [Status]
+
+Pre-Procedure Readiness:
+• Informed consent obtained.
+• H&P, imaging, and labs reviewed; NPO verified.
+• Anticoagulation/antiplatelet plan: [Not documented]
+• ASA class: [Not documented]; Airway assessment: [Not documented].
+• Time Out performed.
+
+Anesthesia / Airway:
+    • Method: {{ d.rb.anesthesia if d.rb.anesthesia else "Not documented" }}
+    • Airway: {{ d.rb.airway if d.rb.airway else "Not documented" }}
+
+Procedure Performed:
+    • Robotic Navigational Bronchoscopy (Ion){% if d.rb.target_location %} targeting {{ d.rb.target_location }}{% endif %}
+    {% if d.rb.cbct_tool_in_lesion %}• Cone-beam CT (CBCT) confirmation of tool-in-lesion{% endif %}
+    {% if d.rose_summary_lesion not in ["not documented","n/a"] %}• ROSE (lesion): {{ d.rose_summary_lesion|title }}{% endif %}
+    {% if d.ebus.performed %}• Endobronchial Ultrasound (EBUS) staging{% endif %}
+
+Navigation:
+• Platform: Ion
+• Confirmation imaging: {% if d.rb.cbct_tool_in_lesion %}CBCT (tool-in-lesion confirmed){% else %}Not documented{% endif %}
+
+Lesion Sampling:
+{% if d.rb.lesion_samples %}
+{% for s in d.rb.lesion_samples -%}
+    • {{ s.modality }}{% if s.gauge_or_size %} ({{ s.gauge_or_size }}){% endif %}{% if s.passes %} x{{ s.passes }}{% endif %}{% if s.rose and s.rose != "not documented" %}; ROSE: {{ s.rose|title }}{% endif %}
+{% endfor -%}
+{% else %}
+    • Not documented
+{% endif %}
+
+EBUS Staging:
+{% if d.ebus.performed and d.ebus.samples %}
+    {% for s in d.ebus.samples -%}
+    • Station {{ s.station }}{% if s.short_axis_mm %} ({{ s.short_axis_mm }} mm){% endif %}{% if s.needle_gauge %} with {{ s.needle_gauge }}{% endif %}{% if s.passes %} x{{ s.passes }} passes{% endif %}{% if s.rose and s.rose != "not documented" %}; ROSE: {{ s.rose|title }}{% endif %}
+    {% endfor -%}
+{% elif d.ebus.performed %}
+    • Performed (details not documented)
+{% else %}
+    • Not performed
+{% endif %}
+
+Complications:
+    • Pneumothorax: Not documented
+    • Bleeding: {{ d.complications.bleeding|title if d.complications.bleeding else "Not documented" }}
+    • Hypoxemia requiring intervention: Not documented
+    • Other: {{ d.complications.other if d.complications.other else "None" }}
+
+Post-Procedure:
+    • Estimated Blood Loss (EBL): {{ "Minimal" if d.complications.bleeding in ["minimal","mild"] else "Not documented" }}
+    • Disposition: [Not documented]
+    • Post-procedure imaging: [Not documented]
+    • Follow-up: [Not documented]
+
+Signature Block:
+===============
+Electronically signed by:
+[Physician Name], MD
+[Date/Time]
+
+Data quality (auto-generated):
+{% if d.data_warnings %}
+    • {{ d.data_warnings | join("\n    • ") }}
+{% else %}
+    • All critical fields captured from source text without defaults.
+{% endif %}
+
+Procedure Narrative:
+Robotic navigational bronchoscopy was performed{% if d.rb.target_location %} targeting the {{ d.rb.target_location }}{% endif %}{% if d.rb.airway %} via the {{ d.rb.airway }}{% endif %}{% if d.rb.anesthesia %} under {{ d.rb.anesthesia }} anesthesia{% endif %}. {% if d.rb.cbct_tool_in_lesion %}Tool-in-lesion was confirmed by CBCT.{% endif %} 
+Lesion sampling included:
+{% for s in d.rb.lesion_samples -%}
+{{ " " -}}
+{{ s.modality }}{% if s.gauge_or_size %} ({{ s.gauge_or_size }}){% endif %}{% if s.passes %} x{{ s.passes }}{% endif %}{% if not loop.last %};{% else %}.{% endif %}
+{% endfor -%}
+{% if d.rose_summary_lesion not in ["not documented","n/a"] %}Rapid on-site evaluation at the lesion was {{ d.rose_summary_lesion }}.{% endif %}
+{% if d.ebus.performed and d.ebus.samples %} Subsequently, systematic linear EBUS staging was performed with sampling of:
+{% for s in d.ebus.samples -%}
+{{ " " -}}station {{ s.station }}{% if s.short_axis_mm %} ({{ s.short_axis_mm }} mm){% endif %}{% if s.needle_gauge %} using {{ s.needle_gauge }}{% endif %}{% if s.passes %} with {{ s.passes }} passes{% endif %}{% if not loop.last %};{% else %}.{% endif %}
+{% endfor -%}
+{% if d.rose_summary_ebus not in ["not documented","n/a"] %}ROSE during EBUS was {{ d.rose_summary_ebus }}.{% endif %}
+{% endif %}
+The patient tolerated the procedure{% if d.complications.bleeding in ["minimal","mild"] %} with minimal bleeding not requiring intervention{% else %} without complication{% endif %}.
