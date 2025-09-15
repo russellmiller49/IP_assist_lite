@@ -8,9 +8,16 @@ echo "======================================"
 if ! command -v qdrant &> /dev/null; then
     echo "📦 Qdrant not found. Installing..."
     
-    # Download Qdrant binary for macOS
+    # Download Qdrant binary for macOS (detect architecture)
     echo "Downloading Qdrant for macOS..."
-    curl -L https://github.com/qdrant/qdrant/releases/download/v1.7.4/qdrant-x86_64-apple-darwin.tar.gz -o qdrant.tar.gz
+    ARCH=$(uname -m)
+    if [ "$ARCH" = "arm64" ]; then
+        echo "Detected Apple Silicon (ARM64)"
+        curl -L https://github.com/qdrant/qdrant/releases/download/v1.7.4/qdrant-aarch64-apple-darwin.tar.gz -o qdrant.tar.gz
+    else
+        echo "Detected Intel (x86_64)"
+        curl -L https://github.com/qdrant/qdrant/releases/download/v1.7.4/qdrant-x86_64-apple-darwin.tar.gz -o qdrant.tar.gz
+    fi
     
     # Extract
     tar -xzf qdrant.tar.gz

@@ -3,7 +3,7 @@
 
 # Variables
 PYTHON := python
-CONDA_ENV := ipass2
+CONDA_ENV := ipass
 DATA_DIR := data
 SRC_DIR := src
 

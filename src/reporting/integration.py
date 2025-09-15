@@ -77,6 +77,11 @@ def generate_report_and_codes(
         coding_result = code_case(case, kb)
         
         # Compile results
+        # Extract code strings from CodeLine objects
+        professional_codes = [f"{cl.code}: {cl.description}" for cl in coding_result.professional]
+        facility_codes = [f"{cl.code}: {cl.description}" for cl in coding_result.facility]
+        all_codes = professional_codes + facility_codes
+        
         return {
             "success": True,
             "report_text": report_text,
@@ -87,9 +92,9 @@ def generate_report_and_codes(
                 "summary": validation_summary
             },
             "cpt_codes": {
-                "professional": coding_result.professional_codes,
-                "technical": coding_result.technical_codes,
-                "combined": coding_result.all_codes()
+                "professional": professional_codes,
+                "technical": facility_codes,
+                "combined": all_codes
             },
             "warnings": coding_result.warnings
         }
@@ -191,8 +196,11 @@ def example_run():
         print("\n=== VALIDATION ===")
         print(result["validation"]["summary"])
         print("\n=== CPT CODES ===")
-        for code in result["cpt_codes"]["combined"]:
-            print(f"  {code}")
+        if result["cpt_codes"]["combined"]:
+            for code in result["cpt_codes"]["combined"]:
+                print(f"  {code}")
+        else:
+            print("  No codes generated")
     else:
         print(f"Error: {result['error']}")
     

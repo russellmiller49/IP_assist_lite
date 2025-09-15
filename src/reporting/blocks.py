@@ -32,18 +32,18 @@ PRE_PROCEDURE_CHECKLIST = ReportBlock("""Pre-Procedure Readiness:
 
 # Anesthesia/Sedation standard block
 ANESTHESIA_SEDATION_STANDARD = ReportBlock("""Anesthesia / Sedation:
-• Method: ${anesthesia_method}
-• Airway: ${airway_device}
-• Administered by: ${anesthesia_provider}
-• Topical Lidocaine: ${lido_ml} mL of ${lido_percent}% = ${lido_mg} mg (~${lido_mg_per_kg} mg/kg; goal ≤ 8 mg/kg)""")
+    • Method: ${anesthesia_method}
+    • Airway: ${airway_device}
+    • Topical lidocaine: ${lido_ml} mL of ${lido_percent}% (${lido_mg} mg; ~${lido_mg_per_kg} mg/kg; goal ≤ 8 mg/kg)
+    • Administered by: ${anesthesia_provider}""")
 
 
 # Complications checklist (procedure-agnostic)
 COMPLICATIONS_CHECKLIST = ReportBlock("""Complications:
-• Pneumothorax: ${ptx_present} [size: ${ptx_size}; intervention: ${ptx_intervention}]
-• Bleeding: ${bleeding_severity}; Hemostasis: ${hemostasis_method}
-• Hypoxemia requiring intervention: ${hypoxemia_present} [details: ${hypoxemia_details}]
-• Other: ${other_complications}""")
+    • Pneumothorax: ${ptx_present} (size: ${ptx_size}; intervention: ${ptx_intervention})
+    • Bleeding: ${bleeding_severity} (hemostasis ${hemostasis_method})
+    • Hypoxemia requiring intervention: ${hypoxemia_present}
+    • Other: ${other_complications}""")
 
 
 # EBUS station table with elastography column
@@ -72,19 +72,19 @@ def format_ebus_station_row(station: Dict[str, Any]) -> str:
 
 # Post-procedure standard block
 POST_PROCEDURE_STANDARD = ReportBlock("""Post-Procedure:
-• EBL: ${ebl_ml} mL
-• Disposition: ${disposition}
-• Post-procedure imaging: ${imaging_orders}
-• Follow-up: ${followup_plan}""")
+    • Estimated Blood Loss (EBL): ${ebl_ml}
+    • Disposition: ${disposition}
+    • Post-procedure imaging: ${imaging_orders}
+    • Follow-up: ${followup_plan}""")
 
 
 # Specimen handling block
 SPECIMEN_HANDLING = ReportBlock("""Specimens:
-• Cell block: ${cell_block}
-• Molecular testing: ${molecular_tests}
-• Microbiology: ${micro_tests}
-• Flow cytometry: ${flow_cytometry}
-• Special instructions: ${special_instructions}""")
+    • Cell block: ${cell_block}
+    • Molecular testing: ${molecular_tests}
+    • Microbiology: ${micro_tests}
+    • Flow cytometry: ${flow_cytometry}
+    • Special instructions: ${special_instructions}""")
 
 
 # Navigation guidance block
@@ -166,10 +166,7 @@ def create_rcs18_compliant_header(
     elective_emergency: str
 ) -> str:
     """Create RCS-18 compliant report header with mandatory fields."""
-    return f"""INTERVENTIONAL PULMONOLOGY PROCEDURE REPORT
-{'=' * 45}
-
-Patient: {patient_name}
+    return f"""Patient: {patient_name}
 DoD ID: {dod_id}
 Date: {procedure_date}
 Location: {location}

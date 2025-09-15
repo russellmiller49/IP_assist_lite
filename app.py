@@ -36,6 +36,15 @@ except ImportError:
         with gr.Tab("📋 Procedural Coding"):
             gr.Markdown("Coding module not available")
 
+# Import Reporter module
+try:
+    from src.reporting.ui_tab import build as build_reporter_tab
+except ImportError:
+    # Fallback if reporter module not available
+    def build_reporter_tab():
+        with gr.Tab("📝 Report Generator"):
+            gr.Markdown("Reporter module not available")
+
 # Configure logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -357,6 +366,9 @@ def create_interface():
             
             # V3 Procedural Coding Tab
             build_coding_tab()
+            
+            # Reporter Tab
+            build_reporter_tab()
         
         # Footer
         gr.Markdown("""
@@ -376,7 +388,7 @@ if __name__ == "__main__":
         app.launch(
             server_name="0.0.0.0",
             server_port=7862,  # Different port to avoid conflicts
-            share=True,  # Use share to bypass localhost issues
+            share=False,  # Disable share to avoid frontend template issues
             show_error=True,
             show_api=False  # Disable API completely
         )

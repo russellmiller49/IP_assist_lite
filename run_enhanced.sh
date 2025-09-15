@@ -10,8 +10,8 @@ echo ""
 
 # Activate conda environment if available
 if command -v conda &> /dev/null; then
-    echo "Activating conda environment ipass2..."
-    conda activate ipass2
+    echo "Activating conda environment ipass..."
+    conda activate ipass
 fi
 
 # Set environment variables

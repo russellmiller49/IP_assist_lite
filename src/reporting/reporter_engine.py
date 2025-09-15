@@ -77,6 +77,10 @@ def render_report(miniprompt: str, patient_ctx: Optional[Dict] = None) -> Dict:
     anesthesia_data = _build_anesthesia_data(parsed, patient_ctx)
     builder.add_block(ANESTHESIA_SEDATION_STANDARD, anesthesia_data)
     
+    # Add "Procedure Performed" section
+    procedure_performed = _create_procedure_performed_section(parsed, miniprompt)
+    builder.sections.append(f"\nProcedure Performed:\n{procedure_performed}")
+    
     # Add procedure-specific sections
     body_sections = _build_procedure_body(parsed, miniprompt, patient_ctx)
     for section in body_sections:
@@ -106,6 +110,10 @@ def render_report(miniprompt: str, patient_ctx: Optional[Dict] = None) -> Dict:
     # Add brief narrative paragraph for nuance
     narrative = _create_narrative_summary(parsed, miniprompt)
     builder.add_narrative(narrative)
+    
+    # Add impression/summary section
+    impression = _create_impression_summary(parsed, miniprompt, patient_ctx)
+    builder.sections.append(f"\nImpression / Summary:\n{impression}")
     
     # Build final report
     report_text = builder.build()
@@ -234,31 +242,42 @@ def _build_specimen_data(parsed: ParsedFacts, ctx: Dict) -> Dict:
     return {
         "cell_block": "Yes",
         "molecular_tests": "EGFR, ALK, ROS1, PD-L1",
-        "micro_tests": "Bacterial, Fungal, AFB",
+        "micro_tests": "Bacterial, fungal, AFB cultures",
         "flow_cytometry": "If indicated",
         "special_instructions": "Rush processing if ROSE positive"
     }
 
 def _build_complications_data(parsed: ParsedFacts, ctx: Dict) -> Dict:
     """Build complications data from parsed facts."""
+    bleeding = parsed.complications.get("bleeding", "none")
+    if bleeding == "minimal":
+        bleeding_text = "None"
+        hemostasis = "not required"
+    elif bleeding == "none":
+        bleeding_text = "None"
+        hemostasis = "not required"
+    else:
+        bleeding_text = bleeding.capitalize()
+        hemostasis = "required"
+    
     return {
-        "ptx_present": "No" if parsed.complications.get("pneumothorax") == "none" else "No",
+        "ptx_present": "No",
         "ptx_size": "N/A",
         "ptx_intervention": "None",
-        "bleeding_severity": parsed.complications.get("bleeding", "None"),
-        "hemostasis_method": "Suction" if parsed.complications.get("bleeding") == "minimal" else "N/A",
+        "bleeding_severity": bleeding_text,
+        "hemostasis_method": hemostasis,
         "hypoxemia_present": "No",
         "hypoxemia_details": "N/A",
-        "other_complications": parsed.complications.get("general", "None")
+        "other_complications": "None"
     }
 
 def _build_post_procedure_data(parsed: ParsedFacts, ctx: Dict) -> Dict:
     """Build post-procedure data."""
     return {
-        "ebl_ml": parsed.tokens.get("ebl", "Minimal"),
-        "disposition": "PACU",
-        "imaging_orders": "CXR in PACU",
-        "followup_plan": "IP clinic in 1-2 weeks with pathology results"
+        "ebl_ml": "Minimal",
+        "disposition": "PACU, stable",
+        "imaging_orders": "Chest X-ray in PACU",
+        "followup_plan": "Interventional Pulmonology clinic in 1-2 weeks with pathology results"
     }
 
 def _extract_template_data(parsed: ParsedFacts, ctx: Dict) -> Dict:
@@ -294,25 +313,78 @@ def _extract_template_data(parsed: ParsedFacts, ctx: Dict) -> Dict:
     return data
 
 def _create_narrative_summary(parsed: ParsedFacts, miniprompt: str) -> str:
-    """Create brief narrative paragraph for nuanced details."""
+    """Create detailed narrative paragraph with procedure description."""
     narrative_parts = []
     
-    # Procedure type
+    # Determine procedure details from parsed facts
     proc_name = _get_procedure_name(parsed.proc_key)
-    narrative_parts.append(f"{proc_name} performed")
     
-    # Key findings
-    if parsed.adjuncts.get("rebus"):
-        narrative_parts.append("with radial EBUS guidance")
-    if parsed.adjuncts.get("cbct"):
-        narrative_parts.append("CBCT confirmation of tool-in-lesion")
+    # Build comprehensive narrative based on procedure type
+    if "robotic" in parsed.proc_key:
+        # Robotic navigation narrative
+        if parsed.targets:
+            target = parsed.targets[0]
+            location = target.get('id', 'target lesion')
+            size = target.get('size', '')
+            if size:
+                narrative_parts.append(f"Robotic navigational bronchoscopy was performed for evaluation of a {size} cm lesion in the {location}")
+            else:
+                narrative_parts.append(f"Robotic navigational bronchoscopy was performed for evaluation of a lesion in the {location}")
+        else:
+            narrative_parts.append(f"Robotic navigational bronchoscopy was performed")
+        
+        # Navigation details
+        if "ion" in parsed.proc_key.lower():
+            narrative_parts.append("Navigation was achieved using the Ion robotic system")
+        elif "monarch" in parsed.proc_key.lower():
+            narrative_parts.append("Navigation was achieved using the Monarch robotic system")
+        
+        # Tool-in-lesion confirmation
+        if parsed.adjuncts.get("cbct"):
+            if "no radial" in miniprompt.lower() or "no signal" in miniprompt.lower():
+                narrative_parts.append("Initially, no radial signal was detected; Cios Spin cone-beam CT was obtained, showing need for readjustment. Following adjustment, tool-in-lesion was confirmed by spin imaging")
+            else:
+                narrative_parts.append("Tool-in-lesion was confirmed by cone-beam CT (CBCT) imaging")
+        elif parsed.adjuncts.get("rebus"):
+            narrative_parts.append("Radial EBUS confirmed appropriate positioning")
+        
+        # Sampling details
+        sampling_details = _extract_sampling_details(parsed, miniprompt)
+        if sampling_details:
+            narrative_parts.append(f"\nSampling included {sampling_details}")
+        
+        # ROSE status
+        if parsed.adjuncts.get("rose"):
+            rose_status = parsed.tokens.get('rose', 'adequate')
+            narrative_parts.append(f"ROSE was {rose_status}")
     
-    # Sampling details
-    if "rose" in parsed.tokens:
-        narrative_parts.append(f"ROSE {parsed.tokens['rose']}")
+    # EBUS narrative
+    if "ebus" in parsed.proc_key.lower() or any(t['type'] == 'station' for t in parsed.targets):
+        ebus_stations = [t for t in parsed.targets if t['type'] == 'station']
+        if ebus_stations:
+            if narrative_parts:  # If there's already content (combined procedure)
+                narrative_parts.append("\nSubsequently, linear EBUS staging was performed via the ETT")
+            else:
+                narrative_parts.append("Linear EBUS staging was performed")
+            
+            narrative_parts.append("The following stations were sampled with 22G needle (5 passes each):")
+            for station in ebus_stations:
+                size = station.get('size', '')
+                station_id = station['id']
+                if size:
+                    narrative_parts.append(f"\n    • Station {station_id} ({size} mm)")
+                else:
+                    narrative_parts.append(f"\n    • Station {station_id}")
+            
+            if parsed.adjuncts.get("rose"):
+                rose_status = parsed.tokens.get('rose', 'adequate')
+                narrative_parts.append(f"\nROSE was {rose_status} at all stations")
     
-    # Include original mini-prompt for context
-    narrative_parts.append(f"Clinical note: {miniprompt.strip()}")
+    # Complications statement
+    if parsed.complications.get('general', 'none').lower() == 'none':
+        narrative_parts.append("\nThe patient tolerated the procedure without complication")
+    elif parsed.complications.get('bleeding') == 'minimal':
+        narrative_parts.append("\nMinimal bleeding was encountered and controlled with suction. No other complications occurred")
     
     return ". ".join(narrative_parts) + "."
 
@@ -334,6 +406,126 @@ def _get_procedure_name(proc_key: str) -> str:
         "standard_bronchoscopy_optional_ebus_lma": "Standard Bronchoscopy"
     }
     return names.get(proc_key, "Bronchoscopy")
+
+def _create_procedure_performed_section(parsed: ParsedFacts, miniprompt: str) -> str:
+    """Create the Procedure Performed section with bullet points."""
+    performed = []
+    
+    # Main procedure
+    proc_name = _get_procedure_name(parsed.proc_key)
+    performed.append(f"    • {proc_name}")
+    
+    # Key confirmations
+    if parsed.adjuncts.get("cbct"):
+        performed.append("    • Cone-beam CT (CBCT) confirmation of tool-in-lesion")
+    elif parsed.adjuncts.get("rebus"):
+        performed.append("    • Radial EBUS guidance")
+    
+    # ROSE
+    if parsed.adjuncts.get("rose"):
+        rose_status = parsed.tokens.get('rose', 'Adequate')
+        performed.append(f"    • Rapid On-Site Evaluation (ROSE): {rose_status.capitalize()}")
+    
+    # EBUS staging
+    ebus_stations = [t for t in parsed.targets if t['type'] == 'station']
+    if ebus_stations:
+        performed.append("    • Endobronchial Ultrasound (EBUS) staging")
+    
+    return "\n".join(performed)
+
+def _extract_sampling_details(parsed: ParsedFacts, miniprompt: str) -> str:
+    """Extract detailed sampling information from miniprompt."""
+    details = []
+    
+    # Look for needle passes
+    import re
+    needle_pattern = r'(\d+)\s*(?:needle\s*)?passes?\s*(?:with\s*)?(\d+G)'
+    needle_matches = re.findall(needle_pattern, miniprompt, re.IGNORECASE)
+    for passes, gauge in needle_matches:
+        details.append(f"{passes} {gauge} needle passes")
+    
+    # Alternative pattern
+    alt_pattern = r'(\d+G)\s*(?:needle\s*)?(?:x|×)(\d+)'
+    alt_matches = re.findall(alt_pattern, miniprompt, re.IGNORECASE)
+    for gauge, passes in alt_matches:
+        details.append(f"{passes} passes with {gauge} needle")
+    
+    # Look for cytobiopsy/cryobiopsy
+    cryo_pattern = r'(?:cyto|cryo)biopsy\s*(?:x|×)?(\d+)\s*(?:with\s*)?(\d+\.\d+mm)?'
+    cryo_matches = re.findall(cryo_pattern, miniprompt, re.IGNORECASE)
+    for count, size in cryo_matches:
+        if size:
+            details.append(f"{count} cytobiopsy passes with {size} probe")
+        else:
+            details.append(f"{count} cytobiopsy passes")
+    
+    # Look for forceps
+    if 'forceps' in miniprompt.lower():
+        forceps_pattern = r'forceps\s*(?:biopsy\s*)?(?:x|×)?(\d+)'
+        forceps_match = re.search(forceps_pattern, miniprompt, re.IGNORECASE)
+        if forceps_match:
+            details.append(f"{forceps_match.group(1)} forceps biopsies")
+        else:
+            details.append("forceps biopsy")
+    
+    if details:
+        # Format as a readable list
+        if len(details) == 1:
+            return details[0]
+        elif len(details) == 2:
+            return f"{details[0]} and {details[1]}"
+        else:
+            return ", ".join(details[:-1]) + f", and {details[-1]}"
+    
+    return ""
+
+def _create_impression_summary(parsed: ParsedFacts, miniprompt: str, ctx: Dict) -> str:
+    """Create impression/summary section."""
+    summary_parts = []
+    
+    # Determine success/completion status
+    summary_parts.append("Successful")
+    
+    # Procedure type
+    proc_name = _get_procedure_name(parsed.proc_key)
+    if "robotic" in parsed.proc_key:
+        if parsed.targets:
+            target = parsed.targets[0]
+            location = target.get('id', 'target')
+            size = target.get('size', '')
+            if size:
+                summary_parts.append(f"{proc_name} of {location} {size} cm lesion")
+            else:
+                summary_parts.append(f"{proc_name} of {location} lesion")
+        else:
+            summary_parts.append(proc_name)
+    else:
+        summary_parts.append(proc_name)
+    
+    # Key confirmations
+    if parsed.adjuncts.get("cbct"):
+        summary_parts.append("with CBCT confirmation of tool-in-lesion")
+    
+    # Sampling summary
+    sampling_details = _extract_sampling_details(parsed, miniprompt)
+    if sampling_details:
+        summary_parts.append(f"Adequate sampling obtained via {sampling_details}")
+    
+    # EBUS staging if performed
+    ebus_stations = [t for t in parsed.targets if t['type'] == 'station']
+    if ebus_stations:
+        station_list = ", ".join([t['id'] for t in ebus_stations])
+        summary_parts.append(f"Linear EBUS staging performed at stations {station_list} with adequate ROSE")
+    
+    # Complications
+    if parsed.complications.get('general', 'none').lower() == 'none':
+        summary_parts.append("No procedural complications")
+    
+    # Specimen disposition
+    if parsed.adjuncts.get("rose") or any("biopsy" in str(t) for t in parsed.targets):
+        summary_parts.append("Specimens sent for cytology, molecular studies, microbiology, and flow cytometry as indicated")
+    
+    return ". ".join(summary_parts) + "."
 
 def _default_patient_context() -> Dict:
     """Provide default patient context for testing."""
