@@ -52,3 +52,6 @@ ragas>=0.1.21
 scispacy>=0.5.2
 # Optional: install biomedical NER model in setup step (see CI)
 # en_ner_bc5cdr_md==0.5.1
+
+#testing
+pytest 
