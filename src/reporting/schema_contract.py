@@ -14,7 +14,7 @@ class PatientInfo(BaseModel):
 
 class ProcedureContext(BaseModel):
     """Procedure context and setting."""
-    date: str = Field(pattern=r'^\d{4}-\d{2}-\d{2}$')
+    date: Optional[str] = Field(default=None, pattern=r'^\d{4}-\d{2}-\d{2}$')
     location: str
     elective_vs_emergency: Literal["elective", "emergency"]
     asa: Optional[Literal["I", "II", "III", "IV", "V"]] = None

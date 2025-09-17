@@ -34,7 +34,10 @@ DTS_RE = re.compile(r"\b(digital\s*tomosynthesis|dts)\b", re.I)
 GAUGE_RE = re.compile(r"\b(19|21|22|23|25)\s*G\b", re.I)
 PASSES_RE = re.compile(r"(\d+)\s*(?:needle\s*)?passes\b", re.I)
 CRYO_PASSES_RE = re.compile(r"cryo(?:biopsy)?\s*[x×]\s*(\d+)", re.I)
-FREEZE_RE = re.compile(r"(?:freeze|freezes?)\s*(\d+)\s*(?:s|sec)", re.I)
+FREEZE_PATTERNS = (
+    re.compile(r"(?:freeze|freezes?)\s*(\d+)\s*(?:s|sec|secs|second|seconds)", re.I),
+    re.compile(r"(\d+)\s*(?:s|sec|secs|second|seconds)\s*(?:freeze|freezes?)", re.I),
+)
 PROBE_SIZE_RE = re.compile(r"(\d+\.?\d*)\s*mm\s*(?:cryo)?probe", re.I)
 
 # Anatomical patterns
@@ -125,8 +128,11 @@ def _extract_tokens(text: str) -> Dict[str, str]:
     # Cryobiopsy
     if m := CRYO_PASSES_RE.search(text):
         tokens["cryo_passes"] = m.group(1)
-    if m := FREEZE_RE.search(text):
-        tokens["cryo_freeze_s"] = m.group(1)
+    for pattern in FREEZE_PATTERNS:
+        m = pattern.search(text)
+        if m:
+            tokens["cryo_freeze_s"] = m.group(1)
+            break
     if m := PROBE_SIZE_RE.search(text):
         tokens["cryo_probe_mm"] = m.group(1)
     
@@ -179,22 +185,23 @@ def _extract_adjuncts(text: str) -> Dict[str, bool]:
 def _extract_complications(text: str) -> Dict[str, str]:
     """Extract complications from text."""
     complications = {}
+    lower_text = text.lower()
     
     # Bleeding
     if m := BLEEDING_RE.search(text):
-        complications["bleeding"] = m.group(1)
-    elif "no bleeding" in text.lower() or "minimal bleeding" in text.lower():
+        complications["bleeding"] = m.group(1).lower()
+    elif "no bleeding" in lower_text or "minimal bleeding" in lower_text:
         complications["bleeding"] = "minimal"
     
     # Pneumothorax
     if PTX_RE.search(text):
-        if "no ptx" in text.lower() or "no pneumothorax" in text.lower():
+        if "no ptx" in lower_text or "no pneumothorax" in lower_text:
             complications["pneumothorax"] = "none"
         else:
             complications["pneumothorax"] = "present"
     
     # General complications
-    if "no complications" in text.lower():
+    if "no complications" in lower_text:
         complications["general"] = "none"
     
     return complications

@@ -14,7 +14,8 @@ import sys
 sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
 
 from llm.gpt5_medical import GPT5Medical
-from safety.contraindication_tool import contraindication_tool_schema, to_jsonable
+from safety.contraindication_tool import contraindication_tool_schema
+from utils.serialization import to_jsonable
 
 
 class TestGPT5Medical(unittest.TestCase):

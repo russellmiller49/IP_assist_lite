@@ -58,6 +58,7 @@ fix_*.py
 temp_*
 tmp_*
 scratch*
+!tests/test_*.py
 
 # Streamlit/FastAPI apps (using Gradio instead)
 streamlit_*.py

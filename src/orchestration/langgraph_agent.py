@@ -5,6 +5,7 @@ Implements intelligent query routing, safety checks, and hierarchy-aware retriev
 """
 from __future__ import annotations
 
+import logging
 import sys
 import json
 import re
@@ -20,6 +21,10 @@ from langgraph.graph import StateGraph, START, END
 
 from retrieval.hybrid_retriever import HybridRetriever, RetrievalResult
 from llm.gpt5_medical import GPT5Medical
+from adapters.openai_responses import generate_grounded, rerank
+
+
+logger = logging.getLogger(__name__)
 
 
 # State definition (LangGraph 1.0 canonical)
@@ -198,17 +203,16 @@ class IPAssistOrchestrator:
             filters = {"has_contraindication": True}
             top_k = 8
         
-        # Perform retrieval
         results = self.retriever.retrieve(
             query=query,
             top_k=top_k,
             use_reranker=True,
-            filters=filters if query_type in ["emergency", "coding", "safety"] else None
+            filters=filters if query_type in ["emergency", "coding", "safety"] else None,
         )
-        
+
         # Store in canonical 'retrieved' field
         state["retrieved"] = [r.__dict__ for r in results] if results else []
-        
+
         # Add retrieval message (canonical format)
         if results:
             state["messages"].append(
@@ -241,9 +245,8 @@ class IPAssistOrchestrator:
         if state["is_emergency"]:
             response_parts.append("🚨 **EMERGENCY DETECTED** - Immediate action required\n")
         
-        # Collect context from top results
         context_parts = []
-        for i, result in enumerate(results[:3], 1):
+        for i, result in enumerate(results[:8], 1):
             # Build citation
             citation = {
                 "doc_id": result.doc_id,
@@ -262,45 +265,24 @@ class IPAssistOrchestrator:
                 "A3": "BACADA 2012"
             }.get(result.authority_tier, result.doc_id[:30])
             
-            context_parts.append(f"[{source_label}]: {result.text}")
+            context_parts.append(f"[{source_label}] {result.text}")
         
         # Use LLM to synthesize response
         if context_parts:
-            context = "\n\n".join(context_parts)
-            prompt = f"""Based on the following authoritative medical sources, provide a comprehensive answer to: {state['query']}
-
-Sources:
-{context}
-
-Please synthesize this information into a clear, professional response. Prioritize information from higher authority sources (A1 > A2 > A3 > A4). Include specific details like doses, contraindications, and techniques when mentioned."""
-            
             try:
-                # Send a clean, minimal context (avoid noisy assistant history)
-                synth_messages = [
-                    {"role": "system", "content": (
-                        "You are an expert interventional pulmonology assistant. "
-                        "Synthesize a clinically useful answer using only the retrieved Sources. "
-                        "Cite sources inline as [A1], [A2], [A3] where relevant. "
-                        "Be concise but complete; include key complications/contraindications/doses when applicable."
-                    )}
-                ]
-                llm_response = self.llm.generate_response(prompt, synth_messages)
-                response_parts.append(llm_response)
-                # Capture LLM telemetry
-                state["llm_model_used"] = getattr(self.llm, "last_used_model", self.current_model)
-                banner = getattr(self.llm, "last_warning_banner", None)
-                if banner:
-                    state["llm_warning_banner"] = banner
-            except Exception as e:
-                # Fallback: Show the raw context if LLM fails
+                rerank_indices = rerank(state["query"], context_parts)
+                ordered_context = [context_parts[idx] for idx in rerank_indices if idx < len(context_parts)]
+                if not ordered_context:
+                    ordered_context = context_parts
+                draft = generate_grounded(state["query"], ordered_context)
+                response_parts.append(draft)
+                state["llm_model_used"] = getattr(self.llm, "last_used_model", None) or self.current_model
+            except Exception as exc:
+                logger.warning("grounded generation failed: %s", exc)
                 response_parts.append("**Retrieved Information:**\n")
                 for i, part in enumerate(context_parts[:3], 1):
                     response_parts.append(f"\n{i}. {part[:500]}...")
-                # Surface error details for UI/metadata
-                state["llm_error"] = str(e)
-                banner = getattr(self.llm, "last_warning_banner", None)
-                if banner:
-                    state["llm_warning_banner"] = banner
+                state["llm_error"] = str(exc)
         else:
             response_parts.append("No relevant information found for your query.")
         

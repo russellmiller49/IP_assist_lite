@@ -27,8 +27,8 @@ load_dotenv()
 # Configuration from environment
 USE_RESPONSES_API = os.getenv("USE_RESPONSES_API", "1").strip() not in {"0","false","False"}
 REASONING_EFFORT = os.getenv("REASONING_EFFORT", "").strip() or None  # e.g., "medium"
-# Allowed GPT‑5 model family
-ALLOWED_GPT5_MODELS = {"gpt-5", "gpt-5-mini", "gpt-5-nano"}
+# Allowed GPT‑5 model family (including new GPT-5-Codex)
+ALLOWED_GPT5_MODELS = {"gpt-5", "gpt-5-mini", "gpt-5-nano", "gpt-5-codex"}
 ENABLE_GPT4_FALLBACK = os.getenv("ENABLE_GPT4_FALLBACK", "true").strip().lower() == "true"
 FALLBACK_MODEL = os.getenv("FALLBACK_MODEL", "gpt-4o-mini").strip() or "gpt-4o-mini"
 
@@ -146,7 +146,8 @@ class GPT5Medical:
                  model: Optional[str] = None,
                  use_responses: Optional[bool] = None,
                  max_out: int = 4000,  # Increased to 4000 for comprehensive responses
-                 reasoning_effort: Optional[str] = None):  # "low"|"medium"|"high"
+                 reasoning_effort: Optional[str] = None,  # "low"|"medium"|"high"
+                 codex_mode: bool = False):  # Enable Codex-specific features
         self.client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
         # Normalize to GPT‑5 family if an alias like "gpt-5-turbo" is provided
         raw_model = (model or os.getenv("IP_GPT5_MODEL") or os.getenv("GPT5_MODEL") or "gpt-5-mini").strip()
@@ -154,13 +155,14 @@ class GPT5Medical:
         self.use_responses = use_responses if use_responses is not None else USE_RESPONSES_API
         self.max_out = max_out
         self.reasoning_effort = reasoning_effort or REASONING_EFFORT
+        self.codex_mode = codex_mode
         # Trace fields for UI/telemetry
         self.last_used_model: Optional[str] = None
         self.last_warning_banner: Optional[str] = None
 
     def _coerce_gpt5_model(self, name: str) -> str:
         """Map arbitrary names into the supported GPT‑5 family.
-        - Exact matches allowed: gpt-5, gpt-5-mini, gpt-5-nano
+        - Exact matches allowed: gpt-5, gpt-5-mini, gpt-5-nano, gpt-5-codex
         - Unknown gpt‑5 variants (e.g., gpt-5-turbo) → gpt-5
         - Non gpt‑5 names left as-is (fallback logic will handle access errors)
         """
@@ -255,6 +257,7 @@ class GPT5Medical:
                         }
                         if self.model and (self.model.startswith("gpt-5") or self.model in ALLOWED_GPT5_MODELS):
                             chat_kwargs["max_completion_tokens"] = self.max_out
+                            chat_kwargs["max_tokens"] = self.max_out
                         else:
                             chat_kwargs["max_tokens"] = self.max_out
                         if tools:
@@ -309,6 +312,7 @@ class GPT5Medical:
                 # Use correct token cap per model family
                 if self.model and (self.model.startswith("gpt-5") or self.model in ALLOWED_GPT5_MODELS):
                     kwargs["max_completion_tokens"] = self.max_out
+                    kwargs["max_tokens"] = self.max_out
                 else:
                     kwargs["max_tokens"] = self.max_out
                 if not is_o1_model:

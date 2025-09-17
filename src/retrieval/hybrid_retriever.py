@@ -8,10 +8,12 @@ Hybrid retrieval system combining:
 """
 
 import json
+import os
 import re
 import numpy as np
 from pathlib import Path
 from typing import List, Dict, Any, Tuple, Optional
+import warnings
 from datetime import datetime
 from dataclasses import dataclass
 from collections import defaultdict
@@ -144,13 +146,43 @@ class HybridRetriever:
         
         # Initialize encoders
         print(f"Loading query encoder: {query_encoder_model}")
-        self.query_encoder = SentenceTransformer(query_encoder_model)
+        self.query_encoder = self._load_query_encoder(query_encoder_model)
         
         print(f"Loading reranker: {reranker_model}")
-        self.reranker = CrossEncoder(reranker_model)
+        self.reranker = self._load_reranker(reranker_model)
         
         print("Hybrid retriever initialized")
-    
+
+    def _load_query_encoder(self, model_name: str):
+        try:
+            if os.getenv("IP_ASSIST_OFFLINE", "0").lower() in {"1", "true", "yes"}:
+                raise RuntimeError("Offline mode enabled")
+            return SentenceTransformer(model_name)
+        except Exception as exc:
+            warnings.warn(
+                f"Falling back to lightweight query encoder due to error loading '{model_name}': {exc}"
+            )
+            class _ZeroEncoder:
+                def encode(self, text, convert_to_numpy=True):
+                    if isinstance(text, list):
+                        return np.zeros((len(text), 768))
+                    return np.zeros(768)
+            return _ZeroEncoder()
+
+    def _load_reranker(self, model_name: str):
+        try:
+            if os.getenv("IP_ASSIST_OFFLINE", "0").lower() in {"1", "true", "yes"}:
+                raise RuntimeError("Offline mode enabled")
+            return CrossEncoder(model_name)
+        except Exception as exc:
+            warnings.warn(
+                f"Falling back to dummy reranker due to error loading '{model_name}': {exc}"
+            )
+            class _IdentityReranker:
+                def predict(self, pairs):
+                    return [0.0] * len(pairs)
+            return _IdentityReranker()
+
     def _load_term_index(self, index_file: str) -> Dict[str, List[str]]:
         """Load term index from JSONL file."""
         index = defaultdict(list)

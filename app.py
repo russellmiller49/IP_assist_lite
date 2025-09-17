@@ -26,6 +26,18 @@ sys.path.insert(0, str(project_root))
 from src.retrieval.hybrid_retriever import HybridRetriever
 from src.llm.gpt5_medical import GPT5Medical
 from src.orchestrator.enhanced_orchestrator import EnhancedOrchestrator
+from src.adapters.openai_responses import generate_grounded
+from src.ui.board_study import (
+    BOARD_CATEGORIES,
+    BOARD_QUESTIONS,
+    BoardQuestion,
+    evaluate_answer,
+    generate_detailed_rationale,
+    initialise_state,
+    prepare_next_question,
+    question_to_markdown,
+    stats_summary,
+)
 
 # Import V3 coding module
 try:
@@ -75,7 +87,7 @@ def get_orchestrator() -> EnhancedOrchestrator:
         
         # Initialize LLM client
         llm_client = GPT5Medical(
-            model=os.getenv("IP_GPT5_MODEL", "gpt-4o-mini")
+            model=os.getenv("IP_GPT5_MODEL", "gpt-5-mini")
         )
         
         _orchestrator = EnhancedOrchestrator(retriever, llm_client)
@@ -252,6 +264,64 @@ def clear_conversation():
     # Return empty query, empty response, new session, and status
     return "", "", session_id, "Conversation cleared. Starting new session."
 
+
+BOARD_CATEGORY_CHOICES = ["All Topics"] + BOARD_CATEGORIES
+
+
+def board_next_question_handler(category: str, state: Optional[Dict[str, Any]] = None):
+    state = initialise_state(state)
+    question, message, state = prepare_next_question(category, state)
+    if message or not question:
+        return (
+            message or "No question available.",
+            gr.update(choices=[], value=None, interactive=False),
+            "",
+            stats_summary(state),
+            state,
+        )
+
+    choices = [f"{letter}. {text}" for letter, text in question.options.items()]
+    return (
+        question_to_markdown(question),
+        gr.update(choices=choices, value=None, interactive=bool(choices)),
+        "",
+        stats_summary(state),
+        state,
+    )
+
+
+def board_generate_rationale(question: BoardQuestion, selected_letter: str) -> str:
+    try:
+        orchestrator = get_orchestrator()
+        retriever = getattr(orchestrator, "retriever", None)
+        if retriever is None:
+            return ""
+        return generate_detailed_rationale(
+            question,
+            selected_letter,
+            retriever,
+            generate_grounded,
+            top_k=8,
+            temperature=0.2,
+            max_output_tokens=900,
+        )
+    except Exception as exc:
+        logger.warning("Board rationale generation failed: %s", exc)
+        return ""
+
+
+def board_check_answer_handler(selection: Optional[str], state: Optional[Dict[str, Any]] = None):
+    state = initialise_state(state)
+    question, feedback, state, selected_letter = evaluate_answer(selection, state)
+    if not question or not selected_letter:
+        return feedback, stats_summary(state), state
+
+    rationale = board_generate_rationale(question, selected_letter)
+    if rationale:
+        feedback = f"{feedback}\n\n---\n{rationale}" if feedback else rationale
+
+    return feedback, stats_summary(state), state
+
 def create_interface():
     """Create the enhanced Gradio interface."""
     
@@ -363,7 +433,46 @@ def create_interface():
                     inputs=[response_output],
                     outputs=[conversation_state]
                 )
-            
+
+            with gr.Tab("🎓 Board Study"):
+                initial_board_state = initialise_state({})
+                board_state = gr.State({"stats": initial_board_state["stats"].copy(), "current": None})
+                if not BOARD_QUESTIONS:
+                    gr.Markdown(
+                        "⚠️ Board study bank not found. Add `data/knowledge_base/complete board review data set.txt` "
+                        "and run `make kb-all` to enable this module."
+                    )
+                else:
+                    gr.Markdown(
+                        f"📚 Board-style questions loaded: **{len(BOARD_QUESTIONS)}**. Choose a topic and start quizzing."
+                    )
+                    with gr.Row():
+                        board_topic = gr.Dropdown(
+                            choices=BOARD_CATEGORY_CHOICES,
+                            value="All Topics",
+                            label="Topic",
+                            info="Filter by board review section",
+                        )
+                        board_next_btn = gr.Button("🎯 Next Question", variant="primary")
+                        board_check_btn = gr.Button("✅ Check Answer", variant="secondary")
+
+                    board_stats = gr.Markdown(value=stats_summary(initial_board_state))
+                    board_question = gr.Markdown(value="Click **Next Question** to start.")
+                    board_options = gr.Radio(label="Select your answer", choices=[], interactive=False)
+                    board_feedback = gr.Markdown(value="")
+
+                    board_next_btn.click(
+                        fn=board_next_question_handler,
+                        inputs=[board_topic, board_state],
+                        outputs=[board_question, board_options, board_feedback, board_stats, board_state],
+                    )
+
+                    board_check_btn.click(
+                        fn=board_check_answer_handler,
+                        inputs=[board_options, board_state],
+                        outputs=[board_feedback, board_stats, board_state],
+                    )
+
             # V3 Procedural Coding Tab
             build_coding_tab()
             

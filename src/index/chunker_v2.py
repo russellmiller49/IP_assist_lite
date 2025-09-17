@@ -232,24 +232,37 @@ def chunk_document(doc: Dict, policy_base: ChunkPolicy,
         return []
 
     # Handle table rows specially
-    if sec_type == "table_row":
-        rows = [ln for ln in text.splitlines() if ln.strip()]
-        rows = coalesce_table_rows(rows, policy, tlen)
+    table_mode = sec_type == "table_row"
+    if table_mode:
+        original_rows = [ln for ln in text.splitlines() if ln.strip()]
+        rows = coalesce_table_rows(original_rows, policy, tlen)
         text = "\n".join(rows)
-
-    # Split into sentences
-    splitter = make_sentence_splitter()
-    sentences, pos = [], 0
-    for sent in splitter(text):
-        start = text.find(sent, pos)
-        if start == -1:
+        sentences = []
+        pos = 0
+        for row in rows:
             start = pos
-        end = start + len(sent)
-        sentences.append((sent, start, end))
-        pos = end
-
-    # Pack sentences into chunks
-    chunks = pack_sentences(sentences, policy, tlen)
+            end = start + len(row)
+            sentences.append((row, start, end))
+            pos = end + 1
+        chunks = []
+        for idx, (row_text, start, end) in enumerate(sentences):
+            tok_count = tlen(row_text)
+            issues = []
+            if tok_count < policy.min_tokens:
+                issues.append("very_short")
+            chunks.append(Chunk(text=row_text, start=start, end=end,
+                                token_count=tok_count, index=idx, issues=issues))
+    else:
+        splitter = make_sentence_splitter()
+        sentences, pos = [], 0
+        for sent in splitter(text):
+            start = text.find(sent, pos)
+            if start == -1:
+                start = pos
+            end = start + len(sent)
+            sentences.append((sent, start, end))
+            pos = end
+        chunks = pack_sentences(sentences, policy, tlen)
 
     # Deduplicate
     seen = set()

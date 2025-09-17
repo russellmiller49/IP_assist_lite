@@ -1,0 +1,7 @@
+generation_model: gpt-5
+extraction_model: gpt-5-mini
+rerank_model: gpt-5-mini
+embed_model: text-embedding-3-large
+responses_defaults:
+  temperature: 0.1
+  max_output_tokens: 1800

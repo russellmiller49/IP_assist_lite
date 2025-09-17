@@ -1,5 +1,6 @@
 # IP Assist Lite - Makefile for pipeline execution
-.PHONY: help setup prep chunk embed index retrieve api ui test clean all
+.PHONY: help setup prep chunk embed index retrieve api ui test clean all \
+	kb-setup kb-extract kb-generate kb-validate kb-chunks kb-embed kb-all
 
 # Variables
 PYTHON := python
@@ -22,6 +23,7 @@ help:
 	@echo "  test      - Run tests"
 	@echo "  clean     - Remove generated files"
 	@echo "  all       - Run complete pipeline (prep -> chunk -> embed -> index)"
+	@echo "  kb-all    - Run structured knowledge base pipeline"
 	@echo ""
 	@echo "Docker targets:"
 	@echo "  docker-up   - Start Qdrant container"
@@ -130,6 +132,34 @@ dev-chunk:
 		--out_jsonl $(DATA_DIR)/chunks/dev_chunks.jsonl \
 		--policy configs/chunking.yaml
 	$(PYTHON) -m src.index.chunk_quality_gate $(DATA_DIR)/chunks/dev_chunks.qa.csv
+
+# Structured knowledge base pipeline
+kb-setup:
+	@echo "Scanning knowledge base sources..."
+	$(PYTHON) -m src.prep.kb_setup
+
+kb-extract:
+	@echo "Running OpenAI-powered structured extraction..."
+	$(PYTHON) -m src.prep.kb_extract
+
+kb-generate:
+	@echo "Building disease markdown files..."
+	$(PYTHON) -m src.prep.kb_generate
+
+kb-validate:
+	@echo "Validating structured knowledge output..."
+	$(PYTHON) -m src.prep.kb_validate
+
+kb-chunks:
+	@echo "Inspecting chunk counts for structured knowledge base..."
+	$(PYTHON) -m src.index.build_chunks
+
+kb-embed:
+	@echo "Creating embedding dump for structured knowledge base..."
+	$(PYTHON) -m src.index.embed_index
+
+kb-all: kb-setup kb-extract kb-generate kb-validate kb-embed
+	@echo "Structured knowledge base pipeline completed."
 
 # Statistics
 stats:
