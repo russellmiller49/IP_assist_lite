@@ -1,0 +1,44 @@
+# Core dependencies
+gradio>=4.0.0
+openai>=1.0.0
+python-dotenv>=1.0.0
+
+# Vector database and embeddings
+qdrant-client>=1.7.0
+sentence-transformers>=2.2.0
+numpy>=1.24.0
+
+# HTTP clients
+httpx>=0.24.0
+aiohttp>=3.8.0
+requests>=2.31.0
+
+# Data processing
+pandas>=2.0.0
+pydantic>=2.0.0
+pyyaml>=6.0
+
+# Template rendering
+jinja2>=3.1.0
+
+# Retry logic
+tenacity>=8.2.0
+
+# Testing
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+pytest-cov>=4.1.0
+
+# Development tools
+black>=23.0.0
+flake8>=6.0.0
+mypy>=1.5.0
+isort>=5.12.0
+
+# Optional: GPU acceleration
+# torch>=2.0.0
+# torchvision>=0.15.0
+
+# Optional: Additional ML libraries
+# scikit-learn>=1.3.0
+# transformers>=4.30.0
