@@ -148,7 +148,12 @@ class GPT5Medical:
                  max_out: int = 4000,  # Increased to 4000 for comprehensive responses
                  reasoning_effort: Optional[str] = None,  # "low"|"medium"|"high"
                  codex_mode: bool = False):  # Enable Codex-specific features
-        self.client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+        # Initialize client only if API key is available
+        api_key = os.getenv("OPENAI_API_KEY")
+        if api_key:
+            self.client = OpenAI(api_key=api_key)
+        else:
+            self.client = None
         # Normalize to GPT‑5 family if an alias like "gpt-5-turbo" is provided
         raw_model = (model or os.getenv("IP_GPT5_MODEL") or os.getenv("GPT5_MODEL") or "gpt-5-mini").strip()
         self.model = self._coerce_gpt5_model(raw_model)
@@ -159,6 +164,11 @@ class GPT5Medical:
         # Trace fields for UI/telemetry
         self.last_used_model: Optional[str] = None
         self.last_warning_banner: Optional[str] = None
+
+    def _ensure_client(self) -> None:
+        """Ensure OpenAI client is available, raise error if not."""
+        if not self.client:
+            raise RuntimeError("OpenAI API key not set. Set OPENAI_API_KEY environment variable.")
 
     def _coerce_gpt5_model(self, name: str) -> str:
         """Map arbitrary names into the supported GPT‑5 family.
@@ -232,6 +242,7 @@ class GPT5Medical:
                     for i, msg in enumerate(kwargs.get('input', [])[:2]):  # Log first 2 messages
                         logger.debug(f"  Message {i}: role={msg.get('role')}, content_length={len(msg.get('content', ''))}")
                 
+                self._ensure_client()
                 resp = self.client.responses.create(**kwargs)
                 logger.debug(f"Response type: {type(resp)}")
                 
@@ -267,6 +278,7 @@ class GPT5Medical:
                             chat_kwargs["temperature"] = temperature
 
                         logger.info(f"🔄 Trying Chat Completions with model: {self.model}")
+                        self._ensure_client()
                         chat_resp = self.client.chat.completions.create(**chat_kwargs)
                         msg = chat_resp.choices[0].message if chat_resp.choices else None
                         text = msg.content if msg else ""
@@ -330,6 +342,7 @@ class GPT5Medical:
                             filtered_messages.append(msg)
                     kwargs["messages"] = filtered_messages
 
+                self._ensure_client()
                 resp = self.client.chat.completions.create(**kwargs)
                 msg = resp.choices[0].message if resp.choices else None
                 text = msg.content if msg else ""
@@ -365,6 +378,7 @@ class GPT5Medical:
                         fallback_kwargs["tools"] = tools
                         fallback_kwargs["tool_choice"] = tool_choice or "auto"
                         
+                    self._ensure_client()
                     fallback_resp = self.client.chat.completions.create(**fallback_kwargs)
                     msg = fallback_resp.choices[0].message if fallback_resp.choices else None
                     text = msg.content if msg else ""
@@ -420,6 +434,7 @@ class GPT5Medical:
                             kwargs["tools"] = tools
                             kwargs["tool_choice"] = tool_choice or "auto"
                         kwargs["temperature"] = 0.2 if temperature is None else temperature
+                        self._ensure_client()
                         resp = self.client.responses.create(**kwargs)
                         text = self._extract_text(resp)
                         tool_calls = _extract_tool_calls_from_responses(resp)
@@ -450,6 +465,7 @@ class GPT5Medical:
                                 kwargs["tool_choice"] = tool_choice or "auto"
                             if temperature is not None:
                                 kwargs["temperature"] = temperature
+                        self._ensure_client()
                         resp = self.client.chat.completions.create(**kwargs)
                         msg = resp.choices[0].message if resp.choices else None
                         text = msg.content if msg else ""
