@@ -1,0 +1,202 @@
+# Medparse Integration Workspace
+
+Comprehensive guide for developing, running, and validating the combined **IP_Assist_Lite ↔ Medparse** environment. This workspace links two repositories:
+
+- `IP_Assist_Lite` (this repo) – LangGraph/Gradio application focused on interventional pulmonology retrieval and reasoning.
+- `medparse-docling` (sidecar repo located at `/home/rjm/projects/ip_knowledge/medparse/medparse-docling`) – FastAPI service that converts PDFs into enriched medical knowledge assets and provides UMLS concept linking.
+
+These projects communicate strictly over HTTP, letting each keep its own Python toolchain while sharing clinical enrichment data.
+
+---
+
+## Contents
+- [High-Level Architecture](#high-level-architecture)
+- [Key Directories](#key-directories)
+- [Services & Ports](#services--ports)
+- [Environment Variables](#environment-variables)
+- [Quick Start Workflow](#quick-start-workflow)
+- [Integration Data Flow](#integration-data-flow)
+- [Testing Matrix](#testing-matrix)
+- [Operational Playbook](#operational-playbook)
+- [Reference Documents](#reference-documents)
+
+---
+
+## High-Level Architecture
+- **Medparse sidecar (FastAPI, Python 3.11)**
+  - Runs Docling + GROBID + enrichment pipeline.
+  - Exposes REST endpoints: `/healthz`, `/version`, `/link`, `/extract`.
+  - Optional `X-API-Key` header guard when `API_KEY` is defined in `.env`.
+  - Supports stubbed mode by setting `ENABLE_PIPELINE=false` for lightweight contract tests.
+- **IP_Assist_Lite application (LangGraph/Gradio, Python 3.12)**
+  - Sends link/extract requests to Medparse via the async client in `src/adapters/medparse_client.py`.
+  - Consumes extraction payloads to enrich graph/Qdrant stores (see `src/graph/medparse_ingest.py`).
+  - Presents concept evidence counts in the Gradio UI once ingestion wiring is complete.
+
+### Separation of Concerns
+- **Data processing & linking** live entirely in the Medparse project.
+- **Retrieval orchestration & UI** live in IP_Assist_Lite.
+- Only the Medparse HTTP interface is assumed stable between repos, keeping upgrade paths independent.
+
+---
+
+## Key Directories
+| Path | Description |
+| --- | --- |
+| `/home/rjm/projects/IP_assist_lite` | Application workspace (this repo). |
+| `/home/rjm/projects/IP_assist_lite/src/adapters` | External integration clients (Medparse client lives here). |
+| `/home/rjm/projects/IP_assist_lite/src/graph` | Graph utilities, including Medparse ingest helpers. |
+| `/home/rjm/projects/IP_assist_lite/docs/medparse_integration` | Workspace documentation (this folder). |
+| `/home/rjm/projects/ip_knowledge/medparse/medparse-docling` | Medparse FastAPI service source. |
+| `/home/rjm/projects/ip_knowledge/quickumls_data` | Recommended QuickUMLS index location (build once per machine). |
+
+---
+
+## Services & Ports
+| Service | Default Port | Notes |
+| --- | --- | --- |
+| Medparse FastAPI | `8099` | Configurable via `uvicorn` CLI; expects GROBID at `8070` when full pipeline enabled. |
+| GROBID (optional) | `8070` | Required for full PDF metadata extraction; skip in stub mode. |
+| IP_Assist_Lite Gradio UI | `7860` | Launch via `python app.py` or `./run.sh`. |
+| Qdrant | `6333` | Must be running for hybrid retrieval to succeed; can be dockerized or remote. |
+
+---
+
+## Environment Variables
+
+### Medparse `.env`
+| Variable | Purpose |
+| --- | --- |
+| `UMLS_API_KEY` | Enables remote UMLS concept linking (primary path). |
+| `NCBI_API_KEY`, `NCBI_EMAIL` | PubMed enrichment for references. |
+| `QUICKUMLS_PATH` | Local QuickUMLS index fallback path. |
+| `GROBID_URL` | GROBID server endpoint (default `http://localhost:8070`). |
+| `API_TITLE`, `API_VERSION` | Metadata for `/version` route. |
+| `ALLOWED_ORIGINS` | CORS whitelist (include IP_Assist_Lite host). |
+| `MAX_UPLOAD_MB` | Maximum PDF upload size. |
+| `ENABLE_PIPELINE` | Toggle full Docling pipeline (`true`) vs. stub mode (`false`). |
+| `API_KEY` | Optional secret required in the `X-API-Key` header. |
+
+### IP_Assist_Lite
+| Variable | Purpose |
+| --- | --- |
+| `MEDPARSE_URL` | Base URL for Medparse (e.g., `http://127.0.0.1:8099`). |
+| `MEDPARSE_API_KEY` | Matches Medparse `API_KEY` when the sidecar is locked down. |
+| `MEDPARSE_TIMEOUT_SECONDS` | Request timeout (defaults to `30`). |
+| `MEDPARSE_MAX_RETRIES` | Number of retries for `429/5xx` responses (defaults to `3`). |
+| `MEDPARSE_RETRY_BACKOFF_SECONDS` | Backoff multiplier between retries (defaults to `1`). |
+| `QDRANT_HOST`, `QDRANT_PORT` | Hybrid retriever connection (defaults `localhost:6333`). |
+| `QDRANT_COLLECTION_V2` | Name of the Qdrant collection (defaults `ip_docs_v2`). |
+| `IP_ASSIST_OFFLINE` | When set, LangGraph retrieval falls back to lightweight encoders. |
+
+Set these variables before launching the corresponding service to avoid runtime configuration errors.
+
+---
+
+## Quick Start Workflow
+
+1. **Provision prerequisites**
+   - Python 3.11 for Medparse (conda recommended).
+   - Python 3.12 for IP_Assist_Lite.
+   - Docker (for GROBID) and QuickUMLS data bundle.
+
+2. **Bootstrap Medparse**
+   ```bash
+   cd /home/rjm/projects/ip_knowledge/medparse/medparse-docling
+   conda create -n medparse-py311 python=3.11 -y
+   conda activate medparse-py311
+   pip install -r requirements.txt
+   cp .env.example .env  # populate values listed above
+   docker run -d -p 8070:8070 lfoppiano/grobid:0.8.0  # optional but recommended
+   uvicorn api.main:app --reload --port 8099
+   ```
+
+3. **Prepare IP_Assist_Lite**
+   ```bash
+   cd /home/rjm/projects/IP_assist_lite
+   conda create -n ip-assist python=3.12 -y
+   conda activate ip-assist
+   pip install -r requirements.txt
+   export MEDPARSE_URL=http://127.0.0.1:8099
+   export MEDPARSE_API_KEY=<value-if-set>
+   python app.py  # or ./run.sh
+   ```
+
+4. **Smoke test integration**
+   ```bash
+   python - <<'PY'
+   import asyncio
+   from src.adapters import get_client_from_env
+
+   async def main():
+       client = get_client_from_env()
+       print("health:", await client.healthcheck())
+       print("link sample:", await client.link("massive hemoptysis", top_k=5))
+
+   asyncio.run(main())
+   PY
+   ```
+
+5. **Run LangGraph flow**
+   - Launch the Gradio UI and issue a query involving clinical terminology.
+   - Inspect logs to confirm Medparse link responses are included in retrieval decisions.
+
+---
+
+## Integration Data Flow
+
+1. **Concept Linking**
+   - `src/adapters/medparse_client.MedparseClient.link()` sends JSON `{text, top_k}`.
+   - Medparse returns curated and fallback UMLS concepts which feed query expansion and evidence panels.
+
+2. **PDF Extraction**
+   - `MedparseClient.extract()` uploads PDFs for full processing.
+   - `src/graph/medparse_ingest.build_graph_payload()` transforms the response into graph-ready payloads.
+   - Downstream components (Neo4j ingest, Qdrant seeding, UI evidence counters) consume this normalized structure.
+
+3. **Error Handling**
+   - `MedparseClient` retries `429/5xx` responses with exponential backoff.
+   - `MedparseAuthError` surfaces misconfigured API keys quickly.
+   - Fallback behavior is determined by the sidecar (`UMLS_API_KEY` primary → QuickUMLS → empty list).
+
+---
+
+## Testing Matrix
+| Scope | Location | Command |
+| --- | --- | --- |
+| Medparse client contract | `IP_Assist_Lite/tests/test_medparse_client.py` | `pytest tests/test_medparse_client.py` |
+| LangGraph flow (core) | `IP_Assist_Lite/tests/` | `pytest -q` |
+| Medparse API smoke | `medparse-docling/tests/test_extract_smoke.py` | `pytest -q` (inside medparse env) |
+| QuickUMLS fallback | `medparse-docling/tests/test_umls_linker.py` | `pytest tests/test_umls_linker.py` |
+
+Use `ENABLE_PIPELINE=false` in Medparse `.env` when running tests that should avoid the heavy Docling pipeline.
+
+---
+
+## Operational Playbook
+- **Startup Order**
+  1. QuickUMLS index (ensure filesystem path accessible).
+  2. GROBID docker container (if running full pipeline).
+  3. Medparse FastAPI (`uvicorn api.main:app ...`).
+  4. Qdrant service.
+  5. IP_Assist_Lite application (`python app.py`).
+
+- **Configuration Changes**
+  - Update `MEDPARSE_URL` in IP_Assist_Lite when deploying across hosts.
+  - Adjust `ALLOWED_ORIGINS` in Medparse `.env` if the UI is hosted elsewhere.
+
+- **Troubleshooting**
+  - `401 Unauthorized` → verify `MEDPARSE_API_KEY` matches Medparse `API_KEY`.
+  - `413` from `/extract` → increase `MAX_UPLOAD_MB` or compress the PDF.
+  - Empty link results → check `UMLS_API_KEY` validity or QuickUMLS accessibility.
+  - QuickUMLS ImportError (`imp` module) → ensure Medparse is running under Python 3.11.
+
+---
+
+## Reference Documents
+- `agent.md` – condensed integration guide referenced by QA/agents.
+- `docs/medparse_integration/SETUP.md` – step-by-step environment instructions (see companion file).
+- Medparse repo docs: `README.md`, `USER_GUIDE.md`, `DOCUMENTATION.md`, `TROUBLESHOOTING.md`.
+- IP_Assist_Lite `README.md` – broader product overview and LangGraph architecture.
+
+Keep this README synchronized with code changes impacting integration (client configuration, new endpoints, testing expectations).

@@ -15,10 +15,13 @@ fi
 export IP_GPT5_MODEL=${IP_GPT5_MODEL:-"gpt-4o-mini"}
 export QDRANT_HOST=${QDRANT_HOST:-"localhost"}
 export QDRANT_PORT=${QDRANT_PORT:-"6333"}
+export MEDPARSE_URL=${MEDPARSE_URL:-"http://127.0.0.1:8099"}
+export MEDPARSE_API_KEY=${MEDPARSE_API_KEY:-"my-secret-medparse-key-123"}
 
 echo "Configuration:"
 echo "  Model: $IP_GPT5_MODEL"
 echo "  Qdrant: $QDRANT_HOST:$QDRANT_PORT"
+echo "  Medparse: $MEDPARSE_URL"
 echo ""
 
 # Run the app

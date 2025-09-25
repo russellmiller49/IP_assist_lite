@@ -35,6 +35,7 @@ structlog>=23.0.0
 orjson>=3.9.0
 uvloop>=0.17.0
 python-dotenv>=1.0.0
+httpx>=0.27.0
 
 # LangChain/LangGraph 1.0 alpha pins
 langchain==1.0.0a3
