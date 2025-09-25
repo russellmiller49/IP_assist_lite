@@ -1,373 +1,348 @@
----
-title: IP Assist Lite
-emoji: 🏥
-colorFrom: blue
-colorTo: green
-sdk: gradio
-sdk_version: 5.44.1
-app_file: app.py
-pinned: false
-license: mit
-short_description: Medical Information Retrieval for Interventional Pulmonology
----
+# IP Assist Lite - Intelligent Medical Knowledge Assistant
 
-# 🏥 IP Assist Lite
+An advanced AI-powered medical knowledge assistant that combines hybrid retrieval, medical concept linking, and GPT-5 reasoning to provide evidence-based answers to medical questions.
 
-**Medical Information Retrieval for Interventional Pulmonology**
+## 🏥 Overview
 
-## Features
+IP Assist Lite is designed to help medical professionals access comprehensive, evidence-based information from medical literature. It combines multiple AI technologies to provide accurate, cited responses with integrated medical concept linking.
 
-- 🔍 **Hybrid Search**: MedCPT embeddings with BM25 and exact matching
-- 📊 **Hierarchy-Aware Ranking**: Authority tiers (A1-A4) and evidence levels (H1-H4)
-- 🚨 **Emergency Detection**: Automatic routing for urgent medical queries
-- ⚠️ **Safety Checks**: Contraindication detection and pediatric warnings
-- 📚 **Source Citations**: Confidence scoring with document authority
+## ✨ Key Features
 
-## Usage
+- **🧠 Hybrid Retrieval**: Combines BM25 keyword search with semantic vector search
+- **🔗 Medical Concept Linking**: UMLS integration via Medparse API
+- **📚 Multi-Document Support**: Articles, textbooks, guidelines, and procedural manuals
+- **🎯 Smart Citations**: Automatic citation generation with source verification
+- **📊 Report Generation**: Structured medical reports with templates
+- **🚀 GPT-5 Integration**: Advanced medical reasoning with OpenAI's latest models
+- **🌐 Web Interface**: User-friendly Gradio interface
 
-This application provides AI-powered medical information retrieval specifically designed for interventional pulmonology. It can help with:
+## 🚀 Quick Start
 
-- Clinical decision support
-- Procedure guidance
-- CPT code lookup
-- Contraindication checking
-- Emergency protocol queries
+### Prerequisites
+- Python 3.11+
+- Docker (for Qdrant)
+- OpenAI API key
+- 8GB+ RAM recommended
 
-## Important Notice
-
-⚠️ **This system is for informational purposes only.** Always verify medical information with official guidelines and consult with qualified healthcare professionals before making clinical decisions.
-
-## Authentication
-
-This Space requires authentication. Please contact the administrator for access credentials.
-
-## Project Structure
-
-```
-IP_assist_lite/
-├── app.py                 # Main Gradio application
-├── cli_interface.py       # Command-line interface
-├── src/                   # Core source code
-│   ├── llm/              # GPT-5 integration
-│   ├── retrieval/        # Hybrid search implementation
-│   ├── safety/           # Safety checks and contraindications
-│   ├── prep/             # Data preparation pipelines
-│   └── index/            # Embedding and indexing
-├── data/                  # Processed data and embeddings
-├── configs/               # Configuration files
-├── scripts/               # Startup and utility scripts
-├── documentation/         # User guides and project status
-├── tests/                 # Test suites
-└── bronchmonkey2/         # HuggingFace Spaces deployment (separate)
-
-## Architecture Overview
-
-IP Assist Lite is a sophisticated **medical RAG (Retrieval-Augmented Generation) system** built with **LangGraph 1.0** orchestration and medical domain-specific components.
-
-### Core Technologies
-
-- **🔄 LangGraph 1.0**: Workflow orchestration with state management
-- **🧠 GPT-5 Family**: Language models for response synthesis
-- **🔍 MedCPT**: Medical domain embeddings for semantic search
-- **🗄️ Qdrant**: Vector database for hybrid retrieval
-- **📊 BM25**: Sparse retrieval for exact matching
-- **🛡️ Safety Guards**: Multi-layer medical safety checks
-
-### System Architecture
-
-```
-Raw Medical Literature → Data Preparation → Chunking → Embedding → Indexing → Retrieval → LangGraph Orchestration → Response Synthesis → UI
-```
-
-## LangGraph Implementation
-
-**Yes, this system extensively uses LangGraph 1.0** for intelligent query orchestration:
-
-### Workflow Nodes
-- **Query Classification**: Routes queries by type (clinical, procedure, coding, emergency, safety)
-- **Information Retrieval**: Hybrid search with hierarchy-aware ranking
-- **Response Synthesis**: GPT-5 powered generation with grounded citations
-- **Safety Checks**: Multi-layer validation and warning systems
-
-### State Management
-- **AgentState**: Canonical state with medical-specific fields
-- **Safety Flags**: Automatic detection of dosage, pediatric, contraindication queries
-- **Emergency Routing**: Immediate handling of urgent medical queries
-- **Confidence Scoring**: Authority-tiered response quality assessment
-
-## Knowledge Base System
-
-### Structured Knowledge (Not Traditional Knowledge Graphs)
-- **Authority Tiers**: A1 (PAPOIP 2025) → A4 (case reports)
-- **Evidence Levels**: H1 (systematic reviews) → H4 (expert opinion)
-- **Domain Classification**: Medical domains (ablation, lung_volume_reduction, etc.)
-- **Temporal Tracking**: Document validity periods and precedence scoring
-
-### Data Sources
-- **Medical Literature**: 500+ research papers, guidelines, textbooks
-- **Clinical Guidelines**: PAPOIP 2025, Practical Guide 2022, BACADA 2012
-- **Procedural Manuals**: Step-by-step technique descriptions
-- **Coding References**: CPT/HCPCS codes and billing information
-
-## Complete Data Pipeline
-
-### From Raw Data to Final App
-
-The system processes medical literature through a comprehensive pipeline:
-
-#### 1. Data Preparation (`make prep`)
+### Installation
 ```bash
-src/prep/data_preparer_v12.py
-```
-- **Input**: Raw JSON files from medical literature (~500+ documents)
-- **Process**: Standardization, cleaning, metadata extraction
-- **Output**: Processed documents with authority tiers (A1-A4), evidence levels (H1-H4), domain classification
-
-#### 2. Chunking (`make chunk`)
-```bash
-src/index/chunker_v2.py
-```
-- **Input**: Processed documents
-- **Process**: Policy-driven chunking with quality gates
-- **Output**: Semantic chunks with precedence scoring and medical domain tags
-
-#### 3. Embedding Generation (`make embed`)
-```bash
-src/index/embed_medcpt.py
-```
-- **Input**: Chunks
-- **Process**: MedCPT embeddings (medical domain-specific)
-- **Output**: Vector embeddings optimized for medical terminology
-
-#### 4. Indexing (`make index`)
-```bash
-src/index/upsert_qdrant.py
-```
-- **Input**: Embeddings + metadata
-- **Process**: Qdrant vector database indexing
-- **Output**: Searchable vector index with hierarchy-aware ranking
-
-#### 5. Hybrid Retrieval System
-```bash
-src/retrieval/hybrid_retriever.py
-```
-- **MedCPT Semantic Search**: Medical domain embeddings
-- **BM25 Sparse Retrieval**: Exact term matching
-- **Hierarchy-Aware Ranking**: Authority tiers and evidence levels
-- **Safety Checks**: Emergency detection, contraindication warnings
-
-#### 6. LangGraph Orchestration
-```bash
-src/orchestration/langgraph_agent.py
-```
-- **Query Classification**: Clinical, procedure, coding, emergency, safety
-- **Intelligent Routing**: Based on query type and safety flags
-- **Response Synthesis**: GPT-5 powered with grounded generation
-- **Safety Validation**: Multi-layer medical safety checks
-
-#### 7. User Interface
-```bash
-app.py (Gradio)
-```
-- **Multi-turn Conversations**: Context retention across queries
-- **AMA Citations**: Full journal references with authority tiers
-- **Procedural Coding**: V3 CPT code generation with NCCI checks
-- **Safety Warnings**: Automatic flagging of critical information
-
-### Pipeline Commands
-
-```bash
-# Complete pipeline
-make all  # prep → chunk → embed → index
-
-# Individual steps
-make prep    # Process raw medical literature
-make chunk   # Create semantic chunks
-make embed   # Generate MedCPT embeddings
-make index   # Build Qdrant index
-
-# Development mode
-make dev-prep   # Process first 10 files
-make dev-chunk  # Chunk first 5 documents
-
-# Statistics
-make stats      # Show pipeline statistics
-make check-gpu  # Verify GPU availability
-```
-
-## Running the Application
-
-**Note:** The main `app.py` now includes all enhanced features by default. The basic version is archived as `app_basic.py`.
-
-### Standard Pipeline (Now Enhanced)
-```bash
-# 1. Start Qdrant database
-./scripts/start_qdrant_local.sh
-
-# 2. Run the main app (includes all enhanced features)
-python app.py
-
-# Or use the Makefile
-make all  # Run complete pipeline
-```
-
-**Features included:**
-- 💬 Multi-turn conversation support
-- 📚 Full AMA format citations
-- 📋 V3 Procedural Coding with Q&A
-- 🔍 Enhanced retrieval with reranking
-
-### Alternative Options
-```bash
-# Run the basic/legacy version (without enhancements)
-python app_basic.py
-
-# Run with specific port
-GRADIO_SERVER_PORT=7861 python app.py
-
-# Use the CLI interface
-python cli_enhanced.py
-
-# Set environment variables (optional)
-export IP_GPT5_MODEL=gpt-4o-mini  # or gpt-5-mini, gpt-5
-export QDRANT_HOST=localhost
-export QDRANT_PORT=6333
-```
-
-The enhanced pipeline provides:
-- **Query Assistant Tab:**
-  - Multi-turn conversation support with context retention
-  - Follow-up questions capability
-  - Full AMA-style citations with journal details
-  - Session management for continuous dialogue
-  - Improved source tracking and confidence scoring
-- **Procedural Coding Tab (V3):**
-  - Automatic CPT/HCPCS code generation
-  - EBUS station counting (31652 vs 31653)
-  - TBLB lobe tracking with add-on codes
-  - Sedation time calculation and family selection
-  - NCCI edit checks and warnings
-  - OPPS packaging notes
-  - ICD-10-PCS suggestions
-  - Documentation gap detection
-
-## Technical Implementation Details
-
-### LangGraph Workflow Architecture
-
-The system uses **LangGraph 1.0** with a sophisticated state management system:
-
-```python
-# Core workflow nodes
-classify_query → retrieve_information → synthesize_response → safety_check → end
-```
-
-**State Management:**
-- **AgentState**: Canonical state with medical-specific fields
-- **Safety Flags**: Automatic detection of critical medical terms
-- **Emergency Routing**: Immediate handling of urgent queries
-- **Confidence Scoring**: Authority-tiered response quality
-
-### Hybrid Retrieval System
-
-**Three-tier search approach:**
-1. **MedCPT Semantic Search**: Medical domain embeddings for conceptual matching
-2. **BM25 Sparse Retrieval**: Exact term matching for precise queries
-3. **Hierarchy-Aware Ranking**: Authority tiers (A1-A4) and evidence levels (H1-H4)
-
-**Retrieval Features:**
-- Emergency detection and priority routing
-- Contraindication and safety warnings
-- CPT code exact matching
-- Domain-specific filtering
-
-### Medical Safety System
-
-**Multi-layer safety checks:**
-- **Query Classification**: Automatic detection of dosage, pediatric, contraindication queries
-- **Response Validation**: Safety guard validation with warning generation
-- **Emergency Routing**: Immediate handling of life-threatening scenarios
-- **Review Flagging**: Automatic flagging of responses requiring medical review
-
-### Data Processing Pipeline
-
-**Input Requirements:**
-- Raw medical literature in JSON format
-- Clinical guidelines and procedural manuals
-- CPT/HCPCS coding references
-- Evidence-based medical content
-
-**Processing Steps:**
-1. **Standardization**: Clean and normalize medical text
-2. **Metadata Extraction**: Authority tiers, evidence levels, domain classification
-3. **Chunking**: Policy-driven semantic chunking with quality gates
-4. **Embedding**: MedCPT medical domain embeddings
-5. **Indexing**: Qdrant vector database with hierarchy-aware ranking
-
-## System Requirements
-
-### Hardware Requirements
-- **GPU**: NVIDIA GPU recommended for MedCPT embedding generation
-- **RAM**: 16GB+ recommended for large document processing
-- **Storage**: 10GB+ for embeddings and vector database
-
-### Software Dependencies
-- **Python 3.8+**
-- **LangGraph 1.0**: Workflow orchestration
-- **Qdrant**: Vector database
-- **MedCPT**: Medical domain embeddings
-- **GPT-5 Family**: Language models
-- **PyTorch**: GPU acceleration for embeddings
-
-### Environment Setup
-```bash
-# Install dependencies
+git clone https://github.com/your-org/IP_assist_lite.git
+cd IP_assist_lite
 pip install -r requirements.txt
-
-# Download spaCy model
-python -m spacy download en_core_web_sm
-
-# Verify GPU availability
-python -c "import torch; print(f'GPU: {torch.cuda.is_available()}')"
 ```
 
-## Development and Testing
-
-### Development Commands
+### Setup
 ```bash
-# Development mode (smaller datasets)
-make dev-prep   # Process first 10 files
-make dev-chunk  # Chunk first 5 documents
+# Start vector database
+docker run -p 6333:6333 qdrant/qdrant
 
-# Full pipeline
-make all        # Complete data processing pipeline
+# Set environment variables
+export OPENAI_API_KEY="your-openai-key"
+export MEDPARSE_URL="http://127.0.0.1:8099"
 
-# Individual components
-make prep       # Data preparation
-make chunk      # Chunking with quality gates
-make embed      # MedCPT embedding generation
-make index      # Qdrant indexing
-
-# Testing and validation
-make test       # Run test suite
-make stats      # Show pipeline statistics
-make check-gpu  # Verify GPU availability
+# Start the application
+./run.sh
 ```
 
-### Quality Assurance
-- **Chunk Quality Gates**: Automated validation of chunk quality
-- **Safety Validation**: Multi-layer medical safety checks
-- **Authority Ranking**: Evidence-based document precedence
-- **Response Grounding**: Citations with confidence scoring
+### Access
+Open http://localhost:7862 in your browser and start asking medical questions!
 
-## About
+## 📚 Knowledge Base Types
 
-IP Assist Lite is a **production-ready medical AI system** designed specifically for interventional pulmonology. It combines state-of-the-art RAG techniques with medical domain expertise, LangGraph orchestration, and comprehensive safety systems to provide reliable, evidence-based medical information retrieval.
+### 🔬 Medical Articles
+- **Content**: Journal articles, research papers, case studies
+- **Optimization**: Abstract extraction, clinical terminology, evidence focus
+- **Use Cases**: Evidence-based medicine, research findings, clinical studies
 
-**Key Differentiators:**
-- Medical domain-specific embeddings (MedCPT)
-- Hierarchy-aware authority ranking
-- Multi-layer safety validation
-- LangGraph workflow orchestration
-- Evidence-based response generation
-- Comprehensive medical literature coverage
+### 📖 Medical Textbooks
+- **Content**: Comprehensive medical references, educational materials
+- **Optimization**: Chapter structure, comprehensive coverage, cross-references
+- **Use Cases**: Medical education, comprehensive knowledge, foundational concepts
+
+### 📋 Clinical Guidelines
+- **Content**: Practice guidelines, protocols, clinical standards
+- **Optimization**: Recommendations, evidence levels, clinical algorithms
+- **Use Cases**: Clinical decision support, protocol adherence, best practices
+
+### 🛠️ Procedural Manuals
+- **Content**: Equipment manuals, procedural guides, technical documentation
+- **Optimization**: Step-by-step procedures, safety warnings, troubleshooting
+- **Use Cases**: Procedural guidance, equipment operation, safety protocols
+
+## 🏗️ Architecture
+
+```
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│   Gradio UI     │    │  Enhanced       │    │   Medparse      │
+│   (Port 7862)   │◄──►│  Orchestrator   │◄──►│   API           │
+└─────────────────┘    └─────────────────┘    └─────────────────┘
+         │                       │                       │
+         ▼                       ▼                       ▼
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│   Knowledge     │    │  Hybrid         │    │   UMLS          │
+│   Base          │    │  Retriever      │    │   Concepts      │
+└─────────────────┘    └─────────────────┘    └─────────────────┘
+         │                       │                       │
+         ▼                       ▼                       ▼
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│   Qdrant        │    │  BM25 +         │    │   GPT-5         │
+│   Vector DB     │    │  Semantic       │    │   Medical       │
+└─────────────────┘    └─────────────────┘    └─────────────────┘
+```
+
+## 🔄 Building Your Knowledge Base
+
+### Step 1: Organize Documents
+```
+data/raw/
+├── articles/           # Medical journal articles
+├── textbooks/         # Medical textbooks
+├── guidelines/        # Clinical guidelines
+└── manuals/           # Procedural manuals
+```
+
+### Step 2: Process with Medparse
+```bash
+# Start medparse API
+cd ../medparse-docling
+uvicorn api.main:app --reload --port 8099
+
+# Process documents
+./scripts/process_all_documents.sh
+```
+
+### Step 3: Import and Build
+```bash
+# Import processed documents
+cp ../medparse-docling/output/*/*.json data/processed/
+
+# Build knowledge base
+./scripts/build_knowledge_base.sh
+```
+
+### Step 4: Test and Deploy
+```bash
+# Test retrieval
+python scripts/test_retrieval.py "What are the indications for bronchoscopy?"
+
+# Start the application
+./run.sh
+```
+
+## 🎯 Usage Examples
+
+### Basic Medical Questions
+```
+"What are the indications for bronchoscopy?"
+"How do you perform EBUS-TBNA?"
+"What are the complications of chest tube placement?"
+"Describe the anatomy of the tracheobronchial tree"
+```
+
+### Advanced Queries
+```
+"In guidelines, what are the current recommendations for pneumonia treatment?"
+"Show me textbook information about pulmonary anatomy"
+"What procedures are indicated for hemoptysis according to recent articles?"
+```
+
+### Report Generation
+```
+"Generate a procedure note for flexible bronchoscopy"
+"Create a structured report for EBUS findings"
+```
+
+## ⚙️ Configuration
+
+### Environment Variables
+```bash
+# Core Configuration
+export OPENAI_API_KEY="your-openai-key"
+export IP_GPT5_MODEL="gpt-4o-mini"
+
+# Vector Database
+export QDRANT_HOST="localhost"
+export QDRANT_PORT="6333"
+
+# Medparse Integration
+export MEDPARSE_URL="http://127.0.0.1:8099"
+export MEDPARSE_API_KEY="your-medparse-key"
+```
+
+### Knowledge Base Configuration
+```yaml
+# configs/knowledge_base_config.yaml
+retrieval:
+  embedding_model: "ncbi/MedCPT-Query-Encoder"
+  hybrid:
+    bm25_weight: 0.3
+    semantic_weight: 0.7
+
+document_types:
+  articles:
+    chunk_size: 500
+    focus_areas: ["diagnosis", "treatment"]
+  textbooks:
+    chunk_size: 1000
+    focus_areas: ["anatomy", "physiology"]
+```
+
+## 🔧 API Integration
+
+### Python Client
+```python
+import requests
+
+def query_ip_assist(question):
+    response = requests.post(
+        "http://localhost:7862/api/query",
+        json={"question": question}
+    )
+    return response.json()
+
+# Example usage
+result = query_ip_assist("What are the indications for EBUS?")
+print(f"Answer: {result['response']}")
+print(f"Citations: {len(result['citations'])}")
+```
+
+### EMR Integration
+```python
+class EMRIntegration:
+    def get_procedure_guidance(self, patient_id, procedure_code):
+        # Get patient data from EMR
+        patient_data = self.emr.get_patient(patient_id)
+        
+        # Query IP Assist for guidance
+        query = f"Considerations for {procedure_code} in patient with {patient_data['conditions']}"
+        guidance = self.ip_assist.query(query)
+        
+        return guidance
+```
+
+## 🧪 Testing
+
+```bash
+# Run all tests
+pytest
+
+# Run specific test categories
+pytest tests/test_retrieval.py
+pytest tests/test_orchestrator.py
+pytest tests/test_medparse_integration.py
+
+# Run with coverage
+pytest --cov=src --cov-report=html
+```
+
+## 🚀 Deployment
+
+### Docker Deployment
+```bash
+# Build image
+docker build -t ip-assist-lite .
+
+# Run with Docker Compose
+docker-compose up -d
+```
+
+### Production Deployment
+```bash
+# Using Gunicorn (for API mode)
+gunicorn app:app --bind 0.0.0.0:7862 --workers 4
+
+# Using systemd service
+sudo systemctl enable ip-assist-lite
+sudo systemctl start ip-assist-lite
+```
+
+### HuggingFace Spaces
+```bash
+cd t4_deployment/
+# Follow deployment instructions in README
+```
+
+## 🔗 Integration with Medparse
+
+IP Assist Lite works seamlessly with Medparse for enhanced medical document processing:
+
+1. **Document Processing**: Medparse extracts and structures medical content
+2. **Concept Linking**: UMLS concepts are linked to medical terms
+3. **Knowledge Integration**: Processed documents are imported into IP Assist Lite
+4. **Enhanced Retrieval**: Medical concepts improve search accuracy
+5. **Smart Citations**: Citations include concept-linked metadata
+
+## 📊 Monitoring and Analytics
+
+### Performance Metrics
+- Query response time
+- Retrieval accuracy
+- User satisfaction scores
+- System resource usage
+
+### Health Checks
+```bash
+# Check system health
+curl http://localhost:7862/health
+
+# Monitor component status
+python scripts/health_check.py
+```
+
+## 🎓 Medical Specialties
+
+### Pulmonology Focus
+- Bronchoscopy procedures
+- Pleural interventions
+- Airway management
+- Lung biopsy techniques
+
+### Interventional Procedures
+- Image-guided procedures
+- Minimally invasive techniques
+- Safety protocols
+- Equipment operation
+
+### Evidence-Based Medicine
+- Clinical guidelines
+- Research findings
+- Best practices
+- Quality metrics
+
+## 📖 Documentation
+
+- **[Technical Documentation](TECHNICAL_DOCUMENTATION.md)**: Detailed architecture and API reference
+- **[User Guide](USER_GUIDE.md)**: Step-by-step usage instructions
+- **[Medparse Integration Guide](docs/medparse_integration/README.md)**: Integration documentation
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests
+5. Submit a pull request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🆘 Support
+
+- **Issues**: [GitHub Issues](https://github.com/your-org/IP_assist_lite/issues)
+- **Documentation**: See documentation files in the repository
+- **Community**: Join our medical AI community discussions
+
+## 🔄 Changelog
+
+### Latest Version
+- ✅ Enhanced Medparse integration
+- ✅ Structured document type processing
+- ✅ Improved hybrid retrieval
+- ✅ Smart citation system
+- ✅ Report generation capabilities
+- ✅ Comprehensive documentation
+
+---
+
+**Ready to transform medical knowledge access with AI-powered intelligence!** 🏥🧠✨
