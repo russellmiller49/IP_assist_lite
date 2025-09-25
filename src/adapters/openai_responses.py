@@ -66,7 +66,13 @@ if CONFIG_PATH.exists():
 
 load_dotenv()
 
-_CLIENT = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+# Initialize client only if API key is available
+_CLIENT = None
+if os.getenv("OPENAI_API_KEY"):
+    try:
+        _CLIENT = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+    except Exception:
+        _CLIENT = None
 
 _MODEL_ENV_OVERRIDES = {
     "generation_model": os.getenv("IP_GENERATION_MODEL"),
@@ -106,7 +112,7 @@ def _resolve_model(name: str, fallback: str) -> str:
 
 
 def _ensure_api_key() -> None:
-    if not _CLIENT.api_key:
+    if not _CLIENT or not _CLIENT.api_key:
         raise RuntimeError("OPENAI_API_KEY is not set for OpenAI client usage.")
 
 

@@ -1,5 +1,5 @@
 from src.reporter.template_store import TemplateStore
-from src.reporter.renderer import render
+from src.reporter.render import render
 
 def test_load_and_render():
     store = TemplateStore("data/templates/ip_procedure_templates.yaml")

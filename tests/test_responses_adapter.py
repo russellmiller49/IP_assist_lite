@@ -1,4 +1,4 @@
-from adapters.openai_responses import Extraction
+from src.adapters.openai_responses import Extraction
 
 
 def test_extraction_model_schema_roundtrip():
