@@ -1,0 +1,65 @@
+# Knowledge Base Builder Configuration
+
+# Document Processing
+documents:
+  pdf_directory: "data/raw_pdfs"
+  text_directory: "data/raw_text"
+  output_directory: "data/processed"
+  
+  # PDF Processing
+  pdf_settings:
+    chunk_size: 1000
+    chunk_overlap: 200
+    extract_figures: true
+    extract_tables: true
+    
+  # Text Processing  
+  text_settings:
+    normalize_text: true
+    remove_references: true
+    extract_abstracts: true
+
+# Retrieval Configuration
+retrieval:
+  # Embedding Model
+  embedding_model: "ncbi/MedCPT-Query-Encoder"
+  
+  # Chunking Strategy
+  chunking:
+    strategy: "semantic"  # semantic, fixed, sentence
+    max_chunk_size: 1000
+    overlap_percentage: 20
+    
+  # Hybrid Retrieval
+  hybrid:
+    bm25_weight: 0.3
+    semantic_weight: 0.7
+    rerank_top_k: 20
+    
+# Medparse Integration
+medparse:
+  url: "http://127.0.0.1:8099"
+  api_key: "my-secret-medparse-key-123"
+  enable_concept_linking: true
+  enable_semantic_filtering: true
+
+# LLM Configuration
+llm:
+  model: "gpt-4o-mini"
+  temperature: 0.1
+  max_tokens: 4000
+  enable_responses_api: true
+
+# Knowledge Base Settings
+knowledge_base:
+  # Collection Names
+  collections:
+    articles: "ip_articles"
+    textbooks: "ip_textbooks"
+    procedures: "ip_procedures"
+    
+  # Indexing
+  indexing:
+    batch_size: 100
+    parallel_workers: 4
+    enable_metadata: true
