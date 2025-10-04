@@ -38,6 +38,9 @@ class TestGpt5ModelFamily(unittest.TestCase):
 
     def test_chat_uses_max_tokens(self):
         m = GPT5Medical(model="gpt-5-mini", use_responses=False, max_out=777)
+        # Mock the client if it's None (no API key)
+        if m.client is None:
+            m.client = Mock()
         with patch.object(m.client.chat.completions, "create") as mock_create:
             # Minimal valid mock response
             mock_msg = Mock(); mock_msg.content = "ok"; mock_msg.tool_calls = None

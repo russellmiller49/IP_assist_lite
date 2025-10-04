@@ -86,7 +86,7 @@ def test_sedation_family():
     """
     analysis = engine.analyze_procedure_report(report_anes)
     codes = [c.code for c in analysis.sedation_codes]
-    assert "99155" in codes  # Initial by different provider
+    assert "99156" in codes  # Initial by different provider (age >= 5)
 
 def test_pleural_procedures():
     """Test pleural procedures with imaging guidance detection"""

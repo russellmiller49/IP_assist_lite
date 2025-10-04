@@ -29,6 +29,9 @@ class TestGPT5Medical(unittest.TestCase):
             max_out=500,
             reasoning_effort="medium"
         )
+        # Mock the client if it's None (no API key)
+        if self.llm.client is None:
+            self.llm.client = Mock()
     
     def test_complete_returns_correct_format(self):
         """Test that complete() returns dict with text|tool_calls|raw."""
