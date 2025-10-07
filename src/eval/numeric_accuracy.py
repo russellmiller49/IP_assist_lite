@@ -37,16 +37,11 @@ def numeric_ok(pred: str, gold: str, tol_pct: float=5.0, allow_gauge_off_by_one:
     pred_vals, gold_vals = _extract_all(pred), _extract_all(gold)
     if not gold_vals: return True
     
-    # Check if gold contains ranges and pred contains single values
-    gold_ranges = RANGE.findall(gold)
+    # Check if pred contains ranges
     pred_ranges = RANGE.findall(pred)
     
     for g_n, g_u in gold_vals:
         g_un = _unit_norm(g_u)
-        
-        # Check if this gold value is part of a range
-        is_in_range = any(float(a) <= g_n <= float(b) and _unit_norm(u) == g_un 
-                         for a, b, u in gold_ranges)
         
         if g_un == "g":
             found = any((_unit_norm(pu)=="g" and abs(round(pn)-round(g_n)) <= (1 if allow_gauge_off_by_one else 0)) for pn,pu in pred_vals)
@@ -58,15 +53,20 @@ def numeric_ok(pred: str, gold: str, tol_pct: float=5.0, allow_gauge_off_by_one:
             
         g_mm = _to_mm(g_n, g_un, context_hint)
         if g_mm is not None:
-            # If gold is in a range, check if any pred value falls within the range
-            if is_in_range:
-                range_match = any((pm := _to_mm(pn, pu, context_hint)) is not None and 
-                                 any(float(a) * (10 if _unit_norm(u) == "cm" else 1) <= pm <= float(b) * (10 if _unit_norm(u) == "cm" else 1)
-                                     for a, b, u in gold_ranges if _unit_norm(u) == g_un)
-                                 for pn, pu in pred_vals)
-                if not range_match:
-                    return False
-            else:
+            # Check if gold value falls within any pred range
+            range_match = False
+            for a, b, u in pred_ranges:
+                if _unit_norm(u) == g_un:
+                    a_mm = _to_mm(float(a), u, context_hint)
+                    b_mm = _to_mm(float(b), u, context_hint)
+                    if a_mm is not None and b_mm is not None:
+                        min_val, max_val = min(a_mm, b_mm), max(a_mm, b_mm)
+                        if min_val <= g_mm <= max_val:
+                            range_match = True
+                            break
+            
+            if not range_match:
+                # Fall back to regular tolerance matching
                 if not any((pm := _to_mm(pn, pu, context_hint)) is not None and _close(pm, g_mm, tol_pct) for pn,pu in pred_vals):
                     return False
         elif g_un in {"w"}:
