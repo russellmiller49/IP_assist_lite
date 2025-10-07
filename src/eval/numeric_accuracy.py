@@ -11,7 +11,12 @@ GAUGE_ID_MM = {18:0.838,19:0.686,20:0.603,21:0.514,22:0.413,23:0.337,25:0.260}
 def _unit_norm(u: str) -> str: return {"watts":"w","watt":"w","gauge":"g","french":"fr"}.get(u.lower(), u.lower())
 
 def _extract_all(s: str) -> List[Tuple[float,str]]:
-    out = []; out += [(float(a),u) for a,_,u in RANGE.findall(s)]; out += [(float(b),u) for _,b,u in RANGE.findall(s)]
+    out = []
+    # Extract ranges first
+    for a, b, u in RANGE.findall(s):
+        out.append((float(a), u))
+        out.append((float(b), u))
+    # Then extract single numbers
     out += [(float(n),u) for n,u in NUM_UNIT.findall(s)]
     return out
 

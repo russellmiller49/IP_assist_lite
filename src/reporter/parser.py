@@ -14,7 +14,7 @@ RE_CRYO = re.compile(r"\b([\d.]+)\s*mm\s*cryo\s*x\s*(\d+)\b", re.I)
 RE_ROSE_POS = re.compile(r"\bROSE\s+(positive|adequate|negative|atypical)\b", re.I)
 
 # EBUS block: stations like "4R (12mm), 7 (8mm), 11R (15mm)" and common suffix "all with 22G x3 passes"
-RE_EBUS_LIST = re.compile(r"stations?\s+([0-9R L,()]+(?:mm|\)))", re.I)
+RE_EBUS_LIST = re.compile(r"stations?\s+([0-9R L,()]+mm[^,]*(?:,\s*[0-9R L,()]+mm[^,]*)*)", re.I)
 RE_STATION = re.compile(r"(\d{1,2}[RL]?)(?:\s*\((\d+)\s*mm\))?", re.I)
 RE_EBUS_NEEDLE_PASSES = re.compile(r"\b(all\s+with\s+)?(\d{2}G)\s*x\s*(\d+)\s*passes?\b", re.I)
 

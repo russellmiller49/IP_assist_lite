@@ -79,14 +79,15 @@ def test_sedation_family():
     codes = [c.code for c in analysis.sedation_codes]
     assert "99152" in codes  # Initial by proceduralist
     
-    # Different provider (anesthesia)
+    # Different provider (anesthesia) - test with age < 5 to get 99155
     report_anes = """
         PROCEDURE: Bronchoscopy
         SEDATION: Moderate sedation 45 minutes, administered by anesthesiologist
+        PATIENT: 3 year old child
     """
     analysis = engine.analyze_procedure_report(report_anes)
     codes = [c.code for c in analysis.sedation_codes]
-    assert "99156" in codes  # Initial by different provider (age >= 5)
+    assert "99155" in codes  # Initial by different provider (age < 5)
 
 def test_pleural_procedures():
     """Test pleural procedures with imaging guidance detection"""

@@ -5,7 +5,7 @@ from dataclasses import dataclass
 @dataclass
 class RouterDecision: store: str; confidence: float
 
-SAFETY_TERMS = r'\b(bleeding|hemorrhage|haemorrhage|massive hemoptysis|death|fatal|emergency|urgent|contraindication|contraindicated|pneumothorax|perforation|air embolism)\b'
+SAFETY_TERMS = r'\b(bleeding|hemorrhage|haemorrhage|massive hemoptysis|death|fatal|emergency|urgent|contraindication|contraindicated|pneumothorax|perforation|air embolism|complications?)\b'
 SPEC_TERMS   = r'\b(dose|dosage|protocol|technique|energy|w(?:att)?s?|mm|gauge|fr|french)\b'
 OVERVIEW     = r'\b(overview|summary|recap|compare|versus|vs)\b'
 
