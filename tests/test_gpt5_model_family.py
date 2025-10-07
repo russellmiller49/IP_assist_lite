@@ -52,7 +52,8 @@ class TestGpt5ModelFamily(unittest.TestCase):
             kwargs = mock_create.call_args.kwargs
             assert "max_tokens" in kwargs, "max_tokens must be used for Chat Completions"
             assert kwargs["max_tokens"] == 777
-            assert "max_completion_tokens" not in kwargs
+            # GPT-5 models use both max_tokens and max_completion_tokens
+            assert kwargs["max_completion_tokens"] == 777
 
 
 if __name__ == "__main__":

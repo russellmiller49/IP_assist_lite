@@ -29,6 +29,11 @@ def extract_case(report_text: str, kb: CodingKB, llm=None) -> Case:
     try:
         text = report_text.strip()
         case = Case(report_text=text)
+        
+        # Extract patient age
+        age_match = re.search(r'\b(\d+)\s*year\s*old\b', text, re.I)
+        if age_match:
+            case.patient_age_years = int(age_match.group(1))
 
         # Sedation - suppress under general anesthesia
         ga_present = bool(PATTERNS['general_anesthesia'].search(text))
