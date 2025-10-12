@@ -1,5 +1,6 @@
-# IP Assist Lite - Makefile for pipeline execution
-.PHONY: help setup prep chunk embed index retrieve api ui test clean all \
+# IP Assist Lite / Medparse Makefile
+.PHONY: help setup test cov format lint typecheck batch \
+	legacy-setup legacy-test prep chunk embed index retrieve api ui clean all \
 	kb-setup kb-extract kb-generate kb-validate kb-chunks kb-embed kb-all
 
 # Variables
@@ -11,26 +12,65 @@ SRC_DIR := src
 help:
 	@echo "IP Assist Lite - Medical Information Retrieval System"
 	@echo ""
-	@echo "Available targets:"
-	@echo "  setup     - Install dependencies and download models"
-	@echo "  prep      - Process raw JSON files (standardize, clean, extract)"
-	@echo "  chunk     - Create chunks with v2 chunker (policy-driven + QA gate)"
-	@echo "  embed     - Generate MedCPT embeddings (requires GPU)"
-	@echo "  index     - Build Qdrant index"
-	@echo "  retrieve  - Test retrieval pipeline"
-	@echo "  api       - Start FastAPI server"
-	@echo "  ui        - Start Gradio interface"
-	@echo "  test      - Run tests"
-	@echo "  clean     - Remove generated files"
-	@echo "  all       - Run complete pipeline (prep -> chunk -> embed -> index)"
-	@echo "  kb-all    - Run structured knowledge base pipeline"
+	@echo "Medparse targets:"
+	@echo "  setup       - Install dependencies for Medparse and register pre-commit hooks"
+	@echo "  test        - Run Medparse unit and integration tests"
+	@echo "  cov         - Run tests with coverage reporting"
+	@echo "  format      - Format Medparse code (black + isort)"
+	@echo "  lint        - Run Ruff lint checks"
+	@echo "  typecheck   - Run mypy static analysis"
+	@echo "  batch       - Execute batch extraction pipeline (INPUT=, OUTPUT=)"
 	@echo ""
-	@echo "Docker targets:"
-	@echo "  docker-up   - Start Qdrant container"
-	@echo "  docker-down - Stop Qdrant container"
+	@echo "Legacy IP Assist targets remain available (legacy-setup, legacy-test, prep, chunk, ...)."
+	@echo "Run 'make legacy-setup' for the original environment bootstrap."
 
-# Setup environment
+# ---------------------------------------------------------------------------
+# Medparse tooling
+
 setup:
+	@echo "Installing Medparse dependencies..."
+	$(PYTHON) -m pip install --upgrade pip
+	$(PYTHON) -m pip install -e .[dev]
+	@echo "Registering pre-commit hooks..."
+	pre-commit install --install-hooks
+	@echo "Medparse setup complete."
+
+test:
+	@echo "Running Medparse tests..."
+	$(PYTHON) -m pytest
+
+cov:
+	@echo "Running Medparse tests with coverage..."
+	$(PYTHON) -m pytest --cov=medparse --cov-report=term-missing
+
+format:
+	@echo "Formatting Medparse code..."
+	$(PYTHON) -m black medparse tests/unit tests/integration
+	$(PYTHON) -m isort medparse tests/unit tests/integration
+
+lint:
+	@echo "Linting Medparse code..."
+	$(PYTHON) -m ruff check medparse tests/unit tests/integration
+
+typecheck:
+	@echo "Running mypy..."
+	$(PYTHON) -m mypy medparse
+
+batch:
+ifndef INPUT
+	$(error INPUT is not set. Usage: make batch INPUT=path/to/pdfs OUTPUT=out_dir)
+endif
+ifndef OUTPUT
+	$(error OUTPUT is not set. Usage: make batch INPUT=path/to/pdfs OUTPUT=out_dir)
+endif
+	@echo "Running Medparse batch extraction..."
+	$(PYTHON) -m medparse.batch.run --input "$(INPUT)" --output "$(OUTPUT)"
+	@echo "Batch extraction finished."
+
+# ---------------------------------------------------------------------------
+# Legacy pipeline (retained for backward compatibility)
+
+legacy-setup:
 	@echo "Setting up environment..."
 	conda activate $(CONDA_ENV) && pip install -r requirements.txt
 	@echo "Downloading spaCy model..."
@@ -91,7 +131,7 @@ ui:
 	cd $(SRC_DIR)/ui && $(PYTHON) gradio_app.py
 
 # Run tests
-test:
+legacy-test:
 	@echo "Running tests..."
 	pytest tests/ -v
 

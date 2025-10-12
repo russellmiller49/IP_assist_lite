@@ -1,0 +1,52 @@
+{
+  "doc_type": "research",
+  "source_file": "tests/data/pdfs/Robotic Cyrobiopsy 2022.pdf",
+  "page_count": 9,
+  "extraction_version": "v1.0.0",
+  "title": null,
+  "design": "retrospective",
+  "centers": null,
+  "n_patients": 112,
+  "n_lesions": 120,
+  "primary_outcome": null,
+  "outcomes": [
+    {
+      "name": "Diagnostic yield",
+      "value": 90.0,
+      "unit": "percent",
+      "evidence": {
+        "text": "Results The overall diagnostic yield was 90%",
+        "page": 1,
+        "bbox": null,
+        "confidence": 1.0
+      }
+    },
+    {
+      "name": "Pneumothorax",
+      "value": 5.4,
+      "unit": "percent",
+      "evidence": {
+        "text": "Pneumothorax 6 (5.4%) Chest tube placement",
+        "page": 5,
+        "bbox": null,
+        "confidence": 1.0
+      }
+    }
+  ],
+  "ats_yield": {
+    "numerator": 101,
+    "denominator": 112,
+    "yield_pct": 90.2,
+    "evidence": {
+      "text": "ATS 2024 strict yield: numerator = specific benign or malignant diagnosis established during the procedural encounter; nonspecific findings are nondiagnostic; denominator = all attempted/performed.",
+      "page": 1,
+      "bbox": null,
+      "confidence": 1.0
+    }
+  },
+  "nondiagnostic": {
+    "atypia_or_suspicious": 0,
+    "nonspecific_inflammation": 17,
+    "other_nondiagnostic": 0
+  }
+}
