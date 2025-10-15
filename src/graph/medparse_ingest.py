@@ -4,6 +4,9 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Any, Dict, Iterable, List, Mapping, MutableMapping, Optional, TypedDict
 
+from ..normalize.merge_enrichments import extract_to_graph_payload
+from ..normalize.types import GraphPayload
+
 
 class EvidenceSummary(TypedDict):
     statistics: int
@@ -24,9 +27,7 @@ class MedparseGraphPayload(TypedDict, total=False):
     doc_id: str
     metadata: Dict[str, Any]
     concepts: List[ConceptRecord]
-    statistics: List[Dict[str, Any]]
-    figures: List[Dict[str, Any]]
-    tables: List[Dict[str, Any]]
+    graph: GraphPayload
     references: List[Dict[str, Any]]
     validation: Dict[str, Any]
     evidence: EvidenceSummary
@@ -120,28 +121,21 @@ def summarise_evidence(payload: Mapping[str, Any]) -> EvidenceSummary:
 def build_graph_payload(extraction_result: Mapping[str, Any]) -> MedparseGraphPayload:
     """Convert a Medparse extraction payload into a graph-friendly structure."""
 
-    doc_id = extraction_result.get("doc_id")
-    if not doc_id:
-        raise ValueError("Medparse extraction payload is missing 'doc_id'")
-
-    metadata = extraction_result.get("metadata") or {}
-    statistics = list(extraction_result.get("statistics") or [])
-    figures = list(extraction_result.get("figures") or [])
-    tables = list(extraction_result.get("tables") or [])
-    references = list(extraction_result.get("references_enriched") or [])
-    validation = extraction_result.get("validation") or {}
+    graph_payload = extract_to_graph_payload(extraction_result)  # type: ignore[arg-type]
+    metadata = dict(graph_payload.get("doc_meta", {}))
 
     concepts_primary = extraction_result.get("umls_links") or []
     concepts_fallback = extraction_result.get("umls_links_local") or []
     concepts = _dedupe_concepts([*concepts_primary, *concepts_fallback])
 
+    references = list(extraction_result.get("references_enriched") or [])
+    validation = extraction_result.get("validation") or {}
+
     return {
-        "doc_id": str(doc_id),
-        "metadata": dict(metadata),
+        "doc_id": graph_payload["doc_id"],
+        "metadata": metadata,
         "concepts": concepts,
-        "statistics": statistics,
-        "figures": figures,
-        "tables": tables,
+        "graph": graph_payload,
         "references": references,
         "validation": dict(validation),
         "evidence": summarise_evidence(extraction_result),

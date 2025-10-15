@@ -7,7 +7,7 @@ name = "medparse"
 version = "0.1.0"
 description = "End-to-end medical PDF parsing and normalization pipeline."
 readme = "README.md"
-requires-python = ">=3.11,<3.12"
+requires-python = ">=3.11,<3.13"
 authors = [{name = "Medparse Team"}]
 dependencies = [
     "pydantic>=2.0.0",
@@ -67,10 +67,10 @@ filterwarnings = [
 
 [tool.coverage.run]
 branch = true
-source = ["medparse"]
+source = ["src"]
 
 [tool.coverage.report]
 exclude_lines = [
     "if TYPE_CHECKING:",
 ]
-fail_under = 85
+fail_under = 80

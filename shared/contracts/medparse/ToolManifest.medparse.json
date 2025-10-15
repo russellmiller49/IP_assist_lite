@@ -1,0 +1,30 @@
+{
+  "version": "1.0.0",
+  "tools": [
+    {
+      "name": "parse_document",
+      "input": "ParseOptions",
+      "output": "ExtractionEnvelope"
+    },
+    {
+      "name": "enrich_stats",
+      "input": "DocRef",
+      "output": "StatResult[]"
+    },
+    {
+      "name": "extract_figures",
+      "input": "DocRef",
+      "output": "Figure[]"
+    },
+    {
+      "name": "link_umls",
+      "input": "DocRef",
+      "output": "RelationEdge[]"
+    },
+    {
+      "name": "compute_ats_yield",
+      "input": "DocRef",
+      "output": "ATSStrictYield"
+    }
+  ]
+}

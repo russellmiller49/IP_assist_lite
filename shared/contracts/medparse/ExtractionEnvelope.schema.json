@@ -1,0 +1,54 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ExtractionEnvelope.schema.json",
+  "title": "ExtractionEnvelope",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "doc_id": {"type": "string"},
+    "source_file": {"type": "string"},
+    "schema_version": {"type": "string", "const": "1.0.0"},
+    "sections": {
+      "type": "array",
+      "items": {"$ref": "Section.schema.json"}
+    },
+    "figures": {
+      "type": "array",
+      "items": {"$ref": "Figure.schema.json"}
+    },
+    "tables": {
+      "type": "array",
+      "items": {"$ref": "Table.schema.json"}
+    },
+    "stats": {
+      "type": "array",
+      "items": {"$ref": "StatResult.schema.json"}
+    },
+    "relations": {
+      "type": "array",
+      "items": {"$ref": "RelationEdge.schema.json"}
+    },
+    "quality": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "flags": {
+          "type": "array",
+          "items": {"type": "string"}
+        }
+      },
+      "required": ["flags"]
+    }
+  },
+  "required": [
+    "doc_id",
+    "source_file",
+    "schema_version",
+    "sections",
+    "figures",
+    "tables",
+    "stats",
+    "relations",
+    "quality"
+  ]
+}

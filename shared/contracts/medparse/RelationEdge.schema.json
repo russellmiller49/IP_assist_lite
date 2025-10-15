@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "RelationEdge.schema.json",
+  "title": "RelationEdge",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {"type": "string"},
+    "subject_id": {"type": "string"},
+    "predicate": {
+      "type": "string",
+      "enum": ["SUPPORTED_BY", "MENTIONS", "DERIVED_FROM"]
+    },
+    "object_id": {"type": "string"},
+    "evidence_spans": {
+      "type": "array",
+      "items": {"$ref": "EvidenceSpan.schema.json"},
+      "minItems": 1
+    }
+  },
+  "required": ["id", "subject_id", "predicate", "object_id", "evidence_spans"]
+}

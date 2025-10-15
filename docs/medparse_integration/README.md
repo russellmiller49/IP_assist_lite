@@ -80,13 +80,19 @@ These projects communicate strictly over HTTP, letting each keep its own Python 
 ### IP_Assist_Lite
 | Variable | Purpose |
 | --- | --- |
-| `MEDPARSE_URL` | Base URL for Medparse (e.g., `http://127.0.0.1:8099`). |
+| `MEDPARSE_ENABLED` | Toggle Medparse integration (`true` by default). |
+| `MEDPARSE_TRANSPORT` | Transport selection: `http` (default) or `mcp`. |
+| `MEDPARSE_HTTP_BASE_URL` | Base URL for the Medparse HTTP sidecar (`http://127.0.0.1:8099`). |
 | `MEDPARSE_API_KEY` | Matches Medparse `API_KEY` when the sidecar is locked down. |
 | `MEDPARSE_TIMEOUT_SECONDS` | Request timeout (defaults to `30`). |
 | `MEDPARSE_MAX_RETRIES` | Number of retries for `429/5xx` responses (defaults to `3`). |
 | `MEDPARSE_RETRY_BACKOFF_SECONDS` | Backoff multiplier between retries (defaults to `1`). |
-| `QDRANT_HOST`, `QDRANT_PORT` | Hybrid retriever connection (defaults `localhost:6333`). |
-| `QDRANT_COLLECTION_V2` | Name of the Qdrant collection (defaults `ip_docs_v2`). |
+| `NEO4J_URI`, `NEO4J_USER`, `NEO4J_PASSWORD` | Connection details for Neo4j evidence graph. |
+| `QDRANT_URL`, `QDRANT_API_KEY` | Qdrant endpoint and API key (defaults `http://localhost:6333`, no key). |
+| `QDRANT_COLLECTION_EVIDENCE` | Qdrant collection for recommendation evidence (`ip_evidence_v1`). |
+| `QDRANT_COLLECTION_SECTIONS` | Qdrant collection for section embeddings (`ip_sections_v1`). |
+| `QDRANT_HOST`, `QDRANT_PORT` | Legacy knobs used by the original retriever (defaults `localhost:6333`). |
+| `QDRANT_COLLECTION_V2` | Legacy chunks collection name (defaults `ip_docs_v2`). |
 | `IP_ASSIST_OFFLINE` | When set, LangGraph retrieval falls back to lightweight encoders. |
 
 Set these variables before launching the corresponding service to avoid runtime configuration errors.
@@ -141,6 +147,12 @@ Set these variables before launching the corresponding service to avoid runtime 
    - Launch the Gradio UI and issue a query involving clinical terminology.
    - Inspect logs to confirm Medparse link responses are included in retrieval decisions.
 
+### Transport toggle
+
+- `MEDPARSE_TRANSPORT=http` (default) directs calls to the FastAPI sidecar via `src/adapters/medparse_http_adapter.py`.
+- `MEDPARSE_TRANSPORT=mcp` routes through the MCP client adapter. Ensure the Medparse MCP server from `ip-mcp-integration` is running locally before enabling.
+- Set `MEDPARSE_ENABLED=false` to boot IP Assist Lite without attempting Medparse calls (the retriever will fall back to vector-only search).
+
 ---
 
 ## Integration Data Flow
@@ -151,8 +163,10 @@ Set these variables before launching the corresponding service to avoid runtime 
 
 2. **PDF Extraction**
    - `MedparseClient.extract()` uploads PDFs for full processing.
-   - `src/graph/medparse_ingest.build_graph_payload()` transforms the response into graph-ready payloads.
-   - Downstream components (Neo4j ingest, Qdrant seeding, UI evidence counters) consume this normalized structure.
+   - `src/graph/medparse_ingest.build_graph_payload()` wraps `src/normalize.merge_enrichments.extract_to_graph_payload()` to produce a unified evidence graph.
+   - `src/jobs/ingest_documents.py` orchestrates extraction, optional raw artifact capture, and dispatch to the sinks.
+   - `src/graph/sinks/neo4j_sink.Neo4jSink` upserts documents, sections, recommendations, statistics, figures, and tables into Neo4j.
+   - `src/graph/sinks/qdrant_sink.QdrantSink` pushes recommendation evidence and section embeddings into dedicated Qdrant collections for UI drill-down.
 
 3. **Error Handling**
    - `MedparseClient` retries `429/5xx` responses with exponential backoff.
@@ -168,6 +182,7 @@ Set these variables before launching the corresponding service to avoid runtime 
 | LangGraph flow (core) | `IP_Assist_Lite/tests/` | `pytest -q` |
 | Medparse API smoke | `medparse-docling/tests/test_extract_smoke.py` | `pytest -q` (inside medparse env) |
 | QuickUMLS fallback | `medparse-docling/tests/test_umls_linker.py` | `pytest tests/test_umls_linker.py` |
+| IP Assist Lite evidence ingest | `tests/e2e/test_medparse_end_to_end.py` | `pytest tests/e2e/test_medparse_end_to_end.py` |
 
 Use `ENABLE_PIPELINE=false` in Medparse `.env` when running tests that should avoid the heavy Docling pipeline.
 

@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "DocRef.schema.json",
+  "title": "DocRef",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "doc_id": {"type": "string"},
+    "locator": {"type": ["string", "null"]},
+    "options": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "required": ["doc_id"]
+}

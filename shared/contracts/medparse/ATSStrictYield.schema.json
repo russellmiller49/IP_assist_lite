@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ATSStrictYield.schema.json",
+  "title": "ATSStrictYield",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "numerator": {"type": "integer", "minimum": 0},
+    "denominator": {"type": "integer", "minimum": 1},
+    "value": {"type": "number", "minimum": 0.0},
+    "categories_excluded": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "evidence_span": {"$ref": "EvidenceSpan.schema.json"}
+  },
+  "required": ["numerator", "denominator", "value", "categories_excluded", "evidence_span"]
+}

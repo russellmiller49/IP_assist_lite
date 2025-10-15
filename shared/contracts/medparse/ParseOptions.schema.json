@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ParseOptions.schema.json",
+  "title": "ParseOptions",
+  "type": "object",
+  "properties": {
+    "doc_type": {"type": "string"},
+    "force_reparse": {"type": "boolean"},
+    "include_images": {"type": "boolean"},
+    "extra": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

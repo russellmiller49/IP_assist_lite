@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "Section.schema.json",
+  "title": "Section",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {"type": "string"},
+    "title": {"type": ["string", "null"]},
+    "level": {"type": ["integer", "null"], "minimum": 0},
+    "text": {"type": "string"},
+    "page_anchor": {"type": ["integer", "null"], "minimum": 1},
+    "evidence_spans": {
+      "type": "array",
+      "items": {"$ref": "EvidenceSpan.schema.json"},
+      "minItems": 1
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "required": ["id", "text", "evidence_spans"]
+}

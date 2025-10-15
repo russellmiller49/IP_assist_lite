@@ -131,6 +131,80 @@ def format_response_html(result: Dict[str, Any], include_query: bool = False) ->
         <p>{response_text}</p>
     </div>
     """)
+
+    medparse_terms = result.get("medparse_terms") or []
+    if medparse_terms:
+        chips = " ".join(
+            f"<span style='display:inline-block; background:#e0f2ff; color:#0366d6; padding:4px 8px; margin:2px; border-radius:12px; font-size:0.85em;'>🔗 {term}</span>"
+            for term in medparse_terms[:12]
+        )
+        html_parts.append(
+            "<div style='margin-bottom: 14px;'><strong>Linked Concepts:</strong><br>" + chips + "</div>"
+        )
+
+    evidence_summary = result.get("evidence_summary")
+    if isinstance(evidence_summary, dict) and evidence_summary:
+        html_parts.append("<div style='margin-bottom: 16px;'>")
+        html_parts.append("<h3 style='margin-bottom: 8px;'>Evidence Summary</h3>")
+        summary_rows = []
+        for key, label in (
+            ("recommendations", "Recommendations"),
+            ("stats", "Statistics"),
+            ("figures", "Figures"),
+            ("tables", "Tables"),
+        ):
+            if key in evidence_summary:
+                summary_rows.append(f"<li><strong>{label}:</strong> {evidence_summary[key]}</li>")
+        if summary_rows:
+            html_parts.append("<ul style='margin: 0 0 12px 18px;'>" + "".join(summary_rows) + "</ul>")
+        html_parts.append("</div>")
+
+    evidence_items = result.get("evidence_items") or []
+    if evidence_items:
+        html_parts.append("<div style='margin-bottom: 18px;'>")
+        html_parts.append("<h3 style='margin-bottom: 8px;'>Document Evidence</h3>")
+        for item in evidence_items:
+            recommendation = item.get("recommendation") or {}
+            rec_text = recommendation.get("text", "")
+            grade = recommendation.get("grade")
+            page = recommendation.get("page")
+            html_parts.append("<div style='border: 1px solid #ddd; border-radius: 6px; padding: 12px; margin-bottom: 10px;'>")
+            header = rec_text or "Recommendation"
+            meta_bits = []
+            if grade:
+                meta_bits.append(f"Grade {grade}")
+            if page is not None:
+                meta_bits.append(f"Page {page}")
+            subtitle = f"<em>{', '.join(meta_bits)}</em>" if meta_bits else ""
+            html_parts.append(f"<p style='margin-bottom: 6px;'><strong>{header}</strong><br>{subtitle}</p>")
+
+            stats = item.get("statistics") or []
+            if stats:
+                html_parts.append("<ul style='margin: 0 0 6px 18px;'>")
+                for stat in stats:
+                    stat_text = stat.get("text") or stat.get("stat_type") or "Statistic"
+                    value = stat.get("value")
+                    if value is not None:
+                        stat_text += f": {value}"
+                    html_parts.append(f"<li>{stat_text}</li>")
+                html_parts.append("</ul>")
+
+            figures = item.get("figures") or []
+            tables = item.get("tables") or []
+            if figures or tables:
+                html_parts.append("<div style='font-size: 0.9em; color: #555;'>")
+                for figure in figures:
+                    caption = figure.get("caption", "Figure")
+                    fig_page = figure.get("page")
+                    html_parts.append(f"<div>📷 {caption} (page {fig_page})</div>")
+                for table in tables:
+                    caption = table.get("caption", "Table")
+                    tab_page = table.get("page")
+                    html_parts.append(f"<div>📊 {caption} (page {tab_page})</div>")
+                html_parts.append("</div>")
+
+            html_parts.append("</div>")
+        html_parts.append("</div>")
     
     # References in full AMA format (only articles shown)
     if result.get("citations"):
