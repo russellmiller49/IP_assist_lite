@@ -49,20 +49,29 @@ class AppConfig:
 
     MEDPARSE_ENABLED: bool
     MEDPARSE_TRANSPORT: TransportLiteral
-    MEDPARSE_HTTP_BASE_URL: Optional[str]
+    MEDPARSE_BASE_URL: Optional[str]
     MEDPARSE_TIMEOUT_SECONDS: float
     MEDPARSE_API_KEY: Optional[str]
     MEDPARSE_MAX_RETRIES: int
     MEDPARSE_RETRY_BACKOFF_SECONDS: float
 
+    APP_USE_NEO4J: bool
+    APP_USE_QDRANT: bool
+    APP_SHOW_EVIDENCE: bool
+
     NEO4J_URI: Optional[str]
     NEO4J_USER: Optional[str]
     NEO4J_PASSWORD: Optional[str]
+    NEO4J_DATABASE: Optional[str]
 
-    QDRANT_URL: Optional[str]
+    QDRANT_HOST: str
+    QDRANT_PORT: int
+    QDRANT_URL: str
     QDRANT_API_KEY: Optional[str]
-    QDRANT_COLLECTION_EVIDENCE: str
+    QDRANT_COLLECTION_PREFIX: str
     QDRANT_COLLECTION_SECTIONS: str
+    QDRANT_COLLECTION_RECS: str
+    QDRANT_COLLECTION_FIGTABS: str
 
     def __init__(self) -> None:
         self.MEDPARSE_ENABLED = _env_bool("MEDPARSE_ENABLED", True)
@@ -74,24 +83,35 @@ class AppConfig:
             )
         self.MEDPARSE_TRANSPORT = transport  # type: ignore[assignment]
 
-        self.MEDPARSE_HTTP_BASE_URL = _env_str("MEDPARSE_HTTP_BASE_URL", "http://127.0.0.1:8099")
+        base_url = _env_str("MEDPARSE_BASE_URL", None) or _env_str(
+            "MEDPARSE_HTTP_BASE_URL", "http://127.0.0.1:8099"
+        )
+        self.MEDPARSE_BASE_URL = base_url.rstrip("/") if base_url else None
         self.MEDPARSE_TIMEOUT_SECONDS = _env_float("MEDPARSE_TIMEOUT_SECONDS", 30.0)
         self.MEDPARSE_API_KEY = _env_str("MEDPARSE_API_KEY", None)
         self.MEDPARSE_MAX_RETRIES = _env_int("MEDPARSE_MAX_RETRIES", 3)
         self.MEDPARSE_RETRY_BACKOFF_SECONDS = _env_float("MEDPARSE_RETRY_BACKOFF_SECONDS", 1.0)
 
+        self.APP_USE_NEO4J = _env_bool("APP_USE_NEO4J", True)
+        self.APP_USE_QDRANT = _env_bool("APP_USE_QDRANT", True)
+        self.APP_SHOW_EVIDENCE = _env_bool("APP_SHOW_EVIDENCE", False)
+
         self.NEO4J_URI = _env_str("NEO4J_URI", "neo4j://localhost:7687")
         self.NEO4J_USER = _env_str("NEO4J_USER", "neo4j")
         self.NEO4J_PASSWORD = _env_str("NEO4J_PASSWORD", None)
+        self.NEO4J_DATABASE = _env_str("NEO4J_DATABASE", None)
 
-        self.QDRANT_URL = _env_str("QDRANT_URL", "http://localhost:6333")
+        self.QDRANT_HOST = _env_str("QDRANT_HOST", "localhost") or "localhost"
+        self.QDRANT_PORT = _env_int("QDRANT_PORT", 6333)
+        self.QDRANT_URL = _env_str("QDRANT_URL", f"http://{self.QDRANT_HOST}:{self.QDRANT_PORT}") or (
+            f"http://{self.QDRANT_HOST}:{self.QDRANT_PORT}"
+        )
         self.QDRANT_API_KEY = _env_str("QDRANT_API_KEY", None)
-        self.QDRANT_COLLECTION_EVIDENCE = (
-            _env_str("QDRANT_COLLECTION_EVIDENCE", "ip_evidence_v1") or "ip_evidence_v1"
-        )
-        self.QDRANT_COLLECTION_SECTIONS = (
-            _env_str("QDRANT_COLLECTION_SECTIONS", "ip_sections_v1") or "ip_sections_v1"
-        )
+        prefix = _env_str("QDRANT_COLLECTION_PREFIX", "ip") or "ip"
+        self.QDRANT_COLLECTION_PREFIX = prefix
+        self.QDRANT_COLLECTION_SECTIONS = f"{prefix}_sections"
+        self.QDRANT_COLLECTION_RECS = f"{prefix}_recs"
+        self.QDRANT_COLLECTION_FIGTABS = f"{prefix}_figtabs"
 
 
 __all__ = ["AppConfig", "TransportLiteral"]

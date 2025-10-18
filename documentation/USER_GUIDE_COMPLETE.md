@@ -2,6 +2,7 @@
 
 ## ⚡ QUICK START (If Already Set Up)
 
+### Manual Startup
 ```bash
 # 1. Activate conda environment (ALWAYS DO THIS FIRST!)
 conda activate ipass2
@@ -16,8 +17,6 @@ python cli_interface.py    # Command-line interface
 ```
 
 **Web UI**: Open http://localhost:7860 in your browser
-
----
 
 ## 🚨 COMPLETE SETUP FROM SCRATCH
 

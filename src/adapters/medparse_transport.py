@@ -108,12 +108,12 @@ def _build_http_factory() -> Callable[[AppConfig], MedparseTransport]:
     from .medparse_http_adapter import MedparseHTTPAdapter
 
     def _factory(cfg: AppConfig) -> MedparseTransport:
-        if not cfg.MEDPARSE_HTTP_BASE_URL:
+        if not cfg.MEDPARSE_BASE_URL:
             raise MedparseTransportConfigError(
-                "MEDPARSE_HTTP_BASE_URL must be configured when MEDPARSE_TRANSPORT=http"
+                "MEDPARSE_BASE_URL must be configured when MEDPARSE_TRANSPORT=http"
             )
         return MedparseHTTPAdapter(
-            base_url=cfg.MEDPARSE_HTTP_BASE_URL,
+            base_url=cfg.MEDPARSE_BASE_URL,
             api_key=cfg.MEDPARSE_API_KEY,
             timeout=cfg.MEDPARSE_TIMEOUT_SECONDS,
             max_retries=cfg.MEDPARSE_MAX_RETRIES,

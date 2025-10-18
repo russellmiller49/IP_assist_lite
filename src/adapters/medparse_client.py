@@ -39,10 +39,12 @@ class MedparseConfig:
     def from_env(cls) -> "MedparseConfig":
         """Construct settings from environment variables."""
 
-        base_url = (
-            os.getenv("MEDPARSE_HTTP_BASE_URL")
+        base_url_raw = (
+            os.getenv("MEDPARSE_BASE_URL")
+            or os.getenv("MEDPARSE_HTTP_BASE_URL")
             or os.getenv("MEDPARSE_URL", "")
-        ).strip().rstrip("/")
+        )
+        base_url = base_url_raw.strip().rstrip("/") if base_url_raw else ""
         if not base_url:
             raise MedparseConfigError("MEDPARSE_URL must be configured for Medparse client usage")
 

@@ -111,128 +111,98 @@ Raw Medical Literature → Data Preparation → Chunking → Embedding → Index
 
 ## Complete Data Pipeline
 
-### From Raw Data to Final App
+### Current Pipeline: PDF to Full Searchable System
 
-The system processes medical literature through a comprehensive pipeline:
+The system now uses a streamlined pipeline that processes PDFs directly into a searchable medical information retrieval system:
 
-#### 1. Data Preparation (`make prep`)
+#### 1. Start Graph Services
 ```bash
-src/prep/data_preparer_v12.py
+make graph-up
 ```
-- **Input**: Raw JSON files from medical literature (~500+ documents)
-- **Process**: Standardization, cleaning, metadata extraction
-- **Output**: Processed documents with authority tiers (A1-A4), evidence levels (H1-H4), domain classification
+- **Starts**: Neo4j + Qdrant stack via Docker
+- **Purpose**: Provides graph database and vector search infrastructure
 
-#### 2. Chunking (`make chunk`)
+#### 2. Ingest Documents
 ```bash
-src/index/chunker_v2.py
-```
-- **Input**: Processed documents
-- **Process**: Policy-driven chunking with quality gates
-- **Output**: Semantic chunks with precedence scoring and medical domain tags
+# For PDF files
+ipa_ingest --path data/seed/*.pdf --doc-type auto
 
-#### 3. Embedding Generation (`make embed`)
-```bash
-src/index/embed_medcpt.py
+# For existing JSON payloads
+ipa_ingest --json data/seed/*.json
 ```
-- **Input**: Chunks
-- **Process**: MedCPT embeddings (medical domain-specific)
-- **Output**: Vector embeddings optimized for medical terminology
+- **Input**: PDF files or structured JSON documents
+- **Process**: Extracts structured data via Medparse, persists to graph stores
+- **Output**: Documents indexed in Neo4j graph and Qdrant vector database
 
-#### 4. Indexing (`make index`)
+#### 3. Validate Stores (Optional)
 ```bash
-src/index/upsert_qdrant.py
+make graph-validate
 ```
-- **Input**: Embeddings + metadata
-- **Process**: Qdrant vector database indexing
-- **Output**: Searchable vector index with hierarchy-aware ranking
+- **Validates**: Neo4j graph structure and Qdrant collections
+- **Purpose**: Ensures data integrity and proper indexing
 
-#### 5. Hybrid Retrieval System
+#### 4. Launch Application
 ```bash
-src/retrieval/hybrid_retriever.py
+make ui
 ```
-- **MedCPT Semantic Search**: Medical domain embeddings
-- **BM25 Sparse Retrieval**: Exact term matching
-- **Hierarchy-Aware Ranking**: Authority tiers and evidence levels
-- **Safety Checks**: Emergency detection, contraindication warnings
+- **Starts**: Gradio interface for medical information retrieval
+- **Features**: Hybrid search, authority-aware ranking, safety checks
 
-#### 6. LangGraph Orchestration
-```bash
-src/orchestration/langgraph_agent.py
-```
-- **Query Classification**: Clinical, procedure, coding, emergency, safety
-- **Intelligent Routing**: Based on query type and safety flags
-- **Response Synthesis**: GPT-5 powered with grounded generation
-- **Safety Validation**: Multi-layer medical safety checks
+### Legacy Pipeline (Deprecated)
 
-#### 7. User Interface
-```bash
-app.py (Gradio)
-```
-- **Multi-turn Conversations**: Context retention across queries
-- **AMA Citations**: Full journal references with authority tiers
-- **Procedural Coding**: V3 CPT code generation with NCCI checks
-- **Safety Warnings**: Automatic flagging of critical information
+The old pipeline (`make prep`, `make chunk`, `make embed`, `make index`) has been replaced by the streamlined ingestion process above.
 
 ### Pipeline Commands
 
 ```bash
-# Complete pipeline
-make all  # prep → chunk → embed → index
+# Complete current pipeline
+make graph-up                    # Start services
+ipa_ingest --path data/seed/*.pdf --doc-type auto  # Ingest documents
+make graph-validate              # Validate stores (optional)
+make ui                          # Launch application
 
-# Individual steps
-make prep    # Process raw medical literature
-make chunk   # Create semantic chunks
-make embed   # Generate MedCPT embeddings
-make index   # Build Qdrant index
+# Service management
+make graph-down                  # Stop graph services
+make graph-validate              # Validate data stores
 
-# Development mode
-make dev-prep   # Process first 10 files
-make dev-chunk  # Chunk first 5 documents
+# Development helpers
+make dev-prep                    # Process first 10 files (legacy)
+make dev-chunk                   # Chunk first 5 documents (legacy)
 
 # Statistics
-make stats      # Show pipeline statistics
-make check-gpu  # Verify GPU availability
+make stats                       # Show pipeline statistics
+make check-gpu                   # Verify GPU availability
 ```
 
 ## Running the Application
 
+### Quick Start
+
+```bash
+# 1. Start graph services
+make graph-up
+
+# 2. Ingest your documents
+ipa_ingest --path data/seed/*.pdf --doc-type auto
+
+# 3. Launch the application
+make ui
+```
+
+The application will be available at `http://localhost:7860`
+
+### Alternative: Using Module Path
+
+If `ipa_ingest` command is not available, use the module path:
+
+```bash
+# Ingest documents using module path
+python -m src.jobs.ingest_documents --path data/seed/*.pdf --doc-type auto
+```
+
 **Note:** The main `app.py` now includes all enhanced features by default. The basic version is archived as `app_basic.py`.
 
-### Standard Pipeline (Now Enhanced)
-```bash
-# 1. Start Qdrant database
-./scripts/start_qdrant_local.sh
-
-# 2. Run the main app (includes all enhanced features)
-python app.py
-
-# Or use the Makefile
-make all  # Run complete pipeline
-```
-
-**Features included:**
-- 💬 Multi-turn conversation support
-- 📚 Full AMA format citations
-- 📋 V3 Procedural Coding with Q&A
-- 🔍 Enhanced retrieval with reranking
-
-### Alternative Options
-```bash
-# Run the basic/legacy version (without enhancements)
-python app_basic.py
-
-# Run with specific port
-GRADIO_SERVER_PORT=7861 python app.py
-
-# Use the CLI interface
-python cli_enhanced.py
-
-# Set environment variables (optional)
-export IP_GPT5_MODEL=gpt-4o-mini  # or gpt-5-mini, gpt-5
-export QDRANT_HOST=localhost
-export QDRANT_PORT=6333
-```
+## Features
 
 The enhanced pipeline provides:
 - **Query Assistant Tab:**
@@ -244,12 +214,55 @@ The enhanced pipeline provides:
 - **Procedural Coding Tab (V3):**
   - Automatic CPT/HCPCS code generation
   - EBUS station counting (31652 vs 31653)
-  - TBLB lobe tracking with add-on codes
-  - Sedation time calculation and family selection
-  - NCCI edit checks and warnings
-  - OPPS packaging notes
-  - ICD-10-PCS suggestions
-  - Documentation gap detection
+  - NCCI conflict detection
+  - Modifier recommendations
+  - Billing guidance with documentation requirements
+- **Enhanced Retrieval:**
+  - Reranking for improved relevance
+  - Authority-aware result ordering
+  - Safety checks and contraindication warnings
+  - Emergency query detection and routing
+
+## Environment Variables
+
+```bash
+# Optional configuration
+export IP_GPT5_MODEL=gpt-4o-mini  # or gpt-5-mini, gpt-5
+export QDRANT_HOST=localhost
+export QDRANT_PORT=6333
+export MEDPARSE_URL=http://127.0.0.1:8099
+export MEDPARSE_API_KEY=my-secret-medparse-key-123
+```
+
+## Troubleshooting
+
+### Common Issues
+
+1. **`ipa_ingest` command not found**
+   ```bash
+   # Use module path instead
+   python -m src.jobs.ingest_documents --path data/seed/*.pdf --doc-type auto
+   ```
+
+2. **Graph services not starting**
+   ```bash
+   # Check Docker is running
+   docker ps
+   
+   # Restart services
+   make graph-down
+   make graph-up
+   ```
+
+3. **Document ingestion fails**
+   ```bash
+   # Validate stores
+   make graph-validate
+   
+   # Check service logs
+   docker logs ip_assist_neo4j
+   docker logs ip_assist_qdrant
+   ```
 
 ## Technical Implementation Details
 

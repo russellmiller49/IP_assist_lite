@@ -55,6 +55,8 @@ SUCCESS_COLOR = "#4CAF50"
 WARNING_COLOR = "#FF9800"
 EMERGENCY_COLOR = "#F44336"
 
+APP_SHOW_EVIDENCE = os.getenv("APP_SHOW_EVIDENCE", "0").strip().lower() in {"1", "true", "yes"}
+
 # Global orchestrator instance
 _orchestrator = None
 _session_states = {}  # Store session states
@@ -142,69 +144,10 @@ def format_response_html(result: Dict[str, Any], include_query: bool = False) ->
             "<div style='margin-bottom: 14px;'><strong>Linked Concepts:</strong><br>" + chips + "</div>"
         )
 
-    evidence_summary = result.get("evidence_summary")
-    if isinstance(evidence_summary, dict) and evidence_summary:
-        html_parts.append("<div style='margin-bottom: 16px;'>")
-        html_parts.append("<h3 style='margin-bottom: 8px;'>Evidence Summary</h3>")
-        summary_rows = []
-        for key, label in (
-            ("recommendations", "Recommendations"),
-            ("stats", "Statistics"),
-            ("figures", "Figures"),
-            ("tables", "Tables"),
-        ):
-            if key in evidence_summary:
-                summary_rows.append(f"<li><strong>{label}:</strong> {evidence_summary[key]}</li>")
-        if summary_rows:
-            html_parts.append("<ul style='margin: 0 0 12px 18px;'>" + "".join(summary_rows) + "</ul>")
-        html_parts.append("</div>")
-
-    evidence_items = result.get("evidence_items") or []
-    if evidence_items:
-        html_parts.append("<div style='margin-bottom: 18px;'>")
-        html_parts.append("<h3 style='margin-bottom: 8px;'>Document Evidence</h3>")
-        for item in evidence_items:
-            recommendation = item.get("recommendation") or {}
-            rec_text = recommendation.get("text", "")
-            grade = recommendation.get("grade")
-            page = recommendation.get("page")
-            html_parts.append("<div style='border: 1px solid #ddd; border-radius: 6px; padding: 12px; margin-bottom: 10px;'>")
-            header = rec_text or "Recommendation"
-            meta_bits = []
-            if grade:
-                meta_bits.append(f"Grade {grade}")
-            if page is not None:
-                meta_bits.append(f"Page {page}")
-            subtitle = f"<em>{', '.join(meta_bits)}</em>" if meta_bits else ""
-            html_parts.append(f"<p style='margin-bottom: 6px;'><strong>{header}</strong><br>{subtitle}</p>")
-
-            stats = item.get("statistics") or []
-            if stats:
-                html_parts.append("<ul style='margin: 0 0 6px 18px;'>")
-                for stat in stats:
-                    stat_text = stat.get("text") or stat.get("stat_type") or "Statistic"
-                    value = stat.get("value")
-                    if value is not None:
-                        stat_text += f": {value}"
-                    html_parts.append(f"<li>{stat_text}</li>")
-                html_parts.append("</ul>")
-
-            figures = item.get("figures") or []
-            tables = item.get("tables") or []
-            if figures or tables:
-                html_parts.append("<div style='font-size: 0.9em; color: #555;'>")
-                for figure in figures:
-                    caption = figure.get("caption", "Figure")
-                    fig_page = figure.get("page")
-                    html_parts.append(f"<div>📷 {caption} (page {fig_page})</div>")
-                for table in tables:
-                    caption = table.get("caption", "Table")
-                    tab_page = table.get("page")
-                    html_parts.append(f"<div>📊 {caption} (page {tab_page})</div>")
-                html_parts.append("</div>")
-
-            html_parts.append("</div>")
-        html_parts.append("</div>")
+    if APP_SHOW_EVIDENCE:
+        evidence_html = _render_evidence_panel(result)
+        if evidence_html:
+            html_parts.append(evidence_html)
     
     # References in full AMA format (only articles shown)
     if result.get("citations"):
@@ -262,6 +205,71 @@ def format_response_html(result: Dict[str, Any], include_query: bool = False) ->
     """)
     
     return "".join(html_parts)
+
+
+def _render_evidence_panel(result: Dict[str, Any]) -> str:
+    summary = result.get("evidence_summary") or {}
+    items = result.get("evidence_items") or []
+    if not summary and not items:
+        return ""
+
+    chips = []
+    for label, key in (("Recommendations", "recommendations"), ("Stats", "stats"), ("Figures", "figures"), ("Tables", "tables")):
+        if key in summary:
+            chips.append(
+                "<span style='display:inline-block;background:#eef5ff;color:#1f4b99;padding:4px 10px;"
+                "margin:2px;border-radius:12px;font-size:0.85em;'>"
+                f"{label}: {summary[key]}"
+                "</span>"
+            )
+    header = "".join(chips)
+
+    rows = []
+    for item in items:
+        rec = item.get("recommendation") or {}
+        stats = item.get("statistics") or []
+        figures = item.get("figures") or []
+        tables = item.get("tables") or []
+
+        rec_meta = []
+        if rec.get("grade"):
+            rec_meta.append(f"Grade {rec['grade']}")
+        if rec.get("page") is not None:
+            rec_meta.append(f"Page {rec['page']}")
+        if rec.get("supported_by"):
+            rec_meta.append(f"Supported by {rec['supported_by']} stats")
+        subtitle = " · ".join(rec_meta)
+
+        stats_list = "".join(
+            f"<li>{stat.get('stat_type', 'Stat')}: {stat.get('value')}</li>" for stat in stats
+        )
+        figure_list = "".join(
+            f"<li>📷 {fig.get('caption', 'Figure')} (page {fig.get('page')})</li>" for fig in figures
+        )
+        table_list = "".join(
+            f"<li>📊 {tab.get('caption', 'Table')} (page {tab.get('page')})</li>" for tab in tables
+        )
+
+        rows.append(
+            "<div style='border:1px solid #d9e2f3;border-radius:6px;padding:12px;margin-bottom:8px;'>"
+            f"<strong>{rec.get('text', 'Recommendation')}</strong><br>"
+            f"<span style='font-size:0.85em;color:#4663ac;'>{subtitle}</span>"
+            + (f"<ul style='margin:8px 0 0 18px;'>{stats_list}</ul>" if stats_list else "")
+            + (
+                f"<ul style='margin:6px 0 0 18px;'>{figure_list}{table_list}</ul>"
+                if (figure_list or table_list)
+                else ""
+            )
+            + "</div>"
+        )
+
+    return (
+        "<div style='border-left:4px solid #4663ac;background:#f7f9ff;padding:12px;margin-bottom:16px;'>"
+        "<h3 style='margin-top:0;'>Evidence Panel</h3>"
+        + header
+        + "".join(rows)
+        + "</div>"
+    )
 
 def process_query(query: str, 
                  session_state: Optional[str] = None,

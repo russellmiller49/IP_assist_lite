@@ -10,4 +10,6 @@ def retrieve_node(state: IPState) -> IPState:
     state["retrieved_chunks"] = deduped
     state["temporal_context"] = extract_temporal_markers(deduped)
     state["medparse_terms"] = res.get("medparse_terms", [])
+    state["evidence_summary"] = res.get("evidence_summary", {})
+    state["evidence_items"] = res.get("evidence_items", [])
     return state

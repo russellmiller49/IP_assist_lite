@@ -4,6 +4,10 @@ from __future__ import annotations
 
 from typing import Any, Mapping, Optional, Protocol
 
+import httpx
+
+from ..config import AppConfig
+
 from .medparse_transport import (
     ExtractRequest,
     ExtractResponse,
@@ -35,15 +39,9 @@ class MedparseMCPAdapter(MedparseTransport):
         self._client = client or self._build_default_client()
 
     def _build_default_client(self) -> _MCPClient:
-        try:
-            from ip_mcp_client import MedparseMCPClient  # type: ignore[import]
-        except ModuleNotFoundError as exc:
-            raise MedparseTransportError(
-                "MCP transport requires the ip-mcp-integration client package. "
-                "Install it or set MEDPARSE_TRANSPORT=http."
-            ) from exc
-
-        return MedparseMCPClient(timeout=self._timeout)
+        cfg = AppConfig()
+        base_url = cfg.MEDPARSE_BASE_URL or "http://127.0.0.1:8099"
+        return _HttpMCPClient(base_url=base_url, api_key=cfg.MEDPARSE_API_KEY, timeout=self._timeout)
 
     def health(self) -> bool:
         try:
@@ -134,6 +132,31 @@ def _coerce_extract_response(response: Any) -> ExtractResponse:
         result[optional_key] = dict(payload_value)
 
     return result
+
+
+class _HttpMCPClient:
+    """Fallback MCP client that proxies calls to the Medparse HTTP bridge."""
+
+    def __init__(self, *, base_url: str, api_key: str | None, timeout: float) -> None:
+        headers = {"Accept": "application/json"}
+        if api_key:
+            headers["X-API-Key"] = api_key
+        self._client = httpx.Client(base_url=base_url, timeout=timeout, headers=headers)
+
+    def health(self, *, timeout: float) -> Mapping[str, Any]:
+        response = self._client.get("/healthz", timeout=timeout)
+        response.raise_for_status()
+        return response.json()
+
+    def link(self, payload: Mapping[str, Any], *, timeout: float) -> Mapping[str, Any]:
+        response = self._client.post("/link", json=dict(payload), timeout=timeout)
+        response.raise_for_status()
+        return response.json()
+
+    def extract(self, payload: Mapping[str, Any], *, timeout: float) -> Mapping[str, Any]:
+        response = self._client.post("/extract", json=dict(payload), timeout=timeout)
+        response.raise_for_status()
+        return response.json()
 
 
 __all__ = ["MedparseMCPAdapter"]

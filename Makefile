@@ -1,7 +1,8 @@
 # IP Assist Lite / Medparse Makefile
 .PHONY: help setup test cov format lint typecheck batch \
-	legacy-setup legacy-test prep chunk embed index retrieve api ui clean all \
-	kb-setup kb-extract kb-generate kb-validate kb-chunks kb-embed kb-all
+ legacy-setup legacy-test prep chunk embed index retrieve api ui clean all \
+ kb-setup kb-extract kb-generate kb-validate kb-chunks kb-embed kb-all \
+ graph-up graph-down backfill graph-validate
 
 # Variables
 PYTHON := python
@@ -144,6 +145,24 @@ docker-up:
 docker-down:
 	@echo "Stopping Qdrant container..."
 	cd docker && docker-compose down
+
+graph-up:
+	@echo "Starting Neo4j + Qdrant stack..."
+	docker compose -f docker/docker-compose.yml up -d
+
+graph-down:
+	@echo "Stopping Neo4j + Qdrant stack..."
+	docker compose -f docker/docker-compose.yml down
+
+backfill:
+	@echo "Backfilling seed documents into Neo4j/Qdrant..."
+	$(PYTHON) -m src.jobs.backfill_graph --pdf-dir data/seed --json-dir data/seed --report data/seed/backfill_report.csv
+
+graph-validate:
+	@echo "Validating Neo4j graph..."
+	$(PYTHON) -m src.graph.validate_neo4j
+	@echo "Validating Qdrant collections..."
+	$(PYTHON) -m src.graph.validate_qdrant
 
 # Clean generated files
 clean:

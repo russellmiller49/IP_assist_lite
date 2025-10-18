@@ -107,7 +107,8 @@ def iter_pages(pdf_path: Path) -> Iterator[PageContent]:
             return
 
     # Fallback: treat the file as plain text
-    text = normalize_text_artifacts(pdf_path.read_text(encoding="utf-8"))
+    raw_bytes = pdf_path.read_bytes()
+    text = normalize_text_artifacts(raw_bytes.decode("utf-8", errors="ignore"))
     lines = _clean_lines(text.splitlines())
     blocks = [
         TextBlock(text=line, bbox=None, font_size=None, is_bold=line.isupper()) for line in lines

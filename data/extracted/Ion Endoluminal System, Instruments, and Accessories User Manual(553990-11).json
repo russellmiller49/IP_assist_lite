@@ -1,0 +1,1249 @@
+{
+  "doc_id": "85901388-76ef-46e4-b693-761e25c39c99",
+  "doc_type": "ifu",
+  "source_file": "tests/data/pdfs/Ion Endoluminal System, Instruments, and Accessories User Manual(553990-11).pdf",
+  "page_count": 128,
+  "extraction_timestamp": "2025-10-17T23:30:28.049201Z",
+  "extraction_version": "v3.0.0",
+  "title": null,
+  "sections": [],
+  "figures": [],
+  "tables": [],
+  "stats": [],
+  "relations": [],
+  "warnings": [
+    {
+      "id": "warning_warning_ec14947fe315758f",
+      "severity": "warning",
+      "category": null,
+      "text": "Alerts the reader about a situation which, if not avoided, could result in death or serious injury. 1.4 Professional Instructions for Use Essential Prescribing Information • Device Name: Intuitive Ion Endoluminal System and Instruments (IF1000). • Rx only: Federal Law (USA) restricts this device to sale by or on the order of a physician (or properly licensed practitioner). Indications for Use The Ion endoluminal system (Model IF1000), referred to in this manual as “the system,” assists the user in navigating a catheter and endoscopic tools in the pulmonary tract using endoscopic visualization of the tracheobronchial tree for diagnostic and therapeutic procedures. The Ion endoluminal system enables fiducial marker placement. It does not make a diagnosis and is not for pediatric use. The PlanPoint Software uses patient CT scans to create a 3D plan of the lung and navigation pathways for use with the Ion endoluminal system. The Flexision Biopsy Needle is used with the Ion endoluminal system to biopsy tissue from a target area in the lung. Introduction | Professional Instructions for Use 11",
+      "page": 11,
+      "bbox_norm": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "evidence_spans": [
+        {
+          "id": "fcc19e0f03cc41b9b566af2dd6d64fb9",
+          "page": 11,
+          "bbox_norm": null,
+          "text": "Warning: Alerts the reader about a situation which, if not avoided, could result in death",
+          "confidence": 1.0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "id": "warning_warning_c13c00dcafd9d868",
+      "severity": "warning",
+      "category": "pinch_hazard",
+      "text": "To avoid risk of electric shock or equipment damage, do not step on, crush/ pinch, crimp, or otherwise stress cables and connectors.",
+      "page": 14,
+      "bbox_norm": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "evidence_spans": [
+        {
+          "id": "a0492610b9dc43999a213a87b18b9b84",
+          "page": 14,
+          "bbox_norm": null,
+          "text": "WARNING: To avoid risk of electric shock or equipment damage, do not step on, crush/",
+          "confidence": 1.0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "id": "warning_warning_4dfcb83b50de49b4",
+      "severity": "warning",
+      "category": null,
+      "text": "To prevent patient injury, do not use excessive force during the insertion or extraction of the Vision Probe or bronchoscopic tools through the Catheter tool channel.",
+      "page": 14,
+      "bbox_norm": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "evidence_spans": [
+        {
+          "id": "f65c4da100cb423e9debc8a786f38217",
+          "page": 14,
+          "bbox_norm": null,
+          "text": "WARNING: To prevent patient injury, do not use excessive force during the insertion or",
+          "confidence": 1.0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "id": "warning_warning_5f839bc4456021eb",
+      "severity": "warning",
+      "category": null,
+      "text": "Use fluoroscopic visualization (fluoroscopy) when advancing tools past the tip of the Catheter. Failure to use fluoroscopy during biopsy may result in patient injury.",
+      "page": 14,
+      "bbox_norm": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "evidence_spans": [
+        {
+          "id": "59b4c78051e746abb9c360dbbfd087c1",
+          "page": 14,
+          "bbox_norm": null,
+          "text": "WARNING: Use fluoroscopic visualization (fluoroscopy) when advancing tools past the tip",
+          "confidence": 1.0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "id": "warning_warning_57657849f6597fb5",
+      "severity": "warning",
+      "category": null,
+      "text": "Advance the Catheter only under live visualization from the Vision Probe (Live View) to prevent procedural delay or patient injury.",
+      "page": 14,
+      "bbox_norm": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "evidence_spans": [
+        {
+          "id": "06313fa64c8a40678eece285828affb8",
+          "page": 14,
+          "bbox_norm": null,
+          "text": "WARNING: Advance the Catheter only under live visualization from the Vision Probe",
+          "confidence": 1.0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "id": "warning_warning_1c6acd656c9ad218",
+      "severity": "warning",
+      "category": null,
+      "text": "Handle biopsy needles with care to prevent user injury.",
+      "page": 14,
+      "bbox_norm": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "evidence_spans": [
+        {
+          "id": "4267367b86eb465fad64bcc38681f3fd",
+          "page": 14,
+          "bbox_norm": null,
+          "text": "WARNING: Handle biopsy needles with care to prevent user injury.",
+          "confidence": 1.0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "id": "warning_warning_dd4397435825b758",
+      "severity": "warning",
+      "category": null,
+      "text": "Always inspect the biopsy needle for damage before and during use. A damaged needle can contain loose fragments that may cause toxic reaction if left in the patient.",
+      "page": 14,
+      "bbox_norm": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "evidence_spans": [
+        {
+          "id": "ce873f654b8244bc88a2e4d5f763e5c2",
+          "page": 14,
+          "bbox_norm": null,
+          "text": "WARNING: Always inspect the biopsy needle for damage before and during use. A damaged",
+          "confidence": 1.0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "id": "warning_warning_5ad2616beea031d4",
+      "severity": "warning",
+      "category": null,
+      "text": "Use caution during biopsy of targets within 5 mm of the visceral pleura or other critical structures. Biopsy near critical structures may result in patient injury. 14 Introduction | General Warnings, Cautions, and Notes",
+      "page": 14,
+      "bbox_norm": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "evidence_spans": [
+        {
+          "id": "c6fbaf98b8574ce8b0d12e0c5397e129",
+          "page": 14,
+          "bbox_norm": null,
+          "text": "WARNING: Use caution during biopsy of targets within 5 mm of the visceral pleura or other",
+          "confidence": 1.0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "id": "warning_warning_972087a20285ca0f",
+      "severity": "warning",
+      "category": null,
+      "text": "Insert the Vision Probe after biopsy to assess airways for trauma or bleeding to prevent delayed intervention in case of an emergency.",
+      "page": 15,
+      "bbox_norm": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "evidence_spans": [
+        {
+          "id": "153d6c4e5f3d463794768906a2c95f58",
+          "page": 15,
+          "bbox_norm": null,
+          "text": "WARNING: Insert the Vision Probe after biopsy to assess airways for trauma or bleeding to",
+          "confidence": 1.0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "id": "warning_warning_fec11e24f4e51aa4",
+      "severity": "warning",
+      "category": "electrical",
+      "text": "Leakage currents from other medical equipment applied parts may be additive. To ensure maximum safety for the patient, only devices having Type BF or Type CF applied parts should be used with the Ion endoluminal system. 16 Introduction | General Warnings, Cautions, and Notes",
+      "page": 16,
+      "bbox_norm": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "evidence_spans": [
+        {
+          "id": "09675e855fc141fa9c4a9d6db67cbb4c",
+          "page": 16,
+          "bbox_norm": null,
+          "text": "WARNING: Leakage currents from other medical equipment applied parts may be additive.",
+          "confidence": 1.0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "id": "warning_warning_b9efa5b8049f4e71",
+      "severity": "warning",
+      "category": "suction",
+      "text": "If saline injection does not clear the obstruction, remove the Catheter or Vision Probe for continued cleaning, as excess saline injection into the lung may result in patient injury. Vision Probe Bag The Vision Probe Bag installs over the arm for temporary storage of the Vision Probe when it is not inserted within the Catheter tool channel. The Vision Probe Bag is a single-use device provided sterile by Ethylene Oxide (EO) sterilization method. For replacement, contact Customer Service. Suction Adapter Figure 4.8 Suction Adapter The Suction Adapter attaches to the Catheter tool channel to be used with suction tubing for bronchoalveolar lavage (BAL). System Overview | Device Description 29",
+      "page": 29,
+      "bbox_norm": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "evidence_spans": [
+        {
+          "id": "37b3908b8f7a412ab17abf5867b68b69",
+          "page": 29,
+          "bbox_norm": null,
+          "text": "WARNING: If saline injection does not clear the obstruction, remove the Catheter or Vision",
+          "confidence": 1.0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "id": "warning_warning_6f9959940f806462",
+      "severity": "warning",
+      "category": null,
+      "text": "To avoid patient injury, always lock the wheels of the System Cart before docking to the patient. • Ensure the System Cart power cable can reach a power outlet. • Ensure the System Cart is adjacent to the procedure table (bed), with the Power button facing the bed. • Ensure there is enough room for the fluoroscope to move around the bed. • Ensure the System Cart is at or near the head of the bed. • Ensure the physician can easily view the monitors. • Ensure the System Cart does not interfere with other equipment in the room. • Ensure there are no obstructions around the arm. • Once positioned, apply the foot brake and un-stow the monitors. • Ensure the bed brakes are locked before starting the procedure. Move and Position the Controller Guidelines to Move the Controller • Release the brakes on the wheels. • Tilt the Controller and push to transport the Controller. Guidelines to Position the Controller in the Procedure Room • Ensure the physician can view the monitors and reach the arm. • Ensure the Controller cable can reach the connector on the System Cart. • Ensure there is space to move the Controller out of the way during biopsy, if needed. 48 Room Setup",
+      "page": 48,
+      "bbox_norm": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "evidence_spans": [
+        {
+          "id": "9fff72c39217405b9747d5c9639c30ea",
+          "page": 48,
+          "bbox_norm": null,
+          "text": "WARNING: To avoid patient injury, always lock the wheels of the System Cart before",
+          "confidence": 1.0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "id": "warning_warning_1c5d5d396888efc3",
+      "severity": "warning",
+      "category": null,
+      "text": "Failure to properly install the Catheter and accessories may result in patient injury.",
+      "page": 60,
+      "bbox_norm": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "evidence_spans": [
+        {
+          "id": "d87638d859ab4687a8036dc84044fa5b",
+          "page": 60,
+          "bbox_norm": null,
+          "text": "WARNING: Failure to properly install the Catheter and accessories may result in patient",
+          "confidence": 1.0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "id": "warning_caution_f352a6f9816092af",
+      "severity": "caution",
+      "category": "electrical",
+      "text": "Leakage current from interconnected medical equipment (for example, ultrasound equipment) may exceed safe levels. To maintain the safety of patients and users, interconnect only with devices that comply with IEC 60601-1, and whose total patient leakage current meets the limits of Clause 16 of IEC 60601-1 (third edition or higher).",
+      "page": 15,
+      "bbox_norm": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "evidence_spans": [
+        {
+          "id": "6120c4587e73418fbe0c34bd7f862291",
+          "page": 15,
+          "bbox_norm": null,
+          "text": "CAUTION: Leakage current from interconnected medical equipment (for example,",
+          "confidence": 1.0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "id": "warning_caution_d3c036919bdc665a",
+      "severity": "caution",
+      "category": "electrical",
+      "text": "Leakage current from interconnected electrical equipment (for example, external displays) may exceed safe levels. To maintain the safety of patients and users, interconnect only with devices in compliance with IEC 60601-1-1. Users must ensure that any interconnected equipment not supplied by Intuitive maintains compliance with IEC 60601-1-1.",
+      "page": 15,
+      "bbox_norm": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "evidence_spans": [
+        {
+          "id": "a9a49e12e80449868b57de05a7921043",
+          "page": 15,
+          "bbox_norm": null,
+          "text": "CAUTION: Leakage current from interconnected electrical equipment (for example,",
+          "confidence": 1.0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "id": "warning_caution_a91569795c35478e",
+      "severity": "caution",
+      "category": null,
+      "text": "Exercise caution when inserting the biopsy needle into the Catheter tool channel with the sheath extended. Failure to do so may result in patient injury.",
+      "page": 15,
+      "bbox_norm": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "evidence_spans": [
+        {
+          "id": "48018e34b1bd42fa9dd99a2aa3ea2317",
+          "page": 15,
+          "bbox_norm": null,
+          "text": "CAUTION: Exercise caution when inserting the biopsy needle into the Catheter tool channel",
+          "confidence": 1.0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "id": "warning_caution_f5602df86d6ea7bf",
+      "severity": "caution",
+      "category": "saline",
+      "text": "To prevent impaired lung function, limit the total volume of saline injection for Vision Probe cleaning to less than 40 mL.",
+      "page": 15,
+      "bbox_norm": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "evidence_spans": [
+        {
+          "id": "d2cd805a089f4d77a2464d021179253d",
+          "page": 15,
+          "bbox_norm": null,
+          "text": "CAUTION: To prevent impaired lung function, limit the total volume of saline injection for",
+          "confidence": 1.0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "id": "warning_caution_69bf5f61fa61094a",
+      "severity": "caution",
+      "category": null,
+      "text": "If resistance is felt when removing the Vision Probe or tool from the Catheter tool channel, do not continue retracting the device, as this may result in device damage. Remove the Catheter and Vision Probe or tool together. Notes",
+      "page": 15,
+      "bbox_norm": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "evidence_spans": [
+        {
+          "id": "6adab74ac3c945798f71621a7dcc0e9e",
+          "page": 15,
+          "bbox_norm": null,
+          "text": "CAUTION: If resistance is felt when removing the Vision Probe or tool from the Catheter tool",
+          "confidence": 1.0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "id": "warning_caution_5b4f19708e1d907d",
+      "severity": "caution",
+      "category": "laser_safety",
+      "text": "While Class 1 laser products are considered to be “eye safe” without the need for additional protection, the following general safety guidelines should be observed to reduce the risk of eye injury: • Do not look or stare at optical fiber ports or optical fibers that are connected to a light source. • Do not examine with optical instruments optical fiber ports or optical fibers that are connected to a source. The use of optical instruments (for example, a magnifying glass) may increase eye hazard. • Use of controls or adjustments or performance of procedures other than those specified herein may result in hazardous radiation exposure. • Do not attempt to perform any repair or maintenance on optical communication components. Repairs and maintenance outside that which is allowed herein must be performed only by an authorized repair facility. System Cart Monitor Positioning The label below indicates a pinch hazard and appears on the System Cart monitor arm:",
+      "page": 17,
+      "bbox_norm": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "evidence_spans": [
+        {
+          "id": "c1f1715b910048f798a994be950f7d83",
+          "page": 17,
+          "bbox_norm": null,
+          "text": "CAUTION: While Class 1 laser products are considered to be “eye safe” without the need for",
+          "confidence": 1.0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "id": "warning_caution_e7e1bd166d346312",
+      "severity": "caution",
+      "category": "suction",
+      "text": "Do not apply suction for extended durations, as this may impair ventilation or lead to procedure delay.",
+      "page": 30,
+      "bbox_norm": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "evidence_spans": [
+        {
+          "id": "197b785a608b47ab97c3a7926a866d00",
+          "page": 30,
+          "bbox_norm": null,
+          "text": "CAUTION: Do not apply suction for extended durations, as this may impair ventilation or",
+          "confidence": 1.0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "id": "warning_caution_c691520a5b1f8fb3",
+      "severity": "caution",
+      "category": "saline",
+      "text": "Use small size syringes (for example, 12 mL or smaller) to prevent accidentally injecting large volumes of saline or air and impairing lung function.",
+      "page": 56,
+      "bbox_norm": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "evidence_spans": [
+        {
+          "id": "165b4ed12e774402932076776c5dccd8",
+          "page": 56,
+          "bbox_norm": null,
+          "text": "CAUTION: Use small size syringes (for example, 12 mL or smaller) to prevent accidentally",
+          "confidence": 1.0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "id": "warning_caution_27f37dfc9ecc5abe",
+      "severity": "caution",
+      "category": null,
+      "text": "Inspect the Vision Probe for defects or damage to tip or lens, fiber optic surfaces and cable prior to inserting into the Catheter tool channel. Failure to do so may result in patient harm or Catheter damage.",
+      "page": 56,
+      "bbox_norm": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "evidence_spans": [
+        {
+          "id": "8f52ac9a51cd4c28bb3954b7fd6beb8c",
+          "page": 56,
+          "bbox_norm": null,
+          "text": "CAUTION: Inspect the Vision Probe for defects or damage to tip or lens, fiber optic surfaces",
+          "confidence": 1.0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "id": "warning_caution_819e89464e59f136",
+      "severity": "caution",
+      "category": null,
+      "text": "If fluid is observed in the sensor port well on the Catheter Reprocessing Cover or on the green sensor port, do not install the Catheter on the system, as it may result in Catheter or system damage. Contact Customer Service. 8.2 Select Compatible Third-Party Biopsy Tools The use of third-party tools is at the discretion of the hospital and the physician.",
+      "page": 58,
+      "bbox_norm": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "evidence_spans": [
+        {
+          "id": "c19ec3ab1c05466ab8b9b3dae9d8268e",
+          "page": 58,
+          "bbox_norm": null,
+          "text": "CAUTION: If fluid is observed in the sensor port well on the Catheter Reprocessing Cover",
+          "confidence": 1.0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "id": "warning_note_fd29a955d321ce81",
+      "severity": "note",
+      "category": null,
+      "text": "Not all technologies may have regulatory approval or may be commercially available in all geographies. For availability in your country, check with your local representative. 1.2 Limitation on Use - Limited License Ion endoluminal system instruments and accessories are provided pursuant to a limited license to use only with the Ion endoluminal system. Upon expiration of the instrument’s or accessory’s maximum number of uses, this limited license expires. Any repair, refurbishment, reconditioning, or servicing of Intuitive instruments and accessories is strictly prohibited and results in expiration of limited license. Introduction 9",
+      "page": 9,
+      "bbox_norm": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "evidence_spans": [
+        {
+          "id": "1d59b940fc644b38a6b65478d860c40e",
+          "page": 9,
+          "bbox_norm": null,
+          "text": "Note: Not all technologies may have regulatory approval or may be commercially available",
+          "confidence": 1.0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "id": "warning_note_a5bb453b47c6103f",
+      "severity": "note",
+      "category": null,
+      "text": "Before connecting any fluoroscopy equipment having no patient applied parts (that is, nothing comes into direct contact with patient) with this system, use device labeling to confirm that they comply with the standards IEC 60601-1 and IEC 60601-1-3.",
+      "page": 16,
+      "bbox_norm": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "evidence_spans": [
+        {
+          "id": "8f0ade1377424e5483bd9ebf03b8eaa9",
+          "page": 16,
+          "bbox_norm": null,
+          "text": "Note: Before connecting any fluoroscopy equipment having no patient applied parts (that",
+          "confidence": 1.0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "id": "warning_note_a9423e8b66900bf3",
+      "severity": "note",
+      "category": null,
+      "text": "Use only water-based or silicone-based lubricants for the Catheter. Other lubricants may be difficult to remove during reprocessing and reduce the effectiveness of disinfection.",
+      "page": 16,
+      "bbox_norm": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "evidence_spans": [
+        {
+          "id": "ef0c0c9dec0a4885b2925c50e7e54480",
+          "page": 16,
+          "bbox_norm": null,
+          "text": "Note: Use only water-based or silicone-based lubricants for the Catheter. Other lubricants",
+          "confidence": 1.0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "id": "warning_note_061e738571d52ed3",
+      "severity": "note",
+      "category": null,
+      "text": "Drive with caution in small airways where the airway diameter is smaller than the outer diameter of the Catheter.",
+      "page": 16,
+      "bbox_norm": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "evidence_spans": [
+        {
+          "id": "3c604dde4275477aad5998476dd6f833",
+          "page": 16,
+          "bbox_norm": null,
+          "text": "Note: Drive with caution in small airways where the airway diameter is smaller than the",
+          "confidence": 1.0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "id": "warning_note_e3ebb4e11931ee89",
+      "severity": "note",
+      "category": "suction",
+      "text": "Do not apply large volume suction through the Catheter tool channel when Catheter tip is wedged in small airways. Endoscopic Procedure Precautions and Notes Only physicians having adequate training and experience with endoscopic techniques should perform endoscopic procedures with the Ion endoluminal system. Medical literature should be consulted regarding techniques, complications, and hazards before performing any endoscopic procedure.",
+      "page": 16,
+      "bbox_norm": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "evidence_spans": [
+        {
+          "id": "d6f41daeac314d948e8866e8ec5ddcdc",
+          "page": 16,
+          "bbox_norm": null,
+          "text": "Note: Do not apply large volume suction through the Catheter tool channel when Catheter",
+          "confidence": 1.0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "id": "warning_note_c927106ea4683dcd",
+      "severity": "note",
+      "category": null,
+      "text": "Use of the Ion endoluminal system may be associated with increased procedure and anesthesia time. Accessory Equipment Interconnection",
+      "page": 16,
+      "bbox_norm": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "evidence_spans": [
+        {
+          "id": "49f31f318ad6438e8f07b5e978560dd0",
+          "page": 16,
+          "bbox_norm": null,
+          "text": "Note: Use of the Ion endoluminal system may be associated with increased procedure and",
+          "confidence": 1.0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "id": "warning_note_ed15c7b8ac4a9e98",
+      "severity": "note",
+      "category": "electrical",
+      "text": "Do not suction excess fluid in airways when vision is obscured. While the Catheter tip is wedged in small airways, bubbles may form that can obscure vision and lead to procedure delay. Catheter Guide Figure 4.9 Catheter Guide Bottom View, Collapsed 9 10 11 9 8 7 6 5 4 3 2 1 1. Docking spar mount 2. Catheter channel exit point 3. Hinges 4. Link 5. Eyelets 6. Release buttons 7. Proximal mount 8. Catheter channel entry point 9. Vents 10. Electrical contacts 11. Latch The Catheter Guide prevents buckling of the Catheter shaft during insertion into the patient. The Catheter Guide attaches to the arm and has release buttons to remove it from the arm. The Catheter Guide consists of the proximal mount, release buttons, eyelets, links, hinges, Catheter channel entrance and exit points, and a distal mount. The Catheter Guide is provided non-sterile and is a multi-use device. See the Ion Catheter Guide Reprocessing Instructions for further information. 30 System Overview | Device Description",
+      "page": 30,
+      "bbox_norm": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "evidence_spans": [
+        {
+          "id": "3370a55beb0843b3a3ab07445b7ee13e",
+          "page": 30,
+          "bbox_norm": null,
+          "text": "Note: Do not suction excess fluid in airways when vision is obscured. While the Catheter tip",
+          "confidence": 1.0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "id": "warning_note_6709aa14b1d23f13",
+      "severity": "note",
+      "category": "saline",
+      "text": "If friction is felt in the trackball or scroll wheel, clean it with saline and dry with gauze prior to or during use, as needed.",
+      "page": 39,
+      "bbox_norm": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "evidence_spans": [
+        {
+          "id": "02a858a2308240d68b7083e3bde04e04",
+          "page": 39,
+          "bbox_norm": null,
+          "text": "Note: If friction is felt in the trackball or scroll wheel, clean it with saline and dry with gauze",
+          "confidence": 1.0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "id": "warning_note_2fe968cf66b86a1c",
+      "severity": "note",
+      "category": null,
+      "text": "If Controller responsiveness is poor, change or dry gloves. The Controller touchscreen and scroll wheel are designed to sense touch. Wet gloves may interfere with touch sensing. Figure 4.19 Controller 5 10 9 3 2 4 1 7 6 8 The Controller has the following components: 1. Handle: Provides grasp for transport of the Controller. 2. Emergency stop (E-stop) button: Stops system operation at any time and causes the Catheter tip to go inactive. 3. Scroll wheel: Controls the insertion and retraction of the Catheter. Roll it towards the touchscreen to insert the Catheter, and roll it away from the touchscreen to retract it. 4. Passive button: Controls the Catheter state (active and passive). Quick-press this button to relax the Catheter tip (passive), and press it again to resume active mode. Press and hold to slowly relax the Catheter tip (temporary passive). Release the button to stop relaxing the Catheter and resume active mode. 5. Touchscreen: Controls to select targets, save images and videos, and provide other options described in this manual. System Overview | Controller Use 39",
+      "page": 39,
+      "bbox_norm": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "evidence_spans": [
+        {
+          "id": "fad4616a61dd48aa9b4614d528c5d465",
+          "page": 39,
+          "bbox_norm": null,
+          "text": "Note: If Controller responsiveness is poor, change or dry gloves. The Controller touchscreen",
+          "confidence": 1.0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "id": "warning_note_93cf6d0fadb49789",
+      "severity": "note",
+      "category": null,
+      "text": "Once the target is moved, the Airway Tree and anatomy borders are no longer visible on the Top Monitor since the Catheter-to-target relationship has been updated. To restore the airway tree and anatomy borders, undo the updated target, tap Adjust Tree in the quick tools bar, and tap Airway Tree. • Fluoro Reference: Save a fluoro image that is overlayed on the fluoroscopic view. Adjust visibility and opacity of overlay. System Overview | Controller Use 41",
+      "page": 41,
+      "bbox_norm": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "evidence_spans": [
+        {
+          "id": "674b0dd620034ccc9a3a4bd2a76f2e91",
+          "page": 41,
+          "bbox_norm": null,
+          "text": "Note: Once the target is moved, the Airway Tree and anatomy borders are no longer",
+          "confidence": 1.0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "id": "warning_note_3a7b858b930df3bd",
+      "severity": "note",
+      "category": "pinch_hazard",
+      "text": "the various preview modes and options: • Lock to Path mode: On by default, Lock to Path locks the Navi- gation View to the path towards the selected destination. Lock to Path mode forces the Navigation View to remain on the path to the target, but still follows the insertion motion of the real Catheter, and can be used with the Live View to accurately facil- itate navigation to the target. While relying on the Live View, use Lock to Path to indicate which turns to make. If there is divergence between the Live View and Navigation View, use the arrows that appear on the touchscreen to adjust the insertion or retraction of the Navigation View to match the Live View. Use the Move Target or Catheter reference function- ality to help localize the target. • Preview Path mode: Tap Scroll Wheel Lock to unlock Lock to Path and enter Preview Path to preview the selected path to the target without moving the actual Catheter. Use the arrows to move the Navigation View Catheter forward or backward through the airway. See Figure 4.22. • Vasculature: Depicts both arteries and veins in red. Tap Vascu- lature to toggle the visibility of any vasculature that was added during planning. Vasculature is visible only in the Navigation View when either Preview Path or Lock to Path mode is active. Adjust Tree Tap and hold with one finger to rotate, tap and hold with two fingers to pan, and pinch to zoom into the airway tree on the monitor. The Tree View is set to follow Catheter movement by default and stops when the tree is rotated. Recenter to follow the Catheter movement again. The Tree View can be rotated only in manual view. You can also toggle the visibility of the target, reference areas, and anatomy borders. • Airway Tree: Tap Airway Tree to view the approximate shape of the Catheter within the airways. If the target is updated, the option to switch to Airway Tree is disabled until the target is reset. • Set the angle for Tree View to match the fluoroscope angle, or input any desired angle by tapping Adjust Angle on the Con- troller touchscreen. Rotate the Tree View to get the optimal angle for viewing by tapping the view orientations on the Con- troller touchscreen (Axial, Sagittal, Coronal, Follow, Manual, and Adjust Angle). Tap Coronal to rotate the tree to the anterior- posterior view. (continues on next page) 44 System Overview | Controller Use",
+      "page": 44,
+      "bbox_norm": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "evidence_spans": [
+        {
+          "id": "e4db67ccc2474459a7a995880ccfe4f9",
+          "page": 44,
+          "bbox_norm": null,
+          "text": "Note the various preview modes and options:",
+          "confidence": 1.0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "id": "warning_note_43ae153ad78a233e",
+      "severity": "note",
+      "category": "saline",
+      "text": "Before clinical use, always inspect the system and Controller for any damage (for example, broken, cracked, chipped, or worn parts). If you observe any damage, contact Customer Service and do not use the system. 1. Power on the system by pressing the Power button on the System Cart. The system must be plugged in to begin a procedure. If the System Cart is powered on before the Controller cable is attached, attach the cable to the System Cart and then restart the system. 2. Unfold the monitors. Position the screens for optimal viewing. 3. Connect the fluoroscope and other auxiliary devices to the system (for example, standard bronchoscope, R-EBUS) and power them on: • Connect the devices to the System Cart using the appropriate cables. • Confirm the connections are secure. • Power on the fluoroscope and other auxiliary devices. Once a connection is established, the label of the connection illuminates blue on the auxiliary connection panel. For further information, see 6.3 Auxiliary Connections on page 52. 4. Remove the trackball and scroll wheel, clean them with saline and dry with gauze. Reinstall the trackball and scroll wheel into the Controller and wait for calibration to complete. 5. Follow Guided Setup instructions on the top monitor.",
+      "page": 54,
+      "bbox_norm": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "evidence_spans": [
+        {
+          "id": "3fa6e333aa264850bd07f98c5a5f2bfe",
+          "page": 54,
+          "bbox_norm": null,
+          "text": "Note: Before clinical use, always inspect the system and Controller for any damage (for",
+          "confidence": 1.0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "id": "warning_note_c128f0ed3a9e9620",
+      "severity": "note",
+      "category": null,
+      "text": "If an installed Catheter Guide, Catheter, or Vision Probe has expired, the system displays a message to remove and replace the instrument or accessory. Prepare Materials Prepare reusable and disposable items. 56 Prepare for Procedure",
+      "page": 56,
+      "bbox_norm": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "evidence_spans": [
+        {
+          "id": "f59da3ba632a4820a5aeb49e12944c86",
+          "page": 56,
+          "bbox_norm": null,
+          "text": "Note: If an installed Catheter Guide, Catheter, or Vision Probe has expired, the system",
+          "confidence": 1.0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "id": "warning_note_bc7ddc26e818c822",
+      "severity": "note",
+      "category": "suction",
+      "text": "Use only compatible bronchoscopic biopsy forceps. Third-party tools must be legally marketed. Use the table below for guidance to select third-party tools. Table 8.1 Compatible Third-party Tools Third-Party Tool Brand/Type Maximum Diameter Minimum Length Cook Captura Biopsy Forceps Must be Cook Captura Disposable Broncho- scope Biopsy Forceps (Model G53006) only 2 mm 100 cm Cytology Brush Any 2 mm 100 cm Bronchial Balloon (for example, Endobron- chial blocker) Any 2 mm 100 cm Bronchoalveolar Lavage Kit Must be compatible with standard suction tubing ISO 8836",
+      "page": 58,
+      "bbox_norm": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "evidence_spans": [
+        {
+          "id": "04f902d2d7784197bf6d9602d4e92829",
+          "page": 58,
+          "bbox_norm": null,
+          "text": "Note: Use only compatible bronchoscopic biopsy forceps.",
+          "confidence": 1.0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "id": "warning_note_d595585cdd9ab33f",
+      "severity": "note",
+      "category": null,
+      "text": "Third-party biopsy tools must be compatible with a 2 mm tool channel and have a minimum length of 100 cm. 58 Prepare for Procedure | Select Compatible Third-Party Biopsy Tools",
+      "page": 58,
+      "bbox_norm": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "evidence_spans": [
+        {
+          "id": "97da2e17c996402c8d7ea51dd0b8dddf",
+          "page": 58,
+          "bbox_norm": null,
+          "text": "Note: Third-party biopsy tools must be compatible with a 2 mm tool channel and have a",
+          "confidence": 1.0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "id": "warning_note_71f8d785066857ff",
+      "severity": "note",
+      "category": null,
+      "text": "Whenever you connect the Catheter to the system, clean the sensor connections on the arm carriage and on the Catheter itself using the Sensor Connection Cleaner. This includes the first time you attach the Catheter to the system, as well as any time you reattach or replace the Catheter on the system.",
+      "page": 60,
+      "bbox_norm": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "evidence_spans": [
+        {
+          "id": "145be0efcb3c4de0b8a1f8f58638935d",
+          "page": 60,
+          "bbox_norm": null,
+          "text": "Note: Whenever you connect the Catheter to the system, clean the sensor connections on",
+          "confidence": 1.0,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "id": "warning_note_88407f5f80ce28a2",
+      "severity": "note",
+      "category": null,
+      "text": "If the Vision Probe Bag is not used for temporary storage of the Vision Probe when it is not inserted within the Catheter tool channel, it is recommended to use an alternate, legally marketed, method to store the Vision Probe during the procedure.",
+      "page": 60,
+      "bbox_norm": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "evidence_spans": [
+        {
+          "id": "91fb99f27d41451da008111eb07fd4b8",
+          "page": 60,
+          "bbox_norm": null,
+          "text": "Note: If the Vision Probe Bag is not used for temporary storage of the Vision Probe when it is",
+          "confidence": 1.0,
+          "bbox": null
+        }
+      ]
+    }
+  ],
+  "metadata": {},
+  "manufacturer": "Intuitive Surgical, Inc",
+  "model": "Ion Endoluminal System Model IF1000",
+  "indications_for_use": [
+    {
+      "id": "indication_001",
+      "text": "The Ion endoluminal system (Model IF1000), referred to in this manual as “the system,” assists the user in navigating a catheter and endoscopic tools in the pulmonary tract using endoscopic visualization of the tracheobronchial tree for diagnostic and therapeutic procedures.",
+      "evidence_spans": [
+        {
+          "id": "95e8233e7fea48998bb3e7eb963ec9fb",
+          "page": 11,
+          "bbox_norm": null,
+          "text": "The Ion endoluminal system (Model IF1000), referred to in this manual as “the system,” assists the user in navigating a catheter and endoscopic tools in the pulmonary tract using endoscopic visualization of the tracheobronchial tree for diagnostic and therapeutic procedures.",
+          "confidence": 1.0,
+          "bbox": null
+        }
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "indication_002",
+      "text": "The Ion endoluminal system enables fiducial marker placement.",
+      "evidence_spans": [
+        {
+          "id": "c1ca72d04bb94e10848fecf1d2364fdb",
+          "page": 11,
+          "bbox_norm": null,
+          "text": "The Ion endoluminal system enables fiducial marker placement.",
+          "confidence": 1.0,
+          "bbox": null
+        }
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "indication_003",
+      "text": "It does not make a diagnosis and is not for pediatric use.",
+      "evidence_spans": [
+        {
+          "id": "13e281173d944ad5b0a617e09d259d52",
+          "page": 11,
+          "bbox_norm": null,
+          "text": "It does not make a diagnosis and is not for pediatric use.",
+          "confidence": 1.0,
+          "bbox": null
+        }
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "indication_004",
+      "text": "The PlanPoint Software uses patient CT scans to create a 3D plan of the lung and navigation pathways for use with the Ion endoluminal system.",
+      "evidence_spans": [
+        {
+          "id": "10c0400bb183494092696e383963f6b1",
+          "page": 11,
+          "bbox_norm": null,
+          "text": "The PlanPoint Software uses patient CT scans to create a 3D plan of the lung and navigation pathways for use with the Ion endoluminal system.",
+          "confidence": 1.0,
+          "bbox": null
+        }
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "indication_005",
+      "text": "The Flexision Biopsy Needle is used with the Ion endoluminal system to biopsy tissue from a target area in the lung.",
+      "evidence_spans": [
+        {
+          "id": "4139b1d9d17042549151cf0a68dbe125",
+          "page": 11,
+          "bbox_norm": null,
+          "text": "The Flexision Biopsy Needle is used with the Ion endoluminal system to biopsy tissue from a target area in the lung.",
+          "confidence": 1.0,
+          "bbox": null
+        }
+      ],
+      "metadata": {}
+    }
+  ],
+  "intended_use": [
+    {
+      "id": "intended_use_001",
+      "text": "The Ion System Cart (referred to as the System Cart) is intended to facilitate navigation and positioning of endoscopic instruments in the pulmonary tract.",
+      "evidence_spans": [
+        {
+          "id": "20421a84e1df4e8595fbf87dfda787c5",
+          "page": 12,
+          "bbox_norm": null,
+          "text": "The Ion System Cart (referred to as the System Cart) is intended to facilitate navigation and positioning of endoscopic instruments in the pulmonary tract.",
+          "confidence": 1.0,
+          "bbox": null
+        }
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "intended_use_002",
+      "text": "The Ion Controller (referred to as the Controller) is intended to facilitate navigation and positioning of endoscopic instruments in the pulmonary tract.",
+      "evidence_spans": [
+        {
+          "id": "97e21a7bd8d9469b9195494e684b754e",
+          "page": 12,
+          "bbox_norm": null,
+          "text": "The Ion Controller (referred to as the Controller) is intended to facilitate navigation and positioning of endoscopic instruments in the pulmonary tract.",
+          "confidence": 1.0,
+          "bbox": null
+        }
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "intended_use_003",
+      "text": "The Ion Fully Articulating Catheter (referred to as the Catheter) is intended to be used with the Ion endoluminal system for navigating to the target region in the airways.",
+      "evidence_spans": [
+        {
+          "id": "1ad2ac65dcbc44a0a99a456a4a1668c6",
+          "page": 12,
+          "bbox_norm": null,
+          "text": "The Ion Fully Articulating Catheter (referred to as the Catheter) is intended to be used with the Ion endoluminal system for navigating to the target region in the airways.",
+          "confidence": 1.0,
+          "bbox": null
+        }
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "intended_use_004",
+      "text": "It is intended to also provide a conduit for the Ion Peripheral Vision Probe, Flexision Biopsy Needles and delivering compatible off-the-shelf tools.",
+      "evidence_spans": [
+        {
+          "id": "aadbad3d53ce425c86b4c802cbe22515",
+          "page": 12,
+          "bbox_norm": null,
+          "text": "It is intended to also provide a conduit for the Ion Peripheral Vision Probe, Flexision Biopsy Needles and delivering compatible off-the-shelf tools.",
+          "confidence": 1.0,
+          "bbox": null
+        }
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "intended_use_005",
+      "text": "The Flexision Biopsy Needle is intended to retrieve tissue from a target structure.",
+      "evidence_spans": [
+        {
+          "id": "e9e7e88c93d54de6afa52cf31ecb55db",
+          "page": 12,
+          "bbox_norm": null,
+          "text": "The Flexision Biopsy Needle is intended to retrieve tissue from a target structure.",
+          "confidence": 1.0,
+          "bbox": null
+        }
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "intended_use_006",
+      "text": "The Ion Peripheral Vision Probe (referred to as the Vision Probe) is intended to be used with the Ion endoluminal system to provide live airway view for catheter navigation.",
+      "evidence_spans": [
+        {
+          "id": "3e0d134eba8f45739ceee25fee75c40d",
+          "page": 12,
+          "bbox_norm": null,
+          "text": "The Ion Peripheral Vision Probe (referred to as the Vision Probe) is intended to be used with the Ion endoluminal system to provide live airway view for catheter navigation.",
+          "confidence": 1.0,
+          "bbox": null
+        }
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "intended_use_007",
+      "text": "The Vision Probe Adapter is intended to be used to connect the Ion Peripheral Vision Probe to the Ion Fully Articulating Catheter.",
+      "evidence_spans": [
+        {
+          "id": "d6bd0afc982b45959bf0e43f6691a826",
+          "page": 12,
+          "bbox_norm": null,
+          "text": "The Vision Probe Adapter is intended to be used to connect the Ion Peripheral Vision Probe to the Ion Fully Articulating Catheter.",
+          "confidence": 1.0,
+          "bbox": null
+        }
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "intended_use_008",
+      "text": "The Vision Probe Bag is used for temporary storage of the Ion Peripheral Vision Probe during a procedure.",
+      "evidence_spans": [
+        {
+          "id": "a973ab6f6d564d9d9bac493244ed28b3",
+          "page": 12,
+          "bbox_norm": null,
+          "text": "The Vision Probe Bag is used for temporary storage of the Ion Peripheral Vision Probe during a procedure.",
+          "confidence": 1.0,
+          "bbox": null
+        }
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "intended_use_009",
+      "text": "The Catheter Guide is intended to be used with the Ion Fully Articulating Catheter to provide support.",
+      "evidence_spans": [
+        {
+          "id": "acabbd3737af4c28b66de90c332dedf1",
+          "page": 12,
+          "bbox_norm": null,
+          "text": "The Catheter Guide is intended to be used with the Ion Fully Articulating Catheter to provide support.",
+          "confidence": 1.0,
+          "bbox": null
+        }
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "intended_use_010",
+      "text": "The Sensor Connection Cleaner is used for cleaning the sensor connections on the carriage of the Ion System Cart and the Ion Fully Articulating Catheter.",
+      "evidence_spans": [
+        {
+          "id": "92be05f0127a4b019b9069f23832c74c",
+          "page": 12,
+          "bbox_norm": null,
+          "text": "The Sensor Connection Cleaner is used for cleaning the sensor connections on the carriage of the Ion System Cart and the Ion Fully Articulating Catheter.",
+          "confidence": 1.0,
+          "bbox": null
+        }
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "intended_use_011",
+      "text": "The Swivel Connector is intended to be used to connect the Ion Fully Articulating Catheter to an endotracheal tube.",
+      "evidence_spans": [
+        {
+          "id": "d332ca8a82934bc0a2f58aaf73754c3a",
+          "page": 12,
+          "bbox_norm": null,
+          "text": "The Swivel Connector is intended to be used to connect the Ion Fully Articulating Catheter to an endotracheal tube.",
+          "confidence": 1.0,
+          "bbox": null
+        }
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "intended_use_012",
+      "text": "The Suction Adapter is intended to allow modulation of suction when suction tubing is connected to the Ion Fully Articulating Catheter.",
+      "evidence_spans": [
+        {
+          "id": "84bbaf4e9a1b45c88b842549ef18f2a0",
+          "page": 12,
+          "bbox_norm": null,
+          "text": "The Suction Adapter is intended to allow modulation of suction when suction tubing is connected to the Ion Fully Articulating Catheter.",
+          "confidence": 1.0,
+          "bbox": null
+        }
+      ],
+      "metadata": {}
+    }
+  ],
+  "contraindications": [],
+  "intended_user": "Only physicians with adequate training and experience in bronchoscopic techniques and adequate healthcare facilities should perform procedures with the Ion endoluminal system. Training provided by Intuitive is limited to the use of the Ion endoluminal system and does not replace the necessary medical training and experience required to perform diagnostic and therapeutic bronchoscopy procedures.",
+  "references": [],
+  "warning_index": {
+    "warning": [
+      "warning_warning_ec14947fe315758f",
+      "warning_warning_c13c00dcafd9d868",
+      "warning_warning_4dfcb83b50de49b4",
+      "warning_warning_5f839bc4456021eb",
+      "warning_warning_57657849f6597fb5",
+      "warning_warning_1c6acd656c9ad218",
+      "warning_warning_dd4397435825b758",
+      "warning_warning_5ad2616beea031d4",
+      "warning_warning_972087a20285ca0f",
+      "warning_warning_fec11e24f4e51aa4",
+      "warning_warning_b9efa5b8049f4e71",
+      "warning_warning_6f9959940f806462",
+      "warning_warning_1c5d5d396888efc3"
+    ],
+    "caution": [
+      "warning_caution_f352a6f9816092af",
+      "warning_caution_d3c036919bdc665a",
+      "warning_caution_a91569795c35478e",
+      "warning_caution_f5602df86d6ea7bf",
+      "warning_caution_69bf5f61fa61094a",
+      "warning_caution_5b4f19708e1d907d",
+      "warning_caution_e7e1bd166d346312",
+      "warning_caution_c691520a5b1f8fb3",
+      "warning_caution_27f37dfc9ecc5abe",
+      "warning_caution_819e89464e59f136"
+    ],
+    "note": [
+      "warning_note_fd29a955d321ce81",
+      "warning_note_a5bb453b47c6103f",
+      "warning_note_a9423e8b66900bf3",
+      "warning_note_061e738571d52ed3",
+      "warning_note_e3ebb4e11931ee89",
+      "warning_note_c927106ea4683dcd",
+      "warning_note_ed15c7b8ac4a9e98",
+      "warning_note_6709aa14b1d23f13",
+      "warning_note_2fe968cf66b86a1c",
+      "warning_note_93cf6d0fadb49789",
+      "warning_note_3a7b858b930df3bd",
+      "warning_note_43ae153ad78a233e",
+      "warning_note_c128f0ed3a9e9620",
+      "warning_note_bc7ddc26e818c822",
+      "warning_note_d595585cdd9ab33f",
+      "warning_note_71f8d785066857ff",
+      "warning_note_88407f5f80ce28a2"
+    ]
+  }
+}

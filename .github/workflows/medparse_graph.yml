@@ -1,0 +1,59 @@
+name: medparse-graph
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - develop
+  workflow_dispatch:
+
+env:
+  PYTHON_VERSION: "3.12"
+  DOCKER_E2E: ${{ vars.DOCKER_E2E || '0' }}
+
+jobs:
+  graph-sinks-unit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+      - name: Run sink unit tests
+        run: |
+          pytest tests/unit/test_sinks_neo4j.py tests/unit/test_sinks_qdrant.py -q
+
+  medparse-e2e:
+    if: ${{ env.DOCKER_E2E == '1' }}
+    runs-on: ubuntu-latest
+    services:
+      neo4j:
+        image: neo4j:5.20.0
+        env:
+          NEO4J_AUTH: neo4j/neo4j
+        ports:
+          - 7687:7687
+      qdrant:
+        image: qdrant/qdrant:v1.8.2
+        ports:
+          - 6333:6333
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+      - name: Run Medparse E2E
+        env:
+          APP_USE_NEO4J: "false"
+          APP_USE_QDRANT: "false"
+        run: |
+          pytest tests/e2e/test_medparse_end_to_end.py -q

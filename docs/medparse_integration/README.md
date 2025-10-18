@@ -82,15 +82,16 @@ These projects communicate strictly over HTTP, letting each keep its own Python 
 | --- | --- |
 | `MEDPARSE_ENABLED` | Toggle Medparse integration (`true` by default). |
 | `MEDPARSE_TRANSPORT` | Transport selection: `http` (default) or `mcp`. |
-| `MEDPARSE_HTTP_BASE_URL` | Base URL for the Medparse HTTP sidecar (`http://127.0.0.1:8099`). |
+| `MEDPARSE_BASE_URL` | Base URL for the Medparse HTTP sidecar (`http://127.0.0.1:8099`). |
 | `MEDPARSE_API_KEY` | Matches Medparse `API_KEY` when the sidecar is locked down. |
 | `MEDPARSE_TIMEOUT_SECONDS` | Request timeout (defaults to `30`). |
 | `MEDPARSE_MAX_RETRIES` | Number of retries for `429/5xx` responses (defaults to `3`). |
 | `MEDPARSE_RETRY_BACKOFF_SECONDS` | Backoff multiplier between retries (defaults to `1`). |
-| `NEO4J_URI`, `NEO4J_USER`, `NEO4J_PASSWORD` | Connection details for Neo4j evidence graph. |
+| `APP_USE_NEO4J` / `APP_USE_QDRANT` | Toggle graph/vector persistence individually. |
+| `APP_SHOW_EVIDENCE` | Render the UI evidence panel when `true`. |
+| `NEO4J_URI`, `NEO4J_USER`, `NEO4J_PASSWORD`, `NEO4J_DATABASE` | Connection details for Neo4j evidence graph. |
 | `QDRANT_URL`, `QDRANT_API_KEY` | Qdrant endpoint and API key (defaults `http://localhost:6333`, no key). |
-| `QDRANT_COLLECTION_EVIDENCE` | Qdrant collection for recommendation evidence (`ip_evidence_v1`). |
-| `QDRANT_COLLECTION_SECTIONS` | Qdrant collection for section embeddings (`ip_sections_v1`). |
+| `QDRANT_COLLECTION_PREFIX` | Prefix used for `{prefix}_sections`, `{prefix}_recs`, `{prefix}_figtabs`. |
 | `QDRANT_HOST`, `QDRANT_PORT` | Legacy knobs used by the original retriever (defaults `localhost:6333`). |
 | `QDRANT_COLLECTION_V2` | Legacy chunks collection name (defaults `ip_docs_v2`). |
 | `IP_ASSIST_OFFLINE` | When set, LangGraph retrieval falls back to lightweight encoders. |
@@ -143,9 +144,96 @@ Set these variables before launching the corresponding service to avoid runtime 
    PY
    ```
 
+6. **Ingest seed documents**
+   ```bash
+   ipa_ingest --path data/seed/*.pdf --doc-type guideline
+   ```
+
 5. **Run LangGraph flow**
    - Launch the Gradio UI and issue a query involving clinical terminology.
    - Inspect logs to confirm Medparse link responses are included in retrieval decisions.
+
+---
+
+## 🚀 Automated Startup Scripts
+
+For convenience, automated scripts are available to start all services with proper health checks and error handling.
+
+### **Option 1: Start All Services + Application**
+```bash
+cd /home/rjm/projects/IP_assist_lite
+./scripts/start_full_system.sh
+```
+This single command:
+- Starts Qdrant, GROBID, and Medparse services
+- Performs health checks on all services
+- Launches the IP Assist Lite application
+- Handles conda environment activation automatically
+
+### **Option 2: Start Services Only**
+```bash
+cd /home/rjm/projects/IP_assist_lite
+./scripts/start_extraction_services.sh
+```
+This starts all extraction services:
+- **Qdrant** vector database (port 6333)
+- **GROBID** PDF processor (port 8070)
+- **Medparse** FastAPI service (port 8099)
+
+Then manually start the application:
+```bash
+conda activate ip-assist
+export MEDPARSE_URL=http://127.0.0.1:8099
+python app.py
+```
+
+### **Stop All Services**
+```bash
+cd /home/rjm/projects/IP_assist_lite
+./scripts/stop_extraction_services.sh
+```
+
+### **Check Service Status**
+```bash
+cd /home/rjm/projects/IP_assist_lite
+./scripts/check_services_status.sh
+```
+This comprehensive status check will:
+- ✅ Verify all service health endpoints
+- ✅ Check port availability
+- ✅ Show Docker container status
+- ✅ Display process information
+- ✅ Provide service URLs and troubleshooting guidance
+
+### **Script Features**
+- ✅ **Health checks** - Verifies all services are responding
+- ✅ **Error handling** - Clear error messages and troubleshooting guidance
+- ✅ **Colored output** - Easy-to-read status messages
+- ✅ **PID tracking** - Clean shutdown capabilities
+- ✅ **Docker management** - Automatic container lifecycle management
+- ✅ **Conda integration** - Automatic environment activation
+
+### **Prerequisites for Scripts**
+- Docker installed and running
+- Conda environments: `medparse-py311` and `ip-assist`
+- Required dependencies installed in both environments
+
+### **Quick Reference Commands**
+```bash
+# Start everything
+./scripts/start_full_system.sh
+
+# Check status
+./scripts/check_services_status.sh
+
+# Stop everything
+./scripts/stop_extraction_services.sh
+
+# Clean up containers
+./scripts/cleanup_containers.sh
+```
+
+---
 
 ### Transport toggle
 
@@ -196,15 +284,28 @@ Use `ENABLE_PIPELINE=false` in Medparse `.env` when running tests that should av
   4. Qdrant service.
   5. IP_Assist_Lite application (`python app.py`).
 
+- **Automated Startup (Recommended)**
+  ```bash
+  # Start everything with one command
+  ./scripts/start_full_system.sh
+  
+  # Or start services only
+  ./scripts/start_extraction_services.sh
+  ```
+
 - **Configuration Changes**
   - Update `MEDPARSE_URL` in IP_Assist_Lite when deploying across hosts.
   - Adjust `ALLOWED_ORIGINS` in Medparse `.env` if the UI is hosted elsewhere.
 
 - **Troubleshooting**
-  - `401 Unauthorized` → verify `MEDPARSE_API_KEY` matches Medparse `API_KEY`.
-  - `413` from `/extract` → increase `MAX_UPLOAD_MB` or compress the PDF.
-  - Empty link results → check `UMLS_API_KEY` validity or QuickUMLS accessibility.
-  - QuickUMLS ImportError (`imp` module) → ensure Medparse is running under Python 3.11.
+- `401 Unauthorized` → verify `MEDPARSE_API_KEY` matches Medparse `API_KEY`.
+- `413` from `/extract` → increase `MAX_UPLOAD_MB` or compress the PDF.
+- Empty link results → check `UMLS_API_KEY` validity or QuickUMLS accessibility.
+- QuickUMLS ImportError (`imp` module) → ensure Medparse is running under Python 3.11.
+
+## Graph & Vector Stores
+
+Runbook, schema diagrams, and validation commands live in `docs/medparse_integration/GRAPHING.md`. Consult that guide for Neo4j/Qdrant environment variables, the `make graph-up`/`make backfill` workflow, and reusable Cypher/Qdrant queries.
 
 ---
 
