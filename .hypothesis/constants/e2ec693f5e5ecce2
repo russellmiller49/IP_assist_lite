@@ -1,0 +1,4 @@
+# file: /home/rjm/projects/IP_assist_lite/medparse/extract/book.py
+# hypothesis_version: 6.140.3
+
+['!', ',', '.', ':', '?', 'Airway stent', 'Conclusion', 'Content', 'Diagnosis', 'Esophageal stent', 'Introduction', 'Management', 'Prognosis', 'Untitled Chapter', '\\.{3,}', '\\s+', '^\\d+(?:\\.\\d+)*\\s*', 'airway stent**', 'authors:', 'book_chapter', 'conclusion', 'diagnosis', 'esophageal stent', 'introduction', 'management', 'prognosis']

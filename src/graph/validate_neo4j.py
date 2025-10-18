@@ -1,9 +1,11 @@
 """Validation helpers for Neo4j evidence graph."""
 from __future__ import annotations
 
+import os
+import sys
 from typing import Sequence
 
-from ..config import AppConfig
+from config import AppConfig
 from .schema import (
     DOCUMENT_LABEL,
     FIGURE_LABEL,
@@ -19,6 +21,9 @@ def validate(cfg: AppConfig | None = None) -> bool:
     try:
         from neo4j import GraphDatabase
     except ModuleNotFoundError as exc:  # pragma: no cover - dependency missing
+        if _skip_validation():
+            sys.stderr.write("[warn] Neo4j driver missing; skipping validation (set ALLOW_SKIP_NEO4J_VALIDATION=0 to enforce).\n")
+            return False
         raise RuntimeError("neo4j python driver not installed; cannot validate graph.") from exc
 
     auth = None
@@ -50,6 +55,11 @@ def validate(cfg: AppConfig | None = None) -> bool:
 
 def main() -> None:  # pragma: no cover - CLI convenience
     validate()
+
+
+def _skip_validation() -> bool:
+    raw = os.getenv("ALLOW_SKIP_NEO4J_VALIDATION", "")
+    return raw.strip().lower() in {"1", "true", "yes", "on"}
 
 
 _LABELS: Sequence[str] = (

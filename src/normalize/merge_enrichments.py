@@ -3,7 +3,7 @@ from __future__ import annotations
 
 from typing import Any, Dict, Iterable, List, Mapping, MutableMapping, Optional, Tuple
 
-from ..adapters.medparse_transport import ExtractResponse
+from adapters.medparse_transport import ExtractResponse
 from .types import (
     FigureNode,
     GraphPayload,

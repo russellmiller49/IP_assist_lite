@@ -2,7 +2,7 @@
 from __future__ import annotations
 
 import time
-from typing import Any, Dict, Mapping, Optional
+from typing import Any, Dict, Mapping, Optional, cast
 
 import httpx
 
@@ -24,6 +24,7 @@ class MedparseHTTPAdapter(MedparseTransport):
         *,
         base_url: str,
         api_key: Optional[str],
+        auth_header_name: Optional[str] = None,
         timeout: float,
         max_retries: int,
         retry_backoff: float,
@@ -34,6 +35,7 @@ class MedparseHTTPAdapter(MedparseTransport):
             raise ValueError("base_url must be provided for Medparse HTTP transport")
 
         self._api_key = api_key
+        self._auth_header_name = (auth_header_name or "X-API-Key").strip() or "X-API-Key"
         self._timeout = timeout
         self._max_retries = max(1, max_retries)
         self._retry_backoff = max(0.0, retry_backoff)
@@ -56,7 +58,11 @@ class MedparseHTTPAdapter(MedparseTransport):
     def _headers(self, extra: Optional[Mapping[str, str]] = None) -> Dict[str, str]:
         headers: Dict[str, str] = {"Accept": "application/json"}
         if self._api_key:
-            headers["X-API-Key"] = self._api_key
+            header_name = self._auth_header_name or "X-API-Key"
+            if header_name.lower() == "x-api-key":
+                headers[header_name] = self._api_key
+            else:
+                headers[header_name] = f"Bearer {self._api_key}"
         if extra:
             headers.update(dict(extra))
         return headers
@@ -116,15 +122,31 @@ class MedparseHTTPAdapter(MedparseTransport):
         return _ensure_link_response(data)
 
     def extract(self, req: ExtractRequest) -> ExtractResponse:
-        payload = _filter_payload(req)
+        payload: Dict[str, Any] = {}
+        if req.get("doc_id"):
+            payload["doc_id"] = req["doc_id"]
+        if req.get("bytes_b64"):
+            payload["pdf"] = req["bytes_b64"]
+        if req.get("url"):
+            payload["url"] = req["url"]
+        if req.get("doc_type"):
+            payload["doc_type"] = req["doc_type"]
+
         if not payload:
             raise ValueError("extract request requires url, doc_id, or bytes_b64")
-        response = self._request("POST", "/extract", json=payload)
+
+        try:
+            response = self._request("POST", "/extract", json=payload)
+        except MedparseTransportError as exc:
+            keys = ", ".join(sorted(payload.keys())) or "<none>"
+            raise MedparseTransportError(
+                f"{exc} (Medparse /extract payload keys: {keys})"
+            ) from exc
         try:
             data = response.json()
         except ValueError as exc:
             raise MedparseTransportError("Medparse /extract response was not JSON") from exc
-        return _ensure_extract_response(data)
+        return _ensure_extract_response(cast(Dict[str, Any], data))
 
 
 def _filter_payload(payload: Mapping[str, Any]) -> Dict[str, Any]:

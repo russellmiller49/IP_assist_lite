@@ -1,8 +1,8 @@
 """Adapter to convert IPProcedureReport to coding Case objects."""
 
 from typing import List, Optional, Dict
-from ...reporting.schema_contract import IPProcedureReport
-from ..schema import Case, PerformedItem, Sedation
+from reporting.schema_contract import IPProcedureReport
+from coding.schema import Case, PerformedItem, Sedation
 
 
 def case_from_ip_report(ip: IPProcedureReport) -> Case:

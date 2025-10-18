@@ -1,0 +1,4 @@
+# file: /home/rjm/projects/IP_assist_lite/medparse/extract/research.py
+# hypothesis_version: 6.140.3
+
+[200, '(\\d+(?:\\.\\d+)?)%', '(\\d{2,4})\\s+patients', '-\n', 'Diagnostic yield', 'Molecular adequacy', 'Pneumothorax', '\\s+', 'observational', 'percent', 'prospective', 'randomized', 'research', 'retrospective']

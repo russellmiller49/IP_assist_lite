@@ -4,8 +4,8 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Any, Dict, Iterable, List, Mapping, MutableMapping, Optional, TypedDict
 
-from ..normalize.merge_enrichments import extract_to_graph_payload
-from ..normalize.types import GraphPayload
+from normalize.merge_enrichments import extract_to_graph_payload
+from normalize.types import GraphPayload
 
 
 class EvidenceSummary(TypedDict):

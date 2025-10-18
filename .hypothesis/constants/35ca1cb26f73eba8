@@ -1,0 +1,4 @@
+# file: /home/rjm/projects/IP_assist_lite/medparse/extract/ifu.py
+# hypothesis_version: 6.140.3
+
+['!', '(?<=[.!?])\\s+', '.', '.,', '?', 'Contraindications', 'Indications for Use', 'Intended Use', 'Intended User', 'Warnings', '[^a-z0-9]', '\\s+', '\\s+\\d+$', '^\\d+\\s', 'accessory', 'biopsy', 'catheter', 'caution', 'contraindication', 'contraindications', 'fluoroscopy', 'ifu', 'indication', 'indications_for_use', 'intended_use', 'intended_user', 'introduction', 'intuitive surgical', 'laser', 'leakage', 'manufactured by', 'manufacturer', 'model', 'model\\s*([A-Z0-9-]+)', 'note', 'pinch', 'rev.', 'saline', 'suction', 'system', 'text', 'user manual', 'warning', '|']

@@ -129,7 +129,7 @@ api:
 # Start Gradio UI
 ui:
 	@echo "Starting Gradio interface..."
-	cd $(SRC_DIR)/ui && $(PYTHON) gradio_app.py
+	PYTHONPATH=src $(PYTHON) -m ui.gradio_app
 
 # Run tests
 legacy-test:
@@ -156,13 +156,13 @@ graph-down:
 
 backfill:
 	@echo "Backfilling seed documents into Neo4j/Qdrant..."
-	$(PYTHON) -m src.jobs.backfill_graph --pdf-dir data/seed --json-dir data/seed --report data/seed/backfill_report.csv
+	PYTHONPATH=src $(PYTHON) -m jobs.backfill_graph --pdf-dir data/seed --json-dir data/seed --report data/seed/backfill_report.csv
 
 graph-validate:
 	@echo "Validating Neo4j graph..."
-	$(PYTHON) -m src.graph.validate_neo4j
+	PYTHONPATH=src $(PYTHON) -m graph.validate_neo4j
 	@echo "Validating Qdrant collections..."
-	$(PYTHON) -m src.graph.validate_qdrant
+	PYTHONPATH=src $(PYTHON) -m graph.validate_qdrant
 
 # Clean generated files
 clean:

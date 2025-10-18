@@ -28,13 +28,13 @@ IP_GPT5_MODEL=gpt-4o-mini  # Start with GPT-4 for reliability
 
 ```bash
 # Basic run
-python src/ui/gradio_app.py
+PYTHONPATH=src python -m ui.gradio_app
 
 # With debug logging
-LOG_LEVEL=DEBUG python src/ui/gradio_app.py
+LOG_LEVEL=DEBUG PYTHONPATH=src python -m ui.gradio_app
 
 # With specific model
-IP_GPT5_MODEL=gpt-4o-mini python src/ui/gradio_app.py
+IP_GPT5_MODEL=gpt-4o-mini PYTHONPATH=src python -m ui.gradio_app
 ```
 
 The app will start on: http://localhost:7860
@@ -66,7 +66,7 @@ If you see "401 Unauthorized" errors:
 If the model returns empty responses:
 - Switch to `gpt-4o-mini` in the dropdown
 - Check the terminal for detailed error messages
-- Enable debug logging: `LOG_LEVEL=DEBUG python src/ui/gradio_app.py`
+- Enable debug logging: `LOG_LEVEL=DEBUG PYTHONPATH=src python -m ui.gradio_app`
 
 ### 3. Model Not Found
 
@@ -103,7 +103,7 @@ To see detailed information about what's happening:
 
 ```bash
 export LOG_LEVEL=DEBUG
-python src/ui/gradio_app.py
+PYTHONPATH=src python -m ui.gradio_app
 ```
 
 Look for these indicators in the terminal:

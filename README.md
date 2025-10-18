@@ -197,7 +197,7 @@ If `ipa_ingest` command is not available, use the module path:
 
 ```bash
 # Ingest documents using module path
-python -m src.jobs.ingest_documents --path data/seed/*.pdf --doc-type auto
+PYTHONPATH=src python -m jobs.ingest_documents --path data/seed/*.pdf --doc-type auto
 ```
 
 **Note:** The main `app.py` now includes all enhanced features by default. The basic version is archived as `app_basic.py`.
@@ -241,7 +241,7 @@ export MEDPARSE_API_KEY=my-secret-medparse-key-123
 1. **`ipa_ingest` command not found**
    ```bash
    # Use module path instead
-   python -m src.jobs.ingest_documents --path data/seed/*.pdf --doc-type auto
+   PYTHONPATH=src python -m jobs.ingest_documents --path data/seed/*.pdf --doc-type auto
    ```
 
 2. **Graph services not starting**

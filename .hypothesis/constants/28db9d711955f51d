@@ -1,0 +1,4 @@
+# file: /home/rjm/projects/IP_assist_lite/src/graph/schema.py
+# hypothesis_version: 6.140.3
+
+['DOCUMENT_LABEL', 'Document', 'FIGURE_LABEL', 'Figure', 'NEO4J_CONSTRAINTS', 'RECOMMENDATION_LABEL', 'RELATIONSHIPS', 'Recommendation', 'SECTION_LABEL', 'STAT_LABEL', 'Section', 'Stat', 'TABLE_LABEL', 'Table']

@@ -7,7 +7,7 @@ from qdrant_client import QdrantClient
 from qdrant_client.http import models as rest_models
 from qdrant_client.models import PointStruct
 
-from ...normalize.types import GraphPayload, RecommendationNode
+from normalize.types import GraphPayload, RecommendationNode
 
 
 class QdrantSink:
@@ -37,7 +37,13 @@ class QdrantSink:
     ) -> "QdrantSink":  # pragma: no cover - heavy dependency path
         if embed_fn is None:
             embed_fn = _default_embedder
-        client = QdrantClient(url=config.QDRANT_URL, api_key=config.QDRANT_API_KEY)
+        client = QdrantClient(
+            url=config.QDRANT_URL,
+            api_key=config.QDRANT_API_KEY,
+            timeout=60,
+            prefer_grpc=False,
+            check_compatibility=False,
+        )
         return cls(
             client,
             section_collection=config.QDRANT_COLLECTION_SECTIONS,

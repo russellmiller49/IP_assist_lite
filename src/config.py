@@ -52,6 +52,7 @@ class AppConfig:
     MEDPARSE_BASE_URL: Optional[str]
     MEDPARSE_TIMEOUT_SECONDS: float
     MEDPARSE_API_KEY: Optional[str]
+    MEDPARSE_AUTH_HEADER_NAME: Optional[str]
     MEDPARSE_MAX_RETRIES: int
     MEDPARSE_RETRY_BACKOFF_SECONDS: float
 
@@ -89,6 +90,7 @@ class AppConfig:
         self.MEDPARSE_BASE_URL = base_url.rstrip("/") if base_url else None
         self.MEDPARSE_TIMEOUT_SECONDS = _env_float("MEDPARSE_TIMEOUT_SECONDS", 30.0)
         self.MEDPARSE_API_KEY = _env_str("MEDPARSE_API_KEY", None)
+        self.MEDPARSE_AUTH_HEADER_NAME = _env_str("MEDPARSE_AUTH_HEADER_NAME", None)
         self.MEDPARSE_MAX_RETRIES = _env_int("MEDPARSE_MAX_RETRIES", 3)
         self.MEDPARSE_RETRY_BACKOFF_SECONDS = _env_float("MEDPARSE_RETRY_BACKOFF_SECONDS", 1.0)
 

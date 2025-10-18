@@ -7,21 +7,21 @@ from typing import Any, Dict, List, Sequence
 
 from qdrant_client import QdrantClient
 
-from ..adapters.medparse_transport import (
+from adapters.medparse_transport import (
     LinkRequest,
     MedparseTransportError,
     get_medparse_transport,
 )
-from ..config import AppConfig
+from config import AppConfig
 
 try:  # pragma: no cover - optional dependency for local development
-    from ..index.embedders import medcpt_query_encode
+    from index.embedders import medcpt_query_encode
 except ModuleNotFoundError:  # pragma: no cover - fallback for test environments
 
     def medcpt_query_encode(_: str):  # type: ignore[unused-ignore]
         return [0.0] * 768
 
-from .router import RouterDecision, choose_store
+from retrieval.router import RouterDecision, choose_store
 
 try:  # pragma: no cover - optional dependency
     from neo4j import GraphDatabase
@@ -34,7 +34,7 @@ QDRANT_HOST = os.getenv("QDRANT_HOST", "localhost")
 QDRANT_PORT = int(os.getenv("QDRANT_PORT", "6333"))
 COLL_NAME = os.getenv("QDRANT_COLLECTION_V2", "ip_docs_v2")
 
-client = QdrantClient(host=QDRANT_HOST, port=QDRANT_PORT)
+client = QdrantClient(host=QDRANT_HOST, port=QDRANT_PORT, prefer_grpc=False, check_compatibility=False)
 
 
 def _ensure_query_embedding(query: str) -> List[float]:

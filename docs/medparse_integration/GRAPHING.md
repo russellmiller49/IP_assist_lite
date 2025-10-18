@@ -43,7 +43,7 @@ Runs `docker compose -f docker/docker-compose.yml up -d` which starts:
 
 ### `make backfill`
 
-Invokes `python -m src.jobs.backfill_graph` with the default seed directories (`data/seed`). The command:
+Invokes `PYTHONPATH=src python -m jobs.backfill_graph` with the default seed directories (`data/seed`). The command:
 
 1. Extracts Medparse JSON for PDFs (via the configured transport).
 2. Normalises payloads using `src/normalize/merge_enrichments.py`.
@@ -54,8 +54,8 @@ Invokes `python -m src.jobs.backfill_graph` with the default seed directories (`
 
 Runs both validators:
 
-- `python -m src.graph.validate_neo4j` – ensures the expected node labels exist and that at least one `(:Recommendation)-[:SUPPORTED_BY]->(:Stat)` edge is present.
-- `python -m src.graph.validate_qdrant` – checks that the three Qdrant collections exist and contain >0 vectors.
+- `PYTHONPATH=src python -m graph.validate_neo4j` – ensures the expected node labels exist and that at least one `(:Recommendation)-[:SUPPORTED_BY]->(:Stat)` edge is present.
+- `PYTHONPATH=src python -m graph.validate_qdrant` – checks that the three Qdrant collections exist and contain >0 vectors.
 
 ## Data Model
 

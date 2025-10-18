@@ -7,8 +7,8 @@ import json
 from pathlib import Path
 from typing import Sequence
 
-from ..adapters.medparse_transport import get_medparse_transport
-from ..config import AppConfig
+from adapters.medparse_transport import get_medparse_transport
+from config import AppConfig
 from .ingest_documents import (
     IngestSummary,
     ingest_payload,

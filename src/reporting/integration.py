@@ -5,9 +5,9 @@ from typing import Dict, Tuple, Any, Optional
 from .reporter_engine import render_report
 from .llm_structurer import structure_to_json, MockLLMClient
 from .quality import run_all_validators, get_validation_summary, auto_fill_defaults
-from ..coding.adapters.reporting_adapter import case_from_ip_report
-from ..coding.rules import code_case
-from ..coding.kb import CodingKB
+from coding.adapters.reporting_adapter import case_from_ip_report
+from coding.rules import code_case
+from coding.kb import CodingKB
 
 logger = logging.getLogger(__name__)
 

@@ -3,8 +3,8 @@ from __future__ import annotations
 
 from typing import Any, Mapping
 
-from ...normalize.types import GraphPayload
-from ..schema import (
+from normalize.types import GraphPayload
+from graph.schema import (
     DOCUMENT_LABEL,
     FIGURE_LABEL,
     RECOMMENDATION_LABEL,

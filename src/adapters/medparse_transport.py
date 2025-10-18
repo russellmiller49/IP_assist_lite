@@ -4,7 +4,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Any, Callable, Dict, List, Optional, Protocol, TypedDict
 
-from ..config import AppConfig, TransportLiteral
+from config import AppConfig, TransportLiteral
 
 
 class LinkRequest(TypedDict, total=False):
@@ -115,6 +115,7 @@ def _build_http_factory() -> Callable[[AppConfig], MedparseTransport]:
         return MedparseHTTPAdapter(
             base_url=cfg.MEDPARSE_BASE_URL,
             api_key=cfg.MEDPARSE_API_KEY,
+            auth_header_name=cfg.MEDPARSE_AUTH_HEADER_NAME,
             timeout=cfg.MEDPARSE_TIMEOUT_SECONDS,
             max_retries=cfg.MEDPARSE_MAX_RETRIES,
             retry_backoff=cfg.MEDPARSE_RETRY_BACKOFF_SECONDS,

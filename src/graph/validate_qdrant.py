@@ -1,7 +1,7 @@
 """Validation helpers for Qdrant collections."""
 from __future__ import annotations
 
-from ..config import AppConfig
+from config import AppConfig
 
 
 def validate(cfg: AppConfig | None = None) -> bool:

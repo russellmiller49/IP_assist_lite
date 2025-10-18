@@ -1,0 +1,4 @@
+# file: /home/rjm/projects/IP_assist_lite/src/reporting/parser.py
+# hypothesis_version: 6.140.3
+
+['(pneumothorax|ptx)', '\\bebus\\b', '\\benb\\b', '\\bfluoro', '\\bforeign.*body\\b', '\\bion\\b', '\\bmonarch\\b', 'anesthesia', 'bleeding', 'cbct', 'cryo', 'cryo_freeze_s', 'cryo_passes', 'cryo_probe_mm', 'dts', 'ebl', 'enb_rebus_fluoro', 'fibrinolysis', 'fluoro', 'general', 'id', 'ipc_fibrinolysis', 'lido_mg', 'lobe', 'microwave', 'minimal', 'minimal bleeding', 'moderate', 'mwa', 'no bleeding', 'no complications', 'no pneumothorax', 'no ptx', 'none', 'pdt', 'pneumothorax', 'present', 'rebus', 'rigid_foreign_body', 'robotic_ion', 'robotic_monarch', 'rose', 'segment', 'staging', 'station', 'talc_pleurodesis', 'targeted_ebus_ett', 'tbna_gauge', 'tbna_passes', 'therapy', 'tma_mwa', 'type']

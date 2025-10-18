@@ -44,6 +44,12 @@ Thumbs.db
 *.log
 docker/qdrant_storage/
 
+# Local storage artifacts
+data/qdrant_storage/
+data/neo4j/
+data/extracted/
+*.pdf:Zone.Identifier
+
 # HuggingFace Spaces repo (separate deployment)
 bronchmonkey2/
 

@@ -9,16 +9,16 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Iterable, List, Sequence
 
-from ..adapters.medparse_transport import (
+from adapters.medparse_transport import (
     ExtractRequest,
     MedparseTransport,
     get_medparse_transport,
 )
-from ..config import AppConfig
-from ..normalize.merge_enrichments import extract_to_graph_payload
-from ..normalize.types import GraphPayload
-from ..graph.sinks.neo4j_sink import Neo4jSink
-from ..graph.sinks.qdrant_sink import QdrantSink
+from config import AppConfig
+from normalize.merge_enrichments import extract_to_graph_payload
+from normalize.types import GraphPayload
+from graph.sinks.neo4j_sink import Neo4jSink
+from graph.sinks.qdrant_sink import QdrantSink
 
 
 @dataclass(slots=True)

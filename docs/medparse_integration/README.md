@@ -84,6 +84,7 @@ These projects communicate strictly over HTTP, letting each keep its own Python 
 | `MEDPARSE_TRANSPORT` | Transport selection: `http` (default) or `mcp`. |
 | `MEDPARSE_BASE_URL` | Base URL for the Medparse HTTP sidecar (`http://127.0.0.1:8099`). |
 | `MEDPARSE_API_KEY` | Matches Medparse `API_KEY` when the sidecar is locked down. |
+| `MEDPARSE_AUTH_HEADER_NAME` | Optional override when the sidecar expects a header other than `X-API-Key` (e.g., `Authorization`). |
 | `MEDPARSE_TIMEOUT_SECONDS` | Request timeout (defaults to `30`). |
 | `MEDPARSE_MAX_RETRIES` | Number of retries for `429/5xx` responses (defaults to `3`). |
 | `MEDPARSE_RETRY_BACKOFF_SECONDS` | Backoff multiplier between retries (defaults to `1`). |
@@ -252,7 +253,7 @@ This comprehensive status check will:
 2. **PDF Extraction**
    - `MedparseClient.extract()` uploads PDFs for full processing.
    - `src/graph/medparse_ingest.build_graph_payload()` wraps `src/normalize.merge_enrichments.extract_to_graph_payload()` to produce a unified evidence graph.
-   - `src/jobs/ingest_documents.py` orchestrates extraction, optional raw artifact capture, and dispatch to the sinks.
+   - `jobs/ingest_documents.py` orchestrates extraction, optional raw artifact capture, and dispatch to the sinks.
    - `src/graph/sinks/neo4j_sink.Neo4jSink` upserts documents, sections, recommendations, statistics, figures, and tables into Neo4j.
    - `src/graph/sinks/qdrant_sink.QdrantSink` pushes recommendation evidence and section embeddings into dedicated Qdrant collections for UI drill-down.
 

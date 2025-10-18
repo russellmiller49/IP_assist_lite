@@ -1,0 +1,4 @@
+# file: /home/rjm/projects/IP_assist_lite/src/adapters/medparse_client.py
+# hypothesis_version: 6.140.3
+
+[1.0, 30.0, 401, 500, 600, '/', '/extract', '/healthz', '/link', '/version', 'Accept', 'GET', 'MEDPARSE_API_KEY', 'MEDPARSE_BASE_URL', 'MEDPARSE_MAX_RETRIES', 'MEDPARSE_URL', 'MedparseAuthError', 'MedparseClient', 'MedparseConfig', 'MedparseConfigError', 'MedparseError', 'POST', 'X-API-Key', 'application/json', 'application/pdf', 'doc_id', 'get_client_from_env', 'headers', 'ok', 'pdf', 'text', 'top_k']

@@ -3,7 +3,7 @@ requires = ["setuptools>=67", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "medparse"
+name = "ip-assist-lite"
 version = "0.1.0"
 description = "End-to-end medical PDF parsing and normalization pipeline."
 readme = "README.md"
@@ -27,6 +27,7 @@ dependencies = [
     "python-dateutil>=2.8.2",
     "fastapi>=0.110.0",
     "jsondiff>=2.0.0",
+    "qdrant-client>=1.8,<1.16",
 ]
 
 [project.optional-dependencies]
@@ -37,6 +38,16 @@ dev = [
     "mypy>=1.8.0",
     "pre-commit>=3.6.0",
 ]
+graph = [
+    "neo4j>=5.20",
+]
+
+[tool.setuptools]
+package-dir = {"": "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["*"]
 
 [tool.black]
 line-length = 100
@@ -55,7 +66,7 @@ lint.ignore = ["E203", "E501"]
 
 [tool.pytest.ini_options]
 minversion = "8.0"
-addopts = "--strict-config --strict-markers --cov=medparse --cov-report=xml --cov-report=term-missing"
+addopts = "--strict-config --strict-markers --cov=adapters --cov=jobs --cov=graph --cov=normalize --cov-report=xml --cov-report=term-missing"
 testpaths = ["tests/unit", "tests/integration"]
 filterwarnings = [
     "error::UserWarning:medparse\\..*",
@@ -76,4 +87,4 @@ exclude_lines = [
 fail_under = 80
 
 [project.scripts]
-ipa_ingest = "src.jobs.ingest_documents:main"
+ipa_ingest = "jobs.ingest_documents:main"

@@ -1,0 +1,4 @@
+# file: /home/rjm/projects/IP_assist_lite/src/coding/extractors.py
+# hypothesis_version: 6.140.3
+
+['%H:%M', '%I:%M %p', '%I:%M%p', 'L', 'R', '\\b(microwave|mwa)\\b', 'ablation', 'airway_dilation_only', 'bronchial_terms', 'chartis', 'chartis_assessment', 'chest_tube', 'dilation', 'ebus', 'ebus_tbna', 'ebus_without_tbna', 'endobronchial_valves', 'fiducial', 'fiducial_markers', 'general_anesthesia', 'hhmm_times', 'id', 'left', 'lobes', 'moderate_sedation', 'nav_bronchoscopy', 'navigation', 'pleurx', 'pulsed.?electric', 'radial_or_diagnostic', 'right', 'sedation_minutes', 'snare_excision', 'stent_removal', 'synonyms', 'tblb', 'tblb_forceps_or_cryo', 'tbna', 'technique', 'thoracentesis', 'tracheal_terms', 'valves', 'whole_lung_lavage', 'y_stent']

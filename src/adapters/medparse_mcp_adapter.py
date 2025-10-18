@@ -6,7 +6,7 @@ from typing import Any, Mapping, Optional, Protocol
 
 import httpx
 
-from ..config import AppConfig
+from config import AppConfig
 
 from .medparse_transport import (
     ExtractRequest,

@@ -1,6 +1,6 @@
 from __future__ import annotations
-from ..state import IPState
-from ...llm.llm_client import llm_call
+from graph.state import IPState
+from llm.llm_client import llm_call
 
 REWRITE_PROMPT = """Some sentences lacked support:
 {missing}

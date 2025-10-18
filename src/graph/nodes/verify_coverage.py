@@ -1,6 +1,7 @@
 from __future__ import annotations
-from ..state import IPState
 import re
+
+from graph.state import IPState
 
 FACET_SYNONYMS = {"valve":["valve","endobronchial valve","ebv","zephyr","spiration"],
                   "coil":["coil","endobronchial coil","lvrc"]}

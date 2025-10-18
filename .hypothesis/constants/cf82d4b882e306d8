@@ -1,0 +1,4 @@
+# file: /home/rjm/projects/IP_assist_lite/medparse/classify/rules.py
+# hypothesis_version: 6.140.3
+
+[0.0, 0.3, 0.5, 0.8, 1.1, 500, 'analysis', 'book_chapter', 'caution', 'chapter', 'complications', 'conclusion', 'consensus', 'contents', 'diagnostic yield', 'etiology', 'evidence', 'grade', 'guideline', 'ifu', 'indications for use', 'instructions for use', 'introduction', 'intuitive', 'lesions', 'management', 'method', 'methods', 'model', 'note', 'outcomes', 'patients', 'prospective', 'recommendation', 'research', 'retrospective', 'sign', 'society', 'sterile', 'strong', 'study', 'study design', 'system', 'treatment of', 'trial', 'user manual', 'warning', 'weak']
