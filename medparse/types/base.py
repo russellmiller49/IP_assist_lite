@@ -7,7 +7,7 @@ import hashlib
 from typing import Any, Dict, List, Literal, Optional, Tuple
 from uuid import uuid4
 
-from pydantic import BaseModel, Field, field_validator
+from pydantic import AliasChoices, BaseModel, ConfigDict, Field, field_validator
 
 DEFAULT_EXTRACTION_VERSION = "v3.0.0"
 
@@ -96,16 +96,10 @@ class Figure(BaseModel):
 class StatResult(BaseModel):
     """Structured statistical result with evidence traceability."""
 
+    model_config = ConfigDict(extra="ignore")
+
     id: str
-    kind: Literal[
-        "sensitivity",
-        "specificity",
-        "ppv",
-        "npv",
-        "diagnostic_yield_strict",
-        "sample_size",
-        "prevalence",
-    ]
+    kind: str = Field(validation_alias=AliasChoices("type", "kind"))
     value: Optional[float] = None
     unit: Optional[str] = None
     context: Optional[str] = None

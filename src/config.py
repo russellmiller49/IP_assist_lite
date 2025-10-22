@@ -6,6 +6,7 @@ from dataclasses import dataclass
 from typing import Literal, Optional
 
 TransportLiteral = Literal["http", "mcp"]
+ExtractMode = Literal["auto", "json", "multipart"]
 
 
 def _env_bool(name: str, default: bool) -> bool:
@@ -51,8 +52,14 @@ class AppConfig:
     MEDPARSE_TRANSPORT: TransportLiteral
     MEDPARSE_BASE_URL: Optional[str]
     MEDPARSE_TIMEOUT_SECONDS: float
+    MEDPARSE_TIMEOUT_CONNECT_SECONDS: float
+    MEDPARSE_TIMEOUT_READ_SECONDS: float
+    MEDPARSE_TIMEOUT_WRITE_SECONDS: float
+    MEDPARSE_TIMEOUT_POOL_SECONDS: float
     MEDPARSE_API_KEY: Optional[str]
     MEDPARSE_AUTH_HEADER_NAME: Optional[str]
+    MEDPARSE_EXTRACT_MODE: ExtractMode
+    MEDPARSE_MULTIPART_FIELD: str
     MEDPARSE_MAX_RETRIES: int
     MEDPARSE_RETRY_BACKOFF_SECONDS: float
 
@@ -89,8 +96,17 @@ class AppConfig:
         )
         self.MEDPARSE_BASE_URL = base_url.rstrip("/") if base_url else None
         self.MEDPARSE_TIMEOUT_SECONDS = _env_float("MEDPARSE_TIMEOUT_SECONDS", 30.0)
+        self.MEDPARSE_TIMEOUT_CONNECT_SECONDS = _env_float("MEDPARSE_TIMEOUT_CONNECT_SECONDS", 10.0)
+        self.MEDPARSE_TIMEOUT_READ_SECONDS = _env_float("MEDPARSE_TIMEOUT_READ_SECONDS", 600.0)
+        self.MEDPARSE_TIMEOUT_WRITE_SECONDS = _env_float("MEDPARSE_TIMEOUT_WRITE_SECONDS", 600.0)
+        self.MEDPARSE_TIMEOUT_POOL_SECONDS = _env_float("MEDPARSE_TIMEOUT_POOL_SECONDS", 600.0)
         self.MEDPARSE_API_KEY = _env_str("MEDPARSE_API_KEY", None)
         self.MEDPARSE_AUTH_HEADER_NAME = _env_str("MEDPARSE_AUTH_HEADER_NAME", None)
+        extract_mode = (_env_str("MEDPARSE_EXTRACT_MODE", "auto") or "auto").lower()
+        if extract_mode not in {"auto", "json", "multipart"}:
+            raise ValueError("MEDPARSE_EXTRACT_MODE must be one of {'auto','json','multipart'} (case-insensitive)")
+        self.MEDPARSE_EXTRACT_MODE = extract_mode  # type: ignore[assignment]
+        self.MEDPARSE_MULTIPART_FIELD = _env_str("MEDPARSE_MULTIPART_FIELD", "pdf") or "pdf"
         self.MEDPARSE_MAX_RETRIES = _env_int("MEDPARSE_MAX_RETRIES", 3)
         self.MEDPARSE_RETRY_BACKOFF_SECONDS = _env_float("MEDPARSE_RETRY_BACKOFF_SECONDS", 1.0)
 
@@ -115,5 +131,9 @@ class AppConfig:
         self.QDRANT_COLLECTION_RECS = f"{prefix}_recs"
         self.QDRANT_COLLECTION_FIGTABS = f"{prefix}_figtabs"
 
+    @property
+    def MEDPARSE_BASE(self) -> str:
+        return (self.MEDPARSE_BASE_URL or "").rstrip("/")
 
-__all__ = ["AppConfig", "TransportLiteral"]
+
+__all__ = ["AppConfig", "TransportLiteral", "ExtractMode"]

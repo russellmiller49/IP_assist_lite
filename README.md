@@ -198,6 +198,46 @@ If `ipa_ingest` command is not available, use the module path:
 ```bash
 # Ingest documents using module path
 PYTHONPATH=src python -m jobs.ingest_documents --path data/seed/*.pdf --doc-type auto
+
+### Medparse sidecar sanity checks
+
+Verify connectivity to the extraction sidecar before running long pipelines:
+
+```bash
+# JSON contract check
+python - <<'PY'
+import os, base64, httpx
+b64 = base64.b64encode(b"%PDF-FAKE").decode()
+headers = {}
+api_key = os.getenv("MEDPARSE_API_KEY")
+if api_key:
+    header_name = os.getenv("MEDPARSE_AUTH_HEADER_NAME", "X-API-Key")
+    headers[header_name] = api_key if header_name.lower() == "x-api-key" else f"Bearer {api_key}"
+r = httpx.post(os.getenv("MEDPARSE_BASE_URL", "http://127.0.0.1:8099") + "/extract",
+               headers=headers,
+               json={"doc_id": "ping", "pdf": b64},
+               timeout=30)
+print(r.status_code, r.text[:160])
+PY
+
+# Multipart contract check
+python - <<'PY'
+import os, httpx
+headers = {}
+api_key = os.getenv("MEDPARSE_API_KEY")
+if api_key:
+    header_name = os.getenv("MEDPARSE_AUTH_HEADER_NAME", "X-API-Key")
+    headers[header_name] = api_key if header_name.lower() == "x-api-key" else f"Bearer {api_key}"
+files = {"pdf": ("ping.pdf", b"%PDF-FAKE", "application/pdf")}
+data = {"doc_id": "ping"}
+r = httpx.post(os.getenv("MEDPARSE_BASE_URL", "http://127.0.0.1:8099") + "/extract",
+               headers=headers,
+               files=files,
+               data=data,
+               timeout=30)
+print(r.status_code, r.text[:160])
+PY
+```
 ```
 
 **Note:** The main `app.py` now includes all enhanced features by default. The basic version is archived as `app_basic.py`.

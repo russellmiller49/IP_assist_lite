@@ -24,4 +24,15 @@ app = FastAPI(lifespan=lifespan)
 
 @app.get("/health")
 async def health() -> dict:
+    """Legacy health endpoint maintained for backwards compatibility."""
     return {"status": "ok", "ready": getattr(app.state, "ready", False)}
+
+
+@app.get("/healthz")
+async def healthz() -> dict:
+    """Kubernetes-style health probe."""
+    return {
+        "ok": True,
+        "ready": getattr(app.state, "ready", False),
+        "status": "ok",
+    }

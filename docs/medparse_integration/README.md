@@ -85,7 +85,13 @@ These projects communicate strictly over HTTP, letting each keep its own Python 
 | `MEDPARSE_BASE_URL` | Base URL for the Medparse HTTP sidecar (`http://127.0.0.1:8099`). |
 | `MEDPARSE_API_KEY` | Matches Medparse `API_KEY` when the sidecar is locked down. |
 | `MEDPARSE_AUTH_HEADER_NAME` | Optional override when the sidecar expects a header other than `X-API-Key` (e.g., `Authorization`). |
-| `MEDPARSE_TIMEOUT_SECONDS` | Request timeout (defaults to `30`). |
+| `MEDPARSE_TIMEOUT_SECONDS` | Overall request timeout for Medparse HTTP calls (defaults to `30`). |
+| `MEDPARSE_TIMEOUT_CONNECT_SECONDS` | Socket connect timeout (defaults to `10`). |
+| `MEDPARSE_TIMEOUT_READ_SECONDS` | Response read timeout (defaults to `600` for large PDFs). |
+| `MEDPARSE_TIMEOUT_WRITE_SECONDS` | Upload write timeout (defaults to `600`). |
+| `MEDPARSE_TIMEOUT_POOL_SECONDS` | Connection pool acquisition timeout (defaults to `600`). |
+| `MEDPARSE_EXTRACT_MODE` | Force Medparse HTTP payload strategy: `auto`, `json`, or `multipart` (defaults to `auto`). |
+| `MEDPARSE_MULTIPART_FIELD` | Preferred multipart field name for PDF uploads (defaults to `pdf`). |
 | `MEDPARSE_MAX_RETRIES` | Number of retries for `429/5xx` responses (defaults to `3`). |
 | `MEDPARSE_RETRY_BACKOFF_SECONDS` | Backoff multiplier between retries (defaults to `1`). |
 | `APP_USE_NEO4J` / `APP_USE_QDRANT` | Toggle graph/vector persistence individually. |
@@ -153,6 +159,68 @@ Set these variables before launching the corresponding service to avoid runtime 
 5. **Run LangGraph flow**
    - Launch the Gradio UI and issue a query involving clinical terminology.
    - Inspect logs to confirm Medparse link responses are included in retrieval decisions.
+
+## Quick QA
+
+Run a lightweight smoke check without the sidecar by replaying existing JSON payloads and launching the UI:
+
+```bash
+make ingest-json JSON="data/extracted/*.json"
+make ui
+```
+
+Set `APP_USE_NEO4J=false` / `APP_USE_QDRANT=false` if the graph services are not available locally.
+
+## Sidecar QA
+
+When the Medparse FastAPI service is running, use the PDF pipeline end-to-end:
+
+1. Ensure the sidecar is live (for example `uvicorn api.main:app --port 8099`).
+2. Export authentication details:
+   ```bash
+   export MEDPARSE_BASE_URL=http://127.0.0.1:8099
+   export MEDPARSE_API_KEY=my-medparse-key
+   # Optional when the sidecar expects a bearer token
+   export MEDPARSE_AUTH_HEADER_NAME=Authorization
+   ```
+3. Ingest sample PDFs directly:
+   ```bash
+   make ingest-pdf PATH="tests/data/pdfs/*.pdf" DOC_TYPE=auto
+   ```
+4. Launch the UI (`make ui`) and confirm the new documents appear in downstream flows.
+
+## Sidecar protocol variants
+
+Different deployments of the Medparse sidecar expose two `/extract` contracts. IP Assist Lite auto-detects the correct variant unless you override it via `MEDPARSE_EXTRACT_MODE`.
+
+| Variant | Request shape | Notes |
+| --- | --- | --- |
+| **JSON** (current default) | `POST /extract` with JSON body `{"doc_id": ..., "pdf": "<base64>"}` | Set `MEDPARSE_EXTRACT_MODE=json` to force this mode. |
+| **Multipart** (legacy) | `POST /extract` with `files["pdf"]` (or `files["file"]`) containing the binary PDF and form data `doc_id=...` | Set `MEDPARSE_EXTRACT_MODE=multipart` to bypass the JSON attempt. |
+
+Environment setup example:
+
+```bash
+export MEDPARSE_TRANSPORT=http
+export MEDPARSE_BASE_URL=http://127.0.0.1:8099
+export MEDPARSE_API_KEY=my-secret-medparse-key-123   # value only; do not include MEDPARSE_API_KEY=
+# export MEDPARSE_AUTH_HEADER_NAME=Authorization     # uncomment if the sidecar expects bearer tokens
+# export MEDPARSE_EXTRACT_MODE=json                   # optional override (auto|json|multipart)
+```
+
+## Golden Maintenance
+
+- Regenerate the deterministic goldens when the extraction schema changes:
+  ```bash
+  python scripts/regenerate_goldens.py
+  # or as part of pytest
+  REGEN_GOLDENS=1 PYTHONPATH=src pytest tests/integration/test_structured_extractors.py
+  ```
+- Skip the legacy assertions locally (default in CI) with:
+  ```bash
+  SKIP_LEGACY_GOLDENS=1 PYTHONPATH=src pytest -q
+  ```
+- Regenerated files are written to `tests/golden/current/`. Review the diff and commit alongside code changes.
 
 ---
 

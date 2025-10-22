@@ -3,21 +3,13 @@
   "$id": "StatResult.schema.json",
   "title": "StatResult",
   "type": "object",
-  "additionalProperties": false,
+  "additionalProperties": true,
   "properties": {
     "id": {"type": "string"},
     "kind": {
-      "type": "string",
-      "enum": [
-        "sensitivity",
-        "specificity",
-        "ppv",
-        "npv",
-        "diagnostic_yield_strict",
-        "sample_size",
-        "prevalence"
-      ]
+      "type": "string"
     },
+    "type": {"type": "string"},
     "value": {"type": ["number", "null"]},
     "unit": {"type": ["string", "null"]},
     "context": {"type": ["string", "null"]},
@@ -27,5 +19,13 @@
       "minItems": 1
     }
   },
-  "required": ["id", "kind", "evidence_spans"]
+  "required": ["id", "evidence_spans"],
+  "allOf": [
+    {
+      "anyOf": [
+        {"required": ["kind"]},
+        {"required": ["type"]}
+      ]
+    }
+  ]
 }

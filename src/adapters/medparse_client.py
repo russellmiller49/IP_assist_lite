@@ -3,7 +3,7 @@ from __future__ import annotations
 
 import asyncio
 import os
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, Mapping, MutableMapping, Optional
 
@@ -31,9 +31,11 @@ class MedparseConfig:
 
     base_url: str
     api_key: Optional[str] = None
-    timeout: float = 30.0
+    timeout: httpx.Timeout = field(default_factory=lambda: httpx.Timeout(30.0))
     max_retries: int = 3
     retry_backoff: float = 1.0
+    multipart_field: str = "pdf"
+    extract_mode: str = "multipart"
 
     @classmethod
     def from_env(cls) -> "MedparseConfig":
@@ -66,12 +68,29 @@ class MedparseConfig:
             except ValueError as exc:  # pragma: no cover - defensive configuration guard
                 raise MedparseConfigError(f"Invalid integer value for {name}: {value}") from exc
 
+        extract_mode = (os.getenv("MEDPARSE_EXTRACT_MODE") or "auto").strip().lower()
+        if extract_mode not in {"auto", "json", "multipart"}:
+            raise MedparseConfigError(
+                "MEDPARSE_EXTRACT_MODE must be one of {'auto','json','multipart'} (case-insensitive)"
+            )
+        multipart_field = (os.getenv("MEDPARSE_MULTIPART_FIELD") or "pdf").strip() or "pdf"
+
+        timeout = httpx.Timeout(
+            timeout=_read_float("MEDPARSE_TIMEOUT_SECONDS", 30.0),
+            connect=_read_float("MEDPARSE_TIMEOUT_CONNECT_SECONDS", 10.0),
+            read=_read_float("MEDPARSE_TIMEOUT_READ_SECONDS", 600.0),
+            write=_read_float("MEDPARSE_TIMEOUT_WRITE_SECONDS", 600.0),
+            pool=_read_float("MEDPARSE_TIMEOUT_POOL_SECONDS", 600.0),
+        )
+
         return cls(
             base_url=base_url,
             api_key=(os.getenv("MEDPARSE_API_KEY") or None),
-            timeout=_read_float("MEDPARSE_TIMEOUT_SECONDS", 30.0),
+            timeout=timeout,
             max_retries=_read_int("MEDPARSE_MAX_RETRIES", 3),
             retry_backoff=_read_float("MEDPARSE_RETRY_BACKOFF_SECONDS", 1.0),
+            multipart_field=multipart_field,
+            extract_mode=extract_mode,
         )
 
 
@@ -85,10 +104,9 @@ class MedparseClient:
         transport: httpx.AsyncBaseTransport | None = None,
     ) -> None:
         self.config = config
-        timeout = httpx.Timeout(config.timeout)
         self._client = httpx.AsyncClient(
             base_url=config.base_url,
-            timeout=timeout,
+            timeout=config.timeout,
             transport=transport,
         )
         self._lock = asyncio.Lock()
@@ -179,7 +197,9 @@ class MedparseClient:
         if not doc_id:
             raise ValueError("doc_id must be provided for Medparse extraction")
         pdf_bytes = path.read_bytes()
-        files = {"pdf": (path.name, pdf_bytes, "application/pdf")}
+        files = {
+            self.config.multipart_field: (path.name, pdf_bytes, "application/pdf"),
+        }
         data = {"doc_id": doc_id}
         response = await self._request("POST", "/extract", files=files, data=data)
         try:
