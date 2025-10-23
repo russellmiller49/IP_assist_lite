@@ -1,10 +1,2709 @@
 {
-  "doc_type": "guideline",
-  "source_file": "tests/data/pdfs/Guideline ATS diagnostic yield.pdf",
-  "page_count": 14,
-  "extraction_version": "v1.0.0",
-  "society": "AMERICAN THORACIC SOCIETY",
-  "title": "AMERICAN THORACIC SOCIETY DOCUMENTS",
-  "year": 2023,
-  "recommendations": []
+  "metadata": {
+    "title": "Assessment of Advanced Diagnostic Bronchoscopy Outcomes for Peripheral Lung Lesions: A Delphi Consensus Definition of Diagnostic Yield and Recommendations for Patient-centered Study Designs. An Official American Thoracic Society/American College of Chest Physicians Research Statement",
+    "year": "2024-02-23",
+    "authors": [
+      {
+        "given": "Anne V",
+        "family": "Gonzalez",
+        "full_name": "Anne V Gonzalez",
+        "is_corresponding": false,
+        "display": "Anne V Gonzalez"
+      },
+      {
+        "given": "Gerard A",
+        "family": "Silvestri",
+        "full_name": "Gerard A Silvestri",
+        "is_corresponding": false,
+        "display": "Gerard A Silvestri"
+      },
+      {
+        "given": "Daniel A",
+        "family": "Korevaar",
+        "full_name": "Daniel A Korevaar",
+        "is_corresponding": false,
+        "display": "Daniel A Korevaar"
+      },
+      {
+        "given": "Yaron B",
+        "family": "Gesthalter",
+        "full_name": "Yaron B Gesthalter",
+        "is_corresponding": false,
+        "display": "Yaron B Gesthalter"
+      },
+      {
+        "given": "Nisha D",
+        "family": "Almeida",
+        "full_name": "Nisha D Almeida",
+        "is_corresponding": false,
+        "display": "Nisha D Almeida"
+      },
+      {
+        "given": "Alex",
+        "family": "Chen",
+        "full_name": "Alex Chen",
+        "is_corresponding": false,
+        "display": "Alex Chen"
+      },
+      {
+        "given": "Chris R",
+        "family": "Gilbert",
+        "full_name": "Chris R Gilbert",
+        "is_corresponding": false,
+        "display": "Chris R Gilbert"
+      },
+      {
+        "given": "Peter B",
+        "family": "Illei",
+        "full_name": "Peter B Illei",
+        "is_corresponding": false,
+        "display": "Peter B Illei"
+      },
+      {
+        "given": "Neal",
+        "family": "Navani",
+        "full_name": "Neal Navani",
+        "is_corresponding": false,
+        "display": "Neal Navani"
+      },
+      {
+        "given": "Mary M",
+        "family": "Pasquinelli",
+        "full_name": "Mary M Pasquinelli",
+        "is_corresponding": false,
+        "display": "Mary M Pasquinelli"
+      },
+      {
+        "given": "Nicholas J",
+        "family": "Pastis",
+        "full_name": "Nicholas J Pastis",
+        "is_corresponding": false,
+        "display": "Nicholas J Pastis"
+      },
+      {
+        "given": "Catherine R",
+        "family": "Sears",
+        "full_name": "Catherine R Sears",
+        "is_corresponding": false,
+        "display": "Catherine R Sears"
+      },
+      {
+        "given": "Samira",
+        "family": "Shojaee",
+        "full_name": "Samira Shojaee",
+        "is_corresponding": false,
+        "display": "Samira Shojaee"
+      },
+      {
+        "given": "Stephen B",
+        "family": "Solomon",
+        "full_name": "Stephen B Solomon",
+        "is_corresponding": false,
+        "display": "Stephen B Solomon"
+      },
+      {
+        "given": "Daniel P",
+        "family": "Steinfort",
+        "full_name": "Daniel P Steinfort",
+        "is_corresponding": false,
+        "display": "Daniel P Steinfort"
+      },
+      {
+        "given": "Fabien",
+        "family": "Maldonado",
+        "full_name": "Fabien Maldonado",
+        "is_corresponding": false,
+        "display": "Fabien Maldonado"
+      },
+      {
+        "given": "M Patricia",
+        "family": "Rivera",
+        "full_name": "M Patricia Rivera",
+        "is_corresponding": false,
+        "display": "M Patricia Rivera"
+      },
+      {
+        "given": "Lonny B",
+        "family": "Yarmus",
+        "full_name": "Lonny B Yarmus",
+        "is_corresponding": false,
+        "display": "Lonny B Yarmus"
+      }
+    ],
+    "references_text": [
+      "Recent trends in the identification of incidental pulmonary nodules\n\t\t\n\t\t\tMKGould\n\t\t\n\t\t\n\t\t\tTTang\n\t\t\n\t\t\n\t\t\tILLiu\n\t\t\n\t\t\n\t\t\tJLee\n\t\t\n\t\t\n\t\t\tCZheng\n\t\t\n\t\t\n\t\t\tKNDanforth\n\t\t\n\t\n\t\n\t\tAm J Respir Crit Care Med\n\t\t\n\t\t\t192\n\t\t\t\n\t\t\t2015",
+      "National Lung Screening Trial Research Team. Reduced lungcancer mortality with low-dose computed tomographic screening\n\t\t\n\t\t\tDRAberle\n\t\t\n\t\t\n\t\t\tAMAdams\n\t\t\n\t\t\n\t\t\tCDBerg\n\t\t\n\t\t\n\t\t\tWCBlack\n\t\t\n\t\t\n\t\t\tJDClapp\n\t\t\n\t\t\n\t\t\tRMFagerstrom\n\t\t\n\t\n\t\n\t\tN Engl J Med\n\t\t\n\t\t\t365\n\t\t\t\n\t\t\t2011",
+      "Development and Validation of a Deep Learning–Based Synthetic Bone-Suppressed Model for Pulmonary Nodule Detection in Chest Radiographs\n\t\t\n\t\t\tHwiyoungKim\n\t\t\n\t\t\n\t\t\tKyeHoLee\n\t\t\n\t\t\n\t\t\tKyunghwaHan\n\t\t\n\t\t\n\t\t\tJiWonLee\n\t\t\n\t\t\n\t\t\tJinYoungKim\n\t\t\n\t\t\n\t\t\tDongJinIm\n\t\t\n\t\t\n\t\t\tYooJinHong\n\t\t\n\t\t\n\t\t\tByoungWookChoi\n\t\t\n\t\t\n\t\t\tJinHur\n\t\t\n\t\t10.1001/jamanetworkopen.2022.53820\n\t\n\t\n\t\tJAMA Network Open\n\t\tJAMA Netw Open\n\t\t2574-3805\n\t\t\n\t\t\t6\n\t\t\t1\n\t\t\te2253820\n\t\t\t2023\n\t\t\tAmerican Medical Association (AMA)",
+      "Establishing the Diagnosis of Lung Cancer\n\t\t\n\t\t\tMPatriciaRivera\n\t\t\n\t\t\n\t\t\tAtulCMehta\n\t\t\n\t\t\n\t\t\tMomenMWahidi\n\t\t\n\t\t10.1378/chest.12-2353\n\t\n\t\n\t\tChest\n\t\tChest\n\t\t0012-3692\n\t\t\n\t\t\t143\n\t\t\t5\n\t\t\t\n\t\t\t2013\n\t\t\tElsevier BV\n\t\t\n\t\n\tSuppl):e142S-e165S",
+      "Accuracy of a robotic endoscopic system in cadaver models with simulated tumor targets: ACCESS study\n\t\t\n\t\t\tACChen\n\t\t\n\t\t\n\t\t\tNJPastis\n\t\t\n\t\t\n\t\t\tMSMachuzak\n\t\t\n\t\t\n\t\t\tTRGildea\n\t\t\n\t\t\n\t\t\tMJSimoff\n\t\t\n\t\t\n\t\t\tCTGillespie\n\t\t\n\t\n\t\n\t\tRespiration\n\t\t\n\t\t\t99\n\t\t\t\n\t\t\t2020",
+      "A prospective randomized comparative study of three guided bronchoscopic approaches for investigating pulmonary nodules: the PRECISION-1 study\n\t\t\n\t\t\tLYarmus\n\t\t\t\n\t\t\t\tInterventional Pulmonary Outcomes Group\n\t\t\t\n\t\t\n\t\t\n\t\t\tJAkulian\n\t\t\t\n\t\t\t\tInterventional Pulmonary Outcomes Group\n\t\t\t\n\t\t\n\t\t\n\t\t\tMWahidi\n\t\t\t\n\t\t\t\tInterventional Pulmonary Outcomes Group\n\t\t\t\n\t\t\n\t\t\n\t\t\tAChen\n\t\t\t\n\t\t\t\tInterventional Pulmonary Outcomes Group\n\t\t\t\n\t\t\n\t\t\n\t\t\tJPSteltz\n\t\t\t\n\t\t\t\tInterventional Pulmonary Outcomes Group\n\t\t\t\n\t\t\n\t\t\n\t\t\tSLSolomon\n\t\t\t\n\t\t\t\tInterventional Pulmonary Outcomes Group\n\t\t\t\n\t\t\n\t\n\t\n\t\tChest\n\t\t\n\t\t\t157\n\t\t\t\n\t\t\t2020",
+      "Methods for Staging Non-small Cell Lung Cancer\n\t\t\n\t\t\tGerardASilvestri\n\t\t\n\t\t\n\t\t\tAnneVGonzalez\n\t\t\n\t\t\n\t\t\tMichaelAJantz\n\t\t\n\t\t\n\t\t\tMitchellLMargolis\n\t\t\n\t\t\n\t\t\tMichaelKGould\n\t\t\n\t\t\n\t\t\tLynnTTanoue\n\t\t\n\t\t\n\t\t\tLorenJHarris\n\t\t\n\t\t\n\t\t\tFrankCDetterbeck\n\t\t\n\t\t10.1378/chest.12-2355\n\t\n\t\n\t\tChest\n\t\tChest\n\t\t0012-3692\n\t\t\n\t\t\t143\n\t\t\t5\n\t\t\t\n\t\t\t2013\n\t\t\tElsevier BV\n\t\t\n\t\n\tSuppl):e211S-e250S",
+      "Multimodality bronchoscopic diagnosis of peripheral lung lesions: a randomized controlled trial\n\t\t\n\t\t\tREberhardt\n\t\t\n\t\t\n\t\t\tDAnantham\n\t\t\n\t\t\n\t\t\tAErnst\n\t\t\n\t\t\n\t\t\tDFeller-Kopman\n\t\t\n\t\t\n\t\t\tFHerth\n\t\t\n\t\n\t\n\t\tAm J Respir Crit Care Med\n\t\t\n\t\t\t176\n\t\t\t\n\t\t\t2007",
+      "A randomized controlled trial comparing the diagnostic yield of using Rapid On-Site Cytology Evaluation (ROSE) and without using ROSE in Radial Probe Endobronchial Ultrasound (R-EBUS) guided sheath transbronchial lung biopsy with bronchial brushing in peripheral pulmonary lesions\n\t\t\n\t\t\tKulchamaiSilathapanasakul\n\t\t\n\t\t10.58837/chula.the.2022.249\n\t\n\t\n\t\tJ Thorac Dis\n\t\t\n\t\t\t7\n\t\t\t\n\t\t\t2015\n\t\t\tOffice of Academic Resources, Chulalongkorn University",
+      "Electromagnetic navigation bronchoscopy for peripheral pulmonary lesions: one-year results of the prospective, multicenter NAVIGATE study\n\t\t\n\t\t\tEEFolch\n\t\t\n\t\t\n\t\t\tMAPritchett\n\t\t\n\t\t\n\t\t\tMANead\n\t\t\n\t\t\n\t\t\tMRBowling\n\t\t\n\t\t\n\t\t\tSDMurgu\n\t\t\n\t\t\n\t\t\tWSKrimsky\n\t\t\n\t\n\t\n\t\tJ Thorac Oncol\n\t\t\n\t\t\t14\n\t\t\t\n\t\t\t2019\n\t\t\n\t\n\tNAVIGATE Study Investigators",
+      "Radial Probe Endobronchial Ultrasound for Peripheral Pulmonary Lesions. A 5-Year Institutional Experience\n\t\t\n\t\t\tAlexanderChen\n\t\t\n\t\t\n\t\t\tPraveenChenna\n\t\t\n\t\t\n\t\t\tAndreaLoiselle\n\t\t\n\t\t\n\t\t\tJenniferMassoni\n\t\t\n\t\t\n\t\t\tMartinMayse\n\t\t\n\t\t\n\t\t\tDavidMisselhorn\n\t\t\n\t\t10.1513/annalsats.201311-384oc\n\t\n\t\n\t\tAnnals of the American Thoracic Society\n\t\tAnnals ATS\n\t\t2329-6933\n\t\t2325-6621\n\t\t\n\t\t\t11\n\t\t\t4\n\t\t\t\n\t\t\t2014\n\t\t\tAmerican Thoracic Society",
+      "Standard bronchoscopy with fluoroscopy vs thin bronchoscopy and radial endobronchial ultrasound for biopsy of pulmonary lesions: a multicenter, prospective, randomized trial\n\t\t\n\t\t\tNTTanner\n\t\t\n\t\t\n\t\t\tLYarmus\n\t\t\n\t\t\n\t\t\tChenA\n\t\t\n\t\t\n\t\t\tWangMemoli\n\t\t\n\t\t\n\t\t\tJMehta\n\t\t\n\t\t\n\t\t\tHJPastis\n\t\t\n\t\t\n\t\t\tNJ\n\t\t\n\t\n\t\n\t\tChest\n\t\t\n\t\t\t154\n\t\t\t\n\t\t\t2018",
+      "Flying Blind Despite All Our Instruments\n\t\t\n\t\t\tErikVakil\n\t\t\n\t\t\n\t\t\tAlainTremblay\n\t\t\n\t\t10.1016/j.chest.2020.06.059\n\t\n\t\n\t\tChest\n\t\tChest\n\t\t0012-3692\n\t\t\n\t\t\t158\n\t\t\t4\n\t\t\t\n\t\t\t2020\n\t\t\tElsevier BV",
+      "AQuIRE Bronchoscopy Registry. Diagnostic yield and complications of bronchoscopy for peripheral lung lesions. results of the AQuIRE Registry\n\t\t\n\t\t\tDEOst\n\t\t\n\t\t\n\t\t\tAErnst\n\t\t\n\t\t\n\t\t\tXLei\n\t\t\n\t\t\n\t\t\tKLKovitz\n\t\t\n\t\t\n\t\t\tSBenzaquen\n\t\t\n\t\t\n\t\t\tJDiaz-Mendoza\n\t\t\n\t\n\t\n\t\tAm J Respir Crit Care Med\n\t\t\n\t\t\t193\n\t\t\t\n\t\t\t2016",
+      "Retrospective analysis of radial EBUS outcome for the diagnosis of peripheral pulmonary lesion: sensitivity and complications\n\t\t\n\t\t\tADurakovic\n\t\t\n\t\t\n\t\t\tHAndersen\n\t\t\n\t\t\n\t\t\tAChristiansen\n\t\t\n\t\t\n\t\t\tIHammen\n\t\t\n\t\n\t\n\t\tEur Clin Respir J\n\t\t\n\t\t\t2\n\t\t\t28947\n\t\t\t2015",
+      "Electromagnetic Navigation Diagnostic Bronchoscopy in Peripheral Lung Lesions\n\t\t\n\t\t\tRalfEberhardt\n\t\t\n\t\t\n\t\t\tDevanandAnantham\n\t\t\n\t\t\n\t\t\tFelixHerth\n\t\t\n\t\t\n\t\t\tDavidFeller-Kopman\n\t\t\n\t\t\n\t\t\tArminErnst\n\t\t\n\t\t10.1378/chest.06-3016\n\t\n\t\n\t\tChest\n\t\tChest\n\t\t0012-3692\n\t\t\n\t\t\t131\n\t\t\t6\n\t\t\t\n\t\t\t2007\n\t\t\tElsevier BV",
+      "Endobronchial ultrasound-guided transbronchial biopsy and brushing: a comparative evaluation for the diagnosis of peripheral pulmonary lesions\n\t\t\n\t\t\tCHKuo\n\t\t\n\t\t\n\t\t\tSMLin\n\t\t\n\t\t\n\t\t\tKYLee\n\t\t\n\t\t\n\t\t\tFTChung\n\t\t\n\t\t\n\t\t\tYLLo\n\t\t\n\t\t\n\t\t\tTCHsiung\n\t\t\n\t\n\t\n\t\tEur J Cardiothorac Surg\n\t\t\n\t\t\t45\n\t\t\t\n\t\t\t2014",
+      "Safety and Performance of Transbronchial Cryobiopsy for Parenchymal Lung Lesions\n\t\t\n\t\t\tFelixJHerth\n\t\t\n\t\t\n\t\t\tMaxMayer\n\t\t\n\t\t\n\t\t\tJeffreyThiboutot\n\t\t\n\t\t\n\t\t\tChristopherMKapp\n\t\t\n\t\t\n\t\t\tJiayuanSun\n\t\t\n\t\t\n\t\t\tXiaojuZhang\n\t\t\n\t\t\n\t\t\tJonasHerth\n\t\t\n\t\t\n\t\t\tKonstantinaKontogianni\n\t\t\n\t\t\n\t\t\tLonnyYarmus\n\t\t\n\t\t10.1016/j.chest.2021.04.063\n\t\n\t\n\t\tChest\n\t\tChest\n\t\t0012-3692\n\t\t\n\t\t\t160\n\t\t\t4\n\t\t\t\n\t\t\t2021\n\t\t\tElsevier BV",
+      "Meta-analysis of guided bronchoscopy for the evaluation of the pulmonary nodule\n\t\t\n\t\t\tWangMemoli\n\t\t\n\t\t\n\t\t\tJSNietert\n\t\t\n\t\t\n\t\t\tPJSilvestri\n\t\t\n\t\t\n\t\t\tGA\n\t\t\n\t\n\t\n\t\tChest\n\t\t\n\t\t\t142\n\t\t\t\n\t\t\t2012",
+      "The Impact of Alternative Approaches to Diagnostic Yield Calculation in Studies of Bronchoscopy\n\t\t\n\t\t\tAnilVachani\n\t\t\n\t\t\n\t\t\tFabienMaldonado\n\t\t\n\t\t\n\t\t\tBalajiLaxmanan\n\t\t\n\t\t\n\t\t\tIftekharKalsekar\n\t\t\n\t\t\n\t\t\tSeptimiuMurgu\n\t\t\n\t\t10.1016/j.chest.2021.08.074\n\t\n\t\n\t\tChest\n\t\tChest\n\t\t0012-3692\n\t\t\n\t\t\t161\n\t\t\t5\n\t\t\t\n\t\t\t2022\n\t\t\tElsevier BV",
+      "Guided Bronchoscopy for the Evaluation of Pulmonary Lesions\n\t\t\n\t\t\tTejaswiRNadig\n\t\t\t0000-0001-8541-113X\n\t\t\n\t\t\n\t\t\tNinaThomas\n\t\t\n\t\t\n\t\t\tPaulJNietert\n\t\t\t0000-0002-3933-4986\n\t\t\n\t\t\n\t\t\tJessicaLozier\n\t\t\n\t\t\n\t\t\tNicholeTTanner\n\t\t\n\t\t\n\t\t\tJessicaSWang Memoli\n\t\t\n\t\t\n\t\t\tNicholasJPastis\n\t\t\n\t\t\n\t\t\tGerardASilvestri\n\t\t\t0000-0002-8464-2187\n\t\t\n\t\t10.1016/j.chest.2022.12.044\n\t\n\t\n\t\tCHEST\n\t\tCHEST\n\t\t0012-3692\n\t\t\n\t\t\t163\n\t\t\t6\n\t\t\t\n\t\t\t2023\n\t\t\tElsevier BV",
+      "A Multicenter, Single-Arm, Prospective Trial Assessing the Diagnostic Yield of Electromagnetic Bronchoscopic and Transthoracic Navigation for Peripheral Pulmonary Nodules\n\t\t\n\t\t\tJeffreyThiboutot\n\t\t\t0000-0001-7388-4191\n\t\t\n\t\t\n\t\t\tNicholasJPastis\n\t\t\n\t\t\n\t\t\tJasonAkulian\n\t\t\n\t\t\n\t\t\tGerardASilvestri\n\t\t\n\t\t\n\t\t\tAlexanderChen\n\t\t\n\t\t\n\t\t\tMomenMWahidi\n\t\t\n\t\t\n\t\t\tChristopherRGilbert\n\t\t\n\t\t\n\t\t\tChengTingLin\n\t\t\n\t\t\n\t\t\tJennaLos\n\t\t\n\t\t\n\t\t\tEricFlenaugh\n\t\t\n\t\t\n\t\t\tRoySemaan\n\t\t\n\t\t\n\t\t\tAColeBurks\n\t\t\n\t\t\n\t\t\tPriyaSathyanarayan\n\t\t\n\t\t\n\t\t\tSamWu\n\t\t\n\t\t\n\t\t\tDavidFeller-Kopman\n\t\t\n\t\t\n\t\t\tGeorgeZCheng\n\t\t\n\t\t\n\t\t\tRaedAlalawi\n\t\t\n\t\t\n\t\t\tNajibMRahman\n\t\t\n\t\t\n\t\t\tFabienMaldonado\n\t\t\n\t\t\n\t\t\tHansJLee\n\t\t\n\t\t\n\t\t\tLonnyYarmus\n\t\t\n\t\t10.1164/rccm.202301-0099oc\n\t\n\t\n\t\tAmerican Journal of Respiratory and Critical Care Medicine\n\t\tAm J Respir Crit Care Med\n\t\t1073-449X\n\t\t1535-4970\n\t\t\n\t\t\t208\n\t\t\t8\n\t\t\t\n\t\t\t2023\n\t\t\tAmerican Thoracic Society",
+      "Real-World Application of the NAVIGATE Trial\n\t\t\n\t\t\tJeffreyThiboutot\n\t\t\t0000-0001-7388-4191\n\t\t\n\t\t\n\t\t\tLonnyBYarmus\n\t\t\n\t\t\n\t\t\tHansJLee\n\t\t\n\t\t\n\t\t\tMPatriciaRivera\n\t\t\n\t\t\n\t\t\tDavidEOst\n\t\t\n\t\t\n\t\t\tDavidFeller-Kopman\n\t\t\n\t\t10.1016/j.jtho.2019.02.020\n\t\n\t\n\t\tJournal of Thoracic Oncology\n\t\tJournal of Thoracic Oncology\n\t\t1556-0864\n\t\t\n\t\t\t14\n\t\t\t7\n\t\t\t\n\t\t\t2019\n\t\t\tElsevier BV",
+      "Bearing the burden of \"innovation\": the ontological implications of substantial equivalence and the FDA 510(k) pathway\n\t\t\n\t\t\tFMaldonado\n\t\t\n\t\t\n\t\t\tJEberl\n\t\t\n\t\n\t\n\t\tChest\n\t\t\n\t\t\t163\n\t\t\t\n\t\t\t2023",
+      "Modernizing the FDA's 510(k) pathway\n\t\t\n\t\t\tVKRathi\n\t\t\n\t\t\n\t\t\tJSRoss\n\t\t\n\t\n\t\n\t\tN Engl J Med\n\t\t\n\t\t\t381\n\t\t\t\n\t\t\t2019",
+      "Leading the Call for Reform of Medical Device Safety Surveillance\n\t\t\n\t\t\tJamesWSalazar\n\t\t\n\t\t\n\t\t\tRitaFRedberg\n\t\t\n\t\t10.1001/jamainternmed.2019.5170\n\t\n\t\n\t\tJAMA Internal Medicine\n\t\tJAMA Intern Med\n\t\t2168-6106\n\t\t\n\t\t\t180\n\t\t\t2\n\t\t\t179\n\t\t\t2020\n\t\t\tAmerican Medical Association (AMA)",
+      "An Oversight in Oversight\n\t\t\n\t\t\tKellyCLandeen\n\t\t\n\t\t\n\t\t\tAlexanderLangerman\n\t\t\n\t\t\n\t\t\tFabienMaldonado\n\t\t\n\t\t10.1016/j.chest.2021.06.038\n\t\n\t\n\t\tCHEST\n\t\tCHEST\n\t\t0012-3692\n\t\t\n\t\t\t161\n\t\t\t1\n\t\t\t\n\t\t\t2022\n\t\t\tElsevier BV",
+      "Challenges of Health Technology Assessment in Pluralistic Healthcare Systems: An ISPOR Council Report\n\t\t\n\t\t\tMichaelFDrummond\n\t\t\n\t\t\n\t\t\tFedericoAugustovski\n\t\t\n\t\t\n\t\t\tDevarshiBhattacharyya\n\t\t\n\t\t\n\t\t\tJonathanCampbell\n\t\t\n\t\t\n\t\t\tNathornChaiyakunapruk\n\t\t\n\t\t\n\t\t\tYingyaoChen\n\t\t\n\t\t\n\t\t\tRosaMariaGalindo-Suarez\n\t\t\n\t\t\n\t\t\tJohnGuerino\n\t\t\n\t\t\n\t\t\tAurelioMejía\n\t\t\n\t\t\n\t\t\tMichelleMujoomdar\n\t\t\n\t\t\n\t\t\tDanielOllendorf\n\t\t\n\t\t\n\t\t\tNaokoRonquest\n\t\t\n\t\t\n\t\t\tAleksandraTorbica\n\t\t\n\t\t\n\t\t\tEmilyTsiao\n\t\t\n\t\t\n\t\t\tJohnWatkins\n\t\t\n\t\t\n\t\t\tKaiYeung\n\t\t\n\t\t10.1016/j.jval.2022.02.006\n\t\n\t\n\t\tValue in Health\n\t\tValue in Health\n\t\t1098-3015\n\t\t\n\t\t\t25\n\t\t\t8\n\t\t\t\n\t\t\t2022\n\t\t\tElsevier BV",
+      "Diagnostic yield and safety of navigation bronchoscopy: a systematic review and meta-analysis\n\t\t\n\t\t\tSEKops\n\t\t\n\t\t\n\t\t\tPHeus\n\t\t\n\t\t\n\t\t\tDAKorevaar\n\t\t\n\t\t\n\t\t\tJaaDamen\n\t\t\n\t\t\n\t\t\tDLIdema\n\t\t\n\t\t\n\t\t\tRljVerhoeven\n\t\t\n\t\n\t\n\t\tLung Cancer\n\t\t\n\t\t\t180\n\t\t\t107196\n\t\t\t2023",
+      "Stating the Obvious… Or Leading the Way Toward More Judicious Use of Diagnostic Bronchoscopy\n\t\t\n\t\t\tAnneVGonzalez\n\t\t\n\t\t10.1016/j.chest.2020.02.029\n\t\n\t\n\t\tChest\n\t\tChest\n\t\t0012-3692\n\t\t\n\t\t\t157\n\t\t\t6\n\t\t\t\n\t\t\t2020\n\t\t\tElsevier BV",
+      "Reducing waste from incomplete or unusable reports of biomedical research\n\t\t\n\t\t\tPaulGlasziou\n\t\t\n\t\t\n\t\t\tDouglasGAltman\n\t\t\n\t\t\n\t\t\tPatrickBossuyt\n\t\t\n\t\t\n\t\t\tIsabelleBoutron\n\t\t\n\t\t\n\t\t\tMikeClarke\n\t\t\n\t\t\n\t\t\tStevenJulious\n\t\t\n\t\t\n\t\t\tSusanMichie\n\t\t\n\t\t\n\t\t\tDavidMoher\n\t\t\n\t\t\n\t\t\tElizabethWager\n\t\t\n\t\t10.1016/s0140-6736(13)62228-x\n\t\n\t\n\t\tThe Lancet\n\t\tThe Lancet\n\t\t0140-6736\n\t\t\n\t\t\t383\n\t\t\t9913\n\t\t\t\n\t\t\t2014\n\t\t\tElsevier BV",
+      "Assessing risk of bias and applicability\n\t\t\n\t\t\tJBReitsma\n\t\t\n\t\t\n\t\t\tARutjes\n\t\t\n\t\t\n\t\t\tPWhiting\n\t\t\n\t\t\n\t\t\tBYang\n\t\t\n\t\t\n\t\t\tMMLeeflang\n\t\t\n\t\t\n\t\t\tPMBossuyt\n\t\t\n\t\t\n\t\t\tJJDeeks\n\t\t\n\t\t\n\t\n\t\n\t\tCochrane handbook for systematic reviews of diagnostic test accuracy. Version 2.0 (updated\n\t\t\n\t\t\tJJDeeks\n\t\t\n\t\t\n\t\t\tPMBossuyt\n\t\t\n\t\t\n\t\t\tMMLeeflang\n\t\t\n\t\t\n\t\t\tYTakwoingi\n\t\t\n\t\t\n\t\t\tJuly 2023. 2023\n\t\t\t8",
+      "CONSORT 2010 explanation and elaboration: updated guidelines for reporting parallel group randomised trials\n\t\t\n\t\t\tDMoher\n\t\t\n\t\t\n\t\t\tSHopewell\n\t\t\n\t\t\n\t\t\tKFSchulz\n\t\t\n\t\t\n\t\t\tVMontori\n\t\t\n\t\t\n\t\t\tPCGøtzsche\n\t\t\n\t\t\n\t\t\tPJDevereaux\n\t\t\n\t\n\t\n\t\tBMJ\n\t\t\n\t\t\t340\n\t\t\t869\n\t\t\t2010",
+      "Reporting quality of diagnostic accuracy studies: a systematic review and meta-analysis of investigations on adherence to STARD\n\t\t\n\t\t\tDaniëlAKorevaar\n\t\t\n\t\t\n\t\t\tWAnnefloorVan Enst\n\t\t\n\t\t\n\t\t\tRenéSpijker\n\t\t\n\t\t\n\t\t\tPatrickM MBossuyt\n\t\t\n\t\t\n\t\t\tLottyHooft\n\t\t\n\t\t10.1136/eb-2013-101637\n\t\n\t\n\t\tEvidence Based Medicine\n\t\tEvid Based Med\n\t\t1356-5524\n\t\t1473-6810\n\t\t\n\t\t\t19\n\t\t\t2\n\t\t\t\n\t\t\t2014\n\t\t\tBMJ",
+      "Reporting Diagnostic Accuracy Studies: Some Improvements after 10 Years of STARD\n\t\t\n\t\t\tDaniëlAKorevaar\n\t\t\n\t\t\n\t\t\tJunfengWang\n\t\t\n\t\t\n\t\t\tWAnnefloorVan Enst\n\t\t\n\t\t\n\t\t\tMariskaMLeeflang\n\t\t\n\t\t\n\t\t\tLottyHooft\n\t\t\n\t\t\n\t\t\tNynkeSmidt\n\t\t\n\t\t\n\t\t\tPatrickM MBossuyt\n\t\t\n\t\t10.1148/radiol.14141160\n\t\n\t\n\t\tRadiology\n\t\tRadiology\n\t\t0033-8419\n\t\t1527-1315\n\t\t\n\t\t\t274\n\t\t\t3\n\t\t\t\n\t\t\t2015\n\t\t\tRadiological Society of North America (RSNA)",
+      "STARD 2015: an updated list of essential items for reporting diagnostic accuracy studies\n\t\t\n\t\t\tPatrickMBossuyt\n\t\t\t\n\t\t\t\tSTARD Group\n\t\t\t\n\t\t\n\t\t\n\t\t\tJohannesBReitsma\n\t\t\t\n\t\t\t\tSTARD Group\n\t\t\t\n\t\t\n\t\t\n\t\t\tDavidEBruns\n\t\t\t\n\t\t\t\tSTARD Group\n\t\t\t\n\t\t\n\t\t\n\t\t\tConstantineAGatsonis\n\t\t\t\n\t\t\t\tSTARD Group\n\t\t\t\n\t\t\n\t\t\n\t\t\tPaulPGlasziou\n\t\t\t\n\t\t\t\tSTARD Group\n\t\t\t\n\t\t\n\t\t\n\t\t\tLesIrwig\n\t\t\t\n\t\t\t\tSTARD Group\n\t\t\t\n\t\t\n\t\t\n\t\t\tJeroenGLijmer\n\t\t\t\n\t\t\t\tSTARD Group\n\t\t\t\n\t\t\n\t\t\n\t\t\tDavidMoher\n\t\t\t\n\t\t\t\tSTARD Group\n\t\t\t\n\t\t\n\t\t\n\t\t\tDrummondRennie\n\t\t\t\n\t\t\t\tSTARD Group\n\t\t\t\n\t\t\n\t\t\n\t\t\tHenricaC WDe Vet\n\t\t\t\n\t\t\t\tSTARD Group\n\t\t\t\n\t\t\n\t\t\n\t\t\tHerbertYKressel\n\t\t\t\n\t\t\t\tSTARD Group\n\t\t\t\n\t\t\n\t\t\n\t\t\tNaderRifai\n\t\t\t\n\t\t\t\tSTARD Group\n\t\t\t\n\t\t\n\t\t\n\t\t\tRobertMGolub\n\t\t\t\n\t\t\t\tSTARD Group\n\t\t\t\n\t\t\n\t\t\n\t\t\tDouglasGAltman\n\t\t\t\n\t\t\t\tSTARD Group\n\t\t\t\n\t\t\n\t\t\n\t\t\tLottyHooft\n\t\t\t\n\t\t\t\tSTARD Group\n\t\t\t\n\t\t\n\t\t\n\t\t\tDaniëlAKorevaar\n\t\t\t\n\t\t\t\tSTARD Group\n\t\t\t\n\t\t\n\t\t\n\t\t\tJérémieFCohen\n\t\t\t\n\t\t\t\tSTARD Group\n\t\t\t\n\t\t\n\t\t10.1136/bmj.h5527\n\t\n\t\n\t\tBMJ\n\t\t1756-1833\n\t\t\n\t\t\t351\n\t\t\th5527\n\t\t\t2015\n\t\t\tBMJ",
+      "STARD 2015 guidelines for reporting diagnostic accuracy studies: explanation and elaboration\n\t\t\n\t\t\tJFCohen\n\t\t\n\t\t\n\t\t\tDAKorevaar\n\t\t\n\t\t\n\t\t\tDGAltman\n\t\t\n\t\t\n\t\t\tDEBruns\n\t\t\n\t\t\n\t\t\tCAGatsonis\n\t\t\n\t\t\n\t\t\tLHooft\n\t\t\n\t\n\t\n\t\tBMJ Open\n\t\t\n\t\t\t6\n\t\t\t12799\n\t\t\t2016",
+      "Updating standards for reporting diagnostic accuracy: the development of STARD 2015\n\t\t\n\t\t\tDaniëlAKorevaar\n\t\t\n\t\t\n\t\t\tJérémieFCohen\n\t\t\n\t\t\n\t\t\tJohannesBReitsma\n\t\t\n\t\t\n\t\t\tDavidEBruns\n\t\t\n\t\t\n\t\t\tConstantineAGatsonis\n\t\t\n\t\t\n\t\t\tPaulPGlasziou\n\t\t\n\t\t\n\t\t\tLesIrwig\n\t\t\n\t\t\n\t\t\tDavidMoher\n\t\t\n\t\t\n\t\t\tHenricaC WDe Vet\n\t\t\n\t\t\n\t\t\tDouglasGAltman\n\t\t\n\t\t\n\t\t\tLottyHooft\n\t\t\n\t\t\n\t\t\tPatrickM MBossuyt\n\t\t\n\t\t10.1186/s41073-016-0014-7\n\t\n\t\n\t\tResearch Integrity and Peer Review\n\t\tRes Integr Peer Rev\n\t\t2058-8615\n\t\t\n\t\t\t1\n\t\t\t1\n\t\t\t7\n\t\t\t2016\n\t\t\tSpringer Science and Business Media LLC",
+      "Non-diagnostic Results of Percutaneous Transthoracic Needle Biopsy: A Meta-analysis\n\t\t\n\t\t\tKumJuChae\n\t\t\n\t\t\n\t\t\tHyunsookHong\n\t\t\n\t\t\n\t\t\tSoonHoYoon\n\t\t\n\t\t\n\t\t\tSeokyungHahn\n\t\t\n\t\t\n\t\t\tGongYongJin\n\t\t\n\t\t\n\t\t\tChangMinPark\n\t\t\n\t\t\n\t\t\tJinMoGoo\n\t\t\t0000-0003-1791-7942\n\t\t\n\t\t10.1038/s41598-019-48805-x\n\t\n\t\n\t\tScientific Reports\n\t\tSci Rep\n\t\t2045-2322\n\t\t\n\t\t\t9\n\t\t\t1\n\t\t\t12428\n\t\t\t2019\n\t\t\tSpringer Science and Business Media LLC",
+      "Non-specific benign pathological results on transthoracic core-needle biopsy: how to differentiate false-negatives?\n\t\t\n\t\t\tJungImKim\n\t\t\n\t\t\n\t\t\tChangMinPark\n\t\t\n\t\t\n\t\t\tHyungjinKim\n\t\t\n\t\t\n\t\t\tJongHyukLee\n\t\t\n\t\t\n\t\t\tJinMoGoo\n\t\t\n\t\t10.1007/s00330-017-4766-3\n\t\n\t\n\t\tEuropean Radiology\n\t\tEur Radiol\n\t\t0938-7994\n\t\t1432-1084\n\t\t\n\t\t\t27\n\t\t\t9\n\t\t\t\n\t\t\t2017\n\t\t\tSpringer Science and Business Media LLC",
+      "Presence of concurrent sarcoid-like granulomas indicates better survival in cancer patients: a retrospective cohort study\n\t\t\n\t\t\tMukunthanMurthi\n\t\t\n\t\t\n\t\t\tKeiichiroYoshioka\n\t\t\n\t\t\n\t\t\tJeongHeeCho\n\t\t\n\t\t\n\t\t\tSixtoArias\n\t\t\n\t\t\n\t\t\tElioDanna\n\t\t\n\t\t\n\t\t\tMoeZaw\n\t\t\n\t\t\n\t\t\tGregHolt\n\t\t\t0000-0001-8276-7915\n\t\t\n\t\t\n\t\t\tKoichiroTatsumi\n\t\t\t0000-0001-9484-7912\n\t\t\n\t\t\n\t\t\tTakeshiKawasaki\n\t\t\n\t\t\n\t\t\tMehdiMirsaeidi\n\t\t\n\t\t10.1183/23120541.00061-2020\n\t\n\t\n\t\tERJ Open Research\n\t\tERJ Open Res\n\t\t2312-0541\n\t\t\n\t\t\t6\n\t\t\t4\n\t\t\t\n\t\t\t2020\n\t\t\tEuropean Respiratory Society (ERS)",
+      "SAGES guidelines for the introduction of new technology and techniques\n\t\t\n\t\t\tDimitriosStefanidis\n\t\t\n\t\t\n\t\t\tRobertDFanelli\n\t\t\n\t\t\n\t\t\tRayPrice\n\t\t\n\t\t\n\t\t\tWilliamRichardson\n\t\t\n\t\t10.1007/s00464-014-3587-6\n\t\t\n\t\n\t\n\t\tSurgical Endoscopy\n\t\tSurg Endosc\n\t\t0930-2794\n\t\t1432-2218\n\t\t\n\t\t\t28\n\t\t\t8\n\t\t\t\n\t\t\t2014. 2023 Jul 13\n\t\t\tSpringer Science and Business Media LLC",
+      "Evaluation and stages of surgical innovations\n\t\t\n\t\t\tJeffreySBarkun\n\t\t\t\n\t\t\t\tBalliol Collaboration\n\t\t\t\n\t\t\n\t\t\n\t\t\tJeffreyKAronson\n\t\t\t\n\t\t\t\tBalliol Collaboration\n\t\t\t\n\t\t\n\t\t\n\t\t\tLianeSFeldman\n\t\t\t\n\t\t\t\tBalliol Collaboration\n\t\t\t\n\t\t\n\t\t\n\t\t\tGuyJMaddern\n\t\t\t\n\t\t\t\tBalliol Collaboration\n\t\t\t\n\t\t\n\t\t\n\t\t\tStevenMStrasberg\n\t\t\t\n\t\t\t\tBalliol Collaboration\n\t\t\t\n\t\t\n\t\t10.1016/s0140-6736(09)61083-7\n\t\n\t\n\t\tThe Lancet\n\t\tThe Lancet\n\t\t0140-6736\n\t\t\n\t\t\t374\n\t\t\t9695\n\t\t\t\n\t\t\t2009\n\t\t\tElsevier BV",
+      "Challenges in evaluating surgical innovation\n\t\t\n\t\t\tPLErgina\n\t\t\t\n\t\t\t\tBalliol Collaboration\n\t\t\t\n\t\t\n\t\t\n\t\t\tJACook\n\t\t\t\n\t\t\t\tBalliol Collaboration\n\t\t\t\n\t\t\n\t\t\n\t\t\tJMBlazeby\n\t\t\t\n\t\t\t\tBalliol Collaboration\n\t\t\t\n\t\t\n\t\t\n\t\t\tIBoutron\n\t\t\t\n\t\t\t\tBalliol Collaboration\n\t\t\t\n\t\t\n\t\t\n\t\t\tPAClavien\n\t\t\t\n\t\t\t\tBalliol Collaboration\n\t\t\t\n\t\t\n\t\t\n\t\t\tBCReeves\n\t\t\t\n\t\t\t\tBalliol Collaboration\n\t\t\t\n\t\t\n\t\n\t\n\t\tLancet\n\t\t\n\t\t\t374\n\t\t\t\n\t\t\t2009",
+      "No surgical innovation without evaluation: the IDEAL recommendations\n\t\t\n\t\t\tPMcculloch\n\t\t\t\n\t\t\t\tBalliol Collaboration\n\t\t\t\n\t\t\n\t\t\n\t\t\tDGAltman\n\t\t\t\n\t\t\t\tBalliol Collaboration\n\t\t\t\n\t\t\n\t\t\n\t\t\tWBCampbell\n\t\t\t\n\t\t\t\tBalliol Collaboration\n\t\t\t\n\t\t\n\t\t\n\t\t\tDRFlum\n\t\t\t\n\t\t\t\tBalliol Collaboration\n\t\t\t\n\t\t\n\t\t\n\t\t\tPGlasziou\n\t\t\t\n\t\t\t\tBalliol Collaboration\n\t\t\t\n\t\t\n\t\t\n\t\t\tJCMarshall\n\t\t\t\n\t\t\t\tBalliol Collaboration\n\t\t\t\n\t\t\n\t\n\t\n\t\tLancet\n\t\t\n\t\t\t374\n\t\t\t\n\t\t\t2009",
+      "IDEAL framework for surgical innovation 1: the idea and development stages\n\t\t\n\t\t\tPMcculloch\n\t\t\n\t\t\n\t\t\tJACook\n\t\t\n\t\t\n\t\t\tDGAltman\n\t\t\n\t\t\n\t\t\tCHeneghan\n\t\t\n\t\t\n\t\t\tMk; IdealKDiener\n\t\t\n\t\t10.1136/bmj.f3012\n\t\n\t\n\t\tBMJ\n\t\tBMJ\n\t\t1756-1833\n\t\t\n\t\t\t346\n\t\t\tjun18 3\n\t\t\t\n\t\t\t2013\n\t\t\tBMJ",
+      "IDEAL-D: a rational framework for evaluating and regulating the use of medical devices\n\t\t\n\t\t\tArtSedrakyan\n\t\t\n\t\t\n\t\t\tBruceCampbell\n\t\t\n\t\t\n\t\t\tJoseGMerino\n\t\t\n\t\t\n\t\t\tRichardKuntz\n\t\t\n\t\t\n\t\t\tAllisonHirst\n\t\t\n\t\t\n\t\t\tPeterMcculloch\n\t\t\n\t\t10.1136/bmj.i2372\n\t\n\t\n\t\tBMJ\n\t\tBMJ\n\t\t1756-1833\n\t\t\n\t\t\t353\n\t\t\ti2372\n\t\t\t2016\n\t\t\tBMJ",
+      "IDEAL framework for surgical innovation 2: observational studies in the exploration and assessment stages\n\t\t\n\t\t\tPLErgina\n\t\t\n\t\t\n\t\t\tJSBarkun\n\t\t\n\t\t\n\t\t\tPMcculloch\n\t\t\n\t\t\n\t\t\tJACook\n\t\t\n\t\t\n\t\t\tDGAltman\n\t\t\n\t\t10.1136/bmj.f3011\n\t\n\t\n\t\tBMJ\n\t\tBMJ\n\t\t1756-1833\n\t\t\n\t\t\t346\n\t\t\tjun18 3\n\t\t\t\n\t\t\t2013\n\t\t\tBMJ",
+      "IDEAL framework for surgical innovation 3: randomised controlled trials in the assessment stage and evaluations in the long term study stage\n\t\t\n\t\t\tJACook\n\t\t\n\t\t\n\t\t\tPMcculloch\n\t\t\n\t\t\n\t\t\tJMBlazeby\n\t\t\n\t\t\n\t\t\tDJBeard\n\t\t\n\t\t\n\t\t\tDMarinac-Dabic\n\t\t\n\t\t\n\t\t\tA; IdealSedrakyan\n\t\t\n\t\t10.1136/bmj.f2820\n\t\n\t\n\t\tBMJ\n\t\tBMJ\n\t\t1756-1833\n\t\t\n\t\t\t346\n\t\t\tjun18 3\n\t\t\t\n\t\t\t2013\n\t\t\tBMJ",
+      "IDEAL as a guide to designing clinical device studies consistent with the new European Medical Device Regulation\n\t\t\n\t\t\tCFleetcroft\n\t\t\n\t\t\n\t\t\tPMcculloch\n\t\t\n\t\t\n\t\t\tBCampbell\n\t\t\n\t\n\t\n\t\tBMJ Surg Interv Health Technol\n\t\t\n\t\t\t3\n\t\t\t66\n\t\t\t2021",
+      "When are randomised trials unnecessary? Picking signal from noise\n\t\t\n\t\t\tPaulGlasziou\n\t\t\n\t\t\n\t\t\tIainChalmers\n\t\t\n\t\t\n\t\t\tMichaelRawlins\n\t\t\n\t\t\n\t\t\tPeterMcculloch\n\t\t\n\t\t10.1136/bmj.39070.527986.68\n\t\n\t\n\t\tBMJ\n\t\tBMJ\n\t\t0959-8138\n\t\t1468-5833\n\t\t\n\t\t\t334\n\t\t\t7589\n\t\t\t\n\t\t\t2007\n\t\t\tBMJ",
+      "Population-based risk for complications after transthoracic needle lung biopsy of a pulmonary nodule: an analysis of discharge records\n\t\t\n\t\t\tRSWiener\n\t\t\n\t\t\n\t\t\tLMSchwartz\n\t\t\n\t\t\n\t\t\tSWoloshin\n\t\t\n\t\t\n\t\t\tHGWelch\n\t\t\n\t\n\t\n\t\tAnn Intern Med\n\t\t\n\t\t\t155\n\t\t\t\n\t\t\t2011",
+      "Experimental and quasiexperimental designs for generalized causal inference\n\t\t\n\t\t\tWRShadish\n\t\t\n\t\t\n\t\t\tTDCook\n\t\t\n\t\t\n\t\t\tDTCampbell\n\t\t\n\t\t\n\t\t\t2002\n\t\t\tHoughton Mifflin\n\t\t\tBoston, MA",
+      "An overview of the objectives of and the approaches to propensity score analyses\n\t\t\n\t\t\tGeorgHeinze\n\t\t\n\t\t\n\t\t\tPeterJüni\n\t\t\n\t\t10.1093/eurheartj/ehr031\n\t\n\t\n\t\tEuropean Heart Journal\n\t\t0195-668X\n\t\t1522-9645\n\t\t\n\t\t\t32\n\t\t\t14\n\t\t\t\n\t\t\t2011\n\t\t\tOxford University Press (OUP)",
+      "Propensity score methods for bias reduction in the comparison of a treatment to a non-randomized control group\n\t\t\n\t\t\tD'agostino RbJr\n\t\t\n\t\n\t\n\t\tStat Med\n\t\t\n\t\t\t17\n\t\t\t\n\t\t\t1998",
+      "Segmented regression analysis of interrupted time series studies in medication use research\n\t\t\n\t\t\tAKWagner\n\t\t\n\t\t\n\t\t\tSBSoumerai\n\t\t\n\t\t\n\t\t\tFZhang\n\t\t\n\t\t\n\t\t\tDRoss-Degnan\n\t\t\n\t\t10.1046/j.1365-2710.2002.00430.x\n\t\n\t\n\t\tJournal of Clinical Pharmacy and Therapeutics\n\t\tJ Clin Pharm Ther\n\t\t0269-4727\n\t\t1365-2710\n\t\t\n\t\t\t27\n\t\t\t4\n\t\t\t\n\t\t\t2002\n\t\t\tHindawi Limited",
+      "Common Terminology Criteria for Adverse Events (CTCAE) Version\n\t\t5.0. 2017\n\t\t\n\t\t\n\t\t\t2023 Jul 13\n\t\t\tU.S. Department of Health and Human Services",
+      "Patient Satisfaction with Bronchoscopy\n\t\t\n\t\t\tNoahLechtzin\n\t\t\n\t\t\n\t\t\tHayaRRubin\n\t\t\n\t\t\n\t\t\tPeterWhite\n\t\t\n\t\t\n\t\t\tMollieJenckes\n\t\t\n\t\t\n\t\t\tGregoryBDiette\n\t\t\n\t\t10.1164/rccm.200203-231oc\n\t\n\t\n\t\tAmerican Journal of Respiratory and Critical Care Medicine\n\t\tAm J Respir Crit Care Med\n\t\t1073-449X\n\t\t1535-4970\n\t\t\n\t\t\t166\n\t\t\t10\n\t\t\t\n\t\t\t2002\n\t\t\tAmerican Thoracic Society",
+      "Diagnosis\n\t\t\n\t\t\tRHFletcher\n\t\t\n\t\t\n\t\t\tSWFletcher\n\t\t\n\t\t\n\t\t\tGSFletcher\n\t\t\n\t\n\t\n\t\tClinical epidemiology: the essentials. 5th ed\n\t\tBaltimore, MD\n\t\t\n\t\t\tLippincott Williams & Wilkins\n\t\t\t2014",
+      "Decision Making in Health and Medicine\n\t\t\n\t\t\tMgmG MyriamHunink\n\t\t\n\t\t\n\t\t\tMiltonCWeinstein\n\t\t\n\t\t\n\t\t\tEveWittenberg\n\t\t\n\t\t\n\t\t\tMichaelFDrummond\n\t\t\n\t\t\n\t\t\tJosephSPliskin\n\t\t\n\t\t\n\t\t\tJohnBWong\n\t\t\n\t\t\n\t\t\tPaulPGlasziou\n\t\t\n\t\t10.1017/cbo9781139506779\n\t\n\t\n\t\tDecision making in health and medicine: integrating evidence and values\n\t\tCambridge, UK\n\t\t\n\t\t\tCambridge University Press\n\t\t\t2014",
+      "Diagnostic Accuracy of Bronchoscopy Procedures\n\t\t\n\t\t\tAnneVGonzalez\n\t\t\n\t\t\n\t\t\tDavidEOst\n\t\t\n\t\t\n\t\t\tSamiraShojaee\n\t\t\n\t\t10.1097/lbr.0000000000000892\n\t\n\t\n\t\tJournal of Bronchology & Interventional Pulmonology\n\t\t1944-6586\n\t\t\n\t\t\t29\n\t\t\t4\n\t\t\t\n\t\t\t2022\n\t\t\tOvid Technologies (Wolters Kluwer Health)",
+      "First-inhuman use of a hybrid real-time ultrasound-guided fine-needle acquisition system for peripheral pulmonary lesions: a multicenter pilot study\n\t\t\n\t\t\tLBYarmus\n\t\t\t\n\t\t\t\tInterventional Pulmonary Outcomes Group\n\t\t\t\n\t\t\n\t\t\n\t\t\tCMallow\n\t\t\t\n\t\t\t\tInterventional Pulmonary Outcomes Group\n\t\t\t\n\t\t\n\t\t\n\t\t\tNPastis\n\t\t\t\n\t\t\t\tInterventional Pulmonary Outcomes Group\n\t\t\t\n\t\t\n\t\t\n\t\t\tJThiboutot\n\t\t\t\n\t\t\t\tInterventional Pulmonary Outcomes Group\n\t\t\t\n\t\t\n\t\t\n\t\t\tHLee\n\t\t\t\n\t\t\t\tInterventional Pulmonary Outcomes Group\n\t\t\t\n\t\t\n\t\t\n\t\t\tDFeller-Kopman\n\t\t\t\n\t\t\t\tInterventional Pulmonary Outcomes Group\n\t\t\t\n\t\t\n\t\n\t\n\t\tRespiration\n\t\t\n\t\t\t98\n\t\t\t\n\t\t\t2019",
+      "Robotic Bronchoscopy for Peripheral Pulmonary Lesions\n\t\t\n\t\t\tAlexanderCChen\n\t\t\n\t\t\n\t\t\tNicholasJPastis\n\t\t\n\t\t\n\t\t\tAmitKMahajan\n\t\t\n\t\t\n\t\t\tSandeepJKhandhar\n\t\t\n\t\t\n\t\t\tMichaelJSimoff\n\t\t\n\t\t\n\t\t\tMichaelSMachuzak\n\t\t\n\t\t\n\t\t\tJosephCicenia\n\t\t\n\t\t\n\t\t\tThomasRGildea\n\t\t\n\t\t\n\t\t\tGerardASilvestri\n\t\t\n\t\t10.1016/j.chest.2020.08.2047\n\t\n\t\n\t\tChest\n\t\tChest\n\t\t0012-3692\n\t\t\n\t\t\t159\n\t\t\t2\n\t\t\t\n\t\t\t2021\n\t\t\tElsevier BV"
+    ],
+    "references_raw": [
+      "Recent trends in the identification of incidental pulmonary nodules\n\t\t\n\t\t\tMKGould\n\t\t\n\t\t\n\t\t\tTTang\n\t\t\n\t\t\n\t\t\tILLiu\n\t\t\n\t\t\n\t\t\tJLee\n\t\t\n\t\t\n\t\t\tCZheng\n\t\t\n\t\t\n\t\t\tKNDanforth\n\t\t\n\t\n\t\n\t\tAm J Respir Crit Care Med\n\t\t\n\t\t\t192\n\t\t\t\n\t\t\t2015",
+      "National Lung Screening Trial Research Team. Reduced lungcancer mortality with low-dose computed tomographic screening\n\t\t\n\t\t\tDRAberle\n\t\t\n\t\t\n\t\t\tAMAdams\n\t\t\n\t\t\n\t\t\tCDBerg\n\t\t\n\t\t\n\t\t\tWCBlack\n\t\t\n\t\t\n\t\t\tJDClapp\n\t\t\n\t\t\n\t\t\tRMFagerstrom\n\t\t\n\t\n\t\n\t\tN Engl J Med\n\t\t\n\t\t\t365\n\t\t\t\n\t\t\t2011",
+      "Development and validation of a deep learning-based synthetic bone-suppressed model for pulmonary nodule detection in chest radiographs\n\t\t\n\t\t\tHKim\n\t\t\n\t\t\n\t\t\tKHLee\n\t\t\n\t\t\n\t\t\tKHan\n\t\t\n\t\t\n\t\t\tJWLee\n\t\t\n\t\t\n\t\t\tJYKim\n\t\t\n\t\t\n\t\t\tDJIm\n\t\t\n\t\n\t\n\t\tJAMA Netw Open\n\t\t\n\t\t\t6\n\t\t\t2253820\n\t\t\t2023",
+      "Establishing the diagnosis of lung cancer: diagnosis and management of lung cancer, 3rd ed: American College of Chest Physicians evidence-based clinical practice guidelines\n\t\t\n\t\t\tMPRivera\n\t\t\n\t\t\n\t\t\tACMehta\n\t\t\n\t\t\n\t\t\tMMWahidi\n\t\t\n\t\n\t\n\t\tChest\n\t\t\n\t\t\t143\n\t\t\t5\n\t\t\t2013\n\t\t\n\t\n\tSuppl):e142S-e165S",
+      "Accuracy of a robotic endoscopic system in cadaver models with simulated tumor targets: ACCESS study\n\t\t\n\t\t\tACChen\n\t\t\n\t\t\n\t\t\tNJPastis\n\t\t\n\t\t\n\t\t\tMSMachuzak\n\t\t\n\t\t\n\t\t\tTRGildea\n\t\t\n\t\t\n\t\t\tMJSimoff\n\t\t\n\t\t\n\t\t\tCTGillespie\n\t\t\n\t\n\t\n\t\tRespiration\n\t\t\n\t\t\t99\n\t\t\t\n\t\t\t2020",
+      "A prospective randomized comparative study of three guided bronchoscopic approaches for investigating pulmonary nodules: the PRECISION-1 study\n\t\t\n\t\t\tLYarmus\n\t\t\t\n\t\t\t\tInterventional Pulmonary Outcomes Group\n\t\t\t\n\t\t\n\t\t\n\t\t\tJAkulian\n\t\t\t\n\t\t\t\tInterventional Pulmonary Outcomes Group\n\t\t\t\n\t\t\n\t\t\n\t\t\tMWahidi\n\t\t\t\n\t\t\t\tInterventional Pulmonary Outcomes Group\n\t\t\t\n\t\t\n\t\t\n\t\t\tAChen\n\t\t\t\n\t\t\t\tInterventional Pulmonary Outcomes Group\n\t\t\t\n\t\t\n\t\t\n\t\t\tJPSteltz\n\t\t\t\n\t\t\t\tInterventional Pulmonary Outcomes Group\n\t\t\t\n\t\t\n\t\t\n\t\t\tSLSolomon\n\t\t\t\n\t\t\t\tInterventional Pulmonary Outcomes Group\n\t\t\t\n\t\t\n\t\n\t\n\t\tChest\n\t\t\n\t\t\t157\n\t\t\t\n\t\t\t2020",
+      "Methods for staging non-small cell lung cancer: diagnosis and management of lung cancer, 3rd ed: American College of Chest Physicians evidence-based clinical practice guidelines\n\t\t\n\t\t\tGASilvestri\n\t\t\n\t\t\n\t\t\tAVGonzalez\n\t\t\n\t\t\n\t\t\tMAJantz\n\t\t\n\t\t\n\t\t\tMLMargolis\n\t\t\n\t\t\n\t\t\tMKGould\n\t\t\n\t\t\n\t\t\tLTTanoue\n\t\t\n\t\n\t\n\t\tChest\n\t\t\n\t\t\t143\n\t\t\t5\n\t\t\t2013\n\t\t\n\t\n\tSuppl):e211S-e250S",
+      "Multimodality bronchoscopic diagnosis of peripheral lung lesions: a randomized controlled trial\n\t\t\n\t\t\tREberhardt\n\t\t\n\t\t\n\t\t\tDAnantham\n\t\t\n\t\t\n\t\t\tAErnst\n\t\t\n\t\t\n\t\t\tDFeller-Kopman\n\t\t\n\t\t\n\t\t\tFHerth\n\t\t\n\t\n\t\n\t\tAm J Respir Crit Care Med\n\t\t\n\t\t\t176\n\t\t\t\n\t\t\t2007",
+      "Improved diagnostic yield of bronchoscopy in peripheral pulmonary lesions: combination of radial probe endobronchial ultrasound and rapid on-site evaluation\n\t\t\n\t\t\tCHChen\n\t\t\n\t\t\n\t\t\tWCCheng\n\t\t\n\t\t\n\t\t\tBRWu\n\t\t\n\t\t\n\t\t\tCYChen\n\t\t\n\t\t\n\t\t\tWCChen\n\t\t\n\t\t\n\t\t\tTCHsia\n\t\t\n\t\n\t\n\t\tJ Thorac Dis\n\t\t\n\t\t\t7\n\t\t\t\n\t\t\t2015",
+      "Electromagnetic navigation bronchoscopy for peripheral pulmonary lesions: one-year results of the prospective, multicenter NAVIGATE study\n\t\t\n\t\t\tEEFolch\n\t\t\n\t\t\n\t\t\tMAPritchett\n\t\t\n\t\t\n\t\t\tMANead\n\t\t\n\t\t\n\t\t\tMRBowling\n\t\t\n\t\t\n\t\t\tSDMurgu\n\t\t\n\t\t\n\t\t\tWSKrimsky\n\t\t\n\t\n\t\n\t\tJ Thorac Oncol\n\t\t\n\t\t\t14\n\t\t\t\n\t\t\t2019\n\t\t\n\t\n\tNAVIGATE Study Investigators",
+      "Radial probe endobronchial ultrasound for peripheral pulmonary lesions. a 5-year institutional experience\n\t\t\n\t\t\tAChen\n\t\t\n\t\t\n\t\t\tPChenna\n\t\t\n\t\t\n\t\t\tALoiselle\n\t\t\n\t\t\n\t\t\tJMassoni\n\t\t\n\t\t\n\t\t\tMMayse\n\t\t\n\t\t\n\t\t\tDMisselhorn\n\t\t\n\t\n\t\n\t\tAnn Am Thorac Soc\n\t\t\n\t\t\t11\n\t\t\t\n\t\t\t2014",
+      "Standard bronchoscopy with fluoroscopy vs thin bronchoscopy and radial endobronchial ultrasound for biopsy of pulmonary lesions: a multicenter, prospective, randomized trial\n\t\t\n\t\t\tNTTanner\n\t\t\n\t\t\n\t\t\tLYarmus\n\t\t\n\t\t\n\t\t\tChenA\n\t\t\n\t\t\n\t\t\tWangMemoli\n\t\t\n\t\t\n\t\t\tJMehta\n\t\t\n\t\t\n\t\t\tHJPastis\n\t\t\n\t\t\n\t\t\tNJ\n\t\t\n\t\n\t\n\t\tChest\n\t\t\n\t\t\t154\n\t\t\t\n\t\t\t2018",
+      "Flying blind despite all our instruments\n\t\t\n\t\t\tEVakil\n\t\t\n\t\t\n\t\t\tATremblay\n\t\t\n\t\n\t\n\t\tChest\n\t\t\n\t\t\t158\n\t\t\t\n\t\t\t2020",
+      "AQuIRE Bronchoscopy Registry. Diagnostic yield and complications of bronchoscopy for peripheral lung lesions. results of the AQuIRE Registry\n\t\t\n\t\t\tDEOst\n\t\t\n\t\t\n\t\t\tAErnst\n\t\t\n\t\t\n\t\t\tXLei\n\t\t\n\t\t\n\t\t\tKLKovitz\n\t\t\n\t\t\n\t\t\tSBenzaquen\n\t\t\n\t\t\n\t\t\tJDiaz-Mendoza\n\t\t\n\t\n\t\n\t\tAm J Respir Crit Care Med\n\t\t\n\t\t\t193\n\t\t\t\n\t\t\t2016",
+      "Retrospective analysis of radial EBUS outcome for the diagnosis of peripheral pulmonary lesion: sensitivity and complications\n\t\t\n\t\t\tADurakovic\n\t\t\n\t\t\n\t\t\tHAndersen\n\t\t\n\t\t\n\t\t\tAChristiansen\n\t\t\n\t\t\n\t\t\tIHammen\n\t\t\n\t\n\t\n\t\tEur Clin Respir J\n\t\t\n\t\t\t2\n\t\t\t28947\n\t\t\t2015",
+      "Electromagnetic navigation diagnostic bronchoscopy in peripheral lung lesions\n\t\t\n\t\t\tREberhardt\n\t\t\n\t\t\n\t\t\tDAnantham\n\t\t\n\t\t\n\t\t\tFHerth\n\t\t\n\t\t\n\t\t\tDFeller-Kopman\n\t\t\n\t\t\n\t\t\tErnstA\n\t\t\n\t\n\t\n\t\tChest\n\t\t\n\t\t\t131\n\t\t\t\n\t\t\t2007",
+      "Endobronchial ultrasound-guided transbronchial biopsy and brushing: a comparative evaluation for the diagnosis of peripheral pulmonary lesions\n\t\t\n\t\t\tCHKuo\n\t\t\n\t\t\n\t\t\tSMLin\n\t\t\n\t\t\n\t\t\tKYLee\n\t\t\n\t\t\n\t\t\tFTChung\n\t\t\n\t\t\n\t\t\tYLLo\n\t\t\n\t\t\n\t\t\tTCHsiung\n\t\t\n\t\n\t\n\t\tEur J Cardiothorac Surg\n\t\t\n\t\t\t45\n\t\t\t\n\t\t\t2014",
+      "Safety and performance of transbronchial cryobiopsy for parenchymal lung lesions\n\t\t\n\t\t\tFJHerth\n\t\t\n\t\t\n\t\t\tMMayer\n\t\t\n\t\t\n\t\t\tJThiboutot\n\t\t\n\t\t\n\t\t\tCMKapp\n\t\t\n\t\t\n\t\t\tJSun\n\t\t\n\t\t\n\t\t\tXZhang\n\t\t\n\t\n\t\n\t\tChest\n\t\t\n\t\t\t160\n\t\t\t\n\t\t\t2021",
+      "Meta-analysis of guided bronchoscopy for the evaluation of the pulmonary nodule\n\t\t\n\t\t\tWangMemoli\n\t\t\n\t\t\n\t\t\tJSNietert\n\t\t\n\t\t\n\t\t\tPJSilvestri\n\t\t\n\t\t\n\t\t\tGA\n\t\t\n\t\n\t\n\t\tChest\n\t\t\n\t\t\t142\n\t\t\t\n\t\t\t2012",
+      "The impact of alternative approaches to diagnostic yield calculation in studies of bronchoscopy\n\t\t\n\t\t\tAVachani\n\t\t\n\t\t\n\t\t\tFMaldonado\n\t\t\n\t\t\n\t\t\tBLaxmanan\n\t\t\n\t\t\n\t\t\tIKalsekar\n\t\t\n\t\t\n\t\t\tSMurgu\n\t\t\n\t\n\t\n\t\tChest\n\t\t\n\t\t\t161\n\t\t\t\n\t\t\t2022",
+      "Guided bronchoscopy for the evaluation of pulmonary lesions: an updated meta-analysis\n\t\t\n\t\t\tTRNadig\n\t\t\n\t\t\n\t\t\tNThomas\n\t\t\n\t\t\n\t\t\tPJNietert\n\t\t\n\t\t\n\t\t\tJLozier\n\t\t\n\t\t\n\t\t\tNTTanner\n\t\t\n\t\t\n\t\t\tWangMemoli\n\t\t\n\t\t\n\t\t\tJS\n\t\t\n\t\n\t\n\t\tChest\n\t\t\n\t\t\t163\n\t\t\t\n\t\t\t2023",
+      "A multicenter, single-arm, prospective trial assessing the diagnostic yield of electromagnetic bronchoscopic and transthoracic navigation for peripheral pulmonary nodules\n\t\t\n\t\t\tJThiboutot\n\t\t\n\t\t\n\t\t\tNJPastis\n\t\t\n\t\t\n\t\t\tJAkulian\n\t\t\n\t\t\n\t\t\tGASilvestri\n\t\t\n\t\t\n\t\t\tAChen\n\t\t\n\t\t\n\t\t\tMMWahidi\n\t\t\n\t\n\t\n\t\tAm J Respir Crit Care Med\n\t\t\n\t\t\t208\n\t\t\t\n\t\t\t2023",
+      "Real-world application of the NAVIGATE trial\n\t\t\n\t\t\tJThiboutot\n\t\t\n\t\t\n\t\t\tLBYarmus\n\t\t\n\t\t\n\t\t\tHJLee\n\t\t\n\t\t\n\t\t\tMPRivera\n\t\t\n\t\t\n\t\t\tDEOst\n\t\t\n\t\t\n\t\t\tDFeller-Kopman\n\t\t\n\t\n\t\n\t\tJ Thorac Oncol\n\t\t\n\t\t\t14\n\t\t\t\n\t\t\t2019",
+      "Bearing the burden of \"innovation\": the ontological implications of substantial equivalence and the FDA 510(k) pathway\n\t\t\n\t\t\tFMaldonado\n\t\t\n\t\t\n\t\t\tJEberl\n\t\t\n\t\n\t\n\t\tChest\n\t\t\n\t\t\t163\n\t\t\t\n\t\t\t2023",
+      "Modernizing the FDA's 510(k) pathway\n\t\t\n\t\t\tVKRathi\n\t\t\n\t\t\n\t\t\tJSRoss\n\t\t\n\t\n\t\n\t\tN Engl J Med\n\t\t\n\t\t\t381\n\t\t\t\n\t\t\t2019",
+      "Leading the call for reform of medical device safety surveillance\n\t\t\n\t\t\tJWSalazar\n\t\t\n\t\t\n\t\t\tRFRedberg\n\t\t\n\t\n\t\n\t\tJAMA Intern Med\n\t\t\n\t\t\t180\n\t\t\t\n\t\t\t2020",
+      "An oversight in oversight: reconciling the medical device industry, clinicians, and regulation\n\t\t\n\t\t\tKCLandeen\n\t\t\n\t\t\n\t\t\tALangerman\n\t\t\n\t\t\n\t\t\tFMaldonado\n\t\t\n\t\n\t\n\t\tChest\n\t\t\n\t\t\t161\n\t\t\t\n\t\t\t2022",
+      "ISPOR HTA Council Working Group on HTA in Pluralistic Healthcare Systems collaborators\n\t\t\n\t\t\tMFDrummond\n\t\t\n\t\t\n\t\t\tFAugustovski\n\t\t\n\t\t\n\t\t\tDBhattacharyya\n\t\t\n\t\t\n\t\t\tJCampbell\n\t\t\n\t\t\n\t\t\tNChaiyakanapruk\n\t\t\n\t\t\n\t\t\tYChen\n\t\t\n\t\n\t\n\t\tChallenges of health technology assessment in pluralistic healthcare systems: an ISPOR Council report\n\t\t\n\t\t\t2022\n\t\t\t25",
+      "Diagnostic yield and safety of navigation bronchoscopy: a systematic review and meta-analysis\n\t\t\n\t\t\tSEKops\n\t\t\n\t\t\n\t\t\tPHeus\n\t\t\n\t\t\n\t\t\tDAKorevaar\n\t\t\n\t\t\n\t\t\tJaaDamen\n\t\t\n\t\t\n\t\t\tDLIdema\n\t\t\n\t\t\n\t\t\tRljVerhoeven\n\t\t\n\t\n\t\n\t\tLung Cancer\n\t\t\n\t\t\t180\n\t\t\t107196\n\t\t\t2023",
+      "Stating the obvious … or leading the way toward more judicious use of diagnostic bronchoscopy\n\t\t\n\t\t\tAVGonzalez\n\t\t\n\t\n\t\n\t\tChest\n\t\t\n\t\t\t157\n\t\t\t\n\t\t\t2020",
+      "Reducing waste from incomplete or unusable reports of biomedical research\n\t\t\n\t\t\tPGlasziou\n\t\t\n\t\t\n\t\t\tDGAltman\n\t\t\n\t\t\n\t\t\tPBossuyt\n\t\t\n\t\t\n\t\t\tIBoutron\n\t\t\n\t\t\n\t\t\tMClarke\n\t\t\n\t\t\n\t\t\tSJulious\n\t\t\n\t\n\t\n\t\tLancet\n\t\t\n\t\t\t383\n\t\t\t\n\t\t\t2014",
+      "Assessing risk of bias and applicability\n\t\t\n\t\t\tJBReitsma\n\t\t\n\t\t\n\t\t\tARutjes\n\t\t\n\t\t\n\t\t\tPWhiting\n\t\t\n\t\t\n\t\t\tBYang\n\t\t\n\t\t\n\t\t\tMMLeeflang\n\t\t\n\t\t\n\t\t\tPMBossuyt\n\t\t\n\t\t\n\t\t\tJJDeeks\n\t\t\n\t\t\n\t\n\t\n\t\tCochrane handbook for systematic reviews of diagnostic test accuracy. Version 2.0 (updated\n\t\t\n\t\t\tJJDeeks\n\t\t\n\t\t\n\t\t\tPMBossuyt\n\t\t\n\t\t\n\t\t\tMMLeeflang\n\t\t\n\t\t\n\t\t\tYTakwoingi\n\t\t\n\t\t\n\t\t\tJuly 2023. 2023\n\t\t\t8",
+      "CONSORT 2010 explanation and elaboration: updated guidelines for reporting parallel group randomised trials\n\t\t\n\t\t\tDMoher\n\t\t\n\t\t\n\t\t\tSHopewell\n\t\t\n\t\t\n\t\t\tKFSchulz\n\t\t\n\t\t\n\t\t\tVMontori\n\t\t\n\t\t\n\t\t\tPCGøtzsche\n\t\t\n\t\t\n\t\t\tPJDevereaux\n\t\t\n\t\n\t\n\t\tBMJ\n\t\t\n\t\t\t340\n\t\t\t869\n\t\t\t2010",
+      "Reporting quality of diagnostic accuracy studies: a systematic review and metaanalysis of investigations on adherence to STARD\n\t\t\n\t\t\tDAKorevaar\n\t\t\n\t\t\n\t\t\tWAVan Enst\n\t\t\n\t\t\n\t\t\tRSpijker\n\t\t\n\t\t\n\t\t\tPMBossuyt\n\t\t\n\t\t\n\t\t\tLHooft\n\t\t\n\t\n\t\n\t\tEvid Based Med\n\t\t\n\t\t\t19\n\t\t\t\n\t\t\t2014",
+      "Reporting diagnostic accuracy studies: some improvements after 10 years of STARD\n\t\t\n\t\t\tDAKorevaar\n\t\t\n\t\t\n\t\t\tJWang\n\t\t\n\t\t\n\t\t\tWAVan Enst\n\t\t\n\t\t\n\t\t\tMMLeeflang\n\t\t\n\t\t\n\t\t\tLHooft\n\t\t\n\t\t\n\t\t\tNSmidt\n\t\t\n\t\n\t\n\t\tRadiology\n\t\t\n\t\t\t274\n\t\t\t\n\t\t\t2015",
+      "STARD 2015: an updated list of essential items for reporting diagnostic accuracy studies\n\t\t\n\t\t\tPMBossuyt\n\t\t\t\n\t\t\t\tSTARD Group\n\t\t\t\n\t\t\n\t\t\n\t\t\tJBReitsma\n\t\t\t\n\t\t\t\tSTARD Group\n\t\t\t\n\t\t\n\t\t\n\t\t\tDEBruns\n\t\t\t\n\t\t\t\tSTARD Group\n\t\t\t\n\t\t\n\t\t\n\t\t\tCAGatsonis\n\t\t\t\n\t\t\t\tSTARD Group\n\t\t\t\n\t\t\n\t\t\n\t\t\tPPGlasziou\n\t\t\t\n\t\t\t\tSTARD Group\n\t\t\t\n\t\t\n\t\t\n\t\t\tLIrwig\n\t\t\t\n\t\t\t\tSTARD Group\n\t\t\t\n\t\t\n\t\n\t\n\t\tBMJ\n\t\t\n\t\t\t351\n\t\t\t5527\n\t\t\t2015",
+      "STARD 2015 guidelines for reporting diagnostic accuracy studies: explanation and elaboration\n\t\t\n\t\t\tJFCohen\n\t\t\n\t\t\n\t\t\tDAKorevaar\n\t\t\n\t\t\n\t\t\tDGAltman\n\t\t\n\t\t\n\t\t\tDEBruns\n\t\t\n\t\t\n\t\t\tCAGatsonis\n\t\t\n\t\t\n\t\t\tLHooft\n\t\t\n\t\n\t\n\t\tBMJ Open\n\t\t\n\t\t\t6\n\t\t\t12799\n\t\t\t2016",
+      "Updating standards for reporting diagnostic accuracy: the development of STARD 2015\n\t\t\n\t\t\tDAKorevaar\n\t\t\n\t\t\n\t\t\tJFCohen\n\t\t\n\t\t\n\t\t\tJBReitsma\n\t\t\n\t\t\n\t\t\tDEBruns\n\t\t\n\t\t\n\t\t\tCAGatsonis\n\t\t\n\t\t\n\t\t\tPPGlasziou\n\t\t\n\t\n\t\n\t\tRes Integr Peer Rev\n\t\t\n\t\t\t1\n\t\t\t7\n\t\t\t2016",
+      "Nondiagnostic results of percutaneous transthoracic needle biopsy: a metaanalysis\n\t\t\n\t\t\tKJChae\n\t\t\n\t\t\n\t\t\tHHong\n\t\t\n\t\t\n\t\t\tSHYoon\n\t\t\n\t\t\n\t\t\tSHahn\n\t\t\n\t\t\n\t\t\tGYJin\n\t\t\n\t\t\n\t\t\tCMPark\n\t\t\n\t\n\t\n\t\tSci Rep\n\t\t\n\t\t\t9\n\t\t\t12428\n\t\t\t2019",
+      "Non-specific benign pathological results on transthoracic core-needle biopsy: how to differentiate false-negatives?\n\t\t\n\t\t\tJIKim\n\t\t\n\t\t\n\t\t\tCMPark\n\t\t\n\t\t\n\t\t\tHKim\n\t\t\n\t\t\n\t\t\tJHLee\n\t\t\n\t\t\n\t\t\tJMGoo\n\t\t\n\t\n\t\n\t\tEur Radiol\n\t\t\n\t\t\t27\n\t\t\t\n\t\t\t2017",
+      "Presence of concurrent sarcoid-like granulomas indicates better survival in cancer patients: a retrospective cohort study\n\t\t\n\t\t\tMMurthi\n\t\t\n\t\t\n\t\t\tKYoshioka\n\t\t\n\t\t\n\t\t\tJHCho\n\t\t\n\t\t\n\t\t\tSArias\n\t\t\n\t\t\n\t\t\tDannaEZaw\n\t\t\n\t\t\n\t\t\tM\n\t\t\n\t\n\t\n\t\tERJ Open Res\n\t\t\n\t\t\t6\n\t\t\t\n\t\t\t2020",
+      "DStefanidis\n\t\t\n\t\t\n\t\t\tRDFanelli\n\t\t\n\t\t\n\t\t\tRPrice\n\t\t\n\t\t\n\t\t\tWRichardson\n\t\t\n\t\t\n\t\tGuidelines for the introduction of new technology and techniques\n\t\t\n\t\t\t2014. 2023 Jul 13",
+      "Evaluation and stages of surgical innovations\n\t\t\n\t\t\tJSBarkun\n\t\t\t\n\t\t\t\tBalliol Collaboration\n\t\t\t\n\t\t\n\t\t\n\t\t\tJKAronson\n\t\t\t\n\t\t\t\tBalliol Collaboration\n\t\t\t\n\t\t\n\t\t\n\t\t\tLSFeldman\n\t\t\t\n\t\t\t\tBalliol Collaboration\n\t\t\t\n\t\t\n\t\t\n\t\t\tGJMaddern\n\t\t\t\n\t\t\t\tBalliol Collaboration\n\t\t\t\n\t\t\n\t\t\n\t\t\tSMStrasberg\n\t\t\t\n\t\t\t\tBalliol Collaboration\n\t\t\t\n\t\t\n\t\t\n\t\t\tDGAltman\n\t\t\t\n\t\t\t\tBalliol Collaboration\n\t\t\t\n\t\t\n\t\n\t\n\t\tLancet\n\t\t\n\t\t\t374\n\t\t\t\n\t\t\t2009",
+      "Challenges in evaluating surgical innovation\n\t\t\n\t\t\tPLErgina\n\t\t\t\n\t\t\t\tBalliol Collaboration\n\t\t\t\n\t\t\n\t\t\n\t\t\tJACook\n\t\t\t\n\t\t\t\tBalliol Collaboration\n\t\t\t\n\t\t\n\t\t\n\t\t\tJMBlazeby\n\t\t\t\n\t\t\t\tBalliol Collaboration\n\t\t\t\n\t\t\n\t\t\n\t\t\tIBoutron\n\t\t\t\n\t\t\t\tBalliol Collaboration\n\t\t\t\n\t\t\n\t\t\n\t\t\tPAClavien\n\t\t\t\n\t\t\t\tBalliol Collaboration\n\t\t\t\n\t\t\n\t\t\n\t\t\tBCReeves\n\t\t\t\n\t\t\t\tBalliol Collaboration\n\t\t\t\n\t\t\n\t\n\t\n\t\tLancet\n\t\t\n\t\t\t374\n\t\t\t\n\t\t\t2009",
+      "No surgical innovation without evaluation: the IDEAL recommendations\n\t\t\n\t\t\tPMcculloch\n\t\t\t\n\t\t\t\tBalliol Collaboration\n\t\t\t\n\t\t\n\t\t\n\t\t\tDGAltman\n\t\t\t\n\t\t\t\tBalliol Collaboration\n\t\t\t\n\t\t\n\t\t\n\t\t\tWBCampbell\n\t\t\t\n\t\t\t\tBalliol Collaboration\n\t\t\t\n\t\t\n\t\t\n\t\t\tDRFlum\n\t\t\t\n\t\t\t\tBalliol Collaboration\n\t\t\t\n\t\t\n\t\t\n\t\t\tPGlasziou\n\t\t\t\n\t\t\t\tBalliol Collaboration\n\t\t\t\n\t\t\n\t\t\n\t\t\tJCMarshall\n\t\t\t\n\t\t\t\tBalliol Collaboration\n\t\t\t\n\t\t\n\t\n\t\n\t\tLancet\n\t\t\n\t\t\t374\n\t\t\t\n\t\t\t2009",
+      "IDEAL framework for surgical innovation 1: the idea and development stages\n\t\t\n\t\t\tPMcculloch\n\t\t\n\t\t\n\t\t\tJACook\n\t\t\n\t\t\n\t\t\tDGAltman\n\t\t\n\t\t\n\t\t\tCHeneghan\n\t\t\n\t\t\n\t\t\tMk; IdealDiener\n\t\t\n\t\t\n\t\t\tGroup\n\t\t\n\t\n\t\n\t\tBMJ\n\t\t\n\t\t\t346\n\t\t\t3012\n\t\t\t2013",
+      "IDEAL-D: a rational framework for evaluating and regulating the use of medical devices\n\t\t\n\t\t\tASedrakyan\n\t\t\n\t\t\n\t\t\tBCampbell\n\t\t\n\t\t\n\t\t\tJGMerino\n\t\t\n\t\t\n\t\t\tRKuntz\n\t\t\n\t\t\n\t\t\tAHirst\n\t\t\n\t\t\n\t\t\tPMcculloch\n\t\t\n\t\n\t\n\t\tBMJ\n\t\t\n\t\t\t353\n\t\t\t2372\n\t\t\t2016",
+      "Altman DG; IDEAL Group. IDEAL framework for surgical innovation 2: observational studies in the exploration and assessment stages\n\t\t\n\t\t\tPLErgina\n\t\t\n\t\t\n\t\t\tJSBarkun\n\t\t\n\t\t\n\t\t\tPMcculloch\n\t\t\n\t\t\n\t\t\tJACook\n\t\t\n\t\n\t\n\t\tBMJ\n\t\t\n\t\t\t346\n\t\t\t3011\n\t\t\t2013",
+      "IDEAL framework for surgical innovation 3: randomised controlled trials in the assessment stage and evaluations in the long term study stage\n\t\t\n\t\t\tJACook\n\t\t\n\t\t\n\t\t\tPMcculloch\n\t\t\n\t\t\n\t\t\tJMBlazeby\n\t\t\n\t\t\n\t\t\tDJBeard\n\t\t\n\t\t\n\t\t\tDMarinac-Dabic\n\t\t\n\t\t\n\t\t\tA; IdealSedrakyan\n\t\t\n\t\t\n\t\t\tGroup\n\t\t\n\t\n\t\n\t\tBMJ\n\t\t\n\t\t\t346\n\t\t\t2820\n\t\t\t2013",
+      "IDEAL as a guide to designing clinical device studies consistent with the new European Medical Device Regulation\n\t\t\n\t\t\tCFleetcroft\n\t\t\n\t\t\n\t\t\tPMcculloch\n\t\t\n\t\t\n\t\t\tBCampbell\n\t\t\n\t\n\t\n\t\tBMJ Surg Interv Health Technol\n\t\t\n\t\t\t3\n\t\t\t66\n\t\t\t2021",
+      "When are randomised trials unnecessary? Picking signal from noise\n\t\t\n\t\t\tPGlasziou\n\t\t\n\t\t\n\t\t\tIChalmers\n\t\t\n\t\t\n\t\t\tMRawlins\n\t\t\n\t\t\n\t\t\tPMcculloch\n\t\t\n\t\n\t\n\t\tBMJ\n\t\t\n\t\t\t334\n\t\t\t\n\t\t\t2007",
+      "Population-based risk for complications after transthoracic needle lung biopsy of a pulmonary nodule: an analysis of discharge records\n\t\t\n\t\t\tRSWiener\n\t\t\n\t\t\n\t\t\tLMSchwartz\n\t\t\n\t\t\n\t\t\tSWoloshin\n\t\t\n\t\t\n\t\t\tHGWelch\n\t\t\n\t\n\t\n\t\tAnn Intern Med\n\t\t\n\t\t\t155\n\t\t\t\n\t\t\t2011",
+      "Experimental and quasiexperimental designs for generalized causal inference\n\t\t\n\t\t\tWRShadish\n\t\t\n\t\t\n\t\t\tTDCook\n\t\t\n\t\t\n\t\t\tDTCampbell\n\t\t\n\t\t\n\t\t\t2002\n\t\t\tHoughton Mifflin\n\t\t\tBoston, MA",
+      "An overview of the objectives of and the approaches to propensity score analyses\n\t\t\n\t\t\tGHeinze\n\t\t\n\t\t\n\t\t\tPJ€\n\t\t\n\t\n\t\n\t\tEur Heart J\n\t\t\n\t\t\t32\n\t\t\t\n\t\t\t2011",
+      "Propensity score methods for bias reduction in the comparison of a treatment to a non-randomized control group\n\t\t\n\t\t\tD'agostino RbJr\n\t\t\n\t\n\t\n\t\tStat Med\n\t\t\n\t\t\t17\n\t\t\t\n\t\t\t1998",
+      "Segmented regression analysis of interrupted time series studies in medication use research\n\t\t\n\t\t\tAKWagner\n\t\t\n\t\t\n\t\t\tSBSoumerai\n\t\t\n\t\t\n\t\t\tFZhang\n\t\t\n\t\t\n\t\t\tDRoss-Degnan\n\t\t\n\t\n\t\n\t\tJ Clin Pharm Ther\n\t\t\n\t\t\t27\n\t\t\t\n\t\t\t2002",
+      "Common Terminology Criteria for Adverse Events (CTCAE) Version\n\t\t5.0. 2017\n\t\t\n\t\t\n\t\t\t2023 Jul 13\n\t\t\tU.S. Department of Health and Human Services",
+      "Patient satisfaction with bronchoscopy\n\t\t\n\t\t\tNLechtzin\n\t\t\n\t\t\n\t\t\tHRRubin\n\t\t\n\t\t\n\t\t\tWhite P Jr\n\t\t\n\t\t\n\t\t\tMJenckes\n\t\t\n\t\t\n\t\t\tGBDiette\n\t\t\n\t\n\t\n\t\tAm J Respir Crit Care Med\n\t\t\n\t\t\t166\n\t\t\t\n\t\t\t2002",
+      "Diagnosis\n\t\t\n\t\t\tRHFletcher\n\t\t\n\t\t\n\t\t\tSWFletcher\n\t\t\n\t\t\n\t\t\tGSFletcher\n\t\t\n\t\n\t\n\t\tClinical epidemiology: the essentials. 5th ed\n\t\tBaltimore, MD\n\t\t\n\t\t\tLippincott Williams & Wilkins\n\t\t\t2014",
+      "Interpreting diagnostic information\n\t\t\n\t\t\tMgmHunink\n\t\t\n\t\t\n\t\t\tMCWeinstein\n\t\t\n\t\t\n\t\t\tEWittenberg\n\t\t\n\t\t\n\t\t\tMFDrummond\n\t\t\n\t\t\n\t\t\tJSPliskin\n\t\t\n\t\t\n\t\t\tJBWong\n\t\t\n\t\n\t\n\t\tDecision making in health and medicine: integrating evidence and values\n\t\tCambridge, UK\n\t\t\n\t\t\tCambridge University Press\n\t\t\t2014",
+      "Diagnostic accuracy of bronchoscopy procedures: definitions, pearls, and pitfalls\n\t\t\n\t\t\tAVGonzalez\n\t\t\n\t\t\n\t\t\tDEOst\n\t\t\n\t\t\n\t\t\tSShojaee\n\t\t\n\t\n\t\n\t\tJ Bronchology Interv Pulmonol\n\t\t\n\t\t\t29\n\t\t\t\n\t\t\t2022",
+      "First-inhuman use of a hybrid real-time ultrasound-guided fine-needle acquisition system for peripheral pulmonary lesions: a multicenter pilot study\n\t\t\n\t\t\tLBYarmus\n\t\t\t\n\t\t\t\tInterventional Pulmonary Outcomes Group\n\t\t\t\n\t\t\n\t\t\n\t\t\tCMallow\n\t\t\t\n\t\t\t\tInterventional Pulmonary Outcomes Group\n\t\t\t\n\t\t\n\t\t\n\t\t\tNPastis\n\t\t\t\n\t\t\t\tInterventional Pulmonary Outcomes Group\n\t\t\t\n\t\t\n\t\t\n\t\t\tJThiboutot\n\t\t\t\n\t\t\t\tInterventional Pulmonary Outcomes Group\n\t\t\t\n\t\t\n\t\t\n\t\t\tHLee\n\t\t\t\n\t\t\t\tInterventional Pulmonary Outcomes Group\n\t\t\t\n\t\t\n\t\t\n\t\t\tDFeller-Kopman\n\t\t\t\n\t\t\t\tInterventional Pulmonary Outcomes Group\n\t\t\t\n\t\t\n\t\n\t\n\t\tRespiration\n\t\t\n\t\t\t98\n\t\t\t\n\t\t\t2019",
+      "Robotic bronchoscopy for peripheral pulmonary lesions: a multicenter pilot and feasibility study (BENEFIT)\n\t\t\n\t\t\tACChen\n\t\t\n\t\t\n\t\t\tNJPastis\n\t\t\n\t\t\n\t\t\tJr\n\t\t\n\t\t\n\t\t\tAKMahajan\n\t\t\n\t\t\n\t\t\tSJKhandhar\n\t\t\n\t\t\n\t\t\tMJSimoff\n\t\t\n\t\t\n\t\t\tMSMachuzak\n\t\t\n\t\n\t\n\t\tChest\n\t\t\n\t\t\t159\n\t\t\t\n\t\t\t2021"
+    ],
+    "references_struct": [
+      {
+        "title": "Recent trends in the identification of incidental pulmonary nodules",
+        "journal": "Am J Respir Crit Care Med",
+        "year": "2015",
+        "volume": "192",
+        "issue": null,
+        "pages": null,
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Gould MK",
+          "Tang T",
+          "Liu IL",
+          "Lee J",
+          "Zheng C",
+          "Danforth KN"
+        ],
+        "first_author_last": "Gould"
+      },
+      {
+        "title": "National Lung Screening Trial Research Team. Reduced lungcancer mortality with low-dose computed tomographic screening",
+        "journal": "N Engl J Med",
+        "year": "2011",
+        "volume": "365",
+        "issue": null,
+        "pages": null,
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Aberle DR",
+          "Adams AM",
+          "Berg CD",
+          "Black WC",
+          "Clapp JD",
+          "Fagerstrom RM"
+        ],
+        "first_author_last": "Aberle"
+      },
+      {
+        "title": "Development and validation of a deep learning-based synthetic bone-suppressed model for pulmonary nodule detection in chest radiographs",
+        "journal": "JAMA Netw Open",
+        "year": "2023",
+        "volume": "6",
+        "issue": null,
+        "pages": "2253820",
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Kim H",
+          "Lee KH",
+          "Han K",
+          "Lee JW",
+          "Kim JY",
+          "Im DJ"
+        ],
+        "first_author_last": "Kim"
+      },
+      {
+        "title": "Establishing the diagnosis of lung cancer: diagnosis and management of lung cancer, 3rd ed: American College of Chest Physicians evidence-based clinical practice guidelines",
+        "journal": "Chest",
+        "year": "2013",
+        "volume": "143",
+        "issue": "5",
+        "pages": null,
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Rivera MP",
+          "Mehta AC",
+          "Wahidi MM"
+        ],
+        "first_author_last": "Rivera"
+      },
+      {
+        "title": "Accuracy of a robotic endoscopic system in cadaver models with simulated tumor targets: ACCESS study",
+        "journal": "Respiration",
+        "year": "2020",
+        "volume": "99",
+        "issue": null,
+        "pages": null,
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Chen AC",
+          "Pastis NJ",
+          "Machuzak MS",
+          "Gildea TR",
+          "Simoff MJ",
+          "Gillespie CT"
+        ],
+        "first_author_last": "Chen"
+      },
+      {
+        "title": "A prospective randomized comparative study of three guided bronchoscopic approaches for investigating pulmonary nodules: the PRECISION-1 study",
+        "journal": "Chest",
+        "year": "2020",
+        "volume": "157",
+        "issue": null,
+        "pages": null,
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Yarmus L",
+          "Akulian J",
+          "Wahidi M",
+          "Chen A",
+          "Steltz JP",
+          "Solomon SL"
+        ],
+        "first_author_last": "Yarmus"
+      },
+      {
+        "title": "Methods for staging non-small cell lung cancer: diagnosis and management of lung cancer, 3rd ed: American College of Chest Physicians evidence-based clinical practice guidelines",
+        "journal": "Chest",
+        "year": "2013",
+        "volume": "143",
+        "issue": "5",
+        "pages": null,
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Silvestri GA",
+          "Gonzalez AV",
+          "Jantz MA",
+          "Margolis ML",
+          "Gould MK",
+          "Tanoue LT"
+        ],
+        "first_author_last": "Silvestri"
+      },
+      {
+        "title": "Multimodality bronchoscopic diagnosis of peripheral lung lesions: a randomized controlled trial",
+        "journal": "Am J Respir Crit Care Med",
+        "year": "2007",
+        "volume": "176",
+        "issue": null,
+        "pages": null,
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Eberhardt R",
+          "Anantham D",
+          "Ernst A",
+          "Feller-Kopman D",
+          "Herth F"
+        ],
+        "first_author_last": "Eberhardt"
+      },
+      {
+        "title": "Improved diagnostic yield of bronchoscopy in peripheral pulmonary lesions: combination of radial probe endobronchial ultrasound and rapid on-site evaluation",
+        "journal": "J Thorac Dis",
+        "year": "2015",
+        "volume": "7",
+        "issue": null,
+        "pages": null,
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Chen CH",
+          "Cheng WC",
+          "Wu BR",
+          "Chen CY",
+          "Chen WC",
+          "Hsia TC"
+        ],
+        "first_author_last": "Chen"
+      },
+      {
+        "title": "Electromagnetic navigation bronchoscopy for peripheral pulmonary lesions: one-year results of the prospective, multicenter NAVIGATE study",
+        "journal": "J Thorac Oncol",
+        "year": "2019",
+        "volume": "14",
+        "issue": null,
+        "pages": null,
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Folch EE",
+          "Pritchett MA",
+          "Nead MA",
+          "Bowling MR",
+          "Murgu SD",
+          "Krimsky WS"
+        ],
+        "first_author_last": "Folch"
+      },
+      {
+        "title": "Radial probe endobronchial ultrasound for peripheral pulmonary lesions. a 5-year institutional experience",
+        "journal": "Ann Am Thorac Soc",
+        "year": "2014",
+        "volume": "11",
+        "issue": null,
+        "pages": null,
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Chen A",
+          "Chenna P",
+          "Loiselle A",
+          "Massoni J",
+          "Mayse M",
+          "Misselhorn D"
+        ],
+        "first_author_last": "Chen"
+      },
+      {
+        "title": "Standard bronchoscopy with fluoroscopy vs thin bronchoscopy and radial endobronchial ultrasound for biopsy of pulmonary lesions: a multicenter, prospective, randomized trial",
+        "journal": "Chest",
+        "year": "2018",
+        "volume": "154",
+        "issue": null,
+        "pages": null,
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Tanner NT",
+          "Yarmus L",
+          "CA",
+          "Memoli W",
+          "Mehta J",
+          "Pastis HJ",
+          "NJ"
+        ],
+        "first_author_last": "Tanner"
+      },
+      {
+        "title": "Flying blind despite all our instruments",
+        "journal": "Chest",
+        "year": "2020",
+        "volume": "158",
+        "issue": null,
+        "pages": null,
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Vakil E",
+          "Tremblay A"
+        ],
+        "first_author_last": "Vakil"
+      },
+      {
+        "title": "AQuIRE Bronchoscopy Registry. Diagnostic yield and complications of bronchoscopy for peripheral lung lesions. results of the AQuIRE Registry",
+        "journal": "Am J Respir Crit Care Med",
+        "year": "2016",
+        "volume": "193",
+        "issue": null,
+        "pages": null,
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Ost DE",
+          "Ernst A",
+          "Lei X",
+          "Kovitz KL",
+          "Benzaquen S",
+          "Diaz-Mendoza J"
+        ],
+        "first_author_last": "Ost"
+      },
+      {
+        "title": "Retrospective analysis of radial EBUS outcome for the diagnosis of peripheral pulmonary lesion: sensitivity and complications",
+        "journal": "Eur Clin Respir J",
+        "year": "2015",
+        "volume": "2",
+        "issue": null,
+        "pages": "28947",
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Durakovic A",
+          "Andersen H",
+          "Christiansen A",
+          "Hammen I"
+        ],
+        "first_author_last": "Durakovic"
+      },
+      {
+        "title": "Electromagnetic navigation diagnostic bronchoscopy in peripheral lung lesions",
+        "journal": "Chest",
+        "year": "2007",
+        "volume": "131",
+        "issue": null,
+        "pages": null,
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Eberhardt R",
+          "Anantham D",
+          "Herth F",
+          "Feller-Kopman D",
+          "EA"
+        ],
+        "first_author_last": "Eberhardt"
+      },
+      {
+        "title": "Endobronchial ultrasound-guided transbronchial biopsy and brushing: a comparative evaluation for the diagnosis of peripheral pulmonary lesions",
+        "journal": "Eur J Cardiothorac Surg",
+        "year": "2014",
+        "volume": "45",
+        "issue": null,
+        "pages": null,
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Kuo CH",
+          "Lin SM",
+          "Lee KY",
+          "Chung FT",
+          "Lo YL",
+          "Hsiung TC"
+        ],
+        "first_author_last": "Kuo"
+      },
+      {
+        "title": "Safety and performance of transbronchial cryobiopsy for parenchymal lung lesions",
+        "journal": "Chest",
+        "year": "2021",
+        "volume": "160",
+        "issue": null,
+        "pages": null,
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Herth FJ",
+          "Mayer M",
+          "Thiboutot J",
+          "Kapp CM",
+          "Sun J",
+          "Zhang X"
+        ],
+        "first_author_last": "Herth"
+      },
+      {
+        "title": "Meta-analysis of guided bronchoscopy for the evaluation of the pulmonary nodule",
+        "journal": "Chest",
+        "year": "2012",
+        "volume": "142",
+        "issue": null,
+        "pages": null,
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Memoli W",
+          "Nietert JS",
+          "Silvestri PJ",
+          "GA"
+        ],
+        "first_author_last": "Memoli"
+      },
+      {
+        "title": "The impact of alternative approaches to diagnostic yield calculation in studies of bronchoscopy",
+        "journal": "Chest",
+        "year": "2022",
+        "volume": "161",
+        "issue": null,
+        "pages": null,
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Vachani A",
+          "Maldonado F",
+          "Laxmanan B",
+          "Kalsekar I",
+          "Murgu S"
+        ],
+        "first_author_last": "Vachani"
+      },
+      {
+        "title": "Guided bronchoscopy for the evaluation of pulmonary lesions: an updated meta-analysis",
+        "journal": "Chest",
+        "year": "2023",
+        "volume": "163",
+        "issue": null,
+        "pages": null,
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Nadig TR",
+          "Thomas N",
+          "Nietert PJ",
+          "Lozier J",
+          "Tanner NT",
+          "Memoli W",
+          "JS"
+        ],
+        "first_author_last": "Nadig"
+      },
+      {
+        "title": "A multicenter, single-arm, prospective trial assessing the diagnostic yield of electromagnetic bronchoscopic and transthoracic navigation for peripheral pulmonary nodules",
+        "journal": "Am J Respir Crit Care Med",
+        "year": "2023",
+        "volume": "208",
+        "issue": null,
+        "pages": null,
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Thiboutot J",
+          "Pastis NJ",
+          "Akulian J",
+          "Silvestri GA",
+          "Chen A",
+          "Wahidi MM"
+        ],
+        "first_author_last": "Thiboutot"
+      },
+      {
+        "title": "Real-world application of the NAVIGATE trial",
+        "journal": "J Thorac Oncol",
+        "year": "2019",
+        "volume": "14",
+        "issue": null,
+        "pages": null,
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Thiboutot J",
+          "Yarmus LB",
+          "Lee HJ",
+          "Rivera MP",
+          "Ost DE",
+          "Feller-Kopman D"
+        ],
+        "first_author_last": "Thiboutot"
+      },
+      {
+        "title": "Bearing the burden of \"innovation\": the ontological implications of substantial equivalence and the FDA 510(k) pathway",
+        "journal": "Chest",
+        "year": "2023",
+        "volume": "163",
+        "issue": null,
+        "pages": null,
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Maldonado F",
+          "Eberl J"
+        ],
+        "first_author_last": "Maldonado"
+      },
+      {
+        "title": "Modernizing the FDA's 510(k) pathway",
+        "journal": "N Engl J Med",
+        "year": "2019",
+        "volume": "381",
+        "issue": null,
+        "pages": null,
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Rathi VK",
+          "Ross JS"
+        ],
+        "first_author_last": "Rathi"
+      },
+      {
+        "title": "Leading the call for reform of medical device safety surveillance",
+        "journal": "JAMA Intern Med",
+        "year": "2020",
+        "volume": "180",
+        "issue": null,
+        "pages": null,
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Salazar JW",
+          "Redberg RF"
+        ],
+        "first_author_last": "Salazar"
+      },
+      {
+        "title": "An oversight in oversight: reconciling the medical device industry, clinicians, and regulation",
+        "journal": "Chest",
+        "year": "2022",
+        "volume": "161",
+        "issue": null,
+        "pages": null,
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Landeen KC",
+          "Langerman A",
+          "Maldonado F"
+        ],
+        "first_author_last": "Landeen"
+      },
+      {
+        "title": "ISPOR HTA Council Working Group on HTA in Pluralistic Healthcare Systems collaborators",
+        "journal": "Challenges of health technology assessment in pluralistic healthcare systems: an ISPOR Council report",
+        "year": "2022",
+        "volume": "25",
+        "issue": null,
+        "pages": null,
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Drummond MF",
+          "Augustovski F",
+          "Bhattacharyya D",
+          "Campbell J",
+          "Chaiyakanapruk N",
+          "Chen Y"
+        ],
+        "first_author_last": "Drummond"
+      },
+      {
+        "title": "Diagnostic yield and safety of navigation bronchoscopy: a systematic review and meta-analysis",
+        "journal": "Lung Cancer",
+        "year": "2023",
+        "volume": "180",
+        "issue": null,
+        "pages": "107196",
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Kops SE",
+          "Heus P",
+          "Korevaar DA",
+          "Damen J",
+          "Idema DL",
+          "Verhoeven R"
+        ],
+        "first_author_last": "Kops"
+      },
+      {
+        "title": "Stating the obvious … or leading the way toward more judicious use of diagnostic bronchoscopy",
+        "journal": "Chest",
+        "year": "2020",
+        "volume": "157",
+        "issue": null,
+        "pages": null,
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Gonzalez AV"
+        ],
+        "first_author_last": "Gonzalez"
+      },
+      {
+        "title": "Reducing waste from incomplete or unusable reports of biomedical research",
+        "journal": "Lancet",
+        "year": "2014",
+        "volume": "383",
+        "issue": null,
+        "pages": null,
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Glasziou P",
+          "Altman DG",
+          "Bossuyt P",
+          "Boutron I",
+          "Clarke M",
+          "Julious S"
+        ],
+        "first_author_last": "Glasziou"
+      },
+      {
+        "title": "Assessing risk of bias and applicability",
+        "journal": "Cochrane handbook for systematic reviews of diagnostic test accuracy. Version 2.0 (updated",
+        "year": "2023",
+        "volume": "8",
+        "issue": null,
+        "pages": null,
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Reitsma JB",
+          "Rutjes A",
+          "Whiting P",
+          "Yang B",
+          "Leeflang MM",
+          "Bossuyt PM",
+          "Deeks JJ"
+        ],
+        "first_author_last": "Reitsma"
+      },
+      {
+        "title": "CONSORT 2010 explanation and elaboration: updated guidelines for reporting parallel group randomised trials",
+        "journal": "BMJ",
+        "year": "2010",
+        "volume": "340",
+        "issue": null,
+        "pages": "869",
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Moher D",
+          "Hopewell S",
+          "Schulz KF",
+          "Montori V",
+          "Gøtzsche PC",
+          "Devereaux PJ"
+        ],
+        "first_author_last": "Moher"
+      },
+      {
+        "title": "Reporting quality of diagnostic accuracy studies: a systematic review and metaanalysis of investigations on adherence to STARD",
+        "journal": "Evid Based Med",
+        "year": "2014",
+        "volume": "19",
+        "issue": null,
+        "pages": null,
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Korevaar DA",
+          "Van Enst WA",
+          "Spijker R",
+          "Bossuyt PM",
+          "Hooft L"
+        ],
+        "first_author_last": "Korevaar"
+      },
+      {
+        "title": "Reporting diagnostic accuracy studies: some improvements after 10 years of STARD",
+        "journal": "Radiology",
+        "year": "2015",
+        "volume": "274",
+        "issue": null,
+        "pages": null,
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Korevaar DA",
+          "Wang J",
+          "Van Enst WA",
+          "Leeflang MM",
+          "Hooft L",
+          "Smidt N"
+        ],
+        "first_author_last": "Korevaar"
+      },
+      {
+        "title": "STARD 2015: an updated list of essential items for reporting diagnostic accuracy studies",
+        "journal": "BMJ",
+        "year": "2015",
+        "volume": "351",
+        "issue": null,
+        "pages": "5527",
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Bossuyt PM",
+          "Reitsma JB",
+          "Bruns DE",
+          "Gatsonis CA",
+          "Glasziou PP",
+          "Irwig L"
+        ],
+        "first_author_last": "Bossuyt"
+      },
+      {
+        "title": "STARD 2015 guidelines for reporting diagnostic accuracy studies: explanation and elaboration",
+        "journal": "BMJ Open",
+        "year": "2016",
+        "volume": "6",
+        "issue": null,
+        "pages": "12799",
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Cohen JF",
+          "Korevaar DA",
+          "Altman DG",
+          "Bruns DE",
+          "Gatsonis CA",
+          "Hooft L"
+        ],
+        "first_author_last": "Cohen"
+      },
+      {
+        "title": "Updating standards for reporting diagnostic accuracy: the development of STARD 2015",
+        "journal": "Res Integr Peer Rev",
+        "year": "2016",
+        "volume": "1",
+        "issue": null,
+        "pages": "7",
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Korevaar DA",
+          "Cohen JF",
+          "Reitsma JB",
+          "Bruns DE",
+          "Gatsonis CA",
+          "Glasziou PP"
+        ],
+        "first_author_last": "Korevaar"
+      },
+      {
+        "title": "Nondiagnostic results of percutaneous transthoracic needle biopsy: a metaanalysis",
+        "journal": "Sci Rep",
+        "year": "2019",
+        "volume": "9",
+        "issue": null,
+        "pages": "12428",
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Chae KJ",
+          "Hong H",
+          "Yoon SH",
+          "Hahn S",
+          "Jin GY",
+          "Park CM"
+        ],
+        "first_author_last": "Chae"
+      },
+      {
+        "title": "Non-specific benign pathological results on transthoracic core-needle biopsy: how to differentiate false-negatives?",
+        "journal": "Eur Radiol",
+        "year": "2017",
+        "volume": "27",
+        "issue": null,
+        "pages": null,
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Kim JI",
+          "Park CM",
+          "Kim H",
+          "Lee JH",
+          "Goo JM"
+        ],
+        "first_author_last": "Kim"
+      },
+      {
+        "title": "Presence of concurrent sarcoid-like granulomas indicates better survival in cancer patients: a retrospective cohort study",
+        "journal": "ERJ Open Res",
+        "year": "2020",
+        "volume": "6",
+        "issue": null,
+        "pages": null,
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Murthi M",
+          "Yoshioka K",
+          "Cho JH",
+          "Arias S",
+          "Zaw DE",
+          "M"
+        ],
+        "first_author_last": "Murthi"
+      },
+      {
+        "title": "Guidelines for the introduction of new technology and techniques",
+        "journal": "Guidelines for the introduction of new technology and techniques",
+        "year": "2014",
+        "volume": null,
+        "issue": null,
+        "pages": null,
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Stefanidis D",
+          "Fanelli RD",
+          "Price R",
+          "Richardson W"
+        ],
+        "first_author_last": "Stefanidis"
+      },
+      {
+        "title": "Evaluation and stages of surgical innovations",
+        "journal": "Lancet",
+        "year": "2009",
+        "volume": "374",
+        "issue": null,
+        "pages": null,
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Barkun JS",
+          "Aronson JK",
+          "Feldman LS",
+          "Maddern GJ",
+          "Strasberg SM",
+          "Altman DG"
+        ],
+        "first_author_last": "Barkun"
+      },
+      {
+        "title": "Challenges in evaluating surgical innovation",
+        "journal": "Lancet",
+        "year": "2009",
+        "volume": "374",
+        "issue": null,
+        "pages": null,
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Ergina PL",
+          "Cook JA",
+          "Blazeby JM",
+          "Boutron I",
+          "Clavien PA",
+          "Reeves BC"
+        ],
+        "first_author_last": "Ergina"
+      },
+      {
+        "title": "No surgical innovation without evaluation: the IDEAL recommendations",
+        "journal": "Lancet",
+        "year": "2009",
+        "volume": "374",
+        "issue": null,
+        "pages": null,
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Mcculloch P",
+          "Altman DG",
+          "Campbell WB",
+          "Flum DR",
+          "Glasziou P",
+          "Marshall JC"
+        ],
+        "first_author_last": "Mcculloch"
+      },
+      {
+        "title": "IDEAL framework for surgical innovation 1: the idea and development stages",
+        "journal": "BMJ",
+        "year": "2013",
+        "volume": "346",
+        "issue": null,
+        "pages": "3012",
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Mcculloch P",
+          "Cook JA",
+          "Altman DG",
+          "Heneghan C",
+          "Diener M",
+          "Group"
+        ],
+        "first_author_last": "Mcculloch"
+      },
+      {
+        "title": "IDEAL-D: a rational framework for evaluating and regulating the use of medical devices",
+        "journal": "BMJ",
+        "year": "2016",
+        "volume": "353",
+        "issue": null,
+        "pages": "2372",
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Sedrakyan A",
+          "Campbell B",
+          "Merino JG",
+          "Kuntz R",
+          "Hirst A",
+          "Mcculloch P"
+        ],
+        "first_author_last": "Sedrakyan"
+      },
+      {
+        "title": "Altman DG; IDEAL Group. IDEAL framework for surgical innovation 2: observational studies in the exploration and assessment stages",
+        "journal": "BMJ",
+        "year": "2013",
+        "volume": "346",
+        "issue": null,
+        "pages": "3011",
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Ergina PL",
+          "Barkun JS",
+          "Mcculloch P",
+          "Cook JA"
+        ],
+        "first_author_last": "Ergina"
+      },
+      {
+        "title": "IDEAL framework for surgical innovation 3: randomised controlled trials in the assessment stage and evaluations in the long term study stage",
+        "journal": "BMJ",
+        "year": "2013",
+        "volume": "346",
+        "issue": null,
+        "pages": "2820",
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Cook JA",
+          "Mcculloch P",
+          "Blazeby JM",
+          "Beard DJ",
+          "Marinac-Dabic D",
+          "Sedrakyan A",
+          "Group"
+        ],
+        "first_author_last": "Cook"
+      },
+      {
+        "title": "IDEAL as a guide to designing clinical device studies consistent with the new European Medical Device Regulation",
+        "journal": "BMJ Surg Interv Health Technol",
+        "year": "2021",
+        "volume": "3",
+        "issue": null,
+        "pages": "66",
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Fleetcroft C",
+          "Mcculloch P",
+          "Campbell B"
+        ],
+        "first_author_last": "Fleetcroft"
+      },
+      {
+        "title": "When are randomised trials unnecessary? Picking signal from noise",
+        "journal": "BMJ",
+        "year": "2007",
+        "volume": "334",
+        "issue": null,
+        "pages": null,
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Glasziou P",
+          "Chalmers I",
+          "Rawlins M",
+          "Mcculloch P"
+        ],
+        "first_author_last": "Glasziou"
+      },
+      {
+        "title": "Population-based risk for complications after transthoracic needle lung biopsy of a pulmonary nodule: an analysis of discharge records",
+        "journal": "Ann Intern Med",
+        "year": "2011",
+        "volume": "155",
+        "issue": null,
+        "pages": null,
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Wiener RS",
+          "Schwartz LM",
+          "Woloshin S",
+          "Welch HG"
+        ],
+        "first_author_last": "Wiener"
+      },
+      {
+        "title": "Experimental and quasiexperimental designs for generalized causal inference",
+        "journal": "Experimental and quasiexperimental designs for generalized causal inference",
+        "year": "2002",
+        "volume": null,
+        "issue": null,
+        "pages": null,
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Shadish WR",
+          "Cook TD",
+          "Campbell DT"
+        ],
+        "first_author_last": "Shadish"
+      },
+      {
+        "title": "An overview of the objectives of and the approaches to propensity score analyses",
+        "journal": "Eur Heart J",
+        "year": "2011",
+        "volume": "32",
+        "issue": null,
+        "pages": null,
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Heinze G",
+          "J€ P"
+        ],
+        "first_author_last": "Heinze"
+      },
+      {
+        "title": "Propensity score methods for bias reduction in the comparison of a treatment to a non-randomized control group",
+        "journal": "Stat Med",
+        "year": "1998",
+        "volume": "17",
+        "issue": null,
+        "pages": null,
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "D"
+        ],
+        "first_author_last": "D"
+      },
+      {
+        "title": "Segmented regression analysis of interrupted time series studies in medication use research",
+        "journal": "J Clin Pharm Ther",
+        "year": "2002",
+        "volume": "27",
+        "issue": null,
+        "pages": null,
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Wagner AK",
+          "Soumerai SB",
+          "Zhang F",
+          "Ross-Degnan D"
+        ],
+        "first_author_last": "Wagner"
+      },
+      {
+        "title": "Common Terminology Criteria for Adverse Events (CTCAE) Version",
+        "journal": "Common Terminology Criteria for Adverse Events (CTCAE) Version",
+        "year": "2023",
+        "volume": null,
+        "issue": null,
+        "pages": null,
+        "doi": null,
+        "pmid": null,
+        "authors": [],
+        "first_author_last": null
+      },
+      {
+        "title": "Patient satisfaction with bronchoscopy",
+        "journal": "Am J Respir Crit Care Med",
+        "year": "2002",
+        "volume": "166",
+        "issue": null,
+        "pages": null,
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Lechtzin N",
+          "Rubin HR",
+          "White P Jr",
+          "Jenckes M",
+          "Diette GB"
+        ],
+        "first_author_last": "Lechtzin"
+      },
+      {
+        "title": "Diagnosis",
+        "journal": "Clinical epidemiology: the essentials. 5th ed",
+        "year": "2014",
+        "volume": null,
+        "issue": null,
+        "pages": null,
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Fletcher RH",
+          "Fletcher SW",
+          "Fletcher GS"
+        ],
+        "first_author_last": "Fletcher"
+      },
+      {
+        "title": "Interpreting diagnostic information",
+        "journal": "Decision making in health and medicine: integrating evidence and values",
+        "year": "2014",
+        "volume": null,
+        "issue": null,
+        "pages": null,
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Hunink M",
+          "Weinstein MC",
+          "Wittenberg E",
+          "Drummond MF",
+          "Pliskin JS",
+          "Wong JB"
+        ],
+        "first_author_last": "Hunink"
+      },
+      {
+        "title": "Diagnostic accuracy of bronchoscopy procedures: definitions, pearls, and pitfalls",
+        "journal": "J Bronchology Interv Pulmonol",
+        "year": "2022",
+        "volume": "29",
+        "issue": null,
+        "pages": null,
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Gonzalez AV",
+          "Ost DE",
+          "Shojaee S"
+        ],
+        "first_author_last": "Gonzalez"
+      },
+      {
+        "title": "First-inhuman use of a hybrid real-time ultrasound-guided fine-needle acquisition system for peripheral pulmonary lesions: a multicenter pilot study",
+        "journal": "Respiration",
+        "year": "2019",
+        "volume": "98",
+        "issue": null,
+        "pages": null,
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Yarmus LB",
+          "Mallow C",
+          "Pastis N",
+          "Thiboutot J",
+          "Lee H",
+          "Feller-Kopman D"
+        ],
+        "first_author_last": "Yarmus"
+      },
+      {
+        "title": "Robotic bronchoscopy for peripheral pulmonary lesions: a multicenter pilot and feasibility study (BENEFIT)",
+        "journal": "Chest",
+        "year": "2021",
+        "volume": "159",
+        "issue": null,
+        "pages": null,
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Chen AC",
+          "Pastis NJ",
+          "Jr",
+          "Mahajan AK",
+          "Khandhar SJ",
+          "Simoff MJ",
+          "Machuzak MS"
+        ],
+        "first_author_last": "Chen"
+      }
+    ],
+    "doc_type": "guideline",
+    "abstract": "Background: Advanced diagnostic bronchoscopy targeting the lung periphery has developed at an accelerated pace over the last two decades, whereas evidence to support introduction of innovative technologies has been variable and deficient. A major gap relates to variable reporting of diagnostic yield, in addition to limited comparative studies. Objectives: To develop a research framework to standardize the evaluation of advanced diagnostic bronchoscopy techniques for peripheral lung lesions. Specifically, we aimed for consensus on a robust definition of diagnostic yield, and we propose potential study designs at various stages of technology development. Methods: Panel members were selected for their diverse expertise. Workgroup meetings were conducted in virtual or hybrid format. The cochairs subsequently developed summary statements, with voting proceeding according to a modified Delphi process. The statement was cosponsored by the American Thoracic Society and the American College of Chest Physicians. Results: Consensus was reached on 15 statements on the definition of diagnostic outcomes and study designs. A strict definition of diagnostic yield should be used, and studies should be reported according to the STARD (Standards for Reporting Diagnostic Accuracy Studies) guidelines. Clinical or radiographic follow-up may be incorporated into the reference standard definition but should not be used to calculate diagnostic yield from the procedural encounter. Methodologically robust comparative studies, with incorporation of patient-reported outcomes, are needed to adequately assess and validate minimally invasive diagnostic technologies targeting the lung periphery. Conclusions: This American Thoracic Society/American College of Chest Physicians statement aims to provide a research framework that allows greater standardization of device validation efforts through clearly defined diagnostic outcomes and robust study designs. High-quality studies, both industry and publicly funded, can support subsequent health economic analyses and guide implementation decisions in various healthcare settings. recorded and reported according to STARDguidelines. a. Better characterization of downstream patient events (e.g., need for salvage procedures, complications and/or hospitalizations, delays in diagnosis) 14. Informative and inclusive study designs can support subsequent health economic analyses, guide implementation decisions in various healthcare settings, and help address disparities such as access to technological innovations. c. Societal partnerships",
+    "references_enriched": [
+      {
+        "title": "Recent trends in the identification of incidental pulmonary nodules"
+      },
+      {
+        "title": "Am J Respir Crit Care Med",
+        "year": 2015
+      },
+      {
+        "title": "National Lung Screening Trial Research Team. Reduced lungcancer mortality with low-dose computed tomographic screening",
+        "year": 2015
+      },
+      {
+        "title": "N Engl J Med",
+        "year": 2011
+      },
+      {
+        "title": "Development and validation of a deep learning-based synthetic bone-suppressed model for pulmonary nodule detection in chest radiographs",
+        "year": 2011
+      },
+      {
+        "title": "JAMA Netw Open",
+        "year": 2023
+      },
+      {
+        "title": "Establishing the diagnosis of lung cancer: diagnosis and management of lung cancer, 3rd ed: American College of Chest Physicians evidence-based clinical practice guidelines",
+        "year": 2023
+      },
+      {
+        "title": "Chest",
+        "year": 2023
+      },
+      {
+        "title": "Accuracy of a robotic endoscopic system in cadaver models with simulated tumor targets: ACCESS study",
+        "year": 2013
+      },
+      {
+        "title": "Respiration",
+        "year": 2020
+      },
+      {
+        "title": "A prospective randomized comparative study of three guided bronchoscopic approaches for investigating pulmonary nodules: the PRECISION-1 study",
+        "year": 2020
+      },
+      {
+        "title": "Chest",
+        "year": 2023
+      },
+      {
+        "title": "Methods for staging non-small cell lung cancer: diagnosis and management of lung cancer, 3rd ed: American College of Chest Physicians evidence-based clinical practice guidelines",
+        "year": 2020
+      },
+      {
+        "title": "Chest",
+        "year": 2023
+      },
+      {
+        "title": "Multimodality bronchoscopic diagnosis of peripheral lung lesions: a randomized controlled trial",
+        "year": 2013
+      },
+      {
+        "title": "Am J Respir Crit Care Med",
+        "year": 2015
+      },
+      {
+        "title": "Improved diagnostic yield of bronchoscopy in peripheral pulmonary lesions: combination of radial probe endobronchial ultrasound and rapid on-site evaluation",
+        "year": 2007
+      },
+      {
+        "title": "J Thorac Dis",
+        "year": 2015
+      },
+      {
+        "title": "Electromagnetic navigation bronchoscopy for peripheral pulmonary lesions: one-year results of the prospective, multicenter NAVIGATE study",
+        "year": 2015
+      },
+      {
+        "title": "J Thorac Oncol",
+        "year": 2019
+      },
+      {
+        "title": "Radial probe endobronchial ultrasound for peripheral pulmonary lesions. a 5-year institutional experience",
+        "year": 2019
+      },
+      {
+        "title": "Ann Am Thorac Soc",
+        "year": 2014
+      },
+      {
+        "title": "Standard bronchoscopy with fluoroscopy vs thin bronchoscopy and radial endobronchial ultrasound for biopsy of pulmonary lesions: a multicenter, prospective, randomized trial",
+        "year": 2014
+      },
+      {
+        "title": "Chest",
+        "year": 2023
+      },
+      {
+        "title": "Flying blind despite all our instruments",
+        "year": 2018
+      },
+      {
+        "title": "Chest",
+        "year": 2023
+      },
+      {
+        "title": "AQuIRE Bronchoscopy Registry. Diagnostic yield and complications of bronchoscopy for peripheral lung lesions. results of the AQuIRE Registry",
+        "year": 2020
+      },
+      {
+        "title": "Am J Respir Crit Care Med",
+        "year": 2015
+      },
+      {
+        "title": "Retrospective analysis of radial EBUS outcome for the diagnosis of peripheral pulmonary lesion: sensitivity and complications",
+        "year": 2016
+      },
+      {
+        "title": "Eur Clin Respir J",
+        "year": 2015
+      },
+      {
+        "title": "Electromagnetic navigation diagnostic bronchoscopy in peripheral lung lesions",
+        "year": 2015
+      },
+      {
+        "title": "Chest",
+        "year": 2023
+      },
+      {
+        "title": "Endobronchial ultrasound-guided transbronchial biopsy and brushing: a comparative evaluation for the diagnosis of peripheral pulmonary lesions",
+        "year": 2007
+      },
+      {
+        "title": "Eur J Cardiothorac Surg",
+        "year": 2014
+      },
+      {
+        "title": "Safety and performance of transbronchial cryobiopsy for parenchymal lung lesions",
+        "year": 2014
+      },
+      {
+        "title": "Chest",
+        "year": 2023
+      },
+      {
+        "title": "Meta-analysis of guided bronchoscopy for the evaluation of the pulmonary nodule",
+        "year": 2021
+      },
+      {
+        "title": "Chest",
+        "year": 2023
+      },
+      {
+        "title": "The impact of alternative approaches to diagnostic yield calculation in studies of bronchoscopy",
+        "year": 2012
+      },
+      {
+        "title": "Chest",
+        "year": 2023
+      },
+      {
+        "title": "Guided bronchoscopy for the evaluation of pulmonary lesions: an updated meta-analysis",
+        "year": 2022
+      },
+      {
+        "title": "Chest",
+        "year": 2023
+      },
+      {
+        "title": "A multicenter, single-arm, prospective trial assessing the diagnostic yield of electromagnetic bronchoscopic and transthoracic navigation for peripheral pulmonary nodules",
+        "year": 2023
+      },
+      {
+        "title": "Am J Respir Crit Care Med",
+        "year": 2015
+      },
+      {
+        "title": "Real-world application of the NAVIGATE trial",
+        "year": 2023
+      },
+      {
+        "title": "J Thorac Oncol",
+        "year": 2019
+      },
+      {
+        "title": "Bearing the burden of &quot;innovation&quot;: the ontological implications of substantial equivalence and the FDA 510(k) pathway",
+        "year": 2019
+      },
+      {
+        "title": "Chest",
+        "year": 2023
+      },
+      {
+        "title": "Modernizing the FDA&apos;s 510(k) pathway",
+        "year": 2023
+      },
+      {
+        "title": "N Engl J Med",
+        "year": 2011
+      },
+      {
+        "title": "Leading the call for reform of medical device safety surveillance",
+        "year": 2019
+      },
+      {
+        "title": "JAMA Intern Med",
+        "year": 2020
+      },
+      {
+        "title": "An oversight in oversight: reconciling the medical device industry, clinicians, and regulation",
+        "year": 2020
+      },
+      {
+        "title": "Chest",
+        "year": 2023
+      },
+      {
+        "title": "ISPOR HTA Council Working Group on HTA in Pluralistic Healthcare Systems collaborators",
+        "year": 2022
+      },
+      {
+        "title": "Challenges of health technology assessment in pluralistic healthcare systems: an ISPOR Council report",
+        "year": 2022
+      },
+      {
+        "title": "Diagnostic yield and safety of navigation bronchoscopy: a systematic review and meta-analysis",
+        "year": 2022
+      },
+      {
+        "title": "Lung Cancer",
+        "year": 2023
+      },
+      {
+        "title": "Stating the obvious … or leading the way toward more judicious use of diagnostic bronchoscopy",
+        "year": 2023
+      },
+      {
+        "title": "Chest",
+        "year": 2023
+      },
+      {
+        "title": "Reducing waste from incomplete or unusable reports of biomedical research",
+        "year": 2020
+      },
+      {
+        "title": "Lancet",
+        "year": 2014
+      },
+      {
+        "title": "Assessing risk of bias and applicability",
+        "year": 2014
+      },
+      {
+        "title": "Cochrane handbook for systematic reviews of diagnostic test accuracy. Version 2.0 (updated"
+      },
+      {
+        "title": "CONSORT 2010 explanation and elaboration: updated guidelines for reporting parallel group randomised trials"
+      },
+      {
+        "title": "BMJ",
+        "year": 2010
+      },
+      {
+        "title": "Reporting quality of diagnostic accuracy studies: a systematic review and metaanalysis of investigations on adherence to STARD",
+        "year": 2010
+      },
+      {
+        "title": "Evid Based Med",
+        "year": 2014
+      },
+      {
+        "title": "Reporting diagnostic accuracy studies: some improvements after 10 years of STARD",
+        "year": 2014
+      },
+      {
+        "title": "Radiology",
+        "year": 2015
+      },
+      {
+        "title": "STARD 2015: an updated list of essential items for reporting diagnostic accuracy studies",
+        "year": 2015
+      },
+      {
+        "title": "BMJ",
+        "year": 2010
+      },
+      {
+        "title": "STARD 2015 guidelines for reporting diagnostic accuracy studies: explanation and elaboration",
+        "year": 2015
+      },
+      {
+        "title": "BMJ Open",
+        "year": 2016
+      },
+      {
+        "title": "Updating standards for reporting diagnostic accuracy: the development of STARD 2015",
+        "year": 2016
+      },
+      {
+        "title": "Res Integr Peer Rev",
+        "year": 2016
+      },
+      {
+        "title": "Nondiagnostic results of percutaneous transthoracic needle biopsy: a metaanalysis",
+        "year": 2016
+      },
+      {
+        "title": "Sci Rep",
+        "year": 2019
+      },
+      {
+        "title": "Non-specific benign pathological results on transthoracic core-needle biopsy: how to differentiate false-negatives?",
+        "year": 2019
+      },
+      {
+        "title": "Eur Radiol",
+        "year": 2017
+      },
+      {
+        "title": "Presence of concurrent sarcoid-like granulomas indicates better survival in cancer patients: a retrospective cohort study",
+        "year": 2017
+      },
+      {
+        "title": "ERJ Open Res",
+        "year": 2020
+      },
+      {
+        "title": "Guidelines for the introduction of new technology and techniques"
+      },
+      {
+        "title": "Evaluation and stages of surgical innovations"
+      },
+      {
+        "title": "Lancet",
+        "year": 2014
+      },
+      {
+        "title": "Challenges in evaluating surgical innovation",
+        "year": 2009
+      },
+      {
+        "title": "Lancet",
+        "year": 2014
+      },
+      {
+        "title": "No surgical innovation without evaluation: the IDEAL recommendations",
+        "year": 2009
+      },
+      {
+        "title": "Lancet",
+        "year": 2014
+      },
+      {
+        "title": "IDEAL framework for surgical innovation 1: the idea and development stages",
+        "year": 2009
+      },
+      {
+        "title": "BMJ",
+        "year": 2010
+      },
+      {
+        "title": "IDEAL-D: a rational framework for evaluating and regulating the use of medical devices",
+        "year": 2013
+      },
+      {
+        "title": "BMJ",
+        "year": 2010
+      },
+      {
+        "title": "Altman DG; IDEAL Group. IDEAL framework for surgical innovation 2: observational studies in the exploration and assessment stages",
+        "year": 2016
+      },
+      {
+        "title": "BMJ",
+        "year": 2010
+      },
+      {
+        "title": "IDEAL framework for surgical innovation 3: randomised controlled trials in the assessment stage and evaluations in the long term study stage",
+        "year": 2013
+      },
+      {
+        "title": "BMJ",
+        "year": 2010
+      },
+      {
+        "title": "IDEAL as a guide to designing clinical device studies consistent with the new European Medical Device Regulation",
+        "year": 2013
+      },
+      {
+        "title": "BMJ Surg Interv Health Technol",
+        "year": 2021
+      },
+      {
+        "title": "When are randomised trials unnecessary? Picking signal from noise",
+        "year": 2021
+      }
+    ],
+    "references_source": "grobid_fallback"
+  },
+  "sections": [],
+  "statistics": [
+    {
+      "type": "yield",
+      "value": 0.39,
+      "ci_lower": null,
+      "ci_upper": null,
+      "p_value": null,
+      "group_a": null,
+      "group_b": null,
+      "sentence": null
+    },
+    {
+      "type": "yield",
+      "value": 0.88,
+      "ci_lower": null,
+      "ci_upper": null,
+      "p_value": null,
+      "group_a": null,
+      "group_b": null,
+      "sentence": null
+    },
+    {
+      "type": "yield",
+      "value": 0.2,
+      "ci_lower": null,
+      "ci_upper": null,
+      "p_value": null,
+      "group_a": null,
+      "group_b": null,
+      "sentence": null
+    },
+    {
+      "type": "accuracy",
+      "value": 0.05,
+      "ci_lower": null,
+      "ci_upper": null,
+      "p_value": null,
+      "group_a": null,
+      "group_b": null,
+      "sentence": null
+    },
+    {
+      "type": "yield",
+      "value": 0.05,
+      "ci_lower": null,
+      "ci_upper": null,
+      "p_value": null,
+      "group_a": null,
+      "group_b": null,
+      "sentence": null
+    },
+    {
+      "type": "yield",
+      "value": 0.49,
+      "ci_lower": null,
+      "ci_upper": null,
+      "p_value": null,
+      "group_a": null,
+      "group_b": null,
+      "sentence": null
+    },
+    {
+      "type": "yield",
+      "value": 0.32,
+      "ci_lower": null,
+      "ci_upper": null,
+      "p_value": null,
+      "group_a": null,
+      "group_b": null,
+      "sentence": null
+    },
+    {
+      "type": "yield",
+      "value": 0.26,
+      "ci_lower": null,
+      "ci_upper": null,
+      "p_value": null,
+      "group_a": null,
+      "group_b": null,
+      "sentence": null
+    },
+    {
+      "type": "specificity",
+      "value": 1.0,
+      "ci_lower": null,
+      "ci_upper": null,
+      "p_value": null,
+      "group_a": null,
+      "group_b": null,
+      "sentence": null
+    },
+    {
+      "type": "positive_predictive_value",
+      "value": 1.0,
+      "ci_lower": null,
+      "ci_upper": null,
+      "p_value": null,
+      "group_a": null,
+      "group_b": null,
+      "sentence": null
+    },
+    {
+      "type": "incidence",
+      "value": 0.068,
+      "ci_lower": null,
+      "ci_upper": null,
+      "p_value": null,
+      "group_a": null,
+      "group_b": null,
+      "sentence": null
+    },
+    {
+      "type": "accuracy",
+      "value": 0.045,
+      "ci_lower": null,
+      "ci_upper": null,
+      "p_value": null,
+      "group_a": null,
+      "group_b": null,
+      "sentence": null
+    },
+    {
+      "type": "accuracy",
+      "value": 0.107,
+      "ci_lower": null,
+      "ci_upper": null,
+      "p_value": null,
+      "group_a": null,
+      "group_b": null,
+      "sentence": null
+    },
+    {
+      "type": "sensitivity",
+      "value": 0.045,
+      "ci_lower": null,
+      "ci_upper": null,
+      "p_value": null,
+      "group_a": null,
+      "group_b": null,
+      "sentence": null
+    },
+    {
+      "type": "sensitivity",
+      "value": 0.107,
+      "ci_lower": null,
+      "ci_upper": null,
+      "p_value": null,
+      "group_a": null,
+      "group_b": null,
+      "sentence": null
+    },
+    {
+      "type": "specificity",
+      "value": 0.107,
+      "ci_lower": null,
+      "ci_upper": null,
+      "p_value": null,
+      "group_a": null,
+      "group_b": null,
+      "sentence": null
+    }
+  ],
+  "relations": [],
+  "figures": [
+    {
+      "kind": "figure",
+      "caption": "(36,37). On the basis of a complete flowchart, readers can determine at a glance how often bronchoscopy failed to localize and/or sample the nodule or was diagnostic (i.e., specific malignant or benign diagnosis). Readers can also assess how often a reference standard was performed and what the reference standard results were (i.e., malignant, benign, or indeterminate). This information will allow readers to (re)calculate the remaining risk of malignancy in patients whose bronchoscopy yielded a nonspecific or nondiagnostic result.",
+      "image_path": "/tmp/medparse_api_vel788dj/figures/Guideline ATS diagnostic yield_fig01.jpg",
+      "ocr_text": null,
+      "local_id": "fig01",
+      "page": 1,
+      "bbox": [
+        31.509220123291016,
+        754.4671459197998,
+        458.00579833984375,
+        704.2112503051758
+      ],
+      "bbox_pixels": [
+        77,
+        68,
+        1418,
+        260
+      ],
+      "rows": null,
+      "footnotes": [
+        "Diagnostic accuracy has limited clinical usefulness, because it is an aggregate measure that varies with disease prevalence and within which key information on sensitivity and predictive value is buried (61). Incomplete reporting of studies is considered a major source of avoidable research waste (31). When crucial information is missing from a study report, the study may not be reproducible, and the identification of potential sources of bias is hampered (32,33). Unfortunately, reporting is often suboptimal for diagnostic accuracy studies (34,35). STARD (36)(37)(38) is a reporting guideline for diagnostic accuracy studies providing a checklist of essential items to ensure fully informative study reports. STARD was first published in 2003 and updated in 2015 and has been endorsed by hundreds of biomedical journals, indicating that they require or recommend adherence of diagnostic accuracy studies to STARD.",
+        ". We advocate for data through multicenter collaborative efforts to better understand the impact and downstream events (e.g., additional procedures, length and extent of surveillance, ultimate diagnosis, and/or stage shift in those diagnosed with cancer) for patients whose initial procedure yielded nonspecific pathological findings suggestive but not diagnostic.",
+        "ecorded and reported according to STARDguidelines.",
+        ". Better characterization of downstream patient events (e.g., need for salvage procedures, complications and/or hospitalizations, delays in diagnosis)",
+        ". Societal partnerships",
+        ". Weadvocate for data through multicenter collaborative efforts to better understand the impact and downstream events (e.g., additional/salvage procedures, extent of surveillance, ultimate diagnosis) for patients whose initial procedure yielded nonspecific pathological findings suggestive but not diagnostic of a benign etiology.",
+        "onsidered a speci /uniFB01 c benign diagnosis in the appropriate clinical context. However, a positive bacterial culture /uniFB01 nding on BAL /uniFB02 uid may occur in the presence of malignant cytopathology /uniFB01 ndings, and this /uniFB01 nding in isolation would not typically constitute a speci /uniFB01 c benign diagnosis (e.g., BAL /uniFB01 ndings designated post-procedure as a contaminant and not treated with appropriate antimicrobial treatment). Ultimately, transparent reporting is essential to ensure fair comparisons and pooling of results.",
+        "ata collection and continued advances in diagnostic testing of small biopsy samples. Werecognize that bronchoscopy results may not all /uniFB01 t neatly into the proposed boxes, which is why clinical context should be considered and transparently reported. Figure 2 illustrates the classi /uniFB01 cation of biopsy results into diagnostic and nondiagnostic categories.",
+        "edicine and extend to surgery and other interventional /uniFB01 elds (42).",
+        "utcomes (48). The goal is to prepare for de /uniFB01 nitive evaluation in the assessment stage (3), ideally through randomized controlled trials (RCTs) or comprehensive protocoldriven observational studies when an RCT is not feasible (e.g., quasiexperimental study designs such as interrupted time series or propensity score -matching analyses). The long-term stage (4) focuses on surveillance of rare adverse events and effectiveness. Disease-based registries may be best suited to provide an understanding of variations in patient selection for various procedures (49). The IDEAL framework thus provides important practical guidance for evaluation of innovation throughout the total product life cycle (50).",
+        "Addition of a preclinical phase 0 for device development (47).",
+        "y diagnostic outcomes alone. Patientcentered outcomes (e.g., impact of bronchoscopic procedure on patient trajectory, including the need for additional invasive procedures) and patient-reported outcomes (e.g., patient ' s willingness to have a repeat procedure) should be incorporated into studies of advanced diagnostic bronchoscopy. The type and severity of complications also guide decision making. Complication de /uniFB01 nitions should be outlined a priori . When available, standardized de /uniFB01 nitions of complications facilitate uniform reporting and meaningful pooling of data (57).",
+        "rom AbbVie, AstraZeneca, Bristol Myers Squibb, Eli Lilly, Erbe GmBH, Genentech, Janssen, Merus, Roche AG, Sanofi; served as speaker for Eli Lilly and Genentech. N.N. served on advisory board for Bristol Myers Squibb, Janssen, Lilly, MSD, Olympus; received research support from Amgen, AstraZeneca, Boehringer Ingelheim, Bristol Myers Squibb, EQRx, FujiFilm, Guardant Health, Intuitive, Janssen, Lilly, Merck Sharp & Dohme, Olympus, OncLive, PeerVoice; served as speaker for Amgen and AstraZeneca. N.J.P. served as consultant for Olympus America. C.R.S. employee of U.S. Department of Veterans Affairs; served on advisory board for bioAffinity Technologies; served as consultant for Bristol Myers Squibb; received research support from American Cancer Society, Biodesix, NIH, U.S. Department of Veterans Affairs; served as speaker for American College of Chest Physicians, CHEST, National Comprehensive Cancer Network; received travel support from American Cancer Society, Florida Society of",
+        "esions. a 5-year institutional experience. Ann Am Thorac Soc 2014;11: 578 -582."
+      ],
+      "csv_path": null,
+      "width_px": 1341,
+      "height_px": 192
+    },
+    {
+      "kind": "figure",
+      "caption": "(36,37). On the basis of a complete flowchart, readers can determine at a glance how often bronchoscopy failed to localize and/or sample the nodule or was diagnostic (i.e., specific malignant or benign diagnosis). Readers can also assess how often a reference standard was performed and what the reference standard results were (i.e., malignant, benign, or indeterminate). This information will allow readers to (re)calculate the remaining risk of malignancy in patients whose bronchoscopy yielded a nonspecific or nondiagnostic result.",
+      "image_path": "/tmp/medparse_api_vel788dj/figures/Guideline ATS diagnostic yield_fig02.jpg",
+      "ocr_text": null,
+      "local_id": "fig02",
+      "page": 7,
+      "bbox": [
+        35.5913200378418,
+        705.5331192016602,
+        550.8116455078125,
+        113.44561767578125
+      ],
+      "bbox_pixels": [
+        90,
+        218,
+        1702,
+        2065
+      ],
+      "rows": null,
+      "footnotes": [
+        "Diagnostic accuracy has limited clinical usefulness, because it is an aggregate measure that varies with disease prevalence and within which key information on sensitivity and predictive value is buried (61). Incomplete reporting of studies is considered a major source of avoidable research waste (31). When crucial information is missing from a study report, the study may not be reproducible, and the identification of potential sources of bias is hampered (32,33). Unfortunately, reporting is often suboptimal for diagnostic accuracy studies (34,35). STARD (36)(37)(38) is a reporting guideline for diagnostic accuracy studies providing a checklist of essential items to ensure fully informative study reports. STARD was first published in 2003 and updated in 2015 and has been endorsed by hundreds of biomedical journals, indicating that they require or recommend adherence of diagnostic accuracy studies to STARD.",
+        ". We advocate for data through multicenter collaborative efforts to better understand the impact and downstream events (e.g., additional procedures, length and extent of surveillance, ultimate diagnosis, and/or stage shift in those diagnosed with cancer) for patients whose initial procedure yielded nonspecific pathological findings suggestive but not diagnostic.",
+        "ecorded and reported according to STARDguidelines.",
+        ". Better characterization of downstream patient events (e.g., need for salvage procedures, complications and/or hospitalizations, delays in diagnosis)",
+        ". Societal partnerships",
+        ". Weadvocate for data through multicenter collaborative efforts to better understand the impact and downstream events (e.g., additional/salvage procedures, extent of surveillance, ultimate diagnosis) for patients whose initial procedure yielded nonspecific pathological findings suggestive but not diagnostic of a benign etiology.",
+        "onsidered a speci /uniFB01 c benign diagnosis in the appropriate clinical context. However, a positive bacterial culture /uniFB01 nding on BAL /uniFB02 uid may occur in the presence of malignant cytopathology /uniFB01 ndings, and this /uniFB01 nding in isolation would not typically constitute a speci /uniFB01 c benign diagnosis (e.g., BAL /uniFB01 ndings designated post-procedure as a contaminant and not treated with appropriate antimicrobial treatment). Ultimately, transparent reporting is essential to ensure fair comparisons and pooling of results.",
+        "ata collection and continued advances in diagnostic testing of small biopsy samples. Werecognize that bronchoscopy results may not all /uniFB01 t neatly into the proposed boxes, which is why clinical context should be considered and transparently reported. Figure 2 illustrates the classi /uniFB01 cation of biopsy results into diagnostic and nondiagnostic categories.",
+        "edicine and extend to surgery and other interventional /uniFB01 elds (42).",
+        "utcomes (48). The goal is to prepare for de /uniFB01 nitive evaluation in the assessment stage (3), ideally through randomized controlled trials (RCTs) or comprehensive protocoldriven observational studies when an RCT is not feasible (e.g., quasiexperimental study designs such as interrupted time series or propensity score -matching analyses). The long-term stage (4) focuses on surveillance of rare adverse events and effectiveness. Disease-based registries may be best suited to provide an understanding of variations in patient selection for various procedures (49). The IDEAL framework thus provides important practical guidance for evaluation of innovation throughout the total product life cycle (50).",
+        "Addition of a preclinical phase 0 for device development (47).",
+        "y diagnostic outcomes alone. Patientcentered outcomes (e.g., impact of bronchoscopic procedure on patient trajectory, including the need for additional invasive procedures) and patient-reported outcomes (e.g., patient ' s willingness to have a repeat procedure) should be incorporated into studies of advanced diagnostic bronchoscopy. The type and severity of complications also guide decision making. Complication de /uniFB01 nitions should be outlined a priori . When available, standardized de /uniFB01 nitions of complications facilitate uniform reporting and meaningful pooling of data (57).",
+        "rom AbbVie, AstraZeneca, Bristol Myers Squibb, Eli Lilly, Erbe GmBH, Genentech, Janssen, Merus, Roche AG, Sanofi; served as speaker for Eli Lilly and Genentech. N.N. served on advisory board for Bristol Myers Squibb, Janssen, Lilly, MSD, Olympus; received research support from Amgen, AstraZeneca, Boehringer Ingelheim, Bristol Myers Squibb, EQRx, FujiFilm, Guardant Health, Intuitive, Janssen, Lilly, Merck Sharp & Dohme, Olympus, OncLive, PeerVoice; served as speaker for Amgen and AstraZeneca. N.J.P. served as consultant for Olympus America. C.R.S. employee of U.S. Department of Veterans Affairs; served on advisory board for bioAffinity Technologies; served as consultant for Bristol Myers Squibb; received research support from American Cancer Society, Biodesix, NIH, U.S. Department of Veterans Affairs; served as speaker for American College of Chest Physicians, CHEST, National Comprehensive Cancer Network; received travel support from American Cancer Society, Florida Society of",
+        "esions. a 5-year institutional experience. Ann Am Thorac Soc 2014;11: 578 -582."
+      ],
+      "csv_path": null,
+      "width_px": 1612,
+      "height_px": 1847
+    },
+    {
+      "kind": "figure",
+      "caption": "(36,37). On the basis of a complete flowchart, readers can determine at a glance how often bronchoscopy failed to localize and/or sample the nodule or was diagnostic (i.e., specific malignant or benign diagnosis). Readers can also assess how often a reference standard was performed and what the reference standard results were (i.e., malignant, benign, or indeterminate). This information will allow readers to (re)calculate the remaining risk of malignancy in patients whose bronchoscopy yielded a nonspecific or nondiagnostic result.",
+      "image_path": "/tmp/medparse_api_vel788dj/figures/Guideline ATS diagnostic yield_fig03.jpg",
+      "ocr_text": null,
+      "local_id": "fig03",
+      "page": 9,
+      "bbox": [
+        32.38651657104492,
+        708.9708786010742,
+        552.1740112304688,
+        516.6583862304688
+      ],
+      "bbox_pixels": [
+        80,
+        207,
+        1706,
+        833
+      ],
+      "rows": null,
+      "footnotes": [
+        "Diagnostic accuracy has limited clinical usefulness, because it is an aggregate measure that varies with disease prevalence and within which key information on sensitivity and predictive value is buried (61). Incomplete reporting of studies is considered a major source of avoidable research waste (31). When crucial information is missing from a study report, the study may not be reproducible, and the identification of potential sources of bias is hampered (32,33). Unfortunately, reporting is often suboptimal for diagnostic accuracy studies (34,35). STARD (36)(37)(38) is a reporting guideline for diagnostic accuracy studies providing a checklist of essential items to ensure fully informative study reports. STARD was first published in 2003 and updated in 2015 and has been endorsed by hundreds of biomedical journals, indicating that they require or recommend adherence of diagnostic accuracy studies to STARD.",
+        ". We advocate for data through multicenter collaborative efforts to better understand the impact and downstream events (e.g., additional procedures, length and extent of surveillance, ultimate diagnosis, and/or stage shift in those diagnosed with cancer) for patients whose initial procedure yielded nonspecific pathological findings suggestive but not diagnostic.",
+        "ecorded and reported according to STARDguidelines.",
+        ". Better characterization of downstream patient events (e.g., need for salvage procedures, complications and/or hospitalizations, delays in diagnosis)",
+        ". Societal partnerships",
+        ". Weadvocate for data through multicenter collaborative efforts to better understand the impact and downstream events (e.g., additional/salvage procedures, extent of surveillance, ultimate diagnosis) for patients whose initial procedure yielded nonspecific pathological findings suggestive but not diagnostic of a benign etiology.",
+        "onsidered a speci /uniFB01 c benign diagnosis in the appropriate clinical context. However, a positive bacterial culture /uniFB01 nding on BAL /uniFB02 uid may occur in the presence of malignant cytopathology /uniFB01 ndings, and this /uniFB01 nding in isolation would not typically constitute a speci /uniFB01 c benign diagnosis (e.g., BAL /uniFB01 ndings designated post-procedure as a contaminant and not treated with appropriate antimicrobial treatment). Ultimately, transparent reporting is essential to ensure fair comparisons and pooling of results.",
+        "ata collection and continued advances in diagnostic testing of small biopsy samples. Werecognize that bronchoscopy results may not all /uniFB01 t neatly into the proposed boxes, which is why clinical context should be considered and transparently reported. Figure 2 illustrates the classi /uniFB01 cation of biopsy results into diagnostic and nondiagnostic categories.",
+        "edicine and extend to surgery and other interventional /uniFB01 elds (42).",
+        "utcomes (48). The goal is to prepare for de /uniFB01 nitive evaluation in the assessment stage (3), ideally through randomized controlled trials (RCTs) or comprehensive protocoldriven observational studies when an RCT is not feasible (e.g., quasiexperimental study designs such as interrupted time series or propensity score -matching analyses). The long-term stage (4) focuses on surveillance of rare adverse events and effectiveness. Disease-based registries may be best suited to provide an understanding of variations in patient selection for various procedures (49). The IDEAL framework thus provides important practical guidance for evaluation of innovation throughout the total product life cycle (50).",
+        "Addition of a preclinical phase 0 for device development (47).",
+        "y diagnostic outcomes alone. Patientcentered outcomes (e.g., impact of bronchoscopic procedure on patient trajectory, including the need for additional invasive procedures) and patient-reported outcomes (e.g., patient ' s willingness to have a repeat procedure) should be incorporated into studies of advanced diagnostic bronchoscopy. The type and severity of complications also guide decision making. Complication de /uniFB01 nitions should be outlined a priori . When available, standardized de /uniFB01 nitions of complications facilitate uniform reporting and meaningful pooling of data (57).",
+        "rom AbbVie, AstraZeneca, Bristol Myers Squibb, Eli Lilly, Erbe GmBH, Genentech, Janssen, Merus, Roche AG, Sanofi; served as speaker for Eli Lilly and Genentech. N.N. served on advisory board for Bristol Myers Squibb, Janssen, Lilly, MSD, Olympus; received research support from Amgen, AstraZeneca, Boehringer Ingelheim, Bristol Myers Squibb, EQRx, FujiFilm, Guardant Health, Intuitive, Janssen, Lilly, Merck Sharp & Dohme, Olympus, OncLive, PeerVoice; served as speaker for Amgen and AstraZeneca. N.J.P. served as consultant for Olympus America. C.R.S. employee of U.S. Department of Veterans Affairs; served on advisory board for bioAffinity Technologies; served as consultant for Bristol Myers Squibb; received research support from American Cancer Society, Biodesix, NIH, U.S. Department of Veterans Affairs; served as speaker for American College of Chest Physicians, CHEST, National Comprehensive Cancer Network; received travel support from American Cancer Society, Florida Society of",
+        "esions. a 5-year institutional experience. Ann Am Thorac Soc 2014;11: 578 -582."
+      ],
+      "csv_path": null,
+      "width_px": 1626,
+      "height_px": 626
+    }
+  ],
+  "tables": [
+    {
+      "kind": "table",
+      "caption": "defibrillators. Thus, diagnostic bronchoscopy platforms have not traditionally required clinical studies or evidence of improved patient outcomes for commercialization, shifting the responsibility for providing useful clinical data from medical device manufacturers to clinicians (27).",
+      "image_path": null,
+      "ocr_text": null,
+      "local_id": null,
+      "page": 5,
+      "bbox": null,
+      "bbox_pixels": null,
+      "rows": [
+        [
+          {
+            "text": "Diagnostic Outcome Measure",
+            "header": "column"
+          },
+          {
+            "text": "Definition",
+            "header": "column"
+          }
+        ],
+        [
+          {
+            "text": "Diagnostic yield"
+          },
+          {
+            "text": "The proportion of all individuals undergoing the diagnostic procedure under evaluation in whom a specific malignant or benign diagnosis is established The numerator should include all patients with peripheral pulmonary nodules in whom the result of a minimally invasive diagnostic procedure establishes a specific benign or malignant diagnosis that is sufficient to inform patient care, and the denominator should include all patients in whom the minimally invasive procedure was attempted or performed"
+          }
+        ],
+        [
+          {
+            "text": "Diagnostic accuracy measures *"
+          },
+          {
+            "text": ""
+          }
+        ],
+        [
+          {
+            "text": "Sensitivity"
+          },
+          {
+            "text": "The proportion of individuals with the disease of interest (e.g., cancer), as determined by the reference standard, who have a positive test result (i.e., malignancy based on bronchoscopy samples)"
+          }
+        ],
+        [
+          {
+            "text": "Specificity †"
+          },
+          {
+            "text": "The proportion of individuals without the disease of interest (e.g., cancer), as determined by the reference standard, who have a negative test result (i.e., no evidence of malignancy based on bronchoscopy samples)"
+          }
+        ],
+        [
+          {
+            "text": "Positive predictive value †"
+          },
+          {
+            "text": "The likelihood that a patient has the target disease (e.g., cancer), given a positive test result (i.e., malignancy based on bronchoscopy samples)"
+          }
+        ],
+        [
+          {
+            "text": "Negative predictive value"
+          },
+          {
+            "text": "The likelihood that a patient does not have the target disease (e.g., cancer), given a negative test result (i.e., no evidence of lung malignancy based on bronchoscopy samples)"
+          }
+        ],
+        [
+          {
+            "text": "Diagnostic accuracy ‡"
+          },
+          {
+            "text": "The proportion of all test results that are correct for the condition of interest. For example, all correctly identified patients with or without cancer, divided by all patients who underwent advanced diagnostic bronchoscopy"
+          }
+        ]
+      ],
+      "footnotes": [
+        "Diagnostic accuracy has limited clinical usefulness, because it is an aggregate measure that varies with disease prevalence and within which key information on sensitivity and predictive value is buried (61). Incomplete reporting of studies is considered a major source of avoidable research waste (31). When crucial information is missing from a study report, the study may not be reproducible, and the identification of potential sources of bias is hampered (32,33). Unfortunately, reporting is often suboptimal for diagnostic accuracy studies (34,35). STARD (36)(37)(38) is a reporting guideline for diagnostic accuracy studies providing a checklist of essential items to ensure fully informative study reports. STARD was first published in 2003 and updated in 2015 and has been endorsed by hundreds of biomedical journals, indicating that they require or recommend adherence of diagnostic accuracy studies to STARD.",
+        ". We advocate for data through multicenter collaborative efforts to better understand the impact and downstream events (e.g., additional procedures, length and extent of surveillance, ultimate diagnosis, and/or stage shift in those diagnosed with cancer) for patients whose initial procedure yielded nonspecific pathological findings suggestive but not diagnostic.",
+        "ecorded and reported according to STARDguidelines.",
+        ". Better characterization of downstream patient events (e.g., need for salvage procedures, complications and/or hospitalizations, delays in diagnosis)",
+        ". Societal partnerships",
+        ". Weadvocate for data through multicenter collaborative efforts to better understand the impact and downstream events (e.g., additional/salvage procedures, extent of surveillance, ultimate diagnosis) for patients whose initial procedure yielded nonspecific pathological findings suggestive but not diagnostic of a benign etiology.",
+        "onsidered a speci /uniFB01 c benign diagnosis in the appropriate clinical context. However, a positive bacterial culture /uniFB01 nding on BAL /uniFB02 uid may occur in the presence of malignant cytopathology /uniFB01 ndings, and this /uniFB01 nding in isolation would not typically constitute a speci /uniFB01 c benign diagnosis (e.g., BAL /uniFB01 ndings designated post-procedure as a contaminant and not treated with appropriate antimicrobial treatment). Ultimately, transparent reporting is essential to ensure fair comparisons and pooling of results.",
+        "ata collection and continued advances in diagnostic testing of small biopsy samples. Werecognize that bronchoscopy results may not all /uniFB01 t neatly into the proposed boxes, which is why clinical context should be considered and transparently reported. Figure 2 illustrates the classi /uniFB01 cation of biopsy results into diagnostic and nondiagnostic categories.",
+        "edicine and extend to surgery and other interventional /uniFB01 elds (42).",
+        "utcomes (48). The goal is to prepare for de /uniFB01 nitive evaluation in the assessment stage (3), ideally through randomized controlled trials (RCTs) or comprehensive protocoldriven observational studies when an RCT is not feasible (e.g., quasiexperimental study designs such as interrupted time series or propensity score -matching analyses). The long-term stage (4) focuses on surveillance of rare adverse events and effectiveness. Disease-based registries may be best suited to provide an understanding of variations in patient selection for various procedures (49). The IDEAL framework thus provides important practical guidance for evaluation of innovation throughout the total product life cycle (50).",
+        "Addition of a preclinical phase 0 for device development (47).",
+        "y diagnostic outcomes alone. Patientcentered outcomes (e.g., impact of bronchoscopic procedure on patient trajectory, including the need for additional invasive procedures) and patient-reported outcomes (e.g., patient ' s willingness to have a repeat procedure) should be incorporated into studies of advanced diagnostic bronchoscopy. The type and severity of complications also guide decision making. Complication de /uniFB01 nitions should be outlined a priori . When available, standardized de /uniFB01 nitions of complications facilitate uniform reporting and meaningful pooling of data (57).",
+        "rom AbbVie, AstraZeneca, Bristol Myers Squibb, Eli Lilly, Erbe GmBH, Genentech, Janssen, Merus, Roche AG, Sanofi; served as speaker for Eli Lilly and Genentech. N.N. served on advisory board for Bristol Myers Squibb, Janssen, Lilly, MSD, Olympus; received research support from Amgen, AstraZeneca, Boehringer Ingelheim, Bristol Myers Squibb, EQRx, FujiFilm, Guardant Health, Intuitive, Janssen, Lilly, Merck Sharp & Dohme, Olympus, OncLive, PeerVoice; served as speaker for Amgen and AstraZeneca. N.J.P. served as consultant for Olympus America. C.R.S. employee of U.S. Department of Veterans Affairs; served on advisory board for bioAffinity Technologies; served as consultant for Bristol Myers Squibb; received research support from American Cancer Society, Biodesix, NIH, U.S. Department of Veterans Affairs; served as speaker for American College of Chest Physicians, CHEST, National Comprehensive Cancer Network; received travel support from American Cancer Society, Florida Society of",
+        "esions. a 5-year institutional experience. Ann Am Thorac Soc 2014;11: 578 -582."
+      ],
+      "csv_path": "/tmp/medparse_api_vel788dj/tables/Guideline_ATS_diagnostic_yield_table01.csv",
+      "width_px": null,
+      "height_px": null
+    },
+    {
+      "kind": "table",
+      "caption": "defibrillators. Thus, diagnostic bronchoscopy platforms have not traditionally required clinical studies or evidence of improved patient outcomes for commercialization, shifting the responsibility for providing useful clinical data from medical device manufacturers to clinicians (27).",
+      "image_path": null,
+      "ocr_text": null,
+      "local_id": null,
+      "page": 8,
+      "bbox": null,
+      "bbox_pixels": null,
+      "rows": [
+        [
+          {
+            "text": "Specific Malignant Diagnoses",
+            "header": "column"
+          },
+          {
+            "text": "Specific Benign Diagnoses",
+            "header": "column"
+          },
+          {
+            "text": "Nondiagnostic Test Results",
+            "header": "column"
+          }
+        ],
+        [
+          {
+            "text": "Non - small cell lung cancer Adenocarcinoma Squamous cell carcinoma Large cell carcinoma Small cell carcinoma Carcinoma metastatic to lung (e.g., melanoma, breast cancer) Typical/atypical carcinoid tumor"
+          },
+          {
+            "text": "Benign lung tumors (e.g., hamartoma, lipoma, papilloma) Organizing pneumonia Granulomatosis with polyangiitis Fungal (e.g., Aspergillus , Histoplasma ) Mycobacterium (e.g., M. tuberculosis ) Bacterial (e.g., Streptococcus pneumoniae ) Granuloma/granulomatous inflammation"
+          },
+          {
+            "text": "Atypia/atypical cells Acute or chronic inflammation Normal lung parenchyma Insufficient tissue for diagnosis Blood Necrosis -"
+          }
+        ]
+      ],
+      "footnotes": [
+        "Diagnostic accuracy has limited clinical usefulness, because it is an aggregate measure that varies with disease prevalence and within which key information on sensitivity and predictive value is buried (61). Incomplete reporting of studies is considered a major source of avoidable research waste (31). When crucial information is missing from a study report, the study may not be reproducible, and the identification of potential sources of bias is hampered (32,33). Unfortunately, reporting is often suboptimal for diagnostic accuracy studies (34,35). STARD (36)(37)(38) is a reporting guideline for diagnostic accuracy studies providing a checklist of essential items to ensure fully informative study reports. STARD was first published in 2003 and updated in 2015 and has been endorsed by hundreds of biomedical journals, indicating that they require or recommend adherence of diagnostic accuracy studies to STARD.",
+        ". We advocate for data through multicenter collaborative efforts to better understand the impact and downstream events (e.g., additional procedures, length and extent of surveillance, ultimate diagnosis, and/or stage shift in those diagnosed with cancer) for patients whose initial procedure yielded nonspecific pathological findings suggestive but not diagnostic.",
+        "ecorded and reported according to STARDguidelines.",
+        ". Better characterization of downstream patient events (e.g., need for salvage procedures, complications and/or hospitalizations, delays in diagnosis)",
+        ". Societal partnerships",
+        ". Weadvocate for data through multicenter collaborative efforts to better understand the impact and downstream events (e.g., additional/salvage procedures, extent of surveillance, ultimate diagnosis) for patients whose initial procedure yielded nonspecific pathological findings suggestive but not diagnostic of a benign etiology.",
+        "onsidered a speci /uniFB01 c benign diagnosis in the appropriate clinical context. However, a positive bacterial culture /uniFB01 nding on BAL /uniFB02 uid may occur in the presence of malignant cytopathology /uniFB01 ndings, and this /uniFB01 nding in isolation would not typically constitute a speci /uniFB01 c benign diagnosis (e.g., BAL /uniFB01 ndings designated post-procedure as a contaminant and not treated with appropriate antimicrobial treatment). Ultimately, transparent reporting is essential to ensure fair comparisons and pooling of results.",
+        "ata collection and continued advances in diagnostic testing of small biopsy samples. Werecognize that bronchoscopy results may not all /uniFB01 t neatly into the proposed boxes, which is why clinical context should be considered and transparently reported. Figure 2 illustrates the classi /uniFB01 cation of biopsy results into diagnostic and nondiagnostic categories.",
+        "edicine and extend to surgery and other interventional /uniFB01 elds (42).",
+        "utcomes (48). The goal is to prepare for de /uniFB01 nitive evaluation in the assessment stage (3), ideally through randomized controlled trials (RCTs) or comprehensive protocoldriven observational studies when an RCT is not feasible (e.g., quasiexperimental study designs such as interrupted time series or propensity score -matching analyses). The long-term stage (4) focuses on surveillance of rare adverse events and effectiveness. Disease-based registries may be best suited to provide an understanding of variations in patient selection for various procedures (49). The IDEAL framework thus provides important practical guidance for evaluation of innovation throughout the total product life cycle (50).",
+        "Addition of a preclinical phase 0 for device development (47).",
+        "y diagnostic outcomes alone. Patientcentered outcomes (e.g., impact of bronchoscopic procedure on patient trajectory, including the need for additional invasive procedures) and patient-reported outcomes (e.g., patient ' s willingness to have a repeat procedure) should be incorporated into studies of advanced diagnostic bronchoscopy. The type and severity of complications also guide decision making. Complication de /uniFB01 nitions should be outlined a priori . When available, standardized de /uniFB01 nitions of complications facilitate uniform reporting and meaningful pooling of data (57).",
+        "rom AbbVie, AstraZeneca, Bristol Myers Squibb, Eli Lilly, Erbe GmBH, Genentech, Janssen, Merus, Roche AG, Sanofi; served as speaker for Eli Lilly and Genentech. N.N. served on advisory board for Bristol Myers Squibb, Janssen, Lilly, MSD, Olympus; received research support from Amgen, AstraZeneca, Boehringer Ingelheim, Bristol Myers Squibb, EQRx, FujiFilm, Guardant Health, Intuitive, Janssen, Lilly, Merck Sharp & Dohme, Olympus, OncLive, PeerVoice; served as speaker for Amgen and AstraZeneca. N.J.P. served as consultant for Olympus America. C.R.S. employee of U.S. Department of Veterans Affairs; served on advisory board for bioAffinity Technologies; served as consultant for Bristol Myers Squibb; received research support from American Cancer Society, Biodesix, NIH, U.S. Department of Veterans Affairs; served as speaker for American College of Chest Physicians, CHEST, National Comprehensive Cancer Network; received travel support from American Cancer Society, Florida Society of",
+        "esions. a 5-year institutional experience. Ann Am Thorac Soc 2014;11: 578 -582."
+      ],
+      "csv_path": "/tmp/medparse_api_vel788dj/tables/Guideline_ATS_diagnostic_yield_table02.csv",
+      "width_px": null,
+      "height_px": null
+    },
+    {
+      "kind": "table",
+      "caption": "defibrillators. Thus, diagnostic bronchoscopy platforms have not traditionally required clinical studies or evidence of improved patient outcomes for commercialization, shifting the responsibility for providing useful clinical data from medical device manufacturers to clinicians (27).",
+      "image_path": null,
+      "ocr_text": null,
+      "local_id": null,
+      "page": 10,
+      "bbox": null,
+      "bbox_pixels": null,
+      "rows": [
+        [
+          {
+            "text": ""
+          },
+          {
+            "text": "1 Idea*",
+            "header": "column"
+          },
+          {
+            "text": "2a Development",
+            "header": "column"
+          },
+          {
+            "text": "2b Exploration",
+            "header": "column"
+          },
+          {
+            "text": "3 Assessment",
+            "header": "column"
+          },
+          {
+            "text": "4 Long-Term Study",
+            "header": "column"
+          }
+        ],
+        [
+          {
+            "text": "Question"
+          },
+          {
+            "text": "Can the procedure or device achieve a specific physical or diagnostic goal?"
+          },
+          {
+            "text": "What is the optimal technique, and for which patient does it work best?"
+          },
+          {
+            "text": "What are the diagnostic outcomes of more widespread use?"
+          },
+          {
+            "text": "How well does the procedure work compared with current standards of care?"
+          },
+          {
+            "text": "What are the long- term outcomes of the procedure?"
+          }
+        ],
+        [
+          {
+            "text": "Aim Patients Optimal study design(s)"
+          },
+          {
+            "text": "Proof of concept Single to few ( , 10) First-in-human study; structured case reports"
+          },
+          {
+            "text": "Safety, efficacy 10s Prospective development studies"
+          },
+          {
+            "text": "Efficacy 100s Prospective collaborative observational studies, or feasibility randomized controlled trial"
+          },
+          {
+            "text": "Comparative effectiveness 100s 1 Randomized controlled trial Nonrandomized controlled trials or interrupted time series are potential alternatives to randomized controlled"
+          },
+          {
+            "text": "Surveillance 100s 1 Comprehensive disease-based registry or database"
+          }
+        ],
+        [
+          {
+            "text": "Key aspects"
+          },
+          {
+            "text": "Confidential reporting of all first-in-human procedures"
+          },
+          {
+            "text": "Protocol Sequential reporting of cases and modifications of technique"
+          },
+          {
+            "text": "Protocol Standardized outcome definitions Learning curve evaluation"
+          },
+          {
+            "text": "trials Quantitative comparison with standards of care"
+          },
+          {
+            "text": "Monitoring for long-term safety (rare adverse events) and effectiveness"
+          }
+        ],
+        [
+          {
+            "text": "Examples at this stage †"
+          },
+          {
+            "text": "First-in-Human Use of a Hybrid Real- Time Ultrasound- guided Fine- Needle Acquisi- tion System for Peripheral Pul- monary Lesions: A Multicenter Pilot Study (62)"
+          },
+          {
+            "text": "Robotic Bronchoscopy for Peripheral Pulmonary Lesions: A Multicenter Pilot and Feasibility Study (BENEFIT) (63)"
+          },
+          {
+            "text": "A Multicenter Prospective Trial Assessing the Diagnostic Yield of Electromagnetic Bronchoscopic and Transthoracic Navigation for Peripheral Pulmonary Nodules (22)"
+          },
+          {
+            "text": "Standard Bronchoscopy with Fluoroscopy vs Thin Bronchoscopy and Radial Endobronchial Ultrasound for Biopsy of Pulmonary Lesions: A Multicenter, Prospective, Randomized Trial (12)"
+          },
+          {
+            "text": "Diagnostic Yield and Complications of Bronchoscopy for Peripheral Lung Lesions. Results of the AQuIRE Registry (14)"
+          }
+        ]
+      ],
+      "footnotes": [
+        "Diagnostic accuracy has limited clinical usefulness, because it is an aggregate measure that varies with disease prevalence and within which key information on sensitivity and predictive value is buried (61). Incomplete reporting of studies is considered a major source of avoidable research waste (31). When crucial information is missing from a study report, the study may not be reproducible, and the identification of potential sources of bias is hampered (32,33). Unfortunately, reporting is often suboptimal for diagnostic accuracy studies (34,35). STARD (36)(37)(38) is a reporting guideline for diagnostic accuracy studies providing a checklist of essential items to ensure fully informative study reports. STARD was first published in 2003 and updated in 2015 and has been endorsed by hundreds of biomedical journals, indicating that they require or recommend adherence of diagnostic accuracy studies to STARD.",
+        ". We advocate for data through multicenter collaborative efforts to better understand the impact and downstream events (e.g., additional procedures, length and extent of surveillance, ultimate diagnosis, and/or stage shift in those diagnosed with cancer) for patients whose initial procedure yielded nonspecific pathological findings suggestive but not diagnostic.",
+        "ecorded and reported according to STARDguidelines.",
+        ". Better characterization of downstream patient events (e.g., need for salvage procedures, complications and/or hospitalizations, delays in diagnosis)",
+        ". Societal partnerships",
+        ". Weadvocate for data through multicenter collaborative efforts to better understand the impact and downstream events (e.g., additional/salvage procedures, extent of surveillance, ultimate diagnosis) for patients whose initial procedure yielded nonspecific pathological findings suggestive but not diagnostic of a benign etiology.",
+        "onsidered a speci /uniFB01 c benign diagnosis in the appropriate clinical context. However, a positive bacterial culture /uniFB01 nding on BAL /uniFB02 uid may occur in the presence of malignant cytopathology /uniFB01 ndings, and this /uniFB01 nding in isolation would not typically constitute a speci /uniFB01 c benign diagnosis (e.g., BAL /uniFB01 ndings designated post-procedure as a contaminant and not treated with appropriate antimicrobial treatment). Ultimately, transparent reporting is essential to ensure fair comparisons and pooling of results.",
+        "ata collection and continued advances in diagnostic testing of small biopsy samples. Werecognize that bronchoscopy results may not all /uniFB01 t neatly into the proposed boxes, which is why clinical context should be considered and transparently reported. Figure 2 illustrates the classi /uniFB01 cation of biopsy results into diagnostic and nondiagnostic categories.",
+        "edicine and extend to surgery and other interventional /uniFB01 elds (42).",
+        "utcomes (48). The goal is to prepare for de /uniFB01 nitive evaluation in the assessment stage (3), ideally through randomized controlled trials (RCTs) or comprehensive protocoldriven observational studies when an RCT is not feasible (e.g., quasiexperimental study designs such as interrupted time series or propensity score -matching analyses). The long-term stage (4) focuses on surveillance of rare adverse events and effectiveness. Disease-based registries may be best suited to provide an understanding of variations in patient selection for various procedures (49). The IDEAL framework thus provides important practical guidance for evaluation of innovation throughout the total product life cycle (50).",
+        "Addition of a preclinical phase 0 for device development (47).",
+        "y diagnostic outcomes alone. Patientcentered outcomes (e.g., impact of bronchoscopic procedure on patient trajectory, including the need for additional invasive procedures) and patient-reported outcomes (e.g., patient ' s willingness to have a repeat procedure) should be incorporated into studies of advanced diagnostic bronchoscopy. The type and severity of complications also guide decision making. Complication de /uniFB01 nitions should be outlined a priori . When available, standardized de /uniFB01 nitions of complications facilitate uniform reporting and meaningful pooling of data (57).",
+        "rom AbbVie, AstraZeneca, Bristol Myers Squibb, Eli Lilly, Erbe GmBH, Genentech, Janssen, Merus, Roche AG, Sanofi; served as speaker for Eli Lilly and Genentech. N.N. served on advisory board for Bristol Myers Squibb, Janssen, Lilly, MSD, Olympus; received research support from Amgen, AstraZeneca, Boehringer Ingelheim, Bristol Myers Squibb, EQRx, FujiFilm, Guardant Health, Intuitive, Janssen, Lilly, Merck Sharp & Dohme, Olympus, OncLive, PeerVoice; served as speaker for Amgen and AstraZeneca. N.J.P. served as consultant for Olympus America. C.R.S. employee of U.S. Department of Veterans Affairs; served on advisory board for bioAffinity Technologies; served as consultant for Bristol Myers Squibb; received research support from American Cancer Society, Biodesix, NIH, U.S. Department of Veterans Affairs; served as speaker for American College of Chest Physicians, CHEST, National Comprehensive Cancer Network; received travel support from American Cancer Society, Florida Society of",
+        "esions. a 5-year institutional experience. Ann Am Thorac Soc 2014;11: 578 -582."
+      ],
+      "csv_path": "/tmp/medparse_api_vel788dj/tables/Guideline_ATS_diagnostic_yield_table03.csv",
+      "width_px": null,
+      "height_px": null
+    }
+  ],
+  "recommendations": [
+    {
+      "id": "R1",
+      "number": 1,
+      "text": "There is considerable variation in how diagnostic yield is calculated across published studies. It is recommended that a strict definition of diagnostic yield be used. The numerator should include all patients with peripheral pulmonary nodules in whom the result of a minimally invasive diagnostic procedure establishes a specific benign or malignant diagnosis that is sufficient to inform patient care, whereas the denominator should include all patients in whom the minimally invasive procedure was attempted or performed. All meetings were conducted in virtual (www.zoom.com) or hybrid format. An initial meeting was held in July 2022 to introduce the project and assign subgroups and tasks. Between September and November 2022, three workgroup meetings were held to tackle the challenges of technology evaluation and introduction in various healthcare settings, improved reporting of diagnostic accuracy studies, and optimal study designs. After these discussions, the cochairs developed summary statements (definition of outcomes and study designs, which were circulated for comments, and revisions were made on the basis of panel suggestions before voting. Voting proceeded according to a modified Delphi process. Participants anonymously voted virtually (or by e-mail) to state their agreement or disagreement, using a 5-point Likert scale (strongly disagree, somewhat disagree, neither agree nor disagree, somewhat agree, strongly agree. Responses were scored agree (strongly agree, somewhat agree, neutral (I neither agree or disagree, or disagree (strongly disagree, somewhat disagree. If consensus had not been reached during the first round, the plan was to review feedback and re-present the statements. All data were collected prospectively using the zoom.com software (virtual voting, which was exported into Microsoft Excel (Microsoft) for analysis after adding e-mail vote results. Consensus was defined a priori as a greater than or equal to 80% agreement response to a question. The investigation of peripheral lung nodules seeks to achieve early detection of lung cancer or other malignancies but may also yield alternative noncancer diagnoses (e.g., granulomatous inflammation or other benign lesions, which must be clearly distinguished from nonspecific biopsy results. The use of variable definitions of diagnostic yield has plagued the advanced diagnostic bronchoscopy literature (10,14, making valid comparisons of innovative technologies across studies difficult if not impossible. In the numerator, some studies only include procedures that resulted in a specific malignant or benign pathological diagnosis (i.e., \"strict\" definition of diagnostic yield, whereas others also include procedures with nonspecific benign diagnoses that turn out to be nonmalignant at follow-up (i.e., \"intermediate\" definition) or even nondiagnostic procedures (e.g., normal lung tissue) that turn out to be nonmalignant at follow-up (i.e., \"liberal\" definition. It is particularly problematic that the so-called intermediate and liberal definitions of diagnostic yield incorporate clinical follow-up into the index bronchoscopy result. A recent systematic review on the diagnostic performance of navigation bronchoscopy in peripheral lung nodules included With the present recommendation comes a significant shift in perspective and recommendation on the length of follow-up needed for bronchoscopic studies. Historically a follow-up time of 12-24 months has been incorporated into the \"intermediate\" and \"liberal\" definitions of diagnostic yield discussed above. By mandating a strict definition of diagnostic yield, the procedure results are finalized at the time of pathology/microbiology result reporting, potentially allowing prompt reporting of preliminary investigative procedural results. Sufficient follow-up, however, is still required as part of the definition of the refence standard and the assessment of deviceand procedure-related complications. Adequate follow-up will also inform efforts to better understand the implications of nondiagnostic bronchoscopy procedures but should no longer be incorporated into the factors needed for diagnostic yield reporting. Statement Statement b. We advocate for data through multicenter collaborative efforts to better understand the impact and downstream events (e.g., additional procedures, length and extent of surveillance, ultimate diagnosis, and/or stage shift in those diagnosed with cancer) for patients whose initial procedure yielded nonspecific pathological findings suggestive but not diagnostic. Statement",
+      "grade": null,
+      "sections": [
+        {
+          "index": 0,
+          "title": ""
+        },
+        {
+          "index": 2,
+          "title": "Methods"
+        },
+        {
+          "index": 4,
+          "title": "Definition of Outcomes"
+        },
+        {
+          "index": 11,
+          "title": "Members of the subcommittee are as follows:"
+        }
+      ],
+      "supporting_sections": [],
+      "supplementary_text": [
+        "One-third of panelists were women, and one-third were from outside the United States.",
+        "There is considerable variation in how diagnostic yield is calculated across published studies. It is recommended that a strict definition of diagnostic yield be used. The numerator should include all patients with peripheral pulmonary nodules in whom the result of a minimally invasive diagnostic procedure establishes a specific benign or malignant diagnosis that is sufficient to inform patient care, and the denominator should include all patients in whom the minimally invasive procedure was attempted or performed.",
+        "summarizes the proposed definitions for diagnostic outcome measures. We recommend against using so-called intermediate or liberal definitions of diagnostic yield, because a level of uncertainty remains in patients without a specific diagnosis at the time the procedure is performed (i.e., some patients with a \"nonspecific diagnosis: benign\" or \"nondiagnostic\" result may be malignant after follow-up, and these procedures should not be considered as diagnostic.",
+        "36,37. On the basis of a complete flowchart, readers can determine at a glance how often bronchoscopy failed to localize and/or sample the nodule or was diagnostic (i.e., specific malignant or benign diagnosis. Readers can also assess how often a reference standard was performed and what the reference standard results were (i.e., malignant, benign, or indeterminate. This information will allow readers to (recalculate the remaining risk of malignancy in patients whose bronchoscopy yielded a nonspecific or nondiagnostic result.",
+        "Standards for Reporting Diagnostic Accuracy Studies-inspired flow diagram, adapted for studies of minimally invasive diagnostic procedures for peripheral pulmonary nodules (36,37. Diagnostic yield is calculated as the sum of \"specific diagnosis: malignant\" and \"specific diagnosis: benign\" (in the numerator, divided by \"procedures performed\" (in the denominator. The remaining risk of malignancy in those without a specific diagnosis is subsequently calculated as the sum of procedures with a \"final diagnosis: malignant\" in those with a \"nondiagnostic\" result (in the numerator, divided by the sum of patients with a \"reference standard available\" in the \"nondiagnostic\" result group (in the denominator. The reference standard in many cases is clinicoradiological follow-up.",
+        "GERARD A. SILVESTRI, M.D., M.S. ( Co-Chair )",
+        "Division of Respiratory Medicine, McGill University Health Centre, Montreal, Quebec, Canada;"
+      ]
+    },
+    {
+      "id": "R2",
+      "number": 2,
+      "text": "Typical diagnostic accuracy measures (sensitivity, specificity, positive predictive value, and negative predictive value) refer to the ability of a test to identify a single target condition (e.g., presence or absence of lung cancer. In contrast, peripheral pulmonary nodules may be caused by a range of benign and malignant conditions. Therefore, when evaluating the performance of a test for peripheral pulmonary nodules, diagnostic yield is a more informative and recommended primary outcome, because it refers to the ability of a test to establish a specific pathological diagnosis that is sufficient to inform patient care. All series reporting diagnostic accuracy measures should clearly report the prevalence of malignancy to enhance ease of comparison across studies. Typical diagnostic accuracy measures such as sensitivity and negative predictive value are important in estimating the The likelihood that a patient has the target disease (e.g., cancer, given a positive test result (i.e., malignancy based on bronchoscopy samples) Negative predictive value The likelihood that a patient does not have the target disease (e.g., cancer, given a negative test result (i.e., no evidence of lung malignancy based on bronchoscopy samples) Diagnostic accuracy ‡ The proportion of all test results that are correct for the condition of interest. For example, all correctly identified patients with or without cancer, divided by all patients who underwent advanced diagnostic bronchoscopy *Diagnostic accuracy measures include sensitivity, specificity, positive predictive value, and negative predictive value. Please refer to epidemiology textbooks for calculation of these measures using classical ‡ Diagnostic accuracy has limited clinical usefulness, because it is an aggregate measure that varies with disease prevalence and within which key information on sensitivity and predictive value is buried (61. Incomplete reporting of studies is considered a major source of avoidable research waste (31. When crucial information is missing from a study report, the study may not be reproducible, and the identification of potential sources of bias is hampered (32,33. Unfortunately, reporting is often suboptimal for diagnostic accuracy studies (34,35. STARD (363738) is a reporting guideline for diagnostic accuracy studies providing a checklist of essential items to ensure fully informative study reports. STARD was first published in 2003 and updated in 2015 and has been endorsed by hundreds of biomedical journals, indicating that they require or recommend adherence of diagnostic accuracy studies to STARD. Studies of advanced bronchoscopy targeting the lung periphery should adhere to STARD to allow comparisons between studies and technologies (36,37. This includes clear reporting of which patients were included in the numerator and denominator of the diagnostic yield calculation (STARD 2015, item 14, details on the reference standard used (item 10b, and what was done in case of indeterminate or missing bronchoscopy or reference standard results (items Clinical decision making downstream of the index diagnostic bronchoscopy may provide additional clarity in adjudicating bronchoscopy results as diagnostic versus nondiagnostic. Consider a patient with nonspecific inflammation in bronchoscopy samples referred for surgical resection due to a high suspicion of malignancy. Even if the surgical pathology reveals a benign nodule etiology, the bronchoscopy result cannot be considered diagnostic, because no patient would be referred to surgery had the bronchoscopy convincingly confirmed a benign lung nodule etiology. A bronchoscopy that does not provide a specific benign or malignant result sufficient to inform patient care simply cannot be considered a diagnostic procedure. data collection and continued advances in diagnostic testing of small biopsy samples. Werecognize that bronchoscopy results may not all /uniFB01 t neatly into the proposed boxes, which is why clinical context should be considered and transparently reported. Figure Clinical decision making downstream of the index diagnostic bronchoscopy may provide additional clarity in adjudicating bronchoscopy results as diagnostic versus nondiagnostic. Consider a patient with nonspeci /uniFB01 c in /uniFB02 ammation in bronchoscopy samples referred for surgical resection due to a high suspicion of malignancy. Even if the surgical pathology reveals a benign nodule etiology, the bronchoscopy result cannot be considered diagnostic, because no patient would be referred to surgery had the bronchoscopy convincingly con /uniFB01 rmed a benign lung nodule etiology. A bronchoscopy that does not provide a speci /uniFB01 c benign or malignant result suf /uniFB01 cient to inform patient care simply cannot be considered a diagnostic procedure. medicine and extend to surgery and other interventional /uniFB01 elds (42. The IDEAL Collaboration stems from a series of exchanges between surgeons and methodologists at Balliol College, Oxford, that examined the dif /uniFB01 culties of conducting high-quality trials in surgery and potential solutions (43 -45. The IDEAL framework identi /uniFB01 es the various stages of (surgical) innovation (idea, development, exploration, assessment, and long-term study) and proposes optimal study designs for conducting evaluation at each stage. Table",
+      "grade": null,
+      "sections": [
+        {
+          "index": 0,
+          "title": ""
+        },
+        {
+          "index": 4,
+          "title": "Definition of Outcomes"
+        },
+        {
+          "index": 10,
+          "title": "AMERICAN THORACIC SOCIETY DOCUMENTS"
+        },
+        {
+          "index": 11,
+          "title": "Members of the subcommittee are as follows:"
+        }
+      ],
+      "supporting_sections": [],
+      "supplementary_text": [
+        "Typical diagnostic accuracy measures (sensitivity, specificity, positive predictive value, and negative predictive value) refer to the ability of a test to identify a single target condition (e.g., presence or absence of lung cancer. In contrast, peripheral pulmonary nodules may be caused by a range of benign and malignant conditions. Therefore, when evaluating the performance of a test for peripheral pulmonary nodules, diagnostic yield is a more informative and recommended primary outcome, because it refers to the ability of a test to establish a specific pathological diagnosis that is sufficient to inform patient care. All series reporting diagnostic accuracy measures should clearly report the prevalence of malignancy to enhance ease of comparison across studies. Diagnostic yield will vary significantly according to the underlying prevalence of malignant disease, because establishing a pathological diagnosis of malignancy is generally more straightforward than establishing a specific, benign pathological diagnosis. Therefore, all series should clearly report the prevalence of malignancy to enhance ease of comparison across studies.",
+        "tables (59, 60. † In studies of diagnostic bronchoscopy procedures, specificity and positive predictive value are often considered 100% (i.e., no false-positive malignancy results, and a reference standard is generally not systematically performed in patients with positive test results, making the reporting of these outcomes somewhat redundant.",
+        "summarizes what constitutes a specific malignant or benign diagnosis versus a nondiagnostic procedure result. Nondiagnostic results refer to specimens showing only blood, necrosis, normal lung parenchyma, or insufficient tissue to make any diagnosis (39. The findings of atypia and nonspecific pathological findings, including nonspecific inflammation, also constitute nondiagnostic results. These definitions may evolve through thoughtful data collection and continued advances in diagnostic testing of small biopsy samples. We recognize that bronchoscopy results may not all fit neatly into the proposed boxes, which is why clinical context should be considered and transparently reported. Figure",
+        "illustrates the classification of biopsy results into diagnostic and nondiagnostic categories.",
+        "summarizes what constitutes a speci /uniFB01 c malignant or benign diagnosis versus a nondiagnostic procedure result. Nondiagnostic results refer to specimens showing only blood, necrosis, normal lung parenchyma, or insuf /uniFB01 cient tissue to make any diagnosis (39. The /uniFB01 ndings of atypia and nonspeci /uniFB01 c pathological /uniFB01 ndings, including nonspeci /uniFB01 c in /uniFB02 ammation, also constitute nondiagnostic results. These de /uniFB01 nitions may evolve through thoughtful",
+        "illustrates the classi /uniFB01 cation of biopsy results into diagnostic and nondiagnostic categories.",
+        "LONNY B. YARMUS, D.O., M.B.A. ( Co-Chair )",
+        "PETER B. ILLEI, M.D.",
+        "Medical University of South Carolina, Charleston, South Carolina;"
+      ]
+    },
+    {
+      "id": "R3",
+      "number": 3,
+      "text": "Studies on the diagnostic performance of advanced bronchoscopy techniques should be reported according to the STARD (Standards for Reporting Diagnostic Accuracy Studies) guidelines, with inclusion of a detailed flow diagram. A STARD-inspired flowchart, adapted for studies of minimally invasive diagnostic procedures for peripheral pulmonary nodules, is proposed. Lack of evidence for improved patient outcomes is a barrier to the introduction of novel technology in both \"pluralistic\" and single-payer systems. The process of introduction of new technology may vary, depending on the country and healthcare system. In general, however, the process typically takes several steps, informed by knowledge derived from clinical and health economics research. New medical technologies should undergo rigorous clinical testing and evaluation to establish their safety and effectiveness. Regulatory authorities must then review evidence to ensure the technology meets the necessary standards for medical use. Regulatory approval is typically followed by a health technology assessment (28, which considers the best available evidence on the clinical effectiveness, safety, and cost-effectiveness of the novel technology compared with existing options. Poor-quality research can undermine decision makers' confidence in the safety, effectiveness, and costeffectiveness of new technologies, making it more difficult to introduce these technologies in single-payer systems. This statement proposes a research framework to standardize the evaluation of advanced diagnostic bronchoscopy techniques for peripheral lung lesions and ultimately provide the level of evidence required for successful and rational integration of novel technologies into clinical practice. Specifically, we propose a robust consensus definition of diagnostic yield and discuss potential study designs for evaluation of novel bronchoscopy technology at various stages of introduction. Cost-effectiveness analyses are beyond the scope of this project, which aims to ensure that better effectiveness data are available before broad uptake of novel bronchoscopy techniques. Additional considerations include transparent reporting of relevant patient, operator, and procedural factors and the incorporation of patientreported outcomes into the evaluation of technological innovations. The idea stage (1) focuses on demonstrating whether the device can safely achieve its intended goal. Mandatory reporting of all \"first-in-human\" procedures is recommended, and anonymous reporting should be permitted to avoid repeated failures by others (46. The IDEAL-D framework, adapted for medical devices, adds a preclinical phase If an RCT is not feasible, alternative quasiexperimental study designs may be considered. Quasiexperimental study designs attempt to replicate RCTs by rendering treatment groups as similar as possible on all known confounders (53. Examples of quasiexperimental designs include interrupted time series with temporal controls, propensity score matching, regression discontinuity, and instrumental variables (48. Such prospective observational studies require careful design and planning, with robust measures to address potential biases, including selection bias. A nonrandomized controlled trial would compare a cohort of patients evaluated with a novel advanced bronchoscopy platform with a concurrent group of patients undergoing a standard diagnostic intervention. Standardized data collection with control for all known confounders is required to address selection bias. Propensity score matching, which balances study groups on the likelihood of receiving an intervention to reduce confounding by indication, may be considered (54,55. Interrupted time series is an alternative quasiexperimental study design (56) whereby key outcomes are measured before and after the introduction of a novel intervention (i.e., the interruption. Interrupted time series with a control group for time are preferred to avoid biases due to temporal trends. Here again, analysis requires careful adjustment for key patient and/or peripheral pulmonary lesion characteristics. Statement The idea stage (1) focuses on demonstrating whether the device can safely achieve its intended goal. Mandatory reporting of all ' /uniFB01 rst-in-human ' procedures is recommended, and anonymous reporting should be permitted to avoid repeated failures by others (46. The IDEAL-D framework, adapted for medical devices, adds a preclinical phase Beyond clearly de /uniFB01 ned and transparently reported diagnostic outcome measures, relevant patient, operator, and procedural factors should be delineated at the study outset and reported. The STARD guidelines provide guidance for reporting of these important factors, with a complete checklist available at equator-network.org/ reporting-guidelines/stard/. These include patient characteristics, with reporting of both individual pretest probability of malignancy and prevalence of malignancy, underlying lung disease, and lung nodule characteristics known to be associated with diagnostic yield (size, anatomic location, presence of a bronchus sign, etc.. Operator factors include learning curve and diagnostic yield before formal evaluation of the new technology, as well as procedural volume of operators/centers reporting their experience. Relevant procedural factors include the use of moderate sedation versus general anesthesia, availability of rapid on-site *Addition of a preclinical phase",
+      "grade": null,
+      "sections": [
+        {
+          "index": 0,
+          "title": ""
+        },
+        {
+          "index": 1,
+          "title": "Introduction"
+        },
+        {
+          "index": 5,
+          "title": "Study Designs"
+        },
+        {
+          "index": 10,
+          "title": "AMERICAN THORACIC SOCIETY DOCUMENTS"
+        },
+        {
+          "index": 11,
+          "title": "Members of the subcommittee are as follows:"
+        }
+      ],
+      "supporting_sections": [],
+      "supplementary_text": [
+        "devices, defined as devices that \"usually sustain or support life, are implanted, or present potential unreasonable risk of illness or injury,\" such as implantable cardiac defibrillators. Thus, diagnostic bronchoscopy platforms have not traditionally required clinical studies or evidence of improved patient outcomes for commercialization, shifting the responsibility for providing useful clinical data from medical device manufacturers to clinicians (27.",
+        "outlines key aspects of the IDEAL framework, with examples drawn from the advanced diagnostic bronchoscopy literature.",
+        "are lacking from the bronchoscopy evidence landscape. The preferred study design for definitive evaluation is an RCT, although the window of opportunity for conducting one may sometimes seem narrow. The smaller the incremental impact of novel technology, the greater the need for a randomized trial (49,51. The major benefit of an RCT is minimization of bias, because random allocation ensures balance in both known and unknown confounders affecting the outcomes) of interest. Comparison needs not be limited to alternative advanced diagnostic bronchoscopy techniques but should consider the broader standard of care for investigation of peripheral pulmonary lesions. An example would be comparison of novel (robotic) bronchoscopy platforms with CT-guided TTNBs, which are associated with higher diagnostic yields for peripheral pulmonary lesions (without the need for general anesthesia) but higher complication rates (52.",
+        "are lacking from the bronchoscopy evidence landscape. The preferred study design for de /uniFB01 nitive evaluation is an RCT, although the window of opportunity for conducting one may sometimes seem narrow. The smaller the incremental impact of novel technology, the greater the need for a randomized trial (49, 51. The major bene /uniFB01 t of an RCT is minimization of bias, because random allocation ensures balance",
+        "NISHA D. ALMEIDA, PH.D.",
+        "DANIEL A. KOREVAAR, M.D., PH.D.",
+        "Johns Hopkins University School of Medicine, Baltimore, Maryland;"
+      ]
+    },
+    {
+      "id": "R4",
+      "number": 4,
+      "text": "Diagnostic outcome reporting of bronchoscopic studies targeting the lung periphery should be standardized to allow comparison and/or pooling of results across studies. Reporting of results should be detailed, transparent, and allow calculation of diagnostic yield using the strict definition",
+      "grade": null,
+      "sections": [
+        {
+          "index": 0,
+          "title": ""
+        },
+        {
+          "index": 11,
+          "title": "Members of the subcommittee are as follows:"
+        }
+      ],
+      "supporting_sections": [],
+      "supplementary_text": [
+        "ALEX CHEN, M.D.",
+        "Division of Clinical Epidemiology, McGill University, and Health Technology Assessment Unit, McGill University Health Centre, Montreal, Quebec, Canada;"
+      ]
+    },
+    {
+      "id": "R5",
+      "number": 5,
+      "text": "Minimally invasive diagnostic procedures targeting the lung periphery include advanced diagnostic bronchoscopy procedures and computed tomography (CT-guided transthoracic biopsies. Diagnostic outcome reporting of CT-guided transthoracic biopsies targeting the lung periphery should be similarly standardized to allow comparison and/or pooling of results across studies. Reporting of results should be detailed, transparent, and allow calculation of diagnostic yield using the strict definition. The use of variable definitions of diagnostic yield with insufficient clarity in reporting is not limited to studies of advanced diagnostic bronchoscopy for peripheral pulmonary lesions. A recent meta-analysis pooled 24,668 transthoracic needle biopsies (TTNBs) in 106 studies and reported an incidence of nondiagnostic biopsies of 6.8% (95% confidence interval, 6-7.6%) 39. The findings of malignancy, atypical cells, specific benign results (6.9%, and nonspecific benign results (14.2%) were considered separate categories. The authors considered the following specific benign diagnoses: benign lung tumors, infectious pneumonia, pulmonary tuberculosis, silicosis, vasculitis, or \"others.\" Nonspecific benign disease included acute or chronic nonspecific inflammation, granuloma, focal fibrosis, or a specimen without evidence of malignancy. The proportion of nodules proven malignant at follow-up ranged from 1.5% for specific benign results to 20.6% for nonspecific benign results and up to 59.3% of nondiagnostic biopsies. Simple exclusion of nondiagnostic results from diagnostic accuracy measure calculations is inappropriate, because it leads to an overestimation of diagnostic accuracy; including nondiagnostic results decreased sensitivity by 4.5% and specificity by 10.7%, on average (39. Future studies of transthoracic needle aspiration and/or TTNB should be reported according to clear definitions of diagnostic outcomes and with sufficient granularity to allow accurate comparisons of diagnostic yield. Statement",
+      "grade": null,
+      "sections": [
+        {
+          "index": 0,
+          "title": ""
+        },
+        {
+          "index": 4,
+          "title": "Definition of Outcomes"
+        },
+        {
+          "index": 11,
+          "title": "Members of the subcommittee are as follows:"
+        }
+      ],
+      "supporting_sections": [],
+      "supplementary_text": [
+        "Minimally invasive diagnostic procedures targeting the lung periphery include advanced diagnostic bronchoscopy procedures and CT-guided transthoracic biopsies. Diagnostic outcome reporting of CT-guided transthoracic biopsies targeting the lung periphery should be similarly standardized to allow comparison and/or pooling of results across studies. Reporting of results should be detailed, transparent, and allow calculation of diagnostic yield using the strict definition.",
+        "YARON B. GESTHALTER, M.D.",
+        "Washington University School of Medicine, St. Louis, Missouri;"
+      ]
+    },
+    {
+      "id": "R6",
+      "number": 6,
+      "text": "For determination of sensitivity for malignancy, clinical or radiographic follow-up that occurs after the bronchoscopy or CT-guided biopsy is completed and pathology/microbiology results are available may be incorporated into the definition of the reference standard to determine whether the peripheral pulmonary nodule targeted for biopsy was indeed benign or malignant. This clinical follow-up should span a minimum of",
+      "grade": null,
+      "sections": [
+        {
+          "index": 0,
+          "title": ""
+        },
+        {
+          "index": 4,
+          "title": "Definition of Outcomes"
+        },
+        {
+          "index": 11,
+          "title": "Members of the subcommittee are as follows:"
+        }
+      ],
+      "supporting_sections": [],
+      "supplementary_text": [
+        "For determination of sensitivity for malignancy, clinical or radiographic follow-up that occurs after the bronchoscopy or CT-guided biopsy is completed and pathology/microbiology results are available may be incorporated into the definition of the reference standard to determine whether the peripheral pulmonary nodule targeted for biopsy was indeed benign or malignant. This clinical follow-up should span a minimum of",
+        "CHRIS R. GILBERT, D.O., M.S.",
+        "University of California, San Francisco, San Francisco, California;"
+      ]
+    },
+    {
+      "id": "R7",
+      "number": 7,
+      "text": "Nonspecific pathological findings suggestive but not diagnostic of malignancy (e.g., atypia, suspicious cells) are considered nondiagnostic in the calculation of diagnostic yield. a. There is a need to better understand patient outcomes after nonspecific pathological findings suggestive but not diagnostic of malignancy. b. We advocate for data through multicenter collaborative efforts to better understand the impact and downstream events (e.g., additional procedures, length and extent of surveillance, ultimate diagnosis, and/or stage shift in those diagnosed with cancer) for patients whose initial procedure yielded nonspecific pathological findings suggestive but not diagnostic of malignancy. AMERICAN THORACIC SOCIETY DOCUMENTS Figure Amsterdam University Medical Centers, Amsterdam, the Netherlands",
+      "grade": null,
+      "sections": [
+        {
+          "index": 0,
+          "title": ""
+        },
+        {
+          "index": 4,
+          "title": "Definition of Outcomes"
+        },
+        {
+          "index": 11,
+          "title": "Members of the subcommittee are as follows:"
+        }
+      ],
+      "supporting_sections": [],
+      "supplementary_text": [
+        "Nonspecific pathological findings suggestive but not diagnostic of malignancy (e.g., atypia, suspicious cells) are considered nondiagnostic in the calculation of diagnostic yield. a. There is a need to better understand patient outcomes after nonspecific pathological findings suggestive but not diagnostic of malignancy.",
+        "FABIEN MALDONADO, M.D., M.SC.",
+        "Department of Respiratory Medicine,"
+      ]
+    },
+    {
+      "id": "R8",
+      "number": 8,
+      "text": "Nonspecific pathological findings suggestive but not diagnostic of specific benign etiologies (e.g., nonspecific inflammation) are considered nondiagnostic in the calculation of diagnostic yield. a. There is a need to better understand patient outcomes after nonspecific pathological findings suggestive but not diagnostic of a specific benign etiology. b. We advocate for data through multicenter collaborative efforts to better understand the impact and downstream events (e.g., additional/salvage procedures, extent of surveillance, ultimate diagnosis) for patients whose initial procedure yielded nonspecific pathological findings suggestive but not diagnostic of a benign etiology. Panel members extensively discussed the question of what constitutes a diagnostic bronchoscopy procedure, particularly as relates to specific benign diagnoses. There was agreement that less common but specific benign pathological diagnoses, such as benign lung tumors (e.g., hamartoma, lipoma, vasculitis, or amyloidosis, constituted specific benign diagnoses. Similarly, cytopathological findings suggestive of a mycotic infection or tuberculosis constitute specific benign diagnoses. Cytopathological findings suggestive of bacterial infection in the presence of congruent culture results may also be considered a specific benign diagnosis in the appropriate clinical context. However, a positive bacterial culture finding on BAL fluid may occur in the presence of malignant cytopathology findings, and this finding in isolation would not typically constitute a specific benign diagnosis (e.g., BAL findings designated post-procedure as a contaminant and not treated with appropriate antimicrobial treatment. Ultimately, transparent reporting is essential to ensure fair comparisons and pooling of results. The finding of granulomatous inflammation, whether necrotizing or nonnecrotizing, is also believed to constitute a specific benign diagnosis. In the systematic review by Chae and colleagues, granulomatous inflammation was considered a nonspecific benign result, together with acute or chronic nonspecific inflammation and focal fibrosis (39. Kim and colleagues, however, reviewed nonspecific pathological results in 226 TTNB samples and reported that the finding of granulomatous inflammation was a robust indicator of a true negative biopsy result, with no diagnoses of cancer among the b. Weadvocate for data through multicenter collaborative efforts to better understand the impact and downstream events (e.g., additional/salvage procedures, extent of surveillance, ultimate diagnosis) for patients whose initial procedure yielded nonspecific pathological findings suggestive but not diagnostic of a benign etiology. Panel members extensively discussed the question of what constitutes a diagnostic bronchoscopy procedure, particularly as relates to speci /uniFB01 c benign diagnoses. There was agreement that less common but speci /uniFB01 c benign pathological diagnoses, such as benign lung tumors (e.g., hamartoma, lipoma, vasculitis, or amyloidosis, constituted speci /uniFB01 c benign diagnoses. Similarly, cytopathological /uniFB01 ndings suggestive of a mycotic infection or tuberculosis constitute speci /uniFB01 c benign diagnoses. Cytopathological /uniFB01 ndings suggestive of bacterial infection in the presence of congruent culture results may also be considered a speci /uniFB01 c benign diagnosis in the appropriate clinical context. However, a positive bacterial culture /uniFB01 nding on BAL /uniFB02 uid may occur in the presence of malignant cytopathology /uniFB01 ndings, and this /uniFB01 nding in isolation would not typically constitute a speci /uniFB01 c benign diagnosis (e.g., BAL /uniFB01 ndings designated post-procedure as a contaminant and not treated with appropriate antimicrobial treatment. Ultimately, transparent reporting is essential to ensure fair comparisons and pooling of results. The /uniFB01 nding of granulomatous in /uniFB02 ammation, whether necrotizing or nonnecrotizing, is also believed to constitute a speci /uniFB01 c benign diagnosis. In the systematic review by Chae and colleagues, granulomatous in /uniFB02 ammation was considered a nonspeci /uniFB01 c benign result, together with acute or chronic nonspeci /uniFB01 c in /uniFB02 ammation and focal /uniFB01 brosis (39. Kim and colleagues, however, reviewed nonspeci /uniFB01 c pathological results in 226 TTNB samples and reported that the /uniFB01 nding of granulomatous in /uniFB02 ammation was a robust indicator of a true negative biopsy result, with no diagnoses of cancer among the",
+      "grade": null,
+      "sections": [
+        {
+          "index": 0,
+          "title": ""
+        },
+        {
+          "index": 4,
+          "title": "Definition of Outcomes"
+        },
+        {
+          "index": 10,
+          "title": "AMERICAN THORACIC SOCIETY DOCUMENTS"
+        },
+        {
+          "index": 11,
+          "title": "Members of the subcommittee are as follows:"
+        }
+      ],
+      "supporting_sections": [],
+      "supplementary_text": [
+        "Nonspecific pathological findings suggestive but not diagnostic of specific benign etiologies (e.g., nonspecific inflammation) are considered nondiagnostic in the calculation of diagnostic yield. a. There is a need to better understand patient outcomes after nonspecific pathological findings suggestive but not diagnostic of a specific benign etiology. b. We advocate for data through multicenter collaborative efforts to better understand the impact and downstream events (e.g., additional/salvage procedures, extent of surveillance, ultimate diagnosis) for patients whose initial procedure yielded nonspecific pathological findings suggestive but not diagnostic of a benign etiology.",
+        "Nonspeci /uniFB01 c pathological /uniFB01 ndings suggestive but not diagnostic of speci /uniFB01 c benign etiologies (e.g., nonspeci /uniFB01 c in /uniFB02 ammation) are considered nondiagnostic in the calculation of diagnostic yield.",
+        "NEAL NAVANI, M.A, M.SC., PH.D.",
+        "Vanderbilt University Medical Center, Nashville, Tennessee;"
+      ]
+    },
+    {
+      "id": "R9",
+      "number": 9,
+      "text": "Different study designs may be most appropriate at various stages of innovation of new technologies focused on bronchoscopic peripheral lung nodule sampling. We propose adoption of the IDEAL (idea, development, exploration, assessment, long-term study) collaboration framework for evaluation of novel technology targeting the lung periphery. The evidence to support using current advanced diagnostic bronchoscopy techniques clinically remains weak overall, consisting mainly of single-center, retrospective series. The inherent challenges to robust evaluation of clinical innovations are not limited to interventional pulmonary The IDEAL Collaboration stems from a series of exchanges between surgeons and methodologists at Balliol College, Oxford, that examined the difficulties of conducting high-quality trials in surgery and potential solutions (434445. The IDEAL framework identifies the various stages of (surgical) innovation (idea, development, exploration, assessment, and long-term study) and proposes optimal study designs for conducting evaluation at each stage. Table",
+      "grade": null,
+      "sections": [
+        {
+          "index": 5,
+          "title": "Study Designs"
+        },
+        {
+          "index": 11,
+          "title": "Members of the subcommittee are as follows:"
+        }
+      ],
+      "supporting_sections": [],
+      "supplementary_text": [
+        "MARY M. PASQUINELLI, D.N.P.",
+        "UCL Respiratory, University College London, London, United Kingdom;"
+      ]
+    },
+    {
+      "id": "R10",
+      "number": 10,
+      "text": "Methodologically robust comparative studies, preferentially RCTs, are needed to adequately assess and validate minimally invasive diagnostic technologies targeting the lung periphery. There is broad recognition within the interventional pulmonology community of the need for higher-quality studies, particularly comparative effectiveness studies of different techniques. Robust studies in the assessment phase of evaluation (IDEAL stage",
+      "grade": null,
+      "sections": [
+        {
+          "index": 5,
+          "title": "Study Designs"
+        },
+        {
+          "index": 10,
+          "title": "AMERICAN THORACIC SOCIETY DOCUMENTS"
+        },
+        {
+          "index": 11,
+          "title": "Members of the subcommittee are as follows:"
+        }
+      ],
+      "supporting_sections": [],
+      "supplementary_text": [
+        "years of STARD. Radiology 2015;274:781 -789.",
+        "NICHOLAS J. PASTIS, M.D.",
+        "University of Illinois Chicago, Chicago, Illinois;"
+      ]
+    },
+    {
+      "id": "R11",
+      "number": 11,
+      "text": "Aside from clear diagnostic performance and safety outcomes as primary endpoints, additional methodological factors should be clearly established in the study protocols. Examples include setting of recruitment, patient selection, target characteristics, and other relevant factors related to the index test. These factors should be recorded and reported according to STARD guidelines. Beyond clearly defined and transparently reported diagnostic outcome measures, relevant patient, operator, and procedural factors should be delineated at the study outset and reported. The STARD guidelines provide guidance for reporting of these important factors, with a complete checklist available at equator-network.org/ reporting-guidelines/stard/. These include patient characteristics, with reporting of both individual pretest probability of malignancy and prevalence of malignancy, underlying lung disease, and lung nodule characteristics known to be associated with diagnostic yield (size, anatomic location, presence of a bronchus sign, etc.. Operator factors include learning curve and diagnostic yield before formal evaluation of the new technology, as well as procedural volume of operators/centers reporting their experience. Relevant procedural factors include the use of moderate sedation versus general anesthesia, availability of rapid on-site evaluation by a cytopathologist, and use of imaging adjuncts (e.g., radial endobronchial ultrasound, cone-beam CT. Procedure duration and personnel and equipment requirements (including disposables) are additional relevant factors that relate to feasibility and cost of the intervention and warrant reporting. Statement",
+      "grade": null,
+      "sections": [
+        {
+          "index": 5,
+          "title": "Study Designs"
+        },
+        {
+          "index": 11,
+          "title": "Members of the subcommittee are as follows:"
+        }
+      ],
+      "supporting_sections": [],
+      "supplementary_text": [
+        "M. PATRICIA RIVERA, M.D.",
+        "The Ohio State University, Colombus, Ohio;"
+      ]
+    }
+  ],
+  "validation": {
+    "checks": {
+      "has_title": true,
+      "has_authors": true,
+      "authors_are_valid": true,
+      "has_sections": true,
+      "sections_have_content": true,
+      "has_tables": true,
+      "tables_have_captions": true,
+      "tables_have_data": true,
+      "has_figures": true,
+      "figures_have_captions": true,
+      "figures_have_images": true,
+      "has_entities": true,
+      "has_statistics": true,
+      "has_recommendations": true,
+      "has_references": true,
+      "refs_structured": true,
+      "refs_enriched_some": true,
+      "references_enriched": true,
+      "has_references_csv": false,
+      "has_cross_refs": false,
+      "umls_links": true,
+      "figures_textual_count": 0
+    },
+    "completeness_score": 91,
+    "is_valid": true,
+    "issues": [],
+    "warnings": [],
+    "quality_level": "excellent"
+  }
 }

@@ -184,6 +184,21 @@ class MedparseHTTPAdapter(MedparseTransport):
                 raise MedparseTransportError("Medparse /extract response was not JSON") from exc
             return _ensure_extract_response(cast(Dict[str, Any], data))
 
+        def _form_attempt() -> ExtractResponse:
+            payload = _build_json_payload()
+            try:
+                response = self._request("POST", "/extract", data=payload)
+            except MedparseTransportError as exc:  # pragma: no cover - defensive fallback
+                keys = ", ".join(sorted(payload.keys())) or "<none>"
+                raise MedparseTransportError(
+                    f"{exc} (Medparse /extract form payload keys: {keys})"
+                ) from exc
+            try:
+                data = response.json()
+            except ValueError as exc:
+                raise MedparseTransportError("Medparse /extract response was not JSON") from exc
+            return _ensure_extract_response(cast(Dict[str, Any], data))
+
         def _multipart_attempt(field_name: str) -> ExtractResponse:
             if not bytes_b64:
                 raise MedparseTransportError("multipart extract requires bytes_b64 in the request payload")
@@ -259,6 +274,11 @@ class MedparseHTTPAdapter(MedparseTransport):
         except MedparseTransportError as exc:
             if not _is_unprocessable(exc):
                 raise
+            try:
+                return _form_attempt()
+            except MedparseTransportError as exc_form:
+                if not _is_unprocessable(exc_form):
+                    raise
             return _multipart_sequence()
 
 
