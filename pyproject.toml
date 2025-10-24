@@ -7,7 +7,7 @@ name = "ip-assist-lite"
 version = "0.1.0"
 description = "End-to-end medical PDF parsing and normalization pipeline."
 readme = "README.md"
-requires-python = ">=3.11,<3.13"
+requires-python = ">=3.11,<3.14"
 authors = [{name = "Medparse Team"}]
 dependencies = [
     "pydantic>=2.0.0",
@@ -42,12 +42,9 @@ graph = [
     "neo4j>=5.20",
 ]
 
-[tool.setuptools]
-package-dir = {"": "src"}
-
 [tool.setuptools.packages.find]
-where = ["src"]
-include = ["*"]
+where = ["."]
+include = ["medparse*", "src*"]
 
 [tool.black]
 line-length = 100
@@ -88,3 +85,4 @@ fail_under = 80
 
 [project.scripts]
 ipa_ingest = "jobs.ingest_documents:main"
+medparse = "medparse.cli:run"

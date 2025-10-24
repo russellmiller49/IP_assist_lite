@@ -1,0 +1,104 @@
+{
+  "doc_id": "d25837c7-65da-4e33-9a13-8ea033e1ce32",
+  "doc_type": "ifu",
+  "source_file": "/home/rjm/projects/IP_assist_lite/data/Input pdfs/IFUs/pdf/85100-172_ERBE_EN_Units_and_modules__D080643.pdf",
+  "page_count": 16,
+  "extraction_timestamp": "2025-10-24T20:59:16.119323",
+  "extraction_version": "v1.0.0",
+  "manufacturer": null,
+  "product_name": null,
+  "part_number": null,
+  "revision": null,
+  "publication_date": "2025-05-01",
+  "model": null,
+  "software_versions": [],
+  "indications_for_use": null,
+  "intended_use": null,
+  "intended_user": null,
+  "intended_patient_population": null,
+  "contraindications": [],
+  "adverse_events": [],
+  "safety_blocks": [],
+  "tables": [
+    {
+      "title": "VIO® 3",
+      "headers": [
+        "VIO® 3",
+        "",
+        ""
+      ],
+      "rows": [
+        [
+          "",
+          "No. 10160-000",
+          ""
+        ],
+        [
+          "",
+          "CUT",
+          "COAG"
+        ],
+        [
+          "",
+          "auto CUT high CUT dry CUT thermo SECT auto CUT bipolar high CUT bipolar endo CUT Q endo CUT I",
+          "precise SECT swift COAG soft COAG forced COAG spray COAG twin COAG soft COAG bipolar forced COAG bipolar thermo SEAL forced APC pulsed APC precise APC"
+        ]
+      ],
+      "page": 4
+    },
+    {
+      "title": "Socket modules No.",
+      "headers": [
+        "Socket modules",
+        "No."
+      ],
+      "rows": [
+        [
+          "MF-U, as an upgrade kit",
+          "20160-005"
+        ],
+        [
+          "MF-0, as an upgrade kit",
+          "20160-004"
+        ],
+        [
+          "MO 3 Pin-9/5, as an upgrade kit",
+          "20160-001"
+        ],
+        [
+          "MO 3 Pin-Bovie, as an upgrade kit",
+          "20160-002"
+        ],
+        [
+          "BI 2 Pin 22-28-8/4, as an upgrade kit",
+          "20160-003"
+        ],
+        [
+          "NE 6 - NE 2 Pin, as an upgrade kit",
+          "20160-006"
+        ]
+      ],
+      "page": 4
+    }
+  ],
+  "references": [],
+  "_metrics": {
+    "page_count": 16,
+    "unique_pages_seen": 16,
+    "unique_pages_ratio": 1.0,
+    "extracted_chars": 16949,
+    "duration_s": 0.6043903827667236
+  },
+  "_engine": "pdfplumber",
+  "_mode": "full",
+  "_cache_used": false,
+  "_pipeline_metadata": {
+    "generator": "medparse",
+    "pipeline_version": "1.1.0",
+    "engine": "pdfplumber",
+    "mode": "full",
+    "cache_used": false,
+    "config_hash": "f2b25d1f",
+    "content_hash": "6895ed8c21c9"
+  }
+}

@@ -1,0 +1,16 @@
+doc_type: textbook
+layout_engine_primary: pdfplumber
+layout_engine_fallbacks:
+  - pymupdf
+table_extraction: true
+book_context_file: "<REQUIRED>"
+max_pages: null
+summary_length: long
+min_chars: 25000
+min_pages_ratio: 0.75
+sections:
+  - overview
+  - key_points
+  - figures
+  - tables
+  - procedures

@@ -1,36 +1,32 @@
-"""Routes classified documents to the appropriate extractor."""
+"""Routes documents to the appropriate extractor."""
 
 from __future__ import annotations
 
 from pathlib import Path
+from typing import Literal
 
-from medparse.classify.rules import classify_with_rules
-from medparse.config import ExtractionConfig
-from medparse.types import BaseDocument
-from medparse.types.book import BookChapterDocument
-from medparse.types.guideline import GuidelineDocument
-from medparse.types.ifu import IFUDocument
-from medparse.types.research import ResearchDocument
+from medparse.schema.article import ArticleDocument
+from medparse.schema.common import BaseDocument
+from medparse.schema.ifu import IFUDocument
+from medparse.schema.textbook import TextbookChapterDocument
 
-from .book import extract_book_chapter
-from .guideline import extract_guideline
+from .articles import extract_article
 from .ifu import extract_ifu
-from .research import extract_research
+from .textbook import extract_textbook_chapter
+
+DocType = Literal["article", "ifu", "textbook_chapter"]
 
 
-def dispatch_document(pdf_path: Path, config: ExtractionConfig | None = None) -> BaseDocument:
-    """Classify ``pdf_path`` and dispatch to the matching extractor."""
-    config = config or ExtractionConfig()
-    doc_type = classify_with_rules(pdf_path)
+def dispatch(pdf_path: Path, doc_type: DocType) -> BaseDocument:
+    """Dispatch ``pdf_path`` to the extractor matching ``doc_type``."""
 
+    if doc_type == "article":
+        return extract_article(pdf_path)
     if doc_type == "ifu":
-        return extract_ifu(pdf_path, config)
-    if doc_type == "guideline":
-        return extract_guideline(pdf_path, config)
-    if doc_type == "book_chapter":
-        return extract_book_chapter(pdf_path, config)
-    if doc_type == "research":
-        return extract_research(pdf_path, config)
+        return extract_ifu(pdf_path)
+    if doc_type == "textbook_chapter":
+        return extract_textbook_chapter(pdf_path)
+    raise ValueError(f"Unsupported doc_type: {doc_type}")
 
-    # Generic fallback when classification yields unsupported type
-    return BaseDocument(doc_type="research", source_file=str(pdf_path))
+
+__all__ = ["dispatch", "DocType"]

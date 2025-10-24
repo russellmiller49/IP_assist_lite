@@ -1,0 +1,51 @@
+{
+  "doc_type": "ifu",
+  "source_file": "Ion_Endoluminal_System_Instruments_and_Accessories_User_Manual.pdf",
+  "page_count": 128,
+  "part_number": "553990-11",
+  "revision": "Rev C",
+  "manufacturer": "Intuitive Surgical, Inc.",
+  "product_name": "Ion Endoluminal System",
+  "publication_date": "2024-08-01",
+  "indications_for_use": "The Ion endoluminal system is intended to enable navigation to peripheral lung lesions for diagnostic bronchoscopy procedures.",
+  "intended_user": "Rx only: on the order of a physician",
+  "contraindications": [
+    "Do not use the Ion system in patients who are unable to tolerate bronchoscopy procedures."
+  ],
+  "adverse_events": [
+    "Potential complications include pneumothorax, bleeding, and airway irritation."
+  ],
+  "software_versions": [
+    "Ion OS v6.0.0",
+    "PlanPoint v4.0.0"
+  ],
+  "references": [],
+  "tables": [
+    {
+      "title": "Table 4.2 LED status indicators",
+      "headers": [
+        "State",
+        "LED Color",
+        "Action"
+      ],
+      "rows": [
+        ["Ready", "Green", "Proceed"],
+        ["Fault", "Red", "Halt procedure"],
+        ["Charging", "Amber", "Keep connected"]
+      ],
+      "page": 45
+    },
+    {
+      "title": "Table 7.1 Power Modes",
+      "headers": [
+        "Mode",
+        "Description"
+      ],
+      "rows": [
+        ["Standby", "System idle"],
+        ["Active", "Navigation enabled"]
+      ],
+      "page": 72
+    }
+  ]
+}

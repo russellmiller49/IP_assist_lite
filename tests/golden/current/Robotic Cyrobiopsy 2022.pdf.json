@@ -1,52 +1,2571 @@
 {
-  "doc_type": "research",
-  "source_file": "tests/data/pdfs/Robotic Cyrobiopsy 2022.pdf",
-  "page_count": 9,
-  "extraction_version": "v1.0.0",
-  "title": null,
-  "design": "retrospective",
-  "centers": null,
-  "n_patients": 112,
-  "n_lesions": 120,
-  "primary_outcome": null,
-  "outcomes": [
-    {
-      "name": "Diagnostic yield",
-      "value": 90.0,
-      "unit": "percent",
-      "evidence": {
-        "text": "Results The overall diagnostic yield was 90%",
-        "page": 1,
-        "bbox": null,
-        "confidence": 1.0
+  "metadata": {
+    "title": "Novel Robotic-Assisted Cryobiopsy for Peripheral Pulmonary Lesions",
+    "year": "2022-10-10",
+    "authors": [
+      {
+        "given": "Catherine L",
+        "family": "Oberg",
+        "full_name": "Catherine L Oberg",
+        "email": "coberg@mednet.ucla.edu",
+        "is_corresponding": true,
+        "affiliations": [
+          {
+            "text": "Section of Interventional Pulmonology, David Geffen School of Medicine at UCLA, Los Angeles, CA, USA",
+            "organizations": [
+              "Section of Interventional Pulmonology",
+              "David Geffen School of Medicine at UCLA"
+            ],
+            "address": {
+              "city": "Los Angeles",
+              "region": "CA",
+              "country": "USA"
+            }
+          },
+          {
+            "text": "Department of Medicine, Division of Pulmonary and Critical Care Medicine, David Geffen School of Medicine at UCLA, Los Angeles, CA, USA",
+            "organizations": [
+              "Department of Medicine",
+              "Division of Pulmonary and Critical Care Medicine",
+              "David Geffen School of Medicine at UCLA"
+            ],
+            "address": {
+              "city": "Los Angeles",
+              "region": "CA",
+              "country": "USA"
+            }
+          }
+        ],
+        "display": "Catherine L Oberg"
+      },
+      {
+        "given": "Ryan P",
+        "family": "Lau",
+        "full_name": "Ryan P Lau",
+        "is_corresponding": false,
+        "affiliations": [
+          {
+            "text": "Department of Pathology and Laboratory Medicine",
+            "organizations": [
+              "Department of Pathology and Laboratory Medicine"
+            ]
+          },
+          {
+            "text": "David Geffen School of Medicine at UCLA, Los Angeles, CA, USA",
+            "organizations": [
+              "David Geffen School of Medicine at UCLA"
+            ],
+            "address": {
+              "city": "Los Angeles",
+              "region": "CA",
+              "country": "USA"
+            }
+          }
+        ],
+        "display": "Ryan P Lau"
+      },
+      {
+        "given": "Erik E",
+        "family": "Folch",
+        "full_name": "Erik E Folch",
+        "is_corresponding": false,
+        "affiliations": [
+          {
+            "text": "Section of Interventional Pulmonology, Massachusetts General Hospital, Harvard Medical School, Boston, MA, USA",
+            "organizations": [
+              "Section of Interventional Pulmonology",
+              "Massachusetts General Hospital",
+              "Harvard Medical School"
+            ],
+            "address": {
+              "city": "Boston",
+              "region": "MA",
+              "country": "USA"
+            }
+          }
+        ],
+        "display": "Erik E Folch"
+      },
+      {
+        "given": "Tao",
+        "family": "He",
+        "full_name": "Tao He",
+        "is_corresponding": false,
+        "affiliations": [
+          {
+            "text": "Section of Interventional Pulmonology, David Geffen School of Medicine at UCLA, Los Angeles, CA, USA",
+            "organizations": [
+              "Section of Interventional Pulmonology",
+              "David Geffen School of Medicine at UCLA"
+            ],
+            "address": {
+              "city": "Los Angeles",
+              "region": "CA",
+              "country": "USA"
+            }
+          }
+        ],
+        "display": "Tao He"
+      },
+      {
+        "given": "Reza",
+        "family": "Ronaghi",
+        "full_name": "Reza Ronaghi",
+        "is_corresponding": false,
+        "affiliations": [
+          {
+            "text": "Section of Interventional Pulmonology, David Geffen School of Medicine at UCLA, Los Angeles, CA, USA",
+            "organizations": [
+              "Section of Interventional Pulmonology",
+              "David Geffen School of Medicine at UCLA"
+            ],
+            "address": {
+              "city": "Los Angeles",
+              "region": "CA",
+              "country": "USA"
+            }
+          }
+        ],
+        "display": "Reza Ronaghi"
+      },
+      {
+        "given": "Irawan",
+        "family": "Susanto",
+        "full_name": "Irawan Susanto",
+        "is_corresponding": false,
+        "affiliations": [
+          {
+            "text": "Section of Interventional Pulmonology, David Geffen School of Medicine at UCLA, Los Angeles, CA, USA",
+            "organizations": [
+              "Section of Interventional Pulmonology",
+              "David Geffen School of Medicine at UCLA"
+            ],
+            "address": {
+              "city": "Los Angeles",
+              "region": "CA",
+              "country": "USA"
+            }
+          }
+        ],
+        "display": "Irawan Susanto"
+      },
+      {
+        "given": "Colleen",
+        "family": "Channick",
+        "full_name": "Colleen Channick",
+        "is_corresponding": false,
+        "affiliations": [
+          {
+            "text": "Section of Interventional Pulmonology, David Geffen School of Medicine at UCLA, Los Angeles, CA, USA",
+            "organizations": [
+              "Section of Interventional Pulmonology",
+              "David Geffen School of Medicine at UCLA"
+            ],
+            "address": {
+              "city": "Los Angeles",
+              "region": "CA",
+              "country": "USA"
+            }
+          }
+        ],
+        "display": "Colleen Channick"
+      },
+      {
+        "given": "Rodrigo Garcia",
+        "family": "Tome",
+        "full_name": "Rodrigo Garcia Tome",
+        "is_corresponding": false,
+        "affiliations": [
+          {
+            "text": "Section of Interventional Pulmonology, David Geffen School of Medicine at UCLA, Los Angeles, CA, USA",
+            "organizations": [
+              "Section of Interventional Pulmonology",
+              "David Geffen School of Medicine at UCLA"
+            ],
+            "address": {
+              "city": "Los Angeles",
+              "region": "CA",
+              "country": "USA"
+            }
+          }
+        ],
+        "display": "Rodrigo Garcia Tome"
+      },
+      {
+        "given": "Scott",
+        "family": "Oh",
+        "full_name": "Scott Oh",
+        "is_corresponding": false,
+        "affiliations": [
+          {
+            "text": "Section of Interventional Pulmonology, David Geffen School of Medicine at UCLA, Los Angeles, CA, USA",
+            "organizations": [
+              "Section of Interventional Pulmonology",
+              "David Geffen School of Medicine at UCLA"
+            ],
+            "address": {
+              "city": "Los Angeles",
+              "region": "CA",
+              "country": "USA"
+            }
+          }
+        ],
+        "display": "Scott Oh"
       }
+    ],
+    "references_text": [
+      "Natural History and Factors Associated with Overall Survival in Stage IV ALK-Rearranged Non–Small Cell Lung Cancer\n\t\t\n\t\t\tJoseMPacheco\n\t\t\n\t\t\n\t\t\tDexiangGao\n\t\t\n\t\t\n\t\t\tDerekSmith\n\t\t\n\t\t\n\t\t\tThomasPurcell\n\t\t\n\t\t\n\t\t\tMarkHancock\n\t\t\n\t\t\n\t\t\tPaulBunn\n\t\t\n\t\t\n\t\t\tTylerRobin\n\t\t\n\t\t\n\t\t\tArthurLiu\n\t\t\n\t\t\n\t\t\tSanaKaram\n\t\t\n\t\t\n\t\t\tLaurieGaspar\n\t\t\n\t\t\n\t\t\tBrianKavanagh\n\t\t\n\t\t\n\t\t\tChadRusthoven\n\t\t\n\t\t\n\t\t\tDaraAisner\n\t\t\n\t\t\n\t\t\tRobertDoebele\n\t\t\n\t\t\n\t\t\tDRossCamidge\n\t\t\n\t\t10.1016/j.jtho.2018.12.014\n\t\t\n\t\n\t\n\t\tJournal of Thoracic Oncology\n\t\tJournal of Thoracic Oncology\n\t\t1556-0864\n\t\t\n\t\t\t14\n\t\t\t4\n\t\t\t\n\t\t\t2019\n\t\t\tElsevier BV",
+      "The International Association for the Study of Lung Cancer Global Survey on Molecular Testing in Lung Cancer\n\t\t\n\t\t\tMatthewPSmeltzer\n\t\t\n\t\t\n\t\t\tMurryWWynes\n\t\t\n\t\t\n\t\t\tSylvieLantuejoul\n\t\t\n\t\t\n\t\t\tRossSoo\n\t\t\n\t\t\n\t\t\tSureshSRamalingam\n\t\t\n\t\t\n\t\t\tMarileilaVarella-Garcia\n\t\t\n\t\t\n\t\t\tMeghanMeadows Taylor\n\t\t\n\t\t\n\t\t\tKristinRicheimer\n\t\t\n\t\t\n\t\t\tKelseyWood\n\t\t\n\t\t\n\t\t\tKristenEHowell\n\t\t\n\t\t\n\t\t\tMercedesLilanaDalurzo\n\t\t\n\t\t\n\t\t\tEnriquetaFelip\n\t\t\n\t\t\n\t\t\tGinaHollenbeck\n\t\t\n\t\t\n\t\t\tKeithKerr\n\t\t\n\t\t\n\t\t\tEdwardSKim\n\t\t\n\t\t\n\t\t\tClarissaMathias\n\t\t\n\t\t\n\t\t\tJosePacheco\n\t\t\n\t\t\n\t\t\tPieterPostmus\n\t\t\n\t\t\n\t\t\tCharlesPowell\n\t\t\n\t\t\n\t\t\tMasahiroTsuboi\n\t\t\n\t\t\n\t\t\tIgnacioIWistuba\n\t\t\n\t\t\n\t\t\tHeatherAWakelee\n\t\t\n\t\t\n\t\t\tChandraPBelani\n\t\t\n\t\t\n\t\t\tGiorgioVScagliotti\n\t\t\n\t\t\n\t\t\tFredRHirsch\n\t\t\n\t\t10.1016/j.jtho.2020.05.002\n\t\t\n\t\n\t\n\t\tJournal of Thoracic Oncology\n\t\tJournal of Thoracic Oncology\n\t\t1556-0864\n\t\t\n\t\t\t15\n\t\t\t9\n\t\t\t\n\t\t\t2020\n\t\t\tElsevier BV",
+      "Robotic bronchoscopy and future directions of interventional pulmonology\n\t\t\n\t\t\tErikFolch\n\t\t\n\t\t\n\t\t\tAbhinavMittal\n\t\t\n\t\t\n\t\t\tCatherineOberg\n\t\t\n\t\t10.1097/mcp.0000000000000849\n\t\t\n\t\n\t\n\t\tCurrent Opinion in Pulmonary Medicine\n\t\t1070-5287\n\t\t1531-6971\n\t\t\n\t\t\t28\n\t\t\t1\n\t\t\t\n\t\t\t2022\n\t\t\tOvid Technologies (Wolters Kluwer Health)",
+      "Shape-sensing robotic-assisted bronchoscopy for pulmonary nodules: initial multicenter experience using the Ion™ Endoluminal System\n\t\t\n\t\t\tMichaelJSimoff\n\t\t\n\t\t\n\t\t\tMichaelAPritchett\n\t\t\n\t\t\n\t\t\tJananiSReisenauer\n\t\t\n\t\t\n\t\t\tDavidEOst\n\t\t\n\t\t\n\t\t\tAdnanMajid\n\t\t\n\t\t\n\t\t\tColleenKeyes\n\t\t\n\t\t\n\t\t\tRobertoFCasal\n\t\t\n\t\t\n\t\t\tMihirSParikh\n\t\t\n\t\t\n\t\t\tJavierDiaz-Mendoza\n\t\t\n\t\t\n\t\t\tSebastianFernandez-Bussy\n\t\t\n\t\t\n\t\t\tErikEFolch\n\t\t\n\t\t10.1186/s12890-021-01693-2\n\t\t1186/ s12890-021-01693-2\n\t\t\n\t\n\t\n\t\tBMC Pulmonary Medicine\n\t\tBMC Pulm Med\n\t\t1471-2466\n\t\t\n\t\t\t21\n\t\t\t1\n\t\t\t322\n\t\t\t2021\n\t\t\tSpringer Science and Business Media LLC",
+      "PROSPECTIVE MULTICENTER ANALYSIS OF SHAPE-SENSING ROBOTIC-ASSISTED BRONCHOSCOPY FOR THE BIOPSY OF PULMONARY NODULES: RESULTS FROM THE PRECISE STUDY\n\t\t\n\t\t\tDavidOst\n\t\t\n\t\t\n\t\t\tMichaelPritchett\n\t\t\n\t\t\n\t\t\tJananiReisenauer\n\t\t\n\t\t\n\t\t\tMichaelSimoff\n\t\t\n\t\t\n\t\t\tJavierDiaz-Mendoza\n\t\t\n\t\t\n\t\t\tSebastianFernandez-Bussy\n\t\t\n\t\t\n\t\t\tAdnanMajid\n\t\t\n\t\t\n\t\t\tRobertoCasal\n\t\t\n\t\t\n\t\t\tColleenKeyes\n\t\t\n\t\t\n\t\t\tMihirParikh\n\t\t\n\t\t\n\t\t\tErikFolch\n\t\t\n\t\t10.1016/j.chest.2021.08.034\n\t\n\t\n\t\tChest\n\t\tChest\n\t\t0012-3692\n\t\t\n\t\t\t160\n\t\t\t4\n\t\t\t\n\t\t\t2021\n\t\t\tElsevier BV",
+      "The Impact of Biopsy Tool Choice and Rapid On-Site Evaluation on Diagnostic Accuracy for Malignant Lesions in the Prospective\n\t\t\n\t\t\tThomasRGildea\n\t\t\n\t\t\n\t\t\tErikEFolch\n\t\t\n\t\t\n\t\t\tSandeepJKhandhar\n\t\t\n\t\t\n\t\t\tMichaelAPritchett\n\t\t\n\t\t\n\t\t\tGregoryPLemense\n\t\t\n\t\t\n\t\t\tPhilipALinden\n\t\t\n\t\t\n\t\t\tDouglasAArenberg\n\t\t\n\t\t\n\t\t\tOtisBRickman\n\t\t\n\t\t\n\t\t\tAmitKMahajan\n\t\t\n\t\t\n\t\t\tJaspalSingh\n\t\t\n\t\t\n\t\t\tJosephCicenia\n\t\t\n\t\t\n\t\t\tAtulCMehta\n\t\t\n\t\t\n\t\t\tHaiyingLin\n\t\t\n\t\t\n\t\t\tJenniferSMattingley\n\t\t\n\t\t10.1097/lbr.0000000000000740\n\t\t\n\t\n\t\n\t\tJournal of Bronchology & Interventional Pulmonology\n\t\t1944-6586\n\t\t\n\t\t\t28\n\t\t\t3\n\t\t\t\n\t\t\t2021\n\t\t\tOvid Technologies (Wolters Kluwer Health)",
+      "Cytologic features and diagnostic value of PeriView FLEX transbronchial needle aspiration targeting pulmonary nodules\n\t\t\n\t\t\tJuliaNaso\n\t\t\t0000-0002-7799-7860\n\t\t\n\t\t\n\t\t\tJamesBras\n\t\t\t0000-0003-1148-5026\n\t\t\n\t\t\n\t\t\tCarlosVillamil\n\t\t\n\t\t\n\t\t\tDianaNIonescu\n\t\t\n\t\t\n\t\t\tGangWang\n\t\t\t0000-0002-0225-4173\n\t\t\n\t\t\n\t\t\tTawimasShaipanich\n\t\t\n\t\t\n\t\t\tEve‐leaBeaudoin\n\t\t\n\t\t\n\t\t\tRenelleMyers\n\t\t\n\t\t\n\t\t\tStephenLam\n\t\t\n\t\t\n\t\t\tChenZhou\n\t\t\n\t\t10.1002/cncy.22240\n\t\t\n\t\n\t\n\t\tCancer Cytopathology\n\t\tCancer Cytopathology\n\t\t1934-662X\n\t\t1934-6638\n\t\t\n\t\t\t128\n\t\t\t5\n\t\t\t\n\t\t\t2020\n\t\t\tWiley",
+      "Molecular analysis of peripheral lung adenocarcinoma in brush cytology obtained by EBUS plus fluoroscopy‐guided bronchoscopy\n\t\t\n\t\t\tAlbertSánchez‐font\n\t\t\t0000-0003-1026-7908\n\t\t\n\t\t\n\t\t\tRobertoChalela\n\t\t\n\t\t\n\t\t\tClaraMartín‐ontiyuelo\n\t\t\n\t\t\n\t\t\tRaquelAlbero‐gonzález\n\t\t\n\t\t\n\t\t\tAlbaDalmases\n\t\t\n\t\t\n\t\t\tRaquelLongarón\n\t\t\n\t\t\n\t\t\tVirginiaAlonso‐espinaco\n\t\t\n\t\t\n\t\t\tVíctorCurull\n\t\t\n\t\t\n\t\t\tBeatrizBellosillo\n\t\t\n\t\t\n\t\t\tLaraPijuan\n\t\t\n\t\t10.1002/cncy.22053\n\t\t\n\t\n\t\n\t\tCancer Cytopathology\n\t\tCancer Cytopathology\n\t\t1934-662X\n\t\t1934-6638\n\t\t\n\t\t\t126\n\t\t\t10\n\t\t\t\n\t\t\t2018\n\t\t\tWiley",
+      "Transbronchial cryobiopsy for diffuse parenchymal lung disease: a state-of-the-art review of procedural techniques, current evidence, and future challenges\n\t\t\n\t\t\tRobertJLentz\n\t\t\n\t\t\n\t\t\tAChristineArgento\n\t\t\n\t\t\n\t\t\tThomasVColby\n\t\t\n\t\t\n\t\t\tOtisBRickman\n\t\t\n\t\t\n\t\t\tFabienMaldonado\n\t\t\n\t\t10.21037/jtd.2017.06.96\n\t\t\n\t\n\t\n\t\tJournal of Thoracic Disease\n\t\tJ. Thorac. Dis.\n\t\t2072-1439\n\t\t2077-6624\n\t\t\n\t\t\t9\n\t\t\t7\n\t\t\t\n\t\t\t2017\n\t\t\tAME Publishing Company",
+      "Transbronchial cryobiopsies\n\t\t\n\t\t\tSSOh\n\t\t\n\t\t\n\t\t\tWDWallace\n\t\t\n\t\t\n\t\t\tFShaikh\n\t\t\n\t\t\n\t\t\tJPLynch\n\t\t\n\t\t10.1055/s-0038-1676645\n\t\t\n\t\n\t\n\t\tSemin Respir Crit Care Med\n\t\t\n\t\t\t39\n\t\t\t6\n\t\t\t45\n\t\t\t2018",
+      "Diagnostic Outcomes and Safety of Cryobiopsy Added to Conventional Sampling Methods\n\t\t\n\t\t\tYujiMatsumoto\n\t\t\n\t\t\n\t\t\tToshiyukiNakai\n\t\t\n\t\t\n\t\t\tMidoriTanaka\n\t\t\n\t\t\n\t\t\tTatsuyaImabayashi\n\t\t\n\t\t\n\t\t\tTakaakiTsuchida\n\t\t\n\t\t\n\t\t\tYuichiroOhe\n\t\t\n\t\t10.1016/j.chest.2021.05.015\n\t\tchest. 2021. 05. 015\n\t\t\n\t\n\t\n\t\tChest\n\t\tChest\n\t\t0012-3692\n\t\t\n\t\t\t160\n\t\t\t5\n\t\t\t\n\t\t\t2021\n\t\t\tElsevier BV",
+      "Lung Navigation Ventilation Protocol to Optimize Biopsy of Peripheral Lung Lesions\n\t\t\n\t\t\tKrishBhadra\n\t\t\n\t\t\n\t\t\tRandolphMSetser\n\t\t\n\t\t\n\t\t\tWilliamCondra\n\t\t\n\t\t\n\t\t\tMichaelAPritchett\n\t\t\n\t\t10.1097/lbr.0000000000000756\n\t\t1097/ LBR. 00000 00000 000756\n\t\t\n\t\n\t\n\t\tJournal of Bronchology & Interventional Pulmonology\n\t\t1944-6586\n\t\t\n\t\t\t29\n\t\t\t1\n\t\t\t\n\t\t\t2022\n\t\t\tOvid Technologies (Wolters Kluwer Health)",
+      "The safety profile of a protocolized transbronchial cryobiopsy program utilizing a 2.4 mm cryoprobe for interstitial lung disease\n\t\t\n\t\t\tScottOh\n\t\t\t0000-0003-3993-4401\n\t\t\n\t\t\n\t\t\tRezaRonaghi\n\t\t\n\t\t\n\t\t\tTaoHe\n\t\t\n\t\t\n\t\t\tCatherineOberg\n\t\t\n\t\t\n\t\t\tColleenChannick\n\t\t\n\t\t\n\t\t\tIrawanSusanto\n\t\t\t0000-0003-0322-7393\n\t\t\n\t\t\n\t\t\tMathewCarroll\n\t\t\n\t\t\n\t\t\tSSamWeigt\n\t\t\n\t\t\n\t\t\tDavidSayah\n\t\t\n\t\t\n\t\t\tTamasDolinay\n\t\t\t0000-0002-9928-9873\n\t\t\n\t\t\n\t\t\tAugustineChung\n\t\t\n\t\t\n\t\t\tGregoryFishbein\n\t\t\t0000-0002-3632-5654\n\t\t\n\t\t\n\t\t\tJosephPLynch\n\t\t\n\t\t\n\t\t\tJohnABelperio\n\t\t\t0000-0003-2379-5486\n\t\t\n\t\t10.1016/j.rmed.2022.106913\n\t\t\n\t\n\t\n\t\tRespiratory Medicine\n\t\tRespiratory Medicine\n\t\t0954-6111\n\t\t\n\t\t\t200\n\t\t\t106913\n\t\t\t2022\n\t\t\tElsevier BV",
+      "Standardized Definitions of Bleeding After Transbronchial Lung Biopsy\n\t\t\n\t\t\tErikEFolch\n\t\t\n\t\t\n\t\t\tAmitKMahajan\n\t\t\n\t\t\n\t\t\tCatherineLOberg\n\t\t\n\t\t\n\t\t\tFabienMaldonado\n\t\t\n\t\t\n\t\t\tEricToloza\n\t\t\n\t\t\n\t\t\tWilliamSKrimsky\n\t\t\n\t\t\n\t\t\tScottOh\n\t\t\n\t\t\n\t\t\tMarkRBowling\n\t\t\n\t\t\n\t\t\tSadiaBenzaquen\n\t\t\n\t\t\n\t\t\tCharlesMKinsey\n\t\t\n\t\t\n\t\t\tAtulCMehta\n\t\t\n\t\t\n\t\t\tSebastianFernandez-Bussy\n\t\t\n\t\t\n\t\t\tJavierFlandes\n\t\t\n\t\t\n\t\t\tKelvinLau\n\t\t\n\t\t\n\t\t\tGaneshKrishna\n\t\t\n\t\t\n\t\t\tMichaelANead\n\t\t\n\t\t\n\t\t\tFelixHerth\n\t\t\n\t\t\n\t\t\tAlejandroAAragaki-Nakahodo\n\t\t\n\t\t\n\t\t\tEmanuelaBarisione\n\t\t\n\t\t\n\t\t\tSandeepBansal\n\t\t\n\t\t\n\t\t\tDragosZanchi\n\t\t\n\t\t\n\t\t\tMichaelZgoda\n\t\t\n\t\t\n\t\t\tPeterOLutz\n\t\t\n\t\t\n\t\t\tRobertJLentz\n\t\t\n\t\t\n\t\t\tChristopherParks\n\t\t\n\t\t\n\t\t\tMarioSalio\n\t\t\n\t\t\n\t\t\tKennethPerret\n\t\t\n\t\t\n\t\t\tColleenKeyes\n\t\t\n\t\t\n\t\t\tGregoryPLemense\n\t\t\n\t\t\n\t\t\tJohnDHinze\n\t\t\n\t\t\n\t\t\tAdnanMajid\n\t\t\n\t\t\n\t\t\tMereteChristensen\n\t\t\n\t\t\n\t\t\tJordanKazakov\n\t\t\n\t\t\n\t\t\tGonzaloLabarca\n\t\t\n\t\t\n\t\t\tErnestWaller\n\t\t\n\t\t\n\t\t\tMichaelStudnicka\n\t\t\n\t\t\n\t\t\tCatalinaVTeba\n\t\t\n\t\t\n\t\t\tSandeepJKhandhar\n\t\t\n\t\t10.1016/j.chest.2020.01.036\n\t\tchest. 2020. 01. 036\n\t\t\n\t\n\t\n\t\tChest\n\t\tChest\n\t\t0012-3692\n\t\t\n\t\t\t158\n\t\t\t1\n\t\t\t\n\t\t\t2020\n\t\t\tElsevier BV",
+      "Adequacy of Lymph Node Transbronchial Needle Aspirates Using Convex Probe Endobronchial Ultrasound for Multiple Tumor Genotyping Techniques in Non–Small-Cell Lung Cancer\n\t\t\n\t\t\tErikFolch\n\t\t\n\t\t\n\t\t\tNorihiroYamaguchi\n\t\t\n\t\t\n\t\t\tPaulAVanderlaan\n\t\t\n\t\t\n\t\t\tOlivierNKocher\n\t\t\n\t\t\n\t\t\tDavidHBoucher\n\t\t\n\t\t\n\t\t\tMichaelAGoldstein\n\t\t\n\t\t\n\t\t\tMarkSHuberman\n\t\t\n\t\t\n\t\t\tMichaelSKent\n\t\t\n\t\t\n\t\t\tSidhartaPGangadharan\n\t\t\n\t\t\n\t\t\tDanielBCosta\n\t\t\n\t\t\n\t\t\tAdnanMajid\n\t\t\n\t\t10.1097/jto.0b013e3182a471a9\n\t\t\n\t\n\t\n\t\tJournal of Thoracic Oncology\n\t\tJournal of Thoracic Oncology\n\t\t1556-0864\n\t\t\n\t\t\t8\n\t\t\t11\n\t\t\t\n\t\t\t2013\n\t\t\tElsevier BV\n\t\t\n\t\n\tb013 e3182 a471a9",
+      "NAVIGATE 24-Month Results: Electromagnetic Navigation Bronchoscopy for Pulmonary Lesions at 37 Centers in Europe and the United States\n\t\t\n\t\t\tErikEFolch\n\t\t\n\t\t\n\t\t\tMarkRBowling\n\t\t\n\t\t\n\t\t\tMichaelAPritchett\n\t\t\n\t\t\n\t\t\tSeptimiuDMurgu\n\t\t\n\t\t\n\t\t\tMichaelANead\n\t\t\n\t\t\n\t\t\tJavierFlandes\n\t\t\n\t\t\n\t\t\tWilliamSKrimsky\n\t\t\n\t\t\n\t\t\tAmitKMahajan\n\t\t\n\t\t\n\t\t\tGregoryPLemense\n\t\t\n\t\t\n\t\t\tBorisAMurillo\n\t\t\n\t\t\n\t\t\tSandeepBansal\n\t\t\n\t\t\n\t\t\tKelvinLau\n\t\t\n\t\t\n\t\t\tThomasRGildea\n\t\t\n\t\t\n\t\t\tMereteChristensen\n\t\t\n\t\t\n\t\t\tDouglasAArenberg\n\t\t\n\t\t\n\t\t\tJaspalSingh\n\t\t\n\t\t\n\t\t\tKrishBhadra\n\t\t\n\t\t\n\t\t\tDKyleHogarth\n\t\t\n\t\t\n\t\t\tChristopherWTowe\n\t\t\n\t\t\n\t\t\tBerndLamprecht\n\t\t\n\t\t\n\t\t\tMichelaBezzi\n\t\t\n\t\t\n\t\t\tJenniferSMattingley\n\t\t\n\t\t\n\t\t\tKristinLHood\n\t\t\n\t\t\n\t\t\tHaiyingLin\n\t\t\n\t\t\n\t\t\tJenniferJWolvers\n\t\t\n\t\t\n\t\t\tSandeepJKhandhar\n\t\t\n\t\t10.1016/j.jtho.2021.12.008\n\t\t\n\t\n\t\n\t\tJournal of Thoracic Oncology\n\t\tJournal of Thoracic Oncology\n\t\t1556-0864\n\t\t\n\t\t\t17\n\t\t\t4\n\t\t\t\n\t\t\t2022\n\t\t\tElsevier BV",
+      "Population-Based Risk for Complications After Transthoracic Needle Lung Biopsy of a Pulmonary Nodule: An Analysis of Discharge Records\n\t\t\n\t\t\tRendaSoylemezWiener\n\t\t\n\t\t\n\t\t\tLisaMSchwartz\n\t\t\n\t\t\n\t\t\tStevenWoloshin\n\t\t\n\t\t\n\t\t\tHGilbertWelch\n\t\t\n\t\t10.7326/0003-4819-155-3-201108020-00003\n\t\t\n\t\n\t\n\t\tAnnals of Internal Medicine\n\t\tAnn Intern Med\n\t\t0003-4819\n\t\t1539-3704\n\t\t\n\t\t\t155\n\t\t\t3\n\t\t\t\n\t\t\t2011\n\t\t\tAmerican College of Physicians"
+    ],
+    "corresponding_author": {
+      "name": "Catherine L Oberg",
+      "email": "coberg@mednet.ucla.edu",
+      "affiliations": [
+        {
+          "text": "Section of Interventional Pulmonology, David Geffen School of Medicine at UCLA, Los Angeles, CA, USA",
+          "organizations": [
+            "Section of Interventional Pulmonology",
+            "David Geffen School of Medicine at UCLA"
+          ],
+          "address": {
+            "city": "Los Angeles",
+            "region": "CA",
+            "country": "USA"
+          }
+        },
+        {
+          "text": "Department of Medicine, Division of Pulmonary and Critical Care Medicine, David Geffen School of Medicine at UCLA, Los Angeles, CA, USA",
+          "organizations": [
+            "Department of Medicine",
+            "Division of Pulmonary and Critical Care Medicine",
+            "David Geffen School of Medicine at UCLA"
+          ],
+          "address": {
+            "city": "Los Angeles",
+            "region": "CA",
+            "country": "USA"
+          }
+        }
+      ]
+    },
+    "references_raw": [
+      "Natural history and factors associated with overall survival in stage IV ALK-rearranged non-small cell lung cancer\n\t\t\n\t\t\tJMPacheco\n\t\t\n\t\t\n\t\t\tDGao\n\t\t\n\t\t\n\t\t\tDSmith\n\t\t\n\t\t10.1016/j.jtho.2018.12.014\n\t\t\n\t\n\t\n\t\tJ Thorac Oncol Off Publ Int Assoc Study Lung Cancer\n\t\t\n\t\t\t14\n\t\t\t4\n\t\t\t\n\t\t\t2019",
+      "The international association for the study of lung cancer global survey on molecular testing in lung cancer\n\t\t\n\t\t\tMPSmeltzer\n\t\t\n\t\t\n\t\t\tMWWynes\n\t\t\n\t\t\n\t\t\tSLantuejoul\n\t\t\n\t\t10.1016/j.jtho.2020.05.002\n\t\t\n\t\n\t\n\t\tJ Thorac Oncol Off Publ Int Assoc Study Lung Cancer\n\t\t\n\t\t\t15\n\t\t\t9\n\t\t\t\n\t\t\t2020",
+      "Robotic bronchoscopy and future directions of interventional pulmonology\n\t\t\n\t\t\tEFolch\n\t\t\n\t\t\n\t\t\tAMittal\n\t\t\n\t\t\n\t\t\tCOberg\n\t\t\n\t\t10.1097/MCP.0000000000000849\n\t\t\n\t\n\t\n\t\tCurr Opin Pulm Med\n\t\t\n\t\t\t28\n\t\t\t1\n\t\t\t\n\t\t\t2022",
+      "Shapesensing robotic-assisted bronchoscopy for pulmonary nodules: initial multicenter experience using the Ion™ Endoluminal system\n\t\t\n\t\t\tMJSimoff\n\t\t\n\t\t\n\t\t\tMAPritchett\n\t\t\n\t\t\n\t\t\tJSReisenauer\n\t\t\n\t\t10.1186/s12890-021-01693-2\n\t\t1186/ s12890-021-01693-2\n\t\t\n\t\n\t\n\t\tBMC Pulm Med\n\t\t\n\t\t\t21\n\t\t\t1\n\t\t\t322\n\t\t\t2021",
+      "Prospective multicenter analysis of shapesensing robotic-assisted bronchoscopy for the biopsy of pulmonary nodules: results from the PRECiSE study\n\t\t\n\t\t\tDEOst\n\t\t\n\t\n\t\n\t\tChest\n\t\t\n\t\t\t160\n\t\t\t4\n\t\t\t\n\t\t\t2021",
+      "the impact of biopsy tool choice and rapid on-site evaluation on diagnostic accuracy for malignant lesions in the prospective: multicenter NAVIGATE study\n\t\t\n\t\t\tTRGildea\n\t\t\n\t\t\n\t\t\tEEFolch\n\t\t\n\t\t\n\t\t\tSJKhandhar\n\t\t\n\t\t10.1097/LBR.0000000000000740\n\t\t\n\t\n\t\n\t\tJ Bronchol Interv Pulmonol\n\t\t\n\t\t\t28\n\t\t\t3\n\t\t\t\n\t\t\t2021",
+      "Cytologic features and diagnostic value of PeriView FLEX transbronchial needle aspiration targeting pulmonary nodules\n\t\t\n\t\t\tJNaso\n\t\t\n\t\t\n\t\t\tJBras\n\t\t\n\t\t\n\t\t\tCVillamil\n\t\t\n\t\t10.1002/cncy.22240\n\t\t\n\t\n\t\n\t\tCancer Cytopathol\n\t\t\n\t\t\t128\n\t\t\t5\n\t\t\t\n\t\t\t2020",
+      "Molecular analysis of peripheral lung adenocarcinoma in brush cytology obtained by EBUS plus fluoroscopy-guided bronchoscopy\n\t\t\n\t\t\tASánchez-Font\n\t\t\n\t\t\n\t\t\tRChalela\n\t\t\n\t\t\n\t\t\tCMartín-Ontiyuelo\n\t\t\n\t\t10.1002/cncy.22053\n\t\t\n\t\n\t\n\t\tCancer Cytopathol\n\t\t\n\t\t\t126\n\t\t\t10\n\t\t\t\n\t\t\t2018",
+      "Transbronchial cryobiopsy for diffuse parenchymal lung disease: a state-of-the-art review of procedural techniques, current evidence, and future challenges\n\t\t\n\t\t\tRJLentz\n\t\t\n\t\t\n\t\t\tACArgento\n\t\t\n\t\t\n\t\t\tTVColby\n\t\t\n\t\t\n\t\t\tOBRickman\n\t\t\n\t\t\n\t\t\tFMaldonado\n\t\t\n\t\t10.21037/jtd.2017.06.96\n\t\t\n\t\n\t\n\t\tJ Thorac Dis\n\t\t\n\t\t\t9\n\t\t\t7\n\t\t\t\n\t\t\t2017",
+      "Transbronchial cryobiopsies\n\t\t\n\t\t\tSSOh\n\t\t\n\t\t\n\t\t\tWDWallace\n\t\t\n\t\t\n\t\t\tFShaikh\n\t\t\n\t\t\n\t\t\tJPLynch\n\t\t\n\t\t10.1055/s-0038-1676645\n\t\t\n\t\n\t\n\t\tSemin Respir Crit Care Med\n\t\t\n\t\t\t39\n\t\t\t6\n\t\t\t45\n\t\t\t2018",
+      "Diagnostic outcomes and safety of cryobiopsy added to conventional sampling methods: an observational study\n\t\t\n\t\t\tYMatsumoto\n\t\t\n\t\t\n\t\t\tTNakai\n\t\t\n\t\t\n\t\t\tMTanaka\n\t\t\n\t\t\n\t\t\tTImabayashi\n\t\t\n\t\t\n\t\t\tTTsuchida\n\t\t\n\t\t\n\t\t\tYOhe\n\t\t\n\t\t10.1016/j.chest.2021.05.015\n\t\tchest. 2021. 05. 015\n\t\t\n\t\n\t\n\t\tChest\n\t\t\n\t\t\t160\n\t\t\t5\n\t\t\t\n\t\t\t2021",
+      "Lung navigation ventilation protocol to optimize biopsy of peripheral lung lesions\n\t\t\n\t\t\tKBhadra\n\t\t\n\t\t\n\t\t\tRMSetser\n\t\t\n\t\t\n\t\t\tWCondra\n\t\t\n\t\t\n\t\t\tMAPritchett\n\t\t\n\t\t10.1097/LBR.0000000000000756\n\t\t1097/ LBR. 00000 00000 000756\n\t\t\n\t\n\t\n\t\tJ Bronchol Interv Pulmonol\n\t\t\n\t\t\t29\n\t\t\t1\n\t\t\t\n\t\t\t2022",
+      "The safety profile of a protocolized transbronchial cryobiopsy program utilizing a 2.4 mm cryoprobe for interstitial lung disease\n\t\t\n\t\t\tSOh\n\t\t\n\t\t\n\t\t\tRRonaghi\n\t\t\n\t\t\n\t\t\tTHe\n\t\t\n\t\t10.1016/j.rmed.2022.106913\n\t\t\n\t\n\t\n\t\tRespir Med\n\t\t\n\t\t\t200\n\t\t\t106913\n\t\t\t2022",
+      "Standardized definitions of bleeding after transbronchial lung biopsy: a Delphi consensus statement from the Nashville working group\n\t\t\n\t\t\tEEFolch\n\t\t\n\t\t\n\t\t\tAKMahajan\n\t\t\n\t\t\n\t\t\tCLOberg\n\t\t\n\t\t10.1016/j.chest.2020.01.036\n\t\tchest. 2020. 01. 036\n\t\t\n\t\n\t\n\t\tChest\n\t\t\n\t\t\t158\n\t\t\t1\n\t\t\t\n\t\t\t2020",
+      "Adequacy of lymph node transbronchial needle aspirates using convex probe endobronchial ultrasound for multiple tumor genotyping techniques in non-small-cell lung cancer\n\t\t\n\t\t\tEFolch\n\t\t\n\t\t\n\t\t\tNYamaguchi\n\t\t\n\t\t\n\t\t\tPAVanderlaan\n\t\t\n\t\t10.1097/JTO.0b013e3182a471a9\n\t\t\n\t\n\t\n\t\tJ Thorac Oncol Off Publ Int Assoc Study Lung Cancer\n\t\t\n\t\t\t8\n\t\t\t11\n\t\t\t\n\t\t\t2013\n\t\t\n\t\n\tb013 e3182 a471a9",
+      "NAVIGATE 24-month results: electromagnetic navigation bronchoscopy for pulmonary lesions at 37 centers in Europe and the United States\n\t\t\n\t\t\tEEFolch\n\t\t\n\t\t\n\t\t\tMRBowling\n\t\t\n\t\t\n\t\t\tMAPritchett\n\t\t\n\t\t10.1016/j.jtho.2021.12.008\n\t\t\n\t\n\t\n\t\tJ Thorac Oncol Off Publ Int Assoc Study Lung Cancer\n\t\t\n\t\t\t17\n\t\t\t4\n\t\t\t\n\t\t\t2022",
+      "Population-based risk for complications after transthoracic needle lung biopsy of a pulmonary nodule: an analysis of discharge records\n\t\t\n\t\t\tRSWiener\n\t\t\n\t\t\n\t\t\tLMSchwartz\n\t\t\n\t\t\n\t\t\tSWoloshin\n\t\t\n\t\t\n\t\t\tHGWelch\n\t\t\n\t\t10.7326/0003-4819-155-3-201108020-00003\n\t\t\n\t\n\t\n\t\tAnn Intern Med\n\t\t\n\t\t\t155\n\t\t\t3\n\t\t\t\n\t\t\t2011"
+    ],
+    "references_struct": [
+      {
+        "title": "Natural history and factors associated with overall survival in stage IV ALK-rearranged non-small cell lung cancer",
+        "journal": "J Thorac Oncol Off Publ Int Assoc Study Lung Cancer",
+        "year": "2019",
+        "volume": "14",
+        "issue": "4",
+        "pages": null,
+        "doi": "10.1016/j.jtho.2018.12.014",
+        "pmid": null,
+        "authors": [
+          "Pacheco JM",
+          "Gao D",
+          "Smith D"
+        ],
+        "first_author_last": "Pacheco"
+      },
+      {
+        "title": "The international association for the study of lung cancer global survey on molecular testing in lung cancer",
+        "journal": "J Thorac Oncol Off Publ Int Assoc Study Lung Cancer",
+        "year": "2020",
+        "volume": "15",
+        "issue": "9",
+        "pages": null,
+        "doi": "10.1016/j.jtho.2020.05.002",
+        "pmid": null,
+        "authors": [
+          "Smeltzer MP",
+          "Wynes MW",
+          "Lantuejoul S"
+        ],
+        "first_author_last": "Smeltzer"
+      },
+      {
+        "title": "Robotic bronchoscopy and future directions of interventional pulmonology",
+        "journal": "Curr Opin Pulm Med",
+        "year": "2022",
+        "volume": "28",
+        "issue": "1",
+        "pages": null,
+        "doi": "10.1097/MCP.0000000000000849",
+        "pmid": null,
+        "authors": [
+          "Folch E",
+          "Mittal A",
+          "Oberg C"
+        ],
+        "first_author_last": "Folch"
+      },
+      {
+        "title": "Shapesensing robotic-assisted bronchoscopy for pulmonary nodules: initial multicenter experience using the Ion™ Endoluminal system",
+        "journal": "BMC Pulm Med",
+        "year": "2021",
+        "volume": "21",
+        "issue": "1",
+        "pages": "322",
+        "doi": "10.1186/s12890-021-01693-2",
+        "pmid": null,
+        "authors": [
+          "Simoff MJ",
+          "Pritchett MA",
+          "Reisenauer JS"
+        ],
+        "first_author_last": "Simoff"
+      },
+      {
+        "title": "Prospective multicenter analysis of shapesensing robotic-assisted bronchoscopy for the biopsy of pulmonary nodules: results from the PRECiSE study",
+        "journal": "Chest",
+        "year": "2021",
+        "volume": "160",
+        "issue": "4",
+        "pages": null,
+        "doi": null,
+        "pmid": null,
+        "authors": [
+          "Ost DE"
+        ],
+        "first_author_last": "Ost"
+      },
+      {
+        "title": "the impact of biopsy tool choice and rapid on-site evaluation on diagnostic accuracy for malignant lesions in the prospective: multicenter NAVIGATE study",
+        "journal": "J Bronchol Interv Pulmonol",
+        "year": "2021",
+        "volume": "28",
+        "issue": "3",
+        "pages": null,
+        "doi": "10.1097/LBR.0000000000000740",
+        "pmid": null,
+        "authors": [
+          "Gildea TR",
+          "Folch EE",
+          "Khandhar SJ"
+        ],
+        "first_author_last": "Gildea"
+      },
+      {
+        "title": "Cytologic features and diagnostic value of PeriView FLEX transbronchial needle aspiration targeting pulmonary nodules",
+        "journal": "Cancer Cytopathol",
+        "year": "2020",
+        "volume": "128",
+        "issue": "5",
+        "pages": null,
+        "doi": "10.1002/cncy.22240",
+        "pmid": null,
+        "authors": [
+          "Naso J",
+          "Bras J",
+          "Villamil C"
+        ],
+        "first_author_last": "Naso"
+      },
+      {
+        "title": "Molecular analysis of peripheral lung adenocarcinoma in brush cytology obtained by EBUS plus fluoroscopy-guided bronchoscopy",
+        "journal": "Cancer Cytopathol",
+        "year": "2018",
+        "volume": "126",
+        "issue": "10",
+        "pages": null,
+        "doi": "10.1002/cncy.22053",
+        "pmid": null,
+        "authors": [
+          "Sánchez-Font A",
+          "Chalela R",
+          "Martín-Ontiyuelo C"
+        ],
+        "first_author_last": "Sánchez-Font"
+      },
+      {
+        "title": "Transbronchial cryobiopsy for diffuse parenchymal lung disease: a state-of-the-art review of procedural techniques, current evidence, and future challenges",
+        "journal": "J Thorac Dis",
+        "year": "2017",
+        "volume": "9",
+        "issue": "7",
+        "pages": null,
+        "doi": "10.21037/jtd.2017.06.96",
+        "pmid": null,
+        "authors": [
+          "Lentz RJ",
+          "Argento AC",
+          "Colby TV",
+          "Rickman OB",
+          "Maldonado F"
+        ],
+        "first_author_last": "Lentz"
+      },
+      {
+        "title": "Transbronchial cryobiopsies",
+        "journal": "Semin Respir Crit Care Med",
+        "year": "2018",
+        "volume": "39",
+        "issue": "6",
+        "pages": "45",
+        "doi": "10.1055/s-0038-1676645",
+        "pmid": null,
+        "authors": [
+          "Oh SS",
+          "Wallace WD",
+          "Shaikh F",
+          "Lynch JP"
+        ],
+        "first_author_last": "Oh"
+      },
+      {
+        "title": "Diagnostic outcomes and safety of cryobiopsy added to conventional sampling methods: an observational study",
+        "journal": "Chest",
+        "year": "2021",
+        "volume": "160",
+        "issue": "5",
+        "pages": null,
+        "doi": "10.1016/j.chest.2021.05.015",
+        "pmid": null,
+        "authors": [
+          "Matsumoto Y",
+          "Nakai T",
+          "Tanaka M",
+          "Imabayashi T",
+          "Tsuchida T",
+          "Ohe Y"
+        ],
+        "first_author_last": "Matsumoto"
+      },
+      {
+        "title": "Lung navigation ventilation protocol to optimize biopsy of peripheral lung lesions",
+        "journal": "J Bronchol Interv Pulmonol",
+        "year": "2022",
+        "volume": "29",
+        "issue": "1",
+        "pages": null,
+        "doi": "10.1097/LBR.0000000000000756",
+        "pmid": null,
+        "authors": [
+          "Bhadra K",
+          "Setser RM",
+          "Condra W",
+          "Pritchett MA"
+        ],
+        "first_author_last": "Bhadra"
+      },
+      {
+        "title": "The safety profile of a protocolized transbronchial cryobiopsy program utilizing a 2.4 mm cryoprobe for interstitial lung disease",
+        "journal": "Respir Med",
+        "year": "2022",
+        "volume": "200",
+        "issue": null,
+        "pages": "106913",
+        "doi": "10.1016/j.rmed.2022.106913",
+        "pmid": null,
+        "authors": [
+          "Oh S",
+          "Ronaghi R",
+          "He T"
+        ],
+        "first_author_last": "Oh"
+      },
+      {
+        "title": "Standardized definitions of bleeding after transbronchial lung biopsy: a Delphi consensus statement from the Nashville working group",
+        "journal": "Chest",
+        "year": "2020",
+        "volume": "158",
+        "issue": "1",
+        "pages": null,
+        "doi": "10.1016/j.chest.2020.01.036",
+        "pmid": null,
+        "authors": [
+          "Folch EE",
+          "Mahajan AK",
+          "Oberg CL"
+        ],
+        "first_author_last": "Folch"
+      },
+      {
+        "title": "Adequacy of lymph node transbronchial needle aspirates using convex probe endobronchial ultrasound for multiple tumor genotyping techniques in non-small-cell lung cancer",
+        "journal": "J Thorac Oncol Off Publ Int Assoc Study Lung Cancer",
+        "year": "2013",
+        "volume": "8",
+        "issue": "11",
+        "pages": null,
+        "doi": "10.1097/JTO.0b013e3182a471a9",
+        "pmid": null,
+        "authors": [
+          "Folch E",
+          "Yamaguchi N",
+          "Vanderlaan PA"
+        ],
+        "first_author_last": "Folch"
+      },
+      {
+        "title": "NAVIGATE 24-month results: electromagnetic navigation bronchoscopy for pulmonary lesions at 37 centers in Europe and the United States",
+        "journal": "J Thorac Oncol Off Publ Int Assoc Study Lung Cancer",
+        "year": "2022",
+        "volume": "17",
+        "issue": "4",
+        "pages": null,
+        "doi": "10.1016/j.jtho.2021.12.008",
+        "pmid": null,
+        "authors": [
+          "Folch EE",
+          "Bowling MR",
+          "Pritchett MA"
+        ],
+        "first_author_last": "Folch"
+      },
+      {
+        "title": "Population-based risk for complications after transthoracic needle lung biopsy of a pulmonary nodule: an analysis of discharge records",
+        "journal": "Ann Intern Med",
+        "year": "2011",
+        "volume": "155",
+        "issue": "3",
+        "pages": null,
+        "doi": "10.7326/0003-4819-155-3-201108020-00003",
+        "pmid": null,
+        "authors": [
+          "Wiener RS",
+          "Schwartz LM",
+          "Woloshin S",
+          "Welch HG"
+        ],
+        "first_author_last": "Wiener"
+      }
+    ],
+    "abstract": "Purpose Tissue acquisition in lung cancer is vital for multiple reasons. Primary reasons reported for molecular testing failure in lung cancer biopsy specimens include insufficient amount of tumor cells provided and inadequate tissue quality. Robotic bronchoscopy is a new tool enabling peripheral pulmonary lesion sampling; however, diagnostic yield remains imperfect possibly due to the location of nodules adjacent to or outside of the airway. The 1.1-mm cryoprobe is a novel diagnostic tool and accesses tissue in a 360-degree manner, thus potentially sampling eccentric/adjacent lesions. This study examines the diagnostic yield of the cryoprobe compared to standard needle aspiration and forceps biopsy. It additionally evaluates yield for molecular markers in cases of lung cancer. Methods This is a retrospective analysis of 112 patients with 120 peripheral pulmonary lesions biopsied via robotic bronchoscopy using needle aspirate, forceps, and cryobiopsy. Results The overall diagnostic yield was 90%. Nearly 18% of diagnoses were made exclusively from the cryobiopsy sample. Molecular analysis was adequate on all cryobiopsy samples sent. Digital imaging software confirmed an increase in quantity and quality of samples taken via cryobiopsy compared to needle aspirate and traditional forceps biopsy. Conclusion Using the 1.1-mm cryoprobe to biopsy PPN combined with the Ion robotic bronchoscopy system is safe, feasible, and provides more diagnostic tissue than needle aspirates or traditional forceps biopsies. The combination of cryobiopsy with robotic-assisted bronchoscopy increased diagnostic yield, likely due to its 360-degree tissue acquisition which is beneficial when targeting extraluminal lesions adjacent to the airway. Keywords Robotic bronchoscopy · Lung nodule · Cryobiopsy · Lung cancer · Advanced bronchoscopy · Interventional pulmonology Conflict of Interest Dr. Oberg is an educational consultant for Medtronic and Boston Scientific. Dr. Folch is a consultant for Boston Scientific, Cook, and Medtronic and has an educational grant from Intuitive Surgical. Dr. Oh is a consultant for Medtronic and Intuitive Surgical. These roles are unrelated to this study. There are no conflicts for Drs. Lau, He, Ronaghi, Susanto, Channick, and Garcia Tome. Open Access This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, and focal, weak HHV-8 expression (Top panel: Hematoxylin & Eosin stain, 200 × magnification; Bottom panel: HHV-8 immunohistochemistry, 200 × magnification) C Cryobiopsy showed Kaposi sarcoma with strong and diffuse HHV-8 expression (Top panel: Hematoxylin & Eosin stain, 200 × magnification; Bottom panel: HHV-8 immunohistochemistry, 200 × magnification",
+    "references_enriched": [
+      {
+        "title": "Natural history and factors associated with overall survival in stage IV ALK-rearranged non-small cell lung cancer"
+      },
+      {
+        "title": "J Thorac Oncol Off Publ Int Assoc Study Lung Cancer",
+        "year": 2019
+      },
+      {
+        "title": "The international association for the study of lung cancer global survey on molecular testing in lung cancer",
+        "year": 2019
+      },
+      {
+        "title": "J Thorac Oncol Off Publ Int Assoc Study Lung Cancer",
+        "year": 2019
+      },
+      {
+        "title": "Robotic bronchoscopy and future directions of interventional pulmonology",
+        "year": 2020
+      },
+      {
+        "title": "Curr Opin Pulm Med",
+        "year": 2022
+      },
+      {
+        "title": "Shapesensing robotic-assisted bronchoscopy for pulmonary nodules: initial multicenter experience using the Ion™ Endoluminal system",
+        "year": 2022
+      },
+      {
+        "title": "BMC Pulm Med",
+        "year": 2021
+      },
+      {
+        "title": "Prospective multicenter analysis of shapesensing robotic-assisted bronchoscopy for the biopsy of pulmonary nodules: results from the PRECiSE study",
+        "year": 2021
+      },
+      {
+        "title": "Chest",
+        "year": 2021
+      },
+      {
+        "title": "the impact of biopsy tool choice and rapid on-site evaluation on diagnostic accuracy for malignant lesions in the prospective: multicenter NAVIGATE study",
+        "year": 2021
+      },
+      {
+        "title": "J Bronchol Interv Pulmonol",
+        "year": 2021
+      },
+      {
+        "title": "Cytologic features and diagnostic value of PeriView FLEX transbronchial needle aspiration targeting pulmonary nodules",
+        "year": 2021
+      },
+      {
+        "title": "Cancer Cytopathol",
+        "year": 2020
+      },
+      {
+        "title": "Molecular analysis of peripheral lung adenocarcinoma in brush cytology obtained by EBUS plus fluoroscopy-guided bronchoscopy",
+        "year": 2020
+      },
+      {
+        "title": "Cancer Cytopathol",
+        "year": 2020
+      },
+      {
+        "title": "Transbronchial cryobiopsy for diffuse parenchymal lung disease: a state-of-the-art review of procedural techniques, current evidence, and future challenges",
+        "year": 2018
+      },
+      {
+        "title": "J Thorac Dis",
+        "year": 2017
+      },
+      {
+        "title": "Transbronchial cryobiopsies",
+        "year": 2017
+      },
+      {
+        "title": "Semin Respir Crit Care Med",
+        "year": 2018
+      },
+      {
+        "title": "Diagnostic outcomes and safety of cryobiopsy added to conventional sampling methods: an observational study",
+        "year": 2018
+      },
+      {
+        "title": "Chest",
+        "year": 2021
+      },
+      {
+        "title": "Lung navigation ventilation protocol to optimize biopsy of peripheral lung lesions",
+        "year": 2021
+      },
+      {
+        "title": "J Bronchol Interv Pulmonol",
+        "year": 2021
+      },
+      {
+        "title": "The safety profile of a protocolized transbronchial cryobiopsy program utilizing a 2.4 mm cryoprobe for interstitial lung disease",
+        "year": 2022
+      },
+      {
+        "title": "Respir Med",
+        "year": 2022
+      },
+      {
+        "title": "Standardized definitions of bleeding after transbronchial lung biopsy: a Delphi consensus statement from the Nashville working group",
+        "year": 2022
+      },
+      {
+        "title": "Chest",
+        "year": 2021
+      },
+      {
+        "title": "Adequacy of lymph node transbronchial needle aspirates using convex probe endobronchial ultrasound for multiple tumor genotyping techniques in non-small-cell lung cancer",
+        "year": 2020
+      },
+      {
+        "title": "J Thorac Oncol Off Publ Int Assoc Study Lung Cancer",
+        "year": 2019
+      },
+      {
+        "title": "NAVIGATE 24-month results: electromagnetic navigation bronchoscopy for pulmonary lesions at 37 centers in Europe and the United States",
+        "year": 2013
+      },
+      {
+        "title": "J Thorac Oncol Off Publ Int Assoc Study Lung Cancer",
+        "year": 2019
+      },
+      {
+        "title": "Population-based risk for complications after transthoracic needle lung biopsy of a pulmonary nodule: an analysis of discharge records",
+        "year": 2022
+      },
+      {
+        "title": "Ann Intern Med",
+        "year": 2011
+      }
+    ],
+    "references_source": "grobid_fallback"
+  },
+  "sections": [],
+  "statistics": [
+    {
+      "type": "sensitivity",
+      "value": 0.7,
+      "ci_lower": null,
+      "ci_upper": null,
+      "p_value": null,
+      "group_a": null,
+      "group_b": null,
+      "sentence": null
     },
     {
-      "name": "Pneumothorax",
-      "value": 5.4,
-      "unit": "percent",
-      "evidence": {
-        "text": "Pneumothorax 6 (5.4%) Chest tube placement",
-        "page": 5,
-        "bbox": null,
-        "confidence": 1.0
-      }
+      "type": "sensitivity",
+      "value": 0.69,
+      "ci_lower": null,
+      "ci_upper": null,
+      "p_value": null,
+      "group_a": null,
+      "group_b": null,
+      "sentence": null
+    },
+    {
+      "type": "yield",
+      "value": 0.71,
+      "ci_lower": null,
+      "ci_upper": null,
+      "p_value": null,
+      "group_a": null,
+      "group_b": null,
+      "sentence": null
+    },
+    {
+      "type": "yield",
+      "value": 1.0,
+      "ci_lower": null,
+      "ci_upper": null,
+      "p_value": null,
+      "group_a": null,
+      "group_b": null,
+      "sentence": null
+    },
+    {
+      "type": "yield",
+      "value": 0.086,
+      "ci_lower": null,
+      "ci_upper": null,
+      "p_value": null,
+      "group_a": null,
+      "group_b": null,
+      "sentence": null
+    },
+    {
+      "type": "effect_size",
+      "value": 21.0,
+      "ci_lower": null,
+      "ci_upper": null,
+      "p_value": null,
+      "group_a": null,
+      "group_b": null,
+      "sentence": null
+    },
+    {
+      "type": "yield",
+      "value": 0.902,
+      "ci_lower": null,
+      "ci_upper": null,
+      "p_value": null,
+      "group_a": null,
+      "group_b": null,
+      "sentence": null
+    },
+    {
+      "type": "sample_size",
+      "value": 10.0,
+      "ci_lower": null,
+      "ci_upper": null,
+      "p_value": null,
+      "group_a": null,
+      "group_b": null,
+      "sentence": null
+    },
+    {
+      "type": "sample_size",
+      "value": 7.0,
+      "ci_lower": null,
+      "ci_upper": null,
+      "p_value": null,
+      "group_a": null,
+      "group_b": null,
+      "sentence": null
+    },
+    {
+      "type": "yield",
+      "value": 0.9,
+      "ci_lower": null,
+      "ci_upper": null,
+      "p_value": null,
+      "group_a": null,
+      "group_b": null,
+      "sentence": null
     }
   ],
-  "ats_yield": {
-    "numerator": 101,
-    "denominator": 112,
-    "yield_pct": 90.2,
-    "evidence": {
-      "text": "ATS 2024 strict yield: numerator = specific benign or malignant diagnosis established during the procedural encounter; nonspecific findings are nondiagnostic; denominator = all attempted/performed.",
+  "relations": [],
+  "figures": [
+    {
+      "kind": "figure",
+      "caption": "shows a frozen and a thawed cryobiopsy specimen as well as a gross comparison of needle aspirate tissue, forceps biopsies, and cryobiopsies.",
+      "image_path": "/tmp/medparse_api_x2uzsuwc/figures/Robotic Cyrobiopsy 2022_fig01.jpg",
+      "ocr_text": null,
+      "local_id": "fig01",
       "page": 1,
-      "bbox": null,
-      "confidence": 1.0
+      "bbox": [
+        514.5416259765625,
+        726.2721176147461,
+        544.3720703125,
+        695.5282821655273
+      ],
+      "bbox_pixels": [
+        1553,
+        179,
+        1682,
+        310
+      ],
+      "rows": null,
+      "footnotes": [
+        "nd focal, weak HHV-8 expression (Top panel: Hematoxylin & Eosin stain, 200 × magnification; Bottom panel: HHV-8 immunohistochemistry, 200 × magnification) C Cryobiopsy showed Kaposi sarcoma with strong and diffuse HHV-8 expression (Top panel: Hematoxylin & Eosin stain, 200 × magnification; Bottom panel: HHV-8 immunohistochemistry, 200 × magnification)"
+      ],
+      "csv_path": null,
+      "width_px": 129,
+      "height_px": 131
+    },
+    {
+      "kind": "figure",
+      "caption": "shows a frozen and a thawed cryobiopsy specimen as well as a gross comparison of needle aspirate tissue, forceps biopsies, and cryobiopsies.",
+      "image_path": "/tmp/medparse_api_x2uzsuwc/figures/Robotic Cyrobiopsy 2022_fig02.jpg",
+      "ocr_text": null,
+      "local_id": "fig02",
+      "page": 1,
+      "bbox": [
+        500.9800720214844,
+        56.10455322265625,
+        543.9971313476562,
+        43.70172119140625
+      ],
+      "bbox_pixels": [
+        1512,
+        2226,
+        1681,
+        2302
+      ],
+      "rows": null,
+      "footnotes": [
+        "nd focal, weak HHV-8 expression (Top panel: Hematoxylin & Eosin stain, 200 × magnification; Bottom panel: HHV-8 immunohistochemistry, 200 × magnification) C Cryobiopsy showed Kaposi sarcoma with strong and diffuse HHV-8 expression (Top panel: Hematoxylin & Eosin stain, 200 × magnification; Bottom panel: HHV-8 immunohistochemistry, 200 × magnification)"
+      ],
+      "csv_path": null,
+      "width_px": 169,
+      "height_px": 76
+    },
+    {
+      "kind": "figure",
+      "caption": "shows a frozen and a thawed cryobiopsy specimen as well as a gross comparison of needle aspirate tissue, forceps biopsies, and cryobiopsies.",
+      "image_path": "/tmp/medparse_api_x2uzsuwc/figures/Robotic Cyrobiopsy 2022_fig03.jpg",
+      "ocr_text": null,
+      "local_id": "fig03",
+      "page": 2,
+      "bbox": [
+        49.70283508300781,
+        56.073974609375,
+        59.89217758178711,
+        44.0440673828125
+      ],
+      "bbox_pixels": [
+        133,
+        2226,
+        202,
+        2301
+      ],
+      "rows": null,
+      "footnotes": [
+        "nd focal, weak HHV-8 expression (Top panel: Hematoxylin & Eosin stain, 200 × magnification; Bottom panel: HHV-8 immunohistochemistry, 200 × magnification) C Cryobiopsy showed Kaposi sarcoma with strong and diffuse HHV-8 expression (Top panel: Hematoxylin & Eosin stain, 200 × magnification; Bottom panel: HHV-8 immunohistochemistry, 200 × magnification)"
+      ],
+      "csv_path": null,
+      "width_px": 69,
+      "height_px": 75
+    },
+    {
+      "kind": "figure",
+      "caption": "shows a frozen and a thawed cryobiopsy specimen as well as a gross comparison of needle aspirate tissue, forceps biopsies, and cryobiopsies.",
+      "image_path": "/tmp/medparse_api_x2uzsuwc/figures/Robotic Cyrobiopsy 2022_fig04.jpg",
+      "ocr_text": null,
+      "local_id": "fig04",
+      "page": 3,
+      "bbox": [
+        53.1243896484375,
+        733.9406661987305,
+        540.7484741210938,
+        403.3686828613281
+      ],
+      "bbox_pixels": [
+        143,
+        155,
+        1671,
+        1203
+      ],
+      "rows": null,
+      "footnotes": [
+        "nd focal, weak HHV-8 expression (Top panel: Hematoxylin & Eosin stain, 200 × magnification; Bottom panel: HHV-8 immunohistochemistry, 200 × magnification) C Cryobiopsy showed Kaposi sarcoma with strong and diffuse HHV-8 expression (Top panel: Hematoxylin & Eosin stain, 200 × magnification; Bottom panel: HHV-8 immunohistochemistry, 200 × magnification)"
+      ],
+      "csv_path": null,
+      "width_px": 1528,
+      "height_px": 1048
+    },
+    {
+      "kind": "figure",
+      "caption": "shows a frozen and a thawed cryobiopsy specimen as well as a gross comparison of needle aspirate tissue, forceps biopsies, and cryobiopsies.",
+      "image_path": "/tmp/medparse_api_x2uzsuwc/figures/Robotic Cyrobiopsy 2022_fig05.jpg",
+      "ocr_text": null,
+      "local_id": "fig05",
+      "page": 3,
+      "bbox": [
+        501.04852294921875,
+        56.0625,
+        543.84228515625,
+        43.72979736328125
+      ],
+      "bbox_pixels": [
+        1512,
+        2226,
+        1681,
+        2302
+      ],
+      "rows": null,
+      "footnotes": [
+        "nd focal, weak HHV-8 expression (Top panel: Hematoxylin & Eosin stain, 200 × magnification; Bottom panel: HHV-8 immunohistochemistry, 200 × magnification) C Cryobiopsy showed Kaposi sarcoma with strong and diffuse HHV-8 expression (Top panel: Hematoxylin & Eosin stain, 200 × magnification; Bottom panel: HHV-8 immunohistochemistry, 200 × magnification)"
+      ],
+      "csv_path": null,
+      "width_px": 169,
+      "height_px": 76
+    },
+    {
+      "kind": "figure",
+      "caption": "shows a frozen and a thawed cryobiopsy specimen as well as a gross comparison of needle aspirate tissue, forceps biopsies, and cryobiopsies.",
+      "image_path": "/tmp/medparse_api_x2uzsuwc/figures/Robotic Cyrobiopsy 2022_fig06.jpg",
+      "ocr_text": null,
+      "local_id": "fig06",
+      "page": 5,
+      "bbox": [
+        501.0743408203125,
+        56.06866455078125,
+        543.8584594726562,
+        43.738525390625
+      ],
+      "bbox_pixels": [
+        1512,
+        2226,
+        1681,
+        2302
+      ],
+      "rows": null,
+      "footnotes": [
+        "nd focal, weak HHV-8 expression (Top panel: Hematoxylin & Eosin stain, 200 × magnification; Bottom panel: HHV-8 immunohistochemistry, 200 × magnification) C Cryobiopsy showed Kaposi sarcoma with strong and diffuse HHV-8 expression (Top panel: Hematoxylin & Eosin stain, 200 × magnification; Bottom panel: HHV-8 immunohistochemistry, 200 × magnification)"
+      ],
+      "csv_path": null,
+      "width_px": 169,
+      "height_px": 76
+    },
+    {
+      "kind": "figure",
+      "caption": "shows a frozen and a thawed cryobiopsy specimen as well as a gross comparison of needle aspirate tissue, forceps biopsies, and cryobiopsies.",
+      "image_path": "/tmp/medparse_api_x2uzsuwc/figures/Robotic Cyrobiopsy 2022_fig07.jpg",
+      "ocr_text": null,
+      "local_id": "fig07",
+      "page": 6,
+      "bbox": [
+        84.40699005126953,
+        732.8504676818848,
+        509.8187561035156,
+        505.26422119140625
+      ],
+      "bbox_pixels": [
+        239,
+        158,
+        1577,
+        892
+      ],
+      "rows": null,
+      "footnotes": [
+        "nd focal, weak HHV-8 expression (Top panel: Hematoxylin & Eosin stain, 200 × magnification; Bottom panel: HHV-8 immunohistochemistry, 200 × magnification) C Cryobiopsy showed Kaposi sarcoma with strong and diffuse HHV-8 expression (Top panel: Hematoxylin & Eosin stain, 200 × magnification; Bottom panel: HHV-8 immunohistochemistry, 200 × magnification)"
+      ],
+      "csv_path": null,
+      "width_px": 1338,
+      "height_px": 734
+    },
+    {
+      "kind": "figure",
+      "caption": "shows a frozen and a thawed cryobiopsy specimen as well as a gross comparison of needle aspirate tissue, forceps biopsies, and cryobiopsies.",
+      "image_path": "/tmp/medparse_api_x2uzsuwc/figures/Robotic Cyrobiopsy 2022_fig08.jpg",
+      "ocr_text": null,
+      "local_id": "fig08",
+      "page": 6,
+      "bbox": [
+        49.72800064086914,
+        55.98406982421875,
+        92.80343627929688,
+        43.53912353515625
+      ],
+      "bbox_pixels": [
+        133,
+        2227,
+        302,
+        2302
+      ],
+      "rows": null,
+      "footnotes": [
+        "nd focal, weak HHV-8 expression (Top panel: Hematoxylin & Eosin stain, 200 × magnification; Bottom panel: HHV-8 immunohistochemistry, 200 × magnification) C Cryobiopsy showed Kaposi sarcoma with strong and diffuse HHV-8 expression (Top panel: Hematoxylin & Eosin stain, 200 × magnification; Bottom panel: HHV-8 immunohistochemistry, 200 × magnification)"
+      ],
+      "csv_path": null,
+      "width_px": 169,
+      "height_px": 75
+    },
+    {
+      "kind": "figure",
+      "caption": "shows a frozen and a thawed cryobiopsy specimen as well as a gross comparison of needle aspirate tissue, forceps biopsies, and cryobiopsies.",
+      "image_path": "/tmp/medparse_api_x2uzsuwc/figures/Robotic Cyrobiopsy 2022_fig09.jpg",
+      "ocr_text": null,
+      "local_id": "fig09",
+      "page": 7,
+      "bbox": [
+        501.1076354980469,
+        56.034423828125,
+        543.8804321289062,
+        43.835693359375
+      ],
+      "bbox_pixels": [
+        1512,
+        2226,
+        1681,
+        2301
+      ],
+      "rows": null,
+      "footnotes": [
+        "nd focal, weak HHV-8 expression (Top panel: Hematoxylin & Eosin stain, 200 × magnification; Bottom panel: HHV-8 immunohistochemistry, 200 × magnification) C Cryobiopsy showed Kaposi sarcoma with strong and diffuse HHV-8 expression (Top panel: Hematoxylin & Eosin stain, 200 × magnification; Bottom panel: HHV-8 immunohistochemistry, 200 × magnification)"
+      ],
+      "csv_path": null,
+      "width_px": 169,
+      "height_px": 75
+    },
+    {
+      "kind": "figure",
+      "caption": "shows a frozen and a thawed cryobiopsy specimen as well as a gross comparison of needle aspirate tissue, forceps biopsies, and cryobiopsies.",
+      "image_path": "/tmp/medparse_api_x2uzsuwc/figures/Robotic Cyrobiopsy 2022_fig10.jpg",
+      "ocr_text": null,
+      "local_id": "fig10",
+      "page": 8,
+      "bbox": [
+        53.02851104736328,
+        734.078182220459,
+        541.7620239257812,
+        415.4063720703125
+      ],
+      "bbox_pixels": [
+        143,
+        155,
+        1674,
+        1166
+      ],
+      "rows": null,
+      "footnotes": [
+        "nd focal, weak HHV-8 expression (Top panel: Hematoxylin & Eosin stain, 200 × magnification; Bottom panel: HHV-8 immunohistochemistry, 200 × magnification) C Cryobiopsy showed Kaposi sarcoma with strong and diffuse HHV-8 expression (Top panel: Hematoxylin & Eosin stain, 200 × magnification; Bottom panel: HHV-8 immunohistochemistry, 200 × magnification)"
+      ],
+      "csv_path": null,
+      "width_px": 1531,
+      "height_px": 1011
+    },
+    {
+      "kind": "figure",
+      "caption": "shows a frozen and a thawed cryobiopsy specimen as well as a gross comparison of needle aspirate tissue, forceps biopsies, and cryobiopsies.",
+      "image_path": "/tmp/medparse_api_x2uzsuwc/figures/Robotic Cyrobiopsy 2022_fig11.jpg",
+      "ocr_text": null,
+      "local_id": "fig11",
+      "page": 8,
+      "bbox": [
+        49.73662185668945,
+        56.00726318359375,
+        92.761474609375,
+        43.5263671875
+      ],
+      "bbox_pixels": [
+        133,
+        2227,
+        302,
+        2302
+      ],
+      "rows": null,
+      "footnotes": [
+        "nd focal, weak HHV-8 expression (Top panel: Hematoxylin & Eosin stain, 200 × magnification; Bottom panel: HHV-8 immunohistochemistry, 200 × magnification) C Cryobiopsy showed Kaposi sarcoma with strong and diffuse HHV-8 expression (Top panel: Hematoxylin & Eosin stain, 200 × magnification; Bottom panel: HHV-8 immunohistochemistry, 200 × magnification)"
+      ],
+      "csv_path": null,
+      "width_px": 169,
+      "height_px": 75
+    },
+    {
+      "kind": "figure",
+      "caption": "shows a frozen and a thawed cryobiopsy specimen as well as a gross comparison of needle aspirate tissue, forceps biopsies, and cryobiopsies.",
+      "image_path": "/tmp/medparse_api_x2uzsuwc/figures/Robotic Cyrobiopsy 2022_fig12.jpg",
+      "ocr_text": null,
+      "local_id": "fig12",
+      "page": 9,
+      "bbox": [
+        501.0146484375,
+        55.94677734375,
+        543.7987060546875,
+        43.892822265625
+      ],
+      "bbox_pixels": [
+        1512,
+        2227,
+        1680,
+        2301
+      ],
+      "rows": null,
+      "footnotes": [
+        "nd focal, weak HHV-8 expression (Top panel: Hematoxylin & Eosin stain, 200 × magnification; Bottom panel: HHV-8 immunohistochemistry, 200 × magnification) C Cryobiopsy showed Kaposi sarcoma with strong and diffuse HHV-8 expression (Top panel: Hematoxylin & Eosin stain, 200 × magnification; Bottom panel: HHV-8 immunohistochemistry, 200 × magnification)"
+      ],
+      "csv_path": null,
+      "width_px": 168,
+      "height_px": 74
     }
-  },
-  "nondiagnostic": {
-    "atypia_or_suspicious": 0,
-    "nonspecific_inflammation": 17,
-    "other_nondiagnostic": 0
+  ],
+  "tables": [
+    {
+      "kind": "table",
+      "caption": "molecular testing [7]. Other studies have evaluated diagnostic yield and specimen adequacy from bronchial brushing specimens obtained by radial endobronchial ultrasound (REBUS) guidance in peripheral pulmonary lesions. In 71 patients, the overall diagnostic yield was only 71%; however, in the 30 patients with adenocarcinoma, 100% of samples were viable for further molecular testing. [8] A novel tool for lung biopsy, cryoprobes are insulated catheters inserted through a bronchoscope and can extend to the lung periphery. The distal metal tip cools to -79 °C within seconds via the Joule-Thomson effect [9]. Transbronchial lung cryobiopsies (TBLCB) are used in patients with interstitial lung disease (ILD) in order to acquire larger tissue samples and prevent crush artifact that can occur with forceps biopsies [10]. Despite freezing, tissue architecture and cytologic findings are preserved, including nuclear details, such as mitotic activity and nuclear-cytoplasmic ratio. Additionally, the TBLCB obtain tissue in a 360-degree fashion; whereas, traditional tools only biopsy in one plane. Therefore, an eccentric PPN may be missed if the opposite side of the airway is biopsied; whereas, a 360-degree biopsy will sample tissue from all sides. In a recent study sampling PPN using a 1.9-mm (mm) cryoprobe through a conventional bronchoscope, the diagnostic yield was increased by 8.6% exclusively based on the cryobiopsy [11].",
+      "image_path": null,
+      "ocr_text": null,
+      "local_id": null,
+      "page": 4,
+      "bbox": null,
+      "bbox_pixels": null,
+      "rows": [
+        [
+          {
+            "text": "Demographics and clinical characteristics"
+          },
+          {
+            "text": "Median (IQR) or frequency (%) n =112",
+            "header": "column"
+          }
+        ],
+        [
+          {
+            "text": "Age, years",
+            "header": "row"
+          },
+          {
+            "text": "71 (64-76)"
+          }
+        ],
+        [
+          {
+            "text": "Sex"
+          },
+          {
+            "text": ""
+          }
+        ],
+        [
+          {
+            "text": "Women",
+            "header": "row"
+          },
+          {
+            "text": "60 (54%)"
+          }
+        ],
+        [
+          {
+            "text": "Men",
+            "header": "row"
+          },
+          {
+            "text": "52 (46%)"
+          }
+        ],
+        [
+          {
+            "text": "Smoking history",
+            "header": "row"
+          },
+          {
+            "text": "66 (59%)"
+          }
+        ],
+        [
+          {
+            "text": "Pack years",
+            "header": "row"
+          },
+          {
+            "text": "25 (15-50)"
+          }
+        ],
+        [
+          {
+            "text": "Comorbidities"
+          },
+          {
+            "text": ""
+          }
+        ],
+        [
+          {
+            "text": "Pulmonary Disease",
+            "header": "row"
+          },
+          {
+            "text": "66 (59%)"
+          }
+        ],
+        [
+          {
+            "text": "Radiographic emphysema",
+            "header": "row"
+          },
+          {
+            "text": "38 (34%)"
+          }
+        ],
+        [
+          {
+            "text": "COPD",
+            "header": "row"
+          },
+          {
+            "text": "33 (29%)"
+          }
+        ],
+        [
+          {
+            "text": "Interstitial lung disease",
+            "header": "row"
+          },
+          {
+            "text": "22 (20%)"
+          }
+        ],
+        [
+          {
+            "text": "Asthma",
+            "header": "row"
+          },
+          {
+            "text": "11 (9.8%)"
+          }
+        ],
+        [
+          {
+            "text": "Chronic respiratory failure on home oxygen",
+            "header": "row"
+          },
+          {
+            "text": "4 (3.6%)"
+          }
+        ],
+        [
+          {
+            "text": "Lung transplant",
+            "header": "row"
+          },
+          {
+            "text": "3 (2.7%)"
+          }
+        ],
+        [
+          {
+            "text": "Sarcoidosis",
+            "header": "row"
+          },
+          {
+            "text": "2 (1.8%)"
+          }
+        ],
+        [
+          {
+            "text": "Non-Pulmonary Disease",
+            "header": "row"
+          },
+          {
+            "text": "105 (94%)"
+          }
+        ],
+        [
+          {
+            "text": "Hypertension",
+            "header": "row"
+          },
+          {
+            "text": "51 (46%)"
+          }
+        ],
+        [
+          {
+            "text": "Hyperlipidemia",
+            "header": "row"
+          },
+          {
+            "text": "36 (32%)"
+          }
+        ],
+        [
+          {
+            "text": "Prior Malignancy",
+            "header": "row"
+          },
+          {
+            "text": "37 (33%)"
+          }
+        ],
+        [
+          {
+            "text": "Lung",
+            "header": "row"
+          },
+          {
+            "text": "11 (9.8%)"
+          }
+        ],
+        [
+          {
+            "text": "Breast",
+            "header": "row"
+          },
+          {
+            "text": "8 (7.1%)"
+          }
+        ],
+        [
+          {
+            "text": "Prostate",
+            "header": "row"
+          },
+          {
+            "text": "6 (5.4%)"
+          }
+        ],
+        [
+          {
+            "text": "Hematologic",
+            "header": "row"
+          },
+          {
+            "text": "6 (5.4%)"
+          }
+        ],
+        [
+          {
+            "text": "Uterine",
+            "header": "row"
+          },
+          {
+            "text": "4 (3.6%)"
+          }
+        ],
+        [
+          {
+            "text": "Renal Cell",
+            "header": "row"
+          },
+          {
+            "text": "3 (2.7%)"
+          }
+        ],
+        [
+          {
+            "text": "Melanoma",
+            "header": "row"
+          },
+          {
+            "text": "2 (5.7%)"
+          }
+        ],
+        [
+          {
+            "text": "Bladder",
+            "header": "row"
+          },
+          {
+            "text": "2 (1.8%)"
+          }
+        ],
+        [
+          {
+            "text": "Colon",
+            "header": "row"
+          },
+          {
+            "text": "2 (1.8%)"
+          }
+        ],
+        [
+          {
+            "text": "Head and Neck",
+            "header": "row"
+          },
+          {
+            "text": "2 (1.8%)"
+          }
+        ],
+        [
+          {
+            "text": "Pancreatic",
+            "header": "row"
+          },
+          {
+            "text": "1 (0.9%)"
+          }
+        ],
+        [
+          {
+            "text": "Hepatocellular",
+            "header": "row"
+          },
+          {
+            "text": "1 (0.9%)"
+          }
+        ],
+        [
+          {
+            "text": "With more than 1 malignancy",
+            "header": "row"
+          },
+          {
+            "text": "9 (8%)"
+          }
+        ],
+        [
+          {
+            "text": "Cardiac disease/stroke",
+            "header": "row"
+          },
+          {
+            "text": "23 (20.5%)"
+          }
+        ],
+        [
+          {
+            "text": "GERD",
+            "header": "row"
+          },
+          {
+            "text": "20 (17.9%)"
+          }
+        ],
+        [
+          {
+            "text": "Diabetes mellitus II",
+            "header": "row"
+          },
+          {
+            "text": "19 (17%)"
+          }
+        ],
+        [
+          {
+            "text": "Medications"
+          },
+          {
+            "text": ""
+          }
+        ],
+        [
+          {
+            "text": "Antiplatelet agent*",
+            "header": "row"
+          },
+          {
+            "text": "20 (17.8%)"
+          }
+        ],
+        [
+          {
+            "text": "Therapeutic anticoagulation**",
+            "header": "row"
+          },
+          {
+            "text": "12 (10.7%)"
+          }
+        ],
+        [
+          {
+            "text": "Laboratory Values"
+          },
+          {
+            "text": ""
+          }
+        ],
+        [
+          {
+            "text": "Platelet count×10 9 per l",
+            "header": "row"
+          },
+          {
+            "text": "249 (192.5-301)"
+          }
+        ],
+        [
+          {
+            "text": "International normalized ratio",
+            "header": "row"
+          },
+          {
+            "text": "1 (1-1.1)"
+          }
+        ],
+        [
+          {
+            "text": "Blood urea nitrogen, mg/dL",
+            "header": "row"
+          },
+          {
+            "text": "16 (13-22)"
+          }
+        ],
+        [
+          {
+            "text": "Creatinine, mg/dL",
+            "header": "row"
+          },
+          {
+            "text": "0.89 (0.74-1.1)"
+          }
+        ],
+        [
+          {
+            "text": "Nodule Features",
+            "header": "row"
+          },
+          {
+            "text": "n =120"
+          }
+        ],
+        [
+          {
+            "text": "Location"
+          },
+          {
+            "text": ""
+          }
+        ],
+        [
+          {
+            "text": "Right upper lobe",
+            "header": "row"
+          },
+          {
+            "text": "35 (29.2%)"
+          }
+        ],
+        [
+          {
+            "text": "Right middle lobe",
+            "header": "row"
+          },
+          {
+            "text": "10 (8.3%)"
+          }
+        ]
+      ],
+      "footnotes": [
+        "nd focal, weak HHV-8 expression (Top panel: Hematoxylin & Eosin stain, 200 × magnification; Bottom panel: HHV-8 immunohistochemistry, 200 × magnification) C Cryobiopsy showed Kaposi sarcoma with strong and diffuse HHV-8 expression (Top panel: Hematoxylin & Eosin stain, 200 × magnification; Bottom panel: HHV-8 immunohistochemistry, 200 × magnification)"
+      ],
+      "csv_path": "/tmp/medparse_api_x2uzsuwc/tables/Robotic_Cyrobiopsy_2022_table01.csv",
+      "width_px": null,
+      "height_px": null
+    },
+    {
+      "kind": "table",
+      "caption": "molecular testing [7]. Other studies have evaluated diagnostic yield and specimen adequacy from bronchial brushing specimens obtained by radial endobronchial ultrasound (REBUS) guidance in peripheral pulmonary lesions. In 71 patients, the overall diagnostic yield was only 71%; however, in the 30 patients with adenocarcinoma, 100% of samples were viable for further molecular testing. [8] A novel tool for lung biopsy, cryoprobes are insulated catheters inserted through a bronchoscope and can extend to the lung periphery. The distal metal tip cools to -79 °C within seconds via the Joule-Thomson effect [9]. Transbronchial lung cryobiopsies (TBLCB) are used in patients with interstitial lung disease (ILD) in order to acquire larger tissue samples and prevent crush artifact that can occur with forceps biopsies [10]. Despite freezing, tissue architecture and cytologic findings are preserved, including nuclear details, such as mitotic activity and nuclear-cytoplasmic ratio. Additionally, the TBLCB obtain tissue in a 360-degree fashion; whereas, traditional tools only biopsy in one plane. Therefore, an eccentric PPN may be missed if the opposite side of the airway is biopsied; whereas, a 360-degree biopsy will sample tissue from all sides. In a recent study sampling PPN using a 1.9-mm (mm) cryoprobe through a conventional bronchoscope, the diagnostic yield was increased by 8.6% exclusively based on the cryobiopsy [11].",
+      "image_path": null,
+      "ocr_text": null,
+      "local_id": null,
+      "page": 5,
+      "bbox": null,
+      "bbox_pixels": null,
+      "rows": [
+        [
+          {
+            "text": "Table 1 (continued)"
+          },
+          {
+            "text": ""
+          }
+        ],
+        [
+          {
+            "text": "Nodule Features"
+          },
+          {
+            "text": "n =120"
+          }
+        ],
+        [
+          {
+            "text": "Right lower lobe"
+          },
+          {
+            "text": "30 (25%)"
+          }
+        ],
+        [
+          {
+            "text": "Left upper lobe"
+          },
+          {
+            "text": "28 (23.3%)"
+          }
+        ],
+        [
+          {
+            "text": "Lingula"
+          },
+          {
+            "text": "3 (2.5%)"
+          }
+        ],
+        [
+          {
+            "text": "Left lower lobe"
+          },
+          {
+            "text": "14 (11.7%)"
+          }
+        ],
+        [
+          {
+            "text": "Size"
+          },
+          {
+            "text": ""
+          }
+        ],
+        [
+          {
+            "text": "Short axis, millimeters"
+          },
+          {
+            "text": "15.5 (8-25.3)"
+          }
+        ],
+        [
+          {
+            "text": "Long axis, millimeters"
+          },
+          {
+            "text": "22 (13-34.3)"
+          }
+        ],
+        [
+          {
+            "text": "Nodules 10 mmor under (long axis)"
+          },
+          {
+            "text": "19 (15.8%)"
+          }
+        ],
+        [
+          {
+            "text": "Nodules 11-20mm"
+          },
+          {
+            "text": "39 (32.5%)"
+          }
+        ],
+        [
+          {
+            "text": "Nodules 21-30mm"
+          },
+          {
+            "text": "27 (22.5%)"
+          }
+        ],
+        [
+          {
+            "text": "Nodules>30mm"
+          },
+          {
+            "text": "35 (29.2%)"
+          }
+        ],
+        [
+          {
+            "text": "Characteristics"
+          },
+          {
+            "text": ""
+          }
+        ],
+        [
+          {
+            "text": "Solid"
+          },
+          {
+            "text": "87 (72.5%)"
+          }
+        ],
+        [
+          {
+            "text": "Part-solid"
+          },
+          {
+            "text": "25 (20.8%)"
+          }
+        ],
+        [
+          {
+            "text": "Ground glass"
+          },
+          {
+            "text": "8 (6.7%)"
+          }
+        ],
+        [
+          {
+            "text": "Bronchus sign present"
+          },
+          {
+            "text": "58 (48.3%)"
+          }
+        ],
+        [
+          {
+            "text": "Pleural distance, millimeters"
+          },
+          {
+            "text": "6 (0-15)"
+          }
+        ],
+        [
+          {
+            "text": "Procedure Details"
+          },
+          {
+            "text": ""
+          }
+        ],
+        [
+          {
+            "text": "REBUS used"
+          },
+          {
+            "text": "120 (100%)"
+          }
+        ],
+        [
+          {
+            "text": "Concentric"
+          },
+          {
+            "text": "67 (55.8%)"
+          }
+        ],
+        [
+          {
+            "text": "Eccentric"
+          },
+          {
+            "text": "37 (30.8%)"
+          }
+        ],
+        [
+          {
+            "text": "No signal"
+          },
+          {
+            "text": "16 (13.3%)"
+          }
+        ],
+        [
+          {
+            "text": "Complications"
+          },
+          {
+            "text": "n =112"
+          }
+        ],
+        [
+          {
+            "text": "Pneumothorax"
+          },
+          {
+            "text": "6 (5.4%)"
+          }
+        ],
+        [
+          {
+            "text": "Chest tube placement"
+          },
+          {
+            "text": "3 (2.7%)"
+          }
+        ],
+        [
+          {
+            "text": "Minor bleeding"
+          },
+          {
+            "text": "3 (2.7%)"
+          }
+        ]
+      ],
+      "footnotes": [
+        "nd focal, weak HHV-8 expression (Top panel: Hematoxylin & Eosin stain, 200 × magnification; Bottom panel: HHV-8 immunohistochemistry, 200 × magnification) C Cryobiopsy showed Kaposi sarcoma with strong and diffuse HHV-8 expression (Top panel: Hematoxylin & Eosin stain, 200 × magnification; Bottom panel: HHV-8 immunohistochemistry, 200 × magnification)"
+      ],
+      "csv_path": "/tmp/medparse_api_x2uzsuwc/tables/Robotic_Cyrobiopsy_2022_table02.csv",
+      "width_px": null,
+      "height_px": null
+    },
+    {
+      "kind": "table",
+      "caption": "molecular testing [7]. Other studies have evaluated diagnostic yield and specimen adequacy from bronchial brushing specimens obtained by radial endobronchial ultrasound (REBUS) guidance in peripheral pulmonary lesions. In 71 patients, the overall diagnostic yield was only 71%; however, in the 30 patients with adenocarcinoma, 100% of samples were viable for further molecular testing. [8] A novel tool for lung biopsy, cryoprobes are insulated catheters inserted through a bronchoscope and can extend to the lung periphery. The distal metal tip cools to -79 °C within seconds via the Joule-Thomson effect [9]. Transbronchial lung cryobiopsies (TBLCB) are used in patients with interstitial lung disease (ILD) in order to acquire larger tissue samples and prevent crush artifact that can occur with forceps biopsies [10]. Despite freezing, tissue architecture and cytologic findings are preserved, including nuclear details, such as mitotic activity and nuclear-cytoplasmic ratio. Additionally, the TBLCB obtain tissue in a 360-degree fashion; whereas, traditional tools only biopsy in one plane. Therefore, an eccentric PPN may be missed if the opposite side of the airway is biopsied; whereas, a 360-degree biopsy will sample tissue from all sides. In a recent study sampling PPN using a 1.9-mm (mm) cryoprobe through a conventional bronchoscope, the diagnostic yield was increased by 8.6% exclusively based on the cryobiopsy [11].",
+      "image_path": null,
+      "ocr_text": null,
+      "local_id": null,
+      "page": 7,
+      "bbox": null,
+      "bbox_pixels": null,
+      "rows": [
+        [
+          {
+            "text": "Diagnoses",
+            "header": "column"
+          },
+          {
+            "text": "Median (IQR) or Frequency (%) n =120",
+            "header": "column"
+          }
+        ],
+        [
+          {
+            "text": "Malignancy"
+          },
+          {
+            "text": "56 (46.7%)"
+          }
+        ],
+        [
+          {
+            "text": "Adenocarcinoma, lung"
+          },
+          {
+            "text": "34 (28.3%)"
+          }
+        ],
+        [
+          {
+            "text": "Squamous cell carcinoma, lung"
+          },
+          {
+            "text": "15 (12.5%)"
+          }
+        ],
+        [
+          {
+            "text": "Lymphoma/lymphoproliferative disorder"
+          },
+          {
+            "text": "3 (2.5%)"
+          }
+        ],
+        [
+          {
+            "text": "Small cell carcinoma, lung"
+          },
+          {
+            "text": "1 (0.8%)"
+          }
+        ],
+        [
+          {
+            "text": "Renal cell carcinoma"
+          },
+          {
+            "text": "1 (0.8%)"
+          }
+        ],
+        [
+          {
+            "text": "Endometrial"
+          },
+          {
+            "text": "1 (0.8%)"
+          }
+        ],
+        [
+          {
+            "text": "Sarcoma"
+          },
+          {
+            "text": "1 (0.8%)"
+          }
+        ],
+        [
+          {
+            "text": "Benign"
+          },
+          {
+            "text": "52 (43.3%)"
+          }
+        ],
+        [
+          {
+            "text": "Granulomas"
+          },
+          {
+            "text": "17 (14.2%)"
+          }
+        ],
+        [
+          {
+            "text": "Organizing pneumonia"
+          },
+          {
+            "text": "9 (7.5%)"
+          }
+        ],
+        [
+          {
+            "text": "Inflammation with or without necrosis"
+          },
+          {
+            "text": "9 (7.5%)"
+          }
+        ],
+        [
+          {
+            "text": "Fibrosis/fibroelastic scar"
+          },
+          {
+            "text": "8 (6.7%)"
+          }
+        ],
+        [
+          {
+            "text": "Infection"
+          },
+          {
+            "text": "7 (5.8%)"
+          }
+        ],
+        [
+          {
+            "text": "Aspergillus"
+          },
+          {
+            "text": "3 (2.5%)"
+          }
+        ],
+        [
+          {
+            "text": "Coccidioidomycosis"
+          },
+          {
+            "text": "3 (2.5%)"
+          }
+        ],
+        [
+          {
+            "text": "Streptococcus anginosus"
+          },
+          {
+            "text": "1 (0.8%)"
+          }
+        ],
+        [
+          {
+            "text": "Hamartoma"
+          },
+          {
+            "text": "2 (1.7%)"
+          }
+        ],
+        [
+          {
+            "text": "Non-Diagnostic"
+          },
+          {
+            "text": "12 (10%)"
+          }
+        ],
+        [
+          {
+            "text": "Yield per tool, diagnostic cases"
+          },
+          {
+            "text": "n =108"
+          }
+        ],
+        [
+          {
+            "text": "Needle alone"
+          },
+          {
+            "text": "0 (0%)"
+          }
+        ],
+        [
+          {
+            "text": "Forceps alone"
+          },
+          {
+            "text": "2 (1.9%)"
+          }
+        ],
+        [
+          {
+            "text": "Cryobiopsy alone"
+          },
+          {
+            "text": "19 (17.6%)"
+          }
+        ],
+        [
+          {
+            "text": "Needle+forceps"
+          },
+          {
+            "text": "1 (0.9%)"
+          }
+        ],
+        [
+          {
+            "text": "Needle+cryobiopsy"
+          },
+          {
+            "text": "5 (4.6%)"
+          }
+        ],
+        [
+          {
+            "text": "Forceps+cryobiopsy"
+          },
+          {
+            "text": "53 (49.1%)"
+          }
+        ],
+        [
+          {
+            "text": "Needle+forceps+cryobiopsy"
+          },
+          {
+            "text": "28 (25.9%)"
+          }
+        ],
+        [
+          {
+            "text": "Molecular analysis"
+          },
+          {
+            "text": "n =49"
+          }
+        ],
+        [
+          {
+            "text": "Local IHC/FISH adequacy"
+          },
+          {
+            "text": "49 (100%)"
+          }
+        ],
+        [
+          {
+            "text": "Needle"
+          },
+          {
+            "text": "2 (100%)"
+          }
+        ],
+        [
+          {
+            "text": "Forceps"
+          },
+          {
+            "text": "18 (100%)"
+          }
+        ],
+        [
+          {
+            "text": "Cryobiopsy"
+          },
+          {
+            "text": "29 (100%)"
+          }
+        ],
+        [
+          {
+            "text": "NGS adequacy"
+          },
+          {
+            "text": "45 (81.6%)"
+          }
+        ],
+        [
+          {
+            "text": "Needle"
+          },
+          {
+            "text": "1 (50%)"
+          }
+        ],
+        [
+          {
+            "text": "Forceps"
+          },
+          {
+            "text": "15 (83.3%)"
+          }
+        ],
+        [
+          {
+            "text": "Cryobiopsy"
+          },
+          {
+            "text": "29 (100%)"
+          }
+        ]
+      ],
+      "footnotes": [
+        "nd focal, weak HHV-8 expression (Top panel: Hematoxylin & Eosin stain, 200 × magnification; Bottom panel: HHV-8 immunohistochemistry, 200 × magnification) C Cryobiopsy showed Kaposi sarcoma with strong and diffuse HHV-8 expression (Top panel: Hematoxylin & Eosin stain, 200 × magnification; Bottom panel: HHV-8 immunohistochemistry, 200 × magnification)"
+      ],
+      "csv_path": "/tmp/medparse_api_x2uzsuwc/tables/Robotic_Cyrobiopsy_2022_table03.csv",
+      "width_px": null,
+      "height_px": null
+    },
+    {
+      "kind": "table",
+      "caption": "molecular testing [7]. Other studies have evaluated diagnostic yield and specimen adequacy from bronchial brushing specimens obtained by radial endobronchial ultrasound (REBUS) guidance in peripheral pulmonary lesions. In 71 patients, the overall diagnostic yield was only 71%; however, in the 30 patients with adenocarcinoma, 100% of samples were viable for further molecular testing. [8] A novel tool for lung biopsy, cryoprobes are insulated catheters inserted through a bronchoscope and can extend to the lung periphery. The distal metal tip cools to -79 °C within seconds via the Joule-Thomson effect [9]. Transbronchial lung cryobiopsies (TBLCB) are used in patients with interstitial lung disease (ILD) in order to acquire larger tissue samples and prevent crush artifact that can occur with forceps biopsies [10]. Despite freezing, tissue architecture and cytologic findings are preserved, including nuclear details, such as mitotic activity and nuclear-cytoplasmic ratio. Additionally, the TBLCB obtain tissue in a 360-degree fashion; whereas, traditional tools only biopsy in one plane. Therefore, an eccentric PPN may be missed if the opposite side of the airway is biopsied; whereas, a 360-degree biopsy will sample tissue from all sides. In a recent study sampling PPN using a 1.9-mm (mm) cryoprobe through a conventional bronchoscope, the diagnostic yield was increased by 8.6% exclusively based on the cryobiopsy [11].",
+      "image_path": null,
+      "ocr_text": null,
+      "local_id": null,
+      "page": 7,
+      "bbox": null,
+      "bbox_pixels": null,
+      "rows": [
+        [
+          {
+            "text": "Samples",
+            "header": "column"
+          },
+          {
+            "text": "Median (IQR) n =40",
+            "header": "column"
+          }
+        ],
+        [
+          {
+            "text": "Transbronchial Needle Aspirate"
+          },
+          {
+            "text": ""
+          }
+        ],
+        [
+          {
+            "text": "Cellularity*"
+          },
+          {
+            "text": "0 (0-1)"
+          }
+        ],
+        [
+          {
+            "text": "Diagnostic fragments**"
+          },
+          {
+            "text": "0.5 (0-1)"
+          }
+        ],
+        [
+          {
+            "text": "Crush artifact*** ( n =12)"
+          },
+          {
+            "text": "0 (0-1)"
+          }
+        ],
+        [
+          {
+            "text": "Greatest dimension diagnostic material, microns"
+          },
+          {
+            "text": "0 (0-135.9)"
+          }
+        ],
+        [
+          {
+            "text": "Diagnostic material per fragment, microns"
+          },
+          {
+            "text": "170.9 (0-516.3)"
+          }
+        ],
+        [
+          {
+            "text": "Transbronchial Forceps Biopsy"
+          },
+          {
+            "text": ""
+          }
+        ],
+        [
+          {
+            "text": "Diagnostic fragments**"
+          },
+          {
+            "text": "1 (1-3)"
+          }
+        ],
+        [
+          {
+            "text": "Crush artifact*** ( n =35)"
+          },
+          {
+            "text": "1 (0-1)"
+          }
+        ],
+        [
+          {
+            "text": "Greatest dimension diagnostic material, microns"
+          },
+          {
+            "text": "1821.5 (996-3194.7)"
+          }
+        ],
+        [
+          {
+            "text": "Diagnostic material per fragment, microns"
+          },
+          {
+            "text": "1017.8 (795.5-1317.8)"
+          }
+        ],
+        [
+          {
+            "text": "Transbronchial Cryobiopsy"
+          },
+          {
+            "text": ""
+          }
+        ],
+        [
+          {
+            "text": "Diagnostic fragments**"
+          },
+          {
+            "text": "2 (1-2)"
+          }
+        ],
+        [
+          {
+            "text": "Crush artifact*** ( n =38)"
+          },
+          {
+            "text": "0 (0-0.5)"
+          }
+        ],
+        [
+          {
+            "text": "Greatest dimension diagnostic material, microns"
+          },
+          {
+            "text": "3570.6 (1974.6-4833.2)"
+          }
+        ],
+        [
+          {
+            "text": "Diagnostic material per fragment, microns"
+          },
+          {
+            "text": "1968.2 (1195.5-3326.4)"
+          }
+        ],
+        [
+          {
+            "text": "*Cellularity: 0-Acellular, 1-Paucicellular, 2-Moderately Cellular, 3-Hypercellular **Diagnostic Fragments:<1-detached cellular material only",
+            "col_span": 2
+          },
+          {
+            "text": "",
+            "placeholder": true
+          }
+        ]
+      ],
+      "footnotes": [
+        "nd focal, weak HHV-8 expression (Top panel: Hematoxylin & Eosin stain, 200 × magnification; Bottom panel: HHV-8 immunohistochemistry, 200 × magnification) C Cryobiopsy showed Kaposi sarcoma with strong and diffuse HHV-8 expression (Top panel: Hematoxylin & Eosin stain, 200 × magnification; Bottom panel: HHV-8 immunohistochemistry, 200 × magnification)"
+      ],
+      "csv_path": "/tmp/medparse_api_x2uzsuwc/tables/Robotic_Cyrobiopsy_2022_table04.csv",
+      "width_px": null,
+      "height_px": null
+    }
+  ],
+  "recommendations": [
+    {
+      "id": "R1",
+      "number": 1,
+      "text": "shows a frozen and a thawed cryobiopsy specimen as well as a gross comparison of needle aspirate tissue, forceps biopsies, and cryobiopsies. Received:",
+      "grade": null,
+      "sections": [
+        {
+          "index": 3,
+          "title": "Procedural Technique"
+        },
+        {
+          "index": 9,
+          "title": "Diagnoses"
+        },
+        {
+          "index": 10,
+          "title": "Tissue Grading/Quantification"
+        },
+        {
+          "index": 12,
+          "title": "Novel Robotic-Assisted Cryobiopsy for Peripheral Pulmonary Lesions"
+        }
+      ],
+      "supporting_sections": [],
+      "supplementary_text": [
+        "of the",
+        "was hyper cellular. Tissue fragments from the needle were present in",
+        "had",
+        "fragment, and",
+        "1-3) diagnostic fragments per case. Of the",
+        "· Reza Ronaghi",
+        "· Irawan Susanto",
+        "· Colleen Channick",
+        "· Rodrigo Garcia Tome",
+        "· Scott Oh 1"
+      ]
+    },
+    {
+      "id": "R2",
+      "number": 2,
+      "text": "or higher on the Nashville Bleeding Scale [14]",
+      "grade": null,
+      "sections": [
+        {
+          "index": 8,
+          "title": "Procedure Details"
+        },
+        {
+          "index": 9,
+          "title": "Diagnoses"
+        },
+        {
+          "index": 10,
+          "title": "Tissue Grading/Quantification"
+        },
+        {
+          "index": 11,
+          "title": "Conclusion"
+        },
+        {
+          "index": 12,
+          "title": "Novel Robotic-Assisted Cryobiopsy for Peripheral Pulmonary Lesions"
+        }
+      ],
+      "supporting_sections": [],
+      "supplementary_text": [
+        "Local IHC and FISH as well as NGS were performed in",
+        "from the needle specimens. All cryobiopsy cases were adequate for both IHC/FISH and NGS;",
+        "needle samples (Table 2.",
+        "had",
+        "fragments,",
+        "1-2) diagnostic fragments per case was identified. In these specimens, crush artifact was present in",
+        "mm and all nodule sizes were",
+        "cm or less. Of note, over half of the patients in this cohort had evidence of radiographic emphysema or ILD, potentially increasing the risk of pneumothorax with biopsy. These rates are comparable to existing data in navigation bronchoscopy and are significantly lower than pneumothorax rates in percutaneous lung biopsies which approach 15% 16,",
+        "· Erik E. Folch"
+      ]
+    },
+    {
+      "id": "R3",
+      "number": 3,
+      "text": "forceps biopsy samples were deemed inadequate for NGS due to insufficient cellularity as well as",
+      "grade": null,
+      "sections": [
+        {
+          "index": 9,
+          "title": "Diagnoses"
+        },
+        {
+          "index": 10,
+          "title": "Tissue Grading/Quantification"
+        },
+        {
+          "index": 12,
+          "title": "Novel Robotic-Assisted Cryobiopsy for Peripheral Pulmonary Lesions"
+        }
+      ],
+      "supporting_sections": [],
+      "supplementary_text": [
+        "had innumerable fragments,",
+        "shows a comparison of the needle aspirate and tissue fragment, forceps biopsy, and cryobiopsy. Fine needle aspiration biopsy showed an acellular smear; the remnant tissue and blood clot showed minute unremarkable lung tissue with no diagnostic abnormalities. The forceps biopsy showed one fragment of rare spindle cells with crush artifact and focal, weak HHV-8 expression. The cryobiopsy showed Kaposi sarcoma with strong and diffuse HHV-8 expression.",
+        "· Tao He"
+      ]
+    },
+    {
+      "id": "R4",
+      "number": 4,
+      "text": "× 8-mm solid lesion Forceps biopsies were evaluated in",
+      "grade": null,
+      "sections": [
+        {
+          "index": 9,
+          "title": "Diagnoses"
+        },
+        {
+          "index": 10,
+          "title": "Tissue Grading/Quantification"
+        }
+      ],
+      "supporting_sections": [],
+      "supplementary_text": [
+        "fragments,",
+        "33.3%. A median of 170.9 microns (0-516.3) of diagnostic tissue was present per needle tissue fragment."
+      ]
+    },
+    {
+      "id": "R5",
+      "number": 5,
+      "text": "days prior to the procedure **Any anticoagulant was held in the recommended period of time prior to the procedure IQR interquartile range, Chronic obstructive pulmonary disease (COPD) chronic obstructive pulmonary disease, GERD gastrointestinal reflux disease, mg milligrams, dL deciliter, REBUS radial endobronchial ultrasound Needle aspirate smears were made in",
+      "grade": null,
+      "sections": [
+        {
+          "index": 10,
+          "title": "Tissue Grading/Quantification"
+        }
+      ],
+      "supporting_sections": [],
+      "supplementary_text": [
+        "was moderately cellular, and"
+      ]
+    },
+    {
+      "id": "R6",
+      "number": 6,
+      "text": "mm (0-15) from the pleural surface. Fifty-four percent of patients had structural lung disease, either radiographic emphysema or ILD, conferring an increased risk of complications with lung nodule sampling",
+      "grade": null,
+      "sections": [
+        {
+          "index": 7,
+          "title": "Patient/Lesion Characteristics"
+        },
+        {
+          "index": 12,
+          "title": "Novel Robotic-Assisted Cryobiopsy for Peripheral Pulmonary Lesions"
+        }
+      ],
+      "supporting_sections": [],
+      "supplementary_text": [
+        "September 2022 / Accepted:"
+      ]
+    },
+    {
+      "id": "R8",
+      "number": 8,
+      "text": "had detached cellular material only. In the",
+      "grade": null,
+      "sections": [
+        {
+          "index": 10,
+          "title": "Tissue Grading/Quantification"
+        }
+      ],
+      "supporting_sections": [],
+      "supplementary_text": null
+    },
+    {
+      "id": "R9",
+      "number": 9,
+      "text": "had",
+      "grade": null,
+      "sections": [
+        {
+          "index": 10,
+          "title": "Tissue Grading/Quantification"
+        }
+      ],
+      "supporting_sections": [],
+      "supplementary_text": null
+    },
+    {
+      "id": "R10",
+      "number": 10,
+      "text": "or if a secondary biopsy modality confirmed the same result (n = 7. In cases with no follow-up imaging or confirmatory biopsy, these were considered false-negative results. Importantly, there were two false-negative cases that were ultimately diagnosed with a malignancy. One case was positive for squamous cell carcinoma on the linear Endobronchial ultrasound (EBUS) sampling of the lymph nodes which was done at the time of the robotic bronchoscopy. The second case was a Figure Multiple studies have shown that needle aspirates can provide adequate tissue acquisition for diagnosis and molecular analysis in lung cancer [15]. The discrepancy in our cases may be due to less high-quality material provided. Additionally, the final interpretations were not always performed by a fellowship-trained cytopathologist; therefore, the comfort level in making a diagnosis using needle aspirates may have varied. Finally, there were no major adverse events in any patient. Six patients experienced post-procedure pneumothoraces, half of whom had radiographic emphysema or ILD. Three patients (2.7%) required chest tube placement, but none had persistent air leaks or prolonged hospital admissions. The median distance to the pleura in these six cases was",
+      "grade": null,
+      "sections": [
+        {
+          "index": 9,
+          "title": "Diagnoses"
+        },
+        {
+          "index": 10,
+          "title": "Tissue Grading/Quantification"
+        },
+        {
+          "index": 11,
+          "title": "Conclusion"
+        },
+        {
+          "index": 12,
+          "title": "Novel Robotic-Assisted Cryobiopsy for Peripheral Pulmonary Lesions"
+        }
+      ],
+      "supporting_sections": [],
+      "supplementary_text": [
+        "25%. A median of 1968.2 (1195.5-3326.4) microns of diagnostic material per fragment was present.",
+        "times more than the needle samples. The tissue was also of higher quality with less crush artifact noted.",
+        "October 2022 © The Authors) 2022"
+      ]
+    },
+    {
+      "id": "R11",
+      "number": 11,
+      "text": "were paucicellular",
+      "grade": null,
+      "sections": [
+        {
+          "index": 10,
+          "title": "Tissue Grading/Quantification"
+        }
+      ],
+      "supporting_sections": [],
+      "supplementary_text": null
+    }
+  ],
+  "validation": {
+    "checks": {
+      "has_title": true,
+      "has_authors": true,
+      "authors_are_valid": true,
+      "has_sections": true,
+      "sections_have_content": true,
+      "has_tables": true,
+      "tables_have_captions": true,
+      "tables_have_data": true,
+      "has_figures": true,
+      "figures_have_captions": true,
+      "figures_have_images": true,
+      "has_entities": true,
+      "has_statistics": true,
+      "has_recommendations": true,
+      "has_references": true,
+      "refs_structured": true,
+      "refs_enriched_some": true,
+      "references_enriched": true,
+      "has_references_csv": false,
+      "has_cross_refs": false,
+      "umls_links": true,
+      "figures_textual_count": 0
+    },
+    "completeness_score": 91,
+    "is_valid": true,
+    "issues": [],
+    "warnings": [],
+    "quality_level": "excellent"
   }
 }

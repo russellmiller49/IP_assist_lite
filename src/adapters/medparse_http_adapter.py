@@ -84,19 +84,26 @@ class MedparseHTTPAdapter(MedparseTransport):
         return self.health()
 
     def _headers(self, extra: Optional[Mapping[str, str]] = None) -> Dict[str, str]:
-        headers: Dict[str, str] = {"Accept": "application/json"}
+        headers: Dict[str, str] = {}
         if self._api_key:
-            header_name = self._auth_header_name or "X-API-Key"
-            if header_name.lower() == "x-api-key":
-                headers[header_name] = self._api_key
-            else:
-                headers[header_name] = f"Bearer {self._api_key}"
+            headers["X-API-Key"] = self._api_key
+            header_name = (self._auth_header_name or "X-API-Key").strip() or "X-API-Key"
+            if header_name and header_name != "X-API-Key":
+                if header_name.lower() == "x-api-key":
+                    headers[header_name] = self._api_key
+                else:
+                    headers[header_name] = f"Bearer {self._api_key}"
         if extra:
             headers.update(dict(extra))
         return headers
 
     def _request(self, method: str, path: str, **kwargs: Any) -> httpx.Response:
         headers = self._headers(kwargs.pop("headers", None))
+        if kwargs.get("files"):
+            # httpx sets the multipart Content-Type with the correct boundary.
+            headers.pop("Content-Type", None)
+            headers.pop("content-type", None)
+        headers.setdefault("Accept", "application/json")
 
         for attempt in range(1, self._max_retries + 1):
             try:
@@ -207,8 +214,9 @@ class MedparseHTTPAdapter(MedparseTransport):
             except (ValueError, binascii.Error) as exc:
                 raise MedparseTransportError("Invalid base64 content provided for bytes_b64") from exc
 
+            filename = f"{doc_id}.pdf" if doc_id else "document.pdf"
             files = {
-                field_name: ("document.pdf", pdf_bytes, "application/pdf"),
+                field_name: (filename, pdf_bytes, "application/pdf"),
             }
             data: Dict[str, Any] = {}
             if doc_id:
@@ -269,6 +277,13 @@ class MedparseHTTPAdapter(MedparseTransport):
             return _multipart_sequence()
 
         # auto mode
+        prefer_multipart = bool(bytes_b64)
+        if prefer_multipart:
+            try:
+                return _multipart_sequence()
+            except MedparseTransportError as exc:
+                if not _is_unprocessable(exc):
+                    raise
         try:
             return _json_attempt()
         except MedparseTransportError as exc:
@@ -279,7 +294,12 @@ class MedparseHTTPAdapter(MedparseTransport):
             except MedparseTransportError as exc_form:
                 if not _is_unprocessable(exc_form):
                     raise
+                # No other fallbacks available without bytes; propagate last error.
+                if not prefer_multipart:
+                    raise
+        if prefer_multipart:
             return _multipart_sequence()
+        raise MedparseTransportError("Medparse /extract auto mode exhausted attempts")
 
 
 def _filter_payload(payload: Mapping[str, Any]) -> Dict[str, Any]:

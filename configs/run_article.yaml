@@ -1,0 +1,15 @@
+doc_type: article
+layout_engine_primary: pdfplumber
+layout_engine_fallbacks:
+  - pymupdf
+table_extraction: true
+max_pages: null
+summary_length: medium
+min_chars: 12000
+min_pages_ratio: 0.6
+sections:
+  - abstract
+  - methods
+  - results
+  - outcomes
+  - limitations
