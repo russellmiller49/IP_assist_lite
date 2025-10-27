@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from datetime import datetime
-from typing import Literal, Optional, Tuple
+from typing import Dict, List, Literal, Optional, Tuple
 from uuid import uuid4
 
 from pydantic import Field
@@ -31,4 +31,26 @@ class BaseDocument(MedparseModel):
     extraction_version: str = "v1.0.0"
 
 
-__all__ = ["EvidenceSpan", "BaseDocument"]
+class UmlsEntity(MedparseModel):
+    """Linked UMLS entity with offsets on the source text."""
+
+    cui: str
+    preferred_term: Optional[str] = None
+    semtypes: List[str] = Field(default_factory=list)
+    offsets: List[Tuple[int, int]] = Field(default_factory=list)
+    text: str
+    page: Optional[int] = None
+    confidence: float = Field(default=0.0, ge=0.0, le=1.0)
+
+
+class Relation(MedparseModel):
+    """Normalized relation triple with optional attributes."""
+
+    subject: str
+    predicate: str
+    object: str
+    attributes: Dict[str, object] = Field(default_factory=dict)
+    evidence: Optional[EvidenceSpan] = None
+
+
+__all__ = ["EvidenceSpan", "BaseDocument", "UmlsEntity", "Relation"]

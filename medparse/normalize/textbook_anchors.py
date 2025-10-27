@@ -6,7 +6,7 @@ import re
 from typing import Dict, List, Optional
 
 from medparse.ingest.models import PageData
-from medparse.normalize.article_sections import is_toc_page, slice_between
+from medparse.normalize.layout import is_toc_page, slice_between
 from medparse.normalize.text_cleanup import clean_paragraph
 
 
@@ -14,12 +14,13 @@ from medparse.normalize.text_cleanup import clean_paragraph
 CHAPTER_SECTION_ANCHORS = {
     'introduction': ['introduction', 'overview', 'background'],
     'epidemiology': ['epidemiology', 'incidence', 'prevalence'],
+    'etiology': ['etiology'],
     'pathophysiology': ['pathophysiology', 'pathogenesis', 'mechanism'],
     'clinical_presentation': ['clinical presentation', 'signs and symptoms', 'presentation'],
     'diagnosis': ['diagnosis', 'diagnostic approach', 'diagnostic evaluation'],
     'indications': ['indications', 'when to use', 'patient selection'],
     'contraindications': ['contraindications', 'when not to use', 'contraindicated'],
-    'technique': ['technique', 'procedure', 'method', 'approach', 'procedural steps'],
+    'technique': ['technique', 'procedure', 'method', 'approach', 'procedural steps', 'management'],
     'complications': ['complications', 'adverse events', 'risks'],
     'outcomes': ['outcomes', 'results', 'efficacy'],
     'postoperative_care': ['postoperative', 'post-operative', 'post-procedure', 'follow-up'],
@@ -38,7 +39,7 @@ def build_section_map(pages: List[PageData]) -> Dict[str, Dict[str, any]]:
         Dictionary mapping section keys to section metadata
     """
     # Filter out TOC pages (critical - reuse IFU pattern)
-    non_toc_pages = [p for p in pages if not is_toc_page('\n'.join(p.lines))]
+    non_toc_pages = [p for p in pages if not is_toc_page(p)]
 
     sections = {}
 
@@ -53,7 +54,6 @@ def build_section_map(pages: List[PageData]) -> Dict[str, Dict[str, any]]:
             non_toc_pages,
             start_anchors=start_anchors,
             stop_anchors=stop_anchors,
-            exclude_toc=True
         )
 
         if section_text:

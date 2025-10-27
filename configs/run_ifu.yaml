@@ -1,20 +1,8 @@
 doc_type: ifu
-layout_engine_primary: pdfplumber
-layout_engine_fallbacks:
-  - pymupdf
-table_extraction: true
-max_pages: null
-summary_length: long
-min_chars: 10000  # Minimum 10K chars (handles small instruction sheets and image-heavy IFUs)
+profile: enriched
+engines:
+  - pdfplumber
+  - fitz
+ocr: true
+min_chars: 10000
 min_pages_ratio: 0.95
-require_front_matter: true
-front_matter_required_for_page_count: 20  # Only require front-matter for docs >= 20 pages
-sections:
-  - intended_use
-  - indications
-  - contraindications
-  - adverse_events
-  - specs
-  - warnings
-  - cautions
-  - notes

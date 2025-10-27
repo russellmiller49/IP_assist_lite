@@ -1,0 +1,415 @@
+"""Profile-aware article extraction pipeline."""
+
+from __future__ import annotations
+
+from pathlib import Path
+from typing import Iterable, List, Optional, Sequence
+
+from medparse.config import ExtractionConfig, get_extraction_config
+from medparse.extract.utils import collect_lines, collect_tables, load_pages, reference_section
+from medparse.ingest.models import PageData
+from medparse.normalize.article_frontmatter import (
+    extract_authors_affiliations,
+    extract_coi_and_funding,
+    extract_doi,
+    extract_title_hierarchical,
+)
+from medparse.normalize.article_sections import normalize_article_sections
+from medparse.normalize.article_yield_ats import DiagnosticYieldATS, extract_ats_compliant_yield
+from medparse.normalize.figures_captions import FigureBlock, extract_figures_and_captions
+from medparse.normalize.guideline_grades import GuidelineRecommendation, parse_guideline_recommendations
+from medparse.normalize.outcomes import OutcomeData, extract_outcomes
+from medparse.normalize.page_furniture import strip_furniture
+from medparse.normalize.relations import RelationRecord, build_relations
+from medparse.normalize.tables_classifier import TableBlock, classify_and_gate_tables
+from medparse.normalize.umls_linking import UmlsEntity as UmlsEntityRecord, link_umls_entities
+from medparse.normalize.references import normalize_references
+from medparse.normalize.yields import yield_from_text
+from medparse.schema.article import (
+    Affiliation,
+    ArticleDocument,
+    ArticleFigure,
+    Author,
+    DiagnosticYield,
+    EnhancedTable,
+    GrantInfo,
+    Outcome,
+    Recommendation,
+)
+from medparse.schema.common import EvidenceSpan, Relation, UmlsEntity
+from medparse.utils.log import get_logger
+
+LOGGER = get_logger(__name__)
+
+
+def extract_article(
+    pdf_path: Path,
+    *,
+    engine: str = "fitz",
+    page_limit: Optional[int] = None,
+    pages: Optional[List[PageData]] = None,
+    config: Optional[ExtractionConfig] = None,
+) -> ArticleDocument:
+    """Extract an article document honouring the configured profile."""
+
+    extraction_config = config or get_extraction_config()
+    pages = pages or load_pages(pdf_path, engine=engine, max_pages=page_limit)
+    if not pages:
+        raise ValueError(f"No pages extracted from {pdf_path}")
+
+    _strip_page_furniture(pages)
+    sections = normalize_article_sections(pages)
+    flat_lines = collect_lines(pages)
+
+    title_info = extract_title_hierarchical(pages)
+    doi = extract_doi(pages[:2])
+    frontmatter = extract_authors_affiliations(pages)
+    authors = _build_authors(frontmatter)
+    affiliations = _build_affiliations(frontmatter.get("affiliations", []))
+
+    table_blocks = _maybe_classify_tables(pages, extraction_config)
+    outcomes = _maybe_extract_outcomes(sections, table_blocks, extraction_config)
+    diagnostic_yield = _maybe_extract_yield(sections, table_blocks, extraction_config)
+    recommendations = _maybe_extract_recommendations(sections, pages, extraction_config)
+    figures = _maybe_extract_figures(pages, extraction_config)
+
+    yield_data = yield_from_text(flat_lines)
+    references = normalize_references(
+        reference_section(flat_lines),
+        mode="article",
+        headings=[heading.title for page in pages for heading in page.headings],
+    )
+
+    conflicts, funding_statements = _coi_and_funding(pages)
+    funding_sources = [
+        GrantInfo(agency=statement) for statement in funding_statements if statement != "None"
+    ]
+
+    umls_records = (
+        link_umls_entities([(page.number, page.text) for page in pages])
+        if extraction_config.should_enrich_umls()
+        else []
+    )
+
+    relation_records = (
+        build_relations(
+            title=title_info.get("title") or pdf_path.stem,
+            outcomes=[outcome.model_dump() for outcome in outcomes],
+            recommendations=[rec.model_dump() for rec in recommendations],
+        )
+        if extraction_config.should_extract_relations()
+        else []
+    )
+
+    document = ArticleDocument(
+        source_file=str(pdf_path),
+        page_count=len(pages),
+        title=title_info.get("title"),
+        title_confidence=title_info.get("confidence", 0.0),
+        title_source=title_info.get("source"),
+        doi=doi,
+        sections=sections,
+        abstract=sections.get("abstract"),
+        authors=authors,
+        affiliations=affiliations,
+        conflicts_of_interest=conflicts,
+        has_no_conflicts=_all_none(conflicts),
+        funding_sources=funding_sources,
+        has_no_funding=_all_none(funding_statements),
+        tables=_map_tables(table_blocks),
+        outcomes=_map_outcomes(outcomes),
+        diagnostic_yield=_map_yield(diagnostic_yield, yield_data),
+        recommendations=_map_recommendations(recommendations),
+        figures=_map_figures(figures),
+        umls_entities=_map_umls_entities(umls_records),
+        relations=_map_relations(relation_records),
+        n_patients=_as_int(yield_data.get("n_patients")),
+        n_lesions=_as_int(yield_data.get("n_lesions")),
+        references=references,
+    )
+
+    return document
+
+
+def _strip_page_furniture(pages: Sequence[PageData]) -> None:
+    lines_by_page = [list(page.lines) for page in pages]
+    cleaned = strip_furniture(lines_by_page, threshold=0.6)
+    for page, clean_lines in zip(pages, cleaned, strict=False):
+        page.lines = clean_lines
+        page.text = "\n".join(clean_lines)
+
+
+def _build_authors(frontmatter: dict) -> List[Author]:
+    payload = []
+    corresponding = frontmatter.get("corresponding_author") or {}
+    corresponding_name = (corresponding.get("name") or "").lower()
+
+    corr_email = corresponding.get("email")
+
+    for author in frontmatter.get("authors", []):
+        try:
+            is_corr = _matches_corresponding(author, corresponding_name)
+            payload.append(
+                Author(
+                    given=author.get("given", ""),
+                    family=author.get("family", ""),
+                    suffix=author.get("suffix"),
+                    affiliation_ids=[
+                        marker
+                        for marker in author.get("footnotes", [])
+                        if marker and marker.isdigit()
+                    ],
+                    is_corresponding=is_corr,
+                    email=corr_email if is_corr else None,
+                    footnote_symbols=[
+                        marker for marker in author.get("footnotes", []) if not marker.isdigit()
+                    ],
+                )
+            )
+        except Exception as exc:  # pragma: no cover - defensive
+            LOGGER.debug("Skipping author due to validation error: %s", exc)
+    return payload
+
+
+def _matches_corresponding(author: dict, corr_lower: str) -> bool:
+    if not corr_lower:
+        return False
+    candidate = f"{author.get('given', '')} {author.get('family', '')}".strip().lower()
+    return candidate and candidate in corr_lower
+
+
+def _build_affiliations(records: Iterable[dict]) -> List[Affiliation]:
+    payload: List[Affiliation] = []
+    for record in records:
+        aff_id = str(record.get("id")) if record.get("id") is not None else None
+        text = record.get("text")
+        if not text:
+            continue
+        payload.append(
+            Affiliation(
+                id=aff_id or str(len(payload) + 1),
+                text=text,
+            )
+        )
+    return payload
+
+
+def _maybe_classify_tables(pages: Sequence[PageData], config: ExtractionConfig) -> List[TableBlock]:
+    if not config.is_enriched():
+        return []
+    raw_tables = collect_tables(pages)
+    return classify_and_gate_tables(raw_tables)
+
+
+def _maybe_extract_outcomes(
+    sections: dict[str, str],
+    tables: List[TableBlock],
+    config: ExtractionConfig,
+) -> List[OutcomeData]:
+    if not config.is_enriched():
+        return []
+    return extract_outcomes(sections, tables)
+
+
+def _maybe_extract_yield(
+    sections: dict[str, str],
+    tables: List[TableBlock],
+    config: ExtractionConfig,
+) -> Optional[DiagnosticYieldATS]:
+    if not config.is_enriched():
+        return None
+    return extract_ats_compliant_yield(sections, tables)
+
+
+def _maybe_extract_recommendations(
+    sections: dict[str, str],
+    pages: Sequence[PageData],
+    config: ExtractionConfig,
+) -> List[GuidelineRecommendation]:
+    if not config.should_normalize_guidelines():
+        return []
+    return parse_guideline_recommendations(sections, list(pages))
+
+
+def _maybe_extract_figures(
+    pages: Sequence[PageData],
+    config: ExtractionConfig,
+) -> List[FigureBlock]:
+    if not config.is_enriched():
+        return []
+    return extract_figures_and_captions(list(pages))
+
+
+def _coi_and_funding(pages: Sequence[PageData]) -> tuple[List[str], List[str]]:
+    data = extract_coi_and_funding(list(pages))
+    return data.get("conflicts", []), data.get("funding", [])
+
+
+def _map_tables(blocks: Sequence[TableBlock]) -> List[EnhancedTable]:
+    tables: List[EnhancedTable] = []
+    for idx, block in enumerate(blocks, start=1):
+        tables.append(
+            EnhancedTable(
+                id=f"table_{idx}",
+                caption=block.caption,
+                headers=[block.headers],
+                rows=block.rows,
+                page=block.page,
+                table_type=block.table_type,
+            )
+        )
+    return tables
+
+
+def _map_outcomes(outcomes: Sequence[OutcomeData]) -> List[Outcome]:
+    mapped: List[Outcome] = []
+    for outcome in outcomes:
+        evidence = (
+            EvidenceSpan(text=outcome.evidence_text, page=outcome.page, confidence=0.8)
+            if outcome.evidence_text
+            else None
+        )
+        mapped.append(
+            Outcome(
+                name=outcome.name,
+                n=outcome.n,
+                percent=outcome.percent,
+                value=outcome.value,
+                denominator=outcome.denominator,
+                ci_lower=outcome.ci_lower,
+                ci_upper=outcome.ci_upper,
+                linked_figure_table=outcome.linked_figure_table,
+                evidence=evidence,
+            )
+        )
+    return mapped
+
+
+def _map_yield(
+    data: Optional[DiagnosticYieldATS],
+    fallback: Optional[dict],
+) -> Optional[DiagnosticYield]:
+    if not data:
+        if not fallback:
+            return None
+        fraction = fallback.get("diagnostic_yield_fraction")
+        pct = fallback.get("diagnostic_yield_pct")
+        numerator = denominator = None
+        if fraction and isinstance(fraction, tuple) and len(fraction) == 2:
+            numerator, denominator = fraction
+        if numerator is not None and denominator:
+            value = (numerator / denominator) * 100
+        else:
+            value = pct
+        if value is None:
+            return None
+        return DiagnosticYield(
+            value=value,
+            numerator=int(numerator) if numerator is not None else None,
+            denominator=int(denominator) if denominator is not None else None,
+        )
+    evidence = (
+        EvidenceSpan(text=data.evidence.text, confidence=data.evidence.confidence)
+        if data.evidence
+        else None
+    )
+    return DiagnosticYield(
+        value=data.yield_pct,
+        numerator=data.numerator,
+        denominator=data.denominator,
+        lower_ci=data.ci_lower,
+        upper_ci=data.ci_upper,
+        exclusion_reasons=data.exclusion_reasons,
+        method_note=data.definition,
+        compatible_with_ats=data.compatible_with_ats,
+        evidence=evidence,
+    )
+
+
+def _map_recommendations(items: Sequence[GuidelineRecommendation]) -> List[Recommendation]:
+    mapped: List[Recommendation] = []
+    for item in items:
+        evidence = EvidenceSpan(text=item.text[:200], page=item.page, confidence=0.7)
+        mapped.append(
+            Recommendation(
+                label=item.number,
+                text=item.text,
+                grade=item.grade,
+                strength=item.strength_scale,
+                evidence_level=item.evidence_level,
+                votes=item.voting_results,
+                consensus_percentage=item.consensus_percentage,
+                evidence=evidence,
+                statement_type="graded" if item.grade else "ungraded",
+            )
+        )
+    return mapped
+
+
+def _map_figures(figures: Sequence[FigureBlock]) -> List[ArticleFigure]:
+    mapped: List[ArticleFigure] = []
+    for figure in figures:
+        mapped.append(
+            ArticleFigure(
+                label=figure.label,
+                caption=figure.caption,
+                page=figure.page,
+            )
+        )
+    return mapped
+
+
+def _map_umls_entities(records: Sequence[UmlsEntityRecord]) -> List[UmlsEntity]:
+    mapped: List[UmlsEntity] = []
+    for record in records:
+        mapped.append(
+            UmlsEntity(
+                cui=record.cui,
+                preferred_term=record.preferred_term,
+                semtypes=record.semtypes,
+                offsets=record.offsets,
+                text=record.text,
+                page=record.page,
+                confidence=record.confidence,
+            )
+        )
+    return mapped
+
+
+def _map_relations(records: Sequence[RelationRecord]) -> List[Relation]:
+    mapped: List[Relation] = []
+    for record in records:
+        evidence = (
+            EvidenceSpan(text=record.evidence, confidence=0.7)
+            if record.evidence
+            else None
+        )
+        mapped.append(
+            Relation(
+                subject=record.subject,
+                predicate=record.predicate,
+                object=record.object,
+                attributes=record.attributes,
+                evidence=evidence,
+            )
+        )
+    return mapped
+
+
+def _all_none(statements: Sequence[str]) -> bool:
+    if not statements:
+        return False
+    normalized = [s.strip().lower() for s in statements]
+    return all(s in {"none", "none declared"} for s in normalized)
+
+
+def _as_int(value: Optional[float]) -> Optional[int]:
+    if value is None:
+        return None
+    try:
+        return int(value)
+    except (TypeError, ValueError):
+        return None
+
+
+__all__ = ["extract_article"]

@@ -1,5 +1,4 @@
 {
-  "doc_type": "article",
   "source_file": "/home/rjm/projects/IP_assist_lite/data/Input pdfs/articles/pdf/Combined EBUS  EUS for the diagnosis and staging of lung cancer ESGE, ERS, ESTS Guideline.pdf",
   "failure_reason": "Extraction did not satisfy completeness thresholds",
   "metrics": {
@@ -14,16 +13,5 @@
     "recommendations_count": 13,
     "diagnostic_yield_present": false,
     "umls_entities": 1919
-  },
-  "engine": "pdfplumber",
-  "mode": "full",
-  "_pipeline_metadata": {
-    "generator": "medparse",
-    "pipeline_version": "1.1.0",
-    "engine": "pdfplumber",
-    "mode": "full",
-    "cache_used": false,
-    "config_hash": "5ab7ae61",
-    "content_hash": "4fbd5386daa3"
   }
 }

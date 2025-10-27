@@ -16,6 +16,7 @@ LOGGER = get_logger(__name__)
 
 CONFIG_MAP = {
     "article": ("run_article.yaml", "article"),
+    "guideline": ("run_guideline.yaml", "guideline"),
     "ifu": ("run_ifu.yaml", "ifu"),
     "textbook": ("run_textbook.yaml", "textbook"),
 }

@@ -32,6 +32,26 @@ def validate_document(document, *, min_safety_blocks: int = 20) -> List[Validati
 
 def _validate_article(document: ArticleDocument) -> List[ValidationIssue]:
     issues: List[ValidationIssue] = []
+    if not document.title:
+        issues.append(ValidationIssue("Article missing title after normalization."))
+    elif document.title.isupper() and len(document.title.split()) <= 6:
+        issues.append(ValidationIssue("Article title appears to be an ALL-CAPS organization name."))
+
+    if not document.sections:
+        issues.append(ValidationIssue("No sections parsed for article; enrichment likely failed."))
+
+    if document.recommendations:
+        graded = sum(
+            1 for rec in document.recommendations if rec.grade or rec.statement_type == "ungraded"
+        )
+        ratio = graded / len(document.recommendations)
+        if ratio < 0.7:
+            issues.append(
+                ValidationIssue(
+                    "Guideline recommendations missing grade/ungraded tag for >=30% of entries.",
+                )
+            )
+
     summary = document.yield_summary
     if summary:
         if summary.strict_numerator is not None and summary.strict_denominator is not None:
@@ -48,6 +68,13 @@ def _validate_article(document: ArticleDocument) -> List[ValidationIssue]:
                 issues.append(
                     ValidationIssue("Strict yield must be expressed as a fraction between 0 and 1.")
                 )
+
+    if document.diagnostic_yield:
+        dy = document.diagnostic_yield
+        if dy.numerator is None or dy.denominator is None:
+            issues.append(
+                ValidationIssue("Diagnostic yield present but numerator/denominator missing.")
+            )
     return issues
 
 
@@ -157,6 +184,15 @@ def _validate_textbook(document: TextbookChapterDocument) -> List[ValidationIssu
         issues.append(
             ValidationIssue("No sections parsed for textbook chapter; ingestion likely failed.")
         )
+    else:
+        for key, section in document.sections.items():
+            if section.end_page is not None and section.start_page is not None:
+                if section.end_page < section.start_page:
+                    issues.append(
+                        ValidationIssue(
+                            f"Section '{key}' has inverted page span (start > end).",
+                        )
+                    )
     return issues
 
 

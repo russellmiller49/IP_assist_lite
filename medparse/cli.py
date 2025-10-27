@@ -13,6 +13,7 @@ from medparse import __version__
 from medparse.pipeline.run_extract import PipelineOutcome, run_extract
 from medparse.utils.slug import slugify
 from medparse.validate.validators import validate_document
+from medparse.config import ExtractionProfile
 
 app = typer.Typer(help="Medparse - structured medical PDF extraction.")
 
@@ -39,6 +40,12 @@ def extract_articles(
     no_cache: bool = typer.Option(False, "--no-cache", help="Skip pipeline cache.", is_flag=True),
     force_deep: bool = typer.Option(False, "--force-deep", help="Start with full extraction.", is_flag=True),
     max_pages: Optional[int] = typer.Option(None, "--max-pages", min=1, help="Limit preview pages."),
+    profile: Optional[str] = typer.Option(
+        None,
+        "--profile",
+        help="Extraction profile (enriched|fast_raw).",
+        click_type=click.Choice([p.value for p in ExtractionProfile], case_sensitive=False),
+    ),
     summary_length: Optional[str] = typer.Option(
         None,
         "--summary-length",
@@ -66,6 +73,51 @@ def extract_articles(
         max_pages=max_pages,
         summary_length=summary_length,
         config_override=config,
+        profile_override=profile,
+    )
+
+
+@app.command("extract-guidelines")
+def extract_guidelines(
+    input_dir: Path = typer.Argument(..., exists=True, file_okay=False, resolve_path=True),
+    out: Path = typer.Option(Path("out/guidelines"), "--out", "-o", resolve_path=True),
+    no_cache: bool = typer.Option(False, "--no-cache", help="Skip pipeline cache.", is_flag=True),
+    force_deep: bool = typer.Option(False, "--force-deep", help="Start with full extraction.", is_flag=True),
+    max_pages: Optional[int] = typer.Option(None, "--max-pages", min=1, help="Limit preview pages."),
+    profile: Optional[str] = typer.Option(
+        None,
+        "--profile",
+        help="Extraction profile (enriched|fast_raw).",
+        click_type=click.Choice([p.value for p in ExtractionProfile], case_sensitive=False),
+    ),
+    summary_length: Optional[str] = typer.Option(
+        None,
+        "--summary-length",
+        help="Override summary length.",
+        click_type=click.Choice(["short", "medium", "long"], case_sensitive=False),
+    ),
+    config: Optional[Path] = typer.Option(
+        None,
+        "--config",
+        exists=True,
+        resolve_path=True,
+        help="Path to pipeline configuration YAML.",
+    ),
+) -> None:
+    """Run the guideline extractor for every PDF in ``input_dir``."""
+
+    pdfs = sorted(input_dir.glob("*.pdf"))
+    _run_pipeline_for_pdfs(
+        pdfs=pdfs,
+        out_dir=out,
+        prefix="guideline",
+        config_name="run_guideline.yaml",
+        use_cache=not no_cache,
+        force_deep=force_deep,
+        max_pages=max_pages,
+        summary_length=summary_length,
+        config_override=config,
+        profile_override=profile,
     )
 
 
@@ -76,6 +128,12 @@ def extract_ifus(
     no_cache: bool = typer.Option(False, "--no-cache", help="Skip pipeline cache.", is_flag=True),
     force_deep: bool = typer.Option(False, "--force-deep", help="Start with full extraction.", is_flag=True),
     max_pages: Optional[int] = typer.Option(None, "--max-pages", min=1, help="Limit preview pages."),
+    profile: Optional[str] = typer.Option(
+        None,
+        "--profile",
+        help="Extraction profile (enriched|fast_raw).",
+        click_type=click.Choice([p.value for p in ExtractionProfile], case_sensitive=False),
+    ),
     summary_length: Optional[str] = typer.Option(
         None,
         "--summary-length",
@@ -103,6 +161,7 @@ def extract_ifus(
         max_pages=max_pages,
         summary_length=summary_length,
         config_override=config,
+        profile_override=profile,
     )
 
 
@@ -113,6 +172,12 @@ def extract_textbook(
     no_cache: bool = typer.Option(False, "--no-cache", help="Skip pipeline cache.", is_flag=True),
     force_deep: bool = typer.Option(False, "--force-deep", help="Start with full extraction.", is_flag=True),
     max_pages: Optional[int] = typer.Option(None, "--max-pages", min=1, help="Limit preview pages."),
+    profile: Optional[str] = typer.Option(
+        None,
+        "--profile",
+        help="Extraction profile (enriched|fast_raw).",
+        click_type=click.Choice([p.value for p in ExtractionProfile], case_sensitive=False),
+    ),
     summary_length: Optional[str] = typer.Option(
         None,
         "--summary-length",
@@ -160,6 +225,7 @@ def extract_textbook(
             force_deep=force_deep,
             max_pages=max_pages,
             summary_length=normalized_summary,
+            profile_override=profile,
         )
         _write_outcome(outcome, out_path)
 
@@ -175,6 +241,7 @@ def _run_pipeline_for_pdfs(
     max_pages: Optional[int],
     summary_length: Optional[str],
     config_override: Optional[Path],
+    profile_override: Optional[str],
 ) -> None:
     pdfs = list(pdfs)
     if not pdfs:
@@ -193,6 +260,7 @@ def _run_pipeline_for_pdfs(
             force_deep=force_deep,
             max_pages=max_pages,
             summary_length=normalized_summary,
+            profile_override=profile_override,
         )
         _write_outcome(outcome, out_path)
 
@@ -214,7 +282,8 @@ def _write_outcome(outcome: PipelineOutcome, out_path: Path) -> None:
 
     # Add config hash for reproducibility
     if outcome.config:
-        config_str = f"{outcome.config.doc_type}:{outcome.config.layout_engine_primary}"
+        engine_tag = ",".join(outcome.config.engines)
+        config_str = f"{outcome.config.doc_type}:{engine_tag}:{outcome.config.profile.value}"
         config_hash = hashlib.md5(config_str.encode()).hexdigest()[:8]
         payload["_pipeline_metadata"]["config_hash"] = config_hash
 
@@ -241,9 +310,22 @@ def _write_outcome(outcome: PipelineOutcome, out_path: Path) -> None:
 
         # Exit with code 2 if there are hard errors
         if has_errors:
+            failure_path = out_path.with_suffix(".failure.json")
+            failure_payload = {
+                "source_file": str(outcome.pdf_path),
+                "issues": [issue.message for issue in issues if issue.severity == "error"],
+            }
+            failure_path.write_text(json.dumps(failure_payload, indent=2, ensure_ascii=False))
             typer.echo("VALIDATION FAILED: Hard errors detected in extraction output.")
             raise typer.Exit(code=2)
     else:
+        failure_path = out_path.with_suffix(".failure.json")
+        failure_payload = {
+            "source_file": str(outcome.pdf_path),
+            "failure_reason": outcome.failure_reason or "extraction_failed",
+            "metrics": outcome.metrics,
+        }
+        failure_path.write_text(json.dumps(failure_payload, indent=2, ensure_ascii=False))
         typer.echo(f"EXTRACTION FAILED: {outcome.failure_reason}")
         raise typer.Exit(code=2)
 

@@ -1,4 +1,4 @@
-doc_type: article
+doc_type: guideline
 profile: enriched
 engines:
   - fitz
@@ -6,5 +6,6 @@ engines:
 ocr: true
 umls: true
 relations: true
+guideline_enrichment: true
 min_chars: 150000
 min_pages_ratio: 0.75

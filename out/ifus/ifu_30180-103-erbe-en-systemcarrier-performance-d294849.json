@@ -1,16 +1,16 @@
 {
-  "doc_id": "84a86d04-091f-472b-8b1c-f0c28b328515",
+  "doc_id": "c6cb60d1-e9a1-483c-b5bf-acade4dd7c84",
   "doc_type": "ifu",
   "source_file": "/home/rjm/projects/IP_assist_lite/data/Input pdfs/IFUs/pdf/30180-103_ERBE_EN_SystemCarrier_performance__D294849.pdf",
   "page_count": 156,
-  "extraction_timestamp": "2025-10-24T20:59:14.065954",
+  "extraction_timestamp": "2025-10-27T16:25:00.480630",
   "extraction_version": "v1.0.0",
-  "manufacturer": null,
+  "manufacturer": "ERBE Elektromedizin GmbH",
   "product_name": null,
-  "part_number": null,
+  "part_number": "20180-110",
   "revision": null,
   "publication_date": null,
-  "model": null,
+  "model": "SYSTEM",
   "software_versions": [],
   "indications_for_use": null,
   "intended_use": null,
@@ -26,18 +26,30 @@
     "unique_pages_seen": 156,
     "unique_pages_ratio": 1.0,
     "extracted_chars": 35894,
-    "duration_s": 15.089744091033936
+    "duration_s": 15.668432474136353,
+    "coverage_ratio": 1.0,
+    "tables_kept": 0
   },
   "_engine": "pdfplumber",
   "_mode": "full",
   "_cache_used": false,
+  "_pipeline": {
+    "profile": "enriched",
+    "engines": [
+      "pdfplumber",
+      "fitz"
+    ],
+    "ocr_used_pages": [],
+    "timestamp": "2025-10-27T16:25:00.480630",
+    "version": "v1.0.0"
+  },
   "_pipeline_metadata": {
     "generator": "medparse",
     "pipeline_version": "1.1.0",
     "engine": "pdfplumber",
     "mode": "full",
     "cache_used": false,
-    "config_hash": "f2b25d1f",
+    "config_hash": "8c705aa6",
     "content_hash": "d95732751813"
   }
 }

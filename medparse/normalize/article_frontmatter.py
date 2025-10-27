@@ -3,9 +3,24 @@
 from __future__ import annotations
 
 import re
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional, Tuple
 
 from medparse.ingest.models import PageData
+
+NAME_EXCLUSION_TERMS = {
+    "department",
+    "university",
+    "hospital",
+    "institute",
+    "center",
+    "centre",
+    "school",
+    "division",
+    "laboratory",
+}
+
+DEGREE_TOKENS = {"md", "phd", "do", "mba", "ms", "msc", "mph", "mbbs", "frcp"}
+SUFFIX_TOKENS = {"jr", "sr", "ii", "iii", "iv", "v"}
 
 
 def extract_title_hierarchical(pages: List[PageData]) -> Dict[str, Any]:
@@ -187,6 +202,73 @@ def extract_affiliations_and_correspondence(pages: List[PageData]) -> Dict[str, 
     }
 
 
+def extract_authors_affiliations(pages: List[PageData]) -> Dict[str, Any]:
+    """Return structured author and affiliation details from early pages."""
+
+    if not pages:
+        return {"authors": [], "affiliations": [], "corresponding_author": None}
+
+    first_page = pages[0]
+    header_lines: List[str] = []
+    for line in first_page.lines[:30]:
+        cleaned = line.strip()
+        if not cleaned:
+            continue
+        if re.match(r"(abstract|summary|keywords)\b", cleaned, re.IGNORECASE):
+            break
+        header_lines.append(cleaned)
+
+    header_block = " ".join(header_lines)
+    header_block = re.sub(r"\s+", " ", header_block)
+    header_block = header_block.replace(" and ", ", ")
+
+    all_affiliations = extract_superscript_affiliations("\n".join(first_page.lines[:80]))
+
+    authors: List[Dict[str, Any]] = []
+    seen: set[str] = set()
+
+    for token in _tokenise_author_block(header_block):
+        if not token:
+            continue
+
+        markers = re.findall(r"[\d]+|[†‡*]", token)
+        clean_token = re.sub(r"[\d†‡*]+", "", token).strip()
+
+        if not _looks_like_name(clean_token):
+            continue
+
+        given, family, suffix = _split_name(clean_token)
+        if not family:
+            continue
+
+        normalized = f"{given.lower()}_{family.lower()}"
+        if normalized in seen:
+            continue
+        seen.add(normalized)
+
+        authors.append(
+            {
+                "given": given,
+                "family": family,
+                "suffix": suffix,
+                "footnotes": markers,
+            }
+        )
+
+    affiliation_records = [
+        {"id": aff_id, "text": text}
+        for aff_id, text in all_affiliations.items()
+    ]
+
+    corresponding = extract_affiliations_and_correspondence(pages).get("corresponding_author")
+
+    return {
+        "authors": authors,
+        "affiliations": affiliation_records,
+        "corresponding_author": corresponding,
+    }
+
+
 def extract_superscript_affiliations(text: str) -> Dict[str, str]:
     """Extract affiliations mapped by superscript numbers.
 
@@ -345,10 +427,63 @@ def parse_funding_statements(text: str) -> List[str]:
     return statements
 
 
+def _tokenise_author_block(block: str) -> List[str]:
+    """Split combined author line into candidate tokens."""
+
+    if not block:
+        return []
+
+    block = re.sub(
+        r"\((?:MD|PhD|DO|MBA|MS|MSc|MPH|MBBS|FRCP|FRCPath|DDS|RN)[^)]*\)",
+        "",
+        block,
+        flags=re.IGNORECASE,
+    )
+    parts = re.split(r",\s*|\s+;\s*", block)
+    return [part.strip() for part in parts if part.strip()]
+
+
+def _looks_like_name(token: str) -> bool:
+    """Heuristic check that ``token`` appears to be a personal name."""
+
+    if not token or len(token.split()) < 2:
+        return False
+
+    lowered = token.lower()
+    if any(term in lowered for term in NAME_EXCLUSION_TERMS):
+        return False
+
+    letters = sum(1 for ch in token if ch.isalpha())
+    return letters / max(len(token), 1) >= 0.6
+
+
+def _split_name(name: str) -> Tuple[str, str, Optional[str]]:
+    """Split a full name into given/family/suffix components."""
+
+    cleaned = re.sub(
+        r"\b(" + "|".join(DEGREE_TOKENS) + r")\b\.?",
+        "",
+        name,
+        flags=re.IGNORECASE,
+    )
+    parts = [part for part in cleaned.replace(".", "").split() if part]
+    if len(parts) < 2:
+        return cleaned.strip(), "", None
+
+    suffix = None
+    if parts[-1].lower() in SUFFIX_TOKENS:
+        suffix = parts.pop()
+
+    family = parts[-1]
+    given = " ".join(parts[:-1])
+    return given.strip(), family.strip(), suffix
+
+
 __all__ = [
     "extract_title_hierarchical",
     "is_valid_title",
     "extract_affiliations_and_correspondence",
+     "extract_authors_affiliations",
     "extract_coi_and_funding",
     "extract_doi",
 ]

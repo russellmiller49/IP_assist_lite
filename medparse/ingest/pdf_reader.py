@@ -38,6 +38,8 @@ def iter_pages(
     include_headings: bool = True,
     engine: str = "pymupdf",
     page_limit: Optional[int] = None,
+    enable_ocr: bool = False,
+    min_chars_for_ocr: int = 120,
 ) -> Iterator[PageData]:
     """Yield ``PageData`` instances for each page in the PDF.
 
@@ -90,6 +92,13 @@ def iter_pages(
                         tables=tables,
                         word_boxes=word_boxes,
                     )
+                    if enable_ocr and len(page_text.strip()) < min_chars_for_ocr:
+                        ocr_text = _ocr_page(pdf_path, index + 1)
+                        if ocr_text:
+                            cleaned_lines = _clean_lines(ocr_text.splitlines())
+                            page_data.text = ocr_text
+                            page_data.lines = cleaned_lines
+                            page_data.ocr_applied = True
                     if include_headings:
                         page_data.headings = _detect_page_headings(page_data)
                     yield page_data
@@ -108,6 +117,13 @@ def iter_pages(
                 if page_limit and index > page_limit:
                     break
                 page_data = _page_from_pymupdf(pdf_path, page, index)
+                if enable_ocr and len(page_data.text.strip()) < min_chars_for_ocr:
+                    ocr_text = _ocr_page(pdf_path, index)
+                    if ocr_text:
+                        cleaned_lines = _clean_lines(ocr_text.splitlines())
+                        page_data.text = ocr_text
+                        page_data.lines = cleaned_lines
+                        page_data.ocr_applied = True
                 if include_headings:
                     page_data.headings = _detect_page_headings(page_data)
                 yield page_data
@@ -125,6 +141,28 @@ def iter_pages(
     if include_headings:
         page_data.headings = _detect_page_headings(page_data)
     yield page_data
+
+
+def _ocr_page(pdf_path: Path, page_number: int) -> Optional[str]:
+    try:
+        import pytesseract  # type: ignore
+        from PIL import Image  # type: ignore
+    except ImportError:  # pragma: no cover - optional dependency
+        return None
+
+    if fitz is None:  # pragma: no cover - PyMuPDF not available
+        return None
+
+    try:
+        document = fitz.open(pdf_path)  # type: ignore[arg-type]
+        page = document.load_page(page_number - 1)
+        pix = page.get_pixmap()
+        image = Image.frombytes("RGB", [pix.width, pix.height], pix.samples)
+        text = pytesseract.image_to_string(image)
+        document.close()
+        return normalize_text_artifacts(text)
+    except Exception:
+        return None
 
 
 def _page_from_pymupdf(pdf_path: Path, page: "fitz.Page", index: int) -> PageData:

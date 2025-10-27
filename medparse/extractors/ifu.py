@@ -5,6 +5,8 @@ from __future__ import annotations
 from pathlib import Path
 from typing import List, Optional
 
+from medparse.config import ExtractionConfig, get_extraction_config
+
 from medparse.extract.utils import (
     collect_lines,
     collect_tables,
@@ -41,9 +43,11 @@ def extract_ifu(
     engine: str = "pymupdf",
     page_limit: Optional[int] = None,
     pages: Optional[List[PageData]] = None,
+    config: Optional[ExtractionConfig] = None,
 ) -> IFUDocument:
     """Extract an IFU document with hardened normalization."""
 
+    extraction_config = config or get_extraction_config()
     pages = pages or load_pages(pdf_path, engine=engine, max_pages=page_limit)
     page_count = len(pages)
 
@@ -123,14 +127,15 @@ def extract_ifu(
         if isinstance(val, str) and val:
             doc_kwargs[fld] = clean_paragraph(val)
 
-    deep_cleanup_fields(doc_kwargs)
-    doc_kwargs["tables"] = clean_tables(doc_kwargs.get("tables", []))
-    doc_kwargs["software_versions"] = filter_software_versions(raw_software)
-
-    # Deduplicate and clean safety blocks
-    doc_kwargs["safety_blocks"] = dedupe_blocks(doc_kwargs.get("safety_blocks", []))
-
-    gate_ifu_references(doc_kwargs, pages_text)
+    if extraction_config.is_enriched():
+        deep_cleanup_fields(doc_kwargs)
+        doc_kwargs["tables"] = clean_tables(doc_kwargs.get("tables", []))
+        doc_kwargs["software_versions"] = filter_software_versions(raw_software)
+        doc_kwargs["safety_blocks"] = dedupe_blocks(doc_kwargs.get("safety_blocks", []))
+        gate_ifu_references(doc_kwargs, pages_text)
+    else:
+        doc_kwargs["tables"] = doc_kwargs.get("tables", [])
+        doc_kwargs["software_versions"] = raw_software
 
     # Ensure list defaults
     for key in ("contraindications", "adverse_events"):

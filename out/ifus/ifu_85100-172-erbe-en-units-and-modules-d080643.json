@@ -1,16 +1,16 @@
 {
-  "doc_id": "d25837c7-65da-4e33-9a13-8ea033e1ce32",
+  "doc_id": "bab3d517-147d-426c-916a-4cff8ca4cf87",
   "doc_type": "ifu",
   "source_file": "/home/rjm/projects/IP_assist_lite/data/Input pdfs/IFUs/pdf/85100-172_ERBE_EN_Units_and_modules__D080643.pdf",
   "page_count": 16,
-  "extraction_timestamp": "2025-10-24T20:59:16.119323",
+  "extraction_timestamp": "2025-10-27T16:25:02.607440",
   "extraction_version": "v1.0.0",
-  "manufacturer": null,
+  "manufacturer": "ERBE Elektromedizin GmbH",
   "product_name": null,
-  "part_number": null,
+  "part_number": "30191-682",
   "revision": null,
   "publication_date": "2025-05-01",
-  "model": null,
+  "model": "VIO",
   "software_versions": [],
   "indications_for_use": null,
   "intended_use": null,
@@ -87,18 +87,30 @@
     "unique_pages_seen": 16,
     "unique_pages_ratio": 1.0,
     "extracted_chars": 16949,
-    "duration_s": 0.6043903827667236
+    "duration_s": 0.6351912021636963,
+    "coverage_ratio": 1.0,
+    "tables_kept": 2
   },
   "_engine": "pdfplumber",
   "_mode": "full",
   "_cache_used": false,
+  "_pipeline": {
+    "profile": "enriched",
+    "engines": [
+      "pdfplumber",
+      "fitz"
+    ],
+    "ocr_used_pages": [],
+    "timestamp": "2025-10-27T16:25:02.607440",
+    "version": "v1.0.0"
+  },
   "_pipeline_metadata": {
     "generator": "medparse",
     "pipeline_version": "1.1.0",
     "engine": "pdfplumber",
     "mode": "full",
     "cache_used": false,
-    "config_hash": "f2b25d1f",
+    "config_hash": "8c705aa6",
     "content_hash": "6895ed8c21c9"
   }
 }

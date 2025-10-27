@@ -12,7 +12,7 @@ from medparse.batch.run import run_batch
 
 app = typer.Typer(help="Medparse batch extraction utility.")
 
-SupportedDocType = Literal["article", "ifu", "textbook"]
+SupportedDocType = Literal["article", "guideline", "ifu", "textbook"]
 
 
 @app.command()

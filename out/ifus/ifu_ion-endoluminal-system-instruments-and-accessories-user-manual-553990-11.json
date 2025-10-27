@@ -1,12 +1,12 @@
 {
-  "doc_id": "fc3ffb64-465c-4eb1-89a9-3b45b4e0284e",
+  "doc_id": "86ac9ff3-2769-4a14-b377-64f88f960e21",
   "doc_type": "ifu",
   "source_file": "/home/rjm/projects/IP_assist_lite/data/Input pdfs/IFUs/pdf/Ion Endoluminal System, Instruments, and Accessories User Manual(553990-11).pdf",
   "page_count": 128,
-  "extraction_timestamp": "2025-10-24T20:59:55.059775",
+  "extraction_timestamp": "2025-10-27T16:25:43.145321",
   "extraction_version": "v1.0.0",
   "manufacturer": "Intuitive Surgical, Inc.",
-  "product_name": "Intuitive Ion Endoluminal System",
+  "product_name": null,
   "part_number": "553990-11",
   "revision": "Rev C",
   "publication_date": "2024-08-01",
@@ -3012,18 +3012,30 @@
     "unique_pages_seen": 128,
     "unique_pages_ratio": 1.0,
     "extracted_chars": 208423,
-    "duration_s": 21.722971439361572
+    "duration_s": 22.308887720108032,
+    "coverage_ratio": 1.0,
+    "tables_kept": 16
   },
   "_engine": "pdfplumber",
   "_mode": "full",
   "_cache_used": false,
+  "_pipeline": {
+    "profile": "enriched",
+    "engines": [
+      "pdfplumber",
+      "fitz"
+    ],
+    "ocr_used_pages": [],
+    "timestamp": "2025-10-27T16:25:43.145321",
+    "version": "v1.0.0"
+  },
   "_pipeline_metadata": {
     "generator": "medparse",
     "pipeline_version": "1.1.0",
     "engine": "pdfplumber",
     "mode": "full",
     "cache_used": false,
-    "config_hash": "f2b25d1f",
+    "config_hash": "8c705aa6",
     "content_hash": "2eae06cdc6cf"
   }
 }

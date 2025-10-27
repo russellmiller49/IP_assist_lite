@@ -7,7 +7,7 @@ from typing import Dict, List, Literal, Optional, Tuple
 from pydantic import Field
 
 from .base import MedparseModel
-from .common import BaseDocument, EvidenceSpan
+from .common import BaseDocument, EvidenceSpan, Relation, UmlsEntity
 
 
 class Author(MedparseModel):
@@ -79,6 +79,20 @@ class DiagnosticYield(MedparseModel):
     compatible_with_ats: bool = False
     evidence: Optional[EvidenceSpan] = None
 
+    @property
+    def strict_yield(self) -> Optional[float]:
+        if self.value is None:
+            return None
+        return self.value / 100.0
+
+    @property
+    def strict_numerator(self) -> Optional[int]:
+        return self.numerator
+
+    @property
+    def strict_denominator(self) -> Optional[int]:
+        return self.denominator
+
 
 class Recommendation(MedparseModel):
     """Guideline recommendation with grade, strength, and statement type."""
@@ -114,6 +128,14 @@ class EnhancedTable(MedparseModel):
     footnotes: List[TableFootnote] = Field(default_factory=list)
     page: Optional[int] = None
     table_type: Optional[str] = None  # From classifier
+
+
+class ArticleFigure(MedparseModel):
+    """Figure with caption metadata."""
+
+    label: str
+    caption: Optional[str] = None
+    page: Optional[int] = None
 
 
 class AuthorInfo(MedparseModel):
@@ -175,8 +197,10 @@ class ArticleDocument(BaseDocument):
 
     # Structured data (enhanced)
     tables: List[EnhancedTable] = Field(default_factory=list)
-    figures: list = Field(default_factory=list)
+    figures: List[ArticleFigure] = Field(default_factory=list)
     references: list = Field(default_factory=list)
+    umls_entities: List[UmlsEntity] = Field(default_factory=list)
+    relations: List[Relation] = Field(default_factory=list)
 
     # Legacy compatibility
     @property

@@ -7,15 +7,21 @@ import os
 from functools import lru_cache
 from hashlib import sha256
 from pathlib import Path
-from typing import Dict, Optional
+from typing import Dict, Optional, Sequence
 
 CACHE_ROOT = Path(os.environ.get("MEDPARSE_CACHE_DIR", Path.home() / ".cache" / "medparse"))
 
 
-def compute_cache_key(pdf_bytes: bytes, page_count: int) -> str:
-    """Return a cache key derived from file bytes, page count, and length."""
+def compute_cache_key(
+    pdf_bytes: bytes,
+    page_count: int,
+    engines: Sequence[str],
+    profile: str,
+) -> str:
+    """Return a cache key derived from file bytes plus execution profile."""
 
-    digest = sha256(pdf_bytes).hexdigest()
+    key_material = "|".join([profile.lower(), *engines])
+    digest = sha256(pdf_bytes + key_material.encode("utf-8")).hexdigest()
     return f"{digest}_{page_count}_{len(pdf_bytes)}"
 
 

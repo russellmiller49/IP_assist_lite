@@ -51,3 +51,4 @@ class PageData:
     headings: List[Heading] = field(default_factory=list)
     tables: List[TableData] = field(default_factory=list)
     word_boxes: List[WordBox] = field(default_factory=list)  # For word-level spacing restoration
+    ocr_applied: bool = False
