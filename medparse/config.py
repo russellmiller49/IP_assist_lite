@@ -4,9 +4,9 @@ from __future__ import annotations
 
 import os
 from enum import Enum
-from typing import Mapping, Optional, Tuple
+from typing import Any, Dict, Mapping, Optional, Tuple
 
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, ConfigDict, Field, PrivateAttr
 
 
 class ExtractionProfile(str, Enum):
@@ -29,6 +29,7 @@ class AppConfig(BaseModel):
     ENABLE_PIPELINE: bool = True
     API_KEY: str | None = None
     UMLS_API_KEY: str | None = None
+    UMLS_MODEL: str | None = None  # scispaCy model name (auto-detect if None)
     QUICKUMLS_PATH: str | None = None
     TUI_WHITELIST: Tuple[str, ...] = ()
     FAIL_FAST: bool = False
@@ -45,6 +46,8 @@ class AppConfig(BaseModel):
             data["API_KEY"] = env["API_KEY"] or None
         if "UMLS_API_KEY" in env:
             data["UMLS_API_KEY"] = env["UMLS_API_KEY"] or None
+        if "UMLS_MODEL" in env:
+            data["UMLS_MODEL"] = env["UMLS_MODEL"] or None
         if "QUICKUMLS_PATH" in env:
             value = env["QUICKUMLS_PATH"].strip()
             data["QUICKUMLS_PATH"] = value or None
@@ -97,6 +100,9 @@ class ExtractionConfig(BaseModel):
     # Quality gates
     min_chars: int = 20000
     min_pages_ratio: float = 0.95
+    thresholds_data: Dict[str, Any] = Field(default_factory=dict, alias="thresholds")
+
+    _thresholds_namespace: "FrozenNamespace" | None = PrivateAttr(default=None)
 
     @classmethod
     def from_env(cls) -> "ExtractionConfig":
@@ -120,15 +126,15 @@ class ExtractionConfig(BaseModel):
                 use_cache=True,  # Cache is still useful in fast mode
             )
 
-        # In enriched mode, respect individual flags
+        # In enriched mode keep enrichers on regardless of CLI/env toggles
         return cls(
             profile=profile,
-            enable_umls=_parse_bool(os.getenv("MEDPARSE_ENABLE_UMLS", "1")),
-            enable_relations=_parse_bool(os.getenv("MEDPARSE_ENABLE_RELATIONS", "1")),
-            enable_guideline_norms=_parse_bool(os.getenv("MEDPARSE_ENABLE_GUIDELINE_NORMS", "1")),
-            enable_validators=_parse_bool(os.getenv("MEDPARSE_ENABLE_VALIDATORS", "1")),
             use_cache=_parse_bool(os.getenv("MEDPARSE_USE_CACHE", "1")),
             fail_fast=_parse_bool(os.getenv("MEDPARSE_FAIL_FAST", "0")),
+            enable_umls=True,
+            enable_relations=True,
+            enable_guideline_norms=True,
+            enable_validators=True,
         )
 
     def is_enriched(self) -> bool:
@@ -150,6 +156,13 @@ class ExtractionConfig(BaseModel):
     def should_validate(self) -> bool:
         """Check if validation should run."""
         return self.is_enriched() and self.enable_validators
+
+    @property
+    def thresholds(self) -> "FrozenNamespace":
+        """Return thresholds as an immutable namespace for dot access."""
+        if self._thresholds_namespace is None:
+            self._thresholds_namespace = FrozenNamespace(self.thresholds_data)
+        return self._thresholds_namespace
 
 
 # Global extraction config instance
@@ -174,3 +187,59 @@ def reset_extraction_config() -> None:
     """Reset global extraction configuration to default."""
     global _extraction_config
     _extraction_config = None
+
+
+class FrozenNamespace:
+    """Immutable view that allows attribute access to nested dicts."""
+
+    __slots__ = ("_data",)
+
+    def __init__(self, data: Mapping[str, Any] | None = None):
+        data = data or {}
+        object.__setattr__(self, "_data", {k: self._wrap(v) for k, v in data.items()})
+
+    def _wrap(self, value: Any) -> Any:
+        if isinstance(value, Mapping):
+            return FrozenNamespace(value)
+        if isinstance(value, list):
+            return [self._wrap(item) for item in value]
+        return value
+
+    def __getattr__(self, item: str) -> Any:
+        try:
+            return self._data[item]
+        except KeyError as exc:  # pragma: no cover - defensive
+            raise AttributeError(item) from exc
+
+    def __getitem__(self, item: str) -> Any:
+        return self._data[item]
+
+    def get(self, key: str, default: Any = None) -> Any:
+        return self._data.get(key, default)
+
+    def __contains__(self, item: object) -> bool:
+        return item in self._data
+
+    def items(self):
+        return self._data.items()
+
+    def to_dict(self) -> Dict[str, Any]:
+        def unwrap(value: Any) -> Any:
+            if isinstance(value, FrozenNamespace):
+                return value.to_dict()
+            if isinstance(value, list):
+                return [unwrap(item) for item in value]
+            return value
+
+        return {key: unwrap(val) for key, val in self._data.items()}
+
+
+__all__ = [
+    "AppConfig",
+    "ExtractionConfig",
+    "ExtractionProfile",
+    "FrozenNamespace",
+    "get_extraction_config",
+    "reset_extraction_config",
+    "set_extraction_config",
+]

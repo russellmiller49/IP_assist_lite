@@ -41,6 +41,69 @@ This application provides AI-powered medical information retrieval specifically 
 
 This Space requires authentication. Please contact the administrator for access credentials.
 
+## Environment Setup
+
+### Prerequisites
+- Python 3.11 or higher
+- Conda (recommended) or venv
+- CUDA-capable GPU (optional, for embedding generation)
+
+### Quick Start
+
+1. **Create and activate conda environment:**
+   ```bash
+   conda create -n medparse-py311 python=3.11
+   conda activate medparse-py311
+   ```
+
+2. **Install core dependencies:**
+   ```bash
+   make setup
+   ```
+
+3. **Install with UMLS enrichment support (optional):**
+   ```bash
+   make setup-enriched
+   ```
+
+   This installs scispaCy and the biomedical NLP model automatically.
+
+4. **Verify installation:**
+   ```bash
+   make preflight
+   ```
+
+### Manual Model Installation
+
+If you need to install the scispaCy model separately:
+
+```bash
+pip install https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.5.4/en_core_sci_lg-0.5.4.tar.gz
+```
+
+### Environment Variables
+
+```bash
+# Optional: Specify scispaCy model
+export UMLS_MODEL=en_core_sci_lg
+
+# Optional: Enable/disable UMLS enrichment
+export MEDPARSE_PROFILE=enriched  # or fast_raw
+```
+
+### Troubleshooting
+
+**Issue**: `typer` version conflicts with `docling`
+
+This is expected. The project uses `typer<0.10` for spaCy 3.7 compatibility. If you see warnings about docling requiring `typer>=0.12.5`, you can safely ignore them for Medparse operations.
+
+**Issue**: Missing scispaCy model
+
+Run the preflight check to diagnose:
+```bash
+python scripts/dev/preflight.py
+```
+
 ## Project Structure
 
 ```

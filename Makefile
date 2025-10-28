@@ -1,5 +1,5 @@
 # IP Assist Lite / Medparse Makefile
-.PHONY: help setup test cov format lint typecheck batch \
+.PHONY: help setup setup-enriched preflight test cov format lint typecheck batch \
  legacy-setup legacy-test prep chunk embed index retrieve api ui clean all \
  kb-setup kb-extract kb-generate kb-validate kb-chunks kb-embed kb-all \
  graph-up graph-down backfill graph-validate ingest-json ingest-pdf
@@ -16,13 +16,15 @@ help:
 	@echo "IP Assist Lite - Medical Information Retrieval System"
 	@echo ""
 	@echo "Medparse targets:"
-	@echo "  setup       - Install dependencies for Medparse and register pre-commit hooks"
-	@echo "  test        - Run Medparse unit and integration tests"
-	@echo "  cov         - Run tests with coverage reporting"
-	@echo "  format      - Format Medparse code (black + isort)"
-	@echo "  lint        - Run Ruff lint checks"
-	@echo "  typecheck   - Run mypy static analysis"
-	@echo "  batch       - Execute batch extraction pipeline (INPUT=, OUTPUT=)"
+	@echo "  setup         - Install dependencies for Medparse and register pre-commit hooks"
+	@echo "  setup-enriched- Install with UMLS enrichment support (scispacy + model)"
+	@echo "  preflight     - Run environment checks"
+	@echo "  test          - Run Medparse unit and integration tests"
+	@echo "  cov           - Run tests with coverage reporting"
+	@echo "  format        - Format Medparse code (black + isort)"
+	@echo "  lint          - Run Ruff lint checks"
+	@echo "  typecheck     - Run mypy static analysis"
+	@echo "  batch         - Execute batch extraction pipeline (INPUT=, OUTPUT=)"
 	@echo ""
 	@echo "Legacy IP Assist targets remain available (legacy-setup, legacy-test, prep, chunk, ...)."
 	@echo "Run 'make legacy-setup' for the original environment bootstrap."
@@ -32,11 +34,29 @@ help:
 
 setup:
 	@echo "Installing Medparse dependencies..."
+	@# Ensure no stray 'e' package from typos
+	@$(PYTHON) -m pip uninstall -y e 2>/dev/null || true
 	$(PYTHON) -m pip install --upgrade pip
 	$(PYTHON) -m pip install -e .[dev]
 	@echo "Registering pre-commit hooks..."
 	pre-commit install --install-hooks
+	@echo "Running preflight checks..."
+	@$(PYTHON) scripts/dev/preflight.py || echo "Warning: Some preflight checks failed"
 	@echo "Medparse setup complete."
+
+setup-enriched:
+	@echo "Installing Medparse with enrichment support..."
+	@# Ensure no stray 'e' package from typos
+	@$(PYTHON) -m pip uninstall -y e 2>/dev/null || true
+	$(PYTHON) -m pip install --upgrade pip
+	$(PYTHON) -m pip install -e .[dev,enriched]
+	@echo "Installing scispaCy large model..."
+	$(PYTHON) -m pip install https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.5.4/en_core_sci_lg-0.5.4.tar.gz
+	@echo "Registering pre-commit hooks..."
+	pre-commit install --install-hooks
+	@echo "Running preflight checks..."
+	@$(PYTHON) scripts/dev/preflight.py
+	@echo "Medparse enriched setup complete."
 
 test:
 	@echo "Running Medparse tests..."
@@ -58,6 +78,10 @@ lint:
 typecheck:
 	@echo "Running mypy..."
 	$(PYTHON_WITH_PATH) -m mypy medparse
+
+preflight:
+	@echo "Running environment preflight checks..."
+	@$(PYTHON) scripts/dev/preflight.py
 
 batch:
 ifndef INPUT
