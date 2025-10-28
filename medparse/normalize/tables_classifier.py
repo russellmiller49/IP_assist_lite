@@ -184,29 +184,73 @@ def is_paragraph_table(table: TableData) -> bool:
     Returns:
         True if table appears to be prose misclassified as table
     """
+    prose_cells = 0
+    total_cells = 0
+
     for row in table.rows:
         for cell in row:
-            if not isinstance(cell, str):
+            if not isinstance(cell, str) or len(cell.strip()) < 10:
                 continue
+
+            total_cells += 1
 
             # Check for long sentences
             sentences = re.split(r'[.!?]+', cell)
-            if sentences:
-                avg_words = sum(len(s.split()) for s in sentences) / len(sentences)
-                if avg_words > 25:  # Paragraph-like
-                    return True
+            clean_sentences = [s.strip() for s in sentences if len(s.strip()) > 5]
+            if clean_sentences:
+                avg_words = sum(len(s.split()) for s in clean_sentences) / len(clean_sentences)
+                if avg_words > 20:  # Paragraph-like
+                    prose_cells += 1
+                    continue
 
             # Check for high punctuation density
-            if len(cell) > 0:
+            if len(cell) > 50:  # Only check substantial cells
                 punct_count = sum(1 for c in cell if c in '.,;:!?')
                 punct_ratio = punct_count / len(cell)
-                if punct_ratio > 0.15:  # >15% punctuation suggests prose
-                    return True
+                if punct_ratio > 0.10:  # >10% punctuation suggests prose
+                    prose_cells += 1
+                    continue
 
             # Check for narrative keywords
-            narrative_markers = ['however', 'therefore', 'moreover', 'furthermore', 'although']
+            narrative_markers = ['however', 'therefore', 'moreover', 'furthermore',
+                               'although', 'thus', 'hence', 'consequently']
             if any(marker in cell.lower() for marker in narrative_markers):
-                return True
+                prose_cells += 1
+                continue
+
+            # Check for garbled text (common in bad extractions)
+            if has_garbled_text(cell):
+                prose_cells += 1
+                continue
+
+    # If more than 30% of cells look like prose, it's probably not a real table
+    if total_cells > 0 and (prose_cells / total_cells) > 0.3:
+        return True
+
+    return False
+
+
+def has_garbled_text(text: str) -> bool:
+    """Check if text contains garbled/corrupted patterns.
+
+    Args:
+        text: Text to check
+
+    Returns:
+        True if text appears garbled
+    """
+    # Check for excessive special characters
+    special_chars = sum(1 for c in text if c in '†‡§¶©®™≥≤±∞')
+    if len(text) > 0 and special_chars / len(text) > 0.1:
+        return True
+
+    # Check for nonsense character sequences
+    if re.search(r'[^\w\s]{5,}', text):  # 5+ consecutive non-alphanumeric
+        return True
+
+    # Check for excessive uppercase/lowercase alternation
+    if re.search(r'([a-z][A-Z]){4,}|([A-Z][a-z]){4,}', text):
+        return True
 
     return False
 

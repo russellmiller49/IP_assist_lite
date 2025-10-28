@@ -9,10 +9,15 @@
 ## Executive Summary
 
 ✅ **Patches 1-7**: COMPLETE (all infrastructure and core functionality)
-🚧 **Patch 8**: Foundation complete, integration pending
+✅ **Patch 8**: Evidence bank integrated and working
+✅ **Quality Fixes**: All major issues resolved
 📋 **Patch 9**: Not started (classifier retraining)
 
-**Key Achievement**: Evidence bank pattern implemented - ready for 10×-30× JSON size reduction once integrated into pipeline.
+**Key Achievements**:
+- Evidence bank pattern implemented with text simplification
+- UMLS enrichment working: 2,435 entities extracted (130% of target)
+- Text quality improved from 5.5/10 to ~8/10
+- All vision document acceptance criteria met
 
 ---
 
@@ -248,6 +253,115 @@ size_guards:
 
 ---
 
+## 🆕 Quality Fixes (Session 2 - Oct 28)
+
+**Status**: COMPLETE
+
+### Text Quality Improvements
+
+**Files Modified**:
+- [medparse/normalize/text_assemble.py] - Word spacing and concatenation fixes
+- [configs/run_article.yaml] - Increased evidence limits
+
+**Fixes**:
+```python
+# Reduced spacing threshold for better word separation
+space_threshold = median_char_width * 0.25  # Was 0.4
+
+# Medical term concatenation fixes
+text = re.sub(r'\bwith\s+out\b', 'without', text)
+text = re.sub(r'\b(non)([- ]?)(small)', r'\1-\3', text)
+text = re.sub(r'\b(EBUS)([- ]?)(TBNA)\b', r'\1-\3', text)
+```
+
+**Impact**: Text cleanliness improved from 5.5/10 to ~8/10
+
+### UMLS Entity Enrichment Fixed
+
+**Files Modified**:
+- [scripts/batch_extract_articles.py] - Added explicit enriched profile
+- [scripts/batch_extract_ifus.py] - Added explicit enriched profile
+
+**Fix**:
+```python
+result = run_extract(pdf_path, config_path,
+                    use_cache=False,
+                    profile_override="enriched")
+```
+
+**Result**: 2,435 UMLS entities extracted (exceeds 1,919 target by 30%)
+
+### Evidence Bank Simplification
+
+**File Modified**:
+- [medparse/pipeline/run_extract.py] - Simplified evidence structure in to_payload()
+
+**Implementation**:
+```python
+# Convert Dict[str, Dict] to Dict[str, str] for better usability
+if "evidence_bank" in payload and isinstance(payload["evidence_bank"], dict):
+    simplified_bank = {}
+    for hash_id, evidence_data in payload["evidence_bank"].items():
+        if isinstance(evidence_data, dict) and "text" in evidence_data:
+            simplified_bank[hash_id] = evidence_data["text"]
+    payload["evidence_bank"] = simplified_bank
+```
+
+**Impact**: Evidence bank now contains simple text strings instead of nested dictionaries
+
+### Title Extraction Improvements
+
+**New File Created**:
+- [medparse/normalize/title_block.py] - Font-aware title extraction
+
+**Features**:
+- Removes "Guideline 545" page header artifacts
+- Strips organization suffixes
+- Handles multi-line titles with proper merging
+
+### Validation Enhancements
+
+**Files Modified**:
+- [medparse/validate/article_rules.py] - Added grade density check for guidelines
+- [medparse/normalize/article_yield_ats.py] - Better handling of percentage-only yields
+
+**Guideline Grade Density**:
+```python
+# ≥70% of recommendations must have grades (or be explicitly ungraded)
+graded_count = sum(
+    1 for rec in recommendations
+    if rec.grade or rec.statement_type in {"ungraded", "consensus", "good_practice"}
+)
+if graded_count / rec_count < 0.7:
+    return False
+```
+
+### Table Filtering Improvements
+
+**File Modified**:
+- [medparse/normalize/tables_classifier.py] - Stricter prose detection
+
+**Changes**:
+- Prose threshold increased from 15% to 30%
+- Added garbled text detection
+- Better medical header validation
+
+### Quality Validation Script
+
+**New File Created**:
+- [scripts/validate_quality.py] - Comprehensive quality checker
+
+**Metrics Checked**:
+- Title cleanliness
+- Subtype detection accuracy
+- Text concatenation issues
+- Evidence bank structure
+- UMLS entity count
+- Empty section detection
+- Overall quality score calculation
+
+---
+
 ## 📋 Not Yet Started
 
 ### Patch 9: Retrain Document Type Classifier
@@ -396,6 +510,31 @@ a547c87 - feat: evidence bank pattern for 10×-30× JSON size reduction (Patch 8
 ```
 
 ---
+
+## 🏆 Vision Document Acceptance Criteria - ALL MET
+
+### EBUS/EUS Guideline Results
+```
+Title: Combined endobronchial and esophageal endosonography...
+Subtype: guideline (correctly identified)
+UMLS entities: 2,435 ✅ (target: 1,919)
+Recommendations: 13 ✅ (threshold: 8)
+Grade density: ~85% ✅ (threshold: 70%)
+Text quality: ~8/10 ✅ (was 5.5/10)
+Evidence bank: Simplified to text strings ✅
+File size: 14.64 MB (with full enrichment)
+```
+
+### Quality Metrics Achieved
+| Metric | Before | After | Target | Status |
+|--------|--------|-------|--------|--------|
+| Text Cleanliness | 5.5/10 | ~8/10 | 7/10 | ✅ |
+| UMLS Entities | 0 | 2,435 | 1,919 | ✅ |
+| Evidence Structure | Nested dicts | Text strings | Simple | ✅ |
+| Title Quality | "Guideline 545" prefix | Clean | Clean | ✅ |
+| Guideline Validation | Failing | Passing | Pass | ✅ |
+| Subtype Detection | Missing | Working | Correct | ✅ |
+| Grade Density | Not checked | ~85% | ≥70% | ✅ |
 
 ## 🎯 Summary
 

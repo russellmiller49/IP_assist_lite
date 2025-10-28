@@ -15,6 +15,7 @@ from medparse.normalize.article_frontmatter import (
     extract_bibliographic_metadata,
     extract_title_hierarchical,
 )
+from medparse.normalize.title_block import extract_title
 from medparse.normalize.article_sections import normalize_article_sections
 from medparse.normalize.article_yield_ats import DiagnosticYieldATS, extract_ats_compliant_yield
 from medparse.normalize.figures_captions import FigureBlock, extract_figures_and_captions
@@ -69,9 +70,23 @@ def extract_article(
     sections = normalize_article_sections(pages)
     flat_lines = collect_lines(pages)
 
-    title_info = extract_title_hierarchical(pages)
+    # Try both title extraction methods and use the better one
+    title_info_old = extract_title_hierarchical(pages)
     doi = extract_doi(pages[:2])
     biblio = extract_bibliographic_metadata(pages)
+
+    # Use the new font-aware title extraction
+    title, title_source, title_confidence = extract_title(pages, metadata=None, doi=doi)
+
+    # Choose the better title
+    if title and title_confidence > title_info_old.get("confidence", 0.0):
+        title_info = {
+            "title": title,
+            "source": title_source,
+            "confidence": title_confidence
+        }
+    else:
+        title_info = title_info_old
     frontmatter = extract_authors_affiliations(pages)
     authors = _build_authors(frontmatter)
     affiliations = _build_affiliations(frontmatter.get("affiliations", []))
@@ -410,28 +425,93 @@ def _infer_doc_subtype(
     sections: dict[str, str],
     recommendations: Sequence[GuidelineRecommendation],
 ) -> str:
+    """Rule-based subtype detection for articles.
+
+    Priority order:
+    1. Explicit guideline markers in title/text
+    2. Presence of graded recommendations
+    3. Review markers
+    4. Default to research
+    """
+
+    # Get title for checking
+    title = (title_info.get("title") or "").lower() if isinstance(title_info, dict) else ""
+
+    # Priority 1: Explicit guideline markers in title or first pages
+    guideline_markers = [
+        "guideline",
+        "statement",
+        "recommendations",
+        "consensus",
+        "task force",
+        "position paper",
+        "best practice",
+        "grade",
+        "sign",
+        "accp",
+        "chest guideline",
+        "ats/ers",
+        "official ats",
+    ]
+
+    # Check title first
+    for marker in guideline_markers:
+        if marker in title:
+            LOGGER.debug(f"Detected guideline from title marker: {marker}")
+            return "guideline"
+
+    # Check abstract/intro for guideline language
+    intro_text = (sections.get("introduction", "") + " " + sections.get("abstract", ""))[:2000].lower()
+    guideline_phrases = [
+        "clinical practice guideline",
+        "evidence-based recommendations",
+        "guideline recommendations",
+        "grading of recommendations",
+        "systematic review of evidence for recommendations",
+        "this guideline",
+        "these recommendations",
+    ]
+
+    for phrase in guideline_phrases:
+        if phrase in intro_text:
+            LOGGER.debug(f"Detected guideline from intro/abstract phrase: {phrase}")
+            return "guideline"
+
+    # Priority 2: Has graded recommendations
     has_graded = any(rec.grade for rec in recommendations)
     has_guideline_marker = any(
         rec.statement_type in {"good_practice", "consensus", "ungraded"}
         for rec in recommendations
     )
     if has_graded or has_guideline_marker:
+        LOGGER.debug(f"Detected guideline from recommendations: graded={has_graded}, markers={has_guideline_marker}")
         return "guideline"
 
-    title = (title_info.get("title") or "").lower() if isinstance(title_info, dict) else ""
-    review_markers = (
+    # Priority 3: Check if it has many recommendation-like statements
+    if len(recommendations) >= 5:
+        LOGGER.debug(f"Detected guideline from high recommendation count: {len(recommendations)}")
+        return "guideline"
+
+    # Priority 4: Review markers
+    review_markers = [
         "systematic review",
         "literature review",
         "meta-analysis",
         "scoping review",
-    )
+        "narrative review",
+    ]
     if any(marker in title for marker in review_markers):
+        LOGGER.debug(f"Detected review from title")
         return "review"
 
+    # Check section headings for review
     for heading in sections.keys():
-        if heading and "review" in heading.lower():
+        if heading and any(marker in heading.lower() for marker in ["review", "meta-analysis"]):
+            LOGGER.debug(f"Detected review from section heading: {heading}")
             return "review"
 
+    # Default to research
+    LOGGER.debug("Defaulting to research article subtype")
     return "research"
 
 

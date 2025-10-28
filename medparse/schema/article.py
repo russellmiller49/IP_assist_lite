@@ -60,6 +60,7 @@ class Outcome(MedparseModel):
     inconclusive: bool = False
     linked_figure_table: Optional[str] = None
     evidence: Optional[EvidenceSpan] = None
+    evidence_refs: Optional[List[str]] = None  # Hash IDs for evidence bank
 
 
 class DiagnosticYield(MedparseModel):
@@ -74,6 +75,7 @@ class DiagnosticYield(MedparseModel):
     denominator_type: Optional[Literal["enrolled", "biopsied", "lesions"]] = None
     exclusion_reasons: List[str] = Field(default_factory=list)
     method_note: Optional[str] = None
+    evidence_refs: Optional[List[str]] = None  # Hash IDs for evidence bank
     pooled_value: Optional[float] = None  # When multiple strata pooled
     pooling_method: Optional[Literal["fixed_effects", "weighted"]] = None
     strata: List[Dict] = Field(default_factory=list)  # Individual stratum yields
@@ -110,6 +112,7 @@ class GuidelineRecommendation(MedparseModel):
     consensus_percentage: Optional[float] = None
     page_span: Optional[Tuple[int, int]] = None
     evidence: Optional[EvidenceSpan] = None
+    evidence_refs: Optional[List[str]] = None  # Hash IDs for evidence bank
 
 
 class TableFootnote(MedparseModel):

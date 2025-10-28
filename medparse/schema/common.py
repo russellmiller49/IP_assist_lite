@@ -105,6 +105,7 @@ class Relation(MedparseModel):
     object: str
     attributes: Dict[str, object] = Field(default_factory=dict)
     evidence: Optional[EvidenceSpan] = None
+    evidence_refs: Optional[List[str]] = None  # Hash IDs for evidence bank
 
 
 __all__ = [

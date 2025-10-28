@@ -119,6 +119,17 @@ class EvidenceBank:
         """
         return self.bank
 
+    def get_text_bank(self) -> Dict[str, str]:
+        """Get the evidence bank as text-only dictionary for JSON export.
+
+        Returns:
+            Dictionary of hash_id -> text string
+        """
+        return {
+            hash_id: evidence.text
+            for hash_id, evidence in self.bank.items()
+        }
+
     def get_stats(self) -> Dict[str, int]:
         """Get deduplication statistics.
 

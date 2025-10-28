@@ -49,8 +49,9 @@ def words_to_text(word_boxes: List[WordBox], y_tol: float = 2.0, x_gap_threshold
 
         median_char_width = sorted(char_widths)[len(char_widths) // 2] if char_widths else 5.0
 
-        # Adaptive gap threshold: 0.4x median char width
-        adaptive_threshold = max(median_char_width * 0.4, x_gap_threshold)
+        # Adaptive gap threshold: 0.25x median char width (more aggressive spacing)
+        # Lower threshold = more spaces preserved
+        adaptive_threshold = max(median_char_width * 0.25, 1.5)
 
         line_parts: List[str] = []
         for i, word in enumerate(line_words_sorted):
@@ -143,7 +144,7 @@ def _post_clean_spacing(text: str) -> str:
 
     Fixes:
         - "6. 0. 0" → "6.0.0" (version numbers)
-        - "Usethis" → "Use this" (missing space before lowercase)
+        - "Formediastinal" → "For mediastinal" (missing spaces)
         - Extra spaces around punctuation
 
     Args:
@@ -157,12 +158,32 @@ def _post_clean_spacing(text: str) -> str:
     text = re.sub(r'(\d+)\s+\.\s+', r'\1.', text)  # "6 . " → "6."
     text = re.sub(r'\.\s+(\d+)', r'.\1', text)      # ". 0" → ".0"
 
+    # Fix common medical term concatenations
+    # "Formediastinal" → "For mediastinal"
+    text = re.sub(r'\b(For)(mediastinal|staging|diagnosis|treatment)\b', r'\1 \2', text)
+    text = re.sub(r'\b(In)(patients|adults|children|cases)\b', r'\1 \2', text)
+
+    # Fix "with out" → "without" and similar
+    text = re.sub(r'\bwith\s+out\b', 'without', text)
+    text = re.sub(r'\bcan\s+not\b', 'cannot', text)
+    text = re.sub(r'\bin\s+to\b', 'into', text)
+
+    # Fix other medical concatenations
+    text = re.sub(r'\b(non)([- ]?)(small)', r'\1-\3', text)  # Standardize to "non-small"
+    text = re.sub(r'\b(CT)([- ]?)(PET)\b', r'\1-\3', text)  # Standardize to "CT-PET"
+    text = re.sub(r'\b(EUS)([- ]?)(FNA)\b', r'\1-\3', text)  # Standardize to "EUS-FNA"
+    text = re.sub(r'\b(EBUS)([- ]?)(TBNA)\b', r'\1-\3', text)  # Standardize to "EBUS-TBNA"
+
+    # Add space between lowercase and uppercase: "nodesFigure" → "nodes Figure"
+    text = re.sub(r'([a-z])([A-Z])', r'\1 \2', text)
+
+    # Add space between letter and number: "Figure1" → "Figure 1"
+    text = re.sub(r'([a-zA-Z])(\d)', r'\1 \2', text)
+    text = re.sub(r'(\d)([a-zA-Z])', r'\1 \2', text)
+
     # Fix missing space before lowercase after uppercase: "USEthis" → "USE this"
     # But preserve acronyms like "IFU" and common patterns
     text = re.sub(r'([A-Z]{2,})([a-z])', r'\1 \2', text)
-
-    # Fix "lowercase[nospace]lowercase" when first is 2+ chars: "Usethis" → "Use this"
-    text = re.sub(r'\b([a-z]{2,})([a-z]{2,})\b', lambda m: m.group(1) + ' ' + m.group(2) if m.group(1) + m.group(2) != m.group(0) else m.group(0), text)
 
     # Collapse multiple spaces
     text = re.sub(r' {2,}', ' ', text)

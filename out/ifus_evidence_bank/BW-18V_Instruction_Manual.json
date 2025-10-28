@@ -1,0 +1,45 @@
+{
+  "doc_id": "b855038c-b195-4902-897d-e71d3916a89c",
+  "doc_type": "ifu",
+  "source_file": "data/Input pdfs/IFUs/pdf/BW-18V_Instruction_Manual.pdf",
+  "page_count": 2,
+  "extraction_timestamp": "2025-10-28T19:10:21.049563",
+  "extraction_version": "v1.0.0",
+  "evidence_bank": {},
+  "software_versions": [],
+  "intended_use": "\uf02a1 These products may not be available in some areas. 4. Perform ultrasonic cleaning, for 5 minutes at 38 \u2013 47 KH z. 2 SYMBOLS 5. Rinse in water, then thoroughly dry with lint-free cloth. The meaning(s) of the symbol(s) shown on the back cover of this instruction manual are as follows: If the brush is not thoroughly cleaned, residual organic debris may solidify and it may be difficult to effectively Manufacturer Authorized representative in the European Community disinfect or sterilize the brush. Importer (into European Union) 6. 2 Disinfection For US Customers only For a Symbols Glossary, visit us: http: //www. olympus-global. com/en/common/pdf/symbolsglossary. pdf 1. After cleaning the brush in accordance with Section 6. 1, \u201cCleaning\u201d prepare a 2. 0 \u2013 3. 2% glutaraldehyde solution. 3 SIGNAL WORDS Follow the manufacturer\u2019s instructions regarding its concentration and temperature. 2. Soak the Channel Cleaning Brush in a basin filled with disinfectant solution, then remove bubbles from the outer The following signal words are used throughout this manual: surface, using a lint-free cloth. In particular, rub the bristle section with your fingers to remove bubbles. 3. Soak in disinfectant solution for the amount of time recommended by the disinfectant manufacturer. Indicates a potentially hazardous situation which, if not avoided, could result in death or serious injury. 4. Remove from the disinfectant solution, then rinse thoroughly with sterile water. 5. Thoroughly dry with a sterile lint-free cloth. Indicates a potentially hazardous situation which, if not avoided, may result in minor or moderate injury. It may also be used to alert against unsafe practices or potential equipment damage. Contact Olympus for the names of specific disinfectants with which the Channel Cleaning Brush is compatible. Indicates additional helpful information. 6. 3 Sterilization",
+  "contraindications": [],
+  "adverse_events": [],
+  "safety_blocks": [],
+  "tables": [],
+  "references": [],
+  "_metrics": {
+    "page_count": 2,
+    "unique_pages_seen": 2,
+    "unique_pages_ratio": 1.0,
+    "extracted_chars": 10934,
+    "duration_s": 0.46153759956359863,
+    "coverage_ratio": 1.0,
+    "tables_kept": 0
+  },
+  "_engine": "pdfplumber",
+  "_mode": "full",
+  "_cache_used": false,
+  "_pipeline_metadata": {
+    "profile": "enriched",
+    "engines_requested": [
+      "pdfplumber",
+      "pymupdf"
+    ],
+    "engine_used": "pdfplumber",
+    "mode": "full",
+    "cache_used": false,
+    "ocr_used_pages": [],
+    "coverage_ratio": 1.0,
+    "page_count": 2,
+    "timestamp": "2025-10-28T19:10:21.049563",
+    "version": "v1.0.0",
+    "warnings": [],
+    "emit": {}
+  }
+}

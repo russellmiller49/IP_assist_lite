@@ -81,38 +81,51 @@ def _extract_from_text(results_text: str) -> Optional[DiagnosticYieldATS]:
     if not results_text:
         return None
 
+    # Try patterns in order of specificity (most specific first)
     patterns = [
-        r'(\d+(?:\.\d+)?)\s?%[^\n]*?\((\d+)\s*/\s*(\d+)\)',
-        r'diagnostic\s+yield[:\s]+(\d+)/(\d+)\s*',
-        r'(\d+)\s+of\s+(\d+)\s+(?:patients?|procedures?)\s+(?:had|received|achieved)\s+(?:a\s+)?(?:definitive\s+)?diagnos',
-        r'diagnostic\s+yield(?:\s+was|\s*[:=])\s*(\d+(?:\.\d+)?)\s?%',
+        (r'(\d+(?:\.\d+)?)\s?%[^\n]*?\((\d+)\s*/\s*(\d+)\)', 'pct_with_fraction'),
+        (r'diagnostic\s+yield[:\s]+(\d+)/(\d+)\s*', 'fraction'),
+        (r'(\d+)\s+of\s+(\d+)\s+(?:patients?|procedures?)\s+(?:had|received|achieved)\s+(?:a\s+)?(?:definitive\s+)?diagnos', 'x_of_y'),
+        (r'diagnostic\s+yield(?:\s+was|\s*[:=])\s*(\d+(?:\.\d+)?)\s?%', 'pct_only'),
     ]
 
-    for pattern in patterns:
-        match = re.search(pattern, results_text, re.IGNORECASE)
+    for pattern_str, pattern_type in patterns:
+        match = re.search(pattern_str, results_text, re.IGNORECASE)
         if not match:
             continue
 
         groups = match.groups()
         numerator = denominator = None
         yield_pct = None
+        exclusion_reasons = []
 
-        if len(groups) >= 3 and groups[1] and groups[2]:
+        if pattern_type == 'pct_with_fraction':
+            # Has percentage and explicit numerator/denominator
+            yield_pct = float(groups[0])
             numerator = int(groups[1])
             denominator = int(groups[2])
-            yield_pct = float(groups[0]) if groups[0] and '%' in pattern else None
-        elif len(groups) >= 2 and groups[0] and groups[1]:
+        elif pattern_type == 'fraction':
+            # Has explicit fraction
             numerator = int(groups[0])
             denominator = int(groups[1])
-        elif groups and len(groups) == 1:
+            yield_pct = (numerator / denominator) * 100 if denominator > 0 else None
+        elif pattern_type == 'x_of_y':
+            # X of Y pattern
+            numerator = int(groups[0])
+            denominator = int(groups[1])
+            yield_pct = (numerator / denominator) * 100 if denominator > 0 else None
+        elif pattern_type == 'pct_only':
+            # Only percentage, no numerator/denominator
             yield_pct = float(groups[0])
+            exclusion_reasons.append("No explicit numerator/denominator in procedural encounter")
 
         match_start, match_end = match.start(), match.end()
         ci_lower, ci_upper = extract_confidence_intervals(results_text, match_start, match_end)
         definition = extract_yield_definition(results_text, match_start, match_end)
 
-        if yield_pct is None and numerator is not None and denominator:
-            yield_pct = (numerator / denominator) * 100 if denominator > 0 else None
+        # Determine ATS compliance based on whether we have n/d
+        compatible = (numerator is not None and denominator is not None)
+        strict = compatible and pattern_type != 'pct_only'
 
         return DiagnosticYieldATS(
             numerator=numerator,
@@ -121,7 +134,10 @@ def _extract_from_text(results_text: str) -> Optional[DiagnosticYieldATS]:
             ci_lower=ci_lower,
             ci_upper=ci_upper,
             definition=definition,
-            evidence=EvidenceSpan(text=match.group(0), confidence=0.85),
+            compatible_with_ats=compatible,
+            exclusion_reasons=exclusion_reasons,
+            evidence=EvidenceSpan(text=match.group(0), confidence=0.85 if compatible else 0.6),
+            strict=strict,
         )
 
     return None
@@ -171,23 +187,36 @@ def _finalize_yield_record(
     methods_text: str,
     sections: Dict[str, str],
 ) -> None:
+    # Try to backfill missing counts from text
     _attempt_backfill_counts(yield_data, sections)
 
+    # Check ATS compliance criteria
     compat, exclusions = validate_ats_compliance(results_text, methods_text)
-    yield_data.compatible_with_ats = compat
-    for reason in exclusions:
-        _append_reason(yield_data, reason)
 
-    if yield_data.numerator is None:
-        _append_reason(yield_data, "no_numerator_in_text")
-    if yield_data.denominator is None:
-        _append_reason(yield_data, "no_denominator_in_text")
+    # If we already marked it as non-compliant due to missing n/d, keep that
+    if not yield_data.compatible_with_ats:
+        # Already marked as non-compliant, just add more reasons if found
+        for reason in exclusions:
+            _append_reason(yield_data, reason)
+    else:
+        # Was marked as compliant, update based on validation
+        yield_data.compatible_with_ats = compat
+        for reason in exclusions:
+            _append_reason(yield_data, reason)
 
+    # Add missing data reasons
+    if yield_data.numerator is None and "No explicit numerator" not in str(yield_data.exclusion_reasons):
+        _append_reason(yield_data, "Numerator not found in text")
+    if yield_data.denominator is None and "No explicit numerator" not in str(yield_data.exclusion_reasons):
+        _append_reason(yield_data, "Denominator not found in text")
+
+    # Update strict flag
     derived_counts = "derived_counts_from_percent" in yield_data.exclusion_reasons
     yield_data.strict = (
         yield_data.numerator is not None
         and yield_data.denominator is not None
         and not derived_counts
+        and yield_data.compatible_with_ats
     )
 
 

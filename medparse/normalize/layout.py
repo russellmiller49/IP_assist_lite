@@ -171,11 +171,22 @@ def _find_anchor(text: str, anchors: Optional[Iterable[str]]) -> Optional[int]:
         return None
 
     for anchor in anchors:
-        # Headings typically start at line boundaries; allow colon or new line
-        pattern = rf"(?:^|\n)\s*{re.escape(anchor)}[:\s]*\n"
-        match = re.search(pattern, text, flags=re.IGNORECASE)
-        if match:
-            return match.end()
+        # Try multiple patterns for more flexible matching
+        patterns = [
+            # Original: heading at line start with colon or newline
+            rf"(?:^|\n)\s*{re.escape(anchor)}[:\s]*\n",
+            # Allow heading without newline after (for inline headings)
+            rf"(?:^|\n)\s*{re.escape(anchor)}[:\s]+",
+            # Allow bold/italic markers around heading
+            rf"(?:^|\n)\s*\*{{0,2}}{re.escape(anchor)}\*{{0,2}}[:\s]*",
+            # Allow numbered headings
+            rf"(?:^|\n)\s*\d+\.?\s+{re.escape(anchor)}[:\s]*",
+        ]
+
+        for pattern in patterns:
+            match = re.search(pattern, text, flags=re.IGNORECASE)
+            if match:
+                return match.end()
 
     return None
 

@@ -18,10 +18,11 @@ from medparse.extractors.ifu import extract_ifu
 from medparse.extractors.textbook import extract_textbook_chapter
 from medparse.extract.utils import load_pages
 from medparse.schema.article import ArticleDocument
-from medparse.schema.common import BaseDocument, EvidenceSpan
+from medparse.schema.common import BaseDocument, EvidenceSpan, SizeGuards
 from medparse.schema.ifu import IFUDocument
 from medparse.schema.textbook import TextbookChapterDocument
 from medparse.utils.cache import compute_cache_key, load_cache_entry, store_cache_entry
+from medparse.utils.evidence_dedup import EvidenceBank
 from medparse.utils.log import get_logger
 
 LOGGER = get_logger(__name__)
@@ -59,6 +60,7 @@ class PipelineConfig:
     thresholds: Dict[str, Any] = field(default_factory=dict)
     ocr_settings: Dict[str, Any] = field(default_factory=dict)
     emit: Dict[str, Any] = field(default_factory=dict)
+    size_guards: Dict[str, Any] = field(default_factory=dict)
 
     @classmethod
     def from_path(cls, path: Path) -> "PipelineConfig":
@@ -80,6 +82,8 @@ class PipelineConfig:
             ocr_enable = bool(ocr_config)
             ocr_settings = {"enable": ocr_enable}
 
+        size_guards_config = data.get("size_guards") or {}
+
         return cls(
             doc_type=data["doc_type"],
             profile=profile,
@@ -94,6 +98,7 @@ class PipelineConfig:
             thresholds=thresholds,
             ocr_settings=ocr_settings,
             emit=emit_settings,
+            size_guards=size_guards_config,
         )
 
     def to_extraction_config(self, *, use_cache: bool) -> ExtractionConfig:
@@ -174,6 +179,17 @@ class PipelineOutcome:
     def to_payload(self) -> Dict[str, object]:
         if self.success and self.document is not None:
             payload = self.document.model_dump(mode="json", exclude_none=True)
+
+            # Simplify evidence_bank to just text strings for better usability
+            if "evidence_bank" in payload and isinstance(payload["evidence_bank"], dict):
+                simplified_bank = {}
+                for hash_id, evidence_data in payload["evidence_bank"].items():
+                    if isinstance(evidence_data, dict) and "text" in evidence_data:
+                        simplified_bank[hash_id] = evidence_data["text"]
+                    elif isinstance(evidence_data, str):
+                        simplified_bank[hash_id] = evidence_data
+                payload["evidence_bank"] = simplified_bank
+
             payload["_metrics"] = self.metrics
             payload["_engine"] = self.engine
             payload["_mode"] = self.mode
@@ -215,6 +231,87 @@ class PipelineOutcome:
             "engine": self.engine,
             "mode": self.mode,
         }
+
+
+def _build_evidence_bank(document: BaseDocument, size_guards: SizeGuards) -> EvidenceBank:
+    """Build evidence bank from extracted document, deduplicating evidence spans.
+
+    Args:
+        document: Extracted document with evidence spans
+        size_guards: Size limits configuration
+
+    Returns:
+        EvidenceBank with deduplicated evidence
+    """
+    bank = EvidenceBank(size_guards=size_guards)
+
+    # Process recommendations
+    if hasattr(document, "recommendations"):
+        for rec in getattr(document, "recommendations") or []:
+            evidence = getattr(rec, "evidence", None)
+            if isinstance(evidence, list):
+                refs = bank.add_evidence_list(evidence)
+                if refs:
+                    setattr(rec, "evidence_refs", refs)
+                    setattr(rec, "evidence", None)  # Clear original
+            elif isinstance(evidence, EvidenceSpan):
+                ref = bank.add_evidence(evidence)
+                if ref:
+                    setattr(rec, "evidence_refs", [ref])
+                    setattr(rec, "evidence", None)  # Clear original
+
+    # Process outcomes
+    if hasattr(document, "outcomes"):
+        for outcome in getattr(document, "outcomes") or []:
+            evidence = getattr(outcome, "evidence", None)
+            if isinstance(evidence, list):
+                refs = bank.add_evidence_list(evidence)
+                if refs:
+                    setattr(outcome, "evidence_refs", refs)
+                    setattr(outcome, "evidence", None)
+            elif isinstance(evidence, EvidenceSpan):
+                ref = bank.add_evidence(evidence)
+                if ref:
+                    setattr(outcome, "evidence_refs", [ref])
+                    setattr(outcome, "evidence", None)
+
+    # Process diagnostic_yield
+    if hasattr(document, "diagnostic_yield"):
+        diag = getattr(document, "diagnostic_yield")
+        if diag:
+            evidence = getattr(diag, "evidence", None)
+            if isinstance(evidence, EvidenceSpan):
+                ref = bank.add_evidence(evidence)
+                if ref:
+                    setattr(diag, "evidence_refs", [ref])
+                    setattr(diag, "evidence", None)
+
+    # Process relations
+    if hasattr(document, "relations"):
+        for relation in getattr(document, "relations") or []:
+            evidence = getattr(relation, "evidence", None)
+            if isinstance(evidence, EvidenceSpan):
+                ref = bank.add_evidence(evidence)
+                if ref:
+                    setattr(relation, "evidence_refs", [ref])
+                    setattr(relation, "evidence", None)
+            elif isinstance(evidence, list):
+                refs = bank.add_evidence_list(evidence)
+                if refs:
+                    setattr(relation, "evidence_refs", refs)
+                    setattr(relation, "evidence", None)
+
+    # Process figures
+    if hasattr(document, "figures"):
+        for figure in getattr(document, "figures") or []:
+            evidence = getattr(figure, "evidence", None)
+            if isinstance(evidence, EvidenceSpan):
+                ref = bank.add_evidence(evidence)
+                if ref:
+                    setattr(figure, "evidence_refs", [ref])
+                    setattr(figure, "evidence", None)
+
+    return bank
 
 
 def run_extract(
@@ -322,6 +419,28 @@ def run_extract(
         metrics.update(_document_metrics(document))
 
         emit_warnings = _apply_emit_constraints(document, config.emit)
+
+        # Build evidence bank for deduplication and size reduction
+        size_guards = SizeGuards(**(config.size_guards or {}))
+        evidence_bank = _build_evidence_bank(document, size_guards)
+
+        # Populate document with evidence bank
+        document.evidence_bank = evidence_bank.get_bank()
+
+        # Add truncation notice if any truncation occurred
+        truncation_notice = evidence_bank.get_truncation_notice()
+        if truncation_notice:
+            document.truncation_notice = truncation_notice
+
+        # Log deduplication stats
+        stats = evidence_bank.get_stats()
+        LOGGER.info(
+            "Evidence deduplication: total=%d deduplicated=%d truncated=%d bank_size=%d",
+            stats["total_added"],
+            stats["deduplicated"],
+            stats["truncated"],
+            len(document.evidence_bank),
+        )
 
         LOGGER.info(
             "Completed extraction: doc_type=%s engine=%s duration=%.2fs chars=%d coverage=%.2f",

@@ -1,0 +1,47 @@
+{
+  "doc_id": "7ac6e60f-e46b-4704-a76c-8c88c5854ace",
+  "doc_type": "ifu",
+  "source_file": "data/Input pdfs/IFUs/pdf/30180-103_ERBE_EN_SystemCarrier_performance__D294849.pdf",
+  "page_count": 156,
+  "extraction_timestamp": "2025-10-28T19:10:01.298788",
+  "extraction_version": "v1.0.0",
+  "evidence_bank": {},
+  "manufacturer": "ERBE Elektromedizin GmbH",
+  "part_number": "20180-110",
+  "model": "SYSTEM",
+  "software_versions": [],
+  "contraindications": [],
+  "adverse_events": [],
+  "safety_blocks": [],
+  "tables": [],
+  "references": [],
+  "_metrics": {
+    "page_count": 156,
+    "unique_pages_seen": 156,
+    "unique_pages_ratio": 1.0,
+    "extracted_chars": 35942,
+    "duration_s": 15.921989679336548,
+    "coverage_ratio": 1.0,
+    "tables_kept": 0
+  },
+  "_engine": "pdfplumber",
+  "_mode": "full",
+  "_cache_used": false,
+  "_pipeline_metadata": {
+    "profile": "enriched",
+    "engines_requested": [
+      "pdfplumber",
+      "pymupdf"
+    ],
+    "engine_used": "pdfplumber",
+    "mode": "full",
+    "cache_used": false,
+    "ocr_used_pages": [],
+    "coverage_ratio": 1.0,
+    "page_count": 156,
+    "timestamp": "2025-10-28T19:10:01.298788",
+    "version": "v1.0.0",
+    "warnings": [],
+    "emit": {}
+  }
+}

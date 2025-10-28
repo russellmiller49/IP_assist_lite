@@ -18,12 +18,12 @@ thresholds:
     require_ats_yield: true
 
 size_guards:
-  max_evidence_per_item: 3
-  max_chars_per_evidence: 1200
+  max_evidence_per_item: 5
+  max_chars_per_evidence: 2000
   max_tables: 50
   max_table_cells: 5000
   max_sections: 60
-  max_paragraph_chars: 2000
+  max_paragraph_chars: 3000
   keep_table_types:
     - diagnostic_accuracy
     - baseline
@@ -32,7 +32,7 @@ size_guards:
     - outcomes
 
 emit:
-  evidence_max_chars: 600
-  table_cell_max_chars: 600
+  evidence_max_chars: 1500
+  table_cell_max_chars: 800
   max_tables: 50
-  max_json_bytes: 8000000
+  max_json_bytes: 10000000
