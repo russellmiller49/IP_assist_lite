@@ -5,6 +5,7 @@ engines:
   - pdfplumber
 ocr:
   enable: false
+
 thresholds:
   guideline:
     min_recommendations: 8
@@ -15,6 +16,21 @@ thresholds:
     min_sections: 4
     min_chars: 25000
     require_ats_yield: true
+
+size_guards:
+  max_evidence_per_item: 3
+  max_chars_per_evidence: 1200
+  max_tables: 50
+  max_table_cells: 5000
+  max_sections: 60
+  max_paragraph_chars: 2000
+  keep_table_types:
+    - diagnostic_accuracy
+    - baseline
+    - complications
+    - yield
+    - outcomes
+
 emit:
   evidence_max_chars: 600
   table_cell_max_chars: 600

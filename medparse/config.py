@@ -101,8 +101,10 @@ class ExtractionConfig(BaseModel):
     min_chars: int = 20000
     min_pages_ratio: float = 0.95
     thresholds_data: Dict[str, Any] = Field(default_factory=dict, alias="thresholds")
+    size_guards_data: Dict[str, Any] = Field(default_factory=dict, alias="size_guards")
 
     _thresholds_namespace: Optional["FrozenNamespace"] = PrivateAttr(default=None)
+    _size_guards_namespace: Optional["FrozenNamespace"] = PrivateAttr(default=None)
 
     @classmethod
     def from_env(cls) -> "ExtractionConfig":
@@ -163,6 +165,13 @@ class ExtractionConfig(BaseModel):
         if self._thresholds_namespace is None:
             self._thresholds_namespace = FrozenNamespace(self.thresholds_data)
         return self._thresholds_namespace
+
+    @property
+    def size_guards(self) -> "FrozenNamespace":
+        """Return size guards as an immutable namespace for dot access."""
+        if self._size_guards_namespace is None:
+            self._size_guards_namespace = FrozenNamespace(self.size_guards_data)
+        return self._size_guards_namespace
 
 
 # Global extraction config instance

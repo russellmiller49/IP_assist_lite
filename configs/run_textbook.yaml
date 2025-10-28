@@ -3,5 +3,14 @@ profile: enriched
 engines:
   - pymupdf
   - pdfplumber
+
 thresholds:
   min_coverage_ratio: 0.80
+
+size_guards:
+  max_evidence_per_item: 3
+  max_chars_per_evidence: 1200
+  max_tables: 40
+  max_table_cells: 4000
+  max_sections: 50
+  max_paragraph_chars: 2000

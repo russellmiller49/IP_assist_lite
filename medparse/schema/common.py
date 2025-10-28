@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import hashlib
 from datetime import datetime
 from typing import Dict, List, Literal, Optional, Tuple
 from uuid import uuid4
@@ -20,6 +21,50 @@ class EvidenceSpan(MedparseModel):
     confidence: float = Field(default=1.0, ge=0.0, le=1.0)
     truncated: bool = False
 
+    def compute_hash(self, max_chars: int = 2000) -> str:
+        """Compute stable hash for deduplication.
+
+        Args:
+            max_chars: Maximum text length to include in hash
+
+        Returns:
+            SHA-1 hash as hex string
+        """
+        text_trimmed = (self.text or "")[:max_chars]
+        bbox_str = f"{self.bbox}" if self.bbox else ""
+        key = f"{self.page or 0}:{bbox_str}:{text_trimmed}"
+        return hashlib.sha1(key.encode("utf-8")).hexdigest()[:16]
+
+
+class SizeGuards(MedparseModel):
+    """Configuration for output size limits and truncation."""
+
+    max_evidence_per_item: int = 3
+    max_chars_per_evidence: int = 1200
+    max_tables: int = 50
+    max_table_cells: int = 5000
+    max_sections: int = 60
+    max_paragraph_chars: int = 2000
+    keep_table_types: List[str] = Field(
+        default_factory=lambda: [
+            "diagnostic_accuracy",
+            "baseline",
+            "complications",
+            "yield",
+            "outcomes",
+        ]
+    )
+
+
+class TruncationNotice(MedparseModel):
+    """Record of content truncated due to size guards."""
+
+    evidence_dropped: int = 0
+    tables_dropped: int = 0
+    sections_dropped: int = 0
+    chars_truncated: int = 0
+    reason: str = "size_guards"
+
 
 class BaseDocument(MedparseModel):
     """Base document metadata shared across extraction modes."""
@@ -31,6 +76,13 @@ class BaseDocument(MedparseModel):
     extraction_timestamp: datetime = Field(default_factory=datetime.utcnow)
     extraction_version: str = "v1.0.0"
     pipeline_info: Dict[str, object] = Field(default_factory=dict, exclude=True)
+
+    # Evidence deduplication
+    evidence_bank: Dict[str, EvidenceSpan] = Field(
+        default_factory=dict,
+        description="Central store of deduplicated evidence spans, keyed by hash",
+    )
+    truncation_notice: Optional[TruncationNotice] = None
 
 
 class UmlsEntity(MedparseModel):
@@ -55,4 +107,11 @@ class Relation(MedparseModel):
     evidence: Optional[EvidenceSpan] = None
 
 
-__all__ = ["EvidenceSpan", "BaseDocument", "UmlsEntity", "Relation"]
+__all__ = [
+    "EvidenceSpan",
+    "BaseDocument",
+    "SizeGuards",
+    "TruncationNotice",
+    "UmlsEntity",
+    "Relation",
+]
