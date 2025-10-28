@@ -11,11 +11,12 @@ thresholds:
     min_recommendations: 8
     min_sections: 1
     min_chars: 30000
-    require_ats_yield: false
+    min_grade_density: 0.7
+    require_diagnostic_yield: false
   research:
     min_sections: 4
     min_chars: 25000
-    require_ats_yield: true
+    require_diagnostic_yield: true
 
 size_guards:
   max_evidence_per_item: 5
@@ -32,7 +33,14 @@ size_guards:
     - outcomes
 
 emit:
-  evidence_max_chars: 1500
+  evidence_policy: compact
+  tables_mode: compact
+  evidence_max_chars: 360
   table_cell_max_chars: 800
-  max_tables: 50
+  paragraph_dedupe: true
+  max_entities: 3000
+  max_relations: 40000
+  relation_window: 80
+  keep_evidence_bank: true
+  max_tables: 24
   max_json_bytes: 10000000

@@ -14,3 +14,15 @@ size_guards:
   max_table_cells: 4000
   max_sections: 50
   max_paragraph_chars: 2000
+
+emit:
+  evidence_policy: compact
+  tables_mode: compact
+  evidence_max_chars: 360
+  table_cell_max_chars: 700
+  paragraph_dedupe: true
+  max_entities: 3000
+  max_relations: 40000
+  relation_window: 80
+  keep_evidence_bank: true
+  max_tables: 24

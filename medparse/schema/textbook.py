@@ -7,7 +7,7 @@ from typing import Dict, List, Literal, Optional
 from pydantic import Field
 
 from .base import MedparseModel
-from .common import BaseDocument, EvidenceSpan
+from .common import BaseDocument, EvidenceSpan, Relation, UmlsEntity
 
 
 class Section(MedparseModel):
@@ -82,6 +82,10 @@ class TextbookChapterDocument(BaseDocument):
 
     # Book-level metadata
     book_meta: Optional[BookMeta] = None
+
+    umls_entities: List[UmlsEntity] = Field(default_factory=list)
+    relations: List[Relation] = Field(default_factory=list)
+    coverage_ratio: Optional[float] = Field(default=None)
 
     # For backward compatibility
     @property

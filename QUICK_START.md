@@ -1,97 +1,124 @@
-# Quick Start Guide - IP Assist Lite
+# IP Assist Lite - Quick Start Guide
 
-## Setup (One-Time)
+Medical Information Retrieval for Interventional Pulmonology
 
-### Option 1: Automated Setup (Recommended)
+## Prerequisites
 
-```bash
-# Run the automated setup script
-bash scripts/setup_environments.sh
-```
+- Python 3.11
+- Conda
+- Git
 
-### Option 2: Manual Setup
+## Environment Setup
 
-Follow the detailed guide: `scripts/env_setup_guide.md`
-
-## Daily Usage
-
-### 1. Activate Environment
+### 1. Create and Activate Environment
 
 ```bash
-conda activate ipassist-py311
+conda activate medparse-py311
 ```
 
-### 2. Verify Environment
+This environment already has everything installed.
+
+### 2. Load Environment Variables
 
 ```bash
-python scripts/doctor.py
+cd /home/rjm/projects/IP_assist_lite
+
+# Load environment variables
+set -a
+source <(grep -v '^#' .env | grep -v '^$' | sed 's/#.*$//g' | grep '=')
+set +a
 ```
 
-Should show:
-- ✓ medparse imported from your workspace
-- ✓ spaCy model loaded
-- ✓ sklearn version 1.1.2
+Or use the helper script:
+```bash
+bash scripts/load_env.sh
+```
 
-### 3. Run Extraction
+### 3. Verify Setup
 
 ```bash
-# Single line (recommended)
-python -m medparse.cli extract-articles "data/Input pdfs/articles/pdf" --out out/articles --profile enriched --no-cache --force-deep
+# Check environment variables
+echo $UMLS_API_KEY
+echo $QUICKUMLS_PATH
 
-# Multi-line with -- separator (if needed)
-python -m medparse.cli -- extract-articles "data/Input pdfs/articles/pdf" --out out/articles --profile enriched --no-cache --force-deep
+# Test imports
+python -c "import medparse, spacy; print('✓ Ready')"
 ```
 
-## Environment Variables
+## Quick Usage
 
-Add to `~/.bashrc` or `~/.zshrc`:
+### Run Batch Extractions
 
 ```bash
-# For ipassist-py311
-export MEDPARSE_PROFILE=enriched
-export MEDPARSE_UMLS_MODEL=en_core_sci_lg
-export MEDPARSE_DISABLE_GPU=false
-export PYTHONUTF8=1
+./run_extractions.sh
 ```
+
+This extracts:
+- Articles (guidelines + research)
+- IFUs (Instruction for Use)
+- Textbooks
+
+### Individual Commands
+
+```bash
+# Articles
+python -m medparse.cli extract-articles "data/Input pdfs/articles/pdf" \
+  --out out/articles \
+  --config configs/run_article.yaml \
+  --profile enriched \
+  --no-cache
+
+# IFUs
+python -m medparse.cli extract-ifus "data/Input pdfs/IFUs/pdf" \
+  --out out/ifus \
+  --config configs/run_ifu.yaml \
+  --profile enriched \
+  --no-cache
+
+# Textbooks
+python -m medparse.cli extract-textbook "data/Input pdfs/Texbooks" \
+  --out out/textbooks \
+  --config configs/run_textbook.yaml \
+  --profile enriched \
+  --no-cache
+```
+
+## Output Locations
+
+Results are saved to:
+- `out/articles/` - Article extractions
+- `out/ifus/` - IFU extractions
+- `out/textbooks/` - Textbook extractions
+
+## Configuration
+
+Environment variables in `.env`:
+- `UMLS_API_KEY` - For concept linking
+- `QUICKUMLS_PATH` - Path to QuickUMLS database (optional)
 
 ## Troubleshooting
 
-### "medparse 1.1.0" prints and exits
+### Command prints "medparse 1.1.0" and exits
 
+Load environment variables first:
 ```bash
-conda activate ipassist-py311
-python -m pip uninstall -y medparse ip-assist-lite
-python -m pip cache purge
-cd /home/rjm/projects/IP_assist_lite
-pip install -e .
+source scripts/load_env.sh
 ```
 
-### Check which medparse you're using
+### Import errors
 
+Verify you're using the correct environment:
 ```bash
-python - <<'PY'
-import medparse, inspect
-print("Using:", inspect.getsourcefile(medparse) or medparse.__file__)
-PY
+conda activate medparse-py311
+which python
 ```
 
-### Verify environment
+### Environment variables not set
 
-```bash
-python scripts/doctor.py
-```
-
-## Available Environments
-
-| Environment | Purpose | Activate with |
-|-------------|---------|---------------|
-| **ipassist-py311** | Main CLI for IP Assist Lite | `conda activate ipassist-py311` |
-| medparse-lib-py311 | Medparse library dev (optional) | `conda activate medparse-lib-py311` |
-| medparse-api-py311 | FastAPI service (isolated) | `conda activate medparse-api-py311` |
+Ensure `.env` file exists and has the required variables.
 
 ## For More Help
 
-- Setup details: `scripts/env_setup_guide.md`
-- Health checks: `python scripts/doctor.py`
-- Rebuild vectorizers: `python tools/rebuild_vectorizer.py`
-
+- Detailed setup: `SETUP_SUMMARY.md`
+- Batch extraction: `BATCH_EXTRACTION.md`
+- Full docs: `docs/` and `documentation/` folders

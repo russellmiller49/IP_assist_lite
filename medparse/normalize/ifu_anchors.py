@@ -82,6 +82,10 @@ def lift_ifu_clinical_fields(pages: Sequence[PageData], ifu_json: dict) -> None:
             )
         except AnchorBleedError as exc:
             LOGGER.debug("Skipping %s due to TOC bleed: %s", field, exc)
+            errors = ifu_json.setdefault("_anchor_errors", [])
+            errors.append(str(exc))
+            error_fields = ifu_json.setdefault("_anchor_error_fields", [])
+            error_fields.append(field)
             continue
         if block:
             ifu_json[field] = block

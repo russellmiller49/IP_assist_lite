@@ -142,7 +142,14 @@ def extract_ifu(
         if not doc_kwargs.get(key):
             doc_kwargs[key] = []
 
-    return IFUDocument.model_validate(doc_kwargs)
+    anchor_errors = doc_kwargs.pop("_anchor_errors", [])
+    anchor_error_fields = doc_kwargs.pop("_anchor_error_fields", [])
+
+    document = IFUDocument.model_validate(doc_kwargs)
+    if anchor_errors:
+        document.pipeline_info["anchor_bleed_errors"] = anchor_errors
+        document.pipeline_info["anchor_bleed_fields"] = anchor_error_fields
+    return document
 
 
 def _extract_safety_blocks(pages: List[PageData]) -> List[SafetyBlock]:

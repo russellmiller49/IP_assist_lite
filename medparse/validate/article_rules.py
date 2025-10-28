@@ -126,9 +126,17 @@ def _check_diagnostic_yield(doc: ArticleDocument) -> List[Issue]:
     exclusion_reasons = getattr(diagnostic_yield, "exclusion_reasons", [])
     strict_flag = _resolve_strict_flag(diagnostic_yield)
 
-    # If marked as non-ATS-compliant with reasons, that's acceptable
+    # If marked as non-ATS-compliant with reasons, capture warning context
     if not compatible and exclusion_reasons:
-        # This is valid - the paper reported yield but not in ATS-compliant format
+        if any(
+            "numerator/denominator not reported" in str(reason).lower()
+            for reason in exclusion_reasons
+        ):
+            issues.append(
+                Issue.warn(
+                    "Diagnostic yield percentage present but numerator/denominator not reported at attempted/performed level"
+                )
+            )
         return issues
 
     # ATS-compliant yields MUST have numerator and denominator
@@ -139,8 +147,12 @@ def _check_diagnostic_yield(doc: ArticleDocument) -> List[Issue]:
     else:
         if numerator is None or denominator is None:
             if value is not None:
-                # Has a percentage but no n/d - this is common and acceptable with warning
-                issues.append(Issue.warn(f"Diagnostic yield {value:.1f}% lacks numerator/denominator"))
+                # Has a percentage but no n/d - this is acceptable with warning
+                issues.append(
+                    Issue.warn(
+                        "Diagnostic yield percentage present but numerator/denominator not reported at attempted/performed level"
+                    )
+                )
 
     return issues
 

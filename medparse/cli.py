@@ -4,7 +4,10 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
-from typing import Iterable, Optional
+from typing import Dict, Iterable, Optional
+
+import os
+import sys
 
 import click
 import typer
@@ -25,6 +28,8 @@ def version_callback(
     version: bool = typer.Option(False, "--version", callback=lambda value: _show_version(value)),
 ) -> None:
     """Register --version flag."""
+
+    typer.echo(f"[medparse.cli] argv={sys.argv}")
 
 
 def _show_version(value: bool) -> None:
@@ -275,6 +280,71 @@ def _run_pipeline_for_pdfs(
         _write_outcome(outcome, out_path)
 
 
+def _collect_failure_metrics(outcome: PipelineOutcome) -> Dict[str, object]:
+    """Assemble uniform failure metrics payload."""
+
+    base_metrics = dict(outcome.metrics or {})
+    document = outcome.document
+
+    page_count = base_metrics.get("page_count")
+    coverage_ratio = base_metrics.get("coverage_ratio")
+    extracted_chars = base_metrics.get("extracted_chars")
+    duration = base_metrics.get("duration_s")
+
+    sections_count = base_metrics.get("sections_count")
+    recommendations_count = base_metrics.get("recommendations_count")
+    tables_kept = base_metrics.get("tables_kept")
+    umls_entities = base_metrics.get("umls_entities")
+    diagnostic_present = base_metrics.get("diagnostic_yield_present")
+
+    if document is not None:
+        if sections_count is None and hasattr(document, "sections"):
+            sections = getattr(document, "sections")
+            if isinstance(sections, dict):
+                sections_count = len(sections)
+        if recommendations_count is None and hasattr(document, "recommendations"):
+            recommendations = getattr(document, "recommendations")
+            if isinstance(recommendations, list):
+                recommendations_count = len(recommendations)
+        if tables_kept is None and hasattr(document, "tables"):
+            tables = getattr(document, "tables")
+            if isinstance(tables, list):
+                tables_kept = len(tables)
+        if umls_entities is None and hasattr(document, "umls_entities"):
+            entities = getattr(document, "umls_entities")
+            if isinstance(entities, list):
+                umls_entities = len(entities)
+        if diagnostic_present is None and hasattr(document, "diagnostic_yield"):
+            diagnostic_present = bool(getattr(document, "diagnostic_yield"))
+
+    engines_raw = outcome.metadata.get("engines_requested", [])
+    if isinstance(engines_raw, list):
+        engines_tried = engines_raw
+    elif engines_raw:
+        engines_tried = [engines_raw]
+    else:
+        engines_tried = []
+    profile = None
+    if outcome.config:
+        profile = outcome.config.profile.value
+
+    failure_metrics: Dict[str, object] = {
+        "page_count": page_count,
+        "coverage_ratio": coverage_ratio,
+        "extracted_chars": extracted_chars,
+        "sections_count": sections_count,
+        "recommendations_count": recommendations_count,
+        "umls_entities": umls_entities,
+        "diagnostic_yield_present": diagnostic_present,
+        "tables_kept": tables_kept,
+        "duration_s": duration,
+        "engines_tried": engines_tried,
+        "profile": profile,
+        "cache_used": outcome.cache_used,
+    }
+    return failure_metrics
+
+
 def _write_outcome(outcome: PipelineOutcome, out_path: Path) -> None:
     """Write pipeline outcome to JSON with metadata and validation."""
     import hashlib
@@ -350,7 +420,9 @@ def _write_outcome(outcome: PipelineOutcome, out_path: Path) -> None:
             failure_path = out_path.with_suffix(".failure.json")
             failure_payload = {
                 "source_file": str(outcome.pdf_path),
+                "failure_reason": "validation_failed",
                 "issues": [issue.message for issue in validator_issues if issue.severity == "error"],
+                "metrics": _collect_failure_metrics(outcome),
             }
             failure_path.write_text(json.dumps(failure_payload, indent=2, ensure_ascii=False))
             typer.echo("VALIDATION FAILED: Hard errors detected in extraction output.")
@@ -360,7 +432,8 @@ def _write_outcome(outcome: PipelineOutcome, out_path: Path) -> None:
         failure_payload = {
             "source_file": str(outcome.pdf_path),
             "failure_reason": outcome.failure_reason or "extraction_failed",
-            "metrics": outcome.metrics,
+            "issues": outcome.warnings,
+            "metrics": _collect_failure_metrics(outcome),
         }
         failure_path.write_text(json.dumps(failure_payload, indent=2, ensure_ascii=False))
         typer.echo(f"EXTRACTION FAILED: {outcome.failure_reason}")

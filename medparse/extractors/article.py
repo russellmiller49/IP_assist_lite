@@ -2,8 +2,9 @@
 
 from __future__ import annotations
 
+import re
 from pathlib import Path
-from typing import Iterable, List, Optional, Sequence
+from typing import Dict, Iterable, List, Optional, Sequence
 
 from medparse.config import ExtractionConfig, get_extraction_config
 from medparse.extract.utils import collect_lines, collect_tables, load_pages, reference_section
@@ -30,7 +31,7 @@ from medparse.normalize.tables_classifier import TableBlock, classify_and_gate_t
 from medparse.normalize.umls_linking import (
     UmlsEntity as UmlsEntityRecord,
     UmlsLinkingResult,
-    link_umls_entities,
+    link_entities,
 )
 from medparse.normalize.references import normalize_references
 from medparse.normalize.yields import yield_from_text
@@ -49,6 +50,7 @@ from medparse.schema.common import EvidenceSpan, Relation, UmlsEntity
 from medparse.utils.log import get_logger
 
 LOGGER = get_logger(__name__)
+UMLS_PAGE_CACHE: Dict[str, List[UmlsEntityRecord]] = {}
 
 
 def extract_article(
@@ -98,7 +100,7 @@ def extract_article(
     recommendations = _map_recommendations(recommendations_raw)
     figures = _maybe_extract_figures(pages, extraction_config)
 
-    doc_subtype = _infer_doc_subtype(title_info, sections, recommendations)
+    doc_subtype = _infer_doc_subtype(pages, title_info, sections, recommendations)
 
     yield_data = yield_from_text(flat_lines)
     references = normalize_references(
@@ -113,7 +115,15 @@ def extract_article(
     ]
 
     if extraction_config.should_enrich_umls():
-        umls_result = link_umls_entities([(page.number, page.text) for page in pages])
+        try:
+            umls_result = link_entities(
+                list(pages),
+                cache=UMLS_PAGE_CACHE,
+                enabled=True,
+            )
+        except Exception as exc:  # pragma: no cover - defensive
+            LOGGER.warning("UMLS linking failed: %s", exc)
+            umls_result = UmlsLinkingResult(status="skipped_model_missing", entities=[])
     else:
         umls_result = UmlsLinkingResult(status="skipped_disabled", entities=[])
     umls_records = umls_result.entities
@@ -131,7 +141,7 @@ def extract_article(
         relation_records.extend(
             build_cooccurrence(
                 [record.model_dump() for record in umls_records],
-                window="page",
+                window=extraction_config.relation_window or "page",
             )
         )
 
@@ -173,6 +183,12 @@ def extract_article(
         document.pipeline_info.setdefault("umls_model", umls_result.model_name)
     document.pipeline_info["umls_entities_count"] = len(umls_records)
     document.pipeline_info["doc_subtype"] = doc_subtype
+    if extraction_config.relation_window:
+        document.pipeline_info["relation_window"] = extraction_config.relation_window
+    if extraction_config.max_entities:
+        document.pipeline_info["max_entities"] = extraction_config.max_entities
+    if extraction_config.max_relations:
+        document.pipeline_info["max_relations"] = extraction_config.max_relations
 
     return document
 
@@ -420,98 +436,120 @@ def _map_figures(figures: Sequence[FigureBlock]) -> List[ArticleFigure]:
     return mapped
 
 
+GUIDELINE_KEYWORDS = {
+    "recommendation grade",
+    "recommendation level",
+    "grading of recommendations",
+    "good practice statement",
+    "consensus recommendation",
+    "grade of recommendation",
+    "grade evidence",
+    "accp",
+    "sign",
+    "evidence level",
+}
+
+GUIDELINE_TITLE_MARKERS = {
+    "guideline",
+    "consensus statement",
+    "clinical practice guideline",
+    "best practice",
+    "task force statement",
+    "policy statement",
+    "position statement",
+    "position paper",
+    "recommendations",
+}
+
+REVIEW_MARKERS = {
+    "systematic review",
+    "meta-analysis",
+    "scoping review",
+    "narrative review",
+    "literature review",
+}
+
+
+def detect_guideline(
+    pages: Sequence[PageData],
+    sections: dict[str, str],
+    recommendations: Sequence[GuidelineRecommendation],
+) -> bool:
+    """Return ``True`` when guideline signals are detected across pages."""
+
+    if recommendations and len(recommendations) >= 5:
+        graded_count = sum(
+            1
+            for rec in recommendations
+            if rec.grade or rec.statement_type in {"ungraded", "consensus", "good_practice"}
+        )
+        grade_ratio = graded_count / len(recommendations)
+        if grade_ratio >= 0.5:
+            LOGGER.debug("Guideline detected via recommendation grades ratio=%.2f", grade_ratio)
+            return True
+
+    early_text = " ".join(
+        page.text or ""
+        for page in pages[:4]
+        if page.text
+    ).lower()
+    keyword_hits = sum(1 for keyword in GUIDELINE_KEYWORDS if keyword in early_text)
+    if keyword_hits >= 2:
+        LOGGER.debug("Guideline detected via keyword match (%d hits).", keyword_hits)
+        return True
+
+    intro_and_abstract = " ".join(
+        sections.get(key, "") or ""
+        for key in ("abstract", "background", "introduction")
+    ).lower()
+    if any(marker in intro_and_abstract for marker in GUIDELINE_TITLE_MARKERS):
+        LOGGER.debug("Guideline detected via section markers.")
+        return True
+
+    recommendation_pages = 0
+    bullet_pattern = re.compile(
+        r"^(?:\d{1,2}[\.\)]|[A-Z][\.\)]|[\u2022\-*])\s*(?:recommend|guideline|consensus|good practice|grade)",
+        flags=re.IGNORECASE,
+    )
+    for page in pages:
+        if not page.lines:
+            continue
+        hits = sum(1 for line in page.lines if bullet_pattern.match(line.strip()))
+        if hits >= 3:
+            recommendation_pages += 1
+        if recommendation_pages >= 2:
+            LOGGER.debug("Guideline detected via multi-page recommendation blocks.")
+            return True
+
+    return False
+
+
 def _infer_doc_subtype(
+    pages: Sequence[PageData],
     title_info: dict,
     sections: dict[str, str],
     recommendations: Sequence[GuidelineRecommendation],
 ) -> str:
-    """Rule-based subtype detection for articles.
+    """Classify article subtype using guideline and review detectors."""
 
-    Priority order:
-    1. Explicit guideline markers in title/text
-    2. Presence of graded recommendations
-    3. Review markers
-    4. Default to research
-    """
+    try:
+        if detect_guideline(pages, sections, recommendations):
+            return "guideline"
+    except Exception as exc:  # pragma: no cover - defensive
+        LOGGER.debug("Guideline detection failed: %s", exc)
 
-    # Get title for checking
     title = (title_info.get("title") or "").lower() if isinstance(title_info, dict) else ""
-
-    # Priority 1: Explicit guideline markers in title or first pages
-    guideline_markers = [
-        "guideline",
-        "statement",
-        "recommendations",
-        "consensus",
-        "task force",
-        "position paper",
-        "best practice",
-        "grade",
-        "sign",
-        "accp",
-        "chest guideline",
-        "ats/ers",
-        "official ats",
-    ]
-
-    # Check title first
-    for marker in guideline_markers:
-        if marker in title:
-            LOGGER.debug(f"Detected guideline from title marker: {marker}")
-            return "guideline"
-
-    # Check abstract/intro for guideline language
-    intro_text = (sections.get("introduction", "") + " " + sections.get("abstract", ""))[:2000].lower()
-    guideline_phrases = [
-        "clinical practice guideline",
-        "evidence-based recommendations",
-        "guideline recommendations",
-        "grading of recommendations",
-        "systematic review of evidence for recommendations",
-        "this guideline",
-        "these recommendations",
-    ]
-
-    for phrase in guideline_phrases:
-        if phrase in intro_text:
-            LOGGER.debug(f"Detected guideline from intro/abstract phrase: {phrase}")
-            return "guideline"
-
-    # Priority 2: Has graded recommendations
-    has_graded = any(rec.grade for rec in recommendations)
-    has_guideline_marker = any(
-        rec.statement_type in {"good_practice", "consensus", "ungraded"}
-        for rec in recommendations
-    )
-    if has_graded or has_guideline_marker:
-        LOGGER.debug(f"Detected guideline from recommendations: graded={has_graded}, markers={has_guideline_marker}")
-        return "guideline"
-
-    # Priority 3: Check if it has many recommendation-like statements
-    if len(recommendations) >= 5:
-        LOGGER.debug(f"Detected guideline from high recommendation count: {len(recommendations)}")
-        return "guideline"
-
-    # Priority 4: Review markers
-    review_markers = [
-        "systematic review",
-        "literature review",
-        "meta-analysis",
-        "scoping review",
-        "narrative review",
-    ]
-    if any(marker in title for marker in review_markers):
-        LOGGER.debug(f"Detected review from title")
+    if any(marker in title for marker in REVIEW_MARKERS):
+        LOGGER.debug("Review detected from title marker.")
         return "review"
 
-    # Check section headings for review
     for heading in sections.keys():
-        if heading and any(marker in heading.lower() for marker in ["review", "meta-analysis"]):
-            LOGGER.debug(f"Detected review from section heading: {heading}")
+        if heading and any(marker in heading.lower() for marker in REVIEW_MARKERS):
+            LOGGER.debug("Review detected from section heading '%s'.", heading)
             return "review"
 
-    # Default to research
-    LOGGER.debug("Defaulting to research article subtype")
+    if recommendations:
+        LOGGER.debug("Defaulting to research despite recommendations (guideline heuristics failed).")
     return "research"
 
 

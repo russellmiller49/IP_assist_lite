@@ -102,6 +102,9 @@ class ExtractionConfig(BaseModel):
     min_pages_ratio: float = 0.95
     thresholds_data: Dict[str, Any] = Field(default_factory=dict, alias="thresholds")
     size_guards_data: Dict[str, Any] = Field(default_factory=dict, alias="size_guards")
+    relation_window: Optional[int] = None
+    max_entities: Optional[int] = None
+    max_relations: Optional[int] = None
 
     _thresholds_namespace: Optional["FrozenNamespace"] = PrivateAttr(default=None)
     _size_guards_namespace: Optional["FrozenNamespace"] = PrivateAttr(default=None)

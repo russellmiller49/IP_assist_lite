@@ -4,11 +4,12 @@ from __future__ import annotations
 
 import hashlib
 from functools import lru_cache
-from typing import Dict, Iterable, List, Literal, Optional, Sequence, Tuple
+from typing import Dict, Iterable, List, Literal, MutableMapping, Optional, Sequence, Tuple
 
 from pydantic import BaseModel, Field
 
 from medparse.utils.log import get_logger
+from medparse.ingest.models import PageData
 
 # Import scispacy to register its components with spaCy
 try:
@@ -46,6 +47,7 @@ def link_umls_entities(
     quickumls_path: Optional[str] = None,
     min_confidence: float = 0.85,
     enabled: bool = True,
+    cache: Optional[MutableMapping[str, List[UmlsEntity]]] = None,
 ) -> UmlsLinkingResult:
     """Link entities for ``page_texts`` returning a status-aware result."""
 
@@ -63,7 +65,7 @@ def link_umls_entities(
 
     entities: List[UmlsEntity] = []
     per_page_counts: Dict[int, int] = {}
-    cache = _page_cache()
+    page_cache = cache if cache is not None else _page_cache()
 
     max_entities_per_page = 200
     for page_number, text in page_texts:
@@ -71,10 +73,10 @@ def link_umls_entities(
             continue
 
         page_hash = hashlib.sha1(text.encode("utf-8")).hexdigest()
-        cached = cache.get(page_hash)
+        cached = page_cache.get(page_hash)
         if cached is None:
             cached = _link_page_text(linker, text, min_confidence=min_confidence)
-            cache[page_hash] = cached
+            page_cache[page_hash] = cached
 
         ranked = sorted(cached, key=lambda entry: entry.confidence, reverse=True)
         for entity in ranked:
@@ -265,4 +267,30 @@ def _page_cache() -> Dict[str, List[UmlsEntity]]:
     return _page_cache._store  # type: ignore[attr-defined]
 
 
-__all__ = ["UmlsEntity", "UmlsLinkingResult", "link_umls_entities"]
+def link_entities(
+    pages: Sequence[PageData],
+    *,
+    quickumls_path: Optional[str] = None,
+    min_confidence: float = 0.85,
+    enabled: bool = True,
+    cache: Optional[MutableMapping[str, List[UmlsEntity]]] = None,
+) -> UmlsLinkingResult:
+    """Convenience wrapper that accepts ``PageData`` objects."""
+
+    page_texts: List[Tuple[int, str]] = []
+    for page in pages:
+        text = page.text or ""
+        if not text.strip():
+            continue
+        page_texts.append((page.number, text))
+
+    return link_umls_entities(
+        page_texts,
+        quickumls_path=quickumls_path,
+        min_confidence=min_confidence,
+        enabled=enabled,
+        cache=cache,
+    )
+
+
+__all__ = ["UmlsEntity", "UmlsLinkingResult", "link_entities", "link_umls_entities"]

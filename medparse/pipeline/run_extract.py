@@ -9,6 +9,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List, Literal, Optional, Tuple, Type
 
+import hashlib
 import yaml
 
 from medparse.config import ExtractionConfig, ExtractionProfile
@@ -125,6 +126,16 @@ class PipelineConfig:
                     "enable_validators": True,
                 }
             )
+        emit_settings = self.emit or {}
+        relation_window = emit_settings.get("relation_window")
+        if isinstance(relation_window, int) and relation_window > 0:
+            kwargs["relation_window"] = relation_window
+        max_entities = emit_settings.get("max_entities")
+        if isinstance(max_entities, int) and max_entities > 0:
+            kwargs["max_entities"] = max_entities
+        max_relations = emit_settings.get("max_relations")
+        if isinstance(max_relations, int) and max_relations > 0:
+            kwargs["max_relations"] = max_relations
         return ExtractionConfig(**kwargs)
 
     def resolved_engines(self, *, force_deep: bool = False) -> List[str]:
@@ -670,13 +681,22 @@ def _apply_emit_constraints(document: BaseDocument, emit: Dict[str, Any]) -> Lis
     if not document or not emit:
         return warnings
 
-    evidence_limit = int(emit.get("evidence_max_chars") or 0)
-    table_cell_limit = int(emit.get("table_cell_max_chars") or 0)
-    max_tables_value = emit.get("max_tables")
-    try:
-        max_tables = int(max_tables_value) if max_tables_value is not None else None
-    except (TypeError, ValueError):
-        max_tables = None
+    def _coerce_positive_int(value: object) -> Optional[int]:
+        try:
+            number = int(value)  # type: ignore[arg-type]
+        except (TypeError, ValueError):
+            return None
+        return number if number > 0 else None
+
+    evidence_limit = _coerce_positive_int(emit.get("evidence_max_chars")) or 0
+    table_cell_limit = _coerce_positive_int(emit.get("table_cell_max_chars")) or 0
+    max_tables = _coerce_positive_int(emit.get("max_tables"))
+    table_sample_rows = _coerce_positive_int(emit.get("table_sample_rows")) or 20
+    tables_mode = str(emit.get("tables_mode", "verbatim") or "verbatim").lower()
+    max_entities = _coerce_positive_int(emit.get("max_entities"))
+    max_relations = _coerce_positive_int(emit.get("max_relations"))
+    keep_evidence_bank = bool(emit.get("keep_evidence_bank", True))
+    paragraph_dedupe = bool(emit.get("paragraph_dedupe", False))
 
     def truncate_text(value: Optional[str], limit: int) -> Optional[str]:
         if not value or limit <= 0:
@@ -737,6 +757,9 @@ def _apply_emit_constraints(document: BaseDocument, emit: Dict[str, Any]) -> Lis
                     continue
                 seen_rows.add(row_key)
                 cleaned_rows.append(cleaned_row)
+            if tables_mode == "compact" and table_sample_rows and len(cleaned_rows) > table_sample_rows:
+                setattr(table, "rows_truncated", True)
+                cleaned_rows = cleaned_rows[:table_sample_rows]
             setattr(table, "rows", cleaned_rows)
             if truncated:
                 setattr(table, "truncated_cells", True)
@@ -746,6 +769,63 @@ def _apply_emit_constraints(document: BaseDocument, emit: Dict[str, Any]) -> Lis
             warnings.append("table_limit_exceeded")
             cleaned_tables = cleaned_tables[:max_tables]
         setattr(document, "tables", cleaned_tables)
+
+    entities = getattr(document, "umls_entities", None)
+    if entities and max_entities and len(entities) > max_entities:
+        try:
+            sorted_entities = sorted(
+                entities,
+                key=lambda item: (
+                    -float(getattr(item, "confidence", 0.0) or 0.0),
+                    getattr(item, "page", 10**6),
+                ),
+            )
+        except Exception:
+            sorted_entities = list(entities)
+        setattr(document, "umls_entities", sorted_entities[:max_entities])
+        warnings.append("umls_entities_truncated")
+
+    relations = getattr(document, "relations", None)
+    if relations and max_relations and len(relations) > max_relations:
+        try:
+            sorted_relations = sorted(
+                relations,
+                key=lambda item: (
+                    getattr(item, "attributes", {}).get("confidence", 0.0) if hasattr(item, "attributes") else 0.0,
+                    getattr(item, "attributes", {}).get("page", 10**6) if hasattr(item, "attributes") else 10**6,
+                ),
+                reverse=True,
+            )
+        except Exception:
+            sorted_relations = list(relations)
+        setattr(document, "relations", sorted_relations[:max_relations])
+        warnings.append("relations_truncated")
+
+    if not keep_evidence_bank:
+        setattr(document, "evidence_bank", {})
+
+    if paragraph_dedupe and hasattr(document, "sections"):
+        paragraph_bank: Dict[str, str] = {}
+        section_refs: Dict[str, List[str]] = {}
+        sections = getattr(document, "sections", {}) or {}
+        for name, text in sections.items():
+            if not isinstance(text, str):
+                continue
+            paragraphs = [para.strip() for para in text.split("\n\n") if para.strip()]
+            refs: List[str] = []
+            for paragraph in paragraphs:
+                normalized = " ".join(paragraph.split())
+                if not normalized:
+                    continue
+                hash_id = hashlib.sha1(normalized.encode("utf-8")).hexdigest()[:16]
+                if hash_id not in paragraph_bank:
+                    paragraph_bank[hash_id] = paragraph
+                refs.append(hash_id)
+            if refs:
+                section_refs[name] = refs
+        if paragraph_bank:
+            document.pipeline_info.setdefault("paragraph_bank", paragraph_bank)
+            document.pipeline_info.setdefault("section_paragraph_refs", section_refs)
 
     return warnings
 

@@ -37,6 +37,15 @@ def validate_ifu(document: IFUDocument, config: ExtractionConfig) -> list[Issue]
         if not value:
             issues.append(fm_severity(f"IFU missing front-matter field '{field}'."))
 
+    pipeline_info = getattr(document, "pipeline_info", {})
+    if isinstance(pipeline_info, dict):
+        anchor_errors = pipeline_info.get("anchor_bleed_errors") or []
+        anchor_fields = pipeline_info.get("anchor_bleed_fields") or []
+        for idx, message in enumerate(anchor_errors):
+            field_name = anchor_fields[idx] if idx < len(anchor_fields) else None
+            suffix = f" ({field_name})" if field_name else ""
+            issues.append(Issue.error(f"Clinical anchor bleed detected{suffix}: {message}"))
+
     return issues
 
 

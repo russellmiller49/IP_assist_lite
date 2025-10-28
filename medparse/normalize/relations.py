@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from itertools import combinations
-from typing import Dict, Iterable, List, Optional
+from typing import Dict, Iterable, List, Optional, Union
 
 from pydantic import BaseModel, Field
 
@@ -106,7 +106,7 @@ def build_relations(
 def build_cooccurrence(
     entities: Iterable[dict],
     *,
-    window: str = "page",
+    window: Union[str, int] = "page",
 ) -> List[RelationRecord]:
     """Build simple co-occurrence edges between UMLS entities."""
 
@@ -117,6 +117,8 @@ def build_cooccurrence(
 
     relations: List[RelationRecord] = []
     dedupe: set[tuple[str, str, Optional[int]]] = set()
+    window_tokens = window if isinstance(window, int) and window > 0 else None
+    window_label: str = "token" if window_tokens else str(window)
 
     for page, items in grouped.items():
         if len(items) < 2:
@@ -132,20 +134,39 @@ def build_cooccurrence(
                 continue
             dedupe.add(key)
 
+            if window_tokens:
+                left_offsets = left.get("offsets") or []
+                right_offsets = right.get("offsets") or []
+                if left_offsets and right_offsets:
+                    min_distance = min(
+                        abs(l_start - r_start)
+                        for l_start, _ in left_offsets
+                        for r_start, _ in right_offsets
+                    )
+                    approx_tokens = max(1, min_distance // 5)
+                    if approx_tokens > window_tokens:
+                        continue
+
             evidence = None
-            if window == "page":
+            if window_tokens:
+                evidence = f"token_window<={window_tokens}"
+            elif window == "page":
                 evidence = f"page {page} co-mention"
             elif window == "evidence_span":
                 evidence = " | ".join(
                     filter(None, (left.get("text"), right.get("text")))
                 ) or None
 
+            attributes: Dict[str, object] = {"page": page, "window": window_label}
+            if window_tokens:
+                attributes["window_tokens"] = window_tokens
+
             relations.append(
                 RelationRecord(
                     subject=cui_left,
                     predicate="co_occurs_with",
                     object=cui_right,
-                    attributes={"page": page, "window": window},
+                    attributes=attributes,
                     evidence=evidence,
                 )
             )

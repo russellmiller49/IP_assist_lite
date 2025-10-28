@@ -187,6 +187,19 @@ def _validate_textbook(document: TextbookChapterDocument) -> List[ValidationIssu
                             f"Section '{key}' has inverted page span (start > end).",
                         )
                     )
+    coverage = getattr(document, "coverage_ratio", None)
+    if coverage is None:
+        issues.append(
+            ValidationIssue(
+                "Textbook chapter missing coverage_ratio metric.",
+            )
+        )
+    elif coverage < 0.80:
+        issues.append(
+            ValidationIssue(
+                f"Textbook chapter coverage ratio below 0.80 (value={coverage:.2f}).",
+            )
+        )
     return issues
 
 

@@ -10,10 +10,18 @@ from medparse.extract.utils import load_pages
 from medparse.ingest.book_meta import load_book_metadata
 from medparse.ingest.models import PageData
 from medparse.normalize.article_frontmatter import extract_authors_affiliations
+from medparse.normalize.layout import is_toc_page
 from medparse.normalize.metadata import normalize_chapter_title
 from medparse.normalize.page_furniture import strip_furniture
+from medparse.normalize.relations import RelationRecord, build_cooccurrence
 from medparse.normalize.textbook_anchors import build_section_map, extract_keywords_clean
 from medparse.normalize.figures_captions import FigureBlock, extract_figures_and_captions
+from medparse.normalize.umls_linking import (
+    UmlsEntity as UmlsEntityRecord,
+    UmlsLinkingResult,
+    link_entities,
+)
+from medparse.schema.common import Relation, UmlsEntity
 from medparse.schema.textbook import (
     AuthorInfo,
     BookMeta,
@@ -24,6 +32,7 @@ from medparse.schema.textbook import (
 from medparse.utils.log import get_logger
 
 LOGGER = get_logger(__name__)
+UMLS_PAGE_CACHE: Dict[str, List[UmlsEntityRecord]] = {}
 
 
 def extract_textbook_chapter(
@@ -53,6 +62,22 @@ def extract_textbook_chapter(
 
     keywords = extract_keywords_clean(pages)
     figures = _maybe_extract_figures(pages, extraction_config)
+
+    umls_result = UmlsLinkingResult(status="skipped_disabled", entities=[])
+    umls_records: List[UmlsEntityRecord] = []
+    relation_records: List[RelationRecord] = []
+    if extraction_config.should_enrich_umls():
+        try:
+            umls_result = link_entities(pages, cache=UMLS_PAGE_CACHE, enabled=True)
+        except Exception as exc:  # pragma: no cover - defensive
+            LOGGER.warning("UMLS linking failed for textbook %s: %s", pdf_path.name, exc)
+            umls_result = UmlsLinkingResult(status="skipped_model_missing", entities=[])
+        umls_records = umls_result.entities
+    if extraction_config.should_extract_relations() and umls_records:
+        relation_records = build_cooccurrence(
+            [record.model_dump() for record in umls_records],
+            window=extraction_config.relation_window or "page",
+        )
 
     book_meta_payload = load_book_metadata(pdf_path.parent)
     if book_meta_payload:
@@ -84,8 +109,19 @@ def extract_textbook_chapter(
         keywords=keywords,
         sections=sections,
         figures=_map_figures(figures),
+        umls_entities=_map_umls_entities(umls_records),
+        relations=_map_relations(relation_records),
+        coverage_ratio=_compute_coverage_ratio(pages, sections),
         book_meta=book_meta,
     )
+    document.pipeline_info["umls_status"] = umls_result.status
+    document.pipeline_info["umls_entities_count"] = len(umls_records)
+    if extraction_config.relation_window:
+        document.pipeline_info["relation_window"] = extraction_config.relation_window
+    if extraction_config.max_entities:
+        document.pipeline_info["max_entities"] = extraction_config.max_entities
+    if extraction_config.max_relations:
+        document.pipeline_info["max_relations"] = extraction_config.max_relations
     return document
 
 
@@ -182,6 +218,95 @@ def _map_figures(figures: Sequence[FigureBlock]) -> List[FigureInfo]:
             )
         )
     return mapped
+
+
+def _map_umls_entities(records: Sequence[UmlsEntityRecord]) -> List[UmlsEntity]:
+    mapped: List[UmlsEntity] = []
+    for record in records:
+        mapped.append(
+            UmlsEntity(
+                cui=record.cui,
+                preferred_term=record.preferred_term,
+                semtypes=record.semtypes,
+                offsets=record.offsets,
+                text=record.text,
+                page=record.page,
+                confidence=record.confidence,
+            )
+        )
+    return mapped
+
+
+def _map_relations(records: Sequence[RelationRecord]) -> List[Relation]:
+    mapped: List[Relation] = []
+    for record in records:
+        mapped.append(
+            Relation(
+                subject=record.subject,
+                predicate=record.predicate,
+                object=record.object,
+                attributes=record.attributes,
+            )
+        )
+    return mapped
+
+
+def _compute_coverage_ratio(
+    pages: Sequence[PageData],
+    sections: Dict[str, SectionMetadata],
+) -> Optional[float]:
+    """Estimate section coverage ratio excluding TOC pages."""
+
+    if not pages or not sections:
+        return None
+
+    filtered_pages = [page for page in pages if not is_toc_page(page)]
+    if not filtered_pages:
+        return None
+
+    total_pages = len(filtered_pages)
+    covered_indices: set[int] = set()
+    for section in sections.values():
+        start = getattr(section, "start_page", None)
+        end = getattr(section, "end_page", None)
+        if start is None:
+            continue
+        try:
+            start_idx = max(0, int(start))
+        except (TypeError, ValueError):
+            continue
+        if end is None:
+            end_idx = start_idx
+        else:
+            try:
+                end_idx = int(end)
+            except (TypeError, ValueError):
+                end_idx = start_idx
+        if end_idx < start_idx:
+            end_idx = start_idx
+        end_idx = min(end_idx, total_pages - 1)
+        for idx in range(start_idx, end_idx + 1):
+            covered_indices.add(idx)
+
+    if covered_indices:
+        page_ratio = len(covered_indices) / total_pages
+    else:
+        page_ratio = 0.0
+
+    if page_ratio >= 0.1 or page_ratio == 0.0:
+        return round(min(1.0, page_ratio), 3)
+
+    # Fallback to character ratio when pagination anchors were unavailable
+    total_chars = sum(len(page.text or "") for page in filtered_pages)
+    if total_chars <= 0:
+        return round(min(1.0, page_ratio), 3)
+
+    section_chars = sum(len(getattr(section, "text", "") or "") for section in sections.values())
+    if section_chars <= 0:
+        return round(min(1.0, page_ratio), 3)
+
+    char_ratio = min(1.0, section_chars / total_chars)
+    return round(char_ratio, 3)
 
 
 __all__ = ["extract_textbook_chapter"]
