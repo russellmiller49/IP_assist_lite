@@ -5,13 +5,14 @@ from __future__ import annotations
 import re
 from typing import Dict, List, Optional, Tuple
 
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 from medparse.normalize.tables_classifier import TableBlock
 
 
 class EvidenceSpan(BaseModel):
     """Evidence location for extracted data."""
+
     text: str
     page: Optional[int] = None
     confidence: float = 0.8
@@ -26,8 +27,9 @@ class DiagnosticYieldATS(BaseModel):
     ci_upper: Optional[float] = None
     definition: Optional[str] = None
     compatible_with_ats: bool = False
-    exclusion_reasons: List[str] = []
+    exclusion_reasons: List[str] = Field(default_factory=list)
     evidence: Optional[EvidenceSpan] = None
+    strict: bool = True
 
 
 def extract_ats_compliant_yield(
@@ -49,141 +51,186 @@ def extract_ats_compliant_yield(
     Returns:
         DiagnosticYieldATS object or None
     """
-    results_text = sections.get('results', '')
-    methods_text = sections.get('methods', '')
+    results_text = sections.get('results', '') or ''
+    methods_text = sections.get('methods', '') or ''
 
-    # Pattern 1: Look for explicit yield statements in results
-    yield_patterns = [
-        r'diagnostic\s+yield[:\s]+(\d+)/(\d+)\s*\(?([\d.]+)%\)?',
-        r'diagnosis\s+established[:\s]+(\d+)\s+of\s+(\d+)',
-        r'definitive\s+(?:pathology|diagnosis)[:\s]+(\d+)/(\d+)',
-        r'(\d+)\s+of\s+(\d+)\s+(?:patients?|procedures?)\s+(?:had|received|achieved)\s+(?:a\s+)?(?:definitive\s+)?diagnos',
-    ]
+    table_candidate = _extract_from_tables(tables)
+    if table_candidate:
+        _finalize_yield_record(table_candidate, results_text, methods_text, sections)
+        return table_candidate
 
-    for pattern in yield_patterns:
-        m = re.search(pattern, results_text, re.IGNORECASE)
-        if m:
-            numerator = int(m.group(1))
-            denominator = int(m.group(2))
-            yield_pct = None
-
-            # Try to extract percentage if captured
-            if m.lastindex >= 3:
-                try:
-                    yield_pct = float(m.group(3))
-                except (ValueError, IndexError):
-                    pass
-
-            # Calculate if not provided
-            if yield_pct is None and denominator > 0:
-                yield_pct = (numerator / denominator) * 100
-
-            # Extract context for definition
-            match_start = m.start()
-            match_end = m.end()
-            definition = extract_yield_definition(results_text, match_start, match_end)
-
-            # Validate ATS compliance
-            compat, exclusions = validate_ats_compliance(results_text, methods_text)
-
-            # Extract confidence intervals if present
-            ci_lower, ci_upper = extract_confidence_intervals(results_text, match_start, match_end)
-
-            return DiagnosticYieldATS(
-                numerator=numerator,
-                denominator=denominator,
-                yield_pct=yield_pct,
-                ci_lower=ci_lower,
-                ci_upper=ci_upper,
-                definition=definition,
-                compatible_with_ats=compat,
-                exclusion_reasons=exclusions,
-                evidence=EvidenceSpan(
-                    text=m.group(0),
-                    confidence=0.9
-                )
-            )
-
-    # Pattern 2: Look in diagnostic yield tables
-    for table in tables:
-        if table.table_type == 'diagnostic_yield' or table.table_type == 'diagnostic_accuracy':
-            yield_data = extract_yield_from_table(table)
-            if yield_data:
-                # Validate ATS compliance
-                compat, exclusions = validate_ats_compliance(results_text, methods_text)
-                yield_data.compatible_with_ats = compat
-                yield_data.exclusion_reasons = exclusions
-                return yield_data
+    text_candidate = _extract_from_text(results_text)
+    if text_candidate:
+        _finalize_yield_record(text_candidate, results_text, methods_text, sections)
+        return text_candidate
 
     return None
 
 
-def extract_yield_from_table(table: TableBlock) -> Optional[DiagnosticYieldATS]:
-    """Extract yield from table data.
+def _extract_from_tables(tables: List[TableBlock]) -> Optional[DiagnosticYieldATS]:
+    for table in tables:
+        if table.table_type not in {'diagnostic_yield', 'diagnostic_accuracy'}:
+            continue
+        candidate = _extract_yield_from_table(table)
+        if candidate:
+            return candidate
+    return None
 
-    Args:
-        table: Table containing yield data
 
-    Returns:
-        DiagnosticYieldATS or None
-    """
-    # Look for yield-related headers
-    yield_headers = ['diagnostic yield', 'yield', 'diagnosis', 'n', '%', 'percentage']
-
-    # Find yield column
-    yield_col_idx = None
-    for i, header in enumerate(table.headers):
-        if any(yh in header.lower() for yh in yield_headers):
-            yield_col_idx = i
-            break
-
-    if yield_col_idx is None:
+def _extract_from_text(results_text: str) -> Optional[DiagnosticYieldATS]:
+    if not results_text:
         return None
 
-    # Extract from first data row
-    if not table.rows:
-        return None
+    patterns = [
+        r'(\d+(?:\.\d+)?)\s?%[^\n]*?\((\d+)\s*/\s*(\d+)\)',
+        r'diagnostic\s+yield[:\s]+(\d+)/(\d+)\s*',
+        r'(\d+)\s+of\s+(\d+)\s+(?:patients?|procedures?)\s+(?:had|received|achieved)\s+(?:a\s+)?(?:definitive\s+)?diagnos',
+        r'diagnostic\s+yield(?:\s+was|\s*[:=])\s*(\d+(?:\.\d+)?)\s?%',
+    ]
 
-    first_row = table.rows[0]
-    if yield_col_idx >= len(first_row):
-        return None
+    for pattern in patterns:
+        match = re.search(pattern, results_text, re.IGNORECASE)
+        if not match:
+            continue
 
-    cell_value = first_row[yield_col_idx]
+        groups = match.groups()
+        numerator = denominator = None
+        yield_pct = None
 
-    # Try to parse as fraction or percentage
-    fraction_match = re.search(r'(\d+)/(\d+)', cell_value)
-    if fraction_match:
-        numerator = int(fraction_match.group(1))
-        denominator = int(fraction_match.group(2))
-        yield_pct = (numerator / denominator) * 100 if denominator > 0 else None
+        if len(groups) >= 3 and groups[1] and groups[2]:
+            numerator = int(groups[1])
+            denominator = int(groups[2])
+            yield_pct = float(groups[0]) if groups[0] and '%' in pattern else None
+        elif len(groups) >= 2 and groups[0] and groups[1]:
+            numerator = int(groups[0])
+            denominator = int(groups[1])
+        elif groups and len(groups) == 1:
+            yield_pct = float(groups[0])
+
+        match_start, match_end = match.start(), match.end()
+        ci_lower, ci_upper = extract_confidence_intervals(results_text, match_start, match_end)
+        definition = extract_yield_definition(results_text, match_start, match_end)
+
+        if yield_pct is None and numerator is not None and denominator:
+            yield_pct = (numerator / denominator) * 100 if denominator > 0 else None
 
         return DiagnosticYieldATS(
             numerator=numerator,
             denominator=denominator,
             yield_pct=yield_pct,
-            definition=f"From table: {table.caption or 'Diagnostic Yield'}",
-            evidence=EvidenceSpan(
-                text=cell_value,
-                page=table.page,
-                confidence=0.85
-            )
-        )
-
-    # Try percentage only
-    pct_match = re.search(r'([\d.]+)%', cell_value)
-    if pct_match:
-        yield_pct = float(pct_match.group(1))
-        return DiagnosticYieldATS(
-            yield_pct=yield_pct,
-            definition=f"From table: {table.caption or 'Diagnostic Yield'}",
-            evidence=EvidenceSpan(
-                text=cell_value,
-                page=table.page,
-                confidence=0.7
-            )
+            ci_lower=ci_lower,
+            ci_upper=ci_upper,
+            definition=definition,
+            evidence=EvidenceSpan(text=match.group(0), confidence=0.85),
         )
 
     return None
+
+
+def _extract_yield_from_table(table: TableBlock) -> Optional[DiagnosticYieldATS]:
+    headers = [header.lower() for header in table.headers]
+    target_indices = [idx for idx, header in enumerate(headers) if any(token in header for token in ('diagnostic yield', 'yield', '%'))]
+    if not target_indices:
+        return None
+
+    for row in table.rows:
+        for idx in target_indices:
+            if idx >= len(row):
+                continue
+            cell_value = row[idx]
+            if not isinstance(cell_value, str):
+                continue
+
+            fraction_match = re.search(r'(\d+)\s*/\s*(\d+)', cell_value)
+            pct_match = re.search(r'([\d.]+)\s?%', cell_value)
+
+            numerator = int(fraction_match.group(1)) if fraction_match else None
+            denominator = int(fraction_match.group(2)) if fraction_match else None
+            yield_pct = float(pct_match.group(1)) if pct_match else None
+
+            if numerator is None and denominator is None and yield_pct is None:
+                continue
+
+            return DiagnosticYieldATS(
+                numerator=numerator,
+                denominator=denominator,
+                yield_pct=yield_pct,
+                definition=f"From table: {table.caption or 'Diagnostic Yield'}",
+                evidence=EvidenceSpan(
+                    text=cell_value,
+                    page=table.page,
+                    confidence=0.85 if fraction_match else 0.7,
+                ),
+            )
+    return None
+
+
+def _finalize_yield_record(
+    yield_data: DiagnosticYieldATS,
+    results_text: str,
+    methods_text: str,
+    sections: Dict[str, str],
+) -> None:
+    _attempt_backfill_counts(yield_data, sections)
+
+    compat, exclusions = validate_ats_compliance(results_text, methods_text)
+    yield_data.compatible_with_ats = compat
+    for reason in exclusions:
+        _append_reason(yield_data, reason)
+
+    if yield_data.numerator is None:
+        _append_reason(yield_data, "no_numerator_in_text")
+    if yield_data.denominator is None:
+        _append_reason(yield_data, "no_denominator_in_text")
+
+    derived_counts = "derived_counts_from_percent" in yield_data.exclusion_reasons
+    yield_data.strict = (
+        yield_data.numerator is not None
+        and yield_data.denominator is not None
+        and not derived_counts
+    )
+
+
+def _attempt_backfill_counts(yield_data: DiagnosticYieldATS, sections: Dict[str, str]) -> None:
+    if yield_data.numerator is not None and yield_data.denominator is not None:
+        return
+
+    combined_text = " \n".join(value for value in sections.values() if isinstance(value, str))
+    if not combined_text:
+        return
+
+    pct_fraction = re.search(r'(\d+(?:\.\d+)?)\s?%[^\n]*?\((\d+)\s*/\s*(\d+)\)', combined_text, re.IGNORECASE)
+    if pct_fraction:
+        if yield_data.yield_pct is None:
+            yield_data.yield_pct = float(pct_fraction.group(1))
+        if yield_data.numerator is None:
+            yield_data.numerator = int(pct_fraction.group(2))
+        if yield_data.denominator is None:
+            yield_data.denominator = int(pct_fraction.group(3))
+        return
+
+    if yield_data.yield_pct is not None:
+        denominator = _find_cohort_size(combined_text)
+        if denominator and yield_data.denominator is None:
+            yield_data.denominator = denominator
+        if denominator and yield_data.numerator is None:
+            yield_data.numerator = int(round((yield_data.yield_pct / 100.0) * denominator))
+            _append_reason(yield_data, "derived_counts_from_percent")
+
+
+def _find_cohort_size(text: str) -> Optional[int]:
+    match = re.search(r'\bn\s*=\s*(\d+)', text, re.IGNORECASE)
+    if match:
+        return int(match.group(1))
+    match = re.search(r'(\d+)\s+(?:patients|subjects|cases|procedures)\b', text, re.IGNORECASE)
+    if match:
+        return int(match.group(1))
+    return None
+
+
+def _append_reason(yield_data: DiagnosticYieldATS, reason: str) -> None:
+    if reason and reason not in yield_data.exclusion_reasons:
+        yield_data.exclusion_reasons.append(reason)
 
 
 def validate_ats_compliance(results_text: str, methods_text: str) -> Tuple[bool, List[str]]:

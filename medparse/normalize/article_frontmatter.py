@@ -45,7 +45,7 @@ def extract_title_hierarchical(pages: List[PageData]) -> Dict[str, Any]:
     # Extract from first page layout (largest heading)
     if title := extract_centered_title_block(pages[0]):
         if is_valid_title(title):
-            return {'title': title, 'confidence': 0.85, 'source': 'layout'}
+            return {'title': title, 'confidence': 0.9, 'source': 'layout'}
 
     # DOI resolver fallback
     if doi := extract_doi(pages[:2]):
@@ -84,13 +84,21 @@ def is_valid_title(title: str) -> bool:
         return False
 
     # Reject all-caps organizational names
-    if title.isupper() and any(org in title for org in ['SOCIETY', 'ASSOCIATION', 'ORGANIZATION', 'JOURNAL', 'STATEMENT']):
+    if title.isupper() and any(org in title for org in ['SOCIETY', 'ASSOCIATION', 'ORGANIZATION', 'JOURNAL', 'STATEMENT', 'GUIDELINE']):
         return False
 
     # Must have at least one non-stopword
     stopwords = {'the', 'a', 'an', 'of', 'for', 'in', 'on', 'at', 'to', 'and', 'or', 'but', 'by', 'with'}
     non_stopwords = [w for w in words if w.lower() not in stopwords]
-    return len(non_stopwords) >= 1
+    if len(non_stopwords) < 1:
+        return False
+
+    alpha = sum(1 for c in title if c.isalpha())
+    digits = sum(1 for c in title if c.isdigit())
+    if alpha == 0 or digits > alpha:
+        return False
+
+    return True
 
 
 def extract_centered_title_block(page: PageData) -> Optional[str]:
@@ -112,16 +120,32 @@ def extract_centered_title_block(page: PageData) -> Optional[str]:
     if not page.lines:
         return None
 
-    for line in page.lines[:10]:
-        # Skip very short lines and lines with typical header content
-        if len(line.split()) < 3:
-            continue
-        if any(kw in line.lower() for kw in ['copyright', '©', 'doi:', 'published', 'received']):
+    collected: List[str] = []
+    for line in page.lines[:20]:
+        candidate = line.strip()
+        if not candidate:
+            if collected:
+                break
             continue
 
-        # Check if line looks like a title (mixed case, longer than 20 chars)
-        if len(line) > 20 and not line.isupper():
-            return line.strip()
+        lower = candidate.lower()
+        if any(kw in lower for kw in ['copyright', '©', 'doi:', 'published', 'received', 'accepted', 'submitted']):
+            if collected:
+                break
+            continue
+
+        if len(candidate.split()) < 3:
+            if collected:
+                break
+            continue
+
+        collected.append(candidate)
+
+        if len(" ".join(collected)) > 180:
+            break
+
+    if collected:
+        return " ".join(collected)
 
     return None
 
@@ -170,6 +194,52 @@ def extract_doi(pages: List[PageData]) -> Optional[str]:
             return doi
 
     return None
+
+
+def extract_bibliographic_metadata(pages: List[PageData]) -> Dict[str, Any]:
+    """Extract journal/year/volume information from early pages."""
+
+    if not pages:
+        return {}
+
+    search_lines = []
+    for page in pages[:2]:
+        search_lines.extend(page.lines[:40])
+
+    journal = None
+    year = None
+    volume = None
+    issue = None
+
+    for line in search_lines:
+        cleaned = line.strip()
+        if not cleaned or len(cleaned) < 6:
+            continue
+        match = re.search(r'([A-Za-z][A-Za-z\s&\-]+?)\s+(\d{4})\s*;\s*(\d+)(?:\s*\(([^)]+)\))?', cleaned)
+        if match:
+            journal = match.group(1).strip()
+            year = int(match.group(2)) if match.group(2) else None
+            volume = match.group(3)
+            issue = match.group(4)
+            break
+
+    if year is None:
+        for line in search_lines:
+            year_match = re.search(r'\b(19|20)\d{2}\b', line)
+            if year_match:
+                year = int(year_match.group(0))
+                break
+
+    payload: Dict[str, Any] = {}
+    if journal:
+        payload['journal'] = journal
+    if year:
+        payload['year'] = year
+    if volume:
+        payload['volume'] = volume
+    if issue:
+        payload['issue'] = issue
+    return payload
 
 
 def extract_affiliations_and_correspondence(pages: List[PageData]) -> Dict[str, Any]:

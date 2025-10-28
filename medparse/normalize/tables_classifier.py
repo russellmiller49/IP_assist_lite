@@ -95,6 +95,12 @@ def classify_and_gate_tables(tables: List[Any]) -> List[TableBlock]:
         if len(table_data.headers) < 2 or len(table_data.rows) < 1:
             continue
 
+        if cell_exceeds_character_limit(table_data):
+            continue
+
+        if row_average_exceeds_threshold(table_data):
+            continue
+
         # Classify table type
         table_type = classify_table_type(table_data)
 
@@ -226,6 +232,23 @@ def classify_table_type(table: TableData) -> str:
             return table_type
 
     return 'other'
+
+
+def cell_exceeds_character_limit(table: TableData, limit: int = 600) -> bool:
+    for row in table.rows:
+        for cell in row:
+            if isinstance(cell, str) and len(cell) > limit:
+                return True
+    return False
+
+
+def row_average_exceeds_threshold(table: TableData, token_threshold: int = 120) -> bool:
+    for row in table.rows:
+        tokens = sum(len(cell.split()) for cell in row if isinstance(cell, str))
+        cells = sum(1 for cell in row if isinstance(cell, str)) or 1
+        if (tokens / cells) > token_threshold:
+            return True
+    return False
 
 
 def extract_table_from_section(section_text: str, table_type: str) -> Optional[TableBlock]:

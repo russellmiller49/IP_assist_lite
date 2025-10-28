@@ -1,51 +1,411 @@
 {
-  "doc_id": "5001c3c8-9fd6-4ccd-bf27-c9182c109d84",
+  "doc_id": "a95c4847-bc37-4c69-9c00-5552d75bae42",
   "doc_type": "article",
   "source_file": "/home/rjm/projects/IP_assist_lite/data/Input pdfs/articles/pdf/Guideline ATS Classification of Interstital Pneumonia.pdf",
   "page_count": 16,
-  "extraction_timestamp": "2025-10-24T22:36:03.809052",
+  "extraction_timestamp": "2025-10-27T21:02:40.617461",
   "extraction_version": "v1.0.0",
+  "doc_subtype": "research",
   "title": "American Thoracic Society Documents",
-  "title_source": null,
-  "title_confidence": null,
-  "doi": null,
-  "authors": [],
-  "corresponding_author": null,
-  "affiliations": {},
-  "abstract": null,
-  "sections": {},
-  "year": 2013,
-  "journal": null,
-  "volume": null,
-  "issue": null,
-  "pages": null,
-  "n_patients": 17,
-  "n_lesions": null,
-  "outcomes": [
+  "title_source": "layout",
+  "title_confidence": 0.9,
+  "authors": [
     {
-      "name": "pneumothorax",
-      "value": null,
-      "n": null,
-      "percent": null,
-      "ci_lower": null,
-      "ci_upper": null,
-      "denominator": null,
-      "inconclusive": false,
-      "linked_figure_table": null,
-      "evidence": {
-        "text": "cations and may result in experienced recurrent infections. Pneumothorax is common. A minority has familial interstitial lung diseas",
-        "page": null,
-        "bbox": null,
-        "confidence": 0.8
-      }
+      "given": "American Thoracic Society Documents An Official American Thoracic Society/European Respiratory Society Statement: Update of the International Multidisciplinary Classification of the Idiopathic Interstitial Pneumonias William D",
+      "family": "Travis",
+      "affiliation_ids": [],
+      "is_corresponding": false,
+      "footnote_symbols": [],
+      "equal_contribution": false
+    },
+    {
+      "given": "Ulrich",
+      "family": "Costabel",
+      "affiliation_ids": [],
+      "is_corresponding": false,
+      "footnote_symbols": [],
+      "equal_contribution": false
+    },
+    {
+      "given": "David M",
+      "family": "Hansell",
+      "affiliation_ids": [],
+      "is_corresponding": false,
+      "footnote_symbols": [],
+      "equal_contribution": false
+    },
+    {
+      "given": "Talmadge E",
+      "family": "King",
+      "affiliation_ids": [],
+      "is_corresponding": false,
+      "footnote_symbols": [],
+      "equal_contribution": false
+    },
+    {
+      "given": "David A",
+      "family": "Lynch",
+      "affiliation_ids": [],
+      "is_corresponding": false,
+      "footnote_symbols": [],
+      "equal_contribution": false
+    },
+    {
+      "given": "Andrew G",
+      "family": "Nicholson",
+      "affiliation_ids": [],
+      "is_corresponding": false,
+      "footnote_symbols": [],
+      "equal_contribution": false
+    },
+    {
+      "given": "Christopher J",
+      "family": "Ryerson",
+      "affiliation_ids": [],
+      "is_corresponding": false,
+      "footnote_symbols": [],
+      "equal_contribution": false
+    },
+    {
+      "given": "Jay H",
+      "family": "Ryu",
+      "affiliation_ids": [],
+      "is_corresponding": false,
+      "footnote_symbols": [],
+      "equal_contribution": false
+    },
+    {
+      "given": "Moise´s",
+      "family": "Selman",
+      "affiliation_ids": [],
+      "is_corresponding": false,
+      "footnote_symbols": [],
+      "equal_contribution": false
+    },
+    {
+      "given": "Athol U",
+      "family": "Wells",
+      "affiliation_ids": [],
+      "is_corresponding": false,
+      "footnote_symbols": [],
+      "equal_contribution": false
+    },
+    {
+      "given": "Jurgen",
+      "family": "Behr",
+      "affiliation_ids": [],
+      "is_corresponding": false,
+      "footnote_symbols": [],
+      "equal_contribution": false
+    },
+    {
+      "given": "Demosthenes",
+      "family": "Bouros",
+      "affiliation_ids": [],
+      "is_corresponding": false,
+      "footnote_symbols": [],
+      "equal_contribution": false
+    },
+    {
+      "given": "Kevin K",
+      "family": "Brown",
+      "affiliation_ids": [],
+      "is_corresponding": false,
+      "footnote_symbols": [],
+      "equal_contribution": false
+    },
+    {
+      "given": "Thomas V",
+      "family": "Colby",
+      "affiliation_ids": [],
+      "is_corresponding": false,
+      "footnote_symbols": [],
+      "equal_contribution": false
+    },
+    {
+      "given": "Harold R",
+      "family": "Collard",
+      "affiliation_ids": [],
+      "is_corresponding": false,
+      "footnote_symbols": [],
+      "equal_contribution": false
+    },
+    {
+      "given": "Carlos Robalo",
+      "family": "Cordeiro",
+      "affiliation_ids": [],
+      "is_corresponding": false,
+      "footnote_symbols": [],
+      "equal_contribution": false
+    },
+    {
+      "given": "Vincent",
+      "family": "Cottin",
+      "affiliation_ids": [],
+      "is_corresponding": false,
+      "footnote_symbols": [],
+      "equal_contribution": false
+    },
+    {
+      "given": "Bruno",
+      "family": "Crestani",
+      "affiliation_ids": [],
+      "is_corresponding": false,
+      "footnote_symbols": [],
+      "equal_contribution": false
+    },
+    {
+      "given": "Marjolein",
+      "family": "Drent",
+      "affiliation_ids": [],
+      "is_corresponding": false,
+      "footnote_symbols": [],
+      "equal_contribution": false
+    },
+    {
+      "given": "Rosalind F",
+      "family": "Dudden",
+      "affiliation_ids": [],
+      "is_corresponding": false,
+      "footnote_symbols": [],
+      "equal_contribution": false
+    },
+    {
+      "given": "Jim",
+      "family": "Egan",
+      "affiliation_ids": [],
+      "is_corresponding": false,
+      "footnote_symbols": [],
+      "equal_contribution": false
+    },
+    {
+      "given": "Kevin",
+      "family": "Flaherty",
+      "affiliation_ids": [],
+      "is_corresponding": false,
+      "footnote_symbols": [],
+      "equal_contribution": false
+    },
+    {
+      "given": "Cory",
+      "family": "Hogaboam",
+      "affiliation_ids": [],
+      "is_corresponding": false,
+      "footnote_symbols": [],
+      "equal_contribution": false
+    },
+    {
+      "given": "Yoshikazu",
+      "family": "Inoue",
+      "affiliation_ids": [],
+      "is_corresponding": false,
+      "footnote_symbols": [],
+      "equal_contribution": false
+    },
+    {
+      "given": "Takeshi",
+      "family": "Johkoh",
+      "affiliation_ids": [],
+      "is_corresponding": false,
+      "footnote_symbols": [],
+      "equal_contribution": false
+    },
+    {
+      "given": "Dong Soon",
+      "family": "Kim",
+      "affiliation_ids": [],
+      "is_corresponding": false,
+      "footnote_symbols": [],
+      "equal_contribution": false
+    },
+    {
+      "given": "Masanori",
+      "family": "Kitaichi",
+      "affiliation_ids": [],
+      "is_corresponding": false,
+      "footnote_symbols": [],
+      "equal_contribution": false
+    },
+    {
+      "given": "James",
+      "family": "Loyd",
+      "affiliation_ids": [],
+      "is_corresponding": false,
+      "footnote_symbols": [],
+      "equal_contribution": false
+    },
+    {
+      "given": "Fernando J",
+      "family": "Martinez",
+      "affiliation_ids": [],
+      "is_corresponding": false,
+      "footnote_symbols": [],
+      "equal_contribution": false
+    },
+    {
+      "given": "Jeffrey",
+      "family": "Myers",
+      "affiliation_ids": [],
+      "is_corresponding": false,
+      "footnote_symbols": [],
+      "equal_contribution": false
+    },
+    {
+      "given": "Shandra",
+      "family": "Protzko",
+      "affiliation_ids": [],
+      "is_corresponding": false,
+      "footnote_symbols": [],
+      "equal_contribution": false
+    },
+    {
+      "given": "Ganesh",
+      "family": "Raghu",
+      "affiliation_ids": [],
+      "is_corresponding": false,
+      "footnote_symbols": [],
+      "equal_contribution": false
+    },
+    {
+      "given": "Luca",
+      "family": "Richeldi",
+      "affiliation_ids": [],
+      "is_corresponding": false,
+      "footnote_symbols": [],
+      "equal_contribution": false
+    },
+    {
+      "given": "Nicola",
+      "family": "Sverzellati",
+      "affiliation_ids": [],
+      "is_corresponding": false,
+      "footnote_symbols": [],
+      "equal_contribution": false
+    },
+    {
+      "given": "Jeffrey",
+      "family": "Swigris",
+      "affiliation_ids": [],
+      "is_corresponding": false,
+      "footnote_symbols": [],
+      "equal_contribution": false
+    },
+    {
+      "given": "Dominique Valeyre; on behalf of the ATS/ERS Committee on Idiopathic Interstitial Pneumonias THIS OFFICIAL STATEMENT OF THE AMERICAN THORACIC SOCIETY (ATS) AND THE EUROPEAN RESPIRATORY SOCIETY (ERS) WAS APPROVED BY THE ATS BOARD OF",
+      "family": "DIRECTORS",
+      "affiliation_ids": [],
+      "is_corresponding": false,
+      "footnote_symbols": [],
+      "equal_contribution": false
+    },
+    {
+      "given": "AND BY THE ERS STEERING",
+      "family": "COMMITTEE",
+      "affiliation_ids": [],
+      "is_corresponding": false,
+      "footnote_symbols": [],
+      "equal_contribution": false
+    },
+    {
+      "given": "MARCH CONTENTS Purpose: The objective of this statement is to update the ATS/ ERS classificationof IIP s Executive Summary Methods: An international multidisciplinary panel was",
+      "family": "formed",
+      "affiliation_ids": [
+        "2013",
+        "2002"
+      ],
+      "is_corresponding": false,
+      "footnote_symbols": [],
+      "equal_contribution": false
+    },
+    {
+      "given": "Introduction developed key questions that were addressed through a review of Methods",
+      "family": "theliteraturepublishedbetween",
+      "affiliation_ids": [
+        "2000"
+      ],
+      "is_corresponding": false,
+      "footnote_symbols": [],
+      "equal_contribution": false
     }
   ],
-  "yield_summary": null,
+  "affiliations": [],
+  "group_authors": [],
+  "year": 2013,
+  "highlights": [],
+  "keywords": [],
+  "sections": {
+    "background": "The objective of this statement is to update the 2002 American Multidisciplinary Approach Thoracic Society/European Respiratory Society(ATS/ERS)clas- Theprocessofachievingamultidisciplinarydiagnosisinapatient sification of idiopathic interstitial pneumonias (IIP s) (1). Focus is with IIP is dynamic, requiring close communication between cliplaced on describingchanges topreviouslydescribedclinical entinician, radiologist, and when appropriate, pathologist (1). Clinties, describing new clinical entities, and describing newhistologic ical data (presentation, exposures, smoking status, associated patterns. This update is not intended as a stand-alone document andshouldbeusedasasupplementtotheoriginal 2002 IIP classification. In 2002, the ATS/ERSIIP classification(1)definedseven TABLE 1. REVISED AMERICAN THORACIC SOCIETY/EUROPEAN disease categories, and proposed standardized terminology and RESPIRATORY SOCIETY CLASSIFICATION OF IDIOPATHIC INTERSTITIAL PNEUMONIAS: MULTIDISCIPLINARY DIAGNOSES diagnostic criteria. In addition, the historical “gold standard” of histologic diagnosis was replaced by a “dynamic integrated ap- Major idiopathic interstitial pneumonias proach” using multidisciplinary discussion (MDD). The 2002 IIP Idiopathic pulmonary fibrosis classification was used in 75% (157 of 208) of all clinical publica- Idiopathic nonspecific interstitial pneumonia Respiratory bronchiolitis–interstitial lung disease tions on the topic of IIP s between 2004 and 2011. The new infor- Desquamative interstitial pneumonia mation from these publications is incorporated in this update. Cryptogenic organizing pneumonia Acute interstitial pneumonia METHODS Rare idiopathic interstitial pneumonias Idiopathic lymphoid interstitial pneumonia Thisprojectwasperformedundersupervisionbythe ATSD ocu- Idiopathic pleuroparenchymal fibroelastosis ments Development and Implementation Committee in collab- Unclassifiable idiopathic interstitial pneumonias* oration with the ERS (Table E 1 in the online supplement). An *Causes of unclassifiable idiopathic interstitial pneumonia include (1) inadeinternational multidisciplinary panel was assembled. The panel quateclinical, radiologic, or pathologic data and(2) major discordance between consisted of 34 experts in interstitial lung diseases (19 pulmonolclinical, radiologic, and pathologic findings that may occur in the following situaogists, 4 radiologists, 5 pathologists, 2 experts in evidence-based tions: (a) previous therapy resulting in substantial alteration of radiologic or histomedicine, and 4 molecular biologists). Several meetings were logic findings (e. g. , biopsy of desquamative interstitial pneumonia after steroid held by members of the international multidisciplinary panel therapy, which shows only residual nonspecific interstitial pneumonia [153]); (b) new entity, or unusual variant of recognized entity, not adequately character- (Table E 2), whodisclosedconflictsofinterest, whichwerevetted ized by the current American Thoracic Society/European Respiratory Society classiaccording to ATS and ERS policies. fication(e. g. ,variantoforganizingpneumoniawithsuperveningfibrosis)(79); and Key questions were developed that the committee believed (c)multiplehigh-resolutioncomputedtomographyand/orpathologicpatternsthat important for the classification of IIP s (see APPENDIX in the may be encountered in patients with idiopathic interstitial pneumonia. 1 American Thoracic Society Documents 735 Figure 1. Atypicalusualinterstitialpneumonia/idiopathicpulmonary fibrosis. Computed tomography (CT) features: (A) CT image of atypical usual in- 4 C/FPO terstitialpneumonia(UIP). Prone axial CT through the lung bases in a patient with histologically proven UIP shows predominantly peribronchovascularground-glass/ reticular opacities with traction bronchiectasis. Under the ATS/ ERS/JRS/ALATS tatement(8), this wouldbeclassifiedasinconsistent with UIP. Histologic features: (B) Thebiopsyshowspatchysubpleural dense fibrosis with honeycomb change adjacent to preserved lung. (C) Dense scarring fibrosis is present with a small nodular fibroblasticfocus. diseases, lung function, laboratory findings) and radiologic find- resolution computed tomography (HRCT) and those where biings are essential for multidisciplinary diagnosis. opsy is not needed. Also, once a pathologist has recognized a histo- The multidisciplinary approach does not lessen the impor- logicpattern(e. g. ,NSIP ororganizingpneumonia[OP]), theclinician tance of lung biopsy in the diagnosis of IIP s; rather, it defines shouldreconsiderpotentialcauses(e. g. ,hypersensitivitypneumonitis the settings where biopsy is more informative than high- [HP], collagen vascular disease [CVD], and drug exposure). Figure 2. Nonspecific interstitial pneumonia. Computed tomography (CT) features: (A) Axialand(B)coronal CT recon- 4 C/FPO structions show confluent bilateral lower lobe groundglass opacities with marked traction bronchiectasis and lower lobe volume loss. The peribronchovascular predominance with subpleural sparing is well shown on the axial image. (C and D) Histologic features: Lung biopsy shows diffuse alveolar wall thickening by uniformfibrosis. Thealveolararchitecture is preserved and no honeycombing or fibroblastic foci are seen. Interstitial inflammation is mild. 736 AMERICAN JOURNAL OF RESPIRATORY AND CRITICAL CARE MEDICINE VOL 188 2013 Figure 3. Respiratorybronchiolitis– interstitial lung disease. (A) Axial and (B) coronal computed tomography (CT) reconstruc- 4 C/FPO tions in a 47-year-old heavy cigarette smoker show moderately extensive ground-glass opacities andcentrilobularnodules(circles). The bronchi are markedly thickwalled and there is minimal emphysema. Bronchoalveolar lavage yielded 91% macrophages. (C) Histologic features: lung biopsy showsperibronchiolarpigmented macrophage accumulation and emphysema. (D) There is mild bronchiolar fibrosis and pigmented macrophages within airspaces. The diagnosis of IIP s requires exclusion of known causes of of specific circulating Ig G antibodies, but up to 30% of subjects interstitiallungdiseasesuchasdrugorinhalationalexposureand with histologic HP have no identifiable exposure (17, 18). CVD. Despite the known association of smoking with RB-ILD and DIP, these disorders were included in the classification in Collagen Vascular Disease 2002 and they are maintained in this revision. CVD is a frequent cause of interstitial pneumonia patterns, es- Observer Agreement in Diagnosis of IIP pecially NSIP. Clinical, serologic, HRCT, and histologic findings may be helpful in distinguishing IIP s from ILD associated with Observer agreement is dependent on observer experience and CVD (19–22). The extent of serologic evaluation to be perthe integration of data from all modalities. In early series, obformed in the evaluation of suspected IPF has been suggested server agreement was marginal among clinicians, radiologists, previously (8). A substantial percentage of patients with NSIP and pathologists (3–5). However, agreement between radiologhave findings suggesting, but not meeting, criteria for a defined ists andpathologistshasimproved substantially withaccumulated CVD (23–25). However, these cases are still accepted as IIP s. experience (6) and, especially, with integration of clinical data in a multidisciplinary conference (4, 7). Academic physicians in a multidisciplinary setting have better diagnostic agreement than Familial Interstitial Pneumonia community physicians, who are more likely to assign the diagnosis of IPF (7). These data underline the need for patient evalua- IIP s have been reported in closely related family members in tion in regional centers using multidisciplinary evaluation (7, 8). 2–20% of cases (26–29). These cases remain classified as IIP s despite the genetic predisposition. Heterozygous mutations in IMPORTANT DIFFERENTIAL SFTPC (z 1%), SFTPA 2 (z 1%), TERT (z 15%), and TERC DIAGNOSTIC CONSIDERATIONS (z 1%) are responsible for about 20% of all familial interstitial pneumonias (FIP s) (29–32). Sporadic IPF, in the absence of Hypersensitivity Pneumonitis telomerase mutations, is often associated with telomere short- IIP s are frequently confused with HP, and vice versa, except ening, suggesting that pathways involved in familial disease may when the exposure is readily apparent. The ATS workshop on contribute to sporadic disease (33–35). Most FIP families (80%) NSIP showed that MDD is particularly important in distinguish- have evidence of vertical transmission suggesting single autosoing HP from NSIP (2). In the past 10 years, the clinical (9), mal dominant mechanisms, but most responsible genes have not HRCT (10–12), and pathologic (13–15) features of chronic HP yet been identified. A recent genome-wide linkage scan showed have been more sharply defined, helping to separate these cases that a common variant in the promoter of the MUCB gene is from the IIP s, particularly IPF and NSIP (9, 11–16). HRCT associated with the development of both familial and sporadic findings suggesting HP include centrilobular nodules, mosaic IPF. This result was confirmed in an independent cohort (36, 37). air-trapping, and upper lobe distribution (Figures 5 A and 5 B) Familial IIP s can be indistinguishable from nonfamilial cases (11, 12). Biopsy findings suggesting HP include bronchiolocen- on HRCT and lung biopsy. All patients with suspected IIP tric distribution and poorly formed granulomas (Figures 5 C and should therefore be questioned about relevant family history 5 D) (13–15). A detailed search for potential exposure in pa- as this may guide gene mutation search, and management or tients with these findings is essential, including consideration evaluation of other family members (38). American Thoracic Society Documents Coexisting Patterns risk prognosis Most patients with a chronic IIP can be given a single clinical– determine radiologic–pathologic diagnosis. However, multiple pathologic and/or HRCT patterns may be found in the same patient. Different patterns may be seen in a single biopsy or in biopsies PROGRESS from multiple sites (e.g., usual interstitial pneumonia [UIP] in Chronic one lobe and NSIP in another) (39), or when pathologic and HRCT patterns differ. In smokers, multiple HRCT and histo- Idiopathic logic features may coexist including Langerhans’ cell histiocy- line tosis, respiratory bronchiolitis (RB), desquamative interstitial lished pneumonia (DIP), pulmonary fibrosis (UIP or NSIP), and em- histologic physema (40–42). Combined pulmonary fibrosis and emphy- was sema (CPFE) is an example of coexisting patterns. CPFE included comprises a heterogeneous population of patients, not believed based to represent a distinctive IIP. Patients with CPFE have increased UIP) TABLE 2. CATEGORIZATION OF MAJOR IDIOPATHIC INTERSTITIAL Category Clinical–Radiologic–Pathologic Diagnoses Chronic fibrosing IP Idiopathic pulmonary fibrosis Idiopathic nonspecific interstitial pneumonia Smoking-related IP* Respiratory bronchiolitis-interstitial lung Desquamative interstitial pneumonia Acute/subacute IP Cryptogenic organizing pneumonia Acute interstitial pneumonia Definition of abbreviation: IP ¼ interstitial pneumonia. *Desquamative interstitial pneumonia can occasionally occur in nonsmokers. 737 Figure 4. Cryptogenic organizing pneumonia. Computed tomography (CT) features with (A) peripheral consolidation and air bronchograms, (B) bronchocentric distribution, (C) perilobular pattern showing focal right lower lobe consolidation, with more central ground-glass opacity, corresponding to the reversed halo sign, and (D) bandlike consolidation. of developing pulmonary hypertension, which portends poor (43–46). When coexisting patterns occur, MDD may the clinical significance of individual patterns (4, 47, 48). IN SPECIFIC IIPS SINCE 2002 Fibrosing IIP s pulmonary fibrosis. An updated evidence-based guidefor the diagnosis and management of IPF was recently pub- (8).A new diagnostic algorithm and schema for correlating and radiologic findings in patients with suspected IPF provided in this guideline (8). New aspects of this algorithm criteria for three levels of certainty for patterns of UIP onHRCTfindings(UIP,possibleUIP,andinconsistent with and four levels of certainty for pathologic diagnosis (UIP, PNEUMONIAS Associated Radiologic and/or Pathologic–Morphologic Patterns Usual interstitial pneumonia Nonspecific interstitial pneumonia disease Respiratory bronchiolitis Desquamative interstitial pneumonia Organizing pneumonia Diffuse alveolar damage 738 AMERICAN JOURNAL OF RESPIRATORY AND CRITICAL CARE MEDICINE VOL 188 2013 Figure 5. Fibrotic hypersensitivity pneumonitis. (A) Axial and (B) coronal computed tomography(CT)reconstructions 4 C/FPO in a 76-year-old bird-keeper with progressive shortness of breath over 6 years show upper lung– predominant subpleural reticulation with some confluent areas of dense opacification, traction bronchiectasis, and patchy ground-glass opacities. Honeycombing is not identified. (C) Histology shows a bronchiolocentric cellular and fibrosing interstitialpneumonia. (D)There is a patchy cellular interstitial infiltrate and poorly formed granulomas. probable, possible, and not UIP) (8). The diagnosis of IPF requires The prognosis is variable. Some patients improve, others re- (1) exclusion of other known causes of ILD, (2) the presence of main stable or improve on treatment, but some evolve to enda UIP pattern on HRCT in patients not subjected to surgical lung stage fibrosis and eventually die of the disease (2, 63, 67). biopsy (SLB), and (3) specific combinations of HRCT and SLB patterns in patients subjected to SLB (Figures 1 A–1 C). Smoking-related IIP s Histologic UIP may be associated with atypical HRCT patterns (Figures 1 A–1 C) (8), including extensive ground-glass RB-ILD and desquamative interstitial pneumonia (DIP) repreopacity, nodules, or mosaic attenuation, and after MDD some sentahistologicspectrumofmacrophageaccumulation, withthe of these patients will be diagnosed with IPF (49–52). Typical distinction dependent on the extent and distribution of this pro- UIP HRCT pattern is illustrated elsewhere (1, 8). Patients with cess (and also reflected by the pattern of disease on HRCT). IPF and definite UIP by HRCT have shorter survival than those However, clinical presentation, imaging findings, and response to with indeterminate HRCT findings (49, 51, 53). therapy differ and they remain classified separately. In the last de- Idiopathic nonspecific interstitial pneumonia. The diagnostic cade, the term “smoking-related interstitial lung disease” has incriteria for NSIP were summarized in a recent ATS workshop creasingly been used, encompassing most cases of DIP, and nearly (2). On the basis of the analysis of cases and the available all cases of RB-ILD and Langerhans’ cell histiocytosis (68, 69). literature, this workshop recommended that NSIP be accepted Respiratory bronchiolitis–interstitial lung disease. Histologic as a distinct entity among the IIP s, with removal of the term RB is always present in current smokers (70) and can be viewed “provisional. ” Importantly, the NSIP pattern occurs not only as as a physiological response to smoking, which in a few individan idiopathic condition, but also in a variety of settings includ- uals becomes extensive enough to result in an interstitial lung ing CVD, HP, and drug toxicity, and in some patients with disease (RB-ILD). Characteristic HRCT features are groundfamilial pulmonary fibrosis. MDD is especially important to glass opacity and centrilobular nodules (Figures 3 A and 3 B). In establish the diagnosis of idiopathic NSIP (2). clinical practice, RB-ILD is increasingly diagnosed without sur- The most common HRCT abnormality in NSIP is bilateral gical lung biopsy in smokers with these HRCT findings and ground-glass opacity (Figures 2 A and 2 B) (26, 54–62). Irregular where bronchoalveolar lavage demonstrates smokers’ macroreticular opacities with traction bronchiectasis and bronchiolec- phages and the absence of lymphocytosis (potentially suggestive tasis occur in approximately 75% of cases (2, 54–62). Subpleural of HP in this setting, although HP is uncommon in smokers) sparing may be helpful in distinguishing NSIP from UIP (2, 12, (68, 71). The disease course is heterogeneous, with a significant 52). Consolidation, if present, reflects an OP component and may minority having progression despite smoking cessation (72). suggest CVD. Honeycombing is sparse or absent at presentation Desquamative interstitial pneumonia. DIP has been recognized but may increase in prevalence and extent during follow-up (63). in nonsmokers (69), perhaps reflecting extension of childhood DIP Thehistologicfeaturesincludevaryingamountsof interstitial in- into adult life (with the latter often due to surfactant protein [SP] flammationandfibrosiswithauniformappearance(Figures 2 Cand gene mutations) (73, 74). Ten-year survival remains approximately 2 D) (2, 64, 65). Most cases of NSIP have a predominantly fibrotic 70%, with resistance to treatment in a significant minority. pattern of injury with rare cases of isolated cellular NSIP (59, 62, Airspace enlargement with fibrosis. DIP and RB-ILD need to 66). OP and honeycomb fibrosis should be inconspicuous or absent. be distinguished from the smoking-related changes including American Thoracic Society Documents 4C/FPO respiratory bronchiolitis and airspace enlargement with fibrosis (AEF) that have been described in the nonneoplastic lung parenchyma in lung cancer resection specimens (75, 76). These incidental HRCT and histologic findings in smokers are not regarded as a distinct form of IIP, but AEF shows more interstitial fibrosis than described in the classic definition of emphysema (77). AEF is an incidental histologic or HRCT finding, whereas patients with CPFE have clinically manifestations reflecting coexisting patterns of interstitial fibrosing and emphysema. Acute or Subacute IIP s IIP s may have an acute or subacute presentation, or an acute exacerbationmayoccurinapreviouslysubclinicalorunrecognized chronic IIP. Cryptogenic organizing pneumonia. COP continues to be included in the classification of IIP because of its idiopathic nature andthetendencyonoccasionstobeconfusedwithotherformsof IIP, especially when there is progression to fibrosis. Because many cases are secondary, use of the generic term “OP” for this reaction pattern is suggested with modifiers as appropriate, for example, OP associated with rheumatoid arthritis. (B) Section through the upper lobes shows scattered pleuroparenchymal lower lobes there was no pleural irregularity, but there was a subtle subpleural 739 Figure 6. Acute exacerbation of idiopathic pulmonary fibrosis (IPF). Computed tomography (CT) features: (A) Axial image through the upper lungs at baseline shows mild peripheral, basal predominant reticular abnormality without honeycombing and mild emphysema. (B) Axial image during an acute exacerbation 4 months later shows extensive newbilateralground-glassopacities, with some superimposed reticular abnormality. (C and D) Histologic features: (C) Usual interstitial pneumonia pattern with honeycomb fibrosis and fibroblastic foci. (D) Focally, features of diffuse alveolar damage are present with uniform thickening of alveolar walls and hyaline membranes. Patients with COP typically present with a subacute illness of relatively short duration (median, less than 3 mo) with variable degrees of cough and dyspnea (78–81). HRCT characteristically demonstrates patchy and often migratory consolidation in a subpleural, peribronchial, or bandlike pattern (Figures 4A–4D) (82–84), commonly associated with ground-glass opacity (79, 83). Perilobular opacities and reversed halo (or atoll) sign (Figure 4C) may be helpful in suggesting the diagnosis (85, 86). Small unilateral or bilateral pleural effusion may occur in 10–30% of patients(83, 84, 86).The OP pattern isapatchyprocess characterized primarily by organizing pneumonia involving alveolar ducts and alveoli with or without bronchiolar intraluminal polyps. Some cases show more marked interstitial inflammation such that there is overlap with cellular NSIP. Themajorityofpatientsrecovercompletelywithoralcorticosteroids, but relapse is common (2, 78, 87). Sporadic reports have identified a subgroup of patients with OP that does not completely resolve despite prolonged treatment. Some of these cases are characterized by residual or progressive interstitial fibrosis, with or without recurrent episodes of OP (79, 88, 89). It is likely that some patients reported with fibrotic NSIP fall into this Figure 7. Pleuroparenchymal fibroelastosis. Computed tomography (CT) features: (A) High-resolution computed tomography (HRCT) through the upper lobes shows irregular pleural-based opacities and a reticular pattern associated with parenchymal distortion. The pleura and lungs in the lower lobes appeared normal. opacities and some distortion of the underlying lung parenchyma. In the reticular pattern. 740 AMERICAN JOURNAL OF RESPIRATORY AND CRITICAL CARE MEDICINE VOL 188 2013 4 C/FPO Figure 8. Pleuroparenchymal fibroelastosis. (A) Low power shows pleural thickening and subpleural fibrosis. (B) Dense massesofelasticfibersarehighlighted beneath the fibrotically thickened pleura (elastic stain). subgroup of patients with a fibrosing variant of OP. In such undergo biopsy, hyaline membranes may be inconspicuous or patients consolidation is prominent on HRCT, variably associ- absent and the key findings include diffuse distribution, loose ated with reticular abnormalities. Some patients with this pattern organizing connective tissue causing alveolar wall thickening of mixed fibrosis and organizing pneumonia are found to have and prominent pneumocyte hyperplasia. Occult background fiunderlying polymyositis or antisynthetase syndrome (90). brosis may be present and if this shows features of UIP, acute Acute interstitial pneumonia. AIP is a distinct IIP character- exacerbation of underlying IPF should be considered (98). AIP ized by rapidly progressive hypoxemia, mortality of 50% or can progress toa pattern similar tofibrotic NSIP(64) or tosevere more, and no proven treatment. Survivors usually have a good fibrosis resembling honeycombing (99). long-term prognosis (similar to adult respiratory distress syndrome Acute exacerbation of IIP. Acute exacerbation occurs mostly [ARDS] survivors) but some experience recurrences or chronic, in IPF, butisalsofoundinotherfibrosinginterstitialpneumonias progressive interstitial lung disease (91–93). AIP is idiopathic (100–106). Diagnostic criteria have been published for acute and should be distinguished from ARDS with known cause. exacerbation of IPF (107). In acute exacerbations of IPF, In the early, exudative phase of AIP, HRCT shows bilateral HRCT shows new bilateral ground-glass opacities and/or conpatchyground-glassopacities, oftenwithconsolidationofthede- solidation superimposed on a reticular pattern or honeycombpendent lung (94–96). The later, organizing stage of AIP is ing (Figures 6 A and 6 B) (108–110). The pathology most often associated with distortion of bronchovascular bundles and trac- shows a mixed pattern of UIP and DAD (Figures 6 C and 6 D), tion bronchiectasis. HRCT scoring of extent of abnormality is but OP and prominent fibroblastic foci are also described as the independently associated with mortality (93, 97). Biopsy shows acute component (103). It is important to exclude infection, left an acute and/or organizing form of diffuse alveolar damage heart failure, and other identifiable causes of acute lung injury (DAD) that is indistinguishable from the histologic pattern before diagnosing an acute exacerbation of an underlying IIP found in ARDS (1). In the organizing phase, when most patients (107). Figure 9. Acute fibrinous and organizing pneumonia. Com- 4 C/FPO puted tomography (CT) features. (A) Axial CT through the lung bases shows multiple poorly defined nodules and areas of consolidation, with peribronchovascular and basal predominance. Pleural and pericardial effusions are present. Histologic features: (B) Biopsy shows nodules of alveolar fibrin and organizing pneumonia. (C) The histology is dominated by intraalveolar plugs of alveolar fibrin. American Thoracic Society Documents 741 RARE IIPS environmental or occupational exposures in most cases (123). One study described cases of peribronchiolar metaplasia-ILD, The category of rare IIP s has been created to include idiopathic which probably represent a form of small airway disease. The lymphoidinterstitialpneumonia(LIP)andidiopathicpleuropar- HRCT s in these cases were either normal or showed air trapenchymal fibroelastosis (PPFE). In addition, several rare histoping (124). logic patterns of ILD have been described including AFOP and a group of bronchiolocentric patterns, although current data do UNCLASSIFIABLE IIP not support these as distinct IIP s. The 2002 ATS/ERS classification proposed an “unclassifiable” Idiopathic Lymphoid Interstitial Pneumonia category of IIP, acknowledging that a final diagnosis may not be achieved, even after lengthy MDD (1). Examples of circum- Most cases of LIP are associated with other conditions, although stances in which a case cannot be satisfactorily classified are idiopathic cases still rarely occur (111). Idiopathic LIP has summarized in Table 1 (127). Cases that are “unclassifiable” therefore been moved to the category of rare IIP s. The clinical, in terms of overlap of histologic patterns often prove to be imaging, and histopathologic criteria for LIP proposed in 2002 related to CVD (e. g. , interstitial pneumonia and follicular bronremain unchanged, apart from recognition that some cases show chiolitis in a patient with rheumatoid arthritis) or drug induced, striking cyst formation on HRCT (111, 112). Both the 2002 IIP rather than being idiopathic on MDD. If ILD is difficult, or classification and the ATS NSIP project demonstrated that impossible, to classify, management should be based on the many of the cases previously diagnosed as LIP are now considmost probable diagnosis after MDD and consideration of the ered cellular NSIP (1, 2). Consequently, few cases of idiopathic expected disease behavior (as described below). LIP have been published since 2002 (111). CLINICAL CLASSIFICATION OF DISEASE BEHAVIOR Idiopathic Pleuroparenchymal Fibroelastosis PPFE is a rare condition that consists of fibrosis involving the Patternsofdiseasebehaviorindiffuselungdisordersandrelated pleura and subpleural lung parenchyma, predominantly in the treatment approaches can be broadly subdivided as shown in upper lobes. HRCT shows dense subpleural consolidation with Table 3. This approach is most useful in unclassifiable cases traction bronchiectasis, architectural distortion, and upper lobe and for some IIP s, such as NSIP, that can be associated with volume loss (Figures 7 A and 7 B) (113). The fibrosis is elastotic, all five patterns of disease behavior. This disease behavior clasand intraalveolar fibrosis is present (Figures 8 A and 8 B) (113– sification is complementary to the IIP classification and should 117). It presents in adults with a median age of 57 years and has not be used as a justification for delaying SLB. Such delays no sex predilection (113). Approximately half of patients have increase the risk of surgical complications and may result in experienced recurrent infections. Pneumothorax is common. A minority has familial interstitial lung disease and nonspecific autoantibodies. Histologically, biopsies may show mild changes of PPFE or other patterns such as UIP. Disease progression occurs TABLE 3. IDIOPATHIC INTERSTITIAL PNEUMONIAS: in 60% of patients with death from disease in 40% (113, 118). CLASSIFICATION ACCORDING TO DISEASE BEHAVIOR* RARE HISTOLOGIC PATTERNS Clinical Behavior Treatment Goal Monitoring Strategy Rare histologic interstitial pneumonia patterns have been de- Reversible and self- Remove possible cause Short-term (3- to 6-mo) limited (e. g. , many observation to confirm scribed and these were not included as new IIP entities because cases of RB-ILD) disease regression of questions concerning whether they are variants of existing IIP s Reversible disease with Initially achieve response Short-term observation or exist only in association with other conditions such as HP or risk of progression and then rationalize to confirm treatment CVD. When encountered histologically, these terms may be of (e. g. , cellular NSIP longer term therapy response. Long-term value in provisionally classifying biopsy features before MDD. and some fibrotic observation to ensure NSIP, DIP, COP) that gains are Acute Fibrinous and Organizing Pneumonia preserved Stable with residual Maintain status Long-term observation to AFOP was first reported in 17 patients with acute respiratory disease (e. g. , some assess disease course failure and initially regarded to represent a possible new IIP fibrotic NSIP) (119). The principal HRCT findings are bilateral basal opacities Progressive, irreversible Stabilize Long-term observation to disease with potential assess disease course and areas of consolidation (Figure 9 A). The dominant histofor stabilization (e. g. , logic pattern is intraalveolar fibrin deposition and associated some fibrotic NSIP) organizing pneumonia (Figures 9 C and 9 D). Classical hyaline Progressive, irreversible Slow progression Long-term observation to membranes of DAD are absent. AFOP may represent a histo- disease despite therapy assess disease course logic pattern that can occur in the clinical spectrum of DAD and (e. g. , IPF, some fibrotic and need for transplant OP or it may reflect a tissue sampling issue. AFOP may be NSIP) or effective palliation idiopathic or associated with CVD (120), hypersensitivity pneu- Definition of abbreviations: COP ¼ cryptogenic organizing pneumonia; DIP ¼ monitis (121), or drug reaction (122). As this pattern can be desquamativeinterstitialpneumonia; HRCT¼high-resolutioncomputedtomogseen in eosinophilic pneumonia, this diagnosis should be exraphy; IPF ¼ idiopathic pulmonary fibrosis; NSIP ¼ nonspecific interstitial pneucluded by absence of tissue and peripheral eosinophilia. monia; RB-ILD ¼ respiratory bronchiolitis–interstitial pneumonia. *The distinctions in Table 3 are made by assimilating several factors: (1) A confident multidisciplinary diagnosis that often identifies the expected pattern Bronchiolocentric Patterns of Interstitial Pneumonia of disease behavior (e. g. , IPF). However, in other idiopathic interstitial pneumo- Several small retrospective series have recently described bron- nias(e. g. , NSIP)more than onepattern ofbehavior ispossible; (2)diseaseseverity, based on lung function and/or HRCT. In severe NSIP (154) a progressive chiolocentric fibroinflammatory changes (123–126). Of these, irreversiblecourseisfrequent; (3)evaluationofpotentiallyreversibleandirreverstwo studies in particular suggest these cases may be an IIP ible features based on review of the HRCT and biopsy if available; and (4) shortcentered on airways (123, 125), although imaging findings term disease behavior. Disease behavior classification must be refined over time were not well characterized and in one series there were in individual patients considering longitudinal changes in disease severity. 742 AMERICAN JOURNAL OF RESPIRATORY AND CRITICAL CARE MEDICINE VOL 188 2013 TABLE 4. BIOMARKERS FOR OUTCOME IN BLOOD AND BRONCHOALVEOLAR LAVAGE (HIGHER LEVELS PREDICTING POOR SURVIVAL) Biomarker Patients HR (95% CI) P Value Reference SP-A 52 IPF (survivors vs. 0. 0125 Takahashi et al. (155) SP-D nonsurvivors) 0. 0032 SP-A 142 IPF 1. 73 0. 031 Greene et al. (156) SP-D 2. 04 0. 003 KL-6 (. 1, 000 U/ml) 27 IPF 12. 56 (1. 195–131. 90) 0. 035 Yokoyama et al. (157) KL-6 (>1, 000 U/ml) 152 IIP and 67 CVD 2. 95 (1. 71–5. 08) 0. 0001 Satoh et al. (129) SP-D (>253) 82 IPF 0. 0013 Takahashi et al. (158) SP-A NS KL-6 (. 1. 014) 0. 0087 Oxidative stress levels 21 IPF FVC r ¼ –0. 79 , 0. 01 Daniil et al. (159) DLCO r ¼ –0. 75 , 0. 01 MMP-7 74 IPF Higher decline of DLCO (r ¼ –0. 53) 0. 002 Rosas et al. (160) MMP-1 and FVC (r ¼ –0. 51) 0. 002 SP-A 82 IPF 3. 27 (1. 49–7. 17) 0. 003 Kinder et al. (128) SP-D (. 460 ng/ml) 72 IPF 3. 22 (1. 33– 7. 81) 0. 01 Barlo et al. (29) CCL 18 above 150 ng/ml 72 IPF 7. 98 (2. 49–25. 51) 0. 0005 Prasse et al. (131) CD 41 CD 28 null . 18% of 89 IPF 13. 0 (1. 6–111. 1) 0. 0004 Gilani et al. (161) total CD 4 MMP-7, ICAM-1, IL-8, 241 IPF (140, In the derivation cohort, high concentration Overall survival derivation cohort Richards et al. (162) VCAM-1, S 100-A 12 derivation; predicted poor survival, poor transplant-free MMP-7: 0. 0021 101, validation) survival and poor progression-free survival. ICAM-1: 0. 0015 In the validation cohort high concentrations IL-8: 0. 029 of all five were predictive of poor transplant- VCAM-1: 0. 00030 free survival; MMP-7, ICAM-1, and IL-8 of S 100-A 12: 0. 0013 overall survival; and ICAM-1 of poor progression-free survival BAL 20 IPF Higher in rapid progressors 0. 028 Mc Keown et al. * (163) MMP-8, MMP-9 0. 015 BAL 39 IPF Higher in nonsurvivors , 0. 02 Shinoda et al. * (164) CCL 2 BAL 20 IPF Negative correlation with PFT Richter et al. * (165) Endostatin FVC (r ¼ –0. 604) 0. 006 TLCO (r ¼ –0. 612) 0. 005 Definition of abbreviations: BAL ¼ bronchoalveolar lavage; CI ¼ confidence interval; CCL ¼ chemokine ligand; CVD ¼ collagen vascular disease; DLCO ¼ diffusing capacityortransferfactorofthelungforcarbonmonoxide; HR¼hazardratio; ICAM¼intercellularadhesionmolecule; IPF¼idiopathicpulmonaryfibrosis; KL-6¼Krebs von den Lungen-6; MMP ¼ matrix metalloproteinase; NS ¼ not significant; PFT ¼ pulmonary function test; S 100-A 12 ¼ protein encoded by S 100-A 12 gene; SP ¼ surfactant protein; TLCO ¼ carbon monoxide diffusion factor; VCAM ¼ vascular cell adhesion protein. inappropriate management. This classification system needs to Many association studies have failed to identify genetic polybe validated for practicality and clinical relevance (127). morphisms that may confer increased risk of developing IPF (140, 141), whereas those showing association have not been BIOMARKERS validated in independent cohorts (140–152). Identificationofbiomarkershasbeenfocusedon IPF andusuallyin Thisofficialstatementwaspreparedbyanadhocsubcommittee small cohorts and without independent validation. However, some of the Assembly on Clinical Problems. interesting findings have emerged that may have implications for Members of the ATS/ERS Committee on Idiopathic Interstidiagnosis, management, or prognostication of other IIP s (Table tial Pneumonias: 4). For example, rapidly declining lung function and/or reduced WILLIAM D. TRAVIS, M. D. (Chair) survival have been associated with high serum levels of some ep- TALMADGE E. KING, JR. , M. D. (Co-Chair) ithelial or macrophage-related proteins such as SP-A, SP-D, KL-6 ULRICH COSTABEL, M. D. (Co-Chair) (Krebs von den Lungen-6), CCL 18 (chemokine ligand-18), and ATHOL U. WELLS, M. D. (Co-Chair) MMP-7 (matrix metalloproteinase-7) (29, 128–131). These associations require validation, but suggest that biomarkers may be clin- Writing Committee ically useful to identify patients at high risk of progression. WILLIAM D. TRAVIS, M. D. Regarding biomarkers for differential diagnosis, serum SP-A ULRICH COSTABEL, M. D. and SP-D were found significantly higher in IPF compared with DAVID M. HANSELL, M. D. , M. P. H. NSIP/COP or CVD-IP, respectively (132, 133). Likewise, higher TALMADGE E. KING, JR. , M. D. levels of serum DNA seem to distinguish patients with IPF from DAVID A. LYNCH, M. B. B. CH. non-IPF patients (134). Studies in lungs and bronchoalveolar ANDREW G. NICHOLSON, D. M. lavage fluid indicate that NSIP is characterized by a helper CHRISTOPHER J. RYERSON, M. D. T-cell type 1–like pattern whereas a helper T-cell type 2–like JAY H. RYU, M. D. response with increased expression of chemokine receptor-7 MOISE´S SELMAN, M. D. (CCR 7) and CCL 7 is observed in IPF (135–138). Last, gene ATHOL U. WELLS, M. D. expression profiling has given contradictory results. Whereas Pulmonary one study found that most NSIP lungs did not resemble IPF, another identified only minor gene expression differences be- JAY H. RYU, M. D. (Subcommittee Chair) tween UIP and NSIP (139). JURGEN BEHR, M. D. American Thoracic Society Documents 743 DEMOSTHENES BOUROS, M. D. , PH. D. Intermune ($100, 0001). J. E. served on advisory committees of Pfizer (Wyeth) KEVIN K. BROWN, M. D. ($1–4, 999). K. F. served as a speaker for Glaxo Smith Kline ($10, 000–49, 999) and on advisory committees of Boehringer Ingelheim ($1–9, 999), Fibrogen ($1–9, 999), and HAROLD R. COLLARD, M. D. Glaxo Smith Kline($1–9, 999); hereceivedresearchsupportfrom Centocor($50, 000– CARLOS ROBALO CORDEIRO, M. D. , PH. D. 99, 999), Immune Works ($50, 000–99, 999), and Intermune ($100, 0001). D. S. K. VINCENT COTTIN, M. D. , PH. D. served on advisory committees of Boehringer Ingelheim ($5, 000–24, 999). M. K. was MARJOLEIN DRENT, M. D. , PH. D. patent holder with Daikin Industries of a process for preparing a fluorine-containing polymer and a cross-linked fluororubber diaphragm. F. J. M. reported consulting for JIM EGAN, M. D. , M. B. B. CH. B. A. O. Almirall ($1–4, 999), American Institute for Research ($1–4, 999), Astra Zeneca ($1– KEVIN FLAHERTY, M. D. , M. S. 4, 999), Bayer ($1–4, 999), Boehringer Ingelheim ($5, 000–24, 999), Caden Jennings YOSHIKAZU INOUE, M. D. , PH. D. ($1–4, 999), Cardiomema(nopayments), Forest($25, 000–49, 999), Glaxo Smith Kline DONG SOON KIM, M. D. ($25, 000–49, 999), HCRC-TC($1–4, 999), Ikarta($5, 000–24, 999), Medimmune($1– 4, 999), Merck ($5, 000–24, 999), Merion-TC ($1–4, 999), Novartis ($5, 000–24, 999), FERNANDO J. MARTINEZ, M. D. , M. S. Pearl($5, 000–24, 999), Pfizer($1–4, 999), Sudler-Hennessey-TC($1–4, 999), and Ver- GANESH RAGHU, M. D. tex ($1–4, 999); he served as a speaker for Astra Zeneca ($1–4, 999), Bayer ($5, 000– LUCA RICHELDI, M. D. , PH. D. 24, 999), Forest ($5, 000–24, 999), Glaxo Smith Kline ($50, 000–49, 999), and DOMINIQUE VALEYRE, M. D. Nycomed/Takeda ($50, 000–49, 999), and on advisory committees of Actelion ($5, 000–24, 999), Bayer ($1–4, 999), Biogen/Stromedix ($1–4, 999), Janssen ($1–4, 999), Mpex(nopayments), Nycomed/Takeda($50, 000–99, 999), Pfizer($1–4, 999), and Radiology Vertex ($1–4, 999); he received research support from Actelion ($5, 000–24, 999) DAVID M. HANSELL, M. D. (Subcommittee Co-Chair) and royalties from Informa ($1–4, 999). G. R. reported consulting for Actelion ($5, 000–24, 999), Bayer ($1, 000–4, 999), Boehringer Ingelheim ($1–4, 999), Cen- DAVID A. LYNCH, M. B. B. CH. (Subcommittee Co-Chair) tocor($1–4, 999), Celgene($1–4, 999), Fibrogen($1–4, 999), Glaxo Smith Kline($1– TAKESHI JOHKOH, M. D. , PH. D. 4, 999), Ge No ($1–4, 999), Gilead ($1–4, 999), Intermune ($1–4, 999), Promedior NICOLA SVERZELLATI, M. D. ($1–4, 999), Sanofi-Aventis ($1–4, 999), Stromedix ($1–4, 999), and Takeda ($1– 4, 999). L. R. reported consulting for Fibrogen ($1–4, 999) and Genentech ($1– Pathology 4, 999), and was a speaker for Boehringer Ingelheim ($1–4, 999) and Intermune ($5, 000–24, 999); he served on advisory committees of Boehringer Ingelheim ($1– ANDREW G. NICHOLSON, D. M. (Subcommittee Chair) 4, 999), Intermune ($1–4, 999), Glaxo Smith Kline ($1–4, 999), Medimmune ($1– THOMAS V. COLBY, M. D. 4, 999), and Sanofi-Aventis($1–4, 999); hereceivedresearchsupportfrom Intermune ($50, 000–99, 999). J. S. consulted for Genentech ($1–4, 999) and received research MASANORI KITAICHI, M. D. support from Intermune ($50, 000–99, 999). D. V. served on advisory committees of JEFFREY MYERS, M. D. Actelion ($1–4, 999) and as an expert witness for Sanofi-Aventis (, $1, 000). W. D. T. , U. C. ,J. H. R. ,M. S. ,A. U. W. ,D. B. ,T. V. C. ,C. R. C. ,M. D. ,R. F. D. ,C. H. ,Y. I. ,T. J. ,J. L. ,J. M. , Molecular Biology S. P. , and N. S. reported they had no relevant commercial interests. Mo ISE´S SELMAN, M. D. (Subcommittee Chair) Acknowledgment: Thecommitteeacknowledgesthe American Thoracic Societyand BRUNO CRESTANI, M. D. , PH. D. European Respiratory Society forsupportingthisproject; thestaffofthe Universityof CORY HOGABOAM, PH. D. Modenaand Reggio Emilia, Italy; Shandra Protzkoand Rosalin Duddenofthe Library JAMES LOYD, M. D. and Knowledge Services, National Jewish Health, Denver, Colorado; the Department of Pathology, VU University Medical Center Amsterdam, Amsterdam, Evidence-based Analysis The Netherlands, and the Department of Pathology, Memorial Sloan-Kettering Cancer Center, New York, New York for assistance with face-to-face meetings; the CHRISTOPHER J. RYERSON, M. D. (Subcommittee Chair) ATS staff for administrative assistance; and members of the ATS Documentation JEFFREY SWIGRIS, D. O. , M. S. and Implementation Committee. The committee also acknowledges the following individualswhohelpedreviewthedocument: Arata Azuma(Japan), Mary Beth Beasley Reference Librarians (United States), Alain Borczuk(United States), Marco Chilosi(Italy), Teri Franks(United States), Jeffrey Galvin (United States), Katrien Grunberg (The Netherlands), Richard ROSALIND F. DUDDEN, M. L. S. Helmers (United States), Kevin Leslie (United States), Robert Kaner (United States), Heber Mac Mahon (United States), Nestor Muller (Brazil), David Naidich SHANDRA PROTZKO, M. S. (United States), Marieke Overbeek(The Netherlands), Lynette Sholl(United States), Zarir F. Udwadia (India), and Dean W. Wallace (United States). Author Disclosures: D. M. H. reported consulting for Astra Zeneca ($1, 000– $4, 999). T. E. K. reported serving on advisory committees of Immune Works ($1–4, 999) and Intermune ($50, 000–99, 999). D. A. L. reported consulting for References Gilead (no payments), Intermune (no payments), and Perceptive Imaging 1. American Thoracic Society, European Respiratory Society. American ($25, 000–49, 999); he received research support from Centocor ($25, 000– 49, 999) and Siemens ($250, 0001). A. G. N. reported consulting for Actelion Thoracic Society/European Respiratory Society international mul- ($50, 000–99, 999) and Boehringer Ingelheim ($10, 000–49, 999). C. J. R. reported tidisciplinary consensus classification of the idiopathic interstitial servingasaspeaker andonadvisory committeesof Intermune($5, 000–24, 999), pneumonias. Am J Respir Crit Care Med 2002; 165: 277–304. and received research support from Intermune ($50, 000–99, 999). J. B. reported 2. Travis WD, Hunninghake G, King TEJ r, Lynch DA, Colby TV, Galvin serving as a consultant, speaker, and on advisory committees of Actelion ($25, 000–49, 999), and received research support from Actelion ($25, 000– JR, Brown KK, Chung MP, Cordier J-F, du Bois RM, etal. Idiopathic 49, 999); he served as a consultant, speaker, and on advisory committees of nonspecific interstitial pneumonia: report of an American Thoracic Boehringer Ingelheim ($5, 000–24, 999) and Intermune ($50, 000–99, 999); he Society project. Am J Respir Crit Care Med 2008; 177: 1338–1347. received research support from Intermune ($25, 000–49, 999). K. K. B. served as a consultant for Almirall ($1–4, 999), Amgen ($1–4, 999), Array Bio Pharma ($1– 3. Aziz ZA, Wells AU, Hansell DM, Bain GA, Copley SJ, Desai SR, Ellis 4, 999), Genzyme (no payments), Glaxo Smith Kline (no payments), Ikaria ($1– SM, Gleeson FV, Grubnic S, Nicholson AG, et al. HRCT diagnosis 4, 999), Ironwood ($1–4, 999), and Pfizer (no payments); he served on advisory ofdiffuseparenchymallungdisease: inter-observervariation. Thorax committees of Actelion ($5, 000–24, 999), Array Bio Pharma ($1–4, 999), Boeh- 2004; 59: 506–511. ringer Ingelheim ($5, 000–24, 999), Centocor ($1–4, 999), Fibrogen ($1–4, 999), Genentech ($1–4, 999), Ge No (no payments), Gilead ($5, 000–24, 999), Medi- 4. Flaherty KR, King TEJ r, Raghu G, Lynch JPIII, Colby TV, Travis WD, mmune ($1–4, 999), Mesoblast ($1–4, 999), Promedior ($1–4, 999), and Stromedix/ Gross BH, Kazerooni EA, Toews GB, Long Q, et al. Idiopathic Biogen($1–4, 999); hereceivedresearchsupportfrom Actelion($100, 000–249, 999), interstitial pneumonia: what is the effect of a multidisciplinary Amgen ($25, 000–49, 999), Genentech ($25, 000–49, 999), and Gilead ($5, 000– 24, 999). H. R. C. reported consulting for Boehringer Ingelheim ($5, 000–24, 999), approach to diagnosis? Am J Respir Crit Care Med 2004; 170: 904–910. BMS ($1–4, 999), Gilead ($5, 000–24, 999), and Promedior ($1–4, 999); he served 5. Nicholson AG, Addis BJ, Bharucha H, Clelland CA, Corrin B, Gibbs onadvisorycommitteesof Fibrogen($5, 000–24, 999), Five Prime($1–4, 999), Genoa AR, Hasleton PS, Kerr KM, Ibrahim NBN, Stewart S, et al. Inter- ($1–4, 999), Medimmune ($1–4, 999), and Mesoblast ($1–4, 999), and received reobserver variation between pathologists in diffuse parenchymal lung searchsupportfrom Genentech($5, 000–24, 999)and Intermune(nopayments). V. C. reported serving as a speaker and on advisory committees of Intermune ($5, 000– disease. Thorax 2004; 59: 500–505. 24, 999); heservedonadvisorycommitteesof Boehringer Ingelheim($5, 000–24, 999) 6. Thomeer M, Demedts M, Behr J, Buhl R, Costabel U, Flower CDR, and received research support from Boehringer Ingelheim ($5, 000–24, 999). B. C. Verschakelen J, Laurent F, Nicholson AG, Verbeken EK, et al. ; reported consulting for Sanofi($1–4, 999) and serving on advisory committees of Idiopathic Pulmonary Fibrosis International Group Exploring N- Astra Zeneca ($1, 000–4, 999) and Intermune ($1–4, 999); he was a speaker for Intermune ($1–4, 999) and Stallergenes ($1–4, 999), and received research support from Acetylcysteine I Annual (IFIGENIA) Study Group. Multidisciplinary 744 AMERICAN JOURNAL interobserver agreement in the diagnosis of idiopathic pulmonary fibrosis. Eur Respir J 2008;31:585–591.7. Flaherty KR, Andrei A-C, King TE Jr, Raghu G, Colby TV, Wells A, Bassily N, Brown K, du Bois R, Flint A, et al. Idiopathic interstitial pneumonia: do community and academic physicians agree on diagnosis? Am J Respir Crit Care Med 2007;175:1054–1060.8. RaghuG,CollardHR,EganJJ,MartinezFJ,BehrJ,BrownKK,Colby TV, Cordier JF, Flaherty KR, Lasky JA, et al.; ATS/ERS/JRS/ ALAT Committee on Idiopathic Pulmonary Fibrosis. An official ATS/ERS/JRS/ALAT statement: idiopathic pulmonary fibrosis: evidence-based guidelines for diagnosis and management. Am J Respir Crit Care Med 2011;183:788–824.9. Selman M. Hypersensitivity pneumonitis: a multifaceted deceiving disorder. Clin Chest Med 2004;25:531–547, vi.10. Lynch DA, Newell JD, Logan PM, King TE Jr, Müller NL. Can CT distinguish hypersensitivity pneumonitis from idiopathic pulmonary fibrosis? AJR Am J Roentgenol 1995;165:807–811.11. Silva CI, Churg A, Müller NL. Hypersensitivity pneumonitis: spectrum ofhigh-resolutionCT andpathologicfindings.AJRA mJR oentgenol 2007;188:334–344.12. Silva CIS, Müller NL, Lynch DA, Curran-Everett D, Brown KK, Lee KS, ChungMP,ChurgA.Chronichypersensitivitypneumonitis:differentiation from idiopathic pulmonary fibrosis and nonspecific interstitial pneumonia by using thin-section CT. Radiology 2008;246:288–297.13. Akashi T, Takemura T, Ando N, Eishi Y, Kitagawa M, Takizawa T, Koike M, Ohtani Y, Miyazaki Y, Inase N, et al. Histopathologic analysis of sixteen autopsy cases of chronic hypersensitivity pneumonitis and comparison with idiopathic pulmonary fibrosis/ usual interstitial pneumonia. Am J Clin Pathol 2009;131:405–415.14. Churg A, Muller NL, Flint J, Wright JL. Chronic hypersensitivity pneumonitis. Am J Surg Pathol 2006;30:201–208.15. Churg A, Sin DD, Everett D, Brown K, Cool C. Pathologic patterns and survival in chronic hypersensitivity pneumonitis. Am J Surg Pathol 2009;33:1765–1770.16. Fenton ME, Cockcroft DW, Wright JL, Churg A. Hypersensitivity pneumonitis as a cause of airway-centered interstitial fibrosis. Ann Allergy Asthma Immunol 2007;99:465–466.17. Sahin H, Brown KK, Curran-Everett D, Hale V, Cool CD, Vourlekis JS, Lynch DA. Chronic hypersensitivity pneumonitis: CT features comparison with pathologic evidence of fibrosis and survival. Radiology 2007;244:591–598.18. Hanak V, Golbin JM, Ryu JH. Causes and presenting features in 85 consecutive patients with hypersensitivity pneumonitis. Mayo Clin Proc 2007;82:812–816.19. Felício CH, Parra ER, Capelozzi VL. Idiopathic and collagen vascular disease nonspecific interstitial pneumonia: clinical significance of remodeling process. Lung 2007;185:39–46.20. Park JH, Kim DS, Park IN, Jang SJ, Kitaichi M, Nicholson AG, Colby TV. Prognosis of fibrotic interstitial pneumonia: idiopathic versus collagen vascular disease-related subtypes. Am J Respir Crit Care Med 2007;175:705–711.21. Hwang J-H, Misumi S, Sahin H, Brown KK, Newell JD, Lynch DA. Computed tomographic features of idiopathic fibrosing interstitial pneumonia: comparison with pulmonary fibrosis related to collagen vascular disease. J Comput Assist Tomogr 2009;33:410–415.22. Song JW, Do K-H, Kim M-Y, Jang SJ, Colby TV, Kim DS. Pathologic and radiologic differences between idiopathic and collagen vascular disease–related usual interstitial pneumonia. Chest 2009;136:23–30.23. Corte TJ, Copley SJ, Desai SR, Zappala CJ, Hansell DM, Nicholson AG, Colby TV, Renzoni E, Maher TM, Wells AU. Significance of connective tissue disease features in idiopathic interstitial pneumonia. Eur Respir J 2012;39:661–668.24. Suda T, Kono M, Nakamura Y, Enomoto N, Kaida Y, Fujisawa T, Imokawa S, Yasuda K, Hashizume H, Yokomura K, et al. Distinct prognosis of idiopathic nonspecific interstitial pneumonia (NSIP) fulfilling criteria for undifferentiated connective tissue disease (UCTD). Respir Med 2010;104:1527–1534.25. Kinder BW, Collard HR, Koth L, Daikh DI, Wolters PJ, Elicker B, JonesKD,KingTEJ r.Idiopathicnonspecificinterstitialpneumonia: lungmanifestationofundifferentiatedconnectivetissuedisease?Am J Respir Crit Care Med 2007;176:691–697. OF RESPIRATORY AND CRITICAL CARE MEDICINE VOL 188 2013 26. García-Sancho C, Buendía-Roldán I, Fernández-Plata MR, Navarro C, Pérez-Padilla R, Vargas MH, Loyd JE, Selman M. Familial pulmonary fibrosis is the strongest risk factor for idiopathic pulmonary fibrosis. Respir Med 2011;105:1902–1907.27. HodgsonU,LaitinenT,TukiainenP.Nationwideprevalenceofsporadic and familial idiopathic pulmonary fibrosis: evidence of founder effect among multiplex families in Finland. Thorax 2002;57:338–342.28. MarshallRP,PuddicombeA,CooksonWO,LaurentGJ.Adultfamilial cryptogenicfibrosingalveolitisinthe United Kingdom.Thorax2000; 55:143–146.29. Barlo NP, van Moorsel CHM, Ruven HJT, Zanen P, van den Bosch JMM, Grutters JC.Surfactantprotein-D predictssurvivalinpatients with idiopathic pulmonary fibrosis. Sarcoidosis Vasc Diffuse Lung Dis 2009;26:155–161.30. NogeeLM,DunbarAEIII,WertSE,AskinF,HamvasA,WhitsettJA. A mutation in the surfactant protein C gene associated with familial interstitial lung disease. N Engl J Med 2001;344:573–579.31. Kirwan M, Dokal I. Dyskeratosis congenita, stem cells and telomeres. Biochim Biophys Acta 2009;1792:371–379.32. van Moorsel CH, van Oosterhout MF, Barlo NP, de Jong PA, van der Vis JJ, Ruven HJ, van Es HW, van den Bosch JM, Grutters JC. Surfactant protein C mutations are the basis of a significant portion of adult familial pulmonary fibrosis in a Dutch cohort. Am J Respir Crit Care Med 2010;182:1419–1425.33. AlderJK,ChenJJL,LancasterL,DanoffS,SuSC,CoganJD,VultoI,Xie M,QiX,TuderRM,etal.Shorttelomeresareariskfactorforidiopathic pulmonary fibrosis. Proc Natl Acad Sci USA 2008;105:13051–13056.34. Cronkhite JT, Xing C, Raghu G, Chin KM, Torres F, Rosenblatt RL, Garcia CK. Telomere shortening infamilial and sporadic pulmonary fibrosis. Am J Respir Crit Care Med 2008;178:729–737.35. LawsonWE,CrossnoPF,PolosukhinVV,RoldanJ,ChengD-S,LaneKB, BlackwellTR,XuC,MarkinC,WareLB,etal.Endoplasmicreticulum stress in alveolar epithelial cells is prominent in IPF: association with altered surfactant protein processing and herpesvirus infection. Am J Physiol Lung Cell Mol Physiol 2008;294:L1119–L1126.36. Seibold MA, Wise AL, Speer MC, Steele MP, Brown KK, Loyd JE, Fingerlin TE, Zhang W, Gudmundsson G, Groshong SD, et al. A common MUC5B promoter polymorphism and pulmonary fibrosis. N Engl J Med 2011;364:1503–1512.37. Zhang Y,Noth I, Garcia JG, Kaminski N.A variant inthe promoter of MUC5B and idiopathic pulmonary fibrosis. N Engl J Med 2011;364: 1576–1577.38. Lawson WE, Loyd JE, Degryse AL. Genetics in pulmonary fibrosis— familial cases provide clues to the pathogenesis of idiopathic pulmonary fibrosis. Am J Med Sci 2011;341:439–443.39. Monaghan H, Wells AU, Colby TV, du Bois RM, Hansell DM, Nicholson AG. Prognostic implications of histologic patterns in multiple surgical lung biopsies from patients with idiopathic interstitial pneumonias. Chest 2004;125:522–526.40. Ryu JH, Colby TV, Hartman TE, Vassallo R. Smoking-related interstitial lung diseases: a concise review. Eur Respir J 2001;17:122–132.41. Aubry MC, Wright JL, Myers JL. The pathology of smoking-related lung diseases. Clin Chest Med 2000;21:11–35, vii.42. Vassallo R, Jensen EA, Colby TV, Ryu JH, Douglas WW, Hartman TE, Limper AH. The overlap between respiratory bronchiolitis and desquamative interstitial pneumonia in pulmonary Langerhans cell histiocytosis: high-resolution CT, histologic, and functional correlations. Chest 2003;124:1199–1205.43. Cottin V, Le Pavec J, Prévot G, Mal H, Humbert M, Simonneau G, Cordier JF; GERM“O”P. Pulmonary hypertension in patients with combined pulmonary fibrosis and emphysema syndrome. Eur Respir J 2010;35:105–111.44. Cottin V, Cordier JF. The syndrome of combined pulmonary fibrosis and emphysema. Chest 2009;136:1–2.45. CottinV,NunesH,BrilletPY,DelavalP,DevouassouxG,Tillie-LeblondI, Israel-BietD,Court-FortuneI,ValeyreD,CordierJF;Grouped’Etudeet de Recherche sur les Maladies Orphelines Pulmonaires (GERM“O”P). Combinedpulmonaryfibrosisandemphysema:adistinctunderrecognised entity. Eur Respir J 2005;26:586–593.46. Mejía M, Carrillo G, Rojas-Serrano J, Estrada A, Suárez T, Alonso D, Barrientos E, Gaxiola M, Navarro C, Selman M. Idiopathic American Thoracic Society Documents pulmonary fibrosis and emphysema: decreased survival associated with severe pulmonary arterial hypertension. Chest 2009;136:10–15.47. Akira M, Inoue Y, Kitaichi M, Yamamoto S, Arai T, Toyokawa K. Usual interstitial pneumonia and nonspecific interstitial pneumonia with and without concurrent emphysema: thin-section CT findings. Radiology 2009;251:271–279.48. Flaherty KR, Travis WD, Colby TV, Toews GB, Kazerooni EA, Gross BH, Jain A, Strawderman RL, Flint A, Lynch JP, et al. Histopathologic variability in usual and nonspecific interstitial pneumonias. Am J Respir Crit Care Med 2001;164:1722–1727.49. FlahertyKR,ThwaiteEL,KazerooniEA,GrossBH,ToewsGB,Colby TV, Travis WD, Mumford JA, Murray S, Flint A, et al. Radiological versus histological diagnosis in UIP and NSIP: survival implications. Thorax 2003;58:143–148.50. Sverzellati N, Wells AU, Tomassetti S, Desai SR, Copley SJ, Aziz ZA, Zompatori M, Chilosi M, Nicholson AG, Poletti V, et al. Biopsyproved idiopathic pulmonary fibrosis: spectrum of nondiagnostic thin-section CT diagnoses. Radiology 2010;254:957–964.51. Sumikawa H, Johkoh T, Colby TV, Ichikado K, Suga M, Taniguchi H, Kondoh Y, Ogura T, Arakawa H, Fujimoto K, et al. Computed tomography findings in pathological usual interstitial pneumonia: relationship tosurvival. AmJ Respir Crit Care Med 2008;177:433–439.52. Silva CI, Müller NL, Hansell DM, Lee KS, Nicholson AG, Wells AU. Nonspecific interstitial pneumonia and idiopathic pulmonary fibrosis: changes in pattern and distribution of disease over time. Radiology 2008;247:251–259.53. Lynch DA, Godwin JD, Safrin S, Starko KM, Hormel P, Brown KK, Raghu G,King TE Jr, Bradford WZ, Schwartz DA, et al.;Idiopathic Pulmonary Fibrosis Study Group. High-resolution computed tomography in idiopathic pulmonary fibrosis: diagnosis and prognosis. Am J Respir Crit Care Med 2005;172:488–493.54. Kim EY, Lee KS, Chung MP, Kwon OJ, Kim TS, Hwang JH. Nonspecific interstitial pneumonia with fibrosis: serial highresolution CT findings with functional correlation. AJR Am J Roentgenol 1999;173:949–953.55. Hartman TE, Swensen SJ, Hansell DM, Colby TV, Myers JL, Tazelaar HD,NicholsonAG,WellsAU,RyuJH,MidthunDE,etal.Nonspecific interstitial pneumonia:variableappearance at high-resolution chest CT. Radiology 2000;217:701–705. [Published erratum appears in Radiology 218:606.] 56. Park JS, Lee KS, Kim JS, Park CS, Suh YL, Choi DL, Kim KJ. Nonspecific interstitial pneumonia with fibrosis: radiographic and CT findings in seven patients. Radiology 1995;195:645–648.57. Cottin V, Donsbeck AV, Revel D, Loire R, Cordier JF. Nonspecific interstitial pneumonia: individualization of a clinicopathologic entity in a series of 12 patients. Am J Respir Crit Care Med 1998;158:1286–1293.58. NagaiS,KitaichiM,ItohH,NishimuraK,IzumiT,ColbyTV.Idiopathic nonspecific interstitial pneumonia/fibrosis: comparison with idiopathic pulmonary fibrosis and BOOP. Eur Respir J 1998;12:1010–1019.59. Johkoh T, Müller NL, Colby TV, Ichikado K, Taniguchi H, Kondoh Y, Fujimoto K, Kinoshita M, Arakawa H, Yamada H, et al. Nonspecific interstitial pneumonia: correlation between thin-section CT findings and pathologic subgroups in 55 patients. Radiology 2002;225:199–204.60. JohkohT,MüllerNL,CartierY,KavanaghPV,HartmanTE,AkiraM, Ichikado K, Ando M, Nakamura H. Idiopathic interstitial pneumonias: diagnostic accuracy of thin-section CT in 129 patients. Radiology 1999;211:555–560.61. Nishiyama O, Kondoh Y, Taniguchi H, Yamaki K, Suzuki R, Yokoi T, TakagiK.SerialhighresolutionCTfindingsinnonspecificinterstitial pneumonia/fibrosis. J Comput Assist Tomogr 2000;24:41–46.62. Mac Donald SL, Rubens MB, Hansell DM, Copley SJ, Desai SR, du Bois RM, Nicholson AG, Colby TV, Wells AU. Nonspecific interstitial pneumonia and usual interstitial pneumonia: comparative appearances atanddiagnosticaccuracyofthin-sectionCT.Radiology2001;221:600–605.63. Akira M, Inoue Y, Arai T, Okuma T, Kawata Y. Long-term follow-up high-resolution CT findings in non-specific interstitial pneumonia. Thorax 2011;66:61–65.64. Katzenstein AL, Fiorelli RF. Nonspecific interstitial pneumonia/ fibrosis: histologic features and clinical significance. Am J Surg Pathol 1994;18:136–147.65. Travis WD, Matsui K, Moss J, Ferrans VJ. Idiopathic nonspecific interstitial pneumonia: prognostic significance of cellular and 745 fibrosing patterns: survival comparison with usual interstitial pneumonia and desquamative interstitial pneumonia. Am J Surg Pathol 2000;24:19–33.66. Tsubamoto M, Müller NL, Johkoh T, Ichikado K, Taniguchi H, Kondoh Y, Fujimoto K, Arakawa H, Koyama M, Kozuka T, et al. Pathologic subgroups of nonspecific interstitial pneumonia: differential diagnosis from other idiopathic interstitial pneumonias on high-resolution computed tomography. J Comput Assist Tomogr 2005;29:793–800.67. ParkIN,JegalY,KimDS,DoKH,YooB,ShimTS,LimCM,LeeSD,Koh Y, Kim WS, et al. Clinical course and lung function change of idiopathic nonspecific interstitial pneumonia. Eur Respir J 2009;33:68–76.68. Hidalgo A, Franquet T, Giménez A, Bordes R, Pineda R, Madrid M. Smoking-related interstitial lung diseases: radiologic–pathologic correlation. Eur Radiol 2006;16:2463–2470.69. Craig PJ, Wells AU, Doffman S, Rassl D, Colby TV, Hansell DM, Du Bois RM, Nicholson AG. Desquamative interstitial pneumonia, respiratory bronchiolitis and their relationship to smoking. Histopathology 2004;45:275–282.70. Fraig M, Shreesha U, Savici D, Katzenstein AL. Respiratory bronchiolitis: a clinicopathologic study in current smokers, ex-smokers, and never-smokers. Am J Surg Pathol 2002;26:647–653.71. Vassallo R, Ryu JH. Tobacco smoke–related diffuse lung diseases. Semin Respir Crit Care Med 2008;29:643–650.72. Portnoy J, Veraldi KL, Schwarz MI, Cool CD, Curran-Everett D, Cherniack RM, King TE Jr, Brown KK. Respiratory bronchiolitisinterstitial lung disease: long-term outcome. Chest 2007;131:664–671.73. Doan ML, Guillerman RP, Dishop MK, Nogee LM, Langston C, Mallory GB, Sockrider MM, Fan LL. Clinical, radiological and pathological features of ABCA3 mutations in children. Thorax 2008;63:366–373.74. Bullard JE, Wert SE, Whitsett JA, Dean M, Nogee LM. ABCA3 mutations associated with pediatric interstitial lung disease. Am J Respir Crit Care Med 2005;172:1026–1031.75. Kawabata Y, Hoshi E, Murai K, Ikeya T, Takahashi N, Saitou Y, Kurashima K, Ubukata M, Takayanagi N, Sugita H, et al. Smoking-related changes in the background lung of specimens resectedforlungcancer:asemiquantitativestudywithcorrelation to postoperative course. Histopathology 2008;53:707–714.76. Katzenstein AL, Mukhopadhyay S, Zanardi C, Dexter E. Clinically occult interstitial fibrosis in smokers: classification and significance of a surprisingly common finding in lobectomy specimens. Hum Pathol 2010;41:316–325.77. Snider GL, Kleinerman J, Thurlbeck WM, Bengali ZH. The definition of emphysema: report of a National Heart, Lung, and Blood Institute, Division of Lung Diseases workshop. Am Rev Respir Dis 1985;132:182–185.78. King TE Jr, Mortenson RL. Cryptogenic organizing pneumonitis: the North American experience. Chest 1992;102(1, Suppl)8S–13S.79. Lee JW, Lee KS, Lee HY, Chung MP, Yi CA, Kim TS, Chung MJ. Cryptogenic organizing pneumonia: serial high-resolution CT findings in 22 patients. AJR Am J Roentgenol 2010;195:916–922.80. SenT,UdwadiaZF.Cryptogenicorganizingpneumonia:clinicalprofile in a series of 34 admitted patients in a hospital in India. J Assoc Physicians India 2008;56:229–232. Demirbaş 81. Oymak FS, HM, Mavili E, Akgun H, Gulmez I, Demir R, Ozesmi M. Bronchiolitis obliterans organizing pneumonia: clinical androentgenologicalfeaturesin26cases.Respiration2005;72:254–262.82. Lee JS, Lynch DA, Sharma S, Brown KK, Müller NL. Organizing pneumonia: prognostic implication of high-resolution computed tomography features. J Comput Assist Tomogr 2003;27:260–265.83. Lee KS, Kullnig P, Hartman TE, Müller NL. Cryptogenic organizing pneumonia: CT findings in 43 patients. AJR Am J Roentgenol 1994; 162:543–546.84. Müller NL, Staples CA, Miller RR. Bronchiolitis obliterans organizing pneumonia: CT features in 14 patients. AJR Am J Roentgenol 1990; 154:983–987.85. Ujita M, Renzoni EA, Veeraraghavan S, Wells AU, Hansell DM. Organizing pneumonia: perilobular pattern at thin-section CT. Radiology 2004;232:757–761.86. Kim SJ, Lee KS, Ryu YH, Yoon YC, Choe KO, Kim TS, Sung KJ. Reversed halo sign on high-resolution CT of cryptogenic organizing 746 AMERICAN JOURNAL pneumonia:diagnosticimplications. AJRA mJR oentgenol2003;180: 1251–1254.87. Epler GR, Colby TV, Mc Loud TC, Carrington CB, Gaensler EA. Bronchiolitis obliterans organizing pneumonia. N Engl J Med 1985; 312:152–158.88. Lohr RH, Boland BJ, Douglas WW, Dockrell DH, Colby TV, Swensen SJ,Wollan PC,Silverstein MD. Organizingpneumonia: featuresand prognosis of cryptogenic, secondary, and focal variants. Arch Intern Med 1997;157:1323–1329.89. Lazor R, Vandevenne A, Pelletier A, Leclerc P, Court-Fortune I, Cordier JF; Groupe d’Etudes et de Recherche sur les Maladies “Orphelines” Pulmonaires (GERM“O”P). Cryptogenic organizing pneumonia: characteristics of relapses in a series of 48 patients. Am J Respir Crit Care Med 2000;162:571–577.90. FischerA,SwigrisJJ,du BoisRM,LynchDA,DowneyGP,CosgroveGP, FrankelSK,Fernandez-PerezER,GillisJZ,BrownKK.Anti-synthetase syndrome in ANA and anti–Jo-1 negative patients presenting with idiopathic interstitial pneumonia. Respir Med 2009;103:1719–1724.91. Bouros D, Nicholson AC, Polychronopoulos V, du Bois RM. Acute interstitial pneumonia. Eur Respir J 2000;15:412–418.92. Vourlekis JS, Brown KK, Cool CD, Young DA, Cherniack RM, King TE, Schwarz MI. Acute interstitial pneumonitis: case series and review of the literature. Medicine (Baltimore) 2000;79:369–378.93. Ichikado K, Suga M, Müller NL, Taniguchi H, Kondoh Y, Akira M, Johkoh T, Mihara N, Nakamura H, Takahashi M, et al. Acute interstitial pneumonia: comparison of high-resolution computed tomography findings betweensurvivors and nonsurvivors. AmJR espir Crit Care Med 2002;165:1551–1556.94. Primack SL, Hartman TE, Ikezoe J, Akira M, Sakatani M, Müller NL. Acute interstitial pneumonia: radiographic and CT findings in nine patients. Radiology 1993;188:817–820.95. Johkoh T, Müller NL, Taniguchi H, Kondoh Y, Akira M, Ichikado K, Ando M, Honda O, Tomiyama N, Nakamura H. Acute interstitial pneumonia: thin-section CT findings in 36 patients. Radiology 1999; 211:859–863.96. Desai SR, Wells AU, Rubens MB, Evans TW, Hansell DM. Acute respiratory distress syndrome: CT abnormalities at long-term follow-up. Radiology 1999;210:29–35.97. Ichikado K, Suga M, Muranaka H, Gushima Y, Miyakawa H, Tsubamoto M, Johkoh T, Hirata N, Yoshinaga T, Kinoshita Y, et al. Prediction of prognosis for acute respiratory distress syndrome with thin-section CT: validation in 44 cases. Radiology 2006;238:321–329.98. Araya J, Kawabata Y, Jinho P, Uchiyama T, Ogata H, Sugita Y. Clinically occult subpleural fibrosis and acute interstitial pneumonia a precursor to idiopathic pulmonary fibrosis? Respirology 2008;13:408–412.99. Rice AJ, Wells AU, Bouros D, du Bois RM, Hansell DM, Polychronopoulos V, Vassilakis D, Kerr JR, Evans TW, Nicholson AG. Terminal diffuse alveolar damage in relation to interstitial pneumonias: an autopsy study. Am J Clin Pathol 2003;119:709–714.100. Song JW, Hong SB, Lim CM, Koh Y, Kim DS. Acute exacerbation of idiopathic pulmonary fibrosis: incidence, risk factors and outcome. Eur Respir J 2011;37:356–363.101. Agarwal R, Jindal SK. Acute exacerbation of idiopathic pulmonary fibrosis: a systematic review. Eur J Intern Med 2008;19:227–235.102. Silva CIS, Müller NL, Fujimoto K, Kato S, Ichikado K, Taniguchi H, Kondoh Y, Johkoh T, Churg A. Acute exacerbation of chronic interstitial pneumonia: high-resolution computed tomography and pathologic findings. J Thorac Imaging 2007;22:221–229.103. Churg A, Müller NL, Silva CIS, Wright JL. Acute exacerbation (acute lung injury of unknown cause) in UIP and other forms of fibrotic interstitial pneumonias. Am J Surg Pathol 2007;31:277–284.104. Suda T, Kaida Y, Nakamura Y, Enomoto N, Fujisawa T, Imokawa S, Hashizume H, Naito T, Hashimoto D, Takehara Y, et al. Acute exacerbation of interstitial pneumonia associated with collagen vascular diseases. Respir Med 2009;103:846–853.105. Park IN, Kim DS, Shim TS, Lim C-M, Lee SD, Koh Y, Kim WS, Kim WD,JangSJ,ColbyTV.Acuteexacerbationofinterstitialpneumonia other than idiopathic pulmonary fibrosis. Chest 2007;132:214–220.106. Miyazaki Y, Tateishi T, Akashi T, Ohtani Y, Inase N, Yoshizawa Y. Clinical predictors and histologic appearance of acute exacerbations in chronic hypersensitivity pneumonitis. Chest 2008;134:1265–1270. OF RESPIRATORY AND CRITICAL CARE MEDICINE VOL 188 2013 107. Collard HR, Moore BB, Flaherty KR, Brown KK, Kaner RJ, King TE Jr, Lasky JA, Loyd JE, Noth I, Olman MA, et al.; Idiopathic Pulmonary Fibrosis Clinical Research Network Investigators. Acute exacerbations of idiopathic pulmonary fibrosis. Am J Respir Crit Care Med 2007;176:636–643.108. Akira M,KozukaT,Yamamoto S, SakataniM.Computedtomography findingsinacuteexacerbationofidiopathicpulmonaryfibrosis.AmJ Respir Crit Care Med 2008;178:372–378.109. Akira M, Hamada H, Sakatani M, Kobayashi C, Nishioka M, Yamamoto S. CT findings during phase of accelerated deterioration in patients with idiopathic pulmonary fibrosis. AJR Am J Roentgenol 1997;168:79–83.110. FujimotoK,TaniguchiH,JohkohT,KondohY,IchikadoK,Sumikawa H, Ogura T, Kataoka K, Endo T, Kawaguchi A, et al. Acute exacerbation of idiopathic pulmonary fibrosis: high-resolution CT scores predict mortality. Eur Radiol 2012;22:83–92.111. Cha SI, Fessler MB, Cool CD, Schwarz MI, Brown KK. Lymphoid interstitial pneumonia: clinical features, associations and prognosis. Eur Respir J 2006;28:364–369.112. Johkoh T, Müller NL, Pickford HA, Hartman TE, Ichikado K, Akira M, Honda O, Nakamura H. Lymphocytic interstitial pneumonia: thin-section CT findings in 22 patients. Radiology 1999;212:567–572.113. Reddy TL, Tominaga M, Hansell DM, von der Thusen J Jr, Rassl D, Parfrey H, Guy S, Twentyman O, Rice A, Maher TM, et al. Pleuroparenchymal fibroelastosis: a spectrum of histopathological and imaging phenotypes. Eur Respir J 2012;40:377–385.114. Becker CD, Gil J, Padilla ML. Idiopathic pleuroparenchymal fibroelastosis: an unrecognized or misdiagnosed entity? Mod Pathol 2008;21:784–787.115. FrankelSK,CoolCD,LynchDA,BrownKK.Idiopathicpleuroparenchymal fibroelastosis: description of a novel clinicopathologic entity. Chest 2004;126:2007–2013.116. von der Thüsen JH, Hansell DM, Tominaga M, Veys PA, Ashworth MT,OwensCM,NicholsonAG.Pleuroparenchymalfibroelastosisin patients with pulmonary disease secondary to bone marrow transplantation. Mod Pathol 2011;24:1633–1639.117. Amitani R, Niimi A, Kuze F. Idiopathic pulmonary upper lobe fibrosis (IPUF) [in Japanese]. Kokyu 1992;11:693–699.118. Watanabe K, Nagata N, Kitasato Y, Wakamatsu K, Nabeshima K, Harada T, Hirota T, Shiraishi M, Fujita M. Rapid decrease in forced vital capacity in patients with idiopathic pulmonary upper lobe fibrosis. Respir Investig 2012;50:88–97.119. Beasley MB, Franks TJ, Galvin JR, Gochuico B, Travis WD. Acute fibrinous and organizing pneumonia: a histological pattern of lung injury and possible variant of diffuse alveolar damage. Arch Pathol Lab Med 2002;126:1064–1070.120. Balduin R, Giacometti C, Saccarola L, Marulli G, Rea F, Bartoli M, Agostini C, Calabrese F. Acute fibrinous and organizing pneumonia inapatientwithcollagenvasculardisease“stigma.”Sarcoidosis Vasc Diffuse Lung Dis 2007;24:78–80.121. HaririLP,Mino-KenudsonM,SheaB,DigumarthyS,OnozatoM,Yagi Y,FraireAE,MatsubaraO,MarkEJ.Distincthistopathologyofacute onset or abrupt exacerbation of hypersensitivity pneumonitis. Hum Pathol 2012;43:660–668.122. Yokogawa N, Alcid DV. Acute fibrinous and organizing pneumonia as ararepresentationofabacavirhypersensitivityreaction. AIDS2007; 21:2116–2117.123. Churg A, Myers J, Suarez T, Gaxiola M, Estrada A, Mejia M, Selman M. Airway-centered interstitial fibrosis: a distinct form of aggressive diffuse lung disease. Am J Surg Pathol 2004;28:62–68.124. Fukuoka J, Franks TJ, Colby TV, Flaherty KR, Galvin JR, Hayden D, Gochuico BR, Kazerooni EA, Martinez F, Travis WD. Peribronchiolar metaplasia:acommonhistologiclesionindiffuselungdiseaseandarare cause of interstitial lung disease: clinicopathologic features of 15 cases. Am J Surg Pathol 2005;29:948–954.125. Yousem SA, Dacic S. Idiopathic bronchiolocentric interstitial pneumonia. Mod Pathol 2002;15:1148–1153.126. Mark EJ, Ruangchira Urai R. Bronchiolitis interstitial pneumonitis: a pathologic study of 31 lung biopsies with features intermediate between bronchiolitis obliterans organizing pneumonia and usual interstitial pneumonitis, with clinical correlation. Ann Diagn Pathol 2008;12:171–180. American Thoracic Society Documents 127. Ryerson CJ, Urbania TH, Richeldi L, Mooney JJ, Lee JS, Jones KD, Elicker BM, Koth LL, King TE Jr, Wolters PJ, et al. Prevalence and prognosisofunclassifiableinterstitiallungdisease.Eur RespirJ2013; 42:750–757.128. Kinder BW, Brown KK, Mc Cormack FX, Ix JH, Kervitsky A, Schwarz MI, King TE Jr. Serum surfactant protein-A is a strong predictor of early mortality in idiopathic pulmonary fibrosis. Chest 2009;135: 1557–1563.129. Satoh H, Kurishima K, Ishikawa H, Ohtsuka M. Increased levels of KL-6 and subsequent mortality in patients with interstitial lung diseases. J Intern Med 2006;260:429–434.130. Prasse A, Probst C, Bargagli E, Zissel G, Toews GB, Flaherty KR, Olschewski M, Rottoli P, Müller-Quernheim J. Serum CC-chemokine ligand 18 concentration predicts outcome in idiopathic pulmonary fibrosis. Am J Respir Crit Care Med 2009;179:717–723.131. Prasse A, Pechkovsky DV, Toews GB, Schäfer M, Eggeling S, Ludwig C, Germann M, Kollert F, Zissel G, Müller-Quernheim J. CCL18 as an indicator of pulmonary fibrotic activity in idiopathic interstitial pneumonias and systemic sclerosis. Arthritis Rheum 2007;56:1685– 1693.132. Ishii H, Mukae H, Kadota J, Kaida H, Nagata T, Abe K, Matsukura S, KohnoS.Highserumconcentrationsofsurfactantprotein Ainusual interstitial pneumonia compared with non-specific interstitial pneumonia. Thorax 2003;58:52–57.133. Ohnishi H, Yokoyama A, Kondo K, Hamada H, Abe M, Nishimura K, HiwadaK,KohnoN.ComparativestudyofKL-6,surfactantprotein-A, surfactant protein-D, and monocyte chemoattractant protein-1 as serum markers for interstitial lung diseases. Am J Respir Crit Care Med 2002;165:378–381.134. Casoni GL, Ulivi P, Mercatali L, Chilosi M, Tomassetti S, Romagnoli M,RavagliaC,GurioliC,GurioliC,ZoliW,etal.Increasedlevelsof free circulating DNA in patients with idiopathic pulmonary fibrosis. Int J Biol Markers 2010;25:229–235.135. Pignatti P, Brunetti G, Moretto D, Yacoub M-R, Fiori M, Balbi B, Balestrino A, Cervio G, Nava S, Moscato G. Role of the chemokine receptors CXCR3 and CCR4 in human pulmonary fibrosis. Am J Respir Crit Care Med 2006;173:310–317.136. Ishii H, Mukae H, Kadota J, Fujii T, Abe K, Ashitani J, Kohno S. Increased levels of interleukin-18 in bronchoalveolar lavage fluid of patients with idiopathic nonspecific interstitial pneumonia. Respiration 2005;72:39–45.137. Choi ES, Pierce EM, Jakubzick C, Carpenter KJ, Kunkel SL, Evanoff H, Martinez FJ, Flaherty KR, Moore BB, Toews GB, et al. Focal interstitial CC chemokine receptor 7 (CCR7) expression in idiopathic interstitial pneumonia. J Clin Pathol 2006;59:28–39.138. Choi ES, Jakubzick C, Carpenter KJ, Kunkel SL, Evanoff H, Martinez FJ, Flaherty KR, Toews GB, Colby TV, Kazerooni EA, et al. Enhanced monocyte chemoattractant protein-3/CC chemokine ligand-7 in usual interstitial pneumonia. Am J Respir Crit Care Med 2004;170:508–515.139. Yang IV, Burch LH, Steele MP, Savov JD, Hollingsworth JW, Mc Elvania-Tekippe E, Berman KG, Speer MC, Sporn TA, Brown KK, et al. Gene expression profiling of familial and sporadic interstitial pneumonia. Am J Respir Crit Care Med 2007;175:45–54.140. Lawson WE, Grant SW, Ambrosini V,Womble KE, Dawson EP, Lane KB, Markin C, Renzoni E, Lympany P, Thomas AQ, et al. Genetic mutations in surfactant protein C are a rare cause of sporadic cases of IPF. Thorax 2004;59:977–980.141. Kim KK, Flaherty KR, Long Q, Hattori N, Sisson TH, Colby TV, Travis WD, Martinez FJ, Murray S, Simon RH. A plasminogen activator inhibitor-1 promoter polymorphism and idiopathic interstitial pneumonia. Mol Med 2003;9:52–56.142. MarkartP,RuppertC,WygreckaM,SchmidtR,KorfeiM,HarbachH, Theruvath I, Pison U, Seeger W, Guenther A, et al. Surfactant protein C mutations in sporadic forms of idiopathic interstitial pneumonias. Eur Respir J 2007;29:134–137.143. Zorzetto M, Ferrarotti I, Campo I, Trisolini R, Poletti V, Scabini R, Ceruti M, Mazzola P, Crippa E, Ottaviani S, et al. NOD2/CARD15 gene polymorphisms in idiopathic pulmonary fibrosis. Sarcoidosis Vasc Diffuse Lung Dis 2005;22:180–185. Hutyrová Drábek Zůrková 144. B, Pantelidis P, J, M, Kolek V, Lenhart K, Welsh KI, Du Bois RM, Petrek M. Interleukin-1 gene cluster 747 polymorphisms in sarcoidosis and idiopathic pulmonary fibrosis. Am J Respir Crit Care Med 2002;165:148–151.145. Renzoni E, Lympany P, Sestini P, Pantelidis P, Wells A, Black C, Welsh K, Bunn C, Knight C, Foley P, et al. Distribution of novel polymorphisms of the interleukin-8 and CXC receptor 1and 2 genes in systemic sclerosis and cryptogenic fibrosing alveolitis. Arthritis Rheum 2000;43:1633–1640.146. Zorzetto M, Ferrarotti I, Trisolini R, Lazzari Agli L, Scabini R, Novo M, De Silvestri A, Patelli M, Martinetti M, Cuccia M, et al. Complement receptor 1 gene polymorphisms are associated with idiopathic pulmonary fibrosis. Am J Respir Crit Care Med 2003; 168:330–334.147. Hodgson U, Tukiainen P, Laitinen T. The polymorphism C5507G of complement receptor 1 does not explain idiopathic pulmonary fibrosis among the Finns. Respir Med 2005;99:265–267.148. Kubistova Z, Mrazek F, Lympany PA, Lagan AL, Arakelyan A, Kriegova E, Welsh KI, Kolek V, Zatloukal J, Hutyrova B, et al. The CR1 C5507G polymorphism is not involved in susceptibility to idiopathic pulmonary fibrosis in two European populations. Tissue Antigens 2008;72:483–486.149. Mushiroda T, Wattanapokayakit S, Takahashi A, Nukiwa T, Kudoh S, Ogura T, Taniguchi H, Kubo M, Kamatani N, Nakamura Y; Pirfenidone Clinical Study Group. A genome-wide association study identifies an association of a common variant in TERT with susceptibility to idiopathic pulmonary fibrosis. J Med Genet 2008;45: 654–656.150. SelmanM,LinH-M,Montan˜oM,JenkinsAL,EstradaA,LinZ,Wang G, Di Angelo SL, Guo X, Umstead TM, et al. Surfactant protein A and B genetic variants predispose to idiopathic pulmonary fibrosis. Hum Genet 2003;113:542–550.151. Falfán-Valencia R, Camarena A, Juárez A, Becerril C, Montan˜o M, Cisneros J, Mendoza F, Granados J, Pardo A, Selman M. Major histocompatibility complex and alveolar epithelial apoptosis in idiopathic pulmonary fibrosis. Hum Genet 2005;118:235–244.152. ChecaM,RuizV,Montan˜oM,Velázquez-CruzR,SelmanM,PardoA. MMP-1polymorphismsandtheriskofidiopathicpulmonaryfibrosis. Hum Genet 2008;124:465–472.153. Matsushima H, Takayanagi N, Sakamoto T, Kawata I, Motegi M, Ubukata M, Yanagisawa T, Sugita Y, Kanazawa M, Kawabata Y. Pathologic findings bothbeforeand after steroidtherapyinacase of desquamative interstitial pneumonia [article in Japanese]. Nihon Kokyuki Gakkai Zasshi 2001;39:609–614.154. Latsi PI, du Bois RM, Nicholson AG, Colby TV, Bisirtzoglou D, Nikolakopoulou A, Veeraraghavan S, Hansell DM, Wells AU. Fibrotic idiopathic interstitial pneumonia: the prognostic value of longitudinal functional trends. Am J Respir Crit Care Med 2003; 168:531–537.155. Takahashi H, Fujishima T, Koba H, Murakami S, Kurokawa K, Shibuya Y, Shiratori M, Kuroki Y, Abe S. Serum surfactant proteins A and D as prognostic factors in idiopathic pulmonary fibrosis and their relationship to disease extent. Am J Respir Crit Care Med 2000;162:1109–1114.156. Greene KE, King TE Jr, Kuroki Y, Bucher-Bartelson B, Hunninghake GW,NewmanLS,NagaeH,MasonRJ.Serumsurfactantproteins-A and -D as biomarkers in idiopathic pulmonary fibrosis. Eur Respir J 2002;19:439–446.157. Yokoyama A, Kondo K, Nakajima M, Matsushima T, Takahashi T, Nishimura M, Bando M, Sugiyama Y, Totani Y, Ishizaki T, et al. PrognosticvalueofcirculatingKL-6inidiopathicpulmonaryfibrosis. Respirology 2006;11:164–168.158. Takahashi H, Shiratori M, Kanai A, Chiba H, Kuroki Y, Abe S. Monitoring markers of disease activity for interstitial lung diseases with serum surfactant proteins A and D. Respirology 2006;11:S51– S54.159. Daniil ZD, Papageorgiou E, Koutsokera A, Kostikas K, Kiropoulos T, Papaioannou AI, Gourgoulianis KI. Serum levels of oxidative stress as a marker of disease severity in idiopathic pulmonary fibrosis. Pulm Pharmacol Ther 2008;21:26–31.160. Rosas IO, Richards TJ, Konishi K, Zhang Y, Gibson K, Lokshin AE, Lindell KO,Cisneros J,Macdonald SD,PardoA,SciurbaF,Dauber J, Selman M, Gochuico BR, Kaminski N. MMP1 and MMP7 as 748 AMERICAN JOURNAL OF RESPIRATORY AND CRITICAL CARE MEDICINE VOL 188 2013 potential peripheral blood biomarkers in idiopathic pulmonary 163. Mc Keown S, Richter AG, O’Kane C, Mc Auley DF, Thickett DR. fibrosis. PL o S Med 2008; 5: e 93. MMP expression and abnormal lung permeability are important 161. Gilani SR, Vuga LJ, Lindell KO, Gibson KF, Xue J, Kaminski N, determinants of outcome in IPF. Eur Respir J 2009; 33: 77–84. Valentine VG, Lindsay EK, George MP, Steele C, et al. CD 28 164. Shinoda H, Tasaka S, Fujishima S, Yamasawa W, Miyamoto K, Nakano down-regulation on circulating CD 4 T-cells is associated with poor Y, Kamata H, Hasegawa N, Ishizaka A. Elevated CC chemokinelevel prognoses of patients with idiopathic pulmonary fibrosis. PL o S One in bronchoalveolar lavage fluid is predictive of a poor outcome of 2010; 5: e 8959. idiopathic pulmonary fibrosis. Respiration 2009; 78: 285–292. 162. Richards TJ, Kaminski N, Baribaud F, Flavin S, Brodmerkel C, Horowitz 165. Richter AG, Mc Keown S, Rathinam S, Harper L, Rajesh P, Mc Auley D, Li K, Choi J, Vuga LJ, Lindell KO, Klesen M, Zhang Y, Gibson DF, Heljasvaara R, Thickett DR. Soluble endostatin is a novel KF. Peripheral blood proteins predict mortality in idiopathic inhibitor of epithelial repair in idiopathic pulmonary fibrosis. pulmonary fibrosis. Am J Respir Crit Care Med 2012; 185: 67–76. Thorax 2009; 64: 156–161."
+  },
+  "n_patients": 17,
+  "outcomes": [],
   "recommendations": [],
   "conflicts_of_interest": [],
+  "has_no_conflicts": false,
   "funding_sources": [],
+  "has_no_funding": false,
   "tables": [],
-  "figures": [],
+  "figures": [
+    {
+      "label": "Figure 4",
+      "caption": "and molecular studies may revolutionize the approach and Table 2).. Sixth, a clinical disease behavior classification is pro-\nto diagnosis and classification of the IIP s.. posed.",
+      "page": 2
+    },
+    {
+      "label": "Figure 1",
+      "caption": "Atypicalusualintersti-\ntialpneumonia/idiopathicpul-\nmonary fibrosis.. Computed\ntomography (CT) features: (A)\nCT image of atypical usual in-\n4 C/FPO\nterstitialpneumonia(UIP).. Prone\naxial CT through the lung bases\nin a patient with histologically\nproven UIP shows predominantly\nperibronchovascularground-glass/\nreticular opacities with traction\nbronchiectasis.",
+      "page": 3
+    },
+    {
+      "label": "Figure 2",
+      "caption": "Nonspecific intersti-\ntial pneumonia.. Computed to-\nmography (CT) features: (A)\nAxialand(B)coronal CT recon-\n4 C/FPO structions show confluent bi-\nlateral lower lobe ground-\nglass opacities with marked\ntraction bronchiectasis and\nlower lobe volume loss.. The\nperibronchovascular predomi-\nnance with subpleural sparing\nis well shown on the axial im-\nage.",
+      "page": 3
+    },
+    {
+      "label": "Figure 3",
+      "caption": "Respiratorybronchiolitis–\ninterstitial lung disease.. (A)\nAxial and (B) coronal computed\ntomography (CT) reconstruc-\n4 C/FPO\ntions in a 47-year-old heavy cig-\narette smoker show moderately\nextensive ground-glass opacities\nandcentrilobularnodules(circles).. The bronchi are markedly thick-\nwalled and there is minimal em-\nphysema.",
+      "page": 4
+    },
+    {
+      "label": "Figure 4",
+      "caption": "Cryptogenic organizing\npneumonia.. Computed to-\nmography (CT) features with\n(A) peripheral consolidation\nand air bronchograms, (B)\nbronchocentric distribution,\n(C) perilobular pattern show-\ning focal right lower lobe con-\nsolidation, with more central\nground-glass opacity, corre-\nsponding to the reversed\nhalo sign, and (D) bandlike\nconsolidation.. Coexisting Patterns risk of developing pulmonary hypertension, which portends poor\nprognosis (43–46).",
+      "page": 5
+    },
+    {
+      "label": "Figure 5",
+      "caption": "Fibrotic hypersensi-\ntivity pneumonitis.. (A) Axial\nand (B) coronal computed\ntomography(CT)reconstructions\n4 C/FPO\nin a 76-year-old bird-keeper with\nprogressive shortness of breath\nover 6 years show upper lung–\npredominant subpleural retic-\nulation with some confluent\nareas of dense opacification,\ntraction bronchiectasis, and\npatchy ground-glass opacities.. Honeycombing is not identified.",
+      "page": 6
+    },
+    {
+      "label": "Figure 6",
+      "caption": "Acute exacerbation\nof idiopathic pulmonary fibro-\nsis (IPF).. Computed tomogra-\nphy (CT) features: (A) Axial\nimage through the upper\nlungs at baseline shows mild\n4 C/FPO\nperipheral, basal predominant\nreticular abnormality without\nhoneycombing and mild em-\nphysema.. (B) Axial image dur-\ning an acute exacerbation 4\nmonths later shows extensive\nnewbilateralground-glassopac-\nities, with some superimposed\nreticular abnormality.",
+      "page": 7
+    },
+    {
+      "label": "Figure 4",
+      "caption": "C) may be helpful in suggesting the diagnosis (85, 86).. patterns of interstitial fibrosing and emphysema.. Small unilateral or bilateral pleural effusion may occur in\n10–30% of patients(83, 84, 86).",
+      "page": 7
+    },
+    {
+      "label": "Figure 7",
+      "caption": "Pleuroparenchymal\nfibroelastosis.. Computed to-\nmography (CT) features: (A)\nHigh-resolution computed to-\nmography (HRCT) through\nthe upper lobes shows irregu-\nlar pleural-based opacities and\na reticular pattern associated\nwith parenchymal distortion.. The pleura and lungs in the\nlower lobes appeared normal.",
+      "page": 7
+    },
+    {
+      "label": "Figure 8",
+      "caption": "Pleuroparenchymal\nfibroelastosis.. (A) Low power\nshows pleural thickening and\nsubpleural fibrosis.. (B) Dense\nmassesofelasticfibersarehigh-\nlighted beneath the fibrotically\nthickened pleura (elastic stain).",
+      "page": 8
+    },
+    {
+      "label": "Figure 9",
+      "caption": "Acute fibrinous and\norganizing pneumonia. Com-\n4 C/FPO puted tomography (CT) fea-\ntures. (A) Axial CT through\nthe lung bases shows multiple\npoorly defined nodules and\nareas of consolidation, with\nperibronchovascular and basal\npredominance. Pleural and\npericardial effusions are pres-\nent. Histologic features: (B) Bi-\nopsy shows nodules of alveolar\nfibrin and organizing pneumo-\nnia. (C) The histology is domi-\nnated by intraalveolar plugs of\nalveolar fibrin.",
+      "page": 8
+    },
+    {
+      "label": "Figure 9",
+      "caption": "A).. The dominant histo-\nfor stabilization (e.. g.",
+      "page": 9
+    }
+  ],
   "references": [
     "Gilead (no payments), Intermune (no payments), and Perceptive Imaging",
     "1. American Thoracic Society, European Respiratory Society. American",
@@ -85,7 +445,7 @@
     "reported serving as a speaker and on advisory committees of Intermune ($5, 000– disease. Thorax 2004; 59: 500–505. 24, 999); heservedonadvisorycommitteesof Boehringer Ingelheim($5, 000–24, 999) 6. Thomeer M, Demedts M, Behr J, Buhl R, Costabel U, Flower CDR,",
     "and received research support from Boehringer Ingelheim ($5, 000–24, 999). B. C.",
     "Verschakelen J, Laurent F, Nicholson AG, Verbeken EK, et al. ;",
-    "reported consulting for Sanofi ($1–4, 999) and serving on advisory committees of",
+    "reported consulting for Sanofi($1–4, 999) and serving on advisory committees of",
     "Idiopathic Pulmonary Fibrosis International Group Exploring N-",
     "Astra Zeneca ($1, 000–4, 999) and Intermune ($1–4, 999); he was a speaker for Inter-",
     "mune ($1–4, 999) and Stallergenes ($1–4, 999), and received research support from Acetylcysteine I Annual (IFIGENIA) Study Group. Multidisciplinary",
@@ -130,8 +490,7 @@
     "18. Hanak V, Golbin JM, Ryu JH. Causes and presenting features in 85 1576–1577.",
     "consecutive patients with hypersensitivity pneumonitis. Mayo Clin 38. Lawson WE, Loyd JE, Degryse AL. Genetics in pulmonary fibrosis—",
     "Proc 2007; 82: 812–816. familial cases provide clues to the pathogenesis of idiopathic",
-    "19. Felício CH, Parra ER, Capelozzi VL. Idiopathic and collagen vascular",
-    "pulmonary fibrosis. Am J Med Sci 2011; 341: 439–443.",
+    "19. Felício CH, Parra ER, Capelozzi VL. Idiopathic and collagen vascular pulmonary fibrosis. Am J Med Sci 2011; 341: 439–443.",
     "disease nonspecific interstitial pneumonia: clinical significance of 39. Monaghan H, Wells AU, Colby TV, du Bois RM, Hansell DM,",
     "remodeling process. Lung 2007; 185: 39–46. Nicholson AG. Prognostic implications of histologic patterns in",
     "20. Park JH, Kim DS, Park IN, Jang SJ, Kitaichi M, Nicholson AG, Colby multiple surgical lung biopsies from patients with idiopathic",
@@ -228,28 +587,28 @@
     "nonspecific interstitial pneumonia/fibrosis: comparison with idiopathic",
     "North American experience. Chest 1992; 102(1, Suppl)8 S–13 S.",
     "pulmonary fibrosis and BOOP. Eur Respir J 1998; 12: 1010–1019.",
-    "ü 79. Lee JW, Lee KS, Lee HY, Chung MP, Yi CA, Kim TS, Chung MJ. 59. Johkoh T, M ller NL, Colby TV, Ichikado K, Taniguchi H, Kondoh Y,",
+    "Müller 79. Lee JW, Lee KS, Lee HY, Chung MP, Yi CA, Kim TS, Chung MJ. 59. Johkoh T, NL, Colby TV, Ichikado K, Taniguchi H, Kondoh Y,",
     "Cryptogenic organizing pneumonia: serial high-resolution CT find-",
     "Fujimoto K, Kinoshita M, Arakawa H, Yamada H, et al. Nonspecific",
     "ings in 22 patients. AJR Am J Roentgenol 2010; 195: 916–922.",
     "interstitial pneumonia: correlation between thin-section CT findings",
     "80. Sen T, Udwadia ZF. Cryptogenicorganizingpneumonia: clinicalprofile",
     "and pathologic subgroups in 55 patients. Radiology 2002; 225: 199–204.",
-    "ü in a series of 34 admitted patients in a hospital in India. J Assoc",
-    "60. Johkoh T, M ller NL, Cartier Y, Kavanagh PV, Hartman TE, Akira M,",
+    "Müller in a series of 34 admitted patients in a hospital in India. J Assoc",
+    "60. Johkoh T, NL, Cartier Y, Kavanagh PV, Hartman TE, Akira M,",
     "Physicians India 2008; 56: 229–232.",
     "Ichikado K, Ando M, Nakamura H. Idiopathic interstitial",
-    "81. Oymak FS, Demirbaş HM, Mavili E, Akgun H, Gulmez I, Demir R,",
+    "Demirbaş",
+    "81. Oymak FS, HM, Mavili E, Akgun H, Gulmez I, Demir R,",
     "pneumonias: diagnostic accuracy of thin-section CT in 129 patients.",
     "Radiology Ozesmi M. Bronchiolitis obliterans organizing pneumonia: clinical",
     "1999; 211: 555–560. 61. Nishiyama O, Kondoh Y, Taniguchi H, Yamaki K, Suzuki R, Yokoi T, androentgenologicalfeaturesin 26 cases. Respiration 2005; 72: 254–262. 82. Lee JS, Lynch DA, Sharma S, Brown KK, Müller NL. Organizing",
-    "Takagi K. Serialhighresolution CT findingsinnonspecificinterstitial",
+    "Takagi K. Serialhighresolution CTfindingsinnonspecificinterstitial",
     "pneumonia/fibrosis. J Comput Assist Tomogr 2000; 24: 41–46. pneumonia: prognostic implication of high-resolution computed to-",
     "62. Mac Donald SL, Rubens MB, Hansell DM, Copley SJ, Desai SR, du Bois mography features. J Comput Assist Tomogr 2003; 27: 260–265. 83. Lee KS, Kullnig P, Hartman TE, Müller NL. Cryptogenic organizing",
     "RM, Nicholson AG, Colby TV, Wells AU. Nonspecific interstitial",
     "pneumonia and usual interstitial pneumonia: comparative appearances pneumonia: CT findings in 43 patients. AJR Am J Roentgenol 1994;",
-    "atanddiagnosticaccuracyofthin-section CT. Radiology 2001; 221: 600–605. 162: 543–546. 84. Müller NL, Staples CA, Miller RR. Bronchiolitis obliterans organizing",
-    "63. Akira M, Inoue Y, Arai T, Okuma T, Kawata Y. Long-term follow-up",
+    "atanddiagnosticaccuracyofthin-section CT. Radiology 2001; 221: 600–605. 162: 543–546. 63. Akira M, Inoue Y, Arai T, Okuma T, Kawata Y. Long-term follow-up 84. Müller NL, Staples CA, Miller RR. Bronchiolitis obliterans organizing",
     "high-resolution CT findings in non-specific interstitial pneumonia. pneumonia: CT features in 14 patients. AJR Am J Roentgenol 1990;",
     "Thorax 2011; 66: 61–65. 154: 983–987. 64. Katzenstein AL, Fiorelli RF. Nonspecific interstitial pneumonia/ 85. Ujita M, Renzoni EA, Veeraraghavan S, Wells AU, Hansell DM.",
     "fibrosis: histologic features and clinical significance. Am J Surg Organizing pneumonia: perilobular pattern at thin-section CT. Ra-",
@@ -285,7 +644,7 @@
     "TE, Schwarz MI. Acute interstitial pneumonitis: case series and",
     "113. Reddy TL, Tominaga M, Hansell DM, von der Thusen J Jr, Rassl D,",
     "review of the literature. Medicine (Baltimore) 2000; 79: 369–378.",
-    "ü Parfrey H, Guy S, Twentyman O, Rice A, Maher TM, et al. 93. Ichikado K, Suga M, M ller NL, Taniguchi H, Kondoh Y, Akira M,",
+    "Parfrey H, Guy S, Twentyman O, Rice A, Maher TM, et al. 93. Ichikado K, Suga M, Müller NL, Taniguchi H, Kondoh Y, Akira M,",
     "Pleuroparenchymal fibroelastosis: a spectrum of histopathological",
     "Johkoh T, Mihara N, Nakamura H, Takahashi M, et al. Acute",
     "and imaging phenotypes. Eur Respir J 2012; 40: 377–385.",
@@ -293,8 +652,7 @@
     "114. Becker CD, Gil J, Padilla ML. Idiopathic pleuroparenchymal",
     "mography findings betweensurvivors and nonsurvivors. Am JR espir",
     "fibroelastosis: an unrecognized or misdiagnosed entity? Mod Pathol",
-    "Crit Care Med 2002; 165: 1551–1556.",
-    "ü 2008; 21: 784–787. 94. Primack SL, Hartman TE, Ikezoe J, Akira M, Sakatani M, M ller NL. 115. Frankel SK, Cool CD, Lynch DA, Brown KK. Idiopathicpleuroparenchymal",
+    "Crit Care Med 2002; 165: 1551–1556. 2008; 21: 784–787. 94. Primack SL, Hartman TE, Ikezoe J, Akira M, Sakatani M, Müller NL. 115. Frankel SK, Cool CD, Lynch DA, Brown KK. Idiopathicpleuroparenchymal",
     "Acute interstitial pneumonia: radiographic and CT findings in nine",
     "fibroelastosis: description of a novel clinicopathologic entity. Chest",
     "patients. Radiology 1993; 188: 817–820. 2004; 126: 2007–2013. 95. Johkoh T, Müller NL, Taniguchi H, Kondoh Y, Akira M, Ichikado K,",
@@ -460,7 +818,8 @@
     "Ceruti M, Mazzola P, Crippa E, Ottaviani S, et al. NOD 2/CARD 15 as a marker of disease severity in idiopathic pulmonary fibrosis.",
     "gene polymorphisms in idiopathic pulmonary fibrosis. Sarcoidosis Pulm Pharmacol Ther 2008; 21: 26–31.",
     "Vasc Diffuse Lung Dis 2005; 22: 180–185. 160. Rosas IO, Richards TJ, Konishi K, Zhang Y, Gibson K, Lokshin AE,",
-    "144. Hutyrová B, Pantelidis P, Drábek J, Zůrková M, Kolek V, Lenhart K, Lindell KO, Cisneros J, Macdonald SD, Pardo A, Sciurba F, Dauber",
+    "Hutyrová Drábek Zůrková",
+    "144. B, Pantelidis P, J, M, Kolek V, Lenhart K, Lindell KO, Cisneros J, Macdonald SD, Pardo A, Sciurba F, Dauber",
     "Welsh KI, Du Bois RM, Petrek M. Interleukin-1 gene cluster J, Selman M, Gochuico BR, Kaminski N. MMP 1 and MMP 7 as",
     "748 AMERICAN JOURNAL OF RESPIRATORY AND CRITICAL CARE MEDICINE VOL 188 2013",
     "potential peripheral blood biomarkers in idiopathic pulmonary 163. Mc Keown S, Richter AG, O’Kane C, Mc Auley DF, Thickett DR.",
@@ -474,23 +833,61 @@
     "KF. Peripheral blood proteins predict mortality in idiopathic inhibitor of epithelial repair in idiopathic pulmonary fibrosis.",
     "pulmonary fibrosis. Am J Respir Crit Care Med 2012; 185: 67–76. Thorax 2009; 64: 156–161."
   ],
+  "umls_entities": [],
+  "relations": [],
   "_metrics": {
     "page_count": 16,
     "unique_pages_seen": 16,
     "unique_pages_ratio": 1.0,
-    "extracted_chars": 90458,
-    "duration_s": 1.9502360820770264
+    "extracted_chars": 90374,
+    "duration_s": 1.073911428451538,
+    "coverage_ratio": 1.0,
+    "sections_count": 1,
+    "doc_subtype": "research",
+    "tables_kept": 0,
+    "recommendations_count": 0,
+    "diagnostic_yield_present": false,
+    "umls_entities": 0,
+    "relations_count": 0
   },
-  "_engine": "pdfplumber",
+  "_engine": "pymupdf",
   "_mode": "full",
   "_cache_used": false,
   "_pipeline_metadata": {
-    "generator": "medparse",
-    "pipeline_version": "1.1.0",
-    "engine": "pdfplumber",
+    "profile": "enriched",
+    "engines_requested": [
+      "pymupdf",
+      "pdfplumber"
+    ],
+    "engine_used": "pymupdf",
     "mode": "full",
     "cache_used": false,
-    "config_hash": "b8adc4b1",
-    "content_hash": "1372ece31d58"
+    "ocr_used_pages": [],
+    "coverage_ratio": 1.0,
+    "page_count": 16,
+    "timestamp": "2025-10-27T21:02:40.617461",
+    "version": "v1.0.0",
+    "warnings": [],
+    "emit": {
+      "evidence_max_chars": 600,
+      "table_cell_max_chars": 600,
+      "max_tables": 50,
+      "max_json_bytes": 8000000
+    },
+    "umls_status": "skipped_model_missing",
+    "umls": "skipped_model_missing",
+    "umls_entities_count": 0,
+    "doc_subtype": "research",
+    "emit_raw_pages": false,
+    "generator": "medparse",
+    "pipeline_version": "1.1.0",
+    "engine": "pymupdf",
+    "config_hash": "44bcfbde",
+    "content_hash": "1372ece31d58",
+    "validators": {
+      "passed": true,
+      "warnings": [],
+      "errors": []
+    }
   }
 }

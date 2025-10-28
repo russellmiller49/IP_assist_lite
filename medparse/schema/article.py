@@ -66,6 +66,7 @@ class DiagnosticYield(MedparseModel):
     """ATS-compliant diagnostic yield with denominator provenance."""
 
     value: Optional[float] = Field(default=None, ge=0.0, le=100.0)
+    reported_value: Optional[float] = Field(default=None, ge=0.0, le=1.0)
     lower_ci: Optional[float] = None
     upper_ci: Optional[float] = None
     numerator: Optional[int] = Field(default=None, ge=0)
@@ -77,6 +78,7 @@ class DiagnosticYield(MedparseModel):
     pooling_method: Optional[Literal["fixed_effects", "weighted"]] = None
     strata: List[Dict] = Field(default_factory=list)  # Individual stratum yields
     compatible_with_ats: bool = False
+    strict: bool = True
     evidence: Optional[EvidenceSpan] = None
 
     @property
@@ -94,13 +96,14 @@ class DiagnosticYield(MedparseModel):
         return self.denominator
 
 
-class Recommendation(MedparseModel):
+class GuidelineRecommendation(MedparseModel):
     """Guideline recommendation with grade, strength, and statement type."""
 
     label: Optional[str] = None  # e.g., "1", "1.1", "A"
     text: str
     grade: Optional[str] = None  # Original grade string
     strength: Optional[str] = None  # Normalized: "strong", "weak", "conditional"
+    strength_scale: Optional[str] = None  # Scale name e.g., GRADE, ACCP
     evidence_level: Optional[str] = None  # Level I-IV or High/Moderate/Low
     statement_type: Literal["graded", "consensus", "good_practice", "ungraded"] = "graded"
     votes: Optional[str] = None  # e.g., "15/17 agreed"
@@ -128,6 +131,7 @@ class EnhancedTable(MedparseModel):
     footnotes: List[TableFootnote] = Field(default_factory=list)
     page: Optional[int] = None
     table_type: Optional[str] = None  # From classifier
+    truncated_cells: bool = False
 
 
 class ArticleFigure(MedparseModel):
@@ -150,6 +154,7 @@ class ArticleDocument(BaseDocument):
     """Structured representation of a research article extraction."""
 
     doc_type: Literal["article"] = Field(default="article", frozen=True)
+    doc_subtype: Optional[Literal["guideline", "research", "review"]] = None
 
     # Title and metadata (enhanced)
     title: Optional[str] = None
@@ -187,7 +192,7 @@ class ArticleDocument(BaseDocument):
     diagnostic_yield: Optional[DiagnosticYield] = None
 
     # Guidelines (enhanced)
-    recommendations: List[Recommendation] = Field(default_factory=list)
+    recommendations: List[GuidelineRecommendation] = Field(default_factory=list)
 
     # Disclosures (enhanced)
     conflicts_of_interest: List[str] = Field(default_factory=list)

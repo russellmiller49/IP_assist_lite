@@ -57,7 +57,17 @@ def extract_textbook_chapter(
     book_meta_payload = load_book_metadata(pdf_path.parent)
     if book_meta_payload:
         try:
-            book_meta = BookMeta.model_validate(book_meta_payload)
+            # Map JSON fields to schema fields
+            normalized_payload = {
+                "book_title": book_meta_payload.get("book_title", ""),
+                "edition": book_meta_payload.get("edition", ""),
+                "publisher": book_meta_payload.get("publisher"),
+                "isbn": book_meta_payload.get("isbn", ""),
+                "year": book_meta_payload.get("year") or _extract_year(book_meta_payload.get("publication_year")),
+                "book_doi": book_meta_payload.get("book_doi") or book_meta_payload.get("doi"),
+                "editors": book_meta_payload.get("editors", []) or book_meta_payload.get("editors_or_authors", []),
+            }
+            book_meta = BookMeta.model_validate(normalized_payload)
         except Exception as exc:  # pragma: no cover - defensive
             LOGGER.debug("Invalid book metadata for %s: %s", pdf_path, exc)
             book_meta = None
@@ -85,6 +95,16 @@ def _strip_page_furniture(pages: Sequence[PageData]) -> None:
     for page, clean_lines in zip(pages, cleaned, strict=False):
         page.lines = clean_lines
         page.text = "\n".join(clean_lines)
+
+
+def _extract_year(value: Optional[str]) -> Optional[int]:
+    """Extract year as integer from string."""
+    if not value:
+        return None
+    try:
+        return int(str(value).strip())
+    except (ValueError, AttributeError):
+        return None
 
 
 def _derive_chapter_title(pages: Sequence[PageData], pdf_path: Path) -> tuple[str, Optional[str]]:

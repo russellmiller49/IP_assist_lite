@@ -12,17 +12,25 @@ from medparse.normalize.article_frontmatter import (
     extract_authors_affiliations,
     extract_coi_and_funding,
     extract_doi,
+    extract_bibliographic_metadata,
     extract_title_hierarchical,
 )
 from medparse.normalize.article_sections import normalize_article_sections
 from medparse.normalize.article_yield_ats import DiagnosticYieldATS, extract_ats_compliant_yield
 from medparse.normalize.figures_captions import FigureBlock, extract_figures_and_captions
-from medparse.normalize.guideline_grades import GuidelineRecommendation, parse_guideline_recommendations
+from medparse.normalize.guideline_grades import (
+    GuidelineRecommendation as ParsedGuidelineRecommendation,
+    parse_guideline_recommendations,
+)
 from medparse.normalize.outcomes import OutcomeData, extract_outcomes
 from medparse.normalize.page_furniture import strip_furniture
-from medparse.normalize.relations import RelationRecord, build_relations
+from medparse.normalize.relations import RelationRecord, build_cooccurrence, build_relations
 from medparse.normalize.tables_classifier import TableBlock, classify_and_gate_tables
-from medparse.normalize.umls_linking import UmlsEntity as UmlsEntityRecord, link_umls_entities
+from medparse.normalize.umls_linking import (
+    UmlsEntity as UmlsEntityRecord,
+    UmlsLinkingResult,
+    link_umls_entities,
+)
 from medparse.normalize.references import normalize_references
 from medparse.normalize.yields import yield_from_text
 from medparse.schema.article import (
@@ -33,8 +41,8 @@ from medparse.schema.article import (
     DiagnosticYield,
     EnhancedTable,
     GrantInfo,
+    GuidelineRecommendation,
     Outcome,
-    Recommendation,
 )
 from medparse.schema.common import EvidenceSpan, Relation, UmlsEntity
 from medparse.utils.log import get_logger
@@ -63,6 +71,7 @@ def extract_article(
 
     title_info = extract_title_hierarchical(pages)
     doi = extract_doi(pages[:2])
+    biblio = extract_bibliographic_metadata(pages)
     frontmatter = extract_authors_affiliations(pages)
     authors = _build_authors(frontmatter)
     affiliations = _build_affiliations(frontmatter.get("affiliations", []))
@@ -70,8 +79,11 @@ def extract_article(
     table_blocks = _maybe_classify_tables(pages, extraction_config)
     outcomes = _maybe_extract_outcomes(sections, table_blocks, extraction_config)
     diagnostic_yield = _maybe_extract_yield(sections, table_blocks, extraction_config)
-    recommendations = _maybe_extract_recommendations(sections, pages, extraction_config)
+    recommendations_raw = _maybe_extract_recommendations(sections, pages, extraction_config)
+    recommendations = _map_recommendations(recommendations_raw)
     figures = _maybe_extract_figures(pages, extraction_config)
+
+    doc_subtype = _infer_doc_subtype(title_info, sections, recommendations)
 
     yield_data = yield_from_text(flat_lines)
     references = normalize_references(
@@ -85,11 +97,11 @@ def extract_article(
         GrantInfo(agency=statement) for statement in funding_statements if statement != "None"
     ]
 
-    umls_records = (
-        link_umls_entities([(page.number, page.text) for page in pages])
-        if extraction_config.should_enrich_umls()
-        else []
-    )
+    if extraction_config.should_enrich_umls():
+        umls_result = link_umls_entities([(page.number, page.text) for page in pages])
+    else:
+        umls_result = UmlsLinkingResult(status="skipped_disabled", entities=[])
+    umls_records = umls_result.entities
 
     relation_records = (
         build_relations(
@@ -100,6 +112,13 @@ def extract_article(
         if extraction_config.should_extract_relations()
         else []
     )
+    if extraction_config.should_extract_relations() and umls_records:
+        relation_records.extend(
+            build_cooccurrence(
+                [record.model_dump() for record in umls_records],
+                window="page",
+            )
+        )
 
     document = ArticleDocument(
         source_file=str(pdf_path),
@@ -108,6 +127,10 @@ def extract_article(
         title_confidence=title_info.get("confidence", 0.0),
         title_source=title_info.get("source"),
         doi=doi,
+        journal=biblio.get("journal"),
+        year=biblio.get("year"),
+        volume=biblio.get("volume"),
+        issue=biblio.get("issue"),
         sections=sections,
         abstract=sections.get("abstract"),
         authors=authors,
@@ -119,7 +142,8 @@ def extract_article(
         tables=_map_tables(table_blocks),
         outcomes=_map_outcomes(outcomes),
         diagnostic_yield=_map_yield(diagnostic_yield, yield_data),
-        recommendations=_map_recommendations(recommendations),
+        recommendations=recommendations,
+        doc_subtype=doc_subtype,
         figures=_map_figures(figures),
         umls_entities=_map_umls_entities(umls_records),
         relations=_map_relations(relation_records),
@@ -127,6 +151,13 @@ def extract_article(
         n_lesions=_as_int(yield_data.get("n_lesions")),
         references=references,
     )
+
+    document.pipeline_info["umls_status"] = umls_result.status
+    document.pipeline_info["umls"] = umls_result.status
+    if umls_result.model_name:
+        document.pipeline_info.setdefault("umls_model", umls_result.model_name)
+    document.pipeline_info["umls_entities_count"] = len(umls_records)
+    document.pipeline_info["doc_subtype"] = doc_subtype
 
     return document
 
@@ -225,7 +256,7 @@ def _maybe_extract_recommendations(
     sections: dict[str, str],
     pages: Sequence[PageData],
     config: ExtractionConfig,
-) -> List[GuidelineRecommendation]:
+) -> List[ParsedGuidelineRecommendation]:
     if not config.should_normalize_guidelines():
         return []
     return parse_guideline_recommendations(sections, list(pages))
@@ -303,10 +334,19 @@ def _map_yield(
             value = pct
         if value is None:
             return None
+        exclusion_reasons: List[str] = []
+        if numerator is None:
+            exclusion_reasons.append("no_numerator_in_text")
+        if denominator is None:
+            exclusion_reasons.append("no_denominator_in_text")
+
         return DiagnosticYield(
             value=value,
+            reported_value=(value / 100.0) if value is not None else None,
             numerator=int(numerator) if numerator is not None else None,
             denominator=int(denominator) if denominator is not None else None,
+            strict=False,
+            exclusion_reasons=exclusion_reasons,
         )
     evidence = (
         EvidenceSpan(text=data.evidence.text, confidence=data.evidence.confidence)
@@ -315,6 +355,7 @@ def _map_yield(
     )
     return DiagnosticYield(
         value=data.yield_pct,
+        reported_value=(data.yield_pct / 100.0) if data.yield_pct is not None else None,
         numerator=data.numerator,
         denominator=data.denominator,
         lower_ci=data.ci_lower,
@@ -322,25 +363,30 @@ def _map_yield(
         exclusion_reasons=data.exclusion_reasons,
         method_note=data.definition,
         compatible_with_ats=data.compatible_with_ats,
+        strict=data.strict,
         evidence=evidence,
     )
 
 
-def _map_recommendations(items: Sequence[GuidelineRecommendation]) -> List[Recommendation]:
-    mapped: List[Recommendation] = []
+def _map_recommendations(
+    items: Sequence[ParsedGuidelineRecommendation],
+) -> List[GuidelineRecommendation]:
+    mapped: List[GuidelineRecommendation] = []
     for item in items:
         evidence = EvidenceSpan(text=item.text[:200], page=item.page, confidence=0.7)
         mapped.append(
-            Recommendation(
-                label=item.number,
+            GuidelineRecommendation(
+                label=getattr(item, "number", None),
                 text=item.text,
-                grade=item.grade,
-                strength=item.strength_scale,
-                evidence_level=item.evidence_level,
-                votes=item.voting_results,
-                consensus_percentage=item.consensus_percentage,
+                grade=getattr(item, "grade", None),
+                strength=getattr(item, "strength", None),
+                strength_scale=getattr(item, "strength_scale", None),
+                evidence_level=getattr(item, "evidence_level", None),
+                votes=getattr(item, "votes", None),
+                consensus_percentage=getattr(item, "consensus_percentage", None),
+                statement_type=getattr(item, "statement_type", "graded" if getattr(item, "grade", None) else "ungraded"),
                 evidence=evidence,
-                statement_type="graded" if item.grade else "ungraded",
+                page_span=(item.page, item.page) if item.page is not None else None,
             )
         )
     return mapped
@@ -357,6 +403,36 @@ def _map_figures(figures: Sequence[FigureBlock]) -> List[ArticleFigure]:
             )
         )
     return mapped
+
+
+def _infer_doc_subtype(
+    title_info: dict,
+    sections: dict[str, str],
+    recommendations: Sequence[GuidelineRecommendation],
+) -> str:
+    has_graded = any(rec.grade for rec in recommendations)
+    has_guideline_marker = any(
+        rec.statement_type in {"good_practice", "consensus", "ungraded"}
+        for rec in recommendations
+    )
+    if has_graded or has_guideline_marker:
+        return "guideline"
+
+    title = (title_info.get("title") or "").lower() if isinstance(title_info, dict) else ""
+    review_markers = (
+        "systematic review",
+        "literature review",
+        "meta-analysis",
+        "scoping review",
+    )
+    if any(marker in title for marker in review_markers):
+        return "review"
+
+    for heading in sections.keys():
+        if heading and "review" in heading.lower():
+            return "review"
+
+    return "research"
 
 
 def _map_umls_entities(records: Sequence[UmlsEntityRecord]) -> List[UmlsEntity]:

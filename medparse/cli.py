@@ -59,6 +59,7 @@ def extract_articles(
         resolve_path=True,
         help="Path to pipeline configuration YAML.",
     ),
+    emit_raw_pages: bool = typer.Option(False, "--emit-raw-pages", help="Emit raw page text to sidecar files (disabled by default)."),
 ) -> None:
     """Run the article extractor for every PDF in ``input_dir``."""
 
@@ -74,6 +75,7 @@ def extract_articles(
         summary_length=summary_length,
         config_override=config,
         profile_override=profile,
+        emit_raw_pages=emit_raw_pages,
     )
 
 
@@ -103,6 +105,7 @@ def extract_guidelines(
         resolve_path=True,
         help="Path to pipeline configuration YAML.",
     ),
+    emit_raw_pages: bool = typer.Option(False, "--emit-raw-pages", help="Emit raw page text to sidecar files (disabled by default)."),
 ) -> None:
     """Run the guideline extractor for every PDF in ``input_dir``."""
 
@@ -118,6 +121,7 @@ def extract_guidelines(
         summary_length=summary_length,
         config_override=config,
         profile_override=profile,
+        emit_raw_pages=emit_raw_pages,
     )
 
 
@@ -147,6 +151,7 @@ def extract_ifus(
         resolve_path=True,
         help="Path to pipeline configuration YAML.",
     ),
+    emit_raw_pages: bool = typer.Option(False, "--emit-raw-pages", help="Emit raw page text to sidecar files (disabled by default)."),
 ) -> None:
     """Run the IFU/manual extractor."""
 
@@ -162,6 +167,7 @@ def extract_ifus(
         summary_length=summary_length,
         config_override=config,
         profile_override=profile,
+        emit_raw_pages=emit_raw_pages,
     )
 
 
@@ -191,6 +197,7 @@ def extract_textbook(
         resolve_path=True,
         help="Path to pipeline configuration YAML.",
     ),
+    emit_raw_pages: bool = typer.Option(False, "--emit-raw-pages", help="Emit raw page text to sidecar files (disabled by default)."),
 ) -> None:
     """Run the textbook chapter extractor for each subfolder."""
 
@@ -227,6 +234,7 @@ def extract_textbook(
             summary_length=normalized_summary,
             profile_override=profile,
         )
+        outcome.metadata["emit_raw_pages"] = emit_raw_pages
         _write_outcome(outcome, out_path)
 
 
@@ -242,6 +250,7 @@ def _run_pipeline_for_pdfs(
     summary_length: Optional[str],
     config_override: Optional[Path],
     profile_override: Optional[str],
+    emit_raw_pages: bool,
 ) -> None:
     pdfs = list(pdfs)
     if not pdfs:
@@ -262,6 +271,7 @@ def _run_pipeline_for_pdfs(
             summary_length=normalized_summary,
             profile_override=profile_override,
         )
+        outcome.metadata["emit_raw_pages"] = emit_raw_pages
         _write_outcome(outcome, out_path)
 
 
@@ -271,49 +281,76 @@ def _write_outcome(outcome: PipelineOutcome, out_path: Path) -> None:
 
     payload = outcome.to_payload()
 
-    # Add pipeline metadata for traceability
-    payload["_pipeline_metadata"] = {
-        "generator": "medparse",
-        "pipeline_version": __version__,
-        "engine": outcome.engine,
-        "mode": outcome.mode,
-        "cache_used": outcome.cache_used,
-    }
+    metadata = payload.setdefault("_pipeline_metadata", {})
+    metadata.setdefault("generator", "medparse")
+    metadata.setdefault("pipeline_version", __version__)
+    metadata.setdefault("engine", outcome.engine)
+    metadata.setdefault("mode", outcome.mode)
+    metadata.setdefault("cache_used", outcome.cache_used)
+    metadata.setdefault("warnings", [])
 
     # Add config hash for reproducibility
     if outcome.config:
         engine_tag = ",".join(outcome.config.engines)
         config_str = f"{outcome.config.doc_type}:{engine_tag}:{outcome.config.profile.value}"
         config_hash = hashlib.md5(config_str.encode()).hexdigest()[:8]
-        payload["_pipeline_metadata"]["config_hash"] = config_hash
+        metadata["config_hash"] = config_hash
 
     # Add first-3-pages hash for content verification
     if outcome.pdf_path and outcome.pdf_path.exists():
         try:
             pdf_bytes = outcome.pdf_path.read_bytes()[:50000]  # first ~50KB
             content_hash = hashlib.md5(pdf_bytes).hexdigest()[:12]
-            payload["_pipeline_metadata"]["content_hash"] = content_hash
+            metadata["content_hash"] = content_hash
         except Exception:
             pass
 
+    emit_settings = metadata.get("emit", {}) or {}
+
+    validator_issues = []
+    if outcome.success and outcome.document is not None:
+        validator_issues = validate_document(outcome.document)
+        metadata["validators"] = {
+            "passed": not any(issue.severity == "error" for issue in validator_issues),
+            "warnings": [issue.message for issue in validator_issues if issue.severity == "warning"],
+            "errors": [issue.message for issue in validator_issues if issue.severity == "error"],
+        }
+    else:
+        metadata.setdefault(
+            "validators",
+            {
+                "passed": False,
+                "warnings": [],
+                "errors": [outcome.failure_reason or "extraction_failed"],
+            },
+        )
+
+    payload_json = json.dumps(payload, indent=2, ensure_ascii=False)
+    max_json_bytes = emit_settings.get("max_json_bytes") if isinstance(emit_settings, dict) else None
+    if isinstance(max_json_bytes, int) and max_json_bytes > 0:
+        json_size = len(payload_json.encode("utf-8"))
+        if json_size > max_json_bytes:
+            metadata.setdefault("warnings", []).append(
+                f"json_size_exceeded:{json_size}>{max_json_bytes}"
+            )
+            payload_json = json.dumps(payload, indent=2, ensure_ascii=False)
+
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    out_path.write_text(json.dumps(payload, indent=2, ensure_ascii=False))
+    out_path.write_text(payload_json)
     typer.echo(f"Wrote {out_path}")
 
     if outcome.success and outcome.document is not None:
-        issues = validate_document(outcome.document)
         has_errors = False
-        for issue in issues:
+        for issue in validator_issues:
             typer.echo(f"{issue.severity.upper()}: {issue.message}")
             if issue.severity == "error":
                 has_errors = True
 
-        # Exit with code 2 if there are hard errors
         if has_errors:
             failure_path = out_path.with_suffix(".failure.json")
             failure_payload = {
                 "source_file": str(outcome.pdf_path),
-                "issues": [issue.message for issue in issues if issue.severity == "error"],
+                "issues": [issue.message for issue in validator_issues if issue.severity == "error"],
             }
             failure_path.write_text(json.dumps(failure_payload, indent=2, ensure_ascii=False))
             typer.echo("VALIDATION FAILED: Hard errors detected in extraction output.")

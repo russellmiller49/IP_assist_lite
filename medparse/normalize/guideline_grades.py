@@ -12,38 +12,18 @@ from medparse.ingest.models import PageData
 
 class GuidelineRecommendation(BaseModel):
     """Individual guideline recommendation with grade and evidence."""
-    number: str
+
+    number: Optional[str] = None
     text: str
     grade: Optional[str] = None
+    strength: Optional[str] = None  # normalized strength
     strength_scale: Optional[str] = None  # GRADE, ACCP, SIGN, etc.
     evidence_level: Optional[str] = None
     consensus_percentage: Optional[float] = None
-    voting_results: Optional[str] = None
+    votes: Optional[str] = None
+    statement_type: str = "graded"  # graded | ungraded | good_practice | consensus
     page: Optional[int] = None
-
-
-# Grade scale mappings
-GRADE_SCALES = {
-    'GRADE': {
-        'strong': ['strong', '⊕⊕⊕⊕', '⊕⊕⊕○'],
-        'conditional': ['conditional', 'weak', '⊕⊕○○', '⊕○○○']
-    },
-    'ACCP': {
-        '1A': 'strong_high',
-        '1B': 'strong_moderate',
-        '1C': 'strong_low',
-        '2A': 'weak_high',
-        '2B': 'weak_moderate',
-        '2C': 'weak_low'
-    },
-    'SIGN': {
-        'A': 'high',
-        'B': 'moderate',
-        'C': 'low',
-        'D': 'very_low',
-        'GPP': 'good_practice_point'
-    }
-}
+    page_span: Optional[Tuple[int, int]] = None
 
 
 def parse_guideline_recommendations(
@@ -59,42 +39,44 @@ def parse_guideline_recommendations(
     Returns:
         List of GuidelineRecommendation objects
     """
-    recs = []
+    recs: List[GuidelineRecommendation] = []
 
-    # Look for recommendation sections
     rec_text = sections.get('recommendations', '') or find_recommendation_blocks(pages)
     if not rec_text:
-        return []
+        return recs
 
-    # Split into individual recommendations
     rec_blocks = split_recommendations(rec_text)
 
     for i, block in enumerate(rec_blocks, 1):
-        # Extract text (cut at terminal punctuation before topic shift)
-        rec_text_clean = bound_recommendation_text(block)
+        if not block.strip():
+            continue
 
-        # Extract grade
-        grade, scale = extract_grade(block)
-
-        # Extract evidence level
+        number = extract_number(block) or str(i)
+        grade, scale, strength, statement_type = extract_grade(block)
         evidence_level = extract_evidence_level(block)
-
-        # Extract consensus if present
         consensus = extract_consensus(block)
 
-        # Find page number
-        page_num = find_page_for_text(pages, block[:100])
+        rec_text_clean = bound_recommendation_text(block)
+        if not rec_text_clean:
+            rec_text_clean = block.strip()
 
-        recs.append(GuidelineRecommendation(
-            number=str(i),
-            text=rec_text_clean,
-            grade=grade,
-            strength_scale=scale,
-            evidence_level=evidence_level,
-            consensus_percentage=consensus.get('percentage'),
-            voting_results=consensus.get('votes'),
-            page=page_num
-        ))
+        page_num = find_page_for_text(pages, rec_text_clean[:120])
+
+        recs.append(
+            GuidelineRecommendation(
+                number=number,
+                text=rec_text_clean,
+                grade=grade,
+                strength=strength,
+                strength_scale=scale,
+                evidence_level=evidence_level,
+                consensus_percentage=consensus.get('percentage'),
+                votes=consensus.get('votes'),
+                statement_type=statement_type,
+                page=page_num,
+                page_span=(page_num, page_num) if page_num is not None else None,
+            )
+        )
 
     return recs
 
@@ -146,7 +128,13 @@ def split_recommendations(text: str) -> List[str]:
     if len(blocks) > 1:
         return [b.strip() for b in blocks if b.strip()]
 
-    # Pattern 4: Bullet points or numbered list
+    # Pattern 4: Sentences beginning with "We recommend" / "We suggest"
+    if re.search(r'\bWe\s+(?:recommend|suggest)\b', text, re.IGNORECASE):
+        blocks = re.split(r'(?<=\.)\s+(?=We\s+(?:recommend|suggest))', text)
+        if len(blocks) > 1:
+            return [b.strip() for b in blocks if b.strip()]
+
+    # Pattern 5: Bullet points or numbered list
     if re.search(r'^[•\-\*]\s+', text, re.MULTILINE):
         blocks = re.split(r'\n(?=[•\-\*]\s+)', text)
         return [b.strip() for b in blocks if b.strip()]
@@ -185,41 +173,100 @@ def bound_recommendation_text(block: str) -> str:
 
     # Remove leading numbering if present
     result = re.sub(r'^\d+\.\s+', '', result)
+    result = re.sub(r'^(?:Recommendation\s*)?(\d+(?:\.\d+)*)[:\-]\s*', '', result, flags=re.IGNORECASE)
 
     return result
 
 
-def extract_grade(text: str) -> Tuple[Optional[str], Optional[str]]:
-    """Extract and normalize grade.
+def extract_number(text: str) -> Optional[str]:
+    """Extract explicit recommendation numbering (1, 1.1, etc.)."""
 
-    Args:
-        text: Recommendation text
+    patterns = [
+        r'^\s*recommendation\s*(\d+(?:\.\d+)*)',
+        r'^\s*(\d+(?:\.\d+)*)\s*(?=[\.:])',
+        r'^\s*(\d+(?:\.\d+)*)\s+',
+    ]
 
-    Returns:
-        Tuple of (grade, scale_name)
-    """
-    # Try GRADE first
-    for strength, patterns in GRADE_SCALES['GRADE'].items():
-        for pattern in patterns:
-            if pattern.lower() in text.lower():
-                return (strength.title(), 'GRADE')
+    for pattern in patterns:
+        match = re.search(pattern, text, re.IGNORECASE)
+        if match:
+            return match.group(1)
+    return None
 
-    # Try ACCP
-    for grade_code in GRADE_SCALES['ACCP'].keys():
-        if re.search(rf'\b{grade_code}\b', text):
-            return (grade_code, 'ACCP')
 
-    # Try SIGN
-    for grade_letter in GRADE_SCALES['SIGN'].keys():
-        if re.search(rf'\bGrade\s+{grade_letter}\b', text, re.IGNORECASE):
-            return (grade_letter, 'SIGN')
+def extract_grade(text: str) -> Tuple[Optional[str], Optional[str], Optional[str], str]:
+    """Extract grade details returning (grade, scale, strength, statement_type)."""
 
-    # Look for generic "Grade X" pattern
-    generic_match = re.search(r'\bGrade\s+([A-D12]+)\b', text, re.IGNORECASE)
-    if generic_match:
-        return (generic_match.group(1), 'Generic')
+    lowered = text.lower()
 
-    return (None, None)
+    # Explicit grade tokens with known scales
+    grade_patterns = [
+        (r'\bgrade\s+(1[abc]|2[abc])\b', 'GRADE'),
+        (r'\bgrade\s+([A-D][+\-]?)\b', 'GRADE'),
+        (r'\b(1[ABC]|2[ABC])\b', 'ACCP'),
+        (r'\b(SIGN)\s*(A|B|C|D|GPP)\b', 'SIGN'),
+        (r'\bNICE\s+([A-D1-3])\b', 'NICE'),
+    ]
+
+    for pattern, scale in grade_patterns:
+        match = re.search(pattern, text, re.IGNORECASE)
+        if match:
+            if scale == 'SIGN' and len(match.groups()) == 2:
+                grade_token = match.group(2).upper()
+            else:
+                grade_token = match.group(1).upper()
+
+            strength = normalize_strength(scale, grade_token, lowered)
+            statement_type = 'good_practice' if grade_token == 'GPP' else 'graded'
+            return grade_token, scale, strength, statement_type
+
+    # Good practice / consensus statements without formal grade
+    if 'good practice statement' in lowered or 'good practice point' in lowered:
+        return None, None, None, 'good_practice'
+    if 'consensus statement' in lowered:
+        return None, None, None, 'consensus'
+    if 'ungraded' in lowered or 'no recommendation' in lowered:
+        return None, None, None, 'ungraded'
+
+    strength = derive_strength_from_text(lowered)
+    statement_type = 'graded' if strength else 'ungraded'
+    return None, None, strength, statement_type
+
+
+def normalize_strength(scale: str, grade: str, lowered_text: str) -> Optional[str]:
+    scale_upper = (scale or '').upper()
+    grade_upper = (grade or '').upper()
+
+    if scale_upper == 'ACCP':
+        return 'strong' if grade_upper.startswith('1') else 'conditional'
+    if scale_upper == 'GRADE':
+        if 'strong recommendation' in lowered_text:
+            return 'strong'
+        if 'conditional recommendation' in lowered_text or 'weak recommendation' in lowered_text:
+            return 'conditional'
+    if scale_upper == 'SIGN':
+        if grade_upper in {'A', 'B'}:
+            return 'strong'
+        if grade_upper in {'C', 'D'}:
+            return 'conditional'
+    if scale_upper == 'NICE':
+        if grade_upper in {'A', '1', '2'}:
+            return 'strong'
+        if grade_upper in {'B', 'C', '3'}:
+            return 'conditional'
+    return None
+
+
+def derive_strength_from_text(lowered_text: str) -> Optional[str]:
+    if 'strong recommendation' in lowered_text:
+        return 'strong'
+    if 'conditional recommendation' in lowered_text or 'weak recommendation' in lowered_text:
+        return 'conditional'
+    if 'recommend' in lowered_text and 'suggest' not in lowered_text:
+        return 'strong'
+    if 'we suggest' in lowered_text:
+        return 'conditional'
+    return None
 
 
 def extract_evidence_level(text: str) -> Optional[str]:
@@ -301,6 +348,4 @@ def find_page_for_text(pages: List[PageData], text_snippet: str) -> Optional[int
 __all__ = [
     "parse_guideline_recommendations",
     "GuidelineRecommendation",
-    "extract_grade",
-    "GRADE_SCALES",
 ]

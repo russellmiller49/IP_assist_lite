@@ -18,6 +18,7 @@ class EvidenceSpan(MedparseModel):
     page: Optional[int] = None
     bbox: Optional[Tuple[float, float, float, float]] = None
     confidence: float = Field(default=1.0, ge=0.0, le=1.0)
+    truncated: bool = False
 
 
 class BaseDocument(MedparseModel):
@@ -29,6 +30,7 @@ class BaseDocument(MedparseModel):
     page_count: Optional[int] = None
     extraction_timestamp: datetime = Field(default_factory=datetime.utcnow)
     extraction_version: str = "v1.0.0"
+    pipeline_info: Dict[str, object] = Field(default_factory=dict, exclude=True)
 
 
 class UmlsEntity(MedparseModel):

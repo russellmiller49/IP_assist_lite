@@ -5,9 +5,14 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import List, Literal
 
+from medparse.config import ExtractionConfig, get_extraction_config
 from medparse.schema.article import ArticleDocument
 from medparse.schema.ifu import IFUDocument
 from medparse.schema.textbook import TextbookChapterDocument
+from medparse.validate.article_rules import Issue as ArticleIssue
+from medparse.validate.article_rules import validate_article as run_article_rules
+from medparse.validate.ifu_rules import Issue as IfuIssue
+from medparse.validate.ifu_rules import validate_ifu as run_ifu_rules
 
 Severity = Literal["warning", "error"]
 
@@ -21,16 +26,17 @@ class ValidationIssue:
 def validate_document(document, *, min_safety_blocks: int = 20) -> List[ValidationIssue]:
     """Validate a document instance and return issues."""
 
+    config = get_extraction_config()
     if isinstance(document, ArticleDocument):
-        return _validate_article(document)
+        return _validate_article(document, config)
     if isinstance(document, IFUDocument):
-        return _validate_ifu(document, min_safety_blocks=min_safety_blocks)
+        return _validate_ifu(document, config, min_safety_blocks=min_safety_blocks)
     if isinstance(document, TextbookChapterDocument):
         return _validate_textbook(document)
     return []
 
 
-def _validate_article(document: ArticleDocument) -> List[ValidationIssue]:
+def _validate_article(document: ArticleDocument, config: ExtractionConfig) -> List[ValidationIssue]:
     issues: List[ValidationIssue] = []
     if not document.title:
         issues.append(ValidationIssue("Article missing title after normalization."))
@@ -42,7 +48,9 @@ def _validate_article(document: ArticleDocument) -> List[ValidationIssue]:
 
     if document.recommendations:
         graded = sum(
-            1 for rec in document.recommendations if rec.grade or rec.statement_type == "ungraded"
+            1
+            for rec in document.recommendations
+            if rec.grade or rec.statement_type in {"ungraded", "good_practice", "consensus"}
         )
         ratio = graded / len(document.recommendations)
         if ratio < 0.7:
@@ -52,33 +60,18 @@ def _validate_article(document: ArticleDocument) -> List[ValidationIssue]:
                 )
             )
 
-    summary = document.yield_summary
-    if summary:
-        if summary.strict_numerator is not None and summary.strict_denominator is not None:
-            if summary.strict_denominator <= 0 or summary.strict_numerator < 0:
-                issues.append(
-                    ValidationIssue("Yield denominator must be > 0 and numerator cannot be negative.")
-                )
-            if summary.strict_numerator and summary.strict_numerator > summary.strict_denominator:
-                issues.append(
-                    ValidationIssue("Yield numerator exceeds denominator; check strict counts.")
-                )
-        if summary.strict_yield is not None:
-            if not (0.0 <= summary.strict_yield <= 1.0):
-                issues.append(
-                    ValidationIssue("Strict yield must be expressed as a fraction between 0 and 1.")
-                )
-
-    if document.diagnostic_yield:
-        dy = document.diagnostic_yield
-        if dy.numerator is None or dy.denominator is None:
-            issues.append(
-                ValidationIssue("Diagnostic yield present but numerator/denominator missing.")
-            )
+    article_issues = run_article_rules(document, config)
+    for issue in article_issues:
+        issues.append(ValidationIssue(issue.message, severity=issue.severity))
     return issues
 
 
-def _validate_ifu(document: IFUDocument, *, min_safety_blocks: int) -> List[ValidationIssue]:
+def _validate_ifu(
+    document: IFUDocument,
+    config: ExtractionConfig,
+    *,
+    min_safety_blocks: int,
+) -> List[ValidationIssue]:
     """Validate IFU document with front-matter checks and whitespace quality.
 
     Front-matter validation logic:
@@ -87,24 +80,9 @@ def _validate_ifu(document: IFUDocument, *, min_safety_blocks: int) -> List[Vali
     """
     issues: List[ValidationIssue] = []
 
-    # Front-matter fields - strict validation for Intuitive Surgical IFUs only
-    # Other manufacturers may use different front-matter formats
-    is_intuitive_ifu = (
-        document.manufacturer
-        and "Intuitive Surgical" in document.manufacturer
-    )
-    fm_severity: Severity = "error" if is_intuitive_ifu else "warning"
-
-    required = ("part_number", "revision", "publication_date", "model")
-    for field in required:
-        value = getattr(document, field)
-        if not value:
-            issues.append(
-                ValidationIssue(
-                    f"IFU missing front-matter field '{field}'.",
-                    severity=fm_severity
-                )
-            )
+    rule_issues = run_ifu_rules(document, config)
+    for issue in rule_issues:
+        issues.append(ValidationIssue(issue.message, severity=issue.severity))
 
     # Manufacturer and product name should be present (warnings if missing)
     if not document.manufacturer:
@@ -181,9 +159,25 @@ def _validate_textbook(document: TextbookChapterDocument) -> List[ValidationIssu
             )
         )
     if not document.sections:
-        issues.append(
-            ValidationIssue("No sections parsed for textbook chapter; ingestion likely failed.")
+        # Check if there's other meaningful content before marking as hard error
+        has_content = (
+            document.chapter_title
+            or document.chapter_authors
+            or document.keywords
+            or document.figures
+            or (document.page_count and document.page_count > 0)
         )
+        if has_content:
+            issues.append(
+                ValidationIssue(
+                    "No structured sections parsed; chapter may lack standard section headers.",
+                    severity="warning"
+                )
+            )
+        else:
+            issues.append(
+                ValidationIssue("No sections parsed for textbook chapter; ingestion likely failed.")
+            )
     else:
         for key, section in document.sections.items():
             if section.end_page is not None and section.start_page is not None:

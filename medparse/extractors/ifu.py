@@ -92,7 +92,7 @@ def extract_ifu(
         if key in section_text:
             doc_kwargs[field] = section_text[key]
 
-    lift_ifu_clinical_fields(pages_text, doc_kwargs, pdf_path=pdf_path)
+    lift_ifu_clinical_fields(pages, doc_kwargs)
 
     meta = parse_front_matter(pages_text)
 

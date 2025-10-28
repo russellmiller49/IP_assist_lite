@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from itertools import combinations
 from typing import Dict, Iterable, List, Optional
 
 from pydantic import BaseModel, Field
@@ -91,7 +92,7 @@ def build_relations(
     title: str,
     outcomes: Iterable[dict] | None = None,
     recommendations: Iterable[dict] | None = None,
-) -> List[Relation]:
+) -> List[RelationRecord]:
     """Convenience wrapper combining outcome and recommendation relations."""
 
     relations: List[RelationRecord] = []
@@ -102,9 +103,60 @@ def build_relations(
     return relations
 
 
+def build_cooccurrence(
+    entities: Iterable[dict],
+    *,
+    window: str = "page",
+) -> List[RelationRecord]:
+    """Build simple co-occurrence edges between UMLS entities."""
+
+    grouped: Dict[Optional[int], List[dict]] = {}
+    for entity in entities:
+        page = entity.get("page") if isinstance(entity, dict) else None
+        grouped.setdefault(page, []).append(entity)
+
+    relations: List[RelationRecord] = []
+    dedupe: set[tuple[str, str, Optional[int]]] = set()
+
+    for page, items in grouped.items():
+        if len(items) < 2:
+            continue
+        for left, right in combinations(items, 2):
+            cui_left = left.get("cui") if isinstance(left, dict) else None
+            cui_right = right.get("cui") if isinstance(right, dict) else None
+            if not cui_left or not cui_right or cui_left == cui_right:
+                continue
+
+            key = tuple(sorted((cui_left, cui_right))) + (page,)
+            if key in dedupe:
+                continue
+            dedupe.add(key)
+
+            evidence = None
+            if window == "page":
+                evidence = f"page {page} co-mention"
+            elif window == "evidence_span":
+                evidence = " | ".join(
+                    filter(None, (left.get("text"), right.get("text")))
+                ) or None
+
+            relations.append(
+                RelationRecord(
+                    subject=cui_left,
+                    predicate="co_occurs_with",
+                    object=cui_right,
+                    attributes={"page": page, "window": window},
+                    evidence=evidence,
+                )
+            )
+
+    return relations
+
+
 __all__ = [
     "RelationRecord",
     "build_relations",
+    "build_cooccurrence",
     "relations_from_outcomes",
     "relations_from_recommendations",
 ]

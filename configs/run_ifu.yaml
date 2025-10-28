@@ -2,7 +2,11 @@ doc_type: ifu
 profile: enriched
 engines:
   - pdfplumber
-  - fitz
-ocr: true
-min_chars: 10000
-min_pages_ratio: 0.95
+  - pymupdf
+thresholds:
+  default:
+    min_chars_abs: 10000
+    strict_front_matter: false
+  "Intuitive Surgical":
+    min_chars_abs: 150000
+    strict_front_matter: true

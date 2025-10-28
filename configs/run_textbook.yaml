@@ -1,8 +1,7 @@
 doc_type: textbook
 profile: enriched
 engines:
-  - fitz
+  - pymupdf
   - pdfplumber
-ocr: true
-min_chars: 80000
-min_pages_ratio: 0.8
+thresholds:
+  min_coverage_ratio: 0.80
