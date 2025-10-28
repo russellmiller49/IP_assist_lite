@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import os
 from enum import Enum
-from typing import Any, Dict, Mapping, Optional, Tuple
+from typing import Any, Dict, Mapping, Optional, Tuple, Union
 
 from pydantic import BaseModel, ConfigDict, Field, PrivateAttr
 
@@ -27,15 +27,15 @@ class AppConfig(BaseModel):
     model_config = ConfigDict(extra="ignore", frozen=True)
 
     ENABLE_PIPELINE: bool = True
-    API_KEY: str | None = None
-    UMLS_API_KEY: str | None = None
-    UMLS_MODEL: str | None = None  # scispaCy model name (auto-detect if None)
-    QUICKUMLS_PATH: str | None = None
+    API_KEY: Optional[str] = None
+    UMLS_API_KEY: Optional[str] = None
+    UMLS_MODEL: Optional[str] = None  # scispaCy model name (auto-detect if None)
+    QUICKUMLS_PATH: Optional[str] = None
     TUI_WHITELIST: Tuple[str, ...] = ()
     FAIL_FAST: bool = False
 
     @classmethod
-    def model_construct_from_env(cls, env: Mapping[str, str] | None = None) -> "AppConfig":
+    def model_construct_from_env(cls, env: Optional[Mapping[str, str]] = None) -> "AppConfig":
         """Build a configuration object from environment variables."""
         env = env or os.environ
         data: dict[str, object] = {}
@@ -59,7 +59,7 @@ class AppConfig(BaseModel):
         return cls(**data)
 
     @staticmethod
-    def _parse_tui(value: str | None) -> Tuple[str, ...]:
+    def _parse_tui(value: Optional[str]) -> Tuple[str, ...]:
         """Normalize a comma-separated list of UMLS TUI codes."""
         if not value:
             return ()
@@ -102,7 +102,7 @@ class ExtractionConfig(BaseModel):
     min_pages_ratio: float = 0.95
     thresholds_data: Dict[str, Any] = Field(default_factory=dict, alias="thresholds")
 
-    _thresholds_namespace: "FrozenNamespace" | None = PrivateAttr(default=None)
+    _thresholds_namespace: Optional["FrozenNamespace"] = PrivateAttr(default=None)
 
     @classmethod
     def from_env(cls) -> "ExtractionConfig":
@@ -194,7 +194,7 @@ class FrozenNamespace:
 
     __slots__ = ("_data",)
 
-    def __init__(self, data: Mapping[str, Any] | None = None):
+    def __init__(self, data: Optional[Mapping[str, Any]] = None):
         data = data or {}
         object.__setattr__(self, "_data", {k: self._wrap(v) for k, v in data.items()})
 
