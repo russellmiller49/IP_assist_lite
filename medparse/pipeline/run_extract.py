@@ -9,6 +9,8 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List, Literal, Optional, Tuple, Type
 
+from collections import defaultdict
+
 import hashlib
 import yaml
 
@@ -62,6 +64,8 @@ class PipelineConfig:
     ocr_settings: Dict[str, Any] = field(default_factory=dict)
     emit: Dict[str, Any] = field(default_factory=dict)
     size_guards: Dict[str, Any] = field(default_factory=dict)
+    metadata_sources: Dict[str, Any] = field(default_factory=dict)
+    enrichment: Dict[str, Any] = field(default_factory=dict)
 
     @classmethod
     def from_path(cls, path: Path) -> "PipelineConfig":
@@ -100,6 +104,8 @@ class PipelineConfig:
             ocr_settings=ocr_settings,
             emit=emit_settings,
             size_guards=size_guards_config,
+            metadata_sources=data.get("metadata_sources") or {},
+            enrichment=data.get("enrichment") or {},
         )
 
     def to_extraction_config(self, *, use_cache: bool) -> ExtractionConfig:
@@ -107,6 +113,8 @@ class PipelineConfig:
             "profile": self.profile,
             "use_cache": use_cache,
             "thresholds": self.thresholds,
+            "metadata_sources": self.metadata_sources,
+            "enrichment": self.enrichment,
         }
         if self.profile == ExtractionProfile.FAST_RAW:
             kwargs.update(
@@ -255,6 +263,9 @@ def _build_evidence_bank(document: BaseDocument, size_guards: SizeGuards) -> Evi
         EvidenceBank with deduplicated evidence
     """
     bank = EvidenceBank(size_guards=size_guards)
+    paragraph_store = getattr(document, "paragraph_store", {})
+    if not isinstance(paragraph_store, dict):
+        paragraph_store = {}
 
     max_evidence_list = max(1, size_guards.max_evidence_per_item)
 
@@ -262,92 +273,146 @@ def _build_evidence_bank(document: BaseDocument, size_guards: SizeGuards) -> Evi
         setattr(parent, field, pointer)
         setattr(parent, "evidence_refs", [ref_id])
 
+    def _resolve_span(span: EvidenceSpan) -> Optional[EvidenceSpan]:
+        if not isinstance(span, EvidenceSpan):
+            return None
+        text = span.text
+        if not text and span.paragraph_hash:
+            segment = paragraph_store.get(span.paragraph_hash)
+            if isinstance(segment, str):
+                start, end = span.paragraph_offset or (0, len(segment))
+                try:
+                    text = segment[start:end]
+                except Exception:
+                    text = segment
+        if not text and span.hash:
+            candidate = paragraph_store.get(span.hash)
+            if isinstance(candidate, str):
+                text = candidate
+        if not text:
+            return None
+        resolved = EvidenceSpan(
+            text=text,
+            page=span.page,
+            bbox=span.bbox,
+            confidence=span.confidence,
+            truncated=span.truncated,
+        )
+        resolved.hash = span.hash or span.paragraph_hash
+        if not resolved.hash:
+            resolved.hash = resolved.compute_hash()
+        return resolved
+
     # Process recommendations
     if hasattr(document, "recommendations"):
         for rec in getattr(document, "recommendations") or []:
             evidence = getattr(rec, "evidence", None)
             if isinstance(evidence, list):
-                trimmed = [
-                    span
-                    for span in evidence[:max_evidence_list]
-                    if isinstance(span, EvidenceSpan) and span.text
-                ]
-                refs = bank.add_evidence_list(trimmed)
-                if refs and trimmed:
-                    pointers = [span.as_pointer() for span in trimmed if span.hash]
-                    if pointers:
-                        setattr(rec, "evidence_refs", refs)
-                        setattr(rec, "evidence", pointers[0])
-            elif isinstance(evidence, EvidenceSpan) and evidence.text:
-                ref = bank.add_evidence(evidence)
-                if ref:
-                    pointer = evidence.as_pointer()
-                    _apply_pointer(rec, "evidence", pointer, ref)
+                prepared: List[tuple[EvidenceSpan, EvidenceSpan]] = []
+                for span in evidence[:max_evidence_list]:
+                    if not isinstance(span, EvidenceSpan):
+                        continue
+                    resolved = _resolve_span(span)
+                    if resolved:
+                        prepared.append((span, resolved))
+                refs = bank.add_evidence_list([resolved for _, resolved in prepared])
+                if refs and prepared:
+                    for (original, resolved), ref in zip(prepared, refs, strict=False):
+                        original.hash = resolved.hash or ref
+                    pointer = prepared[0][0].as_pointer()
+                    setattr(rec, "evidence_refs", refs)
+                    setattr(rec, "evidence", pointer)
+            elif isinstance(evidence, EvidenceSpan):
+                resolved = _resolve_span(evidence)
+                if resolved:
+                    ref = bank.add_evidence(resolved)
+                    if ref:
+                        evidence.hash = resolved.hash or ref
+                        pointer = evidence.as_pointer()
+                        _apply_pointer(rec, "evidence", pointer, ref)
 
     # Process outcomes
     if hasattr(document, "outcomes"):
         for outcome in getattr(document, "outcomes") or []:
             evidence = getattr(outcome, "evidence", None)
             if isinstance(evidence, list):
-                trimmed = [
-                    span
-                    for span in evidence[:max_evidence_list]
-                    if isinstance(span, EvidenceSpan) and span.text
-                ]
-                refs = bank.add_evidence_list(trimmed)
-                if refs and trimmed:
-                    pointers = [span.as_pointer() for span in trimmed if span.hash]
-                    if pointers:
-                        setattr(outcome, "evidence_refs", refs)
-                        setattr(outcome, "evidence", pointers[0])
-            elif isinstance(evidence, EvidenceSpan) and evidence.text:
-                ref = bank.add_evidence(evidence)
-                if ref:
-                    pointer = evidence.as_pointer()
-                    _apply_pointer(outcome, "evidence", pointer, ref)
+                prepared: List[tuple[EvidenceSpan, EvidenceSpan]] = []
+                for span in evidence[:max_evidence_list]:
+                    if not isinstance(span, EvidenceSpan):
+                        continue
+                    resolved = _resolve_span(span)
+                    if resolved:
+                        prepared.append((span, resolved))
+                refs = bank.add_evidence_list([resolved for _, resolved in prepared])
+                if refs and prepared:
+                    for (original, resolved), ref in zip(prepared, refs, strict=False):
+                        original.hash = resolved.hash or ref
+                    pointer = prepared[0][0].as_pointer()
+                    setattr(outcome, "evidence_refs", refs)
+                    setattr(outcome, "evidence", pointer)
+            elif isinstance(evidence, EvidenceSpan):
+                resolved = _resolve_span(evidence)
+                if resolved:
+                    ref = bank.add_evidence(resolved)
+                    if ref:
+                        evidence.hash = resolved.hash or ref
+                        pointer = evidence.as_pointer()
+                        _apply_pointer(outcome, "evidence", pointer, ref)
 
     # Process diagnostic_yield
     if hasattr(document, "diagnostic_yield"):
         diag = getattr(document, "diagnostic_yield")
         if diag:
             evidence = getattr(diag, "evidence", None)
-            if isinstance(evidence, EvidenceSpan) and evidence.text:
-                ref = bank.add_evidence(evidence)
-                if ref:
-                    pointer = evidence.as_pointer()
-                    _apply_pointer(diag, "evidence", pointer, ref)
+            if isinstance(evidence, EvidenceSpan):
+                resolved = _resolve_span(evidence)
+                if resolved:
+                    ref = bank.add_evidence(resolved)
+                    if ref:
+                        evidence.hash = resolved.hash or ref
+                        pointer = evidence.as_pointer()
+                        _apply_pointer(diag, "evidence", pointer, ref)
 
     # Process relations
     if hasattr(document, "relations"):
         for relation in getattr(document, "relations") or []:
             evidence = getattr(relation, "evidence", None)
-            if isinstance(evidence, EvidenceSpan) and evidence.text:
-                ref = bank.add_evidence(evidence)
-                if ref:
-                    pointer = evidence.as_pointer()
-                    _apply_pointer(relation, "evidence", pointer, ref)
+            if isinstance(evidence, EvidenceSpan):
+                resolved = _resolve_span(evidence)
+                if resolved:
+                    ref = bank.add_evidence(resolved)
+                    if ref:
+                        evidence.hash = resolved.hash or ref
+                        pointer = evidence.as_pointer()
+                        _apply_pointer(relation, "evidence", pointer, ref)
             elif isinstance(evidence, list):
-                trimmed = [
-                    span
-                    for span in evidence[:max_evidence_list]
-                    if isinstance(span, EvidenceSpan) and span.text
-                ]
-                refs = bank.add_evidence_list(trimmed)
-                if refs and trimmed:
-                    pointers = [span.as_pointer() for span in trimmed if span.hash]
-                    if pointers:
-                        setattr(relation, "evidence_refs", refs)
-                        setattr(relation, "evidence", pointers[0])
+                prepared: List[tuple[EvidenceSpan, EvidenceSpan]] = []
+                for span in evidence[:max_evidence_list]:
+                    if not isinstance(span, EvidenceSpan):
+                        continue
+                    resolved = _resolve_span(span)
+                    if resolved:
+                        prepared.append((span, resolved))
+                refs = bank.add_evidence_list([resolved for _, resolved in prepared])
+                if refs and prepared:
+                    for (original, resolved), ref in zip(prepared, refs, strict=False):
+                        original.hash = resolved.hash or ref
+                    pointer = prepared[0][0].as_pointer()
+                    setattr(relation, "evidence_refs", refs)
+                    setattr(relation, "evidence", pointer)
 
     # Process figures
     if hasattr(document, "figures"):
         for figure in getattr(document, "figures") or []:
             evidence = getattr(figure, "evidence", None)
-            if isinstance(evidence, EvidenceSpan) and evidence.text:
-                ref = bank.add_evidence(evidence)
-                if ref:
-                    pointer = evidence.as_pointer()
-                    _apply_pointer(figure, "evidence", pointer, ref)
+            if isinstance(evidence, EvidenceSpan):
+                resolved = _resolve_span(evidence)
+                if resolved:
+                    ref = bank.add_evidence(resolved)
+                    if ref:
+                        evidence.hash = resolved.hash or ref
+                        pointer = evidence.as_pointer()
+                        _apply_pointer(figure, "evidence", pointer, ref)
 
     return bank
 
@@ -729,10 +794,33 @@ def _apply_emit_constraints(document: BaseDocument, emit: Dict[str, Any]) -> Lis
     max_tables = _coerce_positive_int(emit.get("max_tables"))
     table_sample_rows = _coerce_positive_int(emit.get("table_sample_rows")) or 20
     tables_mode = str(emit.get("tables_mode", "verbatim") or "verbatim").lower()
+    evidence_policy = str(emit.get("evidence_policy", "verbatim") or "verbatim").lower()
+    relation_mode = str(emit.get("relation_mode", "verbatim") or "verbatim").lower()
     max_entities = _coerce_positive_int(emit.get("max_entities"))
     max_relations = _coerce_positive_int(emit.get("max_relations"))
+    max_relations_per_pair = _coerce_positive_int(emit.get("max_relations_per_pair"))
+    max_json_bytes = _coerce_positive_int(emit.get("max_json_bytes"))
     keep_evidence_bank = bool(emit.get("keep_evidence_bank", True))
     paragraph_dedupe = bool(emit.get("paragraph_dedupe", False))
+
+    paragraph_store = getattr(document, "paragraph_store", None)
+    if not isinstance(paragraph_store, dict):
+        paragraph_store = {}
+        setattr(document, "paragraph_store", paragraph_store)
+
+    def _normalize_paragraph(text: str) -> str:
+        return " ".join(text.split())
+
+    def _store_paragraph(text: Optional[str]) -> Optional[tuple[str, str]]:
+        if not text:
+            return None
+        normalized = _normalize_paragraph(text)
+        if not normalized:
+            return None
+        hash_id = hashlib.sha1(normalized.encode("utf-8")).hexdigest()[:16]
+        if hash_id not in paragraph_store:
+            paragraph_store[hash_id] = text.strip()
+        return hash_id, normalized
 
     def truncate_text(value: Optional[str], limit: int) -> Optional[str]:
         if not value or limit <= 0:
@@ -749,7 +837,20 @@ def _apply_emit_constraints(document: BaseDocument, emit: Dict[str, Any]) -> Lis
             span.text = span.text[:limit].rstrip() + "…"
             span.truncated = True  # type: ignore[attr-defined]
 
-    if evidence_limit > 0:
+    def compact_span(span: Optional[EvidenceSpan]) -> None:
+        if evidence_policy != "compact" or not isinstance(span, EvidenceSpan):
+            return
+        if span.text:
+            stored = _store_paragraph(span.text)
+            if stored:
+                hash_id, normalized = stored
+                span.hash = span.hash or hash_id
+                span.paragraph_hash = hash_id
+                stored_text = paragraph_store.get(hash_id, "")
+                span.paragraph_offset = (0, len(stored_text))
+                span.text = None
+
+    if evidence_limit > 0 or evidence_policy == "compact":
         for attr in ("recommendations", "outcomes", "figures"):
             items = getattr(document, attr, None)
             if not items:
@@ -757,20 +858,32 @@ def _apply_emit_constraints(document: BaseDocument, emit: Dict[str, Any]) -> Lis
             for item in items:
                 span = getattr(item, "evidence", None)
                 if isinstance(span, EvidenceSpan):
-                    clamp_evidence(span, evidence_limit)
+                    if evidence_limit > 0:
+                        clamp_evidence(span, evidence_limit)
+                    compact_span(span)
 
         diag = getattr(document, "diagnostic_yield", None)
         if diag and isinstance(getattr(diag, "evidence", None), EvidenceSpan):
-            clamp_evidence(diag.evidence, evidence_limit)
+            if evidence_limit > 0:
+                clamp_evidence(diag.evidence, evidence_limit)
+            compact_span(diag.evidence)
 
-        relations = getattr(document, "relations", None)
-        if relations:
-            for relation in relations:
+        relations_payload = getattr(document, "relations", None)
+        if relations_payload:
+            for relation in relations_payload:
                 evidence = getattr(relation, "evidence", None)
                 if isinstance(evidence, EvidenceSpan):
-                    clamp_evidence(evidence, evidence_limit)
-                elif isinstance(evidence, str) and len(evidence) > evidence_limit:
-                    setattr(relation, "evidence", truncate_text(evidence, evidence_limit))
+                    if evidence_limit > 0:
+                        clamp_evidence(evidence, evidence_limit)
+                    compact_span(evidence)
+                elif isinstance(evidence, str):
+                    truncated = truncate_text(evidence, evidence_limit) if evidence_limit > 0 else evidence
+                    if evidence_policy == "compact":
+                        span = EvidenceSpan(text=truncated or evidence)
+                        compact_span(span)
+                        setattr(relation, "evidence", span)
+                    else:
+                        setattr(relation, "evidence", truncated)
 
     if hasattr(document, "tables"):
         tables = getattr(document, "tables") or []
@@ -797,6 +910,7 @@ def _apply_emit_constraints(document: BaseDocument, emit: Dict[str, Any]) -> Lis
                 cleaned_rows.append(cleaned_row)
             if tables_mode == "compact" and table_sample_rows and len(cleaned_rows) > table_sample_rows:
                 if is_mapping:
+                    table = dict(table)
                     table["rows_truncated"] = True
                 else:
                     setattr(table, "rows_truncated", True)
@@ -836,47 +950,171 @@ def _apply_emit_constraints(document: BaseDocument, emit: Dict[str, Any]) -> Lis
         setattr(document, "umls_entities", sorted_entities[:max_entities])
         warnings.append("umls_entities_truncated")
 
+    def _aggregate_relations(items: List[object]) -> List[object]:
+        if len(items) < 2:
+            return items
+        aggregated: Dict[tuple, object] = {}
+        counts: Dict[tuple, int] = defaultdict(int)
+        order: List[tuple] = []
+        passthrough: List[object] = []
+        for relation in items:
+            is_mapping = isinstance(relation, dict)
+            subject = relation.get("subject") if is_mapping else getattr(relation, "subject", None)
+            predicate = relation.get("predicate") if is_mapping else getattr(relation, "predicate", None)
+            obj = relation.get("object") if is_mapping else getattr(relation, "object", None)
+            attrs = relation.get("attributes") if is_mapping else getattr(relation, "attributes", None)
+            if not isinstance(attrs, dict):
+                attrs = {}
+                if is_mapping:
+                    relation = dict(relation)
+                    relation["attributes"] = attrs
+                else:
+                    setattr(relation, "attributes", attrs)
+            if not subject or not predicate or not obj:
+                passthrough.append(relation)
+                continue
+            page_window = attrs.get("page_window")
+            page = attrs.get("page")
+            window_label = attrs.get("window_tokens") or attrs.get("window")
+            key = (subject, predicate, obj, page_window, page, window_label)
+            counts[key] += 1
+            if key not in aggregated:
+                aggregated[key] = relation
+                order.append(key)
+        result: List[object] = []
+        for key in order:
+            relation = aggregated[key]
+            count = counts.get(key, 1)
+            if count > 1:
+                attrs = relation["attributes"] if isinstance(relation, dict) else getattr(relation, "attributes", {})
+                if not isinstance(attrs, dict):
+                    attrs = {}
+                    if isinstance(relation, dict):
+                        relation["attributes"] = attrs
+                    else:
+                        setattr(relation, "attributes", attrs)
+                attrs["count"] = count
+            result.append(relation)
+        if passthrough:
+            result.extend(passthrough)
+        return result
+
+    def _limit_relations_per_pair(items: List[object], cap: int) -> tuple[List[object], bool]:
+        counts: Dict[tuple, int] = defaultdict(int)
+        limited: List[object] = []
+        truncated = False
+        for relation in items:
+            is_mapping = isinstance(relation, dict)
+            subject = relation.get("subject") if is_mapping else getattr(relation, "subject", None)
+            predicate = relation.get("predicate") if is_mapping else getattr(relation, "predicate", None)
+            obj = relation.get("object") if is_mapping else getattr(relation, "object", None)
+            if not subject or not predicate or not obj:
+                limited.append(relation)
+                continue
+            key = (subject, predicate, obj)
+            if counts[key] >= cap:
+                truncated = True
+                continue
+            counts[key] += 1
+            limited.append(relation)
+        return limited, truncated
+
     relations = getattr(document, "relations", None)
-    if relations and max_relations and len(relations) > max_relations:
-        try:
-            sorted_relations = sorted(
-                relations,
-                key=lambda item: (
-                    getattr(item, "attributes", {}).get("confidence", 0.0) if hasattr(item, "attributes") else 0.0,
-                    getattr(item, "attributes", {}).get("page", 10**6) if hasattr(item, "attributes") else 10**6,
-                ),
-                reverse=True,
-            )
-        except Exception:
-            sorted_relations = list(relations)
-        setattr(document, "relations", sorted_relations[:max_relations])
-        warnings.append("relations_truncated")
+    if relations:
+        relation_list = list(relations)
+        mutated = False
+        if relation_mode in {"compact", "aggregated", "aggregate"}:
+            relation_list = _aggregate_relations(relation_list)
+            mutated = True
+            document.pipeline_info["relations_mode"] = relation_mode
+        if max_relations_per_pair:
+            relation_list, truncated = _limit_relations_per_pair(relation_list, max_relations_per_pair)
+            if truncated:
+                document.pipeline_info["relations_truncated"] = True
+            mutated = mutated or truncated
+        if max_relations and len(relation_list) > max_relations:
+            relation_list = relation_list[:max_relations]
+            warnings.append("relations_truncated")
+            document.pipeline_info["relations_truncated"] = True
+            mutated = True
+        if mutated:
+            setattr(document, "relations", relation_list)
 
     if not keep_evidence_bank:
         setattr(document, "evidence_bank", {})
 
-    if paragraph_dedupe and hasattr(document, "sections"):
-        paragraph_bank: Dict[str, str] = {}
-        section_refs: Dict[str, List[str]] = {}
-        sections = getattr(document, "sections", {}) or {}
-        for name, text in sections.items():
+    if paragraph_dedupe:
+        def _collect_paragraph_refs(text: Optional[str]) -> List[str]:
             if not isinstance(text, str):
-                continue
+                return []
             paragraphs = [para.strip() for para in text.split("\n\n") if para.strip()]
             refs: List[str] = []
             for paragraph in paragraphs:
-                normalized = " ".join(paragraph.split())
-                if not normalized:
+                stored = _store_paragraph(paragraph)
+                if not stored:
                     continue
-                hash_id = hashlib.sha1(normalized.encode("utf-8")).hexdigest()[:16]
-                if hash_id not in paragraph_bank:
-                    paragraph_bank[hash_id] = paragraph
+                hash_id, _ = stored
                 refs.append(hash_id)
-            if refs:
-                section_refs[name] = refs
-        if paragraph_bank:
-            document.pipeline_info.setdefault("paragraph_bank", paragraph_bank)
+            return refs
+
+        section_refs: Dict[str, List[str]] = {}
+        sections = getattr(document, "sections", {}) or {}
+        if isinstance(sections, dict):
+            for name, text in sections.items():
+                refs = _collect_paragraph_refs(text)
+                if refs:
+                    section_refs[name] = refs
+        if section_refs:
             document.pipeline_info.setdefault("section_paragraph_refs", section_refs)
+
+        additional_refs: Dict[str, List[str]] = {}
+        if getattr(document, "doc_type", None) == "ifu":
+            ifu_fields = [
+                "product_name",
+                "indications_for_use",
+                "intended_use",
+                "intended_user",
+                "intended_patient_population",
+                "contraindications",
+                "warnings",
+                "precautions",
+                "adverse_events",
+                "cautions",
+                "maintenance",
+                "clinical_benefits",
+            ]
+            for field in ifu_fields:
+                value = getattr(document, field, None)
+                refs: List[str] = []
+                if isinstance(value, str):
+                    refs.extend(_collect_paragraph_refs(value))
+                elif isinstance(value, list):
+                    for item in value:
+                        if isinstance(item, str):
+                            refs.extend(_collect_paragraph_refs(item))
+                if refs:
+                    additional_refs[field] = refs
+            safety_blocks = getattr(document, "safety_blocks", []) or []
+            safety_refs: List[str] = []
+            for block in safety_blocks:
+                text = getattr(block, "text", None)
+                safety_refs.extend(_collect_paragraph_refs(text))
+            if safety_refs:
+                additional_refs["safety_blocks"] = safety_refs
+        if additional_refs:
+            document.pipeline_info.setdefault("text_field_paragraph_refs", {}).update(additional_refs)
+        document.pipeline_info["paragraph_store_size"] = len(paragraph_store)
+
+    if max_json_bytes:
+        try:
+            payload = document.model_dump(mode="json", exclude_none=True)
+            approx_size = len(json.dumps(payload, ensure_ascii=False).encode("utf-8"))
+        except Exception:  # pragma: no cover - defensive serialization guard
+            approx_size = 0
+        if approx_size and approx_size > max_json_bytes:
+            warnings.append("max_json_bytes_exceeded")
+            document.pipeline_info["max_json_bytes_exceeded"] = True
+            document.pipeline_info["approx_size_bytes"] = approx_size
 
     return warnings
 

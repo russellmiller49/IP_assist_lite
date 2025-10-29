@@ -166,6 +166,8 @@ class ArticleDocument(BaseDocument):
     title_confidence: float = 0.0
     doi: Optional[str] = None
     pmid: Optional[str] = None
+    issn: Optional[str] = None
+    url: Optional[str] = None
 
     # Authors and affiliations (enhanced)
     authors: List[Author] = Field(default_factory=list)

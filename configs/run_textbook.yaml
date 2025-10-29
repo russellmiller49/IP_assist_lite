@@ -4,6 +4,14 @@ engines:
   - pymupdf
   - pdfplumber
 
+metadata_sources:
+  zotero_json: "data/zotero/my_library.json"
+
+enrichment:
+  use_zotero: true
+  min_title_match: 0.90
+  prefer_doi: true
+
 thresholds:
   min_coverage_ratio: 0.80
 
@@ -23,6 +31,8 @@ emit:
   paragraph_dedupe: true
   max_entities: 3000
   max_relations: 40000
+  max_relations_per_pair: 6
+  relation_mode: compact
   relation_window: 80
   keep_evidence_bank: true
   max_tables: 24

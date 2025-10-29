@@ -105,9 +105,13 @@ class ExtractionConfig(BaseModel):
     relation_window: Optional[int] = None
     max_entities: Optional[int] = None
     max_relations: Optional[int] = None
+    metadata_sources_data: Dict[str, Any] = Field(default_factory=dict, alias="metadata_sources")
+    enrichment_data: Dict[str, Any] = Field(default_factory=dict, alias="enrichment")
 
     _thresholds_namespace: Optional["FrozenNamespace"] = PrivateAttr(default=None)
     _size_guards_namespace: Optional["FrozenNamespace"] = PrivateAttr(default=None)
+    _metadata_sources_namespace: Optional["FrozenNamespace"] = PrivateAttr(default=None)
+    _enrichment_namespace: Optional["FrozenNamespace"] = PrivateAttr(default=None)
 
     @classmethod
     def from_env(cls) -> "ExtractionConfig":
@@ -175,6 +179,27 @@ class ExtractionConfig(BaseModel):
         if self._size_guards_namespace is None:
             self._size_guards_namespace = FrozenNamespace(self.size_guards_data)
         return self._size_guards_namespace
+
+    @property
+    def metadata_sources(self) -> "FrozenNamespace":
+        """Return metadata source configuration."""
+        if self._metadata_sources_namespace is None:
+            self._metadata_sources_namespace = FrozenNamespace(self.metadata_sources_data)
+        return self._metadata_sources_namespace
+
+    @property
+    def enrichment(self) -> "FrozenNamespace":
+        """Return enrichment configuration."""
+        if self._enrichment_namespace is None:
+            self._enrichment_namespace = FrozenNamespace(self.enrichment_data)
+        return self._enrichment_namespace
+
+    def should_use_zotero(self) -> bool:
+        """Check if Zotero front-matter enrichment is enabled."""
+        if not self.is_enriched():
+            return False
+        return bool(self.enrichment.get("use_zotero", False))
+
 
 
 # Global extraction config instance

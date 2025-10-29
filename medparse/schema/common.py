@@ -25,6 +25,8 @@ class EvidenceSpan(MedparseModel):
     bbox: Optional[Tuple[float, float, float, float]] = None
     confidence: float = Field(default=1.0, ge=0.0, le=1.0)
     truncated: bool = False
+    paragraph_hash: Optional[str] = None
+    paragraph_offset: Optional[Tuple[int, int]] = None
 
     def compute_hash(self, max_chars: int = 2000) -> str:
         """Compute stable hash for deduplication.
@@ -52,6 +54,8 @@ class EvidenceSpan(MedparseModel):
             bbox=self.bbox,
             confidence=self.confidence,
             truncated=self.truncated,
+            paragraph_hash=self.paragraph_hash,
+            paragraph_offset=self.paragraph_offset,
         )
 
 
@@ -101,7 +105,13 @@ class BaseDocument(MedparseModel):
         default_factory=dict,
         description="Central store of deduplicated evidence spans, keyed by hash",
     )
+    paragraph_store: Dict[str, str] = Field(
+        default_factory=dict,
+        description="Deduplicated paragraph text keyed by stable hash",
+    )
     truncation_notice: Optional[TruncationNotice] = None
+    front_matter_source: Optional[str] = None
+    front_matter_confidence: Optional[float] = Field(default=None, ge=0.0, le=1.0)
 
 
 class UmlsEntity(MedparseModel):

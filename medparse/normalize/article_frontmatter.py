@@ -18,10 +18,26 @@ NAME_EXCLUSION_TERMS = {
     "school",
     "division",
     "laboratory",
+    "society",
+    "statement",
+    "classification",
+    "update",
+    "guideline",
+    "respiratory",
+    "international",
+    "committee",
+    "thoracic",
 }
 
 DEGREE_TOKENS = {"md", "phd", "do", "mba", "ms", "msc", "mph", "mbbs", "frcp"}
 SUFFIX_TOKENS = {"jr", "sr", "ii", "iii", "iv", "v"}
+
+HEADER_NOISE_TITLES = {
+    "american thoracic society documents",
+    "american thoracic society document",
+    "official american thoracic society documents",
+    "guideline",
+}
 
 
 def extract_title_hierarchical(
@@ -141,8 +157,9 @@ def extract_centered_title_block(page: PageData) -> Optional[str]:
     # Try headings first (level 1)
     level_1_headings = [h for h in page.headings if h.level == 1]
     if level_1_headings:
-        # Use first level-1 heading
-        return level_1_headings[0].title
+        candidate = level_1_headings[0].title
+        if candidate and is_valid_title(candidate) and candidate.strip().lower() not in HEADER_NOISE_TITLES:
+            return candidate
 
     # Fallback: look for centered text in first few lines
     if not page.lines:
@@ -151,8 +168,7 @@ def extract_centered_title_block(page: PageData) -> Optional[str]:
     collected: List[str] = []
     org_tokens = {"society", "college", "association", "journal", "thoracic"}
     stop_prefixes = (
-        "An Official",
-        "Official",
+        "Official Journal",
         "This Official",
         "Keywords",
         "Author",
@@ -191,7 +207,7 @@ def extract_centered_title_block(page: PageData) -> Optional[str]:
 
         collected.append(candidate)
 
-        if len(" ".join(collected)) > 180:
+        if len(" ".join(collected)) > 260:
             break
 
     filtered: List[str] = []
@@ -201,8 +217,28 @@ def extract_centered_title_block(page: PageData) -> Optional[str]:
             continue
         filtered.append(segment)
 
+    header_noise = set(HEADER_NOISE_TITLES)
+    header_noise.update({"american thoracic society statement"})
+    while filtered and filtered[0].strip().lower() in header_noise:
+        filtered.pop(0)
+
     if filtered:
-        return " ".join(filtered)
+        title_segments: List[str] = []
+        for segment in filtered:
+            lower = segment.lower()
+            if segment.isupper() and len(segment.split()) <= 4:
+                break
+            if re.search(r"^committee on", lower):
+                break
+            if "this official statement" in lower:
+                break
+            if segment.count(",") >= 3 and any(char.isupper() for char in segment):
+                break
+            title_segments.append(segment)
+            if len(" ".join(title_segments)) > 240:
+                break
+        if title_segments:
+            return " ".join(title_segments)
 
     return None
 
@@ -374,7 +410,10 @@ def extract_authors_affiliations(pages: List[PageData]) -> Dict[str, Any]:
         clean_token = re.sub(r"[\d†‡*]+", "", token).strip()
 
         if not _looks_like_name(clean_token):
-            continue
+            fallback = _extract_trailing_name(clean_token)
+            if not fallback:
+                continue
+            clean_token = fallback
 
         given, family, suffix = _split_name(clean_token)
         if not family:
@@ -400,7 +439,10 @@ def extract_authors_affiliations(pages: List[PageData]) -> Dict[str, Any]:
         for token in _tokenise_author_block(fallback_block):
             clean_token = re.sub(r"[\d†‡*]+", "", token).strip()
             if not _looks_like_name(clean_token):
-                continue
+                fallback = _extract_trailing_name(clean_token)
+                if not fallback:
+                    continue
+                clean_token = fallback
             given, family, suffix = _split_name(clean_token)
             if not family:
                 continue
@@ -606,12 +648,31 @@ def _tokenise_author_block(block: str) -> List[str]:
     return [part.strip() for part in parts if part.strip()]
 
 
+def _extract_trailing_name(token: str) -> Optional[str]:
+    """Extract trailing personal name from a mixed token."""
+
+    if not token:
+        return None
+    pattern = re.compile(
+        r"([A-Z][a-z]+(?:\s+[A-Z]\.)?(?:\s+[A-Z][a-z]+){1,3})(?:\s+(Jr|Sr|II|III|IV|V))?$"
+    )
+    match = pattern.search(token.strip())
+    if not match:
+        return None
+    candidate = match.group(1)
+    suffix = match.group(2)
+    if suffix:
+        candidate = f"{candidate} {suffix}"
+    return candidate if _looks_like_name(candidate) else None
+
+
 def _looks_like_name(token: str) -> bool:
     """Heuristic check that ``token`` appears to be a personal name."""
 
-    if not token or len(token.split()) < 2:
+    if not token:
         return False
-    if len(token.split()) > 6:
+    parts = [part for part in re.split(r"[\s\-]+", token) if part]
+    if len(parts) < 2 or len(parts) > 6:
         return False
     if ":" in token:
         return False
@@ -623,7 +684,14 @@ def _looks_like_name(token: str) -> bool:
         return False
 
     letters = sum(1 for ch in token if ch.isalpha())
-    return letters / max(len(token), 1) >= 0.6
+    if letters / max(len(token), 1) < 0.6:
+        return False
+
+    capitalized = sum(1 for part in parts if part[0].isupper())
+    if capitalized < 2:
+        return False
+
+    return True
 
 
 def _split_name(name: str) -> Tuple[str, str, Optional[str]]:

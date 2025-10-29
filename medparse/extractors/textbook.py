@@ -10,6 +10,7 @@ from medparse.extract.utils import load_pages
 from medparse.ingest.book_meta import load_book_metadata
 from medparse.ingest.models import PageData
 from medparse.normalize.article_frontmatter import extract_authors_affiliations
+from medparse.normalize.frontmatter_link_zotero import link_front_matter
 from medparse.normalize.layout import is_toc_page
 from medparse.normalize.metadata import normalize_chapter_title
 from medparse.normalize.page_furniture import strip_furniture
@@ -114,8 +115,22 @@ def extract_textbook_chapter(
         coverage_ratio=_compute_coverage_ratio(pages, sections),
         book_meta=book_meta,
     )
+    fm_info = None
+    if extraction_config.should_use_zotero():
+        zotero_path = extraction_config.metadata_sources.get("zotero_json")
+        try:
+            document, fm_info = link_front_matter(
+                document,
+                zotero_path,
+                extraction_config.enrichment,
+            )
+        except Exception as exc:  # pragma: no cover - defensive
+            LOGGER.debug("Zotero linking failed for textbook %s: %s", pdf_path.name, exc)
+            fm_info = {"status": "error", "detail": str(exc), "source": "zotero"}
     document.pipeline_info["umls_status"] = umls_result.status
     document.pipeline_info["umls_entities_count"] = len(umls_records)
+    if fm_info:
+        document.pipeline_info["front_matter"] = fm_info
     if extraction_config.relation_window:
         document.pipeline_info["relation_window"] = extraction_config.relation_window
     if extraction_config.max_entities:
