@@ -35,12 +35,12 @@ size_guards:
 emit:
   evidence_policy: compact
   tables_mode: compact
-  evidence_max_chars: 360
+  evidence_max_chars: 500
   table_cell_max_chars: 800
   paragraph_dedupe: true
   max_entities: 3000
-  max_relations: 40000
+  max_relations: 15000
   relation_window: 80
   keep_evidence_bank: true
-  max_tables: 24
+  max_tables: 10
   max_json_bytes: 10000000

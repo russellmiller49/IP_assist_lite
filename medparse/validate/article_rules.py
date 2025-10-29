@@ -58,6 +58,12 @@ def validate_article(doc: ArticleDocument, cfg: ExtractionConfig) -> List[Issue]
         # Guidelines do NOT require diagnostic yield
         return issues
 
+    if doc.doc_subtype == "review":
+        min_sections = _coerce_int(getattr(research_cfg, "min_sections", 4))
+        if min_sections and not sections_ok(doc, min_sections=min_sections):
+            issues.append(Issue.warn(f"Review article has too few sections: {len(doc.sections or {})}/{min_sections}"))
+        return issues
+
     # Research articles require different validation
     min_sections = _coerce_int(getattr(research_cfg, "min_sections", 4))
     if min_sections and not sections_ok(doc, min_sections=min_sections):

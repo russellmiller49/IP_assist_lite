@@ -53,11 +53,17 @@ def normalize_article_sections(pages: List[PageData]) -> Dict[str, str]:
         stop_anchors = [a for a in all_anchors if a not in start_anchors]
 
         # Extract bounded section
-        raw_text = slice_between(
-            processed,
-            start_anchors=start_anchors,
-            stop_anchors=stop_anchors,
-        )
+        if section_key == 'abstract':
+            raw_text = _extract_structured_abstract(processed)
+        else:
+            guard = None if section_key == 'abstract' else is_toc_page
+            raw_text = slice_between(
+                processed,
+                start_anchors=start_anchors,
+                stop_anchors=stop_anchors,
+                guard_fn=guard,
+                allow_inline_stop=False,
+            )
 
         if raw_text:
             # Post-process: normalize whitespace, fix hyphenation
@@ -92,6 +98,108 @@ def find_first_occurrence_page(pages: List[PageData], anchors: List[str]) -> Opt
         if any(anchor.lower() in joined for anchor in anchors):
             return idx
     return None
+
+
+def _extract_structured_abstract(pages: List[PageData]) -> str:
+    """Extract structured abstract, preserving labelled subsections."""
+
+    collecting = False
+    lines: List[str] = []
+    structured_labels = {
+        "background",
+        "objectives",
+        "design",
+        "methods",
+        "results",
+        "conclusions",
+        "interpretation",
+    }
+    stop_markers = {"keywords", "abbreviations"}
+    hard_section_markers = {
+        "background",
+        "introduction",
+        "methods",
+        "results",
+        "discussion",
+        "conclusion",
+        "conclusions",
+    }
+
+    for page in pages:
+        for raw_line in page.lines:
+            line = raw_line.strip()
+
+            if not line:
+                if collecting and (lines and lines[-1] != ""):
+                    lines.append("")
+                continue
+
+            lower = line.lower()
+
+            if not collecting:
+                if lower.startswith("abstract"):
+                    collecting = True
+                    remainder = line[len("Abstract") :].lstrip(": ").strip()
+                    if remainder:
+                        lines.append(remainder)
+                    continue
+            else:
+                keyword_match = None
+                for marker in stop_markers:
+                    token = f"{marker}:"
+                    idx = lower.find(token)
+                    if idx != -1:
+                        keyword_match = idx
+                        break
+                if keyword_match is not None:
+                    if keyword_match > 0:
+                        lines.append(line[:keyword_match].rstrip())
+                    return "\n".join(lines).strip()
+
+                if ":" in line:
+                    label = lower.split(":", 1)[0]
+                    if label in structured_labels:
+                        lines.append(line)
+                        continue
+
+                if lower in hard_section_markers:
+                    return "\n".join(lines).strip()
+
+                if _looks_like_section_heading(line):
+                    return "\n".join(lines).strip()
+
+                lines.append(line)
+
+    return "\n".join(lines).strip()
+
+
+def _looks_like_section_heading(line: str) -> bool:
+    """Heuristic to detect the start of a new section outside the abstract."""
+
+    if ":" in line:
+        return False
+    stripped = line.strip()
+    if not stripped:
+        return False
+    words = stripped.split()
+    if len(words) > 8:
+        return False
+    alpha_chars = [ch for ch in stripped if ch.isalpha()]
+    if not alpha_chars:
+        return False
+    lowercase_token = stripped.lower()
+    if lowercase_token in {
+        "background",
+        "introduction",
+        "methods",
+        "results",
+        "discussion",
+        "conclusion",
+        "conclusions",
+    }:
+        return True
+    uppercase_ratio = sum(1 for ch in alpha_chars if ch.isupper()) / len(alpha_chars)
+    return stripped.isupper() or uppercase_ratio >= 0.7
 
 
 __all__ = ["normalize_article_sections", "dehyphenate", "find_first_occurrence_page"]

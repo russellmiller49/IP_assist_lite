@@ -1,21 +1,17 @@
 {
-  "doc_id": "bab3d517-147d-426c-916a-4cff8ca4cf87",
+  "doc_id": "9408ce4e-e416-4162-b65b-18774c4fc184",
   "doc_type": "ifu",
   "source_file": "/home/rjm/projects/IP_assist_lite/data/Input pdfs/IFUs/pdf/85100-172_ERBE_EN_Units_and_modules__D080643.pdf",
   "page_count": 16,
-  "extraction_timestamp": "2025-10-27T16:25:02.607440",
+  "extraction_timestamp": "2025-10-29T15:26:05.209733",
   "extraction_version": "v1.0.0",
+  "evidence_bank": {},
   "manufacturer": "ERBE Elektromedizin GmbH",
-  "product_name": null,
   "part_number": "30191-682",
-  "revision": null,
+  "revision": "D080643",
   "publication_date": "2025-05-01",
   "model": "VIO",
   "software_versions": [],
-  "indications_for_use": null,
-  "intended_use": null,
-  "intended_user": null,
-  "intended_patient_population": null,
   "contraindications": [],
   "adverse_events": [],
   "safety_blocks": [],
@@ -86,31 +82,54 @@
     "page_count": 16,
     "unique_pages_seen": 16,
     "unique_pages_ratio": 1.0,
-    "extracted_chars": 16949,
-    "duration_s": 0.6351912021636963,
+    "extracted_chars": 17202,
+    "duration_s": 0.6644535064697266,
     "coverage_ratio": 1.0,
     "tables_kept": 2
   },
   "_engine": "pdfplumber",
   "_mode": "full",
   "_cache_used": false,
-  "_pipeline": {
-    "profile": "enriched",
-    "engines": [
-      "pdfplumber",
-      "fitz"
-    ],
-    "ocr_used_pages": [],
-    "timestamp": "2025-10-27T16:25:02.607440",
-    "version": "v1.0.0"
-  },
   "_pipeline_metadata": {
+    "profile": "enriched",
+    "engines_requested": [
+      "pdfplumber",
+      "pymupdf"
+    ],
+    "engine_used": "pdfplumber",
+    "mode": "full",
+    "cache_used": false,
+    "ocr_used_pages": [],
+    "coverage_ratio": 1.0,
+    "page_count": 16,
+    "timestamp": "2025-10-29T15:26:05.209733",
+    "version": "v1.0.0",
+    "warnings": [],
+    "emit": {
+      "evidence_policy": "compact",
+      "tables_mode": "compact",
+      "evidence_max_chars": 500,
+      "table_cell_max_chars": 600,
+      "paragraph_dedupe": true,
+      "max_entities": 3000,
+      "max_relations": 15000,
+      "relation_window": 80,
+      "keep_evidence_bank": true,
+      "max_tables": 10
+    },
+    "emit_raw_pages": false,
     "generator": "medparse",
     "pipeline_version": "1.1.0",
     "engine": "pdfplumber",
-    "mode": "full",
-    "cache_used": false,
-    "config_hash": "8c705aa6",
-    "content_hash": "6895ed8c21c9"
+    "config_hash": "7d58edf1",
+    "content_hash": "6895ed8c21c9",
+    "validators": {
+      "passed": true,
+      "warnings": [
+        "IFU missing product_name field.",
+        "Expected at least 20 safety blocks; found 0."
+      ],
+      "errors": []
+    }
   }
 }

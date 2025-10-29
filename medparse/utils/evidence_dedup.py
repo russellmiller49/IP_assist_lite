@@ -19,7 +19,7 @@ class EvidenceBank:
         Args:
             size_guards: Configuration for size limits
         """
-        self.bank: Dict[str, EvidenceSpan] = {}
+        self.bank: Dict[str, Dict[str, object]] = {}
         self.size_guards = size_guards or SizeGuards()
         self.stats = {
             "total_added": 0,
@@ -53,6 +53,7 @@ class EvidenceBank:
 
         # Compute hash
         hash_id = evidence.compute_hash(max_chars=max_chars)
+        evidence.hash = hash_id
 
         # Check if already exists
         if hash_id in self.bank:
@@ -60,7 +61,12 @@ class EvidenceBank:
             return hash_id
 
         # Add to bank
-        self.bank[hash_id] = evidence
+        self.bank[hash_id] = {
+            "text": evidence.text,
+            "page": evidence.page,
+            "bbox": evidence.bbox,
+            "confidence": evidence.confidence,
+        }
         return hash_id
 
     def add_evidence_list(
@@ -111,12 +117,8 @@ class EvidenceBank:
             reason="size_guards_evidence_truncation",
         )
 
-    def get_bank(self) -> Dict[str, EvidenceSpan]:
-        """Get the evidence bank dictionary.
-
-        Returns:
-            Dictionary of hash_id -> EvidenceSpan
-        """
+    def get_bank(self) -> Dict[str, Dict[str, object]]:
+        """Get the evidence bank dictionary (hash -> payload)."""
         return self.bank
 
     def get_text_bank(self) -> Dict[str, str]:
@@ -126,8 +128,9 @@ class EvidenceBank:
             Dictionary of hash_id -> text string
         """
         return {
-            hash_id: evidence.text
-            for hash_id, evidence in self.bank.items()
+            hash_id: str(payload.get("text", ""))
+            for hash_id, payload in self.bank.items()
+            if isinstance(payload, dict)
         }
 
     def get_stats(self) -> Dict[str, int]:

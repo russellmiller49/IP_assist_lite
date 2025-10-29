@@ -20,6 +20,28 @@ except ImportError:
 
 LOGGER = get_logger(__name__)
 
+ALLOWED_SEMTYPES = {
+    "dsyn",
+    "t047",  # Disease or Syndrome
+    "neop",
+    "t191",  # Neoplastic Process
+    "anatomy",
+    "t023",
+    "t024",
+    "t025",
+    "t026",
+    "t029",
+    "t030",
+    "t017",
+    "t018",
+    "t021",
+    "t022",
+    "phsu",
+    "t121",  # Pharmacologic Substance
+    "topp",
+    "t061",  # Therapeutic or Preventive Procedure
+}
+
 
 class UmlsEntity(BaseModel):
     """Lightweight representation of a linked UMLS concept."""
@@ -39,6 +61,16 @@ class UmlsLinkingResult(BaseModel):
     entities: List[UmlsEntity] = Field(default_factory=list)
     status: Literal["linked", "skipped_model_missing", "skipped_disabled", "skipped_no_input"]
     model_name: Optional[str] = None
+
+
+def _semtypes_allowed(semtypes: Iterable[str]) -> bool:
+    for sem in semtypes:
+        token = sem.lower()
+        if token in ALLOWED_SEMTYPES:
+            return True
+        if token.startswith("t") and token[:4] in ALLOWED_SEMTYPES:
+            return True
+    return False
 
 
 def link_umls_entities(
@@ -83,6 +115,12 @@ def link_umls_entities(
             count = per_page_counts.get(page_number, 0)
             if count >= max_entities_per_page:
                 break
+            if entity.semtypes and not _semtypes_allowed(entity.semtypes):
+                continue
+            if not entity.semtypes:
+                # Allow unlabeled entities only if high confidence
+                if entity.confidence < 0.9:
+                    continue
             entities.append(
                 UmlsEntity(
                     cui=entity.cui,
@@ -101,6 +139,10 @@ def link_umls_entities(
             page_number = quick_entity.page or -1
             count = per_page_counts.get(page_number, 0)
             if count >= max_entities_per_page:
+                continue
+            if quick_entity.semtypes and not _semtypes_allowed(quick_entity.semtypes):
+                continue
+            if not quick_entity.semtypes and quick_entity.confidence < 0.9:
                 continue
             quick_entity.text = (quick_entity.text or "")[:80]
             entities.append(quick_entity)

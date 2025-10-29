@@ -13,9 +13,14 @@ from .base import MedparseModel
 
 
 class EvidenceSpan(MedparseModel):
-    """Snippet of source evidence with optional layout context."""
+    """Snippet of source evidence with optional layout context.
 
-    text: str
+    ``text`` is optional so we can emit compact pointers that reference a shared
+    ``evidence_bank`` entry by ``hash``.
+    """
+
+    text: Optional[str] = None
+    hash: Optional[str] = None
     page: Optional[int] = None
     bbox: Optional[Tuple[float, float, float, float]] = None
     confidence: float = Field(default=1.0, ge=0.0, le=1.0)
@@ -30,10 +35,24 @@ class EvidenceSpan(MedparseModel):
         Returns:
             SHA-1 hash as hex string
         """
+        if self.hash:
+            return self.hash
+
         text_trimmed = (self.text or "")[:max_chars]
         bbox_str = f"{self.bbox}" if self.bbox else ""
         key = f"{self.page or 0}:{bbox_str}:{text_trimmed}"
         return hashlib.sha1(key.encode("utf-8")).hexdigest()[:16]
+
+    def as_pointer(self) -> "EvidenceSpan":
+        """Return a copy suitable for emission (no inline text)."""
+
+        return EvidenceSpan(
+            hash=self.hash,
+            page=self.page,
+            bbox=self.bbox,
+            confidence=self.confidence,
+            truncated=self.truncated,
+        )
 
 
 class SizeGuards(MedparseModel):

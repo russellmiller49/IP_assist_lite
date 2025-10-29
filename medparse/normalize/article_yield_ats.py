@@ -118,6 +118,7 @@ def _extract_from_text(results_text: str) -> Optional[DiagnosticYieldATS]:
             # Only percentage, no numerator/denominator
             yield_pct = float(groups[0])
             exclusion_reasons.append("numerator/denominator not reported at attempted/performed level")
+            exclusion_reasons.append("non_strict_reported")
 
         match_start, match_end = match.start(), match.end()
         ci_lower, ci_upper = extract_confidence_intervals(results_text, match_start, match_end)
@@ -208,6 +209,10 @@ def _finalize_yield_record(
     baseline_reason = "numerator/denominator not reported at attempted/performed level"
     if yield_data.numerator is None or yield_data.denominator is None:
         _append_reason(yield_data, baseline_reason)
+        _append_reason(yield_data, "missing_numerator_denominator")
+        if yield_data.yield_pct is not None:
+            _append_reason(yield_data, "non_strict_reported")
+        yield_data.compatible_with_ats = False
 
     # Update strict flag
     derived_counts = "derived_counts_from_percent" in yield_data.exclusion_reasons

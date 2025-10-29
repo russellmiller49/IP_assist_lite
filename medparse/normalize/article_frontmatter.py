@@ -6,6 +6,7 @@ import re
 from typing import Any, Dict, List, Optional, Tuple
 
 from medparse.ingest.models import PageData
+from medparse.normalize.title_block import extract_title
 
 NAME_EXCLUSION_TERMS = {
     "department",
@@ -23,7 +24,13 @@ DEGREE_TOKENS = {"md", "phd", "do", "mba", "ms", "msc", "mph", "mbbs", "frcp"}
 SUFFIX_TOKENS = {"jr", "sr", "ii", "iii", "iv", "v"}
 
 
-def extract_title_hierarchical(pages: List[PageData]) -> Dict[str, Any]:
+def extract_title_hierarchical(
+    pages: List[PageData],
+    *,
+    metadata: Optional[Dict[str, Any]] = None,
+    doi: Optional[str] = None,
+    fallback: Optional[str] = None,
+) -> Dict[str, Any]:
     """Extract title using hierarchical strategy.
 
     Try in order:
@@ -36,35 +43,52 @@ def extract_title_hierarchical(pages: List[PageData]) -> Dict[str, Any]:
         Dictionary with title, confidence, and source
     """
     if not pages:
-        return {'title': None, 'confidence': 0.0, 'source': None}
+        return {"title": fallback, "confidence": 0.0, "source": "fallback" if fallback else None}
 
-    # Try PDF metadata first (if available in PageData)
-    # Note: This would require extending PageData with metadata
-    # For now, skip this step
+    first_page = pages[0]
 
-    # Extract from first page layout (largest heading)
-    if title := extract_centered_title_block(pages[0]):
-        if is_valid_title(title):
-            return {'title': title, 'confidence': 0.9, 'source': 'layout'}
+    # Strategy 1: font/layout-aware extractor
+    layout_title, layout_source, layout_conf = extract_title(pages, metadata=metadata, doi=doi)
+    if layout_source == "layout" and layout_title and is_valid_title(layout_title):
+        return {"title": layout_title, "confidence": max(layout_conf, 0.85), "source": "layout"}
 
-    # DOI resolver fallback
-    if doi := extract_doi(pages[:2]):
-        # For now, just use DOI as indicator of title location
-        # Real implementation would query CrossRef API
-        pass
+    # Strategy 2: PDF metadata (if provided)
+    meta_title = (metadata or {}).get("title") if metadata else None
+    if meta_title and is_valid_title(meta_title):
+        return {"title": meta_title.strip(), "confidence": 0.8, "source": "metadata"}
 
-    # Running header (lowest confidence)
-    if title := extract_running_header(pages[0]):
-        if is_valid_title(title):
-            return {'title': title, 'confidence': 0.6, 'source': 'header'}
+    # Strategy 3: layout block heuristic
+    layout_block = extract_centered_title_block(first_page)
+    if layout_block and is_valid_title(layout_block):
+        return {"title": layout_block, "confidence": 0.78, "source": "layout_block"}
 
-    # Fallback to first heading
-    if pages[0].headings:
-        title = pages[0].headings[0].title
-        if is_valid_title(title):
-            return {'title': title, 'confidence': 0.5, 'source': 'first_heading'}
+    # Strategy 4: DOI (placeholder for resolver fetch)
+    if doi:
+        doi_hint = extract_doi(pages[:2])
+        if doi_hint and doi_hint == doi:
+            # Without resolver data we can only record provenance
+            return {"title": None, "confidence": 0.0, "source": "doi"}
 
-    return {'title': None, 'confidence': 0.0, 'source': None}
+    # Strategy 5: running header (guarded)
+    header_title = extract_running_header(first_page)
+    if layout_source == "header" and layout_title and is_valid_title(layout_title):
+        header_title = layout_title
+    if header_title and is_valid_title(header_title):
+        return {"title": header_title, "confidence": max(layout_conf, 0.55), "source": "header"}
+
+    # Strategy 6: first heading on page
+    if first_page.headings:
+        heading_title = first_page.headings[0].title
+        if heading_title and is_valid_title(heading_title):
+            return {"title": heading_title, "confidence": 0.5, "source": "heading"}
+
+    # Final fallback: filename-derived title
+    if fallback:
+        normalized = fallback.replace("_", " ").strip()
+        if normalized:
+            return {"title": normalized, "confidence": 0.25, "source": "filename"}
+
+    return {"title": None, "confidence": 0.0, "source": None}
 
 
 def is_valid_title(title: str) -> bool:
@@ -81,6 +105,10 @@ def is_valid_title(title: str) -> bool:
 
     words = title.split()
     if len(words) < 3:
+        return False
+
+    lowered_title = title.lower()
+    if "doi" in lowered_title or "http" in lowered_title or "www." in lowered_title:
         return False
 
     # Reject all-caps organizational names
@@ -121,6 +149,21 @@ def extract_centered_title_block(page: PageData) -> Optional[str]:
         return None
 
     collected: List[str] = []
+    org_tokens = {"society", "college", "association", "journal", "thoracic"}
+    stop_prefixes = (
+        "An Official",
+        "Official",
+        "This Official",
+        "Keywords",
+        "Author",
+        "Correspondence",
+        "Received",
+        "Accepted",
+        "Published",
+        "©",
+    )
+    skip_contains = ("doi", "http", "https", "www.", "vol.", "volume ")
+
     for line in page.lines[:20]:
         candidate = line.strip()
         if not candidate:
@@ -133,10 +176,17 @@ def extract_centered_title_block(page: PageData) -> Optional[str]:
             if collected:
                 break
             continue
+        if any(token in lower for token in skip_contains):
+            continue
 
-        if len(candidate.split()) < 3:
-            if collected:
-                break
+        if any(candidate.startswith(prefix) for prefix in stop_prefixes) and collected:
+            break
+
+        words = candidate.split()
+        if len(words) < 2 and candidate.isupper():
+            continue
+
+        if not collected and candidate.isupper() and any(token in lower for token in org_tokens):
             continue
 
         collected.append(candidate)
@@ -144,8 +194,15 @@ def extract_centered_title_block(page: PageData) -> Optional[str]:
         if len(" ".join(collected)) > 180:
             break
 
-    if collected:
-        return " ".join(collected)
+    filtered: List[str] = []
+    for segment in collected:
+        lower = segment.lower()
+        if not filtered and segment.isupper() and any(token in lower for token in org_tokens):
+            continue
+        filtered.append(segment)
+
+    if filtered:
+        return " ".join(filtered)
 
     return None
 
@@ -292,6 +349,18 @@ def extract_authors_affiliations(pages: List[PageData]) -> Dict[str, Any]:
     header_block = re.sub(r"\s+", " ", header_block)
     header_block = header_block.replace(" and ", ", ")
 
+    # Trim leading metadata before the first name-like pattern
+    name_start = re.search(r"[A-Z][a-z]+(?:\s+[A-Z]\.)?\s+[A-Z][a-z]+(?=\s*\d)", header_block)
+    if not name_start:
+        name_start = re.search(r"[A-Z][a-z]+(?:\s+[A-Z]\.)?\s+[A-Z][a-z]+", header_block)
+    if name_start:
+        header_block = header_block[name_start.start():]
+
+    # Drop trailing publication metadata (received/accepted/etc.)
+    trailer_split = re.split(r"\b(Received|Accepted|Published|Copyright|©)\b", header_block, maxsplit=1)
+    if trailer_split:
+        header_block = trailer_split[0].strip()
+
     all_affiliations = extract_superscript_affiliations("\n".join(first_page.lines[:80]))
 
     authors: List[Dict[str, Any]] = []
@@ -324,6 +393,29 @@ def extract_authors_affiliations(pages: List[PageData]) -> Dict[str, Any]:
                 "footnotes": markers,
             }
         )
+
+    if not authors:
+        fallback_lines = _fallback_author_lines(first_page)
+        fallback_block = ", ".join(fallback_lines)
+        for token in _tokenise_author_block(fallback_block):
+            clean_token = re.sub(r"[\d†‡*]+", "", token).strip()
+            if not _looks_like_name(clean_token):
+                continue
+            given, family, suffix = _split_name(clean_token)
+            if not family:
+                continue
+            normalized = f"{given.lower()}_{family.lower()}"
+            if normalized in seen:
+                continue
+            seen.add(normalized)
+            authors.append(
+                {
+                    "given": given,
+                    "family": family,
+                    "suffix": suffix,
+                    "footnotes": [],
+                }
+            )
 
     affiliation_records = [
         {"id": aff_id, "text": text}
@@ -503,6 +595,7 @@ def _tokenise_author_block(block: str) -> List[str]:
     if not block:
         return []
 
+    block = block.replace("·", ",")
     block = re.sub(
         r"\((?:MD|PhD|DO|MBA|MS|MSc|MPH|MBBS|FRCP|FRCPath|DDS|RN)[^)]*\)",
         "",
@@ -517,6 +610,12 @@ def _looks_like_name(token: str) -> bool:
     """Heuristic check that ``token`` appears to be a personal name."""
 
     if not token or len(token.split()) < 2:
+        return False
+    if len(token.split()) > 6:
+        return False
+    if ":" in token:
+        return False
+    if token.isupper():
         return False
 
     lowered = token.lower()
@@ -547,6 +646,35 @@ def _split_name(name: str) -> Tuple[str, str, Optional[str]]:
     family = parts[-1]
     given = " ".join(parts[:-1])
     return given.strip(), family.strip(), suffix
+
+
+def _fallback_author_lines(page: PageData) -> List[str]:
+    """Collect lines that look like author listings as a last resort."""
+
+    candidates: List[str] = []
+    for line in page.lines[:60]:
+        cleaned = line.strip()
+        if not cleaned:
+            continue
+        lowered = cleaned.lower()
+        if lowered.startswith(("abstract", "summary", "keywords", "introduction")):
+            break
+        if any(
+            term in lowered
+            for term in (
+                "guideline",
+                "statement",
+                "journal",
+                "supplement",
+                "doi",
+                "www.",
+                "copyright",
+            )
+        ):
+            continue
+        if re.search(r"\b[A-Z][a-zA-Z]+(?:[-\s][A-Z][a-zA-Z]+)+", cleaned):
+            candidates.append(cleaned)
+    return candidates
 
 
 __all__ = [

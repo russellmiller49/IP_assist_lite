@@ -1,21 +1,13 @@
 {
-  "doc_id": "9d398cd2-c9c7-465c-ba2f-ffac634e2a5e",
+  "doc_id": "af2f83a4-163b-4414-b5df-c3c8d5225e45",
   "doc_type": "ifu",
   "source_file": "/home/rjm/projects/IP_assist_lite/data/Input pdfs/IFUs/pdf/BW-18V_Instruction_Manual.pdf",
   "page_count": 2,
-  "extraction_timestamp": "2025-10-27T16:25:20.729899",
+  "extraction_timestamp": "2025-10-29T15:26:22.544692",
   "extraction_version": "v1.0.0",
-  "manufacturer": null,
-  "product_name": null,
-  "part_number": null,
-  "revision": null,
-  "publication_date": null,
-  "model": null,
+  "evidence_bank": {},
   "software_versions": [],
-  "indications_for_use": null,
   "intended_use": "1 These products may not be available in some areas. 4. Perform ultrasonic cleaning, for 5 minutes at 38 – 47 KH z. 2 SYMBOLS 5. Rinse in water, then thoroughly dry with lint-free cloth. The meaning(s) of the symbol(s) shown on the back cover of this instruction manual are as follows: If the brush is not thoroughly cleaned, residual organic debris may solidify and it may be difficult to effectively Manufacturer Authorized representative in the European Community disinfect or sterilize the brush. Importer (into European Union) 6. 2 Disinfection For US Customers only For a Symbols Glossary, visit us: http: //www. olympus-global. com/en/common/pdf/symbolsglossary. pdf 1. After cleaning the brush in accordance with Section 6. 1, “Cleaning” prepare a 2. 0 – 3. 2% glutaraldehyde solution. 3 SIGNAL WORDS Follow the manufacturer’s instructions regarding its concentration and temperature. 2. Soak the Channel Cleaning Brush in a basin filled with disinfectant solution, then remove bubbles from the outer The following signal words are used throughout this manual: surface, using a lint-free cloth. In particular, rub the bristle section with your fingers to remove bubbles. 3. Soak in disinfectant solution for the amount of time recommended by the disinfectant manufacturer. Indicates a potentially hazardous situation which, if not avoided, could result in death or serious injury. 4. Remove from the disinfectant solution, then rinse thoroughly with sterile water. 5. Thoroughly dry with a sterile lint-free cloth. Indicates a potentially hazardous situation which, if not avoided, may result in minor or moderate injury. It may also be used to alert against unsafe practices or potential equipment damage. Contact Olympus for the names of specific disinfectants with which the Channel Cleaning Brush is compatible. Indicates additional helpful information. 6. 3 Sterilization",
-  "intended_user": null,
-  "intended_patient_population": null,
   "contraindications": [],
   "adverse_events": [],
   "safety_blocks": [],
@@ -25,31 +17,59 @@
     "page_count": 2,
     "unique_pages_seen": 2,
     "unique_pages_ratio": 1.0,
-    "extracted_chars": 10927,
-    "duration_s": 0.9171106815338135,
+    "extracted_chars": 10934,
+    "duration_s": 0.4558396339416504,
     "coverage_ratio": 1.0,
     "tables_kept": 0
   },
   "_engine": "pdfplumber",
   "_mode": "full",
   "_cache_used": false,
-  "_pipeline": {
-    "profile": "enriched",
-    "engines": [
-      "pdfplumber",
-      "fitz"
-    ],
-    "ocr_used_pages": [],
-    "timestamp": "2025-10-27T16:25:20.729899",
-    "version": "v1.0.0"
-  },
   "_pipeline_metadata": {
+    "profile": "enriched",
+    "engines_requested": [
+      "pdfplumber",
+      "pymupdf"
+    ],
+    "engine_used": "pdfplumber",
+    "mode": "full",
+    "cache_used": false,
+    "ocr_used_pages": [],
+    "coverage_ratio": 1.0,
+    "page_count": 2,
+    "timestamp": "2025-10-29T15:26:22.544692",
+    "version": "v1.0.0",
+    "warnings": [],
+    "emit": {
+      "evidence_policy": "compact",
+      "tables_mode": "compact",
+      "evidence_max_chars": 500,
+      "table_cell_max_chars": 600,
+      "paragraph_dedupe": true,
+      "max_entities": 3000,
+      "max_relations": 15000,
+      "relation_window": 80,
+      "keep_evidence_bank": true,
+      "max_tables": 10
+    },
+    "emit_raw_pages": false,
     "generator": "medparse",
     "pipeline_version": "1.1.0",
     "engine": "pdfplumber",
-    "mode": "full",
-    "cache_used": false,
-    "config_hash": "8c705aa6",
-    "content_hash": "04f7420fcc28"
+    "config_hash": "7d58edf1",
+    "content_hash": "04f7420fcc28",
+    "validators": {
+      "passed": true,
+      "warnings": [
+        "IFU missing front-matter field 'part_number'.",
+        "IFU missing front-matter field 'revision'.",
+        "IFU missing front-matter field 'publication_date'.",
+        "IFU missing front-matter field 'model'.",
+        "IFU missing manufacturer field.",
+        "IFU missing product_name field.",
+        "Expected at least 20 safety blocks; found 0."
+      ],
+      "errors": []
+    }
   }
 }

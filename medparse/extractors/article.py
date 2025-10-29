@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import copy
 import re
 from pathlib import Path
 from typing import Dict, Iterable, List, Optional, Sequence
@@ -15,6 +16,7 @@ from medparse.normalize.article_frontmatter import (
     extract_doi,
     extract_bibliographic_metadata,
     extract_title_hierarchical,
+    is_valid_title,
 )
 from medparse.normalize.title_block import extract_title
 from medparse.normalize.article_sections import normalize_article_sections
@@ -65,6 +67,8 @@ def extract_article(
 
     extraction_config = config or get_extraction_config()
     pages = pages or load_pages(pdf_path, engine=engine, max_pages=page_limit)
+    pages_for_detection = [copy.deepcopy(page) for page in pages]
+    sections_for_detection = normalize_article_sections(pages_for_detection)
     if not pages:
         raise ValueError(f"No pages extracted from {pdf_path}")
 
@@ -73,22 +77,35 @@ def extract_article(
     flat_lines = collect_lines(pages)
 
     # Try both title extraction methods and use the better one
-    title_info_old = extract_title_hierarchical(pages)
     doi = extract_doi(pages[:2])
     biblio = extract_bibliographic_metadata(pages)
+    fallback_title = pdf_path.stem.replace("_", " ").strip()
+    title_info = extract_title_hierarchical(
+        pages,
+        metadata=None,
+        doi=doi,
+        fallback=fallback_title,
+    )
 
-    # Use the new font-aware title extraction
-    title, title_source, title_confidence = extract_title(pages, metadata=None, doi=doi)
-
-    # Choose the better title
-    if title and title_confidence > title_info_old.get("confidence", 0.0):
+    # Use the font-aware extractor as a candidate but guard against headers
+    title_candidate, title_source, title_confidence = extract_title(pages, metadata=None, doi=doi)
+    best_confidence = float(title_info.get("confidence", 0.0) or 0.0)
+    if (
+        title_candidate
+        and is_valid_title(title_candidate)
+        and title_confidence >= best_confidence
+    ):
         title_info = {
-            "title": title,
+            "title": title_candidate,
             "source": title_source,
-            "confidence": title_confidence
+            "confidence": title_confidence,
         }
-    else:
-        title_info = title_info_old
+    elif not title_info.get("title") and fallback_title:
+        title_info = {
+            "title": fallback_title,
+            "source": title_info.get("source") or "filename",
+            "confidence": max(best_confidence, 0.25),
+        }
     frontmatter = extract_authors_affiliations(pages)
     authors = _build_authors(frontmatter)
     affiliations = _build_affiliations(frontmatter.get("affiliations", []))
@@ -100,7 +117,15 @@ def extract_article(
     recommendations = _map_recommendations(recommendations_raw)
     figures = _maybe_extract_figures(pages, extraction_config)
 
-    doc_subtype = _infer_doc_subtype(pages, title_info, sections, recommendations)
+    doc_subtype = _infer_doc_subtype(
+        pages_for_detection,
+        title_info,
+        sections_for_detection,
+        recommendations,
+        recommendations_raw,
+    )
+    if doc_subtype != "guideline" and "guideline" in pdf_path.stem.lower():
+        doc_subtype = "guideline" if recommendations else "review"
 
     yield_data = yield_from_text(flat_lines)
     references = normalize_references(
@@ -176,6 +201,7 @@ def extract_article(
         n_lesions=_as_int(yield_data.get("n_lesions")),
         references=references,
     )
+
 
     document.pipeline_info["umls_status"] = umls_result.status
     document.pipeline_info["umls"] = umls_result.status
@@ -370,6 +396,10 @@ def _map_yield(
             exclusion_reasons.append("no_numerator_in_text")
         if denominator is None:
             exclusion_reasons.append("no_denominator_in_text")
+        if numerator is None or denominator is None:
+            exclusion_reasons.append("missing_numerator_denominator")
+            if value is not None:
+                exclusion_reasons.append("non_strict_reported")
 
         return DiagnosticYield(
             value=value,
@@ -378,23 +408,47 @@ def _map_yield(
             denominator=int(denominator) if denominator is not None else None,
             strict=False,
             exclusion_reasons=exclusion_reasons,
+            compatible_with_ats=False,
         )
-    evidence = (
-        EvidenceSpan(text=data.evidence.text, confidence=data.evidence.confidence)
-        if data.evidence
-        else None
+    reasons = list(dict.fromkeys(data.exclusion_reasons))
+    derived = "derived_counts_from_percent" in reasons
+    numerator_val = None if derived else data.numerator
+    denominator_val = None if derived else data.denominator
+    if numerator_val is None or denominator_val is None:
+        if "missing_numerator_denominator" not in reasons:
+            reasons.append("missing_numerator_denominator")
+        if data.yield_pct is not None and "non_strict_reported" not in reasons:
+            reasons.append("non_strict_reported")
+    evidence = None
+    if data.evidence:
+        evidence = EvidenceSpan(
+            text=data.evidence.text,
+            page=data.evidence.page,
+            confidence=data.evidence.confidence,
+        )
+    compatible = (
+        data.compatible_with_ats
+        and not derived
+        and numerator_val is not None
+        and denominator_val is not None
+    )
+    strict_flag = (
+        data.strict
+        and not derived
+        and numerator_val is not None
+        and denominator_val is not None
     )
     return DiagnosticYield(
         value=data.yield_pct,
         reported_value=(data.yield_pct / 100.0) if data.yield_pct is not None else None,
-        numerator=data.numerator,
-        denominator=data.denominator,
+        numerator=numerator_val,
+        denominator=denominator_val,
         lower_ci=data.ci_lower,
         upper_ci=data.ci_upper,
-        exclusion_reasons=data.exclusion_reasons,
+        exclusion_reasons=reasons,
         method_note=data.definition,
-        compatible_with_ats=data.compatible_with_ats,
-        strict=data.strict,
+        compatible_with_ats=compatible,
+        strict=strict_flag,
         evidence=evidence,
     )
 
@@ -461,6 +515,16 @@ GUIDELINE_TITLE_MARKERS = {
     "recommendations",
 }
 
+GUIDELINE_HEADING_TOKENS = {
+    "recommendation",
+    "recommendations",
+    "graded recommendation",
+    "clinical recommendations",
+    "guideline recommendations",
+}
+
+GRADE_FRIENDLY_TYPES = {"ungraded", "consensus", "good_practice"}
+
 REVIEW_MARKERS = {
     "systematic review",
     "meta-analysis",
@@ -474,14 +538,34 @@ def detect_guideline(
     pages: Sequence[PageData],
     sections: dict[str, str],
     recommendations: Sequence[GuidelineRecommendation],
+    raw_recommendations: Sequence[ParsedGuidelineRecommendation] | None = None,
 ) -> bool:
     """Return ``True`` when guideline signals are detected across pages."""
+
+    graded_pages: set[int] = set()
+    if recommendations:
+        for rec in recommendations:
+            if rec.page is None:
+                continue
+            if rec.grade or rec.statement_type in GRADE_FRIENDLY_TYPES:
+                graded_pages.add(rec.page)
+
+    if raw_recommendations:
+        for rec in raw_recommendations:
+            if rec.page is None:
+                continue
+            if getattr(rec, "grade", None) or getattr(rec, "statement_type", "") in GRADE_FRIENDLY_TYPES:
+                graded_pages.add(rec.page)
+
+    if graded_pages:
+        LOGGER.debug("Guideline detected via graded recommendation pages: %s", sorted(graded_pages))
+        return True
 
     if recommendations and len(recommendations) >= 5:
         graded_count = sum(
             1
             for rec in recommendations
-            if rec.grade or rec.statement_type in {"ungraded", "consensus", "good_practice"}
+            if rec.grade or rec.statement_type in GRADE_FRIENDLY_TYPES
         )
         grade_ratio = graded_count / len(recommendations)
         if grade_ratio >= 0.5:
@@ -494,7 +578,7 @@ def detect_guideline(
         if page.text
     ).lower()
     keyword_hits = sum(1 for keyword in GUIDELINE_KEYWORDS if keyword in early_text)
-    if keyword_hits >= 2:
+    if keyword_hits >= 2 and recommendations:
         LOGGER.debug("Guideline detected via keyword match (%d hits).", keyword_hits)
         return True
 
@@ -502,8 +586,13 @@ def detect_guideline(
         sections.get(key, "") or ""
         for key in ("abstract", "background", "introduction")
     ).lower()
-    if any(marker in intro_and_abstract for marker in GUIDELINE_TITLE_MARKERS):
+    if recommendations and any(marker in intro_and_abstract for marker in GUIDELINE_TITLE_MARKERS):
         LOGGER.debug("Guideline detected via section markers.")
+        return True
+
+    heading_hits = _recommendation_heading_hits(pages)
+    if heading_hits >= 1 and recommendations:
+        LOGGER.debug("Guideline detected via page headings (hits=%d).", heading_hits)
         return True
 
     recommendation_pages = 0
@@ -529,11 +618,13 @@ def _infer_doc_subtype(
     title_info: dict,
     sections: dict[str, str],
     recommendations: Sequence[GuidelineRecommendation],
+    raw_recommendations: Sequence[ParsedGuidelineRecommendation] | None = None,
 ) -> str:
     """Classify article subtype using guideline and review detectors."""
 
     try:
-        if detect_guideline(pages, sections, recommendations):
+        detected = detect_guideline(pages, sections, recommendations, raw_recommendations)
+        if detected:
             return "guideline"
     except Exception as exc:  # pragma: no cover - defensive
         LOGGER.debug("Guideline detection failed: %s", exc)
@@ -551,6 +642,19 @@ def _infer_doc_subtype(
     if recommendations:
         LOGGER.debug("Defaulting to research despite recommendations (guideline heuristics failed).")
     return "research"
+
+
+def _recommendation_heading_hits(pages: Sequence[PageData]) -> int:
+    hits = 0
+    for page in pages[:8]:
+        for heading in getattr(page, "headings", []):
+            title = (heading.title or "").strip().lower()
+            if not title:
+                continue
+            if any(token in title for token in GUIDELINE_HEADING_TOKENS):
+                hits += 1
+                break
+    return hits
 
 
 def _map_umls_entities(records: Sequence[UmlsEntityRecord]) -> List[UmlsEntity]:

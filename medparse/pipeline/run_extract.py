@@ -256,71 +256,98 @@ def _build_evidence_bank(document: BaseDocument, size_guards: SizeGuards) -> Evi
     """
     bank = EvidenceBank(size_guards=size_guards)
 
+    max_evidence_list = max(1, size_guards.max_evidence_per_item)
+
+    def _apply_pointer(parent, field: str, pointer: EvidenceSpan, ref_id: str) -> None:
+        setattr(parent, field, pointer)
+        setattr(parent, "evidence_refs", [ref_id])
+
     # Process recommendations
     if hasattr(document, "recommendations"):
         for rec in getattr(document, "recommendations") or []:
             evidence = getattr(rec, "evidence", None)
             if isinstance(evidence, list):
-                refs = bank.add_evidence_list(evidence)
-                if refs:
-                    setattr(rec, "evidence_refs", refs)
-                    setattr(rec, "evidence", None)  # Clear original
-            elif isinstance(evidence, EvidenceSpan):
+                trimmed = [
+                    span
+                    for span in evidence[:max_evidence_list]
+                    if isinstance(span, EvidenceSpan) and span.text
+                ]
+                refs = bank.add_evidence_list(trimmed)
+                if refs and trimmed:
+                    pointers = [span.as_pointer() for span in trimmed if span.hash]
+                    if pointers:
+                        setattr(rec, "evidence_refs", refs)
+                        setattr(rec, "evidence", pointers[0])
+            elif isinstance(evidence, EvidenceSpan) and evidence.text:
                 ref = bank.add_evidence(evidence)
                 if ref:
-                    setattr(rec, "evidence_refs", [ref])
-                    setattr(rec, "evidence", None)  # Clear original
+                    pointer = evidence.as_pointer()
+                    _apply_pointer(rec, "evidence", pointer, ref)
 
     # Process outcomes
     if hasattr(document, "outcomes"):
         for outcome in getattr(document, "outcomes") or []:
             evidence = getattr(outcome, "evidence", None)
             if isinstance(evidence, list):
-                refs = bank.add_evidence_list(evidence)
-                if refs:
-                    setattr(outcome, "evidence_refs", refs)
-                    setattr(outcome, "evidence", None)
-            elif isinstance(evidence, EvidenceSpan):
+                trimmed = [
+                    span
+                    for span in evidence[:max_evidence_list]
+                    if isinstance(span, EvidenceSpan) and span.text
+                ]
+                refs = bank.add_evidence_list(trimmed)
+                if refs and trimmed:
+                    pointers = [span.as_pointer() for span in trimmed if span.hash]
+                    if pointers:
+                        setattr(outcome, "evidence_refs", refs)
+                        setattr(outcome, "evidence", pointers[0])
+            elif isinstance(evidence, EvidenceSpan) and evidence.text:
                 ref = bank.add_evidence(evidence)
                 if ref:
-                    setattr(outcome, "evidence_refs", [ref])
-                    setattr(outcome, "evidence", None)
+                    pointer = evidence.as_pointer()
+                    _apply_pointer(outcome, "evidence", pointer, ref)
 
     # Process diagnostic_yield
     if hasattr(document, "diagnostic_yield"):
         diag = getattr(document, "diagnostic_yield")
         if diag:
             evidence = getattr(diag, "evidence", None)
-            if isinstance(evidence, EvidenceSpan):
+            if isinstance(evidence, EvidenceSpan) and evidence.text:
                 ref = bank.add_evidence(evidence)
                 if ref:
-                    setattr(diag, "evidence_refs", [ref])
-                    setattr(diag, "evidence", None)
+                    pointer = evidence.as_pointer()
+                    _apply_pointer(diag, "evidence", pointer, ref)
 
     # Process relations
     if hasattr(document, "relations"):
         for relation in getattr(document, "relations") or []:
             evidence = getattr(relation, "evidence", None)
-            if isinstance(evidence, EvidenceSpan):
+            if isinstance(evidence, EvidenceSpan) and evidence.text:
                 ref = bank.add_evidence(evidence)
                 if ref:
-                    setattr(relation, "evidence_refs", [ref])
-                    setattr(relation, "evidence", None)
+                    pointer = evidence.as_pointer()
+                    _apply_pointer(relation, "evidence", pointer, ref)
             elif isinstance(evidence, list):
-                refs = bank.add_evidence_list(evidence)
-                if refs:
-                    setattr(relation, "evidence_refs", refs)
-                    setattr(relation, "evidence", None)
+                trimmed = [
+                    span
+                    for span in evidence[:max_evidence_list]
+                    if isinstance(span, EvidenceSpan) and span.text
+                ]
+                refs = bank.add_evidence_list(trimmed)
+                if refs and trimmed:
+                    pointers = [span.as_pointer() for span in trimmed if span.hash]
+                    if pointers:
+                        setattr(relation, "evidence_refs", refs)
+                        setattr(relation, "evidence", pointers[0])
 
     # Process figures
     if hasattr(document, "figures"):
         for figure in getattr(document, "figures") or []:
             evidence = getattr(figure, "evidence", None)
-            if isinstance(evidence, EvidenceSpan):
+            if isinstance(evidence, EvidenceSpan) and evidence.text:
                 ref = bank.add_evidence(evidence)
                 if ref:
-                    setattr(figure, "evidence_refs", [ref])
-                    setattr(figure, "evidence", None)
+                    pointer = evidence.as_pointer()
+                    _apply_pointer(figure, "evidence", pointer, ref)
 
     return bank
 
@@ -334,6 +361,7 @@ def run_extract(
     max_pages: Optional[int] = None,
     summary_length: Optional[SummaryLength] = None,
     profile_override: Optional[str] = None,
+    emit_overrides: Optional[Dict[str, object]] = None,
 ) -> PipelineOutcome:
     """Run extraction with completeness checks and caching."""
 
@@ -348,6 +376,14 @@ def run_extract(
         config.max_preview_pages = max_pages
     elif force_deep:
         config.max_preview_pages = None
+
+    if emit_overrides:
+        merged_emit = dict(config.emit or {})
+        for key, value in emit_overrides.items():
+            if value is None:
+                continue
+            merged_emit[key] = value
+        config.emit = merged_emit
 
     if config.doc_type not in EXTRACTOR_MAP:
         raise ValueError(f"Unsupported doc_type '{config.doc_type}' in {config_path}")
@@ -741,8 +777,10 @@ def _apply_emit_constraints(document: BaseDocument, emit: Dict[str, Any]) -> Lis
         cleaned_tables = []
         seen_rows: set[tuple] = set()
         for table in tables:
-            headers = getattr(table, "headers", [])
-            rows = getattr(table, "rows", [])
+            is_mapping = isinstance(table, dict)
+            headers = list(table.get("headers", [])) if is_mapping else list(getattr(table, "headers", []))
+            rows = table.get("rows") if is_mapping else getattr(table, "rows", [])
+            rows = rows or []
             truncated = False
             cleaned_rows = []
             for row in rows:
@@ -758,12 +796,25 @@ def _apply_emit_constraints(document: BaseDocument, emit: Dict[str, Any]) -> Lis
                 seen_rows.add(row_key)
                 cleaned_rows.append(cleaned_row)
             if tables_mode == "compact" and table_sample_rows and len(cleaned_rows) > table_sample_rows:
-                setattr(table, "rows_truncated", True)
+                if is_mapping:
+                    table["rows_truncated"] = True
+                else:
+                    setattr(table, "rows_truncated", True)
                 cleaned_rows = cleaned_rows[:table_sample_rows]
-            setattr(table, "rows", cleaned_rows)
-            if truncated:
-                setattr(table, "truncated_cells", True)
-            cleaned_tables.append(table)
+
+            if is_mapping:
+                updated = dict(table)
+                updated["headers"] = headers
+                updated["rows"] = cleaned_rows
+                if truncated:
+                    updated["truncated_cells"] = True
+                cleaned_tables.append(updated)
+            else:
+                setattr(table, "headers", headers)
+                setattr(table, "rows", cleaned_rows)
+                if truncated:
+                    setattr(table, "truncated_cells", True)
+                cleaned_tables.append(table)
 
         if isinstance(max_tables, int) and max_tables >= 0 and len(cleaned_tables) > max_tables:
             warnings.append("table_limit_exceeded")

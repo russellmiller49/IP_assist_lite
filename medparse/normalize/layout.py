@@ -147,6 +147,7 @@ def slice_between(
     start_anchors: Iterable[str],
     stop_anchors: Optional[Iterable[str]] = None,
     guard_fn: GuardFn | None = is_toc_page,
+    allow_inline_stop: bool = True,
 ) -> str:
     """Extract text bounded by anchors, guarding against TOC bleed."""
 
@@ -157,16 +158,21 @@ def slice_between(
         return ""
 
     joined = "\n".join("\n".join(page.lines) for page in filtered_pages)
-    start = _find_anchor(joined, start_anchors)
+    start = _find_anchor(joined, start_anchors, allow_inline=True)
     if start is None:
         return ""
 
-    end = _find_anchor(joined[start:], stop_anchors)
+    end = _find_anchor(joined[start:], stop_anchors, allow_inline=allow_inline_stop)
     slice_text = joined[start : start + end if end is not None else None]
     return slice_text.strip()
 
 
-def _find_anchor(text: str, anchors: Optional[Iterable[str]]) -> Optional[int]:
+def _find_anchor(
+    text: str,
+    anchors: Optional[Iterable[str]],
+    *,
+    allow_inline: bool = True,
+) -> Optional[int]:
     if not anchors:
         return None
 
@@ -175,13 +181,19 @@ def _find_anchor(text: str, anchors: Optional[Iterable[str]]) -> Optional[int]:
         patterns = [
             # Original: heading at line start with colon or newline
             rf"(?:^|\n)\s*{re.escape(anchor)}[:\s]*\n",
-            # Allow heading without newline after (for inline headings)
-            rf"(?:^|\n)\s*{re.escape(anchor)}[:\s]+",
+        ]
+        if allow_inline:
+            patterns.append(
+                rf"(?:^|\n)\s*{re.escape(anchor)}[:\s]+"
+            )
+        patterns.extend(
+            [
             # Allow bold/italic markers around heading
             rf"(?:^|\n)\s*\*{{0,2}}{re.escape(anchor)}\*{{0,2}}[:\s]*",
             # Allow numbered headings
             rf"(?:^|\n)\s*\d+\.?\s+{re.escape(anchor)}[:\s]*",
-        ]
+            ]
+        )
 
         for pattern in patterns:
             match = re.search(pattern, text, flags=re.IGNORECASE)
@@ -231,4 +243,3 @@ __all__ = [
     "reflow_document",
     "slice_between",
 ]
-

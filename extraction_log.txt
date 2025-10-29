@@ -1,0 +1,36 @@
+=== IP Assist Lite Batch Extraction ===
+Logging to: /home/rjm/projects/IP_assist_lite/logs/extraction_20251029_080254.log
+
+Loading environment variables...
+✓ Environment variables loaded
+  UMLS_API_KEY: 360eb22b-f8c7-4c91-b...
+  QUICKUMLS_PATH: /home/rjm/quickumls_data
+
+Activating medparse-py311 environment...
+
+=== Environment Verification ===
+python is /home/rjm/miniconda3/envs/medparse-py311/bin/python
+✓ medparse imported from /home/rjm/projects/IP_assist_lite/medparse/__init__.py
+/home/rjm/miniconda3/envs/medparse-py311/lib/python3.11/site-packages/pydantic/_internal/_fields.py:161: UserWarning: Field "model_name" has conflict with protected namespace "model_".
+
+You may be able to resolve this warning by setting `model_config['protected_namespaces'] = ()`.
+  warnings.warn(
+✓ medparse.cli imported from /home/rjm/projects/IP_assist_lite/medparse/cli.py
+
+Traceback (most recent call last):
+  File "<stdin>", line 6, in <module>
+  File "<frozen os>", line 679, in __getitem__
+KeyError: 'PROJECT_ROOT'
+==========================================
+✅ All batch extractions complete!
+==========================================
+
+Output locations:
+  Articles: out/articles/
+  IFUs:     out/ifus/
+  Textbooks: out/textbooks/
+
+
+Full log saved to: /home/rjm/projects/IP_assist_lite/logs/extraction_20251029_080254.log
+View it with: less /home/rjm/projects/IP_assist_lite/logs/extraction_20251029_080254.log
+

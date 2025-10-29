@@ -1,12 +1,12 @@
 {
-  "doc_id": "86ac9ff3-2769-4a14-b377-64f88f960e21",
+  "doc_id": "05926ec8-b026-42b5-b9e9-9743bb7ed194",
   "doc_type": "ifu",
   "source_file": "/home/rjm/projects/IP_assist_lite/data/Input pdfs/IFUs/pdf/Ion Endoluminal System, Instruments, and Accessories User Manual(553990-11).pdf",
   "page_count": 128,
-  "extraction_timestamp": "2025-10-27T16:25:43.145321",
+  "extraction_timestamp": "2025-10-29T15:26:45.363885",
   "extraction_version": "v1.0.0",
+  "evidence_bank": {},
   "manufacturer": "Intuitive Surgical, Inc.",
-  "product_name": null,
   "part_number": "553990-11",
   "revision": "Rev C",
   "publication_date": "2024-08-01",
@@ -15,79 +15,73 @@
     "Ion OS v6.0.0",
     "Ion OS v5.0.0"
   ],
-  "indications_for_use": "Tableof Contents 5 Ta b le o f C o n ten ts Chapter 1 Introduction........................................................... 9 1. 1 How to Usethis Manual................................................... 9 1. 2 Lim itationon Use-Lim ited License.......................................... 9 1. 3 General Inform ation..................................................... 10 Contact Inform ation..................................................... 10 Im porter Address........................................................ 10 Aboutthis Manual....................................................... 10 1. 4 Professional Instructionsfor Use........................................... 11 Essential Prescribing Inform ation ........................................... 11 Indicationsfor Use....................................................... 11 Intended Use........................................................... 12 Intended Patient Population ............................................... 12 Intended User.......................................................... 12 Clinical Risksand Benefits................................................. 13 1. 5 Serious Incident Reporting................................................ 13 Im porter Address........................................................ 13 1. 6 General W arnings, Cautions, and Notes..................................... 14 Endoscopic Procedure Precautionsand Notes.................................. 16 Accessory Equipm ent Interconnection........................................ 16 Laser Safety............................................................ 17 System Cart Monitor Positioning............................................ 17 Chapter 2 System Software Updates............................................... 18 2. 1 Updatingthe System Software............................................ 18 Chapter 3 Visual System Overview................................................. 21 Chapter 4 System Overview ...................................................... 24 4. 1 Device Description ...................................................... 24 Plan Point Softwareand Planning Laptop ..................................... 25 Ion System Cart......................................................... 26 Ion Controller........................................................... 26 Instrum entsand Accessories............................................... 27 4. 2 System Cart Use........................................................ 33 Instrum ent Arm Features.................................................. 34 System LED Status Indicators .............................................. 35 System Cart Monitors .................................................... 36 4. 3 Controller Use.......................................................... 39 Controller Touchscreen ................................................... 40 Controller Touchscreen Options............................................. 41 4. 4 Networked Login ....................................................... 45 4. 5 Intuitive Network Drive ................................................. 46 Chapter 5 Room Setup ......................................................... 48 5. 1 System Cartand Controller Location ...................................... 48 Moveand Positionthe System Cart.......................................... 48 Moveand Positionthe Controller............................................ 48 Chapter 6 Connect System ...................................................... 50 6. 1 Power Cable ........................................................... 50 6. 2 Controller Cable........................................................ 51 Connect Controller Cable ................................................. 51 Ion System, Instruments, and Accessories User Manual 6 Tableof Contents Cable Layout........................................................... 51 6. 3 Auxiliary Connections.................................................... 52 HDMIOutput........................................................... 52 Fluoroscope, R-EBUS, and Bronchoscope...................................... 53 Chapter 7 Startup ............................................................. 54 7. 1 Start Upthe System ..................................................... 54 7. 2 Power Button Color Indicators............................................. 54 7. 3 Em ergency Stop Button .................................................. 55 7. 4 Em ergency Power Off.................................................... 55 Chapter 8 Preparefor Procedure .................................................. 56 8. 1 Prepare Instrum entsand Accessories........................................ 56 Prepare Materials ....................................................... 56 Prepare Catheter........................................................ 57 8. 2 Select Com patible Third-Party Biopsy Tools .................................. 58 8. 3 Position System for Procedure............................................. 59 8. 4 Set Up System for Docking................................................ 59 Perform System Tests .................................................... 59 Attach Instrum entsand Accessories......................................... 60 8. 5 Loginto Your Intuitive Account ........................................... 67 Log Into Your Intuitive Account............................................. 67 Log Outor Change Intuitive Accounts........................................ 68 8. 6 Load Patient Plan....................................................... 68 USBOnly.............................................................. 68 USBor Network Drive .................................................... 69 8. 7 Preview Plan........................................................... 70 8. 8 Prepare Patientfor Docking............................................... 72 8. 9 Dockto Patient ........................................................ 72 Chapter 9 Procedureand Biopsy .................................................. 75 9. 1 Register .............................................................. 75 9. 2 Navigate.............................................................. 77 9. 3 Biopsy Overview ........................................................ 78 Before Biopsy........................................................... 78 Before Tool Exchange .................................................... 79 After Biopsy Always Evaluate Airway......................................... 79 9. 4 Flexision Needle Biopsy................................................... 80 Rem ove Sam ples........................................................ 82 Repeat Needle Biopsy .................................................... 82 9. 5 Com patible Third-Party Tool Use........................................... 83 Forceps............................................................... 83 Syringe ............................................................... 84 Third-Party Bronchoalveolar Lavage Kit ...................................... 84 Fiducial Marker Placem ent Using Third-Party Brush Tool.......................... 84 Bronchial Balloons(Endobronchial Blockers)................................... 85 9. 6 Repeat Navigationand Biopsy............................................. 85 9. 7 Take Down System ...................................................... 85 Chapter 10 Finish Procedure...................................................... 86 10. 1 Take Down System ...................................................... 86 Instrum entand Accessory Uses............................................. 87 10. 2 Cleanand Disinfect System ............................................... 88 Ion System, Instruments, and Accessories User Manual Tableof Contents 7 10. 3 Stow and Shut Down System .............................................. 90 Auto Stow Troubleshooting ................................................ 92 10. 4 Store System ........................................................... 92 Appendix A Troubleshooting...................................................... 93 A. 1 Obtain Im m ediate Accesstothe Patient..................................... 93 A. 2 Mid-procedure Restart.................................................. 94 A. 3 Unexpected System Motion .............................................. 94 A. 4 Mid-Procedure System Cartor Bed Height Adjustm ent ......................... 95 A. 5 Unableto Com plete Registration .......................................... 95 A. 6 Registrationwith Variant Anatom y ........................................ 96 A. 7 Inaccurate Registration(Navigationand Live View Mism atch)................... 96 A. 8 USBErrors............................................................. 96 A. 9 Catheter Guide Attachm ent Errors......................................... 97 A. 10 Catheter Tests Fail...................................................... 97 A. 11 Catheter Not Moving(Controls Unresponsive)................................ 99 A. 12 Rotated Vision Probe View (Non-intuitive Driving)............................. 99 A. 13 Live View Displays Colored Lines ........................................... 99 A. 14 Vision Probe Im age Quality .............................................. 100 A. 15 Vision Probe Not Detected............................................... 100 A. 16 Live View Not Advancing ................................................ 100 A. 17 Swivel Connector Disconnects............................................ 101 A. 18 Spinning W heelon Monitor(Catheter Shape Sensor Interference)................ 101 A. 19 Touchscreen Unresponsive............................................... 101 A. 20 System Monitors Black Out(Tim e Out)..................................... 102 A. 21 System Faults......................................................... 102 Non-Recoverable Fault.................................................. 102 Recoverable Fault...................................................... 102 A. 22 Patient Motion........................................................ 102 A. 23 Mid-Procedure Catheter Exchange ........................................ 103 A. 24 System Power Issues.................................................... 103 Check Connections..................................................... 103 Battery Backup ........................................................ 103 A. 25 Contact Custom er Service............................................... 104 Appendix BSterilization Methods ................................................ 105 Appendix C Third-Party Com patibility ............................................ 106 C. 1 Contact Inform ation ................................................... 106 Appendix D System Specifications................................................ 108 D. 1 Design Life ........................................................... 108 D. 2 Power Requirem ents.................................................... 108 D. 3 Power Specifications ................................................... 109 D. 4 Physical Dim ensions.................................................... 109 D. 5 Environm ental Specifications ............................................ 110 D. 6 Crate Dim ensions...................................................... 110 D. 7 Electrom agnetic Com patibility........................................... 111 EMC Tables ........................................................... 111 Essential Perform ancefor EMC ............................................ 114 D. 8 Technical System Inform ation............................................ 114 Manufacturerinform ation ............................................... 114 Com plianceand Classification ............................................ 115 Ion System, Instruments, and Accessories User Manual",
-  "intended_use": "Tableof Contents 5 Ta b le o f C o n ten ts Chapter 1 Introduction........................................................... 9 1. 1 How to Usethis Manual................................................... 9 1. 2 Lim itationon Use-Lim ited License.......................................... 9 1. 3 General Inform ation..................................................... 10 Contact Inform ation..................................................... 10 Im porter Address........................................................ 10 Aboutthis Manual....................................................... 10 1. 4 Professional Instructionsfor Use........................................... 11 Essential Prescribing Inform ation ........................................... 11 Indicationsfor Use....................................................... 11 Intended Use........................................................... 12 Intended Patient Population ............................................... 12 Intended User.......................................................... 12 Clinical Risksand Benefits................................................. 13 1. 5 Serious Incident Reporting................................................ 13 Im porter Address........................................................ 13 1. 6 General W arnings, Cautions, and Notes..................................... 14 Endoscopic Procedure Precautionsand Notes.................................. 16 Accessory Equipm ent Interconnection........................................ 16 Laser Safety............................................................ 17 System Cart Monitor Positioning............................................ 17 Chapter 2 System Software Updates............................................... 18 2. 1 Updatingthe System Software............................................ 18 Chapter 3 Visual System Overview................................................. 21 Chapter 4 System Overview ...................................................... 24 4. 1 Device Description ...................................................... 24 Plan Point Softwareand Planning Laptop ..................................... 25 Ion System Cart......................................................... 26 Ion Controller........................................................... 26 Instrum entsand Accessories............................................... 27 4. 2 System Cart Use........................................................ 33 Instrum ent Arm Features.................................................. 34 System LED Status Indicators .............................................. 35 System Cart Monitors .................................................... 36 4. 3 Controller Use.......................................................... 39 Controller Touchscreen ................................................... 40 Controller Touchscreen Options............................................. 41 4. 4 Networked Login ....................................................... 45 4. 5 Intuitive Network Drive ................................................. 46 Chapter 5 Room Setup ......................................................... 48 5. 1 System Cartand Controller Location ...................................... 48 Moveand Positionthe System Cart.......................................... 48 Moveand Positionthe Controller............................................ 48 Chapter 6 Connect System ...................................................... 50 6. 1 Power Cable ........................................................... 50 6. 2 Controller Cable........................................................ 51 Connect Controller Cable ................................................. 51 Ion System, Instruments, and Accessories User Manual 6 Tableof Contents Cable Layout........................................................... 51 6. 3 Auxiliary Connections.................................................... 52 HDMIOutput........................................................... 52 Fluoroscope, R-EBUS, and Bronchoscope...................................... 53 Chapter 7 Startup ............................................................. 54 7. 1 Start Upthe System ..................................................... 54 7. 2 Power Button Color Indicators............................................. 54 7. 3 Em ergency Stop Button .................................................. 55 7. 4 Em ergency Power Off.................................................... 55 Chapter 8 Preparefor Procedure .................................................. 56 8. 1 Prepare Instrum entsand Accessories........................................ 56 Prepare Materials ....................................................... 56 Prepare Catheter........................................................ 57 8. 2 Select Com patible Third-Party Biopsy Tools .................................. 58 8. 3 Position System for Procedure............................................. 59 8. 4 Set Up System for Docking................................................ 59 Perform System Tests .................................................... 59 Attach Instrum entsand Accessories......................................... 60 8. 5 Loginto Your Intuitive Account ........................................... 67 Log Into Your Intuitive Account............................................. 67 Log Outor Change Intuitive Accounts........................................ 68 8. 6 Load Patient Plan....................................................... 68 USBOnly.............................................................. 68 USBor Network Drive .................................................... 69 8. 7 Preview Plan........................................................... 70 8. 8 Prepare Patientfor Docking............................................... 72 8. 9 Dockto Patient ........................................................ 72 Chapter 9 Procedureand Biopsy .................................................. 75 9. 1 Register .............................................................. 75 9. 2 Navigate.............................................................. 77 9. 3 Biopsy Overview ........................................................ 78 Before Biopsy........................................................... 78 Before Tool Exchange .................................................... 79 After Biopsy Always Evaluate Airway......................................... 79 9. 4 Flexision Needle Biopsy................................................... 80 Rem ove Sam ples........................................................ 82 Repeat Needle Biopsy .................................................... 82 9. 5 Com patible Third-Party Tool Use........................................... 83 Forceps............................................................... 83 Syringe ............................................................... 84 Third-Party Bronchoalveolar Lavage Kit ...................................... 84 Fiducial Marker Placem ent Using Third-Party Brush Tool.......................... 84 Bronchial Balloons(Endobronchial Blockers)................................... 85 9. 6 Repeat Navigationand Biopsy............................................. 85 9. 7 Take Down System ...................................................... 85 Chapter 10 Finish Procedure...................................................... 86 10. 1 Take Down System ...................................................... 86 Instrum entand Accessory Uses............................................. 87 10. 2 Cleanand Disinfect System ............................................... 88 Ion System, Instruments, and Accessories User Manual Tableof Contents 7 10. 3 Stow and Shut Down System .............................................. 90 Auto Stow Troubleshooting ................................................ 92 10. 4 Store System ........................................................... 92 Appendix A Troubleshooting...................................................... 93 A. 1 Obtain Im m ediate Accesstothe Patient..................................... 93 A. 2 Mid-procedure Restart.................................................. 94 A. 3 Unexpected System Motion .............................................. 94 A. 4 Mid-Procedure System Cartor Bed Height Adjustm ent ......................... 95 A. 5 Unableto Com plete Registration .......................................... 95 A. 6 Registrationwith Variant Anatom y ........................................ 96 A. 7 Inaccurate Registration(Navigationand Live View Mism atch)................... 96 A. 8 USBErrors............................................................. 96 A. 9 Catheter Guide Attachm ent Errors......................................... 97 A. 10 Catheter Tests Fail...................................................... 97 A. 11 Catheter Not Moving(Controls Unresponsive)................................ 99 A. 12 Rotated Vision Probe View (Non-intuitive Driving)............................. 99 A. 13 Live View Displays Colored Lines ........................................... 99 A. 14 Vision Probe Im age Quality .............................................. 100 A. 15 Vision Probe Not Detected............................................... 100 A. 16 Live View Not Advancing ................................................ 100 A. 17 Swivel Connector Disconnects............................................ 101 A. 18 Spinning W heelon Monitor(Catheter Shape Sensor Interference)................ 101 A. 19 Touchscreen Unresponsive............................................... 101 A. 20 System Monitors Black Out(Tim e Out)..................................... 102 A. 21 System Faults......................................................... 102 Non-Recoverable Fault.................................................. 102 Recoverable Fault...................................................... 102 A. 22 Patient Motion........................................................ 102 A. 23 Mid-Procedure Catheter Exchange ........................................ 103 A. 24 System Power Issues.................................................... 103 Check Connections..................................................... 103 Battery Backup ........................................................ 103 A. 25 Contact Custom er Service............................................... 104 Appendix BSterilization Methods ................................................ 105 Appendix C Third-Party Com patibility ............................................ 106 C. 1 Contact Inform ation ................................................... 106 Appendix D System Specifications................................................ 108 D. 1 Design Life ........................................................... 108 D. 2 Power Requirem ents.................................................... 108 D. 3 Power Specifications ................................................... 109 D. 4 Physical Dim ensions.................................................... 109 D. 5 Environm ental Specifications ............................................ 110 D. 6 Crate Dim ensions...................................................... 110 D. 7 Electrom agnetic Com patibility........................................... 111 EMC Tables ........................................................... 111 Essential Perform ancefor EMC ............................................ 114 D. 8 Technical System Inform ation............................................ 114 Manufacturerinform ation ............................................... 114 Com plianceand Classification ............................................ 115 Ion System, Instruments, and Accessories User Manual",
-  "intended_user": "Rx only",
+  "indications_for_use": "The Ion endoluminal system (Model IF 1000), referred to in this manual as “the system, ” assists the user in navigating a catheter and endoscopic tools in the pulmonary tract using endoscopic visualization of the tracheobronchial tree for diagnostic and therapeutic procedures. The Ion endoluminal system enables fiducial marker placement. It does not make a diagnosis and is not for pediatric use. The Plan Point Software uses patient CT scans to create a 3 D plan of the lung and navigation pathways for use with the Ion endoluminal system. The Flexision Biopsy Needle is used with the Ion endoluminal system to biopsy tissue from a target area in the lung. 12 Introduction | Professional Instructions for Use Intended Use",
+  "intended_use": "The Ion System Cart (referred to as the System Cart) is intended to facilitate navigation and positioning of endoscopic instruments in the pulmonary tract. The Ion Controller (referred to as the Controller) is intended to facilitate navigation and positioning of endoscopic instruments in the pulmonary tract. The Ion Fully Articulating Catheter (referred to as the Catheter) is intended to be used with the Ion endoluminal system for navigating to the target region in the airways. It is intended to also provide a conduit for the Ion Peripheral Vision Probe, Flexision Biopsy Needles and delivering compatible off-the-shelf tools. The Flexision Biopsy Needle is intended to retrieve tissue from a target structure. The Ion Peripheral Vision Probe (referred to as the Vision Probe) is intended to be used with the Ion endoluminal system to provide live airway view for catheter navigation. The Vision Probe Adapter is intended to be used to connect the Ion Peripheral Vision Probe to the Ion Fully Articulating Catheter. The Vision Probe Bag is used for temporary storage of the Ion Peripheral Vision Probe during a procedure. The Catheter Guide is intended to be used with the Ion Fully Articulating Catheter to provide support. The Sensor Connection Cleaner is used for cleaning the sensor connections on the carriage of the Ion System Cart and the Ion Fully Articulating Catheter. The Swivel Connector is intended to be used to connect the Ion Fully Articulating Catheter to an endotracheal tube. The Suction Adapter is intended to allow modulation of suction when suction tubing is connected to the Ion Fully Articulating Catheter. Intended Patient Population The Ion endoluminal system (Model IF 1000) is intended for adult patients suitable for bronchoscopy. Patient general health and medical history must be adequately assessed along with potential benefits and risks prior to performing procedures with the Ion endoluminal system. These include but are not limited to risks associated with pulmonary disease, severe pulmonary hypertension, cardiovascular disease, bleeding disorders, thromboembolic disorders, anticoagulation therapy, anatomical constraints, inability to oxygenate and patient suitability for general anesthesia. Intended User",
+  "intended_user": "Only physicians with adequate training and experience in bronchoscopic techniques and adequate healthcare facilities should perform procedures with the Ion endoluminal system. Training provided by Intuitive is limited to the use of the Ion endoluminal system and does not replace the necessary medical training and experience required to perform diagnostic and therapeutic bronchoscopy procedures. Introduction | Serious Incident Reporting 13 Clinical Risks and Benefits Patients should talk to their physician to decide if the Ion endoluminal system is right for them. As with any bronchoscopic procedure under general anesthesia, serious complications may include bleeding, pneumothorax (collapsed lung), cardiac-related complications, respiratory failure, air embolism, or death. As with other medical procedures, there may be additional risks associated with the use of general anesthesia and/or endotracheal intubation which are not listed above; patients should consult a healthcare professional regarding these and other potential risks. The overall benefit of the Ion endoluminal system is to bronchoscopically access and biopsy pulmonary lesions, including nodules in the lung periphery. The potential clinical benefits include improved or similar diagnostic outcomes of the sample obtained with comparable or fewer complications to other non-surgical approaches. The clinical benefits depend on a number of factors, including but not limited to nodule characteristics, patient medical history and disease state, and physician experience. 1. 5 Serious Incident Reporting Serious incident means any incident that directly or indirectly led, might have led, or might lead to any of the following: • the death of a patient, user, or other person, • the temporary or permanent serious deterioration of a patient's, user's, or other person's state of health, • a serious public health threat. For a patient/user/third party in the European Union and in countries with identical regulatory regime (Regulation 2017/745/EU on Medical Devices); if, during the use of this device or as a result of its use, a serious incident has occurred, report the incident to the manufacturer and its authorized representative and to your national authority. In Europe Intuitive Surgical SAS 11 avenue de Canteranne 33600 Pessac, France Toll free: +800. 0821. 2020 Direct: +33. 1. 77. 68. 88. 45 Fax: +800. 0821. 2021 or +41. 21. 821. 2021 Importer Address European Union Switzerland Intuitive Surgical SAS Intuitive Surgical, Sàrl 11 avenue de Canteranne 1 Chemin des Mûriers 33600 Pessac, France 1170 Aubonne, Switzerland 14 Introduction | General Warnings, Cautions, and Notes 1. 6 General Warnings, Cautions, and Notes Warnings",
   "intended_patient_population": "The Ion endoluminal system (Model IF 1000) is intended for adult patients suitable for bronchoscopy. Patient general health and medical history must be adequately assessed along with potential benefits and risks prior to performing procedures with the Ion endoluminal system. These include but are not limited to risks associated with pulmonary disease, severe pulmonary hypertension, cardiovascular disease, bleeding disorders, thromboembolic disorders, anticoagulation therapy, anatomical constraints, inability to oxygenate and patient suitability for general anesthesia.",
   "contraindications": [],
   "adverse_events": [
-    ", and general information regarding Intuitive products and services."
+    ", and general information regarding Intuitive products and services. In the U. S. In Europe Intuitive Surgical, Inc. Intuitive Surgical SAS 1266 Kifer Road 11 avenue de Canteranne Sunnyvale, CA 94086 USA 33600 Pessac, France Toll free: 1. 866. 225. 2071 Toll free: +800. 0821. 2020 Direct: 408. 523. 9200 Direct: +33. 1. 77. 68. 88. 45 Fax: 408. 523. 2377 Fax: +800. 0821. 2021 or +41. 21. 821. 2021 Use the following information if the system requires maintenance or service. Preventive maintenance is required and must be performed by authorized Intuitive personnel. There are no user-serviceable parts on the main system components. In the U. S. In Europe Toll free: 1. 866. 225. 2071 Toll free: +800. 0821. 2020 Direct: 408. 523. 9200 Direct: +33. 1. 77. 68. 88. 45 In the U. S. , phones are staffed Monday through Friday, 7 a. m. Eastern Time (ET) to 6 p. m. Pacific Time (PT). In Europe, phones are staffed Monday through Friday, 7 a. m. to 5 p. m. Central European Time (CET). Importer Address European Union Switzerland Intuitive Surgical SAS Intuitive Surgical, Sàrl 11 avenue de Canteranne 1 Chemin des Mûriers 33600 Pessac, France 1170 Aubonne, Switzerland About this Manual This manual uses the following conventions. • Names of labeled items that appear on hardware or on screen are in bold (Volume). • A greater than > sign indicates the path of progression through menu options (Settings > Video Output). • Blue text is used for cross-references. In electronic versions, cross-references are active, clickable links. Introduction | Professional Instructions for Use 11 Table 1. 1 Note, Caution, and Warning Symbol Meaning Note: Highlights important information. Caution: Alerts the reader about a potentially hazardous situation which, if not avoided, may result in minor or moderate injury to the user or patient or damage to the equipment or other property. It may also be used to alert against unsafe practices. This includes the special care necessary for the safe and effective use of the device and the care necessary to avoid damage to a device that may occur as a result of use or misuse. Warning: Alerts the reader about a situation which, if not avoided, could result in death or serious injury. 1. 4 Professional Instructions for Use Essential Prescribing Information • Device Name: Intuitive Ion Endoluminal System and Instruments (IF 1000). • Rx only: Federal Law (USA) restricts this device to sale by or on the order of a physician (or properly licensed practitioner). Indications for Use The Ion endoluminal system (Model IF 1000), referred to in this manual as “the system, ” assists the user in navigating a catheter and endoscopic tools in the pulmonary tract using endoscopic visualization of the tracheobronchial tree for diagnostic and therapeutic procedures. The Ion endoluminal system enables fiducial marker placement. It does not make a diagnosis and is not for pediatric use. The Plan Point Software uses patient CT scans to create a 3D plan of the lung and navigation pathways for use with the Ion endoluminal system. The Flexision Biopsy Needle is used with the Ion endoluminal system to biopsy tissue from a target area in the lung. 12 Introduction | Professional Instructions for Use Intended Use The Ion System Cart (referred to as the System Cart) is intended to facilitate navigation and positioning of endoscopic instruments in the pulmonary tract. The Ion Controller (referred to as the Controller) is intended to facilitate navigation and positioning of endoscopic instruments in the pulmonary tract. The Ion Fully Articulating Catheter (referred to as the Catheter) is intended to be used with the Ion endoluminal system for navigating to the target region in the airways. It is intended to also provide a conduit for the Ion Peripheral Vision Probe, Flexision Biopsy Needles and delivering compatible off-the-shelf tools. The Flexision Biopsy Needle is intended to retrieve tissue from a target structure. The Ion Peripheral Vision Probe (referred to as the Vision Probe) is intended to be used with the Ion endoluminal system to provide live airway view for catheter navigation. The Vision Probe Adapter is intended to be used to connect the Ion Peripheral Vision Probe to the Ion Fully Articulating Catheter. The Vision Probe Bag is used for temporary storage of the Ion Peripheral Vision Probe during a procedure. The Catheter Guide is intended to be used with the Ion Fully Articulating Catheter to provide support. The Sensor Connection Cleaner is used for cleaning the sensor connections on the carriage of the Ion System Cart and the Ion Fully Articulating Catheter. The Swivel Connector is intended to be used to connect the Ion Fully Articulating Catheter to an endotracheal tube. The Suction Adapter is intended to allow modulation of suction when suction tubing is connected to the Ion Fully Articulating Catheter. Intended Patient Population The Ion endoluminal system (Model IF 1000) is intended for adult patients suitable for bronchoscopy. Patient general health and medical history must be adequately assessed along with potential benefits and risks prior to performing procedures with the Ion endoluminal system. These include but are not limited to risks associated with pulmonary disease, severe pulmonary hypertension, cardiovascular disease, bleeding disorders, thromboembolic disorders, anticoagulation therapy, anatomical constraints, inability to oxygenate and patient suitability for general anesthesia. Intended User Only physicians with adequate training and experience in bronchoscopic techniques and adequate healthcare facilities should perform procedures with the Ion endoluminal system. Training provided by Intuitive is limited to the use of the Ion endoluminal system and does not replace the necessary medical training and experience required to perform diagnostic and therapeutic bronchoscopy procedures. Introduction | Serious Incident Reporting 13 Clinical Risks and Benefits Patients should talk to their physician to decide if the Ion endoluminal system is right for them. As with any bronchoscopic procedure under general anesthesia, serious complications may include bleeding, pneumothorax (collapsed lung), cardiac-related complications, respiratory failure, air embolism, or death. As with other medical procedures, there may be additional risks associated with the use of general anesthesia and/or endotracheal intubation which are not listed above; patients should consult a healthcare professional regarding these and other potential risks. The overall benefit of the Ion endoluminal system is to bronchoscopically access and biopsy pulmonary lesions, including nodules in the lung periphery. The potential clinical benefits include improved or similar diagnostic outcomes of the sample obtained with comparable or fewer complications to other non-surgical approaches. The clinical benefits depend on a number of factors, including but not limited to nodule characteristics, patient medical history and disease state, and physician experience. 1. 5 Serious Incident Reporting Serious incident means any incident that directly or indirectly led, might have led, or might lead to any of the following: • the death of a patient, user, or other person, • the temporary or permanent serious deterioration of a patient's, user's, or other person's state of health, • a serious public health threat. For a patient/user/third party in the European Union and in countries with identical regulatory regime (Regulation 2017/745/EU on Medical Devices); if, during the use of this device or as a result of its use, a serious incident has occurred, report the incident to the manufacturer and its authorized representative and to your national authority. In Europe Intuitive Surgical SAS 11 avenue de Canteranne 33600 Pessac, France Toll free: +800. 0821. 2020 Direct: +33. 1. 77. 68. 88. 45 Fax: +800. 0821. 2021 or +41. 21. 821. 2021 Importer Address European Union Switzerland Intuitive Surgical SAS Intuitive Surgical, Sàrl 11 avenue de Canteranne 1 Chemin des Mûriers 33600 Pessac, France 1170 Aubonne, Switzerland 14 Introduction | General Warnings, Cautions, and Notes 1. 6 General Warnings, Cautions, and Notes Warnings"
   ],
   "safety_blocks": [
     {
       "severity": "note",
       "text": "Note: Follow all instructions for use (IFU s) supplied with the system, its components, instruments and accessories, including the Plan Point Softwareand Planning Laptop Supplement, the Reprocessing Instructions, and any IFU s provided with third-party instruments or accessories. IFU s are also referred to as user manuals.",
-      "category": null,
       "evidence": {
         "text": "Note: Follow all instructions for use (IFU s) supplied with the system, its components, instruments and accessories, including the Plan Point Softwareand Planning Laptop Supplement, the Reprocessing I",
         "page": 9,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "note",
       "text": "Note: Not all technologies may have regulatory approval or may be commercially available in all geographies. For availability in your country, check with your local representative. 1. 2 Limitation on Use - Limited License Ion endoluminal system instruments and accessories are provided pursuant to a limited license to use only with the Ion endoluminal system. Upon expiration of the instrument’s or accessory’s maximum number of uses, this limited license expires. Any repair, refurbishment, reconditioning, or servicing of Intuitive instruments and accessories is strictly prohibited and results in expiration of limited license.",
-      "category": null,
       "evidence": {
         "text": "Note: Not all technologies may have regulatory approval or may be commercially available in all geographies. For availability in your country, check with your local representative. 1. 2 Limitation on",
         "page": 9,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "note",
       "text": "Note: Highlights important information.",
-      "category": null,
       "evidence": {
         "text": "Note: Highlights important information.",
         "page": 11,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "caution",
       "text": "Caution: Alerts the reader about a potentially hazardous situation which, if not avoided, may result in minor or moderate injury to the user or patient or damage to the equipment or other property. It may also be used to alert against unsafe practices. This includes the special care necessary for the safe and effective use of the device and the care necessary to avoid damage to a device that may occur as a result of use or misuse.",
-      "category": null,
       "evidence": {
         "text": "Caution: Alerts the reader about a potentially hazardous situation which, if not avoided, may result in minor or moderate injury to the user or patient or damage to the equipment or other property. It",
         "page": 11,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "warning",
       "text": "Warning: Alerts the reader about a situation which, if not avoided, could result in death or serious injury. 1. 4 Professional Instructions for Use Essential Prescribing Information • Device Name: Intuitive Ion Endoluminal System and Instruments (IF 1000). • Rx only: Federal Law (USA) restricts this device to sale by or on the order of a physician (or properly licensed practitioner). Indications for Use The Ion endoluminal system (Model IF 1000), referred to in this manual as “the system, ” assists the user in navigating a catheter and endoscopic tools in the pulmonary tract using endoscopic visualization of the tracheobronchial tree for diagnostic and therapeutic procedures. The Ion endoluminal system enables fiducial marker placement. It does not make a diagnosis and is not for pediatric use. The Plan Point Software uses patient CT scans to create a 3 D plan of the lung and navigation pathways for use with the Ion endoluminal system. The Flexision Biopsy Needle is used with the Ion endoluminal system to biopsy tissue from a target area in the lung.",
-      "category": null,
       "evidence": {
         "text": "Warning: Alerts the reader about a situation which, if not avoided, could result in death or serious injury. 1. 4 Professional Instructions for Use Essential Prescribing Information • Device Name: Int",
         "page": 11,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "warning",
       "text": "WARNING: Before using the Ion endoluminal system (the system), review and understand the content in this manual and all accompanying manuals and supplements.",
-      "category": null,
       "evidence": {
         "text": "WARNING: Before using the Ion endoluminal system (the system), review and understand the content in this manual and all accompanying manuals and supplements.",
         "page": 14,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -97,8 +91,8 @@
       "evidence": {
         "text": "WARNING: To prevent patient harm, use only instruments, accessories, and third-party products that are approved by Intuitive. Non-approved devices are not guaranteed to be compatible with the system.",
         "page": 14,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -108,8 +102,8 @@
       "evidence": {
         "text": "WARNING: Confirm that the sterile packaging for all single-use devices is intact and sealed before use. Do not use contaminated single-use devices or reuse single-use devices, as this may result in pa",
         "page": 14,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -119,8 +113,8 @@
       "evidence": {
         "text": "WARNING: To avoid risk of electric shock or equipment damage, do not step on, crush/ pinch, crimp, or otherwise stress cables and connectors.",
         "page": 14,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -130,8 +124,8 @@
       "evidence": {
         "text": "WARNING: Do not reuse or reprocess single-use devices (such as the Swivel Connector and Vision Probe Adapter) after being removed from package, even if unused, as this may result in patient infection",
         "page": 14,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -141,8 +135,8 @@
       "evidence": {
         "text": "WARNING: To prevent impaired ventilation and patient injury, the procedure should be performed under general anesthesia with endotracheal intubation, Electrocardiography (ECG) monitoring, and ventilat",
         "page": 14,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -152,19 +146,18 @@
       "evidence": {
         "text": "WARNING: If the system, instruments and accessories, or any of their components cannot be manipulated in a precise and controlled manner, discontinue use and contact Intuitive to prevent patient harm.",
         "page": 14,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "warning",
       "text": "WARNING: To prevent patient injury, do not use excessive force during the insertion or extraction of the Vision Probe or bronchoscopic tools through the Catheter tool channel.",
-      "category": null,
       "evidence": {
         "text": "WARNING: To prevent patient injury, do not use excessive force during the insertion or extraction of the Vision Probe or bronchoscopic tools through the Catheter tool channel.",
         "page": 14,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -174,41 +167,38 @@
       "evidence": {
         "text": "WARNING: Use fluoroscopic visualization (fluoroscopy) when advancing tools past the tip of the Catheter. Failure to use fluoroscopy during biopsy may result in patient injury.",
         "page": 14,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "warning",
       "text": "WARNING: Advance the Catheter only under live visualization from the Vision Probe (Live View) to prevent procedural delay or patient injury.",
-      "category": null,
       "evidence": {
         "text": "WARNING: Advance the Catheter only under live visualization from the Vision Probe (Live View) to prevent procedural delay or patient injury.",
         "page": 14,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "warning",
       "text": "WARNING: Do not activate the scroll wheel while interacting with the Controller touchscreen, as this may result in pneumothorax.",
-      "category": null,
       "evidence": {
         "text": "WARNING: Do not activate the scroll wheel while interacting with the Controller touchscreen, as this may result in pneumothorax.",
         "page": 14,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "warning",
       "text": "WARNING: In the event of a medical emergency, follow steps to obtain immediate access to the patient (emergency egress), to avoid delays in patient care.",
-      "category": null,
       "evidence": {
         "text": "WARNING: In the event of a medical emergency, follow steps to obtain immediate access to the patient (emergency egress), to avoid delays in patient care.",
         "page": 14,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -218,52 +208,48 @@
       "evidence": {
         "text": "WARNING: Do not contaminate instruments or accessories before or during use, as contamination may result in patient infection.",
         "page": 14,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "warning",
       "text": "WARNING: Handle biopsy needles with care to prevent user injury.",
-      "category": null,
       "evidence": {
         "text": "WARNING: Handle biopsy needles with care to prevent user injury.",
         "page": 14,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "warning",
       "text": "WARNING: Always inspect the biopsy needle for damage before and during use. A damaged needle can contain loose fragments that may cause toxic reaction if left in the patient.",
-      "category": null,
       "evidence": {
         "text": "WARNING: Always inspect the biopsy needle for damage before and during use. A damaged needle can contain loose fragments that may cause toxic reaction if left in the patient.",
         "page": 14,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "warning",
       "text": "WARNING: Use caution during biopsy of targets within 5 mm of the visceral pleura or other critical structures. Biopsy near critical structures may result in patient injury.",
-      "category": null,
       "evidence": {
         "text": "WARNING: Use caution during biopsy of targets within 5 mm of the visceral pleura or other critical structures. Biopsy near critical structures may result in patient injury.",
         "page": 14,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "warning",
       "text": "WARNING: Insert the Vision Probe after biopsy to assess airways for trauma or bleeding to prevent delayed intervention in case of an emergency.",
-      "category": null,
       "evidence": {
         "text": "WARNING: Insert the Vision Probe after biopsy to assess airways for trauma or bleeding to prevent delayed intervention in case of an emergency.",
         "page": 15,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -273,8 +259,8 @@
       "evidence": {
         "text": "WARNING: Follow proper system and Controller cleaning procedures to prevent patient infection. Cautions",
         "page": 15,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -284,8 +270,8 @@
       "evidence": {
         "text": "CAUTION: The system may be unpacked, installed, and serviced by Intuitive personnel only. Do not attempt to unpack, install, or service equipment without Intuitive personnel, as this may result in use",
         "page": 15,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -295,8 +281,8 @@
       "evidence": {
         "text": "CAUTION: No modification of this equipment is allowed. Failure to comply may result in user or patient harm.",
         "page": 15,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -306,19 +292,18 @@
       "evidence": {
         "text": "CAUTION: To avoid the risk of electric shock, this equipment must only be connected to a supply mains with protective earth.",
         "page": 15,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "caution",
       "text": "CAUTION: Note that conversion to alternate technique during the procedure may prolong anesthesia time.",
-      "category": null,
       "evidence": {
         "text": "CAUTION: Note that conversion to alternate technique during the procedure may prolong anesthesia time.",
         "page": 15,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -328,8 +313,8 @@
       "evidence": {
         "text": "CAUTION: Leakage current from interconnected medical equipment (for example, ultrasound equipment) may exceed safe levels. To maintain the safety of patients and users, interconnect only with devices",
         "page": 15,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -339,8 +324,8 @@
       "evidence": {
         "text": "CAUTION: Leakage current from interconnected electrical equipment (for example, external displays) may exceed safe levels. To maintain the safety of patients and users, interconnect only with devices",
         "page": 15,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -350,8 +335,8 @@
       "evidence": {
         "text": "CAUTION: Do not cover any ventilation openings on the system or on the arm. Covering ventilation openings may cause improper function of the system.",
         "page": 15,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -361,8 +346,8 @@
       "evidence": {
         "text": "CAUTION: Inspect all instruments and accessories for potential damage prior to clinical use to prevent procedure delay.",
         "page": 15,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -372,8 +357,8 @@
       "evidence": {
         "text": "CAUTION: Exercise caution when inserting the biopsy needle into the Catheter tool channel with the sheath extended. Failure to do so may result in patient injury.",
         "page": 15,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -383,8 +368,8 @@
       "evidence": {
         "text": "CAUTION: To prevent impaired lung function, limit the total volume of saline injection for Vision Probe cleaning to less than 40 m L.",
         "page": 15,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -394,8 +379,8 @@
       "evidence": {
         "text": "CAUTION: If resistance is felt when removing the Vision Probe or tool from the Catheter tool channel, do not continue retracting the device, as this may result in device damage. Remove the Catheter an",
         "page": 15,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -405,19 +390,18 @@
       "evidence": {
         "text": "Note: The Ion system, instruments, and accessories are not intended specifically to control, diagnose, monitor, or correct a defect of the heart, central circulatory, or central nervous system through",
         "page": 15,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "note",
       "text": "Note: Always route the system cables away from possible tripping and stepping situations.",
-      "category": null,
       "evidence": {
         "text": "Note: Always route the system cables away from possible tripping and stepping situations.",
         "page": 16,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -427,19 +411,18 @@
       "evidence": {
         "text": "Note: Before connecting any fluoroscopy equipment having no patient applied parts (that is, nothing comes into direct contact with patient) with this system, use device labeling to confirm that they c",
         "page": 16,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "note",
       "text": "Note: All reusable devices must be reprocessed before use.",
-      "category": null,
       "evidence": {
         "text": "Note: All reusable devices must be reprocessed before use.",
         "page": 16,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -449,30 +432,28 @@
       "evidence": {
         "text": "Note: Use only water-based or silicone-based lubricants for the Catheter. Other lubricants may be difficult to remove during reprocessing and reduce the effectiveness of disinfection.",
         "page": 16,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "note",
       "text": "Note: Navigation View should be used as guidance only.",
-      "category": null,
       "evidence": {
         "text": "Note: Navigation View should be used as guidance only.",
         "page": 16,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "note",
       "text": "Note: Drive with caution in small airways where the airway diameter is smaller than the outer diameter of the Catheter.",
-      "category": null,
       "evidence": {
         "text": "Note: Drive with caution in small airways where the airway diameter is smaller than the outer diameter of the Catheter.",
         "page": 16,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -482,8 +463,8 @@
       "evidence": {
         "text": "Note: Do not apply large volume suction through the Catheter tool channel when Catheter tip is wedged in small airways. Endoscopic Procedure Precautions and Notes Only physicians having adequate train",
         "page": 16,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -493,19 +474,18 @@
       "evidence": {
         "text": "CAUTION: High energy radiated light may be transmitted from the Vision Probe tip. High temperatures may exist in front of the light emission window. Exercise caution when positioning the tip of the Vi",
         "page": 16,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "note",
       "text": "Note: Use of the Ion endoluminal system may be associated with increased procedure and anesthesia time. Accessory Equipment Interconnection",
-      "category": null,
       "evidence": {
         "text": "Note: Use of the Ion endoluminal system may be associated with increased procedure and anesthesia time. Accessory Equipment Interconnection",
         "page": 16,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -515,8 +495,8 @@
       "evidence": {
         "text": "WARNING: Leakage currents from other medical equipment applied parts may be additive. To ensure maximum safety for the patient, only devices having Type BF or Type CF applied parts should be used with",
         "page": 16,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -526,8 +506,8 @@
       "evidence": {
         "text": "CAUTION: While Class 1 laser products are considered to be “eye safe” without the need for additional protection, the following general safety guidelines should be observed to reduce the risk of eye i",
         "page": 17,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -537,8 +517,8 @@
       "evidence": {
         "text": "CAUTION: When rotating the monitor, keep fingers clear of the monitor arm to avoid injury. End of Section",
         "page": 17,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -548,8 +528,8 @@
       "evidence": {
         "text": "Note: If the system errors at any point during the update or does not restart, contact Customer Service. Do not restart or unplug the system from the Controller or AC power. 7. After the system restar",
         "page": 20,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -559,8 +539,8 @@
       "evidence": {
         "text": "Note: Follow all instructions for use (IFU s) supplied with the system, its components, instruments and accessories, including the Plan Point Softwareand Planning Laptop Supplement, the reprocessing i",
         "page": 21,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -570,8 +550,8 @@
       "evidence": {
         "text": "WARNING: If saline injection does not clear the obstruction, remove the Catheter or Vision Probe for continued cleaning, as excess saline injection into the lung may result in patient injury. Vision P",
         "page": 29,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -581,8 +561,8 @@
       "evidence": {
         "text": "CAUTION: Do not apply suction for extended durations, as this may impair ventilation or lead to procedure delay.",
         "page": 30,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -592,8 +572,8 @@
       "evidence": {
         "text": "Note: Do not suction excess fluid in airways when vision is obscured. While the Catheter tip is wedged in small airways, bubbles may form that can obscure vision and lead to procedure delay. Catheter",
         "page": 30,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -603,8 +583,8 @@
       "evidence": {
         "text": "Note: If friction is felt in the trackball or scroll wheel, clean it with saline and dry with gauze prior to or during use, as needed.",
         "page": 39,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -614,41 +594,38 @@
       "evidence": {
         "text": "Note: Calibration initiates after installing the trackball and scroll wheel. Do not touch the trackball or scroll wheel during calibration.",
         "page": 39,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "note",
       "text": "Note: If Controller responsiveness is poor, change or dry gloves. The Controller touchscreen and scroll wheel are designed to sense touch. Wet gloves may interfere with touch sensing. Figure 4. 19 Controller 4 3 5 6 2 1 7 8 10 9 The Controller has the following components: 1. Handle: Provides grasp for transport of the Controller. 2. Emergency stop (E-stop) button: Stops system operation at any time and causes the Catheter tip to go inactive. 3. Scroll wheel: Controls the insertion and retraction of the Catheter. Roll it towards the touchscreen to insert the Catheter, and roll it away from the touchscreen to retract it. 4. Passive button: Controls the Catheter state (active and passive). Quick-press this button to relax the Catheter tip (passive), and press it again to resume active mode. Press and hold to slowly relax the Catheter tip (temporary passive). Release the button to stop relaxing the Catheter and resume active mode. 5. Touchscreen: Controls to select targets, save images and videos, and provide other options described in this manual.",
-      "category": null,
       "evidence": {
         "text": "Note: If Controller responsiveness is poor, change or dry gloves. The Controller touchscreen and scroll wheel are designed to sense touch. Wet gloves may interfere with touch sensing. Figure 4. 19 Con",
         "page": 39,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "note",
       "text": "Note: Once the target is moved, the Airway Tree and anatomy borders are no longer visible on the Top Monitor since the Catheter-to-target relationship has been updated. To restore the airway tree and anatomy borders, undo the updated target, tap Adjust Tree in the quick tools bar, and tap Airway Tree. • Fluoro Reference: Save a fluoro image that is overlayed on the fluoroscopic view. Adjust visibility and opacity of overlay.",
-      "category": null,
       "evidence": {
         "text": "Note: Once the target is moved, the Airway Tree and anatomy borders are no longer visible on the Top Monitor since the Catheter-to-target relationship has been updated. To restore the airway tree and",
         "page": 41,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "note",
       "text": "Note: Do not remove the USB while recording or immediately after stopping recording, as this may result in corrupt video files. Because video recordings may contain personal information, secure your USB device in accordance with your institution's security policies and procedures. Contact Customer Service to enable video recording. (continues on next page)",
-      "category": null,
       "evidence": {
         "text": "Note: Do not remove the USB while recording or immediately after stopping recording, as this may result in corrupt video files. Because video recordings may contain personal information, secure your U",
         "page": 43,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -658,41 +635,38 @@
       "evidence": {
         "text": "Note the various preview modes and options: • Lock to Path mode: On by default, Lock to Path locks the Navi- gation View to the path towards the selected destination. Lock to Path mode forces the Navi",
         "page": 44,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "note",
-      "text": "Note that logging in to your account is a separate process from authenticating your account, which is required after login if you wish to access patient plans on the Intuitive Network Drive. To log in to your account, you only need to select your account from the list (Figure 4. 24). This associates your account with your procedure to enable the collection of real-time case data. If you wish to authenticate your account, you will need to enter your six-digit Intuitive PIN on the Controller (for more information, see 8. 6 Load Patient Plan on page 68). Figure 4. 24 Networked Login on the Controller (example) For instructions on logging in to your account, see 8. 5 Log in to Your Intuitive Account on page 67. To learn more about Intuitive accounts and how to create one, see my. intuitive. com or contact your Intuitive representative. Networked login may not be available in all regions. Contact your Intuitive representative for more information. 4. 5 Intuitive Network Drive The Intuitive Network Drive (referred to as Network Drive) stores encrypted patient plans on the hospital network. You can access the Network Drive on the system to load patient plans for a procedure as an alternative to using a USB storage device. To access a plan on the Network Drive, you must log in to your Intuitive account on the system and authenticate your account with your six-digit Intuitive PIN. We recommend that you secure your login credentials in accordance with your institution's security policies and procedures.",
-      "category": null,
+      "text": "Note that logging into your account is a separate process from authenticating your account, which is required after login if you wish to access patient plans on the Intuitive Network Drive. To log into your account, you only need to select your account from the list (Figure 4. 24). This associates your account with your procedure to enable the collection of real-time case data. If you wish to authenticate your account, you will need to enter your six-digit Intuitive PIN on the Controller (for more information, see 8. 6 Load Patient Plan on page 68). Figure 4. 24 Networked Login on the Controller (example) For instructions on logging into your account, see 8. 5 Log into Your Intuitive Account on page 67. To learn more about Intuitive accounts and how to create one, see my. intuitive. com or contact your Intuitive representative. Networked login may not be available in all regions. Contact your Intuitive representative for more information. 4. 5 Intuitive Network Drive The Intuitive Network Drive (referred to as Network Drive) stores encrypted patient plans on the hospital network. You can access the Network Drive on the system to load patient plans for a procedure as an alternative to using a USB storage device. To access a plan on the Network Drive, you must log into your Intuitive account on the system and authenticate your account with your six-digit Intuitive PIN. We recommend that you secure your login credentials in accordance with your institution's security policies and procedures.",
       "evidence": {
-        "text": "Note that logging in to your account is a separate process from authenticating your account, which is required after login if you wish to access patient plans on the Intuitive Network Drive. To log in",
+        "text": "Note that logging into your account is a separate process from authenticating your account, which is required after login if you wish to access patient plans on the Intuitive Network Drive. To log int",
         "page": 46,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "note",
       "text": "Note that the Network Drive may not be available in all regions. Contact your Intuitive representative for more information.",
-      "category": null,
       "evidence": {
         "text": "Note that the Network Drive may not be available in all regions. Contact your Intuitive representative for more information.",
         "page": 46,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "warning",
       "text": "WARNING: Failure to appropriately position the System Cart and Controller in the procedure room may lead to procedure delay, patient injury, or user injury. Move and Position the System Cart Guidelines to Move the System Cart • Unlock the brakes by lifting up the foot pedal on either side of the System Cart. • Use the handle to push or pull the System Cart in the desired direction. Guidelines to Position the System Cart in the Procedure Room",
-      "category": null,
       "evidence": {
         "text": "WARNING: Failure to appropriately position the System Cart and Controller in the procedure room may lead to procedure delay, patient injury, or user injury. Move and Position the System Cart Guideline",
         "page": 48,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -702,19 +676,18 @@
       "evidence": {
         "text": "WARNING: To avoid patient injury, always lock the wheels of the System Cart before docking to the patient. • Ensure the System Cart power cable can reach a power outlet. • Ensure the System Cart is ad",
         "page": 48,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "note",
       "text": "Note: Once the system is connected and powered on, the power and Controller cables should not be unplugged until the system has completely powered down. If a cable becomes unplugged during use, a message appears, instructing to plug the cable back in.",
-      "category": null,
       "evidence": {
         "text": "Note: Once the system is connected and powered on, the power and Controller cables should not be unplugged until the system has completely powered down. If a cable becomes unplugged during use, a mess",
         "page": 50,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -724,74 +697,69 @@
       "evidence": {
         "text": "Note: Do not block access to the primary electrical plug (or main disconnect from supply). Ensure there is clearance in the room for the primary electrical plug for the system. 6. 1 Power Cable The po",
         "page": 50,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "note",
       "text": "Note: The System Cart will not power on properly unless the Controller cable is connected to the System Cart. A restart will be required if the Controller is not connected when the System Cart is powered on. Controller Cable Guidelines • The cable is connected to the Controller, and is manually connected to the System Cart. • The Controller cable passes data and power during system use. Connect Controller Cable Connect the Controller cable to the input on the front of the System Cart. 1. Inspect the connector and receptacle for debris or damage. 2. Plug the cable end into the System Cart receptacle until the collar on the connector snaps into place. Gently pull on the connector to verify the cable is fully seated. 3. To unplug, rotate the collar on the connector and pull to release the cable. Figure 6. 1 Controller cable connection on System Cart Cable Layout Arrange the cables so they are out of the path of procedure room traffic, including other equipment, to avoid damaging the cables and to avoid creating an obstacle or hazard.",
-      "category": null,
       "evidence": {
         "text": "Note: The System Cart will not power on properly unless the Controller cable is connected to the System Cart. A restart will be required if the Controller is not connected when the System Cart is powe",
         "page": 51,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "note",
-      "text": "Note: Before clinical use, always inspect the system and Controller for any damage (for example, broken, cracked, chipped, or worn parts). If you observe any damage, contact Customer Service and do not use the system. 1. Power on the system by pressing the Power button on the System Cart. The system must be plugged in to begin a procedure. If the System Cart is powered on before the Controller cable is attached, attach the cable to the System Cart and then restart the system. 2. Unfold the monitors. Position the screens for optimal viewing. 3. Connect the fluoroscope and other auxiliary devices to the system (for example, standard bronchoscope, R-EBUS) and power them on: • Connect the devices to the System Cart using the appropriate cables. • Confirm the connections are secure. • Power on the fluoroscope and other auxiliary devices. Once a connection is established, the label of the connection illuminates blue on the auxiliary connection panel. For further information, see 6. 3 Auxiliary Connections on page 52. 4. Remove the trackball and scroll wheel, clean them with saline and dry with gauze. Reinstall the trackball and scroll wheel into the Controller and wait for calibration to complete. 5. Follow Guided Setup instructions on the top monitor.",
+      "text": "Note: Before clinical use, always inspect the system and Controller for any damage (for example, broken, cracked, chipped, or worn parts). If you observe any damage, contact Customer Service and do not use the system. 1. Power on the system by pressing the Power button on the System Cart. The system must be plugged into begin a procedure. If the System Cart is powered on before the Controller cable is attached, attach the cable to the System Cart and then restart the system. 2. Unfold the monitors. Position the screens for optimal viewing. 3. Connect the fluoroscope and other auxiliary devices to the system (for example, standard bronchoscope, R-EBUS) and power them on: • Connect the devices to the System Cart using the appropriate cables. • Confirm the connections are secure. • Power on the fluoroscope and other auxiliary devices. Once a connection is established, the label of the connection illuminates blue on the auxiliary connection panel. For further information, see 6. 3 Auxiliary Connections on page 52. 4. Remove the trackball and scroll wheel, clean them with saline and dry with gauze. Reinstall the trackball and scroll wheel into the Controller and wait for calibration to complete. 5. Follow Guided Setup instructions on the top monitor.",
       "category": "suction",
       "evidence": {
         "text": "Note: Before clinical use, always inspect the system and Controller for any damage (for example, broken, cracked, chipped, or worn parts). If you observe any damage, contact Customer Service and do no",
         "page": 54,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "note",
       "text": "Note: If the system does not power on as expected, restart the system. 7. 2 Power Button Color Indicators The Power button displays color(s) depending on the system power mode.",
-      "category": null,
       "evidence": {
         "text": "Note: If the system does not power on as expected, restart the system. 7. 2 Power Button Color Indicators The Power button displays color(s) depending on the system power mode.",
         "page": 54,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "note",
       "text": "Note: Complete the pre-procedure steps before administering anesthesia to the patient. Failure to do so may result in unnecessary exposure to anesthesia. Use the CT protocol in the Plan Point Softwareand Planning Laptop Supplementto capture the patient’s CT.",
-      "category": null,
       "evidence": {
         "text": "Note: Complete the pre-procedure steps before administering anesthesia to the patient. Failure to do so may result in unnecessary exposure to anesthesia. Use the CT protocol in the Plan Point Software",
         "page": 56,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "note",
       "text": "Note: To create a patient plan to import to the system, follow the instructions in the Plan Point Softwareand Planning Laptop Supplement.",
-      "category": null,
       "evidence": {
         "text": "Note: To create a patient plan to import to the system, follow the instructions in the Plan Point Softwareand Planning Laptop Supplement.",
         "page": 56,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "note",
       "text": "Note: Endotracheal tube is required to perform the procedure. 8. 1 Prepare Instruments and Accessories",
-      "category": null,
       "evidence": {
         "text": "Note: Endotracheal tube is required to perform the procedure. 8. 1 Prepare Instruments and Accessories",
         "page": 56,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -801,19 +769,18 @@
       "evidence": {
         "text": "WARNING: Do not use damaged or broken instruments or accessories. Inspect instruments and accessories for any defects such as unintended rough surfaces, sharp edges, or protrusions (for example, broke",
         "page": 56,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "caution",
       "text": "CAUTION: Use small size syringes (for example, 12 m L or smaller) to prevent accidentally injecting large volumes of saline or air and impairing lung function.",
-      "category": null,
       "evidence": {
         "text": "CAUTION: Use small size syringes (for example, 12 m L or smaller) to prevent accidentally injecting large volumes of saline or air and impairing lung function.",
         "page": 56,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -823,19 +790,18 @@
       "evidence": {
         "text": "CAUTION: Inspect the Vision Probe for defects or damage to tip or lens, fiber optic surfaces and cable prior to inserting into the Catheter tool channel. Failure to do so may result in patient harm or",
         "page": 56,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "note",
       "text": "Note: During a procedure, have backup instruments and accessories available that are required to perform an Ion procedure in case of instrument failure.",
-      "category": null,
       "evidence": {
         "text": "Note: During a procedure, have backup instruments and accessories available that are required to perform an Ion procedure in case of instrument failure.",
         "page": 56,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -845,30 +811,28 @@
       "evidence": {
         "text": "Note: If an installed Catheter Guide, Catheter, or Vision Probe has expired, the system displays a message to remove and replace the instrument or accessory. Prepare Materials Prepare reusable and dis",
         "page": 56,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "caution",
       "text": "CAUTION: If fluid is observed in the sensor port well on the Catheter Reprocessing Cover or on the green sensor port, do not install the Catheter on the system, as it may result in Catheter or system damage. Contact Customer Service. 8. 2 Select Compatible Third-Party Biopsy Tools The use of third-party tools is at the discretion of the hospital and the physician.",
-      "category": null,
       "evidence": {
         "text": "CAUTION: If fluid is observed in the sensor port well on the Catheter Reprocessing Cover or on the green sensor port, do not install the Catheter on the system, as it may result in Catheter or system",
         "page": 58,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "note",
       "text": "Note: Check compatibility of third-party tools prior to use.",
-      "category": null,
       "evidence": {
         "text": "Note: Check compatibility of third-party tools prior to use.",
         "page": 58,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -878,8 +842,8 @@
       "evidence": {
         "text": "Note: Use only compatible bronchoscopic biopsy forceps. Third-party tools must be legally marketed. Use the table below for guidance to select third-party tools. Table 8. 1 Compatible Third-party Tool",
         "page": 58,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -889,8 +853,8 @@
       "evidence": {
         "text": "Note: Third-party biopsy tools must be compatible with a 2 mm tool channel and have a minimum length of 100 cm.",
         "page": 58,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -900,8 +864,8 @@
       "evidence": {
         "text": "WARNING: To avoid patient injury, always lock the wheels of the System Cart before docking to the patient. 1. If not already done, move the System Cart to the desired location and apply the brakes. 2.",
         "page": 59,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -911,19 +875,18 @@
       "evidence": {
         "text": "WARNING: Perform system tests to ensure normal system operation and prevent patient injury such as pneumothorax. Follow the on-screen prompts to perform system tests. 1. Move the arm. Press and hold t",
         "page": 59,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "warning",
       "text": "WARNING: Failure to properly install the Catheter and accessories may result in patient injury.",
-      "category": null,
       "evidence": {
         "text": "WARNING: Failure to properly install the Catheter and accessories may result in patient injury.",
         "page": 60,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -933,30 +896,28 @@
       "evidence": {
         "text": "Note: Whenever you connect the Catheter to the system, clean the sensor connections on the arm carriage and on the Catheter itself using the Sensor Connection Cleaner. This includes the first time you",
         "page": 60,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "note",
       "text": "Note: Ensure the Vision Probe is not twisted during insertion to prevent image flipping.",
-      "category": null,
       "evidence": {
         "text": "Note: Ensure the Vision Probe is not twisted during insertion to prevent image flipping.",
         "page": 60,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "note",
       "text": "Note: If the Vision Probe Bag is not used for temporary storage of the Vision Probe when it is not inserted within the Catheter tool channel, it is recommended to use an alternate, legally marketed, method to store the Vision Probe during the procedure.",
-      "category": null,
       "evidence": {
         "text": "Note: If the Vision Probe Bag is not used for temporary storage of the Vision Probe when it is not inserted within the Catheter tool channel, it is recommended to use an alternate, legally marketed, m",
         "page": 60,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -966,8 +927,8 @@
       "evidence": {
         "text": "Note: The Vision Probe Bag is sterilized with Ethylene Oxide (EO). It is shipped sterile and is for single use only. Follow the on-screen prompts to attach the Catheter Guide, the Catheter, and the Vi",
         "page": 60,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -977,19 +938,18 @@
       "evidence": {
         "text": "WARNING: Do not contaminate instruments or accessories before or during use, as contamination may result in patient infection. Follow hospital guidelines for interacting with non-disinfected items whe",
         "page": 61,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "caution",
       "text": "CAUTION: If fluid is found on the green sensor port while cleaning with Sensor Connection Cleaner, do not install the Catheter on the system, as it may result in Catheter or system damage. Contact Customer Service. a. Remove the adapter from the Sensor Connection Cleaner. b. Hold the Catheter such that the sensor port is visible. c. Insert the narrow end of the Sensor Connection Cleaner into the Catheter sensor port, to open the shutter. d. Ensure the tip of the Sensor Connection Cleaner is inserted into the sensor connection (small round hole) inside the Catheter sensor port. Ensure that the Sensor Connection Cleaner is straight when inserted. e. Push the handle until it audibly clicks. Repeat three times. f. Place the Catheter on a clean surface.",
-      "category": null,
       "evidence": {
         "text": "CAUTION: If fluid is found on the green sensor port while cleaning with Sensor Connection Cleaner, do not install the Catheter on the system, as it may result in Catheter or system damage. Contact Cus",
         "page": 63,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -999,85 +959,78 @@
       "evidence": {
         "text": "WARNING: Do not contaminate instruments or accessories before or during use, as contamination may result in patient infection. Follow hospital guidelines for interacting with non-disinfected items whe",
         "page": 63,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "note",
-      "text": "Note: Information for the patient plan selection includes patient name, medical record number (MRN), and plan date. USBO nly To load a patient plan: 1. Insert the USB storage device with the exported patient plan into the USB input on the Controller. 2. Select the patient plan on the Controller touchscreen. 3. Check the details of the patient plan and ID, and then tap Confirm to load the plan. To change patient plans at any point, select the Menu icon > Patient Plans and select a new plan. If a plan is updated mid-procedure, ensure that the correct plan is selected after re-inserting the USB device into the Controller.",
-      "category": null,
+      "text": "Note: Information for the patient plan selection includes patient name, medical record number (MRN), and plan date. USB Only To load a patient plan: 1. Insert the USB storage device with the exported patient plan into the USB input on the Controller. 2. Select the patient plan on the Controller touchscreen. 3. Check the details of the patient plan and ID, and then tap Confirm to load the plan. To change patient plans at any point, select the Menu icon > Patient Plans and select a new plan. If a plan is updated mid-procedure, ensure that the correct plan is selected after re-inserting the USB device into the Controller.",
       "evidence": {
-        "text": "Note: Information for the patient plan selection includes patient name, medical record number (MRN), and plan date. USBO nly To load a patient plan: 1. Insert the USB storage device with the exported",
+        "text": "Note: Information for the patient plan selection includes patient name, medical record number (MRN), and plan date. USB Only To load a patient plan: 1. Insert the USB storage device with the exported",
         "page": 68,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "note",
       "text": "Note: Before you can access plans on the Network Drive, you must complete a one-time linking process between your Intuitive account and your local Plan Point account. For instructions on linking your accounts, see the Plan Point Softwareand Planning Laptop Supplement.",
-      "category": null,
       "evidence": {
         "text": "Note: Before you can access plans on the Network Drive, you must complete a one-time linking process between your Intuitive account and your local Plan Point account. For instructions on linking your",
         "page": 69,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "note",
-      "text": "Note: If you load a plan from the Network Drive, a USB device is still required to collect screenshots and video recording during a procedure. 1. If loading a plan from the Network Drive: a. Ensure you have logged in to your Intuitive account (see 8. 5 Log in to Your Intuitive Account on page 67). b. Enter your six-digit Intuitive PIN to authenticate your account. If needed, open the PIN pad by tapping the Menu icon > Patient Plans. Tap the Network tab, then tap the Enter PIN button.",
-      "category": null,
+      "text": "Note: If you load a plan from the Network Drive, a USB device is still required to collect screenshots and video recording during a procedure. 1. If loading a plan from the Network Drive: a. Ensure you have logged into your Intuitive account (see 8. 5 Log into Your Intuitive Account on page 67). b. Enter your six-digit Intuitive PIN to authenticate your account. If needed, open the PIN pad by tapping the Menu icon > Patient Plans. Tap the Network tab, then tap the Enter PIN button.",
       "evidence": {
         "text": "Note: If you load a plan from the Network Drive, a USB device is still required to collect screenshots and video recording during a procedure. 1. If loading a plan from the Network Drive: a. Ensure yo",
         "page": 69,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "note",
-      "text": "Note: If you cannot access the Network Drive, load the patient plan onto the system using a USB device and contact Customer Service. 2. If loading a plan from a USB device: a. Ensure you have logged in to your Intuitive account if you wish to collect real-time case data associated with your procedure (see 8. 5 Log in to Your Intuitive Account on page 67). b. If prompted for your PIN, you may tap Skip on the PIN pad to bypass authentication. Authentication is required only to access patient plans on the Network Drive. c. Insert the USB device with the exported plan into the USB input on the Controller.",
-      "category": null,
+      "text": "Note: If you cannot access the Network Drive, load the patient plan onto the system using a USB device and contact Customer Service. 2. If loading a plan from a USB device: a. Ensure you have logged into your Intuitive account if you wish to collect real-time case data associated with your procedure (see 8. 5 Log into Your Intuitive Account on page 67). b. If prompted for your PIN, you may tap Skip on the PIN pad to bypass authentication. Authentication is required only to access patient plans on the Network Drive. c. Insert the USB device with the exported plan into the USB input on the Controller.",
       "evidence": {
         "text": "Note: If you cannot access the Network Drive, load the patient plan onto the system using a USB device and contact Customer Service. 2. If loading a plan from a USB device: a. Ensure you have logged i",
         "page": 69,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "note",
       "text": "Note: If you are loading the plan from the Network Drive and the plan is not available, load the plan onto the system using a USB device. 4. Tap Continue on the confirmation window to confirm your selection. 5. Check the details of the patient plan and ID, and then tap Confirm to load the plan. To change plans at any point, tap the Menu icon > Patient Plans and select a new plan. If a plan is updated mid-procedure, re-export the plan to the USB or Network Drive and select the correct plan on the system. 8. 7 Preview Plan Once the patient plan loads onto the system, you may preview the plan prior to registration.",
-      "category": null,
       "evidence": {
         "text": "Note: If you are loading the plan from the Network Drive and the plan is not available, load the plan onto the system using a USB device. 4. Tap Continue on the confirmation window to confirm your sel",
         "page": 70,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "warning",
       "text": "WARNING: When docking to patient, always stabilize the endotracheal tube (ET tube). While docked, always release tension before adjusting ET tube as this may result in loss of ventilation.",
-      "category": null,
       "evidence": {
         "text": "WARNING: When docking to patient, always stabilize the endotracheal tube (ET tube). While docked, always release tension before adjusting ET tube as this may result in loss of ventilation.",
         "page": 72,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "warning",
       "text": "WARNING: Do not move patient bed after docking the system to the patient. Moving the patient bed may result in loss of ventilation pathway.",
-      "category": null,
       "evidence": {
         "text": "WARNING: Do not move patient bed after docking the system to the patient. Moving the patient bed may result in loss of ventilation pathway.",
         "page": 72,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -1087,8 +1040,8 @@
       "evidence": {
         "text": "WARNING: To avoid patient injury, always lock the wheels of the System Cart before docking to the patient. Follow the on-screen prompts to dock to the patient. 1. Dock the arm to the Swivel Connector.",
         "page": 72,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -1098,8 +1051,8 @@
       "evidence": {
         "text": "Note: Once docked to the Swivel Connector, the arm clutch button activates after holding it for approximately two seconds.",
         "page": 72,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -1109,8 +1062,8 @@
       "evidence": {
         "text": "WARNING: To prevent impaired ventilation and patient injury, the procedure should be performed under general anesthesia with endotracheal intubation, Electrocardiography (ECG) monitoring, and ventilat",
         "page": 75,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -1120,8 +1073,8 @@
       "evidence": {
         "text": "Note: Use Show Lung Regions to display the separation of the lung into the four quadrants with their associated colors on the Airway Tree (note that these quadrants are not based on lobes). If the sys",
         "page": 76,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -1131,19 +1084,18 @@
       "evidence": {
         "text": "Note: The Swivel Connector may partially disconnect from the arm due to Catheter buckling or excessive friction in the ET tube. Ensure sufficient lubrication is applied to the Catheter. To navigate to",
         "page": 77,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "warning",
       "text": "WARNING: To prevent patient injury, do not use excessive force during the insertion or extraction of the Vision Probe, biopsy needle, or bronchoscopic tools through the Catheter tool channel.",
-      "category": null,
       "evidence": {
         "text": "WARNING: To prevent patient injury, do not use excessive force during the insertion or extraction of the Vision Probe, biopsy needle, or bronchoscopic tools through the Catheter tool channel.",
         "page": 78,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -1153,41 +1105,38 @@
       "evidence": {
         "text": "WARNING: When a system fault occurs, retract the tool inside the protective sheath immediately to minimize interaction with tissue and prevent patient injury as the Catheter slowly releaxes in respons",
         "page": 78,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "note",
       "text": "Note: Vibrations from insertion or extraction of the Vision Probe, biopsy needle, or bronchoscopic tools through the Catheter tool channel may result in Catheter sensor interference. When interference is detected, the system transitions the Catheter to passive state. Recover on the Controller touchscreen and reposition the Catheter as needed. Before Biopsy Ensure that the fluoroscope or other third-party visualization sources are connected to the System Cart and are functional.",
-      "category": null,
       "evidence": {
         "text": "Note: Vibrations from insertion or extraction of the Vision Probe, biopsy needle, or bronchoscopic tools through the Catheter tool channel may result in Catheter sensor interference. When interference",
         "page": 78,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "caution",
       "text": "CAUTION: If resistance is felt when removing the Vision Probe or tool from the Catheter tool channel, do not continue retracting the device, as this may result in device damage. Remove the Catheter and Vision Probe or tool together. 4. If needed, press the Passive button again to return to active mode. 5. Re-articulate the Catheter to your biopsy position. After Biopsy Always Evaluate Airway",
-      "category": null,
       "evidence": {
         "text": "CAUTION: If resistance is felt when removing the Vision Probe or tool from the Catheter tool channel, do not continue retracting the device, as this may result in device damage. Remove the Catheter an",
         "page": 79,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "warning",
       "text": "WARNING: Insert the Vision Probe after biopsy to assess airways for trauma or bleeding to prevent delayed intervention in case of an emergency. After a biopsy, insert the Vision Probe back in the Catheter to check for bleeding, and to inspect the Catheter liner for damage. If the liner is damaged, replace the Catheter.",
-      "category": null,
       "evidence": {
         "text": "WARNING: Insert the Vision Probe after biopsy to assess airways for trauma or bleeding to prevent delayed intervention in case of an emergency. After a biopsy, insert the Vision Probe back in the Cath",
         "page": 79,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -1197,30 +1146,28 @@
       "evidence": {
         "text": "WARNING: Always reset the needle stop (re-sheath the needle): before removing the biopsy needle from the Catheter tool channel, after preparing the sample, or before transferring the needle between st",
         "page": 80,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "warning",
       "text": "WARNING: If you notice damage to the inside of the Catheter during use, replace the Catheter. A damaged Catheter can contain loose fragments that may cause toxic reaction if left in the patient.",
-      "category": null,
       "evidence": {
         "text": "WARNING: If you notice damage to the inside of the Catheter during use, replace the Catheter. A damaged Catheter can contain loose fragments that may cause toxic reaction if left in the patient.",
         "page": 80,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "caution",
       "text": "CAUTION: Proceed with caution if the biopsy needle is inserted or removed through a Catheter bend radius smaller than 15 mm. Insertion and removal of the biopsy needle should not be performed against increased resistance. Failure to follow instructions may result in Catheter or needle damage.",
-      "category": null,
       "evidence": {
         "text": "CAUTION: Proceed with caution if the biopsy needle is inserted or removed through a Catheter bend radius smaller than 15 mm. Insertion and removal of the biopsy needle should not be performed against",
         "page": 80,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -1230,8 +1177,8 @@
       "evidence": {
         "text": "CAUTION: Exercise caution when inserting the biopsy needle into the Catheter tool channel with the sheath extended. Failure to do so may result in patient injury. 1. Inspect the biopsy needle prior to",
         "page": 80,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -1241,8 +1188,8 @@
       "evidence": {
         "text": "WARNING: Confirm the relation of the patient anatomy to the biopsy target (for example, distances to target and anatomy borders) before setting needle stroke length. Setting the incorrect needle strok",
         "page": 81,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -1252,19 +1199,18 @@
       "evidence": {
         "text": "Note: Select a vacuum locking syringe and stopcock with standard luer lock connectors (luer fittings compliant with ISO 80369-7) that can suction up to 20 m L. 7. Perform multiple jabs with the needle",
         "page": 81,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "note",
       "text": "Note: Do not advance forceps through the Catheter tool channel if the bend radius is smaller than 25 mm. Do not advance any other third-party tools if the bend radius is smaller than 20 mm.",
-      "category": null,
       "evidence": {
         "text": "Note: Do not advance forceps through the Catheter tool channel if the bend radius is smaller than 25 mm. Do not advance any other third-party tools if the bend radius is smaller than 20 mm.",
         "page": 83,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -1274,41 +1220,38 @@
       "evidence": {
         "text": "Note: The rotational orientation of third-party tools is not controlled through the Catheter tool channel. Rotation may affect insertion and retraction through the Catheter. 1. Insert compatible third",
         "page": 83,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "warning",
       "text": "WARNING: Failure to properly insert or remove forceps through the Catheter tool channel may damage the forceps, resulting in procedure delay or foreign body in the patient.",
-      "category": null,
       "evidence": {
         "text": "WARNING: Failure to properly insert or remove forceps through the Catheter tool channel may damage the forceps, resulting in procedure delay or foreign body in the patient.",
         "page": 83,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "note",
       "text": "Note: The Catheter must be in passive mode prior to retracting biopsy forceps.",
-      "category": null,
       "evidence": {
         "text": "Note: The Catheter must be in passive mode prior to retracting biopsy forceps.",
         "page": 83,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "note",
       "text": "Note: Slowly insert and retract biopsy forceps through the Catheter tool channel. Quickly inserting and retracting may result in Catheter sensor interference. When interference is detected, the system transitions the Catheter to passive state. Recover on the Controller touchscreen and reposition the Catheter as needed. 1. Press the Passive button on the Controller, and carefully retract through the Catheter. If resistance is felt while retracting forceps, confirm the Catheter is in passive mode. If resistance is still felt consider the following: a. Ensure the forceps are fully closed. b. Gently rotate the forceps back and forth while retracting until the resistance is overcome. If resistance persists, or the tool is jammed, remove the Catheter and biopsy tool together.",
-      "category": null,
       "evidence": {
         "text": "Note: Slowly insert and retract biopsy forceps through the Catheter tool channel. Quickly inserting and retracting may result in Catheter sensor interference. When interference is detected, the system",
         "page": 83,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -1318,8 +1261,8 @@
       "evidence": {
         "text": "WARNING: Always wear personal protective equipment when removing the Vision Probe, biopsy needle, or bronchoscopic tools from the Catheter tool channel after saline injection. Failure to do so may res",
         "page": 84,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -1329,8 +1272,8 @@
       "evidence": {
         "text": "CAUTION: Exercise caution if injecting air through the Catheter when the Catheter is in the peripheral airways. Injecting air when the Catheter is wedged in small airways may result in patient harm.",
         "page": 84,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -1340,8 +1283,8 @@
       "evidence": {
         "text": "CAUTION: Suction excess fluid injected during broncheoalveolar lavage (BAL), as excess fluid may impair lung function. 1. Use a 20 m L locking syringe to infuse warmed saline (room temperature) throug",
         "page": 84,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -1351,8 +1294,8 @@
       "evidence": {
         "text": "Note: When possible before performing lavage, it is recommended to retract the Catheter so it is away from the airway walls for free fluid flow. 1. Connect the tubing of the bronchoalveolar lavage (BA",
         "page": 84,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -1362,8 +1305,8 @@
       "evidence": {
         "text": "CAUTION: Do not apply suction for extended durations, as this may impair ventilation or lead to procedure delay. 5. To collect sample into BAL container, apply gentle suction by closing the hole on th",
         "page": 84,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -1373,8 +1316,8 @@
       "evidence": {
         "text": "WARNING: Clean and disinfect both the Controller and System Cart arm after each procedure to prevent cross-contamination that may result in infection.",
         "page": 88,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -1384,8 +1327,8 @@
       "evidence": {
         "text": "CAUTION: Do not use these disinfectants on the System Cart or Controller: • Cavi Wipes 1 (manufactured by Metrex) • Sani-Cloth AF 3 (manufactured by PDI) Continued use in the presence of cracks may le",
         "page": 88,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -1395,8 +1338,8 @@
       "evidence": {
         "text": "CAUTION: Do not spray liquids while disinfecting the Ion system. Use only pre-moistened wipes to clean the system. Cleaning with spraying liquids may result in system damage.",
         "page": 88,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -1406,8 +1349,8 @@
       "evidence": {
         "text": "Note: Do not manually force the carriage to move unless necessary. Use carriage clutch button or scroll wheel to safely move the carriage. 1. Clean and disinfect the Controller.",
         "page": 88,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -1417,8 +1360,8 @@
       "evidence": {
         "text": "WARNING: Properly disinfect the Controller to prevent infection. a. Remove the trackball and the scroll wheel from Controller. • If needed, use the magnet attached to the Controller to assist in remov",
         "page": 88,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -1428,8 +1371,8 @@
       "evidence": {
         "text": "WARNING: Properly disinfect the arm to prevent infection. Figure 10. 2 Wipe arm a. Ensure all accessories have been removed, and extend the arm fully using the carriage clutch button. b. Place reusabl",
         "page": 89,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -1439,8 +1382,8 @@
       "evidence": {
         "text": "CAUTION: Stow the System Cart as instructed. An unbalanced cart may tip over and cause user or patient injury. To stow the system: 1. Press and hold the arm clutch button to move the arm away from the",
         "page": 90,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -1450,8 +1393,8 @@
       "evidence": {
         "text": "Note: Do not store the system in a temperature below -20 ºC or higher than 60 ºC. Exposure to temperature outside the range -20 ºC to 60 °C may damage the product. Ensure the storage room for the Syst",
         "page": 92,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -1461,8 +1404,8 @@
       "evidence": {
         "text": "Note: When E-stop is pressed or the system is in a fault state, the arm brakes are on. Use force against the arm to move it out of the way if necessary.",
         "page": 93,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -1472,8 +1415,8 @@
       "evidence": {
         "text": "Note: Do not manually force the carriage to move unless necessary. Use carriage clutch button or scroll wheel to safely move the carriage. 1. In case of patient emergency, if a biopsy tool (for exampl",
         "page": 93,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -1483,8 +1426,8 @@
       "evidence": {
         "text": "Note: Do not unlock the System Cart brakes or move the arm (setup joint) while the system restarts, or else you will be prompted to re-register after completing Guided Setup. 5. When the system powers",
         "page": 94,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -1494,8 +1437,8 @@
       "evidence": {
         "text": "Note: If the biopsy needle or a biopsy tool is advanced into the tissue through the Catheter tool channel, then pull the needle back into its protecting sheath and into the Catheter before pressing E-",
         "page": 94,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -1505,41 +1448,38 @@
       "evidence": {
         "text": "WARNING: Do not move patient bed after docking the system to the patient. Moving the patient bed may result in loss of ventilation pathway. If the System Cart or bed height needs adjustment mid-proced",
         "page": 95,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "note",
       "text": "Note: You will need to register 4 cm on each side of the main carina to complete registration.",
-      "category": null,
       "evidence": {
         "text": "Note: You will need to register 4 cm on each side of the main carina to complete registration.",
         "page": 95,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "note",
-      "text": "Note: If a plan has already been loaded when you get this error, you may continue with the loaded plan, but note that you cannot take screenshots, record video, or load new plans unless you restart the system. USBN ot Valid The system does not recognize the USB. Confirm that a compatible and formatted USB is used. The USB file system should be either FAT/FAT 32 or NTFS. If the issue persists after confirming your USB's compatibility and formatting, use a different USB drive.",
-      "category": null,
+      "text": "Note: If a plan has already been loaded when you get this error, you may continue with the loaded plan, but note that you cannot take screenshots, record video, or load new plans unless you restart the system. USB Not Valid The system does not recognize the USB. Confirm that a compatible and formatted USB is used. The USB file system should be either FAT/FAT 32 or NTFS. If the issue persists after confirming your USB's compatibility and formatting, use a different USB drive.",
       "evidence": {
         "text": "Note: If a plan has already been loaded when you get this error, you may continue with the loaded plan, but note that you cannot take screenshots, record video, or load new plans unless you restart th",
         "page": 96,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "warning",
       "text": "WARNING: If saline injection does not clear the obstruction, remove the Catheter or Vision Probe for continued cleaning, as excess saline injection into the lung may result in patient injury.",
-      "category": null,
       "evidence": {
         "text": "WARNING: If saline injection does not clear the obstruction, remove the Catheter or Vision Probe for continued cleaning, as excess saline injection into the lung may result in patient injury.",
         "page": 100,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -1549,8 +1489,8 @@
       "evidence": {
         "text": "CAUTION: Exercise caution if injecting air through the Catheter when the Catheter is in the peripheral airways. Injecting air when the Catheter is wedged in small airways may result in patient harm. •",
         "page": 100,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -1560,19 +1500,18 @@
       "evidence": {
         "text": "Note: After performing the troubleshooting steps below, if only one monitor returns to a live feed, perform a mid-procedure restart to resolve the issue. See A. 2 Mid-procedure Restart on page 94. • I",
         "page": 102,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "caution",
       "text": "CAUTION: Failure to recognize and recover from system faults may result in procedure delay. Non-Recoverable Fault In the event of a non-recoverable fault, system LED s illuminate red (if applicable). See A. 2 Mid- procedure Restart on page 94. If the fault persists, contact Customer Service to troubleshoot the issue. Recoverable Fault In the event of a recoverable fault, system LED s illuminate yellow on the part of the system that needs attention to recover the fault (if applicable). Follow system messages to recover and continue with the procedure. Or, tap Recover Fault on the Controller touchscreen. A. 22 Patient Motion The system detects if there is significant patient motion, and shows a notification on the top monitor. If patient motion is detected, evaluate registration accuracy by ensuring the Live View matches with the Navigation View while driving. Perform one of the following steps: • If registration is accurate, tap Dismiss. • If registration is not accurate, tap Redo Registration to perform registration again.",
-      "category": null,
       "evidence": {
         "text": "CAUTION: Failure to recognize and recover from system faults may result in procedure delay. Non-Recoverable Fault In the event of a non-recoverable fault, system LED s illuminate red (if applicable).",
         "page": 102,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -1582,19 +1521,18 @@
       "evidence": {
         "text": "Note: Catheter buckling or excessive friction in the ET tube may be detected as patient motion, and result in a patient motion notification from the system. Ensure sufficient lubrication is applied to",
         "page": 102,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "note",
       "text": "Note: Battery backup is only intended for safe removal of the system components from the patient and is not intended for continuing a procedure. A. 25 Contact Customer Service Use the following information to contact Customer Service. In the U. S. In Europe Intuitive Surgical, Inc. Intuitive Surgical SAS 1266 Kifer Road 11 avenue de Canteranne Sunnyvale, CA 94086 USA 33600 Pessac, France Toll free: 1. 866. 225. 2071 Toll free: +800. 0821. 2020 Direct: 408. 523. 9200 Direct: +33. 1. 77. 68. 88. 45 In the U. S. , phones are staffed Monday through Friday, 7 a. m. Eastern Time (ET) to 6 p. m. Pacific Time (PT). In Europe, phones are staffed Monday through Friday, 7 a. m to 5 p. m. Central European Time (CET). End of Section",
-      "category": null,
       "evidence": {
         "text": "Note: Battery backup is only intended for safe removal of the system components from the patient and is not intended for continuing a procedure. A. 25 Contact Customer Service Use the following inform",
         "page": 104,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -1604,8 +1542,8 @@
       "evidence": {
         "text": "Note: Use only water-based or silicone-based lubricants for the Catheter. Other lubricants may be difficult to remove during reprocessing and reduce the effectiveness of disinfection. Table C. 1 Third",
         "page": 106,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -1615,41 +1553,38 @@
       "evidence": {
         "text": "Note: Storage and transport of the system are not affected by atmospheric pressure. D. 6 Crate Dimensions Table D. 7 Crate Dimensions Weight Lx Wx H System Cart 53. 5 in. (136 cm) x 49. 0 in. (125 cm)",
         "page": 110,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "warning",
       "text": "WARNING: Use of this equipment adjacent to or stacked with other equipment should be avoided because it could result in improper operation. If such use is necessary, this equipment and the other equipment should be observed to verify that they are operating normally.",
-      "category": null,
       "evidence": {
         "text": "WARNING: Use of this equipment adjacent to or stacked with other equipment should be avoided because it could result in improper operation. If such use is necessary, this equipment and the other equip",
         "page": 111,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "warning",
       "text": "WARNING: Use of accessories, transducers, and cables other than those specified or provided by the manufacturer of this equipment could result in increased electromagnetic emissions or decreased electromagnetic immunity of this equipment and result in improper operation.",
-      "category": null,
       "evidence": {
         "text": "WARNING: Use of accessories, transducers, and cables other than those specified or provided by the manufacturer of this equipment could result in increased electromagnetic emissions or decreased elect",
         "page": 111,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "note",
-      "text": "Note: The Ion system was tested with shielded 3-meter composite video, S-video, SDI, DVI, HDMI, and Ethernet cables. FCCC ompliance",
-      "category": null,
+      "text": "Note: The Ion system was tested with shielded 3-meter composite video, S-video, SDI, DVI, HDMI, and Ethernet cables. FCC Compliance",
       "evidence": {
-        "text": "Note: The Ion system was tested with shielded 3-meter composite video, S-video, SDI, DVI, HDMI, and Ethernet cables. FCCC ompliance",
+        "text": "Note: The Ion system was tested with shielded 3-meter composite video, S-video, SDI, DVI, HDMI, and Ethernet cables. FCC Compliance",
         "page": 111,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -1659,19 +1594,19 @@
       "evidence": {
         "text": "Note: This equipment has been tested and found to comply with the limits for a Class A digital device, pursuant to Part 15 of the FCC Rules. These limits are designed to provide reasonable protection",
         "page": 111,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "caution",
-      "text": "CAUTION: The Live View video signal from the Vision Probe may be susceptible to interference from devices that transmit in the frequency of 80-90 MH z. If excessive noise is seen in the Live View, reorient or relocate the system or the interfering equipment to increase the distance between the two pieces of equipment. EMCT ables The following tables contain the Manufacturer’s declaration and additional information required by IEC 60601-1-2: 2014.",
+      "text": "CAUTION: The Live View video signal from the Vision Probe may be susceptible to interference from devices that transmit in the frequency of 80-90 MH z. If excessive noise is seen in the Live View, reorient or relocate the system or the interfering equipment to increase the distance between the two pieces of equipment. EMC Tables The following tables contain the Manufacturer’s declaration and additional information required by IEC 60601-1-2: 2014.",
       "category": "electrical",
       "evidence": {
         "text": "CAUTION: The Live View video signal from the Vision Probe may be susceptible to interference from devices that transmit in the frequency of 80-90 MH z. If excessive noise is seen in the Live View, reo",
         "page": 111,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -1681,8 +1616,8 @@
       "evidence": {
         "text": "Note: The emissions characteristics of this equipment make it suitable for use in industrial areas and hospitals (CISPR 11 class A). If it is used in a residential environment (for which CISPR 11 clas",
         "page": 112,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -1692,30 +1627,28 @@
       "evidence": {
         "text": "Note: UT is the AC mains voltage before application of the test level. Table 3: IEC 60601-1-2: 2014, Manufacturer’s Declaration – Electromagnetic Immunity The system is intended for use in the electro",
         "page": 113,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "note",
       "text": "Note: Transient flicker, color bars, or fault messages related to loss of image are acceptable. D. 8 Technical System Information Manufacturer information Intuitive Surgical, Inc. 1266 Kifer Road Sunnyvale, CA 94086 USA intuitve. com",
-      "category": null,
       "evidence": {
         "text": "Note: Transient flicker, color bars, or fault messages related to loss of image are acceptable. D. 8 Technical System Information Manufacturer information Intuitive Surgical, Inc. 1266 Kifer Road Sunn",
         "page": 114,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "note",
       "text": "Note: The unit identification labels include the serial number and the date of manufacture. It may be necessary for the reader to be as close as 6 in. (15 cm) from the label to read this information.",
-      "category": null,
       "evidence": {
         "text": "Note: The unit identification labels include the serial number and the date of manufacture. It may be necessary for the reader to be as close as 6 in. (15 cm) from the label to read this information.",
         "page": 115,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -1725,8 +1658,8 @@
       "evidence": {
         "text": "Note: The electrical ratings label is near the power cord entry point. It may be necessary for the reader to be as close as 12 in. (30 cm) from the floor and as close as 6 in. (15 cm) from the label t",
         "page": 115,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -1736,8 +1669,8 @@
       "evidence": {
         "text": "CAUTION A caution alerts the reader about a potentially hazardous situation which, if not avoided, may result in minor or moderate injury to the user or patient or damage to the equipment or other pro",
         "page": 122,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
@@ -1747,41 +1680,39 @@
       "evidence": {
         "text": "Note User information to emphasize an important point. PACS Picture Archiving and Communication Systems (PACS) is a medical imaging technology which provides economical storage and convenient access t",
         "page": 123,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "warning",
       "text": "WARNING A warning alerts the reader about a situation which, if not avoided, could result in death or serious injury. End of Section",
-      "category": null,
       "evidence": {
         "text": "WARNING A warning alerts the reader about a situation which, if not avoided, could result in death or serious injury. End of Section",
         "page": 124,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "caution",
-      "text": "Caution definition. .. .. .. .. .. .. .. .. .. .. .. .. 122 ERD . .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .122 CCSD",
-      "category": null,
+      "text": "Caution definition . . . . . . . . . . . . . . . . . . . . . . . . . 122 ERD . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 122 CCSD",
       "evidence": {
-        "text": "Caution definition. .. .. .. .. .. .. .. .. .. .. .. .. 122 ERD . .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .122 CCSD",
+        "text": "Caution definition . . . . . . . . . . . . . . . . . . . . . . . . . 122 ERD . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 122 CCSD",
         "page": 125,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     },
     {
       "severity": "warning",
-      "text": "Warning Definition . .. .. .. .. .. .. .. .. .. .. .. .122 System Labels. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 115 Water-based lubricant. .. .. .. .. .. .. .. .. .. .. 58 System Overview . .. .. .. .. .. .. .. .. .. .. .. .. .24 System Power Cords . .. .. .. .. .. .. .. .. .. .. .. 50 System software Updates . .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 18 System Specifications . .. .. .. .. .. .. .. .. .. .108 T Take Down System . .. .. .. .. .. .. .. .. .. .. .. .85 Target. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .122 Target Position. .. .. .. .. .. .. .. .. .. .. .. .. .. .122 Technical System Information Compliance and Classification . .. .. .. .. .. 114 Disposal Information . .. .. .. .. .. .. .. .. .. .114 Manufacturer information . .. .. .. .. .. .. .. 114 System Labels. .. .. .. .. .. .. .. .. .. .. .. .. .. 114 Third-Party Compatibility . .. .. .. .. .. .. .. .. 106 Top and bottom monitor interface. .. .. .. .. .. 21 Touchscreen . .. .. .. .. .. .. .. .. .. .. .. .. .40, 122 Trackball . .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 39 Troubleshooting. .. .. .. .. .. .. .. .. .. .. .. 93 – 94 Type BF. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 122 Type CF. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 122 U Unexpected Motion. .. .. .. .. .. .. .. .. .. .. .. .94 USB Errors. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 96 USB inputs. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .39 Using a Third-Party Bronchoalveolar Lavage Kit . .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 84 Using Compatible Third-party Tools",
+      "text": "Warning Definition . . . . . . . . . . . . . . . . . . . . . . . . 122 System Labels. . . . . . . . . . . . . . . . . . . . . . . . . . . . . 115 Water-based lubricant. . . . . . . . . . . . . . . . . . . . . 58 System Overview . . . . . . . . . . . . . . . . . . . . . . . . . . 24 System Power Cords . . . . . . . . . . . . . . . . . . . . . . . 50 System software Updates . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 18 System Specifications . . . . . . . . . . . . . . . . . . . . 108 T Take Down System . . . . . . . . . . . . . . . . . . . . . . . . 85 Target . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 122 Target Position . . . . . . . . . . . . . . . . . . . . . . . . . . . . 122 Technical System Information Compliance and Classification . . . . . . . . . . . 114 Disposal Information . . . . . . . . . . . . . . . . . . . . 114 Manufacturer information . . . . . . . . . . . . . . . 114 System Labels. . . . . . . . . . . . . . . . . . . . . . . . . . . 114 Third-Party Compatibility . . . . . . . . . . . . . . . . . 106 Top and bottom monitor interface. . . . . . . . . . . 21 Touchscreen . . . . . . . . . . . . . . . . . . . . . . . . . . 40, 122 Trackball . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 39 Troubleshooting. . . . . . . . . . . . . . . . . . . . . . . 93 – 94 Type BF . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 122 Type CF. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 122 U Unexpected Motion. . . . . . . . . . . . . . . . . . . . . . . . 94 USB Errors. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 96 USB inputs. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 39 Using a Third-Party Bronchoalveolar Lavage Kit . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 84 Using Compatible Third-party Tools",
       "category": "suction",
       "evidence": {
-        "text": "Warning Definition . .. .. .. .. .. .. .. .. .. .. .. .122 System Labels. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 115 Water-based lubricant. .. .. .. .. .. .. .. .. .. .. 58 System Overview . .. ..",
+        "text": "Warning Definition . . . . . . . . . . . . . . . . . . . . . . . . 122 System Labels. . . . . . . . . . . . . . . . . . . . . . . . . . . . . 115 Water-based lubricant. . . . . . . . . . . . . . . . .",
         "page": 128,
-        "bbox": null,
-        "confidence": 0.8
+        "confidence": 0.8,
+        "truncated": false
       }
     }
   ],
@@ -1935,22 +1866,22 @@
         [
           "",
           "Take Screenshot",
-          "Tap(ifavailable)totakeascreenshotofeverythingonthe System Cartmonitors. Thesystemobscurescertainpersonalhealthinformationor personalinformation(patientname, birthday, and ID)fromthe exportedscreenshot. Otherpersonalhealthinformationor personalinformationmaybevisibleonthe Liveor Fluoroviews(for example, apatienttagthatisvisibleonthe Live Viewwhena screenshotiscaptured). Tosavescreenshots, a USBstoragedevicemustbeinsertedinto the Controller. Screenshotswillsaveontothe USBstoragedevice alongwithamediafilethatpairseachscreenshotwiththeasso- ciatedpatient ID. Becausescreenshotsmaycontainpersonalinformation, secure your USBdeviceinaccordancewithyourinstitution'ssecurity policiesandprocedures. Contact Customer Servicetoenablesystemscreenshots."
+          "Tap(ifavailable)totakeascreenshotofeverythingonthe System Cartmonitors. Thesystemobscurescertainpersonalhealthinformationor personalinformation(patientname, birthday, and ID)fromthe exportedscreenshot. Otherpersonalhealthinformationor personalinformationmaybevisibleonthe Liveor Fluoroviews(for example, apatienttagthatisvisibleonthe Live Viewwhena screenshotiscaptured). Tosavescreenshots, a USBstoragedevicemustbeinsertedinto the Controller. Screenshotswillsaveontothe USBstoragedevice alongwithamediafilethatpairseachscreenshotwiththeasso- ciatedpatient ID. Becausescreenshotsmaycontainpersonalinf…"
         ],
         [
           "",
           "Start Video or Stop Video",
-          "Tap(ifavailable)tostartorstoprecordingvideoofeverything showingonthe System Cartmonitors. Thesystemobscurescertainpersonalhealthinformationor personalinformation(patientname, birthday, and ID)fromthe exportedvideo. Otherpersonalhealthinformationorpersonal informationmaybevisibleonthe Liveor Fluoroviews(for example, apatienttagthatisvisibleonthe Live Viewwhen recordingvideo). Tosaverecordedvideo, a USBstoragedevicemustbeinsertedinto the Controller. Recordedvideowillsaveontothe USBstorage devicealongwithamediafilethatpairseachvideowiththeasso- ciatedpatient ID. Note: Donotremovethe USBwhilerecordingor immediatelyafterstoppingrecording, asthismayresultin corruptvideofiles. Becausevideorecordingsmaycontainpersonalinformation, secureyour USBdeviceinaccordancewithyourinstitution's securitypoliciesandprocedures. Contact Customer Servicetoenablevideorecording."
+          "Tap(ifavailable)tostartorstoprecordingvideoofeverything showingonthe System Cartmonitors. Thesystemobscurescertainpersonalhealthinformationor personalinformation(patientname, birthday, and ID)fromthe exportedvideo. Otherpersonalhealthinformationorpersonal informationmaybevisibleonthe Liveor Fluoroviews(for example, apatienttagthatisvisibleonthe Live Viewwhen recordingvideo). Tosaverecordedvideo, a USBstoragedevicemustbeinsertedinto the Controller. Recordedvideowillsaveontothe USBstorage devicealongwithamediafilethatpairseachvideowiththeasso- ciatedpatient ID. Note: Donotremovethe USBwhilerecor…"
         ],
         [
           "",
           "Preview Path",
-          "Taptopreviewthe Navigation Viewineither Lockto Pathor Preview Pathmode, withtheoptiontoviewanyvasculaturethat wasaddedduringplanning. Notethevariouspreviewmodesandoptions: • Lockto Pathmode: Onbydefault, Lockto Pathlocksthe Navi- gation Viewtothepathtowardstheselecteddestination. Lock to Pathmodeforcesthe Navigation Viewtoremainonthepath tothetarget, butstillfollowstheinsertionmotionofthereal Catheter, andcanbeusedwiththe Live Viewtoaccuratelyfacil- itatenavigationtothetarget. Whilerelyingonthe Live View, use Lockto Pathtoindicatewhichturnstomake. Ifthereisdivergencebetweenthe Live Viewand Navigation View, usethearrowsthatappearonthetouchscreentoadjust theinsertionorretractionofthe Navigation Viewtomatchthe Live View. Usethe Move Targetor Catheterreferencefunction- alitytohelplocalizethetarget. • Preview Pathmode: Tap Scroll Wheel Locktounlock Lockto Pathandenter Preview Pathtopreviewtheselectedpathtothe targetwithoutmovingtheactual Catheter. Usethearrowsto movethe Navigation View Catheterforwardorbackward throughtheairway. See Figure 4. 22. • Vasculature: Depictsbotharteriesandveinsinred. Tap Vascu- laturetotogglethevisibilityofanyvasculaturethatwasadded duringplanning. Vasculatureisvisibleonlyinthe Navigation Viewwheneither Preview Pathor Lockto Pathmodeisactive."
+          "Taptopreviewthe Navigation Viewineither Lockto Pathor Preview Pathmode, withtheoptiontoviewanyvasculaturethat wasaddedduringplanning. Notethevariouspreviewmodesandoptions: • Lockto Pathmode: Onbydefault, Lockto Pathlocksthe Navi- gation Viewtothepathtowardstheselecteddestination. Lock to Pathmodeforcesthe Navigation Viewtoremainonthepath tothetarget, butstillfollowstheinsertionmotionofthereal Catheter, andcanbeusedwiththe Live Viewtoaccuratelyfacil- itatenavigationtothetarget. Whilerelyingonthe Live View, use Lockto Pathtoindicatewhichturnstomake. Ifthereisdivergencebetweenthe Live Viewand Nav…"
         ],
         [
           "",
           "Adjust Tree",
-          "Tapandholdwithonefingertorotate, tapandholdwithtwo fingerstopan, andpinchtozoomintotheairwaytreeonthe monitor. The Tree Viewissettofollow Cathetermovementby defaultandstopswhenthetreeisrotated. Recentertofollowthe Cathetermovementagain. The Tree Viewcanberotatedonlyin manualview. Youcanalsotogglethevisibilityofthetarget, referenceareas, andanatomyborders. • Airway Tree: Tap Airway Treetoviewtheapproximateshapeof the Catheterwithintheairways. Ifthetargetisupdated, the optiontoswitchto Airway Treeisdisableduntilthetargetis reset. • Settheanglefor Tree Viewtomatchthefluoroscopeangle, or inputanydesiredanglebytapping Adjust Angleonthe Con- trollertouchscreen. Rotatethe Tree Viewtogettheoptimal angleforviewingbytappingthevieworientationsonthe Con- trollertouchscreen(Axial, Sagittal, Coronal, Follow, Manual, and Adjust Angle). Tap Coronaltorotatethetreetotheanterior- posteriorview."
+          "Tapandholdwithonefingertorotate, tapandholdwithtwo fingerstopan, andpinchtozoomintotheairwaytreeonthe monitor. The Tree Viewissettofollow Cathetermovementby defaultandstopswhenthetreeisrotated. Recentertofollowthe Cathetermovementagain. The Tree Viewcanberotatedonlyin manualview. Youcanalsotogglethevisibilityofthetarget, referenceareas, andanatomyborders. • Airway Tree: Tap Airway Treetoviewtheapproximateshapeof the Catheterwithintheairways. Ifthetargetisupdated, the optiontoswitchto Airway Treeisdisableduntilthetargetis reset. • Settheanglefor Tree Viewtomatchthefluoroscopeangle, or inputanyd…"
         ],
         [
           "",
@@ -1963,7 +1894,8 @@
           "Taptoswitchliveviewsonthebottommonitor. Optionsare: Camera, Camera&Fluoro, R-EBUS&Fluoro, and Bronchoscope."
         ]
       ],
-      "page": 43
+      "page": 43,
+      "truncated_cells": true
     },
     {
       "title": "Table 6. 1 System Power Cable and Power Requirements",
@@ -2218,756 +2150,6 @@
         ]
       ],
       "page": 106
-    },
-    {
-      "title": "Table D. 3 Power Specifications for System Cart",
-      "headers": [
-        "",
-        "System Cart"
-      ],
-      "rows": [
-        [
-          "Voltage",
-          "100 to 230 VAC 50/60 Hz Auto Sense"
-        ],
-        [
-          "Ratingand Typical Current",
-          "VAContinuous 12 Aat 100 V~ 5. 2 Aat 230 V~"
-        ],
-        [
-          "Typicalcurrentinsleepmode",
-          "2 Aat 100 V~ 0. 9 Aat 230 V~"
-        ],
-        [
-          "Typicalcurrentinsleepmode(battery charging)",
-          "4. 8 Aat 100 V~ 2. 1 Aat 230 V~"
-        ],
-        [
-          "Maxinrushcurrentat 230 VAC",
-          "8 A"
-        ],
-        [
-          "Backup Power",
-          "5 Min"
-        ],
-        [
-          "Surge Protected",
-          "Yes"
-        ]
-      ],
-      "page": 109
-    },
-    {
-      "title": "Table D. 5 Environmental Conditions: Operating",
-      "headers": [
-        "Environmental Conditions: Operating",
-        ""
-      ],
-      "rows": [
-        [
-          "Temperature",
-          "50–86°F(10–30°C)"
-        ],
-        [
-          "Humidity",
-          "10–85%non-condensing"
-        ],
-        [
-          "Atmospheric Pressure",
-          "Thesystemshallfunctionproperlyinatmosphericpressures rangingfrom 586 mm HG(2133 m)to 774 mm HG(-152 m). For every 305 mabovesealevel, the 30°Coperationaltemperature limitspecifiedabovewillbereducedby 1. 43°C. Forexample, the maximumoperatingtemperatureat 2133 mwillbe 20°C."
-        ]
-      ],
-      "page": 110
-    },
-    {
-      "title": "Table 1: IEC 60601-1-2: 2014, Manufacturer’s Declaration - Electronic Emissions",
-      "headers": [
-        "Table 1: IEC 60601-1-2: 2014, Manufacturer’s Declaration-Electronic Emissions",
-        "",
-        ""
-      ],
-      "rows": [
-        [
-          "Thesystemisintendedforuseintheelectromagneticenvironmentspecifiedbelow. Thecustomer ortheuserofthesystemshouldensurethatitissuchanenvironment.",
-          "",
-          ""
-        ],
-        [
-          "Emissions Test",
-          "Compliance",
-          "Electromagnetic Environment-Guidance"
-        ],
-        [
-          "RFemissions CISPR 11",
-          "Group 1",
-          "Thesystemuses RFenergyonlyforitsinternalfunction. Therefore, its RFemissionsareverylowandarenot likelytocauseanyinterferenceinnearbyelectronic environment."
-        ],
-        [
-          "RFemissions CISPR 11",
-          "Class A",
-          "Thesystemissuitableforuseinallestablishments, otherthandomesticestablishmentsandthosedirectly connectedtothepubliclow-voltagepowersupply networkthatsuppliesbuildingsusedfordomestic purposes."
-        ],
-        [
-          "Harmonicemissions IEC 61000-3-2",
-          "Class A",
-          ""
-        ],
-        [
-          "Voltagefluctuations/ flickeremissions IEC 61000-3-3",
-          "Complies",
-          ""
-        ],
-        [
-          "Note: Theemissionscharacteristicsofthisequipmentmakeitsuitableforusein industrialareasandhospitals(CISPR 11 class A). Ifitisusedinaresidentialenvironment (forwhich CISPR 11 class Bisnormallyrequired)thisequipmentmightnotofferadequate protectiontoradio-frequencycommunicationservices. Theusermightneedtotake mitigationmeasures, suchasrelocatingorre-orientingtheequipment.",
-          "",
-          ""
-        ]
-      ],
-      "page": 112
-    },
-    {
-      "title": "Table 3: IEC 60601-1-2: 2014, Manufacturer’s Declaration – Electromagnetic Immunity",
-      "headers": [
-        "Immunity Test",
-        "IEC 60601 Test Level",
-        "Compliance Level",
-        "Electromagnetic Environment Guidance"
-      ],
-      "rows": [
-        [
-          "Surge IEC 61000-4-5",
-          "±1 k Vdiffer- entialmode ±2 k V common mode",
-          "±1 k Vdiffer- entialmode ±2 k V common mode",
-          "Mainspowerqualityshouldbethatofa U. S. or EUcommercialorhospitalenvironmentwith highlyreliableservice."
-        ],
-        [
-          "Voltagedips, short interruptions, and voltagevariations onpowersupply inputlines IEC 61000-4-11",
-          "<5%UT (>95%dip in UT)for 0. 5 cycle 70%UT (30%dipin UT)for 25 cycles <5%UT (>95%dip in UT)for 25 cycles <5%UT (>95%dip in UT)for 250 cycles",
-          "<5%UT (>95%dip in UT)for 0. 5 cycle 70%UT (30%dipin UT)for 25 cycles <5%UT (>95%dip in UT)for 25 cycles <5%UT (>95%dip in UT)for 250 cycles",
-          "Mainspowerqualityshouldbethatofa U. S. or EUcommercialorhospitalenvironmentwith highlyreliableservice. Iftheuserofthesystem requirescontinuedoperationduringpower mainsinterruptions, itisrecommendedthat thesystembepoweredfromanuninterruptible powersupply."
-        ],
-        [
-          "Powerfrequency (50/60 Hz) magneticfield IEC 61000-4-8",
-          "30 A/m",
-          "30 A/m",
-          "Powerfrequencymagneticfieldsshouldbeat levelscharacteristicofatypicallocationina typicalcommercialorhospitalenvironment."
-        ],
-        [
-          "Note: UTisthe ACmainsvoltagebeforeapplicationofthetestlevel.",
-          "",
-          "",
-          ""
-        ]
-      ],
-      "page": 113
-    },
-    {
-      "title": "Table F. 1 Symbols or Icons",
-      "headers": [
-        "col_1",
-        "col_2"
-      ],
-      "rows": [
-        [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "Donotre-sterilize",
-          "",
-          "",
-          ""
-        ],
-        [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "Donotre-use",
-          "",
-          "",
-          ""
-        ],
-        [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "Donotuseautoclave",
-          "",
-          "",
-          "methodtoreprocessproduct"
-        ],
-        [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "Do",
-          "notuseifpackage",
-          "",
-          "isdamaged"
-        ],
-        [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "Indi Itm fro",
-          "cates Equip aybenece mtheequip",
-          "otenti ssaryf otenti",
-          "al Terminal orthereadertobeascloseas 6 in.(15 cm) alterminaltoviewthissymbol."
-        ],
-        [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "Indi",
-          "catestoke",
-          "epdry",
-          ""
-        ],
-        [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "Indi sun",
-          "catesame lightandhe",
-          "dicald at.",
-          "evicethatneedsprotectionfromdirect"
-        ],
-        [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "Indi",
-          "catesuseb",
-          "",
-          ""
-        ],
-        [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "Indi bei",
-          "catesthemanufa dentified",
-          "",
-          "cturer'scataloguenumbersothedevicecan"
-        ],
-        [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "Indicatestheversion",
-          "",
-          "",
-          ""
-        ],
-        [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
-        [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "Indicatesthequantity",
-          "",
-          "",
-          ""
-        ],
-        [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "Indicatesthemanufacturer'sbatchcodesothatthebatchorlot canbeidentified",
-          "",
-          "",
-          ""
-        ],
-        [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "Uses. Theadjacentnumberindicatesthenumberofprocedures afterwhichadeviceexpires.",
-          "",
-          "",
-          ""
-        ],
-        [
-          "",
-          "Indicatescontainsorpresenceofnaturalrubberlatex"
-        ],
-        [
-          "",
-          "Indicatespeeltoopen"
-        ],
-        [
-          "",
-          "Disposeofinaccordancewithlocalregulations—particularly appliestoelectroniccomponents."
-        ],
-        [
-          "",
-          "Inconformancewith Regulation(EU)2017/745 European Medical Devices Regulation(MDR)"
-        ],
-        [
-          "",
-          "Indicatestheauthorizedrepresentativeinthe European Community"
-        ],
-        [
-          "",
-          "Indicatestheauthorizedrepresentativein Switzerland"
-        ],
-        [
-          "",
-          "Indicatesthe Flush Port Symbol"
-        ],
-        [
-          "",
-          "Indicatesthe Leak Test Port"
-        ],
-        [
-          "",
-          "Indicatesthe Serial Port Connection"
-        ],
-        [
-          "DVI",
-          "Indicatesthe DVIvideoport"
-        ],
-        [
-          "Composite",
-          "Indicatesthe Compositevideoports"
-        ],
-        [
-          "S-Video",
-          "Indicatesthe S-Videoport"
-        ],
-        [
-          "SDI",
-          "Indicatesthe SDIvideoport"
-        ],
-        [
-          "",
-          "Indicatesthetopmonitor"
-        ],
-        [
-          "",
-          "Indicatesthebottommonitor"
-        ],
-        [
-          "",
-          "Indicatesthecentermarkingsforthe Catheter Reprocessing Cover strapfortheproperalignmentofthe Catheter Reprocessing Cover duringinstallation"
-        ]
-      ],
-      "page": 118
-    },
-    {
-      "title": "Table G. 1 Glossary",
-      "headers": [
-        "Term",
-        "Meaning"
-      ],
-      "rows": [
-        [
-          "3 D",
-          "Three-dimensional."
-        ],
-        [
-          "AC",
-          "Alternatingcurrent, alsorepresentedbythe ACsymbol:~.“AC”or “ACpower”referstoelectricalconnectiontoawalloutlet, as opposedtobatterypower."
-        ],
-        [
-          "APView",
-          "Anterior-posteriorview. Headonviewoftheairwaytreelooking straightatthepatient’schest."
-        ],
-        [
-          "Arm",
-          "Theinstrumentarmonthe System Cartthatsupportsthe Catheter, Catheter Guide, Vision Probe, andaccessories."
-        ],
-        [
-          "BFor Type BF",
-          "An IEC 60601-1 classificationforpatientappliedparts. AType BF classificationindicatesanappliedpartthatisnotsuitablefor directconductivecontactwiththeheartorotherapplicationsas considerednecessary."
-        ],
-        [
-          "Bronchoscopy",
-          "Anendoscopictechniqueofvisualizingtheinsideoftheairways fordiagnosticandtherapeuticpurposeswhereabronchoscopeis introducedthroughnoseormouth. Itisanon-sterileprocedure."
-        ],
-        [
-          "Bronch Suite",
-          "See Procedure Room."
-        ],
-        [
-          "C-arm",
-          "Seefluoroscope."
-        ],
-        [
-          "CFor Type CF",
-          "An IEC 60601-1 classificationforpatientappliedparts. Type CFis themoststringentclassification, beingrequiredforthoseapplica- tionswheretheappliedpartisindirectconductivecontactwith theheartorotherapplicationsasconsiderednecessary."
-        ],
-        [
-          "CAUTION",
-          "Acautionalertsthereaderaboutapotentiallyhazardoussituation which, ifnotavoided, mayresultinminorormoderateinjuryto theuserorpatientordamagetotheequipmentorotherproperty. Itmayalsobeusedtoalertagainstunsafepractices. Thisincludes thespecialcarenecessaryforthesafeandeffectiveuseofthe deviceandthecarenecessarytoavoiddamagetoadevicethat mayoccurasaresultofuseormisuse."
-        ],
-        [
-          "CSSD",
-          "See SPD."
-        ],
-        [
-          "Carriage",
-          "Themechanismonthearmthatsupportsthe Catheter. Provides theinsertionandretractionmotionofthe Catheter."
-        ],
-        [
-          "Circulatingnurse",
-          "Acirculatingnurseisanon-sterileuser."
-        ],
-        [
-          "Clutchbutton",
-          "Usedtopositionthearm. Therearetwoclutchbuttons, armclutch andelevationclutch."
-        ],
-        [
-          "DICOM",
-          "Digital Imagingand Communicationsin Medicine(DICOM)isa standardforstoringandtransmittingmedicalimagesenabling theintegrationofmedicalimagingdevicessuchasscanners, servers, workstations, printers, networkhardware, andpicture archivingandcommunicationsystems(PACS)frommultiple manufacturers."
-        ],
-        [
-          "Dock",
-          "Attachthe Swivel Connectortothedockingsparonthe System Cartarm. Alsoreferredtoasdocking."
-        ],
-        [
-          "Dockingspar",
-          "Thepartofthearmthatattachestothe Swivel Connectorfor docking."
-        ],
-        [
-          "ETtube",
-          "Endotrachealtube."
-        ],
-        [
-          "ECG",
-          "Electrocardiogram."
-        ],
-        [
-          "ERD",
-          "Endoscope Reprocessing Department."
-        ],
-        [
-          "Fault, faulting",
-          "Thesystemgeneratesafaultwhenitdetectsananomaly."
-        ],
-        [
-          "Fiducial Marker",
-          "Anobjectplacedinoraroundthetargetthatcanbeviewedwith imagingtools."
-        ],
-        [
-          "Fluoro",
-          "Fluoroscopy."
-        ],
-        [
-          "Fluoroscope",
-          "Aninstrumentwithafluorescentscreenusedforviewingx-ray images. Alsoreferredtoas C-arm."
-        ],
-        [
-          "Instrument",
-          "Toolusedinthepatientonceattachedtothearm."
-        ],
-        [
-          "Instrument Arm",
-          "See Arm."
-        ],
-        [
-          "Leak Test",
-          "Atestusedinreprocessingtodetermineifleaksarepresentinthe Fully Articulating Catheterand Peripheral Vision Probe."
-        ],
-        [
-          "Leak Test Port",
-          "Usedforleaktesting."
-        ],
-        [
-          "LED",
-          "Lightemittingdiode."
-        ],
-        [
-          "NA",
-          "Not Applicable."
-        ],
-        [
-          "Note",
-          "Userinformationtoemphasizeanimportantpoint."
-        ],
-        [
-          "PACS",
-          "Picture Archivingand Communication Systems(PACS)isa medicalimagingtechnologywhichprovideseconomicalstorage andconvenientaccesstoimagesfrommultiplemodalities(source machinetypes)."
-        ],
-        [
-          "Procedure Room",
-          "Aroomwherebronchoscopyproceduresareperformed, generally inanoutpatientsetting."
-        ],
-        [
-          "R-EBUS",
-          "Radialendobronchialultrasound."
-        ],
-        [
-          "System Cart",
-          "Thepartofthesystemthatislocatedonthepatient-sideand consistsofthearmthatsupportsthesetupjointsthatcontrolthe Catheter, andthemainmonitors."
-        ],
-        [
-          "Screen",
-          "Themonitordisplays, locatedonthetopandbottommonitors, andonthe Controllertouchscreen."
-        ],
-        [
-          "SPD",
-          "Sterile Processing Department. Alsocalled Central Sterile Supply Department(CSSD)isadepartmentinhospitalsandother healthcarefacilitiesthatperformscleaning, sterilizationand otheractionsonmedicaldevicesandequipment."
-        ],
-        [
-          "Target",
-          "Thelesion, nodule, ortumortobeaccessedforbiopsy."
-        ],
-        [
-          "Touchscreen",
-          "Thetouchscreenmonitoronthe Controller."
-        ],
-        [
-          "Vision Probe",
-          "Providesthelivevideoimage(Live View)tothesystemandthe user."
-        ],
-        [
-          "WARNING",
-          "Awarningalertsthereaderaboutasituationwhich, ifnot avoided, couldresultindeathorseriousinjury."
-        ]
-      ],
-      "page": 122
     }
   ],
   "references": [
@@ -3005,37 +2187,62 @@
     "straight at the patient’s chest.",
     "Bronch Suite See Procedure Room.",
     "DICOM Digital Imaging and Communications in Medicine (DICOM) is a",
-    "Bronch Suite . .. .. .. .. .. .. .. .. .. .. .. .. .. .. .122"
+    "Bronch Suite . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 122"
   ],
   "_metrics": {
     "page_count": 128,
     "unique_pages_seen": 128,
     "unique_pages_ratio": 1.0,
-    "extracted_chars": 208423,
-    "duration_s": 22.308887720108032,
+    "extracted_chars": 211474,
+    "duration_s": 22.710406064987183,
     "coverage_ratio": 1.0,
     "tables_kept": 16
   },
   "_engine": "pdfplumber",
   "_mode": "full",
   "_cache_used": false,
-  "_pipeline": {
-    "profile": "enriched",
-    "engines": [
-      "pdfplumber",
-      "fitz"
-    ],
-    "ocr_used_pages": [],
-    "timestamp": "2025-10-27T16:25:43.145321",
-    "version": "v1.0.0"
-  },
   "_pipeline_metadata": {
+    "profile": "enriched",
+    "engines_requested": [
+      "pdfplumber",
+      "pymupdf"
+    ],
+    "engine_used": "pdfplumber",
+    "mode": "full",
+    "cache_used": false,
+    "ocr_used_pages": [],
+    "coverage_ratio": 1.0,
+    "page_count": 128,
+    "timestamp": "2025-10-29T15:26:45.363885",
+    "version": "v1.0.0",
+    "warnings": [
+      "table_limit_exceeded"
+    ],
+    "emit": {
+      "evidence_policy": "compact",
+      "tables_mode": "compact",
+      "evidence_max_chars": 500,
+      "table_cell_max_chars": 600,
+      "paragraph_dedupe": true,
+      "max_entities": 3000,
+      "max_relations": 15000,
+      "relation_window": 80,
+      "keep_evidence_bank": true,
+      "max_tables": 10
+    },
+    "emit_raw_pages": false,
     "generator": "medparse",
     "pipeline_version": "1.1.0",
     "engine": "pdfplumber",
-    "mode": "full",
-    "cache_used": false,
-    "config_hash": "8c705aa6",
-    "content_hash": "2eae06cdc6cf"
+    "config_hash": "7d58edf1",
+    "content_hash": "2eae06cdc6cf",
+    "validators": {
+      "passed": true,
+      "warnings": [
+        "IFU missing product_name field.",
+        "References detected for IFU – ensure a proper References/Bibliography anchor exists."
+      ],
+      "errors": []
+    }
   }
 }

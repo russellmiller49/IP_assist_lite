@@ -29,11 +29,13 @@ def version_callback(
 ) -> None:
     """Register --version flag."""
 
-    typer.echo(f"[medparse.cli] argv={sys.argv}")
+    if os.getenv("MEDPARSE_CLI_DEBUG_ARGS"):
+        typer.echo(f"[medparse.cli] argv={sys.argv}")
 
 
 def _show_version(value: bool) -> None:
-    if value:
+    # Typer sometimes passes string "False" instead of boolean
+    if value and str(value).lower() != "false":
         typer.echo(f"medparse {__version__}")
         raise typer.Exit()
 
@@ -64,6 +66,18 @@ def extract_articles(
         resolve_path=True,
         help="Path to pipeline configuration YAML.",
     ),
+    tables_mode: Optional[str] = typer.Option(
+        None,
+        "--tables-mode",
+        help="Override tables emit mode (compact|verbatim).",
+        click_type=click.Choice(["compact", "verbatim"], case_sensitive=False),
+    ),
+    evidence_policy: Optional[str] = typer.Option(
+        None,
+        "--evidence-policy",
+        help="Override evidence policy (compact|verbatim).",
+        click_type=click.Choice(["compact", "verbatim"], case_sensitive=False),
+    ),
     emit_raw_pages: bool = typer.Option(False, "--emit-raw-pages", help="Emit raw page text to sidecar files (disabled by default)."),
 ) -> None:
     """Run the article extractor for every PDF in ``input_dir``."""
@@ -81,6 +95,8 @@ def extract_articles(
         config_override=config,
         profile_override=profile,
         emit_raw_pages=emit_raw_pages,
+        tables_mode=tables_mode,
+        evidence_policy=evidence_policy,
     )
 
 
@@ -110,6 +126,18 @@ def extract_guidelines(
         resolve_path=True,
         help="Path to pipeline configuration YAML.",
     ),
+    tables_mode: Optional[str] = typer.Option(
+        None,
+        "--tables-mode",
+        help="Override tables emit mode (compact|verbatim).",
+        click_type=click.Choice(["compact", "verbatim"], case_sensitive=False),
+    ),
+    evidence_policy: Optional[str] = typer.Option(
+        None,
+        "--evidence-policy",
+        help="Override evidence policy (compact|verbatim).",
+        click_type=click.Choice(["compact", "verbatim"], case_sensitive=False),
+    ),
     emit_raw_pages: bool = typer.Option(False, "--emit-raw-pages", help="Emit raw page text to sidecar files (disabled by default)."),
 ) -> None:
     """Run the guideline extractor for every PDF in ``input_dir``."""
@@ -127,6 +155,8 @@ def extract_guidelines(
         config_override=config,
         profile_override=profile,
         emit_raw_pages=emit_raw_pages,
+        tables_mode=tables_mode,
+        evidence_policy=evidence_policy,
     )
 
 
@@ -156,6 +186,18 @@ def extract_ifus(
         resolve_path=True,
         help="Path to pipeline configuration YAML.",
     ),
+    tables_mode: Optional[str] = typer.Option(
+        None,
+        "--tables-mode",
+        help="Override tables emit mode (compact|verbatim).",
+        click_type=click.Choice(["compact", "verbatim"], case_sensitive=False),
+    ),
+    evidence_policy: Optional[str] = typer.Option(
+        None,
+        "--evidence-policy",
+        help="Override evidence policy (compact|verbatim).",
+        click_type=click.Choice(["compact", "verbatim"], case_sensitive=False),
+    ),
     emit_raw_pages: bool = typer.Option(False, "--emit-raw-pages", help="Emit raw page text to sidecar files (disabled by default)."),
 ) -> None:
     """Run the IFU/manual extractor."""
@@ -173,6 +215,8 @@ def extract_ifus(
         config_override=config,
         profile_override=profile,
         emit_raw_pages=emit_raw_pages,
+        tables_mode=tables_mode,
+        evidence_policy=evidence_policy,
     )
 
 
@@ -202,6 +246,18 @@ def extract_textbook(
         resolve_path=True,
         help="Path to pipeline configuration YAML.",
     ),
+    tables_mode: Optional[str] = typer.Option(
+        None,
+        "--tables-mode",
+        help="Override tables emit mode (compact|verbatim).",
+        click_type=click.Choice(["compact", "verbatim"], case_sensitive=False),
+    ),
+    evidence_policy: Optional[str] = typer.Option(
+        None,
+        "--evidence-policy",
+        help="Override evidence policy (compact|verbatim).",
+        click_type=click.Choice(["compact", "verbatim"], case_sensitive=False),
+    ),
     emit_raw_pages: bool = typer.Option(False, "--emit-raw-pages", help="Emit raw page text to sidecar files (disabled by default)."),
 ) -> None:
     """Run the textbook chapter extractor for each subfolder."""
@@ -229,6 +285,13 @@ def extract_textbook(
     config_path = config if config else CONFIG_DIR / "run_textbook.yaml"
     normalized_summary = _normalize_summary(summary_length)
     out.mkdir(parents=True, exist_ok=True)
+    emit_overrides: Dict[str, object] = {}
+    if tables_mode:
+        emit_overrides["tables_mode"] = tables_mode.lower()
+    if evidence_policy:
+        emit_overrides["evidence_policy"] = evidence_policy.lower()
+    overrides_payload = emit_overrides or None
+    failures: list[Path] = []
     for pdf_path, out_path in jobs:
         outcome = run_extract(
             pdf_path=pdf_path,
@@ -238,9 +301,15 @@ def extract_textbook(
             max_pages=max_pages,
             summary_length=normalized_summary,
             profile_override=profile,
+            emit_overrides=overrides_payload,
         )
         outcome.metadata["emit_raw_pages"] = emit_raw_pages
-        _write_outcome(outcome, out_path)
+        if not _write_outcome(outcome, out_path):
+            failures.append(out_path)
+
+    if failures:
+        typer.echo(f"{len(failures)} textbook extraction(s) reported validation errors or failures.")
+        raise typer.Exit(code=2)
 
 
 def _run_pipeline_for_pdfs(
@@ -256,6 +325,8 @@ def _run_pipeline_for_pdfs(
     config_override: Optional[Path],
     profile_override: Optional[str],
     emit_raw_pages: bool,
+    tables_mode: Optional[str],
+    evidence_policy: Optional[str],
 ) -> None:
     pdfs = list(pdfs)
     if not pdfs:
@@ -265,6 +336,13 @@ def _run_pipeline_for_pdfs(
     config_path = config_override if config_override else CONFIG_DIR / config_name
     normalized_summary = _normalize_summary(summary_length)
     out_dir.mkdir(parents=True, exist_ok=True)
+    emit_overrides: Dict[str, object] = {}
+    if tables_mode:
+        emit_overrides["tables_mode"] = tables_mode.lower()
+    if evidence_policy:
+        emit_overrides["evidence_policy"] = evidence_policy.lower()
+    overrides_payload = emit_overrides or None
+    failures: list[Path] = []
     for pdf_path in pdfs:
         out_path = out_dir / f"{prefix}_{slugify(pdf_path.stem)}.json"
         outcome = run_extract(
@@ -275,9 +353,15 @@ def _run_pipeline_for_pdfs(
             max_pages=max_pages,
             summary_length=normalized_summary,
             profile_override=profile_override,
+            emit_overrides=overrides_payload,
         )
         outcome.metadata["emit_raw_pages"] = emit_raw_pages
-        _write_outcome(outcome, out_path)
+        if not _write_outcome(outcome, out_path):
+            failures.append(out_path)
+
+    if failures:
+        typer.echo(f"{len(failures)} extraction(s) reported validation errors or failures.")
+        raise typer.Exit(code=2)
 
 
 def _collect_failure_metrics(outcome: PipelineOutcome) -> Dict[str, object]:
@@ -345,7 +429,7 @@ def _collect_failure_metrics(outcome: PipelineOutcome) -> Dict[str, object]:
     return failure_metrics
 
 
-def _write_outcome(outcome: PipelineOutcome, out_path: Path) -> None:
+def _write_outcome(outcome: PipelineOutcome, out_path: Path) -> bool:
     """Write pipeline outcome to JSON with metadata and validation."""
     import hashlib
 
@@ -426,18 +510,19 @@ def _write_outcome(outcome: PipelineOutcome, out_path: Path) -> None:
             }
             failure_path.write_text(json.dumps(failure_payload, indent=2, ensure_ascii=False))
             typer.echo("VALIDATION FAILED: Hard errors detected in extraction output.")
-            raise typer.Exit(code=2)
-    else:
-        failure_path = out_path.with_suffix(".failure.json")
-        failure_payload = {
-            "source_file": str(outcome.pdf_path),
-            "failure_reason": outcome.failure_reason or "extraction_failed",
-            "issues": outcome.warnings,
-            "metrics": _collect_failure_metrics(outcome),
-        }
-        failure_path.write_text(json.dumps(failure_payload, indent=2, ensure_ascii=False))
-        typer.echo(f"EXTRACTION FAILED: {outcome.failure_reason}")
-        raise typer.Exit(code=2)
+            return False
+        return True
+
+    failure_path = out_path.with_suffix(".failure.json")
+    failure_payload = {
+        "source_file": str(outcome.pdf_path),
+        "failure_reason": outcome.failure_reason or "extraction_failed",
+        "issues": outcome.warnings,
+        "metrics": _collect_failure_metrics(outcome),
+    }
+    failure_path.write_text(json.dumps(failure_payload, indent=2, ensure_ascii=False))
+    typer.echo(f"EXTRACTION FAILED: {outcome.failure_reason}")
+    return False
 
 
 def _normalize_summary(value: Optional[str]) -> Optional[str]:

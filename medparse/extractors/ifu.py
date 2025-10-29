@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import re
 from pathlib import Path
 from typing import List, Optional
 
@@ -50,6 +51,7 @@ def extract_ifu(
     extraction_config = config or get_extraction_config()
     pages = pages or load_pages(pdf_path, engine=engine, max_pages=page_limit)
     page_count = len(pages)
+    raw_pages_text = [page.text for page in pages]
 
     # Strip page furniture (headers/footers) before processing
     lines_by_page = [page.lines for page in pages]
@@ -94,7 +96,7 @@ def extract_ifu(
 
     lift_ifu_clinical_fields(pages, doc_kwargs)
 
-    meta = parse_front_matter(pages_text)
+    meta = parse_front_matter(raw_pages_text)
 
     # Collect software versions from Equipment/Software Version section
     raw_software: List[str] = []
@@ -119,6 +121,11 @@ def extract_ifu(
         value = meta.get(key)
         if value:
             doc_kwargs[key] = value
+
+    if not doc_kwargs.get("revision"):
+        doc_id_match = re.search(r"(D\d{5,6})", pdf_path.stem, re.IGNORECASE)
+        if doc_id_match:
+            doc_kwargs["revision"] = doc_id_match.group(1).upper()
 
     # Apply text cleanup to narrative fields
     for fld in ("product_name", "indications_for_use", "intended_use",
