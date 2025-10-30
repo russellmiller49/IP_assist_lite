@@ -17,10 +17,13 @@ enrichment:
 thresholds:
   guideline:
     min_recommendations: 8
+    grade_density: 0.7
     min_sections: 1
-    min_chars: 30000
-    min_grade_density: 0.7
-    require_diagnostic_yield: false
+  statement:
+    require_yield_definitions: true
+    min_sections: 1
+  classification:
+    min_sections: 1
   research:
     min_sections: 4
     min_chars: 25000

@@ -1,9 +1,9 @@
 {
-  "doc_id": "7b6d7cfe-83e8-47e9-9721-0fbf1e571d5e",
+  "doc_id": "b3c9d5c0-ce08-4f0d-a13e-613eee36bc9d",
   "doc_type": "article",
   "source_file": "/home/rjm/projects/IP_assist_lite/data/Input pdfs/articles/pdf/Robotic Cyrobiopsy 2022.pdf",
   "page_count": 9,
-  "extraction_timestamp": "2025-10-30T14:51:58.037099",
+  "extraction_timestamp": "2025-10-30T17:40:43.682487",
   "extraction_version": "v1.0.0",
   "evidence_bank": {
     "4c987869012f188a": {
@@ -850,12 +850,10 @@
   "front_matter_source": "zotero",
   "front_matter_confidence": 0.9848484848484849,
   "doc_subtype": "research",
-  "title": "Novel Robotic‑Assisted Cryobiopsy for Peripheral Pulmonary Lesions",
-  "title_source": "layout_block",
-  "title_confidence": 0.78,
+  "title": "Novel Robotic-Assisted Cryobiopsy for Peripheral Pulmonary Lesions",
+  "title_source": "zotero",
+  "title_confidence": 0.9848484848484849,
   "doi": "10.1007/s00408-022-00578-3",
-  "issn": "0341-2040, 1432-1750",
-  "url": "https://link.springer.com/10.1007/s00408-022-00578-3",
   "authors": [
     {
       "given": "Catherine L.",
@@ -951,9 +949,6 @@
   "group_authors": [],
   "journal": "Lung",
   "year": 2022,
-  "volume": "200",
-  "issue": "6",
-  "pages": "737-745",
   "abstract": "Purpose Tissue acquisition in lung cancer is vital for multiple reasons. Primary reasons reported for molecular testing failure in lung cancer biopsy specimens include insufficient amount of tumor cells provided and inadequate tissue quality. Robotic bronchoscopy is a new tool enabling peripheral pulmonary lesion sampling; however, diagnostic yield remains imperfect possibly due to the location of nodules adjacent to or outside of the airway. The 1. 1-mm cryoprobe is a novel diagnostic tool and accesses tissue in a 360-degree manner, thus potentially sampling eccentric/adjacent lesions. This study examines the diagnostic yield of the cryoprobe compared to standard needle aspiration and forceps biopsy. It additionally evaluates yield for molecular markers in cases of lung cancer. Methods This is a retrospective analysis of 112 patients with 120 peripheral pulmonary lesions biopsied via robotic bronchoscopy using needle aspirate, forceps, and cryobiopsy. Results The overall diagnostic yield was 90%. Nearly 18% of diagnoses were made exclusively from the cryobiopsy sample. Molecular analysis was adequate on all cryobiopsy samples sent. Digital imaging software confirmed an increase in quantity and quality of samples taken via cryobiopsy compared to needle aspirate and traditional forceps biopsy. Conclusion Using the 1. 1-mm cryoprobe to biopsy PPN combined with the Ion robotic bronchoscopy system is safe, feasible, and provides more diagnostic tissue than needle aspirates or traditional forceps biopsies. The combination of cryobiopsy with robotic-assisted bronchoscopy increased diagnostic yield, likely due to its 360-degree tissue acquisition which is beneficial when targeting extraluminal lesions adjacent to the airway. Keywords Robotic bronchoscopy · Lung nodule · Cryobiopsy · Lung cancer · Advanced bronchoscopy · Interventional pulmonology",
   "highlights": [],
   "keywords": [],
@@ -973,7 +968,7 @@
     "value": 90.0,
     "reported_value": 0.9,
     "exclusion_reasons": [
-      "numerator/denominator not reported at attempted/performed level",
+      "no_numerator_denominator_at_attempted_or_performed_level",
       "non_strict_reported",
       "derived_counts_from_percent",
       "Composite endpoint used (not index procedure alone)",
@@ -997,6 +992,7 @@
       ]
     }
   },
+  "yield_definitions_present": false,
   "recommendations": [],
   "conflicts_of_interest": [],
   "has_no_conflicts": false,
@@ -17951,16 +17947,19 @@
     "unique_pages_seen": 9,
     "unique_pages_ratio": 1.0,
     "extracted_chars": 31390,
-    "duration_s": 1.3376328945159912,
+    "duration_s": 1.3118326663970947,
     "coverage_ratio": 1.0,
     "sections_count": 7,
     "doc_subtype": "research",
     "tables_kept": 0,
     "recommendations_count": 0,
+    "yield_definitions_present": false,
     "diagnostic_yield_present": true,
     "diagnostic_yield_strict": false,
     "umls_entities": 169,
-    "relations_count": 668
+    "relations_count": 668,
+    "evidence_bank_size": 10,
+    "paragraph_store_size": 17
   },
   "_engine": "pymupdf",
   "_mode": "full",
@@ -17977,7 +17976,7 @@
     "ocr_used_pages": [],
     "coverage_ratio": 1.0,
     "page_count": 9,
-    "timestamp": "2025-10-30T14:51:58.037099",
+    "timestamp": "2025-10-30T17:40:43.682487",
     "version": "v1.0.0",
     "warnings": [],
     "emit": {
@@ -18000,12 +17999,12 @@
     "umls_model": "core_sci_lg",
     "umls_entities_count": 169,
     "doc_subtype": "research",
+    "yield_definitions_present": false,
     "front_matter": {
       "status": "linked",
       "source": "zotero",
-      "method": "title_year",
+      "method": "title_signature",
       "score": 0.9848484848484849,
-      "confidence": 0.9848484848484849,
       "id": "http://zotero.org/users/local/mOfIzmnI/items/P3YBQ2XT"
     },
     "relation_window": 80,
@@ -18053,9 +18052,7 @@
     "content_hash": "6e9745764a7e",
     "validators": {
       "passed": true,
-      "warnings": [
-        "Diagnostic yield percentage present but numerator/denominator not reported at attempted/performed level"
-      ],
+      "warnings": [],
       "errors": []
     }
   }

@@ -65,6 +65,8 @@ temp_*
 tmp_*
 scratch*
 !tests/test_*.py
+!tests/integration/test_*.py
+!tests/unit/test_*.py
 
 # Streamlit/FastAPI apps (using Gradio instead)
 streamlit_*.py

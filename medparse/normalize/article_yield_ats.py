@@ -9,6 +9,12 @@ from pydantic import BaseModel, Field
 
 from medparse.normalize.tables_classifier import TableBlock
 
+RE_N = re.compile(r"(?:n\s*=\s*)?(\d{2,5})\s+(patients?|lesions?|nodules?)", re.IGNORECASE)
+RE_YIELD = re.compile(
+    r"diagnostic\s+yield\s+was\s+(?:~|about\s+)?(\d{1,3}(?:\.\d+)?)\s?%",
+    re.IGNORECASE,
+)
+
 
 class EvidenceSpan(BaseModel):
     """Evidence location for extracted data."""
@@ -82,15 +88,26 @@ def _extract_from_text(results_text: str) -> Optional[DiagnosticYieldATS]:
         return None
 
     # Try patterns in order of specificity (most specific first)
-    patterns = [
-        (r'(\d+(?:\.\d+)?)\s?%[^\n]*?\((\d+)\s*/\s*(\d+)\)', 'pct_with_fraction'),
-        (r'diagnostic\s+yield[:\s]+(\d+)/(\d+)\s*', 'fraction'),
-        (r'(\d+)\s+of\s+(\d+)\s+(?:patients?|procedures?)\s+(?:had|received|achieved)\s+(?:a\s+)?(?:definitive\s+)?diagnos', 'x_of_y'),
-        (r'diagnostic\s+yield(?:\s+was|\s*[:=])\s*(\d+(?:\.\d+)?)\s?%', 'pct_only'),
+    patterns: List[Tuple[str, re.Pattern[str]]] = [
+        (
+            "pct_with_fraction",
+            re.compile(r'(\d+(?:\.\d+)?)\s?%[^\n]*?\((\d+)\s*/\s*(\d+)\)', re.IGNORECASE),
+        ),
+        (
+            "fraction",
+            re.compile(r'diagnostic\s+yield[:\s]+(\d+)/(\d+)\s*', re.IGNORECASE),
+        ),
+        (
+            "x_of_y",
+            re.compile(
+                r'(\d+)\s+of\s+(\d+)\s+(?:patients?|procedures?)\s+(?:had|received|achieved)\s+(?:a\s+)?(?:definitive\s+)?diagnos',
+                re.IGNORECASE,
+            ),
+        ),
     ]
 
-    for pattern_str, pattern_type in patterns:
-        match = re.search(pattern_str, results_text, re.IGNORECASE)
+    for pattern_type, regex in patterns:
+        match = regex.search(results_text)
         if not match:
             continue
 
@@ -114,12 +131,6 @@ def _extract_from_text(results_text: str) -> Optional[DiagnosticYieldATS]:
             numerator = int(groups[0])
             denominator = int(groups[1])
             yield_pct = (numerator / denominator) * 100 if denominator > 0 else None
-        elif pattern_type == 'pct_only':
-            # Only percentage, no numerator/denominator
-            yield_pct = float(groups[0])
-            exclusion_reasons.append("numerator/denominator not reported at attempted/performed level")
-            exclusion_reasons.append("non_strict_reported")
-
         match_start, match_end = match.start(), match.end()
         ci_lower, ci_upper = extract_confidence_intervals(results_text, match_start, match_end)
         definition = extract_yield_definition(results_text, match_start, match_end)
@@ -139,6 +150,29 @@ def _extract_from_text(results_text: str) -> Optional[DiagnosticYieldATS]:
             exclusion_reasons=exclusion_reasons,
             evidence=EvidenceSpan(text=match.group(0), confidence=0.85 if compatible else 0.6),
             strict=strict,
+        )
+
+    yield_match = RE_YIELD.search(results_text)
+    if yield_match:
+        yield_pct = float(yield_match.group(1))
+        exclusion_reasons = [
+            "no_numerator_denominator_at_attempted_or_performed_level",
+            "non_strict_reported",
+        ]
+        match_start, match_end = yield_match.start(), yield_match.end()
+        ci_lower, ci_upper = extract_confidence_intervals(results_text, match_start, match_end)
+        definition = extract_yield_definition(results_text, match_start, match_end)
+        return DiagnosticYieldATS(
+            numerator=None,
+            denominator=None,
+            yield_pct=yield_pct,
+            ci_lower=ci_lower,
+            ci_upper=ci_upper,
+            definition=definition,
+            compatible_with_ats=False,
+            exclusion_reasons=exclusion_reasons,
+            evidence=EvidenceSpan(text=yield_match.group(0), confidence=0.6),
+            strict=False,
         )
 
     return None
@@ -206,7 +240,7 @@ def _finalize_yield_record(
             _append_reason(yield_data, reason)
 
     # Add missing data reasons
-    baseline_reason = "numerator/denominator not reported at attempted/performed level"
+    baseline_reason = "no_numerator_denominator_at_attempted_or_performed_level"
     if yield_data.numerator is None or yield_data.denominator is None:
         _append_reason(yield_data, baseline_reason)
         _append_reason(yield_data, "missing_numerator_denominator")
@@ -253,6 +287,9 @@ def _attempt_backfill_counts(yield_data: DiagnosticYieldATS, sections: Dict[str,
 
 def _find_cohort_size(text: str) -> Optional[int]:
     match = re.search(r'\bn\s*=\s*(\d+)', text, re.IGNORECASE)
+    if match:
+        return int(match.group(1))
+    match = RE_N.search(text)
     if match:
         return int(match.group(1))
     match = re.search(r'(\d+)\s+(?:patients|subjects|cases|procedures)\b', text, re.IGNORECASE)

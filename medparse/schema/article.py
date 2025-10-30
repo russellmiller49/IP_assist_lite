@@ -157,7 +157,9 @@ class ArticleDocument(BaseDocument):
     """Structured representation of a research article extraction."""
 
     doc_type: Literal["article"] = Field(default="article", frozen=True)
-    doc_subtype: Optional[Literal["guideline", "research", "review"]] = None
+    doc_subtype: Optional[
+        Literal["guideline", "research", "review", "statement", "classification"]
+    ] = None
 
     # Title and metadata (enhanced)
     title: Optional[str] = None
@@ -195,6 +197,7 @@ class ArticleDocument(BaseDocument):
     # Outcomes (enhanced)
     outcomes: List[Outcome] = Field(default_factory=list)
     diagnostic_yield: Optional[DiagnosticYield] = None
+    yield_definitions_present: Optional[bool] = None
 
     # Guidelines (enhanced)
     recommendations: List[GuidelineRecommendation] = Field(default_factory=list)

@@ -29,7 +29,11 @@ from medparse.normalize.guideline_grades import (
 from medparse.normalize.outcomes import OutcomeData, extract_outcomes
 from medparse.normalize.page_furniture import strip_furniture
 from medparse.normalize.relations import RelationRecord, build_cooccurrence, build_relations
-from medparse.normalize.fm_zotero import link_front_matter
+from medparse.normalize.zotero_map import (
+    FrontMatter,
+    configure_zotero_library,
+    lookup_front_matter,
+)
 from medparse.normalize.tables_classifier import TableBlock, classify_and_gate_tables
 from medparse.normalize.umls_linking import (
     UmlsEntity as UmlsEntityRecord,
@@ -110,6 +114,56 @@ def extract_article(
     frontmatter = extract_authors_affiliations(pages)
     authors = _build_authors(frontmatter)
     affiliations = _build_affiliations(frontmatter.get("affiliations", []))
+    zotero_match: Optional[FrontMatter] = None
+    fm_info: Optional[Dict[str, object]] = None
+    zotero_author_count = 0
+    journal_value = biblio.get("journal")
+    year_value = biblio.get("year")
+
+    if extraction_config.should_use_zotero():
+        zotero_path = extraction_config.metadata_sources.get("zotero_json")
+        configure_zotero_library(zotero_path)
+        if zotero_path:
+            try:
+                zotero_match = lookup_front_matter(doi, title_info.get("title"))
+            except Exception as exc:  # pragma: no cover - defensive
+                LOGGER.debug("Zotero lookup failed for %s: %s", pdf_path.name, exc)
+                fm_info = {
+                    "status": "error",
+                    "detail": str(exc),
+                    "source": "zotero",
+                }
+        else:
+            fm_info = {"status": "library_unavailable", "source": "zotero"}
+
+    if zotero_match:
+        zotero_author_count = len(zotero_match.authors)
+        fm_info = {
+            "status": "linked",
+            "source": "zotero",
+            "method": zotero_match.match_method,
+            "score": zotero_match.match_score,
+            "id": zotero_match.entry_id,
+        }
+        if zotero_match.title:
+            title_info["title"] = zotero_match.title
+            title_info["source"] = "zotero"
+            title_info["confidence"] = max(
+                float(title_info.get("confidence", 0.0) or 0.0),
+                zotero_match.match_score,
+            )
+        if zotero_match.doi and not doi:
+            doi = zotero_match.doi
+        if zotero_match.authors:
+            authors = _authors_from_front_matter(zotero_match)
+        if zotero_match.affiliations:
+            affiliations = _affiliations_from_front_matter(zotero_match)
+        if zotero_match.journal:
+            journal_value = zotero_match.journal
+        if zotero_match.year is not None:
+            year_value = zotero_match.year
+    elif fm_info is None and extraction_config.should_use_zotero():
+        fm_info = {"status": "not_found", "source": "zotero"}
 
     table_blocks = _maybe_classify_tables(pages, extraction_config)
     outcomes = _maybe_extract_outcomes(sections, table_blocks, extraction_config)
@@ -117,6 +171,11 @@ def extract_article(
     recommendations_raw = _maybe_extract_recommendations(sections, pages, extraction_config)
     recommendations = _map_recommendations(recommendations_raw)
     figures = _maybe_extract_figures(pages, extraction_config)
+    yield_definitions_present = _detect_yield_definition_signals(
+        pages_for_detection,
+        sections,
+        table_blocks,
+    )
 
     doc_subtype = _infer_doc_subtype(
         pages_for_detection,
@@ -125,8 +184,9 @@ def extract_article(
         recommendations,
         recommendations_raw,
     )
-    if doc_subtype != "guideline" and "guideline" in pdf_path.stem.lower():
-        doc_subtype = "guideline" if recommendations else "review"
+    if doc_subtype not in {"guideline", "statement", "classification"} and "guideline" in pdf_path.stem.lower():
+        if recommendations:
+            doc_subtype = "guideline"
 
     yield_data = yield_from_text(flat_lines)
     references = normalize_references(
@@ -178,8 +238,8 @@ def extract_article(
         title_confidence=title_info.get("confidence", 0.0),
         title_source=title_info.get("source"),
         doi=doi,
-        journal=biblio.get("journal"),
-        year=biblio.get("year"),
+        journal=journal_value,
+        year=year_value,
         volume=biblio.get("volume"),
         issue=biblio.get("issue"),
         sections=sections,
@@ -193,6 +253,7 @@ def extract_article(
         tables=_map_tables(table_blocks),
         outcomes=_map_outcomes(outcomes),
         diagnostic_yield=_map_yield(diagnostic_yield, yield_data),
+        yield_definitions_present=yield_definitions_present,
         recommendations=recommendations,
         doc_subtype=doc_subtype,
         figures=_map_figures(figures),
@@ -203,26 +264,23 @@ def extract_article(
         references=references,
     )
 
+    if zotero_match:
+        document.front_matter_source = "zotero"
+        document.front_matter_confidence = zotero_match.match_score
+        if zotero_author_count > 0 and not document.authors:
+            warning_list = document.pipeline_info.setdefault("front_matter_warnings", [])
+            if isinstance(warning_list, list):
+                warning_list.append("authors_missing_despite_zotero_match")
 
-    fm_info: Optional[Dict[str, object]] = None
-    if extraction_config.should_use_zotero():
-        zotero_path = extraction_config.metadata_sources.get("zotero_json")
-        try:
-            document, fm_info = link_front_matter(
-                document,
-                zotero_path,
-                extraction_config.enrichment,
-            )
-        except Exception as exc:  # pragma: no cover - defensive
-            LOGGER.debug("Zotero linking failed for %s: %s", pdf_path.name, exc)
-            fm_info = {"status": "error", "detail": str(exc), "source": "zotero"}
 
     document.pipeline_info["umls_status"] = umls_result.status
     document.pipeline_info["umls"] = umls_result.status
-    if umls_result.model_name:
-        document.pipeline_info.setdefault("umls_model", umls_result.model_name)
+    if umls_result.umls_model:
+        document.pipeline_info.setdefault("umls_model", umls_result.umls_model)
     document.pipeline_info["umls_entities_count"] = len(umls_records)
     document.pipeline_info["doc_subtype"] = doc_subtype
+    if yield_definitions_present is not None:
+        document.pipeline_info["yield_definitions_present"] = bool(yield_definitions_present)
     if fm_info:
         document.pipeline_info["front_matter"] = fm_info
     if extraction_config.relation_window:
@@ -296,6 +354,38 @@ def _build_affiliations(records: Iterable[dict]) -> List[Affiliation]:
             )
         )
     return payload
+
+
+def _authors_from_front_matter(front_matter: FrontMatter) -> List[Author]:
+    authors: List[Author] = []
+    for author in front_matter.authors:
+        try:
+            authors.append(
+                Author(
+                    given=author.given or "",
+                    family=author.family or "",
+                )
+            )
+        except Exception as exc:  # pragma: no cover - defensive
+            LOGGER.debug("Skipping Zotero author due to validation error: %s", exc)
+    return authors
+
+
+def _affiliations_from_front_matter(front_matter: FrontMatter) -> List[Affiliation]:
+    affiliations: List[Affiliation] = []
+    for idx, text in enumerate(front_matter.affiliations, start=1):
+        if not text:
+            continue
+        try:
+            affiliations.append(
+                Affiliation(
+                    id=str(idx),
+                    text=text,
+                )
+            )
+        except Exception as exc:  # pragma: no cover - defensive
+            LOGGER.debug("Skipping Zotero affiliation due to validation error: %s", exc)
+    return affiliations
 
 
 def _maybe_classify_tables(pages: Sequence[PageData], config: ExtractionConfig) -> List[TableBlock]:
@@ -538,6 +628,29 @@ GUIDELINE_FIRST_PAGE_MARKERS = {
 }
 
 RECOMMENDATION_ANCHORS_PATTERN = re.compile(r"\bwe\s+(?:recommend|suggest)\b", re.IGNORECASE)
+GUIDELINE_GRADE_PATTERN = re.compile(r"recommendation\s+grade\s+[A-D]", re.IGNORECASE)
+STATEMENT_TITLE_MARKERS = (
+    "statement",
+    "research statement",
+    "framework",
+    "update",
+    "official statement",
+)
+STATEMENT_HEADER_MARKERS = (
+    "american thoracic society documents",
+    "official american thoracic society documents",
+    "an official american thoracic society",
+)
+CLASSIFICATION_TITLE_MARKERS = (
+    "classification",
+    "classifications",
+    "classification update",
+)
+CLASSIFICATION_SUPPORT_MARKERS = (
+    "update",
+    "revision",
+    "framework",
+)
 
 
 def _count_grade_banner_hits(text: Optional[str]) -> int:
@@ -549,6 +662,190 @@ def _count_grade_banner_hits(text: Optional[str]) -> int:
         hits += len(re.findall(rf"\b{token}\b", lowered))
     hits += len(GRADE_SIGN_PATTERN.findall(text))
     return hits
+
+
+def _first_page_text(pages: Sequence[PageData], *, max_lines: int = 40) -> str:
+    if not pages:
+        return ""
+    first_page = pages[0]
+    lines = (first_page.lines or [])[:max_lines]
+    text = " ".join(line.strip() for line in lines if line.strip())
+    if text:
+        return text
+    return (first_page.text or "").strip()
+
+
+def _count_recommendation_phrases(pages: Sequence[PageData]) -> int:
+    hits = 0
+    for page in pages:
+        content = page.text or " ".join(page.lines or [])
+        if not content:
+            continue
+        hits += len(RECOMMENDATION_ANCHORS_PATTERN.findall(content))
+        if hits >= 5:
+            break
+    return hits
+
+
+def _has_recommendations_heading(
+    pages: Sequence[PageData],
+    sections: dict[str, str],
+) -> bool:
+    if any(
+        heading and "recommendation" in heading.lower()
+        for heading in sections.keys()
+    ):
+        return True
+    for page in pages[:6]:
+        for heading in getattr(page, "headings", []):
+            title = (heading.title or "").strip().lower()
+            if not title:
+                continue
+            if "recommendation" in title:
+                return True
+    return False
+
+
+def _guideline_signal_score(
+    pages: Sequence[PageData],
+    sections: dict[str, str],
+    recommendations: Sequence[GuidelineRecommendation],
+) -> int:
+    score = 0
+    if recommendations and len(recommendations) >= 5:
+        score += 1
+    if _count_recommendation_phrases(pages) >= 5:
+        score += 1
+    banner_text = " ".join(
+        (page.text or " ".join(page.lines or [])) for page in pages[:3]
+    )
+    if GUIDELINE_GRADE_PATTERN.search(banner_text):
+        score += 1
+    if _has_recommendations_heading(pages, sections):
+        score += 1
+    return score
+
+
+def looks_like_guideline(
+    pages: Sequence[PageData],
+    sections: dict[str, str],
+    recommendations: Sequence[GuidelineRecommendation],
+    raw_recommendations: Sequence[ParsedGuidelineRecommendation] | None = None,
+) -> bool:
+    try:
+        if detect_guideline(pages, sections, recommendations, raw_recommendations):
+            return True
+    except Exception:  # pragma: no cover - defensive
+        pass
+    score = _guideline_signal_score(pages, sections, recommendations)
+    if (raw_recommendations or recommendations) and score >= 1:
+        score += 1
+    return score >= 2
+
+
+def _classification_signal_score(
+    pages: Sequence[PageData],
+    title_value: str,
+) -> int:
+    score = 0
+    title_lower = title_value.lower()
+    if any(marker in title_lower for marker in CLASSIFICATION_TITLE_MARKERS):
+        score += 1
+    if any(marker in title_lower for marker in CLASSIFICATION_SUPPORT_MARKERS):
+        score += 1
+    if "idiopathic interstitial pneumonia" in title_lower or "iip" in title_lower:
+        score += 1
+
+    first_text = _first_page_text(pages)
+    lowered_first = first_text.lower()
+    if "classification" in lowered_first and any(
+        marker in lowered_first for marker in CLASSIFICATION_SUPPORT_MARKERS
+    ):
+        score += 1
+    for page in pages[:4]:
+        for heading in getattr(page, "headings", []):
+            heading_text = (heading.title or "").lower()
+            if "classification" in heading_text:
+                score += 1
+                break
+    return score
+
+
+def looks_like_classification_update(
+    pages: Sequence[PageData],
+    title_value: str,
+) -> bool:
+    if not title_value:
+        return False
+    score = _classification_signal_score(pages, title_value)
+    return score >= 2
+
+
+def looks_like_statement(
+    pages: Sequence[PageData],
+    title_value: str,
+    sections: dict[str, str],
+) -> bool:
+    if not pages:
+        return False
+    first_text = _first_page_text(pages)
+    lowered_first = first_text.lower()
+    title_lower = title_value.lower()
+
+    classification_score = _classification_signal_score(pages, title_value)
+    if classification_score >= 2:
+        return False
+
+    score = 0
+    if any(marker in lowered_first for marker in STATEMENT_HEADER_MARKERS):
+        score += 2
+    if any(marker in title_lower for marker in STATEMENT_TITLE_MARKERS):
+        score += 1
+    if "american thoracic society" in title_lower and "statement" in title_lower:
+        score += 1
+    if "an official american thoracic society" in lowered_first:
+        score += 1
+
+    intro_text = sections.get("introduction") or ""
+    background_text = sections.get("background") or ""
+    combined = f"{intro_text} {background_text}".lower()
+    if "american thoracic society" in combined and "statement" in combined:
+        score += 1
+
+    return score >= 2
+
+
+def _detect_yield_definition_signals(
+    pages: Sequence[PageData],
+    sections: dict[str, str],
+    tables: Sequence[TableBlock] | None,
+) -> bool:
+    texts: List[str] = []
+    for key in ("methods", "results", "introduction", "abstract"):
+        value = sections.get(key)
+        if isinstance(value, str) and value:
+            texts.append(value.lower())
+
+    early_pages_text = " ".join(
+        (page.text or " ".join(page.lines or [])) for page in pages[:4]
+    ).lower()
+    if early_pages_text:
+        texts.append(early_pages_text)
+
+    combined_text = " ".join(texts)
+    if any(marker in combined_text for marker in YIELD_DEFINITION_MARKERS):
+        return True
+
+    if tables:
+        for table in tables:
+            caption = (getattr(table, "caption", "") or "").lower()
+            label = (getattr(table, "table_type", "") or "").lower()
+            headers = " ".join(getattr(table, "headers", []) or []).lower()
+            first_rows = " ".join(" ".join(row) for row in (table.rows or [])[:3]).lower()
+            table_text = " ".join((caption, label, headers, first_rows))
+            if any(token in table_text for token in YIELD_DEFINITION_TABLE_MARKERS):
+                return True
+    return False
 
 GUIDELINE_TITLE_MARKERS = {
     "guideline",
@@ -579,6 +876,24 @@ REVIEW_MARKERS = {
     "narrative review",
     "literature review",
 }
+
+YIELD_DEFINITION_MARKERS = (
+    "strict definition of diagnostic yield",
+    "diagnostic yield was defined",
+    "diagnostic yield defined as",
+    "diagnostic outcome measures",
+    "diagnostic outcomes were defined",
+    "stard flow",
+    "stard diagram",
+    "stard flowchart",
+    "stard reporting",
+)
+YIELD_DEFINITION_TABLE_MARKERS = (
+    "diagnostic outcome measures",
+    "definition of diagnostic yield",
+    "diagnostic definitions",
+    "diagnostic categories",
+)
 
 
 def detect_guideline(
@@ -669,16 +984,21 @@ def _infer_doc_subtype(
 ) -> str:
     """Classify article subtype using guideline and review detectors."""
 
-    try:
-        detected = detect_guideline(pages, sections, recommendations, raw_recommendations)
-        if detected:
-            return "guideline"
-    except Exception as exc:  # pragma: no cover - defensive
-        LOGGER.debug("Guideline detection failed: %s", exc)
-
-    title_value = ""
     if isinstance(title_info, dict):
         title_value = str(title_info.get("title") or "")
+    else:
+        title_value = str(title_info or "")
+
+    if looks_like_guideline(pages, sections, recommendations, raw_recommendations):
+        return "guideline"
+
+    if looks_like_classification_update(pages, title_value):
+        return "classification"
+
+    if looks_like_statement(pages, title_value, sections):
+        return "statement"
+
+    if isinstance(title_info, dict):
         title_lower = title_value.lower()
         if title_lower and any(marker in title_lower for marker in GUIDELINE_TITLE_MARKERS):
             LOGGER.debug("Guideline detected via title marker.")
@@ -705,6 +1025,13 @@ def _infer_doc_subtype(
         if banner_hits >= 5:
             LOGGER.debug("Guideline retained via grade banners on first page (hits=%d).", banner_hits)
             return "guideline"
+
+    if title_lower and any(marker in title_lower for marker in CLASSIFICATION_TITLE_MARKERS):
+        LOGGER.debug("Classification detected via title marker.")
+        return "classification"
+    if title_lower and "statement" in title_lower and "american thoracic society" in title_lower:
+        LOGGER.debug("Statement detected via title markers.")
+        return "statement"
 
     if title_lower and any(marker in title_lower for marker in REVIEW_MARKERS):
         LOGGER.debug("Review detected from title marker.")

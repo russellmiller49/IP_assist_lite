@@ -1,9 +1,9 @@
 {
-  "doc_id": "a3774cc6-2c6e-4990-9484-5e27c2b95e59",
+  "doc_id": "5b3d771e-b227-494a-b119-16700e05ba35",
   "doc_type": "article",
   "source_file": "/home/rjm/projects/IP_assist_lite/data/Input pdfs/articles/pdf/Guideline ATS diagnostic yield.pdf",
   "page_count": 14,
-  "extraction_timestamp": "2025-10-30T14:51:43.019674",
+  "extraction_timestamp": "2025-10-30T17:40:28.292250",
   "extraction_version": "v1.0.0",
   "evidence_bank": {
     "128bd754a99b0ca9": {
@@ -608,13 +608,11 @@
   },
   "front_matter_source": "zotero",
   "front_matter_confidence": 0.9832635983263599,
-  "doc_subtype": "guideline",
-  "title": "Assessment of Advanced Diagnostic Bronchoscopy Outcomes for Peripheral Lung Lesions: A Delphi Consensus Definition of Diagnostic Yield and Recommendations for Patient-centered Study Designs An Official American Thoracic Society/American College of Chest Physicians",
-  "title_source": "layout_block",
-  "title_confidence": 0.78,
-  "doi": "10.1164/rccm.202401-0192ST",
-  "issn": "1073-449X, 1535-4970",
-  "url": "https://www.atsjournals.org/doi/10.1164/rccm.202401-0192ST",
+  "doc_subtype": "statement",
+  "title": "Assessment of Advanced Diagnostic Bronchoscopy Outcomes for Peripheral Lung Lesions: A Delphi Consensus Definition of Diagnostic Yield and Recommendations for Patient-centered Study Designs. An Official American Thoracic Society/American College of Chest Physicians Research Statement",
+  "title_source": "zotero",
+  "title_confidence": 0.9832635983263599,
+  "doi": "10.1164/rccm.202401-0192st",
   "authors": [
     {
       "given": "Anne V.",
@@ -765,9 +763,6 @@
   "group_authors": [],
   "journal": "American Journal of Respiratory and Critical Care Medicine",
   "year": 2024,
-  "volume": "209",
-  "issue": "6",
-  "pages": "634-646",
   "abstract": "Results: Consensus was reached on 15 statements on the definition of diagnostic outcomes and study designs. A strict Background: Advanced diagnostic bronchoscopy targeting the definition of diagnostic yield should be used, and studies should lung periphery has developed at an accelerated pace over the last be reported according to the STARD (Standards for Reporting two decades, whereas evidence to support introduction of Diagnostic Accuracy Studies) guidelines. Clinical or radiographic innovative technologies has been variable and deficient. A major follow-up may be incorporated into the reference standard gap relates to variable reporting of diagnostic yield, in addition to definition but should not be used to calculate diagnostic yield limited comparative studies. from the procedural encounter. Methodologically robust comparative studies, with incorporation of patient-reported Objectives: To develop a research framework to standardize outcomes, are needed to adequately assess and validate minimally the evaluation of advanced diagnostic bronchoscopy techniques invasive diagnostic technologies targeting the lung periphery. for peripheral lung lesions. Specifically, we aimed for consensus on a robust definition of diagnostic yield, and we propose Conclusions: This American Thoracic Society/American College potential study designs at various stages of technology of Chest Physicians statement aims to provide a research framework development. that allows greater standardization of device validation efforts through clearly defined diagnostic outcomes and robust study Methods: Panel members were selected for their diverse designs. High-quality studies, both industry and publicly funded, expertise. Workgroup meetings were conducted in virtual or can support subsequent health economic analyses and guide hybrid format. The cochairs subsequently developed summary implementation decisions in various healthcare settings. statements, with voting proceeding according to a modified Delphi process. The statement was cosponsored by the American",
   "highlights": [],
   "keywords": [],
@@ -802,6 +797,7 @@
       ]
     }
   ],
+  "yield_definitions_present": true,
   "recommendations": [],
   "conflicts_of_interest": [],
   "has_no_conflicts": false,
@@ -4325,7 +4321,7 @@
   ],
   "relations": [
     {
-      "subject": "Assessment of Advanced Diagnostic Bronchoscopy Outcomes for Peripheral Lung Lesions: A Delphi Consensus Definition of Diagnostic Yield and Recommendations for Patient-centered Study Designs An Official American Thoracic Society/American College of Chest Physicians",
+      "subject": "Assessment of Advanced Diagnostic Bronchoscopy Outcomes for Peripheral Lung Lesions: A Delphi Consensus Definition of Diagnostic Yield and Recommendations for Patient-centered Study Designs. An Official American Thoracic Society/American College of Chest Physicians Research Statement",
       "predicate": "has_complication",
       "object": "infection",
       "attributes": {}
@@ -12980,15 +12976,18 @@
     "unique_pages_seen": 14,
     "unique_pages_ratio": 1.0,
     "extracted_chars": 77261,
-    "duration_s": 3.345872402191162,
+    "duration_s": 3.3582444190979004,
     "coverage_ratio": 1.0,
     "sections_count": 7,
-    "doc_subtype": "guideline",
+    "doc_subtype": "statement",
     "tables_kept": 0,
     "recommendations_count": 0,
+    "yield_definitions_present": true,
     "diagnostic_yield_present": false,
     "umls_entities": 178,
-    "relations_count": 404
+    "relations_count": 404,
+    "evidence_bank_size": 12,
+    "paragraph_store_size": 19
   },
   "_engine": "pymupdf",
   "_mode": "full",
@@ -13005,7 +13004,7 @@
     "ocr_used_pages": [],
     "coverage_ratio": 1.0,
     "page_count": 14,
-    "timestamp": "2025-10-30T14:51:43.019674",
+    "timestamp": "2025-10-30T17:40:28.292250",
     "version": "v1.0.0",
     "warnings": [],
     "emit": {
@@ -13027,13 +13026,13 @@
     "umls": "linked",
     "umls_model": "core_sci_lg",
     "umls_entities_count": 178,
-    "doc_subtype": "guideline",
+    "doc_subtype": "statement",
+    "yield_definitions_present": true,
     "front_matter": {
       "status": "linked",
       "source": "zotero",
-      "method": "title",
+      "method": "title_fuzzy",
       "score": 0.9832635983263599,
-      "confidence": 0.9832635983263599,
       "id": "http://zotero.org/users/local/mOfIzmnI/items/IYZMWF6Y"
     },
     "relation_window": 80,
@@ -13080,11 +13079,9 @@
     "config_hash": "44bcfbde",
     "content_hash": "8a2fe81ecd6a",
     "validators": {
-      "passed": false,
+      "passed": true,
       "warnings": [],
-      "errors": [
-        "Guideline has too few recommendations: 0/8"
-      ]
+      "errors": []
     }
   }
 }

@@ -1,9 +1,9 @@
 {
-  "doc_id": "c21f4f76-09f2-4017-86a3-72e1103c8e4a",
+  "doc_id": "f253669f-4bf6-48df-969e-7061e2e1db81",
   "doc_type": "article",
   "source_file": "/home/rjm/projects/IP_assist_lite/data/Input pdfs/articles/pdf/Guildeline lung cancer screening 2021.pdf",
   "page_count": 68,
-  "extraction_timestamp": "2025-10-30T14:51:56.591256",
+  "extraction_timestamp": "2025-10-30T17:40:42.261915",
   "extraction_version": "v1.0.0",
   "evidence_bank": {
     "47150042c27e3850": {
@@ -5192,12 +5192,10 @@
   "front_matter_source": "zotero",
   "front_matter_confidence": 1.0,
   "doc_subtype": "guideline",
-  "title": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
-  "title_source": "layout",
-  "title_confidence": 0.85,
+  "title": "Screening for Lung Cancer",
+  "title_source": "zotero",
+  "title_confidence": 1.0,
   "doi": "10.1016/j.chest.2021.06.063",
-  "issn": "00123692",
-  "url": "https://linkinghub.elsevier.com/retrieve/pii/S0012369221013076",
   "authors": [
     {
       "given": "Peter J.",
@@ -5270,7 +5268,6 @@
   "year": 2021,
   "volume": "160",
   "issue": "5",
-  "pages": "e427-e494",
   "highlights": [],
   "keywords": [],
   "sections": {
@@ -5323,11 +5320,12 @@
       ]
     }
   ],
+  "yield_definitions_present": false,
   "recommendations": [
     {
       "label": "1",
       "text": "specific outcomes to be extracted from eligible studies. All data\nThe panel drafted and graded recommendations based on the results of\nwere extracted by one reviewer (L. A. S. ) into a preapproved\nthe meta-analyses and evidence profiles. Recommendations were\ndata extraction form which was then reviewed by another author\ngraded according to the CHEST grading system, which uses the\n(P. J. M. ) and revised where necessary. Data and meta-data\nGRADE approach. 59, 60 The recommendations were either strong or\n(variables that characterize numerical data points) were obtained\nweak according to this approach.",
-      "statement_type": "consensus",
+      "statement_type": "ungraded",
       "consensus_percentage": 80.0,
       "page_span": [
         23,
@@ -5374,7 +5372,7 @@
     {
       "label": "2",
       "text": "1. 2 LDCT vs usual care or no screening\nDANTE (Infante 2015) 59 1, 264 55 1, 186 7. 3% 1. 01 [0. 70, 1. 44]\nDLCST (Wille 2015) 39 2, 052 38 2, 052 4. 8% 1. 03 [0. 66, 1. 60]\nITALUNG (Paci 2017) 43 1, 613 60 1, 593 6. 3% 0. 71 [0. 48, 1. 04]\nLUSI (Becker 2020) 29 2, 024 40 2, 015 4. 2% 0. 72 [0. 45, 1. 16]\nMILD (Pastorino 2019) 40 2, 376 40 1, 723 5. 0% 0. 73 [0. 47, 1. 12]\nNELSON (de Koning 2020) 181 7, 895 242 7, 879 24. 7% 0. 75 [0. 62, 0. 90]\nSubtotal (95% CI) 17, 224 16, 448 52. 2% 0. 79 [0.",
-      "statement_type": "consensus",
+      "statement_type": "ungraded",
       "page_span": [
         25,
         25
@@ -5583,7 +5581,7 @@
     {
       "label": "0",
       "text": "2 0. 5125\nTest for subgroup differences: χ2 = 1. 50, df = 1 (P = . 22), I 2 = 33.",
-      "statement_type": "consensus",
+      "statement_type": "ungraded",
       "page_span": [
         27,
         27
@@ -5698,7 +5696,7 @@
     {
       "label": "0",
       "text": "5 0. 711. 5 2\nTest for subgroup differences: χ2 = 2. 17, df = 2 (P = . 34), I 2 = 7.",
-      "statement_type": "consensus",
+      "statement_type": "ungraded",
       "page_span": [
         29,
         29
@@ -5974,7 +5972,7 @@
     {
       "label": "3",
       "text": "0% of individuals having an invasive procedure in of procedures performed in individuals screened by\nLDCT arms from 19 studies (Fig 10). A balance must be LDCT scan and 1. 3% of procedures performed in\nconsidered when reviewing data about procedures for individuals screened by CXR. Focusing only on patients\nscreen-detected nodules. Ideally, procedures should be who had detected nodules eventually found to be benign,\nminimized in those with benign nodules without the risk of death after invasive procedures in the NLST\navoiding procedures and therefore delaying treatment in was 2.",
-      "statement_type": "consensus",
+      "statement_type": "ungraded",
       "page_span": [
         31,
         31
@@ -6020,7 +6018,7 @@
     {
       "label": "1",
       "text": "78; P < . 01). the number of deaths soon after an invasive procedure\ncompared with control arms. Surgery and Nonsurgical Procedures for Benign\nKey Question 4: What is the rate of death or Disease:\ncomplications resulting from biopsies of screen-detected Key Question 5: What is the rate of surgery for benign\nlesions among individuals at elevated risk of lung cancer disease among individuals at elevated risk of lung cancer\nwith different clinical phenotypes (sex, age, race, risk, who undergo screening with LDCT scan compared with\nCOPD, comorbidities) who undergo screening with either no screening or screening with another modality?",
-      "statement_type": "consensus",
+      "statement_type": "ungraded",
       "page_span": [
         32,
         32
@@ -6089,7 +6087,7 @@
     {
       "label": "7",
       "text": "7\ntimes,\nquality\nnot\nof may\nSummary that overall\ndoes\nRecommendation procedure 17, 22, 35 follow-up\n(22%) nodule\n(4. 2%) (0. 8%) or\ncomplications suggest cancers bias. of %) level 18. 5%-\nProcedures but\nan\nEvents/No. (Raw\ninvasive 314/1, 431 detecteddistress, by of\n92/2, 190 19/2, 405 anxiety 67. 2% bias. and\nRatio risk\nStudies lung limited\nfrom Range,\nMajor domains,\nreporting unclear\nAll\nwere\nNone None None None None overall\nfor Other OS s tools,\nand/or\nProfiles assessors. assessment an\ndetection,\nImprecision carried\nserious serious serious serious serious\nEvaluation outcome\nNot Not Not Not Not (DLCST)\nin\nselection,\ndifferences\nIndirectness of\nserious serious serious serious serious Trial\nblinding\nof\nand\nScreening\nNot Not Not Not Not risk\nby\nDevelopment, moderateand caused\nconcealment\nserious serious serious serious Cancer\nbe\nSeriousc\ntrial.",
-      "statement_type": "consensus",
+      "statement_type": "ungraded",
       "page_span": [
         35,
         35
@@ -6112,7 +6110,7 @@
     {
       "label": "0",
       "text": "0000 0. 1000 0.",
-      "statement_type": "consensus",
+      "statement_type": "ungraded",
       "page_span": [
         34,
         34
@@ -6135,7 +6133,7 @@
     {
       "label": "71",
       "text": "1%, respectively; P < . 001), without decreasing screening, minimum smoking history, duration since\nspecificity (62. 9% vs 62. 7%, respectively; P . 54) in a quitting, and choice of risk model and risk threshold. ¼\ncohort recruited in the 1990 s. 100 Use of LCDRAT at a The models developed did not account for race/ethnicity\nstringent threshold (1. 40% 5-year risk of lung-cancer and they did not examine the use of both risk thresholds\ndeath) increased the fraction of screen-preventable and life-expectancy thresholds combined or models of\ndeaths vs the 2013 USPSTF criteria (61% vs 46%, benefit (ie, LYFS-CT).",
-      "statement_type": "consensus",
+      "statement_type": "ungraded",
       "page_span": [
         39,
         39
@@ -6182,7 +6180,7 @@
     {
       "label": "3",
       "text": "For asymptomatic individuals who do not meet the\ndetected, whereas the proportion of screen-detected\nsmoking and/or age criteria in Recommendations #1\ntumors that have low aggressiveness increases\nand 2 but are projected to have a high net benefit from\n(overdiagnosed cancers). These issues potentially\nlung cancer screening based on the results of validated\ndecrease the effectiveness of screening at longer intervals\nclinical risk prediction calculations and life\nbeyond just the number of scans alone.",
-      "statement_type": "consensus",
+      "statement_type": "ungraded",
       "page_span": [
         43,
         43
@@ -6205,7 +6203,7 @@
     {
       "label": "31",
       "text": "7 13. 2 218. 9\nRecommendation\nImaging\nof\nSummary\n(20. 1%) Novel\n(3. 2%) (1. 3%)\nof %)\nProcedures\nEvents/No. (Raw by\nCancer\n24/758 10/758 56/278\nRatio\nfor\nLung\nProfiles\nEarly\nOther None None None\nof\nEvaluation\nScreening\nImprecision\nserious serious\nSeriousa\nand\nNot Not\nand\nDetection\nDevelopment,\nIndirectness\nserious serious serious\nthe\nwhereas\nNot Not Not\nbias,\nInconsistency\nAssessment,\nserious serious serious\nAssessment of\nbias. risk\nNot Not Not\nlowof\ntrial. risk\noverall\nQuality\nBias\nRecommendations, serious serious unclear\nSeriousb controlled\nof an\nRisk Not Not carried\noverall\nrandomized\n(NLST)an\nStudy Design by\nTriallimited\nRCT RCT RCT CI.",
-      "statement_type": "consensus",
+      "statement_type": "ungraded",
       "page_span": [
         44,
         44
@@ -6228,7 +6226,7 @@
     {
       "label": "7",
       "text": "We suggest that low-dose CT screening programs\nperson or telephonic. Multiple smaller observational\ndevelop strategies to provide effective counseling and\nstudies evaluating lung cancer screening decision aids\nshared decision-making visits prior to the\nhave shown that diverse populations think decision aids\nperformance of the LDCT screening exam (Ungraded\nare useful and able to increase patient knowledge about\nConsensus-Based Statement). LDCT screening and its trade-offs. 153–156\nRemarks: Components of the counseling and shared\nIn an evaluation of the rollout of lung cancer screening\ndecision-making visit include a determination of\nin the Veterans Health Administration that included a\nscreening eligibility (including the absence of symptoms\nstructured patient decision aid, 58% of veterans who met\nand confirmation of overall health), the use of decision\nscreening criteria and were approached about lung\naids with information about benefits and harms of\ncancer screening agreed to undergo screening.",
-      "statement_type": "consensus",
+      "statement_type": "ungraded",
       "page_span": [
         47,
         47
@@ -6251,7 +6249,7 @@
     {
       "label": "8",
       "text": "We suggest that screening programs define what\nwith these attributes are far more likely to adhere to their\nconstitutes a positive test on the low-dose CT based on\nscreening regimen. In studies of other commonly\nthe size of a detected solid or part-solid lung nodule,\nscreened for cancers (eg, colorectal, breast, cervical), the\nwith a threshold for a positive test that is either 4 mm,\nfactors associated with poor adherence include being\n5 mm, or 6 mm in diameter (Weak Recommendation,\nunmarried, lower socioeconomic status, Black or\nLow-Quality Evidence).",
-      "statement_type": "consensus",
+      "statement_type": "ungraded",
       "page_span": [
         49,
         49
@@ -6320,7 +6318,7 @@
     {
       "label": "11",
       "text": "We suggest that low-dose CT screening programs\npatients who completed screening, 188 and the final\ndevelop strategies to minimize overtreatment of\npotentially indolent lung cancers (Ungraded reported cessation rates for both the intent-to-treat\nConsensus-Based Statement). population and for only those patients who completed\nscreening. 190 A prior systematic review suggested that\nRemarks: It is important to educate patients about the\npatients with a screen-detected nodule are more likely\npotential to detect an indolent lung cancer to help\nto quit smoking than patients with negative screening\nmitigate the psychological distress that could result from\nresults.",
-      "statement_type": "consensus",
+      "statement_type": "ungraded",
       "page_span": [
         51,
         51
@@ -6390,7 +6388,7 @@
     {
       "label": "13",
       "text": "We suggest that low-dose CT screening programs\nby the ACR and STR. 203 In 2019, Lung-RADS was\nfollow the ACR/STR protocols for performing low\nupdated to version 1. 1. Notable changes include\nradiation dose chest CT scans (Ungraded Consensus-\nincreasing the actionable threshold for pure ground-glass\nBased Statement). attenuation nodules from 20 to 30 mm, removing tissue\nRemarks: An awareness of the potential for radiation sampling recommendation for category 4 A, allowing for\nrelated harm can help programs thoughtfully plan ways follow-up LDCT scan in 1 month for category 4 nodules\nto minimize this risk through proper patient selection, instead of diagnostic testing, optional use of volumetric\nthe performance of the CT scan, tracking of the measurements, and treating small perifissural nodules\n[ ]\ne 480 Guideline and Consensus Statement 160#5 CHEST NOVEMBER 2021\n] Potential Categorization of Nonnodule Findings\nTABLE 18\nCategory Incidencea Likely Next Step Examples\nNot clinically relevant 50% No directed investigation necessary Mild to moderate coronary artery\ncalcification, b emphysema,\nbronchial wall thickening, skeletal\ndegenerative changes, liver cyst(s),\nrenal cyst(s), hiatal hernia, focal\natelectasis, mild to moderate aortic\ndilation, pleural plaques, pulmonary\nfibrosis, adrenal lesions < 10 HU,\nother diaphragmatic hernia,\nbronchiectasis, low risk thyroid\nnodule, c renal stone, gallstone,\npancreatic cyst, splenic cyst\nPossibly clinically 10% Further investigation may be indicated Adrenal lesions > 10 HU, mediastinal\nrelevant adenopathy (> 1 cm), compression\nfracture, breast nodule, suspicious\nthyroid nodule, c pancreatic cyst,\nmoderate to severe coronary artery\ncalcification, b aortic aneurysm 4-5.",
-      "statement_type": "consensus",
+      "statement_type": "ungraded",
       "page_span": [
         53,
         53
@@ -6483,7 +6481,7 @@
     {
       "label": "1",
       "text": "5 HU) Small 1. 5\nNo Most for 10\n> 1\n< < < <\nhigh > of\npopulation population population population population\n(no\nPopulationa referral y\nrisk)\n35\npopulation\n>\nfamilial\nGeneral General General General Generaladults General\n40 b\nFindings\nConsensus, Consensus, Consensus, Consensus,\nof Evidence Guideline Guideline indirect indirect indirect indirect\nNonnodule Level\nto\nRelated\nSTR\nAHA, AHA\nSource\nSCCT,\nESC,\nACCF,\nGuidelines ACC,\nACR ACR ACR ACR\nof\nOverview\ncalcification 210–214\nartery\nenlarge-\nStudies\nment 215 Thyroid 218 Adrenal 219\n] Coronary\nRenal 217\n19 Liver 216\nand\nAortic\nTABLE\nSite\n[ ]\ne 482 Guideline and Consensus Statement 160#5 CHEST NOVEMBER 2021\n¼Radiology; for\nyearly HU, suspicious EUS\nInvestigation 1.",
-      "statement_type": "consensus",
+      "statement_type": "ungraded",
       "page_span": [
         55,
         55
@@ -6506,7 +6504,7 @@
     {
       "label": "15",
       "text": "We suggest that low-dose CT screening programs\ninformation related to eligibility criteria and other lung\ndevelop strategies to guide the management of non-\ncancer risk factors. Patient compliance with the follow-up\nlung nodule findings (Ungraded Consensus-Based\nof screen-detected findings and with annual screening are\nStatement). important data elements that could help to uncover\nRemarks: Examples include coronary artery calcification, quality issues for which a program may not be aware. thyroid nodules, adrenal nodules, kidney and liver\nData on LDCT imaging technique and findings are part\nlesions, thoracic aortic aneurysms, pleural effusions, and\nof mandatory data collection.",
-      "statement_type": "consensus",
+      "statement_type": "ungraded",
       "page_span": [
         59,
         59
@@ -6552,7 +6550,7 @@
     {
       "label": "6",
       "text": "Gohagan JK, Marcus PM, Fagerstrom RM, et al. Final results of the\nto further guide programs about the collection and use Lung Screening Study, a randomized feasibility study of spiral CT\nversus chest X-ray screening for lung cancer. Lung Cancer. of their data. 2005; 47(1): 9-15. [ ]\ne 488 Guideline and Consensus Statement 160#5 CHEST NOVEMBER 2021",
-      "statement_type": "consensus",
+      "statement_type": "ungraded",
       "page_span": [
         61,
         61
@@ -7496,7 +7494,7 @@
     {
       "label": "65",
       "text": "Kovalchik SA, Tammemagi M, Berg CD, et al. Targeting of low- scenarios in a population-based setting: a microsimulation\ndose CT screening according to the risk of lung-cancer death. N modeling analysis in Ontario, Canada. PL o S Med. 2017; 14(2):\nEngl J Med. 2013; 369(3): 245-254. e 1002225. [ ]\ne 490 Guideline and Consensus Statement 160#5 CHEST NOVEMBER 2021",
-      "statement_type": "consensus",
+      "statement_type": "ungraded",
       "page_span": [
         63,
         63
@@ -8370,7 +8368,7 @@
     {
       "label": "141",
       "text": "Tammemagi MC, Ten Haaf K, Toumazis I, et al. Development and\nmaking. J Gen Intern Med. 2020; 35(10): 3045-3049. validation of a multivariable lung cancer risk prediction model that\nincludes low-dose computed tomography screening results: a 160. Brenner AT, Malo TL, Margolis M, et al. Evaluating shared decision\nsecondary analysis of data from the National Lung Screening Trial. making for lung cancer screening. JAMA Intern Med. 2018; 178(10):\nJAMA Network Open. 2019; 2(3): e 190204. 1311-1316.",
-      "statement_type": "consensus",
+      "statement_type": "ungraded",
       "page_span": [
         65,
         65
@@ -9038,7 +9036,7 @@
     {
       "label": "216",
       "text": "Lloyd-Jones DM, Braun LT, Ndumele CE, et al. Use of risk\nDifferentiated Thyroid Cancer. Thyroid. 2016; 26(1): 1-133. assessment tools to guide decision-making in the primary\nprevention of atherosclerotic cardiovascular disease. J Am Coll 232. Mitchell AL, Gandhi A, Scott-Coombes D, Perros P. Management\nCardiol. 2019; 73(24): 3153-3167. of thyroid cancer: United Kingdom National Multidisciplinary\nGuidelines. J Laryngol Otol. 2016; 130(S 2): S 150-S 160. 217. Hiratzka LF, Bakris GL, Beckman JA, et al.",
-      "statement_type": "consensus",
+      "statement_type": "ungraded",
       "page_span": [
         67,
         67
@@ -34925,23 +34923,23 @@
   ],
   "relations": [
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "has_complication",
       "object": "mortality",
       "attributes": {}
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "has_complication",
       "object": "death",
       "attributes": {}
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "specific outcomes to be extracted from eligible studies. All data\nThe panel drafted and graded recommendations based on the results of\nwere extracted by one reviewer (L. A. S. ) into a preapproved\nthe meta-analyses and evidence profiles. Recommendations were\ndata extraction form which was then reviewed by another author\ngraded according to the CHEST grading system, which uses the\n(P. J. M. ) and revised where necessary. Data and meta-data\nGRADE approach. 59, 60 The recommendations were either strong or\n(variables that characterize numerical data points) were obtained\nweak according to this approach.",
       "attributes": {
-        "statement_type": "consensus"
+        "statement_type": "ungraded"
       },
       "evidence": {
         "hash": "47150042c27e3850",
@@ -34958,7 +34956,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "1. 1 LDCT vs CXR\nLSS (Doroudi 2018) 32 1, 600 26 1, 658 3. 6% 1. 28 [0. 76, 2. 13]\nNLST (Aberle 2011) 356 26, 722 443 26, 732 44. 2% 0. 80 [0. 70, 0. 92]\nSubtotal (95% CI) 28, 322 28, 390 47. 8% 0. 95 [0. 61, 1. 46]\nTotal events 388 469\nHeterogeneity: τ2 = 0. 07; χ2 = 2. 90, df = 1 (P = . 09); I 2 = 66%\nTest for overall effect: z = 0. 26 (P = . 80)",
       "attributes": {
@@ -34979,11 +34977,11 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "1. 2 LDCT vs usual care or no screening\nDANTE (Infante 2015) 59 1, 264 55 1, 186 7. 3% 1. 01 [0. 70, 1. 44]\nDLCST (Wille 2015) 39 2, 052 38 2, 052 4. 8% 1. 03 [0. 66, 1. 60]\nITALUNG (Paci 2017) 43 1, 613 60 1, 593 6. 3% 0. 71 [0. 48, 1. 04]\nLUSI (Becker 2020) 29 2, 024 40 2, 015 4. 2% 0. 72 [0. 45, 1. 16]\nMILD (Pastorino 2019) 40 2, 376 40 1, 723 5. 0% 0. 73 [0. 47, 1. 12]\nNELSON (de Koning 2020) 181 7, 895 242 7, 879 24. 7% 0. 75 [0. 62, 0. 90]\nSubtotal (95% CI) 17, 224 16, 448 52. 2% 0. 79 [0.",
       "attributes": {
-        "statement_type": "consensus"
+        "statement_type": "ungraded"
       },
       "evidence": {
         "hash": "e332e90fb8c7eab6",
@@ -35000,7 +34998,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "92; 0. 87; forscreening\n1 0. 86;\nStatements 35 population overall\nFindings Relative CI) (0. 74 0. 89) ratio. 0. 81 RR, were\nRR, RR, $ interest. (95% RR, the\nRR, to these\nnegative, baseline\nvs risk moderate\ntrials of\nmale, y, in\nof White, 1. 26 evidence\n65 . 5218 ¼ patient in\nweight\nSummary of\nscreening interest\nCXR/Usual 44, 838(2. 1%) RR for\n$ RR, outcome\nRecommendation Patients vs\nCare vs bias a\nvs vs ¼ trial;\ntargetno most carried\n944/ 0. 73\nhistory: pack-years, P 0. 85",
       "attributes": {
@@ -35022,7 +35020,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "61 0. 82 factor. 0. 92; of is of\nScreened controlled\nsix\nof riskthe There outcome\nthe\nRR, RR, the NLST\nRR, other\nEvents/No. RR,\nhighin confounding\nScan 45, 546(1. 7%) RR, Because carries\nSmoking\nFemale, Positive, difference recommendation. y, the\nBlack, COPD: the\nRace: randomized as\nAge: 65 35 the\nLDCT 779/ Sex: for\nrated\nwhereas outcome\n< < profiles. in\nanalyses\nfor difference\nwerea this\ndetect\nProfiles Other None None\n¼bias, mortality on\nstudies the hoc\nRCT\nthis based\nto\nof in Post a\nstudy; underpowered detect\nrisk includedfor\nEvaluation Imprecision the\nserious cancer risk.",
       "attributes": {
@@ -35044,7 +35042,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "3. 2 Annual LDCT vs usual care\nDANTE (Infante 2015) 59 1, 264 55 1, 186 32. 3% 1. 01 [0. 70, 1. 44]\nDLCST (Wille 2015) 39 2, 052 38 2, 052 21. 2% 1. 03 [0. 66, 1. 60]\nITALUNG (Paci 2017) 43 1, 613 60 1, 593 28. 0% 0. 71 [0. 48, 1. 04]\nLUSI (Becker 2020) 29 2, 024 40 2, 015 18. 5% 0. 72 [0. 45, 1. 16]\nSubtotal (95% CI) 6, 953 6, 846 100. 0% 0. 86 [0. 70, 1. 06]\nTotal events 170 193\nHeterogeneity: τ2 = 0. 00; χ2 = 2. 86, df = 3 (P = . 41); I 2 = 0%\nTest for overall effect: z = 1. 44 (P = . 15)",
       "attributes": {
@@ -35065,7 +35063,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "3. 4 Other LDCT protocol vs usual care\nMILD (Pastorino 2019) 40 2, 376 40 1, 723 16. 1% 0. 73 [0. 47, 1. 12]\nNELSON (de Koning 2020) 181 7, 895 242 7, 879 83. 9% 0. 75 [0. 62, 0. 90]\nSubtotal (95% CI) 10, 271 9, 602 100. 0% 0. 74 [0. 62, 0. 88]\nTotal events 221 282\nHeterogeneity: τ2 = 0. 00; χ2 = 0. 01, df = 1 (P = . 90); I 2 = 0%\nTest for overall effect: z = 3. 35 (P = . 0008)",
       "attributes": {
@@ -35086,7 +35084,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "2 0. 5125\nTest for subgroup differences: χ2 = 1. 17, df = 1 (P = . 28), I 2 = 14.",
       "attributes": {
@@ -35107,7 +35105,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "82 vs 0. 87, respectively; P . 60) in the NLST.",
       "attributes": {
@@ -35128,7 +35126,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "4. 2 Annual LDCT vs usual care or CXR\nDANTE (Infante 2015) 59 1, 264 55 1, 186 13. 3% 1. 01 [0. 70, 1. 44]\nDLCST (Wille 2015) 39 2, 052 38 2, 052 9. 1% 1. 03 [0. 66, 1. 60]\nITALUNG (Paci 2017) 43 1, 613 60 1, 593 11. 7% 0. 71 [0. 48, 1. 04]\nLSS (Doroudi 2018) 32 1, 600 26 1, 658 6. 9% 1. 28 [0. 76, 2. 13]\nLUSI (Becker 2020) 29 2, 024 40 2, 015 8. 0% 0. 72 [0. 45, 1. 16]\nNLST (Aberle 2011) 356 26, 722 443 26, 732 51. 0% 0. 80 [0. 70, 0. 92]\nSubtotal (95% CI) 35, 275 35, 236 100. 0% 0. 85 [0. 74, 0.",
       "attributes": {
@@ -35149,7 +35147,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "4. 4 Other LDCT protocol vs usual care\nMILD (Pastorino 2019) 40 2, 376 40 1, 723 16. 1% 0. 73 [0. 47, 1. 12]\nNELSON (de Koning 2020) 181 7, 895 242 7, 879 83. 9% 0. 75 [0. 62, 0. 90]\nSubtotal (95% CI) 10, 271 9, 602 100. 0% 0. 74 [0. 62, 0. 88]\nTotal events 221 282\nHeterogeneity: τ2 = 0. 00; χ2 = 0. 01, df = 1 (P = . 90); I 2 = 0%\nTest for overall effect: z = 3. 35 (P = . 0008)",
       "attributes": {
@@ -35170,11 +35168,11 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "2 0. 5125\nTest for subgroup differences: χ2 = 1. 50, df = 1 (P = . 22), I 2 = 33.",
       "attributes": {
-        "statement_type": "consensus"
+        "statement_type": "ungraded"
       },
       "evidence": {
         "hash": "709c05414caf7ef2",
@@ -35191,7 +35189,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "91, respectively; P . 40). 8, 63 Lung cancer deaths from P . 30) did not reach statistical significance. 14 In the\n¼ ¼\nsquamous cell carcinoma were not reduced by screening National Lung Screening Trial - American College of\nwhether men (RR, 1. 31) or women (RR, 1. 04). The Radiology Imaging Network (NLST-ACRIN) subgroup,\nreduction in relative risk of lung cancer mortality was patients with COPD had an increase in lung cancer\nsimilar among lung cancer risk quintiles in the NLST; incidence (incidence rate ratio [IRR], 2.",
       "attributes": {
@@ -35212,7 +35210,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "5. 1 Screening begins at 50 y\nDLCST (Wille 2015) 39 2, 052 38 2, 052 12. 0% 1. 03 [0. 66, 1. 60]\nLUSI (Becker 2020) 29 2, 024 40 2, 015 10. 5% 0. 72 [0. 45, 1. 16]\nMILD (Pastorino 2019) 40 2, 376 40 1, 723 12. 5% 0. 73 [0. 47, 1. 12]\nNELSON (de Koning 2020) 181 7, 895 242 7, 879 65. 1% 0. 75 [0. 62, 0. 90]\nSubtotal (95% CI) 14, 347 13, 669 100. 0% 0. 77 [0. 66, 0. 90]\nTotal events 289 360\nHeterogeneity: τ2 = 0. 00; χ2 = 1. 87, df = 3 (P = . 60); I 2 = 0%\nTest for overall effect: z = 3. 34 (P = .",
       "attributes": {
@@ -35233,7 +35231,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "5. 2 Screening begins at 55 y\nITALUNG (Paci 2017) 43 1, 613 60 1, 593 100. 0% 0. 71 [0. 48, 1. 04]\nSubtotal (95% CI) 1, 613 1, 593 100. 0% 0. 71 [0. 48, 1. 04]\nTotal events 43 60\nHeterogeneity: Not applicable\nTest for overall effect: z = 1. 76 (P = . 08)",
       "attributes": {
@@ -35254,7 +35252,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "5. 3 Screening begins at 60 y\nDANTE (Infante 2015) 59 1, 264 55 1, 186 100. 0% 1. 01 [0. 70, 1. 44]\nSubtotal (95% CI) 1, 264 1, 186 100. 0% 1. 01 [0. 70, 1. 44]\nTotal events 59 55\nHeterogeneity: Not applicable\nTest for overall effect: z = 0. 04 (P = . 97)",
       "attributes": {
@@ -35275,11 +35273,11 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "5 0. 711. 5 2\nTest for subgroup differences: χ2 = 2. 17, df = 2 (P = . 34), I 2 = 7.",
       "attributes": {
-        "statement_type": "consensus"
+        "statement_type": "ungraded"
       },
       "evidence": {
         "hash": "1db7f8131ccb1929",
@@ -35296,7 +35294,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "6. 1 Screening begins at 50 y\nDLCST (Wille 2015) 39 2, 052 38 2, 052 12. 0% 1. 03 [0. 66, 1. 60]\nLUSI (Becker 2020) 29 2, 024 40 2, 015 10. 5% 0. 72 [0. 45, 1. 16]\nMILD (Pastorino 2019) 40 2, 376 40 1, 723 12. 5% 0. 73 [0. 47, 1. 12]\nNELSON (de Koning 2020) 181 7, 895 242 7, 879 65. 1% 0. 75 [0. 62, 0. 90]\nSubtotal (95% CI) 14, 347 13, 669 100. 0% 0. 77 [0. 66, 0. 90]\nTotal events 289 360\nHeterogeneity: τ2 = 0. 00; χ2 = 1. 87, df = 3 (P = . 60); I 2 = 0%\nTest for overall effect: z = 3. 34 (P = .",
       "attributes": {
@@ -35317,7 +35315,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "6. 2 Screening begins at 55 y\nITALUNG (Paci 2017) 43 1, 613 60 1, 593 25. 2% 0. 71 [0. 48, 1. 04]\nLSS (Doroudi 2018) 32 1, 600 26 1, 658 16. 8% 1. 28 [0. 76, 2. 13]\nNLST (Aberle 2011) 356 26, 722 443 26, 732 57. 9% 0. 80 [0. 70, 0. 92]\nSubtotal (95% CI) 29, 935 29, 983 100. 0% 0. 84 [0. 66, 1. 07]\nTotal events 431 529\nHeterogeneity: τ2 = 0. 02; χ2 = 3. 48, df = 2 (P = . 18); I 2 = 43%\nTest for overall effect: z = 1. 41 (P = . 16)",
       "attributes": {
@@ -35338,7 +35336,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "6. 3 Screening begins at 60 y\nDANTE (Infante 2015) 59 1, 264 55 1, 186 100. 0% 1. 01 [0. 70, 1. 44]\nSubtotal (95% CI) 1, 264 1, 186 100. 0% 1. 01 [0. 70, 1. 44]\nTotal events 59 55\nHeterogeneity: Not applicable\nTest for overall effect: z = 0. 04 (P = . 97)",
       "attributes": {
@@ -35359,7 +35357,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "5 0. 711. 5 2\nTest for subgroup differences: χ2 = 1. 92, df = 2 (P = .",
       "attributes": {
@@ -35380,7 +35378,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "7. 1 Male\nDANTE (Infante 2015) 59 1, 264 55 1, 186 22. 2% 1. 01 [0. 70, 1. 44]\nLUSI (Becker 2020) 25 1, 315 27 1, 307 9. 9% 0. 92 [0. 54, 1. 58]\nNELSON (de Koning 2020) 156 6, 583 206 6, 612 67. 9% 0. 76 [0. 62, 0. 93]\nSubtotal (95% CI) 9, 162 9, 105 100. 0% 0. 82 [0. 70, 0. 98]\nTotal events 240 288\nHeterogeneity: τ2 = 0. 00; χ2 = 1. 94, df = 2 (P = . 38); I 2 = 0%\nTest for overall effect: z = 2. 23 (P = . 03)",
       "attributes": {
@@ -35401,7 +35399,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "7. 2 Female\nLUSI (Becker 2020) 4 714 13 716 28. 8% 0. 31 [0. 10, 0. 94]\nNELSON (de Koning 2020) 25 1, 317 36 1, 277 71. 2% 0. 67 [0. 41, 1. 12]\nSubtotal (95% CI) 2, 031 1, 993 100. 0% 0. 54 [0. 27, 1. 08]\nTotal events 29 49\nHeterogeneity: τ2 = 0. 11; χ2 = 1. 56, df = 1 (P = . 21); I 2 = 36%\nTest for overall effect: z = 1. 76 (P = . 08)",
       "attributes": {
@@ -35422,7 +35420,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "1 0. 2 0. 5125 10\nTest for subgroup differences: χ2 = 1. 38, df = 1 (P = . 24), I 2 = 27.",
       "attributes": {
@@ -35443,7 +35441,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "8. 1 Male\nDANTE (Infante 2015) 59 1, 264 55 1, 186 10. 0% 1. 01 [0. 70, 1. 44]\nLUSI (Becker 2020) 25 1, 315 27 1, 307 4. 4% 0. 92 [0. 54, 1. 58]\nNELSON (de Koning 2020) 156 6, 583 206 6, 612 30. 5% 0. 76 [0. 62, 0. 93]\nNLST (Pinsky 2013) 311 15, 769 337 15, 761 55. 1% 0. 92 [0. 79, 1. 07]\nSubtotal (95% CI) 24, 931 24, 866 100. 0% 0. 88 [0. 78, 0. 98]\nTotal events 551 625\nHeterogeneity: τ2 = 0. 00; χ2 = 2. 87, df = 3 (P = . 41); I 2 = 0%\nTest for overall effect: z = 2. 27 (P = . 02)",
       "attributes": {
@@ -35464,7 +35462,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "8. 2 Female\nLUSI (Becker 2020) 4 714 13 716 4. 6% 0. 31 [0. 10, 0. 94]\nNELSON (de Koning 2020) 25 1, 317 36 1, 277 20. 3% 0. 67 [0. 41, 1. 12]\nNLST (Pinsky 2013) 158 10, 953 215 10, 969 75. 1% 0. 74 [0. 60, 0. 90]\nSubtotal (95% CI) 12, 984 12, 962 100. 0% 0. 69 [0. 54, 0. 89]\nTotal events 187 264\nHeterogeneity: τ2 = 0. 01; χ2 = 2. 30, df = 2 (P = . 32); I 2 = 13%\nTest for overall effect: z = 2. 94 (P = . 003)",
       "attributes": {
@@ -35485,7 +35483,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "1 0. 2 0. 5125 10\nTest for subgroup differences: χ2 = 2. 91, df = 1 (P = . 09), I 2 = 65.",
       "attributes": {
@@ -35506,7 +35504,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "7% 8 mm in diameter. 67 By contrast, using after invasive procedures performed for screen-detected\n>\ncriteria that incorporate nodule volume and volume findings, corresponding to an absolute number of 7. 7\ndoubling time, the NELSON labeled 2.",
       "attributes": {
@@ -35527,11 +35525,11 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "0% of individuals having an invasive procedure in of procedures performed in individuals screened by\nLDCT arms from 19 studies (Fig 10). A balance must be LDCT scan and 1. 3% of procedures performed in\nconsidered when reviewing data about procedures for individuals screened by CXR. Focusing only on patients\nscreen-detected nodules. Ideally, procedures should be who had detected nodules eventually found to be benign,\nminimized in those with benign nodules without the risk of death after invasive procedures in the NLST\navoiding procedures and therefore delaying treatment in was 2.",
       "attributes": {
-        "statement_type": "consensus"
+        "statement_type": "ungraded"
       },
       "evidence": {
         "hash": "cdfd82ffad387c7b",
@@ -35548,7 +35546,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "1 per 10, 000 screening participants in the LDCT arm 26, 453 individuals who underwent LDCT screening,\nand 0. 37 per 10, 000 screening participants in the CXR 4. 2% underwent an invasive procedure, 0. 9%\narm. 8 Overall, 11 studies contributed data on major experienced a procedure-related complication, and 0. 3%\ncomplications, showing that among individuals who experienced a serious complication. In the LDCT arm,\nunderwent an invasive procedure after LDCT scan, 4. 2% participants with COPD (n 4, 632, defined by self-\n¼\nexperienced adverse events (not including death).",
       "attributes": {
@@ -35569,11 +35567,11 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "78; P < . 01). the number of deaths soon after an invasive procedure\ncompared with control arms. Surgery and Nonsurgical Procedures for Benign\nKey Question 4: What is the rate of death or Disease:\ncomplications resulting from biopsies of screen-detected Key Question 5: What is the rate of surgery for benign\nlesions among individuals at elevated risk of lung cancer disease among individuals at elevated risk of lung cancer\nwith different clinical phenotypes (sex, age, race, risk, who undergo screening with LDCT scan compared with\nCOPD, comorbidities) who undergo screening with either no screening or screening with another modality?",
       "attributes": {
-        "statement_type": "consensus"
+        "statement_type": "ungraded"
       },
       "evidence": {
         "hash": "da29fd324622446a",
@@ -35590,7 +35588,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "5",
       "attributes": {
@@ -35611,7 +35609,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "6 finding of 18. 567. 2",
       "attributes": {
@@ -35632,11 +35630,11 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "7\ntimes,\nquality\nnot\nof may\nSummary that overall\ndoes\nRecommendation procedure 17, 22, 35 follow-up\n(22%) nodule\n(4. 2%) (0. 8%) or\ncomplications suggest cancers bias. of %) level 18. 5%-\nProcedures but\nan\nEvents/No. (Raw\ninvasive 314/1, 431 detecteddistress, by of\n92/2, 190 19/2, 405 anxiety 67. 2% bias. and\nRatio risk\nStudies lung limited\nfrom Range,\nMajor domains,\nreporting unclear\nAll\nwere\nNone None None None None overall\nfor Other OS s tools,\nand/or\nProfiles assessors. assessment an\ndetection,\nImprecision carried\nserious serious serious serious serious\nEvaluation outcome\nNot Not Not Not Not (DLCST)\nin\nselection,\ndifferences\nIndirectness of\nserious serious serious serious serious Trial\nblinding\nof\nand\nScreening\nNot Not Not Not Not risk\nby\nDevelopment, moderateand caused\nconcealment\nserious serious serious serious Cancer\nbe\nSeriousc\ntrial.",
       "attributes": {
-        "statement_type": "consensus"
+        "statement_type": "ungraded"
       },
       "evidence": {
         "hash": "8112a5455058c93a",
@@ -35653,11 +35651,11 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "0000 0. 1000 0.",
       "attributes": {
-        "statement_type": "consensus"
+        "statement_type": "ungraded"
       },
       "evidence": {
         "hash": "35e14beae377dca8",
@@ -35674,11 +35672,11 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "1%, respectively; P < . 001), without decreasing screening, minimum smoking history, duration since\nspecificity (62. 9% vs 62. 7%, respectively; P . 54) in a quitting, and choice of risk model and risk threshold. ¼\ncohort recruited in the 1990 s. 100 Use of LCDRAT at a The models developed did not account for race/ethnicity\nstringent threshold (1. 40% 5-year risk of lung-cancer and they did not examine the use of both risk thresholds\ndeath) increased the fraction of screen-preventable and life-expectancy thresholds combined or models of\ndeaths vs the 2013 USPSTF criteria (61% vs 46%, benefit (ie, LYFS-CT).",
       "attributes": {
-        "statement_type": "consensus"
+        "statement_type": "ungraded"
       },
       "evidence": {
         "hash": "e15140cd9657e2d6",
@@ -35695,7 +35693,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "For asymptomatic individuals who do not meet the\ncost-effective than longer screening intervals. 84 A final\nsmoking and/or age criteria in Recommendation #1,\nmodeling study considered several scenarios of reduced\nare age 50 to 80, have smoked 20 pack years or more\nstage shift with biennial vs annual screening and found\nand either continue to smoke or have quit within the\nthat the proportional effect for biennial screening on\npast 15 years, we suggest that annual screening with\ndecreasing cost was greater than on decreasing life years\nlow-dose CT should be offered (Weak\ngained, and even less for QALY s.",
       "attributes": {
@@ -35717,11 +35715,11 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "For asymptomatic individuals who do not meet the\ndetected, whereas the proportion of screen-detected\nsmoking and/or age criteria in Recommendations #1\ntumors that have low aggressiveness increases\nand 2 but are projected to have a high net benefit from\n(overdiagnosed cancers). These issues potentially\nlung cancer screening based on the results of validated\ndecrease the effectiveness of screening at longer intervals\nclinical risk prediction calculations and life\nbeyond just the number of scans alone.",
       "attributes": {
-        "statement_type": "consensus"
+        "statement_type": "ungraded"
       },
       "evidence": {
         "hash": "1df9571116a71bc2",
@@ -35738,11 +35736,11 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "7 13. 2 218. 9\nRecommendation\nImaging\nof\nSummary\n(20. 1%) Novel\n(3. 2%) (1. 3%)\nof %)\nProcedures\nEvents/No. (Raw by\nCancer\n24/758 10/758 56/278\nRatio\nfor\nLung\nProfiles\nEarly\nOther None None None\nof\nEvaluation\nScreening\nImprecision\nserious serious\nSeriousa\nand\nNot Not\nand\nDetection\nDevelopment,\nIndirectness\nserious serious serious\nthe\nwhereas\nNot Not Not\nbias,\nInconsistency\nAssessment,\nserious serious serious\nAssessment of\nbias. risk\nNot Not Not\nlowof\ntrial. risk\noverall\nQuality\nBias\nRecommendations, serious serious unclear\nSeriousb controlled\nof an\nRisk Not Not carried\noverall\nrandomized\n(NLST)an\nStudy Design by\nTriallimited\nRCT RCT RCT CI.",
       "attributes": {
-        "statement_type": "consensus"
+        "statement_type": "ungraded"
       },
       "evidence": {
         "hash": "c95a69ac02bb6ebf",
@@ -35759,11 +35757,11 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "We suggest that low-dose CT screening programs\nperson or telephonic. Multiple smaller observational\ndevelop strategies to provide effective counseling and\nstudies evaluating lung cancer screening decision aids\nshared decision-making visits prior to the\nhave shown that diverse populations think decision aids\nperformance of the LDCT screening exam (Ungraded\nare useful and able to increase patient knowledge about\nConsensus-Based Statement). LDCT screening and its trade-offs. 153–156\nRemarks: Components of the counseling and shared\nIn an evaluation of the rollout of lung cancer screening\ndecision-making visit include a determination of\nin the Veterans Health Administration that included a\nscreening eligibility (including the absence of symptoms\nstructured patient decision aid, 58% of veterans who met\nand confirmation of overall health), the use of decision\nscreening criteria and were approached about lung\naids with information about benefits and harms of\ncancer screening agreed to undergo screening.",
       "attributes": {
-        "statement_type": "consensus"
+        "statement_type": "ungraded"
       },
       "evidence": {
         "hash": "bbdac7c29102f42a",
@@ -35780,11 +35778,11 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "We suggest that screening programs define what\nwith these attributes are far more likely to adhere to their\nconstitutes a positive test on the low-dose CT based on\nscreening regimen. In studies of other commonly\nthe size of a detected solid or part-solid lung nodule,\nscreened for cancers (eg, colorectal, breast, cervical), the\nwith a threshold for a positive test that is either 4 mm,\nfactors associated with poor adherence include being\n5 mm, or 6 mm in diameter (Weak Recommendation,\nunmarried, lower socioeconomic status, Black or\nLow-Quality Evidence).",
       "attributes": {
-        "statement_type": "consensus"
+        "statement_type": "ungraded"
       },
       "evidence": {
         "hash": "13c2605de43b9002",
@@ -35801,7 +35799,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "We suggest that low-dose CT screening programs and an understanding of the indolent nature of the\ndevelop strategies to maximize compliance with malignancy they may represent. Lung cancer with a\nannual screening exams and evaluation of screen- predominantly ground-glass appearance account for\ndetected findings (Ungraded Consensus-Based most overdiagnosed lung cancers detected by\nscreening. 76 Specific recommendations for nodule\nStatement). management are beyond the scope of this guideline. An\nRemarks: These strategies may include education during\nexcellent resource for the management of all nodule\nthe shared decision-making visit, communication\ntypes and sizes can be found in the CHEST lung nodule\nthrough EHR reminders, letters, phone calls, and tools to\nguidelines.",
       "attributes": {
@@ -35822,7 +35820,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "We suggest that low-dose CT screening programs about smoking cessation. The Centers for Medicare\ndevelop a comprehensive approach to lung nodule and Medicaid Services (CMS) policy requires smoking\nmanagement that includes access to multi-disciplinary cessation counseling to be delivered at the time of\nexpertise (Pulmonary, Radiology, Thoracic Surgery, LDCT screening. Based on meta-analysis of four\ntrials, 188–191 those undergoing LDCT screening appear\nMedical and Radiation Oncology), and algorithms for\nthe management of small solid nodules, larger solid to have higher smoking quit rates than those in usual\nnodules, and sub-solid nodules (Ungraded Consensus- care arms (RR, 1.",
       "attributes": {
@@ -35843,11 +35841,11 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "We suggest that low-dose CT screening programs\npatients who completed screening, 188 and the final\ndevelop strategies to minimize overtreatment of\npotentially indolent lung cancers (Ungraded reported cessation rates for both the intent-to-treat\nConsensus-Based Statement). population and for only those patients who completed\nscreening. 190 A prior systematic review suggested that\nRemarks: It is important to educate patients about the\npatients with a screen-detected nodule are more likely\npotential to detect an indolent lung cancer to help\nto quit smoking than patients with negative screening\nmitigate the psychological distress that could result from\nresults.",
       "attributes": {
-        "statement_type": "consensus"
+        "statement_type": "ungraded"
       },
       "evidence": {
         "hash": "d08397e11d4d7453",
@@ -35864,7 +35862,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "22(1. 03-\n12 1. 44) concealment\nRelative CI) risk\nAssociation, and the American Thoracic Society, have\nFindings\nRecommendation RR,\n¼ identified\nof several essential components of lung cancer\nRR\narm\nscreening programs. 143, 197\nof trial;\nSummary 649/4, 389(14. 8%)\nCare allocation LDCT\nPatients controlled Delivering a high-quality LDCT screening program\nUsual\nthe\nrequires close teamwork and effective communication\nunclear in\nof\nenrolled among many stakeholders, including primary care\nEvents/No. randomized\nfor physicians, pulmonologists, radiologists, thoracic\nCessation\nand\nProfiles Program patients surgeons, medical and radiation oncologists, nursing\nCessation ITALUNG\n760/4, 184(18.",
       "attributes": {
@@ -35886,7 +35884,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "0 m Gy for average-size patients, adjusted accordingly\nof Thoracic Radiology (STR) Practice Parameter for the\nfor larger or smaller patients. To maintain a\nPerformance and Reporting of Lung Cancer Screening\nstandardized approach to LDCT screening, a dedicated\nThoracic Computed Tomography 203 provides guidance\nLDCT protocol should be developed and reviewed\nabout how to report the LDCT screening examination. annually by the supervising radiologist, medical\nCurrent CMS requirements include the use of a\nphysicist, and radiology technologist.",
       "attributes": {
@@ -35907,11 +35905,11 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "We suggest that low-dose CT screening programs\nby the ACR and STR. 203 In 2019, Lung-RADS was\nfollow the ACR/STR protocols for performing low\nupdated to version 1. 1. Notable changes include\nradiation dose chest CT scans (Ungraded Consensus-\nincreasing the actionable threshold for pure ground-glass\nBased Statement). attenuation nodules from 20 to 30 mm, removing tissue\nRemarks: An awareness of the potential for radiation sampling recommendation for category 4 A, allowing for\nrelated harm can help programs thoughtfully plan ways follow-up LDCT scan in 1 month for category 4 nodules\nto minimize this risk through proper patient selection, instead of diagnostic testing, optional use of volumetric\nthe performance of the CT scan, tracking of the measurements, and treating small perifissural nodules\n[ ]\ne 480 Guideline and Consensus Statement 160#5 CHEST NOVEMBER 2021\n] Potential Categorization of Nonnodule Findings\nTABLE 18\nCategory Incidencea Likely Next Step Examples\nNot clinically relevant 50% No directed investigation necessary Mild to moderate coronary artery\ncalcification, b emphysema,\nbronchial wall thickening, skeletal\ndegenerative changes, liver cyst(s),\nrenal cyst(s), hiatal hernia, focal\natelectasis, mild to moderate aortic\ndilation, pleural plaques, pulmonary\nfibrosis, adrenal lesions < 10 HU,\nother diaphragmatic hernia,\nbronchiectasis, low risk thyroid\nnodule, c renal stone, gallstone,\npancreatic cyst, splenic cyst\nPossibly clinically 10% Further investigation may be indicated Adrenal lesions > 10 HU, mediastinal\nrelevant adenopathy (> 1 cm), compression\nfracture, breast nodule, suspicious\nthyroid nodule, c pancreatic cyst,\nmoderate to severe coronary artery\ncalcification, b aortic aneurysm 4-5.",
       "attributes": {
-        "statement_type": "consensus"
+        "statement_type": "ungraded"
       },
       "evidence": {
         "hash": "10c41d4d4e01eba4",
@@ -35928,7 +35926,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "We suggest that low-dose CT screening programs\nof what amounts to screening for other findings is\nuse a structured reporting system to report the exam\nundefined; the balance of benefits and harms of lung\nresults (Ungraded Consensus-Based Statement). cancer screening is impacted by these other findings and\nRemarks: The structured reporting system should\nthe appropriateness of further investigation.",
       "attributes": {
@@ -35949,7 +35947,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "5 or scan\nFormal Note scan\nif > MRI\ncan HU,\ncm 10\n$ MRI MRI or or of\nCT\nwith no\nphysician or <\nof\nInvestigation marginated,\n20 HU solitary, cm butbe\nunless patients and lackfeatures\nfor by size\ncm < 4 to\n20 cm\nRecommended helpful features y\nany homogeneous, homogeneous, < no\nknown 1",
       "attributes": {
@@ -35971,7 +35969,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "5 to\ncare calcification, 1-4\npatients, (TSTC), but $\nand\nspecific 10\nor suspicious\nFurther < HU; for\n(sharply or\ndeemedprimary cm, HU\nDiameter benign cm HU,\neither cm, stable\n7010",
       "attributes": {
@@ -35992,11 +35990,11 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "5 HU) Small 1. 5\nNo Most for 10\n> 1\n< < < <\nhigh > of\npopulation population population population population\n(no\nPopulationa referral y\nrisk)\n35\npopulation\n>\nfamilial\nGeneral General General General Generaladults General\n40 b\nFindings\nConsensus, Consensus, Consensus, Consensus,\nof Evidence Guideline Guideline indirect indirect indirect indirect\nNonnodule Level\nto\nRelated\nSTR\nAHA, AHA\nSource\nSCCT,\nESC,\nACCF,\nGuidelines ACC,\nACR ACR ACR ACR\nof\nOverview\ncalcification 210–214\nartery\nenlarge-\nStudies\nment 215 Thyroid 218 Adrenal 219\n] Coronary\nRenal 217\n19 Liver 216\nand\nAortic\nTABLE\nSite\n[ ]\ne 482 Guideline and Consensus Statement 160#5 CHEST NOVEMBER 2021\n¼Radiology; for\nyearly HU, suspicious EUS\nInvestigation 1.",
       "attributes": {
-        "statement_type": "consensus"
+        "statement_type": "ungraded"
       },
       "evidence": {
         "hash": "40b03f2a18b69b94",
@@ -36013,11 +36011,11 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "We suggest that low-dose CT screening programs\ninformation related to eligibility criteria and other lung\ndevelop strategies to guide the management of non-\ncancer risk factors. Patient compliance with the follow-up\nlung nodule findings (Ungraded Consensus-Based\nof screen-detected findings and with annual screening are\nStatement). important data elements that could help to uncover\nRemarks: Examples include coronary artery calcification, quality issues for which a program may not be aware. thyroid nodules, adrenal nodules, kidney and liver\nData on LDCT imaging technique and findings are part\nlesions, thoracic aortic aneurysms, pleural effusions, and\nof mandatory data collection.",
       "attributes": {
-        "statement_type": "consensus"
+        "statement_type": "ungraded"
       },
       "evidence": {
         "hash": "9124f3ecb1233e9e",
@@ -36034,7 +36032,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Gohagan J, Marcus P, Fagerstrom R, Pinsky P, Kramer B, Prorok P. program (types of programs, utilization, success). Data\nBaseline findings of a randomized feasibility trial of lung cancer\ncollection requirements from the CMS and the ACR screening with spiral CT scan vs chest radiograph: the Lung\nScreening Study of the National Cancer Institute. Chest.",
       "attributes": {
@@ -36055,11 +36053,11 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Gohagan JK, Marcus PM, Fagerstrom RM, et al. Final results of the\nto further guide programs about the collection and use Lung Screening Study, a randomized feasibility study of spiral CT\nversus chest X-ray screening for lung cancer. Lung Cancer. of their data. 2005; 47(1): 9-15. [ ]\ne 488 Guideline and Consensus Statement 160#5 CHEST NOVEMBER 2021",
       "attributes": {
-        "statement_type": "consensus"
+        "statement_type": "ungraded"
       },
       "evidence": {
         "hash": "4239deb434d2fb95",
@@ -36076,7 +36074,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Aberle DR, Adams AM, Berg CD, et al. Reduced lung-cancer 26. Pastorino U, Rossi M, Rosato V, et al. Annual or biennial CT\nmortality with low-dose computed tomographic screening. N Engl J screening versus observation in heavy smokers: 5-year results of the\nMed. 2011; 365(5): 395-409. MILD trial. Eur J Cancer Prev. 2012; 21(3): 308-315. 8. Pinsky PF, Church TR, Izmirlian G, Kramer BS. The National Lung 27. Sverzellati N, Silva M, Calareso G, et al. Low-dose computed\nScreening Trial: results stratified by demographics, smoking tomography for lung cancer screening: comparison of performance\nhistory, and lung cancer histology.",
       "attributes": {
@@ -36097,7 +36095,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "3829. 9. Patz EF Jr, Greco E, Gatsonis C, Pinsky P, Kramer BS, Aberle DR. 28. Becker N, Motsch E, Trotter A, et al. Lung cancer mortality\nLung cancer incidence and mortality in National Lung Screening reduction by LDCT screening-results from the randomized\nTrial participants who underwent low-dose CT prevalence German LUSI trial. Int J Cancer. 2020; 146(6): 1503-1513. screening: a retrospective cohort analysis of a randomised,",
       "attributes": {
@@ -36118,7 +36116,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Becker N, Motsch E, Gross ML, et al. Randomized study on early\nmulticentre, diagnostic screening trial. Lancet Oncol. 2016; 17(5):\ndetection of lung cancer with MSCT in Germany: results of the first\n590-599. 3 years of follow-up after randomization. J Thorac Oncol. 10. Blanchon T, Brechot JM, Grenier PA, et al. Baseline results of the 2015; 10(6): 890-896. Depiscan study: a French randomized pilot trial of lung cancer",
       "attributes": {
@@ -36139,7 +36137,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Becker N, Motsch E, Gross ML, et al. Randomized study on early\nscreening comparing low dose CT scan (LDCT) and chest X-ray\ndetection of lung cancer with MSCT in Germany: study design and\n(CXR). Lung Cancer. 2007; 58(1): 50-58. results of the first screening round. J Cancer Res Clin Oncol. 11. Infante M, Cavuto S, Lutman FR, et al. Long-term follow-up results 2012; 138(9): 1475-1486. of the DANTE trial, a randomized study of lung cancer screening",
       "attributes": {
@@ -36160,7 +36158,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Field JK, Duffy SW, Baldwin DR, et al. UK Lung Cancer RCT Pilot\nwith spiral computed tomography. Am J Respir Crit Care Med. Screening Trial: baseline findings from the screening arm provide\n2015; 191(10): 1166-1175. evidence for the potential implementation of lung cancer screening. 12. Infante M, Cavuto S, Lutman FR, et al. A randomized study of lung Thorax. 2016; 71(2): 161-170. cancer screening with spiral computed tomography: three-year",
       "attributes": {
@@ -36181,7 +36179,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Field JK, Duffy SW, Baldwin DR, et al. The UK Lung Cancer\nresults from the DANTE trial. Am J Respir Crit Care Med. Screening Trial: a pilot randomised controlled trial of low-dose\n2009; 180(5): 445-453. computed tomography screening for the early detection of lung",
       "attributes": {
@@ -36202,7 +36200,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Infante M, Lutman FR, Cavuto S, et al. Lung cancer screening with cancer. Health Technol Assess. 2016; 20(40): 1-146. spiral CT: baseline results of the randomized DANTE trial. Lung",
       "attributes": {
@@ -36223,7 +36221,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Bastarrika G, Garcia-Velloso MJ, Lozano MD, et al. Early lung\nCancer. 2008; 59(3): 355-363. cancer detection using spiral computed tomography and positron",
       "attributes": {
@@ -36244,7 +36242,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Wille MM, Dirksen A, Ashraf H, et al. Results of the emission tomography. Am J Respir Crit Care Med. 2005; 171(12):\nRandomized Danish Lung Cancer Screening Trial with focus on 1378-1383. high-risk profiling. Am J Respir Crit Care Med. 2016; 193(5): 542-",
       "attributes": {
@@ -36265,7 +36263,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Callol L, Roig F, Cuevas A, et al. Low-dose CT: a useful and",
       "attributes": {
@@ -36286,7 +36284,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "accessible tool for the early diagnosis of lung cancer in selected",
       "attributes": {
@@ -36307,7 +36305,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Saghir Z, Dirksen A, Ashraf H, et al. CT screening for lung cancer populations. Lung Cancer. 2007; 56(2): 217-221. brings forward early disease. The randomised Danish Lung Cancer",
       "attributes": {
@@ -36328,7 +36326,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Diederich S, Thomas M, Semik M, et al. Screening for early lung\nScreening Trial: status after five annual screening rounds with low-\ncancer with low-dose spiral computed tomography: results of\ndose CT. Thorax. 2012; 67(4): 296-301. annual follow-up examinations in asymptomatic smokers. Eur",
       "attributes": {
@@ -36349,7 +36347,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Pedersen JH, Ashraf H, Dirksen A, et al. The Danish randomized Radiol. 2004; 14(4): 691-702. lung cancer CT screening trial–overall design and results of the",
       "attributes": {
@@ -36370,7 +36368,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Henschke CI, Mc Cauley DI, Yankelevitz DF, et al. Early lung\nprevalence round. J Thorac Oncol. 2009; 4(5): 608-614. findings\ncancer action project: a summary of the on baseline",
       "attributes": {
@@ -36391,7 +36389,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Petersen RH, Hansen HJ, Dirksen A, Pedersen JH. Lung cancer screening. Oncologist. 2001; 6(2): 147-152. screening and video-assisted thoracic surgery. J Thorac Oncol. 37. Henschke CI. Early lung cancer action project: overall design and\n2012; 7(6): 1026-1031. findings\nfrom baseline screening. Cancer. 2000; 89(11 suppl): 2474-",
       "attributes": {
@@ -36412,7 +36410,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Heleno B, Siersma V, Brodersen J. Estimation of overdiagnosis of 2482. lung cancer in low-dose computed tomography screening: a",
       "attributes": {
@@ -36433,7 +36431,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Henschke CI, Mc Cauley DI, Yankelevitz DF, et al. Early Lung\nsecondary analysis of the Danish Lung Cancer Screening Trial. findings\nCancer Action Project: overall design and from baseline\nJAMA Intern Med. 2018; 178(10): 1420-1422. screening. Lancet. 1999; 354(9173): 99-105. 19. de Koning HJ, van der Aalst CM, de Jong PA, et al. Reduced lung-",
       "attributes": {
@@ -36454,7 +36452,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Henschke CI, Naidich DP, Yankelevitz DF, et al. Early lung cancer\ncancer mortality with volume CT screening in a randomized trial. findings\naction project: initial on repeat screenings. Cancer. N Engl J Med. 2020; 382(6): 503-513. 2001; 92(1): 153-159. 20. Horeweg N, van der Aalst CM, Vliegenthart R, et al. Volumetric",
       "attributes": {
@@ -36475,7 +36473,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Leleu O, Basille D, Auquier M, et al. Lung cancer screening by low-\ncomputed tomography screening for lung cancer: three rounds of dose CT scan: baseline results of a French prospective study. Clin. the NELSON trial. Eur Respir J. 2013; 42(6): 1659-1667. Lung Cancer. 2020; 21(2): 145-152. 21. Yousaf-Khan U, van der Aalst C, de Jong PA, et al. Risk 41. Mac Redmond R, Mc Vey G, Lee M, et al. Screening for lung cancer\nstratification based on screening history: the NELSON lung cancer\nusing low dose CT scanning: results of 2 year follow up.",
       "attributes": {
@@ -36496,7 +36494,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Pastorino U, Bellomi M, Landoni C, et al. Early lung-cancer",
       "attributes": {
@@ -36517,7 +36515,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "detection with spiral CT and positron emission tomography in\nheavy smokers: 2-year results. Lancet. 2003; 362(9384): 593-597. 67. Kinsinger LS, Anderson C, Kim J, et al. Implementation of lung\ncancer screening in the Veterans Health Administration. JAMA",
       "attributes": {
@@ -36538,7 +36536,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Picozzi G, Paci E, Lopez Pegna A, et al. Screening of lung cancer\nIntern Med. 2017; 177(3): 399-406. with low dose spiral CT: results of a three year pilot study and\ndesign of the randomised controlled trial ’’Italung-CT’’. Radiol 68. Iaccarino JM, Silvestri GA, Wiener RS. Patient-level trajectories\nMed. 2005; 109(1-2): 17-26. and outcomes after low-dose CT screening in the National Lung\nScreening Trial. Chest. 2019; 156(5): 965-971. 48. Shields LBE, Wilkett Barnes JG, Buckley C, et al. Multidisciplinary\napproach to low-dose CT screening for lung cancer in a 69.",
       "attributes": {
@@ -36559,7 +36557,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Sobue T, Moriyama N, Kaneko M, et al. Screening for lung cancer\nA): 419-426. with low-dose helical computed tomography: anti-lung cancer\nassociation project. J Clin Oncol. 2002; 20(4): 911-920. 70. Rzyman W, Jelitto-Gorska M, Dziedzic R, et al. Diagnostic work-up\nand surgery in participants of the Gdansk lung cancer screening",
       "attributes": {
@@ -36580,7 +36578,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Swensen SJ, Jett JR, Hartman TE, et al. Lung cancer screening with\nprogramme: the incidence of surgery for non-malignant conditions. CT: Mayo Clinic experience. Radiology. 2003; 226(3): 756-761. Interact Cardiovasc Thorac Surg. 2013; 17(6): 969-973. 51. Veronesi G, Bellomi M, Mulshine JL, et al. Lung cancer screening\nwith low-dose computed tomography: a non-invasive diagnostic 71. van den Bergh KA, Essink-Bot ML, Borsboom GJ, Scholten ET, van\nprotocol for baseline lung nodules. Lung Cancer. 2008; 61(3): 340- Klaveren RJ, de Koning HJ.",
       "attributes": {
@@ -36601,7 +36599,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "computed tomography screening on health-related quality of life:\nthe NELSON trial. Eur Respir J. 2011; 38(1): 154-161. 52. White LJ, Kaur A, Lapel RT, et al. Lung cancer screening at a\nmilitary treatment facility: a retrospective review. Mil Med. 72. Gareen IF, Duan F, Greco EM, et al. Impact of lung cancer\n2020; 185(5-6): e 864-e 869. screening results on participant health-related quality of life and\nstate anxiety in the National Lung Screening Trial. Cancer. 53. Wilson DO, Weissfeld JL, Fuhrman CR, et al.",
       "attributes": {
@@ -36622,7 +36620,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Kang HR, Cho JY, Lee SH, et al. Role of low-dose computerized",
       "attributes": {
@@ -36643,7 +36641,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "tomography in lung cancer screening amond never-smokers. J\nThorac Oncol. 2019; 14(3): 436-444. 74. Taghizadeh N, Tremblay A, Cressman S, et al. Health-related\nquality of life and anxiety in the PAN-CAN lung cancer screening",
       "attributes": {
@@ -36664,7 +36662,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Higgins JP, Altman DG, Gotzsche PC, et al. The Cochrane\ncohort. BMJ Open. 2019; 9(1): e 024719. Collaboration’s tool for assessing risk of bias in randomised trials. BMJ. 2011; 343: d 5928. 75. Welch LS, Dement JM, Cranford K, et al. Early detection of lung\ncancer in a population at high risk due to occupation and smoking. 56. Sterne JA, Hernan MA, Reeves BC, et al. ROBINS-I: a tool for\nOccup Environ Med. 2019; 76: 137-142. assessing risk of bias in non-randomised studies of interventions. BMJ.",
       "attributes": {
@@ -36685,7 +36683,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Guyatt G, Oxman AD, Akl EA, et al. GRADE guidelines: 1. Med. 2014; 174(2): 269-274.",
       "attributes": {
@@ -36706,7 +36704,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Deeks JJ, Higgins JPT, Altman DG. Chapter 10: Analysing data and\nstrategies using low-dose computed tomography: a systematic\nundertaking meta-analysis. In: Higgins JPT, Thomas J, Chandler J,\nreview. Appl Health Econ Health Policy. 2016; 14(4): 409-418. et al. , eds. Cochrane Handbook for Systematic Reviews of\nInterventions. version 6. 1 (updated September 2020). Cochrane; 78. Berrington de González A, Kim KP, Berg CD. Low-dose lung",
       "attributes": {
@@ -36727,7 +36725,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Accessed September 26, 2020, www. training. Cochrane. org/ computed tomography screening before age 55: estimates of the\nhandbook mortality reduction required to outweigh the radiation-induced\ncancer risk. J Med Screen. 2008; 15(3): 153-158. 59. Diekemper RL, Patel S, Mette SA, Ornelas J, Ouellette DR,\nCasey KR. Making the GRADE: CHEST updates its methodology. 79. Howard DH, Richards TB, Bach PB, Kegler MC, Berg CJ. Chest. 2018; 153(3): 756-759. Comorbidities, smoking status, and life expectancy among\nindividuals eligible for lung cancer screening.",
       "attributes": {
@@ -36748,7 +36746,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Andrews J, Guyatt G, Oxman AD, et al. GRADE guidelines: 14. significance 4341-4347. Going from evidence to recommendations: the and\npresentation of recommendations. J Clin Epidemiol. 2013; 66(7):",
       "attributes": {
@@ -36770,7 +36768,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Kakinuma R, Noguchi M, Ashizawa K, et al. Natural history of\n719-725. pulmonary subsolid nodules: a prospective multicenter study. J",
       "attributes": {
@@ -36791,7 +36789,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Lewis SZ, Diekemper R, Ornelas J, Casey KR. Methodologies for Thorac Oncol. 2016; 11(7): 1012-1028. the development of CHEST guidelines and expert panel reports. 81. Kobayashi Y, Fukui T, Ito S, et al. How long should small lung\nChest. 2014; 146(1): 182-192. lesions of ground-glass opacity be followed? J Thorac Oncol. 62. Jaeschke R, Guyatt GH, Dellinger P, et al. Use of GRADE grid to 2013; 8(3): 309-314. reach decisions on clinical practice guidelines when consensus is",
       "attributes": {
@@ -36812,7 +36810,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Sawada S, Yamashita N, Sugimoto R, Ueno T, Yamashita M. Long-\nelusive. BMJ. 2008; 337: a 744. term outcomes of patients with ground-glass opacities detected",
       "attributes": {
@@ -36833,7 +36831,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Pinsky PF, Gierada DS, Hocking W, Patz EF Jr, Kramer BS. using CT scanning. Chest. 2017; 151(2): 308-315. National Lung Screening Trial findings by age: Medicare-eligible",
       "attributes": {
@@ -36854,7 +36852,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Son JY, Lee HY, Lee KS, et al. Quantitative CT analysis of\nversus under-65 population. Ann Intern Med. 2014; 161(9): 627-633. pulmonary ground-glass opacity nodules for the distinction of",
       "attributes": {
@@ -36875,7 +36873,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Tanner NT, Gebregziabher M, Hughes Halbert C, Payne E, invasive adenocarcinoma from pre-invasive or minimally invasive\nEgede LE, Silvestri GA. Racial differences in outcomes within the adenocarcinoma. PL o S One. 2014; 9(8): e 104066. National Lung Screening Trial. Implications for widespread",
       "attributes": {
@@ -36896,7 +36894,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "ten Haaf K, Tammemägi MC, Bondy SJ, et al. Performance and\nimplementation. Am J Respir Crit Care Med. 2015; 192(2): 200-208. cost-effectiveness of computed tomography lung cancer screening",
       "attributes": {
@@ -36917,11 +36915,11 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Kovalchik SA, Tammemagi M, Berg CD, et al. Targeting of low- scenarios in a population-based setting: a microsimulation\ndose CT screening according to the risk of lung-cancer death. N modeling analysis in Ontario, Canada. PL o S Med. 2017; 14(2):\nEngl J Med. 2013; 369(3): 245-254. e 1002225. [ ]\ne 490 Guideline and Consensus Statement 160#5 CHEST NOVEMBER 2021",
       "attributes": {
-        "statement_type": "consensus"
+        "statement_type": "ungraded"
       },
       "evidence": {
         "hash": "ba6f26c06d57453f",
@@ -36938,7 +36936,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Black WC, Gareen IF, Soneji SS, et al. Cost-effectiveness of CT 109. Balekian AA, Tanner NT, Fisher JM, Silvestri GA, Gould MK. screening in the National Lung Screening Trial. N Engl J Med. Factors associated with a positive baseline screening exam result in\n2014; 371(19): 1793-1802. the national lung screening trial. Ann Am Thorac Soc. 2016; 13(9):\n1568-1574. 86. Goffin JR, Flanagan WM, Miller AB, et al. Biennial lung cancer\nscreening in Canada with smoking cessation-outcomes and cost- 110. Wiener RS, Schwartz LM, Woloshin S, Welch HG.",
       "attributes": {
@@ -36959,7 +36957,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Hofer F, Kauczor HU, Stargardt T. Cost-utility analysis of a\nIntern Med. 2011; 155(3): 137-144. potential lung cancer screening program for a high-risk population\nin Germany: a modelling approach. Lung Cancer. 2018; 124: 189- 111. Brunelli A, Kim AW, Berger KI, Addrizzo-Harris DJ. 198. Physiologic evaluation of the patient with lung cancer being\nconsidered for resectional surgery: diagnosis and management",
       "attributes": {
@@ -36980,7 +36978,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Jensen MD, Siersma V, Rasmussen JF, Brodersen J. Direct and\nof lung cancer, 3 rd ed: American College of Chest Physicians\nindirect healthcare costs of lung cancer CT screening in Denmark:\nevidence-based clinical practice guidelines. Chest. 2013; 143(5\na registry study. BMJ Open. 2020; 10(1): e 031768. suppl): e 166 S-e 190 S. 89. Kim DD, Cohen JT, Wong JB, et al. Targeted incentive programs",
       "attributes": {
@@ -37001,7 +36999,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Berry MF, Yang CJ, Hartwig MG, et al. Impact of pulmonary\nfor lung cancer screening can improve population health and\nfunction measurements on long-term survival after lobectomy for\neconomic efficiency. Health Aff (Millwood). 2019; 38(1): 60-67. stage I non-small cell lung cancer. Ann Thorac Surg. 2015; 100(1):",
       "attributes": {
@@ -37022,7 +37020,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Kumar V, Cohen JT, van Klaveren D, et al. Risk-targeted lung 271-276. cancer screening: a cost-effectiveness analysis. Ann Intern Med. 113. Eguchi T, Bains S, Lee MC, et al. Impact of increasing age on cause-\n2018; 168(3): 161-169. specific mortality and morbidity in patients with stage I non-small-",
       "attributes": {
@@ -37043,7 +37041,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Priola AM, Priola SM, Giaj-Levra M, et al. Clinical implications and cell lung cancer: a competing risks analysis. J Clin Oncol. added costs of incidental findings in an early detection study of 2017; 35(3): 281-290. lung cancer by using low-dose spiral computed tomography. Clin",
       "attributes": {
@@ -37064,7 +37062,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Ten Haaf K, Bastani M, Cao P, et al. A comparative modeling\nLung Cancer. 2013; 14(2): 139-148. analysis of risk-based lung cancer screening strategies. J Natl",
       "attributes": {
@@ -37085,7 +37083,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Kucharczyk MJ, Menezes RJ, Mc Gregor A, Paul NS, Roberts HC. Cancer Inst. 2020; 112(5): 466-479. Assessing the impact of incidental findings in a lung cancer",
       "attributes": {
@@ -37106,7 +37104,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Cressman S, Peacock SJ, Tammemagi MC, et al. The cost-\nscreening study by using low-dose computed tomography. Can\neffectiveness of high-risk lung cancer screening and drivers of\nAssoc Radiol J. 2011; 62(2): 141-145. program efficiency. J Thorac Oncol. 2017; 12(8): 1210-1222. 93. Frank L, Christodoulou E, Kazerooni EA. Radiation risk of lung",
       "attributes": {
@@ -37127,7 +37125,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Meza R, Jeon J, Toumazis I, et al. Evaluation of the benefits and\ncancer screening. Semin Respir Crit Care Med. 2013; 34(6): 738-747. harms of lung cancer screening with low-dose computed",
       "attributes": {
@@ -37148,7 +37146,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Bach PB, Mirkin JN, Oliver TK, et al. Benefits and harms of CT tomography: a collaborative modeling study for the U. S. Preventive\nscreening for lung cancer: a systematic review. JAMA. Services Task Force. AHRQ Publication No. 20-05266-EF-2. 2012; 307(22): 2418-2429. Agency for Healthcare Research and Quality; 2020. 95. Mc Cunney RJ, Li J. Radiation risks in lung cancer screening 117. Caverly TJ, Cao P, Hayward RA, Meza R. Identifying patients for\nprograms. Chest. 2014; 145(3): 618-624. whom lung cancer screening is preference-sensitive: a\nmicrosimulation study.",
       "attributes": {
@@ -37169,7 +37167,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Rampinelli C, De Marco P, Bellomi M. Radiation risk from lung\nForce. Ann Intern Med. 2014; 160(5): 311-320. cancer screening. Ann Transl Med. 2017; 5(23): 480. 119. Tammemagi MC, Church TR, Hocking WG, et al. Evaluation of the",
       "attributes": {
@@ -37190,7 +37188,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Bach PB, Kattan MW, Thornquist MD, et al. Variations in lung\nlung cancer risks at which to screen ever- and never-smokers:\ncancer risk among smokers. J Natl Cancer Inst. 2003; 95(6): 470-478. screening rules applied to the PLCO and NLST cohorts. PL o S Med. 99. Katki HA, Kovalchik SA, Berg CD, Cheung LC, Chaturvedi AK. 2014; 11(12): e 1001764. Development and validation of risk models to select ever-smokers",
       "attributes": {
@@ -37211,7 +37209,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Landy R, Cheung LC, Berg CD, Chaturvedi AK, Robbins HA,\nfor CT lung cancer screening. JAMA. 2016; 315(21): 2300-2311. Katki HA. Contemporary implications of U. S. Preventive Services",
       "attributes": {
@@ -37232,7 +37230,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Tammemagi MC, Katki HA, Hocking WG, et al. Selection criteria Task Force and risk-based guidelines for lung cancer screening\nfor lung-cancer screening. N Engl J Med. 2013; 368(8): 728-736. eligibility in the United States. Ann Intern Med. 2019; 171(5): 384-",
       "attributes": {
@@ -37253,7 +37251,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "101. Cheung LC, Berg CD, Castle PE, Katki HA, Chaturvedi AK. Life-\ngained-based versus risk-based selection of smokers for lung cancer 121. Wood DE, Kazerooni EA, Baum SL, et al. Lung cancer screening,\nscreening. Ann Intern Med. 2019; 171(9): 623-632. version 3. 2018, NCCN clinical practice guidelines in oncology. J\nNatl Compr Canc Netw. 2018; 16(4): 412-441. 102. Katki HA, Kovalchik SA, Petito LC, et al. Implications of nine risk\nprediction models for selecting ever-smokers for computed 122.",
       "attributes": {
@@ -37274,7 +37272,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "103. Bach PB. Lung cancer screening decision tool. Accessed April 23,\n2016, http: //nomograms. mskcc. org/Lung/Screening. aspx 123. Jemal A, Fedewa SA. Lung cancer screening with low-dose\ncomputed tomography in the United States-2010 to 2015. JAMA",
       "attributes": {
@@ -37295,7 +37293,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Fagerlin A, Caverly TJ. Lung cancer screening risk calculator. Oncol. 2017; 3(9): 1278-1281. Accessed September 26, 2020, https: //screenlc. com/",
       "attributes": {
@@ -37316,7 +37314,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Ali N, Lifford KJ, Carter B, et al. Barriers to uptake among high-risk",
       "attributes": {
@@ -37337,7 +37335,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Katki HA. Risk-based NLST Outcomes Tool (RNOT). Accessed\nindividuals declining participation in lung cancer screening: a\nSeptember 26, 2020, https: //analysistools. cancer. gov/\nmixed methods analysis of the UK Lung Cancer Screening (UKLS)\nlung Cancer Screening/#!/\ntrial. BMJ Open. 2015; 5(7): e 008254. 106. Meza R, Arenberg D, Lau L, Caverly TJ. Lung cancer screening. 125. Jonnalagadda S, Bergamo C, Lin JJ, et al. Beliefs and attitudes about\nAccessed September 26, 2020, https: //shouldiscreen.",
       "attributes": {
@@ -37358,7 +37356,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Tammemagi MC. Lung cancer risk calculators. Accessed May 2, 526-531. 2017, https: //brocku. ca/lung-cancer-risk-calculator",
       "attributes": {
@@ -37379,7 +37377,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Quaife SL, Marlow LAV, Mc Ewen A, Janes SM, Wardle J. Attitudes",
       "attributes": {
@@ -37400,7 +37398,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Cheung LC, Katki HA. lcmodels: R package for predictions from towards lung cancer screening in socioeconomically deprived and\npublished lung cancer models. Accessed April 5, 2019, https: //dceg. heavy smoking communities: informing screening communication. cancer. gov/tools/risk-assessment/lcmodels Health Expect. 2017; 20(4): 563-573. chestjournal. org e 491",
       "attributes": {
@@ -37421,7 +37419,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Rivera MP, Katki HA, Tanner NT, et al. Addressing disparities in lung cancer screening programs in clinical practice. Am J Respir\nlung cancer screening eligibility and healthcare access: an official Crit Care Med. 2015; 192(7): 881-891. American Thoracic Society statement. Am J Respir Crit Care Med. 145. American Thoracic Society, American Lung Association. Lung\n2020; 202(7): e 95-e 112. cancer screening implementation guide. Accessed October 2020,",
       "attributes": {
@@ -37442,7 +37440,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Haddad DN, Sandler KL, Henderson LM, Rivera MP, Aldrich MC. https: //www. lungcancerscreeningguide. org/\nDisparities in lung cancer screening: a review. Ann Am Thorac Soc. 146. Ades AE, Biswas M, Welton NJ, Hamilton W. Symptom lead time\n2020; 17(4): 399-405. distribution in lung cancer: natural history and prospects for early",
       "attributes": {
@@ -37463,7 +37461,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Balekian AA, Wisnivesky JP, Gould MK. Surgical disparities among diagnosis. Int J Epidemiol. 2014; 43(6): 1865-1873. patients with stage I lung cancer in the National Lung Screening",
       "attributes": {
@@ -37484,7 +37482,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Walter FM, Rubin G, Bankhead C, et al. Symptoms and other\nTrial. Chest. 2019; 155(1): 44-52. factors associated with time to diagnosis and stage of lung cancer: a",
       "attributes": {
@@ -37505,7 +37503,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Kapoor S, Deppen SA, Paulson AB, Haddad D, Cook JP, prospective cohort study. Br J Cancer. 2015; 112(suppl 1): S 6-S 13. Sandler KL. Education level predicts appropriate follow-up of",
       "attributes": {
@@ -37526,7 +37524,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Centers for Medicare & Medicaid Services. Decision memo for\nincidental findings from lung cancer screening. J Am Coll Radiol. screening for lung cancer with low dose computed tomography\n2020; 17(5): 613-619. (LDCT) (CAG-00439 N). Accessed September 26, 2020, https: //",
       "attributes": {
@@ -37547,7 +37545,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Pasquinelli MM, Tammemagi MC, Kovitz KL, et al. Risk prediction www. cms. gov/medicare-coverage-database/details/nca-decision-\nmodel versus United States Preventive Services Task Force lung memo. aspx?NCAI d¼274\ncancer screening eligibility criteria: reducing race disparities. J",
       "attributes": {
@@ -37568,7 +37566,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Lillie SE, Partin MR, Rice K, et al. The effects of shared decision\nThorac Oncol. 2020; 15(11): 1738-1747. making on cancer screening – a systematic review [Internet]. Washington (DC): Department of Veterans Affairs (US); 2014 Sep. 132. Tanner NT, Dai L, Bade BC, Gebregziabher M, Silvestri GA. Accessed September 26, 2021, https: //www. ncbi. nlm. nih. gov/\nAssessing the generalizability of the National Lung Screening Trial:\nbooks/NBK 310872/\ncomparison of patients with stage 1 disease. Am J Respir Crit Care\nMed.",
       "attributes": {
@@ -37589,7 +37587,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Rivera MP, Tanner NT, Silvestri GA, et al. Incorporating coexisting\nsmoke: a randomized clinical trial. JAMA Netw Open. 2020; 3(1):\nchronic illness into decisions about patient selection for lung cancer\nOfficial e 1920362. screening. An American Thoracic Society Research\nStatement. Am J Respir Crit Care Med. 2018; 198(2): e 3-e 13. 151. Mazzone PJ, Tenenbaum A, Seeley M, et al. Impact of a lung cancer\nscreening counseling and shared decision-making visit. Chest. 134. Sozzi G, Boeri M, Rossi M, et al.",
       "attributes": {
@@ -37610,7 +37608,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Liu MC, Oxnard GR, Klein EA, et al. Sensitive and specific multi-\nof decision quality. Chest. 2019; 155(1): 236-238. cancer detection and localization using methylation signatures in\ncell-free DNA. Ann Oncol. 2020; 31(6): 745-759. 153. Lau YK, Caverly TJ, Cao P, et al. Evaluation of a personalized, web-\nbased decision aid for lung cancer screening. Am J Prev Med. 136. de Koning HJ, Plevritis S, Hazelton WD, ten Haaf K, Munshi V,\n2015; 49(6): e 125-e 129. Jeon J. Benefits and harms of computed tomography lung cancer\nscreening programs for high-risk populations.",
       "attributes": {
@@ -37631,7 +37629,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "focus group study. Ann Am Thorac Soc. 2016; 13(11): 1992-2001. 137. Mc Mahon PM, Meza R, Plevritis SK, et al. Comparing benefits 155. Volk RJ, Linder SK, Leal VB, et al. Feasibility of a patient decision\nfrom many possible computed tomography lung cancer screening aid about lung cancer screening with low-dose computed\nprograms: extrapolating from the National Lung Screening Trial tomography. Prev Med. 2014; 62: 60-63. using comparative modeling. PL o S One. 2014; 9(6): e 99978. 156. Reuland DS, Cubillos L, Brenner AT, Harris RP, Minish B,",
       "attributes": {
@@ -37652,7 +37650,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Meza R, ten Haaf K, Kong CY, et al. Comparative analysis of 5 lung Pignone MP. A pre-post study testing a lung cancer screening\ncancer natural history and screening models that reproduce decision aid in primary care. BMC Med Inform Decis Mak. outcomes of the NLST and PLCO trials. Cancer. 2014; 120(11): 2018; 18(1): 5. 1713-1724. 157. Carter-Harris L, Brandzel S, Wernli KJ, Roth JA, Buist DSM. A",
       "attributes": {
@@ -37673,7 +37671,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Kavanagh J, Liu G, Menezes R, et al. Importance of long-term low- qualitative study exploring why individuals opt out of lung cancer\ndose CT follow-up after negative findings at previous lung cancer screening. Fam Pract. 2017; 34(2): 239-244. screening. Radiology. 2018; 289(1): 218-224. 158. Golden SE, Ono SS, Thakurta SG, et al. \"I’m putting my trust in\ntheir hands\": a qualitative study of patients’ views on clinician",
       "attributes": {
@@ -37694,7 +37692,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Horeweg N, Scholten ET, de Jong PA, et al. Detection of lung\nprespecified initial communication about lung cancer screening. Chest. cancer through low-dose CT screening (NELSON): a\n2020; 158(3): 1260-1267. analysis of screening test performance and interval cancers. Lancet\nOncol. 2014; 15(12): 1342-1350. 159. Caverly TJ, Hayward RA. Dealing with the lack of time for detailed\nshared decision-making in primary care: everyday shared decision-",
       "attributes": {
@@ -37715,11 +37713,11 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Tammemagi MC, Ten Haaf K, Toumazis I, et al. Development and\nmaking. J Gen Intern Med. 2020; 35(10): 3045-3049. validation of a multivariable lung cancer risk prediction model that\nincludes low-dose computed tomography screening results: a 160. Brenner AT, Malo TL, Margolis M, et al. Evaluating shared decision\nsecondary analysis of data from the National Lung Screening Trial. making for lung cancer screening. JAMA Intern Med. 2018; 178(10):\nJAMA Network Open. 2019; 2(3): e 190204. 1311-1316.",
       "attributes": {
-        "statement_type": "consensus"
+        "statement_type": "ungraded"
       },
       "evidence": {
         "hash": "a74e2ef2f06a3cb7",
@@ -37736,7 +37734,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Henschke CI, Yip R, Yankelevitz DF, Smith JP; International Early 183. Gould MK, Donington J, Lynch WR, et al. Evaluation of individuals\nLung Cancer Action Program Investigators. Definition of a positive with pulmonary nodules: when is it lung cancer? Diagnosis and\ntest result in computed tomography screening for lung cancer: a management of lung cancer, 3 rd ed: American College of Chest\ncohort study. Ann Intern Med. 2013; 158(4): 246-252. Physicians evidence-based clinical practice guidelines.",
       "attributes": {
@@ -37757,7 +37755,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "White CS, Dharaiya E, Dalal S, Chen R, Haramati LB. Vancouver\ndownstream medical costs associated with invasive diagnostic\nrisk calculator compared with ACR Lung-RADS in predicting\nprocedures for lung abnormalities in the community setting. JAMA\nmalignancy: analysis of the National Lung Screening Trial. Intern Med. 2019; 179(3): 324-332. Radiology. 2019; 291(1): 205-211. 188. Ashraf H, Saghir Z, Dirksen A, et al. Smoking habits in the",
       "attributes": {
@@ -37778,7 +37776,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Swensen SJ, Jett JR, Sloan JA, et al. Screening for lung cancer with\nrandomised Danish Lung Cancer Screening Trial with low-dose\nlow-dose spiral computed tomography. Am J Respir Crit Care Med. CT: final results after a 5-year screening programme. Thorax. 2002; 165(4): 508-513. 2014; 69(6): 574-579. 170. Wildstein KA, Faustini Y, Yip R, Henschke CI, Ostroff JS. 189. Brain K, Carter B, Lifford KJ, et al. Impact of low-dose CT\nLongitudinal predictors of adherence to annual follow-up in a lung\nscreening on smoking cessation among high-risk participants in the\ncancer screening programme.",
       "attributes": {
@@ -37799,7 +37797,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Pistelli F, Aquilini F, Falaschi F, et al. Smoking cessation in the\ncancer screening adherence in the United States: a systematic\nITALUNG lung cancer screening: what does \"teachable moment\"\nreview. J Adv Pract Oncol. 2014; 5(1): 31-41. mean? Nicotine Tob Res. 2020; 22(9): 1484-1491. 172. Deroche CB, Mc Dermott SW, Mann JR, Hardin JW. Colorectal 191. van der Aalst CM, van den Bergh KA, Willemsen MC, de\ncancer screening adherence in selected disabilities over 10 years. Koning HJ, van Klaveren RJ.",
       "attributes": {
@@ -37820,7 +37818,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Tanner NT, Brasher PB, Wojciechowski B, et al. Screening\ncancer screening. Systematic review in support of the U. S. adherence in the Veterans Administration Lung Cancer Screening\npreventive services task force. Ann Am Thorac Soc. 2014; 11(4): 619-\nDemonstration Project. Chest. 2020; 158(4): 1742-1752. 627. 175. Hirsch EA, New ML, Brown SP, Baron AE, Malkoski SP. Patient",
       "attributes": {
@@ -37841,7 +37839,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Iaccarino JM, Duran C, Slatore CG, Wiener RS, Kathuria H. reminders and longitudinal adherence to lung cancer screening in\nCombining smoking cessation interventions with LDCT lung\nan academic setting. Ann Am Thorac Soc. 2019; 16(10): 1329-1332. cancer screening: a systematic review. Prev Med. 2019; 121: 24-32. 176. Han SS, Erdogan SA, Toumazis I, Leung A, Plevritis SK. Evaluating",
       "attributes": {
@@ -37862,7 +37860,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Kathuria H, Detterbeck FC, Fathi JT, et al. Stakeholder research\nthe impact of varied compliance to lung cancer screening\npriorities for smoking cessation interventions within lung cancer\nrecommendations using a microsimulation model. Cancer Causes official\nscreening programs. An American Thoracic Society\nControl. 2017; 28(9): 947-958. research statement. Am J Respir Crit Care Med. 2017; 196(9): 1202-",
       "attributes": {
@@ -37884,7 +37882,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Munden RF, Chiles C, Boiselle PM, Sicks JD, Aberle DR, 1212. Gatsonis CA. Micronodules detected on computed tomography 195. Fiore MC, Jaen CR, Baker TB, et al. Treating tobacco use and\nduring the National Lung Screening Trial: prevalence and relation dependence: 2008 update. Accessed September 26, 2020, https: //\nto positive studies and lung cancer. J Thorac Oncol. 2019; 14(9): www. ahrq. gov/prevention/guidelines/tobacco/index. html\n1538-1546. 196. Verbiest M, Brakema E, van der Kleij R, et al.",
       "attributes": {
@@ -37905,7 +37903,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Spalluto LB, Lewis JA, La Baze S, et al. Association of a lung for smoking cessation in primary care: a literature review and\nscreening program coordinator with adherence to annual CT lung evidence analysis. NPJ Prim Care Respir Med. 2017; 27(1): 2. screening at a large academic institution. J Am Coll Radiol. 197. Fintelmann FJ, Bernheim A, Digumarthy SR, et al. The 10 pillars of\n2020; 17(2): 208-215. lung cancer screening: rationale and logistics of a lung cancer",
       "attributes": {
@@ -37926,7 +37924,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Swensen SJ, Silverstein MD, Ilstrup DM, Schleck CD, Edell ES. The screening program. Radiographics. 2015; 35(7): 1893-1908. probability of malignancy in solitary pulmonary nodules. 198. Gould MK, Sakoda LC, Ritzwoller DP, et al. Monitoring lung\nApplication to small radiologically indeterminate nodules. Arch\ncancer screening use and outcomes at four cancer research network\nIntern Med. 1997; 157(8): 849-855. sites. Ann Am Thorac Soc. 2017; 14(12): 1827-1835. 180. Herder GJ, van Tinteren H, Golding RP, et al.",
       "attributes": {
@@ -37947,7 +37945,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Gesthalter YB, Koppelman E, Bolton R, et al. Evaluations of\nmodel to characterize pulmonary nodules: validation and added\nimplementation at early-adopting lung cancer screening programs:\nvalue of 18 F-fluorodeoxyglucose positron emission tomography. lessons learned. Chest. 2017; 152(1): 70-80. Chest. 2005; 128(4): 2490-2496. 200. Volk RJ, Foxhall LE. Readiness of primary care clinicians to",
       "attributes": {
@@ -37968,7 +37966,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Gould MK, Ananth L, Barnett PG. A clinical model to estimate the\nimplement lung cancer screening programs. Prev Med Rep. 2015; 2:\npretest probability of lung cancer in patients with solitary 717-719. pulmonary nodules. Chest. 2007; 131(2): 383-388. 201. Iaccarino JM, Clark J, Bolton R, et al. A national survey of",
       "attributes": {
@@ -37989,7 +37987,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Mc Williams A, Tammemagi MC, Mayo JR, et al. Probability of pulmonologists’ views on low-dose computed tomography\ncancer in pulmonary nodules detected on first screening CT. N Engl\nscreening for lung cancer. Ann Am Thorac Soc. 2015; 12(11): 1667-\nJ Med. 2013; 369(10): 910-919. 1675. chestjournal. org e 493",
       "attributes": {
@@ -38010,7 +38008,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Triplette M, Kross EK, Mann BA, et al. An assessment of primary Foundation/American Heart Association Task Force on Practice\ncare and pulmonary provider perspectives on lung cancer Guidelines, American Association for Thoracic Surgery, American\nscreening. Ann Am Thorac Soc. 2018; 15(1): 69-75. College of Radiology, American Stroke Association, Society of\nCardiovascular Anesthesiologists, Society for Cardiovascular",
       "attributes": {
@@ -38031,7 +38029,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Kazerooni EA, Austin JH, Black WC, et al. ACR-STR practice\nAngiography and Interventions, Society of Interventional\nparameter for the performance and reporting of lung cancer\nRadiology, Society of Thoracic Surgeons, and Society for Vascular\nscreening thoracic computed tomography (CT): 2014 (Resolution\nMedicine. Circulation. 2010; 121(13): e 266-e 369. 4). J Thorac Imaging. 2014; 29(5): 310-316. 218. Berland LL, Silverman SG, Gore RM, et al. Managing incidental",
       "attributes": {
@@ -38052,7 +38050,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "American College of Radiology Committee on Lung-RADS. Lung-\nfindings on abdominal CT: white paper of the ACR incidental\nRADS version 1. 1. Accessed 2020, https: //www. acr. org/-/media/\nfindings committee. J Am Coll Radiol. 2010; 7(10): 754-773. ACR/Files/RADS/Lung-RADS/Lung RADSA ssessment\nCategoriesv 1-1. pdf 219. Herts BR, Silverman SG, Hindman NM, et al. Management of the\nincidental renal mass on CT: a white paper of the ACR Incidental",
       "attributes": {
@@ -38073,7 +38071,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Morgan L, Choi H, Reid M, Khawaja A, Mazzone PJ. Frequency of\nfindings Findings Committee. J Am Coll Radiol. 2018; 15(2): 264-273. incidental and subsequent evaluation in low-dose\ncomputed tomographic scans for lung cancer screening. Ann Am 220. Hoang JK, Langer JE, Middleton WD, et al. Managing incidental\nThorac Soc. 2017; 14(9): 1450-1456. thyroid nodules detected on imaging: white paper of the ACR\nbenefit Incidental Thyroid Findings Committee. J Am Coll Radiol. 206. van de Wiel JC, Wang Y, Xu DM, et al.",
       "attributes": {
@@ -38094,7 +38092,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Jacobs PC, Gondrie MJ, van der Graaf Y, et al. Coronary artery Findings Committee. J Am Coll Radiol. 2017; 14(7): 911-923. calcium can predict all-cause mortality and cardiovascular events 223. Sebastian S, Araujo C, Neitlich JD, Berland LL. Managing\non low-dose CT screening for lung cancer. AJR Am J Roentgenol. incidental findings on abdominal and pelvic CT and MRI, Part 4:\n2012; 198(3): 505-511. white paper of the ACR Incidental Findings Committee II on\ngallbladder and biliary findings. J Am Coll Radiol.",
       "attributes": {
@@ -38115,7 +38113,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Loomans-Kropp HA, Dunn BK, Kramer BS, Pinsky P. Thyroid\nincidentalomas in association with low-dose computed tomography 956. in the National Lung Screening Trial. Am J Epidemiol. 2020; 189(1):",
       "attributes": {
@@ -38136,7 +38134,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Heller MT, Harisinghani M, Neitlich JD, Yeghiayan P, Berland LL. 27-33. findings\nManaging incidental on abdominal and pelvic CT and",
       "attributes": {
@@ -38157,7 +38155,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Jacobs PC, Mali WP, Grobbee DE, van der Graaf Y. Prevalence of MRI, part 3: white paper of the ACR Incidental Findings\nfindings Committee II on splenic and nodal findings. J Am Coll Radiol. incidental in computed tomographic screening of the\nchest: a systematic review. J Comput Assist Tomogr. 2008; 32(2): 214- 2013; 10(11): 833-839. 221. 225. Guirguis-Blake JM, Senger CA, Webber EM, Mularski RA,",
       "attributes": {
@@ -38178,7 +38176,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Mendoza DP, Kako B, Digumarthy SR, Shepard JO, Little BP. Whitlock EP. Screening for chronic obstructive pulmonary disease:\nImpact of significant coronary artery calcification reported on low- evidence report and systematic review for the US Preventive\ndose computed tomography lung cancer screening. J Thorac Services Task Force. JAMA. 2016; 315(13): 1378-1393. Imaging. 2020; 35(2): 129-135. 226. Chiles C, Duan F, Gladish GW, et al. Association of coronary artery",
       "attributes": {
@@ -38199,7 +38197,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Pakdaman MN, Rozanski A, Berman DS. Incidental coronary calcification and mortality in the national Lung Screening Trial: a\ncalcifications on routine chest CT: clinical implications. Trends comparison of three scoring methods. Radiology. 2015; 276(1): 82-\nCardiovasc Med. 2017; 27(7): 475-480. 90. 213. Hecht HS, Cronin P, Blaha MJ, et al. 2016 SCCT/STR guidelines for 227. Mets OM, Vliegenthart R, Gondrie MJ, et al. Lung cancer screening\ncoronary artery calcium scoring of noncontrast noncardiac chest CT-based prediction of cardiovascular events.",
       "attributes": {
@@ -38220,7 +38218,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Htwe Y, Cham MD, Henschke CI, et al. Coronary artery\nComput Tomogr. 2017; 11(1): 74-84. calcification on low-dose computed tomography: comparison of",
       "attributes": {
@@ -38241,7 +38239,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Piepoli MF, Hoes AW, Agewall S, et al. 2016 European Agatston and ordinal scores. Clin Imaging. 2015; 39(5): 799-802. Guidelines on cardiovascular disease prevention in clinical",
       "attributes": {
@@ -38262,7 +38260,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Kim YK, Sung YM, Cho SH, Park YN, Choi HY. Reliability analysis\npractice: The Sixth Joint Task Force of the European Society of\nof visual ranking of coronary artery calcification on low-dose CT of\nCardiology and Other Societies on Cardiovascular Disease\nthe thorax for lung cancer screening: comparison with ECG-gated\nPrevention in Clinical Practice (constituted by representatives of\ncalcium scoring CT. Int J Cardiovasc Imaging. 2014; 30(suppl 2): 81-\n10 societies and by invited experts). Developed with the special",
       "attributes": {
@@ -38283,7 +38281,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "contribution of the European Association for Cardiovascular\nPrevention & Rehabilitation (EACPR). Eur Heart J. 2016; 37(29): 230. Uretsky S, Chokshi N, Kobrinski T, et al. The interplay of physician\n2315-2381. awareness and reporting of incidentally found coronary artery\ncalcium on the clinical management of patients who underwent",
       "attributes": {
@@ -38304,7 +38302,7 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Grundy SM, Stone NJ, Bailey AL, et al. 2018 AHA/ACC/AACVPR/\nnoncontrast chest computed tomography. Am J Cardiol. AAPA/ABC/ACPM/ ADA/AGS/AP h A/ASPC/NLA/PCNA\n2015; 115(11): 1513-1517. Guideline on the management of blood cholesterol: executive\nsummary: a report of the American College of Cardiology/ 231. Haugen BR, Alexander EK, Bible KC, et al. 2015 American Thyroid\nAmerican Heart Association Task Force on Clinical Practice Association management guidelines for adult patients with thyroid\nGuidelines.",
       "attributes": {
@@ -38325,11 +38323,11 @@
       ]
     },
     {
-      "subject": "Thoracic Oncology Guideline and Consensus Statement Screening for Lung Cancer CHEST Guideline and Expert Panel Report",
+      "subject": "Screening for Lung Cancer",
       "predicate": "recommends",
       "object": "Lloyd-Jones DM, Braun LT, Ndumele CE, et al. Use of risk\nDifferentiated Thyroid Cancer. Thyroid. 2016; 26(1): 1-133. assessment tools to guide decision-making in the primary\nprevention of atherosclerotic cardiovascular disease. J Am Coll 232. Mitchell AL, Gandhi A, Scott-Coombes D, Perros P. Management\nCardiol. 2019; 73(24): 3153-3167. of thyroid cancer: United Kingdom National Multidisciplinary\nGuidelines. J Laryngol Otol. 2016; 130(S 2): S 150-S 160. 217. Hiratzka LF, Bakris GL, Beckman JA, et al.",
       "attributes": {
-        "statement_type": "consensus"
+        "statement_type": "ungraded"
       },
       "evidence": {
         "hash": "9a96a55d6f39056d",
@@ -64569,15 +64567,18 @@
     "unique_pages_seen": 68,
     "unique_pages_ratio": 1.0,
     "extracted_chars": 266701,
-    "duration_s": 13.53281545639038,
+    "duration_s": 13.936634540557861,
     "coverage_ratio": 1.0,
     "sections_count": 6,
     "doc_subtype": "guideline",
     "tables_kept": 8,
     "recommendations_count": 162,
+    "yield_definitions_present": false,
     "diagnostic_yield_present": false,
     "umls_entities": 1244,
-    "relations_count": 1772
+    "relations_count": 1772,
+    "evidence_bank_size": 213,
+    "paragraph_store_size": 219
   },
   "_engine": "pymupdf",
   "_mode": "full",
@@ -64594,7 +64595,7 @@
     "ocr_used_pages": [],
     "coverage_ratio": 1.0,
     "page_count": 68,
-    "timestamp": "2025-10-30T14:51:56.591256",
+    "timestamp": "2025-10-30T17:40:42.261915",
     "version": "v1.0.0",
     "warnings": [],
     "emit": {
@@ -64617,12 +64618,12 @@
     "umls_model": "core_sci_lg",
     "umls_entities_count": 1244,
     "doc_subtype": "guideline",
+    "yield_definitions_present": false,
     "front_matter": {
       "status": "linked",
       "source": "zotero",
-      "method": "title_year",
+      "method": "title_fuzzy",
       "score": 1.0,
-      "confidence": 1.0,
       "id": "http://zotero.org/users/local/mOfIzmnI/items/KJAT5VLL"
     },
     "relation_window": 80,

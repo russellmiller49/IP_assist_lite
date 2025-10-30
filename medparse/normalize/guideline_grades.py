@@ -9,6 +9,12 @@ from pydantic import BaseModel
 
 from medparse.ingest.models import PageData
 
+RE_REC = re.compile(r"^\s*(?:we\s+(?:recommend|suggest)\b.*)", re.IGNORECASE)
+RE_GRADE = re.compile(
+    r"(?:Recommendation\s*grade\s+([A-D]))|(GRADE\s*(?:Strong|Weak|Conditional))|(Ungraded|Consensus|Good\s*Practice)",
+    re.IGNORECASE,
+)
+
 
 class GuidelineRecommendation(BaseModel):
     """Individual guideline recommendation with grade and evidence."""
@@ -42,10 +48,11 @@ def parse_guideline_recommendations(
     recs: List[GuidelineRecommendation] = []
 
     rec_text = sections.get('recommendations', '') or find_recommendation_blocks(pages)
-    if not rec_text:
+    rec_blocks = split_recommendations(rec_text) if rec_text else []
+    if not rec_blocks:
+        rec_blocks = fallback_recommendation_blocks(pages)
+    if not rec_blocks:
         return recs
-
-    rec_blocks = split_recommendations(rec_text)
 
     for i, block in enumerate(rec_blocks, 1):
         if not block.strip():
@@ -103,6 +110,54 @@ def find_recommendation_blocks(pages: List[PageData]) -> str:
     return ""
 
 
+def fallback_recommendation_blocks(pages: List[PageData]) -> List[str]:
+    """Fallback extractor scanning entire document for anchored recommendation lines."""
+
+    blocks: List[str] = []
+    current: List[str] = []
+
+    def _flush() -> None:
+        nonlocal current
+        if not current:
+            return
+        text = " ".join(current).strip()
+        if text:
+            normalized = re.sub(r"\s+", " ", text)
+            if normalized not in blocks:
+                blocks.append(normalized)
+        current = []
+
+    for page in pages:
+        for raw_line in page.lines or []:
+            line = raw_line.strip()
+            if not line:
+                _flush()
+                continue
+            if RE_REC.match(line):
+                _flush()
+                current.append(line)
+                continue
+            if current:
+                if re.match(r"^(?:[-•*]|\d+[\.\)])\s+", line):
+                    current.append(line)
+                    continue
+                if line and line[0].isupper():
+                    current.append(line)
+                    continue
+                _flush()
+        _flush()
+
+    # Deduplicate while preserving order
+    seen: set[str] = set()
+    unique_blocks: List[str] = []
+    for block in blocks:
+        if block in seen:
+            continue
+        seen.add(block)
+        unique_blocks.append(block)
+    return unique_blocks
+
+
 def split_recommendations(text: str) -> List[str]:
     """Split text into individual recommendations using anchors.
 
@@ -133,6 +188,12 @@ def split_recommendations(text: str) -> List[str]:
         blocks = re.split(r'(?<=\.)\s+(?=We\s+(?:recommend|suggest))', text)
         if len(blocks) > 1:
             return [b.strip() for b in blocks if b.strip()]
+
+    if RE_REC.search(text):
+        paragraphs = re.split(r'\n\s*\n', text)
+        rec_blocks = [paragraph.strip() for paragraph in paragraphs if RE_REC.search(paragraph)]
+        if rec_blocks:
+            return rec_blocks
 
     # Pattern 5: Bullet points or numbered list
     if re.search(r'^[•\-\*]\s+', text, re.MULTILINE):
@@ -199,6 +260,32 @@ def extract_grade(text: str) -> Tuple[Optional[str], Optional[str], Optional[str
 
     lowered = text.lower()
 
+    grade_match = RE_GRADE.search(text)
+    if grade_match:
+        # Explicit grade letter
+        letter = grade_match.group(1)
+        if letter:
+            grade_token = letter.upper()
+            scale = "GRADE"
+            strength = normalize_strength(scale, grade_token, lowered)
+            return grade_token, scale, strength, "graded"
+
+        # GRADE strong/weak wording
+        descriptor = grade_match.group(2)
+        if descriptor:
+            strength = None
+            descriptor_lower = descriptor.lower()
+            if "strong" in descriptor_lower:
+                strength = "strong"
+            elif "weak" in descriptor_lower or "conditional" in descriptor_lower:
+                strength = "conditional"
+            return None, "GRADE", strength, "graded"
+
+        # Ungraded / Consensus / Good Practice statements
+        third = grade_match.group(3)
+        if third:
+            return None, None, None, "ungraded"
+
     # Explicit grade tokens with known scales
     grade_patterns = [
         (r'\bgrade\s+(1[abc]|2[abc])\b', 'GRADE'),
@@ -217,14 +304,17 @@ def extract_grade(text: str) -> Tuple[Optional[str], Optional[str], Optional[str
                 grade_token = match.group(1).upper()
 
             strength = normalize_strength(scale, grade_token, lowered)
-            statement_type = 'good_practice' if grade_token == 'GPP' else 'graded'
+            statement_type = 'graded'
+            if grade_token == 'GPP':
+                statement_type = 'ungraded'
+                grade_token = None
             return grade_token, scale, strength, statement_type
 
     # Good practice / consensus statements without formal grade
     if 'good practice statement' in lowered or 'good practice point' in lowered:
-        return None, None, None, 'good_practice'
+        return None, None, None, 'ungraded'
     if 'consensus statement' in lowered:
-        return None, None, None, 'consensus'
+        return None, None, None, 'ungraded'
     if 'ungraded' in lowered or 'no recommendation' in lowered:
         return None, None, None, 'ungraded'
 

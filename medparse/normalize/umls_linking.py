@@ -60,7 +60,7 @@ class UmlsLinkingResult(BaseModel):
 
     entities: List[UmlsEntity] = Field(default_factory=list)
     status: Literal["linked", "skipped_model_missing", "skipped_disabled", "skipped_no_input"]
-    model_name: Optional[str] = None
+    umls_model: Optional[str] = None
 
 
 def _semtypes_allowed(semtypes: Iterable[str]) -> bool:
@@ -151,7 +151,7 @@ def link_umls_entities(
     return UmlsLinkingResult(
         entities=entities,
         status="linked",
-        model_name=getattr(model, "meta", {}).get("name", "en_core_sci_lg"),
+        umls_model=getattr(model, "meta", {}).get("name", "en_core_sci_lg"),
     )
 
 

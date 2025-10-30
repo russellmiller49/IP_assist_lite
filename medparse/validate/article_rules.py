@@ -31,12 +31,17 @@ def validate_article(doc: ArticleDocument, cfg: ExtractionConfig) -> List[Issue]
     issues: List[Issue] = []
     thresholds = cfg.thresholds
     guideline_cfg = getattr(thresholds, "guideline", FrozenNamespace())
+    statement_cfg = getattr(thresholds, "statement", FrozenNamespace())
+    classification_cfg = getattr(thresholds, "classification", FrozenNamespace())
     research_cfg = getattr(thresholds, "research", FrozenNamespace())
 
     if doc.doc_subtype == "guideline":
         min_recs = _coerce_int(getattr(guideline_cfg, "min_recommendations", 8))
         min_sections = _coerce_int(getattr(guideline_cfg, "min_sections", 1))
-        min_grade_density = float(getattr(guideline_cfg, "min_grade_density", 0.7))
+        grade_density_cfg = getattr(guideline_cfg, "grade_density", None)
+        if grade_density_cfg is None:
+            grade_density_cfg = getattr(guideline_cfg, "min_grade_density", 0.7)
+        min_grade_density = float(grade_density_cfg)
 
         author_count = len(doc.authors or [])
         if author_count == 0:
@@ -51,14 +56,6 @@ def validate_article(doc: ArticleDocument, cfg: ExtractionConfig) -> List[Issue]
             issues.append(Issue.warn(f"Guideline title confidence low ({title_conf:.2f})."))
 
         graded_count, rec_count, grade_ratio = _grade_density_stats(doc.recommendations or [])
-
-        if min_recs and rec_count < min_recs:
-            issues.append(
-                Issue.error(
-                    f"Guideline has too few recommendations: {rec_count}/{min_recs}"
-                )
-            )
-
         if min_sections and not sections_ok(doc, min_sections=min_sections):
             issues.append(
                 Issue.error(
@@ -66,12 +63,29 @@ def validate_article(doc: ArticleDocument, cfg: ExtractionConfig) -> List[Issue]
                 )
             )
 
-        if rec_count and grade_ratio < min_grade_density:
+        if rec_count < max(1, min_recs) or (rec_count and grade_ratio < min_grade_density):
             issues.append(
-                Issue.warn(
-                    f"Guideline grade density low: {graded_count}/{rec_count} ({grade_ratio:.1%}) < {min_grade_density:.0%}"
+                Issue.error(
+                    "Guideline gating failed: rec_count/grade_density"
                 )
             )
+
+        return issues
+
+    if doc.doc_subtype in {"statement", "classification"}:
+        min_sections_statement = _coerce_int(getattr(statement_cfg, "min_sections", 1))
+        min_sections_classification = _coerce_int(getattr(classification_cfg, "min_sections", 1))
+        min_sections_required = min_sections_statement if doc.doc_subtype == "statement" else min_sections_classification
+
+        signals = _statement_support_signals(doc, min_sections=max(1, min_sections_required))
+
+        if doc.doc_subtype == "statement":
+            require_defs = bool(getattr(statement_cfg, "require_yield_definitions", False))
+            if require_defs and not bool(doc.yield_definitions_present):
+                issues.append(Issue.error("Statement gating failed: yield_definitions_missing"))
+        if signals == 0:
+            label = "Statement" if doc.doc_subtype == "statement" else "Classification"
+            issues.append(Issue.error(f"{label} gating failed: insufficient structural signals"))
 
         return issues
 
@@ -115,6 +129,17 @@ def _grade_density_stats(
     )
     ratio = graded / total if total else 0.0
     return graded, total, ratio
+
+
+def _statement_support_signals(doc: ArticleDocument, min_sections: int) -> int:
+    signals = 0
+    if bool(getattr(doc, "yield_definitions_present", False)):
+        signals += 1
+    if sections_ok(doc, min_sections=min_sections):
+        signals += 1
+    if _has_definition_table(doc):
+        signals += 1
+    return signals
 
 
 def _check_diagnostic_yield(doc: ArticleDocument) -> List[Issue]:
@@ -176,6 +201,18 @@ def _coerce_int(value: Optional[object]) -> int:
         return int(value) if value is not None else 0
     except (TypeError, ValueError):
         return 0
+
+
+def _has_definition_table(doc: ArticleDocument) -> bool:
+    tables = getattr(doc, "tables", []) or []
+    for table in tables:
+        caption = getattr(table, "caption", "") or ""
+        label = getattr(table, "label", "") or ""
+        table_type = getattr(table, "table_type", "") or ""
+        combined = f"{caption} {label} {table_type}".lower()
+        if "definition" in combined or "definitions" in combined:
+            return True
+    return False
 
 
 __all__ = ["Issue", "sections_ok", "validate_article"]

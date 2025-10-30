@@ -238,6 +238,7 @@ class PipelineOutcome:
             "metrics": self.metrics,
             "engine": self.engine,
             "mode": self.mode,
+            "issues": list(self.warnings) if self.warnings else [],
         }
 
 
@@ -564,6 +565,11 @@ def run_extract(
 
         # Populate document with evidence bank
         document.evidence_bank = evidence_bank.get_bank()
+        metrics["evidence_bank_size"] = len(document.evidence_bank)
+
+        paragraph_store = getattr(document, "paragraph_store", {})
+        if isinstance(paragraph_store, dict):
+            metrics["paragraph_store_size"] = len(paragraph_store)
 
         # Add truncation notice if any truncation occurred
         truncation_notice = evidence_bank.get_truncation_notice()
@@ -780,6 +786,11 @@ def _document_metrics(document: BaseDocument) -> Dict[str, int | float | bool]:
     if hasattr(document, "recommendations"):
         recs = getattr(document, "recommendations") or []
         payload["recommendations_count"] = len(recs)
+
+    if hasattr(document, "yield_definitions_present"):
+        value = getattr(document, "yield_definitions_present")
+        if value is not None:
+            payload["yield_definitions_present"] = bool(value)
 
     if hasattr(document, "diagnostic_yield"):
         payload["diagnostic_yield_present"] = bool(getattr(document, "diagnostic_yield"))

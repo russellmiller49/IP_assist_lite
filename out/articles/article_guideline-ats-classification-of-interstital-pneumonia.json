@@ -1,9 +1,9 @@
 {
-  "doc_id": "1acb9464-76e0-4bd3-940b-c227523c8a9c",
+  "doc_id": "88be2f9f-1fbe-493c-901f-193ee28ab5fd",
   "doc_type": "article",
   "source_file": "/home/rjm/projects/IP_assist_lite/data/Input pdfs/articles/pdf/Guideline ATS Classification of Interstital Pneumonia.pdf",
   "page_count": 16,
-  "extraction_timestamp": "2025-10-30T14:51:39.613110",
+  "extraction_timestamp": "2025-10-30T17:40:24.872367",
   "extraction_version": "v1.0.0",
   "evidence_bank": {
     "9293d56c98bd5cf4": {
@@ -1512,13 +1512,11 @@
   },
   "front_matter_source": "zotero",
   "front_matter_confidence": 1.0,
-  "doc_subtype": "guideline",
+  "doc_subtype": "classification",
   "title": "An Official American Thoracic Society/European Respiratory Society Statement: Update of the International Multidisciplinary Classification of the Idiopathic Interstitial Pneumonias",
-  "title_source": "layout_block",
-  "title_confidence": 0.78,
-  "doi": "10.1164/rccm.201308-1483ST",
-  "issn": "1073-449X, 1535-4970",
-  "url": "https://www.atsjournals.org/doi/10.1164/rccm.201308-1483ST",
+  "title_source": "zotero",
+  "title_confidence": 1.0,
+  "doi": "10.1164/rccm.201308-1483st",
   "authors": [
     {
       "given": "William D.",
@@ -1813,9 +1811,6 @@
   "group_authors": [],
   "journal": "American Journal of Respiratory and Critical Care Medicine",
   "year": 2013,
-  "volume": "188",
-  "issue": "6",
-  "pages": "733-748",
   "highlights": [],
   "keywords": [],
   "sections": {
@@ -1922,6 +1917,7 @@
       ]
     }
   ],
+  "yield_definitions_present": false,
   "recommendations": [],
   "conflicts_of_interest": [],
   "has_no_conflicts": false,
@@ -36389,15 +36385,18 @@
     "unique_pages_seen": 16,
     "unique_pages_ratio": 1.0,
     "extracted_chars": 91035,
-    "duration_s": 3.7364165782928467,
+    "duration_s": 3.743985414505005,
     "coverage_ratio": 1.0,
     "sections_count": 4,
-    "doc_subtype": "guideline",
+    "doc_subtype": "classification",
     "tables_kept": 0,
     "recommendations_count": 0,
+    "yield_definitions_present": false,
     "diagnostic_yield_present": false,
     "umls_entities": 636,
-    "relations_count": 1221
+    "relations_count": 1221,
+    "evidence_bank_size": 21,
+    "paragraph_store_size": 25
   },
   "_engine": "pymupdf",
   "_mode": "full",
@@ -36414,7 +36413,7 @@
     "ocr_used_pages": [],
     "coverage_ratio": 1.0,
     "page_count": 16,
-    "timestamp": "2025-10-30T14:51:39.613110",
+    "timestamp": "2025-10-30T17:40:24.872367",
     "version": "v1.0.0",
     "warnings": [],
     "emit": {
@@ -36436,13 +36435,13 @@
     "umls": "linked",
     "umls_model": "core_sci_lg",
     "umls_entities_count": 636,
-    "doc_subtype": "guideline",
+    "doc_subtype": "classification",
+    "yield_definitions_present": false,
     "front_matter": {
       "status": "linked",
       "source": "zotero",
-      "method": "title_year",
+      "method": "title_signature",
       "score": 1.0,
-      "confidence": 1.0,
       "id": "http://zotero.org/users/local/mOfIzmnI/items/A3BZ5UBB"
     },
     "relation_window": 80,
@@ -36480,11 +36479,9 @@
     "config_hash": "44bcfbde",
     "content_hash": "1372ece31d58",
     "validators": {
-      "passed": false,
+      "passed": true,
       "warnings": [],
-      "errors": [
-        "Guideline has too few recommendations: 0/8"
-      ]
+      "errors": []
     }
   }
 }
