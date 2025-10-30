@@ -10,7 +10,7 @@ from medparse.extract.utils import load_pages
 from medparse.ingest.book_meta import load_book_metadata
 from medparse.ingest.models import PageData
 from medparse.normalize.article_frontmatter import extract_authors_affiliations
-from medparse.normalize.frontmatter_link_zotero import link_front_matter
+from medparse.normalize.fm_zotero import link_front_matter
 from medparse.normalize.layout import is_toc_page
 from medparse.normalize.metadata import normalize_chapter_title
 from medparse.normalize.page_furniture import strip_furniture

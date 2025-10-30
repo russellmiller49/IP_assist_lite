@@ -252,6 +252,12 @@ def _get_scispacy_model(preferred_models: Optional[List[str]] = None):
 
     try:
         import spacy  # type: ignore
+        import warnings
+        # Suppress sklearn version warnings when loading spaCy models
+        # (models contain sklearn components from version 1.1.2)
+        with warnings.catch_warnings():
+            warnings.filterwarnings("ignore", category=UserWarning, module="sklearn")
+            warnings.filterwarnings("ignore", message=".*Trying to unpickle.*version.*")
     except ImportError:  # pragma: no cover
         return None
 
@@ -260,6 +266,11 @@ def _get_scispacy_model(preferred_models: Optional[List[str]] = None):
 
     for model_name in preferred_models:
         try:
+            import warnings
+            # Suppress warnings during model loading
+            with warnings.catch_warnings():
+                warnings.filterwarnings("ignore", category=UserWarning, module="sklearn")
+                warnings.filterwarnings("ignore", message=".*Trying to unpickle.*version.*")
             nlp = spacy.load(model_name)
             LOGGER.info("Loaded scispaCy model: %s (version %s)",
                        model_name, nlp.meta.get("version", "unknown"))

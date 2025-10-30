@@ -3,10 +3,10 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import List, Literal, Optional
+from typing import List, Literal, Optional, Sequence
 
 from medparse.config import ExtractionConfig, FrozenNamespace
-from medparse.schema.article import ArticleDocument
+from medparse.schema.article import ArticleDocument, GuidelineRecommendation
 
 Severity = Literal["error", "warning"]
 
@@ -38,24 +38,41 @@ def validate_article(doc: ArticleDocument, cfg: ExtractionConfig) -> List[Issue]
         min_sections = _coerce_int(getattr(guideline_cfg, "min_sections", 1))
         min_grade_density = float(getattr(guideline_cfg, "min_grade_density", 0.7))
 
-        if not _meets_guideline_requirements(
-            doc,
-            min_recs=min_recs,
-            min_sections=min_sections,
-            min_grade_density=min_grade_density
-        ):
-            recommendations = doc.recommendations or []
-            rec_count = len(recommendations)
-            graded_count = sum(
-                1 for rec in recommendations
-                if rec.grade or rec.statement_type in {"ungraded", "consensus", "good_practice"}
+        author_count = len(doc.authors or [])
+        if author_count == 0:
+            issues.append(Issue.warn("Guideline authors missing or not detected."))
+        elif author_count < 3:
+            issues.append(Issue.warn(f"Guideline extracted with few authors ({author_count})."))
+
+        title_conf = float(doc.title_confidence or 0.0)
+        if not doc.title:
+            issues.append(Issue.warn("Guideline title missing."))
+        elif title_conf < 0.6:
+            issues.append(Issue.warn(f"Guideline title confidence low ({title_conf:.2f})."))
+
+        graded_count, rec_count, grade_ratio = _grade_density_stats(doc.recommendations or [])
+
+        if min_recs and rec_count < min_recs:
+            issues.append(
+                Issue.error(
+                    f"Guideline has too few recommendations: {rec_count}/{min_recs}"
+                )
             )
-            grade_density = graded_count / rec_count if rec_count > 0 else 0.0
 
-            details = f"recs={rec_count}/{min_recs}, grade_density={grade_density:.1%}/{min_grade_density:.0%}"
-            issues.append(Issue.error(f"Guideline requirements not met: {details}"))
+        if min_sections and not sections_ok(doc, min_sections=min_sections):
+            issues.append(
+                Issue.error(
+                    f"Guideline has too few populated sections: {len(doc.sections or {})}/{min_sections}"
+                )
+            )
 
-        # Guidelines do NOT require diagnostic yield
+        if rec_count and grade_ratio < min_grade_density:
+            issues.append(
+                Issue.warn(
+                    f"Guideline grade density low: {graded_count}/{rec_count} ({grade_ratio:.1%}) < {min_grade_density:.0%}"
+                )
+            )
+
         return issues
 
     if doc.doc_subtype == "review":
@@ -85,36 +102,19 @@ def sections_ok(doc: ArticleDocument, *, min_sections: int) -> bool:
     return non_empty >= min_sections
 
 
-def _meets_guideline_requirements(
-    doc: ArticleDocument,
-    *,
-    min_recs: int,
-    min_sections: int,
-    min_grade_density: float = 0.7
-) -> bool:
-    """Check if document meets guideline requirements including grade density."""
-    recommendations = doc.recommendations or []
-    rec_count = len(recommendations)
-
-    # Check minimum recommendation count
-    if rec_count < max(min_recs, 0):
-        return False
-
-    # Check minimum sections
-    if min_sections and not sections_ok(doc, min_sections=min_sections):
-        return False
-
-    # Check grade density (≥70% must have grade or be explicitly ungraded/consensus/good_practice)
-    if rec_count > 0:
-        graded_count = sum(
-            1 for rec in recommendations
-            if rec.grade or rec.statement_type in {"ungraded", "consensus", "good_practice"}
-        )
-        grade_density = graded_count / rec_count
-        if grade_density < min_grade_density:
-            return False
-
-    return True
+def _grade_density_stats(
+    recommendations: Sequence[GuidelineRecommendation],
+) -> tuple[int, int, float]:
+    total = len(recommendations)
+    if total == 0:
+        return 0, 0, 0.0
+    graded = sum(
+        1
+        for rec in recommendations
+        if rec.grade or rec.statement_type in {"ungraded", "consensus", "good_practice"}
+    )
+    ratio = graded / total if total else 0.0
+    return graded, total, ratio
 
 
 def _check_diagnostic_yield(doc: ArticleDocument) -> List[Issue]:

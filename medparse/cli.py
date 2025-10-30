@@ -3,8 +3,22 @@
 from __future__ import annotations
 
 import json
+import warnings
 from pathlib import Path
 from typing import Dict, Iterable, Optional
+
+# Suppress sklearn version warnings from spaCy models (loaded internally)
+# These warnings occur because spaCy models contain sklearn components from 1.1.2
+warnings.filterwarnings(
+    "ignore",
+    message=".*Trying to unpickle.*version.*",
+    category=UserWarning,
+)
+warnings.filterwarnings(
+    "ignore",
+    category=UserWarning,
+    module="sklearn",
+)
 
 import os
 import sys
@@ -78,6 +92,14 @@ def extract_articles(
         help="Override evidence policy (compact|verbatim).",
         click_type=click.Choice(["compact", "verbatim"], case_sensitive=False),
     ),
+    zotero_json: Optional[Path] = typer.Option(
+        None,
+        "--zotero-json",
+        help="Override Zotero CSL JSON export for front-matter enrichment.",
+        exists=True,
+        dir_okay=False,
+        resolve_path=True,
+    ),
     emit_raw_pages: bool = typer.Option(False, "--emit-raw-pages", help="Emit raw page text to sidecar files (disabled by default)."),
 ) -> None:
     """Run the article extractor for every PDF in ``input_dir``."""
@@ -97,6 +119,7 @@ def extract_articles(
         emit_raw_pages=emit_raw_pages,
         tables_mode=tables_mode,
         evidence_policy=evidence_policy,
+        zotero_json=zotero_json,
     )
 
 
@@ -138,6 +161,14 @@ def extract_guidelines(
         help="Override evidence policy (compact|verbatim).",
         click_type=click.Choice(["compact", "verbatim"], case_sensitive=False),
     ),
+    zotero_json: Optional[Path] = typer.Option(
+        None,
+        "--zotero-json",
+        help="Override Zotero CSL JSON export for front-matter enrichment.",
+        exists=True,
+        dir_okay=False,
+        resolve_path=True,
+    ),
     emit_raw_pages: bool = typer.Option(False, "--emit-raw-pages", help="Emit raw page text to sidecar files (disabled by default)."),
 ) -> None:
     """Run the guideline extractor for every PDF in ``input_dir``."""
@@ -157,6 +188,7 @@ def extract_guidelines(
         emit_raw_pages=emit_raw_pages,
         tables_mode=tables_mode,
         evidence_policy=evidence_policy,
+        zotero_json=zotero_json,
     )
 
 
@@ -198,6 +230,14 @@ def extract_ifus(
         help="Override evidence policy (compact|verbatim).",
         click_type=click.Choice(["compact", "verbatim"], case_sensitive=False),
     ),
+    zotero_json: Optional[Path] = typer.Option(
+        None,
+        "--zotero-json",
+        help="Override Zotero CSL JSON export for front-matter enrichment.",
+        exists=True,
+        dir_okay=False,
+        resolve_path=True,
+    ),
     emit_raw_pages: bool = typer.Option(False, "--emit-raw-pages", help="Emit raw page text to sidecar files (disabled by default)."),
 ) -> None:
     """Run the IFU/manual extractor."""
@@ -217,6 +257,7 @@ def extract_ifus(
         emit_raw_pages=emit_raw_pages,
         tables_mode=tables_mode,
         evidence_policy=evidence_policy,
+        zotero_json=None,
     )
 
 
@@ -258,6 +299,14 @@ def extract_textbook(
         help="Override evidence policy (compact|verbatim).",
         click_type=click.Choice(["compact", "verbatim"], case_sensitive=False),
     ),
+    zotero_json: Optional[Path] = typer.Option(
+        None,
+        "--zotero-json",
+        help="Override Zotero CSL JSON export for front-matter enrichment.",
+        exists=True,
+        dir_okay=False,
+        resolve_path=True,
+    ),
     emit_raw_pages: bool = typer.Option(False, "--emit-raw-pages", help="Emit raw page text to sidecar files (disabled by default)."),
 ) -> None:
     """Run the textbook chapter extractor for each subfolder."""
@@ -291,6 +340,10 @@ def extract_textbook(
     if evidence_policy:
         emit_overrides["evidence_policy"] = evidence_policy.lower()
     overrides_payload = emit_overrides or None
+    metadata_overrides: Dict[str, object] = {}
+    if zotero_json:
+        metadata_overrides["zotero_json"] = str(zotero_json)
+    metadata_payload = metadata_overrides or None
     failures: list[Path] = []
     for pdf_path, out_path in jobs:
         outcome = run_extract(
@@ -302,6 +355,7 @@ def extract_textbook(
             summary_length=normalized_summary,
             profile_override=profile,
             emit_overrides=overrides_payload,
+            metadata_overrides=metadata_payload,
         )
         outcome.metadata["emit_raw_pages"] = emit_raw_pages
         if not _write_outcome(outcome, out_path):
@@ -327,6 +381,7 @@ def _run_pipeline_for_pdfs(
     emit_raw_pages: bool,
     tables_mode: Optional[str],
     evidence_policy: Optional[str],
+    zotero_json: Optional[Path],
 ) -> None:
     pdfs = list(pdfs)
     if not pdfs:
@@ -342,6 +397,10 @@ def _run_pipeline_for_pdfs(
     if evidence_policy:
         emit_overrides["evidence_policy"] = evidence_policy.lower()
     overrides_payload = emit_overrides or None
+    metadata_overrides: Dict[str, object] = {}
+    if zotero_json:
+        metadata_overrides["zotero_json"] = str(zotero_json)
+    metadata_payload = metadata_overrides or None
     failures: list[Path] = []
     for pdf_path in pdfs:
         out_path = out_dir / f"{prefix}_{slugify(pdf_path.stem)}.json"
@@ -354,6 +413,7 @@ def _run_pipeline_for_pdfs(
             summary_length=normalized_summary,
             profile_override=profile_override,
             emit_overrides=overrides_payload,
+            metadata_overrides=metadata_payload,
         )
         outcome.metadata["emit_raw_pages"] = emit_raw_pages
         if not _write_outcome(outcome, out_path):

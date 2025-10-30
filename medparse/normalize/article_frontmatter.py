@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import re
+from collections import OrderedDict
 from typing import Any, Dict, List, Optional, Tuple
 
 from medparse.ingest.models import PageData
@@ -38,6 +39,37 @@ HEADER_NOISE_TITLES = {
     "official american thoracic society documents",
     "guideline",
 }
+
+TITLE_SKIP_KEYWORDS = {
+    "guideline",
+    "guidelines",
+    "esge",
+    "ers",
+    "ests",
+    "ats",
+    "accp",
+    "sign",
+    "statements",
+}
+
+RUNNING_HEADER_PATTERNS = [
+    re.compile(r"\bguideline\s*\d+\b", re.IGNORECASE),
+    re.compile(r"\bamerican thoracic society documents\b", re.IGNORECASE),
+    re.compile(r"^\s*©"),
+    re.compile(r"^\s*copyright", re.IGNORECASE),
+]
+
+AUTHOR_PREFIX_PATTERN = re.compile(r"^\s*author(?:s)?[:\-]\s*", re.IGNORECASE)
+AUTHOR_NAME_PATTERN = re.compile(
+    r"""
+    ^
+    (?P<first>[A-Z][a-zA-Z]*(?:[-'][A-Z][a-zA-Z]*)*)
+    (?:\s+(?:[A-Z]\.|[A-Z][a-zA-Z]*(?:[-'][A-Z][a-zA-Z]*)*)){1,3}
+    (?:\s+(?:Jr|Sr|II|III|IV|V))?
+    $
+    """,
+    re.VERBOSE,
+)
 
 
 def extract_title_hierarchical(
@@ -146,6 +178,33 @@ def is_valid_title(title: str) -> bool:
 
 
 def extract_centered_title_block(page: PageData) -> Optional[str]:
+    def _should_skip_line(line: str) -> bool:
+        cleaned = line.strip()
+        if not cleaned:
+            return True
+        lowered = cleaned.lower()
+        if any(pattern.search(cleaned) for pattern in RUNNING_HEADER_PATTERNS):
+            return True
+        if len(cleaned) <= 4 and cleaned.isdigit():
+            return True
+        if any(keyword in lowered for keyword in TITLE_SKIP_KEYWORDS):
+            words = cleaned.split()
+            if cleaned.isupper() or len(words) <= 2 or re.search(r"\b\d{1,3}\b", cleaned):
+                return True
+        return False
+
+    def _merge_segments(segments: List[str]) -> str:
+        collapsed: List[str] = []
+        for segment in segments:
+            if not collapsed:
+                collapsed.append(segment)
+                continue
+            if collapsed[-1].endswith(":"):
+                collapsed[-1] = f"{collapsed[-1]} {segment}"
+            else:
+                collapsed.append(segment)
+        return " ".join(collapsed)
+
     """Extract title from first page using largest heading or centered text.
 
     Args:
@@ -160,6 +219,38 @@ def extract_centered_title_block(page: PageData) -> Optional[str]:
         candidate = level_1_headings[0].title
         if candidate and is_valid_title(candidate) and candidate.strip().lower() not in HEADER_NOISE_TITLES:
             return candidate
+
+    block_segments: List[str] = []
+    blocks = [
+        block
+        for block in (page.blocks or [])
+        if block.text and (block.font_size or 0) > 0
+    ]
+    if blocks:
+        max_font = max(block.font_size or 0 for block in blocks)
+        # Allow a small tolerance in font size in case of mixed typography
+        high_blocks = [
+            block
+            for block in blocks
+            if (block.font_size or 0) >= max_font * 0.92
+        ]
+        high_blocks.sort(key=lambda blk: blk.bbox[1] if blk.bbox else 0.0)
+        last_baseline: Optional[float] = None
+        for block in high_blocks:
+            lines = [line.strip() for line in block.text.splitlines() if line.strip()]
+            lines = [line for line in lines if not _should_skip_line(line)]
+            if not lines:
+                continue
+            if last_baseline is not None and block.bbox and block.bbox[1] - last_baseline > 80:
+                # Title blocks are typically contiguous; stop when spacing jumps significantly
+                break
+            block_segments.extend(lines)
+            if block.bbox:
+                last_baseline = block.bbox[3]
+        if block_segments:
+            candidate = _merge_segments(block_segments)
+            if candidate and is_valid_title(candidate):
+                return candidate
 
     # Fallback: look for centered text in first few lines
     if not page.lines:
@@ -180,7 +271,10 @@ def extract_centered_title_block(page: PageData) -> Optional[str]:
     )
     skip_contains = ("doi", "http", "https", "www.", "vol.", "volume ")
 
-    for line in page.lines[:20]:
+    for raw_line in page.lines[:20]:
+        if _should_skip_line(raw_line):
+            continue
+        line = raw_line
         candidate = line.strip()
         if not candidate:
             if collected:
@@ -238,7 +332,7 @@ def extract_centered_title_block(page: PageData) -> Optional[str]:
             if len(" ".join(title_segments)) > 240:
                 break
         if title_segments:
-            return " ".join(title_segments)
+            return _merge_segments(title_segments)
 
     return None
 
@@ -255,14 +349,23 @@ def extract_running_header(page: PageData) -> Optional[str]:
     if not page.lines:
         return None
 
-    first_line = page.lines[0].strip()
-
-    # Skip if it looks like metadata
-    if any(kw in first_line.lower() for kw in ['page', 'copyright', '©', 'doi:', 'vol.', 'issue']):
-        return None
-
-    if len(first_line) > 10:
-        return first_line
+    for raw_line in page.lines[:3]:
+        candidate = raw_line.strip()
+        if not candidate:
+            continue
+        lowered = candidate.lower()
+        if any(pattern.search(candidate) for pattern in RUNNING_HEADER_PATTERNS):
+            continue
+        # Skip if it looks like metadata
+        if any(
+            kw in lowered
+            for kw in ['page', 'copyright', '©', 'doi:', 'vol.', 'issue', 'received', 'accepted']
+        ):
+            continue
+        if re.match(r"guideline\s+\d+", lowered):
+            continue
+        if len(candidate) > 10:
+            return candidate
 
     return None
 
@@ -372,10 +475,25 @@ def extract_authors_affiliations(pages: List[PageData]) -> Dict[str, Any]:
         return {"authors": [], "affiliations": [], "corresponding_author": None}
 
     first_page = pages[0]
+    def _strip_running_header(line: str) -> bool:
+        cleaned = line.strip()
+        if not cleaned:
+            return True
+        if any(pattern.search(cleaned) for pattern in RUNNING_HEADER_PATTERNS):
+            return True
+        lowered = cleaned.lower()
+        if lowered.startswith(("guideline", "statement", "american thoracic society documents")):
+            return True
+        if cleaned.startswith("©") or "©" in cleaned:
+            return True
+        return False
+
     header_lines: List[str] = []
     for line in first_page.lines[:30]:
         cleaned = line.strip()
         if not cleaned:
+            continue
+        if _strip_running_header(line):
             continue
         if re.match(r"(abstract|summary|keywords)\b", cleaned, re.IGNORECASE):
             break
@@ -384,6 +502,7 @@ def extract_authors_affiliations(pages: List[PageData]) -> Dict[str, Any]:
     header_block = " ".join(header_lines)
     header_block = re.sub(r"\s+", " ", header_block)
     header_block = header_block.replace(" and ", ", ")
+    header_block = AUTHOR_PREFIX_PATTERN.sub("", header_block)
 
     # Trim leading metadata before the first name-like pattern
     name_start = re.search(r"[A-Z][a-z]+(?:\s+[A-Z]\.)?\s+[A-Z][a-z]+(?=\s*\d)", header_block)
@@ -397,7 +516,8 @@ def extract_authors_affiliations(pages: List[PageData]) -> Dict[str, Any]:
     if trailer_split:
         header_block = trailer_split[0].strip()
 
-    all_affiliations = extract_superscript_affiliations("\n".join(first_page.lines[:80]))
+    all_affiliations_map = extract_superscript_affiliations("\n".join(first_page.lines[:80]))
+    affiliation_entries = list(all_affiliations_map.items())
 
     authors: List[Dict[str, Any]] = []
     seen: set[str] = set()
@@ -406,8 +526,8 @@ def extract_authors_affiliations(pages: List[PageData]) -> Dict[str, Any]:
         if not token:
             continue
 
-        markers = re.findall(r"[\d]+|[†‡*]", token)
-        clean_token = re.sub(r"[\d†‡*]+", "", token).strip()
+        raw_markers, clean_token = _extract_author_markers(token)
+        markers = [marker for marker in raw_markers if _valid_marker(marker)]
 
         if not _looks_like_name(clean_token):
             fallback = _extract_trailing_name(clean_token)
@@ -437,7 +557,7 @@ def extract_authors_affiliations(pages: List[PageData]) -> Dict[str, Any]:
         fallback_lines = _fallback_author_lines(first_page)
         fallback_block = ", ".join(fallback_lines)
         for token in _tokenise_author_block(fallback_block):
-            clean_token = re.sub(r"[\d†‡*]+", "", token).strip()
+            _, clean_token = _extract_author_markers(token)
             if not _looks_like_name(clean_token):
                 fallback = _extract_trailing_name(clean_token)
                 if not fallback:
@@ -459,10 +579,40 @@ def extract_authors_affiliations(pages: List[PageData]) -> Dict[str, Any]:
                 }
             )
 
-    affiliation_records = [
-        {"id": aff_id, "text": text}
-        for aff_id, text in all_affiliations.items()
-    ]
+    marker_to_id: Dict[str, str] = {}
+    affiliation_records: List[Dict[str, str]] = []
+    for marker, text in affiliation_entries:
+        normalized = _normalize_marker(marker)
+        if not normalized or not text:
+            continue
+        if normalized in marker_to_id:
+            continue
+        canonical_id = str(len(marker_to_id) + 1)
+        marker_to_id[normalized] = canonical_id
+        affiliation_records.append({"id": canonical_id, "text": text})
+
+    if not marker_to_id and affiliation_entries and not affiliation_records:
+        for idx, (marker, text) in enumerate(affiliation_entries, start=1):
+            if not text:
+                continue
+            canonical_id = str(idx)
+            normalized = _normalize_marker(marker)
+            if normalized:
+                marker_to_id[normalized] = canonical_id
+            affiliation_records.append({"id": canonical_id, "text": text})
+
+    if marker_to_id:
+        for author in authors:
+            raw_markers = author.get("footnotes", [])
+            normalized_markers: List[str] = []
+            extra_markers: List[str] = []
+            for marker in raw_markers:
+                normalized = _normalize_marker(marker)
+                if normalized in marker_to_id:
+                    normalized_markers.append(marker_to_id[normalized])
+                else:
+                    extra_markers.append(marker)
+            author["footnotes"] = normalized_markers + extra_markers
 
     corresponding = extract_affiliations_and_correspondence(pages).get("corresponding_author")
 
@@ -474,27 +624,17 @@ def extract_authors_affiliations(pages: List[PageData]) -> Dict[str, Any]:
 
 
 def extract_superscript_affiliations(text: str) -> Dict[str, str]:
-    """Extract affiliations mapped by superscript numbers.
+    """Extract affiliations mapped by superscript markers preserving order."""
 
-    Args:
-        text: Text containing affiliation footnotes
-
-    Returns:
-        Dictionary mapping affiliation numbers to institution names
-    """
-    affiliations = {}
-
-    # Pattern: "1 Department of...\n2 Division of..."
-    # Look for numbered lines that mention institutions
-    pattern = r'^(\d+)\s+([^\n]+(?:University|Hospital|Medical Center|Institute|Department|Division|School)[^\n]+)'
-    matches = re.finditer(pattern, text, re.MULTILINE | re.IGNORECASE)
-
-    for m in matches:
-        num = m.group(1)
-        affiliation = m.group(2).strip()
-        affiliations[num] = affiliation
-
-    return affiliations
+    entries = OrderedDict()
+    for marker, body in _parse_affiliation_entries(text):
+        if not marker or not body:
+            continue
+        normalized_marker = marker.strip()
+        if not _valid_marker(normalized_marker):
+            continue
+        entries.setdefault(normalized_marker, body)
+    return entries
 
 
 def extract_email_and_author(line: str) -> Optional[Dict[str, str]]:
@@ -637,13 +777,14 @@ def _tokenise_author_block(block: str) -> List[str]:
     if not block:
         return []
 
-    block = block.replace("·", ",")
+    block = block.replace("·", ",").replace("•", ",")
     block = re.sub(
         r"\((?:MD|PhD|DO|MBA|MS|MSc|MPH|MBBS|FRCP|FRCPath|DDS|RN)[^)]*\)",
         "",
         block,
         flags=re.IGNORECASE,
     )
+    block = AUTHOR_PREFIX_PATTERN.sub("", block)
     parts = re.split(r",\s*|\s+;\s*", block)
     return [part.strip() for part in parts if part.strip()]
 
@@ -671,26 +812,16 @@ def _looks_like_name(token: str) -> bool:
 
     if not token:
         return False
-    parts = [part for part in re.split(r"[\s\-]+", token) if part]
-    if len(parts) < 2 or len(parts) > 6:
-        return False
+    token = token.strip()
     if ":" in token:
         return False
     if token.isupper():
         return False
-
     lowered = token.lower()
     if any(term in lowered for term in NAME_EXCLUSION_TERMS):
         return False
-
-    letters = sum(1 for ch in token if ch.isalpha())
-    if letters / max(len(token), 1) < 0.6:
+    if not AUTHOR_NAME_PATTERN.match(token):
         return False
-
-    capitalized = sum(1 for part in parts if part[0].isupper())
-    if capitalized < 2:
-        return False
-
     return True
 
 
@@ -740,9 +871,138 @@ def _fallback_author_lines(page: PageData) -> List[str]:
             )
         ):
             continue
-        if re.search(r"\b[A-Z][a-zA-Z]+(?:[-\s][A-Z][a-zA-Z]+)+", cleaned):
+    if re.search(r"\b[A-Z][a-zA-Z]+(?:[-\s][A-Z][a-zA-Z]+)+", cleaned):
             candidates.append(cleaned)
     return candidates
+
+
+def _parse_affiliation_entries(text: str) -> List[Tuple[str, str]]:
+    entries: List[Tuple[str, str]] = []
+    marker_pattern = re.compile(r"^\s*([0-9]{1,2}(?:\s*,\s*[0-9]{1,2})*|[†‡*]+)[\s\.)-]*\s*([A-Z].*)$")
+    lines = text.splitlines()
+    current_markers: List[str] = []
+    current_text: List[str] = []
+
+    def _flush() -> None:
+        if not current_markers or not current_text:
+            return
+        cleaned = _clean_affiliation_text(current_text)
+        if not cleaned:
+            return
+        for marker in current_markers:
+            entries.append((marker, cleaned))
+
+    for raw_line in lines:
+        stripped = raw_line.strip()
+        if not stripped:
+            _flush()
+            current_markers = []
+            current_text = []
+            continue
+        match = marker_pattern.match(stripped)
+        if match:
+            _flush()
+            markers = _expand_markers(match.group(1))
+            body = match.group(2).strip()
+            current_markers = markers
+            current_text = [body] if body else []
+            continue
+        if current_markers:
+            if not _looks_like_affiliation_line(stripped):
+                continue
+            current_text.append(stripped)
+
+    _flush()
+    return entries
+
+
+def _expand_markers(raw: str) -> List[str]:
+    tokens = [token.strip() for token in re.split(r"[\s,]+", raw) if token.strip()]
+    return tokens or [raw.strip()]
+
+
+def _clean_affiliation_text(lines: List[str]) -> str:
+    joined = " ".join(lines)
+    joined = re.sub(r"\s+", " ", joined)
+    return joined.strip(" ,;:.-")
+
+
+def _normalize_marker(marker: str) -> str:
+    return re.sub(r"[^0-9a-z]+", "", marker.lower())
+
+
+def _looks_like_affiliation_line(line: str) -> bool:
+    if not line:
+        return False
+    lowered = line.lower()
+    keywords = (
+        "university",
+        "hospital",
+        "department",
+        "division",
+        "school",
+        "institute",
+        "center",
+        "centre",
+        "clinic",
+        "medical",
+        "pulmonology",
+        "pathology",
+        "medicine",
+        "research",
+    )
+    if any(keyword in lowered for keyword in keywords):
+        return True
+    if re.search(r"\d", line) and "," in line:
+        return True
+    return False
+
+
+def _extract_author_markers(token: str) -> Tuple[List[str], str]:
+    markers: List[str] = []
+    wrapped_pattern = re.compile(
+        r"(?:(?<=\s)|(?<=,)|(?<=;)|(?<=\()|(?<=\[))(\d{1,2}|[†‡*])(?=(?:\s|,|;|\.|\)|\]|$))",
+        re.IGNORECASE,
+    )
+    for match in wrapped_pattern.finditer(token):
+        markers.append(match.group(1))
+    tail_match = re.search(r"(\d{1,2}|[†‡*])$", token)
+    if tail_match:
+        markers.append(tail_match.group(1))
+
+    # Deduplicate while preserving order
+    seen_markers: set[str] = set()
+    ordered_markers: List[str] = []
+    for marker in markers:
+        key = marker.lower()
+        if key in seen_markers:
+            continue
+        seen_markers.add(key)
+        ordered_markers.append(marker)
+
+    cleaned = token
+    for marker in ordered_markers:
+        cleaned = re.sub(
+            rf"(?i)(?:\s|,|;|\(|\[)+{re.escape(marker)}(?=(?:\s|,|;|\.|\)|\]|$))",
+            " ",
+            cleaned,
+        )
+        cleaned = re.sub(rf"(?i){re.escape(marker)}(?=$)", " ", cleaned)
+
+    cleaned = re.sub(r"[†‡*]+", " ", cleaned)
+    cleaned = re.sub(r"\s+", " ", cleaned).strip(" ,;:")
+    return ordered_markers, cleaned
+
+
+def _valid_marker(marker: str) -> bool:
+    digits = "".join(ch for ch in marker if ch.isdigit())
+    if digits:
+        if len(digits) > 2:
+            return False
+        value = int(digits)
+        if 1900 <= value <= 2100:
+            return False
+    return True
 
 
 __all__ = [

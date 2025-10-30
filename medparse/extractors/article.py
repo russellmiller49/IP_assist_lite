@@ -29,7 +29,7 @@ from medparse.normalize.guideline_grades import (
 from medparse.normalize.outcomes import OutcomeData, extract_outcomes
 from medparse.normalize.page_furniture import strip_furniture
 from medparse.normalize.relations import RelationRecord, build_cooccurrence, build_relations
-from medparse.normalize.frontmatter_link_zotero import link_front_matter
+from medparse.normalize.fm_zotero import link_front_matter
 from medparse.normalize.tables_classifier import TableBlock, classify_and_gate_tables
 from medparse.normalize.umls_linking import (
     UmlsEntity as UmlsEntityRecord,
@@ -519,6 +519,37 @@ GUIDELINE_KEYWORDS = {
     "evidence level",
 }
 
+GRADE_BANNER_TOKENS = ("grade", "accp")
+GRADE_SIGN_PATTERN = re.compile(r"\bSIGN\b")
+
+GUIDELINE_FIRST_PAGE_MARKERS = {
+    "guideline",
+    "clinical practice guideline",
+    "practice guideline",
+    "consensus statement",
+    "american thoracic society documents",
+    "american college of chest physicians",
+    "chest guideline",
+    "esge",
+    "ers",
+    "ests",
+    "accp",
+    "ats guideline",
+}
+
+RECOMMENDATION_ANCHORS_PATTERN = re.compile(r"\bwe\s+(?:recommend|suggest)\b", re.IGNORECASE)
+
+
+def _count_grade_banner_hits(text: Optional[str]) -> int:
+    if not text:
+        return 0
+    hits = 0
+    lowered = text.lower()
+    for token in GRADE_BANNER_TOKENS:
+        hits += len(re.findall(rf"\b{token}\b", lowered))
+    hits += len(GRADE_SIGN_PATTERN.findall(text))
+    return hits
+
 GUIDELINE_TITLE_MARKERS = {
     "guideline",
     "consensus statement",
@@ -645,8 +676,37 @@ def _infer_doc_subtype(
     except Exception as exc:  # pragma: no cover - defensive
         LOGGER.debug("Guideline detection failed: %s", exc)
 
-    title = (title_info.get("title") or "").lower() if isinstance(title_info, dict) else ""
-    if any(marker in title for marker in REVIEW_MARKERS):
+    title_value = ""
+    if isinstance(title_info, dict):
+        title_value = str(title_info.get("title") or "")
+        title_lower = title_value.lower()
+        if title_lower and any(marker in title_lower for marker in GUIDELINE_TITLE_MARKERS):
+            LOGGER.debug("Guideline detected via title marker.")
+            return "guideline"
+    else:
+        title_lower = ""
+
+    first_page = pages[0] if pages else None
+    if first_page:
+        header_text = " ".join(line.strip() for line in (first_page.lines or [])[:25]).lower()
+        if header_text and _contains_marker(header_text, GUIDELINE_FIRST_PAGE_MARKERS):
+            LOGGER.debug("Guideline detected via first-page header markers.")
+            return "guideline"
+
+    anchor_hits = _count_recommendation_anchors(pages)
+    if anchor_hits >= 6:
+        LOGGER.debug("Guideline detected via recommendation anchors (hits=%d).", anchor_hits)
+        return "guideline"
+
+    first_page = pages[0] if pages else None
+    if first_page:
+        banner_text = " ".join(first_page.lines or []) or first_page.text or ""
+        banner_hits = _count_grade_banner_hits(banner_text)
+        if banner_hits >= 5:
+            LOGGER.debug("Guideline retained via grade banners on first page (hits=%d).", banner_hits)
+            return "guideline"
+
+    if title_lower and any(marker in title_lower for marker in REVIEW_MARKERS):
         LOGGER.debug("Review detected from title marker.")
         return "review"
 
@@ -671,6 +731,32 @@ def _recommendation_heading_hits(pages: Sequence[PageData]) -> int:
                 hits += 1
                 break
     return hits
+
+
+def _count_recommendation_anchors(pages: Sequence[PageData]) -> int:
+    hits = 0
+    for page in pages:
+        content = page.text or " ".join(page.lines or [])
+        if not content:
+            continue
+        hits += len(RECOMMENDATION_ANCHORS_PATTERN.findall(content))
+        if hits >= 6:
+            break
+    return hits
+
+
+def _contains_marker(text: str, markers: Sequence[str]) -> bool:
+    for marker in markers:
+        marker = marker.strip()
+        if not marker:
+            continue
+        if " " in marker:
+            if marker in text:
+                return True
+        else:
+            if re.search(rf"\b{re.escape(marker)}\b", text):
+                return True
+    return False
 
 
 def _map_umls_entities(records: Sequence[UmlsEntityRecord]) -> List[UmlsEntity]:

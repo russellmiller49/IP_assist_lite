@@ -9,3 +9,10 @@ relations: true
 guideline_enrichment: true
 min_chars: 150000
 min_pages_ratio: 0.75
+metadata_sources:
+  zotero_json: "data/zotero/my_library.json"
+
+enrichment:
+  use_zotero: true
+  min_title_match: 0.90
+  prefer_doi: true

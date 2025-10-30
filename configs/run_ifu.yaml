@@ -25,7 +25,7 @@ emit:
   tables_mode: compact
   evidence_max_chars: 500
   table_cell_max_chars: 600
-  paragraph_dedupe: true
+  paragraph_store: true
   max_entities: 3000
   max_relations: 15000
   relation_window: 80

@@ -10,8 +10,6 @@ from pathlib import Path
 from typing import Any, Dict, List, Literal, Optional, Tuple, Type
 
 from collections import defaultdict
-
-import hashlib
 import yaml
 
 from medparse.config import ExtractionConfig, ExtractionProfile
@@ -25,6 +23,7 @@ from medparse.schema.common import BaseDocument, EvidenceSpan, SizeGuards
 from medparse.schema.ifu import IFUDocument
 from medparse.schema.textbook import TextbookChapterDocument
 from medparse.utils.cache import compute_cache_key, load_cache_entry, store_cache_entry
+from medparse.normalize.evidence_bank import register_paragraph
 from medparse.utils.evidence_dedup import EvidenceBank
 from medparse.utils.log import get_logger
 
@@ -199,16 +198,6 @@ class PipelineOutcome:
         if self.success and self.document is not None:
             payload = self.document.model_dump(mode="json", exclude_none=True)
 
-            # Simplify evidence_bank to just text strings for better usability
-            if "evidence_bank" in payload and isinstance(payload["evidence_bank"], dict):
-                simplified_bank = {}
-                for hash_id, evidence_data in payload["evidence_bank"].items():
-                    if isinstance(evidence_data, dict) and "text" in evidence_data:
-                        simplified_bank[hash_id] = evidence_data["text"]
-                    elif isinstance(evidence_data, str):
-                        simplified_bank[hash_id] = evidence_data
-                payload["evidence_bank"] = simplified_bank
-
             payload["_metrics"] = self.metrics
             payload["_engine"] = self.engine
             payload["_mode"] = self.mode
@@ -262,11 +251,27 @@ def _build_evidence_bank(document: BaseDocument, size_guards: SizeGuards) -> Evi
     Returns:
         EvidenceBank with deduplicated evidence
     """
-    bank = EvidenceBank(size_guards=size_guards)
-    paragraph_store = getattr(document, "paragraph_store", {})
-    if not isinstance(paragraph_store, dict):
-        paragraph_store = {}
+    pipeline_info = getattr(document, "pipeline_info", {}) or {}
+    evidence_policy = str(pipeline_info.get("evidence_policy", "verbatim") or "verbatim").lower()
+    inline_text = evidence_policy == "verbatim"
 
+    paragraph_store = getattr(document, "paragraph_store", {}) or {}
+    if isinstance(paragraph_store, dict):
+        for key, value in list(paragraph_store.items()):
+            if isinstance(value, str):
+                paragraph_store[key] = {"text": value, "length": len(value)}
+            elif isinstance(value, dict):
+                if "text" in value and "length" not in value:
+                    value["length"] = len(str(value.get("text") or ""))
+    else:
+        paragraph_store = {}
+    setattr(document, "paragraph_store", paragraph_store)
+
+    bank = EvidenceBank(
+        size_guards=size_guards,
+        paragraph_store=paragraph_store,
+        inline_text=inline_text,
+    )
     max_evidence_list = max(1, size_guards.max_evidence_per_item)
 
     def _apply_pointer(parent, field: str, pointer: EvidenceSpan, ref_id: str) -> None:
@@ -279,15 +284,23 @@ def _build_evidence_bank(document: BaseDocument, size_guards: SizeGuards) -> Evi
         text = span.text
         if not text and span.paragraph_hash:
             segment = paragraph_store.get(span.paragraph_hash)
-            if isinstance(segment, str):
-                start, end = span.paragraph_offset or (0, len(segment))
+            if isinstance(segment, dict):
+                candidate = str(segment.get("text") or "")
+            elif isinstance(segment, str):
+                candidate = segment
+            else:
+                candidate = ""
+            if candidate:
+                start, end = span.paragraph_offset or (0, len(candidate))
                 try:
-                    text = segment[start:end]
+                    text = candidate[start:end]
                 except Exception:
-                    text = segment
+                    text = candidate
         if not text and span.hash:
             candidate = paragraph_store.get(span.hash)
-            if isinstance(candidate, str):
+            if isinstance(candidate, dict):
+                text = str(candidate.get("text") or "")
+            elif isinstance(candidate, str):
                 text = candidate
         if not text:
             return None
@@ -298,9 +311,9 @@ def _build_evidence_bank(document: BaseDocument, size_guards: SizeGuards) -> Evi
             confidence=span.confidence,
             truncated=span.truncated,
         )
-        resolved.hash = span.hash or span.paragraph_hash
-        if not resolved.hash:
-            resolved.hash = resolved.compute_hash()
+        resolved.hash = span.hash or span.paragraph_hash or resolved.compute_hash()
+        resolved.paragraph_hash = span.paragraph_hash or resolved.hash
+        resolved.paragraph_offset = span.paragraph_offset
         return resolved
 
     # Process recommendations
@@ -427,6 +440,7 @@ def run_extract(
     summary_length: Optional[SummaryLength] = None,
     profile_override: Optional[str] = None,
     emit_overrides: Optional[Dict[str, object]] = None,
+    metadata_overrides: Optional[Dict[str, object]] = None,
 ) -> PipelineOutcome:
     """Run extraction with completeness checks and caching."""
 
@@ -450,12 +464,24 @@ def run_extract(
             merged_emit[key] = value
         config.emit = merged_emit
 
+    if metadata_overrides:
+        merged_metadata = dict(config.metadata_sources or {})
+        for key, value in metadata_overrides.items():
+            if value is None:
+                continue
+            merged_metadata[key] = value
+        config.metadata_sources = merged_metadata
+
     if config.doc_type not in EXTRACTOR_MAP:
         raise ValueError(f"Unsupported doc_type '{config.doc_type}' in {config_path}")
 
     extractor = EXTRACTOR_MAP[config.doc_type]
     engines = config.resolved_engines(force_deep=force_deep)
     ocr_enabled = bool(config.ocr_settings.get("enable", config.ocr))
+    base_metadata = {
+        "engines_requested": engines,
+        "metadata_sources": dict(config.metadata_sources or {}),
+    }
     pdf_bytes = pdf_path.read_bytes()
     total_pages = _determine_total_pages(pdf_path)
 
@@ -500,7 +526,7 @@ def run_extract(
     last_engine = engines[0]
     last_ocr_pages: List[int] = []
     failure_reason: Optional[str] = None
-    last_metadata: Dict[str, Any] = {"engines_requested": engines}
+    last_metadata: Dict[str, Any] = dict(base_metadata)
 
     for idx, engine in enumerate(engines):
         LOGGER.info(
@@ -567,6 +593,7 @@ def run_extract(
         combined_warnings = list(dict.fromkeys(threshold_warnings + emit_warnings))
         if meets_thresholds:
             if cache_enabled and idx == 0:
+                cache_metadata = dict(base_metadata)
                 _store_success_in_cache(
                     cache_key,
                     config.doc_type,
@@ -575,7 +602,7 @@ def run_extract(
                     engine,
                     extraction_config.profile.value,
                     combined_warnings,
-                    {"engines_requested": engines},
+                    cache_metadata,
                     config.emit,
                 )
             return PipelineOutcome(
@@ -589,14 +616,16 @@ def run_extract(
                 cache_used=False,
                 ocr_pages=ocr_pages,
                 warnings=combined_warnings,
-                metadata={"engines_requested": engines},
+                metadata=dict(base_metadata),
                 emit_settings=config.emit,
             )
 
         last_metrics = metrics
         last_engine = engine
         last_ocr_pages = ocr_pages
-        last_metadata = {"engines_requested": engines, "threshold_warnings": combined_warnings}
+        metadata_with_warnings = dict(base_metadata)
+        metadata_with_warnings["threshold_warnings"] = combined_warnings
+        last_metadata = metadata_with_warnings
         failure_reason = (
             "Extraction did not satisfy completeness thresholds"
         )
@@ -801,26 +830,39 @@ def _apply_emit_constraints(document: BaseDocument, emit: Dict[str, Any]) -> Lis
     max_relations_per_pair = _coerce_positive_int(emit.get("max_relations_per_pair"))
     max_json_bytes = _coerce_positive_int(emit.get("max_json_bytes"))
     keep_evidence_bank = bool(emit.get("keep_evidence_bank", True))
-    paragraph_dedupe = bool(emit.get("paragraph_dedupe", False))
+    paragraph_requested = bool(emit.get("paragraph_store", emit.get("paragraph_dedupe", False)))
+    paragraph_mode = paragraph_requested or evidence_policy == "compact"
 
     paragraph_store = getattr(document, "paragraph_store", None)
     if not isinstance(paragraph_store, dict):
         paragraph_store = {}
-        setattr(document, "paragraph_store", paragraph_store)
+    else:
+        for key, value in list(paragraph_store.items()):
+            if isinstance(value, str):
+                paragraph_store[key] = {"text": value, "length": len(value)}
+            elif isinstance(value, dict) and "text" in value and "length" not in value:
+                value["length"] = len(str(value.get("text") or ""))
+    setattr(document, "paragraph_store", paragraph_store)
 
-    def _normalize_paragraph(text: str) -> str:
-        return " ".join(text.split())
+    paragraph_counter = {"value": len(paragraph_store)}
 
-    def _store_paragraph(text: Optional[str]) -> Optional[tuple[str, str]]:
-        if not text:
+    def _store_paragraph(text: Optional[str], page: Optional[int] = None) -> Optional[tuple[str, str]]:
+        if not paragraph_mode or not text:
             return None
-        normalized = _normalize_paragraph(text)
-        if not normalized:
+        idx = paragraph_counter["value"]
+        paragraph_counter["value"] += 1
+        hash_id = register_paragraph(paragraph_store, idx, text, page)
+        if not hash_id:
             return None
-        hash_id = hashlib.sha1(normalized.encode("utf-8")).hexdigest()[:16]
-        if hash_id not in paragraph_store:
-            paragraph_store[hash_id] = text.strip()
-        return hash_id, normalized
+        entry = paragraph_store.get(hash_id) or {}
+        stored_text = str(entry.get("text") or text.strip())
+        return hash_id, stored_text
+
+    document.pipeline_info["evidence_policy"] = evidence_policy
+    document.pipeline_info["keep_evidence_bank"] = keep_evidence_bank
+    document.pipeline_info["paragraph_store_enabled"] = paragraph_mode
+    if paragraph_requested:
+        document.pipeline_info["paragraph_store_requested"] = True
 
     def truncate_text(value: Optional[str], limit: int) -> Optional[str]:
         if not value or limit <= 0:
@@ -838,19 +880,21 @@ def _apply_emit_constraints(document: BaseDocument, emit: Dict[str, Any]) -> Lis
             span.truncated = True  # type: ignore[attr-defined]
 
     def compact_span(span: Optional[EvidenceSpan]) -> None:
-        if evidence_policy != "compact" or not isinstance(span, EvidenceSpan):
+        if not isinstance(span, EvidenceSpan):
+            return
+        if not paragraph_mode:
             return
         if span.text:
-            stored = _store_paragraph(span.text)
+            stored = _store_paragraph(span.text, span.page)
             if stored:
-                hash_id, normalized = stored
+                hash_id, stored_text = stored
                 span.hash = span.hash or hash_id
                 span.paragraph_hash = hash_id
-                stored_text = paragraph_store.get(hash_id, "")
                 span.paragraph_offset = (0, len(stored_text))
-                span.text = None
+                if evidence_policy == "compact":
+                    span.text = None
 
-    if evidence_limit > 0 or evidence_policy == "compact":
+    if evidence_limit > 0 or paragraph_mode:
         for attr in ("recommendations", "outcomes", "figures"):
             items = getattr(document, attr, None)
             if not items:
@@ -878,9 +922,11 @@ def _apply_emit_constraints(document: BaseDocument, emit: Dict[str, Any]) -> Lis
                     compact_span(evidence)
                 elif isinstance(evidence, str):
                     truncated = truncate_text(evidence, evidence_limit) if evidence_limit > 0 else evidence
-                    if evidence_policy == "compact":
+                    if paragraph_mode:
                         span = EvidenceSpan(text=truncated or evidence)
                         compact_span(span)
+                        if evidence_policy != "compact":
+                            span.text = truncated or evidence
                         setattr(relation, "evidence", span)
                     else:
                         setattr(relation, "evidence", truncated)
@@ -999,10 +1045,11 @@ def _apply_emit_constraints(document: BaseDocument, emit: Dict[str, Any]) -> Lis
             result.extend(passthrough)
         return result
 
-    def _limit_relations_per_pair(items: List[object], cap: int) -> tuple[List[object], bool]:
+    def _limit_relations_per_pair(items: List[object], cap: int) -> tuple[List[object], bool, int]:
         counts: Dict[tuple, int] = defaultdict(int)
         limited: List[object] = []
         truncated = False
+        dropped = 0
         for relation in items:
             is_mapping = isinstance(relation, dict)
             subject = relation.get("subject") if is_mapping else getattr(relation, "subject", None)
@@ -1014,36 +1061,47 @@ def _apply_emit_constraints(document: BaseDocument, emit: Dict[str, Any]) -> Lis
             key = (subject, predicate, obj)
             if counts[key] >= cap:
                 truncated = True
+                dropped += 1
                 continue
             counts[key] += 1
             limited.append(relation)
-        return limited, truncated
+        return limited, truncated, dropped
 
     relations = getattr(document, "relations", None)
     if relations:
         relation_list = list(relations)
+        relations_original_count = len(relation_list)
+        relations_dropped = 0
         mutated = False
         if relation_mode in {"compact", "aggregated", "aggregate"}:
             relation_list = _aggregate_relations(relation_list)
             mutated = True
             document.pipeline_info["relations_mode"] = relation_mode
         if max_relations_per_pair:
-            relation_list, truncated = _limit_relations_per_pair(relation_list, max_relations_per_pair)
+            relation_list, truncated, dropped = _limit_relations_per_pair(relation_list, max_relations_per_pair)
             if truncated:
                 document.pipeline_info["relations_truncated"] = True
+            if dropped:
+                relations_dropped += dropped
             mutated = mutated or truncated
         if max_relations and len(relation_list) > max_relations:
+            dropped = len(relation_list) - max_relations
             relation_list = relation_list[:max_relations]
             warnings.append("relations_truncated")
             document.pipeline_info["relations_truncated"] = True
+            relations_dropped += dropped
             mutated = True
         if mutated:
             setattr(document, "relations", relation_list)
+            document.pipeline_info.setdefault("relations_original", relations_original_count)
+            document.pipeline_info["relations_kept"] = len(relation_list)
+            if relations_dropped:
+                document.pipeline_info["relations_dropped"] = relations_dropped
 
     if not keep_evidence_bank:
         setattr(document, "evidence_bank", {})
 
-    if paragraph_dedupe:
+    if paragraph_requested:
         def _collect_paragraph_refs(text: Optional[str]) -> List[str]:
             if not isinstance(text, str):
                 return []
@@ -1104,6 +1162,10 @@ def _apply_emit_constraints(document: BaseDocument, emit: Dict[str, Any]) -> Lis
         if additional_refs:
             document.pipeline_info.setdefault("text_field_paragraph_refs", {}).update(additional_refs)
         document.pipeline_info["paragraph_store_size"] = len(paragraph_store)
+
+    if paragraph_mode:
+        document.pipeline_info["paragraph_store_size"] = len(paragraph_store)
+        setattr(document, "paragraph_store", paragraph_store)
 
     if max_json_bytes:
         try:

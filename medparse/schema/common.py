@@ -105,9 +105,9 @@ class BaseDocument(MedparseModel):
         default_factory=dict,
         description="Central store of deduplicated evidence spans, keyed by hash",
     )
-    paragraph_store: Dict[str, str] = Field(
+    paragraph_store: Dict[str, Dict[str, object]] = Field(
         default_factory=dict,
-        description="Deduplicated paragraph text keyed by stable hash",
+        description="Deduplicated paragraph metadata keyed by stable hash (text, pages, offsets)",
     )
     truncation_notice: Optional[TruncationNotice] = None
     front_matter_source: Optional[str] = None

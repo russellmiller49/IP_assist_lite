@@ -1,0 +1,24 @@
+{
+  "source_file": "/home/rjm/projects/IP_assist_lite/data/Input pdfs/articles/pdf/Guideline ATS Classification of Interstital Pneumonia.pdf",
+  "failure_reason": "validation_failed",
+  "issues": [
+    "Guideline has too few recommendations: 0/8"
+  ],
+  "metrics": {
+    "page_count": 16,
+    "coverage_ratio": 1.0,
+    "extracted_chars": 91035,
+    "sections_count": 4,
+    "recommendations_count": 0,
+    "umls_entities": 636,
+    "diagnostic_yield_present": false,
+    "tables_kept": 0,
+    "duration_s": 3.7364165782928467,
+    "engines_tried": [
+      "pymupdf",
+      "pdfplumber"
+    ],
+    "profile": "enriched",
+    "cache_used": false
+  }
+}
