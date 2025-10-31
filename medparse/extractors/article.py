@@ -17,6 +17,7 @@ from medparse.normalize.article_frontmatter import (
     extract_bibliographic_metadata,
     extract_title_hierarchical,
     is_valid_title,
+    link_authors_to_affiliations,
 )
 from medparse.normalize.title_block import extract_title
 from medparse.normalize.article_sections import normalize_article_sections
@@ -54,7 +55,9 @@ from medparse.schema.article import (
     Outcome,
 )
 from medparse.schema.common import EvidenceSpan, Relation, UmlsEntity
+from medparse.text.paragraphizer import build_paragraph_store
 from medparse.utils.log import get_logger
+from medparse.guideline.promoter import enrich_guideline_document
 
 LOGGER = get_logger(__name__)
 UMLS_PAGE_CACHE: Dict[str, List[UmlsEntityRecord]] = {}
@@ -146,12 +149,11 @@ def extract_article(
             "id": zotero_match.entry_id,
         }
         if zotero_match.title:
-            title_info["title"] = zotero_match.title
-            title_info["source"] = "zotero"
-            title_info["confidence"] = max(
-                float(title_info.get("confidence", 0.0) or 0.0),
-                zotero_match.match_score,
-            )
+            current_confidence = float(title_info.get("confidence", 0.0) or 0.0)
+            if not title_info.get("title") or zotero_match.match_score >= current_confidence:
+                title_info["title"] = zotero_match.title
+                title_info["source"] = "zotero"
+            title_info["confidence"] = max(current_confidence, zotero_match.match_score)
         if zotero_match.doi and not doi:
             doi = zotero_match.doi
         if zotero_match.authors:
@@ -164,6 +166,8 @@ def extract_article(
             year_value = zotero_match.year
     elif fm_info is None and extraction_config.should_use_zotero():
         fm_info = {"status": "not_found", "source": "zotero"}
+
+    link_authors_to_affiliations(authors, affiliations, list(pages))
 
     table_blocks = _maybe_classify_tables(pages, extraction_config)
     outcomes = _maybe_extract_outcomes(sections, table_blocks, extraction_config)
@@ -189,6 +193,17 @@ def extract_article(
             doc_subtype = "guideline"
 
     yield_data = yield_from_text(flat_lines)
+    if diagnostic_yield:
+        lesion_hint = getattr(diagnostic_yield, "lesion_denominator", None)
+        if lesion_hint:
+            existing_lesions = _as_int(yield_data.get("n_lesions"))
+            if not existing_lesions or existing_lesions != lesion_hint:
+                yield_data["n_lesions"] = lesion_hint
+        patient_hint = getattr(diagnostic_yield, "patient_denominator", None)
+        if patient_hint:
+            existing_patients = _as_int(yield_data.get("n_patients"))
+            if not existing_patients:
+                yield_data["n_patients"] = patient_hint
     references = normalize_references(
         reference_section(flat_lines),
         mode="article",
@@ -289,6 +304,21 @@ def extract_article(
         document.pipeline_info["max_entities"] = extraction_config.max_entities
     if extraction_config.max_relations:
         document.pipeline_info["max_relations"] = extraction_config.max_relations
+
+    paragraph_store, dedup_applied = build_paragraph_store(
+        document.doc_id,
+        pages,
+        join_hyphens=True,
+        drop_headers=True,
+        drop_footers=True,
+    )
+    document.paragraph_store = paragraph_store
+    if dedup_applied:
+        document.pipeline_info["paragraph_dedup_applied"] = True
+    else:
+        document.pipeline_info.setdefault("paragraph_dedup_applied", False)
+
+    enrich_guideline_document(document, pages)
 
     return document
 
@@ -504,8 +534,11 @@ def _map_yield(
             exclusion_reasons.append("no_denominator_in_text")
         if numerator is None or denominator is None:
             exclusion_reasons.append("missing_numerator_denominator")
+            exclusion_reasons.append("numerator/denominator not reported at attempted/performed level")
             if value is not None:
                 exclusion_reasons.append("non_strict_reported")
+
+        exclusion_reasons = list(dict.fromkeys(exclusion_reasons))
 
         return DiagnosticYield(
             value=value,
@@ -517,14 +550,20 @@ def _map_yield(
             compatible_with_ats=False,
         )
     reasons = list(dict.fromkeys(data.exclusion_reasons))
+    if any("no_numerator_denominator" in str(reason).lower() for reason in reasons):
+        reasons.append("missing_numerator_denominator")
+        reasons.append("numerator/denominator not reported at attempted/performed level")
+        reasons = list(dict.fromkeys(reasons))
     derived = "derived_counts_from_percent" in reasons
-    numerator_val = None if derived else data.numerator
-    denominator_val = None if derived else data.denominator
+    numerator_val = data.numerator
+    denominator_val = data.denominator
     if numerator_val is None or denominator_val is None:
         if "missing_numerator_denominator" not in reasons:
             reasons.append("missing_numerator_denominator")
+            reasons.append("numerator/denominator not reported at attempted/performed level")
         if data.yield_pct is not None and "non_strict_reported" not in reasons:
             reasons.append("non_strict_reported")
+    reasons = list(dict.fromkeys(reasons))
     evidence = None
     if data.evidence:
         evidence = EvidenceSpan(
@@ -544,6 +583,11 @@ def _map_yield(
         and numerator_val is not None
         and denominator_val is not None
     )
+    if any("no_numerator_denominator" in str(reason).lower() for reason in reasons):
+        numerator_val = None
+        denominator_val = None
+        compatible = False
+        strict_flag = False
     return DiagnosticYield(
         value=data.yield_pct,
         reported_value=(data.yield_pct / 100.0) if data.yield_pct is not None else None,
@@ -556,6 +600,7 @@ def _map_yield(
         compatible_with_ats=compatible,
         strict=strict_flag,
         evidence=evidence,
+        denominator_hint=getattr(data, "denominator_hint", None),
     )
 
 
@@ -565,17 +610,22 @@ def _map_recommendations(
     mapped: List[GuidelineRecommendation] = []
     for item in items:
         evidence = EvidenceSpan(text=item.text[:200], page=item.page, confidence=0.7)
+        statement_type = getattr(item, "statement_type", None)
+        if statement_type == "good_practice":
+            statement_type = "ungraded"
+        grade_value = getattr(item, "grade", None)
         mapped.append(
             GuidelineRecommendation(
                 label=getattr(item, "number", None),
                 text=item.text,
-                grade=getattr(item, "grade", None),
+                grade=grade_value,
+                grade_raw=grade_value,
                 strength=getattr(item, "strength", None),
                 strength_scale=getattr(item, "strength_scale", None),
                 evidence_level=getattr(item, "evidence_level", None),
                 votes=getattr(item, "votes", None),
                 consensus_percentage=getattr(item, "consensus_percentage", None),
-                statement_type=getattr(item, "statement_type", "graded" if getattr(item, "grade", None) else "ungraded"),
+                statement_type=statement_type or ("graded" if getattr(item, "grade", None) else "ungraded"),
                 evidence=evidence,
                 page_span=(item.page, item.page) if item.page is not None else None,
             )
@@ -664,6 +714,19 @@ def _count_grade_banner_hits(text: Optional[str]) -> int:
     return hits
 
 
+def _has_summary_statements(pages: Sequence[PageData]) -> bool:
+    for page in pages:
+        content_parts = []
+        if page.lines:
+            content_parts.extend(line.strip() for line in page.lines if line.strip())
+        if page.text:
+            content_parts.append(page.text)
+        combined = " ".join(content_parts).lower()
+        if "summary statement" in combined:
+            return True
+    return False
+
+
 def _first_page_text(pages: Sequence[PageData], *, max_lines: int = 40) -> str:
     if not pages:
         return ""
@@ -724,6 +787,20 @@ def _guideline_signal_score(
     if _has_recommendations_heading(pages, sections):
         score += 1
     return score
+
+
+def _has_recommendation_grade_signal(
+    pages: Sequence[PageData],
+    sections: dict[str, str],
+) -> bool:
+    section_texts = (sections or {}).values()
+    if any("recommendation grade" in (text or "").lower() for text in section_texts):
+        return True
+    for page in pages[:6]:
+        content = page.text or " ".join(page.lines or [])
+        if "recommendation grade" in (content or "").lower():
+            return True
+    return False
 
 
 def looks_like_guideline(
@@ -988,8 +1065,26 @@ def _infer_doc_subtype(
         title_value = str(title_info.get("title") or "")
     else:
         title_value = str(title_info or "")
+    title_lower = title_value.lower()
+
+    if _has_summary_statements(pages):
+        if (
+            "research statement" in title_lower
+            or "official" in title_lower and "statement" in title_lower
+            or any(marker in title_lower for marker in STATEMENT_TITLE_MARKERS)
+        ):
+            return "statement"
+
+    if recommendations:
+        return "guideline"
 
     if looks_like_guideline(pages, sections, recommendations, raw_recommendations):
+        return "guideline"
+
+    if _has_recommendation_grade_signal(pages, sections):
+        return "guideline"
+
+    if _has_recommendations_heading(pages, sections):
         return "guideline"
 
     if looks_like_classification_update(pages, title_value):
@@ -999,12 +1094,9 @@ def _infer_doc_subtype(
         return "statement"
 
     if isinstance(title_info, dict):
-        title_lower = title_value.lower()
         if title_lower and any(marker in title_lower for marker in GUIDELINE_TITLE_MARKERS):
             LOGGER.debug("Guideline detected via title marker.")
             return "guideline"
-    else:
-        title_lower = ""
 
     first_page = pages[0] if pages else None
     if first_page:

@@ -20,6 +20,18 @@ conda run -n medparse-py311 python -m medparse.cli extract-articles \
     --no-cache
 ```
 
+### Using conda run with zotero (Recommended)
+```bash
+conda run -n medparse-py311 python -m medparse.cli extract-articles \
+  "data/Input pdfs/articles/pdf" \
+  --out out/articles \
+  --config configs/run_article.yaml \
+  --profile enriched \
+  --no-cache \
+  --zotero-json data/zotero/my_library.json \
+  --evidence-policy compact
+```
+
 ### Using wrapper script
 ```bash
 ./scripts/run_extraction.sh

@@ -1,6 +1,7 @@
 from medparse.schema.article import ArticleDocument, GuidelineRecommendation
 from medparse.schema.common import EvidenceSpan, Relation, SizeGuards
 from medparse.pipeline.run_extract import _apply_emit_constraints, _build_evidence_bank
+from medparse.text.hash import stable_par_hash
 
 
 def test_paragraph_store_and_refs():
@@ -110,3 +111,49 @@ def test_evidence_bank_uses_paragraph_store():
     assert ref_payload.get("paragraph_hash") == rec_pointer.paragraph_hash
     assert "start" in ref_payload and "end" in ref_payload
     assert "text" not in ref_payload
+
+
+def test_placeholder_window_evidence_mapped_to_paragraph():
+    document = ArticleDocument(
+        source_file="sample.pdf",
+        page_count=1,
+        title="Placeholder Test",
+    )
+    paragraph_text = "Diagnostic yield paragraph on page one."
+    paragraph_hash = stable_par_hash(document.doc_id, 1, paragraph_text)
+    document.paragraph_store = {
+        paragraph_hash: {
+            "text": paragraph_text,
+            "page": 1,
+            "pages": [1],
+            "char_span": [0, len(paragraph_text)],
+            "length": len(paragraph_text),
+            "order": [0],
+            "occurrences": [
+                {
+                    "page": 1,
+                    "char_span": [0, len(paragraph_text)],
+                }
+            ],
+        }
+    }
+    document.relations = [
+        Relation(
+            subject="A",
+            predicate="rel",
+            object="B",
+            attributes={"page": 1},
+            evidence=EvidenceSpan(text="page 1 window<=150 tokens"),
+        )
+    ]
+
+    _apply_emit_constraints(
+        document,
+        {"evidence_policy": "compact", "paragraph_store": True},
+    )
+
+    relation = document.relations[0]
+    assert isinstance(relation.evidence, EvidenceSpan)
+    assert relation.evidence.hash == paragraph_hash
+    assert relation.evidence.paragraph_hash == paragraph_hash
+    assert relation.evidence.text is None

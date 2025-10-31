@@ -82,6 +82,7 @@ class DiagnosticYield(MedparseModel):
     compatible_with_ats: bool = False
     strict: bool = True
     evidence: Optional[EvidenceSpan] = None
+    denominator_hint: Optional[str] = None
 
     @property
     def strict_yield(self) -> Optional[float]:
@@ -103,7 +104,8 @@ class GuidelineRecommendation(MedparseModel):
 
     label: Optional[str] = None  # e.g., "1", "1.1", "A"
     text: str
-    grade: Optional[str] = None  # Original grade string
+    grade: Optional[str] = None  # Normalized grade token when available
+    grade_raw: Optional[str] = None  # Raw grade string from source text
     strength: Optional[str] = None  # Normalized: "strong", "weak", "conditional"
     strength_scale: Optional[str] = None  # Scale name e.g., GRADE, ACCP
     evidence_level: Optional[str] = None  # Level I-IV or High/Moderate/Low
@@ -113,6 +115,27 @@ class GuidelineRecommendation(MedparseModel):
     page_span: Optional[Tuple[int, int]] = None
     evidence: Optional[EvidenceSpan] = None
     evidence_refs: Optional[List[str]] = None  # Hash IDs for evidence bank
+    normalized: Optional[Dict[str, Optional[str]]] = None  # {strength, quality, scale}
+    anchors: List[str] = Field(default_factory=list)
+
+
+class KeyPoint(MedparseModel):
+    """Structured key point extracted from summary statements."""
+
+    id: str
+    text: str
+    page: Optional[int] = None
+    evidence: Optional[EvidenceSpan] = None
+    evidence_refs: Optional[List[str]] = None
+
+
+class DiagnosticFlow(MedparseModel):
+    """Representation of diagnostic flow definition (e.g., ATS STARD figure)."""
+
+    formula: Optional[str] = None
+    notes: Optional[str] = None
+    evidence: Optional[EvidenceSpan] = None
+    evidence_refs: Optional[List[str]] = None
 
 
 class TableFootnote(MedparseModel):
@@ -189,6 +212,7 @@ class ArticleDocument(BaseDocument):
     highlights: List[str] = Field(default_factory=list)  # "What this paper adds", "Key Points"
     keywords: List[str] = Field(default_factory=list)
     sections: Dict[str, str] = Field(default_factory=dict)  # section_name -> text
+    key_points: List[KeyPoint] = Field(default_factory=list)
 
     # Study data
     n_patients: Optional[int] = Field(default=None, ge=0)
@@ -197,6 +221,10 @@ class ArticleDocument(BaseDocument):
     # Outcomes (enhanced)
     outcomes: List[Outcome] = Field(default_factory=list)
     diagnostic_yield: Optional[DiagnosticYield] = None
+    definitions: Dict[str, str] = Field(default_factory=dict)
+    definitions_evidence: Optional[EvidenceSpan] = None
+    definitions_evidence_refs: Optional[List[str]] = None
+    diagnostic_flow: Optional[DiagnosticFlow] = None
     yield_definitions_present: Optional[bool] = None
 
     # Guidelines (enhanced)

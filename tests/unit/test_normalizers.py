@@ -21,6 +21,8 @@ def test_ifu_references_require_anchor_and_allowlist() -> None:
     ]
     refs = normalize_references(allowlisted, mode="ifu", headings=headings)
     assert len(refs) == 3
+    assert all("text" in ref for ref in refs)
+    assert any(ref.get("doi") for ref in refs)
 
 
 def test_safety_severity_supports_symbols() -> None:

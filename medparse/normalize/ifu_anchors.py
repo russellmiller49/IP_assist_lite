@@ -1,49 +1,26 @@
-"""Anchor-driven extraction of IFU clinical blocks with TOC guard."""
+"""Backward-compatible IFU anchor utilities built on the new anchor module."""
 
 from __future__ import annotations
 
 import re
-from dataclasses import dataclass
-from typing import Sequence
+from typing import Dict, Sequence
 
+from medparse.ifu.anchors import (
+    AnchorBleedError,
+    resolve_anchor_map,
+    resolve_toc_guard,
+    slice_section,
+    strip_toc,
+    normalize_bullets,
+    DEFAULT_SECTION_ANCHORS,
+)
 from medparse.ingest.models import PageData
-from medparse.normalize.layout import is_toc_page, slice_between
-from medparse.normalize.text_cleanup import clean_paragraph
 from medparse.utils.log import get_logger
 
 LOGGER = get_logger(__name__)
 
 
-@dataclass
-class AnchorBleedError(Exception):
-    anchor: str
-
-    def __str__(self) -> str:  # pragma: no cover - human readable
-        return f"anchor '{self.anchor}' captured table-of-contents bleed"
-
-
-CLINICAL_ANCHORS = {
-    "indications_for_use": {
-        "start": ["indications for use"],
-        "stops": ["intended use", "intended user", "contraindications", "warnings"],
-    },
-    "intended_use": {
-        "start": ["intended use"],
-        "stops": ["intended user", "contraindications", "warnings", "adverse events"],
-    },
-    "intended_user": {
-        "start": ["intended user", "user"],
-        "stops": ["contraindications", "warnings", "adverse events"],
-    },
-    "contraindications": {
-        "start": ["contraindications"],
-        "stops": ["warnings", "adverse events", "precautions"],
-    },
-    "adverse_events": {
-        "start": ["adverse events", "complications"],
-        "stops": ["warnings", "precautions", "maintenance"],
-    },
-}
+CLINICAL_ANCHORS = DEFAULT_SECTION_ANCHORS
 
 
 def extract_clinical_block(
@@ -51,43 +28,50 @@ def extract_clinical_block(
     *,
     start: Sequence[str],
     stops: Sequence[str] | None = None,
+    toc_guard_settings: Dict[str, object] | None = None,
 ) -> str | None:
-    safe_pages = [page for page in pages if not is_toc_page(page)]
-    if not safe_pages:
+    guard = resolve_toc_guard(toc_guard_settings or {}, manufacturer=None)
+    filtered_pages, _ = strip_toc(pages, guard)
+    section = slice_section(filtered_pages, start, stops or [], toc_guard=False, guard_config=guard)
+    if not section.text:
         return None
-
-    span = slice_between(
-        safe_pages,
-        start_anchors=start,
-        stop_anchors=stops or (),
-        guard_fn=None,
-    )
-    if not span:
-        return None
-
-    if looks_like_toc(span):
-        raise AnchorBleedError(start[0])
-
-    cleaned = clean_paragraph(span)
-    return normalize_bullets(cleaned)
+    return normalize_bullets(section.text)
 
 
-def lift_ifu_clinical_fields(pages: Sequence[PageData], ifu_json: dict) -> None:
-    for field, anchors in CLINICAL_ANCHORS.items():
+def lift_ifu_clinical_fields(
+    pages: Sequence[PageData],
+    ifu_json: dict,
+    *,
+    settings: Dict[str, object] | None = None,
+    manufacturer: str | None = None,
+) -> Dict[str, object]:
+    settings = settings or {}
+    guard = resolve_toc_guard(settings, manufacturer)
+    filtered_pages, dropped_pages = strip_toc(pages, guard)
+    anchor_overrides = settings.get("anchors") or {}
+    anchors = resolve_anchor_map(anchor_overrides)
+
+    errors = ifu_json.setdefault("_anchor_errors", [])
+    error_fields = ifu_json.setdefault("_anchor_error_fields", [])
+
+    for field, config in anchors.items():
+        start = config.get("start", [])
+        stops = config.get("stops", [])
         try:
-            block = extract_clinical_block(
-                pages,
-                start=anchors["start"],
-                stops=anchors.get("stops", []),
-            )
+            section = slice_section(filtered_pages, start, stops, toc_guard=False, guard_config=guard)
         except AnchorBleedError as exc:
             LOGGER.debug("Skipping %s due to TOC bleed: %s", field, exc)
-            errors = ifu_json.setdefault("_anchor_errors", [])
             errors.append(str(exc))
-            error_fields = ifu_json.setdefault("_anchor_error_fields", [])
             error_fields.append(field)
             continue
-        if block:
+
+        if not section.text:
+            continue
+
+        block = normalize_bullets(section.text)
+        if field in {"contraindications", "adverse_events"}:
+            ifu_json[field] = [block] if block else []
+        else:
             ifu_json[field] = block
 
     # Rx-only detection for intended_user
@@ -102,31 +86,13 @@ def lift_ifu_clinical_fields(pages: Sequence[PageData], ifu_json: dict) -> None:
         elif not value:
             ifu_json[key] = []
 
-
-def looks_like_toc(text: str) -> bool:
-    lowered = text.lower()
-    if "table of contents" in lowered:
-        return True
-
-    dotted_lines = sum(1 for line in text.splitlines() if re.search(r"\.{4,}", line))
-    if dotted_lines >= 3:
-        return True
-
-    return False
-
-
-def normalize_bullets(text: str) -> str:
-    lines = []
-    for raw_line in text.splitlines():
-        line = raw_line.strip()
-        if not line:
-            continue
-        if line[0] in {"•", "-", "*"}:
-            token = line[1:].strip()
-            lines.append(f"- {token}")
-        else:
-            lines.append(line)
-    return "\n".join(lines)
+    return {
+        "enabled": guard.enabled,
+        "pages_dropped": sorted(dropped_pages),
+        "density_threshold": guard.density_threshold,
+        "dot_leader_min": guard.dot_leader_min,
+        "page_number_ratio": guard.page_number_ratio,
+    }
 
 
 __all__ = ["AnchorBleedError", "extract_clinical_block", "lift_ifu_clinical_fields"]

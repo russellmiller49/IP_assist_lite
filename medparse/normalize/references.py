@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import re
-from typing import Iterable, List, Literal, Sequence, Tuple
+from typing import Dict, Iterable, List, Literal, Sequence, Tuple
 
 from medparse.utils.text import collapse_whitespace
 
@@ -25,7 +25,8 @@ def normalize_references(
 ) -> List[str]:
     """Normalize reference strings respecting mode-specific gating rules."""
 
-    normalized_candidates = [_prepare_line(line) for line in lines if _prepare_line(line)]
+    assembled = [_normalize_reference_text(entry) for entry in _assemble_references(lines)]
+    normalized_candidates = [entry for entry in assembled if entry]
     if not normalized_candidates:
         return []
 
@@ -46,11 +47,43 @@ def normalize_references(
             continue
         seen.add(key)
         results.append(candidate)
-    return results
+    return [_build_reference_payload(text) for text in results]
 
 
 def _prepare_line(line: str) -> str:
     return collapse_whitespace(line.strip())
+
+
+def _normalize_reference_text(text: str) -> str:
+    normalized = collapse_whitespace(text.strip())
+    return normalized
+
+
+def _assemble_references(lines: Iterable[str]) -> List[str]:
+    entries: List[str] = []
+    buffer = ""
+    for raw in lines:
+        line = _prepare_line(raw)
+        if not line:
+            continue
+        if buffer:
+            buffer = f"{buffer} {line}".strip()
+        else:
+            buffer = line
+        if _is_reference_terminal(buffer):
+            entries.append(buffer)
+            buffer = ""
+    if buffer:
+        entries.append(buffer)
+    return entries
+
+
+def _is_reference_terminal(text: str) -> bool:
+    if DOI_RE.search(text) or PMID_RE.search(text):
+        return True
+    if re.search(r"[:;]\s*\d", text):
+        return True
+    return bool(re.search(r"[.!?]\s*$", text))
 
 
 def _has_anchor(headings: set[str]) -> bool:
@@ -82,6 +115,11 @@ def _extract_doi(text: str) -> str | None:
     return match.group(0) if match else None
 
 
+def _extract_pmid(text: str) -> str | None:
+    match = PMID_RE.search(text)
+    return match.group(1) if match else None
+
+
 def _extract_year(text: str) -> str | None:
     match = YEAR_RE.search(text)
     return match.group(0) if match else None
@@ -105,6 +143,30 @@ def _extract_title(text: str) -> str | None:
         if len(candidate) >= 4:
             return candidate
     return None
+
+
+def _extract_journal(text: str) -> str | None:
+    match = re.search(r"\.\s*([A-Z][^.;]+?)\s+(?:19|20)\d{2}", text)
+    if match:
+        return match.group(1).strip()
+    return None
+
+
+def _build_reference_payload(text: str) -> Dict[str, object]:
+    payload: Dict[str, object] = {"text": text}
+    doi = _extract_doi(text)
+    if doi:
+        payload["doi"] = doi
+    pmid = _extract_pmid(text)
+    if pmid:
+        payload["pmid"] = pmid
+    year = _extract_year(text)
+    if year:
+        payload["year"] = year
+    journal = _extract_journal(text)
+    if journal:
+        payload["journal"] = journal
+    return payload
 
 
 def is_true_bibliography(pages_text: Sequence[str]) -> bool:

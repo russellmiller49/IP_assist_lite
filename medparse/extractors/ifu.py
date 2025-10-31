@@ -27,6 +27,7 @@ from medparse.normalize.tables import clean_tables
 from medparse.normalize.text_cleanup import clean_paragraph, deep_cleanup_fields
 from medparse.schema.common import EvidenceSpan
 from medparse.schema.ifu import IFUDocument, SafetyBlock
+from medparse.text.paragraphizer import build_paragraph_store
 
 SECTION_FIELDS = {
     "indications for use": "indications_for_use",
@@ -52,6 +53,8 @@ def extract_ifu(
     pages = pages or load_pages(pdf_path, engine=engine, max_pages=page_limit)
     page_count = len(pages)
     raw_pages_text = [page.text for page in pages]
+    meta = parse_front_matter(raw_pages_text)
+    ifu_settings = getattr(extraction_config, "ifu", {}) or {}
 
     # Strip page furniture (headers/footers) before processing
     lines_by_page = [page.lines for page in pages]
@@ -94,9 +97,14 @@ def extract_ifu(
         if key in section_text:
             doc_kwargs[field] = section_text[key]
 
-    lift_ifu_clinical_fields(pages, doc_kwargs)
-
-    meta = parse_front_matter(raw_pages_text)
+    toc_guard_info = lift_ifu_clinical_fields(
+        pages,
+        doc_kwargs,
+        settings=ifu_settings,
+        manufacturer=meta.get("manufacturer") if isinstance(meta, dict) else None,
+    )
+    if toc_guard_info:
+        doc_kwargs["_toc_guard_info"] = toc_guard_info
 
     # Collect software versions from Equipment/Software Version section
     raw_software: List[str] = []
@@ -151,11 +159,27 @@ def extract_ifu(
 
     anchor_errors = doc_kwargs.pop("_anchor_errors", [])
     anchor_error_fields = doc_kwargs.pop("_anchor_error_fields", [])
+    toc_guard_info = doc_kwargs.pop("_toc_guard_info", None)
 
     document = IFUDocument.model_validate(doc_kwargs)
     if anchor_errors:
         document.pipeline_info["anchor_bleed_errors"] = anchor_errors
         document.pipeline_info["anchor_bleed_fields"] = anchor_error_fields
+    if toc_guard_info:
+        document.pipeline_info["toc_guard"] = toc_guard_info
+
+    paragraph_store, dedup_applied = build_paragraph_store(
+        document.doc_id,
+        pages,
+        join_hyphens=True,
+        drop_headers=True,
+        drop_footers=True,
+    )
+    document.paragraph_store = paragraph_store
+    if dedup_applied:
+        document.pipeline_info["paragraph_dedup_applied"] = True
+    else:
+        document.pipeline_info.setdefault("paragraph_dedup_applied", False)
     return document
 
 

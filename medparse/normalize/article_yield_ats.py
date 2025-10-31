@@ -14,6 +14,14 @@ RE_YIELD = re.compile(
     r"diagnostic\s+yield\s+was\s+(?:~|about\s+)?(\d{1,3}(?:\.\d+)?)\s?%",
     re.IGNORECASE,
 )
+RE_PATIENTS = re.compile(
+    r"(\d{2,5})(?:\s+[A-Za-z/\-]+){0,3}\s+(?:patients?|subjects?)",
+    re.IGNORECASE,
+)
+RE_LESIONS = re.compile(
+    r"(\d{2,5})(?:\s+[A-Za-z/\-]+){0,3}\s+(?:lesions?|nodules?)",
+    re.IGNORECASE,
+)
 
 
 class EvidenceSpan(BaseModel):
@@ -36,6 +44,9 @@ class DiagnosticYieldATS(BaseModel):
     exclusion_reasons: List[str] = Field(default_factory=list)
     evidence: Optional[EvidenceSpan] = None
     strict: bool = True
+    denominator_hint: Optional[str] = None
+    lesion_denominator: Optional[int] = None
+    patient_denominator: Optional[int] = None
 
 
 def extract_ats_compliant_yield(
@@ -162,9 +173,19 @@ def _extract_from_text(results_text: str) -> Optional[DiagnosticYieldATS]:
         match_start, match_end = yield_match.start(), yield_match.end()
         ci_lower, ci_upper = extract_confidence_intervals(results_text, match_start, match_end)
         definition = extract_yield_definition(results_text, match_start, match_end)
+        context_window = _yield_context(results_text, match_start, match_end)
+        numerator, denominator_from_context, denom_label, lesion_count, patient_count = _infer_counts_from_context(
+            yield_pct,
+            context_window,
+        )
+        denominator_hint = None
+        if denominator_from_context and denom_label:
+            denominator_hint = f"{denominator_from_context} {denom_label}"
+            exclusion_reasons.append("derived_counts_from_percent")
+
         return DiagnosticYieldATS(
-            numerator=None,
-            denominator=None,
+            numerator=numerator,
+            denominator=denominator_from_context,
             yield_pct=yield_pct,
             ci_lower=ci_lower,
             ci_upper=ci_upper,
@@ -173,9 +194,112 @@ def _extract_from_text(results_text: str) -> Optional[DiagnosticYieldATS]:
             exclusion_reasons=exclusion_reasons,
             evidence=EvidenceSpan(text=yield_match.group(0), confidence=0.6),
             strict=False,
+            denominator_hint=denominator_hint,
+            lesion_denominator=lesion_count,
+            patient_denominator=patient_count,
         )
 
     return None
+
+
+def _yield_context(text: str, start: int, end: int, window: int = 300) -> str:
+    return text[max(0, start - window):min(len(text), end + window)]
+
+
+def _infer_counts_from_context(
+    yield_pct: float,
+    context: str,
+) -> tuple[Optional[int], Optional[int], Optional[str], Optional[int], Optional[int]]:
+    lesion_count = None
+    patient_count = None
+    for match in RE_LESIONS.finditer(context):
+        try:
+            lesion_count = int(match.group(1))
+        except (TypeError, ValueError):  # pragma: no cover - defensive
+            continue
+    for match in RE_PATIENTS.finditer(context):
+        try:
+            patient_count = int(match.group(1))
+        except (TypeError, ValueError):  # pragma: no cover - defensive
+            continue
+
+    denominator = None
+    label = None
+    if lesion_count:
+        denominator = lesion_count
+        label = "lesions"
+    elif patient_count:
+        denominator = patient_count
+        label = "patients"
+
+    numerator = None
+    if denominator is not None:
+        numerator = int(round((yield_pct / 100.0) * denominator))
+
+    return numerator, denominator, label, lesion_count, patient_count
+
+
+def _populate_denominator_from_sections(
+    yield_data: DiagnosticYieldATS,
+    sections: Dict[str, str],
+) -> None:
+    if yield_data.denominator_hint and yield_data.lesion_denominator:
+        return
+    lesion_candidate, patient_candidate = _scan_sections_for_counts(sections)
+    if lesion_candidate:
+        yield_data.lesion_denominator = lesion_candidate
+        if not yield_data.denominator_hint:
+            yield_data.denominator_hint = f"{lesion_candidate} lesions"
+        if yield_data.denominator != lesion_candidate:
+            yield_data.denominator = lesion_candidate
+        if yield_data.yield_pct is not None:
+            yield_data.numerator = int(round((yield_data.yield_pct / 100.0) * lesion_candidate))
+        if "derived_counts_from_percent" not in yield_data.exclusion_reasons:
+            yield_data.exclusion_reasons.append("derived_counts_from_percent")
+        return
+    if patient_candidate:
+        yield_data.patient_denominator = patient_candidate
+        if not yield_data.denominator_hint:
+            yield_data.denominator_hint = f"{patient_candidate} patients"
+        if yield_data.denominator is None:
+            yield_data.denominator = patient_candidate
+        if yield_data.numerator is None and yield_data.yield_pct is not None:
+            yield_data.numerator = int(round((yield_data.yield_pct / 100.0) * patient_candidate))
+        if "derived_counts_from_percent" not in yield_data.exclusion_reasons:
+            yield_data.exclusion_reasons.append("derived_counts_from_percent")
+
+
+def _scan_sections_for_counts(sections: Dict[str, str]) -> tuple[Optional[int], Optional[int]]:
+    preferred_keys = {"abstract", "introduction", "background", "methods", "results"}
+    segments: List[str] = []
+    for key, value in sections.items():
+        if not isinstance(value, str):
+            continue
+        if key and key.lower() in preferred_keys:
+            segments.append(value)
+    if not segments:
+        segments = [value for value in sections.values() if isinstance(value, str)]
+
+    combined = " ".join(segments)
+    lesion_candidate = None
+    patient_candidate = None
+    for match in RE_LESIONS.finditer(combined):
+        try:
+            value = int(match.group(1))
+        except (TypeError, ValueError):  # pragma: no cover - defensive
+            continue
+        if value > 1500:
+            continue
+        lesion_candidate = value if lesion_candidate is None else max(lesion_candidate, value)
+    for match in RE_PATIENTS.finditer(combined):
+        try:
+            value = int(match.group(1))
+        except (TypeError, ValueError):  # pragma: no cover - defensive
+            continue
+        if value > 1500:
+            continue
+        patient_candidate = value if patient_candidate is None else max(patient_candidate, value)
+    return lesion_candidate, patient_candidate
 
 
 def _extract_yield_from_table(table: TableBlock) -> Optional[DiagnosticYieldATS]:
@@ -224,6 +348,7 @@ def _finalize_yield_record(
 ) -> None:
     # Try to backfill missing counts from text
     _attempt_backfill_counts(yield_data, sections)
+    _populate_denominator_from_sections(yield_data, sections)
 
     # Check ATS compliance criteria
     compat, exclusions = validate_ats_compliance(results_text, methods_text)
@@ -256,6 +381,10 @@ def _finalize_yield_record(
         and not derived_counts
         and yield_data.compatible_with_ats
     )
+    if yield_data.numerator is not None and yield_data.denominator is not None:
+        yield_data.exclusion_reasons = [
+            reason for reason in yield_data.exclusion_reasons if reason != "missing_numerator_denominator"
+        ]
 
 
 def _attempt_backfill_counts(yield_data: DiagnosticYieldATS, sections: Dict[str, str]) -> None:

@@ -9,11 +9,17 @@ from pydantic import BaseModel
 
 from medparse.ingest.models import PageData
 
+RE_REC_LINE = re.compile(
+    r"^\s*(We\s+(recommend|suggest)[^.\n]*?)(?:\.\s*)?(?:\((?:Recommendation\s+grade\s+([A-D]))\))?",
+    re.IGNORECASE,
+)
 RE_REC = re.compile(r"^\s*(?:we\s+(?:recommend|suggest)\b.*)", re.IGNORECASE)
 RE_GRADE = re.compile(
     r"(?:Recommendation\s*grade\s+([A-D]))|(GRADE\s*(?:Strong|Weak|Conditional))|(Ungraded|Consensus|Good\s*Practice)",
     re.IGNORECASE,
 )
+RE_GRADE_WORD = re.compile(r"\b(strong|conditional)\s+recommendation\b", re.IGNORECASE)
+RE_CERTAINTY = re.compile(r"\b(very low|low|moderate|high)\s+certainty\b", re.IGNORECASE)
 
 
 class GuidelineRecommendation(BaseModel):
@@ -59,7 +65,12 @@ def parse_guideline_recommendations(
             continue
 
         number = extract_number(block) or str(i)
-        grade, scale, strength, statement_type = extract_grade(block)
+        first_line = block.strip().splitlines()[0] if block.strip() else ""
+        line_match = RE_REC_LINE.match(first_line)
+        explicit_grade = None
+        if line_match and line_match.group(3):
+            explicit_grade = line_match.group(3).upper()
+        grade, scale, strength, statement_type = extract_grade(block, explicit_grade=explicit_grade)
         evidence_level = extract_evidence_level(block)
         consensus = extract_consensus(block)
 
@@ -255,36 +266,21 @@ def extract_number(text: str) -> Optional[str]:
     return None
 
 
-def extract_grade(text: str) -> Tuple[Optional[str], Optional[str], Optional[str], str]:
+def extract_grade(
+    text: str,
+    explicit_grade: Optional[str] = None,
+) -> Tuple[Optional[str], Optional[str], Optional[str], str]:
     """Extract grade details returning (grade, scale, strength, statement_type)."""
 
     lowered = text.lower()
 
-    grade_match = RE_GRADE.search(text)
-    if grade_match:
-        # Explicit grade letter
-        letter = grade_match.group(1)
-        if letter:
-            grade_token = letter.upper()
-            scale = "GRADE"
-            strength = normalize_strength(scale, grade_token, lowered)
-            return grade_token, scale, strength, "graded"
+    if "consensus" in lowered:
+        return None, None, None, "consensus"
 
-        # GRADE strong/weak wording
-        descriptor = grade_match.group(2)
-        if descriptor:
-            strength = None
-            descriptor_lower = descriptor.lower()
-            if "strong" in descriptor_lower:
-                strength = "strong"
-            elif "weak" in descriptor_lower or "conditional" in descriptor_lower:
-                strength = "conditional"
-            return None, "GRADE", strength, "graded"
-
-        # Ungraded / Consensus / Good Practice statements
-        third = grade_match.group(3)
-        if third:
-            return None, None, None, "ungraded"
+    if explicit_grade:
+        grade_token = explicit_grade.upper()
+        strength = normalize_strength("GRADE", grade_token, lowered)
+        return grade_token, "GRADE", strength, "graded"
 
     # Explicit grade tokens with known scales
     grade_patterns = [
@@ -310,10 +306,34 @@ def extract_grade(text: str) -> Tuple[Optional[str], Optional[str], Optional[str
                 grade_token = None
             return grade_token, scale, strength, statement_type
 
-    # Good practice / consensus statements without formal grade
+    grade_descriptor = RE_GRADE.search(text)
+    if grade_descriptor:
+        descriptor = grade_descriptor.group(2)
+        trailing = grade_descriptor.group(3)
+        if descriptor:
+            descriptor_lower = descriptor.lower()
+            if "strong" in descriptor_lower:
+                return None, "GRADE", "strong", "graded"
+            if "weak" in descriptor_lower or "conditional" in descriptor_lower:
+                return None, "GRADE", "conditional", "graded"
+        if trailing:
+            trailing_lower = trailing.lower()
+            if "consensus" in trailing_lower:
+                return None, None, None, "consensus"
+            return None, None, None, "ungraded"
+
+    grade_word = RE_GRADE_WORD.search(text)
+    if grade_word:
+        descriptor = grade_word.group(1).lower()
+        strength = "strong" if descriptor == "strong" else "conditional"
+        return None, "GRADE", strength, "graded"
+
+    certainty = RE_CERTAINTY.search(text)
+    if certainty:
+        certainty_label = f"{certainty.group(1).strip().title()} certainty"
+        return None, None, certainty_label, "graded"
+
     if 'good practice statement' in lowered or 'good practice point' in lowered:
-        return None, None, None, 'ungraded'
-    if 'consensus statement' in lowered:
         return None, None, None, 'ungraded'
     if 'ungraded' in lowered or 'no recommendation' in lowered:
         return None, None, None, 'ungraded'
@@ -377,6 +397,10 @@ def extract_evidence_level(text: str) -> Optional[str]:
     match = re.search(r'Quality of evidence:\s*(High|Moderate|Low|Very low)', text, re.IGNORECASE)
     if match:
         return match.group(1).title()
+
+    certainty = RE_CERTAINTY.search(text)
+    if certainty:
+        return f"{certainty.group(1).strip().title()} certainty"
 
     return None
 

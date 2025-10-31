@@ -1,0 +1,5 @@
+emit:
+  evidence_policy: compact
+  tables_mode: compact
+  max_relations: 300
+  max_table_rows: 200

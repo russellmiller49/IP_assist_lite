@@ -30,6 +30,7 @@ from medparse.schema.textbook import (
     SectionMetadata,
     TextbookChapterDocument,
 )
+from medparse.text.paragraphizer import build_paragraph_store
 from medparse.utils.log import get_logger
 
 LOGGER = get_logger(__name__)
@@ -137,6 +138,19 @@ def extract_textbook_chapter(
         document.pipeline_info["max_entities"] = extraction_config.max_entities
     if extraction_config.max_relations:
         document.pipeline_info["max_relations"] = extraction_config.max_relations
+
+    paragraph_store, dedup_applied = build_paragraph_store(
+        document.doc_id,
+        pages,
+        join_hyphens=True,
+        drop_headers=True,
+        drop_footers=True,
+    )
+    document.paragraph_store = paragraph_store
+    if dedup_applied:
+        document.pipeline_info["paragraph_dedup_applied"] = True
+    else:
+        document.pipeline_info.setdefault("paragraph_dedup_applied", False)
     return document
 
 

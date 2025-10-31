@@ -46,6 +46,11 @@ def validate_ifu(document: IFUDocument, config: ExtractionConfig) -> list[Issue]
             suffix = f" ({field_name})" if field_name else ""
             issues.append(Issue.error(f"Clinical anchor bleed detected{suffix}: {message}"))
 
+        toc_guard = pipeline_info.get("toc_guard") or {}
+        dropped = toc_guard.get("pages_dropped")
+        if dropped:
+            issues.append(Issue.warn(f"TOC guard dropped pages {dropped}"))
+
     return issues
 
 

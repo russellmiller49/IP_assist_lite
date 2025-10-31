@@ -107,11 +107,13 @@ class ExtractionConfig(BaseModel):
     max_relations: Optional[int] = None
     metadata_sources_data: Dict[str, Any] = Field(default_factory=dict, alias="metadata_sources")
     enrichment_data: Dict[str, Any] = Field(default_factory=dict, alias="enrichment")
+    ifu: Dict[str, Any] = Field(default_factory=dict)
 
     _thresholds_namespace: Optional["FrozenNamespace"] = PrivateAttr(default=None)
     _size_guards_namespace: Optional["FrozenNamespace"] = PrivateAttr(default=None)
     _metadata_sources_namespace: Optional["FrozenNamespace"] = PrivateAttr(default=None)
     _enrichment_namespace: Optional["FrozenNamespace"] = PrivateAttr(default=None)
+    _ifu_namespace: Optional["FrozenNamespace"] = PrivateAttr(default=None)
 
     @classmethod
     def from_env(cls) -> "ExtractionConfig":
@@ -193,6 +195,13 @@ class ExtractionConfig(BaseModel):
         if self._enrichment_namespace is None:
             self._enrichment_namespace = FrozenNamespace(self.enrichment_data)
         return self._enrichment_namespace
+
+    @property
+    def ifu_settings(self) -> "FrozenNamespace":
+        """Return IFU-specific configuration."""
+        if self._ifu_namespace is None:
+            self._ifu_namespace = FrozenNamespace(self.ifu)
+        return self._ifu_namespace
 
     def should_use_zotero(self) -> bool:
         """Check if Zotero front-matter enrichment is enabled."""

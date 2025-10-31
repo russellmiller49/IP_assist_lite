@@ -4,10 +4,14 @@ from __future__ import annotations
 
 import re
 from collections import OrderedDict
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any, Dict, List, Optional, Tuple, TYPE_CHECKING
 
 from medparse.ingest.models import PageData
 from medparse.normalize.title_block import extract_title
+from medparse.utils.log import get_logger
+
+if TYPE_CHECKING:
+    from medparse.schema.article import Affiliation, Author
 
 NAME_EXCLUSION_TERMS = {
     "department",
@@ -32,6 +36,21 @@ NAME_EXCLUSION_TERMS = {
 
 DEGREE_TOKENS = {"md", "phd", "do", "mba", "ms", "msc", "mph", "mbbs", "frcp"}
 SUFFIX_TOKENS = {"jr", "sr", "ii", "iii", "iv", "v"}
+SUPERSCRIPT_TRANSLATION = str.maketrans({
+    "⁰": "0",
+    "¹": "1",
+    "²": "2",
+    "³": "3",
+    "⁴": "4",
+    "⁵": "5",
+    "⁶": "6",
+    "⁷": "7",
+    "⁸": "8",
+    "⁹": "9",
+})
+SUPERSCRIPT_CLASS = "\u2070\u00B9\u00B2\u00B3\u2074\u2075\u2076\u2077\u2078\u2079"
+
+LOGGER = get_logger(__name__)
 
 HEADER_NOISE_TITLES = {
     "american thoracic society documents",
@@ -694,6 +713,120 @@ def extract_coi_and_funding(pages: List[PageData]) -> Dict[str, List[str]]:
     }
 
 
+def link_authors_to_affiliations(
+    authors: List["Author"],
+    affiliations: List["Affiliation"],
+    pages: List[PageData],
+) -> None:
+    if not authors or not affiliations:
+        return
+    if all(getattr(author, "affiliation_ids", []) for author in authors):
+        return
+
+    header_lines: List[str] = []
+    if pages:
+        first_page = pages[0]
+        header_lines = [line.strip() for line in (first_page.lines or [])[:80] if line.strip()]
+    converted_lines = [line.translate(SUPERSCRIPT_TRANSLATION) for line in header_lines]
+
+    alias_map: Dict[str, str] = {}
+    for affiliation in affiliations:
+        aff_id_raw = getattr(affiliation, "id", "") or ""
+        aff_id = str(aff_id_raw)
+        if not aff_id:
+            continue
+        alias_map[aff_id] = aff_id
+        alias_map[aff_id.lower()] = aff_id
+        digits = re.sub(r"[^0-9]", "", aff_id)
+        if digits:
+            alias_map[digits] = aff_id
+
+    keyword_map: Dict[str, set[str]] = {}
+    for affiliation in affiliations:
+        aff_id = getattr(affiliation, "id", None)
+        text = " ".join(
+            part for part in [getattr(affiliation, "text", ""), getattr(affiliation, "institution", "")] if part
+        )
+        tokens = {token for token in re.findall(r"[A-Z]{3,}", text)}
+        keyword_map[str(aff_id)] = tokens
+
+    unresolved: List["Author"] = []
+
+    for author in authors:
+        current_ids = getattr(author, "affiliation_ids", None) or []
+        if current_ids:
+            continue
+        assigned: List[str] = []
+        family = (author.family or "").strip()
+        if not family:
+            unresolved.append(author)
+            continue
+
+        name_variants = [family]
+        if author.given:
+            name_variants.append(f"{author.given.strip()} {family}")
+
+        for variant in name_variants:
+            pattern_variant = variant.strip()
+            if not pattern_variant:
+                continue
+            for line in converted_lines:
+                if pattern_variant.lower() not in line.lower():
+                    continue
+                for alias, target in alias_map.items():
+                    if not alias:
+                        continue
+                    marker_pattern = rf"{re.escape(pattern_variant)}\s*[,\[(\-]*\s*{re.escape(alias)}\b"
+                    if re.search(marker_pattern, line, re.IGNORECASE):
+                        if target not in assigned:
+                            assigned.append(target)
+                if assigned:
+                    break
+            if assigned:
+                break
+
+        if assigned:
+            author.affiliation_ids = assigned
+            continue
+
+        line_match = next((line for line in converted_lines if family.lower() in line.lower()), "")
+        line_upper = line_match.upper()
+        matched_aff: Optional[str] = None
+        if line_upper:
+            for affiliation in affiliations:
+                aff_id = getattr(affiliation, "id", None)
+                if aff_id is None:
+                    continue
+                keywords = keyword_map.get(str(aff_id)) or set()
+                if keywords and any(token in line_upper for token in keywords):
+                    matched_aff = str(aff_id)
+                    break
+
+        if matched_aff:
+            author.affiliation_ids = [matched_aff]
+            continue
+
+        unresolved.append(author)
+
+    if unresolved and len(affiliations) == 1:
+        fallback_id = str(getattr(affiliations[0], "id", ""))
+        if fallback_id:
+            for author in unresolved:
+                author.affiliation_ids = [fallback_id]
+            LOGGER.warning(
+                "Assigned all authors to sole affiliation id '%s' due to missing explicit markers.",
+                fallback_id,
+            )
+        return
+
+    unresolved_names = [author.family or author.given or "?" for author in unresolved if author]
+    if unresolved_names:
+        LOGGER.warning(
+            "Unable to resolve affiliations for authors: %s",
+            ", ".join(unresolved_names),
+        )
+
+
 def extract_section_text(full_text: str, headings: List[str]) -> Optional[str]:
     """Extract text under any of the given headings.
 
@@ -1009,7 +1142,8 @@ __all__ = [
     "extract_title_hierarchical",
     "is_valid_title",
     "extract_affiliations_and_correspondence",
-     "extract_authors_affiliations",
+    "extract_authors_affiliations",
     "extract_coi_and_funding",
     "extract_doi",
+    "link_authors_to_affiliations",
 ]

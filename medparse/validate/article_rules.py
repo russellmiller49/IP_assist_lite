@@ -63,12 +63,17 @@ def validate_article(doc: ArticleDocument, cfg: ExtractionConfig) -> List[Issue]
                 )
             )
 
-        if rec_count < max(1, min_recs) or (rec_count and grade_ratio < min_grade_density):
+        if rec_count < max(1, min_recs):
             issues.append(
                 Issue.error(
-                    "Guideline gating failed: rec_count/grade_density"
+                    f"Guideline has too few recommendations: {rec_count}/{min_recs}"
                 )
             )
+        else:
+            if grade_ratio < max(0.0, min_grade_density):
+                issues.append(
+                    Issue.error("Guideline grade density below 70%")
+                )
 
         return issues
 

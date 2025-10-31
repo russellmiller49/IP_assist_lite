@@ -146,7 +146,7 @@ def test_grade_density_gate_triggers_warning():
 
     assert issues, "expected validation issues for low grade density"
     assert any(
-        issue.severity == "error" and "Guideline gating failed" in issue.message
+        issue.severity == "error" and "Guideline grade density" in issue.message
         for issue in issues
     )
 

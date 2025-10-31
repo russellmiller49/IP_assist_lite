@@ -92,15 +92,18 @@ def span_to_ref(span: EvidenceSpan, store: ParagraphStore) -> Optional[Dict[str,
         ref["start"] = int(start)
         ref["end"] = int(end)
 
-    snippet_limit = 280
+    snippet_limit = 1200
 
     snippet: Optional[str] = None
+    original_length = 0
     if entry_text:
         snippet_start = start if start is not None else 0
         snippet_end = end if end is not None else len(entry_text)
         snippet = entry_text[snippet_start:snippet_end]
+        original_length = len(snippet)
     elif span.text:
         snippet = span.text
+        original_length = len(snippet)
 
     if snippet:
         snippet = re.sub(r"\s+", " ", snippet).strip()
@@ -112,9 +115,13 @@ def span_to_ref(span: EvidenceSpan, store: ParagraphStore) -> Optional[Dict[str,
                 snippet = ""
         if snippet:
             if len(snippet) > snippet_limit:
-                snippet = snippet[:snippet_limit].rstrip() + "…"
+                kept = snippet[:snippet_limit].rstrip()
+                ref["snippet"] = kept + "…"
+                ref["clip_chars_kept"] = len(kept)
+                ref["clip_chars_original"] = original_length
                 ref["truncated"] = True
-            ref["snippet"] = snippet
+            else:
+                ref["snippet"] = snippet
 
     if span.truncated:
         ref["truncated"] = True

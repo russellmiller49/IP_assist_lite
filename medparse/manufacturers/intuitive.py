@@ -47,6 +47,9 @@ def normalize_intuitive_front_matter(data: Dict[str, Optional[str]]) -> Dict[str
     if normalized.get("manufacturer"):
         normalized["manufacturer"] = "Intuitive Surgical, Inc."
 
+    if not normalized.get("product_name"):
+        normalized["product_name"] = "Intuitive Ion Endoluminal System"
+
     return normalized
 
 
