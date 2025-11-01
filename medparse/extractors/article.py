@@ -21,7 +21,14 @@ from medparse.normalize.article_frontmatter import (
 )
 from medparse.normalize.title_block import extract_title
 from medparse.normalize.article_sections import normalize_article_sections
-from medparse.normalize.article_yield_ats import DiagnosticYieldATS, extract_ats_compliant_yield
+from medparse.normalize.article_yield_ats import (
+    ATS_REASON_DERIVED,
+    ATS_REASON_FOLLOW_UP,
+    ATS_REASON_NO_N_OVER_N,
+    ATS_REASON_NONSPECIFIC,
+    DiagnosticYieldATS,
+    extract_ats_compliant_yield,
+)
 from medparse.normalize.figures_captions import FigureBlock, extract_figures_and_captions
 from medparse.normalize.guideline_grades import (
     GuidelineRecommendation as ParsedGuidelineRecommendation,
@@ -61,6 +68,12 @@ from medparse.guideline.promoter import enrich_guideline_document
 
 LOGGER = get_logger(__name__)
 UMLS_PAGE_CACHE: Dict[str, List[UmlsEntityRecord]] = {}
+ATS_CANONICAL_REASONS = {
+    ATS_REASON_NO_N_OVER_N,
+    ATS_REASON_FOLLOW_UP,
+    ATS_REASON_NONSPECIFIC,
+    ATS_REASON_DERIVED,
+}
 
 
 def extract_article(
@@ -528,17 +541,13 @@ def _map_yield(
         if value is None:
             return None
         exclusion_reasons: List[str] = []
-        if numerator is None:
-            exclusion_reasons.append("no_numerator_in_text")
-        if denominator is None:
-            exclusion_reasons.append("no_denominator_in_text")
         if numerator is None or denominator is None:
-            exclusion_reasons.append("missing_numerator_denominator")
-            exclusion_reasons.append("numerator/denominator not reported at attempted/performed level")
+            exclusion_reasons.append(ATS_REASON_NO_N_OVER_N)
             if value is not None:
-                exclusion_reasons.append("non_strict_reported")
-
-        exclusion_reasons = list(dict.fromkeys(exclusion_reasons))
+                exclusion_reasons.append(ATS_REASON_DERIVED)
+        exclusion_reasons = [
+            reason for reason in dict.fromkeys(exclusion_reasons) if reason in ATS_CANONICAL_REASONS
+        ]
 
         return DiagnosticYield(
             value=value,
@@ -550,20 +559,15 @@ def _map_yield(
             compatible_with_ats=False,
         )
     reasons = list(dict.fromkeys(data.exclusion_reasons))
-    if any("no_numerator_denominator" in str(reason).lower() for reason in reasons):
-        reasons.append("missing_numerator_denominator")
-        reasons.append("numerator/denominator not reported at attempted/performed level")
-        reasons = list(dict.fromkeys(reasons))
-    derived = "derived_counts_from_percent" in reasons
     numerator_val = data.numerator
     denominator_val = data.denominator
     if numerator_val is None or denominator_val is None:
-        if "missing_numerator_denominator" not in reasons:
-            reasons.append("missing_numerator_denominator")
-            reasons.append("numerator/denominator not reported at attempted/performed level")
-        if data.yield_pct is not None and "non_strict_reported" not in reasons:
-            reasons.append("non_strict_reported")
-    reasons = list(dict.fromkeys(reasons))
+        if ATS_REASON_NO_N_OVER_N not in reasons:
+            reasons.append(ATS_REASON_NO_N_OVER_N)
+        if data.yield_pct is not None and ATS_REASON_DERIVED not in reasons:
+            reasons.append(ATS_REASON_DERIVED)
+    reasons = [reason for reason in dict.fromkeys(reasons) if reason in ATS_CANONICAL_REASONS]
+    derived = ATS_REASON_DERIVED in reasons
     evidence = None
     if data.evidence:
         evidence = EvidenceSpan(
@@ -583,7 +587,7 @@ def _map_yield(
         and numerator_val is not None
         and denominator_val is not None
     )
-    if any("no_numerator_denominator" in str(reason).lower() for reason in reasons):
+    if ATS_REASON_NO_N_OVER_N in reasons and (numerator_val is None or denominator_val is None):
         numerator_val = None
         denominator_val = None
         compatible = False
@@ -1067,6 +1071,13 @@ def _infer_doc_subtype(
         title_value = str(title_info or "")
     title_lower = title_value.lower()
 
+    if (
+        "statement" in title_lower
+        and "guideline" not in title_lower
+        and ("official" in title_lower or "consensus" in title_lower or "classification" in title_lower)
+    ):
+        return "statement"
+
     if _has_summary_statements(pages):
         if (
             "research statement" in title_lower
@@ -1088,6 +1099,8 @@ def _infer_doc_subtype(
         return "guideline"
 
     if looks_like_classification_update(pages, title_value):
+        if "statement" in title_lower:
+            return "statement"
         return "classification"
 
     if looks_like_statement(pages, title_value, sections):

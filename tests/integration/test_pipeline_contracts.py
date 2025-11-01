@@ -40,13 +40,15 @@ def test_guideline_contract(article_config):
     document = extract_article(pdf_path, config=article_config)
 
     assert document.doc_subtype == "guideline"
-    graded_or_ungraded = [
-        rec for rec in document.recommendations if (rec.grade or rec.statement_type != "graded")
-    ]
     total_recommendations = len(document.recommendations)
     assert total_recommendations >= 8
-    grade_density = len(graded_or_ungraded) / total_recommendations if total_recommendations else 0.0
-    assert grade_density >= 0.7
+    typed_density = (
+        sum(1 for rec in document.recommendations if rec.grade_normalized or getattr(rec, "ungraded", False))
+        / total_recommendations
+        if total_recommendations
+        else 0.0
+    )
+    assert typed_density >= 0.95
 
     umls_status = document.pipeline_info.get("umls_status")
     assert umls_status in {"linked", "skipped_model_missing", "skipped_disabled"}
@@ -68,7 +70,7 @@ def test_research_ats_yield_strict_or_relaxed(article_config):
     if yield_data.strict:
         assert yield_data.numerator is not None and yield_data.denominator is not None
     else:
-        assert "no_denominator_in_text" in yield_data.exclusion_reasons or "derived_counts_from_percent" in yield_data.exclusion_reasons
+        assert "no_n_over_N" in yield_data.exclusion_reasons or "derived_counts_from_percent" in yield_data.exclusion_reasons
 
     assert len(document.affiliations) >= 2
     affiliation_ids = {aff.id for aff in document.affiliations}

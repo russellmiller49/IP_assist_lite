@@ -8,7 +8,7 @@ from dataclasses import dataclass, field
 import re
 from datetime import datetime
 from pathlib import Path
-from typing import Any, Dict, List, Literal, Optional, Tuple, Type
+from typing import Any, Dict, List, Literal, Optional, Sequence, Tuple, Type
 
 from collections import defaultdict
 import yaml
@@ -35,6 +35,7 @@ DocType = Literal["article", "guideline", "ifu", "textbook"]
 SummaryLength = Literal["short", "medium", "long"]
 
 DROP_DEBUG_EVIDENCE = re.compile(r"^page\s+\d+\s+window<=\d+\s+tokens$", re.IGNORECASE)
+WINDOW_PLACEHOLDER_RE = re.compile(r"^page\s+(-?\d+)\s+window<=\d+\s+tokens$", re.IGNORECASE)
 
 EXTRACTOR_MAP = {
     "article": extract_article,
@@ -553,6 +554,35 @@ def _clean_debug_evidence(document: BaseDocument) -> set[str]:
     return removed
 
 
+def write_failure_artifact(
+    out_path: Path,
+    exc: Exception,
+    *,
+    stage: str,
+    profile: str,
+    doc_path: Path,
+) -> None:
+    """Persist a structured failure artifact for batch operations."""
+
+    from datetime import datetime
+
+    failure_payload = {
+        "failure_reason": f"{exc.__class__.__name__}: {exc}",
+        "metrics": {
+            "stage": stage,
+            "profile": profile or "auto",
+            "timestamp": datetime.utcnow().isoformat() + "Z",
+        },
+        "doc_path": str(doc_path),
+    }
+    failure_path = out_path.with_suffix(out_path.suffix + ".failure.json")
+    try:
+        failure_path.parent.mkdir(parents=True, exist_ok=True)
+    except Exception:
+        pass
+    failure_path.write_text(json.dumps(failure_payload, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
 def run_extract(
     pdf_path: Path,
     config_path: Path,
@@ -680,6 +710,18 @@ def run_extract(
         metrics.update(_document_metrics(document))
         if bool(document.pipeline_info.get("paragraph_dedup_applied")):
             metrics["paragraph_dedup_applied"] = True
+        if bool(document.pipeline_info.get("text_repair_applied")):
+            metrics["text_repair_applied"] = True
+        rec_metrics = document.pipeline_info.get("recommendation_metrics")
+        if isinstance(rec_metrics, dict) and rec_metrics.get("total"):
+            LOGGER.info(
+                "Recommendation metrics: total=%s graded=%s ungraded_typed=%s grade_density=%.2f typed_density=%.2f",
+                rec_metrics.get("total"),
+                rec_metrics.get("graded"),
+                rec_metrics.get("typed_ungraded"),
+                float(rec_metrics.get("grade_density", 0.0)),
+                float(rec_metrics.get("typed_density", 0.0)),
+            )
 
         emit_warnings = _apply_emit_constraints(document, config.emit)
 
@@ -900,6 +942,9 @@ def _meets_thresholds(
 
 def _document_metrics(document: BaseDocument) -> Dict[str, int | float | bool]:
     payload: Dict[str, int | float | bool] = {}
+    pipeline_info = getattr(document, "pipeline_info", {}) or {}
+    if not isinstance(pipeline_info, dict):
+        pipeline_info = {}
 
     if hasattr(document, "sections"):
         sections = getattr(document, "sections") or {}
@@ -914,7 +959,50 @@ def _document_metrics(document: BaseDocument) -> Dict[str, int | float | bool]:
 
     if hasattr(document, "recommendations"):
         recs = getattr(document, "recommendations") or []
-        payload["recommendations_count"] = len(recs)
+        total_recs = len(recs)
+        with_grade = 0
+        graded_count = 0
+        typed_ungraded = 0
+        for rec in recs:
+            normalized = getattr(rec, "grade_normalized", None) or {}
+            if normalized:
+                with_grade += 1
+                if normalized.get("ungraded"):
+                    typed_ungraded += 1
+                else:
+                    graded_count += 1
+            elif getattr(rec, "ungraded", False):
+                typed_ungraded += 1
+        typed_ungraded = min(typed_ungraded, max(0, total_recs - graded_count))
+        grade_density = round(with_grade / total_recs, 4) if total_recs else 0.0
+        typed_density = round((graded_count + typed_ungraded) / total_recs, 4) if total_recs else 0.0
+
+        payload["recommendations_count"] = total_recs
+        payload["graded_count"] = graded_count
+        payload["typed_ungraded_count"] = typed_ungraded
+        payload["grade_density"] = grade_density
+        payload["typed_density"] = typed_density
+
+        pipeline_info["recommendations_count"] = total_recs
+        pipeline_info["graded_count"] = graded_count
+        pipeline_info["typed_ungraded_count"] = typed_ungraded
+        pipeline_info["grade_density"] = grade_density
+        pipeline_info["typed_density"] = typed_density
+        grade_sources = pipeline_info.get("grade_source_breakdown")
+        if isinstance(grade_sources, dict) and grade_sources:
+            payload["grade_source_breakdown"] = dict(grade_sources)
+        metrics_block = pipeline_info.setdefault("recommendation_metrics", {})
+        metrics_block.update(
+            {
+                "total": total_recs,
+                "graded": graded_count,
+                "typed_ungraded": typed_ungraded,
+                "grade_density": grade_density,
+                "typed_density": typed_density,
+            }
+        )
+        if isinstance(grade_sources, dict) and grade_sources:
+            metrics_block["grade_source_breakdown"] = dict(grade_sources)
 
     if hasattr(document, "yield_definitions_present"):
         value = getattr(document, "yield_definitions_present")
@@ -930,9 +1018,23 @@ def _document_metrics(document: BaseDocument) -> Dict[str, int | float | bool]:
     if getattr(document, "doc_type", None) == "article":
         payload["ats"] = validate_ats_yield(document)
 
-    pipeline_info = getattr(document, "pipeline_info", {}) or {}
-    if isinstance(pipeline_info, dict) and "paragraph_dedup_applied" in pipeline_info:
+    if "paragraph_dedup_applied" in pipeline_info:
         payload["paragraph_dedup_applied"] = bool(pipeline_info.get("paragraph_dedup_applied"))
+    if "relations_dropped" in pipeline_info:
+        try:
+            payload["relations_dropped"] = int(pipeline_info.get("relations_dropped") or 0)
+        except (TypeError, ValueError):
+            payload["relations_dropped"] = 0
+    if "tables_dropped" in pipeline_info:
+        try:
+            payload["tables_dropped"] = int(pipeline_info.get("tables_dropped") or 0)
+        except (TypeError, ValueError):
+            payload["tables_dropped"] = 0
+    if "window_placeholders_removed" in pipeline_info:
+        try:
+            payload["window_placeholders_removed"] = int(pipeline_info.get("window_placeholders_removed") or 0)
+        except (TypeError, ValueError):
+            payload["window_placeholders_removed"] = 0
 
     if hasattr(document, "umls_entities"):
         entities = getattr(document, "umls_entities") or []
@@ -942,6 +1044,8 @@ def _document_metrics(document: BaseDocument) -> Dict[str, int | float | bool]:
         relations = getattr(document, "relations") or []
         payload["relations_count"] = len(relations)
 
+    _validate_metrics_consistency(payload, pipeline_info)
+    document.pipeline_info = pipeline_info
     return payload
 
 
@@ -951,6 +1055,24 @@ def _hydrate_document(doc_type: str, cached_data: Dict[str, object]) -> BaseDocu
         raise ValueError(f"Unsupported doc_type '{doc_type}' in cache entry.")
     document_payload = cached_data.get("document") or {}
     return model_cls.model_validate(document_payload)
+
+
+def _validate_metrics_consistency(
+    metrics: Dict[str, int | float | bool],
+    pipeline_info: Dict[str, object],
+) -> None:
+    """Sanity-check metric counters against pipeline bookkeeping."""
+
+    for key in ("recommendations_count", "graded_count", "typed_ungraded_count", "grade_density", "typed_density"):
+        if key in pipeline_info:
+            assert metrics.get(key) == pipeline_info.get(key), f"Metrics mismatch for {key}"
+    for key in ("relations_dropped", "tables_dropped", "window_placeholders_removed"):
+        if key in pipeline_info:
+            assert metrics.get(key) == pipeline_info.get(key), f"Metrics mismatch for {key}"
+    if "paragraph_dedup_applied" in pipeline_info:
+        assert bool(metrics.get("paragraph_dedup_applied")) == bool(
+            pipeline_info.get("paragraph_dedup_applied")
+        ), "Metrics mismatch for paragraph_dedup_applied"
 
 
 def _apply_emit_constraints(document: BaseDocument, emit: Dict[str, Any]) -> List[str]:
@@ -978,11 +1100,50 @@ def _apply_emit_constraints(document: BaseDocument, emit: Dict[str, Any]) -> Lis
     max_json_bytes = _coerce_positive_int(emit.get("max_json_bytes"))
     keep_evidence_bank = bool(emit.get("keep_evidence_bank", True))
     paragraph_requested = bool(emit.get("paragraph_store", emit.get("paragraph_dedupe", False)))
+    tables_cfg = emit.get("tables")
+    if not isinstance(tables_cfg, dict):
+        tables_cfg = {}
+    preserve_header_tokens = [
+        str(value).lower()
+        for value in tables_cfg.get("preserve_headers", [])
+        if isinstance(value, str)
+    ]
+    preserve_summary_tables = bool(tables_cfg.get("preserve_summary_recommendations"))
+
+    def _flatten_headers(raw_headers: Sequence[Sequence[str] | str]) -> List[str]:
+        if not raw_headers:
+            return []
+        if all(isinstance(item, str) for item in raw_headers):
+            return [str(item or "").strip() for item in raw_headers]  # type: ignore[list-item]
+        breadth = 0
+        for row in raw_headers:
+            if isinstance(row, (list, tuple)):
+                breadth = max(breadth, len(row))
+        flattened: List[str] = []
+        for idx in range(breadth):
+            parts: List[str] = []
+            for row in raw_headers:
+                if isinstance(row, (list, tuple)) and idx < len(row):
+                    cell = row[idx]
+                    if cell:
+                        parts.append(str(cell).strip())
+            flattened.append(" ".join(parts).strip())
+        return flattened
+
+    def _contains_grade_columns(flattened_headers: Sequence[str]) -> bool:
+        grade_tokens = ("grade", "strength", "certainty", "quality")
+        for header in flattened_headers:
+            lowered = str(header or "").lower()
+            if any(token in lowered for token in grade_tokens):
+                return True
+        return False
+
     paragraph_mode = paragraph_requested or evidence_policy == "compact"
     window_placeholder = re.compile(r"^page\s+(-?\d+)\s+window<=\d+\s+tokens$", re.IGNORECASE)
     co_mention_placeholder = re.compile(r"^page\s+(-?\d+)\s+co[- ]mention", re.IGNORECASE)
 
     paragraph_store = getattr(document, "paragraph_store", None)
+    placeholders_removed = 0
     if not isinstance(paragraph_store, dict):
         paragraph_store = {}
     else:
@@ -990,9 +1151,15 @@ def _apply_emit_constraints(document: BaseDocument, emit: Dict[str, Any]) -> Lis
             if not isinstance(entry, dict):
                 paragraph_store.pop(hash_id, None)
                 continue
-            text_value = normalize_paragraph_text(entry.get("text"))
-            if not text_value:
+            raw_text = str(entry.get("text") or "")
+            if WINDOW_PLACEHOLDER_RE.match(raw_text.strip()):
                 paragraph_store.pop(hash_id, None)
+                placeholders_removed += 1
+                continue
+            text_value = normalize_paragraph_text(raw_text)
+            if not text_value or WINDOW_PLACEHOLDER_RE.match(text_value):
+                paragraph_store.pop(hash_id, None)
+                placeholders_removed += 1
                 continue
             entry["text"] = text_value
             entry["length"] = len(text_value)
@@ -1075,10 +1242,14 @@ def _apply_emit_constraints(document: BaseDocument, emit: Dict[str, Any]) -> Lis
         order.append(paragraph_counter["value"])
 
     def _store_paragraph(text: Optional[str], page: Optional[int] = None) -> Optional[tuple[str, str]]:
+        nonlocal placeholders_removed
         if not paragraph_mode or not text:
             return None
         normalized_text = normalize_paragraph_text(text)
         if not normalized_text:
+            return None
+        if WINDOW_PLACEHOLDER_RE.match(normalized_text):
+            placeholders_removed += 1
             return None
 
         existing_hash = paragraph_lookup.get(normalized_text)
@@ -1112,6 +1283,7 @@ def _apply_emit_constraints(document: BaseDocument, emit: Dict[str, Any]) -> Lis
         return hash_id, normalized_text
 
     def _resolve_placeholder_span(span: Optional[EvidenceSpan]) -> bool:
+        nonlocal placeholders_removed
         if not paragraph_mode or not isinstance(span, EvidenceSpan):
             return False
         if not span.text:
@@ -1133,7 +1305,12 @@ def _apply_emit_constraints(document: BaseDocument, emit: Dict[str, Any]) -> Lis
             candidate_hashes = page_lookup.get(first_page, [])
 
         if not candidate_hashes:
-            return False
+            placeholders_removed += 1
+            span.text = None
+            span.hash = None
+            span.paragraph_hash = None
+            span.paragraph_offset = None
+            return True
 
         hash_id = candidate_hashes[0]
         entry = paragraph_store.get(hash_id, {})
@@ -1245,15 +1422,37 @@ def _apply_emit_constraints(document: BaseDocument, emit: Dict[str, Any]) -> Lis
                     else:
                         setattr(relation, "evidence", truncated)
 
+    if evidence_policy == "compact" and hasattr(document, "recommendations"):
+        for rec in getattr(document, "recommendations") or []:
+            if hasattr(rec, "grade_candidates"):
+                rec.grade_candidates = None
+
+    tables_dropped = 0
     if hasattr(document, "tables"):
         tables = getattr(document, "tables") or []
         cleaned_tables = []
+        doc_subtype = str(getattr(document, "doc_subtype", "") or "").lower()
+        guideline_doc = doc_subtype in {"guideline", "statement"}
         seen_rows: set[tuple] = set()
         for table in tables:
             is_mapping = isinstance(table, dict)
             headers = list(table.get("headers", [])) if is_mapping else list(getattr(table, "headers", []))
             rows = table.get("rows") if is_mapping else getattr(table, "rows", [])
             rows = rows or []
+            flattened_headers = _flatten_headers(headers)
+            header_text = " ".join(flattened_headers).lower()
+            caption_text = ""
+            if is_mapping:
+                caption_text = str(table.get("caption") or "").lower()
+            else:
+                caption_text = str(getattr(table, "caption", "") or "").lower()
+            preserve_table = False
+            if preserve_header_tokens:
+                combined_text = " ".join(filter(None, [caption_text, header_text]))
+                if any(token in combined_text for token in preserve_header_tokens):
+                    preserve_table = True
+            if not preserve_table and preserve_summary_tables and guideline_doc and _contains_grade_columns(flattened_headers):
+                preserve_table = True
             truncated = False
             cleaned_rows = []
             for row in rows:
@@ -1268,7 +1467,15 @@ def _apply_emit_constraints(document: BaseDocument, emit: Dict[str, Any]) -> Lis
                     continue
                 seen_rows.add(row_key)
                 cleaned_rows.append(cleaned_row)
-            if tables_mode == "compact" and table_sample_rows and len(cleaned_rows) > table_sample_rows:
+            if preserve_table and getattr(table, "table_type", None) is None:
+                if is_mapping:
+                    table = dict(table)
+                    if "table_type" not in table:
+                        table["table_type"] = "preserved_summary"
+                else:
+                    if not getattr(table, "table_type", None):
+                        setattr(table, "table_type", "preserved_summary")
+            if tables_mode == "compact" and table_sample_rows and len(cleaned_rows) > table_sample_rows and not preserve_table:
                 if is_mapping:
                     table = dict(table)
                     table["rows_truncated"] = True
@@ -1292,8 +1499,13 @@ def _apply_emit_constraints(document: BaseDocument, emit: Dict[str, Any]) -> Lis
 
         if isinstance(max_tables, int) and max_tables >= 0 and len(cleaned_tables) > max_tables:
             warnings.append("table_limit_exceeded")
+            drop_count = len(cleaned_tables) - max_tables
+            tables_dropped += drop_count
             cleaned_tables = cleaned_tables[:max_tables]
         setattr(document, "tables", cleaned_tables)
+        document.pipeline_info.setdefault("tables_original", len(tables))
+        document.pipeline_info["tables_kept"] = len(cleaned_tables)
+        document.pipeline_info["tables_dropped"] = tables_dropped
 
     entities = getattr(document, "umls_entities", None)
     if entities and max_entities and len(entities) > max_entities:
@@ -1407,10 +1619,9 @@ def _apply_emit_constraints(document: BaseDocument, emit: Dict[str, Any]) -> Lis
             mutated = True
         if mutated:
             setattr(document, "relations", relation_list)
-            document.pipeline_info.setdefault("relations_original", relations_original_count)
-            document.pipeline_info["relations_kept"] = len(relation_list)
-            if relations_dropped:
-                document.pipeline_info["relations_dropped"] = relations_dropped
+        document.pipeline_info.setdefault("relations_original", relations_original_count)
+        document.pipeline_info["relations_kept"] = len(relation_list)
+        document.pipeline_info["relations_dropped"] = relations_dropped
 
     if not keep_evidence_bank:
         setattr(document, "evidence_bank", {})
@@ -1480,6 +1691,8 @@ def _apply_emit_constraints(document: BaseDocument, emit: Dict[str, Any]) -> Lis
     if paragraph_mode:
         document.pipeline_info["paragraph_store_size"] = len(paragraph_store)
         setattr(document, "paragraph_store", paragraph_store)
+
+    document.pipeline_info["window_placeholders_removed"] = placeholders_removed
 
     if max_json_bytes:
         try:
@@ -1551,4 +1764,4 @@ def _determine_total_pages(pdf_path: Path) -> int:
     return len(load_pages(pdf_path))
 
 
-__all__ = ["PipelineOutcome", "run_extract"]
+__all__ = ["PipelineOutcome", "run_extract", "write_failure_artifact"]

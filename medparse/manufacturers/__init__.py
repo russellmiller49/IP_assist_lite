@@ -39,11 +39,13 @@ def detect_manufacturer(text: str, profiles: List[ManufacturerProfile]) -> Optio
 # Import profiles
 from .erbe import erbe_profile
 from .intuitive import intuitive_profile
+from .olympus import olympus_profile
 
 # Registry of all profiles
 PROFILES = [
     intuitive_profile,
     erbe_profile,
+    olympus_profile,
 ]
 
 __all__ = [
@@ -52,4 +54,5 @@ __all__ = [
     "PROFILES",
     "intuitive_profile",
     "erbe_profile",
+    "olympus_profile",
 ]

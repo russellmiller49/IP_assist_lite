@@ -35,4 +35,4 @@ def test_research_diagnostic_yield_relaxed(article_config):
     else:
         assert yield_data.reported_value is not None
         assert yield_data.reported_value == pytest.approx(0.90, rel=0.05)
-        assert "no_denominator_in_text" in (yield_data.exclusion_reasons or [])
+        assert "no_n_over_N" in (yield_data.exclusion_reasons or [])

@@ -30,6 +30,10 @@ LIGATURE_MAP = {
     "\ufb04": "ffl",  # ﬄ
 }
 
+BRAND_SUBSTITUTIONS = [
+    (re.compile(r"\bplan\s*point\b", re.IGNORECASE), "PlanPoint"),
+]
+
 
 def strip_headers_footers(text: str) -> str:
     cleaned = text
@@ -55,6 +59,8 @@ def heuristic_space_fix(s: str) -> str:
     """Fix missing spaces using CamelCase detection and common OCR artifacts."""
     s = CAMEL_FIX.sub(' ', s)
     s = s.replace('3 D', '3D')  # common OCR artifact
+    for pattern, replacement in BRAND_SUBSTITUTIONS:
+        s = pattern.sub(replacement, s)
     return collapse_runs(s)
 
 

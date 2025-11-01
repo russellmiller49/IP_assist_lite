@@ -3,3 +3,9 @@ emit:
   tables_mode: compact
   max_relations: 300
   max_table_rows: 200
+  tables:
+    preserve_summary_recommendations: true
+    preserve_headers:
+      - summary of recommendations
+      - summary of statements
+      - recommendations and strength

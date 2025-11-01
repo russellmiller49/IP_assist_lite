@@ -27,7 +27,7 @@ import click
 import typer
 
 from medparse import __version__
-from medparse.pipeline.run_extract import PipelineOutcome, run_extract
+from medparse.pipeline.run_extract import PipelineOutcome, run_extract, write_failure_artifact
 from medparse.utils.slug import slugify
 from medparse.validate.validators import validate_document
 from medparse.config import ExtractionProfile
@@ -345,24 +345,40 @@ def extract_textbook(
         metadata_overrides["zotero_json"] = str(zotero_json)
     metadata_payload = metadata_overrides or None
     failures: list[Path] = []
+    successes = 0
+    profile_label = profile or "auto"
     for pdf_path, out_path in jobs:
-        outcome = run_extract(
-            pdf_path=pdf_path,
-            config_path=config_path,
-            use_cache=not no_cache,
-            force_deep=force_deep,
-            max_pages=max_pages,
-            summary_length=normalized_summary,
-            profile_override=profile,
-            emit_overrides=overrides_payload,
-            metadata_overrides=metadata_payload,
-        )
+        try:
+            outcome = run_extract(
+                pdf_path=pdf_path,
+                config_path=config_path,
+                use_cache=not no_cache,
+                force_deep=force_deep,
+                max_pages=max_pages,
+                summary_length=normalized_summary,
+                profile_override=profile,
+                emit_overrides=overrides_payload,
+                metadata_overrides=metadata_payload,
+            )
+        except Exception as exc:  # pragma: no cover - defensive batch safeguard
+            write_failure_artifact(
+                out_path,
+                exc,
+                stage="extract",
+                profile=profile_label,
+                doc_path=pdf_path,
+            )
+            failures.append(out_path)
+            continue
         outcome.metadata["emit_raw_pages"] = emit_raw_pages
-        if not _write_outcome(outcome, out_path):
+        if _write_outcome(outcome, out_path):
+            successes += 1
+        else:
             failures.append(out_path)
 
     if failures:
         typer.echo(f"{len(failures)} textbook extraction(s) reported validation errors or failures.")
+    if successes == 0:
         raise typer.Exit(code=2)
 
 
@@ -402,25 +418,42 @@ def _run_pipeline_for_pdfs(
         metadata_overrides["zotero_json"] = str(zotero_json)
     metadata_payload = metadata_overrides or None
     failures: list[Path] = []
+    successes = 0
+    profile_label = profile_override or "auto"
     for pdf_path in pdfs:
         out_path = out_dir / f"{prefix}_{slugify(pdf_path.stem)}.json"
-        outcome = run_extract(
-            pdf_path=pdf_path,
-            config_path=config_path,
-            use_cache=use_cache,
-            force_deep=force_deep,
-            max_pages=max_pages,
-            summary_length=normalized_summary,
-            profile_override=profile_override,
-            emit_overrides=overrides_payload,
-            metadata_overrides=metadata_payload,
-        )
+        try:
+            outcome = run_extract(
+                pdf_path=pdf_path,
+                config_path=config_path,
+                use_cache=use_cache,
+                force_deep=force_deep,
+                max_pages=max_pages,
+                summary_length=normalized_summary,
+                profile_override=profile_override,
+                emit_overrides=overrides_payload,
+                metadata_overrides=metadata_payload,
+            )
+        except Exception as exc:  # pragma: no cover - defensive batch safeguard
+            write_failure_artifact(
+                out_path,
+                exc,
+                stage="extract",
+                profile=profile_label,
+                doc_path=pdf_path,
+            )
+            failures.append(out_path)
+            continue
+
         outcome.metadata["emit_raw_pages"] = emit_raw_pages
-        if not _write_outcome(outcome, out_path):
+        if _write_outcome(outcome, out_path):
+            successes += 1
+        else:
             failures.append(out_path)
 
     if failures:
         typer.echo(f"{len(failures)} extraction(s) reported validation errors or failures.")
+    if successes == 0:
         raise typer.Exit(code=2)
 
 

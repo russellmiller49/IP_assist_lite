@@ -23,6 +23,11 @@ RE_LESIONS = re.compile(
     re.IGNORECASE,
 )
 
+ATS_REASON_NO_N_OVER_N = "no_n_over_N"
+ATS_REASON_FOLLOW_UP = "follow_up_used_in_numerator"
+ATS_REASON_NONSPECIFIC = "nonspecific_counts_included"
+ATS_REASON_DERIVED = "derived_counts_from_percent"
+
 
 class EvidenceSpan(BaseModel):
     """Evidence location for extracted data."""
@@ -166,10 +171,7 @@ def _extract_from_text(results_text: str) -> Optional[DiagnosticYieldATS]:
     yield_match = RE_YIELD.search(results_text)
     if yield_match:
         yield_pct = float(yield_match.group(1))
-        exclusion_reasons = [
-            "no_numerator_denominator_at_attempted_or_performed_level",
-            "non_strict_reported",
-        ]
+        exclusion_reasons = [ATS_REASON_NO_N_OVER_N]
         match_start, match_end = yield_match.start(), yield_match.end()
         ci_lower, ci_upper = extract_confidence_intervals(results_text, match_start, match_end)
         definition = extract_yield_definition(results_text, match_start, match_end)
@@ -181,7 +183,7 @@ def _extract_from_text(results_text: str) -> Optional[DiagnosticYieldATS]:
         denominator_hint = None
         if denominator_from_context and denom_label:
             denominator_hint = f"{denominator_from_context} {denom_label}"
-            exclusion_reasons.append("derived_counts_from_percent")
+            exclusion_reasons.append(ATS_REASON_DERIVED)
 
         return DiagnosticYieldATS(
             numerator=numerator,
@@ -254,8 +256,8 @@ def _populate_denominator_from_sections(
             yield_data.denominator = lesion_candidate
         if yield_data.yield_pct is not None:
             yield_data.numerator = int(round((yield_data.yield_pct / 100.0) * lesion_candidate))
-        if "derived_counts_from_percent" not in yield_data.exclusion_reasons:
-            yield_data.exclusion_reasons.append("derived_counts_from_percent")
+        if ATS_REASON_DERIVED not in yield_data.exclusion_reasons:
+            yield_data.exclusion_reasons.append(ATS_REASON_DERIVED)
         return
     if patient_candidate:
         yield_data.patient_denominator = patient_candidate
@@ -265,8 +267,8 @@ def _populate_denominator_from_sections(
             yield_data.denominator = patient_candidate
         if yield_data.numerator is None and yield_data.yield_pct is not None:
             yield_data.numerator = int(round((yield_data.yield_pct / 100.0) * patient_candidate))
-        if "derived_counts_from_percent" not in yield_data.exclusion_reasons:
-            yield_data.exclusion_reasons.append("derived_counts_from_percent")
+        if ATS_REASON_DERIVED not in yield_data.exclusion_reasons:
+            yield_data.exclusion_reasons.append(ATS_REASON_DERIVED)
 
 
 def _scan_sections_for_counts(sections: Dict[str, str]) -> tuple[Optional[int], Optional[int]]:
@@ -365,26 +367,20 @@ def _finalize_yield_record(
             _append_reason(yield_data, reason)
 
     # Add missing data reasons
-    baseline_reason = "no_numerator_denominator_at_attempted_or_performed_level"
     if yield_data.numerator is None or yield_data.denominator is None:
-        _append_reason(yield_data, baseline_reason)
-        _append_reason(yield_data, "missing_numerator_denominator")
+        _append_reason(yield_data, ATS_REASON_NO_N_OVER_N)
         if yield_data.yield_pct is not None:
-            _append_reason(yield_data, "non_strict_reported")
+            _append_reason(yield_data, ATS_REASON_DERIVED)
         yield_data.compatible_with_ats = False
 
     # Update strict flag
-    derived_counts = "derived_counts_from_percent" in yield_data.exclusion_reasons
+    derived_counts = ATS_REASON_DERIVED in yield_data.exclusion_reasons
     yield_data.strict = (
         yield_data.numerator is not None
         and yield_data.denominator is not None
         and not derived_counts
         and yield_data.compatible_with_ats
     )
-    if yield_data.numerator is not None and yield_data.denominator is not None:
-        yield_data.exclusion_reasons = [
-            reason for reason in yield_data.exclusion_reasons if reason != "missing_numerator_denominator"
-        ]
 
 
 def _attempt_backfill_counts(yield_data: DiagnosticYieldATS, sections: Dict[str, str]) -> None:
@@ -411,7 +407,7 @@ def _attempt_backfill_counts(yield_data: DiagnosticYieldATS, sections: Dict[str,
             yield_data.denominator = denominator
         if denominator and yield_data.numerator is None:
             yield_data.numerator = int(round((yield_data.yield_pct / 100.0) * denominator))
-            _append_reason(yield_data, "derived_counts_from_percent")
+            _append_reason(yield_data, ATS_REASON_DERIVED)
 
 
 def _find_cohort_size(text: str) -> Optional[int]:
@@ -442,47 +438,34 @@ def validate_ats_compliance(results_text: str, methods_text: str) -> Tuple[bool,
     Returns:
         Tuple of (is_compatible, list_of_exclusion_reasons)
     """
-    exclusions = []
+    exclusions: List[str] = []
+
+    def _append(reason: str) -> None:
+        if reason not in exclusions:
+            exclusions.append(reason)
+
+    lower_results = results_text.lower()
 
     # Check 1: Denominator excludes non-diagnostic?
-    if re.search(r'exclud(?:ing|ed)\s+non-diagnostic', results_text, re.IGNORECASE):
-        exclusions.append("Denominator excludes non-diagnostic cases (should include)")
+    if re.search(r'exclud(?:ing|ed)\s+non-diagnostic', lower_results, re.IGNORECASE):
+        _append(ATS_REASON_NONSPECIFIC)
 
     # Check 2: Per-lesion only (no per-patient)?
-    if 'per-lesion' in results_text.lower() and 'per-patient' not in results_text.lower():
-        exclusions.append("Only per-lesion yield reported (need per-patient)")
+    if "per-lesion" in lower_results and "per-patient" not in lower_results:
+        _append(ATS_REASON_NONSPECIFIC)
 
     # Check 3: Technical success conflated with diagnostic yield
-    if 'technical success' in results_text.lower():
-        # Check if diagnostic yield is also mentioned
-        if 'diagnostic yield' not in results_text.lower():
-            exclusions.append("Only technical success reported (not diagnostic yield)")
+    if "technical success" in lower_results and "diagnostic yield" not in lower_results:
+        _append(ATS_REASON_NONSPECIFIC)
 
     # Check 4: Follow-up required for diagnosis?
-    if re.search(r'follow-up.*(?:required|necessary|used).*diagnosis', methods_text, re.IGNORECASE):
-        # Check if follow-up period is adequate (≥6 months)
-        followup_match = re.search(r'(\d+)\s*(?:day|week|month|year).*follow-up', methods_text, re.IGNORECASE)
-        if followup_match:
-            value = int(followup_match.group(1))
-            unit = re.search(r'(day|week|month|year)', followup_match.group(0), re.IGNORECASE).group(1).lower()
-
-            # Convert to months
-            months = value
-            if unit == 'day':
-                months = value / 30
-            elif unit == 'week':
-                months = value / 4
-            elif unit == 'year':
-                months = value * 12
-
-            if months < 6:
-                exclusions.append(f"Follow-up period inadequate ({value} {unit}, need ≥6 months)")
-        else:
-            exclusions.append("Follow-up period not specified")
+    followup_pattern = re.compile(r'follow[-\s]*up.*(?:required|necessary|used).*diagnos', re.IGNORECASE)
+    if followup_pattern.search(methods_text):
+        _append(ATS_REASON_FOLLOW_UP)
 
     # Check 5: Index procedure vs composite endpoint
-    if 'composite' in results_text.lower() or 'combined' in results_text.lower():
-        exclusions.append("Composite endpoint used (not index procedure alone)")
+    if "composite" in lower_results or "combined" in lower_results:
+        _append(ATS_REASON_NONSPECIFIC)
 
     return (len(exclusions) == 0), exclusions
 

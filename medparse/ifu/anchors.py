@@ -17,33 +17,263 @@ DOT_LEADER_PATTERN = re.compile(r"\.{2,}")
 TRAILING_NUMBER_PATTERN = re.compile(r"\s\d{1,4}\s*$")
 ANCHOR_HEADING_PATTERN = re.compile(r"^\s*\d+\.\s+[A-Z].*$")
 
+# Enhanced TOC detection patterns
+TOC_HEADER_PATTERN = re.compile(r"^\s*(contents|table of contents|index)\s*$", re.IGNORECASE)
+DOT_LEADER_LINE = re.compile(r".+(\.{2,}|\s{2,})\s*\d{1,3}\s*$")
+PAGE_NUMBER_LINE = re.compile(r"^.+\s+\d{1,3}\s*$")
+
 DEFAULT_SECTION_ANCHORS: Dict[str, Dict[str, List[str]]] = {
     "indications_for_use": {
-        "start": ["indications for use"],
-        "stops": ["intended use", "intended user", "contraindications", "warnings"],
+        "start": [
+            "indications for use",
+            "indication for use",
+            "clinical indications",
+        ],
+        "stops": [
+            "intended use",
+            "intended patient population",
+            "intended user",
+            "clinical risks and benefits",
+            "clinical risks & benefits",
+            "clinical benefits and risks",
+            "contraindications",
+            "serious incident reporting",
+            "general warnings, cautions, and notes",
+            "general warnings",
+            "warnings",
+            "cautions",
+            "notes",
+            "professional instructions for use",
+            "introduction | professional instructions for use",
+            "table 1.1",
+        ],
     },
     "intended_use": {
-        "start": ["intended use"],
-        "stops": ["intended user", "contraindications", "warnings", "adverse events"],
+        "start": [
+            "intended use",
+            "use intended",
+            "purpose",
+        ],
+        "stops": [
+            "intended patient population",
+            "intended user",
+            "clinical risks and benefits",
+            "clinical risks & benefits",
+            "clinical benefits and risks",
+            "contraindications",
+            "serious incident reporting",
+            "general warnings, cautions, and notes",
+            "general warnings",
+            "warnings",
+            "cautions",
+            "notes",
+        ],
     },
     "intended_user": {
-        "start": ["intended user", "user"],
-        "stops": ["contraindications", "warnings", "adverse events"],
+        "start": [
+            "intended user",
+            "user qualifications",
+        ],
+        "stops": [
+            "intended patient population",
+            "contraindications",
+            "warnings",
+            "cautions",
+            "notes",
+            "adverse events",
+        ],
+    },
+    "intended_patient_population": {
+        "start": [
+            "intended patient population",
+            "patient population",
+            "intended patients",
+        ],
+        "stops": [
+            "intended user",
+            "contraindications",
+            "clinical risks and benefits",
+            "warnings",
+            "cautions",
+            "notes",
+        ],
     },
     "contraindications": {
-        "start": ["contraindications"],
-        "stops": ["warnings", "adverse events", "precautions"],
+        "start": [
+            "contraindications",
+        ],
+        "stops": [
+            "clinical risks and benefits",
+            "warnings",
+            "cautions",
+            "notes",
+            "adverse events",
+            "precautions",
+        ],
     },
-    "warnings": {"start": ["warnings"], "stops": ["cautions", "precautions", "notes"]},
-    "cautions": {"start": ["cautions"], "stops": ["notes", "instructions", "warnings"]},
-    "notes": {"start": ["notes"], "stops": ["warnings", "instructions", "cautions"]},
+    "clinical_risks_and_benefits": {
+        "start": [
+            "clinical risks and benefits",
+            "clinical risks & benefits",
+        ],
+        "stops": [
+            "serious incident reporting",
+            "general warnings, cautions, and notes",
+            "general warnings",
+            "warnings",
+            "cautions",
+            "notes",
+        ],
+    },
     "adverse_events": {
-        "start": ["adverse events", "complications"],
-        "stops": ["warnings", "precautions", "maintenance"],
+        "start": [
+            "adverse events",
+            "potential adverse events",
+            "possible adverse events",
+            "complications",
+            "potential complications",
+            "possible complications",
+        ],
+        "stops": [
+            "warnings",
+            "cautions",
+            "notes",
+            "maintenance",
+            "serious incident reporting",
+        ],
     },
-    "instructions": {"start": ["instructions"], "stops": ["sterilization", "specifications"]},
-    "sterilization": {"start": ["sterilization"], "stops": ["specifications"]},
-    "specifications": {"start": ["specifications"], "stops": ["appendix", "bibliography"]},
+    "warnings": {
+        "start": ["warnings", "general warnings"],
+        "stops": ["cautions", "precautions", "notes"],
+    },
+    "cautions": {
+        "start": ["cautions"],
+        "stops": ["notes", "instructions", "warnings"],
+    },
+    "notes": {
+        "start": ["notes"],
+        "stops": ["warnings", "instructions", "cautions"],
+    },
+    "instructions": {
+        "start": ["instructions"],
+        "stops": ["sterilization", "specifications"],
+    },
+    "sterilization": {
+        "start": ["sterilization"],
+        "stops": ["specifications"],
+    },
+    "specifications": {
+        "start": ["specifications"],
+        "stops": ["appendix", "bibliography"],
+    },
+}
+
+
+INTUITIVE_ANCHORS: Dict[str, Dict[str, List[str]]] = {
+    "indications_for_use": {
+        "start": [
+            "1.4.1 indications for use",
+            "indications for use",
+        ],
+        "stops": [
+            "1.4.2 intended use",
+            "intended use",
+            "1.5 serious incident reporting",
+            "serious incident reporting",
+        ],
+    },
+    "intended_use": {
+        "start": [
+            "1.4.2 intended use",
+            "intended use",
+        ],
+        "stops": [
+            "1.4.3 intended user",
+            "intended user",
+            "1.5 serious incident reporting",
+            "serious incident reporting",
+        ],
+    },
+    "intended_user": {
+        "start": [
+            "1.4.3 intended user",
+            "intended user",
+        ],
+        "stops": [
+            "1.4.4 intended patient population",
+            "intended patient population",
+            "clinical risks and benefits",
+            "1.5 serious incident reporting",
+        ],
+    },
+    "intended_patient_population": {
+        "start": [
+            "1.4.4 intended patient population",
+            "intended patient population",
+        ],
+        "stops": [
+            "clinical risks and benefits",
+            "1.5 serious incident reporting",
+            "serious incident reporting",
+        ],
+    },
+    "clinical_risks_and_benefits": {
+        "start": [
+            "1.4.5 clinical risks and benefits",
+            "clinical risks and benefits",
+        ],
+        "stops": [
+            "1.5 serious incident reporting",
+            "serious incident reporting",
+            "1.6 general warnings, cautions, and notes",
+        ],
+    },
+}
+
+
+OLYMPUS_ANCHORS: Dict[str, Dict[str, List[str]]] = {
+    "indications_for_use": {
+        "start": [
+            "indications for use",
+        ],
+        "stops": [
+            "contraindications",
+            "important information — please read before use",
+            "important information - please read before use",
+            "user qualifications",
+        ],
+    },
+    "contraindications": {
+        "start": [
+            "contraindications",
+        ],
+        "stops": [
+            "warning",
+            "warnings",
+            "precautions",
+            "user qualifications",
+            "instrument compatibility",
+        ],
+    },
+    "intended_use": {
+        "start": [
+            "intended use",
+            "intended purpose",
+        ],
+        "stops": [
+            "contraindications",
+            "user qualifications",
+            "important information — please read before use",
+        ],
+    },
+}
+
+
+MANUFACTURER_ANCHORS: Dict[str, Dict[str, Dict[str, List[str]]]] = {
+    "INTUITIVE SURGICAL, INC.": INTUITIVE_ANCHORS,
+    "INTUITIVE SURGICAL": INTUITIVE_ANCHORS,
+    "OLYMPUS CORPORATION": OLYMPUS_ANCHORS,
+    "OLYMPUS": OLYMPUS_ANCHORS,
 }
 
 
@@ -145,7 +375,7 @@ def strip_toc(
     filtered: List[PageData] = []
     dropped: List[int] = []
 
-    for page in pages:
+    for page_idx, page in enumerate(pages):
         if not page.lines:
             filtered.append(page)
             continue
@@ -155,6 +385,19 @@ def strip_toc(
             filtered.append(page)
             continue
 
+        # Only check for TOC/Index in first 15 pages
+        if page_idx < 15:
+            page_text = "\n".join(non_empty)
+
+            # Check for explicit TOC/Index headers
+            has_toc_header = any(TOC_HEADER_PATTERN.match(line) for line in non_empty[:5])
+
+            # Check if entire page looks like TOC
+            if has_toc_header or looks_like_toc(page_text):
+                dropped.append(page.number)
+                continue
+
+        # Original density-based detection
         non_empty_ratio = len(non_empty) / max(len(page.lines), 1)
         dot_ratio = sum(1 for line in non_empty if DOT_LEADER_PATTERN.search(line)) / len(non_empty)
         trailing_ratio = sum(1 for line in non_empty if TRAILING_NUMBER_PATTERN.search(line)) / len(non_empty)
@@ -216,15 +459,44 @@ def slice_section(
 
 
 def looks_like_toc(text: str) -> bool:
+    """Enhanced TOC detection with multiple heuristics."""
     lowered = text.lower()
-    if "table of contents" in lowered:
+
+    # Check for explicit TOC headers
+    if "table of contents" in lowered or "index" in lowered:
         return True
 
-    dotted_lines = sum(1 for line in text.splitlines() if DOT_LEADER_PATTERN.search(line))
-    numbered = sum(1 for line in text.splitlines() if TRAILING_NUMBER_PATTERN.search(line))
-    total_lines = max(len(text.splitlines()), 1)
+    lines = text.splitlines()
+    if not lines:
+        return False
 
+    # Check first few lines for TOC header pattern
+    for line in lines[:3]:
+        if TOC_HEADER_PATTERN.match(line):
+            return True
+
+    # Count different TOC indicators
+    dotted_lines = sum(1 for line in lines if DOT_LEADER_LINE.search(line))
+    numbered = sum(1 for line in lines if TRAILING_NUMBER_PATTERN.search(line))
+    page_refs = sum(1 for line in lines if PAGE_NUMBER_LINE.search(line))
+    total_lines = max(len(lines), 1)
+
+    # Multiple detection thresholds
     if dotted_lines / total_lines >= 0.3 and numbered / total_lines >= 0.3:
+        return True
+
+    # Check for high density of page number references
+    if page_refs / total_lines >= 0.5:
+        # But not if it looks like actual content
+        avg_line_length = sum(len(line.strip()) for line in lines) / total_lines
+        if avg_line_length < 60:  # TOC lines tend to be shorter
+            return True
+
+    # Check for index-style patterns (short entries with page numbers)
+    short_with_numbers = sum(1 for line in lines
+                           if len(line.strip()) < 50 and
+                           TRAILING_NUMBER_PATTERN.search(line))
+    if short_with_numbers / total_lines >= 0.6:
         return True
 
     return False
@@ -243,7 +515,10 @@ def normalize_bullets(text: str) -> str:
     return "\n".join(lines)
 
 
-def resolve_anchor_map(overrides: Dict[str, Any]) -> Dict[str, Dict[str, List[str]]]:
+def resolve_anchor_map(
+    overrides: Dict[str, Any],
+    manufacturer: Optional[str] = None,
+) -> Dict[str, Dict[str, List[str]]]:
     merged: Dict[str, Dict[str, List[str]]] = {}
     for key, config in DEFAULT_SECTION_ANCHORS.items():
         merged[key] = {
@@ -258,6 +533,21 @@ def resolve_anchor_map(overrides: Dict[str, Any]) -> Dict[str, Dict[str, List[st
             merged[field]["start"] = _coerce_anchor_list(override.get("start"))
         if "stops" in override:
             merged[field]["stops"] = _coerce_anchor_list(override.get("stops"))
+
+    if manufacturer:
+        normalized = manufacturer.strip().upper()
+        anchor_bundle = MANUFACTURER_ANCHORS.get(normalized)
+        if anchor_bundle:
+            for field, config in anchor_bundle.items():
+                start_values = config.get("start")
+                stop_values = config.get("stops")
+                if start_values:
+                    merged.setdefault(field, {"start": [], "stops": []})
+                    merged[field]["start"] = _coerce_anchor_list(start_values)
+                if stop_values is not None:
+                    merged.setdefault(field, {"start": [], "stops": []})
+                    merged[field]["stops"] = _coerce_anchor_list(stop_values)
+
     return merged
 
 
@@ -299,4 +589,3 @@ __all__ = [
     "slice_section",
     "strip_toc",
 ]
-

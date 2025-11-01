@@ -1,11 +1,8593 @@
 {
-  "doc_id": "7a9248ea-e9ed-4215-9ab6-2ae9a601405a",
+  "doc_id": "ca77aa37-e061-4acb-bba5-d1f979222530",
   "doc_type": "ifu",
   "source_file": "/home/rjm/projects/IP_assist_lite/data/Input pdfs/IFUs/pdf/30180-103_ERBE_EN_SystemCarrier_performance__D294849.pdf",
   "page_count": 156,
-  "extraction_timestamp": "2025-10-29T15:26:02.954263",
+  "extraction_timestamp": "2025-11-01T08:26:18.977235",
   "extraction_version": "v1.0.0",
   "evidence_bank": {},
+  "paragraph_store": {
+    "7d9896c0fda9ed43": {
+      "id": "page1_para0",
+      "text": "MOUNTING-",
+      "page": 1,
+      "char_span": [
+        11,
+        10
+      ],
+      "length": 10,
+      "order": [
+        0
+      ],
+      "occurrences": [
+        {
+          "page": 1,
+          "char_span": [
+            11,
+            10
+          ]
+        }
+      ],
+      "pages": [
+        1
+      ]
+    },
+    "5c689f3a25029c3e": {
+      "id": "page1_para1",
+      "text": "INSTRUCTION System Carrier performance",
+      "page": 1,
+      "char_span": [
+        11,
+        49
+      ],
+      "length": 38,
+      "order": [
+        1
+      ],
+      "occurrences": [
+        {
+          "page": 1,
+          "char_span": [
+            11,
+            49
+          ]
+        }
+      ],
+      "pages": [
+        1
+      ]
+    },
+    "3802a8017bbe0649": {
+      "id": "page2_para0",
+      "text": "CE",
+      "page": 2,
+      "char_span": [
+        3,
+        2
+      ],
+      "length": 2,
+      "order": [
+        2
+      ],
+      "occurrences": [
+        {
+          "page": 2,
+          "char_span": [
+            3,
+            2
+          ]
+        }
+      ],
+      "pages": [
+        2
+      ]
+    },
+    "39c770c7c9d8566a": {
+      "id": "page2_para1",
+      "text": "EN ISO 9001 EN ISO 13485 System Carrier performance Art. No. 20180-110 All rights to this Mounting Instruction, in particular rights of duplication, dissemination and translation, are reserved. No part of this Mounting Instruction may be reproduced in any form (by photocopying, microfilming or other methods) or processed, duplicated or disseminated by the use of electronic systems without the written consent of Erbe Elektromedizin Gmb H. The information contained in this Mounting Instruction can be changed or expanded without prior notice and without obligation on the part of Erbe Elektromedizin Gmb H. The illustrations in this Mounting Instruction may differ in some details from your product. Printed by Erbe Elektromedizin Printed in Germany Copyright © Erbe Elektromedizin Gmb H, Tübingen 2025",
+      "page": 2,
+      "char_span": [
+        3,
+        810
+      ],
+      "length": 805,
+      "order": [
+        3
+      ],
+      "occurrences": [
+        {
+          "page": 2,
+          "char_span": [
+            3,
+            810
+          ]
+        }
+      ],
+      "pages": [
+        2
+      ]
+    },
+    "35820f523877f6b8": {
+      "id": "page3_para0",
+      "text": "What would you like to do? Click on the What would you like to do? accessory / unit to be mounted. Caution, read safety instructions before installation Installing the cable holders on the sysInstalling IES 3 tem carrier Installing the cable holders in the door Installing ESM 2 Installing hook for cable storage Installing baskets Installing EIP 2 Installing footswitch support Installing IES 3 and for large one-pedal",
+      "page": 3,
+      "char_span": [
+        422,
+        421
+      ],
+      "length": 419,
+      "order": [
+        4
+      ],
+      "occurrences": [
+        {
+          "page": 3,
+          "char_span": [
+            422,
+            421
+          ]
+        }
+      ],
+      "pages": [
+        3
+      ]
+    },
+    "1cf06acc038ea4a9": {
+      "id": "page3_para1",
+      "text": "ESM 2 footswitch Installing footswitch support for small one-pedal footswitch on the system carrier Installing IES 3 and",
+      "page": 3,
+      "char_span": [
+        422,
+        542
+      ],
+      "length": 120,
+      "order": [
+        5
+      ],
+      "occurrences": [
+        {
+          "page": 3,
+          "char_span": [
+            422,
+            542
+          ]
+        }
+      ],
+      "pages": [
+        3
+      ]
+    },
+    "f7b6a91021d459dd": {
+      "id": "page3_para2",
+      "text": "EIP 2 Installing footswitch support for small one-pedal footswitch in the door Installing ESM 2 and EIP 2 Installing attachement rail for ESM 2 suction container",
+      "page": 3,
+      "char_span": [
+        543,
+        706
+      ],
+      "length": 161,
+      "order": [
+        6
+      ],
+      "occurrences": [
+        {
+          "page": 3,
+          "char_span": [
+            543,
+            706
+          ]
+        }
+      ],
+      "pages": [
+        3
+      ]
+    },
+    "f133ecc0819aeaff": {
+      "id": "page4_para0",
+      "text": "What would you like to do?",
+      "page": 4,
+      "char_span": [
+        27,
+        26
+      ],
+      "length": 26,
+      "order": [
+        7
+      ],
+      "occurrences": [
+        {
+          "page": 4,
+          "char_span": [
+            27,
+            26
+          ]
+        }
+      ],
+      "pages": [
+        4
+      ]
+    },
+    "6e8fa150f557fb99": {
+      "id": "page4_para1",
+      "text": "VIO S VIO 3 +",
+      "page": 4,
+      "char_span": [
+        27,
+        40
+      ],
+      "length": 13,
+      "order": [
+        8
+      ],
+      "occurrences": [
+        {
+          "page": 4,
+          "char_span": [
+            27,
+            40
+          ]
+        }
+      ],
+      "pages": [
+        4
+      ]
+    },
+    "9eb85f007dfb4ca5": {
+      "id": "page4_para2",
+      "text": "APC 3 Installing APC 3 and VIO 3 series",
+      "page": 4,
+      "char_span": [
+        41,
+        80
+      ],
+      "length": 39,
+      "order": [
+        9
+      ],
+      "occurrences": [
+        {
+          "page": 4,
+          "char_span": [
+            41,
+            80
+          ]
+        }
+      ],
+      "pages": [
+        4
+      ]
+    },
+    "2fc6a52acaec5d24": {
+      "id": "page4_para3",
+      "text": "VIO D Installing different VIO 3 n + VIO series APC 3",
+      "page": 4,
+      "char_span": [
+        81,
+        134
+      ],
+      "length": 53,
+      "order": [
+        10
+      ],
+      "occurrences": [
+        {
+          "page": 4,
+          "char_span": [
+            81,
+            134
+          ]
+        }
+      ],
+      "pages": [
+        4
+      ]
+    },
+    "f1d24a9aeaa05fdd": {
+      "id": "page4_para4",
+      "text": "VIO 3 VIO 3 n + VIO seal VIO 3 n Installing VIO seal and VIO 3 n",
+      "page": 4,
+      "char_span": [
+        135,
+        199
+      ],
+      "length": 64,
+      "order": [
+        11
+      ],
+      "occurrences": [
+        {
+          "page": 4,
+          "char_span": [
+            135,
+            199
+          ]
+        }
+      ],
+      "pages": [
+        4
+      ]
+    },
+    "6953c2a3eae67cff": {
+      "id": "page4_para5",
+      "text": "VIO S +",
+      "page": 4,
+      "char_span": [
+        200,
+        207
+      ],
+      "length": 7,
+      "order": [
+        12,
+        21
+      ],
+      "occurrences": [
+        {
+          "page": 4,
+          "char_span": [
+            200,
+            207
+          ]
+        },
+        {
+          "page": 4,
+          "char_span": [
+            332,
+            339
+          ]
+        }
+      ],
+      "pages": [
+        4
+      ]
+    },
+    "006ad3b995df7405": {
+      "id": "page4_para6",
+      "text": "APC 2 +",
+      "page": 4,
+      "char_span": [
+        208,
+        215
+      ],
+      "length": 7,
+      "order": [
+        13,
+        19,
+        30
+      ],
+      "occurrences": [
+        {
+          "page": 4,
+          "char_span": [
+            208,
+            215
+          ]
+        },
+        {
+          "page": 4,
+          "char_span": [
+            290,
+            297
+          ]
+        },
+        {
+          "page": 4,
+          "char_span": [
+            481,
+            488
+          ]
+        }
+      ],
+      "pages": [
+        4
+      ]
+    },
+    "842898546ed87c2d": {
+      "id": "page4_para7",
+      "text": "ERBEJET 2",
+      "page": 4,
+      "char_span": [
+        216,
+        225
+      ],
+      "length": 9,
+      "order": [
+        14
+      ],
+      "occurrences": [
+        {
+          "page": 4,
+          "char_span": [
+            216,
+            225
+          ]
+        }
+      ],
+      "pages": [
+        4
+      ]
+    },
+    "671d5fafb9e393e6": {
+      "id": "page4_para8",
+      "text": "ERBEJET 2 Installing ERBEJET 2 or",
+      "page": 4,
+      "char_span": [
+        226,
+        259
+      ],
+      "length": 33,
+      "order": [
+        15,
+        20
+      ],
+      "occurrences": [
+        {
+          "page": 4,
+          "char_span": [
+            226,
+            259
+          ]
+        },
+        {
+          "page": 4,
+          "char_span": [
+            298,
+            331
+          ]
+        }
+      ],
+      "pages": [
+        4
+      ]
+    },
+    "0efaf5453e3623d7": {
+      "id": "page4_para9",
+      "text": "ERBECRYO 2",
+      "page": 4,
+      "char_span": [
+        260,
+        270
+      ],
+      "length": 10,
+      "order": [
+        16,
+        17,
+        31
+      ],
+      "occurrences": [
+        {
+          "page": 4,
+          "char_span": [
+            260,
+            270
+          ]
+        },
+        {
+          "page": 4,
+          "char_span": [
+            271,
+            281
+          ]
+        },
+        {
+          "page": 4,
+          "char_span": [
+            489,
+            499
+          ]
+        }
+      ],
+      "pages": [
+        4
+      ]
+    },
+    "bb5c2fc02f1fdd1c": {
+      "id": "page4_para11",
+      "text": "VIO D +",
+      "page": 4,
+      "char_span": [
+        282,
+        289
+      ],
+      "length": 7,
+      "order": [
+        18,
+        27,
+        29
+      ],
+      "occurrences": [
+        {
+          "page": 4,
+          "char_span": [
+            282,
+            289
+          ]
+        },
+        {
+          "page": 4,
+          "char_span": [
+            459,
+            466
+          ]
+        },
+        {
+          "page": 4,
+          "char_span": [
+            473,
+            480
+          ]
+        }
+      ],
+      "pages": [
+        4
+      ]
+    },
+    "56d482a968a64c8c": {
+      "id": "page4_para15",
+      "text": "ERBECRYO 2 +",
+      "page": 4,
+      "char_span": [
+        340,
+        352
+      ],
+      "length": 12,
+      "order": [
+        22
+      ],
+      "occurrences": [
+        {
+          "page": 4,
+          "char_span": [
+            340,
+            352
+          ]
+        }
+      ],
+      "pages": [
+        4
+      ]
+    },
+    "7c9f3c9270d58b92": {
+      "id": "page4_para16",
+      "text": "APC 2 APC 2 + VIO S or",
+      "page": 4,
+      "char_span": [
+        353,
+        375
+      ],
+      "length": 22,
+      "order": [
+        23
+      ],
+      "occurrences": [
+        {
+          "page": 4,
+          "char_span": [
+            353,
+            375
+          ]
+        }
+      ],
+      "pages": [
+        4
+      ]
+    },
+    "8eef692706252a0c": {
+      "id": "page4_para17",
+      "text": "VIO S + VIO D series",
+      "page": 4,
+      "char_span": [
+        376,
+        396
+      ],
+      "length": 20,
+      "order": [
+        24
+      ],
+      "occurrences": [
+        {
+          "page": 4,
+          "char_span": [
+            376,
+            396
+          ]
+        }
+      ],
+      "pages": [
+        4
+      ]
+    },
+    "91dc748054f6b862": {
+      "id": "page4_para18",
+      "text": "APC 2 + Installing APC 2 and",
+      "page": 4,
+      "char_span": [
+        397,
+        425
+      ],
+      "length": 28,
+      "order": [
+        25
+      ],
+      "occurrences": [
+        {
+          "page": 4,
+          "char_span": [
+            397,
+            425
+          ]
+        }
+      ],
+      "pages": [
+        4
+      ]
+    },
+    "503426356ebe98f5": {
+      "id": "page4_para19",
+      "text": "ERBECRYO 2 VIO S or VIO D series",
+      "page": 4,
+      "char_span": [
+        426,
+        458
+      ],
+      "length": 32,
+      "order": [
+        26
+      ],
+      "occurrences": [
+        {
+          "page": 4,
+          "char_span": [
+            426,
+            458
+          ]
+        }
+      ],
+      "pages": [
+        4
+      ]
+    },
+    "3f9183617c2b12fe": {
+      "id": "page4_para21",
+      "text": "APC 2",
+      "page": 4,
+      "char_span": [
+        467,
+        472
+      ],
+      "length": 5,
+      "order": [
+        28
+      ],
+      "occurrences": [
+        {
+          "page": 4,
+          "char_span": [
+            467,
+            472
+          ]
+        }
+      ],
+      "pages": [
+        4
+      ]
+    },
+    "9450f62d5ff70783": {
+      "id": "page5_para0",
+      "text": "What would you like to do?",
+      "page": 5,
+      "char_span": [
+        27,
+        26
+      ],
+      "length": 26,
+      "order": [
+        32
+      ],
+      "occurrences": [
+        {
+          "page": 5,
+          "char_span": [
+            27,
+            26
+          ]
+        }
+      ],
+      "pages": [
+        5
+      ]
+    },
+    "1f599edd8fc91a71": {
+      "id": "page5_para1",
+      "text": "VIO 3 +",
+      "page": 5,
+      "char_span": [
+        27,
+        34
+      ],
+      "length": 7,
+      "order": [
+        33,
+        37,
+        40
+      ],
+      "occurrences": [
+        {
+          "page": 5,
+          "char_span": [
+            27,
+            34
+          ]
+        },
+        {
+          "page": 5,
+          "char_span": [
+            202,
+            209
+          ]
+        },
+        {
+          "page": 5,
+          "char_span": [
+            252,
+            259
+          ]
+        }
+      ],
+      "pages": [
+        5
+      ]
+    },
+    "3cd3db16a1911a4c": {
+      "id": "page5_para2",
+      "text": "APC 3 + VIO seal Stowing gas bottles Installing VIO seal +",
+      "page": 5,
+      "char_span": [
+        35,
+        93
+      ],
+      "length": 58,
+      "order": [
+        34
+      ],
+      "occurrences": [
+        {
+          "page": 5,
+          "char_span": [
+            35,
+            93
+          ]
+        }
+      ],
+      "pages": [
+        5
+      ]
+    },
+    "8ccd29b67227cb36": {
+      "id": "page5_para3",
+      "text": "APC 3 + VIO 3 series VIO 3 n +",
+      "page": 5,
+      "char_span": [
+        94,
+        124
+      ],
+      "length": 30,
+      "order": [
+        35
+      ],
+      "occurrences": [
+        {
+          "page": 5,
+          "char_span": [
+            94,
+            124
+          ]
+        }
+      ],
+      "pages": [
+        5
+      ]
+    },
+    "68ed712778c561a4": {
+      "id": "page5_para4",
+      "text": "APC 3 + VIO seal Making connections Making connections ECB POAG Power supply",
+      "page": 5,
+      "char_span": [
+        125,
+        201
+      ],
+      "length": 76,
+      "order": [
+        36
+      ],
+      "occurrences": [
+        {
+          "page": 5,
+          "char_span": [
+            125,
+            201
+          ]
+        }
+      ],
+      "pages": [
+        5
+      ]
+    },
+    "3bc8a7d2a1cf9c11": {
+      "id": "page5_para6",
+      "text": "APC 3 +",
+      "page": 5,
+      "char_span": [
+        210,
+        217
+      ],
+      "length": 7,
+      "order": [
+        38,
+        42
+      ],
+      "occurrences": [
+        {
+          "page": 5,
+          "char_span": [
+            210,
+            217
+          ]
+        },
+        {
+          "page": 5,
+          "char_span": [
+            273,
+            280
+          ]
+        }
+      ],
+      "pages": [
+        5
+      ]
+    },
+    "c3abea40a27d3a1b": {
+      "id": "page5_para7",
+      "text": "ERBEJET 2 Installing ERBEJET 2 or",
+      "page": 5,
+      "char_span": [
+        218,
+        251
+      ],
+      "length": 33,
+      "order": [
+        39
+      ],
+      "occurrences": [
+        {
+          "page": 5,
+          "char_span": [
+            218,
+            251
+          ]
+        }
+      ],
+      "pages": [
+        5
+      ]
+    },
+    "1c7e47b5ba72b4c1": {
+      "id": "page5_para9",
+      "text": "ERBECRYO 2 +",
+      "page": 5,
+      "char_span": [
+        260,
+        272
+      ],
+      "length": 12,
+      "order": [
+        41
+      ],
+      "occurrences": [
+        {
+          "page": 5,
+          "char_span": [
+            260,
+            272
+          ]
+        }
+      ],
+      "pages": [
+        5
+      ]
+    },
+    "f0efd8d70bb41b80": {
+      "id": "page5_para11",
+      "text": "APC 3 + VIO 3",
+      "page": 5,
+      "char_span": [
+        281,
+        294
+      ],
+      "length": 13,
+      "order": [
+        43
+      ],
+      "occurrences": [
+        {
+          "page": 5,
+          "char_span": [
+            281,
+            294
+          ]
+        }
+      ],
+      "pages": [
+        5
+      ]
+    },
+    "17470a463669f443": {
+      "id": "page5_para12",
+      "text": "ERBECRYO 2 VIO 3 n +",
+      "page": 5,
+      "char_span": [
+        295,
+        315
+      ],
+      "length": 20,
+      "order": [
+        44
+      ],
+      "occurrences": [
+        {
+          "page": 5,
+          "char_span": [
+            295,
+            315
+          ]
+        }
+      ],
+      "pages": [
+        5
+      ]
+    },
+    "dc97eeadd6466d33": {
+      "id": "page5_para13",
+      "text": "APC 3 + VIO seal +",
+      "page": 5,
+      "char_span": [
+        316,
+        334
+      ],
+      "length": 18,
+      "order": [
+        45
+      ],
+      "occurrences": [
+        {
+          "page": 5,
+          "char_span": [
+            316,
+            334
+          ]
+        }
+      ],
+      "pages": [
+        5
+      ]
+    },
+    "a29e9ea5e19eb45e": {
+      "id": "page5_para14",
+      "text": "ERBEJET 2 Installing ERBEJET 2 or VIO 3 n + ERBECRYO 2 +",
+      "page": 5,
+      "char_span": [
+        335,
+        391
+      ],
+      "length": 56,
+      "order": [
+        46
+      ],
+      "occurrences": [
+        {
+          "page": 5,
+          "char_span": [
+            335,
+            391
+          ]
+        }
+      ],
+      "pages": [
+        5
+      ]
+    },
+    "ff650bcc0cac6ab2": {
+      "id": "page5_para15",
+      "text": "APC 3 + VIO seal + APC 3 + VIO seal + VIO 3 n",
+      "page": 5,
+      "char_span": [
+        392,
+        437
+      ],
+      "length": 45,
+      "order": [
+        47
+      ],
+      "occurrences": [
+        {
+          "page": 5,
+          "char_span": [
+            392,
+            437
+          ]
+        }
+      ],
+      "pages": [
+        5
+      ]
+    },
+    "fee84892140d0d61": {
+      "id": "page5_para16",
+      "text": "ERBECRYO 2",
+      "page": 5,
+      "char_span": [
+        438,
+        448
+      ],
+      "length": 10,
+      "order": [
+        48
+      ],
+      "occurrences": [
+        {
+          "page": 5,
+          "char_span": [
+            438,
+            448
+          ]
+        }
+      ],
+      "pages": [
+        5
+      ]
+    },
+    "f06516b8adffcc55": {
+      "id": "page6_para0",
+      "text": "What would you like to do?",
+      "page": 6,
+      "char_span": [
+        0,
+        26
+      ],
+      "length": 26,
+      "order": [
+        49
+      ],
+      "occurrences": [
+        {
+          "page": 6,
+          "char_span": [
+            0,
+            26
+          ]
+        }
+      ],
+      "pages": [
+        6
+      ]
+    },
+    "a548893df0c52577": {
+      "id": "page7_para0",
+      "text": "Safety Instructions Safety Instructions DE Sicherheitshinweise zur Montage von Geräten/Zubehör finden Sie in der Gebrauchsanweisung des Systemträgers. Lesen Sie diese Sicherheitshinweise bevor Sie Montagetätigkeiten ausführen. EN Safety instructions about installing units/accessories are available in the user manual for the system carrier. Read these safety instructions before starting the installation. FR Prière de consulter le mode d’emploi du support système pour connaître les consignes de sécurité relatives au montage de dispositifs/d’accessoires. Prière de consulter les présentes consignes de sécurité avant de procéder à un quelconque montage. ES Encontrará indicaciones de seguridad sobre el montaje de aparatos y accesorios en el manual de instrucciones del soporte del sistema. Lea estas indicaciones de seguridad antes de realizar los trabajos de montaje. IT Per le avvertenze di sicurezza riguardanti il montaggio di apparecchi/accessori, consultare le istruzioni per l'uso del portante di sistema. Leggere le avvertenze di sicurezza prima di eseguire interventi di montaggio. PT Indicações de segurança para a montagem de unidades/acessórios podem ser encontradas no manual de instruções do suporte do sistema. Leia estas indicações de segurança antes de realizar atividades de montagem. EL Για οδηγίες ασφαλείας σχετικά με την τοποθέτηση συσκευών/παρελκομένων, ανατρέξτε στις οδηγίες χρήσης του φορέα συστήματος. Διαβάστε αυτές τις οδηγίες ασφαλείας πριν από τη διεξαγωγή εργασιών τοποθέτησης. NL Veiligheidsinstructies voor de montage van apparaten/accessoires vindt u in de gebruiksaanwijzing van de systeemdrager. Lees deze veiligheidsinstructies voordat u montagewerkzaamheden gaat uitvoeren. DA Sikkerhedshenvisninger til montering af apparater/tilbehør kan findes i brugsanvisningen til systemholderen. Læs disse sikkerhedshenvisninger, før du udfører monteringsarbejderne. NO Sikkerhetsmerknader om montering av apparater/tilbehør finner du i bruksanvisningen for systembæreren. Les disse sikkerhetsmerknadene før du utfører arbeid med montering. SV Säkerhetsanvisningar om montering av apparater och tillbehör hittar du i bruksanvisningen till systembäraren. Läs de här säkerhetsanvisningarna före monteringsarbeten. FILaitteiden / lisävarusteiden asennusta koskevia turvallisuusohjeita on järjestelmätelineen käyttöohjeessa. Lue nämä turvallisuusohjeet ennen ryhtymistä asennustoimiin. 7 / 156",
+      "page": 7,
+      "char_span": [
+        0,
+        2440
+      ],
+      "length": 2422,
+      "order": [
+        50
+      ],
+      "occurrences": [
+        {
+          "page": 7,
+          "char_span": [
+            0,
+            2440
+          ]
+        }
+      ],
+      "pages": [
+        7
+      ]
+    },
+    "a99c95efd43ecdd2": {
+      "id": "page8_para0",
+      "text": "Safety Instructions ET Seadmete/tarvikute paigaldamise ohutusjuhised leiate süsteemikanduri kasutusjuhendist. Lugege enne paigaldustegevuste teostamist neid ohutusjuhiseid. LV Drošības norādījumus par ierīču/piederumu uzstādīšanu skatīt sistēmas pamatnes lietošanas instrukcijā. Izlasiet šos drošības norādījumus, pirms veicat uzstādīšanu. LT Prietaisų ir reikmenų montavimo saugos nuorodas rasite sistemų laikiklio naudojimo instrukcijoje. Prieš imdamiesi montavimo darbų perskaitykite šias saugos nuorodas. PL Wskazówki bezpieczeństwa dotyczące montażu urządzeń/wyposażenia dodatkowego można znaleźć w instrukcji obsługi nośnika systemu. Przed przystąpieniem do prac montażowych należy przeczytać te wskazówki bezpieczeństwa. CS Bezpečnostní pokyny k montáži přístrojů/příslušenství najdete v návodu k použití systémového nosiče. Tyto bezpečnostní pokyny si přečtěte ještě před montáží. SK i Bezpečnostné pokyny týkajúce sa montáže prístrojov/príslušenstva nájdete v návode na použitie nosiča systému. Pred vykonaním montážnych prác si prečítajte tieto bezpečnostné pokyny. HU A készülékek, illetve kiegészítők összeszerelésével kapcsolatos biztonsági utasítások a rendszer tartójának használati útmutatójában találhatóak. A szerelés elkezdése előtt olvassa el a biztonsági utasításokat. RU Указания по технике безопасности при установке приборов/принадлежностей приведены в инструкции по эксплуатации системы-носителя. Ознакомьтесь с указаниями по технике безопасности перед установкой. SL Varnostna navodila za montažo enot/opreme najdete v navodilih za uporabo nosilca za sistem. Pred začetkom montaže preberite ta varnostna navodila. HR Sigurnosne napomene o montaži proizvoda/pribora pronaći ćete u korisničkim uputama nosača sustava. Pročitajte ove sigurnosne napomene prije nego što započnete montažu. RO Indicațiile de siguranță pentru montajul aparatelor/accesoriilor sunt disponibile în cadrul instrucțiunilor de utilizare pentru sistemul de suport. Citiți aceste indicații de siguranță înainte de a efectua montajul. BG Инструкции за безопасност относно монтажа на апарати/принадлежности ще намерите в инструкцията за употреба на носача на системата. Прочетете тези инструкции за безопасност преди да извършите монтажни дейности. TR Cihazların/aksesuarların montajına ilişkin güvenlik bilgilerini sistem taşıyıcısının kullanım kılavuzunda bulabilirsiniz. Montaj işlerini yapmadan önce bu güvenlik bilgilerini okuyun.",
+      "page": 8,
+      "char_span": [
+        2450,
+        2449
+      ],
+      "length": 2429,
+      "order": [
+        51
+      ],
+      "occurrences": [
+        {
+          "page": 8,
+          "char_span": [
+            2450,
+            2449
+          ]
+        }
+      ],
+      "pages": [
+        8
+      ]
+    },
+    "12f9f9eee0d3e680": {
+      "id": "page8_para1",
+      "text": "ZH 仪器台车的使用说明书介绍了仪器 /配件的装配安全须知。装配操作前请您阅读本安全 须知。",
+      "page": 8,
+      "char_span": [
+        2450,
+        2496
+      ],
+      "length": 46,
+      "order": [
+        52
+      ],
+      "occurrences": [
+        {
+          "page": 8,
+          "char_span": [
+            2450,
+            2496
+          ]
+        }
+      ],
+      "pages": [
+        8
+      ]
+    },
+    "edc11d413daa924d": {
+      "id": "page9_para0",
+      "text": "Safety Instructions",
+      "page": 9,
+      "char_span": [
+        20,
+        19
+      ],
+      "length": 19,
+      "order": [
+        53
+      ],
+      "occurrences": [
+        {
+          "page": 9,
+          "char_span": [
+            20,
+            19
+          ]
+        }
+      ],
+      "pages": [
+        9
+      ]
+    },
+    "44706e9c02bf049d": {
+      "id": "page9_para1",
+      "text": "ZHT 儀器台車的使用說明書介紹了儀器 /配件的裝配安全須知。裝配操作前請您閱讀本安全 須知。 KO 장치/ 액세서리 장착에 관한 안전 지침은 시스템 캐리어의 사용 설명서를 참조하십시오 . 장착 작업을 수행하기 전에 이 안전 지침을 읽으십시오 . SR Uputstva o bezbednosti za montažu sredstava/pribora pronaći ćete u uputstvu za upotrebu nosača sistema. Pročitajte ova uputstva o bezbednosti pre nego što počnete montažu. VI Bạn có thể tìm thấy hướng dẫn an toàn cài đặt thiết bị / phụ kiện trong hướng dẫn vận hành của nhà cung cấp. Đọc kĩ hướng dẫn an toàn trước khi tiến hành lắp đặt. ID Petunjuk keselamatan terkait perakitan perangkat/aksesori dapat ditemukan di dalam petunjuk penggunaan modul sistem. Baca petunjuk keselamatan ini sebelum melakukan perakitan. 9 / 156",
+      "page": 9,
+      "char_span": [
+        20,
+        679
+      ],
+      "length": 659,
+      "order": [
+        54
+      ],
+      "occurrences": [
+        {
+          "page": 9,
+          "char_span": [
+            20,
+            679
+          ]
+        }
+      ],
+      "pages": [
+        9
+      ]
+    },
+    "81f3299a54142842": {
+      "id": "page10_para0",
+      "text": "Safety Instructions",
+      "page": 10,
+      "char_span": [
+        0,
+        19
+      ],
+      "length": 19,
+      "order": [
+        55
+      ],
+      "occurrences": [
+        {
+          "page": 10,
+          "char_span": [
+            0,
+            19
+          ]
+        }
+      ],
+      "pages": [
+        10
+      ]
+    },
+    "592495ecc847eea0": {
+      "id": "page11_para0",
+      "text": "Installing the cable holders on the system carrier Installing the cable holders on the system carrier Normal use Permitted installation points Maximum loading: 4 items",
+      "page": 11,
+      "char_span": [
+        0,
+        167
+      ],
+      "length": 167,
+      "order": [
+        56
+      ],
+      "occurrences": [
+        {
+          "page": 11,
+          "char_span": [
+            0,
+            167
+          ]
+        }
+      ],
+      "pages": [
+        11
+      ]
+    },
+    "b0599050484a1a88": {
+      "id": "page12_para0",
+      "text": "Installing the cable holders on the system carrier Scope of delivery IMPORTANT! Only use original Erbe accessories. Erbe REF 20180-460 M 4 x 8 Tools required Torque screwdriver (1 Nm) hex socket 2. 5 Cutter",
+      "page": 12,
+      "char_span": [
+        0,
+        206
+      ],
+      "length": 206,
+      "order": [
+        57
+      ],
+      "occurrences": [
+        {
+          "page": 12,
+          "char_span": [
+            0,
+            206
+          ]
+        }
+      ],
+      "pages": [
+        12
+      ]
+    },
+    "b8597f85683b300b": {
+      "id": "page13_para0",
+      "text": "Installing the cable holders on the system carrier 1 2 2 x 3 Back to Overview",
+      "page": 13,
+      "char_span": [
+        78,
+        77
+      ],
+      "length": 77,
+      "order": [
+        58
+      ],
+      "occurrences": [
+        {
+          "page": 13,
+          "char_span": [
+            78,
+            77
+          ]
+        }
+      ],
+      "pages": [
+        13
+      ]
+    },
+    "45dc36e557aca257": {
+      "id": "page13_para1",
+      "text": "1. 0 Nm 2 x M 4 x 8",
+      "page": 13,
+      "char_span": [
+        78,
+        97
+      ],
+      "length": 19,
+      "order": [
+        59
+      ],
+      "occurrences": [
+        {
+          "page": 13,
+          "char_span": [
+            78,
+            97
+          ]
+        }
+      ],
+      "pages": [
+        13
+      ]
+    },
+    "7c70216a2510772a": {
+      "id": "page14_para0",
+      "text": "Installing the cable holders on the system carrier",
+      "page": 14,
+      "char_span": [
+        0,
+        50
+      ],
+      "length": 50,
+      "order": [
+        60
+      ],
+      "occurrences": [
+        {
+          "page": 14,
+          "char_span": [
+            0,
+            50
+          ]
+        }
+      ],
+      "pages": [
+        14
+      ]
+    },
+    "f8c4a2f9f40a5af1": {
+      "id": "page15_para0",
+      "text": "Installing the cable holders in the door Installing the cable holders in the door Normal use Permitted installation points Maximum loading: 1 item",
+      "page": 15,
+      "char_span": [
+        0,
+        146
+      ],
+      "length": 146,
+      "order": [
+        61
+      ],
+      "occurrences": [
+        {
+          "page": 15,
+          "char_span": [
+            0,
+            146
+          ]
+        }
+      ],
+      "pages": [
+        15
+      ]
+    },
+    "e1beca2f1dd61574": {
+      "id": "page16_para0",
+      "text": "Installing the cable holders in the door Scope of delivery IMPORTANT! Only use original Erbe accessories. Erbe REF 20180-464 M 4 x 8 Universal fastening set: Not all parts are required for the following assembly steps. Tools required Torque screwdriver (1. 4 Nm) Open-end wrench 7",
+      "page": 16,
+      "char_span": [
+        0,
+        280
+      ],
+      "length": 280,
+      "order": [
+        62
+      ],
+      "occurrences": [
+        {
+          "page": 16,
+          "char_span": [
+            0,
+            280
+          ]
+        }
+      ],
+      "pages": [
+        16
+      ]
+    },
+    "5d1da0ea71ff439c": {
+      "id": "page17_para0",
+      "text": "Installing the cable holders in the door 1 2 3 Back to Overview",
+      "page": 17,
+      "char_span": [
+        64,
+        63
+      ],
+      "length": 63,
+      "order": [
+        63
+      ],
+      "occurrences": [
+        {
+          "page": 17,
+          "char_span": [
+            64,
+            63
+          ]
+        }
+      ],
+      "pages": [
+        17
+      ]
+    },
+    "5332ffc8ff878fed": {
+      "id": "page17_para1",
+      "text": "1. 4 Nm 2 x",
+      "page": 17,
+      "char_span": [
+        64,
+        75
+      ],
+      "length": 11,
+      "order": [
+        64
+      ],
+      "occurrences": [
+        {
+          "page": 17,
+          "char_span": [
+            64,
+            75
+          ]
+        }
+      ],
+      "pages": [
+        17
+      ]
+    },
+    "0ff2d2bd4e379d7a": {
+      "id": "page17_para2",
+      "text": "M 4",
+      "page": 17,
+      "char_span": [
+        76,
+        79
+      ],
+      "length": 3,
+      "order": [
+        65
+      ],
+      "occurrences": [
+        {
+          "page": 17,
+          "char_span": [
+            76,
+            79
+          ]
+        }
+      ],
+      "pages": [
+        17
+      ]
+    },
+    "113193e4bbfef91f": {
+      "id": "page18_para0",
+      "text": "Installing the cable holders in the door",
+      "page": 18,
+      "char_span": [
+        0,
+        40
+      ],
+      "length": 40,
+      "order": [
+        66
+      ],
+      "occurrences": [
+        {
+          "page": 18,
+          "char_span": [
+            0,
+            40
+          ]
+        }
+      ],
+      "pages": [
+        18
+      ]
+    },
+    "d7b00282ef7118df": {
+      "id": "page19_para0",
+      "text": "Installing hook for cable storage Installing hook for cable storage Normal use Permitted attachment marked in blue Maximum loading: 1 item",
+      "page": 19,
+      "char_span": [
+        0,
+        138
+      ],
+      "length": 138,
+      "order": [
+        67
+      ],
+      "occurrences": [
+        {
+          "page": 19,
+          "char_span": [
+            0,
+            138
+          ]
+        }
+      ],
+      "pages": [
+        19
+      ]
+    },
+    "1ec1a3e7a1c75095": {
+      "id": "page20_para0",
+      "text": "Installing hook for cable storage Scope of delivery IMPORTANT! Only use original Erbe accessories. Erbe REF 20180-465 Tools required No tool needed. 20 / 156",
+      "page": 20,
+      "char_span": [
+        0,
+        157
+      ],
+      "length": 157,
+      "order": [
+        68
+      ],
+      "occurrences": [
+        {
+          "page": 20,
+          "char_span": [
+            0,
+            157
+          ]
+        }
+      ],
+      "pages": [
+        20
+      ]
+    },
+    "9d20104f040511e5": {
+      "id": "page21_para0",
+      "text": "Installing hook for cable storage 1 2 Back to Overview",
+      "page": 21,
+      "char_span": [
+        0,
+        54
+      ],
+      "length": 54,
+      "order": [
+        69
+      ],
+      "occurrences": [
+        {
+          "page": 21,
+          "char_span": [
+            0,
+            54
+          ]
+        }
+      ],
+      "pages": [
+        21
+      ]
+    },
+    "b2285acc9f7d6914": {
+      "id": "page22_para0",
+      "text": "Installing hook for cable storage",
+      "page": 22,
+      "char_span": [
+        0,
+        33
+      ],
+      "length": 33,
+      "order": [
+        70
+      ],
+      "occurrences": [
+        {
+          "page": 22,
+          "char_span": [
+            0,
+            33
+          ]
+        }
+      ],
+      "pages": [
+        22
+      ]
+    },
+    "8385db7b22e72364": {
+      "id": "page23_para0",
+      "text": "Installing baskets Installing baskets Normal use Permitted attachment marked in blue Maximum loading: 1 basket each for 20180-520 for 20180-010",
+      "page": 23,
+      "char_span": [
+        0,
+        143
+      ],
+      "length": 143,
+      "order": [
+        71
+      ],
+      "occurrences": [
+        {
+          "page": 23,
+          "char_span": [
+            0,
+            143
+          ]
+        }
+      ],
+      "pages": [
+        23
+      ]
+    },
+    "b1276ccc9bcfaf25": {
+      "id": "page24_para0",
+      "text": "Installing baskets Scope of delivery IMPORTANT! Only use original Erbe accessories. Erbe REF 20180-520",
+      "page": 24,
+      "char_span": [
+        0,
+        102
+      ],
+      "length": 102,
+      "order": [
+        72
+      ],
+      "occurrences": [
+        {
+          "page": 24,
+          "char_span": [
+            0,
+            102
+          ]
+        }
+      ],
+      "pages": [
+        24
+      ]
+    },
+    "17848b1c4f1bd179": {
+      "id": "page25_para0",
+      "text": "Installing baskets Erbe REF 20180-010 M 4 x 10 Tools required Torque screwdriver (1 Nm) cross recess 2 Cutter",
+      "page": 25,
+      "char_span": [
+        0,
+        109
+      ],
+      "length": 109,
+      "order": [
+        73
+      ],
+      "occurrences": [
+        {
+          "page": 25,
+          "char_span": [
+            0,
+            109
+          ]
+        }
+      ],
+      "pages": [
+        25
+      ]
+    },
+    "dae203e9275fa46e": {
+      "id": "page26_para0",
+      "text": "Installing baskets 1 2 1 x 3 4",
+      "page": 26,
+      "char_span": [
+        31,
+        30
+      ],
+      "length": 30,
+      "order": [
+        74
+      ],
+      "occurrences": [
+        {
+          "page": 26,
+          "char_span": [
+            31,
+            30
+          ]
+        }
+      ],
+      "pages": [
+        26
+      ]
+    },
+    "a1f644cce1df81cf": {
+      "id": "page26_para1",
+      "text": "1. 0 Nm 1 x 1 x M 4 x 10 Back to Overview",
+      "page": 26,
+      "char_span": [
+        31,
+        72
+      ],
+      "length": 41,
+      "order": [
+        75
+      ],
+      "occurrences": [
+        {
+          "page": 26,
+          "char_span": [
+            31,
+            72
+          ]
+        }
+      ],
+      "pages": [
+        26
+      ]
+    },
+    "f955d81a494ce67f": {
+      "id": "page27_para0",
+      "text": "Installing footswitch support for large one-pedal footswitch Installing footswitch support for large onepedal footswitch Normal use This footswitch support is compatible with the following Erbe one-pedal footswitches: • VIO S, VIO D and VIO 3 one-pedal footswitch • IES 3 one-pedal footswitch Permitted installation points Maximum loading: 2 items",
+      "page": 27,
+      "char_span": [
+        0,
+        349
+      ],
+      "length": 347,
+      "order": [
+        76
+      ],
+      "occurrences": [
+        {
+          "page": 27,
+          "char_span": [
+            0,
+            349
+          ]
+        }
+      ],
+      "pages": [
+        27
+      ]
+    },
+    "d6bf3d6c2d84ffb9": {
+      "id": "page28_para0",
+      "text": "Installing footswitch support for large one-pedal footswitch Scope of delivery IMPORTANT! Only use original Erbe accessories. Erbe REF 20180-463 M 4 x 8 Tools required Torque screwdriver (1 Nm) hex socket 2. 5 Cutter",
+      "page": 28,
+      "char_span": [
+        0,
+        216
+      ],
+      "length": 216,
+      "order": [
+        77
+      ],
+      "occurrences": [
+        {
+          "page": 28,
+          "char_span": [
+            0,
+            216
+          ]
+        }
+      ],
+      "pages": [
+        28
+      ]
+    },
+    "695cf70bb389869c": {
+      "id": "page29_para0",
+      "text": "Installing footswitch support for large one-pedal footswitch 1 2 3 x 3 Back to Overview",
+      "page": 29,
+      "char_span": [
+        88,
+        87
+      ],
+      "length": 87,
+      "order": [
+        78
+      ],
+      "occurrences": [
+        {
+          "page": 29,
+          "char_span": [
+            88,
+            87
+          ]
+        }
+      ],
+      "pages": [
+        29
+      ]
+    },
+    "b78d23b9a461128b": {
+      "id": "page29_para1",
+      "text": "1. 0 Nm 3 x M 4 x 8",
+      "page": 29,
+      "char_span": [
+        88,
+        107
+      ],
+      "length": 19,
+      "order": [
+        79
+      ],
+      "occurrences": [
+        {
+          "page": 29,
+          "char_span": [
+            88,
+            107
+          ]
+        }
+      ],
+      "pages": [
+        29
+      ]
+    },
+    "87d556aeb4a8606d": {
+      "id": "page30_para0",
+      "text": "Installing footswitch support for large one-pedal footswitch",
+      "page": 30,
+      "char_span": [
+        0,
+        60
+      ],
+      "length": 60,
+      "order": [
+        80
+      ],
+      "occurrences": [
+        {
+          "page": 30,
+          "char_span": [
+            0,
+            60
+          ]
+        }
+      ],
+      "pages": [
+        30
+      ]
+    },
+    "dbcea89a7c4bff0f": {
+      "id": "page31_para0",
+      "text": "Installing footswitch support for small one-pedal footswitch on the system carrier Installing footswitch support for small onepedal footswitch on the system carrier Normal use This footswitch support is compatible with the following Erbe one-pedal footswitches: • EIP 2 one-pedal footswitch Permitted installation points Maximum loading: 1 item",
+      "page": 31,
+      "char_span": [
+        0,
+        346
+      ],
+      "length": 344,
+      "order": [
+        81
+      ],
+      "occurrences": [
+        {
+          "page": 31,
+          "char_span": [
+            0,
+            346
+          ]
+        }
+      ],
+      "pages": [
+        31
+      ]
+    },
+    "6f4d35212778466d": {
+      "id": "page32_para0",
+      "text": "Installing footswitch support for small one-pedal footswitch on the system carrier Scope of delivery IMPORTANT! Only use original Erbe accessories. Erbe REF 20180-464 M 4 x 8 Universal fastening set: Not all parts are required for the following assembly steps. Tools required Torque screwdriver (1 Nm) hex socket 2. 5 Cutter",
+      "page": 32,
+      "char_span": [
+        0,
+        324
+      ],
+      "length": 324,
+      "order": [
+        82
+      ],
+      "occurrences": [
+        {
+          "page": 32,
+          "char_span": [
+            0,
+            324
+          ]
+        }
+      ],
+      "pages": [
+        32
+      ]
+    },
+    "36ca597f899de347": {
+      "id": "page33_para0",
+      "text": "Installing footswitch support for small one-pedal footswitch on the system carrier 1 2 2 x 3 Back to Overview",
+      "page": 33,
+      "char_span": [
+        110,
+        109
+      ],
+      "length": 109,
+      "order": [
+        83
+      ],
+      "occurrences": [
+        {
+          "page": 33,
+          "char_span": [
+            110,
+            109
+          ]
+        }
+      ],
+      "pages": [
+        33
+      ]
+    },
+    "ce5e0e5fd208bba8": {
+      "id": "page33_para1",
+      "text": "1. 0 Nm 2 x M 4 x 8",
+      "page": 33,
+      "char_span": [
+        110,
+        129
+      ],
+      "length": 19,
+      "order": [
+        84
+      ],
+      "occurrences": [
+        {
+          "page": 33,
+          "char_span": [
+            110,
+            129
+          ]
+        }
+      ],
+      "pages": [
+        33
+      ]
+    },
+    "81b428d9b6b163e4": {
+      "id": "page34_para0",
+      "text": "Installing footswitch support for small one-pedal footswitch on the system carrier",
+      "page": 34,
+      "char_span": [
+        0,
+        82
+      ],
+      "length": 82,
+      "order": [
+        85
+      ],
+      "occurrences": [
+        {
+          "page": 34,
+          "char_span": [
+            0,
+            82
+          ]
+        }
+      ],
+      "pages": [
+        34
+      ]
+    },
+    "46ff5c8841d4cee1": {
+      "id": "page35_para0",
+      "text": "Installing footswitch support for small one-pedal footswitch in the door Installing footswitch support for small onepedal footswitch in the door Normal use This footswitch support is compatible with the following Erbe one-pedal footswitches: • EIP 2 one-pedal footswitch Permitted installation points Maximum loading: 1 item",
+      "page": 35,
+      "char_span": [
+        0,
+        326
+      ],
+      "length": 324,
+      "order": [
+        86
+      ],
+      "occurrences": [
+        {
+          "page": 35,
+          "char_span": [
+            0,
+            326
+          ]
+        }
+      ],
+      "pages": [
+        35
+      ]
+    },
+    "c213e140c78509f9": {
+      "id": "page36_para0",
+      "text": "Installing footswitch support for small one-pedal footswitch in the door Scope of delivery IMPORTANT! Only use original Erbe accessories. Erbe REF 20180-464 M 4 x 8 Universal fastening set: Not all parts are required for the following assembly steps. Tools required Torque screwdriver (1. 4 Nm) Open-end wrench 7",
+      "page": 36,
+      "char_span": [
+        0,
+        312
+      ],
+      "length": 312,
+      "order": [
+        87
+      ],
+      "occurrences": [
+        {
+          "page": 36,
+          "char_span": [
+            0,
+            312
+          ]
+        }
+      ],
+      "pages": [
+        36
+      ]
+    },
+    "ba2adc746063f862": {
+      "id": "page37_para0",
+      "text": "Installing footswitch support for small one-pedal footswitch in the door 1 2 3 Back to Overview",
+      "page": 37,
+      "char_span": [
+        96,
+        95
+      ],
+      "length": 95,
+      "order": [
+        88
+      ],
+      "occurrences": [
+        {
+          "page": 37,
+          "char_span": [
+            96,
+            95
+          ]
+        }
+      ],
+      "pages": [
+        37
+      ]
+    },
+    "13c99555b89ba3ca": {
+      "id": "page37_para1",
+      "text": "1. 4 Nm 2 x",
+      "page": 37,
+      "char_span": [
+        96,
+        107
+      ],
+      "length": 11,
+      "order": [
+        89
+      ],
+      "occurrences": [
+        {
+          "page": 37,
+          "char_span": [
+            96,
+            107
+          ]
+        }
+      ],
+      "pages": [
+        37
+      ]
+    },
+    "1e9740e8180b9357": {
+      "id": "page37_para2",
+      "text": "M 4",
+      "page": 37,
+      "char_span": [
+        108,
+        111
+      ],
+      "length": 3,
+      "order": [
+        90
+      ],
+      "occurrences": [
+        {
+          "page": 37,
+          "char_span": [
+            108,
+            111
+          ]
+        }
+      ],
+      "pages": [
+        37
+      ]
+    },
+    "bca4d1584d8bad79": {
+      "id": "page38_para0",
+      "text": "Installing footswitch support for small one-pedal footswitch in the door",
+      "page": 38,
+      "char_span": [
+        0,
+        72
+      ],
+      "length": 72,
+      "order": [
+        91
+      ],
+      "occurrences": [
+        {
+          "page": 38,
+          "char_span": [
+            0,
+            72
+          ]
+        }
+      ],
+      "pages": [
+        38
+      ]
+    },
+    "2d588abaeb640d64": {
+      "id": "page39_para0",
+      "text": "Installing attachement rail for ESM 2 suction container Installing attachement rail for ESM 2 suction container Normal use Permitted installation points Maximum loading: 3 items",
+      "page": 39,
+      "char_span": [
+        0,
+        177
+      ],
+      "length": 177,
+      "order": [
+        92
+      ],
+      "occurrences": [
+        {
+          "page": 39,
+          "char_span": [
+            0,
+            177
+          ]
+        }
+      ],
+      "pages": [
+        39
+      ]
+    },
+    "f36856b7cf1f8326": {
+      "id": "page40_para0",
+      "text": "Installing attachement rail for ESM 2 suction container Scope of delivery IMPORTANT! Only use original Erbe accessories. Erbe REF 20180-509 M 4 x 8 Tools required Torque screwdriver (1 Nm) hex socket 2. 5 Cutter",
+      "page": 40,
+      "char_span": [
+        0,
+        211
+      ],
+      "length": 211,
+      "order": [
+        93
+      ],
+      "occurrences": [
+        {
+          "page": 40,
+          "char_span": [
+            0,
+            211
+          ]
+        }
+      ],
+      "pages": [
+        40
+      ]
+    },
+    "80897215f7afe262": {
+      "id": "page41_para0",
+      "text": "Installing attachement rail for ESM 2 suction container 1 2 2 x 3",
+      "page": 41,
+      "char_span": [
+        66,
+        65
+      ],
+      "length": 65,
+      "order": [
+        94
+      ],
+      "occurrences": [
+        {
+          "page": 41,
+          "char_span": [
+            66,
+            65
+          ]
+        }
+      ],
+      "pages": [
+        41
+      ]
+    },
+    "c496f7bfd8e2fe92": {
+      "id": "page41_para1",
+      "text": "1. 0 Nm (cid: 38)(cid: 381)(cid: 396)(cid: 3)(cid: 349)(cid: 374)(cid: 400)(cid: 410)(cid: 258)(cid: 367)(cid: 367)(cid: 258)(cid: 415)(cid: 381)(cid: 374) on ESM 2 click here 2 x M 4 x 8",
+      "page": 41,
+      "char_span": [
+        66,
+        253
+      ],
+      "length": 187,
+      "order": [
+        95
+      ],
+      "occurrences": [
+        {
+          "page": 41,
+          "char_span": [
+            66,
+            253
+          ]
+        }
+      ],
+      "pages": [
+        41
+      ]
+    },
+    "86f07d05924677e8": {
+      "id": "page42_para0",
+      "text": "Installing attachement rail for ESM 2 suction container 1 2 2 x M 4 x 8 3 Back to Overview",
+      "page": 42,
+      "char_span": [
+        91,
+        90
+      ],
+      "length": 90,
+      "order": [
+        96
+      ],
+      "occurrences": [
+        {
+          "page": 42,
+          "char_span": [
+            91,
+            90
+          ]
+        }
+      ],
+      "pages": [
+        42
+      ]
+    },
+    "54185f26baca2603": {
+      "id": "page42_para1",
+      "text": "1. 0 Nm 2 x M 4 x 8",
+      "page": 42,
+      "char_span": [
+        91,
+        110
+      ],
+      "length": 19,
+      "order": [
+        97
+      ],
+      "occurrences": [
+        {
+          "page": 42,
+          "char_span": [
+            91,
+            110
+          ]
+        }
+      ],
+      "pages": [
+        42
+      ]
+    },
+    "7afc993634dc9a01": {
+      "id": "page43_para0",
+      "text": "Installing IES 3 Installing IES 3 Permitted positioning",
+      "page": 43,
+      "char_span": [
+        0,
+        55
+      ],
+      "length": 55,
+      "order": [
+        98
+      ],
+      "occurrences": [
+        {
+          "page": 43,
+          "char_span": [
+            0,
+            55
+          ]
+        }
+      ],
+      "pages": [
+        43
+      ]
+    },
+    "ef5375ccd326e9b7": {
+      "id": "page44_para0",
+      "text": "Installing IES 3 Erbe fastening set IMPORTANT! Only use original Erbe accessories. Erbe REF 20180-512 M 8 x 16 Keep for later use Keep for later use Keep for later use",
+      "page": 44,
+      "char_span": [
+        0,
+        167
+      ],
+      "length": 167,
+      "order": [
+        99
+      ],
+      "occurrences": [
+        {
+          "page": 44,
+          "char_span": [
+            0,
+            167
+          ]
+        }
+      ],
+      "pages": [
+        44
+      ]
+    },
+    "aba5603b2e261376": {
+      "id": "page45_para0",
+      "text": "Installing IES 3 Tools required Torque screwdriver (1 Nm) hex socket 6 Torque screwdriver (4. 9 Nm) open-end wrench 10 Cutter Preparation IMPORTANT! Before installing the units on the system carrier, remove all cables, tubing, and instruments. 45 / 156",
+      "page": 45,
+      "char_span": [
+        0,
+        252
+      ],
+      "length": 252,
+      "order": [
+        100
+      ],
+      "occurrences": [
+        {
+          "page": 45,
+          "char_span": [
+            0,
+            252
+          ]
+        }
+      ],
+      "pages": [
+        45
+      ]
+    },
+    "0f8bb5997d3d74d4": {
+      "id": "page46_para0",
+      "text": "Installing IES 3 1 2 4 x 3 4",
+      "page": 46,
+      "char_span": [
+        29,
+        28
+      ],
+      "length": 28,
+      "order": [
+        101
+      ],
+      "occurrences": [
+        {
+          "page": 46,
+          "char_span": [
+            29,
+            28
+          ]
+        }
+      ],
+      "pages": [
+        46
+      ]
+    },
+    "d27f0c97a8b0723f": {
+      "id": "page46_para1",
+      "text": "1. 0 Nm 4 x M 8 x 16 4 x Continue to next page",
+      "page": 46,
+      "char_span": [
+        29,
+        75
+      ],
+      "length": 46,
+      "order": [
+        102
+      ],
+      "occurrences": [
+        {
+          "page": 46,
+          "char_span": [
+            29,
+            75
+          ]
+        }
+      ],
+      "pages": [
+        46
+      ]
+    },
+    "2b7477e703fcf108": {
+      "id": "page47_para0",
+      "text": "Installing IES 3 5 6 3 x 7 Back to Overview",
+      "page": 47,
+      "char_span": [
+        44,
+        43
+      ],
+      "length": 43,
+      "order": [
+        103
+      ],
+      "occurrences": [
+        {
+          "page": 47,
+          "char_span": [
+            44,
+            43
+          ]
+        }
+      ],
+      "pages": [
+        47
+      ]
+    },
+    "edd1123e64292bbb": {
+      "id": "page47_para1",
+      "text": "4. 9 Nm 3 x",
+      "page": 47,
+      "char_span": [
+        44,
+        55
+      ],
+      "length": 11,
+      "order": [
+        104
+      ],
+      "occurrences": [
+        {
+          "page": 47,
+          "char_span": [
+            44,
+            55
+          ]
+        }
+      ],
+      "pages": [
+        47
+      ]
+    },
+    "5a304cd2d036aa96": {
+      "id": "page48_para0",
+      "text": "Installing IES 3",
+      "page": 48,
+      "char_span": [
+        0,
+        16
+      ],
+      "length": 16,
+      "order": [
+        105
+      ],
+      "occurrences": [
+        {
+          "page": 48,
+          "char_span": [
+            0,
+            16
+          ]
+        }
+      ],
+      "pages": [
+        48
+      ]
+    },
+    "3f5ea2e778e7262a": {
+      "id": "page49_para0",
+      "text": "Installing ESM 2 Installing ESM 2 Permitted positioning",
+      "page": 49,
+      "char_span": [
+        0,
+        55
+      ],
+      "length": 55,
+      "order": [
+        106
+      ],
+      "occurrences": [
+        {
+          "page": 49,
+          "char_span": [
+            0,
+            55
+          ]
+        }
+      ],
+      "pages": [
+        49
+      ]
+    },
+    "ea3212e4457e57e3": {
+      "id": "page50_para0",
+      "text": "Installing ESM 2 Erbe fastening set IMPORTANT! Only use original Erbe accessories. Erbe REF 20180-511 M 8 x 16 Keep for later use Keep for later use Keep for later use",
+      "page": 50,
+      "char_span": [
+        0,
+        167
+      ],
+      "length": 167,
+      "order": [
+        107
+      ],
+      "occurrences": [
+        {
+          "page": 50,
+          "char_span": [
+            0,
+            167
+          ]
+        }
+      ],
+      "pages": [
+        50
+      ]
+    },
+    "cdbd30d815362fc6": {
+      "id": "page51_para0",
+      "text": "Installing ESM 2 Tools required Torque screwdriver (1 Nm) hex socket 6 Torque screwdriver (4. 9 Nm) open-end wrench 10 Cutter Preparation IMPORTANT! Before installing the units on the system carrier, remove all cables, tubing, and instruments. 51 / 156",
+      "page": 51,
+      "char_span": [
+        0,
+        252
+      ],
+      "length": 252,
+      "order": [
+        108
+      ],
+      "occurrences": [
+        {
+          "page": 51,
+          "char_span": [
+            0,
+            252
+          ]
+        }
+      ],
+      "pages": [
+        51
+      ]
+    },
+    "406d257f8c121c63": {
+      "id": "page52_para0",
+      "text": "Installing ESM 2 1 2 3 x 3 4",
+      "page": 52,
+      "char_span": [
+        29,
+        28
+      ],
+      "length": 28,
+      "order": [
+        109
+      ],
+      "occurrences": [
+        {
+          "page": 52,
+          "char_span": [
+            29,
+            28
+          ]
+        }
+      ],
+      "pages": [
+        52
+      ]
+    },
+    "9642cecdc16d46d9": {
+      "id": "page52_para1",
+      "text": "1. 0 Nm 3 x M 8 x 16 3 x Continue to next page",
+      "page": 52,
+      "char_span": [
+        29,
+        75
+      ],
+      "length": 46,
+      "order": [
+        110
+      ],
+      "occurrences": [
+        {
+          "page": 52,
+          "char_span": [
+            29,
+            75
+          ]
+        }
+      ],
+      "pages": [
+        52
+      ]
+    },
+    "227a4aed8a6b38fb": {
+      "id": "page53_para0",
+      "text": "Installing ESM 2 5 6 3 x 7 Back to Overview",
+      "page": 53,
+      "char_span": [
+        44,
+        43
+      ],
+      "length": 43,
+      "order": [
+        111
+      ],
+      "occurrences": [
+        {
+          "page": 53,
+          "char_span": [
+            44,
+            43
+          ]
+        }
+      ],
+      "pages": [
+        53
+      ]
+    },
+    "0aed285851b78fde": {
+      "id": "page53_para1",
+      "text": "4. 9 Nm 3 x",
+      "page": 53,
+      "char_span": [
+        44,
+        55
+      ],
+      "length": 11,
+      "order": [
+        112
+      ],
+      "occurrences": [
+        {
+          "page": 53,
+          "char_span": [
+            44,
+            55
+          ]
+        }
+      ],
+      "pages": [
+        53
+      ]
+    },
+    "74bdf7acd24917c9": {
+      "id": "page54_para0",
+      "text": "Installing ESM 2",
+      "page": 54,
+      "char_span": [
+        0,
+        16
+      ],
+      "length": 16,
+      "order": [
+        113
+      ],
+      "occurrences": [
+        {
+          "page": 54,
+          "char_span": [
+            0,
+            16
+          ]
+        }
+      ],
+      "pages": [
+        54
+      ]
+    },
+    "5de0bd7491c88830": {
+      "id": "page55_para0",
+      "text": "Installing EIP 2 Installing EIP 2 Permitted positioning",
+      "page": 55,
+      "char_span": [
+        0,
+        55
+      ],
+      "length": 55,
+      "order": [
+        114
+      ],
+      "occurrences": [
+        {
+          "page": 55,
+          "char_span": [
+            0,
+            55
+          ]
+        }
+      ],
+      "pages": [
+        55
+      ]
+    },
+    "923c7dc599033854": {
+      "id": "page56_para0",
+      "text": "Installing EIP 2 Erbe fastening set IMPORTANT! Only use original Erbe accessories. Erbe REF 20180-513 M 8 x 16 Keep for later use Keep for later use Keep for later use Tools required Torque screwdriver (1 Nm) hex socket 6 Torque screwdriver (4. 9 Nm) open-end wrench 10 Cutter Preparation IMPORTANT! Before installing the units on the system carrier, remove all cables, tubing, and instruments. 56 / 156",
+      "page": 56,
+      "char_span": [
+        0,
+        403
+      ],
+      "length": 403,
+      "order": [
+        115
+      ],
+      "occurrences": [
+        {
+          "page": 56,
+          "char_span": [
+            0,
+            403
+          ]
+        }
+      ],
+      "pages": [
+        56
+      ]
+    },
+    "95e605ff4193b781": {
+      "id": "page57_para0",
+      "text": "Installing EIP 2 1 2 2 x 3 4",
+      "page": 57,
+      "char_span": [
+        29,
+        28
+      ],
+      "length": 28,
+      "order": [
+        116
+      ],
+      "occurrences": [
+        {
+          "page": 57,
+          "char_span": [
+            29,
+            28
+          ]
+        }
+      ],
+      "pages": [
+        57
+      ]
+    },
+    "20b2c6c531657166": {
+      "id": "page57_para1",
+      "text": "1. 0 Nm 2 x M 8 x 16 2 x Continue to next page",
+      "page": 57,
+      "char_span": [
+        29,
+        75
+      ],
+      "length": 46,
+      "order": [
+        117
+      ],
+      "occurrences": [
+        {
+          "page": 57,
+          "char_span": [
+            29,
+            75
+          ]
+        }
+      ],
+      "pages": [
+        57
+      ]
+    },
+    "cab45204875ccf94": {
+      "id": "page58_para0",
+      "text": "Installing EIP 2 5 6 2 x 7",
+      "page": 58,
+      "char_span": [
+        27,
+        26
+      ],
+      "length": 26,
+      "order": [
+        118
+      ],
+      "occurrences": [
+        {
+          "page": 58,
+          "char_span": [
+            27,
+            26
+          ]
+        }
+      ],
+      "pages": [
+        58
+      ]
+    },
+    "ca28660a95d0d8b8": {
+      "id": "page58_para1",
+      "text": "4. 9 Nm Back to Overview 2 x",
+      "page": 58,
+      "char_span": [
+        27,
+        55
+      ],
+      "length": 28,
+      "order": [
+        119
+      ],
+      "occurrences": [
+        {
+          "page": 58,
+          "char_span": [
+            27,
+            55
+          ]
+        }
+      ],
+      "pages": [
+        58
+      ]
+    },
+    "2911bcc7a1866eb6": {
+      "id": "page59_para0",
+      "text": "Installing IES 3 and ESM 2 Installing IES 3 and ESM 2 Permitted positioning",
+      "page": 59,
+      "char_span": [
+        0,
+        75
+      ],
+      "length": 75,
+      "order": [
+        120
+      ],
+      "occurrences": [
+        {
+          "page": 59,
+          "char_span": [
+            0,
+            75
+          ]
+        }
+      ],
+      "pages": [
+        59
+      ]
+    },
+    "0b0852720f326642": {
+      "id": "page60_para0",
+      "text": "Installing IES 3 and ESM 2 Erbe fastening set IMPORTANT! Only use original Erbe accessories. Erbe REF 20180-512 M 8 x 16 Keep for later use Keep for later use Keep for later use",
+      "page": 60,
+      "char_span": [
+        0,
+        177
+      ],
+      "length": 177,
+      "order": [
+        121
+      ],
+      "occurrences": [
+        {
+          "page": 60,
+          "char_span": [
+            0,
+            177
+          ]
+        }
+      ],
+      "pages": [
+        60
+      ]
+    },
+    "d7d5e677c6bf728d": {
+      "id": "page61_para0",
+      "text": "Installing IES 3 and ESM 2 Tools required Torque screwdriver (1 Nm) hex socket 6 Torque screwdriver (4. 9 Nm) open-end wrench 10 Cutter Preparation IMPORTANT! Before installing the units on the system carrier, remove all cables, tubing, and instruments. 61 / 156",
+      "page": 61,
+      "char_span": [
+        0,
+        262
+      ],
+      "length": 262,
+      "order": [
+        122
+      ],
+      "occurrences": [
+        {
+          "page": 61,
+          "char_span": [
+            0,
+            262
+          ]
+        }
+      ],
+      "pages": [
+        61
+      ]
+    },
+    "603945dafa04b611": {
+      "id": "page62_para0",
+      "text": "Installing IES 3 and ESM 2 1 2 4 x 3 4",
+      "page": 62,
+      "char_span": [
+        39,
+        38
+      ],
+      "length": 38,
+      "order": [
+        123
+      ],
+      "occurrences": [
+        {
+          "page": 62,
+          "char_span": [
+            39,
+            38
+          ]
+        }
+      ],
+      "pages": [
+        62
+      ]
+    },
+    "7445e6cd81d104c5": {
+      "id": "page62_para1",
+      "text": "1. 0 Nm 4 x M 8 x 16 4 x Continue to next page",
+      "page": 62,
+      "char_span": [
+        39,
+        85
+      ],
+      "length": 46,
+      "order": [
+        124
+      ],
+      "occurrences": [
+        {
+          "page": 62,
+          "char_span": [
+            39,
+            85
+          ]
+        }
+      ],
+      "pages": [
+        62
+      ]
+    },
+    "ad6fb5837e7778d6": {
+      "id": "page63_para0",
+      "text": "Installing IES 3 and ESM 2 5 6 3 x 7 (cid: 18)(cid: 381)(cid: 374)(cid: 415)(cid: 374)(cid: 437)(cid: 286)(cid: 3)(cid: 449)(cid: 349)(cid: 410)(cid: 346)(cid: 3)",
+      "page": 63,
+      "char_span": [
+        163,
+        162
+      ],
+      "length": 162,
+      "order": [
+        125
+      ],
+      "occurrences": [
+        {
+          "page": 63,
+          "char_span": [
+            163,
+            162
+          ]
+        }
+      ],
+      "pages": [
+        63
+      ]
+    },
+    "015265c9d18575fa": {
+      "id": "page63_para1",
+      "text": "4. 9 Nm (cid: 3)(cid: 3)(cid: 3)(cid: 3)(cid: 3)(cid: 3)(cid: 3)(cid: 28)(cid: 94)(cid: 68)(cid: 3)(cid: 1006) (cid: 3)(cid: 3) 3 x",
+      "page": 63,
+      "char_span": [
+        163,
+        294
+      ],
+      "length": 131,
+      "order": [
+        126
+      ],
+      "occurrences": [
+        {
+          "page": 63,
+          "char_span": [
+            163,
+            294
+          ]
+        }
+      ],
+      "pages": [
+        63
+      ]
+    },
+    "3f8b2abd4d2c43f9": {
+      "id": "page64_para0",
+      "text": "Installing IES 3 and ESM 2 Erbe fastening set IMPORTANT! Only use original Erbe accessories. Erbe REF 20180-511 M 8 x 16 Keep for later use Keep for later use Keep for later use Tools required Torque screwdriver (1 Nm) hex socket 6 Torque screwdriver (4. 9 Nm) open-end wrench 10 Cutter Preparation IMPORTANT! Before installing the units on the system carrier, remove all cables, tubing, and instruments. 64 / 156",
+      "page": 64,
+      "char_span": [
+        0,
+        413
+      ],
+      "length": 413,
+      "order": [
+        127
+      ],
+      "occurrences": [
+        {
+          "page": 64,
+          "char_span": [
+            0,
+            413
+          ]
+        }
+      ],
+      "pages": [
+        64
+      ]
+    },
+    "541256b09c0e5d6b": {
+      "id": "page65_para0",
+      "text": "Installing IES 3 and ESM 2 1 2 3 x 3 4",
+      "page": 65,
+      "char_span": [
+        39,
+        38
+      ],
+      "length": 38,
+      "order": [
+        128
+      ],
+      "occurrences": [
+        {
+          "page": 65,
+          "char_span": [
+            39,
+            38
+          ]
+        }
+      ],
+      "pages": [
+        65
+      ]
+    },
+    "12138067be5ab093": {
+      "id": "page65_para1",
+      "text": "1. 0 Nm 3 x M 8 x 16 3 x Continue to next page",
+      "page": 65,
+      "char_span": [
+        39,
+        85
+      ],
+      "length": 46,
+      "order": [
+        129
+      ],
+      "occurrences": [
+        {
+          "page": 65,
+          "char_span": [
+            39,
+            85
+          ]
+        }
+      ],
+      "pages": [
+        65
+      ]
+    },
+    "74604e77f01e1f9c": {
+      "id": "page66_para0",
+      "text": "Installing IES 3 and ESM 2 5 6 3 x 7",
+      "page": 66,
+      "char_span": [
+        37,
+        36
+      ],
+      "length": 36,
+      "order": [
+        130
+      ],
+      "occurrences": [
+        {
+          "page": 66,
+          "char_span": [
+            37,
+            36
+          ]
+        }
+      ],
+      "pages": [
+        66
+      ]
+    },
+    "416e99c5d5a15d40": {
+      "id": "page66_para1",
+      "text": "4. 9 Nm Back to Overview 3 x",
+      "page": 66,
+      "char_span": [
+        37,
+        65
+      ],
+      "length": 28,
+      "order": [
+        131
+      ],
+      "occurrences": [
+        {
+          "page": 66,
+          "char_span": [
+            37,
+            65
+          ]
+        }
+      ],
+      "pages": [
+        66
+      ]
+    },
+    "f8a42bc743623369": {
+      "id": "page67_para0",
+      "text": "Installing IES 3 and EIP 2 Installing IES 3 and EIP 2 Permitted positioning",
+      "page": 67,
+      "char_span": [
+        0,
+        75
+      ],
+      "length": 75,
+      "order": [
+        132
+      ],
+      "occurrences": [
+        {
+          "page": 67,
+          "char_span": [
+            0,
+            75
+          ]
+        }
+      ],
+      "pages": [
+        67
+      ]
+    },
+    "26db510b3e30c0eb": {
+      "id": "page68_para0",
+      "text": "Installing IES 3 and EIP 2 Erbe fastening set IMPORTANT! Only use original Erbe accessories. Erbe REF 20180-512 M 8 x 16 Keep for later use Keep for later use Keep for later use",
+      "page": 68,
+      "char_span": [
+        0,
+        177
+      ],
+      "length": 177,
+      "order": [
+        133
+      ],
+      "occurrences": [
+        {
+          "page": 68,
+          "char_span": [
+            0,
+            177
+          ]
+        }
+      ],
+      "pages": [
+        68
+      ]
+    },
+    "17e48b72326ac2c0": {
+      "id": "page69_para0",
+      "text": "Installing IES 3 and EIP 2 Tools required Torque screwdriver (1 Nm) hex socket 6 Torque screwdriver (4. 9 Nm) open-end wrench 10 Cutter Preparation IMPORTANT! Before installing the units on the system carrier, remove all cables, tubing, and instruments. 69 / 156",
+      "page": 69,
+      "char_span": [
+        0,
+        262
+      ],
+      "length": 262,
+      "order": [
+        134
+      ],
+      "occurrences": [
+        {
+          "page": 69,
+          "char_span": [
+            0,
+            262
+          ]
+        }
+      ],
+      "pages": [
+        69
+      ]
+    },
+    "dca7b941770d6c4b": {
+      "id": "page70_para0",
+      "text": "Installing IES 3 and EIP 2 1 2 4 x 3 4",
+      "page": 70,
+      "char_span": [
+        39,
+        38
+      ],
+      "length": 38,
+      "order": [
+        135
+      ],
+      "occurrences": [
+        {
+          "page": 70,
+          "char_span": [
+            39,
+            38
+          ]
+        }
+      ],
+      "pages": [
+        70
+      ]
+    },
+    "1ac94b3f6474b4ff": {
+      "id": "page70_para1",
+      "text": "1. 0 Nm 4 x M 8 x 16 4 x Continue to next page",
+      "page": 70,
+      "char_span": [
+        39,
+        85
+      ],
+      "length": 46,
+      "order": [
+        136
+      ],
+      "occurrences": [
+        {
+          "page": 70,
+          "char_span": [
+            39,
+            85
+          ]
+        }
+      ],
+      "pages": [
+        70
+      ]
+    },
+    "cd613dde8e48efe8": {
+      "id": "page71_para0",
+      "text": "Installing IES 3 and EIP 2 5 6 3 x 7 (cid: 18)(cid: 381)(cid: 374)(cid: 415)(cid: 374)(cid: 437)(cid: 286)(cid: 3)(cid: 449)(cid: 349)(cid: 410)(cid: 346)(cid: 3)",
+      "page": 71,
+      "char_span": [
+        163,
+        162
+      ],
+      "length": 162,
+      "order": [
+        137
+      ],
+      "occurrences": [
+        {
+          "page": 71,
+          "char_span": [
+            163,
+            162
+          ]
+        }
+      ],
+      "pages": [
+        71
+      ]
+    },
+    "fdc05914696cffdf": {
+      "id": "page71_para1",
+      "text": "4. 9 Nm (cid: 3)(cid: 3)(cid: 3)(cid: 3)(cid: 3)(cid: 3)(cid: 3)(cid: 3)(cid: 28)(cid: 47)(cid: 87)(cid: 3)(cid: 1006) (cid: 3) 3 x",
+      "page": 71,
+      "char_span": [
+        163,
+        294
+      ],
+      "length": 131,
+      "order": [
+        138
+      ],
+      "occurrences": [
+        {
+          "page": 71,
+          "char_span": [
+            163,
+            294
+          ]
+        }
+      ],
+      "pages": [
+        71
+      ]
+    },
+    "bf383ac41bcaa6c1": {
+      "id": "page72_para0",
+      "text": "Installing IES 3 and EIP 2 Erbe fastening set IMPORTANT! Only use original Erbe accessories. Erbe REF 20180-513 M 8 x 16 Keep for later use Keep for later use Keep for later use Tools required Torque screwdriver (1 Nm) hex socket 6 Torque screwdriver (4. 9 Nm) open-end wrench 10 Cutter Preparation IMPORTANT! Before installing the units on the system carrier, remove all cables, tubing, and instruments. 72 / 156",
+      "page": 72,
+      "char_span": [
+        0,
+        413
+      ],
+      "length": 413,
+      "order": [
+        139
+      ],
+      "occurrences": [
+        {
+          "page": 72,
+          "char_span": [
+            0,
+            413
+          ]
+        }
+      ],
+      "pages": [
+        72
+      ]
+    },
+    "78d39e770747df79": {
+      "id": "page73_para0",
+      "text": "Installing IES 3 and EIP 2 1 2 2 x 3 4",
+      "page": 73,
+      "char_span": [
+        39,
+        38
+      ],
+      "length": 38,
+      "order": [
+        140
+      ],
+      "occurrences": [
+        {
+          "page": 73,
+          "char_span": [
+            39,
+            38
+          ]
+        }
+      ],
+      "pages": [
+        73
+      ]
+    },
+    "0a671b2cad95d659": {
+      "id": "page73_para1",
+      "text": "1. 0 Nm 2 x M 8 x 16 2 x Continue to next page",
+      "page": 73,
+      "char_span": [
+        39,
+        85
+      ],
+      "length": 46,
+      "order": [
+        141
+      ],
+      "occurrences": [
+        {
+          "page": 73,
+          "char_span": [
+            39,
+            85
+          ]
+        }
+      ],
+      "pages": [
+        73
+      ]
+    },
+    "1532ee45cf4b3505": {
+      "id": "page74_para0",
+      "text": "Installing IES 3 and EIP 2 5 6 2 x 7",
+      "page": 74,
+      "char_span": [
+        37,
+        36
+      ],
+      "length": 36,
+      "order": [
+        142
+      ],
+      "occurrences": [
+        {
+          "page": 74,
+          "char_span": [
+            37,
+            36
+          ]
+        }
+      ],
+      "pages": [
+        74
+      ]
+    },
+    "e7a5322e2fda6412": {
+      "id": "page74_para1",
+      "text": "4. 9 Nm Back to Overview 2 x",
+      "page": 74,
+      "char_span": [
+        37,
+        65
+      ],
+      "length": 28,
+      "order": [
+        143
+      ],
+      "occurrences": [
+        {
+          "page": 74,
+          "char_span": [
+            37,
+            65
+          ]
+        }
+      ],
+      "pages": [
+        74
+      ]
+    },
+    "3ab63cc3f70b56f7": {
+      "id": "page75_para0",
+      "text": "Installing ESM 2 and EIP 2 Installing ESM 2 and EIP 2 Permitted positioning",
+      "page": 75,
+      "char_span": [
+        0,
+        75
+      ],
+      "length": 75,
+      "order": [
+        144
+      ],
+      "occurrences": [
+        {
+          "page": 75,
+          "char_span": [
+            0,
+            75
+          ]
+        }
+      ],
+      "pages": [
+        75
+      ]
+    },
+    "c3208dc8fb1a098e": {
+      "id": "page76_para0",
+      "text": "Installing ESM 2 and EIP 2 Erbe fastening set IMPORTANT! Only use original Erbe accessories. Erbe REF 20180-511 M 8 x 16 Keep for later use Keep for later use Keep for later use Tools required Torque screwdriver (1 Nm) hex socket 6 Torque screwdriver (4. 9 Nm) open-end wrench 10 Cutter Preparation IMPORTANT! Before installing the units on the system carrier, remove all cables, tubing, and instruments. 76 / 156",
+      "page": 76,
+      "char_span": [
+        0,
+        413
+      ],
+      "length": 413,
+      "order": [
+        145
+      ],
+      "occurrences": [
+        {
+          "page": 76,
+          "char_span": [
+            0,
+            413
+          ]
+        }
+      ],
+      "pages": [
+        76
+      ]
+    },
+    "814d141baac8c170": {
+      "id": "page77_para0",
+      "text": "Installing ESM 2 and EIP 2 1 2 3 x 3 4",
+      "page": 77,
+      "char_span": [
+        39,
+        38
+      ],
+      "length": 38,
+      "order": [
+        146
+      ],
+      "occurrences": [
+        {
+          "page": 77,
+          "char_span": [
+            39,
+            38
+          ]
+        }
+      ],
+      "pages": [
+        77
+      ]
+    },
+    "9b4de1974767c4f7": {
+      "id": "page77_para1",
+      "text": "1. 0 Nm 3 x M 8 x 16 3 x Continue to next page",
+      "page": 77,
+      "char_span": [
+        39,
+        85
+      ],
+      "length": 46,
+      "order": [
+        147
+      ],
+      "occurrences": [
+        {
+          "page": 77,
+          "char_span": [
+            39,
+            85
+          ]
+        }
+      ],
+      "pages": [
+        77
+      ]
+    },
+    "dda266b755838cdd": {
+      "id": "page78_para0",
+      "text": "Installing ESM 2 and EIP 2 5 6 3 x 7 (cid: 18)(cid: 381)(cid: 374)(cid: 415)(cid: 374)(cid: 437)(cid: 286)(cid: 3)(cid: 449)(cid: 349)(cid: 410)(cid: 346)(cid: 3)",
+      "page": 78,
+      "char_span": [
+        163,
+        162
+      ],
+      "length": 162,
+      "order": [
+        148
+      ],
+      "occurrences": [
+        {
+          "page": 78,
+          "char_span": [
+            163,
+            162
+          ]
+        }
+      ],
+      "pages": [
+        78
+      ]
+    },
+    "7c0df8621407cffd": {
+      "id": "page78_para1",
+      "text": "4. 9 Nm (cid: 3)(cid: 3)(cid: 3)(cid: 3)(cid: 3)(cid: 3)(cid: 3)(cid: 3)(cid: 28)(cid: 47)(cid: 87)(cid: 3)(cid: 1006) (cid: 3) 3 x",
+      "page": 78,
+      "char_span": [
+        163,
+        294
+      ],
+      "length": 131,
+      "order": [
+        149
+      ],
+      "occurrences": [
+        {
+          "page": 78,
+          "char_span": [
+            163,
+            294
+          ]
+        }
+      ],
+      "pages": [
+        78
+      ]
+    },
+    "39f18d990dcabc63": {
+      "id": "page79_para0",
+      "text": "Installing ESM 2 and EIP 2 Erbe fastening set IMPORTANT! Only use original Erbe accessories. Erbe REF 20180-513 M 8 x 16 Keep for later use Keep for later use Keep for later use Tools required Torque screwdriver (1 Nm) hex socket 6 Torque screwdriver (4. 9 Nm) open-end wrench 10 Cutter Preparation IMPORTANT! Before installing the units on the system carrier, remove all cables, tubing, and instruments. 79 / 156",
+      "page": 79,
+      "char_span": [
+        0,
+        413
+      ],
+      "length": 413,
+      "order": [
+        150
+      ],
+      "occurrences": [
+        {
+          "page": 79,
+          "char_span": [
+            0,
+            413
+          ]
+        }
+      ],
+      "pages": [
+        79
+      ]
+    },
+    "d3d8e8a15fbcc931": {
+      "id": "page80_para0",
+      "text": "Installing ESM 2 and EIP 2 1 2 2 x 3 4",
+      "page": 80,
+      "char_span": [
+        39,
+        38
+      ],
+      "length": 38,
+      "order": [
+        151
+      ],
+      "occurrences": [
+        {
+          "page": 80,
+          "char_span": [
+            39,
+            38
+          ]
+        }
+      ],
+      "pages": [
+        80
+      ]
+    },
+    "49c1bd9ecc066213": {
+      "id": "page80_para1",
+      "text": "1. 0 Nm 2 x M 8 x 16 2 x Continue to next page",
+      "page": 80,
+      "char_span": [
+        39,
+        85
+      ],
+      "length": 46,
+      "order": [
+        152
+      ],
+      "occurrences": [
+        {
+          "page": 80,
+          "char_span": [
+            39,
+            85
+          ]
+        }
+      ],
+      "pages": [
+        80
+      ]
+    },
+    "b0783834e519238f": {
+      "id": "page81_para0",
+      "text": "Installing ESM 2 and EIP 2 5 6 2 x 7 Back to Overview",
+      "page": 81,
+      "char_span": [
+        54,
+        53
+      ],
+      "length": 53,
+      "order": [
+        153
+      ],
+      "occurrences": [
+        {
+          "page": 81,
+          "char_span": [
+            54,
+            53
+          ]
+        }
+      ],
+      "pages": [
+        81
+      ]
+    },
+    "2cb56bdb036ae1d8": {
+      "id": "page81_para1",
+      "text": "4. 9 Nm 2 x",
+      "page": 81,
+      "char_span": [
+        54,
+        65
+      ],
+      "length": 11,
+      "order": [
+        154
+      ],
+      "occurrences": [
+        {
+          "page": 81,
+          "char_span": [
+            54,
+            65
+          ]
+        }
+      ],
+      "pages": [
+        81
+      ]
+    },
+    "e61b03c6f1608060": {
+      "id": "page82_para0",
+      "text": "Installing ESM 2 and EIP 2",
+      "page": 82,
+      "char_span": [
+        0,
+        26
+      ],
+      "length": 26,
+      "order": [
+        155
+      ],
+      "occurrences": [
+        {
+          "page": 82,
+          "char_span": [
+            0,
+            26
+          ]
+        }
+      ],
+      "pages": [
+        82
+      ]
+    },
+    "29d991fcc49e4601": {
+      "id": "page83_para0",
+      "text": "Installing different VIO series Installing different VIO series Permitted positioning VIO S series and VIO D series VIO 3 and VIO 3 n",
+      "page": 83,
+      "char_span": [
+        0,
+        133
+      ],
+      "length": 133,
+      "order": [
+        156
+      ],
+      "occurrences": [
+        {
+          "page": 83,
+          "char_span": [
+            0,
+            133
+          ]
+        }
+      ],
+      "pages": [
+        83
+      ]
+    },
+    "cb1a52a4b6c9fc18": {
+      "id": "page84_para0",
+      "text": "Installing different VIO series Erbe fastening set IMPORTANT! Only use original Erbe accessories. IMPORTANT! Order the protective caps for the via of the units (see Step 1) separately as needed; they are not part of this fastening set 20180-150. For order numbers for the matching protective caps, see the repair instructions for the respective VIO unit. Erbe REF 20180-150 M 4 x 8 M 4 x 16 screws included Keep for later use Keep for later use Tools required Torque screwdriver (1 Nm) hex socket 2. 5 Preparation IMPORTANT! Before installing the units on the system carrier, remove all cables, tubing, and instruments. 84 / 156",
+      "page": 84,
+      "char_span": [
+        0,
+        630
+      ],
+      "length": 628,
+      "order": [
+        157
+      ],
+      "occurrences": [
+        {
+          "page": 84,
+          "char_span": [
+            0,
+            630
+          ]
+        }
+      ],
+      "pages": [
+        84
+      ]
+    },
+    "81c8c6d5a9ffb4c9": {
+      "id": "page85_para0",
+      "text": "Installing different VIO series 1 2 VIO S and VIO D VIO 3 and VIO 3 n 3 4 Only for VIO S and VIO D units",
+      "page": 85,
+      "char_span": [
+        105,
+        104
+      ],
+      "length": 104,
+      "order": [
+        158
+      ],
+      "occurrences": [
+        {
+          "page": 85,
+          "char_span": [
+            105,
+            104
+          ]
+        }
+      ],
+      "pages": [
+        85
+      ]
+    },
+    "098709e1b072b478": {
+      "id": "page85_para1",
+      "text": "1. 0 Nm 2 8 c m 2 x Use marked innner drill holes M 4 x 16 for Step 4! 5 6",
+      "page": 85,
+      "char_span": [
+        105,
+        179
+      ],
+      "length": 74,
+      "order": [
+        159
+      ],
+      "occurrences": [
+        {
+          "page": 85,
+          "char_span": [
+            105,
+            179
+          ]
+        }
+      ],
+      "pages": [
+        85
+      ]
+    },
+    "132af51b719c8d33": {
+      "id": "page85_para2",
+      "text": "1. 0 Nm 2 x M 4 x 8",
+      "page": 85,
+      "char_span": [
+        180,
+        199
+      ],
+      "length": 19,
+      "order": [
+        160
+      ],
+      "occurrences": [
+        {
+          "page": 85,
+          "char_span": [
+            180,
+            199
+          ]
+        }
+      ],
+      "pages": [
+        85
+      ]
+    },
+    "2731dd18be411044": {
+      "id": "page86_para0",
+      "text": "Installing different VIO series 7 8 Attachment points on the system carrier Attachment points on the unit 1 1 2 2 2 2 9 10 2 1 2 1 2 left right 2 11 Back to Overview",
+      "page": 86,
+      "char_span": [
+        0,
+        165
+      ],
+      "length": 165,
+      "order": [
+        161
+      ],
+      "occurrences": [
+        {
+          "page": 86,
+          "char_span": [
+            0,
+            165
+          ]
+        }
+      ],
+      "pages": [
+        86
+      ]
+    },
+    "0cec68479080949f": {
+      "id": "page87_para0",
+      "text": "Installing ERBEJET 2 or ERBECRYO 2 Installing ERBEJET 2 or ERBECRYO 2 Permitted positioning",
+      "page": 87,
+      "char_span": [
+        92,
+        91
+      ],
+      "length": 91,
+      "order": [
+        162
+      ],
+      "occurrences": [
+        {
+          "page": 87,
+          "char_span": [
+            92,
+            91
+          ]
+        }
+      ],
+      "pages": [
+        87
+      ]
+    },
+    "768aeac140fcbf63": {
+      "id": "page87_para1",
+      "text": "ERBEJET 2 ERBECRYO 2",
+      "page": 87,
+      "char_span": [
+        92,
+        112
+      ],
+      "length": 20,
+      "order": [
+        163
+      ],
+      "occurrences": [
+        {
+          "page": 87,
+          "char_span": [
+            92,
+            112
+          ]
+        }
+      ],
+      "pages": [
+        87
+      ]
+    },
+    "70faa921422192d8": {
+      "id": "page88_para0",
+      "text": "Installing ERBEJET 2 or ERBECRYO 2 Erbe fastening set IMPORTANT! Only use original Erbe accessories. Erbe REF 20180-150 M 4 x 8 M 4 x 16 screws included Keep for later use Keep for later use Tools required Torque screwdriver (1 Nm) hex socket 2. 5 Preparation IMPORTANT! Before installing the units on the system carrier, remove all cables, tubing, and instruments. 88 / 156",
+      "page": 88,
+      "char_span": [
+        0,
+        374
+      ],
+      "length": 374,
+      "order": [
+        164
+      ],
+      "occurrences": [
+        {
+          "page": 88,
+          "char_span": [
+            0,
+            374
+          ]
+        }
+      ],
+      "pages": [
+        88
+      ]
+    },
+    "8095c7761d9025ce": {
+      "id": "page89_para0",
+      "text": "Installing ERBEJET 2 or ERBECRYO 2 1 2 2 8 c m",
+      "page": 89,
+      "char_span": [
+        47,
+        46
+      ],
+      "length": 46,
+      "order": [
+        165
+      ],
+      "occurrences": [
+        {
+          "page": 89,
+          "char_span": [
+            47,
+            46
+          ]
+        }
+      ],
+      "pages": [
+        89
+      ]
+    },
+    "67f685fafc6925d5": {
+      "id": "page89_para1",
+      "text": "ERBEJET 2",
+      "page": 89,
+      "char_span": [
+        47,
+        56
+      ],
+      "length": 9,
+      "order": [
+        166
+      ],
+      "occurrences": [
+        {
+          "page": 89,
+          "char_span": [
+            47,
+            56
+          ]
+        }
+      ],
+      "pages": [
+        89
+      ]
+    },
+    "05bc616125ab6a1c": {
+      "id": "page89_para2",
+      "text": "ERBECRYO 2 Use marked inner drill holes for Step 3! 3 4",
+      "page": 89,
+      "char_span": [
+        57,
+        112
+      ],
+      "length": 55,
+      "order": [
+        167
+      ],
+      "occurrences": [
+        {
+          "page": 89,
+          "char_span": [
+            57,
+            112
+          ]
+        }
+      ],
+      "pages": [
+        89
+      ]
+    },
+    "7b9a8c5dad412786": {
+      "id": "page89_para3",
+      "text": "1. 0 Nm 2 x M 4 x 16 5 6 Attachment points on the system carrier",
+      "page": 89,
+      "char_span": [
+        113,
+        177
+      ],
+      "length": 64,
+      "order": [
+        168
+      ],
+      "occurrences": [
+        {
+          "page": 89,
+          "char_span": [
+            113,
+            177
+          ]
+        }
+      ],
+      "pages": [
+        89
+      ]
+    },
+    "2abd7f9923ce7123": {
+      "id": "page89_para4",
+      "text": "1. 0 Nm 1 2 2 2 x M 4 x 8",
+      "page": 89,
+      "char_span": [
+        178,
+        203
+      ],
+      "length": 25,
+      "order": [
+        169
+      ],
+      "occurrences": [
+        {
+          "page": 89,
+          "char_span": [
+            178,
+            203
+          ]
+        }
+      ],
+      "pages": [
+        89
+      ]
+    },
+    "b8e17409c411f2fc": {
+      "id": "page90_para0",
+      "text": "Installing ERBEJET 2 or ERBECRYO 2 7 8 Attachment points on the unit 1 1 2 1 2 9 10 2 2 2 left right 2 Back to Overview",
+      "page": 90,
+      "char_span": [
+        0,
+        119
+      ],
+      "length": 119,
+      "order": [
+        170
+      ],
+      "occurrences": [
+        {
+          "page": 90,
+          "char_span": [
+            0,
+            119
+          ]
+        }
+      ],
+      "pages": [
+        90
+      ]
+    },
+    "715dad612de0131c": {
+      "id": "page91_para0",
+      "text": "Installing APC 2 and VIO S or VIO D series Installing APC 2 and VIO S or VIO D series Permitted positioning VIO S series and VIO D series",
+      "page": 91,
+      "char_span": [
+        138,
+        137
+      ],
+      "length": 137,
+      "order": [
+        171
+      ],
+      "occurrences": [
+        {
+          "page": 91,
+          "char_span": [
+            138,
+            137
+          ]
+        }
+      ],
+      "pages": [
+        91
+      ]
+    },
+    "8c9f00619cd510ce": {
+      "id": "page91_para1",
+      "text": "APC 2",
+      "page": 91,
+      "char_span": [
+        138,
+        143
+      ],
+      "length": 5,
+      "order": [
+        172
+      ],
+      "occurrences": [
+        {
+          "page": 91,
+          "char_span": [
+            138,
+            143
+          ]
+        }
+      ],
+      "pages": [
+        91
+      ]
+    },
+    "373b76065055e772": {
+      "id": "page92_para0",
+      "text": "Installing APC 2 and VIO S or VIO D series Erbe fastening sets IMPORTANT! Only use original Erbe accessories. Fastening set for APC on system carrier Erbe REF 20180-150 M 4 x 8 M 4 x 16 screws included Keep for later use Keep for later use",
+      "page": 92,
+      "char_span": [
+        0,
+        239
+      ],
+      "length": 239,
+      "order": [
+        173
+      ],
+      "occurrences": [
+        {
+          "page": 92,
+          "char_span": [
+            0,
+            239
+          ]
+        }
+      ],
+      "pages": [
+        92
+      ]
+    },
+    "ca5754abbb395b56": {
+      "id": "page93_para0",
+      "text": "Installing APC 2 and VIO S or VIO D series Fastening set for VIO on APC Erbe REF 20180-134 M 4 x 10 Keep for later use Tools required Torque screwdriver (1 Nm) hex socket 2. 5 Preparation IMPORTANT! Before installing the units on the system carrier, remove all cables, tubing, and instruments. 93 / 156",
+      "page": 93,
+      "char_span": [
+        0,
+        302
+      ],
+      "length": 302,
+      "order": [
+        174
+      ],
+      "occurrences": [
+        {
+          "page": 93,
+          "char_span": [
+            0,
+            302
+          ]
+        }
+      ],
+      "pages": [
+        93
+      ]
+    },
+    "36a4779fc11a6e56": {
+      "id": "page94_para0",
+      "text": "Installing APC 2 and VIO S or VIO D series 1 2 2 8 c m",
+      "page": 94,
+      "char_span": [
+        55,
+        54
+      ],
+      "length": 54,
+      "order": [
+        175
+      ],
+      "occurrences": [
+        {
+          "page": 94,
+          "char_span": [
+            55,
+            54
+          ]
+        }
+      ],
+      "pages": [
+        94
+      ]
+    },
+    "2aeeeac480d75289": {
+      "id": "page94_para1",
+      "text": "APC 2 Use marked inner drill holes for Step 3! 3 4",
+      "page": 94,
+      "char_span": [
+        55,
+        105
+      ],
+      "length": 50,
+      "order": [
+        176
+      ],
+      "occurrences": [
+        {
+          "page": 94,
+          "char_span": [
+            55,
+            105
+          ]
+        }
+      ],
+      "pages": [
+        94
+      ]
+    },
+    "f35ced878febca43": {
+      "id": "page94_para2",
+      "text": "1. 0 Nm 2 x M 4 x 16 5 6 Attachment points on the system carrier",
+      "page": 94,
+      "char_span": [
+        106,
+        170
+      ],
+      "length": 64,
+      "order": [
+        177
+      ],
+      "occurrences": [
+        {
+          "page": 94,
+          "char_span": [
+            106,
+            170
+          ]
+        }
+      ],
+      "pages": [
+        94
+      ]
+    },
+    "0bb357e29763ee33": {
+      "id": "page94_para3",
+      "text": "1. 0 Nm 1 2 2 2 x M 4 x 8",
+      "page": 94,
+      "char_span": [
+        171,
+        196
+      ],
+      "length": 25,
+      "order": [
+        178
+      ],
+      "occurrences": [
+        {
+          "page": 94,
+          "char_span": [
+            171,
+            196
+          ]
+        }
+      ],
+      "pages": [
+        94
+      ]
+    },
+    "6135594493b5810d": {
+      "id": "page95_para0",
+      "text": "Installing APC 2 and VIO S or VIO D series 7 8 Attachment points on the unit 1 1 2 1 2 9 10 2 2 2 left right 2 Continue to next page",
+      "page": 95,
+      "char_span": [
+        0,
+        132
+      ],
+      "length": 132,
+      "order": [
+        179
+      ],
+      "occurrences": [
+        {
+          "page": 95,
+          "char_span": [
+            0,
+            132
+          ]
+        }
+      ],
+      "pages": [
+        95
+      ]
+    },
+    "94a4a80e1645a01d": {
+      "id": "page96_para0",
+      "text": "Installing APC 2 and VIO S or VIO D series 11 12 VIO S or VIO D 13 Back to Overview",
+      "page": 96,
+      "char_span": [
+        84,
+        83
+      ],
+      "length": 83,
+      "order": [
+        180
+      ],
+      "occurrences": [
+        {
+          "page": 96,
+          "char_span": [
+            84,
+            83
+          ]
+        }
+      ],
+      "pages": [
+        96
+      ]
+    },
+    "2c91c02a015f476f": {
+      "id": "page96_para1",
+      "text": "1. 0 Nm M 4 x 10",
+      "page": 96,
+      "char_span": [
+        84,
+        100
+      ],
+      "length": 16,
+      "order": [
+        181
+      ],
+      "occurrences": [
+        {
+          "page": 96,
+          "char_span": [
+            84,
+            100
+          ]
+        }
+      ],
+      "pages": [
+        96
+      ]
+    },
+    "a6de3bd4c4601d8f": {
+      "id": "page97_para0",
+      "text": "Installing APC 3 and VIO 3 series Installing APC 3 and VIO 3 series Permitted positioning VIO 3 and VIO 3 n",
+      "page": 97,
+      "char_span": [
+        108,
+        107
+      ],
+      "length": 107,
+      "order": [
+        182
+      ],
+      "occurrences": [
+        {
+          "page": 97,
+          "char_span": [
+            108,
+            107
+          ]
+        }
+      ],
+      "pages": [
+        97
+      ]
+    },
+    "e93297ff4b1ac79c": {
+      "id": "page97_para1",
+      "text": "APC 3",
+      "page": 97,
+      "char_span": [
+        108,
+        113
+      ],
+      "length": 5,
+      "order": [
+        183
+      ],
+      "occurrences": [
+        {
+          "page": 97,
+          "char_span": [
+            108,
+            113
+          ]
+        }
+      ],
+      "pages": [
+        97
+      ]
+    },
+    "0448325d77b3ef6f": {
+      "id": "page98_para0",
+      "text": "Installing APC 3 and VIO 3 series Erbe fastening sets IMPORTANT! Only use original Erbe accessories. Fastening set for APC on system carrier Erbe REF 20180-150 M 4 x 8 M 4 x 16 screws included Keep for later use Keep for later use",
+      "page": 98,
+      "char_span": [
+        0,
+        230
+      ],
+      "length": 230,
+      "order": [
+        184
+      ],
+      "occurrences": [
+        {
+          "page": 98,
+          "char_span": [
+            0,
+            230
+          ]
+        }
+      ],
+      "pages": [
+        98
+      ]
+    },
+    "17d06392fab85a48": {
+      "id": "page99_para0",
+      "text": "Installing APC 3 and VIO 3 series Fastening set for VIO on APC: Erbe REF 30135-030 Bracket: Erbe REF 40160-065 M 4 x 8 M 4 x 16 Keep for later use Keep for later use Tools required Torque screwdriver (1 Nm) hex socket 2. 5 Torque screwdriver (1 Nm) hex socket 3 Preparation IMPORTANT! Before installing the units on the system carrier, remove all cables, tubing, and instruments. 99 / 156",
+      "page": 99,
+      "char_span": [
+        0,
+        388
+      ],
+      "length": 388,
+      "order": [
+        185
+      ],
+      "occurrences": [
+        {
+          "page": 99,
+          "char_span": [
+            0,
+            388
+          ]
+        }
+      ],
+      "pages": [
+        99
+      ]
+    },
+    "ca354b1da9640315": {
+      "id": "page100_para0",
+      "text": "Installing APC 3 and VIO 3 series 1 2",
+      "page": 100,
+      "char_span": [
+        38,
+        37
+      ],
+      "length": 37,
+      "order": [
+        186
+      ],
+      "occurrences": [
+        {
+          "page": 100,
+          "char_span": [
+            38,
+            37
+          ]
+        }
+      ],
+      "pages": [
+        100
+      ]
+    },
+    "76f55f1a8b6540e9": {
+      "id": "page100_para1",
+      "text": "1. 0 Nm",
+      "page": 100,
+      "char_span": [
+        38,
+        45
+      ],
+      "length": 7,
+      "order": [
+        187
+      ],
+      "occurrences": [
+        {
+          "page": 100,
+          "char_span": [
+            38,
+            45
+          ]
+        }
+      ],
+      "pages": [
+        100
+      ]
+    },
+    "797f4d4aea7b95c9": {
+      "id": "page100_para2",
+      "text": "APC 3 2 x M 4 x 16 3 4",
+      "page": 100,
+      "char_span": [
+        46,
+        68
+      ],
+      "length": 22,
+      "order": [
+        188
+      ],
+      "occurrences": [
+        {
+          "page": 100,
+          "char_span": [
+            46,
+            68
+          ]
+        }
+      ],
+      "pages": [
+        100
+      ]
+    },
+    "2c35ec9fcc55223e": {
+      "id": "page100_para3",
+      "text": "1. 0 Nm 2 x M 4 x 8 5 6 Attachment points on the system carrier Attachment points on the unit 1 1 2 2 2 2",
+      "page": 100,
+      "char_span": [
+        69,
+        174
+      ],
+      "length": 105,
+      "order": [
+        189
+      ],
+      "occurrences": [
+        {
+          "page": 100,
+          "char_span": [
+            69,
+            174
+          ]
+        }
+      ],
+      "pages": [
+        100
+      ]
+    },
+    "38dd1acd49b81306": {
+      "id": "page101_para0",
+      "text": "Installing APC 3 and VIO 3 series 7 8 2 1 2 1 2 left right 2 9 Continue to next page",
+      "page": 101,
+      "char_span": [
+        0,
+        84
+      ],
+      "length": 84,
+      "order": [
+        190
+      ],
+      "occurrences": [
+        {
+          "page": 101,
+          "char_span": [
+            0,
+            84
+          ]
+        }
+      ],
+      "pages": [
+        101
+      ]
+    },
+    "4c18a7a471e44024": {
+      "id": "page102_para0",
+      "text": "Installing APC 3 and VIO 3 series 10 11 VIO 3 or VIO 3 n",
+      "page": 102,
+      "char_span": [
+        57,
+        56
+      ],
+      "length": 56,
+      "order": [
+        191
+      ],
+      "occurrences": [
+        {
+          "page": 102,
+          "char_span": [
+            57,
+            56
+          ]
+        }
+      ],
+      "pages": [
+        102
+      ]
+    },
+    "b78c91879c62d964": {
+      "id": "page102_para1",
+      "text": "1. 0 Nm 2 x M 4 x 8 12 13",
+      "page": 102,
+      "char_span": [
+        57,
+        82
+      ],
+      "length": 25,
+      "order": [
+        192
+      ],
+      "occurrences": [
+        {
+          "page": 102,
+          "char_span": [
+            57,
+            82
+          ]
+        }
+      ],
+      "pages": [
+        102
+      ]
+    },
+    "d8c49d8e8dd356b5": {
+      "id": "page102_para2",
+      "text": "1. 0 Nm 2 x M 4 x 16 Back to Overview",
+      "page": 102,
+      "char_span": [
+        83,
+        120
+      ],
+      "length": 37,
+      "order": [
+        193
+      ],
+      "occurrences": [
+        {
+          "page": 102,
+          "char_span": [
+            83,
+            120
+          ]
+        }
+      ],
+      "pages": [
+        102
+      ]
+    },
+    "e560169e69d59b2d": {
+      "id": "page103_para0",
+      "text": "Installing VIO seal and VIO 3 n Installing VIO seal and VIO 3 n Permitted positioning VIO 3 n VIO seal",
+      "page": 103,
+      "char_span": [
+        0,
+        102
+      ],
+      "length": 102,
+      "order": [
+        194
+      ],
+      "occurrences": [
+        {
+          "page": 103,
+          "char_span": [
+            0,
+            102
+          ]
+        }
+      ],
+      "pages": [
+        103
+      ]
+    },
+    "f3850d7ddf45a6f6": {
+      "id": "page104_para0",
+      "text": "Installing VIO seal and VIO 3 n Erbe fastening set IMPORTANT! Only use original Erbe accessories. For the following assembly sequence, the Erbe fastening set shown below must be ordered in quantity 2 (1 for mounting the unit on the other unit, 1 for mounting the unit on the system carrier). IMPORTANT! Order the protective cap for the via of the VIO 3 n (see Step 10) separately as needed; it is not part of this fastening set 20180-150. Erbe order number 40160-131: Protective cap for VIO 3 n Fire, Metal or Water: Erbe REF No. 40160-112. Protective cap for VIO 3 n Stone or Timber: Erbe REF No. 40160-131. Erbe REF 20180-150 M 4 x 8 M 4 x 16 screws included Keep for later use Keep for later use Tools required Torque screwdriver (1 Nm) hex socket 2. 5 Preparation IMPORTANT! Before installing the units on the system carrier, remove all cables, tubing, and instruments. 104 / 156",
+      "page": 104,
+      "char_span": [
+        0,
+        883
+      ],
+      "length": 883,
+      "order": [
+        195
+      ],
+      "occurrences": [
+        {
+          "page": 104,
+          "char_span": [
+            0,
+            883
+          ]
+        }
+      ],
+      "pages": [
+        104
+      ]
+    },
+    "101ee9c7bfe55815": {
+      "id": "page105_para0",
+      "text": "Installing VIO seal and VIO 3 n 1 2",
+      "page": 105,
+      "char_span": [
+        36,
+        35
+      ],
+      "length": 35,
+      "order": [
+        196
+      ],
+      "occurrences": [
+        {
+          "page": 105,
+          "char_span": [
+            36,
+            35
+          ]
+        }
+      ],
+      "pages": [
+        105
+      ]
+    },
+    "9908d52b4072d8a5": {
+      "id": "page105_para1",
+      "text": "1. 0 Nm",
+      "page": 105,
+      "char_span": [
+        36,
+        43
+      ],
+      "length": 7,
+      "order": [
+        197
+      ],
+      "occurrences": [
+        {
+          "page": 105,
+          "char_span": [
+            36,
+            43
+          ]
+        }
+      ],
+      "pages": [
+        105
+      ]
+    },
+    "038c4a1707ddbf51": {
+      "id": "page105_para2",
+      "text": "DM? VIO seal 2 x M 4 x 16 3 4",
+      "page": 105,
+      "char_span": [
+        44,
+        73
+      ],
+      "length": 29,
+      "order": [
+        198
+      ],
+      "occurrences": [
+        {
+          "page": 105,
+          "char_span": [
+            44,
+            73
+          ]
+        }
+      ],
+      "pages": [
+        105
+      ]
+    },
+    "d85da8833de65da5": {
+      "id": "page105_para3",
+      "text": "1. 0 Nm 2 x M 4 x 8 5 6 Attachment points on the system carrier Attachment points on VIO seal 1 1 2 2 2 2",
+      "page": 105,
+      "char_span": [
+        74,
+        179
+      ],
+      "length": 105,
+      "order": [
+        199
+      ],
+      "occurrences": [
+        {
+          "page": 105,
+          "char_span": [
+            74,
+            179
+          ]
+        }
+      ],
+      "pages": [
+        105
+      ]
+    },
+    "7cda1d00da7e059e": {
+      "id": "page106_para0",
+      "text": "Installing VIO seal and VIO 3 n 7 8 2 1 2 1 2 left right 2 9 10 VIO 3 n 11 12",
+      "page": 106,
+      "char_span": [
+        78,
+        77
+      ],
+      "length": 77,
+      "order": [
+        200
+      ],
+      "occurrences": [
+        {
+          "page": 106,
+          "char_span": [
+            78,
+            77
+          ]
+        }
+      ],
+      "pages": [
+        106
+      ]
+    },
+    "565e198aae6f640b": {
+      "id": "page106_para1",
+      "text": "1. 0 Nm 2 x M 4 x 16",
+      "page": 106,
+      "char_span": [
+        78,
+        98
+      ],
+      "length": 20,
+      "order": [
+        201
+      ],
+      "occurrences": [
+        {
+          "page": 106,
+          "char_span": [
+            78,
+            98
+          ]
+        }
+      ],
+      "pages": [
+        106
+      ]
+    },
+    "082ad8fd9afb6127": {
+      "id": "page107_para0",
+      "text": "Installing VIO seal and VIO 3 n 13 14",
+      "page": 107,
+      "char_span": [
+        38,
+        37
+      ],
+      "length": 37,
+      "order": [
+        202
+      ],
+      "occurrences": [
+        {
+          "page": 107,
+          "char_span": [
+            38,
+            37
+          ]
+        }
+      ],
+      "pages": [
+        107
+      ]
+    },
+    "5dd8c1854c489d78": {
+      "id": "page107_para1",
+      "text": "VIO sea l 2 x 15 16",
+      "page": 107,
+      "char_span": [
+        38,
+        57
+      ],
+      "length": 19,
+      "order": [
+        203
+      ],
+      "occurrences": [
+        {
+          "page": 107,
+          "char_span": [
+            38,
+            57
+          ]
+        }
+      ],
+      "pages": [
+        107
+      ]
+    },
+    "42c8c718b969158e": {
+      "id": "page107_para2",
+      "text": "1. 0 Nm",
+      "page": 107,
+      "char_span": [
+        58,
+        65
+      ],
+      "length": 7,
+      "order": [
+        204
+      ],
+      "occurrences": [
+        {
+          "page": 107,
+          "char_span": [
+            58,
+            65
+          ]
+        }
+      ],
+      "pages": [
+        107
+      ]
+    },
+    "f7ebb971e971152c": {
+      "id": "page107_para3",
+      "text": "VIO VIO sea sea l l 2 x 2 x M 4 x 8 17 18 Attachment points on VIO seal Attachment points on VIO 3 n 1 1",
+      "page": 107,
+      "char_span": [
+        66,
+        170
+      ],
+      "length": 104,
+      "order": [
+        205
+      ],
+      "occurrences": [
+        {
+          "page": 107,
+          "char_span": [
+            66,
+            170
+          ]
+        }
+      ],
+      "pages": [
+        107
+      ]
+    },
+    "cfc907836b8a6747": {
+      "id": "page107_para4",
+      "text": "VIO sea 2 l 2 2 2",
+      "page": 107,
+      "char_span": [
+        171,
+        188
+      ],
+      "length": 17,
+      "order": [
+        206
+      ],
+      "occurrences": [
+        {
+          "page": 107,
+          "char_span": [
+            171,
+            188
+          ]
+        }
+      ],
+      "pages": [
+        107
+      ]
+    },
+    "f21b17b3032a274e": {
+      "id": "page108_para0",
+      "text": "Installing VIO seal and VIO 3 n 19 20 3 n",
+      "page": 108,
+      "char_span": [
+        42,
+        41
+      ],
+      "length": 41,
+      "order": [
+        207
+      ],
+      "occurrences": [
+        {
+          "page": 108,
+          "char_span": [
+            42,
+            41
+          ]
+        }
+      ],
+      "pages": [
+        108
+      ]
+    },
+    "c2ccd7911f0190fb": {
+      "id": "page108_para1",
+      "text": "VIO 1 2",
+      "page": 108,
+      "char_span": [
+        42,
+        49
+      ],
+      "length": 7,
+      "order": [
+        208
+      ],
+      "occurrences": [
+        {
+          "page": 108,
+          "char_span": [
+            42,
+            49
+          ]
+        }
+      ],
+      "pages": [
+        108
+      ]
+    },
+    "2f509efd234054e9": {
+      "id": "page108_para2",
+      "text": "VIO seal 2 1 2 VIO seal 2 left right 21 Back to Overview",
+      "page": 108,
+      "char_span": [
+        50,
+        106
+      ],
+      "length": 56,
+      "order": [
+        209
+      ],
+      "occurrences": [
+        {
+          "page": 108,
+          "char_span": [
+            50,
+            106
+          ]
+        }
+      ],
+      "pages": [
+        108
+      ]
+    },
+    "ad963fc3f378a379": {
+      "id": "page109_para0",
+      "text": "Installing ERBEJET 2 or ERBECRYO 2 + APC 2 + VIO S or VIO D series Installing ERBEJET 2 or ERBECRYO 2 + APC 2 + VIO S or VIO D series Permitted positioning VIO S series and VIO D series VIO S series and VIO D series",
+      "page": 109,
+      "char_span": [
+        216,
+        215
+      ],
+      "length": 215,
+      "order": [
+        210
+      ],
+      "occurrences": [
+        {
+          "page": 109,
+          "char_span": [
+            216,
+            215
+          ]
+        }
+      ],
+      "pages": [
+        109
+      ]
+    },
+    "172ea83464534011": {
+      "id": "page109_para1",
+      "text": "APC 2 APC 2",
+      "page": 109,
+      "char_span": [
+        216,
+        227
+      ],
+      "length": 11,
+      "order": [
+        211
+      ],
+      "occurrences": [
+        {
+          "page": 109,
+          "char_span": [
+            216,
+            227
+          ]
+        }
+      ],
+      "pages": [
+        109
+      ]
+    },
+    "32d67e2f279c0f51": {
+      "id": "page109_para2",
+      "text": "ERBEJET 2 ERBECRYO 2",
+      "page": 109,
+      "char_span": [
+        228,
+        248
+      ],
+      "length": 20,
+      "order": [
+        212
+      ],
+      "occurrences": [
+        {
+          "page": 109,
+          "char_span": [
+            228,
+            248
+          ]
+        }
+      ],
+      "pages": [
+        109
+      ]
+    },
+    "ced629063e895818": {
+      "id": "page110_para0",
+      "text": "Installing ERBEJET 2 or ERBECRYO 2 + APC 2 + VIO S or VIO D series Erbe fastening set IMPORTANT! Only use original Erbe accessories. Erbe REF 20180-150 M 4 x 8 M 4 x 16 screws included Keep for later use Keep for later use",
+      "page": 110,
+      "char_span": [
+        0,
+        222
+      ],
+      "length": 222,
+      "order": [
+        213
+      ],
+      "occurrences": [
+        {
+          "page": 110,
+          "char_span": [
+            0,
+            222
+          ]
+        }
+      ],
+      "pages": [
+        110
+      ]
+    },
+    "6ab4ebb152c9f6de": {
+      "id": "page111_para0",
+      "text": "Installing ERBEJET 2 or ERBECRYO 2 + APC 2 + VIO S or VIO D series Erbe REF 20150-050 M 4 x 8 M 4 x 10 Keep for later use Keep for later use Keep for later use",
+      "page": 111,
+      "char_span": [
+        0,
+        159
+      ],
+      "length": 159,
+      "order": [
+        214
+      ],
+      "occurrences": [
+        {
+          "page": 111,
+          "char_span": [
+            0,
+            159
+          ]
+        }
+      ],
+      "pages": [
+        111
+      ]
+    },
+    "22fdef4029de4ed3": {
+      "id": "page112_para0",
+      "text": "Installing ERBEJET 2 or ERBECRYO 2 + APC 2 + VIO S or VIO D series Fastening set for VIO on APC Erbe REF 20180-134 M 4 x 10 Keep for later use Tools required Torque screwdriver (1 Nm) hex socket 2. 5 Torque screwdriver (1 Nm) hex socket 3 Torque screwdriver (1 Nm) open-end wrench 7 Cutter Preparation IMPORTANT! Before installing the units on the system carrier, remove all cables, tubing, and instruments. 112 / 156",
+      "page": 112,
+      "char_span": [
+        0,
+        417
+      ],
+      "length": 417,
+      "order": [
+        215
+      ],
+      "occurrences": [
+        {
+          "page": 112,
+          "char_span": [
+            0,
+            417
+          ]
+        }
+      ],
+      "pages": [
+        112
+      ]
+    },
+    "b60bdcb8632065df": {
+      "id": "page113_para0",
+      "text": "Installing ERBEJET 2 or ERBECRYO 2 + APC 2 + VIO S or VIO D series 1 2 2 8 c m",
+      "page": 113,
+      "char_span": [
+        79,
+        78
+      ],
+      "length": 78,
+      "order": [
+        216
+      ],
+      "occurrences": [
+        {
+          "page": 113,
+          "char_span": [
+            79,
+            78
+          ]
+        }
+      ],
+      "pages": [
+        113
+      ]
+    },
+    "3f4086a97cc74014": {
+      "id": "page113_para1",
+      "text": "ERBEJET 2",
+      "page": 113,
+      "char_span": [
+        79,
+        88
+      ],
+      "length": 9,
+      "order": [
+        217
+      ],
+      "occurrences": [
+        {
+          "page": 113,
+          "char_span": [
+            79,
+            88
+          ]
+        }
+      ],
+      "pages": [
+        113
+      ]
+    },
+    "05dd3d2933f4553b": {
+      "id": "page113_para2",
+      "text": "ERBECRYO 2 Use marked inner drill holes for Step 3! 3 4",
+      "page": 113,
+      "char_span": [
+        89,
+        144
+      ],
+      "length": 55,
+      "order": [
+        218
+      ],
+      "occurrences": [
+        {
+          "page": 113,
+          "char_span": [
+            89,
+            144
+          ]
+        }
+      ],
+      "pages": [
+        113
+      ]
+    },
+    "80c00f1ca2d08304": {
+      "id": "page113_para3",
+      "text": "1. 0 Nm 2 x M 4 x 16 5 6 Attachment points on the system carrier",
+      "page": 113,
+      "char_span": [
+        145,
+        209
+      ],
+      "length": 64,
+      "order": [
+        219
+      ],
+      "occurrences": [
+        {
+          "page": 113,
+          "char_span": [
+            145,
+            209
+          ]
+        }
+      ],
+      "pages": [
+        113
+      ]
+    },
+    "e31b1aa3360cc4b4": {
+      "id": "page113_para4",
+      "text": "1. 0 Nm 1 2 2 2 x M 4 x 8",
+      "page": 113,
+      "char_span": [
+        210,
+        235
+      ],
+      "length": 25,
+      "order": [
+        220
+      ],
+      "occurrences": [
+        {
+          "page": 113,
+          "char_span": [
+            210,
+            235
+          ]
+        }
+      ],
+      "pages": [
+        113
+      ]
+    },
+    "1608f025f72f85f5": {
+      "id": "page114_para0",
+      "text": "Installing ERBEJET 2 or ERBECRYO 2 + APC 2 + VIO S or VIO D series 7 8 Attachment points on the unit 1 1 2 1 2 9 10 2 2 2 left right 2 11 12",
+      "page": 114,
+      "char_span": [
+        141,
+        140
+      ],
+      "length": 140,
+      "order": [
+        221
+      ],
+      "occurrences": [
+        {
+          "page": 114,
+          "char_span": [
+            141,
+            140
+          ]
+        }
+      ],
+      "pages": [
+        114
+      ]
+    },
+    "313f6f2a073d7629": {
+      "id": "page114_para1",
+      "text": "1. 0 Nm 2 x 2 x M 4 x 8",
+      "page": 114,
+      "char_span": [
+        141,
+        164
+      ],
+      "length": 23,
+      "order": [
+        222
+      ],
+      "occurrences": [
+        {
+          "page": 114,
+          "char_span": [
+            141,
+            164
+          ]
+        }
+      ],
+      "pages": [
+        114
+      ]
+    },
+    "737ff91c38f3e7b4": {
+      "id": "page115_para0",
+      "text": "Installing ERBEJET 2 or ERBECRYO 2 + APC 2 + VIO S or VIO D series 13 14 2 8 c m",
+      "page": 115,
+      "char_span": [
+        81,
+        80
+      ],
+      "length": 80,
+      "order": [
+        223
+      ],
+      "occurrences": [
+        {
+          "page": 115,
+          "char_span": [
+            81,
+            80
+          ]
+        }
+      ],
+      "pages": [
+        115
+      ]
+    },
+    "92efbeaeac1d206e": {
+      "id": "page115_para1",
+      "text": "APC 2 Use marked inner drill holes for Step 15! 15 16 Attachment points on",
+      "page": 115,
+      "char_span": [
+        81,
+        155
+      ],
+      "length": 74,
+      "order": [
+        224
+      ],
+      "occurrences": [
+        {
+          "page": 115,
+          "char_span": [
+            81,
+            155
+          ]
+        }
+      ],
+      "pages": [
+        115
+      ]
+    },
+    "c42a32900bff287f": {
+      "id": "page115_para2",
+      "text": "ERBEJET 2 /ERBECRYO 2",
+      "page": 115,
+      "char_span": [
+        156,
+        177
+      ],
+      "length": 21,
+      "order": [
+        225
+      ],
+      "occurrences": [
+        {
+          "page": 115,
+          "char_span": [
+            156,
+            177
+          ]
+        }
+      ],
+      "pages": [
+        115
+      ]
+    },
+    "e36ed687f29509f8": {
+      "id": "page115_para3",
+      "text": "1. 0 Nm 1 2 2 2 x 17 18 Attachment points on APC 2",
+      "page": 115,
+      "char_span": [
+        178,
+        228
+      ],
+      "length": 50,
+      "order": [
+        226
+      ],
+      "occurrences": [
+        {
+          "page": 115,
+          "char_span": [
+            178,
+            228
+          ]
+        }
+      ],
+      "pages": [
+        115
+      ]
+    },
+    "128c81d4bdf36a5f": {
+      "id": "page115_para4",
+      "text": "C 2 1",
+      "page": 115,
+      "char_span": [
+        229,
+        234
+      ],
+      "length": 5,
+      "order": [
+        227
+      ],
+      "occurrences": [
+        {
+          "page": 115,
+          "char_span": [
+            229,
+            234
+          ]
+        }
+      ],
+      "pages": [
+        115
+      ]
+    },
+    "49521abe586ffe76": {
+      "id": "page115_para5",
+      "text": "1 AP 2 1",
+      "page": 115,
+      "char_span": [
+        235,
+        243
+      ],
+      "length": 8,
+      "order": [
+        228
+      ],
+      "occurrences": [
+        {
+          "page": 115,
+          "char_span": [
+            235,
+            243
+          ]
+        }
+      ],
+      "pages": [
+        115
+      ]
+    },
+    "a65125d83cd7c62c": {
+      "id": "page115_para6",
+      "text": "2 ERBEJET",
+      "page": 115,
+      "char_span": [
+        244,
+        253
+      ],
+      "length": 9,
+      "order": [
+        229
+      ],
+      "occurrences": [
+        {
+          "page": 115,
+          "char_span": [
+            244,
+            253
+          ]
+        }
+      ],
+      "pages": [
+        115
+      ]
+    },
+    "a5f8549c6ecfc7d7": {
+      "id": "page115_para7",
+      "text": "ERBECRYO 2 2",
+      "page": 115,
+      "char_span": [
+        254,
+        266
+      ],
+      "length": 12,
+      "order": [
+        230
+      ],
+      "occurrences": [
+        {
+          "page": 115,
+          "char_span": [
+            254,
+            266
+          ]
+        }
+      ],
+      "pages": [
+        115
+      ]
+    },
+    "5dd45da437df7325": {
+      "id": "page116_para0",
+      "text": "Installing ERBEJET 2 or ERBECRYO 2 + APC 2 + VIO S or VIO D series 19 20",
+      "page": 116,
+      "char_span": [
+        73,
+        72
+      ],
+      "length": 72,
+      "order": [
+        231
+      ],
+      "occurrences": [
+        {
+          "page": 116,
+          "char_span": [
+            73,
+            72
+          ]
+        }
+      ],
+      "pages": [
+        116
+      ]
+    },
+    "c6b916cb05ce6a67": {
+      "id": "page116_para1",
+      "text": "1. 0 Nm 2 2 2 2 M 4 x 10 21 22 VIO S or VIO D 23 Back to Overview",
+      "page": 116,
+      "char_span": [
+        73,
+        138
+      ],
+      "length": 65,
+      "order": [
+        232
+      ],
+      "occurrences": [
+        {
+          "page": 116,
+          "char_span": [
+            73,
+            138
+          ]
+        }
+      ],
+      "pages": [
+        116
+      ]
+    },
+    "b72ce7ae2f404593": {
+      "id": "page116_para2",
+      "text": "1. 0 Nm M 4 x 10",
+      "page": 116,
+      "char_span": [
+        139,
+        155
+      ],
+      "length": 16,
+      "order": [
+        233
+      ],
+      "occurrences": [
+        {
+          "page": 116,
+          "char_span": [
+            139,
+            155
+          ]
+        }
+      ],
+      "pages": [
+        116
+      ]
+    },
+    "375be86262550c8d": {
+      "id": "page117_para0",
+      "text": "Installing VIO seal + APC 3 + VIO 3 series Installing VIO seal + APC 3 + VIO 3 series Permitted positioning VIO S series and VIO D series VIO 3 and VIO 3 n",
+      "page": 117,
+      "char_span": [
+        156,
+        155
+      ],
+      "length": 155,
+      "order": [
+        234
+      ],
+      "occurrences": [
+        {
+          "page": 117,
+          "char_span": [
+            156,
+            155
+          ]
+        }
+      ],
+      "pages": [
+        117
+      ]
+    },
+    "8aa58b48d74f4484": {
+      "id": "page117_para1",
+      "text": "APC 3",
+      "page": 117,
+      "char_span": [
+        156,
+        161
+      ],
+      "length": 5,
+      "order": [
+        235
+      ],
+      "occurrences": [
+        {
+          "page": 117,
+          "char_span": [
+            156,
+            161
+          ]
+        }
+      ],
+      "pages": [
+        117
+      ]
+    },
+    "03a2ee1bf2718f81": {
+      "id": "page117_para2",
+      "text": "APC 2 VIO seal",
+      "page": 117,
+      "char_span": [
+        162,
+        176
+      ],
+      "length": 14,
+      "order": [
+        236
+      ],
+      "occurrences": [
+        {
+          "page": 117,
+          "char_span": [
+            162,
+            176
+          ]
+        }
+      ],
+      "pages": [
+        117
+      ]
+    },
+    "b8d6c29a0a213a67": {
+      "id": "page118_para0",
+      "text": "Installing VIO seal + APC 3 + VIO 3 series Erbe fastening set IMPORTANT! Only use original Erbe accessories. For this assembly sequence you will need the following Erbe fastening sets: • 1 x Erbe fastening set 20180-150 VIO seal on system carrier • 1 x Erbe fastening set 20180-150 APC 3 on VIO seal • 1 x 30135-030 + 40160-065 VIO 3 and VIO 3 n series on APC 3 Erbe REF 20180-150 M 4 x 8 M 4 x 16 screws included Keep for later use Keep for later use",
+      "page": 118,
+      "char_span": [
+        0,
+        451
+      ],
+      "length": 451,
+      "order": [
+        237
+      ],
+      "occurrences": [
+        {
+          "page": 118,
+          "char_span": [
+            0,
+            451
+          ]
+        }
+      ],
+      "pages": [
+        118
+      ]
+    },
+    "0ec1d655b849b613": {
+      "id": "page119_para0",
+      "text": "Installing VIO seal + APC 3 + VIO 3 series Fastening set for VIO on APC: Erbe REF 30135-030 Bracket: Erbe REF 40160-065 M 4 x 8 M 4 x 16 Keep for later use Keep for later use Tools required Torque screwdriver (1 Nm) hex socket 2. 5 Torque screwdriver (1 Nm) hex socket 3 Cutter Preparation IMPORTANT! Before installing the units on the system carrier, remove all cables, tubing, and instruments. 119 / 156",
+      "page": 119,
+      "char_span": [
+        0,
+        405
+      ],
+      "length": 405,
+      "order": [
+        238
+      ],
+      "occurrences": [
+        {
+          "page": 119,
+          "char_span": [
+            0,
+            405
+          ]
+        }
+      ],
+      "pages": [
+        119
+      ]
+    },
+    "044e0eb8f0c50acf": {
+      "id": "page120_para0",
+      "text": "Installing VIO seal + APC 3 + VIO 3 series 1 2",
+      "page": 120,
+      "char_span": [
+        47,
+        46
+      ],
+      "length": 46,
+      "order": [
+        239
+      ],
+      "occurrences": [
+        {
+          "page": 120,
+          "char_span": [
+            47,
+            46
+          ]
+        }
+      ],
+      "pages": [
+        120
+      ]
+    },
+    "5b3e2aeda69edb2a": {
+      "id": "page120_para1",
+      "text": "1. 0 Nm VIO seal 2 x M 4 x 16 3 4",
+      "page": 120,
+      "char_span": [
+        47,
+        80
+      ],
+      "length": 33,
+      "order": [
+        240
+      ],
+      "occurrences": [
+        {
+          "page": 120,
+          "char_span": [
+            47,
+            80
+          ]
+        }
+      ],
+      "pages": [
+        120
+      ]
+    },
+    "7c7e1c46d6eaff22": {
+      "id": "page120_para2",
+      "text": "1. 0 Nm 2 x M 4 x 8 5 6 Attachment points on the system carrier Attachment points on VIO seal 1 1 2 2 2 2",
+      "page": 120,
+      "char_span": [
+        81,
+        186
+      ],
+      "length": 105,
+      "order": [
+        241
+      ],
+      "occurrences": [
+        {
+          "page": 120,
+          "char_span": [
+            81,
+            186
+          ]
+        }
+      ],
+      "pages": [
+        120
+      ]
+    },
+    "9075951e5358eb3e": {
+      "id": "page121_para0",
+      "text": "Installing VIO seal + APC 3 + VIO 3 series 7 8 2 1 2 1 2 left right 2 9 10",
+      "page": 121,
+      "char_span": [
+        75,
+        74
+      ],
+      "length": 74,
+      "order": [
+        242
+      ],
+      "occurrences": [
+        {
+          "page": 121,
+          "char_span": [
+            75,
+            74
+          ]
+        }
+      ],
+      "pages": [
+        121
+      ]
+    },
+    "625171c35a5b5ed2": {
+      "id": "page121_para1",
+      "text": "VIO sea l 2 x 11 12",
+      "page": 121,
+      "char_span": [
+        75,
+        94
+      ],
+      "length": 19,
+      "order": [
+        243
+      ],
+      "occurrences": [
+        {
+          "page": 121,
+          "char_span": [
+            75,
+            94
+          ]
+        }
+      ],
+      "pages": [
+        121
+      ]
+    },
+    "64ee2585eeef9851": {
+      "id": "page121_para2",
+      "text": "1. 0 Nm",
+      "page": 121,
+      "char_span": [
+        95,
+        102
+      ],
+      "length": 7,
+      "order": [
+        244
+      ],
+      "occurrences": [
+        {
+          "page": 121,
+          "char_span": [
+            95,
+            102
+          ]
+        }
+      ],
+      "pages": [
+        121
+      ]
+    },
+    "bcb03d1a20307d84": {
+      "id": "page121_para3",
+      "text": "VIO VIO sea sea l l 2 x 2 x M 4 x 8",
+      "page": 121,
+      "char_span": [
+        103,
+        138
+      ],
+      "length": 35,
+      "order": [
+        245
+      ],
+      "occurrences": [
+        {
+          "page": 121,
+          "char_span": [
+            103,
+            138
+          ]
+        }
+      ],
+      "pages": [
+        121
+      ]
+    },
+    "81d1d7ff514e8e99": {
+      "id": "page122_para0",
+      "text": "Installing VIO seal + APC 3 + VIO 3 series 13 14",
+      "page": 122,
+      "char_span": [
+        49,
+        48
+      ],
+      "length": 48,
+      "order": [
+        246
+      ],
+      "occurrences": [
+        {
+          "page": 122,
+          "char_span": [
+            49,
+            48
+          ]
+        }
+      ],
+      "pages": [
+        122
+      ]
+    },
+    "ea4fd541be43d2c2": {
+      "id": "page122_para1",
+      "text": "1. 0 Nm",
+      "page": 122,
+      "char_span": [
+        49,
+        56
+      ],
+      "length": 7,
+      "order": [
+        247
+      ],
+      "occurrences": [
+        {
+          "page": 122,
+          "char_span": [
+            49,
+            56
+          ]
+        }
+      ],
+      "pages": [
+        122
+      ]
+    },
+    "daa4a689bc9f2b2b": {
+      "id": "page122_para2",
+      "text": "APC 3 2 x M 4 x 16 15 16 Attachment points on VIO seal 1",
+      "page": 122,
+      "char_span": [
+        57,
+        113
+      ],
+      "length": 56,
+      "order": [
+        248
+      ],
+      "occurrences": [
+        {
+          "page": 122,
+          "char_span": [
+            57,
+            113
+          ]
+        }
+      ],
+      "pages": [
+        122
+      ]
+    },
+    "cb07502812753b7f": {
+      "id": "page122_para3",
+      "text": "VIO sea 2 l 2 17 18 Attachment points on APC 3",
+      "page": 122,
+      "char_span": [
+        114,
+        160
+      ],
+      "length": 46,
+      "order": [
+        249
+      ],
+      "occurrences": [
+        {
+          "page": 122,
+          "char_span": [
+            114,
+            160
+          ]
+        }
+      ],
+      "pages": [
+        122
+      ]
+    },
+    "d0065999e604d630": {
+      "id": "page122_para4",
+      "text": "C 3 1",
+      "page": 122,
+      "char_span": [
+        161,
+        166
+      ],
+      "length": 5,
+      "order": [
+        250
+      ],
+      "occurrences": [
+        {
+          "page": 122,
+          "char_span": [
+            161,
+            166
+          ]
+        }
+      ],
+      "pages": [
+        122
+      ]
+    },
+    "65d606f0f76f4bb1": {
+      "id": "page122_para5",
+      "text": "1 AP 1 2 VIO seal 2",
+      "page": 122,
+      "char_span": [
+        167,
+        186
+      ],
+      "length": 19,
+      "order": [
+        251
+      ],
+      "occurrences": [
+        {
+          "page": 122,
+          "char_span": [
+            167,
+            186
+          ]
+        }
+      ],
+      "pages": [
+        122
+      ]
+    },
+    "7cc852b63a6b22af": {
+      "id": "page123_para0",
+      "text": "Installing VIO seal + APC 3 + VIO 3 series 19 20 2",
+      "page": 123,
+      "char_span": [
+        51,
+        50
+      ],
+      "length": 50,
+      "order": [
+        252
+      ],
+      "occurrences": [
+        {
+          "page": 123,
+          "char_span": [
+            51,
+            50
+          ]
+        }
+      ],
+      "pages": [
+        123
+      ]
+    },
+    "06b8a65176b7fae0": {
+      "id": "page123_para1",
+      "text": "VIO VIO seal 2 seal 2 2 left right 21 22 VIO 3 or VIO 3 n",
+      "page": 123,
+      "char_span": [
+        51,
+        108
+      ],
+      "length": 57,
+      "order": [
+        253
+      ],
+      "occurrences": [
+        {
+          "page": 123,
+          "char_span": [
+            51,
+            108
+          ]
+        }
+      ],
+      "pages": [
+        123
+      ]
+    },
+    "eaf19fc59cb717d1": {
+      "id": "page123_para2",
+      "text": "1. 0 Nm 2 x M 4 x 8 Continue to next page",
+      "page": 123,
+      "char_span": [
+        109,
+        150
+      ],
+      "length": 41,
+      "order": [
+        254
+      ],
+      "occurrences": [
+        {
+          "page": 123,
+          "char_span": [
+            109,
+            150
+          ]
+        }
+      ],
+      "pages": [
+        123
+      ]
+    },
+    "3b9f86bdd7788bea": {
+      "id": "page124_para0",
+      "text": "Installing VIO seal + APC 3 + VIO 3 series 23 24",
+      "page": 124,
+      "char_span": [
+        49,
+        48
+      ],
+      "length": 48,
+      "order": [
+        255
+      ],
+      "occurrences": [
+        {
+          "page": 124,
+          "char_span": [
+            49,
+            48
+          ]
+        }
+      ],
+      "pages": [
+        124
+      ]
+    },
+    "d0be0302904f7608": {
+      "id": "page124_para1",
+      "text": "1. 0 Nm",
+      "page": 124,
+      "char_span": [
+        49,
+        56
+      ],
+      "length": 7,
+      "order": [
+        256
+      ],
+      "occurrences": [
+        {
+          "page": 124,
+          "char_span": [
+            49,
+            56
+          ]
+        }
+      ],
+      "pages": [
+        124
+      ]
+    },
+    "eed326dc84ae607c": {
+      "id": "page124_para2",
+      "text": "VIO seal 2 x M 4 x 16 Back to Overview",
+      "page": 124,
+      "char_span": [
+        57,
+        95
+      ],
+      "length": 38,
+      "order": [
+        257
+      ],
+      "occurrences": [
+        {
+          "page": 124,
+          "char_span": [
+            57,
+            95
+          ]
+        }
+      ],
+      "pages": [
+        124
+      ]
+    },
+    "6c88e2144f0a26c0": {
+      "id": "page125_para0",
+      "text": "Installing ERBEJET 2 or ERBECRYO 2 + APC 3 + VIO 3 Installing ERBEJET 2 or ERBECRYO 2 + APC 3",
+      "page": 125,
+      "char_span": [
+        94,
+        93
+      ],
+      "length": 93,
+      "order": [
+        258
+      ],
+      "occurrences": [
+        {
+          "page": 125,
+          "char_span": [
+            94,
+            93
+          ]
+        }
+      ],
+      "pages": [
+        125
+      ]
+    },
+    "15fc9990e0b49901": {
+      "id": "page125_para1",
+      "text": "+ VIO 3 Permitted positioning",
+      "page": 125,
+      "char_span": [
+        94,
+        123
+      ],
+      "length": 29,
+      "order": [
+        259
+      ],
+      "occurrences": [
+        {
+          "page": 125,
+          "char_span": [
+            94,
+            123
+          ]
+        }
+      ],
+      "pages": [
+        125
+      ]
+    },
+    "5a0345b7559ca17a": {
+      "id": "page125_para2",
+      "text": "VIO 3 VIO 3",
+      "page": 125,
+      "char_span": [
+        124,
+        135
+      ],
+      "length": 11,
+      "order": [
+        260
+      ],
+      "occurrences": [
+        {
+          "page": 125,
+          "char_span": [
+            124,
+            135
+          ]
+        }
+      ],
+      "pages": [
+        125
+      ]
+    },
+    "6deb066188dbb5bc": {
+      "id": "page125_para3",
+      "text": "APC 3 APC 3",
+      "page": 125,
+      "char_span": [
+        136,
+        147
+      ],
+      "length": 11,
+      "order": [
+        261
+      ],
+      "occurrences": [
+        {
+          "page": 125,
+          "char_span": [
+            136,
+            147
+          ]
+        }
+      ],
+      "pages": [
+        125
+      ]
+    },
+    "f12e8960bdc154b5": {
+      "id": "page125_para4",
+      "text": "ERBEJET 2 ERBECRYO 2",
+      "page": 125,
+      "char_span": [
+        148,
+        168
+      ],
+      "length": 20,
+      "order": [
+        262
+      ],
+      "occurrences": [
+        {
+          "page": 125,
+          "char_span": [
+            148,
+            168
+          ]
+        }
+      ],
+      "pages": [
+        125
+      ]
+    },
+    "d42b3275ae185f47": {
+      "id": "page126_para0",
+      "text": "Installing ERBEJET 2 or ERBECRYO 2 + APC 3 + VIO 3 Erbe fastening set IMPORTANT! Only use original Erbe accessories. Erbe REF 20180-150 M 4 x 8 M 4 x 16 screws included Keep for later use Keep for later use",
+      "page": 126,
+      "char_span": [
+        0,
+        206
+      ],
+      "length": 206,
+      "order": [
+        263
+      ],
+      "occurrences": [
+        {
+          "page": 126,
+          "char_span": [
+            0,
+            206
+          ]
+        }
+      ],
+      "pages": [
+        126
+      ]
+    },
+    "9069dd5844c5692e": {
+      "id": "page127_para0",
+      "text": "Installing ERBEJET 2 or ERBECRYO 2 + APC 3 + VIO 3 Erbe REF 20180-144 M 4 x 8 M 4 x 8 Keep for later use Keep for later use Keep for later use",
+      "page": 127,
+      "char_span": [
+        0,
+        142
+      ],
+      "length": 142,
+      "order": [
+        264
+      ],
+      "occurrences": [
+        {
+          "page": 127,
+          "char_span": [
+            0,
+            142
+          ]
+        }
+      ],
+      "pages": [
+        127
+      ]
+    },
+    "ca8a5b30eff57ff9": {
+      "id": "page128_para0",
+      "text": "Installing ERBEJET 2 or ERBECRYO 2 + APC 3 + VIO 3 Fastening set for VIO on APC: Erbe REF 30135-030 Bracket: Erbe REF 40160-065 M 4 x 8 M 4 x 16 Keep for later use Keep for later use",
+      "page": 128,
+      "char_span": [
+        0,
+        182
+      ],
+      "length": 182,
+      "order": [
+        265
+      ],
+      "occurrences": [
+        {
+          "page": 128,
+          "char_span": [
+            0,
+            182
+          ]
+        }
+      ],
+      "pages": [
+        128
+      ]
+    },
+    "e5233fc77e005015": {
+      "id": "page129_para0",
+      "text": "Installing ERBEJET 2 or ERBECRYO 2 + APC 3 + VIO 3 Tools required Torque screwdriver (1 Nm) hex socket 2. 5 Torque screwdriver (1 Nm) hex socket 3 Torque screwdriver (1 Nm) open-end wrench 7 Cutter Preparation IMPORTANT! Before installing the units on the system carrier, remove all cables, tubing, and instruments. 129 / 156",
+      "page": 129,
+      "char_span": [
+        0,
+        325
+      ],
+      "length": 325,
+      "order": [
+        266
+      ],
+      "occurrences": [
+        {
+          "page": 129,
+          "char_span": [
+            0,
+            325
+          ]
+        }
+      ],
+      "pages": [
+        129
+      ]
+    },
+    "56e41e1b546b9480": {
+      "id": "page130_para0",
+      "text": "Installing ERBEJET 2 or ERBECRYO 2 + APC 3 + VIO 3 1 2 2 8 c m",
+      "page": 130,
+      "char_span": [
+        63,
+        62
+      ],
+      "length": 62,
+      "order": [
+        267
+      ],
+      "occurrences": [
+        {
+          "page": 130,
+          "char_span": [
+            63,
+            62
+          ]
+        }
+      ],
+      "pages": [
+        130
+      ]
+    },
+    "8a2840d9ffba4bd7": {
+      "id": "page130_para1",
+      "text": "ERBEJET 2",
+      "page": 130,
+      "char_span": [
+        63,
+        72
+      ],
+      "length": 9,
+      "order": [
+        268
+      ],
+      "occurrences": [
+        {
+          "page": 130,
+          "char_span": [
+            63,
+            72
+          ]
+        }
+      ],
+      "pages": [
+        130
+      ]
+    },
+    "59f836b0d3f32109": {
+      "id": "page130_para2",
+      "text": "ERBECRYO 2 Use marked inner drill holes for Step 3! 3 4",
+      "page": 130,
+      "char_span": [
+        73,
+        128
+      ],
+      "length": 55,
+      "order": [
+        269
+      ],
+      "occurrences": [
+        {
+          "page": 130,
+          "char_span": [
+            73,
+            128
+          ]
+        }
+      ],
+      "pages": [
+        130
+      ]
+    },
+    "12dabe63b2efb058": {
+      "id": "page130_para3",
+      "text": "1. 0 Nm 2 x M 4 x 16 5 6 Attachment points on the system carrier",
+      "page": 130,
+      "char_span": [
+        129,
+        193
+      ],
+      "length": 64,
+      "order": [
+        270
+      ],
+      "occurrences": [
+        {
+          "page": 130,
+          "char_span": [
+            129,
+            193
+          ]
+        }
+      ],
+      "pages": [
+        130
+      ]
+    },
+    "cd0e15ba5268e467": {
+      "id": "page130_para4",
+      "text": "1. 0 Nm 1 2 2 2 x M 4 x 8",
+      "page": 130,
+      "char_span": [
+        194,
+        219
+      ],
+      "length": 25,
+      "order": [
+        271
+      ],
+      "occurrences": [
+        {
+          "page": 130,
+          "char_span": [
+            194,
+            219
+          ]
+        }
+      ],
+      "pages": [
+        130
+      ]
+    },
+    "e7b88ae960fad190": {
+      "id": "page131_para0",
+      "text": "Installing ERBEJET 2 or ERBECRYO 2 + APC 3 + VIO 3 7 8 Attachment points on the unit 1 1 2 1 2 9 10 2 2 2 left right 2 11 12",
+      "page": 131,
+      "char_span": [
+        125,
+        124
+      ],
+      "length": 124,
+      "order": [
+        272
+      ],
+      "occurrences": [
+        {
+          "page": 131,
+          "char_span": [
+            125,
+            124
+          ]
+        }
+      ],
+      "pages": [
+        131
+      ]
+    },
+    "ab3bce56c42fe08b": {
+      "id": "page131_para1",
+      "text": "1. 0 Nm 2 x 2 x M 4 x 8",
+      "page": 131,
+      "char_span": [
+        125,
+        148
+      ],
+      "length": 23,
+      "order": [
+        273
+      ],
+      "occurrences": [
+        {
+          "page": 131,
+          "char_span": [
+            125,
+            148
+          ]
+        }
+      ],
+      "pages": [
+        131
+      ]
+    },
+    "c9f4d398bd49bc00": {
+      "id": "page132_para0",
+      "text": "Installing ERBEJET 2 or ERBECRYO 2 + APC 3 + VIO 3 13 14",
+      "page": 132,
+      "char_span": [
+        57,
+        56
+      ],
+      "length": 56,
+      "order": [
+        274
+      ],
+      "occurrences": [
+        {
+          "page": 132,
+          "char_span": [
+            57,
+            56
+          ]
+        }
+      ],
+      "pages": [
+        132
+      ]
+    },
+    "bea3f4c8d386c30d": {
+      "id": "page132_para1",
+      "text": "1. 0 Nm",
+      "page": 132,
+      "char_span": [
+        57,
+        64
+      ],
+      "length": 7,
+      "order": [
+        275
+      ],
+      "occurrences": [
+        {
+          "page": 132,
+          "char_span": [
+            57,
+            64
+          ]
+        }
+      ],
+      "pages": [
+        132
+      ]
+    },
+    "a824189b6352d39a": {
+      "id": "page132_para2",
+      "text": "APC 3",
+      "page": 132,
+      "char_span": [
+        65,
+        70
+      ],
+      "length": 5,
+      "order": [
+        276
+      ],
+      "occurrences": [
+        {
+          "page": 132,
+          "char_span": [
+            65,
+            70
+          ]
+        }
+      ],
+      "pages": [
+        132
+      ]
+    },
+    "ad91d797e5594a78": {
+      "id": "page132_para3",
+      "text": "APC 3 2 x 15 16 Attachment points on Attachment points on APC 3",
+      "page": 132,
+      "char_span": [
+        71,
+        134
+      ],
+      "length": 63,
+      "order": [
+        277
+      ],
+      "occurrences": [
+        {
+          "page": 132,
+          "char_span": [
+            71,
+            134
+          ]
+        }
+      ],
+      "pages": [
+        132
+      ]
+    },
+    "8bb61fc2edc23954": {
+      "id": "page132_para4",
+      "text": "ERBEJET 2 /ERBECRYO 2 1 1 2",
+      "page": 132,
+      "char_span": [
+        135,
+        162
+      ],
+      "length": 27,
+      "order": [
+        278
+      ],
+      "occurrences": [
+        {
+          "page": 132,
+          "char_span": [
+            135,
+            162
+          ]
+        }
+      ],
+      "pages": [
+        132
+      ]
+    },
+    "e706db80d45921f7": {
+      "id": "page132_para5",
+      "text": "APC 3 2 2 2 17 18",
+      "page": 132,
+      "char_span": [
+        163,
+        180
+      ],
+      "length": 17,
+      "order": [
+        279
+      ],
+      "occurrences": [
+        {
+          "page": 132,
+          "char_span": [
+            163,
+            180
+          ]
+        }
+      ],
+      "pages": [
+        132
+      ]
+    },
+    "b494eb35613bbb83": {
+      "id": "page132_para6",
+      "text": "C 3 1",
+      "page": 132,
+      "char_span": [
+        181,
+        186
+      ],
+      "length": 5,
+      "order": [
+        280
+      ],
+      "occurrences": [
+        {
+          "page": 132,
+          "char_span": [
+            181,
+            186
+          ]
+        }
+      ],
+      "pages": [
+        132
+      ]
+    },
+    "3a825538bb880b2a": {
+      "id": "page132_para7",
+      "text": "AP 1 2",
+      "page": 132,
+      "char_span": [
+        187,
+        193
+      ],
+      "length": 6,
+      "order": [
+        281
+      ],
+      "occurrences": [
+        {
+          "page": 132,
+          "char_span": [
+            187,
+            193
+          ]
+        }
+      ],
+      "pages": [
+        132
+      ]
+    },
+    "0798dfa086affa5d": {
+      "id": "page132_para8",
+      "text": "ERBEJET 2",
+      "page": 132,
+      "char_span": [
+        194,
+        203
+      ],
+      "length": 9,
+      "order": [
+        282
+      ],
+      "occurrences": [
+        {
+          "page": 132,
+          "char_span": [
+            194,
+            203
+          ]
+        }
+      ],
+      "pages": [
+        132
+      ]
+    },
+    "00b51d609aa6ab14": {
+      "id": "page132_para9",
+      "text": "ERBECRYO 2 2 2 2",
+      "page": 132,
+      "char_span": [
+        204,
+        220
+      ],
+      "length": 16,
+      "order": [
+        283
+      ],
+      "occurrences": [
+        {
+          "page": 132,
+          "char_span": [
+            204,
+            220
+          ]
+        }
+      ],
+      "pages": [
+        132
+      ]
+    },
+    "028676f0b0cffcdd": {
+      "id": "page133_para0",
+      "text": "Installing ERBEJET 2 or ERBECRYO 2 + APC 3 + VIO 3 19 20",
+      "page": 133,
+      "char_span": [
+        57,
+        56
+      ],
+      "length": 56,
+      "order": [
+        284
+      ],
+      "occurrences": [
+        {
+          "page": 133,
+          "char_span": [
+            57,
+            56
+          ]
+        }
+      ],
+      "pages": [
+        133
+      ]
+    },
+    "41dcb1dd99a4bb0e": {
+      "id": "page133_para1",
+      "text": "VIO 3",
+      "page": 133,
+      "char_span": [
+        57,
+        62
+      ],
+      "length": 5,
+      "order": [
+        285
+      ],
+      "occurrences": [
+        {
+          "page": 133,
+          "char_span": [
+            57,
+            62
+          ]
+        }
+      ],
+      "pages": [
+        133
+      ]
+    },
+    "846a8ac196195c5f": {
+      "id": "page133_para2",
+      "text": "1. 0 Nm M 4 x 8 21 22",
+      "page": 133,
+      "char_span": [
+        63,
+        84
+      ],
+      "length": 21,
+      "order": [
+        286
+      ],
+      "occurrences": [
+        {
+          "page": 133,
+          "char_span": [
+            63,
+            84
+          ]
+        }
+      ],
+      "pages": [
+        133
+      ]
+    },
+    "0b31c21af11bc21c": {
+      "id": "page133_para3",
+      "text": "1. 0 Nm 2 x M 4 x 8 23 Back to Overview",
+      "page": 133,
+      "char_span": [
+        85,
+        124
+      ],
+      "length": 39,
+      "order": [
+        287
+      ],
+      "occurrences": [
+        {
+          "page": 133,
+          "char_span": [
+            85,
+            124
+          ]
+        }
+      ],
+      "pages": [
+        133
+      ]
+    },
+    "6d4d28b5f0bc6130": {
+      "id": "page133_para4",
+      "text": "1. 0 Nm 2 x M 4 x 16",
+      "page": 133,
+      "char_span": [
+        125,
+        145
+      ],
+      "length": 20,
+      "order": [
+        288
+      ],
+      "occurrences": [
+        {
+          "page": 133,
+          "char_span": [
+            125,
+            145
+          ]
+        }
+      ],
+      "pages": [
+        133
+      ]
+    },
+    "2befb3a6cd8f8433": {
+      "id": "page134_para0",
+      "text": "Installing ERBEJET 2 or ERBECRYO 2 + APC 3 + VIO 3",
+      "page": 134,
+      "char_span": [
+        0,
+        50
+      ],
+      "length": 50,
+      "order": [
+        289
+      ],
+      "occurrences": [
+        {
+          "page": 134,
+          "char_span": [
+            0,
+            50
+          ]
+        }
+      ],
+      "pages": [
+        134
+      ]
+    },
+    "f7ac56c125b16609": {
+      "id": "page135_para0",
+      "text": "Installing ERBEJET 2 or ERBECRYO 2 + VIO seal + APC 3 + VIO 3 n Installing ERBEJET 2 or ERBECRYO 2 + VIO seal + APC 3 + VIO 3 n Permitted positioning VIO 3 n VIO 3 n",
+      "page": 135,
+      "char_span": [
+        166,
+        165
+      ],
+      "length": 165,
+      "order": [
+        290
+      ],
+      "occurrences": [
+        {
+          "page": 135,
+          "char_span": [
+            166,
+            165
+          ]
+        }
+      ],
+      "pages": [
+        135
+      ]
+    },
+    "7358edd09377d7b5": {
+      "id": "page135_para1",
+      "text": "APC 3 APC 3 VIO seal VIO seal",
+      "page": 135,
+      "char_span": [
+        166,
+        195
+      ],
+      "length": 29,
+      "order": [
+        291
+      ],
+      "occurrences": [
+        {
+          "page": 135,
+          "char_span": [
+            166,
+            195
+          ]
+        }
+      ],
+      "pages": [
+        135
+      ]
+    },
+    "f9441bfa3d3a9542": {
+      "id": "page135_para2",
+      "text": "ERBEJET 2 ERBECRYO 2",
+      "page": 135,
+      "char_span": [
+        196,
+        216
+      ],
+      "length": 20,
+      "order": [
+        292
+      ],
+      "occurrences": [
+        {
+          "page": 135,
+          "char_span": [
+            196,
+            216
+          ]
+        }
+      ],
+      "pages": [
+        135
+      ]
+    },
+    "c71eef7f6d52b53b": {
+      "id": "page136_para0",
+      "text": "Installing ERBEJET 2 or ERBECRYO 2 + VIO seal + APC 3 + VIO 3 n Erbe fastening set IMPORTANT! Only use original Erbe accessories. For this assembly sequence you will need the following Erbe fastening sets: • 1 x Erbe fastening set 20180-150 ERBEJET 2 / ERBECRYO 2 on system carrier • 1 x Erbe fastening set 20180-144 VIO seal on ERBEJET 2 / ERBECRYO 2 • 1 x Erbe fastening set 20180-150 APC 3 on VIO seal • 1 x Erbe fastening set 30135-030 + 40160-065 VIO 3 n on APC 3 Erbe REF 20180-150 M 4 x 8 M 4 x 16 screws included Keep for later use Keep for later use",
+      "page": 136,
+      "char_span": [
+        0,
+        558
+      ],
+      "length": 558,
+      "order": [
+        293
+      ],
+      "occurrences": [
+        {
+          "page": 136,
+          "char_span": [
+            0,
+            558
+          ]
+        }
+      ],
+      "pages": [
+        136
+      ]
+    },
+    "90c62b501bcdc769": {
+      "id": "page137_para0",
+      "text": "Installing ERBEJET 2 or ERBECRYO 2 + VIO seal + APC 3 + VIO 3 n Erbe REF 20180-144 M 4 x 8 M 4 x 8 Keep for later use Keep for later use Keep for later use",
+      "page": 137,
+      "char_span": [
+        0,
+        155
+      ],
+      "length": 155,
+      "order": [
+        294
+      ],
+      "occurrences": [
+        {
+          "page": 137,
+          "char_span": [
+            0,
+            155
+          ]
+        }
+      ],
+      "pages": [
+        137
+      ]
+    },
+    "d32b6123196de738": {
+      "id": "page138_para0",
+      "text": "Installing ERBEJET 2 or ERBECRYO 2 + VIO seal + APC 3 + VIO 3 n Fastening set for VIO on APC: Erbe REF 30135-030 Bracket: Erbe REF 40160-065 M 4 x 8 M 4 x 16 Keep for later use Keep for later use",
+      "page": 138,
+      "char_span": [
+        0,
+        195
+      ],
+      "length": 195,
+      "order": [
+        295
+      ],
+      "occurrences": [
+        {
+          "page": 138,
+          "char_span": [
+            0,
+            195
+          ]
+        }
+      ],
+      "pages": [
+        138
+      ]
+    },
+    "7e5f38f5c5d44e79": {
+      "id": "page139_para0",
+      "text": "Installing ERBEJET 2 or ERBECRYO 2 + VIO seal + APC 3 + VIO 3 n Tools required Torque screwdriver (1 Nm) hex socket 2. 5 Torque screwdriver (1 Nm) hex socket 3 Torque screwdriver (1 Nm) open-end wrench 7 Cutter Preparation IMPORTANT! Before installing the units on the system carrier, remove all cables, tubing, and instruments. 139 / 156",
+      "page": 139,
+      "char_span": [
+        0,
+        338
+      ],
+      "length": 338,
+      "order": [
+        296
+      ],
+      "occurrences": [
+        {
+          "page": 139,
+          "char_span": [
+            0,
+            338
+          ]
+        }
+      ],
+      "pages": [
+        139
+      ]
+    },
+    "0c4b4f7ed7729999": {
+      "id": "page140_para0",
+      "text": "Installing ERBEJET 2 or ERBECRYO 2 + VIO seal + APC 3 + VIO 3 n 1 2 2 8 c m",
+      "page": 140,
+      "char_span": [
+        76,
+        75
+      ],
+      "length": 75,
+      "order": [
+        297
+      ],
+      "occurrences": [
+        {
+          "page": 140,
+          "char_span": [
+            76,
+            75
+          ]
+        }
+      ],
+      "pages": [
+        140
+      ]
+    },
+    "f22ce0477e6478fe": {
+      "id": "page140_para1",
+      "text": "ERBEJET 2",
+      "page": 140,
+      "char_span": [
+        76,
+        85
+      ],
+      "length": 9,
+      "order": [
+        298
+      ],
+      "occurrences": [
+        {
+          "page": 140,
+          "char_span": [
+            76,
+            85
+          ]
+        }
+      ],
+      "pages": [
+        140
+      ]
+    },
+    "dd2e8ee8420f6438": {
+      "id": "page140_para2",
+      "text": "ERBECRYO 2 Use marked inner drill holes for Step 3! 3 4",
+      "page": 140,
+      "char_span": [
+        86,
+        141
+      ],
+      "length": 55,
+      "order": [
+        299
+      ],
+      "occurrences": [
+        {
+          "page": 140,
+          "char_span": [
+            86,
+            141
+          ]
+        }
+      ],
+      "pages": [
+        140
+      ]
+    },
+    "702bfe86c571018b": {
+      "id": "page140_para3",
+      "text": "1. 0 Nm 2 x M 4 x 16 5 6 Attachment points on the system carrier",
+      "page": 140,
+      "char_span": [
+        142,
+        206
+      ],
+      "length": 64,
+      "order": [
+        300
+      ],
+      "occurrences": [
+        {
+          "page": 140,
+          "char_span": [
+            142,
+            206
+          ]
+        }
+      ],
+      "pages": [
+        140
+      ]
+    },
+    "dc58dedafb183974": {
+      "id": "page140_para4",
+      "text": "1. 0 Nm 1 2 2 2 x M 4 x 8",
+      "page": 140,
+      "char_span": [
+        207,
+        232
+      ],
+      "length": 25,
+      "order": [
+        301
+      ],
+      "occurrences": [
+        {
+          "page": 140,
+          "char_span": [
+            207,
+            232
+          ]
+        }
+      ],
+      "pages": [
+        140
+      ]
+    },
+    "842d803db73c822a": {
+      "id": "page141_para0",
+      "text": "Installing ERBEJET 2 or ERBECRYO 2 + VIO seal + APC 3 + VIO 3 n 7 8 Attachment points on the unit 1 1 2 1 2 9 10 2 2 2 left right 2 11 12",
+      "page": 141,
+      "char_span": [
+        138,
+        137
+      ],
+      "length": 137,
+      "order": [
+        302
+      ],
+      "occurrences": [
+        {
+          "page": 141,
+          "char_span": [
+            138,
+            137
+          ]
+        }
+      ],
+      "pages": [
+        141
+      ]
+    },
+    "8542740e7ea71511": {
+      "id": "page141_para1",
+      "text": "1. 0 Nm 2 x 2 x M 4 x 8",
+      "page": 141,
+      "char_span": [
+        138,
+        161
+      ],
+      "length": 23,
+      "order": [
+        303
+      ],
+      "occurrences": [
+        {
+          "page": 141,
+          "char_span": [
+            138,
+            161
+          ]
+        }
+      ],
+      "pages": [
+        141
+      ]
+    },
+    "8a4d6a29496e88ec": {
+      "id": "page142_para0",
+      "text": "Installing ERBEJET 2 or ERBECRYO 2 + VIO seal + APC 3 + VIO 3 n 13 14",
+      "page": 142,
+      "char_span": [
+        70,
+        69
+      ],
+      "length": 69,
+      "order": [
+        304
+      ],
+      "occurrences": [
+        {
+          "page": 142,
+          "char_span": [
+            70,
+            69
+          ]
+        }
+      ],
+      "pages": [
+        142
+      ]
+    },
+    "8e1ab0fc42deb4e5": {
+      "id": "page142_para1",
+      "text": "1. 0 Nm VIO seal 2 x 15 16 Attachment points on Attachment points on VIO seal",
+      "page": 142,
+      "char_span": [
+        70,
+        147
+      ],
+      "length": 77,
+      "order": [
+        305
+      ],
+      "occurrences": [
+        {
+          "page": 142,
+          "char_span": [
+            70,
+            147
+          ]
+        }
+      ],
+      "pages": [
+        142
+      ]
+    },
+    "56907c66a0fab25d": {
+      "id": "page142_para2",
+      "text": "ERBEJET 2 /ERBECRYO 2 1 1 2 2 2 2 17 18 al VIO se seal",
+      "page": 142,
+      "char_span": [
+        148,
+        202
+      ],
+      "length": 54,
+      "order": [
+        306
+      ],
+      "occurrences": [
+        {
+          "page": 142,
+          "char_span": [
+            148,
+            202
+          ]
+        }
+      ],
+      "pages": [
+        142
+      ]
+    },
+    "1704434151a8ac8c": {
+      "id": "page142_para3",
+      "text": "VIO 1 1 2",
+      "page": 142,
+      "char_span": [
+        203,
+        212
+      ],
+      "length": 9,
+      "order": [
+        307
+      ],
+      "occurrences": [
+        {
+          "page": 142,
+          "char_span": [
+            203,
+            212
+          ]
+        }
+      ],
+      "pages": [
+        142
+      ]
+    },
+    "833f98e187867b01": {
+      "id": "page142_para4",
+      "text": "ERBEJET 2",
+      "page": 142,
+      "char_span": [
+        213,
+        222
+      ],
+      "length": 9,
+      "order": [
+        308
+      ],
+      "occurrences": [
+        {
+          "page": 142,
+          "char_span": [
+            213,
+            222
+          ]
+        }
+      ],
+      "pages": [
+        142
+      ]
+    },
+    "7af6bf7b53a134ea": {
+      "id": "page142_para5",
+      "text": "ERBECRYO 2 2 2 2",
+      "page": 142,
+      "char_span": [
+        223,
+        239
+      ],
+      "length": 16,
+      "order": [
+        309
+      ],
+      "occurrences": [
+        {
+          "page": 142,
+          "char_span": [
+            223,
+            239
+          ]
+        }
+      ],
+      "pages": [
+        142
+      ]
+    },
+    "fc4e0198d75a5d2f": {
+      "id": "page143_para0",
+      "text": "Installing ERBEJET 2 or ERBECRYO 2 + VIO seal + APC 3 + VIO 3 n 19 20",
+      "page": 143,
+      "char_span": [
+        70,
+        69
+      ],
+      "length": 69,
+      "order": [
+        310
+      ],
+      "occurrences": [
+        {
+          "page": 143,
+          "char_span": [
+            70,
+            69
+          ]
+        }
+      ],
+      "pages": [
+        143
+      ]
+    },
+    "6f010013c5049917": {
+      "id": "page143_para1",
+      "text": "1. 0 Nm",
+      "page": 143,
+      "char_span": [
+        70,
+        77
+      ],
+      "length": 7,
+      "order": [
+        311,
+        313,
+        315
+      ],
+      "occurrences": [
+        {
+          "page": 143,
+          "char_span": [
+            70,
+            77
+          ]
+        },
+        {
+          "page": 143,
+          "char_span": [
+            114,
+            121
+          ]
+        },
+        {
+          "page": 143,
+          "char_span": [
+            162,
+            169
+          ]
+        }
+      ],
+      "pages": [
+        143
+      ]
+    },
+    "43e0afdda716233e": {
+      "id": "page143_para2",
+      "text": "VIO VIO seal seal M 4 x 8 2 x 21 22",
+      "page": 143,
+      "char_span": [
+        78,
+        113
+      ],
+      "length": 35,
+      "order": [
+        312
+      ],
+      "occurrences": [
+        {
+          "page": 143,
+          "char_span": [
+            78,
+            113
+          ]
+        }
+      ],
+      "pages": [
+        143
+      ]
+    },
+    "8b3c88dbd7899f0e": {
+      "id": "page143_para4",
+      "text": "VIO VIO seal seal 2 x 2 x M 4 x 8 23 24",
+      "page": 143,
+      "char_span": [
+        122,
+        161
+      ],
+      "length": 39,
+      "order": [
+        314
+      ],
+      "occurrences": [
+        {
+          "page": 143,
+          "char_span": [
+            122,
+            161
+          ]
+        }
+      ],
+      "pages": [
+        143
+      ]
+    },
+    "1be6b18fa518c308": {
+      "id": "page143_para6",
+      "text": "APC 3 APC 3 2 x M 4 x 16",
+      "page": 143,
+      "char_span": [
+        170,
+        194
+      ],
+      "length": 24,
+      "order": [
+        316
+      ],
+      "occurrences": [
+        {
+          "page": 143,
+          "char_span": [
+            170,
+            194
+          ]
+        }
+      ],
+      "pages": [
+        143
+      ]
+    },
+    "97f466102cef677a": {
+      "id": "page144_para0",
+      "text": "Installing ERBEJET 2 or ERBECRYO 2 + VIO seal + APC 3 + VIO 3 n 25 26 Attachment points on VIO seal 1",
+      "page": 144,
+      "char_span": [
+        102,
+        101
+      ],
+      "length": 101,
+      "order": [
+        317
+      ],
+      "occurrences": [
+        {
+          "page": 144,
+          "char_span": [
+            102,
+            101
+          ]
+        }
+      ],
+      "pages": [
+        144
+      ]
+    },
+    "218d12deb49c3719": {
+      "id": "page144_para1",
+      "text": "VIO seal 2 2 27 28 Attachment points on APC 3 1 3",
+      "page": 144,
+      "char_span": [
+        102,
+        151
+      ],
+      "length": 49,
+      "order": [
+        318
+      ],
+      "occurrences": [
+        {
+          "page": 144,
+          "char_span": [
+            102,
+            151
+          ]
+        }
+      ],
+      "pages": [
+        144
+      ]
+    },
+    "25e343a2a0ef6dff": {
+      "id": "page144_para2",
+      "text": "PC",
+      "page": 144,
+      "char_span": [
+        152,
+        154
+      ],
+      "length": 2,
+      "order": [
+        319
+      ],
+      "occurrences": [
+        {
+          "page": 144,
+          "char_span": [
+            152,
+            154
+          ]
+        }
+      ],
+      "pages": [
+        144
+      ]
+    },
+    "d034cb68e047ac94": {
+      "id": "page144_para3",
+      "text": "A 1 1 eal Os",
+      "page": 144,
+      "char_span": [
+        155,
+        167
+      ],
+      "length": 12,
+      "order": [
+        320
+      ],
+      "occurrences": [
+        {
+          "page": 144,
+          "char_span": [
+            155,
+            167
+          ]
+        }
+      ],
+      "pages": [
+        144
+      ]
+    },
+    "37f95f9130fb2114": {
+      "id": "page144_para4",
+      "text": "VI 2 2 or",
+      "page": 144,
+      "char_span": [
+        168,
+        177
+      ],
+      "length": 9,
+      "order": [
+        321
+      ],
+      "occurrences": [
+        {
+          "page": 144,
+          "char_span": [
+            168,
+            177
+          ]
+        }
+      ],
+      "pages": [
+        144
+      ]
+    },
+    "c9c4ed7cafa00e99": {
+      "id": "page144_para5",
+      "text": "ERBEJET",
+      "page": 144,
+      "char_span": [
+        178,
+        185
+      ],
+      "length": 7,
+      "order": [
+        322
+      ],
+      "occurrences": [
+        {
+          "page": 144,
+          "char_span": [
+            178,
+            185
+          ]
+        }
+      ],
+      "pages": [
+        144
+      ]
+    },
+    "4e97967da25ff38b": {
+      "id": "page144_para6",
+      "text": "ERBECRYO 2 2 29 30 2",
+      "page": 144,
+      "char_span": [
+        186,
+        206
+      ],
+      "length": 20,
+      "order": [
+        323
+      ],
+      "occurrences": [
+        {
+          "page": 144,
+          "char_span": [
+            186,
+            206
+          ]
+        }
+      ],
+      "pages": [
+        144
+      ]
+    },
+    "a1ac76c6a83142ad": {
+      "id": "page144_para7",
+      "text": "VVIIOO VIO sseeaall 2 seal 2 2 left right",
+      "page": 144,
+      "char_span": [
+        207,
+        248
+      ],
+      "length": 41,
+      "order": [
+        324
+      ],
+      "occurrences": [
+        {
+          "page": 144,
+          "char_span": [
+            207,
+            248
+          ]
+        }
+      ],
+      "pages": [
+        144
+      ]
+    },
+    "cfec902a9d1d179d": {
+      "id": "page145_para0",
+      "text": "Installing ERBEJET 2 or ERBECRYO 2 + VIO seal + APC 3 + VIO 3 n 31 32 VIO 3 n",
+      "page": 145,
+      "char_span": [
+        78,
+        77
+      ],
+      "length": 77,
+      "order": [
+        325
+      ],
+      "occurrences": [
+        {
+          "page": 145,
+          "char_span": [
+            78,
+            77
+          ]
+        }
+      ],
+      "pages": [
+        145
+      ]
+    },
+    "0e5eab403b316e58": {
+      "id": "page145_para1",
+      "text": "1. 0 Nm 2 x M 4 x 8 33 34",
+      "page": 145,
+      "char_span": [
+        78,
+        103
+      ],
+      "length": 25,
+      "order": [
+        326
+      ],
+      "occurrences": [
+        {
+          "page": 145,
+          "char_span": [
+            78,
+            103
+          ]
+        }
+      ],
+      "pages": [
+        145
+      ]
+    },
+    "2808fc694117e488": {
+      "id": "page145_para2",
+      "text": "1. 0 Nm",
+      "page": 145,
+      "char_span": [
+        104,
+        111
+      ],
+      "length": 7,
+      "order": [
+        327
+      ],
+      "occurrences": [
+        {
+          "page": 145,
+          "char_span": [
+            104,
+            111
+          ]
+        }
+      ],
+      "pages": [
+        145
+      ]
+    },
+    "04fb7052834b305f": {
+      "id": "page145_para3",
+      "text": "VIO seal 2 x M 4 x 16 Back to Overview",
+      "page": 145,
+      "char_span": [
+        112,
+        150
+      ],
+      "length": 38,
+      "order": [
+        328
+      ],
+      "occurrences": [
+        {
+          "page": 145,
+          "char_span": [
+            112,
+            150
+          ]
+        }
+      ],
+      "pages": [
+        145
+      ]
+    },
+    "1eac29e17f6ef08e": {
+      "id": "page146_para0",
+      "text": "Installing ERBEJET 2 or ERBECRYO 2 + VIO seal + APC 3 + VIO 3 n",
+      "page": 146,
+      "char_span": [
+        0,
+        63
+      ],
+      "length": 63,
+      "order": [
+        329
+      ],
+      "occurrences": [
+        {
+          "page": 146,
+          "char_span": [
+            0,
+            63
+          ]
+        }
+      ],
+      "pages": [
+        146
+      ]
+    },
+    "e038bac2460999a0": {
+      "id": "page147_para0",
+      "text": "Stowing gas bottles Stowing gas bottles Permitted positioning Maximum loading: 2 items",
+      "page": 147,
+      "char_span": [
+        0,
+        86
+      ],
+      "length": 86,
+      "order": [
+        330
+      ],
+      "occurrences": [
+        {
+          "page": 147,
+          "char_span": [
+            0,
+            86
+          ]
+        }
+      ],
+      "pages": [
+        147
+      ]
+    },
+    "b4b2228802934d54": {
+      "id": "page148_para0",
+      "text": "Stowing gas bottles Tools required No tool needed. Preparation IMPORTANT! Remove the power cord from the system carrier. 148 / 156",
+      "page": 148,
+      "char_span": [
+        0,
+        130
+      ],
+      "length": 130,
+      "order": [
+        331
+      ],
+      "occurrences": [
+        {
+          "page": 148,
+          "char_span": [
+            0,
+            130
+          ]
+        }
+      ],
+      "pages": [
+        148
+      ]
+    },
+    "b4f9fb288b08692e": {
+      "id": "page149_para0",
+      "text": "Stowing gas bottles 1 2 3 Back to Overview",
+      "page": 149,
+      "char_span": [
+        0,
+        42
+      ],
+      "length": 42,
+      "order": [
+        332
+      ],
+      "occurrences": [
+        {
+          "page": 149,
+          "char_span": [
+            0,
+            42
+          ]
+        }
+      ],
+      "pages": [
+        149
+      ]
+    },
+    "bbc80bfc69c7d47d": {
+      "id": "page150_para0",
+      "text": "Stowing gas bottles",
+      "page": 150,
+      "char_span": [
+        0,
+        19
+      ],
+      "length": 19,
+      "order": [
+        333
+      ],
+      "occurrences": [
+        {
+          "page": 150,
+          "char_span": [
+            0,
+            19
+          ]
+        }
+      ],
+      "pages": [
+        150
+      ]
+    },
+    "44b53cb9d682e230": {
+      "id": "page151_para0",
+      "text": "Making connections Making connections Potential equalization and mains connection IMPORTANT! Only use original Erbe cables. VIO unit APC module VIO seal",
+      "page": 151,
+      "char_span": [
+        153,
+        152
+      ],
+      "length": 152,
+      "order": [
+        334
+      ],
+      "occurrences": [
+        {
+          "page": 151,
+          "char_span": [
+            153,
+            152
+          ]
+        }
+      ],
+      "pages": [
+        151
+      ]
+    },
+    "06a6c289990941ca": {
+      "id": "page151_para1",
+      "text": "ERBEJET 2",
+      "page": 151,
+      "char_span": [
+        153,
+        162
+      ],
+      "length": 9,
+      "order": [
+        335
+      ],
+      "occurrences": [
+        {
+          "page": 151,
+          "char_span": [
+            153,
+            162
+          ]
+        }
+      ],
+      "pages": [
+        151
+      ]
+    },
+    "f413ab2fc03063f1": {
+      "id": "page151_para2",
+      "text": "ERBECRYO 2 maximum 2 submodules",
+      "page": 151,
+      "char_span": [
+        163,
+        194
+      ],
+      "length": 31,
+      "order": [
+        336
+      ],
+      "occurrences": [
+        {
+          "page": 151,
+          "char_span": [
+            163,
+            194
+          ]
+        }
+      ],
+      "pages": [
+        151
+      ]
+    },
+    "6169997eb2851d4c": {
+      "id": "page151_para3",
+      "text": "OR allowed:",
+      "page": 151,
+      "char_span": [
+        195,
+        206
+      ],
+      "length": 11,
+      "order": [
+        337
+      ],
+      "occurrences": [
+        {
+          "page": 151,
+          "char_span": [
+            195,
+            206
+          ]
+        }
+      ],
+      "pages": [
+        151
+      ]
+    },
+    "4a8b8c3b3fc80039": {
+      "id": "page151_para4",
+      "text": "IES 3",
+      "page": 151,
+      "char_span": [
+        207,
+        212
+      ],
+      "length": 5,
+      "order": [
+        338
+      ],
+      "occurrences": [
+        {
+          "page": 151,
+          "char_span": [
+            207,
+            212
+          ]
+        }
+      ],
+      "pages": [
+        151
+      ]
+    },
+    "8010d1951d13f820": {
+      "id": "page151_para5",
+      "text": "OR",
+      "page": 151,
+      "char_span": [
+        213,
+        215
+      ],
+      "length": 2,
+      "order": [
+        339
+      ],
+      "occurrences": [
+        {
+          "page": 151,
+          "char_span": [
+            213,
+            215
+          ]
+        }
+      ],
+      "pages": [
+        151
+      ]
+    },
+    "943b8dce5c1fb605": {
+      "id": "page151_para6",
+      "text": "ESM 2",
+      "page": 151,
+      "char_span": [
+        216,
+        221
+      ],
+      "length": 5,
+      "order": [
+        340
+      ],
+      "occurrences": [
+        {
+          "page": 151,
+          "char_span": [
+            216,
+            221
+          ]
+        }
+      ],
+      "pages": [
+        151
+      ]
+    },
+    "ecaeea7c5dfe1305": {
+      "id": "page151_para7",
+      "text": "EIP 2",
+      "page": 151,
+      "char_span": [
+        222,
+        227
+      ],
+      "length": 5,
+      "order": [
+        341
+      ],
+      "occurrences": [
+        {
+          "page": 151,
+          "char_span": [
+            222,
+            227
+          ]
+        }
+      ],
+      "pages": [
+        151
+      ]
+    },
+    "22aa99f27c2dd245": {
+      "id": "page152_para0",
+      "text": "Making connections ECB connection (optional, for communication between the units) IMPORTANT! Only use original Erbe cables. VIO unit APC module VIO seal",
+      "page": 152,
+      "char_span": [
+        153,
+        152
+      ],
+      "length": 152,
+      "order": [
+        342
+      ],
+      "occurrences": [
+        {
+          "page": 152,
+          "char_span": [
+            153,
+            152
+          ]
+        }
+      ],
+      "pages": [
+        152
+      ]
+    },
+    "1149de8b9890359e": {
+      "id": "page152_para1",
+      "text": "ERBEJET 2",
+      "page": 152,
+      "char_span": [
+        153,
+        162
+      ],
+      "length": 9,
+      "order": [
+        343
+      ],
+      "occurrences": [
+        {
+          "page": 152,
+          "char_span": [
+            153,
+            162
+          ]
+        }
+      ],
+      "pages": [
+        152
+      ]
+    },
+    "1c5b170be5f9122a": {
+      "id": "page152_para2",
+      "text": "IES 3",
+      "page": 152,
+      "char_span": [
+        163,
+        168
+      ],
+      "length": 5,
+      "order": [
+        344
+      ],
+      "occurrences": [
+        {
+          "page": 152,
+          "char_span": [
+            163,
+            168
+          ]
+        }
+      ],
+      "pages": [
+        152
+      ]
+    },
+    "9622cf85a17cd2ab": {
+      "id": "page152_para3",
+      "text": "ESM 2 ECB connection: Please read the User Manuals for the units that are to communicate with each other!",
+      "page": 152,
+      "char_span": [
+        169,
+        274
+      ],
+      "length": 105,
+      "order": [
+        345
+      ],
+      "occurrences": [
+        {
+          "page": 152,
+          "char_span": [
+            169,
+            274
+          ]
+        }
+      ],
+      "pages": [
+        152
+      ]
+    },
+    "430971e5b1ac2d95": {
+      "id": "page153_para0",
+      "text": "Making connections VIO unit APC module VIO seal or or",
+      "page": 153,
+      "char_span": [
+        54,
+        53
+      ],
+      "length": 53,
+      "order": [
+        346
+      ],
+      "occurrences": [
+        {
+          "page": 153,
+          "char_span": [
+            54,
+            53
+          ]
+        }
+      ],
+      "pages": [
+        153
+      ]
+    },
+    "539d1684ce05e701": {
+      "id": "page153_para1",
+      "text": "ERBEJET 2",
+      "page": 153,
+      "char_span": [
+        54,
+        63
+      ],
+      "length": 9,
+      "order": [
+        347
+      ],
+      "occurrences": [
+        {
+          "page": 153,
+          "char_span": [
+            54,
+            63
+          ]
+        }
+      ],
+      "pages": [
+        153
+      ]
+    },
+    "2184d89989c2529f": {
+      "id": "page153_para2",
+      "text": "IES 3",
+      "page": 153,
+      "char_span": [
+        64,
+        69
+      ],
+      "length": 5,
+      "order": [
+        348
+      ],
+      "occurrences": [
+        {
+          "page": 153,
+          "char_span": [
+            64,
+            69
+          ]
+        }
+      ],
+      "pages": [
+        153
+      ]
+    },
+    "0f70b04f44f7e662": {
+      "id": "page153_para3",
+      "text": "EIP 2 ECB connection: Please read the User Manuals for the units that are to communicate with each other! Back to Overview",
+      "page": 153,
+      "char_span": [
+        70,
+        192
+      ],
+      "length": 122,
+      "order": [
+        349
+      ],
+      "occurrences": [
+        {
+          "page": 153,
+          "char_span": [
+            70,
+            192
+          ]
+        }
+      ],
+      "pages": [
+        153
+      ]
+    },
+    "4a46d7b00fd13a03": {
+      "id": "page154_para0",
+      "text": "Making connections APC connection Please read the User Manual for the APC 2 or the User Manual for the APC 3. Back to Overview CO connection 2 Please read the User Manual for the ERBECRYO 2. Back to Overview",
+      "page": 154,
+      "char_span": [
+        0,
+        207
+      ],
+      "length": 207,
+      "order": [
+        350
+      ],
+      "occurrences": [
+        {
+          "page": 154,
+          "char_span": [
+            0,
+            207
+          ]
+        }
+      ],
+      "pages": [
+        154
+      ]
+    },
+    "2a920bc470c3af01": {
+      "id": "page156_para0",
+      "text": "Manufacturer Service Hotline Erbe Elektromedizin Gmb H Tel +49 7071 755 437 Waldhörnlestr. 17 Fax +49 7071 755 189 72072 Tübingen, Germany techservice@erbe-med. com erbe-med. com © ERBE Elektromedizin Gmb H",
+      "page": 156,
+      "char_span": [
+        0,
+        206
+      ],
+      "length": 206,
+      "order": [
+        351
+      ],
+      "occurrences": [
+        {
+          "page": 156,
+          "char_span": [
+            0,
+            206
+          ]
+        }
+      ],
+      "pages": [
+        156
+      ]
+    }
+  },
+  "doc_subtype": "installation_guide",
   "manufacturer": "ERBE Elektromedizin GmbH",
   "part_number": "20180-110",
   "revision": "D294849",
@@ -22,9 +8604,13 @@
     "unique_pages_seen": 156,
     "unique_pages_ratio": 1.0,
     "extracted_chars": 35942,
-    "duration_s": 15.392091512680054,
+    "duration_s": 15.203011751174927,
     "coverage_ratio": 1.0,
-    "tables_kept": 0
+    "doc_subtype": "installation_guide",
+    "tables_kept": 0,
+    "paragraph_dedup_applied": true,
+    "evidence_bank_size": 0,
+    "paragraph_store_size": 339
   },
   "_engine": "pdfplumber",
   "_mode": "full",
@@ -41,21 +8627,207 @@
     "ocr_used_pages": [],
     "coverage_ratio": 1.0,
     "page_count": 156,
-    "timestamp": "2025-10-29T15:26:02.954263",
+    "timestamp": "2025-11-01T08:26:18.977235",
     "version": "v1.0.0",
     "warnings": [],
     "emit": {
       "evidence_policy": "compact",
       "tables_mode": "compact",
+      "max_relations": 15000,
+      "max_table_rows": 200,
+      "tables": {
+        "preserve_summary_recommendations": true,
+        "preserve_headers": [
+          "summary of recommendations",
+          "summary of statements",
+          "recommendations and strength"
+        ]
+      },
       "evidence_max_chars": 500,
       "table_cell_max_chars": 600,
-      "paragraph_dedupe": true,
+      "paragraph_store": true,
       "max_entities": 3000,
-      "max_relations": 15000,
       "relation_window": 80,
       "keep_evidence_bank": true,
       "max_tables": 10
     },
+    "text_repair_applied": false,
+    "engine_used_per_page": {
+      "1": "pdfplumber",
+      "2": "pdfplumber",
+      "3": "pdfplumber",
+      "4": "pdfplumber",
+      "5": "pdfplumber",
+      "6": "pdfplumber",
+      "7": "pdfplumber",
+      "8": "pdfplumber",
+      "9": "pdfplumber",
+      "10": "pdfplumber",
+      "11": "pdfplumber",
+      "12": "pdfplumber",
+      "13": "pdfplumber",
+      "14": "pdfplumber",
+      "15": "pdfplumber",
+      "16": "pdfplumber",
+      "17": "pdfplumber",
+      "18": "pdfplumber",
+      "19": "pdfplumber",
+      "20": "pdfplumber",
+      "21": "pdfplumber",
+      "22": "pdfplumber",
+      "23": "pdfplumber",
+      "24": "pdfplumber",
+      "25": "pdfplumber",
+      "26": "pdfplumber",
+      "27": "pdfplumber",
+      "28": "pdfplumber",
+      "29": "pdfplumber",
+      "30": "pdfplumber",
+      "31": "pdfplumber",
+      "32": "pdfplumber",
+      "33": "pdfplumber",
+      "34": "pdfplumber",
+      "35": "pdfplumber",
+      "36": "pdfplumber",
+      "37": "pdfplumber",
+      "38": "pdfplumber",
+      "39": "pdfplumber",
+      "40": "pdfplumber",
+      "41": "pdfplumber",
+      "42": "pdfplumber",
+      "43": "pdfplumber",
+      "44": "pdfplumber",
+      "45": "pdfplumber",
+      "46": "pdfplumber",
+      "47": "pdfplumber",
+      "48": "pdfplumber",
+      "49": "pdfplumber",
+      "50": "pdfplumber",
+      "51": "pdfplumber",
+      "52": "pdfplumber",
+      "53": "pdfplumber",
+      "54": "pdfplumber",
+      "55": "pdfplumber",
+      "56": "pdfplumber",
+      "57": "pdfplumber",
+      "58": "pdfplumber",
+      "59": "pdfplumber",
+      "60": "pdfplumber",
+      "61": "pdfplumber",
+      "62": "pdfplumber",
+      "63": "pdfplumber",
+      "64": "pdfplumber",
+      "65": "pdfplumber",
+      "66": "pdfplumber",
+      "67": "pdfplumber",
+      "68": "pdfplumber",
+      "69": "pdfplumber",
+      "70": "pdfplumber",
+      "71": "pdfplumber",
+      "72": "pdfplumber",
+      "73": "pdfplumber",
+      "74": "pdfplumber",
+      "75": "pdfplumber",
+      "76": "pdfplumber",
+      "77": "pdfplumber",
+      "78": "pdfplumber",
+      "79": "pdfplumber",
+      "80": "pdfplumber",
+      "81": "pdfplumber",
+      "82": "pdfplumber",
+      "83": "pdfplumber",
+      "84": "pdfplumber",
+      "85": "pdfplumber",
+      "86": "pdfplumber",
+      "87": "pdfplumber",
+      "88": "pdfplumber",
+      "89": "pdfplumber",
+      "90": "pdfplumber",
+      "91": "pdfplumber",
+      "92": "pdfplumber",
+      "93": "pdfplumber",
+      "94": "pdfplumber",
+      "95": "pdfplumber",
+      "96": "pdfplumber",
+      "97": "pdfplumber",
+      "98": "pdfplumber",
+      "99": "pdfplumber",
+      "100": "pdfplumber",
+      "101": "pdfplumber",
+      "102": "pdfplumber",
+      "103": "pdfplumber",
+      "104": "pdfplumber",
+      "105": "pdfplumber",
+      "106": "pdfplumber",
+      "107": "pdfplumber",
+      "108": "pdfplumber",
+      "109": "pdfplumber",
+      "110": "pdfplumber",
+      "111": "pdfplumber",
+      "112": "pdfplumber",
+      "113": "pdfplumber",
+      "114": "pdfplumber",
+      "115": "pdfplumber",
+      "116": "pdfplumber",
+      "117": "pdfplumber",
+      "118": "pdfplumber",
+      "119": "pdfplumber",
+      "120": "pdfplumber",
+      "121": "pdfplumber",
+      "122": "pdfplumber",
+      "123": "pdfplumber",
+      "124": "pdfplumber",
+      "125": "pdfplumber",
+      "126": "pdfplumber",
+      "127": "pdfplumber",
+      "128": "pdfplumber",
+      "129": "pdfplumber",
+      "130": "pdfplumber",
+      "131": "pdfplumber",
+      "132": "pdfplumber",
+      "133": "pdfplumber",
+      "134": "pdfplumber",
+      "135": "pdfplumber",
+      "136": "pdfplumber",
+      "137": "pdfplumber",
+      "138": "pdfplumber",
+      "139": "pdfplumber",
+      "140": "pdfplumber",
+      "141": "pdfplumber",
+      "142": "pdfplumber",
+      "143": "pdfplumber",
+      "144": "pdfplumber",
+      "145": "pdfplumber",
+      "146": "pdfplumber",
+      "147": "pdfplumber",
+      "148": "pdfplumber",
+      "149": "pdfplumber",
+      "150": "pdfplumber",
+      "151": "pdfplumber",
+      "152": "pdfplumber",
+      "153": "pdfplumber",
+      "154": "pdfplumber",
+      "155": "pdfplumber",
+      "156": "pdfplumber"
+    },
+    "spacing_metrics": {
+      "space_ratio_before": 0.14178356713426854,
+      "space_ratio_after": null,
+      "avg_token_length_before": 4.732548216419184,
+      "avg_token_length_after": null,
+      "repair_strategy": null
+    },
+    "paragraph_dedup_applied": true,
+    "evidence_policy": "compact",
+    "keep_evidence_bank": true,
+    "paragraph_store_enabled": true,
+    "paragraph_store_requested": true,
+    "tables_original": 0,
+    "tables_kept": 0,
+    "tables_dropped": 0,
+    "paragraph_store_size": 339,
+    "window_placeholders_removed": 0,
+    "metadata_sources": {},
     "emit_raw_pages": false,
     "generator": "medparse",
     "pipeline_version": "1.1.0",

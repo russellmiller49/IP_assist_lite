@@ -23,6 +23,7 @@ class IFUDocument(BaseDocument):
     """Structured IFU/manual extraction."""
 
     doc_type: Literal["ifu"] = Field(default="ifu", frozen=True)
+    doc_subtype: Optional[Literal["ifu", "catalog", "installation_guide", "tech_manual"]] = None
     manufacturer: Optional[str] = None
     product_name: Optional[str] = None
     part_number: Optional[str] = None

@@ -17,14 +17,17 @@ from medparse.extract.utils import (
     section_text_between,
 )
 from medparse.ingest.models import PageData
+from medparse.ifu.subtype import infer_ifu_subtype_from_pages
 from medparse.normalize.ifu_anchors import lift_ifu_clinical_fields
 from medparse.normalize.ifu_frontmatter import parse_front_matter
+from medparse.normalize.ifu_sections import clean_section_text
 from medparse.normalize.page_furniture import strip_furniture
 from medparse.normalize.references import gate_ifu_references, normalize_references
 from medparse.normalize.safety import categorize_block, dedupe_blocks, detect_severity
 from medparse.normalize.software import filter_software_versions
 from medparse.normalize.tables import clean_tables
 from medparse.normalize.text_cleanup import clean_paragraph, deep_cleanup_fields
+from medparse.pipeline.engine_select import repair_space_poor_pages
 from medparse.schema.common import EvidenceSpan
 from medparse.schema.ifu import IFUDocument, SafetyBlock
 from medparse.text.paragraphizer import build_paragraph_store
@@ -36,6 +39,9 @@ SECTION_FIELDS = {
     "intended patient population": "intended_patient_population",
     "contraindications": "contraindications",
     "adverse events": "adverse_events",
+    "clinical risks and benefits": "clinical_risks_and_benefits",
+    "clinical risks & benefits": "clinical_risks_and_benefits",
+    "clinical benefits and risks": "clinical_risks_and_benefits",
 }
 
 
@@ -50,11 +56,18 @@ def extract_ifu(
     """Extract an IFU document with hardened normalization."""
 
     extraction_config = config or get_extraction_config()
+    ifu_settings = getattr(extraction_config, "ifu", {}) or {}
     pages = pages or load_pages(pdf_path, engine=engine, max_pages=page_limit)
+    pages, spacing_info = repair_space_poor_pages(
+        pdf_path,
+        pages,
+        current_engine=engine,
+        settings=ifu_settings,
+    )
+    doc_subtype = infer_ifu_subtype_from_pages(pages, pdf_path)
     page_count = len(pages)
     raw_pages_text = [page.text for page in pages]
     meta = parse_front_matter(raw_pages_text)
-    ifu_settings = getattr(extraction_config, "ifu", {}) or {}
 
     # Strip page furniture (headers/footers) before processing
     lines_by_page = [page.lines for page in pages]
@@ -75,6 +88,7 @@ def extract_ifu(
 
     doc_kwargs: dict[str, object] = {
         "doc_type": "ifu",
+        "doc_subtype": doc_subtype,
         "source_file": str(pdf_path),
         "page_count": page_count,
         "manufacturer": None,
@@ -93,18 +107,41 @@ def extract_ifu(
         "safety_blocks": _extract_safety_blocks(pages),
     }
 
+    skip_clinical_fields = isinstance(doc_subtype, str) and doc_subtype in {"catalog", "installation_guide", "tech_manual"}
     for key, field in SECTION_FIELDS.items():
+        if skip_clinical_fields and field in {
+            "indications_for_use",
+            "intended_use",
+            "intended_user",
+            "intended_patient_population",
+            "contraindications",
+            "adverse_events",
+            "clinical_risks_and_benefits",
+        }:
+            continue
         if key in section_text:
             doc_kwargs[field] = section_text[key]
 
-    toc_guard_info = lift_ifu_clinical_fields(
-        pages,
-        doc_kwargs,
-        settings=ifu_settings,
-        manufacturer=meta.get("manufacturer") if isinstance(meta, dict) else None,
-    )
-    if toc_guard_info:
-        doc_kwargs["_toc_guard_info"] = toc_guard_info
+    for fld in (
+        "indications_for_use",
+        "intended_use",
+        "intended_user",
+        "intended_patient_population",
+    ):
+        val = doc_kwargs.get(fld)
+        if isinstance(val, str):
+            doc_kwargs[fld] = clean_section_text(val)
+
+    toc_guard_info = None
+    if not skip_clinical_fields:
+        toc_guard_info = lift_ifu_clinical_fields(
+            pages,
+            doc_kwargs,
+            settings=ifu_settings,
+            manufacturer=meta.get("manufacturer") if isinstance(meta, dict) else None,
+        )
+        if toc_guard_info:
+            doc_kwargs["_toc_guard_info"] = toc_guard_info
 
     # Collect software versions from Equipment/Software Version section
     raw_software: List[str] = []
@@ -142,6 +179,15 @@ def extract_ifu(
         if isinstance(val, str) and val:
             doc_kwargs[fld] = clean_paragraph(val)
 
+    for fld in ("contraindications", "adverse_events"):
+        val = doc_kwargs.get(fld)
+        if isinstance(val, list):
+            cleaned_list = []
+            for item in val:
+                if isinstance(item, str) and item.strip():
+                    cleaned_list.append(clean_paragraph(item))
+            doc_kwargs[fld] = cleaned_list
+
     if extraction_config.is_enriched():
         deep_cleanup_fields(doc_kwargs)
         doc_kwargs["tables"] = clean_tables(doc_kwargs.get("tables", []))
@@ -167,6 +213,19 @@ def extract_ifu(
         document.pipeline_info["anchor_bleed_fields"] = anchor_error_fields
     if toc_guard_info:
         document.pipeline_info["toc_guard"] = toc_guard_info
+    if spacing_info:
+        document.pipeline_info["text_repair_applied"] = bool(spacing_info.get("text_repair_applied"))
+        engine_map = spacing_info.get("engine_used_per_page")
+        if isinstance(engine_map, dict):
+            document.pipeline_info["engine_used_per_page"] = engine_map
+        spacing_metrics = {
+            "space_ratio_before": spacing_info.get("space_ratio_before"),
+            "space_ratio_after": spacing_info.get("space_ratio_after"),
+            "avg_token_length_before": spacing_info.get("avg_token_length_before"),
+            "avg_token_length_after": spacing_info.get("avg_token_length_after"),
+            "repair_strategy": spacing_info.get("repair_strategy"),
+        }
+        document.pipeline_info["spacing_metrics"] = spacing_metrics
 
     paragraph_store, dedup_applied = build_paragraph_store(
         document.doc_id,

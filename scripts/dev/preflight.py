@@ -5,8 +5,14 @@ This script verifies that the environment is correctly configured for Medparse,
 checking for common issues like missing models, incompatible versions, etc.
 """
 
+import json
 import sys
+from pathlib import Path
 from typing import List, Tuple
+
+import yaml
+
+ROOT_DIR = Path(__file__).resolve().parents[2]
 
 
 def check_python_version() -> Tuple[bool, str]:
@@ -115,6 +121,63 @@ def check_scispacy() -> Tuple[bool, str]:
         return False, f"scispacy error: {e}"
 
 
+def check_emit_config() -> Tuple[bool, str]:
+    """Ensure the shared emit configuration exists and declares required keys."""
+
+    config_path = ROOT_DIR / "configs" / "_shared" / "emit.yaml"
+    if not config_path.exists():
+        return False, "configs/_shared/emit.yaml missing"
+
+    try:
+        data = yaml.safe_load(config_path.read_text(encoding="utf-8")) or {}
+    except Exception as exc:
+        return False, f"Failed to parse emit config: {exc}"
+
+    emit_section = data.get("emit", data)
+    required_keys = ["evidence_policy", "tables_mode", "max_relations"]
+    missing = [key for key in required_keys if key not in emit_section]
+    if missing:
+        return False, f"emit config missing keys: {', '.join(missing)}"
+
+    summary = ", ".join(f"{key}={emit_section[key]}" for key in required_keys if key in emit_section)
+    return True, f"emit config ok ({summary})"
+
+
+def check_doc_type_model() -> Tuple[bool, str]:
+    """Verify doc-type model assets and sklearn version alignment."""
+
+    manifest_path = ROOT_DIR / "models" / "doc_type" / "MANIFEST.json"
+    model_path = manifest_path.with_name("model.joblib")
+
+    if not manifest_path.exists():
+        return False, "Doc-type MANIFEST.json missing (run scripts/train_doc_type.py)"
+
+    try:
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    except Exception as exc:
+        return False, f"Failed to parse doc-type manifest: {exc}"
+
+    declared_version = manifest.get("sklearn_version")
+    try:
+        from sklearn import __version__ as runtime_version
+    except ImportError:
+        return False, "scikit-learn not installed (required for doc-type model)"
+
+    if not declared_version:
+        return False, "Doc-type manifest missing sklearn_version"
+
+    declared_major = declared_version.split(".")[:2]
+    runtime_major = runtime_version.split(".")[:2]
+    if declared_major != runtime_major:
+        return False, f"Doc-type model targets sklearn {declared_version}, runtime is {runtime_version}"
+
+    if not model_path.exists():
+        return False, f"Doc-type model missing at {model_path}"
+
+    labels = manifest.get("labels") or []
+    return True, f"doc-type model ok (labels={len(labels)}; sklearn {declared_version})"
+
+
 def run_preflight() -> int:
     """Run all preflight checks and return exit code."""
     checks: List[Tuple[str, Tuple[bool, str]]] = [
@@ -124,6 +187,8 @@ def run_preflight() -> int:
         ("scikit-learn", check_sklearn_version()),
         ("scispacy", check_scispacy()),
         ("scispaCy Model", check_scispacy_model()),
+        ("Emit Config", check_emit_config()),
+        ("Doc-Type Model", check_doc_type_model()),
     ]
 
     print("=== Medparse Environment Preflight ===\n")

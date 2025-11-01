@@ -243,4 +243,25 @@ def _flush_buffer(buffer: List[str], *, join_hyphens: bool) -> str:
     return " ".join(pieces)
 
 
-__all__ = ["Paragraph", "iter_paragraphs", "build_paragraph_store"]
+def compute_space_metrics(pages: Sequence[PageData]) -> Dict[str, float]:
+    """Estimate spacing quality across pages."""
+    total_chars = 0
+    space_chars = 0
+    token_lengths: List[int] = []
+
+    for page in pages:
+        text = page.text or ""
+        total_chars += len(text)
+        space_chars += text.count(" ")
+        tokens = re.findall(r"[A-Za-z0-9]{2,}", text)
+        token_lengths.extend(len(token) for token in tokens)
+
+    avg_token_length = float(sum(token_lengths) / len(token_lengths)) if token_lengths else 0.0
+    space_ratio = float(space_chars / total_chars) if total_chars else 0.0
+    return {
+        "space_ratio": space_ratio,
+        "avg_token_length": avg_token_length,
+    }
+
+
+__all__ = ["Paragraph", "iter_paragraphs", "build_paragraph_store", "compute_space_metrics"]

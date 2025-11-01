@@ -51,3 +51,10 @@ ifu:
     "INTUITIVE SURGICAL, INC.":
       toc_guard:
         density_threshold: 0.55
+  engine_fallback:
+    space_ratio_threshold: 0.05
+    avg_token_length_threshold: 12.0
+    fallback_engines:
+      - pymupdf
+      - pdfplumber
+    enable_ocr: false

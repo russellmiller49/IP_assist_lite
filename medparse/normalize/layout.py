@@ -158,12 +158,20 @@ def slice_between(
         return ""
 
     joined = "\n".join("\n".join(page.lines) for page in filtered_pages)
-    start = _find_anchor(joined, start_anchors, allow_inline=True)
+    start = _find_anchor(joined, start_anchors, allow_inline=True, return_start=False)
     if start is None:
         return ""
 
-    end = _find_anchor(joined[start:], stop_anchors, allow_inline=allow_inline_stop)
-    slice_text = joined[start : start + end if end is not None else None]
+    stop = _find_anchor(
+        joined[start:],
+        stop_anchors,
+        allow_inline=allow_inline_stop,
+        return_start=True,
+    )
+    if stop is None:
+        slice_text = joined[start:]
+    else:
+        slice_text = joined[start : start + stop]
     return slice_text.strip()
 
 
@@ -172,6 +180,7 @@ def _find_anchor(
     anchors: Optional[Iterable[str]],
     *,
     allow_inline: bool = True,
+    return_start: bool = False,
 ) -> Optional[int]:
     if not anchors:
         return None
@@ -188,17 +197,17 @@ def _find_anchor(
             )
         patterns.extend(
             [
-            # Allow bold/italic markers around heading
-            rf"(?:^|\n)\s*\*{{0,2}}{re.escape(anchor)}\*{{0,2}}[:\s]*",
-            # Allow numbered headings
-            rf"(?:^|\n)\s*\d+\.?\s+{re.escape(anchor)}[:\s]*",
+                # Allow bold/italic markers around heading
+                rf"(?:^|\n)\s*\*{{0,2}}{re.escape(anchor)}\*{{0,2}}[:\s]*",
+                # Allow numbered headings including sub-sections (1.4.1)
+                rf"(?:^|\n)\s*\d+(?:\.\d+)*\s+{re.escape(anchor)}[:\s]*",
             ]
         )
 
         for pattern in patterns:
             match = re.search(pattern, text, flags=re.IGNORECASE)
             if match:
-                return match.end()
+                return match.start() if return_start else match.end()
 
     return None
 

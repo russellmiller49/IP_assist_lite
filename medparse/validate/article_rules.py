@@ -55,7 +55,9 @@ def validate_article(doc: ArticleDocument, cfg: ExtractionConfig) -> List[Issue]
         elif title_conf < 0.6:
             issues.append(Issue.warn(f"Guideline title confidence low ({title_conf:.2f})."))
 
-        graded_count, rec_count, grade_ratio = _grade_density_stats(doc.recommendations or [])
+        graded_count, typed_ungraded_count, rec_count, grade_ratio, typed_ratio = _grade_density_stats(
+            doc.recommendations or []
+        )
         if min_sections and not sections_ok(doc, min_sections=min_sections):
             issues.append(
                 Issue.error(
@@ -70,9 +72,16 @@ def validate_article(doc: ArticleDocument, cfg: ExtractionConfig) -> List[Issue]
                 )
             )
         else:
-            if grade_ratio < max(0.0, min_grade_density):
+            threshold = max(0.0, min_grade_density)
+            coverage = max(grade_ratio, typed_ratio)
+            if coverage < threshold:
+                issues.append(Issue.error("Guideline graded/typed coverage below 70%"))
+            else:
+                if typed_ratio >= threshold and grade_ratio < threshold:
+                    issues.append(Issue.warn("typed ok, grades incomplete—check table/inline mapping"))
+            if graded_count == 0 and _abstract_mentions_graded(doc):
                 issues.append(
-                    Issue.error("Guideline grade density below 70%")
+                    Issue.error("Guideline abstract references graded recommendations but none detected")
                 )
 
         return issues
@@ -123,17 +132,36 @@ def sections_ok(doc: ArticleDocument, *, min_sections: int) -> bool:
 
 def _grade_density_stats(
     recommendations: Sequence[GuidelineRecommendation],
-) -> tuple[int, int, float]:
+) -> tuple[int, int, int, float, float]:
     total = len(recommendations)
     if total == 0:
-        return 0, 0, 0.0
-    graded = sum(
-        1
-        for rec in recommendations
-        if rec.grade or rec.statement_type in {"ungraded", "consensus", "good_practice"}
-    )
-    ratio = graded / total if total else 0.0
-    return graded, total, ratio
+        return 0, 0, 0, 0.0, 0.0
+    with_grade = 0
+    graded = 0
+    typed_ungraded = 0
+    for rec in recommendations:
+        normalized = getattr(rec, "grade_normalized", None) or {}
+        if normalized:
+            with_grade += 1
+            if normalized.get("ungraded"):
+                typed_ungraded += 1
+            else:
+                graded += 1
+        elif getattr(rec, "ungraded", False):
+            typed_ungraded += 1
+    typed_ungraded = min(typed_ungraded, max(0, total - graded))
+    grade_ratio = with_grade / total if total else 0.0
+    typed_ratio = (graded + typed_ungraded) / total if total else 0.0
+    return graded, typed_ungraded, total, grade_ratio, typed_ratio
+
+
+def _abstract_mentions_graded(doc: ArticleDocument) -> bool:
+    sections = getattr(doc, "sections", {}) or {}
+    abstract = sections.get("abstract")
+    if not isinstance(abstract, str):
+        return False
+    abstract_lower = abstract.lower()
+    return "graded recommendation" in abstract_lower
 
 
 def _statement_support_signals(doc: ArticleDocument, min_sections: int) -> int:

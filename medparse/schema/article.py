@@ -104,6 +104,7 @@ class GuidelineRecommendation(MedparseModel):
 
     label: Optional[str] = None  # e.g., "1", "1.1", "A"
     text: str
+    recommendation_type: Optional[Literal["recommendation", "suggestion", "consensus_statement"]] = None
     grade: Optional[str] = None  # Normalized grade token when available
     grade_raw: Optional[str] = None  # Raw grade string from source text
     strength: Optional[str] = None  # Normalized: "strong", "weak", "conditional"
@@ -117,6 +118,17 @@ class GuidelineRecommendation(MedparseModel):
     evidence_refs: Optional[List[str]] = None  # Hash IDs for evidence bank
     normalized: Optional[Dict[str, Optional[str]]] = None  # {strength, quality, scale}
     anchors: List[str] = Field(default_factory=list)
+    remarks: List[str] = Field(default_factory=list)
+    grade_normalized: Optional[Dict[str, object]] = Field(default=None, serialization_alias="grade_normalized")
+    grade_source: Optional[Literal["inline", "table", "context"]] = None
+    grade_candidates: Optional[List[Dict[str, object]]] = Field(
+        default=None,
+        alias="_grade_candidates",
+        serialization_alias="_grade_candidates",
+    )
+    ungraded: bool = False
+    ungraded_reason: Optional[str] = None
+    consensus_basis: Optional[str] = None
 
 
 class KeyPoint(MedparseModel):

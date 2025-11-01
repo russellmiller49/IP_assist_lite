@@ -28,4 +28,12 @@ def test_research_article_flags_non_strict_yield() -> None:
     assert ats_metrics is not None
     assert ats_metrics.get("compatible") is False
     reasons = ats_metrics.get("exclusion_reasons") or []
-    assert any("follow_up_used_in_numerator" in reason for reason in reasons)
+    allowed = {
+        "no_n_over_N",
+        "follow_up_used_in_numerator",
+        "nonspecific_counts_included",
+        "derived_counts_from_percent",
+    }
+    assert set(reasons).issubset(allowed)
+    assert "no_n_over_N" in reasons
+    assert "follow_up_used_in_numerator" in reasons

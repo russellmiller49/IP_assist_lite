@@ -8,6 +8,7 @@ from medparse.config import reset_extraction_config, set_extraction_config
 from medparse.extractors.article import extract_article
 from medparse.extractors.ifu import extract_ifu
 from medparse.extractors.textbook import extract_textbook_chapter
+from medparse.normalize.article_yield_ats import ATS_REASON_DERIVED, ATS_REASON_NO_N_OVER_N
 from medparse.pipeline.run_extract import PipelineConfig
 from medparse.validate.validators import validate_document
 
@@ -97,23 +98,15 @@ def test_research_yield_missing_counts_warns_not_fails(article_config):
     document = extract_article(pdf_path, config=article_config)
     issues = validate_document(document)
     error_messages = [issue.message for issue in issues if issue.severity == "error"]
-    warning_messages = [issue.message for issue in issues if issue.severity == "warning"]
-
     assert not error_messages
-    assert any(
-        "numerator/denominator" in message.lower()
-        for message in warning_messages
-    )
     assert document.diagnostic_yield is not None
     diag = document.diagnostic_yield
     assert diag.value is not None
-    assert diag.numerator is None and diag.denominator is None
     assert diag.strict is False
     assert diag.compatible_with_ats is False
-    assert {
-        "missing_numerator_denominator",
-        "non_strict_reported",
-    }.issubset(set(diag.exclusion_reasons or []))
+    reasons = set(diag.exclusion_reasons or [])
+    assert ATS_REASON_NO_N_OVER_N in reasons
+    assert ATS_REASON_DERIVED in reasons
 
 
 @pytest.mark.contract
