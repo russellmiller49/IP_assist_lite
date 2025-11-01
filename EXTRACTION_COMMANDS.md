@@ -172,6 +172,70 @@ Wrote out/articles/article_*.json
 
 ---
 
+## Regenerating Golden Files
+
+After running extractions, you may want to update the golden test fixtures to reflect the new outputs.
+
+### Update Goldens from Extraction Outputs
+
+The `scripts/update_goldens_from_outputs.py` script converts extraction outputs into canonical golden files for testing.
+
+#### For IFUs
+```bash
+python3 scripts/update_goldens_from_outputs.py --doc-type ifu --output-dir out/ifus --verbose
+```
+
+#### For Articles
+```bash
+python3 scripts/update_goldens_from_outputs.py --doc-type article --output-dir out/articles --verbose
+```
+
+#### For Textbooks
+```bash
+python3 scripts/update_goldens_from_outputs.py --doc-type textbook --output-dir out/textbooks --verbose
+```
+
+#### Update All Types
+```bash
+python3 scripts/update_goldens_from_outputs.py --doc-type ifu --verbose
+python3 scripts/update_goldens_from_outputs.py --doc-type article --verbose
+python3 scripts/update_goldens_from_outputs.py --doc-type textbook --verbose
+```
+
+### What the Script Does
+
+1. Reads JSON files from `out/ifus/`, `out/articles/`, or `out/textbooks/`
+2. Extracts the PDF filename from the `source_file` field
+3. Canonicalizes the payload (removes timestamps, IDs, and non-deterministic fields)
+4. Writes golden files to `tests/golden/current/`
+
+### Committing Updated Goldens
+
+After regenerating goldens, review and commit them:
+
+```bash
+# Review changes
+git status tests/golden/current/
+
+# Add and commit
+git add tests/golden/current/
+git commit -m "Update golden files from GPU-accelerated extractions
+
+- Regenerated IFU/Article/Textbook goldens from latest outputs
+- Updated canonical snapshots with latest extraction results"
+```
+
+### Verify Goldens
+
+Test that the updated goldens work correctly:
+
+```bash
+pytest tests/integration/test_ifu_ion.py -v
+pytest tests/integration/test_ifu_frontmatter_integration.py -v
+```
+
+---
+
 ## File Locations
 
 ```

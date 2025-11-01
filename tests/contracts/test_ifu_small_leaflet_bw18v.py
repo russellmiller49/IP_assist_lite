@@ -1,0 +1,48 @@
+from __future__ import annotations
+
+from pathlib import Path
+
+import pytest
+import yaml
+
+from medparse.config import get_extraction_config
+from medparse.pipeline.run_extract import run_extract
+from medparse.validate.ifu_rules import validate_ifu
+
+CONFIG_PATH = Path("configs/run_ifu.yaml")
+BW18V_PDF = Path("data/Input pdfs/IFUs/pdf/BW-18V_Instruction_Manual.pdf")
+
+
+@pytest.mark.skipif(not BW18V_PDF.exists(), reason="BW-18V IFU fixture not available")
+def test_small_leaflet_indications_fallback() -> None:
+    outcome = run_extract(
+        pdf_path=BW18V_PDF,
+        config_path=CONFIG_PATH,
+        use_cache=False,
+        force_deep=False,
+        profile_override="enriched",
+    )
+    assert outcome.success, outcome.failure_reason or "extraction failed"
+
+    document = outcome.document
+    assert document is not None
+
+    # Ensure indications_for_use populated via small IFU policy with provenance
+    indications = document.indications_for_use
+    if isinstance(indications, dict):
+        assert indications.get("derived_from") == "intended_use"
+        assert indications.get("text")
+    else:
+        assert isinstance(indications, str)
+        assert indications.strip()
+
+    pipeline = document.pipeline_info
+    assert pipeline.get("small_ifu_fallback_applied") is True
+    assert pipeline.get("small_ifu_threshold") and pipeline.get("small_ifu_threshold") >= 2
+
+    # Safety density should not raise hard errors for small leaflets
+    extraction_config = get_extraction_config()
+    config_payload = yaml.safe_load(CONFIG_PATH.read_text(encoding="utf-8")) or {}
+    extraction_config.ifu = config_payload.get("ifu", {}) or {}
+    issues = validate_ifu(document, extraction_config)
+    assert not any(issue.severity == "error" for issue in issues)

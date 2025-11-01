@@ -9,7 +9,7 @@ from typing import Dict, Iterable, List, NamedTuple, Optional, Sequence, Set, Tu
 
 from medparse.normalize.guideline_grade import SIGN_INLINE_RE, detect_context_candidates, detect_inline_candidates
 from medparse.tables.extract_guideline_tables import TableGradeIndex, extract_guideline_grade_index
-from medparse.guideline.grade_map import map_sign_letter
+from medparse.guideline.grades import canonicalize_scale, map_grade_code, map_sign_letter
 from medparse.schema.article import ArticleDocument, DiagnosticFlow, GuidelineRecommendation, KeyPoint
 from medparse.schema.common import EvidenceSpan
 
@@ -27,6 +27,13 @@ GRADE_NEIGHBOR_HINT = re.compile(
 )
 JOIN_PUNCTUATION = {":", ";", ",", "—", "-", "–"}
 RECOMMENDATION_VERB = re.compile(r"(?i)\bwe\s+(recommend|suggest)\b")
+RECOMMENDATION_MODAL = re.compile(r"(?i)\b(we\s+(?:recommend|suggest)|recommend(?:ation|ations)?|suggest(?:ion|ions)?)\b")
+GRADE_PAREN_PHRASE_RE = re.compile(
+    r"\(\s*(?:grade\s*[12]\s*[ABCD]|(?:strong|conditional|weak)\s+recommendation[^)]{0,120}|ungraded\s+consensus(?:-?based)?\s+statement)\s*\)",
+    re.IGNORECASE,
+)
+GRADE_CODE_INLINE_RE = re.compile(r"(?i)\bgrade\s*(?:recommendation\s*)?([12])\s*([ABCD])\b")
+ATS_WORD_RE = re.compile(r"\bats\b")
 
 DEFINITION_FIELD_MAP = {
     "diagnostic yield": "diagnostic_yield",
@@ -48,10 +55,41 @@ class EnumeratedItem(NamedTuple):
     paragraph_hashes: List[str]
 
 
+def _infer_grade_scale_hint(document: ArticleDocument) -> Optional[str]:
+    """Infer the dominant grading scheme from document metadata."""
+
+    fields: List[str] = []
+    for attr in ("title", "journal"):
+        value = getattr(document, attr, None)
+        if isinstance(value, str) and value.strip():
+            fields.append(value)
+    source_file = getattr(document, "source_file", None)
+    if isinstance(source_file, str) and source_file.strip():
+        fields.append(source_file)
+    pipeline_info = getattr(document, "pipeline_info", {}) or {}
+    if isinstance(pipeline_info, dict):
+        front_matter = pipeline_info.get("front_matter")
+        if isinstance(front_matter, dict):
+            for value in front_matter.values():
+                if isinstance(value, str) and value.strip():
+                    fields.append(value)
+
+    combined = " ".join(part for part in fields if part).lower()
+    if not combined:
+        return None
+    if "chest" in combined or "american college of chest physicians" in combined or "accp" in combined:
+        return "CHEST"
+    if "esge" in combined or ("ers" in combined and "ests" in combined):
+        return "ESGE_ERS_ESTS"
+    if "american thoracic society" in combined or ATS_WORD_RE.search(combined):
+        return "ATS_ERS"
+    return None
+
+
 def enrich_guideline_document(document: ArticleDocument, pages: Sequence) -> None:
     """Apply guideline-specific promotions to the given document in-place."""
 
-    if document.doc_subtype not in {"guideline", "statement"}:
+    if document.doc_subtype not in {"guideline", "statement", "classification"}:
         return
 
     paragraph_store = getattr(document, "paragraph_store", {}) or {}
@@ -107,21 +145,33 @@ def _preprocess_recommendations(recommendations: List[GuidelineRecommendation]) 
     for rec in recommendations:
         original_text = rec.text or ""
         cleaned_text, remarks = _strip_remarks(original_text)
-        if cleaned_text:
-            rec.text = cleaned_text
+        stripped_text = cleaned_text or rec.text or ""
+        stripped_text, inline_grades = _strip_inline_grade_phrases(stripped_text)
+        if stripped_text:
+            rec.text = stripped_text
         rec.remarks = remarks or []
         rec.grade_candidates = []
         rec.grade_normalized = None
         rec.grade_source = None
         rec.normalized = None
         rec.grade = rec.grade if isinstance(rec.grade, str) else None
-        rec.grade_raw = rec.grade_raw or rec.grade
-        rec.ungraded = bool(rec.ungraded)
+        grade_fragments: List[str] = []
+        if rec.grade_raw:
+            grade_fragments.append(str(rec.grade_raw))
+        grade_fragments.extend(inline_grades)
+        cleaned_fragments = [fragment.strip() for fragment in grade_fragments if fragment and fragment.strip()]
+        if cleaned_fragments:
+            rec.grade_raw = "; ".join(dict.fromkeys(cleaned_fragments))
+        else:
+            rec.grade_raw = None
+        rec.ungraded = False
         rec.ungraded_reason = rec.ungraded_reason
         rec.consensus_basis = rec.consensus_basis
+        rec.graded = False
+        rec.typed = False
         if CHEST_UNGRADED_PATTERN.search(original_text):
             rec.consensus_basis = rec.consensus_basis or "CHEST-ungraded"
-        rec.text = " ".join(rec.text.split())
+        rec.text = " ".join((rec.text or "").split())
 
 
 def _assign_recommendation_grades(
@@ -133,6 +183,10 @@ def _assign_recommendation_grades(
     table_index = extract_guideline_grade_index(tables, signature_fn=_stable_text_signature)
     pipeline_info = getattr(document, "pipeline_info", {}) or {}
     summary_anchor_ids = set(pipeline_info.get("summary_recommendation_anchors") or [])
+    scale_hint = _infer_grade_scale_hint(document)
+    if isinstance(pipeline_info, dict) and scale_hint:
+        pipeline_info.setdefault("grade_scale_hint", scale_hint)
+        document.pipeline_info = pipeline_info
     context_map = _collect_context_grade_candidates(recommendations, paragraph_store)
     summary_grade_map = _collect_summary_grade_candidates(paragraph_store)
     source_counts: Dict[str, int] = defaultdict(int)
@@ -158,20 +212,28 @@ def _assign_recommendation_grades(
             best["source"] = "table"
             ordered[0] = dict(best)
         if best:
-            _apply_grade_payload(rec, best)
+            _apply_grade_payload(rec, best, scale_hint=scale_hint)
             source = str(best.get("source") or "")
             if source:
                 source_counts[source] += 1
         else:
-            rec.grade_normalized = None
-            rec.grade_source = None
-            rec.ungraded = True
-            if rec.statement_type != "consensus":
-                rec.statement_type = "ungraded"
-            if rec.ungraded:
-                rec.ungraded_reason = rec.ungraded_reason or "no_grade_detected"
-            rec.grade = rec.grade if isinstance(rec.grade, str) else None
+            fallback_payload = _grade_payload_from_raw(rec.grade_raw, scale_hint=scale_hint)
+            if fallback_payload:
+                _apply_grade_payload(rec, fallback_payload, scale_hint=scale_hint)
+                source = str(fallback_payload.get("source") or "")
+                if source:
+                    source_counts[source] += 1
+            else:
+                rec.grade_normalized = None
+                rec.grade_source = None
+                rec.ungraded = True
+                if rec.statement_type != "consensus":
+                    rec.statement_type = "ungraded"
+                if rec.ungraded:
+                    rec.ungraded_reason = rec.ungraded_reason or "no_grade_detected"
+                rec.grade = rec.grade if isinstance(rec.grade, str) else None
         _apply_recommendation_type(rec)
+        _finalize_recommendation_flags(rec)
 
     return dict(source_counts)
 
@@ -285,7 +347,7 @@ def _anchor_detection_texts(
 def _looks_like_recommendation_phrase(text: Optional[str]) -> bool:
     if not text:
         return False
-    return bool(RECOMMENDATION_VERB.search(text))
+    return bool(RECOMMENDATION_MODAL.search(text))
 
 
 def _is_summary_recommendation(
@@ -382,6 +444,16 @@ def _collect_summary_grade_candidates(
             )
             if payload:
                 candidates[label].append(payload)
+        for match in GRADE_CODE_INLINE_RE.finditer(text):
+            payload = map_grade_code(
+                match.group(1),
+                match.group(2),
+                source="table",
+                confidence=0.86,
+                raw=match.group(0),
+            )
+            if payload:
+                candidates[label].append(payload)
     return candidates
 
 
@@ -433,6 +505,37 @@ def _strip_recommendation_label(text: str) -> str:
     return stripped
 
 
+def _strip_inline_grade_phrases(text: str) -> Tuple[str, List[str]]:
+    if not text:
+        return text, []
+
+    phrases: List[str] = []
+
+    def _capture(match: re.Match[str]) -> str:
+        phrase = match.group(0)
+        if phrase:
+            cleaned = phrase.strip()
+            cleaned = cleaned.strip("() ").strip()
+            if cleaned:
+                phrases.append(cleaned)
+        return " "
+
+    updated = GRADE_PAREN_PHRASE_RE.sub(_capture, text)
+
+    def _capture_code(match: re.Match[str]) -> str:
+        phrase = match.group(0)
+        if phrase:
+            cleaned = phrase.strip()
+            if cleaned not in phrases:
+                phrases.append(cleaned)
+        return " "
+
+    updated = GRADE_CODE_INLINE_RE.sub(_capture_code, updated)
+    cleaned = re.sub(r"\s{2,}", " ", updated).strip()
+    unique = list(dict.fromkeys(phrases))
+    return cleaned, unique
+
+
 def _deduplicate_payloads(items: Iterable[Dict[str, object]]) -> List[Dict[str, object]]:
     unique: List[Dict[str, object]] = []
     seen: Set[Tuple[object, ...]] = set()
@@ -465,11 +568,24 @@ def _candidate_sort_key(payload: Dict[str, object]) -> Tuple[float, float, float
     return precedence, confidence, detail
 
 
-def _apply_grade_payload(rec: GuidelineRecommendation, payload: Dict[str, object]) -> None:
+def _apply_grade_payload(
+    rec: GuidelineRecommendation,
+    payload: Dict[str, object],
+    *,
+    scale_hint: Optional[str] = None,
+) -> None:
     applied = dict(payload)
+    raw_value = applied.get("raw")
+    canonical_scale = canonicalize_scale(applied.get("scale"), raw=raw_value, hint=scale_hint)
+    if canonical_scale:
+        applied["scale"] = canonical_scale
+    elif applied.get("scale"):
+        applied["scale"] = str(applied["scale"]).upper()
+    else:
+        applied.pop("scale", None)
+
     rec.grade_normalized = applied
     rec.grade_source = str(applied.get("source") or "")
-    raw_value = applied.get("raw")
     if raw_value:
         rec.grade_raw = str(raw_value)
     scale = applied.get("scale")
@@ -478,17 +594,25 @@ def _apply_grade_payload(rec: GuidelineRecommendation, payload: Dict[str, object
     strength = applied.get("strength")
     certainty = applied.get("certainty")
     letter = applied.get("letter")
+    code = applied.get("code")
+    value_token = applied.get("value")
     if strength:
         rec.strength = strength
     if certainty:
         rec.evidence_level = certainty
-    if letter:
+    if code:
+        rec.grade = code
+    elif letter:
         rec.grade = letter
     elif strength:
         rec.grade = strength
+    elif isinstance(value_token, str) and value_token and value_token.lower() not in {"conditional", "strong"}:
+        rec.grade = value_token
     else:
         rec.grade = rec.grade if isinstance(rec.grade, str) else None
-    normalized: Dict[str, object] = {"scale": scale}
+    normalized: Dict[str, object] = {}
+    if scale:
+        normalized["scale"] = scale
     if strength:
         normalized["strength"] = strength
     if certainty:
@@ -496,6 +620,10 @@ def _apply_grade_payload(rec: GuidelineRecommendation, payload: Dict[str, object
         normalized["evidence_quality"] = certainty
     if letter:
         normalized["letter"] = letter
+    if code:
+        normalized["code"] = code
+    if value_token:
+        normalized.setdefault("value", value_token)
     rec.normalized = {key: value for key, value in normalized.items() if value is not None}
     rec.ungraded = bool(applied.get("ungraded"))
     if rec.ungraded:
@@ -504,13 +632,15 @@ def _apply_grade_payload(rec: GuidelineRecommendation, payload: Dict[str, object
         rec.statement_type = "consensus"
         if not strength:
             rec.strength = None
-        rec.grade = rec.grade if letter else None
+        rec.grade = rec.grade if code or letter else None
     else:
         rec.ungraded_reason = None
         if rec.statement_type != "consensus":
             rec.statement_type = "graded"
         if rec.consensus_basis and rec.consensus_basis == "CHEST-ungraded":
             rec.consensus_basis = None
+    rec.graded = not rec.ungraded
+    rec.typed = True
 
 
 def _remove_parenthetical_phrase(text: str, phrase: str) -> str:
@@ -564,20 +694,12 @@ def _tag_ungraded_recommendation(
 
 def _apply_recommendation_type(rec: GuidelineRecommendation) -> None:
     text_lower = (rec.text or "").lower()
-    if "we recommend" in text_lower:
+    if "recommend" in text_lower:
         rec.recommendation_type = "recommendation"
-    elif "we suggest" in text_lower:
+    elif "suggest" in text_lower:
         rec.recommendation_type = "suggestion"
     else:
         rec.recommendation_type = rec.recommendation_type or "consensus_statement"
-
-    if rec.ungraded:
-        if rec.recommendation_type == "consensus_statement":
-            rec.statement_type = "consensus"
-        else:
-            rec.statement_type = "ungraded"
-    else:
-        rec.statement_type = rec.statement_type if rec.statement_type == "consensus" else "graded"
 
 
 def _anchor_recommendations(document: ArticleDocument, paragraph_store: Dict[str, Dict[str, object]]) -> None:
@@ -1161,6 +1283,80 @@ def _stable_text_signature(text: str) -> str:
     return digest.hexdigest()
 
 
+def _grade_payload_from_raw(
+    raw: Optional[str],
+    *,
+    scale_hint: Optional[str] = None,
+) -> Optional[Dict[str, object]]:
+    if not raw:
+        return None
+    fragments = [segment.strip() for segment in str(raw).split(";") if segment and segment.strip()]
+    for fragment in fragments:
+        match = GRADE_CODE_INLINE_RE.search(fragment)
+        if match:
+            payload = map_grade_code(
+                match.group(1),
+                match.group(2),
+                source="inline",
+                confidence=0.82,
+                raw=fragment,
+                scale_hint=scale_hint,
+            )
+            if payload:
+                return payload
+        candidates = detect_inline_candidates(fragment) or detect_context_candidates(fragment)
+        for candidate in candidates:
+            payload = dict(candidate.to_payload())
+            payload.setdefault("source", "inline")
+            payload["raw"] = payload.get("raw") or fragment
+            canonical_scale = canonicalize_scale(payload.get("scale"), raw=fragment, hint=scale_hint)
+            if canonical_scale:
+                payload["scale"] = canonical_scale
+            elif payload.get("scale"):
+                payload["scale"] = str(payload["scale"]).upper()
+            return payload
+    return None
+
+
+def _finalize_recommendation_flags(rec: GuidelineRecommendation) -> None:
+    normalized = getattr(rec, "grade_normalized", None) or {}
+    graded_flag = bool(normalized) and not normalized.get("ungraded", False)
+    typed_flag = False
+    if normalized:
+        typed_flag = True
+    if not typed_flag:
+        if _looks_like_recommendation_phrase(rec.text):
+            typed_flag = True
+        elif isinstance(rec.recommendation_type, str) and rec.recommendation_type in {"recommendation", "suggestion"}:
+            typed_flag = True
+    if not typed_flag and rec.label:
+        typed_flag = True
+    if not typed_flag and isinstance(rec.recommendation_type, str) and rec.recommendation_type == "consensus_statement":
+        typed_flag = True
+
+    rec.graded = graded_flag
+    rec.typed = bool(typed_flag)
+
+    if graded_flag:
+        rec.ungraded = False
+        rec.ungraded_reason = None
+        if rec.statement_type != "consensus":
+            rec.statement_type = "graded"
+    elif normalized.get("ungraded", False):
+        rec.ungraded = True
+        if rec.statement_type != "consensus":
+            rec.statement_type = "ungraded"
+    elif rec.typed:
+        rec.ungraded = True
+        rec.ungraded_reason = rec.ungraded_reason or "grade_not_provided"
+        if rec.statement_type not in {"consensus", "ungraded"}:
+            rec.statement_type = "ungraded"
+    else:
+        rec.ungraded = bool(rec.ungraded)
+        if rec.ungraded and rec.statement_type != "consensus":
+            rec.statement_type = "ungraded"
+
+
 def _recommendation_density_stats(
     recommendations: Sequence[GuidelineRecommendation],
 ) -> Tuple[int, int, float, float]:
@@ -1172,13 +1368,13 @@ def _recommendation_density_stats(
     typed_ungraded = 0
     for rec in recommendations:
         normalized = getattr(rec, "grade_normalized", None) or {}
+        graded_flag = bool(getattr(rec, "graded", False))
+        typed_flag = bool(getattr(rec, "typed", False) or normalized)
         if normalized:
             with_grade += 1
-            if normalized.get("ungraded"):
-                typed_ungraded += 1
-            else:
-                graded += 1
-        elif getattr(rec, "ungraded", False):
+        if graded_flag:
+            graded += 1
+        elif typed_flag:
             typed_ungraded += 1
     typed_ungraded = min(typed_ungraded, max(0, total - graded))
     grade_density = with_grade / total if total else 0.0

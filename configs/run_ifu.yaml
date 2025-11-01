@@ -1,8 +1,8 @@
 doc_type: ifu
 profile: enriched
 engines:
-  - pdfplumber
   - pymupdf
+  - pdfplumber
 
 thresholds:
   default:
@@ -33,6 +33,22 @@ emit:
   max_tables: 10
 
 ifu:
+  small_ifu_threshold: 4
+  small_leaflet_policy: map_intended_use_to_indications
+  engine:
+    mode: auto
+    text: pymupdf
+    tables: pdfplumber
+    auto:
+      sample_pages: 6
+      char_density_threshold: 1400
+      image_density_threshold: 0.6
+      large_doc_pages: 90
+      prefer: pymupdf
+      fallback: pdfplumber
+      timeouts:
+        pymupdf: 70
+        pdfplumber: 85
   anchors:
     indications_for_use:
       start:
@@ -51,10 +67,31 @@ ifu:
     "INTUITIVE SURGICAL, INC.":
       toc_guard:
         density_threshold: 0.55
-  engine_fallback:
-    space_ratio_threshold: 0.05
-    avg_token_length_threshold: 12.0
-    fallback_engines:
-      - pymupdf
-      - pdfplumber
-    enable_ocr: false
+        dot_leader_min: 0.15  # More aggressive for Ion's index pages
+      strict_anchors: true  # Use strict section boundaries
+      require_cover_metadata: true  # Require PN/Rev/Model from cover
+      min_anchor_page: 10
+    "INTUITIVE SURGICAL":  # Alternate name matching
+      toc_guard:
+        density_threshold: 0.55
+        dot_leader_min: 0.15
+      strict_anchors: true
+      require_cover_metadata: true
+      min_anchor_page: 10
+    "OLYMPUS":
+      recognize_important_info_block: true
+      small_ifu_fallback: true  # For 2-4 page leaflets like BW 18V
+    "OLYMPUS CORPORATION":
+      recognize_important_info_block: true
+      small_ifu_fallback: true
+  safety:
+    default:
+      small_max_pages: 6
+      small_min_blocks: 0
+      min_blocks: 4
+      large_page_threshold: 90
+      large_min_blocks: 20
+      chars_per_block: 7500
+    manufacturers:
+      "INTUITIVE SURGICAL, INC.":
+        large_min_blocks: 24

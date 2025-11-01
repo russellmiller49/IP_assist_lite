@@ -129,6 +129,8 @@ class GuidelineRecommendation(MedparseModel):
     ungraded: bool = False
     ungraded_reason: Optional[str] = None
     consensus_basis: Optional[str] = None
+    graded: bool = False
+    typed: bool = False
 
 
 class KeyPoint(MedparseModel):

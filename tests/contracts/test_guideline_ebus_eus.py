@@ -28,19 +28,21 @@ def test_ebus_guideline_contract():
     recommendations = document.recommendations or []
     assert len(recommendations) >= 8
     with_grade = [rec for rec in recommendations if rec.grade_normalized]
-    sign_inline = [
+    esge_inline = [
         rec
         for rec in recommendations
         if rec.grade_normalized
-        and rec.grade_normalized.get("scale") == "SIGN"
+        and rec.grade_normalized.get("scale") == "ESGE_ERS_ESTS"
         and rec.grade_normalized.get("source") == "inline"
-        and rec.grade_normalized.get("letter")
     ]
     grade_density = len(with_grade) / len(recommendations) if recommendations else 0.0
     typed_density = sum(1 for rec in recommendations if rec.grade_normalized or getattr(rec, "ungraded", False)) / len(recommendations) if recommendations else 0.0
     assert grade_density >= 0.70
     assert typed_density >= 0.95
-    assert sign_inline, "Expected SIGN inline detections"
+    assert esge_inline, "Expected ESGE/ERS/ESTS inline detections"
+    scales = {rec.grade_normalized.get("scale") for rec in with_grade if rec.grade_normalized}
+    assert "ESGE_ERS_ESTS" in scales
+    assert all(rec.grade_normalized.get("value") for rec in with_grade if rec.grade_normalized)
 
     payload = outcome.to_payload()
     metrics = payload.get("_metrics", {})
@@ -55,3 +57,4 @@ def test_ebus_guideline_contract():
         assert metrics.get("umls_entities", 0) > 0
 
     assert metadata.get("window_placeholders_removed", 0) == 0
+    assert metadata.get("grade_scale_hint") == "ESGE_ERS_ESTS"

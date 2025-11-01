@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import re
-from typing import Dict, Iterable, List, Optional
+from typing import Dict, List, Optional, Tuple
 
 from medparse.schema.article import ArticleDocument
 from medparse.normalize.article_yield_ats import (
@@ -18,8 +18,6 @@ FOLLOW_UP_CONSIDERED_PATTERN = re.compile(r"considered diagnostic if follow[-\s]
 INTERMEDIATE_PATTERN = re.compile(r"\b(intermediate|liberal)\s+diagnostic\s+yield\b", re.IGNORECASE)
 NONSPECIFIC_TERMS = re.compile(r"\b(atypia|suspicious|nonspecific)\b", re.IGNORECASE)
 N_OVER_N_PATTERN = re.compile(r"\b\d{1,4}\s*/\s*\d{1,4}\b")
-STRICT_ANCHOR_PATTERN = re.compile(r"\b(strict|diagnostic yield)\b", re.IGNORECASE)
-PROXIMITY_WINDOW = 120
 CANONICAL_REASONS = {
     ATS_REASON_NO_N_OVER_N,
     ATS_REASON_FOLLOW_UP,
@@ -42,8 +40,10 @@ def validate_ats_yield(document: ArticleDocument) -> Dict[str, object]:
         return result
 
     paragraph_store = getattr(document, "paragraph_store", {}) or {}
+    ordered_paragraphs = _ordered_paragraphs(paragraph_store)
+    texts = [text for _order, _page, text in ordered_paragraphs]
+
     initial_strict_claim = bool(getattr(diagnostic, "strict", False) or getattr(diagnostic, "compatible_with_ats", False))
-    texts = list(_paragraph_texts(paragraph_store))
 
     exclusion_reasons: List[str] = []
     for reason in diagnostic.exclusion_reasons or []:
@@ -51,46 +51,50 @@ def validate_ats_yield(document: ArticleDocument) -> Dict[str, object]:
         if normalized and normalized not in exclusion_reasons:
             exclusion_reasons.append(normalized)
 
-    has_follow_up_phrase = any(FOLLOW_UP_PATTERN.search(text) for text in texts)
-    follow_up_considered = any(FOLLOW_UP_CONSIDERED_PATTERN.search(text) for text in texts)
-    if has_follow_up_phrase or follow_up_considered:
+    if any(FOLLOW_UP_PATTERN.search(text) for text in texts) or any(FOLLOW_UP_CONSIDERED_PATTERN.search(text) for text in texts):
         if ATS_REASON_FOLLOW_UP not in exclusion_reasons:
             exclusion_reasons.append(ATS_REASON_FOLLOW_UP)
 
-    has_intermediate_phrase = any(INTERMEDIATE_PATTERN.search(text) for text in texts)
-    if has_intermediate_phrase and ATS_REASON_NONSPECIFIC not in exclusion_reasons:
+    if any(INTERMEDIATE_PATTERN.search(text) for text in texts) and ATS_REASON_NONSPECIFIC not in exclusion_reasons:
         exclusion_reasons.append(ATS_REASON_NONSPECIFIC)
 
-    # Flag nonspecific terminology when combined with yield language
-    nonspecific_mentions = any(NONSPECIFIC_TERMS.search(text) and "diagnostic" in text for text in texts)
-    if nonspecific_mentions and ATS_REASON_NONSPECIFIC not in exclusion_reasons:
+    if any(NONSPECIFIC_TERMS.search(text) and "diagnostic" in text for text in texts) and ATS_REASON_NONSPECIFIC not in exclusion_reasons:
         exclusion_reasons.append(ATS_REASON_NONSPECIFIC)
 
-    anchor_seen = any(STRICT_ANCHOR_PATTERN.search(text) for text in texts)
-    anchor_with_counts = any(_has_proximal_n_over_n(text) for text in texts)
+    strict_indices = _strict_anchor_indices(ordered_paragraphs)
 
     numerator = getattr(diagnostic, "numerator", None)
     denominator = getattr(diagnostic, "denominator", None)
 
-    if (numerator is None or denominator is None or (anchor_seen and not anchor_with_counts)) and ATS_REASON_NO_N_OVER_N not in exclusion_reasons:
+    if (numerator is None or denominator is None) and ATS_REASON_NO_N_OVER_N not in exclusion_reasons:
         exclusion_reasons.append(ATS_REASON_NO_N_OVER_N)
 
-    exclusion_reasons = list(dict.fromkeys(exclusion_reasons))
-
-    blockers = set(exclusion_reasons) & CANONICAL_REASONS
-    compatible = (
-        numerator is not None
-        and denominator is not None
-        and not blockers
-    )
+    counts_adjacent = True
+    if strict_indices:
+        counts_adjacent = _anchors_have_adjacent_counts(ordered_paragraphs, strict_indices)
+        if not counts_adjacent and ATS_REASON_NO_N_OVER_N not in exclusion_reasons:
+            exclusion_reasons.append(ATS_REASON_NO_N_OVER_N)
 
     exclusion_reasons = [reason for reason in exclusion_reasons if reason in CANONICAL_REASONS]
+    ordered_reasons: List[str] = []
+    for reason in (
+        ATS_REASON_NO_N_OVER_N,
+        ATS_REASON_FOLLOW_UP,
+        ATS_REASON_NONSPECIFIC,
+        ATS_REASON_DERIVED,
+    ):
+        if reason in exclusion_reasons and reason not in ordered_reasons:
+            ordered_reasons.append(reason)
+
+    blockers = {reason for reason in ordered_reasons if reason != ATS_REASON_NO_N_OVER_N}
+    has_counts = numerator is not None and denominator is not None
+    compatible = has_counts and counts_adjacent and not blockers
 
     diagnostic.strict = bool(compatible)
-    diagnostic.exclusion_reasons = exclusion_reasons
-    diagnostic.compatible_with_ats = compatible
+    diagnostic.compatible_with_ats = bool(compatible)
+    diagnostic.exclusion_reasons = ordered_reasons
 
-    result["strict_yield_detected"] = bool(initial_strict_claim or compatible)
+    result["strict_yield_detected"] = bool(initial_strict_claim or strict_indices or has_counts)
     result["compatible"] = diagnostic.compatible_with_ats
     result["exclusion_reasons"] = exclusion_reasons
 
@@ -114,22 +118,51 @@ def _normalize_reason(reason: Optional[str]) -> Optional[str]:
     return None
 
 
-def _has_proximal_n_over_n(text: str, window: int = PROXIMITY_WINDOW) -> bool:
-    if not text:
-        return False
-    for match in STRICT_ANCHOR_PATTERN.finditer(text):
-        start = max(0, match.start() - window)
-        end = min(len(text), match.end() + window)
-        if N_OVER_N_PATTERN.search(text[start:end]):
-            return True
-    return False
-
-
-def _paragraph_texts(paragraph_store: Dict[str, Dict[str, object]]) -> Iterable[str]:
+def _ordered_paragraphs(paragraph_store: Dict[str, Dict[str, object]]) -> List[Tuple[int, Optional[int], str]]:
+    ordered: List[Tuple[int, Optional[int], str]] = []
     for entry in paragraph_store.values():
         text = entry.get("text")
-        if isinstance(text, str) and text:
-            yield text.lower()
+        if not isinstance(text, str) or not text.strip():
+            continue
+        orders = entry.get("order") or []
+        try:
+            order_index = min(int(value) for value in orders) if orders else 10**6
+        except (TypeError, ValueError):
+            order_index = 10**6
+        page = entry.get("page")
+        ordered.append((order_index, page, text.lower()))
+    ordered.sort(key=lambda item: item[0])
+    return ordered
+
+
+def _strict_anchor_indices(paragraphs: List[Tuple[int, Optional[int], str]]) -> List[int]:
+    indices: List[int] = []
+    for idx, (_order, _page, text) in enumerate(paragraphs):
+        if "strict" in text:
+            indices.append(idx)
+    return indices
+
+
+def _anchors_have_adjacent_counts(
+    paragraphs: List[Tuple[int, Optional[int], str]],
+    indices: List[int],
+) -> bool:
+    if not paragraphs or not indices:
+        return True
+
+    for anchor_idx in indices:
+        text = paragraphs[anchor_idx][2]
+        if N_OVER_N_PATTERN.search(text):
+            return True
+        neighbors = []
+        if anchor_idx > 0:
+            neighbors.append(paragraphs[anchor_idx - 1][2])
+        if anchor_idx + 1 < len(paragraphs):
+            neighbors.append(paragraphs[anchor_idx + 1][2])
+        for neighbor_text in neighbors:
+            if neighbor_text and N_OVER_N_PATTERN.search(neighbor_text):
+                return True
+    return False
 
 
 __all__ = ["validate_ats_yield"]

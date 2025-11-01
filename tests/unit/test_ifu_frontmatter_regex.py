@@ -1,0 +1,25 @@
+from __future__ import annotations
+
+from medparse.ingest.models import PageData
+from medparse.ifu.frontmatter import extract_front_matter
+
+
+def test_front_matter_patterns_capture_identifiers() -> None:
+    cover_lines = [
+        "ERBE Elektromedizin GmbH",
+        "SystemCarrier Performance",
+        "REF D294849",
+        "Rev B",
+        "Published Date: 2022-04-15",
+        "Model SC-200",
+    ]
+    pages = [PageData(number=1, text="\n".join(cover_lines), lines=cover_lines, headings=[], tables=[])]
+
+    meta = extract_front_matter(pages)
+
+    assert meta["manufacturer"] == "ERBE Elektromedizin GmbH"
+    assert meta["part_number"] == "D294849"
+    assert meta["revision"] == "B"
+    assert meta["publication_date"] == "2022-04-15"
+    assert meta["model"] == "SC-200"
+    assert meta["product_name"] == "SystemCarrier Performance"

@@ -8,7 +8,7 @@ from dataclasses import dataclass, field
 import re
 from datetime import datetime
 from pathlib import Path
-from typing import Any, Dict, List, Literal, Optional, Sequence, Tuple, Type
+from typing import Any, Dict, Iterable, List, Literal, Optional, Sequence, Tuple, Type
 
 from collections import defaultdict
 import yaml
@@ -50,6 +50,123 @@ MODEL_MAP: Dict[str, Type[BaseDocument]] = {
     "ifu": IFUDocument,
     "textbook": TextbookChapterDocument,
 }
+
+
+def _estimate_pdf_density(pdf_path: Path, *, sample_pages: int = 6) -> Dict[str, float]:
+    try:
+        import fitz  # type: ignore[import-untyped]
+    except ImportError:  # pragma: no cover - optional dependency guard
+        return {}
+
+    try:
+        doc = fitz.open(pdf_path)
+    except Exception:  # pragma: no cover - defensive
+        return {}
+
+    page_count = int(getattr(doc, "page_count", 0) or 0)
+    sample_total = max(1, min(sample_pages, page_count) or 1)
+    total_chars = 0
+    total_images = 0
+
+    for idx in range(sample_total):
+        try:
+            page = doc.load_page(idx)
+        except Exception:  # pragma: no cover - defensive
+            continue
+        text = page.get_text("text") or ""
+        total_chars += len(text)
+        try:
+            total_images += len(page.get_images(full=True))
+        except Exception:  # pragma: no cover - defensive
+            try:
+                total_images += len(page.get_images())
+            except Exception:
+                total_images += 0
+
+    try:
+        doc.close()
+    except Exception:  # pragma: no cover - defensive
+        pass
+
+    avg_chars = total_chars / float(sample_total)
+    image_ratio = total_images / float(sample_total)
+    return {
+        "page_count": float(page_count),
+        "avg_chars_per_page": avg_chars,
+        "image_ratio": image_ratio,
+    }
+
+
+def _resolve_ifu_engines(
+    pdf_path: Path,
+    config: PipelineConfig,
+    *,
+    force_deep: bool,
+) -> tuple[list[str], Dict[str, float]]:
+    base_engines = config.resolved_engines(force_deep=force_deep)
+    ifu_settings = config.ifu or {}
+    if not isinstance(ifu_settings, dict):
+        ifu_settings = {}
+    engine_block = ifu_settings.get("engine") or {}
+    if not isinstance(engine_block, dict):
+        engine_block = {}
+
+    mode = str(engine_block.get("mode") or "manual").lower()
+    text_engine = str(engine_block.get("text") or (base_engines[0] if base_engines else "pymupdf"))
+    tables_engine = str(engine_block.get("tables") or "pdfplumber")
+    fallback_engine = str(engine_block.get("fallback") or tables_engine or "pdfplumber")
+    auto_block = engine_block.get("auto") or {}
+    if not isinstance(auto_block, dict):
+        auto_block = {}
+    timeout_block = auto_block.get("timeouts") or engine_block.get("timeouts") or {}
+    engine_timeouts: Dict[str, float] = {}
+    if isinstance(timeout_block, dict):
+        for key, value in timeout_block.items():
+            try:
+                engine_timeouts[str(key).lower()] = float(value)
+            except (TypeError, ValueError):  # pragma: no cover - defensive
+                continue
+
+    def _unique_order(candidates: Iterable[str]) -> list[str]:
+        ordered: list[str] = []
+        seen: set[str] = set()
+        for candidate in candidates:
+            if not candidate:
+                continue
+            lowered = candidate.lower()
+            if lowered not in seen:
+                seen.add(lowered)
+                ordered.append(lowered)
+        return ordered
+
+    if mode in {"pymupdf", "pdfplumber"}:
+        engines = _unique_order([mode, *base_engines])
+        return engines, engine_timeouts
+
+    if mode != "auto":
+        engines = _unique_order([text_engine, fallback_engine, *base_engines])
+        return engines, engine_timeouts
+
+    sample_pages = int(auto_block.get("sample_pages", 6) or 6)
+    metrics = _estimate_pdf_density(pdf_path, sample_pages=sample_pages)
+    avg_chars = float(metrics.get("avg_chars_per_page", 0.0))
+    image_ratio = float(metrics.get("image_ratio", 0.0))
+    page_count = float(metrics.get("page_count", 0.0))
+
+    char_threshold = float(auto_block.get("char_density_threshold", auto_block.get("char_threshold", 900)))
+    image_threshold = float(auto_block.get("image_density_threshold", auto_block.get("image_threshold", 0.8)))
+    large_doc_pages = float(auto_block.get("large_doc_pages", 120))
+    prefer_engine = str(auto_block.get("prefer", text_engine or "pymupdf"))
+    fallback = str(auto_block.get("fallback", fallback_engine or "pdfplumber"))
+
+    primary = prefer_engine
+    if avg_chars < char_threshold or image_ratio >= image_threshold:
+        primary = fallback
+    elif page_count >= large_doc_pages:
+        primary = prefer_engine
+
+    engines = _unique_order([primary, prefer_engine, fallback, fallback_engine, text_engine, *base_engines])
+    return engines, engine_timeouts
 
 
 @dataclass
@@ -594,6 +711,7 @@ def run_extract(
     profile_override: Optional[str] = None,
     emit_overrides: Optional[Dict[str, object]] = None,
     metadata_overrides: Optional[Dict[str, object]] = None,
+    ifu_overrides: Optional[Dict[str, object]] = None,
 ) -> PipelineOutcome:
     """Run extraction with completeness checks and caching."""
 
@@ -625,16 +743,30 @@ def run_extract(
             merged_metadata[key] = value
         config.metadata_sources = merged_metadata
 
+    if ifu_overrides:
+        merged_ifu = dict(config.ifu or {})
+        for key, value in ifu_overrides.items():
+            if value is None:
+                continue
+            merged_ifu[key] = value
+        config.ifu = merged_ifu
+
     if config.doc_type not in EXTRACTOR_MAP:
         raise ValueError(f"Unsupported doc_type '{config.doc_type}' in {config_path}")
 
     extractor = EXTRACTOR_MAP[config.doc_type]
-    engines = config.resolved_engines(force_deep=force_deep)
+    engine_timeouts: Dict[str, float] = {}
+    if config.doc_type == "ifu":
+        engines, engine_timeouts = _resolve_ifu_engines(pdf_path, config, force_deep=force_deep)
+    else:
+        engines = config.resolved_engines(force_deep=force_deep)
     ocr_enabled = bool(config.ocr_settings.get("enable", config.ocr))
     base_metadata = {
         "engines_requested": engines,
         "metadata_sources": dict(config.metadata_sources or {}),
     }
+    if engine_timeouts:
+        base_metadata["engine_timeouts"] = dict(engine_timeouts)
     pdf_bytes = pdf_path.read_bytes()
     total_pages = _determine_total_pages(pdf_path)
 
@@ -708,6 +840,7 @@ def run_extract(
 
         metrics = _compute_metrics(pages, total_pages, duration)
         metrics.update(_document_metrics(document))
+        document.pipeline_info.setdefault("extracted_chars", metrics.get("extracted_chars"))
         if bool(document.pipeline_info.get("paragraph_dedup_applied")):
             metrics["paragraph_dedup_applied"] = True
         if bool(document.pipeline_info.get("text_repair_applied")):
@@ -724,6 +857,27 @@ def run_extract(
             )
 
         emit_warnings = _apply_emit_constraints(document, config.emit)
+
+        timeout_limit = engine_timeouts.get(engine)
+        if timeout_limit and duration > timeout_limit:
+            LOGGER.warning(
+                "Engine %s exceeded soft timeout %.1fs (took %.1fs); attempting fallback.",
+                engine,
+                timeout_limit,
+                duration,
+            )
+            metrics["engine_timeout"] = True
+            last_metrics = metrics
+            last_engine = engine
+            last_ocr_pages = ocr_pages
+            timeout_warning = f"{engine}_timeout"
+            metadata_with_timeout = dict(base_metadata)
+            warnings_list = metadata_with_timeout.setdefault("threshold_warnings", [])
+            if timeout_warning not in warnings_list:
+                warnings_list.append(timeout_warning)
+            last_metadata = metadata_with_timeout
+            failure_reason = timeout_warning
+            continue
 
         # Build evidence bank for deduplication and size reduction
         size_guards = SizeGuards(**(config.size_guards or {}))
@@ -956,6 +1110,7 @@ def _document_metrics(document: BaseDocument) -> Dict[str, int | float | bool]:
     if hasattr(document, "tables"):
         tables = getattr(document, "tables") or []
         payload["tables_kept"] = len(tables)
+        pipeline_info["tables_kept"] = len(tables)
 
     if hasattr(document, "recommendations"):
         recs = getattr(document, "recommendations") or []
@@ -1043,6 +1198,30 @@ def _document_metrics(document: BaseDocument) -> Dict[str, int | float | bool]:
     if hasattr(document, "relations"):
         relations = getattr(document, "relations") or []
         payload["relations_count"] = len(relations)
+        payload["relations_kept"] = len(relations)
+        pipeline_info["relations_kept"] = len(relations)
+
+    toc_guard_info = pipeline_info.get("toc_guard")
+    if isinstance(toc_guard_info, dict):
+        guard_metrics = {
+            "pages_dropped": toc_guard_info.get("pages_dropped", pipeline_info.get("toc_guard_pages_dropped", [])),
+            "pages_dropped_count": toc_guard_info.get(
+                "pages_dropped_count", pipeline_info.get("toc_guard_pages_dropped_count", 0)
+            ),
+        }
+        payload["toc_guard"] = guard_metrics
+    anchors_bleed = pipeline_info.get("anchors_bleed")
+    if isinstance(anchors_bleed, dict):
+        payload["anchors_bleed"] = dict(anchors_bleed)
+    if "small_ifu_fallback_applied" in pipeline_info:
+        payload["small_ifu_fallback_applied"] = bool(pipeline_info.get("small_ifu_fallback_applied"))
+    if "small_ifu_threshold" in pipeline_info:
+        payload["small_ifu_threshold"] = pipeline_info.get("small_ifu_threshold")
+    if "extracted_chars" in pipeline_info:
+        try:
+            payload["extracted_chars"] = int(pipeline_info.get("extracted_chars") or 0)
+        except (TypeError, ValueError):
+            payload["extracted_chars"] = 0
 
     _validate_metrics_consistency(payload, pipeline_info)
     document.pipeline_info = pipeline_info

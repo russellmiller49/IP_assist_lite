@@ -14,12 +14,15 @@ from medparse.ifu.anchors import (
     normalize_bullets,
     DEFAULT_SECTION_ANCHORS,
 )
+from medparse.ifu.manufacturers import get_manufacturer_rules
+from medparse.ifu.toc_guard import detect_first_chapter_page
 from medparse.ingest.models import PageData
 from medparse.normalize.ifu_sections import (
     clean_section_text,
     parse_contraindications,
     sanitize_adverse_events,
 )
+from medparse.normalize.ifu_small import apply_small_leaflet_policy
 from medparse.utils.log import get_logger
 
 LOGGER = get_logger(__name__)
@@ -52,9 +55,53 @@ def lift_ifu_clinical_fields(
 ) -> Dict[str, object]:
     settings = settings or {}
     guard = resolve_toc_guard(settings, manufacturer)
-    filtered_pages, dropped_pages = strip_toc(pages, guard)
+    filtered_pages, guard_report = strip_toc(pages, guard)
+    guard_metrics = guard_report.to_metrics()
     anchor_overrides = settings.get("anchors") or {}
     anchors = resolve_anchor_map(anchor_overrides, manufacturer=manufacturer)
+
+    threshold_raw = settings.get("small_ifu_threshold")
+    small_ifu_threshold = 4
+    if threshold_raw is not None:
+        try:
+            small_ifu_threshold = max(1, int(threshold_raw))
+        except (TypeError, ValueError):
+            LOGGER.debug("Invalid small_ifu_threshold override: %r", threshold_raw)
+    is_small_ifu = len(pages) <= small_ifu_threshold
+    if is_small_ifu:
+        LOGGER.debug("Small IFU detected (%d pages, threshold=%d)", len(pages), small_ifu_threshold)
+
+    manufacturer_normalized = (manufacturer or "").strip().upper()
+    first_content_page = None
+    manufacturer_rules = get_manufacturer_rules(manufacturer)
+    first_content_page = None
+    if manufacturer_normalized.startswith("INTUITIVE"):
+        first_content_page = detect_first_chapter_page(filtered_pages)
+        if first_content_page:
+            manufacturer_rules = dict(manufacturer_rules)
+            existing_min = manufacturer_rules.get("min_anchor_page")
+            if isinstance(existing_min, int):
+                manufacturer_rules["min_anchor_page"] = max(existing_min, first_content_page)
+            else:
+                manufacturer_rules["min_anchor_page"] = first_content_page
+
+    overrides_cfg = settings.get("manufacturer_overrides") if isinstance(settings, dict) else {}
+    if manufacturer_normalized and isinstance(overrides_cfg, dict):
+        for key, value in overrides_cfg.items():
+            if key.strip().upper() == manufacturer_normalized and isinstance(value, dict):
+                min_page_override = value.get("min_anchor_page")
+                if isinstance(min_page_override, int):
+                    manufacturer_rules = dict(manufacturer_rules)
+                    existing_min = manufacturer_rules.get("min_anchor_page")
+                    if isinstance(existing_min, int):
+                        manufacturer_rules["min_anchor_page"] = max(existing_min, int(min_page_override))
+                    else:
+                        manufacturer_rules["min_anchor_page"] = int(min_page_override)
+                break
+
+    # Small IFU rule: 2-4 page leaflets
+    anchors_bleed: Dict[str, int] = {}
+    small_ifu_applied = False
 
     errors = ifu_json.setdefault("_anchor_errors", [])
     error_fields = ifu_json.setdefault("_anchor_error_fields", [])
@@ -63,7 +110,16 @@ def lift_ifu_clinical_fields(
         start = config.get("start", [])
         stops = config.get("stops", [])
         try:
-            section = slice_section(filtered_pages, start, stops, toc_guard=False, guard_config=guard)
+            section = slice_section(
+                filtered_pages,
+                start,
+                stops,
+                toc_guard=False,
+                guard_config=guard,
+                min_start_page=manufacturer_rules.get("min_anchor_page") if isinstance(manufacturer_rules, dict) else None,
+                field_name=field,
+                manufacturer_rules=manufacturer_rules if isinstance(manufacturer_rules, dict) else None,
+            )
         except AnchorBleedError as exc:
             LOGGER.debug("Skipping %s due to TOC bleed: %s", field, exc)
             errors.append(str(exc))
@@ -72,6 +128,9 @@ def lift_ifu_clinical_fields(
 
         if not section.text:
             continue
+
+        if section.trimmed_prefix:
+            anchors_bleed[field] = section.trimmed_prefix
 
         block = normalize_bullets(section.text)
         block = clean_section_text(block)
@@ -114,6 +173,18 @@ def lift_ifu_clinical_fields(
 
         ifu_json[field] = block
 
+    policy = settings.get("small_leaflet_policy") if isinstance(settings, dict) else None
+    if is_small_ifu:
+        applied_policy = apply_small_leaflet_policy(
+            ifu_json,
+            policy=policy,
+            page_count=len(pages),
+            pages=filtered_pages,
+        )
+        if applied_policy:
+            LOGGER.debug("Small IFU policy applied: %s", policy or "<default>")
+            small_ifu_applied = True
+
     # Rx-only detection for intended_user
     combined_text = "\n".join(page.text for page in pages if page.text)
     if re.search(r"\bRx\s*only\b", combined_text, re.IGNORECASE):
@@ -129,13 +200,22 @@ def lift_ifu_clinical_fields(
     if "clinical_risks_and_benefits" in ifu_json:
         ifu_json.pop("clinical_risks_and_benefits", None)
 
-    return {
-        "enabled": guard.enabled,
-        "pages_dropped": sorted(dropped_pages),
-        "density_threshold": guard.density_threshold,
-        "dot_leader_min": guard.dot_leader_min,
-        "page_number_ratio": guard.page_number_ratio,
+    toc_info: Dict[str, object] = {
+        "enabled": bool(guard_metrics.get("enabled", guard.enabled)),
+        "pages_dropped": sorted(guard_metrics.get("pages_dropped", [])),
+        "pages_dropped_count": guard_metrics.get("pages_dropped_count", 0),
+        "config": guard.as_dict(),
+        "small_ifu_threshold": small_ifu_threshold,
+        "small_ifu_fallback_applied": bool(small_ifu_applied),
     }
+    if guard_metrics.get("pages_considered") is not None:
+        toc_info["pages_considered"] = guard_metrics.get("pages_considered")
+    if anchors_bleed:
+        toc_info["anchors_bleed"] = anchors_bleed
+    if manufacturer_rules:
+        toc_info["manufacturer_rules"] = {key: value for key, value in manufacturer_rules.items() if value}
+
+    return toc_info
 
 def _merge_lists(first: List[str], second: List[str]) -> List[str]:
     combined: List[str] = []

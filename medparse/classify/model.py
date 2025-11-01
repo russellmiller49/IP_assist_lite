@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import os
 import warnings
 from pathlib import Path
 from typing import Optional
@@ -20,6 +21,7 @@ ROOT_DIR = Path(__file__).resolve().parents[2]
 MODEL_DIR = ROOT_DIR / "models" / "doc_type"
 MODEL_PATH = MODEL_DIR / "model.joblib"
 MANIFEST_PATH = MODEL_DIR / "MANIFEST.json"
+_VERSION_MISMATCH_WARNED = False
 
 
 def _load_manifest() -> dict:
@@ -34,6 +36,7 @@ def _load_manifest() -> dict:
 
 def _validate_sklearn_version(model, manifest: dict, model_path: Path) -> None:
     """Check if model was trained with a compatible sklearn version."""
+    global _VERSION_MISMATCH_WARNED
     try:
         from sklearn import __version__ as current_version
 
@@ -44,16 +47,17 @@ def _validate_sklearn_version(model, manifest: dict, model_path: Path) -> None:
         if not expected_version:
             return
 
-        current_major_minor = tuple(map(int, current_version.split(".")[:2]))
-        expected_major_minor = tuple(map(int, str(expected_version).split(".")[:2]))
-        if current_major_minor != expected_major_minor:
-            LOGGER.warning(
-                "Doc-type model at %s targets scikit-learn %s but runtime is %s. "
-                "Consider retraining with scripts/train_doc_type.py.",
-                model_path,
-                expected_version,
-                current_version,
+        if str(expected_version) != str(current_version):
+            allow_drift = os.getenv("MEDPARSE_ALLOW_MODEL_DRIFT", "").lower() in {"1", "true", "yes"}
+            message = (
+                f"Doc-type model at {model_path} targets scikit-learn {expected_version} "
+                f"but runtime is {current_version}."
             )
+            if allow_drift and not _VERSION_MISMATCH_WARNED:
+                warnings.warn(f"{message} Proceeding due to MEDPARSE_ALLOW_MODEL_DRIFT.", RuntimeWarning, stacklevel=2)
+                _VERSION_MISMATCH_WARNED = True
+            elif not allow_drift:
+                raise RuntimeError(f"{message} Set MEDPARSE_ALLOW_MODEL_DRIFT=true to bypass in development.")
     except Exception as exc:
         LOGGER.debug("Could not validate sklearn version: %s", exc)
 
@@ -66,13 +70,27 @@ def classify_with_model(pdf_path: Path) -> str:
             LOGGER.debug("Doc-type manifest present but model missing at %s; using rules.", MODEL_PATH)
         return classify_with_rules(pdf_path)
 
+    suppress_version_warning = False
+    try:
+        from sklearn import __version__ as current_version
+    except Exception:  # pragma: no cover - defensive
+        current_version = None
+    declared_version = str(manifest.get("sklearn_version") or "")
+    if declared_version and current_version and declared_version == current_version:
+        suppress_version_warning = True
+
     try:
         with warnings.catch_warnings():
-            warnings.filterwarnings("ignore", category=UserWarning, module="sklearn")
+            if suppress_version_warning:
+                warnings.filterwarnings("ignore", category=UserWarning, module="sklearn")
             model = joblib.load(MODEL_PATH)
+    except Exception as exc:
+        LOGGER.debug("Model load failed for %s: %s. Falling back to rules.", pdf_path, exc)
+        return classify_with_rules(pdf_path)
 
-        _validate_sklearn_version(model, manifest, MODEL_PATH)
+    _validate_sklearn_version(model, manifest, MODEL_PATH)
 
+    try:
         features = [str(pdf_path)]
         return model.predict(features)[0]
     except Exception as exc:

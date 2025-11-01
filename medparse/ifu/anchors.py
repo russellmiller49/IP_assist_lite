@@ -3,10 +3,12 @@
 from __future__ import annotations
 
 import re
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, replace
+from difflib import SequenceMatcher
 from typing import Any, Dict, Iterable, List, Optional, Sequence, Tuple
 
 from medparse.ingest.models import PageData
+from medparse.ifu.toc_guard import TocGuardConfig, TocGuardReport, apply_toc_guard, trim_anchor_bleed
 from medparse.normalize.layout import slice_between
 from medparse.normalize.text_cleanup import clean_paragraph
 from medparse.utils.log import get_logger
@@ -21,6 +23,17 @@ ANCHOR_HEADING_PATTERN = re.compile(r"^\s*\d+\.\s+[A-Z].*$")
 TOC_HEADER_PATTERN = re.compile(r"^\s*(contents|table of contents|index)\s*$", re.IGNORECASE)
 DOT_LEADER_LINE = re.compile(r".+(\.{2,}|\s{2,})\s*\d{1,3}\s*$")
 PAGE_NUMBER_LINE = re.compile(r"^.+\s+\d{1,3}\s*$")
+HEADING_CASE_PATTERN = re.compile(r"^[A-Z][A-Za-z].+")
+
+INDICATION_REQUIRED_PHRASES = (
+    "indicated for",
+    "intended for use",
+    "intended to",
+    "indications",
+)
+
+ANCHOR_TOC_WINDOW = 10
+ANCHOR_TOC_RATIO = 0.4
 
 DEFAULT_SECTION_ANCHORS: Dict[str, Dict[str, List[str]]] = {
     "indications_for_use": {
@@ -37,6 +50,8 @@ DEFAULT_SECTION_ANCHORS: Dict[str, Dict[str, List[str]]] = {
             "clinical risks & benefits",
             "clinical benefits and risks",
             "contraindications",
+            "intended audience",
+            "definitions",
             "serious incident reporting",
             "general warnings, cautions, and notes",
             "general warnings",
@@ -160,11 +175,15 @@ DEFAULT_SECTION_ANCHORS: Dict[str, Dict[str, List[str]]] = {
     },
     "sterilization": {
         "start": ["sterilization"],
-        "stops": ["specifications"],
+        "stops": ["specifications", "reprocessing", "storage", "troubleshooting", "references"],
     },
     "specifications": {
         "start": ["specifications"],
         "stops": ["appendix", "bibliography"],
+    },
+    "references": {
+        "start": ["references", "bibliography", "works cited", "literature"],
+        "stops": ["appendix", "index"],
     },
 }
 
@@ -173,13 +192,19 @@ INTUITIVE_ANCHORS: Dict[str, Dict[str, List[str]]] = {
     "indications_for_use": {
         "start": [
             "1.4.1 indications for use",
+            "1.4 professional instructions for use",  # Navigate to parent first
             "indications for use",
         ],
         "stops": [
             "1.4.2 intended use",
             "intended use",
-            "1.5 serious incident reporting",
-            "serious incident reporting",
+            "1.4.3 intended user",
+            "intended audience",
+            "definitions",
+            "clinical risks and benefits",
+            "1.4.4 intended patient population",
+            "contraindications",
+            "warnings",
         ],
     },
     "intended_use": {
@@ -212,6 +237,7 @@ INTUITIVE_ANCHORS: Dict[str, Dict[str, List[str]]] = {
             "intended patient population",
         ],
         "stops": [
+            "1.4.5 clinical risks and benefits",
             "clinical risks and benefits",
             "1.5 serious incident reporting",
             "serious incident reporting",
@@ -226,6 +252,34 @@ INTUITIVE_ANCHORS: Dict[str, Dict[str, List[str]]] = {
             "1.5 serious incident reporting",
             "serious incident reporting",
             "1.6 general warnings, cautions, and notes",
+            "general warnings, cautions, and notes",
+        ],
+    },
+    # Add safety blocks extraction for Ion
+    "warnings": {
+        "start": [
+            "1.6 general warnings, cautions, and notes",
+            "general warnings, cautions, and notes",
+            "warnings",
+        ],
+        "stops": [
+            "cautions and notes",
+            "cautions",
+            "notes",
+            "contraindications",
+            "sterilization",
+        ],
+    },
+    "sterilization": {
+        "start": [
+            "sterilization",
+            "6 sterilization",
+        ],
+        "stops": [
+            "reprocessing",
+            "storage",
+            "troubleshooting",
+            "references",
         ],
     },
 }
@@ -235,17 +289,23 @@ OLYMPUS_ANCHORS: Dict[str, Dict[str, List[str]]] = {
     "indications_for_use": {
         "start": [
             "indications for use",
+            "indication",
         ],
         "stops": [
             "contraindications",
+            "contraindication",
             "important information — please read before use",
             "important information - please read before use",
             "user qualifications",
+            "instruction manual",  # Stop at instruction manual section
+            "warnings",
+            "warning",
         ],
     },
     "contraindications": {
         "start": [
             "contraindications",
+            "contraindication",
         ],
         "stops": [
             "warning",
@@ -253,17 +313,25 @@ OLYMPUS_ANCHORS: Dict[str, Dict[str, List[str]]] = {
             "precautions",
             "user qualifications",
             "instrument compatibility",
+            "instruction manual",  # Stop at instruction manual section
+            "terms used in this manual",  # Stop at term definitions
         ],
     },
     "intended_use": {
         "start": [
             "intended use",
             "intended purpose",
+            "1 intended use",  # BW 18V pattern
         ],
         "stops": [
             "contraindications",
+            "contraindication",
             "user qualifications",
             "important information — please read before use",
+            "important information - please read before use",
+            "2 precautions",  # BW 18V pattern
+            "precautions",
+            "warnings",
         ],
     },
 }
@@ -276,47 +344,6 @@ MANUFACTURER_ANCHORS: Dict[str, Dict[str, Dict[str, List[str]]]] = {
     "OLYMPUS": OLYMPUS_ANCHORS,
 }
 
-
-@dataclass(slots=True)
-class TocGuardConfig:
-    enabled: bool = True
-    density_threshold: float = 0.65
-    dot_leader_min: float = 0.20
-    page_number_ratio: float = 0.40
-
-    @classmethod
-    def from_dict(cls, data: Optional[Dict[str, Any]]) -> "TocGuardConfig":
-        if not isinstance(data, dict):
-            return cls()
-        return cls(
-            enabled=bool(data.get("enabled", True)),
-            density_threshold=float(data.get("density_threshold", 0.65)),
-            dot_leader_min=float(data.get("dot_leader_min", 0.20)),
-            page_number_ratio=float(data.get("page_number_ratio", 0.40)),
-        )
-
-    def update(self, data: Dict[str, Any]) -> None:
-        for key, value in (data or {}).items():
-            if not hasattr(self, key):
-                continue
-            current = getattr(self, key)
-            if isinstance(current, bool):
-                setattr(self, key, bool(value))
-            else:
-                try:
-                    setattr(self, key, float(value))
-                except (TypeError, ValueError):  # pragma: no cover - defensive
-                    LOGGER.debug("Invalid toc_guard override for %s: %s", key, value)
-
-    def as_dict(self) -> Dict[str, float | bool]:
-        return {
-            "enabled": self.enabled,
-            "density_threshold": self.density_threshold,
-            "dot_leader_min": self.dot_leader_min,
-            "page_number_ratio": self.page_number_ratio,
-        }
-
-
 @dataclass(slots=True)
 class Section:
     anchor: str
@@ -324,6 +351,8 @@ class Section:
     start_page: Optional[int] = None
     end_page: Optional[int] = None
     lines: List[str] = field(default_factory=list)
+    trimmed_prefix: int = 0
+    toc_report: Optional[TocGuardReport] = None
 
 
 class AnchorBleedError(Exception):
@@ -368,54 +397,11 @@ def resolve_toc_guard(settings: Dict[str, Any], manufacturer: Optional[str]) -> 
 def strip_toc(
     pages: Sequence[PageData],
     guard: TocGuardConfig,
-) -> Tuple[List[PageData], List[int]]:
-    if not guard.enabled:
-        return list(pages), []
+) -> Tuple[List[PageData], TocGuardReport]:
+    """Apply TOC guard to pages and return filtered pages plus report."""
 
-    filtered: List[PageData] = []
-    dropped: List[int] = []
-
-    for page_idx, page in enumerate(pages):
-        if not page.lines:
-            filtered.append(page)
-            continue
-
-        non_empty = [line for line in page.lines if line.strip()]
-        if not non_empty:
-            filtered.append(page)
-            continue
-
-        # Only check for TOC/Index in first 15 pages
-        if page_idx < 15:
-            page_text = "\n".join(non_empty)
-
-            # Check for explicit TOC/Index headers
-            has_toc_header = any(TOC_HEADER_PATTERN.match(line) for line in non_empty[:5])
-
-            # Check if entire page looks like TOC
-            if has_toc_header or looks_like_toc(page_text):
-                dropped.append(page.number)
-                continue
-
-        # Original density-based detection
-        non_empty_ratio = len(non_empty) / max(len(page.lines), 1)
-        dot_ratio = sum(1 for line in non_empty if DOT_LEADER_PATTERN.search(line)) / len(non_empty)
-        trailing_ratio = sum(1 for line in non_empty if TRAILING_NUMBER_PATTERN.search(line)) / len(non_empty)
-
-        if (
-            non_empty_ratio >= guard.density_threshold
-            and dot_ratio >= guard.dot_leader_min
-            and trailing_ratio >= guard.page_number_ratio
-        ):
-            dropped.append(page.number)
-            continue
-
-        filtered.append(page)
-
-    if dropped:
-        LOGGER.debug("TOC guard dropped pages: %s", dropped)
-
-    return filtered, dropped
+    filtered, report = apply_toc_guard(pages, guard)
+    return filtered, report
 
 
 def slice_section(
@@ -425,36 +411,136 @@ def slice_section(
     *,
     toc_guard: bool = True,
     guard_config: Optional[TocGuardConfig] = None,
+    min_start_page: Optional[int] = None,
+    bleed_threshold: float = 0.8,
+    field_name: Optional[str] = None,
+    manufacturer_rules: Optional[Dict[str, object]] = None,
 ) -> Section:
     guard = guard_config or TocGuardConfig()
 
     working_pages = list(pages)
-    dropped: List[int] = []
+    guard_report: Optional[TocGuardReport] = None
     if toc_guard:
-        working_pages, dropped = strip_toc(working_pages, guard)
+        working_pages, guard_report = strip_toc(working_pages, guard)
+
+    min_page_threshold = min_start_page
+    if isinstance(manufacturer_rules, dict):
+        rule_min = manufacturer_rules.get("min_anchor_page")
+        if isinstance(rule_min, int):
+            if min_page_threshold is None or rule_min > min_page_threshold:
+                min_page_threshold = rule_min
+        field_rules = manufacturer_rules.get("fields") if field_name else None
+        if isinstance(field_rules, dict):
+            field_config = field_rules.get(field_name)
+            if isinstance(field_config, dict):
+                field_min = field_config.get("min_page")
+                if isinstance(field_min, int):
+                    if min_page_threshold is None or field_min > min_page_threshold:
+                        min_page_threshold = field_min
+
+    if min_page_threshold is not None:
+        working_pages = [page for page in working_pages if page.number >= min_page_threshold]
 
     start_list = _coerce_anchor_list(start_anchor)
     stop_list = _coerce_anchor_list(stop_anchors)
 
-    extracted = slice_between(
-        working_pages,
-        start_anchors=start_list,
-        stop_anchors=stop_list or (),
-        guard_fn=None,
-    )
-    cleaned = clean_paragraph(extracted)
-    if cleaned and looks_like_toc(cleaned):
-        raise AnchorBleedError(start_list[0] if start_list else "unknown")
+    if not working_pages or not start_list:
+        return Section(
+            anchor=start_list[0] if start_list else "",
+            text="",
+            start_page=None,
+            end_page=None,
+            lines=[],
+            trimmed_prefix=0,
+            toc_report=guard_report,
+        )
 
-    start_page = _find_anchor_page(working_pages, start_list)
-    end_page = _find_anchor_page(working_pages, stop_list) if stop_list else None
+    start_patterns = [_compile_anchor_pattern(anchor) for anchor in start_list if anchor]
+    if not start_patterns:
+        return Section(
+            anchor=start_list[0] if start_list else "",
+            text="",
+            start_page=None,
+            end_page=None,
+            lines=[],
+            trimmed_prefix=0,
+            toc_report=guard_report,
+        )
+
+    max_attempts = max(len(working_pages), 1)
+    attempts = 0
+    current_pages = working_pages
+    bleed_detected = False
+
+    while attempts < max_attempts and current_pages:
+        candidate = _find_first_anchor_line(current_pages, start_patterns)
+        if not candidate:
+            break
+        start_page_no, line_index, raw_line = candidate
+        if min_page_threshold is not None and start_page_no < min_page_threshold:
+            current_pages = _drop_first_anchor_occurrence(current_pages, start_patterns)
+            attempts += 1
+            continue
+        if is_toc_like_para(raw_line) or not looks_like_section_heading(raw_line):
+            current_pages = _drop_first_anchor_occurrence(current_pages, start_patterns)
+            attempts += 1
+            continue
+
+        extracted = slice_between(
+            current_pages,
+            start_anchors=start_list,
+            stop_anchors=stop_list or (),
+            guard_fn=None,
+        )
+        if not extracted:
+            break
+
+        cleaned = clean_paragraph(extracted)
+        cleaned = _truncate_to_stop(cleaned, stop_list)
+        cleaned = normalize_bullets(cleaned)
+        trimmed_text, trimmed_prefix = trim_anchor_bleed(cleaned, ratio_threshold=bleed_threshold)
+
+        if not trimmed_text:
+            current_pages = _drop_first_anchor_occurrence(current_pages, start_patterns)
+            attempts += 1
+            continue
+
+        if not anchor_post_guard(trimmed_text):
+            bleed_detected = True
+            current_pages = _drop_first_anchor_occurrence(current_pages, start_patterns)
+            attempts += 1
+            continue
+
+        if field_name == "indications_for_use" and not _contains_indication_phrase(trimmed_text):
+            bleed_detected = True
+            current_pages = _drop_first_anchor_occurrence(current_pages, start_patterns)
+            attempts += 1
+            continue
+
+        start_page = start_page_no
+        end_page = _find_anchor_page(current_pages, stop_list) if stop_list else None
+
+        return Section(
+            anchor=start_list[0] if start_list else "",
+            text=trimmed_text,
+            start_page=start_page,
+            end_page=end_page,
+            lines=[line for line in trimmed_text.splitlines() if line.strip()],
+            trimmed_prefix=trimmed_prefix,
+            toc_report=guard_report,
+        )
+
+    if bleed_detected:
+        raise AnchorBleedError(start_list[0] if start_list else "unknown")
 
     return Section(
         anchor=start_list[0] if start_list else "",
-        text=cleaned,
-        start_page=start_page,
-        end_page=end_page,
-        lines=[line for line in cleaned.splitlines() if line.strip()],
+        text="",
+        start_page=None,
+        end_page=None,
+        lines=[],
+        trimmed_prefix=0,
+        toc_report=guard_report,
     )
 
 
@@ -502,16 +588,76 @@ def looks_like_toc(text: str) -> bool:
     return False
 
 
+def is_toc_like_para(line: str) -> bool:
+    if not line:
+        return False
+    lowered = line.strip().lower()
+    if not lowered:
+        return False
+    if "table of contents" in lowered or "contents" in lowered or lowered.endswith("index"):
+        return True
+    if DOT_LEADER_LINE.search(line) or PAGE_NUMBER_LINE.search(line) or TRAILING_NUMBER_PATTERN.search(line):
+        return True
+    return False
+
+
+def looks_like_section_heading(line: str) -> bool:
+    if not line:
+        return False
+    stripped = line.strip()
+    if not stripped:
+        return False
+    if re.match(r"^\d+(?:\.\d+)*\s+", stripped):
+        return True
+    if HEADING_CASE_PATTERN.match(stripped):
+        return True
+    if stripped.isupper():
+        words = stripped.split()
+        if len(words) <= 6:
+            return True
+    return False
+
+
+def anchor_post_guard(text: str, *, window: int = ANCHOR_TOC_WINDOW, threshold: float = ANCHOR_TOC_RATIO) -> bool:
+    if not text:
+        return False
+    lines = [line.strip() for line in text.splitlines() if line.strip()]
+    if not lines:
+        return False
+    if len(lines) == 1:
+        sentence_chunks = [chunk.strip() for chunk in re.split(r"(?<=[.!?])\s+", text) if chunk.strip()]
+        if len(sentence_chunks) > 1:
+            lines = sentence_chunks
+    window_lines = lines[: window]
+    if not window_lines:
+        return True
+    toc_like = sum(1 for line in window_lines if is_toc_like_para(line))
+    ratio = toc_like / len(window_lines)
+    return ratio <= threshold
+
+
 def normalize_bullets(text: str) -> str:
+    """Normalize bullet points and remove common prefixes."""
     lines = []
     for raw_line in text.splitlines():
         line = raw_line.strip()
         if not line:
             continue
-        if line and line[0] in {"•", "-", "*"}:
-            lines.append(f"- {line[1:].strip()}")
-        else:
-            lines.append(line)
+
+        # Remove common bullet characters
+        if line and line[0] in {"•", "◾", "▪", "○", "◦", "‣", "-", "*", "·"}:
+            line = line[1:].strip()
+
+        # Remove leading dashes with spaces
+        if line.startswith("- "):
+            line = line[2:].strip()
+
+        # Skip empty lines after bullet removal
+        if not line:
+            continue
+
+        lines.append(line)
+
     return "\n".join(lines)
 
 
@@ -551,6 +697,55 @@ def resolve_anchor_map(
     return merged
 
 
+def _truncate_to_stop(text: str, stop_anchors: Sequence[str]) -> str:
+    if not text or not stop_anchors:
+        return text
+
+    lines = text.splitlines()
+    normalized_stops = [_normalize_for_match(anchor) for anchor in stop_anchors if anchor]
+
+    for idx, raw_line in enumerate(lines):
+        normalized_line = _normalize_for_match(raw_line)
+        if not normalized_line:
+            continue
+        for normalized_stop in normalized_stops:
+            if _matches_stop_heading(normalized_line, normalized_stop):
+                return "\n".join(lines[:idx])
+    return text
+
+
+def _normalize_for_match(value: str) -> str:
+    lowered = value.lower()
+    lowered = lowered.replace("’", "'")
+    cleaned = re.sub(r"[^a-z0-9\s]", " ", lowered)
+    return " ".join(cleaned.split())
+
+
+def _contains_indication_phrase(text: str) -> bool:
+    lowered = text.lower()
+    if any(phrase in lowered for phrase in INDICATION_REQUIRED_PHRASES):
+        return True
+    if len(lowered) >= 160:
+        sentence_marks = sum(1 for char in lowered if char in {".", "!", "?"})
+        if sentence_marks >= 2:
+            return True
+    return False
+
+
+def _matches_stop_heading(line: str, stop: str) -> bool:
+    if not line or not stop:
+        return False
+    if line.startswith(stop):
+        return True
+    if stop in line:
+        return True
+    if abs(len(line) - len(stop)) <= 3:
+        ratio = SequenceMatcher(None, line, stop).ratio()
+        if ratio >= 0.82:
+            return True
+    return False
+
+
 def _coerce_anchor_list(values: Sequence[str] | str | None) -> List[str]:
     if values is None:
         return []
@@ -573,8 +768,44 @@ def _find_anchor_page(pages: Sequence[PageData], anchors: Sequence[str]) -> Opti
 
 def _compile_anchor_pattern(anchor: str) -> re.Pattern[str]:
     escaped = re.escape(anchor)
-    pattern = rf"(?:^|\n)\s*(?:\d+\.\s*)?{escaped}[\s:]*"
+    pattern = rf"(?:^|\n)\s*(?:\d+(?:\.\d+)*\s*)?{escaped}[\s:]*"
     return re.compile(pattern, flags=re.IGNORECASE)
+
+
+def _find_first_anchor_line(
+    pages: Sequence[PageData],
+    patterns: Sequence[re.Pattern[str]],
+) -> Optional[Tuple[int, int, str]]:
+    for page in pages:
+        for idx, line in enumerate(page.lines or []):
+            for pattern in patterns:
+                if pattern.search(line):
+                    return page.number, idx, line
+    return None
+
+
+def _drop_first_anchor_occurrence(
+    pages: Sequence[PageData],
+    patterns: Sequence[re.Pattern[str]],
+) -> List[PageData]:
+    updated: List[PageData] = []
+    removed = False
+    for page in pages:
+        if removed:
+            updated.append(page)
+            continue
+
+        lines = list(page.lines or [])
+        for idx, line in enumerate(lines):
+            if any(pattern.search(line) for pattern in patterns):
+                new_lines = lines[idx + 1 :]
+                new_text = "\n".join(new_lines)
+                updated.append(replace(page, lines=new_lines, text=new_text))
+                removed = True
+                break
+        else:
+            updated.append(page)
+    return updated
 
 
 __all__ = [
@@ -582,6 +813,9 @@ __all__ = [
     "DEFAULT_SECTION_ANCHORS",
     "Section",
     "TocGuardConfig",
+    "anchor_post_guard",
+    "is_toc_like_para",
+    "looks_like_section_heading",
     "looks_like_toc",
     "normalize_bullets",
     "resolve_anchor_map",

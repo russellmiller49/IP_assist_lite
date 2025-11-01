@@ -28,12 +28,19 @@ def test_chest_guideline_contract():
     recommendations = document.recommendations or []
     assert len(recommendations) >= 16
     with_grade = [rec for rec in recommendations if rec.grade_normalized]
-    consensus_items = [rec for rec in recommendations if rec.grade_normalized and rec.grade_normalized.get("scale") == "CONSENSUS"]
+    consensus_items = [rec for rec in recommendations if getattr(rec, "ungraded", False)]
     grade_density = len(with_grade) / len(recommendations) if recommendations else 0.0
     typed_density = sum(1 for rec in recommendations if rec.grade_normalized or getattr(rec, "ungraded", False)) / len(recommendations) if recommendations else 0.0
     assert grade_density >= 0.70
     assert typed_density == pytest.approx(1.0, rel=1e-3)
-    assert consensus_items, "Expected CONSENSUS entries for UCS guidance"
+    assert consensus_items, "Expected ungraded consensus entries for UCS guidance"
+    scales = {rec.grade_normalized.get("scale") for rec in with_grade if rec.grade_normalized}
+    assert "CHEST" in scales
+    assert all(
+        rec.grade_normalized.get("value")
+        for rec in with_grade
+        if rec.grade_normalized and not rec.grade_normalized.get("ungraded")
+    )
     assert any(rec.grade_normalized.get("source") == "table" for rec in with_grade), "Expected at least one table-sourced grade"
 
     payload = outcome.to_payload()
@@ -49,3 +56,4 @@ def test_chest_guideline_contract():
         assert metrics.get("umls_entities", 0) > 0
 
     assert metadata.get("window_placeholders_removed", 0) == 0
+    assert metadata.get("grade_scale_hint") == "CHEST"

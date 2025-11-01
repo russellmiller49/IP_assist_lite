@@ -1071,11 +1071,28 @@ def _infer_doc_subtype(
         title_value = str(title_info or "")
     title_lower = title_value.lower()
 
+    if "guideline" in title_lower and "statement" in title_lower and recommendations:
+        return "guideline"
+
+    if "official american thoracic society" in title_lower or "official ats" in title_lower:
+        return "statement"
+
+    if "official statement" in title_lower or "consensus statement" in title_lower:
+        return "statement"
+
+    if "consensus" in title_lower and "statement" not in title_lower and (
+        "official" in title_lower or "american thoracic society" in title_lower
+    ):
+        return "statement"
+
     if (
         "statement" in title_lower
         and "guideline" not in title_lower
         and ("official" in title_lower or "consensus" in title_lower or "classification" in title_lower)
     ):
+        return "statement"
+
+    if "update" in title_lower and ("official" in title_lower or "statement" in title_lower or "consensus" in title_lower):
         return "statement"
 
     if _has_summary_statements(pages):

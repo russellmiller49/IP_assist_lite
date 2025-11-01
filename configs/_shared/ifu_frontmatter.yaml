@@ -1,0 +1,26 @@
+manufacturers:
+  - name: "ERBE Elektromedizin GmbH"
+    patterns:
+      - 'ERBE\s+Elektromedizin\s+GmbH'
+      - 'ERBE\s+Medical'
+  - name: "Intuitive Surgical, Inc."
+    patterns:
+      - 'Intuitive\s+Surgical'
+      - 'Ion(?:™)?\s+Endoluminal\s+System'
+
+product_patterns:
+  "ERBE Elektromedizin GmbH":
+    - regex: '(?i)(System\s*Carrier.*)'
+      group: 1
+    - regex: '(?i)(SystemCarrier.*)'
+      group: 1
+    - regex: '(?i)(Units and Modules.*)'
+      group: 1
+  "Intuitive Surgical, Inc.":
+    - regex: '(?i)(Ion\s+Endoluminal\s+System.*)'
+      group: 1
+  default:
+    - regex: '(?i)([A-Z][A-Za-z0-9\-/ ]{4,})'
+      group: 1
+
+product_name_from_filename: true

@@ -27,6 +27,12 @@ ATS_REASON_NO_N_OVER_N = "no_n_over_N"
 ATS_REASON_FOLLOW_UP = "follow_up_used_in_numerator"
 ATS_REASON_NONSPECIFIC = "nonspecific_counts_included"
 ATS_REASON_DERIVED = "derived_counts_from_percent"
+ATS_CANONICAL_REASONS = {
+    ATS_REASON_NO_N_OVER_N,
+    ATS_REASON_FOLLOW_UP,
+    ATS_REASON_NONSPECIFIC,
+    ATS_REASON_DERIVED,
+}
 
 
 class EvidenceSpan(BaseModel):
@@ -227,6 +233,8 @@ def _infer_counts_from_context(
 
     denominator = None
     label = None
+    if re.search(r"follow[-\s]*up", context, re.IGNORECASE):
+        return None, None, None, lesion_count, patient_count
     if lesion_count:
         denominator = lesion_count
         label = "lesions"
@@ -352,35 +360,17 @@ def _finalize_yield_record(
     _attempt_backfill_counts(yield_data, sections)
     _populate_denominator_from_sections(yield_data, sections)
 
-    # Check ATS compliance criteria
-    compat, exclusions = validate_ats_compliance(results_text, methods_text)
-
-    # If we already marked it as non-compliant due to missing n/d, keep that
-    if not yield_data.compatible_with_ats:
-        # Already marked as non-compliant, just add more reasons if found
-        for reason in exclusions:
-            _append_reason(yield_data, reason)
-    else:
-        # Was marked as compliant, update based on validation
-        yield_data.compatible_with_ats = compat
-        for reason in exclusions:
-            _append_reason(yield_data, reason)
+    # Check ATS compliance criteria and record canonical reasons
+    _compat_unused, exclusions = validate_ats_compliance(results_text, methods_text)
+    for reason in exclusions:
+        _append_reason(yield_data, reason)
 
     # Add missing data reasons
     if yield_data.numerator is None or yield_data.denominator is None:
         _append_reason(yield_data, ATS_REASON_NO_N_OVER_N)
         if yield_data.yield_pct is not None:
             _append_reason(yield_data, ATS_REASON_DERIVED)
-        yield_data.compatible_with_ats = False
-
-    # Update strict flag
-    derived_counts = ATS_REASON_DERIVED in yield_data.exclusion_reasons
-    yield_data.strict = (
-        yield_data.numerator is not None
-        and yield_data.denominator is not None
-        and not derived_counts
-        and yield_data.compatible_with_ats
-    )
+    _normalize_reasons(yield_data)
 
 
 def _attempt_backfill_counts(yield_data: DiagnosticYieldATS, sections: Dict[str, str]) -> None:
@@ -426,6 +416,27 @@ def _find_cohort_size(text: str) -> Optional[int]:
 def _append_reason(yield_data: DiagnosticYieldATS, reason: str) -> None:
     if reason and reason not in yield_data.exclusion_reasons:
         yield_data.exclusion_reasons.append(reason)
+
+
+def _normalize_reasons(yield_data: DiagnosticYieldATS) -> None:
+    seen = {reason for reason in yield_data.exclusion_reasons if reason in ATS_CANONICAL_REASONS}
+    has_counts = yield_data.numerator is not None and yield_data.denominator is not None
+    if not has_counts:
+        seen.add(ATS_REASON_NO_N_OVER_N)
+    ordered = [
+        reason
+        for reason in (
+            ATS_REASON_NO_N_OVER_N,
+            ATS_REASON_FOLLOW_UP,
+            ATS_REASON_NONSPECIFIC,
+            ATS_REASON_DERIVED,
+        )
+        if reason in seen
+    ]
+    blockers = {reason for reason in ordered if reason != ATS_REASON_NO_N_OVER_N}
+    yield_data.compatible_with_ats = has_counts and not blockers
+    yield_data.strict = has_counts and ATS_REASON_DERIVED not in seen and not blockers
+    yield_data.exclusion_reasons = ordered
 
 
 def validate_ats_compliance(results_text: str, methods_text: str) -> Tuple[bool, List[str]]:

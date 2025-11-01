@@ -36,6 +36,7 @@ def _create_profile():
         ],
         pn_patterns=[
             r"\b(ALT-?Pro)\b",
+            r"\b(BW-?\d+V?)\b",  # BW-18V pattern
             r"\b([A-Z]{2,}\d{2,}-\d{2,})\b",
         ],
         rev_patterns=[
@@ -48,6 +49,7 @@ def _create_profile():
         ],
         model_patterns=[
             r"\bALT-?Pro\b",
+            r"\bBW-?\d+V?\b",  # BW-18V pattern
             r"\bSystemCarrier\b",
         ],
         normalize=normalize_olympus_front_matter,

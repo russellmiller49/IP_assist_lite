@@ -1,9 +1,7 @@
 {
-  "doc_id": "f7c0ad8e-37b7-4008-949b-4f3825af330e",
   "doc_type": "ifu",
-  "source_file": "/home/rjm/projects/IP_assist_lite/data/Input pdfs/IFUs/pdf/ALT-Pro_Instruction Manual.pdf",
+  "source_file": "ALT-Pro_Instruction Manual.pdf",
   "page_count": 154,
-  "extraction_timestamp": "2025-11-01T10:58:56.466486",
   "extraction_version": "v1.0.0",
   "evidence_bank": {},
   "paragraph_store": {
@@ -11056,43 +11054,19 @@
     {
       "severity": "note",
       "text": "NOTE Indicates additional helpful information.  Precautions Follow the warnings and cautions given below when handling this equipment. This information is supplemented by the warnings given in each chapter. A very small pin hole may not be detected in automated leakage testing. The ALT-Pro is capable of detecting leaks that cause fluid invasion to the inside of the endoscope; however, if more precise leak detection is required, perform manual leakage testing. WARNING • Strictly observe the following cautions. Failure to do so may place the patient and medical personnel in danger of an electric shock.  Keep fluids away from all electrical equipment. If fluids are spilled on or into this equipment, stop operation immediately and contact Olympus.  Do not prepare, inspect, or use this equipment with wet hand. • Do not install this equipment in any place where any of the following are present.  High oxygen concentration  Oxidizing substance such as Nitrous Oxide (N O) 2  Flammable anesthetic gas  Flammable liquid This equipment is not explosion-proof and may explode or cause a fire under these conditions. • Do not insert an Endo Therapy accessory or other object through an opening including the air vents of this equipment. Also, do not allow any liquid including water or disinfectant solution to flow into the opening. Contact with an electrical part inside this equipment could cause an electric shock and/or malfunction of this equipment. ALT-Pro INSTRUCTION MANUAL 7",
-      "category": "electrical",
-      "evidence": {
-        "text": "NOTE Indicates additional helpful information.  Precautions Follow the warnings and cautions given below when handling this equipment. This information is supplemented by the warnings given in each c",
-        "page": 13,
-        "confidence": 0.8,
-        "truncated": false
-      }
+      "category": "electrical"
     },
     {
       "severity": "caution",
-      "text": "CAUTION Ch. 3 • Do not install the ALT-Pro wall-mount holder upside down. This equipment may fall off. • After installing the ALT-Pro wall-mount holder on the wall, install this equipment, taking care not to step on the power cord or cables. The power cord or cables may be damaged.  Installation location conditions To ensure safe use of the ALT-Pro wall-mount holder, be sure to observe the following conditions that are requisite for installation of the ALT-Pro wall-mount holder and the conditions described in Section 3. 1, “Installation of this equipment”. • The wall for installation should be vertical. • The wall should be strong enough to hold the weight of the ALT-Pro wall-mount holder and this equipment. (See Figure 3. 1, the dimensional drawing) Secure ALT-Pro wall-mount holder to a wall using anchors or bolts being able to withstand 26 kg load. ALT-Pro INSTRUCTION MANUAL 23",
-      "evidence": {
-        "text": "CAUTION Ch. 3 • Do not install the ALT-Pro wall-mount holder upside down. This equipment may fall off. • After installing the ALT-Pro wall-mount holder on the wall, install this equipment, taking care",
-        "page": 29,
-        "confidence": 0.8,
-        "truncated": false
-      }
+      "text": "CAUTION Ch. 3 • Do not install the ALT-Pro wall-mount holder upside down. This equipment may fall off. • After installing the ALT-Pro wall-mount holder on the wall, install this equipment, taking care not to step on the power cord or cables. The power cord or cables may be damaged.  Installation location conditions To ensure safe use of the ALT-Pro wall-mount holder, be sure to observe the following conditions that are requisite for installation of the ALT-Pro wall-mount holder and the conditions described in Section 3. 1, “Installation of this equipment”. • The wall for installation should be vertical. • The wall should be strong enough to hold the weight of the ALT-Pro wall-mount holder and this equipment. (See Figure 3. 1, the dimensional drawing) Secure ALT-Pro wall-mount holder to a wall using anchors or bolts being able to withstand 26 kg load. ALT-Pro INSTRUCTION MANUAL 23"
     },
     {
       "severity": "note",
-      "text": "Note section Ch. 7 This message is displayed when manual leakage testing is performed immediately after a FAIL of automated leakage testing. You can note down the result of a manual leakage test. User name User number End of printing Figure 7. 45 ALT-Pro INSTRUCTION MANUAL 107",
-      "evidence": {
-        "text": "Note section Ch. 7 This message is displayed when manual leakage testing is performed immediately after a FAIL of automated leakage testing. You can note down the result of a manual leakage test. User",
-        "page": 113,
-        "confidence": 0.8,
-        "truncated": false
-      }
+      "text": "Note section Ch. 7 This message is displayed when manual leakage testing is performed immediately after a FAIL of automated leakage testing. You can note down the result of a manual leakage test. User name User number End of printing Figure 7. 45 ALT-Pro INSTRUCTION MANUAL 107"
     },
     {
       "severity": "note",
-      "text": "Note section You can note down the result of a manual leakage test. User name User number End of printing Figure 7. 46  Printed information on self-check Ch. 7 Serial number of this equipment Test mode Month/Day/Year and Hour/Minute/Second of the start of process Month/Day/Year and Hour/Minute/Second of the end of process Results of self-check End of printing Figure 7. 47 108 ALT-Pro INSTRUCTION MANUAL",
-      "evidence": {
-        "text": "Note section You can note down the result of a manual leakage test. User name User number End of printing Figure 7. 46  Printed information on self-check Ch. 7 Serial number of this equipment Test mo",
-        "page": 114,
-        "confidence": 0.8,
-        "truncated": false
-      }
+      "text": "Note section You can note down the result of a manual leakage test. User name User number End of printing Figure 7. 46  Printed information on self-check Ch. 7 Serial number of this equipment Test mode Month/Day/Year and Hour/Minute/Second of the start of process Month/Day/Year and Hour/Minute/Second of the end of process Results of self-check End of printing Figure 7. 47 108 ALT-Pro INSTRUCTION MANUAL"
     }
   ],
   "tables": [

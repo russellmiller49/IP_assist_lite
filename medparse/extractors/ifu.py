@@ -17,20 +17,22 @@ from medparse.extract.utils import (
     section_text_between,
 )
 from medparse.ingest.models import PageData
+from medparse.ifu.frontmatter import extract_front_matter
+from medparse.ifu.safety import extract_safety_blocks as build_safety_blocks
 from medparse.ifu.subtype import infer_ifu_subtype_from_pages
 from medparse.normalize.ifu_anchors import lift_ifu_clinical_fields
-from medparse.normalize.ifu_frontmatter import parse_front_matter
 from medparse.normalize.ifu_sections import clean_section_text
 from medparse.normalize.page_furniture import strip_furniture
 from medparse.normalize.references import gate_ifu_references, normalize_references
-from medparse.normalize.safety import categorize_block, dedupe_blocks, detect_severity
 from medparse.normalize.software import filter_software_versions
 from medparse.normalize.tables import clean_tables
 from medparse.normalize.text_cleanup import clean_paragraph, deep_cleanup_fields
 from medparse.pipeline.engine_select import repair_space_poor_pages
-from medparse.schema.common import EvidenceSpan
-from medparse.schema.ifu import IFUDocument, SafetyBlock
+from medparse.schema.ifu import IFUDocument
 from medparse.text.paragraphizer import build_paragraph_store
+from medparse.utils.log import get_logger
+
+LOGGER = get_logger(__name__)
 
 SECTION_FIELDS = {
     "indications for use": "indications_for_use",
@@ -64,10 +66,20 @@ def extract_ifu(
         current_engine=engine,
         settings=ifu_settings,
     )
+    engine_overrides = ifu_settings.get("engine") or {}
+    tables_engine = str(engine_overrides.get("tables") or "").lower()
+    tables_pages = pages
+    if tables_engine and tables_engine != engine:
+        try:
+            tables_pages = load_pages(pdf_path, engine=tables_engine, max_pages=page_limit)
+        except Exception as exc:
+            LOGGER.warning("Table engine '%s' failed (%s); using primary engine", tables_engine, exc)
+            tables_pages = pages
     doc_subtype = infer_ifu_subtype_from_pages(pages, pdf_path)
     page_count = len(pages)
     raw_pages_text = [page.text for page in pages]
-    meta = parse_front_matter(raw_pages_text)
+    metadata_title = pdf_path.stem.replace("_", " ").strip()
+    meta = extract_front_matter(pages, metadata_title=metadata_title or None)
 
     # Strip page furniture (headers/footers) before processing
     lines_by_page = [page.lines for page in pages]
@@ -98,13 +110,13 @@ def extract_ifu(
         "publication_date": None,
         "model": None,
         "software_versions": [],
-        "tables": collect_tables(pages),
+        "tables": collect_tables(tables_pages),
         "references": normalize_references(
             reference_section(lines),
             mode="ifu",
             headings=[heading.title for page in pages for heading in page.headings],
         ),
-        "safety_blocks": _extract_safety_blocks(pages),
+        "safety_blocks": build_safety_blocks(pages),
     }
 
     skip_clinical_fields = isinstance(doc_subtype, str) and doc_subtype in {"catalog", "installation_guide", "tech_manual"}
@@ -192,7 +204,6 @@ def extract_ifu(
         deep_cleanup_fields(doc_kwargs)
         doc_kwargs["tables"] = clean_tables(doc_kwargs.get("tables", []))
         doc_kwargs["software_versions"] = filter_software_versions(raw_software)
-        doc_kwargs["safety_blocks"] = dedupe_blocks(doc_kwargs.get("safety_blocks", []))
         gate_ifu_references(doc_kwargs, pages_text)
     else:
         doc_kwargs["tables"] = doc_kwargs.get("tables", [])
@@ -213,6 +224,19 @@ def extract_ifu(
         document.pipeline_info["anchor_bleed_fields"] = anchor_error_fields
     if toc_guard_info:
         document.pipeline_info["toc_guard"] = toc_guard_info
+        document.pipeline_info["toc_guard_applied"] = bool(toc_guard_info.get("enabled", False))
+        document.pipeline_info["toc_guard_pages_dropped"] = toc_guard_info.get("pages_dropped", [])
+        document.pipeline_info["toc_guard_pages_dropped_count"] = toc_guard_info.get("pages_dropped_count", 0)
+        if "anchors_bleed" in toc_guard_info:
+            document.pipeline_info["anchors_bleed"] = toc_guard_info["anchors_bleed"]
+        if "small_ifu_threshold" in toc_guard_info:
+            document.pipeline_info["small_ifu_threshold"] = toc_guard_info.get("small_ifu_threshold")
+        if "small_ifu_fallback_applied" in toc_guard_info:
+            document.pipeline_info["small_ifu_fallback_applied"] = bool(
+                toc_guard_info.get("small_ifu_fallback_applied")
+            )
+        if "manufacturer_rules" in toc_guard_info:
+            document.pipeline_info["manufacturer_rules"] = toc_guard_info["manufacturer_rules"]
     if spacing_info:
         document.pipeline_info["text_repair_applied"] = bool(spacing_info.get("text_repair_applied"))
         engine_map = spacing_info.get("engine_used_per_page")
@@ -240,62 +264,4 @@ def extract_ifu(
     else:
         document.pipeline_info.setdefault("paragraph_dedup_applied", False)
     return document
-
-
-def _extract_safety_blocks(pages: List[PageData]) -> List[SafetyBlock]:
-    blocks: List[SafetyBlock] = []
-    for page in pages:
-        heading_lookup = _page_heading_lookup(page)
-        idx = 0
-        while idx < len(page.lines):
-            line = page.lines[idx].strip()
-            severity = detect_severity(line)
-            if not severity:
-                idx += 1
-                continue
-
-            text_lines = [line]
-            j = idx + 1
-            while j < len(page.lines):
-                next_line = page.lines[j].strip()
-                if not next_line:
-                    break
-                if detect_severity(next_line):
-                    break
-                text_lines.append(next_line)
-                j += 1
-
-            block_text = " ".join(text_lines)
-            parent_heading = heading_lookup(idx)
-            category = categorize_block(block_text, parent_heading=parent_heading)
-            evidence = EvidenceSpan(text=block_text[:200], page=page.number, bbox=None, confidence=0.8)
-            blocks.append(
-                SafetyBlock(
-                    severity=severity,  # type: ignore[arg-type]
-                    text=block_text,
-                    category=category,
-                    evidence=evidence,
-                )
-            )
-            idx = j
-    return blocks
-
-
-def _page_heading_lookup(page: PageData):
-    heading_lines = sorted(
-        [
-            (heading.line_index, heading.title)
-            for heading in page.headings
-            if heading.kind == "section"
-        ],
-        key=lambda item: item[0],
-    )
-
-    def lookup(line_index: int) -> str | None:
-        candidates = [title for idx, title in heading_lines if idx <= line_index]
-        return candidates[-1] if candidates else None
-
-    return lookup
-
-
 __all__ = ["extract_ifu"]

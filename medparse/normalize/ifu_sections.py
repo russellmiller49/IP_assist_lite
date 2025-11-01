@@ -100,9 +100,29 @@ def clean_section_text(text: str) -> str:
         line = raw_line.strip()
         if not line:
             continue
-        if any(pattern.search(line) for pattern in ADMIN_DENY_PATTERNS):
+        skip_line = False
+        candidate = line
+        changed = True
+        while changed:
+            changed = False
+            for pattern in ADMIN_DENY_PATTERNS:
+                match = pattern.search(candidate)
+                if not match:
+                    continue
+                if match.start() <= 3:
+                    skip_line = True
+                    break
+                prefix = candidate[: match.start()].rstrip(" -–—|,:.")
+                suffix = candidate[match.end() :].lstrip(" -–—|,:.")
+                candidate = (prefix + (" " if prefix and suffix else "") + suffix).strip()
+                changed = True
+            if skip_line:
+                break
+        if skip_line:
             continue
-        filtered.append(line)
+        candidate = candidate.strip()
+        if candidate:
+            filtered.append(candidate)
 
     if not filtered:
         return ""
@@ -203,4 +223,3 @@ def parse_contraindications(text: str) -> List[str]:
 
 
 __all__ = ["clean_section_text", "sanitize_adverse_events", "parse_contraindications"]
-

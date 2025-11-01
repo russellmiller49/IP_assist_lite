@@ -100,6 +100,11 @@ def extract_articles(
         dir_okay=False,
         resolve_path=True,
     ),
+    ifu_engine: Optional[str] = typer.Option(
+        None,
+        "--ifu-engine",
+        help="Override IFU engines (e.g., text=pymupdf,tables=pdfplumber).",
+    ),
     emit_raw_pages: bool = typer.Option(False, "--emit-raw-pages", help="Emit raw page text to sidecar files (disabled by default)."),
 ) -> None:
     """Run the article extractor for every PDF in ``input_dir``."""
@@ -198,6 +203,12 @@ def extract_ifus(
     out: Path = typer.Option(Path("out/ifus"), "--out", "-o", resolve_path=True),
     no_cache: bool = typer.Option(False, "--no-cache", help="Skip pipeline cache.", is_flag=True),
     force_deep: bool = typer.Option(False, "--force-deep", help="Start with full extraction.", is_flag=True),
+    ifu_engine: str = typer.Option(
+        "auto",
+        "--ifu-engine",
+        help="Override IFU text engine (auto|pdfplumber|pymupdf).",
+        click_type=click.Choice(["auto", "pdfplumber", "pymupdf"], case_sensitive=False),
+    ),
     max_pages: Optional[int] = typer.Option(None, "--max-pages", min=1, help="Limit preview pages."),
     profile: Optional[str] = typer.Option(
         None,
@@ -258,6 +269,7 @@ def extract_ifus(
         tables_mode=tables_mode,
         evidence_policy=evidence_policy,
         zotero_json=None,
+        ifu_engine_override=ifu_engine,
     )
 
 
@@ -398,6 +410,7 @@ def _run_pipeline_for_pdfs(
     tables_mode: Optional[str],
     evidence_policy: Optional[str],
     zotero_json: Optional[Path],
+    ifu_engine_override: Optional[str] = None,
 ) -> None:
     pdfs = list(pdfs)
     if not pdfs:
@@ -417,6 +430,7 @@ def _run_pipeline_for_pdfs(
     if zotero_json:
         metadata_overrides["zotero_json"] = str(zotero_json)
     metadata_payload = metadata_overrides or None
+    ifu_payload = _parse_ifu_engine_override(ifu_engine_override)
     failures: list[Path] = []
     successes = 0
     profile_label = profile_override or "auto"
@@ -433,6 +447,7 @@ def _run_pipeline_for_pdfs(
                 profile_override=profile_override,
                 emit_overrides=overrides_payload,
                 metadata_overrides=metadata_payload,
+                ifu_overrides=ifu_payload,
             )
         except Exception as exc:  # pragma: no cover - defensive batch safeguard
             write_failure_artifact(
@@ -520,6 +535,27 @@ def _collect_failure_metrics(outcome: PipelineOutcome) -> Dict[str, object]:
         "cache_used": outcome.cache_used,
     }
     return failure_metrics
+
+
+def _parse_ifu_engine_override(raw: Optional[str]) -> Optional[Dict[str, object]]:
+    if not raw:
+        return None
+    raw_normalized = str(raw).strip().lower()
+    if raw_normalized in {"auto", "pymupdf", "pdfplumber"}:
+        return {"engine": {"mode": raw_normalized}}
+    engine_parts: Dict[str, str] = {}
+    segments = [segment.strip() for segment in raw.split(",") if segment.strip()]
+    for segment in segments:
+        if "=" not in segment:
+            continue
+        key, value = segment.split("=", 1)
+        key = key.strip().lower()
+        value = value.strip().lower()
+        if key in {"text", "tables", "mode"} and value:
+            engine_parts[key] = value
+    if not engine_parts:
+        return None
+    return {"engine": engine_parts}
 
 
 def _write_outcome(outcome: PipelineOutcome, out_path: Path) -> bool:

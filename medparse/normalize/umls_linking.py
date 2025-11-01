@@ -267,10 +267,19 @@ def _get_scispacy_model(preferred_models: Optional[List[str]] = None):
     for model_name in preferred_models:
         try:
             import warnings
+            import os
             # Suppress warnings during model loading
             with warnings.catch_warnings():
                 warnings.filterwarnings("ignore", category=UserWarning, module="sklearn")
                 warnings.filterwarnings("ignore", message=".*Trying to unpickle.*version.*")
+            # Try to use GPU if available - set environment variable before loading
+            try:
+                import cupy
+                os.environ["THINC_USE_OPS"] = "cupy"
+                LOGGER.info("GPU acceleration enabled for scispaCy (via THINC_USE_OPS)")
+            except (ImportError, ValueError, RuntimeError):
+                LOGGER.debug("GPU not available for spaCy, using CPU")
+                os.environ.pop("THINC_USE_OPS", None)
             nlp = spacy.load(model_name)
             LOGGER.info("Loaded scispaCy model: %s (version %s)",
                        model_name, nlp.meta.get("version", "unknown"))

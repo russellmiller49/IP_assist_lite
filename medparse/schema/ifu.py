@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from typing import List, Literal, Optional
+from typing import Dict, List, Literal, Optional, Union
 
 from pydantic import Field
 
@@ -11,10 +11,14 @@ from .common import BaseDocument, EvidenceSpan
 
 
 class SafetyBlock(MedparseModel):
-    """Represent a categorized warning/caution/note block with evidence."""
+    """Represent a categorized safety block with evidence."""
 
-    severity: Literal["warning", "caution", "note"]
+    level: Literal["danger", "warning", "caution", "notice", "note", "attention"]
     text: str
+    title: Optional[str] = None
+    page: Optional[int] = None
+    hash: Optional[str] = None
+    severity: Optional[Literal["warning", "caution", "note"]] = None
     category: Optional[str] = None
     evidence: EvidenceSpan
 
@@ -31,7 +35,7 @@ class IFUDocument(BaseDocument):
     publication_date: Optional[str] = None
     model: Optional[str] = None
     software_versions: List[str] = Field(default_factory=list)
-    indications_for_use: Optional[str] = None
+    indications_for_use: Optional[Union[str, Dict[str, str]]] = None
     intended_use: Optional[str] = None
     intended_user: Optional[str] = None
     intended_patient_population: Optional[str] = None

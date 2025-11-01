@@ -9,11 +9,13 @@ from typing import Iterable, List, Optional, Sequence
 from medparse.guideline.grade_map import (
     build_envelope,
     map_consensus,
+    map_grade_code,
     map_grade_strength,
     map_sign_letter,
 )
 
 SIGN_INLINE_RE = re.compile(r"(?i)\brecommendation\s+grade\s*([ABCD])\b")
+CHEST_GRADE_RE = re.compile(r"(?i)\bgrade\s*(?:recommendation\s*)?([12])\s*([ABCD])\b")
 GRADE_PAIR_RE = re.compile(
     r"(?i)\b(strong|conditional|weak)\s+recommendation(?:s?)\b"
     r"(?:(?:\s|,|;|:|and|with){0,5}[^.;()]{0,60})?"
@@ -83,6 +85,17 @@ def _detect_candidates(
     matches: List[GradeCandidate] = []
     for match in SIGN_INLINE_RE.finditer(text):
         payload = map_sign_letter(match.group(1), source=source, confidence=letter_bias, raw=match.group(0))
+        if payload:
+            matches.append(GradeCandidate(payload=payload, raw=match.group(0)))
+
+    for match in CHEST_GRADE_RE.finditer(text):
+        payload = map_grade_code(
+            match.group(1),
+            match.group(2),
+            source=source,
+            confidence=max(strength_bias, letter_bias),
+            raw=match.group(0),
+        )
         if payload:
             matches.append(GradeCandidate(payload=payload, raw=match.group(0)))
 

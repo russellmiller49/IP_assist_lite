@@ -178,6 +178,42 @@ def check_doc_type_model() -> Tuple[bool, str]:
     return True, f"doc-type model ok (labels={len(labels)}; sklearn {declared_version})"
 
 
+def check_ifu_guard_config() -> Tuple[bool, str]:
+    """Ensure IFU configuration declares guard and engine settings."""
+
+    config_path = ROOT_DIR / "configs" / "run_ifu.yaml"
+    if not config_path.exists():
+        return False, "configs/run_ifu.yaml missing"
+
+    try:
+        data = yaml.safe_load(config_path.read_text(encoding="utf-8")) or {}
+    except Exception as exc:
+        return False, f"Failed to parse run_ifu.yaml: {exc}"
+
+    ifu_block = data.get("ifu") or {}
+    toc_guard = ifu_block.get("toc_guard")
+    engine_block = ifu_block.get("engine") or {}
+    threshold = ifu_block.get("small_ifu_threshold")
+
+    missing = []
+    if toc_guard is None:
+        missing.append("toc_guard")
+    if not engine_block or not all(key in engine_block for key in ("text", "tables")):
+        missing.append("engine.text/tables")
+    if threshold is None:
+        missing.append("small_ifu_threshold")
+
+    if missing:
+        return False, f"IFU config missing {', '.join(missing)}"
+
+    summary = (
+        f"toc_guard_enabled={toc_guard.get('enabled', True)}; "
+        f"engines=text={engine_block.get('text')},tables={engine_block.get('tables')}; "
+        f"small_ifu_threshold={threshold}"
+    )
+    return True, summary
+
+
 def run_preflight() -> int:
     """Run all preflight checks and return exit code."""
     checks: List[Tuple[str, Tuple[bool, str]]] = [
@@ -189,6 +225,7 @@ def run_preflight() -> int:
         ("scispaCy Model", check_scispacy_model()),
         ("Emit Config", check_emit_config()),
         ("Doc-Type Model", check_doc_type_model()),
+        ("IFU Guard Config", check_ifu_guard_config()),
     ]
 
     print("=== Medparse Environment Preflight ===\n")
