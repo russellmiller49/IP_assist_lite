@@ -7,7 +7,7 @@ import re
 from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
-from typing import Dict, Iterable, List, Optional, Sequence
+from typing import Dict, Iterable, List, Optional, Sequence, Tuple
 
 import yaml
 
@@ -33,6 +33,7 @@ MANUFACTURER_PATTERNS: Sequence[tuple[str, Sequence[re.Pattern[str]]]] = [
         (
             re.compile(r"Olympus\s+Corporation", re.IGNORECASE),
             re.compile(r"Olympus\s+America\s+Inc\.", re.IGNORECASE),
+            re.compile(r"Olympus\s+Medical", re.IGNORECASE),
         ),
     ),
 ]
@@ -131,6 +132,7 @@ def _load_frontmatter_config() -> Dict[str, object]:
 class FrontMatterResult:
     manufacturer: Optional[str] = None
     product_name: Optional[str] = None
+    product_name_source: Optional[str] = None
     part_number: Optional[str] = None
     revision: Optional[str] = None
     publication_date: Optional[str] = None
@@ -140,6 +142,7 @@ class FrontMatterResult:
         return {
             "manufacturer": self.manufacturer,
             "product_name": self.product_name,
+            "product_name_source": self.product_name_source,
             "part_number": self.part_number,
             "revision": self.revision,
             "publication_date": self.publication_date,
@@ -186,11 +189,13 @@ def extract_front_matter(
         elif field == "model":
             result.model = raw_value.strip()
 
-    product_name = _select_product_name(pages, result, metadata_title, config)
+    product_name, product_source = _select_product_name(pages, result, metadata_title, config)
     if product_name:
         result.product_name = product_name
+        result.product_name_source = product_source or "pattern"
     elif result.model and result.manufacturer:
         result.product_name = f"{result.manufacturer} {result.model}".strip()
+        result.product_name_source = "model_hint"
     if metadata_title:
         if not result.part_number:
             part_match = re.search(r"([A-Z0-9]{3,}-[A-Z0-9]{3,})", metadata_title)
@@ -286,12 +291,21 @@ def _normalize_date(raw: str) -> Optional[str]:
     return None
 
 
+def _clean_product_name(value: str, *, manufacturer: Optional[str] = None) -> str:
+    cleaned = value.strip()
+    cleaned = re.sub(r"(?i)^product\s+name[:\-]\s*", "", cleaned)
+    cleaned = cleaned.strip(" :-")
+    if manufacturer and cleaned.lower() == manufacturer.lower():
+        return ""
+    return cleaned
+
+
 def _select_product_name(
     pages: Sequence[PageData],
     result: FrontMatterResult,
     metadata_title: Optional[str],
     config: Optional[Dict[str, object]] = None,
-) -> Optional[str]:
+) -> Tuple[Optional[str], Optional[str]]:
     candidates = _collect_cover_lines(pages)
     manufacturer = (result.manufacturer or "").lower()
 
@@ -301,6 +315,7 @@ def _select_product_name(
         if result.manufacturer and result.manufacturer in product_patterns:
             pattern_bundle.extend(product_patterns[result.manufacturer])
         pattern_bundle.extend(product_patterns.get("default", []))
+    pattern_bundle.append((re.compile(r"(?i)product\s+name[:\-]\s*(.+)"), 1))
 
     for pattern, group_index in pattern_bundle:
         for line in candidates:
@@ -312,9 +327,9 @@ def _select_product_name(
             except IndexError:
                 extracted = match.group(0)
             if extracted:
-                cleaned = extracted.strip()
+                cleaned = _clean_product_name(extracted, manufacturer=result.manufacturer)
                 if cleaned:
-                    return cleaned
+                    return cleaned, "pattern"
 
     best_line = None
     best_score = 0.0
@@ -330,14 +345,18 @@ def _select_product_name(
             best_line = line
 
     if best_line:
-        return best_line
+        cleaned = _clean_product_name(best_line, manufacturer=result.manufacturer)
+        if cleaned:
+            return cleaned, "cover_line"
 
     # Try to find a line that contains the detected model identifier
     if result.model:
         model_lower = result.model.lower()
         for line in candidates:
             if model_lower in line.lower():
-                return line.strip()
+                cleaned = _clean_product_name(line, manufacturer=result.manufacturer)
+                if cleaned:
+                    return cleaned, "model_hint"
 
     fallback_enabled = True
     if isinstance(config, dict):
@@ -346,12 +365,14 @@ def _select_product_name(
     if fallback_enabled and metadata_title:
         cleaned = metadata_title.strip()
         if cleaned:
-            return cleaned
+            normalized = _clean_product_name(cleaned, manufacturer=result.manufacturer)
+            if normalized:
+                return normalized, "metadata_title"
 
-    return None
+    return None, None
 
 
-def _collect_cover_lines(pages: Sequence[PageData], max_pages: int = 2) -> List[str]:
+def _collect_cover_lines(pages: Sequence[PageData], max_pages: int = 3) -> List[str]:
     lines: List[str] = []
     for page in pages[:max_pages]:
         if not page or not page.lines:

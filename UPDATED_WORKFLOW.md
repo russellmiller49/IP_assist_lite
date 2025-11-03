@@ -29,7 +29,9 @@ python -m medparse.cli extract-articles \
   --out out/articles \
   --config configs/run_article.yaml \
   --profile enriched \
-  --no-cache
+  --no-cache \
+  --evidence-policy compact \
+  --tables-mode compact
 
 # IFUs
 python -m medparse.cli extract-ifus \
@@ -37,7 +39,11 @@ python -m medparse.cli extract-ifus \
   --out out/ifus \
   --config configs/run_ifu.yaml \
   --profile enriched \
-  --no-cache
+  --no-cache \
+  --evidence-policy compact \
+  --tables-mode compact \
+  --ifu-engine hybrid \
+  --ifu-fast-long-docs
 
 # Textbooks
 python -m medparse.cli extract-textbooks \
@@ -171,28 +177,40 @@ python -m medparse.cli extract-articles \
   "data/Input pdfs/articles/pdf/Robotic Cyrobiopsy 2022.pdf" \
   --out out/articles \
   --config configs/run_article.yaml \
-  --profile enriched
+  --profile enriched \
+  --evidence-policy compact \
+  --tables-mode compact
 
 # Batch articles
 python -m medparse.cli extract-articles \
   "data/Input pdfs/articles/pdf" \
   --out out/articles \
   --config configs/run_article.yaml \
-  --profile enriched
+  --profile enriched \
+  --evidence-policy compact \
+  --tables-mode compact
 
 # Single IFU
 python -m medparse.cli extract-ifus \
   "data/Input pdfs/IFUs/pdf/Ion Endoluminal System, Instruments, and Accessories User Manual(553990-11).pdf" \
   --out out/ifus \
   --config configs/run_ifu.yaml \
-  --profile enriched
+  --profile enriched \
+  --evidence-policy compact \
+  --tables-mode compact \
+  --ifu-engine hybrid \
+  --ifu-fast-long-docs
 
 # Batch IFUs
 python -m medparse.cli extract-ifus \
   "data/Input pdfs/IFUs/pdf" \
   --out out/ifus \
   --config configs/run_ifu.yaml \
-  --profile enriched
+  --profile enriched \
+  --evidence-policy compact \
+  --tables-mode compact \
+  --ifu-engine hybrid \
+  --ifu-fast-long-docs
 
 # Textbook chapters
 python -m medparse.cli extract-textbooks \

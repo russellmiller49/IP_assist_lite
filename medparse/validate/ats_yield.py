@@ -96,7 +96,7 @@ def validate_ats_yield(document: ArticleDocument) -> Dict[str, object]:
 
     result["strict_yield_detected"] = bool(initial_strict_claim or strict_indices or has_counts)
     result["compatible"] = diagnostic.compatible_with_ats
-    result["exclusion_reasons"] = exclusion_reasons
+    result["exclusion_reasons"] = ordered_reasons
 
     return result
 

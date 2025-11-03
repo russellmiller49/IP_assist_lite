@@ -59,6 +59,7 @@ def extract_ifu(
 
     extraction_config = config or get_extraction_config()
     ifu_settings = getattr(extraction_config, "ifu", {}) or {}
+    engine_runtime = ifu_settings.get("_engine_runtime") if isinstance(ifu_settings, dict) else {}
     pages = pages or load_pages(pdf_path, engine=engine, max_pages=page_limit)
     pages, spacing_info = repair_space_poor_pages(
         pdf_path,
@@ -98,6 +99,14 @@ def extract_ifu(
         text, _evidence, _ = section_text_between(pages, heading, next_heading)
         section_text[heading.title.lower()] = text
 
+    safety_blocks = build_safety_blocks(pages)
+
+    references = normalize_references(
+        reference_section(lines),
+        mode="ifu",
+        headings=[heading.title for page in pages for heading in page.headings],
+    )
+
     doc_kwargs: dict[str, object] = {
         "doc_type": "ifu",
         "doc_subtype": doc_subtype,
@@ -111,12 +120,8 @@ def extract_ifu(
         "model": None,
         "software_versions": [],
         "tables": collect_tables(tables_pages),
-        "references": normalize_references(
-            reference_section(lines),
-            mode="ifu",
-            headings=[heading.title for page in pages for heading in page.headings],
-        ),
-        "safety_blocks": build_safety_blocks(pages),
+        "references": references,
+        "safety_blocks": safety_blocks,
     }
 
     skip_clinical_fields = isinstance(doc_subtype, str) and doc_subtype in {"catalog", "installation_guide", "tech_manual"}
@@ -219,6 +224,22 @@ def extract_ifu(
     toc_guard_info = doc_kwargs.pop("_toc_guard_info", None)
 
     document = IFUDocument.model_validate(doc_kwargs)
+    document.pipeline_info["safety_blocks_found"] = len(safety_blocks)
+    if isinstance(meta, dict) and meta.get("product_name_source"):
+        front_meta = document.pipeline_info.setdefault("front_matter_meta", {})
+        if isinstance(front_meta, dict):
+            front_meta["product_name_source"] = meta.get("product_name_source")
+    if references:
+        document.pipeline_info["references_detected"] = len(references)
+    if isinstance(engine_runtime, dict):
+        if engine_runtime.get("long_doc_fast_path"):
+            document.pipeline_info["long_doc_fast_path"] = True
+            if engine_runtime.get("long_doc_page_threshold") is not None:
+                document.pipeline_info["long_doc_page_threshold"] = engine_runtime.get("long_doc_page_threshold")
+            document.pipeline_info["long_doc_page_count"] = page_count
+            document.pipeline_info["long_doc_fast_engine"] = engine_runtime.get("fast_long_engine")
+        else:
+            document.pipeline_info.setdefault("long_doc_fast_path", False)
     if anchor_errors:
         document.pipeline_info["anchor_bleed_errors"] = anchor_errors
         document.pipeline_info["anchor_bleed_fields"] = anchor_error_fields

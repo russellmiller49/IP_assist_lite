@@ -130,6 +130,7 @@ def _promote_recommendations(document: ArticleDocument, paragraph_store: Dict[st
 
     _preprocess_recommendations(recommendations)
     grade_sources = _assign_recommendation_grades(document, recommendations, paragraph_store)
+    _finalize_recommendation_texts(recommendations)
 
     pipeline_info = getattr(document, "pipeline_info", {}) or {}
     if isinstance(grade_sources, dict) and grade_sources:
@@ -651,6 +652,34 @@ def _remove_parenthetical_phrase(text: str, phrase: str) -> str:
     if updated == text:
         updated = text.replace(phrase, " ")
     return " ".join(updated.split())
+
+
+def _strip_grade_fragments(text: str, fragments: Sequence[str]) -> str:
+    if not text or not fragments:
+        return text
+    updated = text
+    for fragment in fragments:
+        fragment_clean = fragment.strip()
+        if not fragment_clean:
+            continue
+        updated = _remove_parenthetical_phrase(updated, fragment_clean)
+        escaped = re.escape(fragment_clean)
+        updated = re.sub(rf"\b{escaped}\b", " ", updated, flags=re.IGNORECASE)
+        updated = updated.replace(fragment_clean, " ")
+    return " ".join(updated.split())
+
+
+def _finalize_recommendation_texts(recommendations: Sequence[GuidelineRecommendation]) -> None:
+    for rec in recommendations:
+        fragments: List[str] = []
+        if rec.grade_raw:
+            fragments.extend(part.strip() for part in str(rec.grade_raw).split(";") if part.strip())
+        grade_payload = rec.grade_normalized if isinstance(rec.grade_normalized, dict) else {}
+        raw_fragment = grade_payload.get("raw") if isinstance(grade_payload, dict) else None
+        if raw_fragment:
+            fragments.append(str(raw_fragment).strip())
+        if fragments:
+            rec.text = _strip_grade_fragments(rec.text or "", fragments)
 
 
 def _strip_remarks(text: str) -> tuple[str, List[str]]:

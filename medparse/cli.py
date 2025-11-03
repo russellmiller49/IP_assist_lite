@@ -203,11 +203,11 @@ def extract_ifus(
     out: Path = typer.Option(Path("out/ifus"), "--out", "-o", resolve_path=True),
     no_cache: bool = typer.Option(False, "--no-cache", help="Skip pipeline cache.", is_flag=True),
     force_deep: bool = typer.Option(False, "--force-deep", help="Start with full extraction.", is_flag=True),
-    ifu_engine: str = typer.Option(
-        "auto",
+    ifu_engine_override: Optional[str] = typer.Option(
+        None,
         "--ifu-engine",
-        help="Override IFU text engine (auto|pdfplumber|pymupdf).",
-        click_type=click.Choice(["auto", "pdfplumber", "pymupdf"], case_sensitive=False),
+        help="Override IFU extraction engine (hybrid|pdfplumber|pymupdf).",
+        click_type=click.Choice(["hybrid", "pdfplumber", "pymupdf"], case_sensitive=False),
     ),
     max_pages: Optional[int] = typer.Option(None, "--max-pages", min=1, help="Limit preview pages."),
     profile: Optional[str] = typer.Option(
@@ -250,6 +250,11 @@ def extract_ifus(
         resolve_path=True,
     ),
     emit_raw_pages: bool = typer.Option(False, "--emit-raw-pages", help="Emit raw page text to sidecar files (disabled by default)."),
+    ifu_fast_long_docs: bool = typer.Option(
+        True,
+        "--ifu-fast-long-docs/--no-ifu-fast-long-docs",
+        help="Enable two-pass fast-path for long IFUs (pymupdf first).",
+    ),
 ) -> None:
     """Run the IFU/manual extractor."""
 
@@ -269,7 +274,8 @@ def extract_ifus(
         tables_mode=tables_mode,
         evidence_policy=evidence_policy,
         zotero_json=None,
-        ifu_engine_override=ifu_engine,
+        ifu_engine_override=ifu_engine_override,
+        ifu_fast_long_docs=ifu_fast_long_docs,
     )
 
 
@@ -411,6 +417,7 @@ def _run_pipeline_for_pdfs(
     evidence_policy: Optional[str],
     zotero_json: Optional[Path],
     ifu_engine_override: Optional[str] = None,
+    ifu_fast_long_docs: Optional[bool] = None,
 ) -> None:
     pdfs = list(pdfs)
     if not pdfs:
@@ -431,6 +438,10 @@ def _run_pipeline_for_pdfs(
         metadata_overrides["zotero_json"] = str(zotero_json)
     metadata_payload = metadata_overrides or None
     ifu_payload = _parse_ifu_engine_override(ifu_engine_override)
+    if ifu_fast_long_docs is not None:
+        if ifu_payload is None:
+            ifu_payload = {}
+        ifu_payload["fast_long_docs"] = bool(ifu_fast_long_docs)
     failures: list[Path] = []
     successes = 0
     profile_label = profile_override or "auto"
@@ -541,8 +552,10 @@ def _parse_ifu_engine_override(raw: Optional[str]) -> Optional[Dict[str, object]
     if not raw:
         return None
     raw_normalized = str(raw).strip().lower()
-    if raw_normalized in {"auto", "pymupdf", "pdfplumber"}:
-        return {"engine": {"mode": raw_normalized}}
+    payload: Dict[str, object] = {}
+    if raw_normalized in {"hybrid", "auto", "pymupdf", "pdfplumber"}:
+        payload["cli_engine"] = raw_normalized
+        return payload
     engine_parts: Dict[str, str] = {}
     segments = [segment.strip() for segment in raw.split(",") if segment.strip()]
     for segment in segments:
@@ -555,7 +568,11 @@ def _parse_ifu_engine_override(raw: Optional[str]) -> Optional[Dict[str, object]
             engine_parts[key] = value
     if not engine_parts:
         return None
-    return {"engine": engine_parts}
+    payload["engine"] = engine_parts
+    mode_override = engine_parts.get("mode")
+    if mode_override:
+        payload["cli_engine"] = mode_override
+    return payload
 
 
 def _write_outcome(outcome: PipelineOutcome, out_path: Path) -> bool:

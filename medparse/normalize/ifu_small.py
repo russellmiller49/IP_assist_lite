@@ -21,10 +21,26 @@ def _coerce_text(value: Any) -> Optional[str]:
     return None
 
 
+FALLBACK_SENTENCE_PATTERNS = (
+    "indicated for",
+    "indicated to",
+    "intended for",
+    "intended to",
+    "designed for",
+    "designed to",
+    "for use in",
+    "for use with",
+    "used for",
+)
+
+
 def _extract_intended_use_from_pages(pages: Sequence[PageData]) -> Optional[str]:
-    intent_pattern = re.compile(r"(INTENDED\s+(?:USE|PURPOSE)|APPLICATION)", re.IGNORECASE)
+    intent_pattern = re.compile(
+        r"(INDICATIONS?|CLINICAL\s+INDICATIONS?|INTENDED\s+(?:USE|PURPOSE)|APPLICATIONS?)",
+        re.IGNORECASE,
+    )
     stop_pattern = re.compile(r"\n\s*(?:\d+\s+[A-Z]|[A-Z]{2,})")
-    for page in pages[:2]:
+    for page in pages[:3]:
         page_lines = page.lines or []
         if not page_lines:
             continue
@@ -70,6 +86,23 @@ def _extract_intended_use_from_pages(pages: Sequence[PageData]) -> Optional[str]
         use_text = clean_section_text(target)
         if use_text:
             return use_text
+    # Fallback: look for sentences containing indicative phrases
+    for page in pages[:3]:
+        page_text = "\n".join(page.lines or [])
+        if not page_text:
+            continue
+        sentences = [segment.strip() for segment in re.split(r"(?<=[.!?])\s+", page_text) if segment.strip()]
+        collected_sentences: List[str] = []
+        for sentence in sentences:
+            lowered = sentence.lower()
+            if any(token in lowered for token in FALLBACK_SENTENCE_PATTERNS):
+                normalized = clean_section_text(sentence)
+                if normalized:
+                    collected_sentences.append(normalized)
+            if len(collected_sentences) >= 2:
+                break
+        if collected_sentences:
+            return " ".join(collected_sentences)
     return None
 
 
@@ -118,6 +151,7 @@ def apply_small_leaflet_policy(
     ifu_payload["indications_for_use"] = {
         "text": intended_text,
         "derived_from": "intended_use",
+        "provenance": "small_leaflet_fallback",
     }
     return True
 

@@ -44,6 +44,22 @@ LEVEL_TO_SEVERITY = {
     "attention": "warning",
 }
 
+FOOTER_CLEANUP_PATTERN = re.compile(r"(page\s+\d+(?:\s*/\s*\d+)?|\b\d+\s*/\s*\d+\b)", re.IGNORECASE)
+
+
+def _normalize_block_lines(lines: Iterable[str]) -> List[str]:
+    normalized: List[str] = []
+    for line in lines:
+        stripped = (line or "").strip()
+        if not stripped:
+            continue
+        stripped = FOOTER_CLEANUP_PATTERN.sub("", stripped)
+        stripped = re.sub(r"\s{2,}", " ", stripped)
+        cleaned = stripped.strip(" :-")
+        if cleaned:
+            normalized.append(cleaned)
+    return normalized
+
 
 def extract_safety_blocks(pages: Sequence[PageData]) -> List[SafetyBlock]:
     """Extract safety blocks using severity keywords and icons."""
@@ -73,7 +89,8 @@ def extract_safety_blocks(pages: Sequence[PageData]) -> List[SafetyBlock]:
                 block_lines.append(candidate)
                 idx += 1
 
-            normalized_text = _normalize_block_text(block_lines)
+            normalized_lines = _normalize_block_lines(block_lines)
+            normalized_text = _normalize_block_text(normalized_lines)
             if not normalized_text:
                 continue
 
@@ -82,7 +99,7 @@ def extract_safety_blocks(pages: Sequence[PageData]) -> List[SafetyBlock]:
                 continue
 
             seen_hashes.add(block_hash)
-            title = _normalize_title(block_lines[0])
+            title = _normalize_title(normalized_lines[0] if normalized_lines else block_lines[0])
             severity = LEVEL_TO_SEVERITY.get(level, "warning")
 
             blocks.append(

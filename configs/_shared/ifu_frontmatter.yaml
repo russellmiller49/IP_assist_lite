@@ -16,8 +16,19 @@ product_patterns:
       group: 1
     - regex: '(?i)(Units and Modules.*)'
       group: 1
+    - regex: '(?i)product\s+name[:\-]\s*(.+)'
+      group: 1
   "Intuitive Surgical, Inc.":
     - regex: '(?i)(Ion\s+Endoluminal\s+System.*)'
+      group: 1
+  "Olympus Corporation":
+    - regex: '(?i)(ALT[\s\-]?PRO\s+.*)'
+      group: 1
+    - regex: '(?i)(BW[\s\-]?18V\s+.*)'
+      group: 1
+    - regex: '(?i)(System\s+Carrier.*)'
+      group: 1
+    - regex: '(?i)(Units and Modules.*)'
       group: 1
   default:
     - regex: '(?i)([A-Z][A-Za-z0-9\-/ ]{4,})'

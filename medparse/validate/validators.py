@@ -85,13 +85,19 @@ def _validate_ifu(
         issues.append(ValidationIssue(issue.message, severity=issue.severity))
 
     # Manufacturer and product name should be present (warnings if missing)
+    pipeline_info = getattr(document, "pipeline_info", {}) or {}
+    front_meta = pipeline_info.get("front_matter_meta", {}) if isinstance(pipeline_info, dict) else {}
+
     if not document.manufacturer:
         issues.append(
             ValidationIssue("IFU missing manufacturer field.", severity="warning")
         )
     if not document.product_name:
+        product_severity = "error"
+        if document.manufacturer and isinstance(front_meta, dict) and front_meta.get("product_name_source") == "metadata_title":
+            product_severity = "warning"
         issues.append(
-            ValidationIssue("IFU missing product_name field.", severity="warning")
+            ValidationIssue("IFU missing product_name field.", severity=product_severity)
         )
 
     # Whitespace quality check: look for run-together tokens in clinical fields

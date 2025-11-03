@@ -66,14 +66,20 @@ python -m medparse.cli extract-articles "data/Input pdfs/articles/pdf" \
   --out out/articles \
   --config configs/run_article.yaml \
   --profile enriched \
-  --no-cache
+  --no-cache \
+  --evidence-policy compact \
+  --tables-mode compact
 
 # IFUs
 python -m medparse.cli extract-ifus "data/Input pdfs/IFUs/pdf" \
   --out out/ifus \
   --config configs/run_ifu.yaml \
   --profile enriched \
-  --no-cache
+  --no-cache \
+  --evidence-policy compact \
+  --tables-mode compact \
+  --ifu-engine hybrid \
+  --ifu-fast-long-docs
 
 # Textbooks
 python -m medparse.cli extract-textbook "data/Input pdfs/Texbooks" \
@@ -89,6 +95,8 @@ Results are saved to:
 - `out/articles/` - Article extractions
 - `out/ifus/` - IFU extractions
 - `out/textbooks/` - Textbook extractions
+
+`configs/run_ifu.yaml` defines manufacturer overrides and engine selection. CLI flags such as `--ifu-engine` (`pymupdf`, `pdfplumber`, or `hybrid`) and `--ifu-fast-long-docs/--no-ifu-fast-long-docs` can override the YAML defaults.
 
 ## Configuration
 

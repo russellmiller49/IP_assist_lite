@@ -2,10 +2,14 @@
 
 from __future__ import annotations
 
+import functools
 import re
 from dataclasses import dataclass, field, replace
 from difflib import SequenceMatcher
+from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional, Sequence, Tuple
+
+import yaml
 
 from medparse.ingest.models import PageData
 from medparse.ifu.toc_guard import TocGuardConfig, TocGuardReport, apply_toc_guard, trim_anchor_bleed
@@ -34,6 +38,29 @@ INDICATION_REQUIRED_PHRASES = (
 
 ANCHOR_TOC_WINDOW = 10
 ANCHOR_TOC_RATIO = 0.4
+
+SECTION_ALIAS_PATH = Path(__file__).resolve().parents[2] / "configs" / "_shared" / "ifu_section_aliases.yaml"
+
+
+@functools.lru_cache(maxsize=1)
+def _load_section_aliases() -> Dict[str, List[str]]:
+    if not SECTION_ALIAS_PATH.exists():
+        return {}
+    try:
+        data = yaml.safe_load(SECTION_ALIAS_PATH.read_text(encoding="utf-8")) or {}
+    except Exception as exc:
+        LOGGER.debug("Failed to load IFU section aliases from %s: %s", SECTION_ALIAS_PATH, exc)
+        return {}
+
+    aliases: Dict[str, List[str]] = {}
+    for field, values in data.items():
+        if not isinstance(values, list):
+            continue
+        collected = [str(value) for value in values if isinstance(value, str) and value.strip()]
+        if collected:
+            aliases[field] = collected
+    return aliases
+
 
 DEFAULT_SECTION_ANCHORS: Dict[str, Dict[str, List[str]]] = {
     "indications_for_use": {
@@ -132,6 +159,11 @@ DEFAULT_SECTION_ANCHORS: Dict[str, Dict[str, List[str]]] = {
             "clinical risks & benefits",
         ],
         "stops": [
+            "1.6 general warnings, cautions, and notes",
+            "1.6 general warnings, cautions and notes",
+            "1.6 general warnings cautions and notes",
+            "1.6 general warnings, cautions & notes",
+            "1.6 general warnings",
             "serious incident reporting",
             "general warnings, cautions, and notes",
             "general warnings",
@@ -159,7 +191,14 @@ DEFAULT_SECTION_ANCHORS: Dict[str, Dict[str, List[str]]] = {
     },
     "warnings": {
         "start": ["warnings", "general warnings"],
-        "stops": ["cautions", "precautions", "notes"],
+        "stops": [
+            "cautions and notes",
+            "cautions & notes",
+            "notes and cautions",
+            "cautions",
+            "precautions",
+            "notes",
+        ],
     },
     "cautions": {
         "start": ["cautions"],
@@ -175,7 +214,16 @@ DEFAULT_SECTION_ANCHORS: Dict[str, Dict[str, List[str]]] = {
     },
     "sterilization": {
         "start": ["sterilization"],
-        "stops": ["specifications", "reprocessing", "storage", "troubleshooting", "references"],
+        "stops": [
+            "reprocessing and handling",
+            "handling and storage",
+            "handling",
+            "specifications",
+            "reprocessing",
+            "storage",
+            "troubleshooting",
+            "references",
+        ],
     },
     "specifications": {
         "start": ["specifications"],
@@ -486,49 +534,62 @@ def slice_section(
             attempts += 1
             continue
 
-        extracted = slice_between(
-            current_pages,
-            start_anchors=start_list,
-            stop_anchors=stop_list or (),
-            guard_fn=None,
-        )
-        if not extracted:
-            break
+        start_tokens = _extract_heading_tokens(raw_line)
+        pages_for_slice: Sequence[PageData] = current_pages
+        window_applied = False
+        trimmed_prefix = 0
 
-        cleaned = clean_paragraph(extracted)
-        cleaned = _truncate_to_stop(cleaned, stop_list)
-        cleaned = normalize_bullets(cleaned)
-        trimmed_text, trimmed_prefix = trim_anchor_bleed(cleaned, ratio_threshold=bleed_threshold)
+        while True:
+            extracted = slice_between(
+                pages_for_slice,
+                start_anchors=start_list,
+                stop_anchors=stop_list or (),
+                guard_fn=None,
+            )
+            if not extracted:
+                trimmed_text = ""
+                break
 
-        if not trimmed_text:
-            current_pages = _drop_first_anchor_occurrence(current_pages, start_patterns)
-            attempts += 1
-            continue
+            cleaned = clean_paragraph(extracted)
+            cleaned = _truncate_to_stop(cleaned, stop_list, start_tokens)
+            cleaned = normalize_bullets(cleaned)
+            trimmed_text, trimmed_prefix = trim_anchor_bleed(cleaned, ratio_threshold=bleed_threshold)
 
-        if not anchor_post_guard(trimmed_text):
-            bleed_detected = True
-            current_pages = _drop_first_anchor_occurrence(current_pages, start_patterns)
-            attempts += 1
-            continue
+            if not trimmed_text:
+                break
 
-        if field_name == "indications_for_use" and not _contains_indication_phrase(trimmed_text):
-            bleed_detected = True
-            current_pages = _drop_first_anchor_occurrence(current_pages, start_patterns)
-            attempts += 1
-            continue
+            if not anchor_post_guard(trimmed_text):
+                bleed_detected = True
+                break
 
-        start_page = start_page_no
-        end_page = _find_anchor_page(current_pages, stop_list) if stop_list else None
+            if field_name == "indications_for_use" and not _contains_indication_phrase(trimmed_text):
+                bleed_detected = True
+                break
 
-        return Section(
-            anchor=start_list[0] if start_list else "",
-            text=trimmed_text,
-            start_page=start_page,
-            end_page=end_page,
-            lines=[line for line in trimmed_text.splitlines() if line.strip()],
-            trimmed_prefix=trimmed_prefix,
-            toc_report=guard_report,
-        )
+            if _span_contains_toc(trimmed_text) and not window_applied:
+                limited_pages = _limit_pages_to_window(pages_for_slice, start_page_no, window=3)
+                if len(limited_pages) < len(pages_for_slice):
+                    pages_for_slice = limited_pages
+                    window_applied = True
+                    continue
+                window_applied = True
+
+            start_page = start_page_no
+            end_page = _find_anchor_page(pages_for_slice, stop_list) if stop_list else None
+
+            return Section(
+                anchor=start_list[0] if start_list else "",
+                text=trimmed_text,
+                start_page=start_page,
+                end_page=end_page,
+                lines=[line for line in trimmed_text.splitlines() if line.strip()],
+                trimmed_prefix=trimmed_prefix,
+                toc_report=guard_report,
+            )
+
+        current_pages = _drop_first_anchor_occurrence(current_pages, start_patterns)
+        attempts += 1
+        continue
 
     if bleed_detected:
         raise AnchorBleedError(start_list[0] if start_list else "unknown")
@@ -694,10 +755,23 @@ def resolve_anchor_map(
                     merged.setdefault(field, {"start": [], "stops": []})
                     merged[field]["stops"] = _coerce_anchor_list(stop_values)
 
+    alias_map = _load_section_aliases()
+    if alias_map:
+        for field, alias_values in alias_map.items():
+            target = merged.setdefault(field, {"start": [], "stops": []})
+            starts = target.setdefault("start", [])
+            for alias in alias_values:
+                if alias not in starts:
+                    starts.append(alias)
+
     return merged
 
 
-def _truncate_to_stop(text: str, stop_anchors: Sequence[str]) -> str:
+def _truncate_to_stop(
+    text: str,
+    stop_anchors: Sequence[str],
+    start_tokens: Optional[Sequence[int]] = None,
+) -> str:
     if not text or not stop_anchors:
         return text
 
@@ -705,6 +779,10 @@ def _truncate_to_stop(text: str, stop_anchors: Sequence[str]) -> str:
     normalized_stops = [_normalize_for_match(anchor) for anchor in stop_anchors if anchor]
 
     for idx, raw_line in enumerate(lines):
+        if start_tokens:
+            heading_tokens = _extract_heading_tokens(raw_line)
+            if _should_stop_at_heading(heading_tokens, start_tokens):
+                return "\n".join(lines[:idx])
         normalized_line = _normalize_for_match(raw_line)
         if not normalized_line:
             continue
@@ -721,6 +799,36 @@ def _normalize_for_match(value: str) -> str:
     return " ".join(cleaned.split())
 
 
+def _extract_heading_tokens(line: str) -> List[int]:
+    match = re.match(r"^\s*(\d+(?:\.\d+)*)", line or "")
+    if not match:
+        return []
+    tokens: List[int] = []
+    for part in match.group(1).split("."):
+        try:
+            tokens.append(int(part))
+        except ValueError:
+            continue
+    return tokens
+
+
+def _should_stop_at_heading(tokens: Sequence[int], start_tokens: Sequence[int]) -> bool:
+    if not tokens or not start_tokens:
+        return False
+    prefix_len = len(start_tokens)
+    if len(tokens) > prefix_len and list(tokens[:prefix_len]) == list(start_tokens):
+        return False
+    compare_len = min(len(tokens), prefix_len)
+    for idx in range(compare_len):
+        if tokens[idx] > start_tokens[idx]:
+            return True
+        if tokens[idx] < start_tokens[idx]:
+            return False
+    if len(tokens) < prefix_len and list(tokens) == list(start_tokens[: len(tokens)]):
+        return False
+    return False
+
+
 def _contains_indication_phrase(text: str) -> bool:
     lowered = text.lower()
     if any(phrase in lowered for phrase in INDICATION_REQUIRED_PHRASES):
@@ -730,6 +838,32 @@ def _contains_indication_phrase(text: str) -> bool:
         if sentence_marks >= 2:
             return True
     return False
+
+
+def _span_contains_toc(text: str) -> bool:
+    if not text:
+        return False
+    lines = [line.strip() for line in text.splitlines() if line.strip()]
+    if not lines:
+        return False
+    return any(is_toc_like_para(line) for line in lines)
+
+
+def _limit_pages_to_window(
+    pages: Sequence[PageData],
+    start_page_no: int,
+    *,
+    window: int = 3,
+) -> List[PageData]:
+    if not pages:
+        return list(pages)
+    try:
+        start_index = next(idx for idx, page in enumerate(pages) if page.number == start_page_no)
+    except StopIteration:
+        start_index = 0
+    start = max(0, start_index - window)
+    end = min(len(pages), start_index + window + 1)
+    return list(pages[start:end])
 
 
 def _matches_stop_heading(line: str, stop: str) -> bool:
@@ -768,8 +902,8 @@ def _find_anchor_page(pages: Sequence[PageData], anchors: Sequence[str]) -> Opti
 
 def _compile_anchor_pattern(anchor: str) -> re.Pattern[str]:
     escaped = re.escape(anchor)
-    pattern = rf"(?:^|\n)\s*(?:\d+(?:\.\d+)*\s*)?{escaped}[\s:]*"
-    return re.compile(pattern, flags=re.IGNORECASE)
+    pattern = rf"^\s*(?:\d+(?:\.\d+)*\s+)?{escaped}(?:\b|[:\-–—]|\s)"
+    return re.compile(pattern, flags=re.IGNORECASE | re.MULTILINE)
 
 
 def _find_first_anchor_line(

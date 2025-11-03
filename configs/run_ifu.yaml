@@ -35,6 +35,14 @@ emit:
 ifu:
   small_ifu_threshold: 4
   small_leaflet_policy: map_intended_use_to_indications
+  ifu_engine: hybrid
+  engine_overrides:
+    intuitive: pymupdf
+    erbe: pdfplumber
+    olympus: pymupdf
+  fast_long_docs: true
+  long_doc_page_threshold: 80
+  fast_long_engine: pymupdf
   engine:
     mode: auto
     text: pymupdf

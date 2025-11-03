@@ -1071,13 +1071,43 @@ def _infer_doc_subtype(
         title_value = str(title_info or "")
     title_lower = title_value.lower()
 
-    if "guideline" in title_lower and "statement" in title_lower and recommendations:
+    has_guideline = "guideline" in title_lower
+    has_statement = "statement" in title_lower
+
+    if has_guideline and has_statement and recommendations:
+        return "guideline"
+
+    if has_guideline and recommendations:
+        return "guideline"
+
+    guideline_signal: Optional[bool] = None
+
+    def _guideline_signal() -> bool:
+        nonlocal guideline_signal
+        if guideline_signal is None:
+            guideline_signal = looks_like_guideline(
+                pages,
+                sections,
+                recommendations,
+                raw_recommendations,
+            )
+        return guideline_signal
+
+    if has_guideline and _guideline_signal():
         return "guideline"
 
     if "official american thoracic society" in title_lower or "official ats" in title_lower:
+        if has_guideline and recommendations:
+            return "guideline"
+        if has_guideline and _guideline_signal():
+            return "guideline"
         return "statement"
 
     if "official statement" in title_lower or "consensus statement" in title_lower:
+        if has_guideline and recommendations:
+            return "guideline"
+        if has_guideline and _guideline_signal():
+            return "guideline"
         return "statement"
 
     if "consensus" in title_lower and "statement" not in title_lower and (
@@ -1106,7 +1136,7 @@ def _infer_doc_subtype(
     if recommendations:
         return "guideline"
 
-    if looks_like_guideline(pages, sections, recommendations, raw_recommendations):
+    if _guideline_signal():
         return "guideline"
 
     if _has_recommendation_grade_signal(pages, sections):

@@ -17,6 +17,7 @@ from medparse.config import ExtractionConfig, ExtractionProfile
 from medparse.extractors.article import extract_article
 from medparse.extractors.guideline import extract_guideline
 from medparse.extractors.ifu import extract_ifu
+from medparse.ifu.frontmatter import extract_front_matter
 from medparse.extractors.textbook import extract_textbook_chapter
 from medparse.extract.utils import load_pages
 from medparse.schema.article import ArticleDocument
@@ -97,21 +98,88 @@ def _estimate_pdf_density(pdf_path: Path, *, sample_pages: int = 6) -> Dict[str,
     }
 
 
+def _normalize_override_key(value: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "", value.lower())
+
+
+def _infer_engine_override_key(
+    pdf_path: Path,
+    overrides: Dict[str, object],
+    *,
+    sample_pages: int = 4,
+) -> tuple[Optional[str], Optional[str]]:
+    """Return (override_key, engine_mode) when a manufacturer override matches."""
+
+    if not overrides:
+        return None, None
+
+    normalized_path = _normalize_override_key(str(pdf_path))
+    for raw_key, mode in overrides.items():
+        if not isinstance(raw_key, str):
+            continue
+        match_key = _normalize_override_key(raw_key)
+        if not match_key:
+            continue
+        if match_key in normalized_path:
+            return raw_key, str(mode)
+
+    # Fallback to lightweight front-matter detection using pymupdf pages
+    try:
+        pages = load_pages(pdf_path, engine="pymupdf", max_pages=sample_pages)
+    except Exception:
+        pages = []
+    if pages:
+        metadata_title = pdf_path.stem.replace("_", " ").strip()
+        front_matter = extract_front_matter(pages, metadata_title=metadata_title or None)
+        manufacturer = front_matter.get("manufacturer") if isinstance(front_matter, dict) else None
+        if manufacturer:
+            manufacturer_key = _normalize_override_key(str(manufacturer))
+            for raw_key, mode in overrides.items():
+                if not isinstance(raw_key, str):
+                    continue
+                match_key = _normalize_override_key(raw_key)
+                if match_key and match_key in manufacturer_key:
+                    return raw_key, str(mode)
+    return None, None
+
+
 def _resolve_ifu_engines(
     pdf_path: Path,
     config: PipelineConfig,
     *,
     force_deep: bool,
+    total_pages: Optional[int] = None,
 ) -> tuple[list[str], Dict[str, float]]:
     base_engines = config.resolved_engines(force_deep=force_deep)
-    ifu_settings = config.ifu or {}
-    if not isinstance(ifu_settings, dict):
-        ifu_settings = {}
+    if not isinstance(config.ifu, dict):
+        config.ifu = {}
+    ifu_settings = config.ifu
     engine_block = ifu_settings.get("engine") or {}
     if not isinstance(engine_block, dict):
         engine_block = {}
 
     mode = str(engine_block.get("mode") or "manual").lower()
+    cli_engine = str(ifu_settings.get("cli_engine") or "").strip().lower()
+    default_engine = str(ifu_settings.get("ifu_engine") or "").strip().lower()
+    overrides_cfg = ifu_settings.get("engine_overrides")
+    override_key: Optional[str] = None
+    override_choice: Optional[str] = None
+    if isinstance(overrides_cfg, dict) and overrides_cfg:
+        override_key, override_choice = _infer_engine_override_key(pdf_path, overrides_cfg)
+
+    resolved_mode = mode
+    engine_source = "engine"
+    if cli_engine:
+        resolved_mode = cli_engine
+        engine_source = "cli"
+    elif override_choice:
+        resolved_mode = str(override_choice).lower()
+        engine_source = f"manufacturer:{override_key}" if override_key else "manufacturer"
+    elif default_engine:
+        resolved_mode = default_engine
+        engine_source = "config"
+    mode = resolved_mode or mode or "auto"
+
     text_engine = str(engine_block.get("text") or (base_engines[0] if base_engines else "pymupdf"))
     tables_engine = str(engine_block.get("tables") or "pdfplumber")
     fallback_engine = str(engine_block.get("fallback") or tables_engine or "pdfplumber")
@@ -139,33 +207,67 @@ def _resolve_ifu_engines(
                 ordered.append(lowered)
         return ordered
 
-    if mode in {"pymupdf", "pdfplumber"}:
+    fast_long_docs = bool(ifu_settings.get("fast_long_docs", False))
+    long_doc_threshold = int(ifu_settings.get("long_doc_page_threshold", 80) or 80)
+    fast_engine = str(ifu_settings.get("fast_long_engine", "pymupdf") or "pymupdf").lower()
+
+    runtime_info = {
+        "mode": mode,
+        "source": engine_source,
+        "cli_engine": cli_engine or None,
+    }
+    if override_key:
+        runtime_info["override_key"] = override_key
+
+    if mode == "hybrid":
+        engines = _unique_order(
+            [
+                text_engine,
+                tables_engine,
+                fallback_engine,
+                *base_engines,
+            ]
+        )
+    elif mode in {"pymupdf", "pdfplumber"}:
         engines = _unique_order([mode, *base_engines])
-        return engines, engine_timeouts
-
-    if mode != "auto":
+    elif mode != "auto":
         engines = _unique_order([text_engine, fallback_engine, *base_engines])
-        return engines, engine_timeouts
+    else:
+        sample_pages = int(auto_block.get("sample_pages", 6) or 6)
+        metrics = _estimate_pdf_density(pdf_path, sample_pages=sample_pages)
+        avg_chars = float(metrics.get("avg_chars_per_page", 0.0))
+        image_ratio = float(metrics.get("image_ratio", 0.0))
+        page_count = float(metrics.get("page_count", 0.0))
 
-    sample_pages = int(auto_block.get("sample_pages", 6) or 6)
-    metrics = _estimate_pdf_density(pdf_path, sample_pages=sample_pages)
-    avg_chars = float(metrics.get("avg_chars_per_page", 0.0))
-    image_ratio = float(metrics.get("image_ratio", 0.0))
-    page_count = float(metrics.get("page_count", 0.0))
+        char_threshold = float(auto_block.get("char_density_threshold", auto_block.get("char_threshold", 900)))
+        image_threshold = float(auto_block.get("image_density_threshold", auto_block.get("image_threshold", 0.8)))
+        large_doc_pages = float(auto_block.get("large_doc_pages", 120))
+        prefer_engine = str(auto_block.get("prefer", text_engine or "pymupdf"))
+        fallback = str(auto_block.get("fallback", fallback_engine or "pdfplumber"))
 
-    char_threshold = float(auto_block.get("char_density_threshold", auto_block.get("char_threshold", 900)))
-    image_threshold = float(auto_block.get("image_density_threshold", auto_block.get("image_threshold", 0.8)))
-    large_doc_pages = float(auto_block.get("large_doc_pages", 120))
-    prefer_engine = str(auto_block.get("prefer", text_engine or "pymupdf"))
-    fallback = str(auto_block.get("fallback", fallback_engine or "pdfplumber"))
-
-    primary = prefer_engine
-    if avg_chars < char_threshold or image_ratio >= image_threshold:
-        primary = fallback
-    elif page_count >= large_doc_pages:
         primary = prefer_engine
+        if avg_chars < char_threshold or image_ratio >= image_threshold:
+            primary = fallback
+        elif page_count >= large_doc_pages:
+            primary = prefer_engine
 
-    engines = _unique_order([primary, prefer_engine, fallback, fallback_engine, text_engine, *base_engines])
+        engines = _unique_order([primary, prefer_engine, fallback, fallback_engine, text_engine, *base_engines])
+
+    fast_path = False
+    if fast_long_docs and isinstance(total_pages, (int, float)) and total_pages > long_doc_threshold:
+        fast_path = True
+        if fast_engine not in engines:
+            engines.insert(0, fast_engine)
+        else:
+            engines = [fast_engine, *[candidate for candidate in engines if candidate != fast_engine]]
+
+    runtime_info["long_doc_fast_path"] = fast_path
+    runtime_info["long_doc_page_threshold"] = long_doc_threshold
+    if total_pages is not None:
+        runtime_info["long_doc_page_count"] = int(total_pages)
+    runtime_info["fast_long_engine"] = fast_engine
+    config.ifu["_engine_runtime"] = runtime_info  # type: ignore[index]
+
     return engines, engine_timeouts
 
 
@@ -743,33 +845,56 @@ def run_extract(
             merged_metadata[key] = value
         config.metadata_sources = merged_metadata
 
+    emit_policy_source = "cli" if emit_overrides else "yaml"
+
     if ifu_overrides:
         merged_ifu = dict(config.ifu or {})
         for key, value in ifu_overrides.items():
             if value is None:
                 continue
-            merged_ifu[key] = value
+            if key == "engine" and isinstance(value, dict):
+                existing_engine = merged_ifu.get("engine")
+                if isinstance(existing_engine, dict):
+                    updated_engine = dict(existing_engine)
+                    updated_engine.update(value)
+                    merged_ifu["engine"] = updated_engine
+                else:
+                    merged_ifu["engine"] = dict(value)
+            else:
+                merged_ifu[key] = value
         config.ifu = merged_ifu
 
     if config.doc_type not in EXTRACTOR_MAP:
         raise ValueError(f"Unsupported doc_type '{config.doc_type}' in {config_path}")
 
     extractor = EXTRACTOR_MAP[config.doc_type]
+    pdf_bytes = pdf_path.read_bytes()
+    total_pages = _determine_total_pages(pdf_path)
     engine_timeouts: Dict[str, float] = {}
     if config.doc_type == "ifu":
-        engines, engine_timeouts = _resolve_ifu_engines(pdf_path, config, force_deep=force_deep)
+        engines, engine_timeouts = _resolve_ifu_engines(
+            pdf_path,
+            config,
+            force_deep=force_deep,
+            total_pages=total_pages,
+        )
     else:
         engines = config.resolved_engines(force_deep=force_deep)
     ocr_enabled = bool(config.ocr_settings.get("enable", config.ocr))
     base_metadata = {
         "engines_requested": engines,
         "metadata_sources": dict(config.metadata_sources or {}),
+        "emit_policy_source": emit_policy_source,
     }
     if engine_timeouts:
         base_metadata["engine_timeouts"] = dict(engine_timeouts)
-    pdf_bytes = pdf_path.read_bytes()
-    total_pages = _determine_total_pages(pdf_path)
-
+    if config.doc_type == "ifu":
+        runtime_info = config.ifu.get("_engine_runtime") if isinstance(config.ifu, dict) else None
+        if isinstance(runtime_info, dict):
+            base_metadata["ifu_engine_mode"] = runtime_info.get("mode")
+            base_metadata["ifu_engine_source"] = runtime_info.get("source")
+            if runtime_info.get("override_key"):
+                base_metadata["ifu_engine_override_key"] = runtime_info.get("override_key")
     threshold_signature = json.dumps(config.thresholds, sort_keys=True)
     cache_key = compute_cache_key(
         pdf_bytes,
@@ -856,7 +981,7 @@ def run_extract(
                 float(rec_metrics.get("typed_density", 0.0)),
             )
 
-        emit_warnings = _apply_emit_constraints(document, config.emit)
+        emit_warnings = _apply_emit_constraints(document, config.emit, policy_source=emit_policy_source)
 
         timeout_limit = engine_timeouts.get(engine)
         if timeout_limit and duration > timeout_limit:
@@ -903,13 +1028,20 @@ def run_extract(
 
         # Log deduplication stats
         stats = evidence_bank.get_stats()
-        LOGGER.info(
-            "Evidence deduplication: total=%d deduplicated=%d truncated=%d bank_size=%d",
-            stats["total_added"],
-            stats["deduplicated"],
-            stats["truncated"],
-            len(document.evidence_bank),
-        )
+        if config.doc_type == "ifu" and stats["total_added"] == 0 and stats["deduplicated"] == 0 and stats["truncated"] == 0:
+            LOGGER.debug(
+                "Evidence deduplication skipped: total=0 doc_type=%s bank_size=%d",
+                config.doc_type,
+                len(document.evidence_bank),
+            )
+        else:
+            LOGGER.info(
+                "Evidence deduplication: total=%d deduplicated=%d truncated=%d bank_size=%d",
+                stats["total_added"],
+                stats["deduplicated"],
+                stats["truncated"],
+                len(document.evidence_bank),
+            )
 
         LOGGER.info(
             "Completed extraction: doc_type=%s engine=%s duration=%.2fs chars=%d coverage=%.2f",
@@ -1099,6 +1231,11 @@ def _document_metrics(document: BaseDocument) -> Dict[str, int | float | bool]:
     pipeline_info = getattr(document, "pipeline_info", {}) or {}
     if not isinstance(pipeline_info, dict):
         pipeline_info = {}
+    if "paragraph_dedup_applied" not in pipeline_info:
+        pipeline_info["paragraph_dedup_applied"] = False
+    policy_source = pipeline_info.get("emit_policy_source")
+    if policy_source:
+        payload["emit_policy_source"] = str(policy_source)
 
     if hasattr(document, "sections"):
         sections = getattr(document, "sections") or {}
@@ -1111,6 +1248,9 @@ def _document_metrics(document: BaseDocument) -> Dict[str, int | float | bool]:
         tables = getattr(document, "tables") or []
         payload["tables_kept"] = len(tables)
         pipeline_info["tables_kept"] = len(tables)
+    else:
+        payload["tables_kept"] = payload.get("tables_kept", 0)
+        pipeline_info.setdefault("tables_kept", 0)
 
     if hasattr(document, "recommendations"):
         recs = getattr(document, "recommendations") or []
@@ -1173,18 +1313,17 @@ def _document_metrics(document: BaseDocument) -> Dict[str, int | float | bool]:
     if getattr(document, "doc_type", None) == "article":
         payload["ats"] = validate_ats_yield(document)
 
-    if "paragraph_dedup_applied" in pipeline_info:
-        payload["paragraph_dedup_applied"] = bool(pipeline_info.get("paragraph_dedup_applied"))
-    if "relations_dropped" in pipeline_info:
-        try:
-            payload["relations_dropped"] = int(pipeline_info.get("relations_dropped") or 0)
-        except (TypeError, ValueError):
-            payload["relations_dropped"] = 0
-    if "tables_dropped" in pipeline_info:
-        try:
-            payload["tables_dropped"] = int(pipeline_info.get("tables_dropped") or 0)
-        except (TypeError, ValueError):
-            payload["tables_dropped"] = 0
+    payload["paragraph_dedup_applied"] = bool(pipeline_info.get("paragraph_dedup_applied"))
+    try:
+        payload["relations_dropped"] = int(pipeline_info.get("relations_dropped") or 0)
+    except (TypeError, ValueError):
+        payload["relations_dropped"] = 0
+    pipeline_info["relations_dropped"] = payload["relations_dropped"]
+    try:
+        payload["tables_dropped"] = int(pipeline_info.get("tables_dropped") or 0)
+    except (TypeError, ValueError):
+        payload["tables_dropped"] = 0
+    pipeline_info["tables_dropped"] = payload["tables_dropped"]
     if "window_placeholders_removed" in pipeline_info:
         try:
             payload["window_placeholders_removed"] = int(pipeline_info.get("window_placeholders_removed") or 0)
@@ -1200,6 +1339,26 @@ def _document_metrics(document: BaseDocument) -> Dict[str, int | float | bool]:
         payload["relations_count"] = len(relations)
         payload["relations_kept"] = len(relations)
         pipeline_info["relations_kept"] = len(relations)
+    else:
+        payload.setdefault("relations_count", 0)
+        payload.setdefault("relations_kept", 0)
+        pipeline_info.setdefault("relations_kept", 0)
+
+    if hasattr(document, "safety_blocks"):
+        blocks = getattr(document, "safety_blocks") or []
+        payload["safety_blocks_found"] = len(blocks)
+        pipeline_info["safety_blocks_found"] = len(blocks)
+
+    if hasattr(document, "references"):
+        references = getattr(document, "references") or []
+        payload["references_count"] = len(references)
+        pipeline_info["references_detected"] = len(references)
+
+    if "long_doc_fast_path" in pipeline_info:
+        payload["long_doc_fast_path"] = bool(pipeline_info.get("long_doc_fast_path"))
+        threshold_value = pipeline_info.get("long_doc_page_threshold")
+        if threshold_value is not None:
+            payload["long_doc_page_threshold"] = threshold_value
 
     toc_guard_info = pipeline_info.get("toc_guard")
     if isinstance(toc_guard_info, dict):
@@ -1245,7 +1404,7 @@ def _validate_metrics_consistency(
     for key in ("recommendations_count", "graded_count", "typed_ungraded_count", "grade_density", "typed_density"):
         if key in pipeline_info:
             assert metrics.get(key) == pipeline_info.get(key), f"Metrics mismatch for {key}"
-    for key in ("relations_dropped", "tables_dropped", "window_placeholders_removed"):
+    for key in ("relations_dropped", "tables_dropped", "relations_kept", "tables_kept", "window_placeholders_removed"):
         if key in pipeline_info:
             assert metrics.get(key) == pipeline_info.get(key), f"Metrics mismatch for {key}"
     if "paragraph_dedup_applied" in pipeline_info:
@@ -1254,8 +1413,25 @@ def _validate_metrics_consistency(
         ), "Metrics mismatch for paragraph_dedup_applied"
 
 
-def _apply_emit_constraints(document: BaseDocument, emit: Dict[str, Any]) -> List[str]:
+def _apply_emit_constraints(
+    document: BaseDocument,
+    emit: Dict[str, Any],
+    *,
+    policy_source: str = "yaml",
+) -> List[str]:
     warnings: List[str] = []
+    pipeline_info: Dict[str, Any] = {}
+    if document is not None:
+        existing_pipeline = getattr(document, "pipeline_info", {}) or {}
+        if isinstance(existing_pipeline, dict):
+            pipeline_info = existing_pipeline
+    normalized_source = "cli" if str(policy_source).lower() == "cli" else "yaml"
+    assert normalized_source in {"cli", "yaml"}
+    pipeline_info["emit_policy_source"] = normalized_source
+    pipeline_info.setdefault("paragraph_dedup_applied", False)
+    if document is not None:
+        document.pipeline_info = pipeline_info
+
     if not document or not emit:
         return warnings
 

@@ -214,6 +214,38 @@ def check_ifu_guard_config() -> Tuple[bool, str]:
     return True, summary
 
 
+def check_ifu_resources() -> Tuple[bool, str]:
+    """Validate supporting IFU resource files are present."""
+
+    shared_dir = ROOT_DIR / "configs" / "_shared"
+    frontmatter_path = shared_dir / "ifu_frontmatter.yaml"
+    aliases_path = shared_dir / "ifu_section_aliases.yaml"
+
+    missing: List[str] = []
+    if not frontmatter_path.exists():
+        missing.append(str(frontmatter_path))
+    if not aliases_path.exists():
+        missing.append(str(aliases_path))
+    if missing:
+        return False, f"Missing IFU shared config: {', '.join(missing)}"
+
+    try:
+        front_data = yaml.safe_load(frontmatter_path.read_text(encoding="utf-8")) or {}
+    except Exception as exc:
+        return False, f"Failed to parse {frontmatter_path.name}: {exc}"
+    if not isinstance(front_data, dict):
+        return False, f"Unexpected structure in {frontmatter_path.name}"
+
+    try:
+        alias_data = yaml.safe_load(aliases_path.read_text(encoding="utf-8")) or {}
+    except Exception as exc:
+        return False, f"Failed to parse {aliases_path.name}: {exc}"
+    if not isinstance(alias_data, dict) or not alias_data:
+        return False, "IFU section aliases missing entries"
+
+    return True, "IFU resources available"
+
+
 def run_preflight() -> int:
     """Run all preflight checks and return exit code."""
     checks: List[Tuple[str, Tuple[bool, str]]] = [
@@ -226,6 +258,7 @@ def run_preflight() -> int:
         ("Emit Config", check_emit_config()),
         ("Doc-Type Model", check_doc_type_model()),
         ("IFU Guard Config", check_ifu_guard_config()),
+        ("IFU Resources", check_ifu_resources()),
     ]
 
     print("=== Medparse Environment Preflight ===\n")
