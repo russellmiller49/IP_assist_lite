@@ -23,3 +23,19 @@ def test_front_matter_patterns_capture_identifiers() -> None:
     assert meta["publication_date"] == "2022-04-15"
     assert meta["model"] == "SC-200"
     assert meta["product_name"] == "SystemCarrier Performance"
+
+
+def test_front_matter_captures_dot_separated_date() -> None:
+    cover_lines = [
+        "Ion Endoluminal System",
+        "PN 553990-11",
+        "Rev. C",
+        "Publication Date: 2024.08",
+    ]
+    pages = [PageData(number=1, text="\n".join(cover_lines), lines=cover_lines, headings=[], tables=[])]
+
+    meta = extract_front_matter(pages)
+
+    assert meta["part_number"] == "553990-11"
+    assert meta["revision"] == "C"
+    assert meta["publication_date"] == "2024-08"

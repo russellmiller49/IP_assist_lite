@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import re
 from pathlib import Path
-from typing import List, Optional
+from typing import Dict, List, Optional
 
 from medparse.config import ExtractionConfig, get_extraction_config
 
@@ -18,6 +18,7 @@ from medparse.extract.utils import (
 )
 from medparse.ingest.models import PageData
 from medparse.ifu.frontmatter import extract_front_matter
+from medparse.ifu.manufacturer import detect_manufacturer
 from medparse.ifu.safety import extract_safety_blocks as build_safety_blocks
 from medparse.ifu.subtype import infer_ifu_subtype_from_pages
 from medparse.normalize.ifu_anchors import lift_ifu_clinical_fields
@@ -80,7 +81,18 @@ def extract_ifu(
     page_count = len(pages)
     raw_pages_text = [page.text for page in pages]
     metadata_title = pdf_path.stem.replace("_", " ").strip()
-    meta = extract_front_matter(pages, metadata_title=metadata_title or None)
+    manufacturer_detection = detect_manufacturer(pages, metadata_title=metadata_title or None, pdf_path=pdf_path)
+    manufacturer_hint = manufacturer_detection.get("name") if manufacturer_detection else None
+    manufacturer_source = manufacturer_detection.get("source") if manufacturer_detection else None
+    meta = extract_front_matter(
+        pages,
+        metadata_title=metadata_title or None,
+        manufacturer_hint=manufacturer_hint,
+        manufacturer_source=manufacturer_source,
+    )
+    provenance = {}
+    if isinstance(meta, dict) and "_provenance" in meta:
+        provenance = dict(meta.pop("_provenance", {}) or {})
 
     # Strip page furniture (headers/footers) before processing
     lines_by_page = [page.lines for page in pages]
@@ -99,7 +111,13 @@ def extract_ifu(
         text, _evidence, _ = section_text_between(pages, heading, next_heading)
         section_text[heading.title.lower()] = text
 
-    safety_blocks = build_safety_blocks(pages)
+    manufacturer_for_safety = None
+    if isinstance(meta, dict):
+        manufacturer_for_safety = meta.get("manufacturer")
+    if not manufacturer_for_safety:
+        manufacturer_for_safety = manufacturer_hint
+
+    safety_blocks = build_safety_blocks(pages, manufacturer=manufacturer_for_safety)
 
     references = normalize_references(
         reference_section(lines),
@@ -184,6 +202,9 @@ def extract_ifu(
         if value:
             doc_kwargs[key] = value
 
+    if manufacturer_hint and not doc_kwargs.get("manufacturer"):
+        doc_kwargs["manufacturer"] = manufacturer_hint
+
     if not doc_kwargs.get("revision"):
         doc_id_match = re.search(r"(D\d{5,6})", pdf_path.stem, re.IGNORECASE)
         if doc_id_match:
@@ -225,10 +246,29 @@ def extract_ifu(
 
     document = IFUDocument.model_validate(doc_kwargs)
     document.pipeline_info["safety_blocks_found"] = len(safety_blocks)
+
+    front_meta_payload: Dict[str, str] = {}
     if isinstance(meta, dict) and meta.get("product_name_source"):
+        product_source = str(meta.get("product_name_source"))
+        if product_source:
+            front_meta_payload["product_name_source"] = product_source
+    for field_name, source_name in provenance.items():
+        key_name = f"{field_name}_source"
+        if key_name not in front_meta_payload and source_name:
+            front_meta_payload[key_name] = str(source_name)
+    if manufacturer_detection:
+        document.pipeline_info["manufacturer_detection"] = manufacturer_detection
+        detection_confidence = manufacturer_detection.get("confidence")
+        detection_source = manufacturer_detection.get("source")
+        if detection_confidence and "manufacturer_detection_confidence" not in front_meta_payload:
+            front_meta_payload["manufacturer_detection_confidence"] = str(detection_confidence)
+        if detection_source and "manufacturer_detection_source" not in front_meta_payload:
+            front_meta_payload["manufacturer_detection_source"] = str(detection_source)
+    if front_meta_payload:
         front_meta = document.pipeline_info.setdefault("front_matter_meta", {})
         if isinstance(front_meta, dict):
-            front_meta["product_name_source"] = meta.get("product_name_source")
+            front_meta.update(front_meta_payload)
+
     if references:
         document.pipeline_info["references_detected"] = len(references)
     if isinstance(engine_runtime, dict):

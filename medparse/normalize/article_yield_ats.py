@@ -7,6 +7,13 @@ from typing import Dict, List, Optional, Tuple
 
 from pydantic import BaseModel, Field
 
+from medparse.normalize._ats_codes import (
+    ATS_REASON_NO_N_OVER_N,
+    ATS_REASON_FOLLOW_UP,
+    ATS_REASON_NONSPECIFIC,
+    ATS_REASON_DERIVED,
+    ATS_CANONICAL_REASONS,
+)
 from medparse.normalize.tables_classifier import TableBlock
 
 RE_N = re.compile(r"(?:n\s*=\s*)?(\d{2,5})\s+(patients?|lesions?|nodules?)", re.IGNORECASE)
@@ -22,17 +29,6 @@ RE_LESIONS = re.compile(
     r"(\d{2,5})(?:\s+[A-Za-z/\-]+){0,3}\s+(?:lesions?|nodules?)",
     re.IGNORECASE,
 )
-
-ATS_REASON_NO_N_OVER_N = "no_n_over_N"
-ATS_REASON_FOLLOW_UP = "follow_up_used_in_numerator"
-ATS_REASON_NONSPECIFIC = "nonspecific_counts_included"
-ATS_REASON_DERIVED = "derived_counts_from_percent"
-ATS_CANONICAL_REASONS = {
-    ATS_REASON_NO_N_OVER_N,
-    ATS_REASON_FOLLOW_UP,
-    ATS_REASON_NONSPECIFIC,
-    ATS_REASON_DERIVED,
-}
 
 
 class EvidenceSpan(BaseModel):

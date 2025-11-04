@@ -1,0 +1,40 @@
+manufacturers:
+  - name: "Intuitive Surgical, Inc."
+    aliases:
+      - "Intuitive Surgical"
+      - "Ion Endoluminal System"
+      - "Intuitive Surgical SARL"
+      - "Intuitive Ibérica"
+    hints:
+      - "Intuitive Surgical"
+      - "Ion Endoluminal"
+      - "Intuitive Operations"
+  - name: "ERBE Elektromedizin GmbH"
+    aliases:
+      - "ERBE Medical"
+      - "Erbe USA"
+      - "ERBE Austria"
+      - "ERBE Elektromedizin"
+    hints:
+      - "ERBE"
+      - "Tuebingen"
+  - name: "Olympus Corporation"
+    aliases:
+      - "Olympus Medical Systems"
+      - "Olympus America"
+      - "Olympus Europa"
+      - "Olympus KeyMed"
+    hints:
+      - "Olympus"
+      - "KeyMed"
+      - "Shinjuku"
+fallback_hints:
+  ion:
+    name: "Intuitive Surgical, Inc."
+    confidence: "low"
+  erbe:
+    name: "ERBE Elektromedizin GmbH"
+    confidence: "low"
+  olympus:
+    name: "Olympus Corporation"
+    confidence: "low"

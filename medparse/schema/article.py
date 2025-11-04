@@ -195,7 +195,16 @@ class ArticleDocument(BaseDocument):
 
     doc_type: Literal["article"] = Field(default="article", frozen=True)
     doc_subtype: Optional[
-        Literal["guideline", "research", "review", "statement", "classification"]
+        Literal[
+            "guideline",
+            "research",
+            "review",
+            "statement",
+            "classification",
+            "therapeutic_trial",
+            "practice_management",
+            "diagnostic_study",
+        ]
     ] = None
 
     # Title and metadata (enhanced)

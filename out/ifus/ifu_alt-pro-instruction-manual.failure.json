@@ -1,0 +1,24 @@
+{
+  "source_file": "/home/rjm/projects/IP_assist_lite/data/Input pdfs/IFUs/pdf/ALT-Pro_Instruction Manual.pdf",
+  "failure_reason": "validation_failed",
+  "issues": [
+    "Safety content below expected density (found 13, expected >= 20)"
+  ],
+  "metrics": {
+    "page_count": 154,
+    "coverage_ratio": 1.0,
+    "extracted_chars": 200482,
+    "sections_count": null,
+    "recommendations_count": null,
+    "umls_entities": null,
+    "diagnostic_yield_present": null,
+    "tables_kept": 15,
+    "duration_s": 27.31296968460083,
+    "engines_tried": [
+      "pymupdf",
+      "pdfplumber"
+    ],
+    "profile": "enriched",
+    "cache_used": false
+  }
+}

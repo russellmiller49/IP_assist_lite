@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import functools
 import re
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from datetime import datetime
 from pathlib import Path
 from typing import Dict, Iterable, List, Optional, Sequence, Tuple
@@ -41,21 +41,23 @@ MANUFACTURER_PATTERNS: Sequence[tuple[str, Sequence[re.Pattern[str]]]] = [
 IDENTIFIER_PATTERNS: Dict[str, Sequence[re.Pattern[str]]] = {
     "part_number": (
         re.compile(
-            r"(?:PN|P/N|REF|Cat(?:\.)?\s*No\.?|Document\s*(?:No\.|#)|Order\s*No\.)\s*[:#]?\s*([A-Z0-9][A-Z0-9\-_/]{2,})",
+            r"(?:PN|P/N|REF|Catalog(?:ue)?\s*(?:No\.?|Number)?|Cat(?:\.)?\s*No\.?|Order\s*(?:No\.?|Number)|Document\s*(?:No\.|#)|Article\s*(?:No\.?|Number))\s*[:#]?\s*([A-Z0-9][A-Z0-9\-_/]{2,})",
             re.IGNORECASE,
         ),
     ),
     "revision": (
         re.compile(r"(?:Rev(?:ision)?|Version)\s*[:#]?\s*([A-Z0-9][A-Z0-9\.\-]{0,9})", re.IGNORECASE),
+        re.compile(r"(?:Revision\s*(?:Level|Code)|Rev\.)\s*[:#]?\s*([A-Z0-9][A-Z0-9\.\-]{0,9})", re.IGNORECASE),
     ),
     "publication_date": (
-        re.compile(r"(?:Published|Issue|Revision)\s*(?:Date)?\s*[:#]?\s*([0-9]{4}[-/\.][01]?[0-9](?:[-/\.][0-3]?[0-9])?)"),
+        re.compile(r"(?:Published|Issue|Revision|Release|Effective|Publication|Date\s*of\s*issue|Printed\s*on)\s*(?:Date)?\s*[:#]?\s*([0-9]{4}[-/\.][01]?[0-9](?:[-/\.][0-3]?[0-9])?)", re.IGNORECASE),
         re.compile(r"(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{4})", re.IGNORECASE),
         re.compile(r"(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)\.?\s+(\d{4})", re.IGNORECASE),
         re.compile(r"(0?[1-9]|1[0-2])[/-](\d{4})"),
     ),
     "model": (
-        re.compile(r"(?:Model|Series)\s*[:#]?\s*([A-Z0-9][A-Z0-9\-_/]{1,})", re.IGNORECASE),
+        re.compile(r"(?:Model|Type|Series)\s*[:#]?\s*([A-Z0-9][A-Z0-9\-_/]{1,})", re.IGNORECASE),
+        re.compile(r"System\s*[:#]\s*([A-Z0-9][A-Z0-9\-_/]{1,})", re.IGNORECASE),
     ),
 }
 
@@ -137,9 +139,10 @@ class FrontMatterResult:
     revision: Optional[str] = None
     publication_date: Optional[str] = None
     model: Optional[str] = None
+    provenance: Dict[str, str] = field(default_factory=dict)
 
     def as_dict(self) -> Dict[str, Optional[str]]:
-        return {
+        payload: Dict[str, Optional[str]] = {
             "manufacturer": self.manufacturer,
             "product_name": self.product_name,
             "product_name_source": self.product_name_source,
@@ -148,12 +151,21 @@ class FrontMatterResult:
             "publication_date": self.publication_date,
             "model": self.model,
         }
+        if self.provenance:
+            payload["_provenance"] = dict(self.provenance)
+        return payload
+
+    def record(self, field: str, source: Optional[str]) -> None:
+        if source:
+            self.provenance[field] = source
 
 
 def extract_front_matter(
     pages: Sequence[PageData],
     *,
     metadata_title: Optional[str] = None,
+    manufacturer_hint: Optional[str] = None,
+    manufacturer_source: Optional[str] = None,
 ) -> Dict[str, Optional[str]]:
     """Extract manufacturer, product name, and identifiers from the cover pages."""
 
@@ -161,60 +173,93 @@ def extract_front_matter(
     result = FrontMatterResult()
     cover_text = _join_page_text(pages[:3])
     tail_text = _join_page_text(pages[-3:])
-    lower_title = metadata_title.lower() if metadata_title else ""
+    normalized_title = metadata_title.replace("_", " ") if metadata_title else ""
+    lower_title = normalized_title.lower() if normalized_title else ""
 
-    manufacturer = _detect_manufacturer(cover_text, config) or _detect_manufacturer(tail_text, config)
-    if manufacturer:
-        result.manufacturer = manufacturer
-    elif lower_title:
+    if manufacturer_hint:
+        result.manufacturer = manufacturer_hint
+        result.record("manufacturer", manufacturer_source or "detector")
+
+    if not result.manufacturer:
+        manufacturer_cover = _detect_manufacturer(cover_text, config)
+        if manufacturer_cover:
+            result.manufacturer = manufacturer_cover
+            result.record("manufacturer", "cover")
+        else:
+            manufacturer_tail = _detect_manufacturer(tail_text, config)
+            if manufacturer_tail:
+                result.manufacturer = manufacturer_tail
+                result.record("manufacturer", "tail")
+
+    if not result.manufacturer and lower_title:
         if "erbe" in lower_title:
             result.manufacturer = "ERBE Elektromedizin GmbH"
         elif "intuitive" in lower_title:
             result.manufacturer = "Intuitive Surgical, Inc."
         elif "olympus" in lower_title:
             result.manufacturer = "Olympus Corporation"
+        if result.manufacturer:
+            result.record("manufacturer", "metadata_title")
 
     for field, patterns in IDENTIFIER_PATTERNS.items():
-        raw_value = _search_patterns(cover_text, patterns) or _search_patterns(tail_text, patterns)
-        if not raw_value:
+        match_info = _search_patterns(cover_text, patterns)
+        source = "pattern_cover"
+        if not match_info:
+            match_info = _search_patterns(tail_text, patterns)
+            source = "pattern_tail"
+        if not match_info:
             continue
+        raw_value, _pattern = match_info
         if field == "publication_date":
             normalized = _normalize_date(raw_value)
             if normalized:
                 result.publication_date = normalized
+                result.record("publication_date", source)
         elif field == "part_number":
             result.part_number = raw_value.strip().upper()
+            result.record("part_number", source)
         elif field == "revision":
             result.revision = raw_value.strip().upper()
+            result.record("revision", source)
         elif field == "model":
             result.model = raw_value.strip()
+            result.record("model", source)
 
     product_name, product_source = _select_product_name(pages, result, metadata_title, config)
     if product_name:
         result.product_name = product_name
         result.product_name_source = product_source or "pattern"
+        result.record("product_name", result.product_name_source)
     elif result.model and result.manufacturer:
         result.product_name = f"{result.manufacturer} {result.model}".strip()
         result.product_name_source = "model_hint"
+        result.record("product_name", result.product_name_source)
     if metadata_title:
         if not result.part_number:
-            part_match = re.search(r"([A-Z0-9]{3,}-[A-Z0-9]{3,})", metadata_title)
+            part_match = re.search(r"\b([A-Z0-9]{2,}[-_][A-Z0-9]{2,})\b", normalized_title, re.IGNORECASE)
+            if not part_match:
+                part_match = re.search(r"\b([0-9]{3,}[-_][0-9]{2,})\b", normalized_title)
             if part_match:
                 result.part_number = part_match.group(1).upper()
+                result.record("part_number", "filename")
         if not result.part_number:
-            doc_match = re.search(r"(D[0-9]{5,})", metadata_title, re.IGNORECASE)
+            doc_match = re.search(r"\b(D[0-9]{5,})\b", normalized_title, re.IGNORECASE)
             if doc_match:
                 result.part_number = doc_match.group(1).upper()
+                result.record("part_number", "filename")
         if not result.revision:
-            rev_match = re.search(r"(D[0-9]{5,})", metadata_title, re.IGNORECASE)
+            rev_match = re.search(r"\brev(?:ision)?[_\-\s]*([A-Z0-9\.\-]{1,10})", normalized_title, re.IGNORECASE)
             if rev_match:
                 result.revision = rev_match.group(1).upper()
+                result.record("revision", "filename")
 
     return result.as_dict()
 
 
 def _join_page_text(pages: Sequence[PageData]) -> str:
-    return "\n".join(page.text or "" for page in pages if page is not None)
+    text = "\n".join(page.text or "" for page in pages if page is not None)
+    text = re.sub(r"\bGmb\s+H\b", "GmbH", text)
+    return text
 
 
 def _detect_manufacturer(text: str, config: Optional[Dict[str, object]] = None) -> Optional[str]:
@@ -227,7 +272,7 @@ def _detect_manufacturer(text: str, config: Optional[Dict[str, object]] = None) 
     return None
 
 
-def _search_patterns(text: str, patterns: Sequence[re.Pattern[str]]) -> Optional[str]:
+def _search_patterns(text: str, patterns: Sequence[re.Pattern[str]]) -> Optional[Tuple[str, re.Pattern[str]]]:
     if not text:
         return None
     for pattern in patterns:
@@ -235,8 +280,10 @@ def _search_patterns(text: str, patterns: Sequence[re.Pattern[str]]) -> Optional
         if not match:
             continue
         if match.lastindex:
-            return match.group(match.lastindex)
-        return match.group(0)
+            value = match.group(match.lastindex)
+        else:
+            value = match.group(0)
+        return value, pattern
     return None
 
 
@@ -248,7 +295,7 @@ def _normalize_date(raw: str) -> Optional[str]:
     if re.fullmatch(r"\d{4}-\d{2}-\d{2}", candidate):
         return candidate
     if re.fullmatch(r"\d{4}-\d{2}", candidate):
-        return f"{candidate}-01"
+        return candidate
     month_map = {
         "jan": 1,
         "feb": 2,
@@ -287,7 +334,7 @@ def _normalize_date(raw: str) -> Optional[str]:
     if month_year_match:
         month = int(month_year_match.group(1))
         year = month_year_match.group(2)
-        return f"{year}-{month:02d}-01"
+        return f"{year}-{month:02d}"
     return None
 
 

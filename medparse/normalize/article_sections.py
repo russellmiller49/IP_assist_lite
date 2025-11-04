@@ -19,9 +19,9 @@ from medparse.normalize.text_cleanup import clean_paragraph
 SECTION_ANCHORS = {
     'abstract': ['abstract', 'summary'],
     'background': ['background', 'introduction', 'rationale'],
-    'methods': ['methods', 'materials and methods', 'patients and methods', 'study design'],
-    'results': ['results', 'findings'],
-    'discussion': ['discussion', 'interpretation'],
+    'methods': ['methods', 'materials and methods', 'patients and methods', 'study design', 'study methodology', 'materials & methods'],
+    'results': ['results', 'findings', 'outcomes'],
+    'discussion': ['discussion', 'interpretation', 'comment', 'commentary'],
     'conclusion': ['conclusion', 'conclusions', 'summary'],
     'limitations': ['limitations', 'study limitations'],
     'funding': ['funding', 'financial support', 'grant support'],
@@ -70,6 +70,11 @@ def normalize_article_sections(pages: List[PageData]) -> Dict[str, str]:
             clean_text = dehyphenate(raw_text)
             clean_text = clean_paragraph(clean_text)
             sections[section_key] = clean_text
+
+    if 'methods' in sections and 'results' in sections and 'discussion' not in sections:
+        synthetic = _synthesise_discussion(processed)
+        if synthetic:
+            sections['discussion'] = clean_paragraph(synthetic)
 
     return sections
 
@@ -171,6 +176,23 @@ def _extract_structured_abstract(pages: List[PageData]) -> str:
                 lines.append(line)
 
     return "\n".join(lines).strip()
+
+
+def _synthesise_discussion(pages: List[PageData]) -> str:
+    tail_lines: List[str] = []
+    for page in pages[-2:]:
+        tail_lines.extend(page.lines or [])
+    tail_text = "\n".join(tail_lines)
+    match = re.search(
+        r"(?:^|\n)(in conclusion|conclusions?|summary)[:\s]+(.+)",
+        tail_text,
+        flags=re.IGNORECASE | re.DOTALL,
+    )
+    if not match:
+        return ""
+    snippet = match.group(0)
+    snippet = re.split(r"\n\s*\n", snippet, maxsplit=1)[0]
+    return snippet.strip()
 
 
 def _looks_like_section_heading(line: str) -> bool:

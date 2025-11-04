@@ -55,6 +55,18 @@ class EnumeratedItem(NamedTuple):
     paragraph_hashes: List[str]
 
 
+def _has_numbered_recap(document: ArticleDocument) -> bool:
+    sections = getattr(document, "sections", {}) or {}
+    for key, value in sections.items():
+        if not isinstance(value, str) or not value:
+            continue
+        lowered_key = str(key or "").lower()
+        if any(token in lowered_key for token in ("recommendation", "summary", "statement")):
+            if re.search(r"\b\d+\.\s", value):
+                return True
+    return False
+
+
 def _infer_grade_scale_hint(document: ArticleDocument) -> Optional[str]:
     """Infer the dominant grading scheme from document metadata."""
 
@@ -89,7 +101,14 @@ def _infer_grade_scale_hint(document: ArticleDocument) -> Optional[str]:
 def enrich_guideline_document(document: ArticleDocument, pages: Sequence) -> None:
     """Apply guideline-specific promotions to the given document in-place."""
 
-    if document.doc_subtype not in {"guideline", "statement", "classification"}:
+    subtype = (getattr(document, "doc_subtype", "") or "").strip().lower()
+    eligible = False
+    if subtype:
+        if "guideline" in subtype or "statement" in subtype or subtype == "classification":
+            eligible = True
+    if not eligible and _has_numbered_recap(document):
+        eligible = True
+    if not eligible:
         return
 
     paragraph_store = getattr(document, "paragraph_store", {}) or {}
@@ -103,34 +122,33 @@ def enrich_guideline_document(document: ArticleDocument, pages: Sequence) -> Non
 
 def _promote_recommendations(document: ArticleDocument, paragraph_store: Dict[str, Dict[str, object]]) -> None:
     summary_recs = _extract_summary_recommendations(document, paragraph_store)
-    if summary_recs:
-        unique: List[GuidelineRecommendation] = []
-        seen_signatures: Set[str] = set()
-        for rec in summary_recs:
-            signature = _stable_text_signature(rec.text)
-            if signature in seen_signatures:
-                continue
-            unique.append(rec)
-            seen_signatures.add(signature)
-        recommendations = unique
-    else:
-        recommendations = list(document.recommendations or [])
-        seen_signatures = {
-            _stable_text_signature(rec.text)
-            for rec in recommendations
-            if isinstance(rec, GuidelineRecommendation) and rec.text
-        }
+    base_recs = list(document.recommendations or [])
 
-        for rec in summary_recs:
-            signature = _stable_text_signature(rec.text)
-            if signature in seen_signatures:
-                continue
-            recommendations.append(rec)
-            seen_signatures.add(signature)
+    recommendations: List[GuidelineRecommendation] = []
+    seen_signatures: Set[str] = set()
 
-    _preprocess_recommendations(recommendations)
+    for rec in base_recs:
+        if not isinstance(rec, GuidelineRecommendation) or not rec.text:
+            continue
+        signature = _stable_text_signature(rec.text)
+        if signature in seen_signatures:
+            continue
+        recommendations.append(rec)
+        seen_signatures.add(signature)
+
+    for rec in summary_recs or []:
+        if not isinstance(rec, GuidelineRecommendation) or not rec.text:
+            continue
+        signature = _stable_text_signature(rec.text)
+        if signature in seen_signatures:
+            continue
+        recommendations.append(rec)
+        seen_signatures.add(signature)
+
+    pending_remarks = _preprocess_recommendations(recommendations)
     grade_sources = _assign_recommendation_grades(document, recommendations, paragraph_store)
     _finalize_recommendation_texts(recommendations)
+    _apply_remarks(recommendations, pending_remarks)
 
     pipeline_info = getattr(document, "pipeline_info", {}) or {}
     if isinstance(grade_sources, dict) and grade_sources:
@@ -142,7 +160,8 @@ def _promote_recommendations(document: ArticleDocument, paragraph_store: Dict[st
     _update_recommendation_metrics(document)
 
 
-def _preprocess_recommendations(recommendations: List[GuidelineRecommendation]) -> None:
+def _preprocess_recommendations(recommendations: List[GuidelineRecommendation]) -> Dict[int, List[str]]:
+    pending_remarks: Dict[int, List[str]] = {}
     for rec in recommendations:
         original_text = rec.text or ""
         cleaned_text, remarks = _strip_remarks(original_text)
@@ -150,7 +169,7 @@ def _preprocess_recommendations(recommendations: List[GuidelineRecommendation]) 
         stripped_text, inline_grades = _strip_inline_grade_phrases(stripped_text)
         if stripped_text:
             rec.text = stripped_text
-        rec.remarks = remarks or []
+        pending_remarks[id(rec)] = [remark.strip() for remark in (remarks or []) if remark and remark.strip()]
         rec.grade_candidates = []
         rec.grade_normalized = None
         rec.grade_source = None
@@ -173,6 +192,17 @@ def _preprocess_recommendations(recommendations: List[GuidelineRecommendation]) 
         if CHEST_UNGRADED_PATTERN.search(original_text):
             rec.consensus_basis = rec.consensus_basis or "CHEST-ungraded"
         rec.text = " ".join((rec.text or "").split())
+        rec.remarks = []
+    return pending_remarks
+
+
+def _apply_remarks(recommendations: List[GuidelineRecommendation], remarks_map: Dict[int, List[str]]) -> None:
+    for rec in recommendations:
+        pending = remarks_map.get(id(rec), [])
+        if pending:
+            rec.remarks = pending
+        elif not getattr(rec, "remarks", None):
+            rec.remarks = []
 
 
 def _assign_recommendation_grades(

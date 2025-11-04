@@ -7,10 +7,13 @@ checking for common issues like missing models, incompatible versions, etc.
 
 import json
 import sys
+import warnings
 from pathlib import Path
 from typing import List, Tuple
 
 import yaml
+
+warnings.filterwarnings("ignore", message="Possible set union", module="spacy.language")
 
 ROOT_DIR = Path(__file__).resolve().parents[2]
 
@@ -175,7 +178,17 @@ def check_doc_type_model() -> Tuple[bool, str]:
         return False, f"Doc-type model missing at {model_path}"
 
     labels = manifest.get("labels") or []
-    return True, f"doc-type model ok (labels={len(labels)}; sklearn {declared_version})"
+    label_set = set(labels)
+    core_labels = {"guideline", "statement", "research", "ifu", "textbook"}
+    missing_core = core_labels - label_set
+    if missing_core:
+        return False, f"Doc-type model labels missing: {', '.join(sorted(missing_core))}"
+    optional = {"diagnostic_study", "therapeutic_trial", "practice_management"}
+    missing_optional = sorted(optional - label_set)
+    summary = f"doc-type model ok (labels={len(labels)}; sklearn {declared_version})"
+    if missing_optional:
+        summary += f" – optional labels missing {missing_optional}"
+    return True, summary
 
 
 def check_ifu_guard_config() -> Tuple[bool, str]:
@@ -246,6 +259,21 @@ def check_ifu_resources() -> Tuple[bool, str]:
     return True, "IFU resources available"
 
 
+def check_article_topics() -> Tuple[bool, str]:
+    """Validate presence of diagnostic topic config for ATS gating."""
+
+    topics_path = ROOT_DIR / "configs" / "_shared" / "article_topics.yaml"
+    if not topics_path.exists():
+        return False, "configs/_shared/article_topics.yaml missing"
+    try:
+        data = yaml.safe_load(topics_path.read_text(encoding="utf-8")) or {}
+    except Exception as exc:
+        return False, f"Failed to parse article_topics.yaml: {exc}"
+    if not isinstance(data, dict) or "diagnostic" not in data:
+        return False, "article_topics.yaml missing 'diagnostic' block"
+    return True, "article topics config ok"
+
+
 def run_preflight() -> int:
     """Run all preflight checks and return exit code."""
     checks: List[Tuple[str, Tuple[bool, str]]] = [
@@ -259,6 +287,7 @@ def run_preflight() -> int:
         ("Doc-Type Model", check_doc_type_model()),
         ("IFU Guard Config", check_ifu_guard_config()),
         ("IFU Resources", check_ifu_resources()),
+        ("Article Topics", check_article_topics()),
     ]
 
     print("=== Medparse Environment Preflight ===\n")
@@ -282,3 +311,4 @@ def run_preflight() -> int:
 
 if __name__ == "__main__":
     sys.exit(run_preflight())
+warnings.filterwarnings("ignore", message="Possible set union", module="spacy.language")

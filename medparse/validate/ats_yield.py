@@ -6,24 +6,21 @@ import re
 from typing import Dict, List, Optional, Tuple
 
 from medparse.schema.article import ArticleDocument
-from medparse.normalize.article_yield_ats import (
+from medparse.normalize._ats_codes import (
     ATS_REASON_NO_N_OVER_N,
     ATS_REASON_FOLLOW_UP,
     ATS_REASON_NONSPECIFIC,
     ATS_REASON_DERIVED,
+    ATS_CANONICAL_REASONS,
+    canonicalize_reason,
 )
+from medparse.validate.applicability import is_diagnostic_study
 
 FOLLOW_UP_PATTERN = re.compile(r"\b12[-\s]*month diagnostic yield\b", re.IGNORECASE)
 FOLLOW_UP_CONSIDERED_PATTERN = re.compile(r"considered diagnostic if follow[-\s]*up", re.IGNORECASE)
 INTERMEDIATE_PATTERN = re.compile(r"\b(intermediate|liberal)\s+diagnostic\s+yield\b", re.IGNORECASE)
 NONSPECIFIC_TERMS = re.compile(r"\b(atypia|suspicious|nonspecific)\b", re.IGNORECASE)
 N_OVER_N_PATTERN = re.compile(r"\b\d{1,4}\s*/\s*\d{1,4}\b")
-CANONICAL_REASONS = {
-    ATS_REASON_NO_N_OVER_N,
-    ATS_REASON_FOLLOW_UP,
-    ATS_REASON_NONSPECIFIC,
-    ATS_REASON_DERIVED,
-}
 
 
 def validate_ats_yield(document: ArticleDocument) -> Dict[str, object]:
@@ -35,9 +32,39 @@ def validate_ats_yield(document: ArticleDocument) -> Dict[str, object]:
         "exclusion_reasons": [],
     }
 
+    pipeline_info = getattr(document, "pipeline_info", {}) or {}
+    subtype = (getattr(document, "doc_subtype", None) or "").strip()
+    if subtype in {"therapeutic_trial", "practice_management"}:
+        pipeline_info["ats_yield_applicability"] = "not_applicable"
+        pipeline_info["ats_yield_reasons"] = [f"doc_subtype:{subtype}"]
+        document.pipeline_info = pipeline_info
+        result["strict_yield_detected"] = False
+        result["compatible"] = False
+        result["exclusion_reasons"] = []
+        return result
+
     diagnostic = getattr(document, "diagnostic_yield", None)
     if diagnostic is None:
+        pipeline_info["ats_yield_applicability"] = pipeline_info.get("ats_yield_applicability", "not_applicable")
+        pipeline_info.setdefault("ats_yield_reasons", ["no_diagnostic_payload"])
+        document.pipeline_info = pipeline_info
+        result["compatible"] = False
         return result
+
+    applicability, applicability_reasons = is_diagnostic_study(document)
+    if applicability:
+        pipeline_info["ats_yield_applicability"] = "applicable"
+    else:
+        pipeline_info["ats_yield_applicability"] = "not_applicable"
+        pipeline_info["ats_yield_reasons"] = applicability_reasons
+        document.pipeline_info = pipeline_info
+        result["strict_yield_detected"] = False
+        result["compatible"] = False
+        result["exclusion_reasons"] = []
+        return result
+
+    pipeline_info["ats_yield_reasons"] = applicability_reasons or ["diagnostic_cues_detected"]
+    document.pipeline_info = pipeline_info
 
     paragraph_store = getattr(document, "paragraph_store", {}) or {}
     ordered_paragraphs = _ordered_paragraphs(paragraph_store)
@@ -45,11 +72,26 @@ def validate_ats_yield(document: ArticleDocument) -> Dict[str, object]:
 
     initial_strict_claim = bool(getattr(diagnostic, "strict", False) or getattr(diagnostic, "compatible_with_ats", False))
 
+    pipeline_info = getattr(document, "pipeline_info", {}) or {}
+    warnings_bucket = pipeline_info.setdefault("warnings", [])
+    if not isinstance(warnings_bucket, list):
+        warnings_bucket = pipeline_info["warnings"] = list(warnings_bucket) if isinstance(warnings_bucket, (list, tuple)) else []
+
     exclusion_reasons: List[str] = []
     for reason in diagnostic.exclusion_reasons or []:
-        normalized = _normalize_reason(reason)
-        if normalized and normalized not in exclusion_reasons:
-            exclusion_reasons.append(normalized)
+        normalized = canonicalize_reason(reason)
+        if normalized:
+            if normalized not in exclusion_reasons:
+                exclusion_reasons.append(normalized)
+            if normalized != reason and reason is not None:
+                message = f"ATS diagnostic yield reason normalized to '{normalized}' from '{reason}'."
+                if message not in warnings_bucket:
+                    warnings_bucket.append(message)
+            continue
+        if reason and reason not in ATS_CANONICAL_REASONS:
+            message = f"ATS diagnostic yield reason '{reason}' not recognized; dropped."
+            if message not in warnings_bucket:
+                warnings_bucket.append(message)
 
     if any(FOLLOW_UP_PATTERN.search(text) for text in texts) or any(FOLLOW_UP_CONSIDERED_PATTERN.search(text) for text in texts):
         if ATS_REASON_FOLLOW_UP not in exclusion_reasons:
@@ -75,7 +117,7 @@ def validate_ats_yield(document: ArticleDocument) -> Dict[str, object]:
         if not counts_adjacent and ATS_REASON_NO_N_OVER_N not in exclusion_reasons:
             exclusion_reasons.append(ATS_REASON_NO_N_OVER_N)
 
-    exclusion_reasons = [reason for reason in exclusion_reasons if reason in CANONICAL_REASONS]
+    exclusion_reasons = [reason for reason in exclusion_reasons if reason in ATS_CANONICAL_REASONS]
     ordered_reasons: List[str] = []
     for reason in (
         ATS_REASON_NO_N_OVER_N,
@@ -97,25 +139,9 @@ def validate_ats_yield(document: ArticleDocument) -> Dict[str, object]:
     result["strict_yield_detected"] = bool(initial_strict_claim or strict_indices or has_counts)
     result["compatible"] = diagnostic.compatible_with_ats
     result["exclusion_reasons"] = ordered_reasons
+    document.pipeline_info = pipeline_info
 
     return result
-
-
-def _normalize_reason(reason: Optional[str]) -> Optional[str]:
-    if not reason:
-        return None
-    if reason in CANONICAL_REASONS:
-        return reason
-    lowered = str(reason).lower()
-    if "no_numerator" in lowered or "missing_n_over" in lowered or "no n/" in lowered:
-        return ATS_REASON_NO_N_OVER_N
-    if "follow_up" in lowered or "follow-up" in lowered or "12-month" in lowered:
-        return ATS_REASON_FOLLOW_UP
-    if "derived_counts_from_percent" in lowered or ("derived" in lowered and "percent" in lowered):
-        return ATS_REASON_DERIVED
-    if any(token in lowered for token in ("nonspecific", "composite", "technical success", "per-lesion", "intermediate", "liberal")):
-        return ATS_REASON_NONSPECIFIC
-    return None
 
 
 def _ordered_paragraphs(paragraph_store: Dict[str, Dict[str, object]]) -> List[Tuple[int, Optional[int], str]]:

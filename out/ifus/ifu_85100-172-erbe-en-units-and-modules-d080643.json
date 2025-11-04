@@ -1,13 +1,13 @@
 {
-  "doc_id": "c579ec7c-adbe-4e49-bf8a-20b8467bc934",
+  "doc_id": "644b900b-7a78-43ba-b673-a708f182878b",
   "doc_type": "ifu",
   "source_file": "/home/rjm/projects/IP_assist_lite/data/Input pdfs/IFUs/pdf/85100-172_ERBE_EN_Units_and_modules__D080643.pdf",
   "page_count": 16,
-  "extraction_timestamp": "2025-11-01T10:49:52.081493",
+  "extraction_timestamp": "2025-11-03T19:49:42.261773",
   "extraction_version": "v1.0.0",
   "evidence_bank": {},
   "paragraph_store": {
-    "6ea233ef2bdc84e1": {
+    "103d97a439bd8562": {
       "id": "page1_para0",
       "text": "Units and modules",
       "page": 1,
@@ -17,7 +17,8 @@
       ],
       "length": 17,
       "order": [
-        0
+        0,
+        66
       ],
       "occurrences": [
         {
@@ -26,13 +27,17 @@
             0,
             17
           ]
+        },
+        {
+          "page": null,
+          "char_span": null
         }
       ],
       "pages": [
         1
       ]
     },
-    "e59a386655d83a19": {
+    "0113ce10c8e4cd76": {
       "id": "page2_para0",
       "text": "Legend Important notes The authors and Erbe Elektromedizin Gmb H have taken the greatest possible care while compiling the catalogue with electrosurgical accessories. Nevertheless, it is impossible to exclude the possibility that errors may be contained herein. The information and recommendations given here may not be construed as constituting any basis for any claims against Erbe Elektromedizin Gmb H. Should legal regulations stipulate liability, such liability shall be limited to intentional misconduct or gross negligence. The data on the use of instruments is based on clinical experience. Medical science is subject to a process of permanent change based on research and clinical experience. Therefore the products are subject to alterations in design and technique. Because of production tolerances dimensions in the catalogue may marginally differ. Further product information Max. electrical capacity Packaging unit = 5 4 k Vp max 95 °C Temperature for cleaning in washer disinfector Notes on use 30191-682 max 134 °C Temperature for sterilization in autoclave Single-use product Sterile packaging",
       "page": 2,
@@ -57,7 +62,7 @@
         2
       ]
     },
-    "57400bd0a95af69b": {
+    "543b39ec0fffeb39": {
       "id": "page2_para1",
       "text": "STERILE R",
       "page": 2,
@@ -90,7 +95,7 @@
         2
       ]
     },
-    "484d921b81f5d9b7": {
+    "99bac6ba305d48cf": {
       "id": "page2_para3",
       "text": "STERILE EO Manual cleaning and disinfection Please read carefully the corresponding notes on use before using any instrument. 02 erbe-med. com",
       "page": 2,
@@ -115,7 +120,7 @@
         2
       ]
     },
-    "1c3113cd60ddf0f6": {
+    "a94491d620f4b872": {
       "id": "page3_para0",
       "text": "Contents Units and modules Electrosurgery Plasmasurgery 04 13 VIO® 3 Modules 05 VIO® 3 n Hydrosurgery 08 VIO® seal 08",
       "page": 3,
@@ -140,7 +145,7 @@
         3
       ]
     },
-    "4857e99bed9d8711": {
+    "35aebc985db9108a": {
       "id": "page3_para1",
       "text": "VIO® D, S, C 14 Units and modules 12 Modules Cryosurgery 15 Units",
       "page": 3,
@@ -165,7 +170,7 @@
         3
       ]
     },
-    "0050962fb469c29d": {
+    "cd42194b0203cc38": {
       "id": "page3_para2",
       "text": "VIO®3 VIO® 3 n APC 3 VIO seal APC 2",
       "page": 3,
@@ -190,7 +195,7 @@
         3
       ]
     },
-    "4f9f4ef4529455c4": {
+    "451835fdf15d8005": {
       "id": "page3_para3",
       "text": "VIO®D, S, C",
       "page": 3,
@@ -215,7 +220,7 @@
         3
       ]
     },
-    "966cc6c94f7ed228": {
+    "e0d225b7d15e0c32": {
       "id": "page3_para4",
       "text": "IES 3 ERBEJET®2",
       "page": 3,
@@ -240,7 +245,7 @@
         3
       ]
     },
-    "61ccb717198f7833": {
+    "d46d4c9da2b7d7a9": {
       "id": "page3_para5",
       "text": "EIP 2 ESM 2",
       "page": 3,
@@ -265,7 +270,7 @@
         3
       ]
     },
-    "3dbf87831864ff15": {
+    "f05da495e9a172eb": {
       "id": "page3_para6",
       "text": "ERBECRYO®2 erbe-med. com 03",
       "page": 3,
@@ -290,7 +295,7 @@
         3
       ]
     },
-    "824c1341af24ba20": {
+    "74d5a55a23c4f47b": {
       "id": "page4_para0",
       "text": "Electrosurgery",
       "page": 4,
@@ -315,7 +320,7 @@
         4
       ]
     },
-    "4ab6f68a67da37c2": {
+    "50ccbc697b2cd603": {
       "id": "page4_para1",
       "text": "VIO® 3",
       "page": 4,
@@ -340,7 +345,7 @@
         4
       ]
     },
-    "8a7f170bf81c7176": {
+    "b4c8710db1216a97": {
       "id": "page4_para2",
       "text": "VIO® 3 No. 10160-000 VIO® 3 is yet another of our milestones in technology following VIO® 300/200. Take advantage of the progress that using VIO® 3 provides you and your patients. CUT COAG auto CUT precise SECT • Logical, convenient and visual operator guidance (step GUIDE) high CUT swift COAG dry CUT soft COAG • Re Mode: Up to 6 different settings selectable from the sterile field thermo SECT forced COAG • Reliable, reproducible tissue effects thanks to state-of-the-art processor technology auto CUT bipolar spray COAG • Sockets: Easy replacement, connection recommendations, slot assignment high CUT bipolar twin COAG endo CUT Q soft COAG bipolar endo CUT I forced COAG bipolar thermo SEAL forced APC pulsed APC precise APC Socket modules for VIO® 3 Socket modules No. MF-U, as an upgrade kit 20160-005 MF-0, as an upgrade kit 20160-004 MO 3 Pin-9/5, as an upgrade kit 20160-001 MO 3 Pin-Bovie, as an upgrade kit 20160-002 BI 2 Pin 22-28-8/4, as an upgrade kit 20160-003 NE 6 - NE 2 Pin, as an upgrade kit 20160-006 04 erbe-med. com",
       "page": 4,
@@ -365,7 +370,7 @@
         4
       ]
     },
-    "845033db20e6ab52": {
+    "3af762866fb6a69f": {
       "id": "page5_para0",
       "text": "Electrosurgery VIO® 3 n for Endoscopy VIO® 3 n Fire No. 10160-010 Designed for GI and pulmonology procedures at the highest level Perfectly combinable with FiAPC® probes and proprietary Erbe hybrid instruments such as HYBRID knife® flex CUT COAG and Hybrid APC, e. g. underwater interventions, 3 rd space endoscopy interventions auto CUT soft COAG auto CUT bipolar soft COAG bipolar high CUT forced COAG Exemplary compatible modules dry CUT swift COAG • APC 3 endo CUT I spray COAG • ERBEJET® 2 endo CUT Q precise SECT endo CUT U twin COAG",
       "page": 5,
@@ -390,7 +395,7 @@
         5
       ]
     },
-    "25360f12442a77ad": {
+    "62550f4d9d241241": {
       "id": "page5_para1",
       "text": "• ERBECRYO® 2 forced APC",
       "page": 5,
@@ -415,7 +420,7 @@
         5
       ]
     },
-    "5c052a6135850ed0": {
+    "6bd5aec0830d7597": {
       "id": "page5_para2",
       "text": "• EIP 2 precise APC pulsed APC sense APD auto CUT argon high CUT argon dry CUT argon swift COAG argon precise SECT argon twin COAG argon VIO® 3 n Metal No. 10160-010 Designed for advanced GI procedures Perfectly combinable with FiAPC® probes and Hybrid APC for procedures such as EMR, CUT COAG post-EMR margin/resection bed ablation auto CUT soft COAG auto CUT bipolar soft COAG bipolar endo CUT I forced COAG Exemplary compatible modules endo CUT Q swift COAG • APC 3 forced APC • ERBECRYO® 2 precise APC pulsed APC",
       "page": 5,
@@ -440,7 +445,7 @@
         5
       ]
     },
-    "aa67684baccb4495": {
+    "fa1af1032ed8a10a": {
       "id": "page5_para3",
       "text": "• EIP 2 VIO® 3 n Stone No. 10160-010 Designed for day-to-day, routine interventions Compact design makes it suitable for applications in outpatient settings, e. g. polypectomy, CUT COAG papillotomy/sphincterotomy auto CUT soft COAG auto CUT bipolar soft COAG bipolar endo CUT I forced COAG Exemplary compatible modules endo CUT Q",
       "page": 5,
@@ -465,7 +470,7 @@
         5
       ]
     },
-    "00784ee790ff4c0b": {
+    "07d3e1c823c02c06": {
       "id": "page5_para4",
       "text": "• EIP 2 erbe-med. com 05",
       "page": 5,
@@ -490,7 +495,7 @@
         5
       ]
     },
-    "e4b9288b9ebb49f7": {
+    "6b5e5ebb4316cfb0": {
       "id": "page6_para0",
       "text": "Electrosurgery VIO® 3 n for Surgery VIO® 3 n Water No. 10160-010 Your go-to device for the multidisciplinary OR and simultaneous bipolar activation • Simultaneous bipolar activation when combined with VIO® seal, e. g. DIEP-Flap, LASH, hysterectomy, CUT COAG thyroidectomy auto CUT soft COAG • Versatile for a multitude of procedures: simultaneous monopolar activation auto CUT bipolar soft COAG bipolar high CUT forced COAG • Perfect combination with APC applicator e. g. liver surgery, cholecystectomy, treatment of endometriosis dry CUT swift COAG spray COAG Exemplary compatible modules precise SECT • VIO®seal twin COAG • APC 3 forced APC • IES 3 precise APC • ERBEJET®2 pulsed APC auto CUT argon",
       "page": 6,
@@ -515,7 +520,7 @@
         6
       ]
     },
-    "f21b8666c3f75115": {
+    "7f76bf166ed3d0d6": {
       "id": "page6_para1",
       "text": "• ESM 2 high CUT argon dry CUT argon swift COAG argon precise SECT argon twin COAG argon sense APD VIO® 3 n Timber No. 10160-010 Designed for everyday procedures in surgery • Compatible with a large selection of standard instruments CUT COAG • Compact design makes it suitable for outpatient settings, e. g. cholecystectomy, hernia treatment, C-sectio auto CUT soft COAG auto CUT bipolar soft COAG bipolar dry CUT forced COAG Exemplary compatible modules swift COAG • VIO®seal spray COAG • IES 3 precise SECT 06 erbe-med. com",
       "page": 6,
@@ -540,7 +545,7 @@
         6
       ]
     },
-    "74c9e041e49e0dfd": {
+    "4f1314adf80a1848": {
       "id": "page7_para0",
       "text": "Electrosurgery Available modes by configuration VIO® 3 n Modes VIO® 3 n Fire VIO® 3 n Metal VIO® 3 n Stone VIO® 3 n Water VIO® 3 n Timber auto CUT ● ● ● ● ● high CUT ● - - ● dry CUT ● - - ● ● endo CUT I ● ● ● - endo CUT Q ● ● ● - endo CUT U ● - - - soft COAG ● ● ● ● ● forced COAG ● ● ● ● ● swift COAG ● ● - ● ● spray COAG ● - - ● ● precise SECT ● - - ● twin COAG ● - - ● auto CUT bipolar ● ● ● ● ● soft COAG bipolar ● ● ● ● ● forced APC ● ● - ● precise APC ● ● - ● pulsed APC ● ● - ● move APD ● - - - sense APD ● - - ● auto CUT argon ● - - ● high CUT argon ● - - ● dry CUT argon ● - - ● swift COAG argon ● - - ● precise SECT argon ● - - ● twin COAG argon ● - - ● Functions and instrument sockets by configuration VIO® 3 n Functions, instrument sockets VIO® 3 n Fire VIO® 3 n Metal VIO® 3 n Stone VIO® 3 n Water VIO® 3 n Timber Connect instrument with the help of ● ● - ● the socket frame light Socket frame light on activation of the ● ● - ● instrument Socket frame light signals operating ● ● - ● state of the neutral electrode Electrical connector for APC 3 ● ● - ● connection",
       "page": 7,
@@ -565,7 +570,7 @@
         7
       ]
     },
-    "e2c90833db450cd7": {
+    "c2f52bca497bb086": {
       "id": "page7_para1",
       "text": "1. Socket: ● ● ● ● ● BI 2-pin 22–28",
       "page": 7,
@@ -590,7 +595,7 @@
         7
       ]
     },
-    "40f548f7bc2e8e17": {
+    "08e13a8076869b80": {
       "id": "page7_para2",
       "text": "2. Socket: ● ● ● ● ● MO 3-pin; Bovie",
       "page": 7,
@@ -615,7 +620,7 @@
         7
       ]
     },
-    "79798075df2855a0": {
+    "f9b791b2ab8b0873": {
       "id": "page7_para3",
       "text": "3. Socket: ● ● - ● MO 3-pin; Bovie",
       "page": 7,
@@ -640,7 +645,7 @@
         7
       ]
     },
-    "aea052255303da6a": {
+    "a7c91a1a53819e8d": {
       "id": "page7_para4",
       "text": "4. Socket: ● ● ● ● ● NE 6; 2-pin erbe-med. com 07",
       "page": 7,
@@ -665,7 +670,7 @@
         7
       ]
     },
-    "4a23b7d4a5a90476": {
+    "1aada5af7ad69725": {
       "id": "page8_para0",
       "text": "Electrosurgery VIO® seal VIO® seal No. 10160-020 Generator entirely dedicated to bipolar applications Pair VIO® seal with other VIO® generators to create a state-of-the-art workstation for surgical environments, CUT COAG e. g. DIEP-flap, hysterectomy, thyroidectomy auto CUT bipolar soft COAG bipolar thermo SECT bi CLAMP termo SEAL Exemplary compatible modules",
       "page": 8,
@@ -690,7 +695,7 @@
         8
       ]
     },
-    "6813f42e7e5ae8f2": {
+    "b72cf256f15e1093": {
       "id": "page8_para1",
       "text": "• VIO®",
       "page": 8,
@@ -715,7 +720,7 @@
         8
       ]
     },
-    "4201decdf2959603": {
+    "ed651e5aa0c4683c": {
       "id": "page8_para2",
       "text": "• IES 3",
       "page": 8,
@@ -740,7 +745,7 @@
         8
       ]
     },
-    "124e13467c60036c": {
+    "0beded70042e9f1e": {
       "id": "page8_para3",
       "text": "• EIP 2 Sockets • 2 x MF-U",
       "page": 8,
@@ -765,7 +770,7 @@
         8
       ]
     },
-    "20054a516cfd0936": {
+    "fe539c5a415e37b9": {
       "id": "page8_para4",
       "text": "VIO® D",
       "page": 8,
@@ -790,7 +795,7 @@
         8
       ]
     },
-    "7501011f529154ca": {
+    "7c3576bf63aaddc8": {
       "id": "page8_para5",
       "text": "VIO® 300 D No. 10140-100 In addition to vessel sealing, the high-end unit from the VIO® product range offers all APC modes and all available CUT and COAG modes (either as a standard mode in the unit or as an upgrade) Upgrades PRECISE Upgrade 29140-217 • Simple and interactive operation using the TFT display -PRECISE CUT",
       "page": 8,
@@ -815,7 +820,7 @@
         8
       ]
     },
-    "af5654bdb443d91c": {
+    "085f5986fcc912a8": {
       "id": "page8_para6",
       "text": "-BIPOLAR PRECISE CUT • Automatic power adjustment for all control technologies",
       "page": 8,
@@ -848,7 +853,7 @@
         8
       ]
     },
-    "ade4c501e45df0fe": {
+    "f4fb8e531e65bd5f": {
       "id": "page8_para7",
       "text": "-PRECISE COAG • Variable configuration of socket assignment",
       "page": 8,
@@ -881,7 +886,7 @@
         8
       ]
     },
-    "fbc64578afc99129": {
+    "19a9156d7261f795": {
       "id": "page8_para8",
       "text": "-BIPOLAR PRECISE COAG • Additional upgrades available for specific medical specialties ENDO CUT Upgrade 29140-218",
       "page": 8,
@@ -914,7 +919,7 @@
         8
       ]
     },
-    "17f342a697c5b2ed": {
+    "550c81ae27e30aa4": {
       "id": "page8_para9",
       "text": "-ENDO CUT Q",
       "page": 8,
@@ -947,7 +952,7 @@
         8
       ]
     },
-    "592e710dc1ecd53c": {
+    "f5c9b3ed8dbbf58a": {
       "id": "page8_para10",
       "text": "-ENDO CUT I TWIN COAG Upgrade 29140-216",
       "page": 8,
@@ -972,7 +977,7 @@
         8
       ]
     },
-    "d7ff51439d4909b9": {
+    "3d897be07e3764ba": {
       "id": "page8_para11",
       "text": "-TWIN COAG -Argon TWIN COAG Bi Clamp Upgrade 29140-214",
       "page": 8,
@@ -997,7 +1002,7 @@
         8
       ]
     },
-    "6d9f4460d52e20e0": {
+    "f59ed8edd4258a33": {
       "id": "page8_para12",
       "text": "VIO® 200 D No. 10140-200 VIO® electrosurgical unit for endoscopy and other disciplines with all APC modes and other COAG modes for endoscopy, ENDO CUT I and Q as an upgrade Upgrades PRECISE Upgrade 29140-217 • Simple and interactive operation using the TFT display -PRECISE CUT",
       "page": 8,
@@ -1022,7 +1027,7 @@
         8
       ]
     },
-    "1b29b0ce9acdcf42": {
+    "0e7a7aa597f390e3": {
       "id": "page8_para17",
       "text": "-ENDO CUT I DRY CUT Upgrade 29140-215",
       "page": 8,
@@ -1047,7 +1052,7 @@
         8
       ]
     },
-    "0a20e980bacfe790": {
+    "d116dbd0bde01524": {
       "id": "page8_para18",
       "text": "-DRY CUT -Argon DRY CUT 08 erbe-med. com",
       "page": 8,
@@ -1072,7 +1077,7 @@
         8
       ]
     },
-    "f2602170d25d8785": {
+    "ceb1507194db7e20": {
       "id": "page9_para0",
       "text": "Electrosurgery",
       "page": 9,
@@ -1097,7 +1102,7 @@
         9
       ]
     },
-    "2fd7f191c49d6ac4": {
+    "34c9660c25a02eba": {
       "id": "page9_para1",
       "text": "VIO® S",
       "page": 9,
@@ -1122,7 +1127,7 @@
         9
       ]
     },
-    "e617c10f7d546d45": {
+    "bf86ad6fcd7957cf": {
       "id": "page9_para2",
       "text": "VIO® 300 S No. 10140-300 Universal VIO® electrosurgical unit based on different variants. For many surgical specialities with the most important CUT and COAG modes as well as FORCED APC, with optional ENDO CUT I and Q Upgrades ENDO CUT Upgrade 29140-218 • Direct operation using the segment display -ENDO CUT Q • Automatic power adjustment for all control technologies -ENDO CUT I • Variable configuration of socket assignment TWIN COAG Upgrade 29140-216",
       "page": 9,
@@ -1147,7 +1152,7 @@
         9
       ]
     },
-    "ee5f6e8e958e36d3": {
+    "28489ad84e7b9445": {
       "id": "page9_para3",
       "text": "-TWIN COAG -Argon TWIN COAG",
       "page": 9,
@@ -1172,7 +1177,7 @@
         9
       ]
     },
-    "ad3c30ee494fdb60": {
+    "bfdc598ba8217702": {
       "id": "page9_para4",
       "text": "VIO® 200 S No. 10140-400 VIO® electrosurgical unit for many electrosurgical procedures and for specialist medical practices with the most important CUT and COAG modes as well as FORCED APC, with optional ENDO CUT I and Q Upgrades ENDO CUT Upgrade 29140-218 • Direct operation using the segment display -ENDO CUT Q • Automatic power adjustment for all control technologies -ENDO CUT I • Variable configuration of socket assignment",
       "page": 9,
@@ -1197,7 +1202,7 @@
         9
       ]
     },
-    "2563cd692b02a72c": {
+    "441bcd173e18097d": {
       "id": "page9_para5",
       "text": "VIO® C",
       "page": 9,
@@ -1222,7 +1227,7 @@
         9
       ]
     },
-    "27e3ddcfdbde7fde": {
+    "fb660fd881a6eff9": {
       "id": "page9_para6",
       "text": "VIO® 100 C No. 10140-500 VIO® compact electrosurgical unit for use in surgical practice with the most important CUT and COAG modes (100 watt unit) • Direct operation using the segment display • Monopolar cutting • Monopolar and bipolar coagulation erbe-med. com 09",
       "page": 9,
@@ -1247,7 +1252,7 @@
         9
       ]
     },
-    "c800d63ee7bd2e16": {
+    "0bd79c89bff58fe2": {
       "id": "page10_para0",
       "text": "Electrosurgery Socket modules for VIO® D, S and C Bipolar sockets (BI) No. 2 Pin-22-28-8/4 mm 20140-613 Monopolar sockets (MO) No. 3 Pin-Bovie 20140-622 3 Pin-9/5 mm 20140-623 Multifunctional socket (MF) for VIO® 300 D only No. multifunctional 20140-630 Neutral electrode sockets (NE) No. 6 mm-2 Pin 20140-642 Socket modularity VIO® 300 D VIO® 200 D VIO® 300 S VIO® 200 S VIO® 100 C Slot 1 BI BI BI BI BI Slot 2 MO, BI, MF MO, BI MO MO MO Slot 3 MO, MF MO MO MO Slot 4 NE NE NE NE NE 10 erbe-med. com",
       "page": 10,
@@ -1272,7 +1277,7 @@
         10
       ]
     },
-    "b2366619e3601524": {
+    "77564bf9765e2d55": {
       "id": "page11_para0",
       "text": "Electrosurgery Modes and Upgrades for VIO® D, S, C CUT VIO® 300 D VIO® 200 D VIO® 300 S VIO® 200 S VIO® 100 C AUTO CUT ■ ■ ■ ■ ■* HIGH CUT ■ − ○ − − DRY CUT ■ ⬓ ○ − ■* DRY CUT° ■ − ○ − − BIPOLAR CUT ■ ■ ○ − − BIPOLAR CUT + ■ − − − − BIPOLAR CUT ++ ■ − − − − PRECISE CUT ⬓ ⬓ − − − BIPOLAR PRECISE CUT ⬓ ⬓ − − − ENDO CUT Q ⬓ ⬓ ☐ ☐ − ENDO CUT I ⬓ ⬓ ☐ ☐ − ARGON AUTO CUT ■ ■ ■ ■ − ARGON HIGH CUT ■ − ○ − − ARGON DRY CUT ■ ⬓ ○ − − ARGON DRY CUT° ■ − ○ − − COAG VIO® 300 D VIO® 200 D VIO® 300 S VIO® 200 S VIO® 100 C SOFT COAG ■ ■ ○ ■ ■* SWIFT COAG ■ ■ ○ − − SWIFT COAG° ■ − ○ − −",
       "page": 11,
@@ -1297,7 +1302,7 @@
         11
       ]
     },
-    "af44ab40480986ff": {
+    "79656efe73ae2394": {
       "id": "page11_para1",
       "text": "CLASSIC COAG ■ − ■ − FORCED COAG ■ ■ ○ ■ ■* SPRAY COAG ■ − ■ − − BIPOLAR SOFT COAG ■ ■ ■ ■ ■* BIPOLAR SOFT COAG + ■ − − − − BIPOLAR SOFT COAG ++ ■ − − − BIPOLAR FORCED COAG ■ ■ − − − PRECISE COAG ⬓ ⬓ − − − BIPOLAR PRECISE COAG ⬓ ⬓ − − − TWIN COAG ⬓ − ☐ − −",
       "page": 11,
@@ -1322,7 +1327,7 @@
         11
       ]
     },
-    "2ac04a722c07365b": {
+    "ee6f603755b49ac7": {
       "id": "page11_para2",
       "text": "BICLAMP ⬓ − − − − FORCED APC ■ ■ ■ ■ − PRECISE APC ■ ■ − − − PULSED APC ■ ■ − − − ARGON SOFT COAG ■ ■ ○ ■ − ARGON SWIFT COAG ■ ■ ○ − − ARGON SWIFT COAG° ■ − ○ − − ARGON FORCED COAG ■ ■ ○ ■ − ARGON TWIN COAG ⬓ − ☐ − − Legend: ■ included ⬓ upgradeable * modified modes, ○ depending on the version ☐ only available ex factory (must be ordered) power adjustment only 11",
       "page": 11,
@@ -1347,7 +1352,7 @@
         11
       ]
     },
-    "47633242dfe59142": {
+    "a21c23e202fce845": {
       "id": "page12_para0",
       "text": "Electrosurgery Modules IES 3 Smoke evacuation unit, 100–240 V AC (± 10 %), without main filter cartridge No. 10323-000 • Protection through ULPA-15 filter • Good response, quiet operation • Extended range of applications • Flexible activation The main filter cartridge is not included in the scope of delivery. Main filter cartridge IES 3 with connection ø 22 mm No. 20323-000 = 1 80114-801 EIP 2, irrigation pump for endoscopic procedures No. 10325-000 Endoscopic irrigation pump for irrigating the target tissue • Activation via footswitch or via the user interface on the unit • 3 quick access options for irrigation level (30%, 50% and 80% irrigation) • Values can be changed individually and quickly • Additional irrigation catheter often not required 12 erbe-med. com",
       "page": 12,
@@ -1372,7 +1377,7 @@
         12
       ]
     },
-    "ed31771b9dfbc79f": {
+    "255a125557b05ad0": {
       "id": "page13_para0",
       "text": "Plasmasurgery Modules",
       "page": 13,
@@ -1397,7 +1402,7 @@
         13
       ]
     },
-    "8b867a7ab4f07d1a": {
+    "bc84282c31592242": {
       "id": "page13_para1",
       "text": "APC 3 No. 10135-000 The benefits of the logical and intuitive VIO®3 interface are now also available with APC 3. As your step GUIDE, the interface guides you through each menu, suggesting experienced starting settings for APC applications. • All APC modes are integrated into the VIO®3 and VIO®3 n: pulsed APC®, forced APC and precise APC® • The APC socket – your connection for APC filtered instruments • Besides the APC socket, an additional multifunctional socket is provided for further instruments. For the first time, this allows you to connect and use up to 6 instruments as required for your procedure. only for VIO®3 and VIO®3 n",
       "page": 13,
@@ -1422,7 +1427,7 @@
         13
       ]
     },
-    "b702dfb22401af4d": {
+    "c117e749e3efa577": {
       "id": "page13_para2",
       "text": "APC 2 No. 10134-000 Effective coagulation of bleeding, as well as devitalization of changes in tissue • 3 APC modes: FORCED APC, PRECISE APC, PULSED APC (see table on page 9) • Non-contact procedure, instrument tips cannot become clogged • Even effects with coagulation and devitalization • Good dosage accuracy, resulting in greater safety during application • Low risk of perforation • Argon-supported cutting • Minimum carbonization, minimum development of smoke plume, good visibility of the target area only for VIO® D/S erbe-med. com 13",
       "page": 13,
@@ -1447,7 +1452,7 @@
         13
       ]
     },
-    "a4dab3962fb319ef": {
+    "4cb86052d86d043e": {
       "id": "page14_para0",
       "text": "Hydrosurgery Units and modules",
       "page": 14,
@@ -1472,7 +1477,7 @@
         14
       ]
     },
-    "ea7c061c7266e12e": {
+    "d884d7fa4e9ccf80": {
       "id": "page14_para1",
       "text": "ERBEJET® 2 No. 10150-000 Selective dissection of tissue, layer-specific elevation of tissue layers • Basic module for hybrid technology • Applications include general or abdominal surgery, gastroenterology, urology • Protects blood vessels, nerves and organs • High degree of tissue selectivity enables exposure and dissection of tissue layers • Minimized bleeding, controlled management of bleeding ESM 2, suction module No. 10340-000 Suction module for the waterjet surgery unit (ERBEJET 2) • Individual or automatic suction for waterjet application • Clear view of the target operating area 14 erbe-med. com",
       "page": 14,
@@ -1497,7 +1502,7 @@
         14
       ]
     },
-    "d6ba9741d3a432d6": {
+    "a39c144055daefc5": {
       "id": "page15_para0",
       "text": "Cryosurgery Units",
       "page": 15,
@@ -1522,7 +1527,7 @@
         15
       ]
     },
-    "c772c3c5263936e8": {
+    "daaeacc9713fcc24": {
       "id": "page15_para1",
       "text": "ERBECRYO® 2 No. 10402-000 Cryosurgical unit for cryobiopsy, recanalization and cryo-devitalization • Application with flexible cryoprobes • Superior tissue samples in terms of quality and quantity • No crush artifacts or hemorrhages • High diagnostic weighting • Supports endobronchial and transbronchial biopsy • Coolant: carbon dioxide (CO ) 2 erbe-med. com 15",
       "page": 15,
@@ -1547,7 +1552,7 @@
         15
       ]
     },
-    "cd7037d9c485d99c": {
+    "00543e3d283e7c93": {
       "id": "page16_para0",
       "text": "Important information The information, recommendations and other details contained in this medium (“information′′) reflect our state of knowledge and the state of the art in science and technology at the time the medium was created. The information is of a general nature, non-binding and intended solely for general information purposes; it does not constitute instructions for use. The information and recommendations contained in this medium do not create any legal obligations on the part of Erbe Elektromedizin Gmb H and its affiliated companies (“Erbe′′) or any other claims against Erbe. The information does not constituteanyguaranteesorotherinformationonthenatureoftheproduct; such informationrequiresanexpresscontractualagreementwith Erbeineachindividual case. Erbeisnotliableforanykindofdamageresultingfromfollowingtheinformation on this medium, regardless of any legal grounds for liability. Everyuserofan Erbeproductisresponsiblefortestingtherespective Erbeproduct in advance with regard to its properties and its suitability for the intended typeofuseorpurpose. Suitabletypeofuseoftherespective Erbeproductcanbe found in the instructions for use for the respective Erbe product. The user is obliged to ascertain whether the instructions for use available to him/her correspondtothecurrentstatusofthespecific Erbeproduct. Devicesmayonlybeused in accordance with the instructions for use. Information on settings, application sites, application duration and use of the respective Erbe product is based on the clinical experience of individual centers, physicians and clinical literature independent of Erbe as well as post market surveillanceandempiricalevidence. Theyconstitutereferencevalues, or Experienced Starting Settings, which must be checked by the user to ensure that they are suitable for the specifically planned application. Depending on the circumstances of a specific application, it may be necessary to deviate from the information provided. The user is responsible for checking this when using Erbe products. We wishtonotethatscienceandtechnologyaresubjecttoconstantdevelopmentas a result of research and clinical experience. Similarly, medicine and clinical application are constantly evolving as a result of research and technological development. This may also make it necessary for the user to deviate from the information provided on this medium. This medium contains information about Erbe products that may not be approved/cleared in certain countries. The user of the respective Erbe product is obligedtoinformhimself/herselfastowhetherthe Erbeproducthe/sheisusing islegallyapproved/clearedinhis/hercountryand/ortowhatextent, ifany, there are legal requirements for or restrictions on its use. This medium is not intended for use in the USA. Erbe Elektromedizin Gmb H Phone +49 7071 755-0 Waldhoernlestrasse 17 info@erbe-med. com 72072 Tuebingen erbe-med. com Germany medical-videos. com ©Erbe Elektromedizin Gmb H 2025 2025-05 85100-172 non-US only",
       "page": 16,
@@ -1571,18 +1576,138 @@
       "pages": [
         16
       ]
+    },
+    "e17b58b5ff39a659": {
+      "text": "Important notes The authors and Erbe Elektromedizin Gmb H have taken the greatest possible care while compiling the catalogue with electrosurgical accessories. Nevertheless, it is impossible to exclude the possibi lity that errors may be contained herein. The information and recommendations given here may not be construed as constituting any basis for any claims against Erbe Elektromedizin Gmb H. Should legal regulations stipulate liability, such liability shall be limited to intentional misconduct or gross negligence. The data on the use of instruments is based on clinical experience. Medical science is subject to a process of permanent change based on research and clinical experience. Therefore the products are subject to alterations in design and technique. Because of production tolerances dimensions in the catalogue may marginally differ. Further product information Max. electrical capacity Packaging unit = 5 4 k Vp max 95 °C Temperature for cleaning in washer disinfector Notes on use 30191-682 max 134 °C Temperature for sterilization in autoclave Single-use product Sterile packaging STERILE R STERILE R STERILE EO Manual cleaning and disinfection Please read carefully the corresponding notes on use before using any instrument. 02 erbe-med. com",
+      "page": null,
+      "pages": [],
+      "char_span": null,
+      "length": 1267,
+      "order": [
+        67
+      ],
+      "occurrences": [
+        {
+          "page": null,
+          "char_span": null
+        }
+      ]
+    },
+    "aa7f76ed8998f1a9": {
+      "text": "important CUT and COAG modes as well as FORCED APC, with optional ENDO CUT I and Q Upgrades ENDO CUT Upgrade 29140-218 • Direct operation using the segment display -ENDO CUT Q • Automatic power adjustment for all control technologies -ENDO CUT I • Variable configuration of socket assignment TWIN COAG Upgrade 29140-216 TWIN COAG Argon TWIN COAG VIO® 200 S No. 10140-400 VIO® electrosurgical unit for many electrosurgical procedures and for specialist medical practices with the most",
+      "page": null,
+      "pages": [],
+      "char_span": null,
+      "length": 483,
+      "order": [
+        68
+      ],
+      "occurrences": [
+        {
+          "page": null,
+          "char_span": null
+        }
+      ]
+    },
+    "b608153e8f1894b0": {
+      "text": "important CUT and COAG modes as well as FORCED APC, with optional ENDO CUT I and Q Upgrades ENDO CUT Upgrade 29140-218 • Direct operation using the segment display -ENDO CUT Q • Automatic power adjustment for all control technologies -ENDO CUT I • Variable configuration of socket assignment VIO® C VIO® 100 C No. 10140-500 VIO® compact electrosurgical unit for use in surgical practice with the most important CUT and COAG modes (100 watt unit) • Direct operation using the segment display • Monopolar cutting • Monopolar and bipolar coagulation erbe-med. com 09",
+      "page": null,
+      "pages": [],
+      "char_span": null,
+      "length": 563,
+      "order": [
+        69
+      ],
+      "occurrences": [
+        {
+          "page": null,
+          "char_span": null
+        }
+      ]
+    },
+    "51e42524de8e6fcb": {
+      "text": "Important information The information, recommendations and other details contained in this medium (“information′′) reflect our state of knowledge and the state of the art in science and technology at the time the medium was created. The information is of a general nature, non-binding and intended solely for general information purpos es; it does not constitute instructions for use. The information and recommendations contained in this medium do not create any legal obligations on the part of Erbe Elektromedizin Gmb H and its affiliated companies (“Erbe′′) or any other claims against Erbe. The information does not constituteanyguaranteesorotherinformationonthenatureoftheproduct; such informationrequiresanexpresscontractualagreementwith Erbeineachindivid ual case. Erbeisnotliableforanykindofdamageresultingfromfollowingtheinformation on this medium, regardless of any legal grounds for liability. Everyuserofan Erbeproductisresponsiblefortestingtherespective Erbeprod uct in advance with regard to its properties and its suitability for the intended typeofuseorpurpose. Suitabletypeofuseoftherespective Erbeproductcanbe found in the instructions for use for the respective Erbe product. The user is obliged to ascertain whether the instructions for use available to him/her corre spondtothecurrentstatusofthespecific Erbeproduct. Devicesmayonlybeused in accordance with the instructions for use. Information on settings, application sites, application duration and use of the re spective Erbe product is based on the clinical experience of individual centers, physicians and clinical literature independent of Erbe as well as post market sur veillanceandempiricalevidence. Theyconstitutereferencevalues, or Experienced Starting Settings, which must be checked by the user to ensure that they are suitable for the specifically planned application. Depending on the circumstances of a specific application, it may be necessary to deviate from the information provided. The user is responsible for checking this when using Erbe products. We wishtonotethatscienceandtechnologyaresubjecttoconstantdevelopmentas a result of research and clinical experience. Similarly, medicine and clinical appli cation are constantly evolving as a result of research and technological develop ment. This may also make it necessary for the user to deviate from the informa tion provided on this medium. This medium contains information about Erbe products that may not be ap proved/cleared in certain countries. The user of the respective Erbe product is obligedtoinformhimself/herselfastowhetherthe Erbeproducthe/sheisusing islegallyapproved/clearedinhis/hercountryand/ortowhatextent, ifany, there are legal requirements for or restrictions on its use. This medium is not intended for use in the USA. Erbe Elektromedizin Gmb H Phone +49 7071 755-0 Waldhoernlestrasse 17 info@erbe-med. com 72072 Tuebingen erbe-med. com Germany medical-videos. com ©Erbe Elektromedizin Gmb H 2025 2025-05 85100-172 non-US only",
+      "page": null,
+      "pages": [],
+      "char_span": null,
+      "length": 2996,
+      "order": [
+        70
+      ],
+      "occurrences": [
+        {
+          "page": null,
+          "char_span": null
+        }
+      ]
     }
   },
   "doc_subtype": "catalog",
   "manufacturer": "ERBE Elektromedizin GmbH",
-  "part_number": "30191-682",
+  "product_name": "Units and modules",
+  "part_number": "ORE",
   "revision": "D080643",
-  "publication_date": "2025-05-01",
-  "model": "VIO",
   "software_versions": [],
   "contraindications": [],
   "adverse_events": [],
-  "safety_blocks": [],
+  "safety_blocks": [
+    {
+      "level": "attention",
+      "text": "Important notes The authors and Erbe Elektromedizin Gmb H have taken the greatest possible care while compiling the catalogue with electrosurgical accessories. Nevertheless, it is impossible to exclude the possibi lity that errors may be contained herein. The information and recommendations given here may not be construed as constituting any basis for any claims against Erbe Elektromedizin Gmb H. Should legal regulations stipulate liability, such liability shall be limited to intentional misconduct or gross negligence. The data on the use of instruments is based on clinical experience. Medical science is subject to a process of permanent change based on research and clinical experience. Therefore the products are subject to alterations in design and technique. Because of production tolerances dimensions in the catalogue may marginally differ. Further product information Max. electrical capacity Packaging unit = 5 4 k Vp max 95 °C Temperature for cleaning in washer disinfector Notes on use 30191-682 max 134 °C Temperature for sterilization in autoclave Single-use product Sterile packaging STERILE R STERILE R STERILE EO Manual cleaning and disinfection Please read carefully the corresponding notes on use before using any instrument. 02 erbe-med. com",
+      "title": "Important notes",
+      "page": 2,
+      "hash": "f2fe223f29a3a23479ea",
+      "severity": "warning",
+      "evidence": {
+        "text": "Important notes The authors and Erbe Elektromedizin Gmb H have taken the greatest possible care while compiling the catalogue with electrosurgical accessories. Nevertheless, it is impossible to exclud",
+        "page": 2,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "attention",
+      "text": "important CUT and COAG modes as well as FORCED APC, with optional ENDO CUT I and Q Upgrades ENDO CUT Upgrade 29140-218 • Direct operation using the segment display -ENDO CUT Q • Automatic power adjustment for all control technologies -ENDO CUT I • Variable configuration of socket assignment TWIN COAG Upgrade 29140-216 TWIN COAG Argon TWIN COAG VIO® 200 S No. 10140-400 VIO® electrosurgical unit for many electrosurgical procedures and for specialist medical practices with the most",
+      "title": "important CUT and COAG modes as well as FORCED APC, with optional ENDO CUT I and Q Upgrades",
+      "page": 9,
+      "hash": "b47c34139950d9dc36e8",
+      "severity": "warning",
+      "evidence": {
+        "text": "important CUT and COAG modes as well as FORCED APC, with optional ENDO CUT I and Q Upgrades ENDO CUT Upgrade 29140-218 • Direct operation using the segment display -ENDO CUT Q • Automatic power adjust",
+        "page": 9,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "attention",
+      "text": "important CUT and COAG modes as well as FORCED APC, with optional ENDO CUT I and Q Upgrades ENDO CUT Upgrade 29140-218 • Direct operation using the segment display -ENDO CUT Q • Automatic power adjustment for all control technologies -ENDO CUT I • Variable configuration of socket assignment VIO® C VIO® 100 C No. 10140-500 VIO® compact electrosurgical unit for use in surgical practice with the most important CUT and COAG modes (100 watt unit) • Direct operation using the segment display • Monopolar cutting • Monopolar and bipolar coagulation erbe-med. com 09",
+      "title": "important CUT and COAG modes as well as FORCED APC, with optional ENDO CUT I and Q Upgrades",
+      "page": 9,
+      "hash": "6d11651c4afe30679005",
+      "severity": "warning",
+      "evidence": {
+        "text": "important CUT and COAG modes as well as FORCED APC, with optional ENDO CUT I and Q Upgrades ENDO CUT Upgrade 29140-218 • Direct operation using the segment display -ENDO CUT Q • Automatic power adjust",
+        "page": 9,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "attention",
+      "text": "Important information The information, recommendations and other details contained in this medium (“information″) reflect our state of knowledge and the state of the art in science and technology at the time the medium was created. The information is of a general nature, non-binding and intended solely for general information purpos es; it does not constitute instructions for use. The information and recommendations contained in this medium do not create any legal obligations on the part of Erbe Elektromedizin Gmb H and its affiliated companies (“Erbe″) or any other claims against Erbe. The information does not constituteanyguaranteesorotherinformationonthenatureoftheproduct; such informationrequiresanexpresscontractualagreementwith Erbeineachindivid ual case. Erbeisnotliableforanykindofdamageresultingfromfollowingtheinformation on this medium, regardless of any legal grounds for liability. Everyuserofan Erbeproductisresponsiblefortestingtherespective Erbeprod uct in advance with regard to its properties and its suitability for the intended typeofuseorpurpose. Suitabletypeofuseoftherespective Erbeproductcanbe found in the instructions for use for the respective Erbe product. The user is obliged to ascertain whether the instructions for use available to him/her corre spondtothecurrentstatusofthespecific Erbeproduct. Devicesmayonlybeused in accordance with the instructions for use. Information on settings, application sites, application duration and use of the re spective Erbe product is based on the clinical experience of individual centers, physicians and clinical literature independent of Erbe as well as post market sur veillanceandempiricalevidence. Theyconstitutereferencevalues, or Experienced Starting Settings, which must be checked by the user to ensure that they are suitable for the specifically planned application. Depending on the circumstances of a specific application, it may be necessary to deviate from the information provided. The user is responsible for checking this when using Erbe products. We wishtonotethatscienceandtechnologyaresubjecttoconstantdevelopmentas a result of research and clinical experience. Similarly, medicine and clinical appli cation are constantly evolving as a result of research and technological develop ment. This may also make it necessary for the user to deviate from the informa tion provided on this medium. This medium contains information about Erbe products that may not be ap proved/cleared in certain countries. The user of the respective Erbe product is obligedtoinformhimself/herselfastowhetherthe Erbeproducthe/sheisusing islegallyapproved/clearedinhis/hercountryand/ortowhatextent, ifany, there are legal requirements for or restrictions on its use. This medium is not intended for use in the USA. Erbe Elektromedizin Gmb H Phone +49 7071 755-0 Waldhoernlestrasse 17 info@erbe-med. com 72072 Tuebingen erbe-med. com Germany medical-videos. com ©Erbe Elektromedizin Gmb H 2025 2025-05 85100-172 non-US only",
+      "title": "Important information",
+      "page": 16,
+      "hash": "91e9ed422ff6ef644dd4",
+      "severity": "warning",
+      "evidence": {
+        "text": "Important information The information, recommendations and other details contained in this medium (“information″) reflect our state of knowledge and the state of the art in science and technology at t",
+        "page": 16,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    }
+  ],
   "tables": [
     {
       "title": "VIO® 3",
@@ -1651,13 +1776,20 @@
     "unique_pages_seen": 16,
     "unique_pages_ratio": 1.0,
     "extracted_chars": 17202,
-    "duration_s": 0.6686112880706787,
+    "duration_s": 0.6842470169067383,
     "coverage_ratio": 1.0,
     "doc_subtype": "catalog",
     "tables_kept": 2,
     "paragraph_dedup_applied": true,
+    "relations_dropped": 0,
+    "tables_dropped": 0,
+    "relations_count": 0,
+    "relations_kept": 0,
+    "safety_blocks_found": 4,
+    "references_count": 0,
+    "long_doc_fast_path": false,
     "evidence_bank_size": 0,
-    "paragraph_store_size": 61
+    "paragraph_store_size": 65
   },
   "_engine": "pdfplumber",
   "_mode": "full",
@@ -1674,7 +1806,7 @@
     "ocr_used_pages": [],
     "coverage_ratio": 1.0,
     "page_count": 16,
-    "timestamp": "2025-11-01T10:49:52.081493",
+    "timestamp": "2025-11-03T19:49:42.261773",
     "version": "v1.0.0",
     "warnings": [],
     "emit": {
@@ -1698,6 +1830,11 @@
       "keep_evidence_bank": true,
       "max_tables": 10
     },
+    "safety_blocks_found": 4,
+    "front_matter_meta": {
+      "product_name_source": "pattern"
+    },
+    "long_doc_fast_path": false,
     "text_repair_applied": false,
     "engine_used_per_page": {
       "1": "pdfplumber",
@@ -1725,27 +1862,49 @@
       "repair_strategy": null
     },
     "paragraph_dedup_applied": true,
+    "tables_kept": 2,
+    "relations_dropped": 0,
+    "tables_dropped": 0,
+    "relations_kept": 0,
+    "references_detected": 0,
+    "extracted_chars": 17202,
+    "emit_policy_source": "yaml",
     "evidence_policy": "compact",
     "keep_evidence_bank": true,
     "paragraph_store_enabled": true,
     "paragraph_store_requested": true,
     "tables_original": 2,
-    "tables_kept": 2,
-    "tables_dropped": 0,
-    "paragraph_store_size": 61,
+    "text_field_paragraph_refs": {
+      "product_name": [
+        "103d97a439bd8562"
+      ],
+      "safety_blocks": [
+        "e17b58b5ff39a659",
+        "aa7f76ed8998f1a9",
+        "b608153e8f1894b0",
+        "51e42524de8e6fcb"
+      ]
+    },
+    "paragraph_store_size": 65,
     "window_placeholders_removed": 0,
     "metadata_sources": {},
+    "engine_timeouts": {
+      "pymupdf": 70.0,
+      "pdfplumber": 85.0
+    },
+    "ifu_engine_mode": "pdfplumber",
+    "ifu_engine_source": "manufacturer:erbe",
+    "ifu_engine_override_key": "erbe",
     "emit_raw_pages": false,
     "generator": "medparse",
     "pipeline_version": "1.1.0",
     "engine": "pdfplumber",
-    "config_hash": "7d58edf1",
+    "config_hash": "f53923c0",
     "content_hash": "6895ed8c21c9",
     "validators": {
       "passed": true,
       "warnings": [
-        "IFU missing product_name field.",
-        "Expected at least 20 safety blocks; found 0."
+        "Expected at least 20 safety blocks; found 4."
       ],
       "errors": []
     }

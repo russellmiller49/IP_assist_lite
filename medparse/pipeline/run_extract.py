@@ -1269,18 +1269,24 @@ def _document_metrics(document: BaseDocument) -> Dict[str, int | float | bool]:
             elif getattr(rec, "ungraded", False):
                 typed_ungraded += 1
         typed_ungraded = min(typed_ungraded, max(0, total_recs - graded_count))
-        grade_density = round(with_grade / total_recs, 4) if total_recs else 0.0
-        typed_density = round((graded_count + typed_ungraded) / total_recs, 4) if total_recs else 0.0
+        grade_density = round(with_grade / total_recs, 2) if total_recs else 0.0
+        typed_density = round((graded_count + typed_ungraded) / total_recs, 2) if total_recs else 0.0
 
         payload["recommendations_count"] = total_recs
+        payload["recommendations_total"] = total_recs
         payload["graded_count"] = graded_count
+        payload["recommendations_graded"] = graded_count
         payload["typed_ungraded_count"] = typed_ungraded
+        payload["recommendations_ungraded_typed"] = typed_ungraded
         payload["grade_density"] = grade_density
         payload["typed_density"] = typed_density
 
         pipeline_info["recommendations_count"] = total_recs
+        pipeline_info["recommendations_total"] = total_recs
         pipeline_info["graded_count"] = graded_count
+        pipeline_info["recommendations_graded"] = graded_count
         pipeline_info["typed_ungraded_count"] = typed_ungraded
+        pipeline_info["recommendations_ungraded_typed"] = typed_ungraded
         pipeline_info["grade_density"] = grade_density
         pipeline_info["typed_density"] = typed_density
         grade_sources = pipeline_info.get("grade_source_breakdown")
@@ -1312,6 +1318,15 @@ def _document_metrics(document: BaseDocument) -> Dict[str, int | float | bool]:
 
     if getattr(document, "doc_type", None) == "article":
         payload["ats"] = validate_ats_yield(document)
+        ats_applicability = pipeline_info.get("ats_yield_applicability")
+        if ats_applicability:
+            payload["ats_yield_applicability"] = ats_applicability
+        reasons = pipeline_info.get("ats_yield_reasons")
+        if reasons is not None:
+            if isinstance(reasons, list):
+                payload["ats_yield_reasons"] = list(reasons)
+            else:
+                payload["ats_yield_reasons"] = [str(reasons)]
 
     payload["paragraph_dedup_applied"] = bool(pipeline_info.get("paragraph_dedup_applied"))
     try:
@@ -1359,6 +1374,18 @@ def _document_metrics(document: BaseDocument) -> Dict[str, int | float | bool]:
         threshold_value = pipeline_info.get("long_doc_page_threshold")
         if threshold_value is not None:
             payload["long_doc_page_threshold"] = threshold_value
+
+    unresolved_affiliations = pipeline_info.get("frontmatter_affiliations_unresolved")
+    if unresolved_affiliations is not None:
+        try:
+            unresolved_count = int(unresolved_affiliations)
+        except (TypeError, ValueError):
+            unresolved_count = 0
+        payload["frontmatter_affiliations_unresolved"] = unresolved_count
+        pipeline_info["frontmatter_affiliations_unresolved"] = unresolved_count
+    else:
+        payload.setdefault("frontmatter_affiliations_unresolved", 0)
+        pipeline_info.setdefault("frontmatter_affiliations_unresolved", 0)
 
     toc_guard_info = pipeline_info.get("toc_guard")
     if isinstance(toc_guard_info, dict):

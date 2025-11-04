@@ -90,6 +90,51 @@ AUTHOR_NAME_PATTERN = re.compile(
     re.VERBOSE,
 )
 
+AFFILIATION_HEADING_PATTERN = re.compile(
+    r"^\s*(affiliations?|author information|author affiliations?|institution(?:s)?|author details)\s*[:\-]?\s*$",
+    re.IGNORECASE,
+)
+AFFILIATION_STOP_PATTERN = re.compile(
+    r"^\s*(keywords|key words|abstract|summary|introduction|correspondence|address for correspondence|contact)\b",
+    re.IGNORECASE,
+)
+AFFILIATION_MARKER_LINE = re.compile(
+    r"^\s*(?:\d{1,2}(?:\s*,\s*\d{1,2})*|[A-Za-z]|[†‡*]+)[\s\.)-]+.*$"
+)
+
+
+def _collect_affiliation_text(pages: List[PageData], max_pages: int = 2) -> str:
+    if not pages:
+        return ""
+
+    collected: List[str] = []
+    capture = False
+
+    for page in pages[:max_pages]:
+        for raw_line in page.lines or []:
+            stripped = raw_line.strip()
+            if not stripped:
+                if capture:
+                    collected.append("")
+                continue
+
+            if AFFILIATION_HEADING_PATTERN.match(stripped):
+                capture = True
+                continue
+
+            if capture and AFFILIATION_STOP_PATTERN.match(stripped):
+                capture = False
+                continue
+
+            if capture:
+                collected.append(stripped)
+                continue
+
+            if AFFILIATION_MARKER_LINE.match(stripped):
+                collected.append(stripped)
+
+    return "\n".join(collected)
+
 
 def extract_title_hierarchical(
     pages: List[PageData],
@@ -469,10 +514,12 @@ def extract_affiliations_and_correspondence(pages: List[PageData]) -> Dict[str, 
     if not pages:
         return {'affiliations': {}, 'corresponding_author': None}
 
+    heading_block = _collect_affiliation_text(pages[:2])
     first_page_text = '\n'.join(pages[0].lines)
+    candidate_text = "\n".join(part for part in (first_page_text, heading_block) if part)
 
     # Extract affiliations (superscript numbers/letters)
-    affiliations = extract_superscript_affiliations(first_page_text)
+    affiliations = extract_superscript_affiliations(candidate_text)
 
     # Extract corresponding author (✉ or "Correspondence:" marker)
     corr_author = None
@@ -508,15 +555,18 @@ def extract_authors_affiliations(pages: List[PageData]) -> Dict[str, Any]:
         return False
 
     header_lines: List[str] = []
-    for line in first_page.lines[:30]:
-        cleaned = line.strip()
-        if not cleaned:
-            continue
-        if _strip_running_header(line):
-            continue
-        if re.match(r"(abstract|summary|keywords)\b", cleaned, re.IGNORECASE):
+    for page in pages[:2]:
+        for line in (page.lines or [])[:40]:
+            cleaned = line.strip()
+            if not cleaned:
+                continue
+            if _strip_running_header(line):
+                continue
+            if re.match(r"(abstract|summary|keywords)\b", cleaned, re.IGNORECASE):
+                break
+            header_lines.append(cleaned)
+        if header_lines:
             break
-        header_lines.append(cleaned)
 
     header_block = " ".join(header_lines)
     header_block = re.sub(r"\s+", " ", header_block)
@@ -535,7 +585,16 @@ def extract_authors_affiliations(pages: List[PageData]) -> Dict[str, Any]:
     if trailer_split:
         header_block = trailer_split[0].strip()
 
-    all_affiliations_map = extract_superscript_affiliations("\n".join(first_page.lines[:80]))
+    affiliation_block = _collect_affiliation_text(pages[:2])
+    combined_affiliation_text = "\n".join(
+        part
+        for part in (
+            "\n".join(first_page.lines[:120]),
+            affiliation_block,
+        )
+        if part
+    )
+    all_affiliations_map = extract_superscript_affiliations(combined_affiliation_text)
     affiliation_entries = list(all_affiliations_map.items())
 
     authors: List[Dict[str, Any]] = []
@@ -717,17 +776,16 @@ def link_authors_to_affiliations(
     authors: List["Author"],
     affiliations: List["Affiliation"],
     pages: List[PageData],
-) -> None:
+) -> List[str]:
     if not authors or not affiliations:
-        return
+        return []
     if all(getattr(author, "affiliation_ids", []) for author in authors):
-        return
+        return []
 
-    header_lines: List[str] = []
-    if pages:
-        first_page = pages[0]
-        header_lines = [line.strip() for line in (first_page.lines or [])[:80] if line.strip()]
-    converted_lines = [line.translate(SUPERSCRIPT_TRANSLATION) for line in header_lines]
+    window_lines: List[str] = []
+    for page in pages[:2]:
+        window_lines.extend(line for line in (page.lines or [])[:120] if line.strip())
+    converted_lines = [line.translate(SUPERSCRIPT_TRANSLATION) for line in window_lines]
 
     alias_map: Dict[str, str] = {}
     for affiliation in affiliations:
@@ -817,14 +875,19 @@ def link_authors_to_affiliations(
                 "Assigned all authors to sole affiliation id '%s' due to missing explicit markers.",
                 fallback_id,
             )
-        return
+        return []
 
     unresolved_names = [author.family or author.given or "?" for author in unresolved if author]
-    if unresolved_names:
+    coverage = 0.0
+    if authors:
+        mapped = sum(1 for author in authors if getattr(author, "affiliation_ids", []))
+        coverage = mapped / len(authors)
+    if unresolved_names and coverage < 0.6:
         LOGGER.warning(
             "Unable to resolve affiliations for authors: %s",
             ", ".join(unresolved_names),
         )
+    return unresolved_names
 
 
 def extract_section_text(full_text: str, headings: List[str]) -> Optional[str]:
@@ -1011,7 +1074,7 @@ def _fallback_author_lines(page: PageData) -> List[str]:
 
 def _parse_affiliation_entries(text: str) -> List[Tuple[str, str]]:
     entries: List[Tuple[str, str]] = []
-    marker_pattern = re.compile(r"^\s*([0-9]{1,2}(?:\s*,\s*[0-9]{1,2})*|[†‡*]+)[\s\.)-]*\s*([A-Z].*)$")
+    marker_pattern = re.compile(r"^\s*([0-9]{1,2}(?:\s*,\s*[0-9]{1,2})*|[A-Za-z]|[†‡*]+)[\s\.)-]*\s*(.*)$")
     lines = text.splitlines()
     current_markers: List[str] = []
     current_text: List[str] = []
@@ -1037,6 +1100,8 @@ def _parse_affiliation_entries(text: str) -> List[Tuple[str, str]]:
             _flush()
             markers = _expand_markers(match.group(1))
             body = match.group(2).strip()
+            if not body:
+                continue
             current_markers = markers
             current_text = [body] if body else []
             continue
@@ -1094,12 +1159,12 @@ def _looks_like_affiliation_line(line: str) -> bool:
 def _extract_author_markers(token: str) -> Tuple[List[str], str]:
     markers: List[str] = []
     wrapped_pattern = re.compile(
-        r"(?:(?<=\s)|(?<=,)|(?<=;)|(?<=\()|(?<=\[))(\d{1,2}|[†‡*])(?=(?:\s|,|;|\.|\)|\]|$))",
+        r"(?:(?<=\s)|(?<=,)|(?<=;)|(?<=\()|(?<=\[))(\d{1,2}|[a-z]|[†‡*])(?=(?:\s|,|;|\.|\)|\]|$))",
         re.IGNORECASE,
     )
     for match in wrapped_pattern.finditer(token):
         markers.append(match.group(1))
-    tail_match = re.search(r"(\d{1,2}|[†‡*])$", token)
+    tail_match = re.search(r"(\d{1,2}|[a-z]|[†‡*])$", token, re.IGNORECASE)
     if tail_match:
         markers.append(tail_match.group(1))
 

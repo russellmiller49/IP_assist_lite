@@ -77,6 +77,10 @@ def test_emit_metrics_mirror_pipeline_counters():
     assert metrics["typed_ungraded_count"] == 1
     assert metrics["typed_density"] == 1.0
     assert metrics["grade_density"] == document.pipeline_info.get("grade_density")
+    assert metrics["recommendations_total"] == 2
+    assert metrics["recommendations_graded"] == 1
+    assert metrics["recommendations_ungraded_typed"] == 1
+    assert metrics["frontmatter_affiliations_unresolved"] == 0
 
 
 def test_ifu_toc_guard_metrics():

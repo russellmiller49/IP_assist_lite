@@ -3,10 +3,21 @@ manufacturers:
     patterns:
       - 'ERBE\s+Elektromedizin\s+GmbH'
       - 'ERBE\s+Medical'
+      - 'ERBE\s+USA'
+      - 'ERBE\s+Austria'
   - name: "Intuitive Surgical, Inc."
     patterns:
       - 'Intuitive\s+Surgical'
       - 'Ion(?:™)?\s+Endoluminal\s+System'
+      - 'Intuitive\s+Surgical\s+SARL'
+      - 'Intuitive\s+Ib[eé]rica'
+      - 'Intuitive\s+Operations'
+  - name: "Olympus Corporation"
+    patterns:
+      - 'Olympus\s+Corporation'
+      - 'Olympus\s+America\s+Inc\.'
+      - 'Olympus\s+Medical'
+      - 'Olympus\s+KeyMed'
 
 product_patterns:
   "ERBE Elektromedizin GmbH":
@@ -21,6 +32,8 @@ product_patterns:
   "Intuitive Surgical, Inc.":
     - regex: '(?i)(Ion\s+Endoluminal\s+System.*)'
       group: 1
+    - regex: '(?i)(Ion\s+System\s+Instruments?.*)'
+      group: 1
   "Olympus Corporation":
     - regex: '(?i)(ALT[\s\-]?PRO\s+.*)'
       group: 1
@@ -29,6 +42,8 @@ product_patterns:
     - regex: '(?i)(System\s+Carrier.*)'
       group: 1
     - regex: '(?i)(Units and Modules.*)'
+      group: 1
+    - regex: '(?i)(Safety\s+Precautions?.*)'
       group: 1
   default:
     - regex: '(?i)([A-Z][A-Za-z0-9\-/ ]{4,})'

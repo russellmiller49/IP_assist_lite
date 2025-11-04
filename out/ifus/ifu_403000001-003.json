@@ -1,13 +1,13 @@
 {
-  "doc_id": "c9a17227-09c2-4cbc-9381-ba12f5d04335",
+  "doc_id": "3195c695-f589-429d-a0d8-2de7579076eb",
   "doc_type": "ifu",
   "source_file": "/home/rjm/projects/IP_assist_lite/data/Input pdfs/IFUs/pdf/403000001_003.pdf",
   "page_count": 4,
-  "extraction_timestamp": "2025-11-01T10:49:51.399534",
+  "extraction_timestamp": "2025-11-03T19:49:41.563792",
   "extraction_version": "v1.0.0",
   "evidence_bank": {},
   "paragraph_store": {
-    "0ed7b7413bfc2e52": {
+    "4bf83008c2138797": {
       "id": "page1_para0",
       "text": "Tracheobronchial Stent System",
       "page": 1,
@@ -17,7 +17,8 @@
       ],
       "length": 29,
       "order": [
-        0
+        0,
+        19
       ],
       "occurrences": [
         {
@@ -26,13 +27,17 @@
             30,
             29
           ]
+        },
+        {
+          "page": null,
+          "char_span": null
         }
       ],
       "pages": [
         1
       ]
     },
-    "36ac32021676c990": {
+    "4730b5b9bd697647": {
       "id": "page1_para1",
       "text": "INSTRUCTI ONSFORUSE",
       "page": 1,
@@ -57,7 +62,7 @@
         1
       ]
     },
-    "5c5a777552cc71e5": {
+    "9a5c3220945d0701": {
       "id": "page2_para0",
       "text": "PROCEDURAL COMPLICATIONS:",
       "page": 2,
@@ -82,15 +87,15 @@
         2
       ]
     },
-    "e925a587209f8e84": {
+    "742723cecd539806": {
       "id": "page2_para1",
-      "text": "STENT DIAMETER SIZINGTABLE (TABLE 1) • Stentmisplacement Tracheobronchial Stent System • Bleeding DEVICESIZING • Tracheobronchialperforationandpneumothorax Recommended Lumen Diameter DEVICEDESCRIPTION • Retrosternal Pain Labeled Device Diameter(mm) (mm) • Aspiration The MERITENDOTEKAERO mini Tracheobronchial Stent Systemiscomprisedof • Hypoxia 8 6. 0-7. 5 twocomponents: theradiopaqueself-expandingnitinolstentandthedelivery • Infection 10 7. 5-9. 5 system. Thestentiscompletelycoveredwithabiocompatiblepolyurethane membrane. Thestentexpansionresultsfromthephysicalpropertiesofthe POST-STENT PLACEMENT COMPLICATIONS: 12 9. 0-11. 5 metalandtheproprietarygeometry. Thestentisdesignedwithaconstant • Stentmigration • Occlusionduetomucousaccumulation 14 10. 5-13. 5 diameterthroughoutitsentirelength. Theoverallstentgeometryisdesigned tomaintainaconstantlengthovertheentirerangeofpossiblediameters. As • Occlusionduetotumorin-growthorovergrowthatstentends aresultofthisuniquedesignthestenthasvirtuallynoforeshortening, thus • Occlusionduetogranulomatoustissueformation",
+      "text": "STENT DIAMETER SIZINGTABLE (TABLE 1) • Stentmisplacement Tracheobronchial Stent System • Bleeding",
       "page": 2,
       "char_span": [
         26,
-        1092
+        123
       ],
-      "length": 1066,
+      "length": 97,
       "order": [
         3
       ],
@@ -99,6 +104,31 @@
           "page": 2,
           "char_span": [
             26,
+            123
+          ]
+        }
+      ],
+      "pages": [
+        2
+      ]
+    },
+    "4fcbc6c3e0cdd845": {
+      "id": "page2_para2",
+      "text": "DEVICESIZING • Tracheobronchialperforationandpneumothorax Recommended Lumen Diameter DEVICEDESCRIPTION • Retrosternal Pain Labeled Device Diameter(mm) (mm) • Aspiration The MERITENDOTEKAERO mini Tracheobronchial Stent Systemiscomprisedof • Hypoxia 8 6. 0-7. 5 twocomponents: theradiopaqueself-expandingnitinolstentandthedelivery • Infection 10 7. 5-9. 5 system. Thestentiscompletelycoveredwithabiocompatiblepolyurethane membrane. Thestentexpansionresultsfromthephysicalpropertiesofthe POST-STENT PLACEMENT COMPLICATIONS: 12 9. 0-11. 5 metalandtheproprietarygeometry. Thestentisdesignedwithaconstant • Stentmigration • Occlusionduetomucousaccumulation 14 10. 5-13. 5 diameterthroughoutitsentirelength. Theoverallstentgeometryisdesigned tomaintainaconstantlengthovertheentirerangeofpossiblediameters. As • Occlusionduetotumorin-growthorovergrowthatstentends aresultofthisuniquedesignthestenthasvirtuallynoforeshortening, thus • Occlusionduetogranulomatoustissueformation",
+      "page": 2,
+      "char_span": [
+        124,
+        1092
+      ],
+      "length": 968,
+      "order": [
+        4
+      ],
+      "occurrences": [
+        {
+          "page": 2,
+          "char_span": [
+            124,
             1092
           ]
         }
@@ -107,9 +137,9 @@
         2
       ]
     },
-    "76f74467b1aab46b": {
-      "id": "page2_para2",
-      "text": "STENT DIAMETER SIZINGTABLE (TABLE 2) facilitatingtheselectionoftheappropriatestentlength. • Chroniccough • Partialstentfractures Labeled Length 10 mm Labeled Length 15 mm Labeled Device Thestentsaredeployedwithadedicateddeliverysystem. Thedeliverysystem • Recurrentobstructivedyspnearelatedtostentocclusionormigration Diameter(mm) • Tracheobronchialwallulceration, perforationandhemorrhage Stenosis Length(mm) Stenosis Length(mm) consistsoftwocoaxialsheaths. Theexteriorsheathservestoconstrainthe stent until the sheath is retracted during deployment. The stent remains • Infectionandsepticshock 8 10 15 constrained by the delivery system until the trigger is pulled beyond the • Aphonia white deployment threshold mark located between the trigger and hand • Death 10 10 15 grip. Thisfeatureallowsforrepositioningofthestentproximally. Inaddition, 12 10 15 theprocedurecanbeabortedandtheentiresystemcanbewithdrawnen ADDITIONALCAUTIONSANDWARNINGS blocatanytimebeforethetriggerispulledbeyondthewhitedeployment 14 10 15 thresholdmarklocatedbetweenthetriggerandhandgrip. Aradiopaquetip 1. The MERIT ENDOTEK AERO mini Tracheobronchial Stent System andmarkerontheinnershaftaidtheoperatorindeterminingstentposition should be used with caution and only after careful consideration inrelationtothedeploymentthresholdmark, whererepositioningorenbloc in patients with: withdrawalisnolongerpossible. Theinnertubeofthecoaxialsheathdelivery STENTSELECTION systemcontainsacentrallumenthatwillaccommodatea 0. 035”guidewire. • Extendedclottingtimesorcoagulopathies Thisfeatureisdesignedtoallowsafeguidanceofthedeliverysystemtothe • Priorpneumonectomy • Priortoimplantationofthe MERITENDOTEKAERO mini Tracheobronchial intended implant site while minimizing the risk of airway injury from the • Activeacuteinflammationintheairwaylumen Stent System, thephysicianshouldrefertothe Sizing Table(Table 1& deliverysystemtip. • Atumorrelatedstenosisadjacenttoamajorvessel 2)andreadthe Instructionsfor Use. • Whenusedinthetreatmentofstenoticorobstructivelesions, placement Thestentanddeliverysystemareprovided STERILE usinganethyleneoxide 2. If the stent becomes fractured or does not fully expand during ofthestentshouldimmediatelyfollowtheopeningoftheairwayby (EO)process. implantation, removethestentfollowingthe Instructionsforuse. whatevermeansappropriateandbeconfirmedbyfluoroscopyand/or bronchoscopy. Thedevicemustbesizedinaccordancewiththe Sizing MRISAFETYINFORMATION 3. Donotusethestentfortreatmentoflesionswhereplacementofthe Table(Table 1&2)usingaccuratemeasurementtechniques. devicemayobstructafunctioningmajorsidebranch. • Proper placement of the device should be monitored and confirmed MR Non-clinical testing has demonstrated that the AERO mini usingbronchoscopyand/orfluoroscopy. is MRC onditional. Apatientwiththisdevicecanbesafely 4. Donotcutthestentorthedeliverysystem. Thedeviceshouldonlybe MRC onditional placedanddeployedusingthesupplieddeliverysystem. scannedinan MR systemmeetingthefollowingconditions: REQUIREDEQUIPMENT • Staticmagneticfieldof 1. 5 Tand 3. 0 Tonly 5. Do not use a kinked bronchoscope, endotracheal tube or introducer • Bronchoscope • Maximumspatialgradientmagneticfieldof 3, 000 Gauss/cm(30 T/m) sheath as this may increase the force necessary to deploy the device • 0. 035”(0. 89 mm) stiff bodied, soft tipped guide wire, 180 cm length orless andmaycauseadeploymentfailureordeliverysystembreakage. minimum. • Maximum MR systemreported, wholebodyaveragedspecificabsorption • Fluoroscopic imaging should be used to facilitate tracheobronchial rate(SAR)of 2 W/kg(Normal Operating Mode) 6. Donotdeploythestentinsideofthebronchoscope. dilationifrequiredpriortostentplacement. Fluoroscopicimagingmay alsobeusedinadditiontoorinplaceofendoscopytoaidinaccurate Underthescanconditiondefinedabove, the AERO miniisexpectedtoproduce 7. Donotrepositionthestentbypushingonthestentwiththebronchoscope. stentplacement. amaximumtemperatureriseof 2. 0 o Cafter 15 minutesofcontinuousscanning. • Graspingforceps",
+    "55c2a4d3caa6a86d": {
+      "id": "page2_para3",
+      "text": "STENT DIAMETER SIZINGTABLE (TABLE 2) facilitatingtheselectionoftheappropriatestentlength. • Chroniccough • Partialstentfractures Labeled Length 10 mm Labeled Length 15 mm Labeled Device Thestentsaredeployedwithadedicateddeliverysystem. Thedeliverysystem • Recurrentobstructivedyspnearelatedtostentocclusionormigration Diameter(mm) • Tracheobronchialwallulceration, perforationandhemorrhage Stenosis Length(mm) Stenosis Length(mm) consistsoftwocoaxialsheaths. Theexteriorsheathservestoconstrainthe stent until the sheath is retracted during deployment. The stent remains • Infectionandsepticshock 8 10 15 constrained by the delivery system until the trigger is pulled beyond the • Aphonia white deployment threshold mark located between the trigger and hand • Death 10 10 15 grip. Thisfeatureallowsforrepositioningofthestentproximally. Inaddition, 12 10 15 theprocedurecanbeabortedandtheentiresystemcanbewithdrawnen ADDITIONALCAUTIONSANDWARNINGS blocatanytimebeforethetriggerispulledbeyondthewhitedeployment 14 10 15 thresholdmarklocatedbetweenthetriggerandhandgrip. Aradiopaquetip 1. The MERIT ENDOTEK AERO mini Tracheobronchial Stent System andmarkerontheinnershaftaidtheoperatorindeterminingstentposition should be used with caution and only after careful consideration inrelationtothedeploymentthresholdmark, whererepositioningorenbloc in patients with: withdrawalisnolongerpossible. Theinnertubeofthecoaxialsheathdelivery STENTSELECTION systemcontainsacentrallumenthatwillaccommodatea 0. 035”guidewire. • Extendedclottingtimesorcoagulopathies Thisfeatureisdesignedtoallowsafeguidanceofthedeliverysystemtothe • Priorpneumonectomy • Priortoimplantationofthe MERITENDOTEKAERO mini Tracheobronchial intended implant site while minimizing the risk of airway injury from the • Activeacuteinflammationintheairwaylumen Stent System, thephysicianshouldrefertothe Sizing Table(Table 1& deliverysystemtip. • Atumorrelatedstenosisadjacenttoamajorvessel 2)andreadthe Instructionsfor Use. • Whenusedinthetreatmentofstenoticorobstructivelesions, placement Thestentanddeliverysystemareprovided STERILE usinganethyleneoxide 2. If the stent becomes fractured or does not fully expand during ofthestentshouldimmediatelyfollowtheopeningoftheairwayby (EO)process. implantation, removethestentfollowingthe Instructionsforuse. whatevermeansappropriateandbeconfirmedbyfluoroscopyand/or bronchoscopy. Thedevicemustbesizedinaccordancewiththe Sizing MRISAFETYINFORMATION 3. Donotusethestentfortreatmentoflesionswhereplacementofthe Table(Table 1&2)usingaccuratemeasurementtechniques. devicemayobstructafunctioningmajorsidebranch. • Proper placement of the device should be monitored and confirmed MR Non-clinical testing has demonstrated that the AERO mini usingbronchoscopyand/orfluoroscopy. is MRC onditional. Apatientwiththisdevicecanbesafely 4. Donotcutthestentorthedeliverysystem. Thedeviceshouldonlybe MRC onditional placedanddeployedusingthesupplieddeliverysystem. REQUIREDEQUIPMENT scannedinan MR systemmeetingthefollowingconditions: • Staticmagneticfieldof 1. 5 Tand 3. 0 Tonly 5. Do not use a kinked bronchoscope, endotracheal tube or introducer • Bronchoscope • Maximumspatialgradientmagneticfieldof 3, 000 Gauss/cm(30 T/m) sheath as this may increase the force necessary to deploy the device • 0. 035”(0. 89 mm) stiff bodied, soft tipped guide wire, 180 cm length orless andmaycauseadeploymentfailureordeliverysystembreakage. minimum. • Maximum MR systemreported, wholebodyaveragedspecificabsorption • Fluoroscopic imaging should be used to facilitate tracheobronchial rate(SAR)of 2 W/kg(Normal Operating Mode) 6. Donotdeploythestentinsideofthebronchoscope. dilationifrequiredpriortostentplacement. Fluoroscopicimagingmay alsobeusedinadditiontoorinplaceofendoscopytoaidinaccurate Underthescanconditiondefinedabove, the AERO miniisexpectedtoproduce 7. Donotrepositionthestentbypushingonthestentwiththebronchoscope. stentplacement. amaximumtemperatureriseof 2. 0 o Cafter 15 minutesofcontinuousscanning. • Graspingforceps",
       "page": 2,
       "char_span": [
         1093,
@@ -117,7 +147,7 @@
       ],
       "length": 4007,
       "order": [
-        4
+        5
       ],
       "occurrences": [
         {
@@ -132,8 +162,8 @@
         2
       ]
     },
-    "af3ac2d97cbf89d0": {
-      "id": "page2_para3",
+    "94404bcea3b49291": {
+      "id": "page2_para4",
       "text": "8. Do not insert a rigid bronchoscope through the stent lumen after In non-clinical testing, the image artifact caused by the device extends deployment. INSTRUCTIONSFORUSE approximately 5 mm from the AERO mini when imaged with a gradient echo pulse sequence and a 3 Tesla MRI system. The artifact does obscure 9. When using a rigid bronchoscope, do not allow the bronchoscope to MERITENDOTEK recommendsthattheoperatorfollowthedirectionsoutlined thedevicelumen. abradethestent. below. INDICATIONSFORUSE 10. Donotwithdrawthe MERITENDOTEKAERO mini Tracheobronchial Stent 1. Locate Stenosisand Pre-Dilateas Necessary. Systembackintothebronchoscope, endotrachealtube, orintroducer Pass a bronchoscope into the airway beyond the tracheobronchial The MERITENDOTEKAERO mini Tracheobronchial Stent Systemisindicatedfor sheathoncethedeviceisfullyintroduced. Withdrawingthestentback stricture. Ifnecessary, dilatethestrictureusingaballooncatheterdilator useinthetreatmentoftracheobronchialstricturesproducedbymalignant into the bronchoscope, endotracheal tube, or introducer sheath may untilabronchoscopecanbepassed. neoplasms. causedamagetothedevice, prematuredeployment, deploymentfailure, and/or delivery system separation. If removal prior to deployment is When selecting a rigid tube for placement of the device with rigid WARNING: Thesafetyandeffectivenessofthedeviceforuseinthevascular necessary, donotreusethestentordeliverysystem. bronchoscopy, selectatrachealtubethathasaninternaldiameterofnot systemhasnotbeenestablishedandcanresultinseriousharmand/ordeath. lessthan 11. 5 mmtoallowsufficientclearanceforthedeliverysystem",
       "page": 2,
       "char_span": [
@@ -142,7 +172,7 @@
       ],
       "length": 1621,
       "order": [
-        5
+        6
       ],
       "occurrences": [
         {
@@ -157,8 +187,8 @@
         2
       ]
     },
-    "406433d6bad39644": {
-      "id": "page2_para4",
+    "91fca1dbc979d44c": {
+      "id": "page2_para5",
       "text": "11. Do not reposition the stent by grasping the polyurethane covering. andaflexibleorrigidbronchoscope. Thephysicianshouldconfirmthat CONTRAINDICATIONS Alwaysgraspthesutureorstentconnectortorepositionthestentand thereisadequateclearancebeforeproceedingwiththestentplacement. donottwistorrotatethestentormetalstrutunlessthestentisbeing The MERIT ENDOTEK AERO mini Tracheobronchial Stent System is removed. WARNING: Do not attempt placement of the MERIT ENDOTEK AERO mini contraindicated for: Tracheobronchial Stent Systeminpatientswithstenosisthatcannotbedilated",
       "page": 2,
       "char_span": [
@@ -167,7 +197,7 @@
       ],
       "length": 561,
       "order": [
-        6
+        7
       ],
       "occurrences": [
         {
@@ -182,8 +212,8 @@
         2
       ]
     },
-    "75a946ca4be036b4": {
-      "id": "page2_para5",
+    "9fa7aa7d3f71f6b6": {
+      "id": "page2_para6",
       "text": "12. Ifthelesionmassisreducedsignificantly, (asmayoccurwithradiation sufficientlytoallowpassageofabronchoscope. 1. Tracheobronchialobstructionwithaluminaldiameterthatcannotbe therapyorchemotherapy)thereisanincreasedchanceofmigration. If dilatedtoatleast 75%ofthenominaldiameteroftheselectedstent. thisoccurs, removalofthestentshouldbeconsidered. 2. Estimatethe Stenosis Lengthand Luminal Diameter. 2. Patientsforwhombronchoscopicproceduresarecontraindicated. Thisestimationmaybeperformedbyvisualinspectionviabronchoscopy",
       "page": 2,
       "char_span": [
@@ -192,7 +222,7 @@
       ],
       "length": 519,
       "order": [
-        7
+        8
       ],
       "occurrences": [
         {
@@ -207,8 +237,8 @@
         2
       ]
     },
-    "bb93884a6946b029": {
-      "id": "page2_para6",
+    "ca04c815492a0469": {
+      "id": "page2_para7",
       "text": "3. Anyuseotherthanthosespecificallyoutlinedunder Indicationsfor Use. 13. Thereisanincreasedriskofstentmigrationwhenthestenthasbeen orviafluoroscopy. implanted in patients with narrowing at the distal end of the lesion POTENTIALCOMPLICATIONS relativetotheproximalend(conicalorfunnelshapedlesion). Physicians Measuringthelength: Advancethescopetothedistalendofthelesion, shouldconsidermonitoringthesepatientsforupto 72 hoursafterstent pauseandobservetheanatomy. Grasptheproximalendofthescopeand Complicationshavebeenreportedintheliteraturefortracheobronchialstent placementandmaywishtoverifyfinalplacementusingchestx-ray. donotreleaseyourgrasp. Retractthescopeuntiltheproximalendof placement with both silicone stents and expandable metal stents. These thelesioncanbevisualized. Withyouroppositehandgrasptheproximal include, butarenotnecessarilylimitedto: endofthescopenearthepatient’smouthwhilemaintainingyourinitial grip. Itisimportanttoalwaysmaintaintheinitialgraspmarkonthe scopeduringvisualmeasurementbecausethiswillprovideyouwith theinitialpointofreferencetoconductthelengthmeasurement. Once thedistalandproximallimitsareidentifieditispossibletomeasurethe",
       "page": 2,
       "char_span": [
@@ -217,7 +247,7 @@
       ],
       "length": 1159,
       "order": [
-        8
+        9
       ],
       "occurrences": [
         {
@@ -232,7 +262,7 @@
         2
       ]
     },
-    "7d1677c38be22010": {
+    "a20aa8b004d5aa9b": {
       "id": "page3_para0",
       "text": "lesionlengthandselecttheappropriatesizestent. Iftherearedepth 9. Assess Deployed Stentand Remove Delivery System. REUSEPRECAUTIONSTATEMENT measurementmarkingsonthescopethesecanbeusedtomeasurethe Confirm bronchoscopically and fluoroscopically that the stent has actuallesionlength. Oncethemeasurementiscompletedtheappropriate completelydeployedandexpanded. Carefullyremovethedeliverysystem Donotreuse, reprocessorresterilize. Reuse, reprocessingorresterilization lengthstentcanbeselected. Besuretoreviewthedirectionsforuse fromwithintheexpandedstent, usingcarenottomovethestentwith maycompromisethestructuralintegrityofthedeviceand/orleadtodevice regarding sizing the diameter before choosing the final device. To thedistaltipofthedeliverysystem. Ifthestentappearstobedamaged failure which, in turn, may result in patient injury, illness or death. Reuse, determinethelumendiameter, estimatethediameterofthenormal- orisnotevenlyandfullydeployed, itshouldberemovedfollowingthe reprocessingorresterilizationmayalsocreateariskofcontaminationofthe appearingtracheobronchiallumenproximaltothestenosis. Anopen directionsforusetoremovethestent. Dilationisnotrecommended. deviceand/orcausepatientinfectionorcross-infection, including, butnot biopsy forceps may be used for a reference guide. Alternatively, the limitedto, thetransmissionofinfectiousdisease(s)fromonepatienttoanother. stenosislengthandluminaldiametermaybemeasuredbyreviewing WARNING: Conservative medical practice suggests that stents not be Contaminationofthedevicemayleadtoinjury, illnessordeathofthepatient. arecent CTS canofthenarrowedtracheobronchiallumen. repositioneddistally. Donotattempttoreloadorreconstrainadeployedor partiallydeployedself-expandingstent. Ifitbecomesnecessarytoremove For more information or to arrange for a demonstration, contact MERIT",
       "page": 3,
@@ -242,7 +272,7 @@
       ],
       "length": 1821,
       "order": [
-        9
+        10
       ],
       "occurrences": [
         {
@@ -257,7 +287,7 @@
         3
       ]
     },
-    "a0902fad6b8d4478": {
+    "88feae9826cc8c74": {
       "id": "page3_para1",
       "text": "3. Identify Landmarksto Aidin Placement. apartiallydeployedstenttheentiresystemshouldbewithdrawnenbloc. ENDOTEK at 1-800-356-3748. Bronchoscopicallyexaminethelumendistaltothestenosis, notingthe Donotattempttoadvancetheoutersheath. distancetoanybranches. Examinethestenoticareafluoroscopically. The WARRANTY strictureshouldbedilatedtoapproximately 75%ofthenormallumen REMOVAL&REPOSITIONINGOFTHETRACHEOBRONCHIALSTENT diameter. Radiopaquemarkersmaybeplacedonthepatient’schestto Themanufacturerwarrantsthatreasonablecarehasbeenusedinthedesign assistinidentifyingthemarginsofthestenoticarea. The MERITENDOTEKAERO ministentcanberepositionedorremovedusing andmanufactureofthisdevice. Thiswarrantyisinlieuofandexcludesall graspingforceps. Forremovalofthestent, longjawedforcepssuchasalligator otherwarrantiesnotexpresslysetforthherein, whetherexpressedorimplied",
       "page": 3,
@@ -267,7 +297,7 @@
       ],
       "length": 853,
       "order": [
-        10
+        11
       ],
       "occurrences": [
         {
@@ -282,7 +312,7 @@
         3
       ]
     },
-    "134c1282db12877e": {
+    "ac2f6cd1fceaeda5": {
       "id": "page3_para2",
       "text": "4. Selectthe Appropriate Covered Stent Size. orrat-toothforcepsarerecommended. Forrepositioningthestentproximally, byoperationoflaworotherwise, including, butnotlimitedto, anyimplied Chooseastentlongenoughtocompletelybridgethetargetstenosis. onlyanatraumaticgrasper, suchasalligatorforceps, shouldbeused. Donot warrantiesofmerchantabilityorfitness. Handlingandstorageofthisdevice, Choosethestentdiametertoapproximatethesizeofthenormalproximal userattoothorbiopsyforceps(duck-billedforceps)torepositionthestent. aswellasotherfactorsrelatingtothepatient, diagnosis, treatment, implant lumenbutdonotexceedthedesiredfinaldiameterbymorethan 2 mm. Open the forceps and carefully pass the forceps over the end of the stent procedures, andothermattersbeyondthecontrolofthemanufacturerdirectly Ifpossible, avoidchoosingastentthatwouldcrosssidebrancheswhen at the location of one of stent connectors. One jaw should be positioned affect the device and the results obtained from its use. The manufacturer placed. See Sizing Table(Table 1&2). outsideofthestent, betweenthestentandtheluminalwall. Theotherjaw obligationunderthiswarrantyislimitedtothereplacementofthisdevice; and shouldbepositionedinsideofthestent(Fig. 3). Closetheforcepsoverthe themanufacturershallnotbeliableforanyincidentalorconsequentialloss,",
       "page": 3,
@@ -292,7 +322,7 @@
       ],
       "length": 1300,
       "order": [
-        11
+        12
       ],
       "occurrences": [
         {
@@ -307,7 +337,7 @@
         3
       ]
     },
-    "927aa2de96257cd3": {
+    "420856875a37b2d7": {
       "id": "page3_para3",
       "text": "5. Introducethe Guide Wire. stentconnector, graspingasmuchofthestentconnectoraspossible. Donot damage, orexpensedirectlyorindirectlyarisingfromtheuseofthisdevice. Placea 0. 035”(0. 89 mm), stiff-bodied, soft-tippedguidewirethrough graspthecoverofthestent. Gentlyrotatetheforcepsonequarterofaturn Themanufacturerneitherassumes, norauthorizesanyotherpersontoassume thebronchoscopeandbeyondthestenosis. Thebronchoscopeshouldbe astractionisapplied. Slowlyextractthestent(Fig. 4). Usethistechniquefor forit, anyotheroradditionalliabilityorresponsibilityinconnectionwiththis removedatthistimewhilemaintainingthepositionoftheguidewire. stentremovalonly. Donotrotatethestentifitisbeingrepositionedproximally. device. Themanufacturerassumesnoliabilitywithrespecttodevicesthatare reused, reprocessed, orresterilized, andmakesnowarranties, expressedor",
       "page": 3,
@@ -317,7 +347,7 @@
       ],
       "length": 840,
       "order": [
-        12
+        13
       ],
       "occurrences": [
         {
@@ -332,7 +362,7 @@
         3
       ]
     },
-    "87c589f5a015c8ee": {
+    "d83571b80fe86230": {
       "id": "page3_para4",
       "text": "6. Inspect and prepare the MERIT ENDOTEK AERO mini Forastentwitharepositioningaid(bluecoloredbraidedsuture)the MERIT implied, including, butnotlimitedto, merchantabilityorfitnessforintended Tracheobronchial Stent System. ENDOTEK AERO mini stent can be removed with an atraumatic forceps by use, withrespecttosuchdevice. This product is supplied sterile. Before opening the package, inspect graspingthesutureadjacenttotheknotandcarefullyapplyingtraction(Fig. thepackagefordamage. Donotuseifthepackagehasbeenopened 5). Thiswillrelievetensionontheproximalendofthestent, thusfacilitating : CAUTION: Federal(U. S. A)lawrestrictsthisdevicetosale or damaged. Visually inspect the Tracheobronchial Stent System for removal(Fig. 6). byorontheorderofaphysician. anysignofdamage. Donotuseifithasanyvisiblesignsofdamage. CAUTION: Ifthesutureisusedtorepositionthestentproximally, thestent Open the label end of the box. Carefully open the box and pouch. should be examined carefully to assure that it has fully expanded after Removethedeliverysystemfromtheplastictraybypullinguponthe repositioning. Intheeventthatsomecompressionremainsattheproximal handleendlidtabs, liftingthehingedlid, andpullingthedevicefrom enditmaybenecessarytoexpandthestentwithaballooncatheter.",
       "page": 3,
@@ -342,7 +372,7 @@
       ],
       "length": 1255,
       "order": [
-        13
+        14
       ],
       "occurrences": [
         {
@@ -357,7 +387,7 @@
         3
       ]
     },
-    "6202e781827ca1d2": {
+    "b1c93ae9177e4513": {
       "id": "page3_para5",
       "text": "MR thetray. Thetraydoesnotneedtobefullyremovedfromthepouch, onlythehingedendofthetray. WARNING: Clinicaldataforstentremovalinhumanswaslimitedtoaclinical Single Use MRC onditional Max Guide Wire studyof 51 patientswithmalignancies. Thirteendeviceswereremovedafter Aredsafetyislocatedadjacenttothedeliverysystemtrigger. Thered 30 days; 6 deviceswereremovedafter 60 days; and 2 deviceswereremoved safetyonthedeliverysystemisdesignedtopreventprematurestent after 90 days. Duringthisclinicalstudy, therewasnotissuein-growthinto deploymentandmayremainonthedeliverysystemuntilitiscorrectly thelumenofthestentreported. positionedrelativetothetreatmentsize.",
       "page": 3,
@@ -367,7 +397,7 @@
       ],
       "length": 648,
       "order": [
-        14
+        15
       ],
       "occurrences": [
         {
@@ -382,7 +412,7 @@
         3
       ]
     },
-    "b9e7282f1f189411": {
+    "70e9120e985cfa5e": {
       "id": "page3_para6",
       "text": "PACKAGINGANDLABELING Sterilizedusingethyleneoxide Caution: Consult Donotuseifpackage Lubricate the distal portion of the stent delivery system with wateraccompanyingdocuments isdamaged solublelubricanttoaidinintroduction. Backloadtheguidewireinto Inspectthe MERITENDOTEKAERO mini Tracheobronchial Stent Systemandthe thedistalendofthedeliverysystem. packagingfordamagepriortouse. Confirmthatthedeviceisconsistentwith thepackagelabel. Discardandreplaceanydamageddevices. 7. Positioningof MERITENDOTEKAERO mini Tracheobronchial Stent Systemin Airway. DONOTATTEMPTTOREPAIR. Under bronchoscopic visualization, advance the stent over the guide wire through the stenosis. Direct visualization of the green proximal Contact MERITENDOTEKC ustomer Serviceat 1-800-356-3748 ifthepackage markeronthedeliverysystemwillprovideaguideforplacement. The hasbeenopenedordamaged. proximal end of the deployed stent will be aligned with this green marker. Whenusingfluoroscopy, visualizetheradiopaquemarkerson STORAGE thedeliverysystemtipandinnershaftsothatthestenosisiscentered betweenthem. Thesemarkersindicatetheendsofthestent. Thestent Donotexposethisdevicetoconditionsofextremeheatandhumidity. Store willnotforeshortenupondeployment. the MERIT ENDOTEK AERO mini Tracheobronchial Stent System in a normal roomtemperatureenvironment. 8. Deploymentof Stent. Holdthehandgripinthepalmofyourhand(Fig. 1). Usingtheindex HOWSUPPLIED andmiddlefinger, graspthetrigger. Productnotmadewithnaturalrubberlatex. Slowlyretracttheoutersheathbypullingbackonthetrigger(Fig. 2)until thetriggertouchesthehandgrip. Thestentisnowfullydeployed. Carefully Thedisposable, single-patient-useself-expandingstentsareavailable, preremovethedeliverysystemwithoutdisturbingthepositionofthestent. mountedonadeliverysysteminavarietyofconfigurations. Stentswitha diameterof 8 mmand 10 mmaremountedon 12 Fdeliverysystem. Stents Monitor the stent deployment under fluoroscopy, while maintaining withadiameterof 12 mmand 14 mmaremountedona 16 Fdeliverysystem. theidentifiedstricturemarginscenteredbetweenthedeliverysystem Theworkinglengthforalldeliverysystemsis 70 cm. radiopaquemarkers. Ifnecessary, stopdeploymentandadjustthestent position proximally. The stent may be repositioned proximally while The MERIT ENDOTEK AERO mini Tracheobronchial Stent System is provided holding the position of the trigger and moving the delivery system STERILE usinganethyleneoxide(EO)process. asaunit. Thestentmayberepositionedproximallyuntilthetriggeris pulledbeyondthewhitedeploymentthresholdmarklocatedbetween DONOTRESTERLIZE thetriggerandhandgrip. Eachpackagedunitisintendedfor SINGLE-PATIENT-USEONLY.",
       "page": 3,
@@ -392,7 +422,7 @@
       ],
       "length": 2637,
       "order": [
-        15
+        16
       ],
       "occurrences": [
         {
@@ -407,7 +437,7 @@
         3
       ]
     },
-    "5abc469bcf411cd2": {
+    "728d2a878b808046": {
       "id": "page4_para0",
       "text": "1 5 2 6 3 4 Manufacturer: Merit Medical Systems, Inc. South Jordan, Utah 84095 U. S. A. 1-801-253-1600 endotek. merit. com U. S. A. Customer Service 1-800-356-3748",
       "page": 4,
@@ -417,7 +447,7 @@
       ],
       "length": 163,
       "order": [
-        16
+        17
       ],
       "occurrences": [
         {
@@ -432,7 +462,7 @@
         4
       ]
     },
-    "d05b7b6d40ff2d7e": {
+    "4c0ed24cd53ce896": {
       "id": "page4_para1",
       "text": "403000001_003 ID 2018-06-19",
       "page": 4,
@@ -442,7 +472,7 @@
       ],
       "length": 27,
       "order": [
-        17
+        18
       ],
       "occurrences": [
         {
@@ -457,14 +487,14 @@
         4
       ]
     },
-    "aa797152312ffa20": {
-      "text": "WARNING: Thesafetyandeffectivenessofthedeviceforuseinthevascular necessary, donotreusethestentordeliverysystem. bronchoscopy, selectatrachealtubethathasaninternaldiameterofnot systemhasnotbeenestablishedandcanresultinseriousharmand/ordeath. lessthan 11. 5 mmtoallowsufficientclearanceforthedeliverysystem 11. Do not reposition the stent by grasping the polyurethane covering. andaflexibleorrigidbronchoscope. Thephysicianshouldconfirmthat CONTRAINDICATIONS Alwaysgraspthesutureorstentconnectortorepositionthestentand thereisadequateclearancebeforeproceedingwiththestentplacement. donottwistorrotatethestentormetalstrutunlessthestentisbeing The MERIT ENDOTEK AERO mini Tracheobronchial Stent System is removed. WARNING: Do not attempt placement of the MERIT ENDOTEK AERO mini contraindicated for: Tracheobronchial Stent Systeminpatientswithstenosisthatcannotbedilated 12. Ifthelesionmassisreducedsignificantly, (asmayoccurwithradiation sufficientlytoallowpassageofabronchoscope. 1. Tracheobronchialobstructionwithaluminaldiameterthatcannotbe therapyorchemotherapy)thereisanincreasedchanceofmigration. If dilatedtoatleast 75%ofthenominaldiameteroftheselectedstent. thisoccurs, removalofthestentshouldbeconsidered. 2. Estimatethe Stenosis Lengthand Luminal Diameter. 2. Patientsforwhombronchoscopicproceduresarecontraindicated. Thisestimationmaybeperformedbyvisualinspectionviabronchoscopy 3. Anyuseotherthanthosespecificallyoutlinedunder Indicationsfor Use. 13. Thereisanincreasedriskofstentmigrationwhenthestenthasbeen orviafluoroscopy. implanted in patients with narrowing at the distal end of the lesion POTENTIALCOMPLICATIONS relativetotheproximalend(conicalorfunnelshapedlesion). Physicians Measuringthelength: Advancethescopetothedistalendofthelesion, shouldconsidermonitoringthesepatientsforupto 72 hoursafterstent pauseandobservetheanatomy. Grasptheproximalendofthescopeand Complicationshavebeenreportedintheliteraturefortracheobronchialstent placementandmaywishtoverifyfinalplacementusingchestx-ray. donotreleaseyourgrasp. Retractthescopeuntiltheproximalendof placement with both silicone stents and expandable metal stents. These thelesioncanbevisualized. Withyouroppositehandgrasptheproximal include, butarenotnecessarilylimitedto: endofthescopenearthepatient’smouthwhilemaintainingyourinitial grip. Itisimportanttoalwaysmaintaintheinitialgraspmarkonthe scopeduringvisualmeasurementbecausethiswillprovideyouwith theinitialpointofreferencetoconductthelengthmeasurement. Once thedistalandproximallimitsareidentifieditispossibletomeasurethe",
+    "a29ee632b11f758e": {
+      "text": "FORUSE 10. Donotwithdrawthe MERITENDOTEKAERO mini Tracheobronchial Stent 1. Locate Stenosisand Pre-Dilateas Necessary. Systembackintothebronchoscope, endotrachealtube, orintroducer Pass a bronchoscope into the airway beyond the tracheobronchial The MERITENDOTEKAERO mini Tracheobronchial Stent Systemisindicatedfor sheathoncethedeviceisfullyintroduced. Withdrawingthestentback stricture. Ifnecessary, dilatethestrictureusingaballooncatheterdilator useinthetreatmentoftracheobronchialstricturesproducedbymalignant into the bronchoscope, endotracheal tube, or introducer sheath may untilabronchoscopecanbepassed. neoplasms. causedamagetothedevice, prematuredeployment, deploymentfailure, and/or delivery system separation. If removal prior to deployment is When selecting a rigid tube for placement of the device with rigid",
       "page": null,
       "pages": [],
       "char_span": null,
-      "length": 2546,
+      "length": 821,
       "order": [
-        18
+        20
       ],
       "occurrences": [
         {
@@ -473,14 +503,350 @@
         }
       ]
     },
-    "eae75e7863d126ac": {
-      "text": "CAUTION: Ifthesutureisusedtorepositionthestentproximally, thestent Open the label end of the box. Carefully open the box and pouch. should be examined carefully to assure that it has fully expanded after Removethedeliverysystemfromtheplastictraybypullinguponthe repositioning. Intheeventthatsomecompressionremainsattheproximal handleendlidtabs, liftingthehingedlid, andpullingthedevicefrom enditmaybenecessarytoexpandthestentwithaballooncatheter. MR thetray. Thetraydoesnotneedtobefullyremovedfromthepouch, onlythehingedendofthetray. WARNING: Clinicaldataforstentremovalinhumanswaslimitedtoaclinical Single Use MRC onditional Max Guide Wire studyof 51 patientswithmalignancies. Thirteendeviceswereremovedafter Aredsafetyislocatedadjacenttothedeliverysystemtrigger. Thered 30 days; 6 deviceswereremovedafter 60 days; and 2 deviceswereremoved safetyonthedeliverysystemisdesignedtopreventprematurestent after 90 days. Duringthisclinicalstudy, therewasnotissuein-growthinto deploymentandmayremainonthedeliverysystemuntilitiscorrectly thelumenofthestentreported. positionedrelativetothetreatmentsize. PACKAGINGANDLABELING Sterilizedusingethyleneoxide Caution: Consult Donotuseifpackage Lubricate the distal portion of the stent delivery system with water- accompanyingdocuments isdamaged solublelubricanttoaidinintroduction. Backloadtheguidewireinto Inspectthe MERITENDOTEKAERO mini Tracheobronchial Stent Systemandthe thedistalendofthedeliverysystem. packagingfordamagepriortouse. Confirmthatthedeviceisconsistentwith thepackagelabel. Discardandreplaceanydamageddevices. 7. Positioningof MERITENDOTEKAERO mini Tracheobronchial Stent Systemin Airway. DONOTATTEMPTTOREPAIR. Under bronchoscopic visualization, advance the stent over the guide wire through the stenosis. Direct visualization of the green proximal Contact MERITENDOTEKC ustomer Serviceat 1-800-356-3748 ifthepackage markeronthedeliverysystemwillprovideaguideforplacement. The hasbeenopenedordamaged. proximal end of the deployed stent will be aligned with this green marker. Whenusingfluoroscopy, visualizetheradiopaquemarkerson STORAGE thedeliverysystemtipandinnershaftsothatthestenosisiscentered betweenthem. Thesemarkersindicatetheendsofthestent. Thestent Donotexposethisdevicetoconditionsofextremeheatandhumidity. Store willnotforeshortenupondeployment. the MERIT ENDOTEK AERO mini Tracheobronchial Stent System in a normal roomtemperatureenvironment. 8. Deploymentof Stent. Holdthehandgripinthepalmofyourhand(Fig. 1). Usingtheindex HOWSUPPLIED andmiddlefinger, graspthetrigger. Productnotmadewithnaturalrubberlatex. Slowlyretracttheoutersheathbypullingbackonthetrigger(Fig. 2)until thetriggertouchesthehandgrip. Thestentisnowfullydeployed. Carefully Thedisposable, single-patient-useself-expandingstentsareavailable, pre- removethedeliverysystemwithoutdisturbingthepositionofthestent. mountedonadeliverysysteminavarietyofconfigurations. Stentswitha diameterof 8 mmand 10 mmaremountedon 12 Fdeliverysystem. Stents Monitor the stent deployment under fluoroscopy, while maintaining withadiameterof 12 mmand 14 mmaremountedona 16 Fdeliverysystem. theidentifiedstricturemarginscenteredbetweenthedeliverysystem Theworkinglengthforalldeliverysystemsis 70 cm. radiopaquemarkers. Ifnecessary, stopdeploymentandadjustthestent position proximally. The stent may be repositioned proximally while The MERIT ENDOTEK AERO mini Tracheobronchial Stent System is provided holding the position of the trigger and moving the delivery system STERILE usinganethyleneoxide(EO)process. asaunit. Thestentmayberepositionedproximallyuntilthetriggeris pulledbeyondthewhitedeploymentthresholdmarklocatedbetween DONOTRESTERLIZE thetriggerandhandgrip. Eachpackagedunitisintendedfor SINGLE-PATIENT-USEONLY.",
+    "6d51b88112ff33fb": {
+      "text": "Alwaysgraspthesutureorstentconnectortorepositionthestentand thereisadequateclearancebeforeproceedingwiththestentplacement. donottwistorrotatethestentormetalstrutunlessthestentisbeing The MERIT ENDOTEK AERO mini Tracheobronchial Stent System is removed.",
       "page": null,
       "pages": [],
       "char_span": null,
-      "length": 3737,
+      "length": 252,
       "order": [
-        19
+        21
+      ],
+      "occurrences": [
+        {
+          "page": null,
+          "char_span": null
+        }
+      ]
+    },
+    "631a5a4102543a43": {
+      "text": "WARNING: Do not attempt placement of the MERIT ENDOTEK AERO mini contraindicated for: Tracheobronchial Stent Systeminpatientswithstenosisthatcannotbedilated 12.",
+      "page": null,
+      "pages": [],
+      "char_span": null,
+      "length": 160,
+      "order": [
+        22
+      ],
+      "occurrences": [
+        {
+          "page": null,
+          "char_span": null
+        }
+      ]
+    },
+    "c555648b531f2196": {
+      "text": "Ifthelesionmassisreducedsignificantly, (asmayoccurwithradiation sufficientlytoallowpassageofabronchoscope.",
+      "page": null,
+      "pages": [],
+      "char_span": null,
+      "length": 106,
+      "order": [
+        23
+      ],
+      "occurrences": [
+        {
+          "page": null,
+          "char_span": null
+        }
+      ]
+    },
+    "2413c3dbeae30e6c": {
+      "text": "1.",
+      "page": null,
+      "pages": [],
+      "char_span": null,
+      "length": 2,
+      "order": [
+        24
+      ],
+      "occurrences": [
+        {
+          "page": null,
+          "char_span": null
+        }
+      ]
+    },
+    "fb56f25d2f668deb": {
+      "text": "Tracheobronchialobstructionwithaluminaldiameterthatcannotbe therapyorchemotherapy)thereisanincreasedchanceofmigration.",
+      "page": null,
+      "pages": [],
+      "char_span": null,
+      "length": 118,
+      "order": [
+        25
+      ],
+      "occurrences": [
+        {
+          "page": null,
+          "char_span": null
+        }
+      ]
+    },
+    "3c1811150ff0384f": {
+      "text": "If dilatedtoatleast 75%ofthenominaldiameteroftheselectedstent. thisoccurs, removalofthestentshouldbeconsidered.",
+      "page": null,
+      "pages": [],
+      "char_span": null,
+      "length": 111,
+      "order": [
+        26
+      ],
+      "occurrences": [
+        {
+          "page": null,
+          "char_span": null
+        }
+      ]
+    },
+    "2a36393df80a324a": {
+      "text": "2.",
+      "page": null,
+      "pages": [],
+      "char_span": null,
+      "length": 2,
+      "order": [
+        27
+      ],
+      "occurrences": [
+        {
+          "page": null,
+          "char_span": null
+        }
+      ]
+    },
+    "56c3db0d5d9a17c8": {
+      "text": "Estimatethe Stenosis Lengthand Luminal Diameter.",
+      "page": null,
+      "pages": [],
+      "char_span": null,
+      "length": 48,
+      "order": [
+        28
+      ],
+      "occurrences": [
+        {
+          "page": null,
+          "char_span": null
+        }
+      ]
+    },
+    "188f1b8e57ec0f20": {
+      "text": "Patientsforwhombronchoscopicproceduresarecontraindicated.",
+      "page": null,
+      "pages": [],
+      "char_span": null,
+      "length": 57,
+      "order": [
+        29
+      ],
+      "occurrences": [
+        {
+          "page": null,
+          "char_span": null
+        }
+      ]
+    },
+    "ad122db81142444b": {
+      "text": "Thisestimationmaybeperformedbyvisualinspectionviabronchoscopy 3.",
+      "page": null,
+      "pages": [],
+      "char_span": null,
+      "length": 64,
+      "order": [
+        30
+      ],
+      "occurrences": [
+        {
+          "page": null,
+          "char_span": null
+        }
+      ]
+    },
+    "13b8456f994eb7ec": {
+      "text": "Anyuseotherthanthosespecificallyoutlinedunder Indicationsfor Use.",
+      "page": null,
+      "pages": [],
+      "char_span": null,
+      "length": 65,
+      "order": [
+        31
+      ],
+      "occurrences": [
+        {
+          "page": null,
+          "char_span": null
+        }
+      ]
+    },
+    "17e774846e9b2fa7": {
+      "text": "13.",
+      "page": null,
+      "pages": [],
+      "char_span": null,
+      "length": 3,
+      "order": [
+        32
+      ],
+      "occurrences": [
+        {
+          "page": null,
+          "char_span": null
+        }
+      ]
+    },
+    "e1b9a58d966cae4b": {
+      "text": "Thereisanincreasedriskofstentmigrationwhenthestenthasbeen orviafluoroscopy. implanted in patients with narrowing at the distal end of the lesion POTENTIALCOMPLICATIONS relativetotheproximalend(conicalorfunnelshapedlesion).",
+      "page": null,
+      "pages": [],
+      "char_span": null,
+      "length": 222,
+      "order": [
+        33
+      ],
+      "occurrences": [
+        {
+          "page": null,
+          "char_span": null
+        }
+      ]
+    },
+    "5b582ddeb831b65b": {
+      "text": "Physicians Measuringthelength: Advancethescopetothedistalendofthelesion, shouldconsidermonitoringthesepatientsforupto 72 hoursafterstent pauseandobservetheanatomy.",
+      "page": null,
+      "pages": [],
+      "char_span": null,
+      "length": 163,
+      "order": [
+        34
+      ],
+      "occurrences": [
+        {
+          "page": null,
+          "char_span": null
+        }
+      ]
+    },
+    "181ad2dfe1c94021": {
+      "text": "Grasptheproximalendofthescopeand Complicationshavebeenreportedintheliteraturefortracheobronchialstent placementandmaywishtoverifyfinalplacementusingchestx-ray. donotreleaseyourgrasp.",
+      "page": null,
+      "pages": [],
+      "char_span": null,
+      "length": 182,
+      "order": [
+        35
+      ],
+      "occurrences": [
+        {
+          "page": null,
+          "char_span": null
+        }
+      ]
+    },
+    "a4a63e8134969a38": {
+      "text": "Retractthescopeuntiltheproximalendof placement with both silicone stents and expandable metal stents.",
+      "page": null,
+      "pages": [],
+      "char_span": null,
+      "length": 101,
+      "order": [
+        36
+      ],
+      "occurrences": [
+        {
+          "page": null,
+          "char_span": null
+        }
+      ]
+    },
+    "597521ad6572797f": {
+      "text": "These thelesioncanbevisualized.",
+      "page": null,
+      "pages": [],
+      "char_span": null,
+      "length": 31,
+      "order": [
+        37
+      ],
+      "occurrences": [
+        {
+          "page": null,
+          "char_span": null
+        }
+      ]
+    },
+    "ee5920997af48582": {
+      "text": "Withyouroppositehandgrasptheproximal include, butarenotnecessarilylimitedto: endofthescopenearthepatient’smouthwhilemaintainingyourinitial grip.",
+      "page": null,
+      "pages": [],
+      "char_span": null,
+      "length": 144,
+      "order": [
+        38
+      ],
+      "occurrences": [
+        {
+          "page": null,
+          "char_span": null
+        }
+      ]
+    },
+    "15190ae36de159a3": {
+      "text": "Itisimportanttoalwaysmaintaintheinitialgraspmarkonthe scopeduringvisualmeasurementbecausethiswillprovideyouwith theinitialpointofreferencetoconductthelengthmeasurement.",
+      "page": null,
+      "pages": [],
+      "char_span": null,
+      "length": 168,
+      "order": [
+        39
+      ],
+      "occurrences": [
+        {
+          "page": null,
+          "char_span": null
+        }
+      ]
+    },
+    "32e769b45b98c633": {
+      "text": "Once thedistalandproximallimitsareidentifieditispossibletomeasurethe.",
+      "page": null,
+      "pages": [],
+      "char_span": null,
+      "length": 69,
+      "order": [
+        40
+      ],
+      "occurrences": [
+        {
+          "page": null,
+          "char_span": null
+        }
+      ]
+    },
+    "c3c35756c610c26b": {
+      "text": "WARNING: Thesafetyandeffectivenessofthedeviceforuseinthevascular necessary, donotreusethestentordeliverysystem. bronchoscopy, selectatrachealtubethathasaninternaldiameterofnot systemhasnotbeenestablishedandcanresultinseriousharmand/ordeath. lessthan 11. 5 mmtoallowsufficientclearanceforthedeliverysystem 11. Do not reposition the stent by grasping the polyurethane covering. andaflexibleorrigidbronchoscope. Thephysicianshouldconfirmthat CONTRAINDICATIONS Alwaysgraspthesutureorstentconnectortorepositionthestentand thereisadequateclearancebeforeproceedingwiththestentplacement. donottwistorrotatethestentormetalstrutunlessthestentisbeing The MERIT ENDOTEK AERO mini Tracheobronchial Stent System is removed. WARNING: Do not attempt placement of the MERIT ENDOTEK AERO mini contraindicated for: Tracheobronchial Stent Systeminpatientswithstenosisthatcannotbedilated 12. Ifthelesionmassisreducedsignificantly, (asmayoccurwithradiation sufficientlytoallowpassageofabronchoscope. 1. Tracheobronchialobstructionwithaluminaldiameterthatcannotbe therapyorchemotherapy)thereisanincreasedchanceofmigration. If dilatedtoatleast 75%ofthenominaldiameteroftheselectedstent. thisoccurs, removalofthestentshouldbeconsidered. 2. Estimatethe Stenosis Lengthand Luminal Diameter. 2. Patientsforwhombronchoscopicproceduresarecontraindicated. Thisestimationmaybeperformedbyvisualinspectionviabronchoscopy 3. Anyuseotherthanthosespecificallyoutlinedunder Indicationsfor Use. 13. Thereisanincreasedriskofstentmigrationwhenthestenthasbeen orviafluoroscopy. implanted in patients with narrowing at the distal end of the lesion POTENTIALCOMPLICATIONS relativetotheproximalend(conicalorfunnelshapedlesion). Physicians Measuringthelength: Advancethescopetothedistalendofthelesion, shouldconsidermonitoringthesepatientsforupto 72 hoursafterstent pauseandobservetheanatomy. Grasptheproximalendofthescopeand Complicationshavebeenreportedintheliteraturefortracheobronchialstent placementandmaywishtoverifyfinalplacementusingchestx-ray. donotreleaseyourgrasp. Retractthescopeuntiltheproximalendof placement with both silicone stents and expandable metal stents. These thelesioncanbevisualized. Withyouroppositehandgrasptheproximal include, butarenotnecessarilylimitedto: endofthescopenearthepatient’smouthwhilemaintainingyourinitial grip. Itisimportanttoalwaysmaintaintheinitialgraspmarkonthe scopeduringvisualmeasurementbecausethiswillprovideyouwith theinitialpointofreferencetoconductthelengthmeasurement. Once thedistalandproximallimitsareidentifieditispossibletomeasurethe",
+      "page": null,
+      "pages": [],
+      "char_span": null,
+      "length": 2546,
+      "order": [
+        41
+      ],
+      "occurrences": [
+        {
+          "page": null,
+          "char_span": null
+        }
+      ]
+    },
+    "de81983afb988c23": {
+      "text": "CAUTION: Ifthesutureisusedtorepositionthestentproximally, thestent Open the label end of the box. Carefully open the box and pouch. should be examined carefully to assure that it has fully expanded after Removethedeliverysystemfromtheplastictraybypullinguponthe repositioning. Intheeventthatsomecompressionremainsattheproximal handleendlidtabs, liftingthehingedlid, andpullingthedevicefrom enditmaybenecessarytoexpandthestentwithaballooncatheter. MR thetray. Thetraydoesnotneedtobefullyremovedfromthepouch, onlythehingedendofthetray. WARNING: Clinicaldataforstentremovalinhumanswaslimitedtoaclinical Single Use MRC onditional Max Guide Wire studyof 51 patientswithmalignancies. Thirteendeviceswereremovedafter Aredsafetyislocatedadjacenttothedeliverysystemtrigger. Thered 30 days; 6 deviceswereremovedafter 60 days; and 2 deviceswereremoved safetyonthedeliverysystemisdesignedtopreventprematurestent after 90 days. Duringthisclinicalstudy, therewasnotissuein-growthinto deploymentandmayremainonthedeliverysystemuntilitiscorrectly thelumenofthestentreported. positionedrelativetothetreatmentsize. PACKAGINGANDLABELING Sterilizedusingethyleneoxide Caution: Consult Donotuseifpackage Lubricate the distal portion of the stent delivery system with water accompanyingdocuments isdamaged solublelubricanttoaidinintroduction. Backloadtheguidewireinto Inspectthe MERITENDOTEKAERO mini Tracheobronchial Stent Systemandthe thedistalendofthedeliverysystem. packagingfordamagepriortouse. Confirmthatthedeviceisconsistentwith thepackagelabel. Discardandreplaceanydamageddevices. 7. Positioningof MERITENDOTEKAERO mini Tracheobronchial Stent Systemin Airway. DONOTATTEMPTTOREPAIR. Under bronchoscopic visualization, advance the stent over the guide wire through the stenosis. Direct visualization of the green proximal Contact MERITENDOTEKC ustomer Serviceat 1-800-356-3748 ifthepackage markeronthedeliverysystemwillprovideaguideforplacement. The hasbeenopenedordamaged. proximal end of the deployed stent will be aligned with this green marker. Whenusingfluoroscopy, visualizetheradiopaquemarkerson STORAGE thedeliverysystemtipandinnershaftsothatthestenosisiscentered betweenthem. Thesemarkersindicatetheendsofthestent. Thestent Donotexposethisdevicetoconditionsofextremeheatandhumidity. Store willnotforeshortenupondeployment. the MERIT ENDOTEK AERO mini Tracheobronchial Stent System in a normal roomtemperatureenvironment. 8. Deploymentof Stent. Holdthehandgripinthepalmofyourhand(Fig. 1). Usingtheindex HOWSUPPLIED andmiddlefinger, graspthetrigger. Productnotmadewithnaturalrubberlatex. Slowlyretracttheoutersheathbypullingbackonthetrigger(Fig. 2)until thetriggertouchesthehandgrip. Thestentisnowfullydeployed. Carefully Thedisposable, single-patient-useself-expandingstentsareavailable, pre removethedeliverysystemwithoutdisturbingthepositionofthestent. mountedonadeliverysysteminavarietyofconfigurations. Stentswitha diameterof 8 mmand 10 mmaremountedon 12 Fdeliverysystem. Stents Monitor the stent deployment under fluoroscopy, while maintaining withadiameterof 12 mmand 14 mmaremountedona 16 Fdeliverysystem. theidentifiedstricturemarginscenteredbetweenthedeliverysystem Theworkinglengthforalldeliverysystemsis 70 cm. radiopaquemarkers. Ifnecessary, stopdeploymentandadjustthestent position proximally. The stent may be repositioned proximally while The MERIT ENDOTEK AERO mini Tracheobronchial Stent System is provided holding the position of the trigger and moving the delivery system STERILE usinganethyleneoxide(EO)process. asaunit. Thestentmayberepositionedproximallyuntilthetriggeris pulledbeyondthewhitedeploymentthresholdmarklocatedbetween DONOTRESTERLIZE thetriggerandhandgrip. Eachpackagedunitisintendedfor SINGLE-PATIENT-USEONLY.",
+      "page": null,
+      "pages": [],
+      "char_span": null,
+      "length": 3735,
+      "order": [
+        42
       ],
       "occurrences": [
         {
@@ -490,14 +856,47 @@
       ]
     }
   },
+  "product_name": "Tracheobronchial Stent System",
+  "part_number": "EUMOTHORAX",
+  "revision": "IEWTHEDIRE",
   "software_versions": [],
-  "contraindications": [],
+  "indications_for_use": {
+    "text": "FORUSE 10. Donotwithdrawthe MERITENDOTEKAERO mini Tracheobronchial Stent 1. Locate Stenosisand Pre-Dilateas Necessary. Systembackintothebronchoscope, endotrachealtube, orintroducer Pass a bronchoscope into the airway beyond the tracheobronchial The MERITENDOTEKAERO mini Tracheobronchial Stent Systemisindicatedfor sheathoncethedeviceisfullyintroduced. Withdrawingthestentback stricture. Ifnecessary, dilatethestrictureusingaballooncatheterdilator useinthetreatmentoftracheobronchialstricturesproducedbymalignant into the bronchoscope, endotracheal tube, or introducer sheath may untilabronchoscopecanbepassed. neoplasms. causedamagetothedevice, prematuredeployment, deploymentfailure, and/or delivery system separation. If removal prior to deployment is When selecting a rigid tube for placement of the device with rigid",
+    "derived_from": "intended_use",
+    "provenance": "small_leaflet_fallback"
+  },
+  "intended_use": "FORUSE 10. Donotwithdrawthe MERITENDOTEKAERO mini Tracheobronchial Stent 1. Locate Stenosisand Pre-Dilateas Necessary. Systembackintothebronchoscope, endotrachealtube, orintroducer Pass a bronchoscope into the airway beyond the tracheobronchial The MERITENDOTEKAERO mini Tracheobronchial Stent Systemisindicatedfor sheathoncethedeviceisfullyintroduced. Withdrawingthestentback stricture. Ifnecessary, dilatethestrictureusingaballooncatheterdilator useinthetreatmentoftracheobronchialstricturesproducedbymalignant into the bronchoscope, endotracheal tube, or introducer sheath may untilabronchoscopecanbepassed. neoplasms. causedamagetothedevice, prematuredeployment, deploymentfailure, and/or delivery system separation. If removal prior to deployment is When selecting a rigid tube for placement of the device with rigid",
+  "contraindications": [
+    "Alwaysgraspthesutureorstentconnectortorepositionthestentand thereisadequateclearancebeforeproceedingwiththestentplacement. donottwistorrotatethestentormetalstrutunlessthestentisbeing The MERIT ENDOTEK AERO mini Tracheobronchial Stent System is removed.",
+    "WARNING: Do not attempt placement of the MERIT ENDOTEK AERO mini contraindicated for: Tracheobronchial Stent Systeminpatientswithstenosisthatcannotbedilated 12.",
+    "Ifthelesionmassisreducedsignificantly, (asmayoccurwithradiation sufficientlytoallowpassageofabronchoscope.",
+    "1.",
+    "Tracheobronchialobstructionwithaluminaldiameterthatcannotbe therapyorchemotherapy)thereisanincreasedchanceofmigration.",
+    "If dilatedtoatleast 75%ofthenominaldiameteroftheselectedstent. thisoccurs, removalofthestentshouldbeconsidered.",
+    "2.",
+    "Estimatethe Stenosis Lengthand Luminal Diameter.",
+    "Patientsforwhombronchoscopicproceduresarecontraindicated.",
+    "Thisestimationmaybeperformedbyvisualinspectionviabronchoscopy 3.",
+    "Anyuseotherthanthosespecificallyoutlinedunder Indicationsfor Use.",
+    "13.",
+    "Thereisanincreasedriskofstentmigrationwhenthestenthasbeen orviafluoroscopy. implanted in patients with narrowing at the distal end of the lesion POTENTIALCOMPLICATIONS relativetotheproximalend(conicalorfunnelshapedlesion).",
+    "Physicians Measuringthelength: Advancethescopetothedistalendofthelesion, shouldconsidermonitoringthesepatientsforupto 72 hoursafterstent pauseandobservetheanatomy.",
+    "Grasptheproximalendofthescopeand Complicationshavebeenreportedintheliteraturefortracheobronchialstent placementandmaywishtoverifyfinalplacementusingchestx-ray. donotreleaseyourgrasp.",
+    "Retractthescopeuntiltheproximalendof placement with both silicone stents and expandable metal stents.",
+    "These thelesioncanbevisualized.",
+    "Withyouroppositehandgrasptheproximal include, butarenotnecessarilylimitedto: endofthescopenearthepatient’smouthwhilemaintainingyourinitial grip.",
+    "Itisimportanttoalwaysmaintaintheinitialgraspmarkonthe scopeduringvisualmeasurementbecausethiswillprovideyouwith theinitialpointofreferencetoconductthelengthmeasurement.",
+    "Once thedistalandproximallimitsareidentifieditispossibletomeasurethe."
+  ],
   "adverse_events": [],
   "safety_blocks": [
     {
-      "severity": "warning",
+      "level": "warning",
       "text": "WARNING: Thesafetyandeffectivenessofthedeviceforuseinthevascular necessary, donotreusethestentordeliverysystem. bronchoscopy, selectatrachealtubethathasaninternaldiameterofnot systemhasnotbeenestablishedandcanresultinseriousharmand/ordeath. lessthan 11. 5 mmtoallowsufficientclearanceforthedeliverysystem 11. Do not reposition the stent by grasping the polyurethane covering. andaflexibleorrigidbronchoscope. Thephysicianshouldconfirmthat CONTRAINDICATIONS Alwaysgraspthesutureorstentconnectortorepositionthestentand thereisadequateclearancebeforeproceedingwiththestentplacement. donottwistorrotatethestentormetalstrutunlessthestentisbeing The MERIT ENDOTEK AERO mini Tracheobronchial Stent System is removed. WARNING: Do not attempt placement of the MERIT ENDOTEK AERO mini contraindicated for: Tracheobronchial Stent Systeminpatientswithstenosisthatcannotbedilated 12. Ifthelesionmassisreducedsignificantly, (asmayoccurwithradiation sufficientlytoallowpassageofabronchoscope. 1. Tracheobronchialobstructionwithaluminaldiameterthatcannotbe therapyorchemotherapy)thereisanincreasedchanceofmigration. If dilatedtoatleast 75%ofthenominaldiameteroftheselectedstent. thisoccurs, removalofthestentshouldbeconsidered. 2. Estimatethe Stenosis Lengthand Luminal Diameter. 2. Patientsforwhombronchoscopicproceduresarecontraindicated. Thisestimationmaybeperformedbyvisualinspectionviabronchoscopy 3. Anyuseotherthanthosespecificallyoutlinedunder Indicationsfor Use. 13. Thereisanincreasedriskofstentmigrationwhenthestenthasbeen orviafluoroscopy. implanted in patients with narrowing at the distal end of the lesion POTENTIALCOMPLICATIONS relativetotheproximalend(conicalorfunnelshapedlesion). Physicians Measuringthelength: Advancethescopetothedistalendofthelesion, shouldconsidermonitoringthesepatientsforupto 72 hoursafterstent pauseandobservetheanatomy. Grasptheproximalendofthescopeand Complicationshavebeenreportedintheliteraturefortracheobronchialstent placementandmaywishtoverifyfinalplacementusingchestx-ray. donotreleaseyourgrasp. Retractthescopeuntiltheproximalendof placement with both silicone stents and expandable metal stents. These thelesioncanbevisualized. Withyouroppositehandgrasptheproximal include, butarenotnecessarilylimitedto: endofthescopenearthepatient’smouthwhilemaintainingyourinitial grip. Itisimportanttoalwaysmaintaintheinitialgraspmarkonthe scopeduringvisualmeasurementbecausethiswillprovideyouwith theinitialpointofreferencetoconductthelengthmeasurement. Once thedistalandproximallimitsareidentifieditispossibletomeasurethe",
-      "category": "radiation",
+      "title": "WARNING: Thesafetyandeffectivenessofthedeviceforuseinthevascular necessary, donotreusethestentordeliverysystem. bronchoscopy, selectatrachealtubethathasaninternaldiameterofnot",
+      "page": 2,
+      "hash": "ab76a0b573867b12d860",
+      "severity": "warning",
       "evidence": {
         "text": "WARNING: Thesafetyandeffectivenessofthedeviceforuseinthevascular necessary, donotreusethestentordeliverysystem. bronchoscopy, selectatrachealtubethathasaninternaldiameterofnot systemhasnotbeenestablis",
         "page": 2,
@@ -506,9 +905,12 @@
       }
     },
     {
+      "level": "caution",
+      "text": "CAUTION: Ifthesutureisusedtorepositionthestentproximally, thestent Open the label end of the box. Carefully open the box and pouch. should be examined carefully to assure that it has fully expanded after Removethedeliverysystemfromtheplastictraybypullinguponthe repositioning. Intheeventthatsomecompressionremainsattheproximal handleendlidtabs, liftingthehingedlid, andpullingthedevicefrom enditmaybenecessarytoexpandthestentwithaballooncatheter. MR thetray. Thetraydoesnotneedtobefullyremovedfromthepouch, onlythehingedendofthetray. WARNING: Clinicaldataforstentremovalinhumanswaslimitedtoaclinical Single Use MRC onditional Max Guide Wire studyof 51 patientswithmalignancies. Thirteendeviceswereremovedafter Aredsafetyislocatedadjacenttothedeliverysystemtrigger. Thered 30 days; 6 deviceswereremovedafter 60 days; and 2 deviceswereremoved safetyonthedeliverysystemisdesignedtopreventprematurestent after 90 days. Duringthisclinicalstudy, therewasnotissuein-growthinto deploymentandmayremainonthedeliverysystemuntilitiscorrectly thelumenofthestentreported. positionedrelativetothetreatmentsize. PACKAGINGANDLABELING Sterilizedusingethyleneoxide Caution: Consult Donotuseifpackage Lubricate the distal portion of the stent delivery system with water accompanyingdocuments isdamaged solublelubricanttoaidinintroduction. Backloadtheguidewireinto Inspectthe MERITENDOTEKAERO mini Tracheobronchial Stent Systemandthe thedistalendofthedeliverysystem. packagingfordamagepriortouse. Confirmthatthedeviceisconsistentwith thepackagelabel. Discardandreplaceanydamageddevices. 7. Positioningof MERITENDOTEKAERO mini Tracheobronchial Stent Systemin Airway. DONOTATTEMPTTOREPAIR. Under bronchoscopic visualization, advance the stent over the guide wire through the stenosis. Direct visualization of the green proximal Contact MERITENDOTEKC ustomer Serviceat 1-800-356-3748 ifthepackage markeronthedeliverysystemwillprovideaguideforplacement. The hasbeenopenedordamaged. proximal end of the deployed stent will be aligned with this green marker. Whenusingfluoroscopy, visualizetheradiopaquemarkerson STORAGE thedeliverysystemtipandinnershaftsothatthestenosisiscentered betweenthem. Thesemarkersindicatetheendsofthestent. Thestent Donotexposethisdevicetoconditionsofextremeheatandhumidity. Store willnotforeshortenupondeployment. the MERIT ENDOTEK AERO mini Tracheobronchial Stent System in a normal roomtemperatureenvironment. 8. Deploymentof Stent. Holdthehandgripinthepalmofyourhand(Fig. 1). Usingtheindex HOWSUPPLIED andmiddlefinger, graspthetrigger. Productnotmadewithnaturalrubberlatex. Slowlyretracttheoutersheathbypullingbackonthetrigger(Fig. 2)until thetriggertouchesthehandgrip. Thestentisnowfullydeployed. Carefully Thedisposable, single-patient-useself-expandingstentsareavailable, pre removethedeliverysystemwithoutdisturbingthepositionofthestent. mountedonadeliverysysteminavarietyofconfigurations. Stentswitha diameterof 8 mmand 10 mmaremountedon 12 Fdeliverysystem. Stents Monitor the stent deployment under fluoroscopy, while maintaining withadiameterof 12 mmand 14 mmaremountedona 16 Fdeliverysystem. theidentifiedstricturemarginscenteredbetweenthedeliverysystem Theworkinglengthforalldeliverysystemsis 70 cm. radiopaquemarkers. Ifnecessary, stopdeploymentandadjustthestent position proximally. The stent may be repositioned proximally while The MERIT ENDOTEK AERO mini Tracheobronchial Stent System is provided holding the position of the trigger and moving the delivery system STERILE usinganethyleneoxide(EO)process. asaunit. Thestentmayberepositionedproximallyuntilthetriggeris pulledbeyondthewhitedeploymentthresholdmarklocatedbetween DONOTRESTERLIZE thetriggerandhandgrip. Eachpackagedunitisintendedfor SINGLE-PATIENT-USEONLY.",
+      "title": "CAUTION: Ifthesutureisusedtorepositionthestentproximally, thestent",
+      "page": 3,
+      "hash": "0410a08e1d26a18a4c40",
       "severity": "caution",
-      "text": "CAUTION: Ifthesutureisusedtorepositionthestentproximally, thestent Open the label end of the box. Carefully open the box and pouch. should be examined carefully to assure that it has fully expanded after Removethedeliverysystemfromtheplastictraybypullinguponthe repositioning. Intheeventthatsomecompressionremainsattheproximal handleendlidtabs, liftingthehingedlid, andpullingthedevicefrom enditmaybenecessarytoexpandthestentwithaballooncatheter. MR thetray. Thetraydoesnotneedtobefullyremovedfromthepouch, onlythehingedendofthetray. WARNING: Clinicaldataforstentremovalinhumanswaslimitedtoaclinical Single Use MRC onditional Max Guide Wire studyof 51 patientswithmalignancies. Thirteendeviceswereremovedafter Aredsafetyislocatedadjacenttothedeliverysystemtrigger. Thered 30 days; 6 deviceswereremovedafter 60 days; and 2 deviceswereremoved safetyonthedeliverysystemisdesignedtopreventprematurestent after 90 days. Duringthisclinicalstudy, therewasnotissuein-growthinto deploymentandmayremainonthedeliverysystemuntilitiscorrectly thelumenofthestentreported. positionedrelativetothetreatmentsize. PACKAGINGANDLABELING Sterilizedusingethyleneoxide Caution: Consult Donotuseifpackage Lubricate the distal portion of the stent delivery system with water- accompanyingdocuments isdamaged solublelubricanttoaidinintroduction. Backloadtheguidewireinto Inspectthe MERITENDOTEKAERO mini Tracheobronchial Stent Systemandthe thedistalendofthedeliverysystem. packagingfordamagepriortouse. Confirmthatthedeviceisconsistentwith thepackagelabel. Discardandreplaceanydamageddevices. 7. Positioningof MERITENDOTEKAERO mini Tracheobronchial Stent Systemin Airway. DONOTATTEMPTTOREPAIR. Under bronchoscopic visualization, advance the stent over the guide wire through the stenosis. Direct visualization of the green proximal Contact MERITENDOTEKC ustomer Serviceat 1-800-356-3748 ifthepackage markeronthedeliverysystemwillprovideaguideforplacement. The hasbeenopenedordamaged. proximal end of the deployed stent will be aligned with this green marker. Whenusingfluoroscopy, visualizetheradiopaquemarkerson STORAGE thedeliverysystemtipandinnershaftsothatthestenosisiscentered betweenthem. Thesemarkersindicatetheendsofthestent. Thestent Donotexposethisdevicetoconditionsofextremeheatandhumidity. Store willnotforeshortenupondeployment. the MERIT ENDOTEK AERO mini Tracheobronchial Stent System in a normal roomtemperatureenvironment. 8. Deploymentof Stent. Holdthehandgripinthepalmofyourhand(Fig. 1). Usingtheindex HOWSUPPLIED andmiddlefinger, graspthetrigger. Productnotmadewithnaturalrubberlatex. Slowlyretracttheoutersheathbypullingbackonthetrigger(Fig. 2)until thetriggertouchesthehandgrip. Thestentisnowfullydeployed. Carefully Thedisposable, single-patient-useself-expandingstentsareavailable, pre- removethedeliverysystemwithoutdisturbingthepositionofthestent. mountedonadeliverysysteminavarietyofconfigurations. Stentswitha diameterof 8 mmand 10 mmaremountedon 12 Fdeliverysystem. Stents Monitor the stent deployment under fluoroscopy, while maintaining withadiameterof 12 mmand 14 mmaremountedona 16 Fdeliverysystem. theidentifiedstricturemarginscenteredbetweenthedeliverysystem Theworkinglengthforalldeliverysystemsis 70 cm. radiopaquemarkers. Ifnecessary, stopdeploymentandadjustthestent position proximally. The stent may be repositioned proximally while The MERIT ENDOTEK AERO mini Tracheobronchial Stent System is provided holding the position of the trigger and moving the delivery system STERILE usinganethyleneoxide(EO)process. asaunit. Thestentmayberepositionedproximallyuntilthetriggeris pulledbeyondthewhitedeploymentthresholdmarklocatedbetween DONOTRESTERLIZE thetriggerandhandgrip. Eachpackagedunitisintendedfor SINGLE-PATIENT-USEONLY.",
-      "category": "sterility",
       "evidence": {
         "text": "CAUTION: Ifthesutureisusedtorepositionthestentproximally, thestent Open the label end of the box. Carefully open the box and pouch. should be examined carefully to assure that it has fully expanded af",
         "page": 3,
@@ -524,30 +926,46 @@
     "unique_pages_seen": 4,
     "unique_pages_ratio": 1.0,
     "extracted_chars": 18568,
-    "duration_s": 1.6482195854187012,
+    "duration_s": 1.4970653057098389,
     "coverage_ratio": 1.0,
     "doc_subtype": null,
     "tables_kept": 0,
     "paragraph_dedup_applied": false,
+    "relations_dropped": 0,
+    "tables_dropped": 0,
+    "relations_count": 0,
+    "relations_kept": 0,
+    "safety_blocks_found": 2,
+    "references_count": 0,
+    "long_doc_fast_path": false,
+    "toc_guard": {
+      "pages_dropped": [
+        3,
+        4
+      ],
+      "pages_dropped_count": 2
+    },
+    "small_ifu_fallback_applied": true,
+    "small_ifu_threshold": 4,
     "evidence_bank_size": 0,
-    "paragraph_store_size": 20
+    "paragraph_store_size": 42
   },
-  "_engine": "pdfplumber",
+  "_engine": "pymupdf",
   "_mode": "full",
   "_cache_used": false,
   "_pipeline_metadata": {
     "profile": "enriched",
     "engines_requested": [
-      "pdfplumber",
-      "pymupdf"
+      "pymupdf",
+      "pdfplumber"
     ],
-    "engine_used": "pdfplumber",
+    "engine_used": "pymupdf",
     "mode": "full",
     "cache_used": false,
     "ocr_used_pages": [],
     "coverage_ratio": 1.0,
     "page_count": 4,
-    "timestamp": "2025-11-01T10:49:51.399534",
+    "timestamp": "2025-11-03T19:49:41.563792",
     "version": "v1.0.0",
     "warnings": [],
     "emit": {
@@ -571,68 +989,125 @@
       "keep_evidence_bank": true,
       "max_tables": 10
     },
+    "safety_blocks_found": 2,
+    "front_matter_meta": {
+      "product_name_source": "pattern"
+    },
+    "long_doc_fast_path": false,
     "toc_guard": {
       "enabled": true,
       "pages_dropped": [
-        3
+        3,
+        4
       ],
-      "density_threshold": 0.65,
-      "dot_leader_min": 0.2,
-      "page_number_ratio": 0.4
+      "pages_dropped_count": 2,
+      "config": {
+        "enabled": true,
+        "density_threshold": 0.65,
+        "dot_leader_min": 0.2,
+        "page_number_ratio": 0.4,
+        "scan_page_limit": 15,
+        "min_dotted_lines": 2,
+        "min_page_number_lines": 2
+      },
+      "small_ifu_threshold": 4,
+      "small_ifu_fallback_applied": true,
+      "pages_considered": 4
     },
     "toc_guard_applied": true,
+    "toc_guard_pages_dropped": [
+      3,
+      4
+    ],
+    "toc_guard_pages_dropped_count": 2,
+    "small_ifu_threshold": 4,
+    "small_ifu_fallback_applied": true,
     "text_repair_applied": false,
     "engine_used_per_page": {
-      "1": "pdfplumber",
-      "2": "pdfplumber",
-      "3": "pdfplumber",
-      "4": "pdfplumber"
+      "1": "pymupdf",
+      "2": "pymupdf",
+      "3": "pymupdf",
+      "4": "pymupdf"
     },
     "spacing_metrics": {
-      "space_ratio_before": 0.06042654028436019,
+      "space_ratio_before": 0.060372684187850065,
       "space_ratio_after": null,
       "avg_token_length_before": 13.206814580031695,
       "avg_token_length_after": null,
       "repair_strategy": null
     },
-    "paragraph_dedup_applied": false,
+    "paragraph_dedup_applied": true,
+    "tables_kept": 0,
+    "relations_dropped": 0,
+    "tables_dropped": 0,
+    "relations_kept": 0,
+    "references_detected": 0,
+    "extracted_chars": 18568,
+    "emit_policy_source": "yaml",
     "evidence_policy": "compact",
     "keep_evidence_bank": true,
     "paragraph_store_enabled": true,
     "paragraph_store_requested": true,
     "tables_original": 0,
-    "tables_kept": 0,
-    "tables_dropped": 0,
     "text_field_paragraph_refs": {
+      "product_name": [
+        "4bf83008c2138797"
+      ],
+      "intended_use": [
+        "a29ee632b11f758e"
+      ],
+      "contraindications": [
+        "6d51b88112ff33fb",
+        "631a5a4102543a43",
+        "c555648b531f2196",
+        "2413c3dbeae30e6c",
+        "fb56f25d2f668deb",
+        "3c1811150ff0384f",
+        "2a36393df80a324a",
+        "56c3db0d5d9a17c8",
+        "188f1b8e57ec0f20",
+        "ad122db81142444b",
+        "13b8456f994eb7ec",
+        "17e774846e9b2fa7",
+        "e1b9a58d966cae4b",
+        "5b582ddeb831b65b",
+        "181ad2dfe1c94021",
+        "a4a63e8134969a38",
+        "597521ad6572797f",
+        "ee5920997af48582",
+        "15190ae36de159a3",
+        "32e769b45b98c633"
+      ],
       "safety_blocks": [
-        "aa797152312ffa20",
-        "eae75e7863d126ac"
+        "c3c35756c610c26b",
+        "de81983afb988c23"
       ]
     },
-    "paragraph_store_size": 20,
+    "paragraph_store_size": 42,
     "window_placeholders_removed": 0,
     "metadata_sources": {},
+    "engine_timeouts": {
+      "pymupdf": 70.0,
+      "pdfplumber": 85.0
+    },
+    "ifu_engine_mode": "hybrid",
+    "ifu_engine_source": "config",
     "emit_raw_pages": false,
     "generator": "medparse",
     "pipeline_version": "1.1.0",
-    "engine": "pdfplumber",
-    "config_hash": "7d58edf1",
+    "engine": "pymupdf",
+    "config_hash": "f53923c0",
     "content_hash": "9a47daba1d1c",
     "validators": {
-      "passed": false,
+      "passed": true,
       "warnings": [
-        "IFU missing front-matter field 'part_number'.",
-        "IFU missing front-matter field 'revision'.",
         "IFU missing front-matter field 'publication_date'.",
         "IFU missing front-matter field 'model'.",
-        "TOC guard dropped pages [3]",
+        "TOC guard dropped pages [3, 4]",
         "IFU missing manufacturer field.",
-        "IFU missing product_name field.",
         "Expected at least 20 safety blocks; found 2."
       ],
-      "errors": [
-        "IFU missing required field 'indications_for_use'"
-      ]
+      "errors": []
     }
   }
 }

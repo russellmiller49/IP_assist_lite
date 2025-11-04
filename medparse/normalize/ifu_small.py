@@ -151,7 +151,7 @@ def apply_small_leaflet_policy(
     ifu_payload["indications_for_use"] = {
         "text": intended_text,
         "derived_from": "intended_use",
-        "provenance": "small_leaflet_fallback",
+        "provenance": "small_leaflet_mapper",
     }
     return True
 

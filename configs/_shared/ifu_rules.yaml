@@ -1,0 +1,20 @@
+safety_policy:
+  default:
+    small_leaflet_max_pages: 4
+    min_blocks_by_pages:
+      - {max_pages: 4, min: 0}
+      - {max_pages: 20, min: 4}
+      - {max_pages: 100, min: 10}
+      - {max_pages: 9999, min: 20}
+  vendor_overrides:
+    INTUITIVE:
+      min_large_manual: 20
+    ERBE:
+      min_large_manual: 10
+    OLYMPUS:
+      min_large_manual: 12
+  subtype_overrides:
+    performance_spec:
+      min_any: 0
+    units_modules:
+      min_large_manual: 8

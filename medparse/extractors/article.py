@@ -75,6 +75,32 @@ ATS_CANONICAL_REASONS = {
     ATS_REASON_DERIVED,
 }
 
+PRACTICE_MANAGEMENT_TERMS = {
+    "practice management",
+    "financial plan",
+    "business model",
+    "economic analysis",
+    "workflow",
+    "operations",
+    "strategy",
+    "swot",
+}
+
+THERAPEUTIC_TRIAL_TERMS = {
+    "feasibility",
+    "safety",
+    "treatment",
+    "therapy",
+    "therapeutic",
+    "randomized",
+    "device trial",
+    "implant",
+    "ablation",
+    "valve",
+    "rheoplasty",
+    "intervention",
+}
+
 
 def extract_article(
     pdf_path: Path,
@@ -180,7 +206,7 @@ def extract_article(
     elif fm_info is None and extraction_config.should_use_zotero():
         fm_info = {"status": "not_found", "source": "zotero"}
 
-    link_authors_to_affiliations(authors, affiliations, list(pages))
+    unresolved_affiliations = link_authors_to_affiliations(authors, affiliations, list(pages))
 
     table_blocks = _maybe_classify_tables(pages, extraction_config)
     outcomes = _maybe_extract_outcomes(sections, table_blocks, extraction_config)
@@ -291,6 +317,43 @@ def extract_article(
         n_lesions=_as_int(yield_data.get("n_lesions")),
         references=references,
     )
+
+    if unresolved_affiliations:
+        document.pipeline_info["frontmatter_affiliations_unresolved"] = len(unresolved_affiliations)
+        front_meta = document.pipeline_info.setdefault("front_matter_meta", {})
+        if isinstance(front_meta, dict):
+            front_meta["affiliations_unresolved"] = list(unresolved_affiliations)
+
+    affiliation_lookup = {aff.id: aff for aff in document.affiliations or []}
+    affiliation_summary: List[Dict[str, object]] = []
+    mapped_authors = 0
+    for idx, author in enumerate(document.authors or []):
+        aff_ids = getattr(author, "affiliation_ids", []) or []
+        aff_texts = [affiliation_lookup[aff_id].text for aff_id in aff_ids if aff_id in affiliation_lookup]
+        if aff_ids:
+            mapped_authors += 1
+        affiliation_summary.append(
+            {
+                "author_index": idx,
+                "author": {
+                    "given": author.given,
+                    "family": author.family,
+                },
+                "affiliation_ids": aff_ids,
+                "affiliations": aff_texts,
+            }
+        )
+    if affiliation_summary:
+        front_meta = document.pipeline_info.setdefault("front_matter_meta", {})
+        if isinstance(front_meta, dict):
+            front_meta.setdefault("affiliations", affiliation_summary)
+            total_authors = len(document.authors or [])
+            if total_authors:
+                coverage_ratio = mapped_authors / total_authors
+                front_meta.setdefault("affiliation_mapping_ratio", round(coverage_ratio, 3))
+    base_front_matter = document.pipeline_info.get("front_matter")
+    if isinstance(base_front_matter, dict) and affiliation_summary:
+        base_front_matter.setdefault("affiliations", affiliation_summary)
 
     if zotero_match:
         document.front_matter_source = "zotero"
@@ -1193,6 +1256,25 @@ def _infer_doc_subtype(
         if heading and any(marker in heading.lower() for marker in REVIEW_MARKERS):
             LOGGER.debug("Review detected from section heading '%s'.", heading)
             return "review"
+
+    first_pages_text = " ".join(" ".join(page.lines or []) for page in pages[:2]).lower()
+    combined_scope = " ".join(
+        [
+            title_lower,
+            sections.get("abstract", "").lower(),
+            sections.get("introduction", "").lower(),
+            first_pages_text,
+        ]
+    )
+
+    if any(phrase in combined_scope for phrase in PRACTICE_MANAGEMENT_TERMS):
+        LOGGER.debug("Practice management detected via scope markers.")
+        return "practice_management"
+
+    therapeutic_hits = [term for term in THERAPEUTIC_TRIAL_TERMS if term in combined_scope]
+    if therapeutic_hits and any(token in combined_scope for token in {"trial", "study", "feasibility"}):
+        LOGGER.debug("Therapeutic trial detected via scope markers: %s", therapeutic_hits)
+        return "therapeutic_trial"
 
     if recommendations:
         LOGGER.debug("Defaulting to research despite recommendations (guideline heuristics failed).")

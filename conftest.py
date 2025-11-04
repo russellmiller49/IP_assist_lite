@@ -1,5 +1,6 @@
 import os
 import sys
+import warnings
 from pathlib import Path
 
 import pytest
@@ -12,6 +13,8 @@ if SRC.exists():
     sys.path.insert(0, str(SRC))
 
 TRUTHY_VALUES = {"1", "true", "yes", "on"}
+
+warnings.filterwarnings("ignore", message="Possible set union", module="spacy.language")
 
 
 def _env_truthy(name: str) -> bool:
