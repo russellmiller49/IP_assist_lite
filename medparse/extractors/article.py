@@ -9,6 +9,7 @@ from typing import Dict, Iterable, List, Optional, Sequence
 
 from medparse.config import ExtractionConfig, get_extraction_config
 from medparse.extract.utils import collect_lines, collect_tables, load_pages, reference_section
+from medparse.extractors.research_outcomes import extract_research_outcomes
 from medparse.ingest.models import PageData
 from medparse.normalize.article_frontmatter import (
     extract_authors_affiliations,
@@ -78,28 +79,242 @@ ATS_CANONICAL_REASONS = {
 PRACTICE_MANAGEMENT_TERMS = {
     "practice management",
     "financial plan",
+    "business plan",
     "business model",
     "economic analysis",
+    "return on investment",
+    "revenue",
     "workflow",
     "operations",
     "strategy",
     "swot",
+    "macra",
+    "mips",
+    "pro forma",
 }
 
 THERAPEUTIC_TRIAL_TERMS = {
     "feasibility",
-    "safety",
     "treatment",
     "therapy",
     "therapeutic",
-    "randomized",
     "device trial",
+    "clinical improvement",
+    "efficacy",
+    "procedure efficacy",
     "implant",
     "ablation",
+    "lung volume reduction",
     "valve",
     "rheoplasty",
     "intervention",
+    "clinical outcome",
+    "treatment arm",
 }
+
+DIAGNOSTIC_TARGET_TERMS = {
+    "pulmonary nodule",
+    "nodule",
+    "ppn",
+    "lesion",
+    "lung nodule",
+    "peripheral lesion",
+}
+
+DIAGNOSTIC_ACTION_TERMS = {
+    "diagnostic",
+    "diagnosis",
+    "biopsy",
+    "yield",
+    "sensitivity",
+    "specificity",
+    "accuracy",
+    "specimen",
+    "histology",
+    "cytology",
+}
+
+DIAGNOSTIC_PROCEDURE_TERMS = {
+    "ebus",
+    "radial ebus",
+    "robotic bronchoscopy",
+    "navigation bronchoscopy",
+    "ct-guided biopsy",
+    "ct guided biopsy",
+    "transbronchial biopsy",
+    "ion endoluminal",
+    "transthoracic needle biopsy",
+    "shape-sensing catheter",
+    "robotic-assisted bronchoscopy",
+}
+
+THERAPEUTIC_SCOPE_TERMS = {
+    "endobronchial valve",
+    "bronchoscopic lung volume reduction",
+    "lung volume reduction surgery",
+    "lvrs",
+    "lvr coil",
+    "coil",
+    "valve",
+    "rheoplasty",
+    "thermal vapor",
+    "therapy",
+    "therapeutic",
+    "treatment",
+    "ablation",
+    "stent",
+    "implant",
+    "thermal energy",
+}
+
+EDITORIAL_SCOPE_TERMS = {
+    "value-based",
+    "value based",
+    "cost-effective",
+    "cost effectiveness",
+    "economics",
+    "economic",
+    "budget",
+    "workflow",
+    "business case",
+    "perspective",
+    "editorial",
+    "policy statement",
+    "macra",
+    "mips",
+    "pro forma",
+    "revenue",
+    "profitability",
+    "return on investment",
+    "business plan",
+}
+
+DIAGNOSTIC_NEGATIVE_TERMS = {
+    "workflow",
+    "cost",
+    "economics",
+    "value-based",
+    "value based",
+    "therapy",
+    "treatment",
+    "therapeutic",
+    "valve",
+    "rheoplasty",
+    "suite",
+    "radiologic gastrostomy",
+}
+
+DIAGNOSTIC_PERFORMANCE_TERMS = {
+    "diagnostic accuracy",
+    "diagnostic yield",
+    "diagnostic performance",
+    "sensitivity",
+    "specificity",
+    "false negative",
+    "false-negative",
+    "false positive",
+    "false-positive",
+    "noninferiority",
+    "non-inferiority",
+    "noninferiority margin",
+    "non-inferiority margin",
+    "specific diagnosis",
+    "diagnostic endpoint",
+    "diagnostic efficacy",
+}
+
+DIAGNOSTIC_ENDPOINT_TERMS = {
+    "primary endpoint",
+    "primary outcome",
+    "noninferiority margin",
+    "non-inferiority margin",
+    "diagnostic endpoint",
+    "diagnostic primary endpoint",
+    "diagnostic primary outcome",
+    "superiority endpoint",
+    "study endpoint",
+}
+
+BIOPSY_CONTEXT_TERMS = {
+    "biopsy",
+    "biopsies",
+    "biopsied",
+    "sampling",
+    "sampled",
+    "specimen",
+    "specimens",
+    "nodule",
+    "lesion",
+    "peripheral lesion",
+    "bronchoscopy",
+    "bronchoscopic",
+    "transthoracic needle biopsy",
+    "needle biopsy",
+    "navigational bronchoscopy",
+    "robotic bronchoscopy",
+}
+
+PATHOLOGY_NOUNS = {
+    "pathology",
+    "histology",
+    "cytology",
+    "microbiology",
+    "specimen",
+    "biopsy",
+}
+
+SAMPLE_COUNT_PATTERN = re.compile(
+    r"\b(?:n\s*=\s*\d{1,4}|\d{1,4}\s+(?:patients?|subjects?|procedures?|lesions?|nodules?|cases|specimens?))\b",
+    re.IGNORECASE,
+)
+
+SENTENCE_SPLIT_PATTERN = re.compile(r"[.;]\s+|\n+")
+
+
+def _count_phrase_hits(text: str, phrases: Iterable[str]) -> int:
+    lowered = text.lower()
+    return sum(1 for phrase in phrases if phrase in lowered)
+
+
+def _sentence_contains_terms(text: str, anchors: Iterable[str], companions: Iterable[str]) -> bool:
+    lowered = text.lower()
+    sentences = [segment.strip() for segment in SENTENCE_SPLIT_PATTERN.split(lowered) if segment.strip()]
+    if not sentences:
+        sentences = [lowered]
+    anchor_terms = [term for term in anchors if term]
+    companion_terms = [term for term in companions if term]
+    for sentence in sentences:
+        if any(anchor in sentence for anchor in anchor_terms) and any(
+            companion in sentence for companion in companion_terms
+        ):
+            return True
+    return False
+
+
+def _has_diagnostic_endpoint_signal(text: str) -> bool:
+    if not text:
+        return False
+    endpoint_hits = [term for term in DIAGNOSTIC_ENDPOINT_TERMS if term in text]
+    if not endpoint_hits:
+        return False
+    performance_terms = {
+        "diagnostic",
+        "accuracy",
+        "yield",
+        "sensitivity",
+        "specificity",
+        "noninferiority",
+        "non-inferiority",
+        "noninferiority margin",
+        "non-inferiority margin",
+    }
+    return _sentence_contains_terms(text, endpoint_hits, performance_terms)
+
+
+def _has_biopsy_context(text: str) -> bool:
+    if not text:
+        return False
+    return any(term in text for term in BIOPSY_CONTEXT_TERMS)
 
 
 def extract_article(
@@ -389,6 +604,19 @@ def extract_article(
         drop_footers=True,
     )
     document.paragraph_store = paragraph_store
+    if doc_subtype == "research_diagnostic":
+        try:
+            research_outcomes = extract_research_outcomes(
+                document=document,
+                paragraph_store=paragraph_store,
+                evidence_bank=document.evidence_bank,
+                subtype=doc_subtype,
+            )
+        except Exception as exc:  # pragma: no cover - defensive
+            LOGGER.warning("Research outcomes extraction failed: %s", exc)
+            research_outcomes = None
+        if research_outcomes:
+            document.research_outcomes = research_outcomes
     if dedup_applied:
         document.pipeline_info["paragraph_dedup_applied"] = True
     else:
@@ -1268,17 +1496,196 @@ def _infer_doc_subtype(
     )
 
     if any(phrase in combined_scope for phrase in PRACTICE_MANAGEMENT_TERMS):
-        LOGGER.debug("Practice management detected via scope markers.")
+        LOGGER.debug("Practice management markers detected; attempting refined subtype.")
+        refined_candidate = _refine_research_subtype(
+            pages=pages,
+            sections=sections,
+            title_value=title_value,
+            combined_scope=combined_scope,
+        )
+        if refined_candidate != "research":
+            return refined_candidate
         return "practice_management"
-
-    therapeutic_hits = [term for term in THERAPEUTIC_TRIAL_TERMS if term in combined_scope]
-    if therapeutic_hits and any(token in combined_scope for token in {"trial", "study", "feasibility"}):
-        LOGGER.debug("Therapeutic trial detected via scope markers: %s", therapeutic_hits)
-        return "therapeutic_trial"
 
     if recommendations:
         LOGGER.debug("Defaulting to research despite recommendations (guideline heuristics failed).")
+
+    refined_research = _refine_research_subtype(
+        pages=pages,
+        sections=sections,
+        title_value=title_value,
+        combined_scope=combined_scope,
+    )
+    return refined_research
+
+
+def _refine_research_subtype(
+    pages: Sequence[PageData],
+    sections: dict[str, str],
+    title_value: str,
+    combined_scope: str,
+) -> str:
+    """Refine research subtype into diagnostic/therapeutic/editorial variants."""
+
+    normalized_sections = {
+        (key or "").lower(): value
+        for key, value in (sections or {}).items()
+        if isinstance(value, str) and value.strip()
+    }
+    scope_lower = (combined_scope or "").lower()
+    title_lower = (title_value or "").lower()
+
+    editorial_hits = {term for term in EDITORIAL_SCOPE_TERMS if term in scope_lower or term in title_lower}
+    if editorial_hits:
+        LOGGER.debug("Editorial/economics scope detected via terms: %s", sorted(editorial_hits))
+        return "editorial_or_economics"
+
+    therapeutic_hits = {term for term in THERAPEUTIC_SCOPE_TERMS if term in scope_lower}
+    therapeutic_strength = len(therapeutic_hits)
+    if therapeutic_hits and any(token in scope_lower for token in {"trial", "randomized", "clinical outcome"}):
+        therapeutic_strength += 1
+
+    target_signal = _has_target_action_paragraph(normalized_sections, pages)
+    procedure_signal = any(term in scope_lower for term in DIAGNOSTIC_PROCEDURE_TERMS)
+    methods_signal = _has_methods_results_with_counts(normalized_sections)
+    pathology_hits = _count_pathology_signals(normalized_sections)
+
+    diagnostic_phrase_hits = {term for term in DIAGNOSTIC_PERFORMANCE_TERMS if term in scope_lower}
+    noninferiority_pair = _sentence_contains_terms(
+        scope_lower,
+        {"noninferiority", "non-inferiority"},
+        {"diagnostic", "diagnosis", "accuracy", "yield", "sensitivity", "specificity"},
+    )
+    if noninferiority_pair:
+        diagnostic_phrase_hits.add("noninferiority_diagnostic_pair")
+
+    endpoint_signal = False
+    biopsy_signal = False
+    diagnostic_context_score = 0
+
+    positive_signals = 0
+    if target_signal:
+        positive_signals += 1
+    if procedure_signal:
+        positive_signals += 1
+    if methods_signal:
+        positive_signals += 1
+    if pathology_hits:
+        positive_signals += 1
+    if diagnostic_phrase_hits:
+        positive_signals += 1
+        endpoint_signal = _has_diagnostic_endpoint_signal(scope_lower)
+        biopsy_signal = _has_biopsy_context(scope_lower)
+        diagnostic_context_score += min(2, len(diagnostic_phrase_hits))
+        if endpoint_signal:
+            positive_signals += 1
+            diagnostic_context_score += 2
+        if biopsy_signal:
+            positive_signals += 1
+            diagnostic_context_score += 1
+        if target_signal:
+            diagnostic_context_score += 1
+        if methods_signal:
+            diagnostic_context_score += 1
+        if pathology_hits:
+            diagnostic_context_score += 1
+        if noninferiority_pair:
+            diagnostic_context_score += 1
+
+    negative_hits = {term for term in DIAGNOSTIC_NEGATIVE_TERMS if term in scope_lower}
+    if not pathology_hits:
+        negative_hits.add("no_pathology_terms")
+
+    if diagnostic_context_score >= 4 or (
+        diagnostic_context_score >= 3 and diagnostic_context_score >= therapeutic_strength + 1
+    ):
+        LOGGER.debug(
+            "Research subtype flagged diagnostic via performance cues (phrases=%s endpoint=%s biopsy=%s score=%d).",
+            sorted(diagnostic_phrase_hits),
+            endpoint_signal,
+            biopsy_signal,
+            diagnostic_context_score,
+        )
+        return "research_diagnostic"
+
+    if therapeutic_strength >= 2 and diagnostic_context_score < therapeutic_strength:
+        LOGGER.debug("Therapeutic research scope detected via terms: %s", sorted(therapeutic_hits))
+        return "research_therapeutic"
+
+    if scope_lower:
+        LOGGER.debug("Research scope retained as 'other_research' (signals=%d, negatives=%d).", positive_signals, len(negative_hits))
+        return "other_research"
+
     return "research"
+
+
+def _collect_section_paragraphs(sections: dict[str, str]) -> List[str]:
+    paragraphs: List[str] = []
+    for text in sections.values():
+        for chunk in re.split(r"\n{2,}", text):
+            cleaned = chunk.strip()
+            if cleaned:
+                paragraphs.append(cleaned.lower())
+    return paragraphs
+
+
+def _has_target_action_paragraph(
+    sections: dict[str, str],
+    pages: Sequence[PageData],
+) -> bool:
+    paragraphs = _collect_section_paragraphs(sections)
+    if not paragraphs:
+        for page in pages[:6]:
+            text = (page.text or " ".join(page.lines or [])).strip()
+            if not text:
+                continue
+            for chunk in re.split(r"\n{2,}", text):
+                cleaned = chunk.strip()
+                if cleaned:
+                    paragraphs.append(cleaned.lower())
+            if len(paragraphs) >= 40:
+                break
+    for paragraph in paragraphs:
+        if any(term in paragraph for term in DIAGNOSTIC_TARGET_TERMS) and any(
+            term in paragraph for term in DIAGNOSTIC_ACTION_TERMS
+        ):
+            return True
+    return False
+
+
+def _has_methods_results_with_counts(sections: dict[str, str]) -> bool:
+    methods_texts = [
+        sections[key]
+        for key in sections
+        if "method" in key and isinstance(sections[key], str)
+    ]
+    results_texts = [
+        sections[key]
+        for key in sections
+        if ("result" in key or "finding" in key) and isinstance(sections[key], str)
+    ]
+    if not methods_texts or not results_texts:
+        return False
+    for text in methods_texts + results_texts:
+        if not isinstance(text, str):
+            continue
+        if SAMPLE_COUNT_PATTERN.search(text):
+            return True
+    return False
+
+
+def _count_pathology_signals(sections: dict[str, str]) -> int:
+    hits = 0
+    for key, text in sections.items():
+        if any(token in key for token in {"pathology", "histopathology", "histology", "cytology", "microbiology"}):
+            hits += 1
+            continue
+        if not isinstance(text, str):
+            continue
+        lowered = text.lower()
+        if any(term in lowered for term in PATHOLOGY_NOUNS):
+            hits += 1
+    return hits
 
 
 def _recommendation_heading_hits(pages: Sequence[PageData]) -> int:

@@ -19,6 +19,36 @@ from medparse.normalize.text_assemble import words_to_text
 
 GuardFn = Callable[[PageData], bool]
 
+ANCHOR_PREFIX_CHARS = "".join(
+    [
+        "-",
+        "!",
+        "\u00b7",
+        "\u2022",
+        "\u2023",
+        "\u25aa",
+        "\u25cf",
+        "\u25a0",
+        "\u25b6",
+        "\u25ba",
+        "\u25c6",
+        "\u25c7",
+        "\u25a1",
+        "\u25b2",
+        "\u25b3",
+        "\u2206",
+        "\u00bb",
+        "\u26a0",
+        "\uf06d",
+        "\uf06e",
+        "\uf06f",
+        "\uf0a7",
+        "\uf0b7",
+        "\uf0d8",
+    ]
+)
+ANCHOR_PREFIX_CLASS = re.escape(ANCHOR_PREFIX_CHARS)
+
 
 def is_toc_page(page: PageData) -> bool:
     """Heuristic TOC detector based on keywords and layout patterns."""
@@ -186,21 +216,24 @@ def _find_anchor(
         return None
 
     for anchor in anchors:
+        escaped = re.escape(anchor)
+        flexible = escaped.replace(r"\ ", r"\s+")
+        prefix_group = rf"(?:[{ANCHOR_PREFIX_CLASS}]+\s*)?"
         # Try multiple patterns for more flexible matching
         patterns = [
             # Original: heading at line start with colon or newline
-            rf"(?:^|\n)\s*{re.escape(anchor)}[:\s]*\n",
+            rf"(?:^|\n)\s*{prefix_group}{flexible}[:\s]*\n",
         ]
         if allow_inline:
             patterns.append(
-                rf"(?:^|\n)\s*{re.escape(anchor)}[:\s]+"
+                rf"(?:^|\n)\s*{prefix_group}{flexible}[:\s]+"
             )
         patterns.extend(
             [
                 # Allow bold/italic markers around heading
-                rf"(?:^|\n)\s*\*{{0,2}}{re.escape(anchor)}\*{{0,2}}[:\s]*",
+                rf"(?:^|\n)\s*{prefix_group}\*{{0,2}}{flexible}\*{{0,2}}[:\s]*",
                 # Allow numbered headings including sub-sections (1.4.1)
-                rf"(?:^|\n)\s*\d+(?:\.\d+)*\s+{re.escape(anchor)}[:\s]*",
+                rf"(?:^|\n)\s*\d+(?:\.\d+)*\s+{prefix_group}{flexible}[:\s]*",
             ]
         )
 

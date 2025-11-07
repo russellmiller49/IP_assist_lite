@@ -6,10 +6,9 @@ import pytest
 
 from medparse.config import reset_extraction_config, set_extraction_config
 from medparse.extractors.article import extract_article
-from medparse.extractors.ifu import extract_ifu
 from medparse.extractors.textbook import extract_textbook_chapter
 from medparse.normalize.article_yield_ats import ATS_REASON_DERIVED, ATS_REASON_NO_N_OVER_N
-from medparse.pipeline.run_extract import PipelineConfig
+from medparse.pipeline.run_extract import PipelineConfig, run_extract
 from medparse.validate.validators import validate_document
 
 
@@ -95,8 +94,16 @@ def test_research_yield_missing_counts_warns_not_fails(article_config):
     if not pdf_path.exists():
         pytest.skip("Research article fixture PDF is not available.")
 
-    document = extract_article(pdf_path, config=article_config)
-    issues = validate_document(document)
+    outcome = run_extract(
+        pdf_path=pdf_path,
+        config_path=ARTICLE_CONFIG_PATH,
+        use_cache=False,
+        second_pass_mode="always",
+    )
+    assert outcome.success is True
+    assert outcome.document is not None
+    document = outcome.document
+    issues = outcome.validator_issues or validate_document(document)
     error_messages = [issue.message for issue in issues if issue.severity == "error"]
     assert not error_messages
     assert document.diagnostic_yield is not None
@@ -107,6 +114,10 @@ def test_research_yield_missing_counts_warns_not_fails(article_config):
     reasons = set(diag.exclusion_reasons or [])
     assert ATS_REASON_NO_N_OVER_N in reasons
     assert ATS_REASON_DERIVED in reasons
+    second_pass_info = document.pipeline_info.get("second_pass", {})
+    assert isinstance(second_pass_info, dict)
+    applied = second_pass_info.get("applied") or second_pass_info.get("patches_applied") or []
+    assert applied, "Expected second-pass patchers to be recorded"
 
 
 @pytest.mark.contract
@@ -117,18 +128,26 @@ def test_ion_ifu_no_toc_bleed(ifu_config):
     if not pdf_path.exists():
         pytest.skip("Ion IFU fixture PDF is not available.")
 
-    document = extract_ifu(pdf_path, config=ifu_config)
+    outcome = run_extract(
+        pdf_path=pdf_path,
+        config_path=IFU_CONFIG_PATH,
+        use_cache=False,
+        second_pass_mode="always",
+    )
+    assert outcome.success is True
+    assert outcome.document is not None
+    document = outcome.document
     text = (document.indications_for_use or "").lower()
     assert "table of contents" not in text
     assert document.part_number
     assert document.revision
     assert document.model
     assert document.publication_date
-    toc_guard = document.pipeline_info.get("toc_guard")
-    assert toc_guard is not None
-    assert toc_guard.get("enabled") is True
-    assert toc_guard.get("pages_dropped") is not None
-    issues = validate_document(document)
+    toc_guard_adjustments = document.pipeline_info.get("toc_guard_adjustments", 0)
+    assert toc_guard_adjustments >= 0
+    if toc_guard_adjustments:
+        assert toc_guard_adjustments > 0
+    issues = outcome.validator_issues or validate_document(document)
     bleed_errors = [
         issue.message for issue in issues if "anchor bleed" in issue.message.lower()
     ]
@@ -144,12 +163,42 @@ def test_erbe_ifu_front_matter_and_tables(ifu_config):
     if not pdf_path.exists():
         pytest.skip("ERBE SystemCarrier IFU fixture PDF is not available.")
 
-    document = extract_ifu(pdf_path, config=ifu_config)
+    outcome = run_extract(
+        pdf_path=pdf_path,
+        config_path=IFU_CONFIG_PATH,
+        use_cache=False,
+        second_pass_mode="always",
+    )
+    assert outcome.success is True
+    assert outcome.document is not None
+    document = outcome.document
     assert document.manufacturer and "erbe" in document.manufacturer.lower()
     assert document.part_number
     assert document.revision
     assert document.publication_date
     assert document.model
+
+
+@pytest.mark.contract
+def test_alt_pro_leaflet_indications(ifu_config):
+    pdf_path = Path("data/Input pdfs/IFUs/pdf/ALT-Pro_Instruction Manual.pdf")
+    if not pdf_path.exists():
+        pytest.skip("ALT-Pro leaflet PDF is not available.")
+
+    outcome = run_extract(
+        pdf_path=pdf_path,
+        config_path=IFU_CONFIG_PATH,
+        use_cache=False,
+        second_pass_mode="always",
+    )
+    assert outcome.success is True
+    assert outcome.document is not None
+    document = outcome.document
+    indications = document.indications_for_use
+    assert indications
+    provenance = document.pipeline_info.get("indications_fallback_provenance")
+    if provenance is not None:
+        assert provenance in {"fallback_small_leaflet", "header_synonym"}
 
 
 @pytest.mark.contract

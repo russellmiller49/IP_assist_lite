@@ -39,6 +39,9 @@ def test_small_leaflet_indications_fallback() -> None:
     pipeline = document.pipeline_info
     assert pipeline.get("small_ifu_fallback_applied") is True
     assert pipeline.get("small_ifu_threshold") and pipeline.get("small_ifu_threshold") >= 2
+    assert pipeline.get("safety_expected_min") == 8
+    assert len(document.safety_blocks or []) >= pipeline.get("safety_expected_min")
+    assert pipeline.get("safety_blocks_added", 0) >= 0
 
     # Safety density should not raise hard errors for small leaflets
     extraction_config = get_extraction_config()

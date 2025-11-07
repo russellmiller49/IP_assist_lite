@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import List, Literal, Optional, Sequence
+from typing import Any, List, Literal, Mapping, Optional, Sequence
 
 from medparse.config import ExtractionConfig, FrozenNamespace
 from medparse.schema.article import ArticleDocument, GuidelineRecommendation
@@ -73,11 +73,12 @@ def validate_article(doc: ArticleDocument, cfg: ExtractionConfig) -> List[Issue]
             )
         else:
             threshold = max(0.0, min_grade_density)
-            coverage = max(grade_ratio, typed_ratio)
-            if coverage < threshold:
+            if typed_ratio < threshold:
                 issues.append(Issue.error("Guideline graded/typed coverage below 70%"))
             else:
-                if typed_ratio >= threshold and grade_ratio < threshold:
+                if grade_ratio < 0.30:
+                    issues.append(Issue.warn("typed ok, grades sparse (<30%)"))
+                elif grade_ratio < threshold:
                     issues.append(Issue.warn("typed ok, grades incomplete—check table/inline mapping"))
             if graded_count == 0 and _abstract_mentions_graded(doc):
                 issues.append(
@@ -114,10 +115,26 @@ def validate_article(doc: ArticleDocument, cfg: ExtractionConfig) -> List[Issue]
     if min_sections and not sections_ok(doc, min_sections=min_sections):
         issues.append(Issue.error(f"Research article has too few sections: {len(doc.sections or {})}/{min_sections}"))
 
-    # Research articles require ATS-compliant diagnostic yield
+    # Research articles require ATS-compliant diagnostic yield when applicable
     require_diagnostic_yield = bool(getattr(research_cfg, "require_diagnostic_yield", True))
-    if require_diagnostic_yield:
-        issues.extend(_check_diagnostic_yield(doc))
+    if doc.doc_subtype == "research_diagnostic":
+        performance_sources = _collect_diagnostic_performance_sources(doc)
+        if not performance_sources:
+            issues.append(Issue.error("Diagnostic performance missing for diagnostic research article"))
+        else:
+            ats_gate = getattr(doc, "ats_compatibility", None)
+            if require_diagnostic_yield and getattr(ats_gate, "compatible_with_ats", False):
+                issues.extend(_check_diagnostic_yield(doc))
+            elif require_diagnostic_yield and getattr(doc, "diagnostic_yield", None) is None:
+                issues.append(Issue.warn("Diagnostic yield absent; relying on diagnostic accuracy outputs."))
+    elif doc.doc_subtype in {"research_therapeutic", "editorial_or_economics", "other_research"}:
+        # No strict diagnostic performance requirement for therapeutic/editorial research.
+        pass
+    else:
+        ats_gate = getattr(doc, "ats_compatibility", None)
+        strict_required = bool(getattr(ats_gate, "compatible_with_ats", False))
+        if require_diagnostic_yield and strict_required and getattr(doc, "diagnostic_yield", None) is None:
+            issues.extend(_check_diagnostic_yield(doc))
 
     return issues
 
@@ -246,6 +263,90 @@ def _has_definition_table(doc: ArticleDocument) -> bool:
         if "definition" in combined or "definitions" in combined:
             return True
     return False
+
+
+def _collect_diagnostic_performance_sources(doc: ArticleDocument) -> List[str]:
+    """Return list of sources where diagnostic accuracy/yield evidence is present."""
+
+    sources: List[str] = []
+    diagnostic_yield = getattr(doc, "diagnostic_yield", None)
+    if _metric_has_value(diagnostic_yield):
+        sources.append("document.diagnostic_yield")
+
+    research_outcomes = getattr(doc, "research_outcomes", None)
+    if research_outcomes is None:
+        return sources
+
+    diagnostic_accuracy = _get_value(research_outcomes, "diagnostic_accuracy")
+    if _metric_has_value(diagnostic_accuracy):
+        sources.append("research_outcomes.diagnostic_accuracy")
+
+    research_yield = _get_value(research_outcomes, "diagnostic_yield")
+    if _metric_has_value(research_yield):
+        sources.append("research_outcomes.diagnostic_yield")
+
+    arms = _get_value(research_outcomes, "arms")
+    if isinstance(arms, Sequence):
+        for idx, arm in enumerate(arms):
+            arm_accuracy = _get_value(arm, "diagnostic_accuracy")
+            if _metric_has_value(arm_accuracy):
+                sources.append(f"research_outcomes.arms[{idx}].diagnostic_accuracy")
+            arm_yield = _get_value(arm, "diagnostic_yield")
+            if _metric_has_value(arm_yield):
+                sources.append(f"research_outcomes.arms[{idx}].diagnostic_yield")
+    return sources
+
+
+def _metric_has_value(metric: Any) -> bool:
+    """Check for a usable diagnostic performance payload."""
+
+    if metric is None:
+        return False
+    if isinstance(metric, Mapping):
+        candidates = (
+            metric.get("percent"),
+            metric.get("value"),
+            metric.get("reported_value"),
+        )
+        if any(_is_number(value) for value in candidates):
+            return True
+        numerator = metric.get("numerator")
+        denominator = metric.get("denominator")
+        if _is_number(numerator) and _is_number(denominator):
+            return True
+        n_over_n = metric.get("n_over_N") or metric.get("n_over_n")
+        if n_over_n not in (None, "", []):
+            return True
+        return False
+
+    candidates = (
+        getattr(metric, "percent", None),
+        getattr(metric, "value", None),
+        getattr(metric, "reported_value", None),
+    )
+    if any(_is_number(value) for value in candidates):
+        return True
+    numerator = getattr(metric, "numerator", None)
+    denominator = getattr(metric, "denominator", None)
+    if _is_number(numerator) and _is_number(denominator):
+        return True
+    for attr in ("n_over_N", "n_over_n"):
+        value = getattr(metric, attr, None)
+        if value not in (None, "", []):
+            return True
+    return False
+
+
+def _is_number(value: Any) -> bool:
+    return isinstance(value, (int, float)) and not isinstance(value, bool)
+
+
+def _get_value(obj: Any, key: str) -> Any:
+    if obj is None:
+        return None
+    if isinstance(obj, Mapping):
+        return obj.get(key)
+    return getattr(obj, key, None)
 
 
 __all__ = ["Issue", "sections_ok", "validate_article"]

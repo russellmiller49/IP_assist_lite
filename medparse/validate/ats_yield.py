@@ -5,7 +5,7 @@ from __future__ import annotations
 import re
 from typing import Dict, List, Optional, Tuple
 
-from medparse.schema.article import ArticleDocument
+from medparse.schema.article import ArticleDocument, ATSCompatibility
 from medparse.normalize._ats_codes import (
     ATS_REASON_NO_N_OVER_N,
     ATS_REASON_FOLLOW_UP,
@@ -23,6 +23,13 @@ NONSPECIFIC_TERMS = re.compile(r"\b(atypia|suspicious|nonspecific)\b", re.IGNORE
 N_OVER_N_PATTERN = re.compile(r"\b\d{1,4}\s*/\s*\d{1,4}\b")
 
 
+def _append_reason(reasons: List[str], reason: str) -> None:
+    if not reason:
+        return
+    if reason not in reasons:
+        reasons.append(reason)
+
+
 def validate_ats_yield(document: ArticleDocument) -> Dict[str, object]:
     """Validate diagnostic yield fields against ATS strict semantics."""
 
@@ -33,14 +40,27 @@ def validate_ats_yield(document: ArticleDocument) -> Dict[str, object]:
     }
 
     pipeline_info = getattr(document, "pipeline_info", {}) or {}
+    ats_compat = getattr(document, "ats_compatibility", None)
+    if not isinstance(ats_compat, ATSCompatibility):
+        ats_compat = ATSCompatibility()
+        document.ats_compatibility = ats_compat
+
     subtype = (getattr(document, "doc_subtype", None) or "").strip()
-    if subtype in {"therapeutic_trial", "practice_management"}:
+    strict_candidate = subtype == "research_diagnostic"
+    if not strict_candidate:
         pipeline_info["ats_yield_applicability"] = "not_applicable"
-        pipeline_info["ats_yield_reasons"] = [f"doc_subtype:{subtype}"]
+        primary_reason = f"doc_subtype:{subtype}" if subtype else "not_diagnostic_study"
+        reasons = [primary_reason]
+        if "not_diagnostic_study" not in reasons:
+            reasons.append("not_diagnostic_study")
+        pipeline_info["ats_yield_reasons"] = reasons
+        ats_compat.strict_required = False
+        ats_compat.compatible_with_ats = False
+        _append_reason(ats_compat.exclusion_reasons, "not_diagnostic_study")
         document.pipeline_info = pipeline_info
         result["strict_yield_detected"] = False
         result["compatible"] = False
-        result["exclusion_reasons"] = []
+        result["exclusion_reasons"] = ["not_diagnostic_study"]
         return result
 
     diagnostic = getattr(document, "diagnostic_yield", None)
@@ -61,6 +81,23 @@ def validate_ats_yield(document: ArticleDocument) -> Dict[str, object]:
         result["strict_yield_detected"] = False
         result["compatible"] = False
         result["exclusion_reasons"] = []
+        return result
+    ats_compat.strict_required = True if applicability else False
+    ats_compat.compatible_with_ats = bool(applicability)
+    if applicability:
+        ats_compat.exclusion_reasons = []
+    if not applicability:
+        reasons_block = list(applicability_reasons or [])
+        for reason in reasons_block:
+            _append_reason(ats_compat.exclusion_reasons, reason)
+        _append_reason(ats_compat.exclusion_reasons, "not_diagnostic_study")
+        if "not_diagnostic_study" not in reasons_block:
+            reasons_block.append("not_diagnostic_study")
+        pipeline_info["ats_yield_reasons"] = reasons_block
+        document.pipeline_info = pipeline_info
+        result["strict_yield_detected"] = False
+        result["compatible"] = False
+        result["exclusion_reasons"] = ["not_diagnostic_study"]
         return result
 
     pipeline_info["ats_yield_reasons"] = applicability_reasons or ["diagnostic_cues_detected"]

@@ -20,6 +20,7 @@ class SafetyBlock(MedparseModel):
     hash: Optional[str] = None
     severity: Optional[Literal["warning", "caution", "note"]] = None
     category: Optional[str] = None
+    source: Optional[Literal["heading", "table", "icon"]] = None
     evidence: EvidenceSpan
 
 

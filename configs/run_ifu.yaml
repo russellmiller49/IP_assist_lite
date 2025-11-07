@@ -1,5 +1,6 @@
 doc_type: ifu
 profile: enriched
+second_pass: auto
 engines:
   - pymupdf
   - pdfplumber
@@ -93,13 +94,6 @@ ifu:
       recognize_important_info_block: true
       small_ifu_fallback: true
   safety:
-    default:
-      small_max_pages: 6
-      small_min_blocks: 0
-      min_blocks: 4
-      large_page_threshold: 90
-      large_min_blocks: 20
-      chars_per_block: 7500
-    manufacturers:
-      "INTUITIVE SURGICAL, INC.":
-        large_min_blocks: 24
+    booster:
+      dedupe_ratio: 0.92
+      max_added: 20

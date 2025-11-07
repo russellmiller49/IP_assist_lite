@@ -5,7 +5,7 @@ from __future__ import annotations
 import json
 import warnings
 from pathlib import Path
-from typing import Dict, Iterable, Optional
+from typing import Dict, Iterable, List, Optional
 
 # Suppress sklearn version warnings from spaCy models (loaded internally)
 # These warnings occur because spaCy models contain sklearn components from 1.1.2
@@ -106,6 +106,12 @@ def extract_articles(
         help="Override IFU engines (e.g., text=pymupdf,tables=pdfplumber).",
     ),
     emit_raw_pages: bool = typer.Option(False, "--emit-raw-pages", help="Emit raw page text to sidecar files (disabled by default)."),
+    second_pass: str = typer.Option(
+        "auto",
+        "--second-pass",
+        help="Second-pass remediation stage (off|auto|always).",
+        click_type=click.Choice(["off", "auto", "always"], case_sensitive=False),
+    ),
 ) -> None:
     """Run the article extractor for every PDF in ``input_dir``."""
 
@@ -125,6 +131,7 @@ def extract_articles(
         tables_mode=tables_mode,
         evidence_policy=evidence_policy,
         zotero_json=zotero_json,
+        second_pass_mode=second_pass,
     )
 
 
@@ -175,6 +182,12 @@ def extract_guidelines(
         resolve_path=True,
     ),
     emit_raw_pages: bool = typer.Option(False, "--emit-raw-pages", help="Emit raw page text to sidecar files (disabled by default)."),
+    second_pass: str = typer.Option(
+        "auto",
+        "--second-pass",
+        help="Second-pass remediation stage (off|auto|always).",
+        click_type=click.Choice(["off", "auto", "always"], case_sensitive=False),
+    ),
 ) -> None:
     """Run the guideline extractor for every PDF in ``input_dir``."""
 
@@ -194,6 +207,7 @@ def extract_guidelines(
         tables_mode=tables_mode,
         evidence_policy=evidence_policy,
         zotero_json=zotero_json,
+        second_pass_mode=second_pass,
     )
 
 
@@ -255,6 +269,12 @@ def extract_ifus(
         "--ifu-fast-long-docs/--no-ifu-fast-long-docs",
         help="Enable two-pass fast-path for long IFUs (pymupdf first).",
     ),
+    second_pass: str = typer.Option(
+        "auto",
+        "--second-pass",
+        help="Second-pass remediation stage (off|auto|always).",
+        click_type=click.Choice(["off", "auto", "always"], case_sensitive=False),
+    ),
 ) -> None:
     """Run the IFU/manual extractor."""
 
@@ -276,6 +296,7 @@ def extract_ifus(
         zotero_json=None,
         ifu_engine_override=ifu_engine_override,
         ifu_fast_long_docs=ifu_fast_long_docs,
+        second_pass_mode=second_pass,
     )
 
 
@@ -418,6 +439,7 @@ def _run_pipeline_for_pdfs(
     zotero_json: Optional[Path],
     ifu_engine_override: Optional[str] = None,
     ifu_fast_long_docs: Optional[bool] = None,
+    second_pass_mode: str = "auto",
 ) -> None:
     pdfs = list(pdfs)
     if not pdfs:
@@ -437,6 +459,9 @@ def _run_pipeline_for_pdfs(
     if zotero_json:
         metadata_overrides["zotero_json"] = str(zotero_json)
     metadata_payload = metadata_overrides or None
+    second_pass_normalized = (second_pass_mode or "auto").lower()
+    if second_pass_normalized not in {"off", "auto", "always"}:
+        second_pass_normalized = "auto"
     ifu_payload = _parse_ifu_engine_override(ifu_engine_override)
     if ifu_fast_long_docs is not None:
         if ifu_payload is None:
@@ -459,6 +484,7 @@ def _run_pipeline_for_pdfs(
                 emit_overrides=overrides_payload,
                 metadata_overrides=metadata_payload,
                 ifu_overrides=ifu_payload,
+                second_pass_mode=second_pass_normalized,
             )
         except Exception as exc:  # pragma: no cover - defensive batch safeguard
             write_failure_artifact(
@@ -542,6 +568,7 @@ def _collect_failure_metrics(outcome: PipelineOutcome) -> Dict[str, object]:
         "tables_kept": tables_kept,
         "duration_s": duration,
         "engines_tried": engines_tried,
+        "engine_selected": base_metrics.get("engine_selected"),
         "profile": profile,
         "cache_used": outcome.cache_used,
     }
@@ -607,9 +634,10 @@ def _write_outcome(outcome: PipelineOutcome, out_path: Path) -> bool:
 
     emit_settings = metadata.get("emit", {}) or {}
 
-    validator_issues = []
+    validator_issues = list(outcome.validator_issues or [])
     if outcome.success and outcome.document is not None:
-        validator_issues = validate_document(outcome.document)
+        if not validator_issues:
+            validator_issues = validate_document(outcome.document)
         metadata["validators"] = {
             "passed": not any(issue.severity == "error" for issue in validator_issues),
             "warnings": [issue.message for issue in validator_issues if issue.severity == "warning"],
@@ -638,6 +666,23 @@ def _write_outcome(outcome: PipelineOutcome, out_path: Path) -> bool:
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(payload_json)
     typer.echo(f"Wrote {out_path}")
+
+    applied_list: List[str] = []
+    reasons_list: List[str] = []
+    if outcome.second_pass_report is not None:
+        applied_list = list(outcome.second_pass_report.summary.applied)
+        reasons_list = list(outcome.second_pass_report.summary.reasons)
+    else:
+        second_pass_data = payload.get("second_pass", {}) if isinstance(payload, dict) else {}
+        if isinstance(second_pass_data, dict):
+            raw_applied = second_pass_data.get("applied")
+            if isinstance(raw_applied, list):
+                applied_list = [str(item) for item in raw_applied]
+            raw_reasons = second_pass_data.get("reasons")
+            if isinstance(raw_reasons, list):
+                reasons_list = [str(item) for item in raw_reasons]
+    summary = f"Second pass: {len(applied_list)} patches -> {applied_list} reasons={reasons_list}"
+    typer.echo(summary)
 
     if outcome.success and outcome.document is not None:
         has_errors = False

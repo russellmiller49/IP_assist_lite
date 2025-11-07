@@ -2,12 +2,25 @@
 
 from __future__ import annotations
 
-import math
+import functools
 from dataclasses import dataclass
+from pathlib import Path
 from typing import Dict, Literal, Optional
+
+import yaml
 
 from medparse.config import ExtractionConfig, FrozenNamespace
 from medparse.schema.ifu import IFUDocument
+
+SAFETY_CONFIG_PATH = Path(__file__).resolve().parents[2] / "configs" / "_shared" / "second_pass.yaml"
+
+SEVERITY_TABLE = {
+    "toc_bleed": {"default": "error", "non_intuitive": "warning"},
+    "safety_density_shortfall": {"default": "warning", "intuitive_big": "error"},
+    "missing_front_matter": {"default": "warning", "critical": ["manufacturer", "product_name"]},
+}
+
+FRONT_MATTER_CRITICAL = set(SEVERITY_TABLE["missing_front_matter"].get("critical", []))
 
 Severity = Literal["error", "warning"]
 
@@ -24,6 +37,50 @@ class Issue:
     @classmethod
     def warn(cls, message: str) -> "Issue":
         return cls(message=message, severity="warning")
+
+
+@functools.lru_cache(maxsize=1)
+def _load_safety_density_min() -> Dict[str, object]:
+    if not SAFETY_CONFIG_PATH.exists():
+        return {}
+    try:
+        data = yaml.safe_load(SAFETY_CONFIG_PATH.read_text(encoding="utf-8")) or {}
+    except Exception:
+        return {}
+    if isinstance(data, dict) and "second_pass" in data and isinstance(data["second_pass"], dict):
+        data = data["second_pass"]
+    if not isinstance(data, dict):
+        return {}
+    ifu_cfg = data.get("ifu")
+    if not isinstance(ifu_cfg, dict):
+        return {}
+    density_cfg = ifu_cfg.get("safety_density_min")
+    if isinstance(density_cfg, dict):
+        return density_cfg
+    return {}
+
+
+def _severity_label(kind: str, variant: str = "default") -> str:
+    table = SEVERITY_TABLE.get(kind, {})
+    candidate = table.get(variant)
+    if isinstance(candidate, str):
+        return candidate
+    fallback = table.get("default")
+    if isinstance(fallback, str):
+        return fallback
+    return "error"
+
+
+def _issue_from_label(label: str, message: str) -> Issue:
+    return Issue.error(message) if label == "error" else Issue.warn(message)
+
+
+def _front_matter_issue(field: str, *, strict: bool) -> Issue:
+    message = f"IFU missing front-matter field '{field}'."
+    if strict or field in FRONT_MATTER_CRITICAL:
+        return Issue.error(message)
+    label = _severity_label("missing_front_matter")
+    return _issue_from_label(label, message)
 
 
 def _coerce_text(value: object) -> Optional[str]:
@@ -68,7 +125,17 @@ def validate_ifu(document: IFUDocument, config: ExtractionConfig) -> list[Issue]
                 mfr_config = value if isinstance(value, dict) else {}
                 break
 
+    pipeline_info = getattr(document, "pipeline_info", {}) or {}
+    extracted_chars = _coerce_positive_int(pipeline_info.get("extracted_chars")) if isinstance(pipeline_info, dict) else 0
+
     # For Intuitive, require cover metadata
+    if not manufacturer:
+        issues.append(_front_matter_issue("manufacturer", strict=strict_front))
+
+    product_name = getattr(document, "product_name", None)
+    if not product_name:
+        issues.append(_front_matter_issue("product_name", strict=strict_front))
+
     if mfr_config.get("require_cover_metadata") and manufacturer and "intuitive" in manufacturer.lower():
         for field in ("part_number", "revision", "model"):
             value = getattr(document, field)
@@ -78,21 +145,59 @@ def validate_ifu(document: IFUDocument, config: ExtractionConfig) -> list[Issue]
         # Default validation for other manufacturers
         for field in ("part_number", "revision", "publication_date", "model"):
             value = getattr(document, field)
-            if not value:
-                issues.append(fm_severity(f"IFU missing front-matter field '{field}'."))
+            if value:
+                continue
+            if field == "revision" and extracted_chars and extracted_chars > 100_000:
+                if getattr(document, "part_number") and getattr(document, "model"):
+                    issues.append(Issue.warn("IFU missing front-matter field 'revision' (large document, tolerated)."))
+                    continue
+            issues.append(_front_matter_issue(field, strict=strict_front))
 
-    pipeline_info = getattr(document, "pipeline_info", {})
-    extracted_chars = _coerce_positive_int(pipeline_info.get("extracted_chars")) if isinstance(pipeline_info, dict) else 0
+    manufacturer_label = (manufacturer or "").strip().lower() if manufacturer else ""
+    is_intuitive = "intuitive" in manufacturer_label
+
+    toc_mask: set[int] = set()
+    anchor_spans: Dict[str, Dict[str, object]] = {}
+    if isinstance(pipeline_info, dict):
+        mask_values = pipeline_info.get("toc_guard_pages_dropped") or []
+        if isinstance(mask_values, list):
+            for value in mask_values:
+                try:
+                    page_num = int(value)
+                except (TypeError, ValueError):
+                    continue
+                if page_num > 0:
+                    toc_mask.add(page_num)
+        spans_payload = pipeline_info.get("anchor_spans")
+        if isinstance(spans_payload, dict):
+            anchor_spans = spans_payload
+
     if isinstance(pipeline_info, dict):
         anchor_errors = pipeline_info.get("anchor_bleed_errors") or []
         anchor_fields = pipeline_info.get("anchor_bleed_fields") or []
         for idx, message in enumerate(anchor_errors):
             field_name = anchor_fields[idx] if idx < len(anchor_fields) else None
             suffix = f" ({field_name})" if field_name else ""
-            issues.append(Issue.error(f"Clinical anchor bleed detected{suffix}: {message}"))
+            if toc_mask and field_name:
+                span_dict = anchor_spans.get(field_name) if isinstance(anchor_spans, dict) else None
+                if isinstance(span_dict, dict):
+                    start_page = _coerce_positive_int(span_dict.get("start_page"))
+                    end_page = _coerce_positive_int(span_dict.get("end_page")) or start_page
+                    if start_page is not None:
+                        start_bound = start_page
+                        end_bound = end_page if end_page is not None else start_page
+                        if end_bound is None:
+                            end_bound = start_bound
+                        low = min(start_bound, end_bound)
+                        high = max(start_bound, end_bound)
+                        span_pages = set(range(low, high + 1))
+                        if span_pages.isdisjoint(toc_mask):
+                            continue
+            severity_variant = "default" if is_intuitive else "non_intuitive"
+            bleeds_label = _severity_label("toc_bleed", severity_variant)
+            issues.append(_issue_from_label(bleeds_label, f"Clinical anchor bleed detected{suffix}: {message}"))
 
-        toc_guard = pipeline_info.get("toc_guard") or {}
-        dropped = toc_guard.get("pages_dropped")
+        dropped = pipeline_info.get("toc_guard_pages_dropped")
         if dropped:
             issues.append(Issue.warn(f"TOC guard dropped pages {dropped}"))
 
@@ -131,56 +236,88 @@ def validate_ifu(document: IFUDocument, config: ExtractionConfig) -> list[Issue]
     if safety_ns is None:
         raw_safety = getattr(config, "ifu", {}).get("safety") if isinstance(getattr(config, "ifu", {}), dict) else {}
         safety_config = raw_safety or {}
-    else:
-        if hasattr(safety_ns, "to_dict"):
-            safety_config = safety_ns.to_dict()
-        elif isinstance(safety_ns, dict):
-            safety_config = safety_ns
+    elif hasattr(safety_ns, "to_dict"):
+        safety_config = safety_ns.to_dict()
+    elif isinstance(safety_ns, dict):
+        safety_config = safety_ns
 
-    default_safety = safety_config.get("default", {}) if isinstance(safety_config, dict) else {}
-    manufacturer_rules = {}
-    manufacturer_normalized = (document.manufacturer or "").strip().upper()
-    overrides = safety_config.get("manufacturers") if isinstance(safety_config, dict) else {}
-    if manufacturer_normalized and isinstance(overrides, dict):
-        for key, value in overrides.items():
-            if key.strip().upper() == manufacturer_normalized and isinstance(value, dict):
-                manufacturer_rules = value
+    min_blocks_cfg = {}
+    if isinstance(safety_config, dict):
+        candidate_cfg = safety_config.get("min_blocks")
+        if isinstance(candidate_cfg, dict):
+            min_blocks_cfg = candidate_cfg
+
+    def _as_int(value: object, default: int) -> int:
+        try:
+            number = int(value)
+            return number if number >= 0 else default
+        except (TypeError, ValueError):
+            return default
+
+    default_min = _as_int(min_blocks_cfg.get("default"), 12)
+    small_leaflet_pages_max = _as_int(min_blocks_cfg.get("small_leaflet_pages_max"), 4)
+    small_leaflet_min = _as_int(min_blocks_cfg.get("small_leaflet_min"), max(1, default_min // 2))
+    vendor_overrides = min_blocks_cfg.get("vendor_overrides") if isinstance(min_blocks_cfg, dict) else {}
+
+    density_cfg = _load_safety_density_min()
+    if density_cfg:
+        default_min = _as_int(density_cfg.get("default"), default_min)
+        if density_cfg.get("small_leaflet") is not None:
+            small_leaflet_min = _as_int(density_cfg.get("small_leaflet"), small_leaflet_min)
+        if density_cfg.get("small_leaflet_pages_max") is not None:
+            small_leaflet_pages_max = _as_int(density_cfg.get("small_leaflet_pages_max"), small_leaflet_pages_max)
+        overrides_cfg = density_cfg.get("by_manufacturer")
+        if isinstance(overrides_cfg, dict):
+            vendor_overrides = overrides_cfg
+
+    manufacturer_label = (document.manufacturer or "").strip().lower()
+    vendor_min = default_min
+    vendor_override_applied = False
+    if manufacturer_label and isinstance(vendor_overrides, dict):
+        for key, value in vendor_overrides.items():
+            if not isinstance(key, str):
+                continue
+            key_norm = key.strip().lower()
+            if not key_norm:
+                continue
+            if key_norm in manufacturer_label:
+                vendor_min = _as_int(value, default_min)
+                vendor_override_applied = True
                 break
 
-    def _resolve_threshold(name: str, default_value: int) -> int:
-        candidate = manufacturer_rules.get(name)
-        if candidate is None:
-            candidate = default_safety.get(name, default_value)
-        try:
-            return int(candidate)
-        except (TypeError, ValueError):
-            return default_value
+    expected_min = small_leaflet_min if page_count and page_count <= small_leaflet_pages_max else vendor_min
 
-    small_max_pages = _resolve_threshold("small_max_pages", 6)
-    small_min_blocks = _resolve_threshold("small_min_blocks", 0)
-    min_blocks_standard = _resolve_threshold("min_blocks", 4)
-    large_page_threshold = _resolve_threshold("large_page_threshold", 80)
-    large_min_blocks = _resolve_threshold("large_min_blocks", 20)
-    chars_per_block = _resolve_threshold("chars_per_block", 7500)
-
-    expected_density = min_blocks_standard
-    if page_count and page_count <= small_max_pages:
-        expected_density = small_min_blocks
-    else:
-        if extracted_chars and chars_per_block > 0:
-            char_based = math.ceil(extracted_chars / chars_per_block)
-            expected_density = max(expected_density, min(large_min_blocks, char_based))
-        if page_count and page_count >= large_page_threshold:
-            expected_density = max(expected_density, large_min_blocks)
-
-    if expected_density > 0 and len(safety_blocks) < expected_density:
-        severity_fn = Issue.warn if (page_count and page_count <= small_max_pages) else Issue.error
-        issues.append(
-            severity_fn(
-                f"Safety content below expected density (found {len(safety_blocks)}, expected >= {expected_density})"
-            )
+    if isinstance(pipeline_info, dict):
+        pipeline_info.setdefault("safety_expected_min", expected_min)
+        expectation_source = (
+            "density_config_override"
+            if density_cfg and vendor_override_applied
+            else "density_config"
+            if density_cfg
+            else ("vendor_override" if vendor_override_applied else "default")
         )
+        pipeline_info.setdefault("safety_expectation_source", expectation_source)
 
+    if expected_min > 0 and len(safety_blocks) < expected_min:
+        message = f"Safety content below expected density (found {len(safety_blocks)}, expected >= {expected_min})"
+        variant = "default"
+        if manufacturer_label and "intuitive" in manufacturer_label and page_count and page_count > 30:
+            variant = "intuitive_big"
+        severity_label = _severity_label("safety_density_shortfall", variant)
+        issues.append(_issue_from_label(severity_label, message))
+
+    if isinstance(pipeline_info, dict):
+        document.pipeline_info = pipeline_info
+
+    if getattr(document, "references", None):
+        sections_map = {}
+        if isinstance(pipeline_info, dict) and isinstance(pipeline_info.get("sections"), dict):
+            sections_map = pipeline_info.get("sections") or {}
+        elif isinstance(getattr(document, "sections", None), dict):
+            sections_map = document.sections  # type: ignore[assignment]
+        references_section = sections_map.get("references") if isinstance(sections_map, dict) else None
+        if not isinstance(references_section, dict):
+            issues.append(Issue.warn("References detected but references section anchor missing."))
     return issues
 
 

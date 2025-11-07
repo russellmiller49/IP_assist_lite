@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from medparse.ingest.models import PageData
+from medparse.extractors.ifu import _clamp_pages
 from medparse.ifu.toc_guard import TocGuardConfig, apply_toc_guard, trim_anchor_bleed
 
 
@@ -31,3 +32,8 @@ def test_trim_anchor_bleed_removes_toc_lines() -> None:
     assert "Actual prose" in trimmed
     assert "Warnings" not in trimmed
     assert removed > 0
+
+
+def test_clamp_pages_bounds_results_to_document_range() -> None:
+    clamped = _clamp_pages([0, 1, 5, 9, "10", None], page_count=6)
+    assert clamped == [1, 5, 6]

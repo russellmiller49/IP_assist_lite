@@ -1,0 +1,12 @@
+chest:
+  scale: CHEST
+  entries:
+    - pattern: "(strong|weak) recommendation(?:;|\\s)+(high|moderate|low) certainty"
+      map:
+        strength: "$1"
+        certainty: "$2"
+        normalized: "CHEST:$1/$2"
+    - pattern: "ungraded\\s+consensus(?:-based)?\\s+statement"
+      map:
+        normalized: "CHEST:UCS"
+        ungraded: true

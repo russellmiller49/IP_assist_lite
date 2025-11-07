@@ -63,6 +63,47 @@ class Outcome(MedparseModel):
     evidence_refs: Optional[List[str]] = None  # Hash IDs for evidence bank
 
 
+class CountFraction(MedparseModel):
+    """Structured numerator/denominator pair for arm-level outcomes."""
+
+    numerator: Optional[int] = Field(default=None, ge=0)
+    denominator: Optional[int] = Field(default=None, ge=0)
+
+
+class ResearchOutcomeMetric(MedparseModel):
+    """Normalized diagnostic performance metric with evidence pointers."""
+
+    percent: Optional[float] = Field(default=None, ge=0.0, le=100.0)
+    ci_95: Optional[Tuple[float, float]] = None
+    p_value: Optional[float] = None
+    n_over_N: Optional[CountFraction] = None
+    reasons: List[str] = Field(default_factory=list)
+    evidence_ids: List[str] = Field(default_factory=list)
+
+
+class ResearchOutcomeArm(MedparseModel):
+    """Arm-level diagnostic performance and complications."""
+
+    name: str
+    diagnostic_accuracy: Optional[ResearchOutcomeMetric] = None
+    diagnostic_yield: Optional[ResearchOutcomeMetric] = None
+    complications: Dict[str, ResearchOutcomeMetric] = Field(default_factory=dict)
+    evidence_ids: List[str] = Field(default_factory=list)
+
+
+class ResearchOutcomes(MedparseModel):
+    """Bundle of diagnostic research outcomes with per-arm metrics."""
+
+    design: Optional[str] = None
+    primary_outcome: Optional[str] = None
+    diagnostic_accuracy: Optional[ResearchOutcomeMetric] = None
+    diagnostic_yield: Optional[ResearchOutcomeMetric] = None
+    complications: Dict[str, ResearchOutcomeMetric] = Field(default_factory=dict)
+    arms: List[ResearchOutcomeArm] = Field(default_factory=list)
+    evidence_ids: List[str] = Field(default_factory=list)
+    reasons: List[str] = Field(default_factory=list)
+
+
 class DiagnosticYield(MedparseModel):
     """ATS-compliant diagnostic yield with denominator provenance."""
 
@@ -97,6 +138,14 @@ class DiagnosticYield(MedparseModel):
     @property
     def strict_denominator(self) -> Optional[int]:
         return self.denominator
+
+
+class ATSCompatibility(MedparseModel):
+    """Compatibility report for ATS diagnostic-yield expectations."""
+
+    compatible_with_ats: bool = False
+    exclusion_reasons: List[str] = Field(default_factory=list)
+    strict_required: bool = False
 
 
 class GuidelineRecommendation(MedparseModel):
@@ -198,6 +247,10 @@ class ArticleDocument(BaseDocument):
         Literal[
             "guideline",
             "research",
+            "research_diagnostic",
+            "research_therapeutic",
+            "editorial_or_economics",
+            "other_research",
             "review",
             "statement",
             "classification",
@@ -244,11 +297,13 @@ class ArticleDocument(BaseDocument):
     # Outcomes (enhanced)
     outcomes: List[Outcome] = Field(default_factory=list)
     diagnostic_yield: Optional[DiagnosticYield] = None
+    research_outcomes: Optional[ResearchOutcomes] = None
     definitions: Dict[str, str] = Field(default_factory=dict)
     definitions_evidence: Optional[EvidenceSpan] = None
     definitions_evidence_refs: Optional[List[str]] = None
     diagnostic_flow: Optional[DiagnosticFlow] = None
     yield_definitions_present: Optional[bool] = None
+    ats_compatibility: ATSCompatibility = Field(default_factory=ATSCompatibility)
 
     # Guidelines (enhanced)
     recommendations: List[GuidelineRecommendation] = Field(default_factory=list)

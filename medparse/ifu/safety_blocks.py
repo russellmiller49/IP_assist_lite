@@ -48,7 +48,9 @@ LEVEL_TO_SEVERITY = {
     "attention": "warning",
 }
 
-ICON_PREFIX_PATTERN = re.compile(r"^[\s\-\u2022\u2023\u25AA\u25CF\u25A0\u25B6\u25C6\u25C7\u25CF\u25A1\u2023●▪■□▶►»⚠!]+")
+ICON_PREFIX_PATTERN = re.compile(
+    r"^[\s\-\u2022\u2023\u25AA\u25CF\u25A0\u25B6\u25C6\u25C7\u25CF\u25A1\u25B2\u25B3\u2206\u2023●▪■□▶►»⚠!△▲∆]+"
+)
 COLON_HEADER_PATTERN = re.compile(r"^\s*([A-Z][A-Z0-9\s/&\-]+?)\s*[:：]\s*(.*)$")
 DASH_HEADER_PATTERN = re.compile(r"^\s*([A-Z][A-Z0-9\s/&\-]+?)\s*[–—\-]\s*(.+)$")
 HEADING_WITH_NUMBER_PATTERN = re.compile(r"^\s*\d+(?:\.\d+)*\s+[A-Z]")
@@ -70,6 +72,7 @@ class DetectedHeader:
     title: str
     inline_text: str = ""
     lines_consumed: int = 1
+    source: str = "heading"
 
 
 @functools.lru_cache(maxsize=1)
@@ -130,6 +133,7 @@ def extract_safety_blocks(
                         text=cleaned_text,
                         page=page.number,
                         hash=block_hash,
+                        source=header.source,
                         evidence=EvidenceSpan(
                             text=cleaned_text[:200],
                             page=page.number,
@@ -188,9 +192,37 @@ def _detect_header(
     if not raw_line or not raw_line.strip():
         return None
 
+    source = "heading"
+    if "|" in raw_line or "\t" in raw_line:
+        source = "table"
+    if ICON_PREFIX_PATTERN.match(raw_line):
+        source = "icon"
+
     candidate = _strip_leading_icons(raw_line)
-    if not candidate:
+    lines_consumed = 1
+
+    if not candidate and source == "icon":
+        lookahead_idx = idx + 1
+        while lookahead_idx < len(lines):
+            lookahead_line = lines[lookahead_idx].strip()
+            if lookahead_line:
+                break
+            lookahead_idx += 1
+        if lookahead_idx < len(lines):
+            next_candidate = _strip_leading_icons(lines[lookahead_idx])
+            if next_candidate and (_match_level(next_candidate) or next_candidate.isupper()):
+                candidate = next_candidate
+                raw_line = lines[lookahead_idx]
+                lines_consumed = lookahead_idx - idx + 1
+            else:
+                candidate = next_candidate
+        if not candidate:
+            return None
+    elif not candidate:
         return None
+
+    if source != "icon" and ("|" in raw_line or "\t" in raw_line):
+        source = "table"
 
     inline_text = ""
     label = candidate
@@ -209,6 +241,9 @@ def _detect_header(
     if not label:
         return None
 
+    if source == "heading" and colon_match and label.isupper():
+        source = "table"
+
     level = _match_level(label)
     upper_label = label.upper()
     if not level and upper_label in phrase_set:
@@ -217,7 +252,11 @@ def _detect_header(
     if not level:
         return None
 
-    return DetectedHeader(level=level, title=label, inline_text=inline_text, lines_consumed=1)
+    inline_text = inline_text.strip()
+    if inline_text:
+        inline_text = inline_text.strip(" -–—")
+
+    return DetectedHeader(level=level, title=label, inline_text=inline_text, lines_consumed=lines_consumed, source=source)
 
 
 def _collect_block_lines(

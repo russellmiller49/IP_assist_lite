@@ -30,6 +30,7 @@ python -m medparse.cli extract-articles \
   --config configs/run_article.yaml \
   --profile enriched \
   --no-cache \
+  --second-pass auto \
   --evidence-policy compact \
   --tables-mode compact
 
@@ -40,6 +41,7 @@ python -m medparse.cli extract-ifus \
   --config configs/run_ifu.yaml \
   --profile enriched \
   --no-cache \
+  --second-pass auto \
   --evidence-policy compact \
   --tables-mode compact \
   --ifu-engine hybrid \
@@ -159,6 +161,17 @@ pytest tests/integration/test_medparse_articles.py \
   tests/integration/test_medparse_textbook.py \
   tests/unit/test_normalizers.py \
   tests/unit/test_cli_batch.py -q
+
+---
+
+## 🛠 Second-Pass for IFUs
+
+- `second_pass: auto` is the default in `configs/run_ifu.yaml`; override via `--second-pass {auto,always,off}`.
+- TOC guard now runs before anchor discovery, drops leading TOC pages, and records them in `_metrics.toc_pages_dropped`. Anchors starting on TOC pages are re-searched automatically.
+- Front-matter patterns live in `configs/_shared/ifu_frontmatter.yaml` (`pattern_bundle`). Extend this YAML to capture new manufacturers, product names, part numbers, models, revisions, or publication dates.
+- Safety density thresholds are centralized in `configs/_shared/second_pass.yaml` (`second_pass.ifu.safety_density_min`) with defaults (20) and vendor overrides (Intuitive=20, ERBE=15, Olympus=8). Validators and second pass use the same table.
+- References anchor patcher now registers a `references` section so downstream validators remain quiet after backfill.
+- Second-pass results surface in both `second_pass` (mode/applied/reasons/modifications) and `_metrics.second_pass_*`, and the CLI prints a single summary line of applied IFU patchers.
 ```
 
 ---

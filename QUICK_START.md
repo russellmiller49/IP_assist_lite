@@ -67,6 +67,7 @@ python -m medparse.cli extract-articles "data/Input pdfs/articles/pdf" \
   --config configs/run_article.yaml \
   --profile enriched \
   --no-cache \
+  --second-pass auto \
   --evidence-policy compact \
   --tables-mode compact
 
@@ -76,6 +77,7 @@ python -m medparse.cli extract-ifus "data/Input pdfs/IFUs/pdf" \
   --config configs/run_ifu.yaml \
   --profile enriched \
   --no-cache \
+  --second-pass auto \
   --evidence-policy compact \
   --tables-mode compact \
   --ifu-engine hybrid \
@@ -103,6 +105,13 @@ Results are saved to:
 Environment variables in `.env`:
 - `UMLS_API_KEY` - For concept linking
 - `QUICKUMLS_PATH` - Path to QuickUMLS database (optional)
+
+Key IFU configuration files:
+- `configs/_shared/ifu_frontmatter.yaml` – regex `pattern_bundle` for manufacturer, product name, part number, revision, publication date, and model. Extend this file when onboarding a new vendor.
+- `configs/_shared/second_pass.yaml` – houses second-pass defaults, including IFU safety density thresholds (`second_pass.ifu.safety_density_min`). Defaults are 20 blocks (8 for ≤4-page leaflets) with overrides for Intuitive, ERBE, and Olympus.
+- `configs/run_ifu.yaml` – controls TOC guard, engine selection, and manufacturer overrides (`small_ifu_threshold`, `ifu.engine`, etc.).
+
+Each extraction now records a second-pass summary (`second_pass.applied`, `second_pass.reasons`) and rolled-up metrics in `_metrics` so QA can verify which fixes ran and how many safety blocks were harvested.
 
 ## Troubleshooting
 

@@ -17,7 +17,8 @@ conda run -n medparse-py311 python -m medparse.cli extract-articles \
     --out out/articles \
     --config configs/run_article.yaml \
     --profile enriched \
-    --no-cache
+    --no-cache \
+    --second-pass auto
 ```
 
 ### Using conda run with zotero (Recommended)
@@ -28,6 +29,7 @@ conda run -n medparse-py311 python -m medparse.cli extract-articles \
   --config configs/run_article.yaml \
   --profile enriched \
   --no-cache \
+  --second-pass auto \
   --zotero-json data/zotero/my_library.json \
   --evidence-policy compact
 ```
@@ -54,7 +56,8 @@ conda run -n medparse-py311 python -m medparse.cli extract-ifus \
     --out out/ifus \
     --config configs/run_ifu.yaml \
     --profile enriched \
-    --no-cache
+    --no-cache \
+    --second-pass auto
 ```
 
 ### Using wrapper script
@@ -115,6 +118,7 @@ conda run -n medparse-py311 python scripts/batch_extract_ifus.py
 | `--no-cache` | Skip pipeline cache | Off (uses cache) |
 | `--force-deep` | Force full extraction | Off |
 | `--max-pages N` | Limit pages processed | No limit |
+| `--second-pass` | Second-pass remediation stage | `auto` |
 
 ---
 
@@ -133,6 +137,67 @@ conda run -n medparse-py311 python scripts/batch_extract_ifus.py
 - ❌ Minimal validation
 - ⏱️ Faster: ~2-5 seconds per document
 - 📁 Smaller output files (10-50KB)
+
+---
+
+## Second-Pass Remediation
+
+The second-pass stage applies targeted fixes and improvements after initial extraction.
+
+### Modes
+
+- `auto` (default): Runs second-pass when validation issues are detected
+- `always`: Always runs second-pass regardless of validation status
+- `off`: Disables second-pass remediation
+
+### What Second-Pass Does
+
+Second-pass includes patchers for:
+
+- **Articles/Guidelines**:
+  - ATS (diagnostic yield) extraction fixes
+  - Section salvage for missing content
+  - Guideline backfill
+  - Article affiliation extraction
+
+- **IFUs**:
+  - Front-matter enrichment (manufacturer, PN, revision, publication date, model)
+  - TOC guard + anchor hygiene (drops TOC pages and reseeks anchors safely)
+  - Safety density booster for sparse warnings/cautions
+  - Indications/intended-use salvage for small leaflets
+  - References anchor backfill for trailing bibliographies
+
+### IFU Second-Pass Helpers
+
+- **TOC guard & anchors** – the IFU pipeline runs TOC guard before anchor discovery and records dropped pages in `_metrics.toc_pages_dropped`. Anchors that start on TOC pages are automatically re-searched on the next content page.
+- **Front-matter pattern bundle** – regex bundles live in `configs/_shared/ifu_frontmatter.yaml` under `pattern_bundle`. Add vendor-specific patterns there to teach the extractor how to recognize new manufacturers, product names, part numbers, models, revisions, or publication dates.
+- **Safety density overrides** – centralized in `configs/_shared/second_pass.yaml` (`second_pass.ifu.safety_density_min`). Defaults are 20 blocks (8 for ≤4-page leaflets) with vendor overrides: Intuitive=20, ERBE=15, Olympus=8. Validator severities follow the same table automatically.
+- **Metrics & traceability** – every extraction now emits `second_pass.applied`, `second_pass.reasons`, and `_metrics.second_pass_modifications` so downstream QA can assert which patchers ran.
+
+### Usage Examples
+
+```bash
+# Enable second-pass (auto mode - default)
+conda run -n medparse-py311 python -m medparse.cli extract-ifus \
+    "data/Input pdfs/IFUs/pdf" \
+    --out out/ifus \
+    --profile enriched \
+    --second-pass auto
+
+# Always run second-pass
+conda run -n medparse-py311 python -m medparse.cli extract-articles \
+    "data/Input pdfs/articles/pdf" \
+    --out out/articles \
+    --profile enriched \
+    --second-pass always
+
+# Disable second-pass
+conda run -n medparse-py311 python -m medparse.cli extract-ifus \
+    "data/Input pdfs/IFUs/pdf" \
+    --out out/ifus \
+    --profile enriched \
+    --second-pass off
+```
 
 ---
 

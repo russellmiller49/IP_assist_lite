@@ -32,12 +32,15 @@ def test_ion_manual_toc_guard_and_anchor_hygiene() -> None:
     for anchor in ("indications_for_use", "warnings", "sterilization"):
         assert anchors_bleed.get(anchor, 0) == 0
 
-    toc_guard = pipeline.get("toc_guard") or {}
-    dropped_pages = toc_guard.get("pages_dropped") or []
-    assert toc_guard.get("enabled") is True
+    dropped_pages = pipeline.get("toc_guard_pages_dropped") or []
+    assert pipeline.get("toc_guard_applied") is True
     assert pipeline.get("toc_guard_pages_dropped_count", 0) >= 3
     expected_drop = {5, 6, 7, 8, 9}
     assert expected_drop.issubset(set(dropped_pages)), dropped_pages
+
+    assert pipeline.get("references_anchor_backfill") is True
+    references_anchor = pipeline.get("references_anchor") or {}
+    assert references_anchor.get("pages")
 
     text_fields = [
         getattr(document, "indications_for_use", None),

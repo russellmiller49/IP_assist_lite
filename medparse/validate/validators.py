@@ -125,8 +125,23 @@ def _validate_ifu(
             )
         )
 
-    # References should be empty for IFU unless true bibliography detected
-    if document.references:
+    pipeline_info = getattr(document, "pipeline_info", {}) or {}
+    references_backfilled = False
+    has_references_section = False
+    if isinstance(pipeline_info, dict):
+        references_backfilled = bool(pipeline_info.get("references_anchor_backfill"))
+        sections_payload = pipeline_info.get("sections")
+        if isinstance(sections_payload, dict):
+            has_references_section = any(
+                str(key).strip().lower() == "references" for key in sections_payload.keys()
+            )
+    sections_map = getattr(document, "sections", None)
+    if not has_references_section and isinstance(sections_map, dict):
+        has_references_section = any(
+            str(key).strip().lower() == "references" for key in sections_map.keys()
+        )
+
+    if document.references and not references_backfilled and not has_references_section:
         issues.append(
             ValidationIssue(
                 "References detected for IFU – ensure a proper References/Bibliography anchor exists.",

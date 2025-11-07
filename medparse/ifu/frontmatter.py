@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import functools
 import re
+from collections import Counter
 from dataclasses import dataclass, field
 from datetime import datetime
 from pathlib import Path
@@ -79,6 +80,10 @@ BLOCKLIST_KEYWORDS = {
 }
 
 CONFIG_PATH = Path(__file__).resolve().parents[2] / "configs" / "_shared" / "ifu_frontmatter.yaml"
+FOOTER_SAMPLE_PAGES = 2
+DOMAIN_PATTERN = re.compile(r"https?://(?:www\.)?([A-Za-z0-9\-]+)\.(?:com|org|net|de|eu|co\.[a-z]{2}|[a-z]{2,})", re.IGNORECASE)
+EMAIL_PATTERN = re.compile(r"[A-Za-z0-9_.+-]+@([A-Za-z0-9\-]+)\.[A-Za-z]{2,}", re.IGNORECASE)
+COPYRIGHT_PATTERN = re.compile(r"©\s*(?:\d{4}\s*)?([A-Z][A-Za-z0-9&\-\s]{2,})")
 
 
 @functools.lru_cache(maxsize=1)
@@ -128,6 +133,109 @@ def _load_frontmatter_config() -> Dict[str, object]:
     data["_product_patterns"] = product_patterns_cfg
 
     return data
+
+
+@functools.lru_cache(maxsize=1)
+def load_pattern_bundle() -> Dict[str, List[str]]:
+    """Return the configured regex bundle used for second-pass backfills."""
+
+    config = _load_frontmatter_config()
+    raw_bundle = config.get("pattern_bundle") if isinstance(config, dict) else {}
+    if not isinstance(raw_bundle, dict):
+        return {}
+
+    bundle: Dict[str, List[str]] = {}
+    for key, values in raw_bundle.items():
+        if not isinstance(values, list):
+            continue
+        cleaned: List[str] = []
+        for value in values:
+            if not isinstance(value, str):
+                continue
+            stripped = value.strip()
+            if stripped:
+                cleaned.append(stripped)
+        if cleaned:
+            bundle[str(key)] = cleaned
+    return bundle
+def infer_manufacturer_from_footer_texts(
+    texts: Sequence[str],
+    *,
+    domain_hits: bool = True,
+    copyright_hits: bool = True,
+) -> Optional[str]:
+    """Infer manufacturer name from footer/copyright text fragments."""
+
+    if not texts:
+        return None
+
+    candidates: Counter[str] = Counter()
+    domains: List[str] = []
+
+    for raw_line in texts:
+        line = (raw_line or "").strip()
+        if not line:
+            continue
+        if domain_hits:
+            for match in DOMAIN_PATTERN.finditer(line):
+                domains.append(match.group(1).lower())
+            for match in EMAIL_PATTERN.finditer(line):
+                domains.append(match.group(1).lower())
+        if copyright_hits:
+            match = COPYRIGHT_PATTERN.search(line)
+            if match:
+                name = match.group(1).strip(" .")
+                if name:
+                    candidates[name] += 3
+
+    proper_pattern = re.compile(r"\b([A-Z][A-Za-z0-9&\-]+(?:\s+[A-Z][A-Za-z0-9&\-]+){0,3})\b")
+    for raw_line in texts:
+        for match in proper_pattern.finditer(raw_line or ""):
+            token = match.group(1).strip()
+            if not token or len(token) < 3:
+                continue
+            lowered = token.lower()
+            if lowered in {"warning", "caution", "danger", "notice", "important"}:
+                continue
+            candidates[token] += 1
+
+    if not candidates:
+        return None
+
+    if domains:
+        for name in list(candidates.keys()):
+            lowered = name.lower().replace(" ", "")
+            if any(domain in lowered or lowered in domain for domain in domains):
+                candidates[name] += 5
+
+    best = candidates.most_common(1)
+    if not best:
+        return None
+    name, score = best[0]
+    if score < 2:
+        return None
+    return name.strip()
+
+
+def infer_manufacturer_from_footer(
+    pages: Sequence[PageData],
+    *,
+    domain_hits: bool = True,
+    copyright_hits: bool = True,
+) -> Optional[str]:
+    """Infer manufacturer name from the first few pages."""
+
+    if not pages:
+        return None
+
+    samples: List[str] = []
+    for page in pages[:FOOTER_SAMPLE_PAGES]:
+        if page.lines:
+            tail = page.lines[-6:] if len(page.lines) > 6 else page.lines
+            samples.extend(tail)
+        elif page.text:
+            samples.extend(page.text.splitlines()[-6:])
+    return infer_manufacturer_from_footer_texts(samples, domain_hits=domain_hits, copyright_hits=copyright_hits)
 
 
 @dataclass(slots=True)
@@ -200,6 +308,18 @@ def extract_front_matter(
             result.manufacturer = "Olympus Corporation"
         if result.manufacturer:
             result.record("manufacturer", "metadata_title")
+
+    if not result.manufacturer:
+        footer_guess = infer_manufacturer_from_footer(pages)
+        if footer_guess:
+            result.manufacturer = footer_guess
+            result.record("manufacturer", "footer")
+
+    if not result.model:
+        alt_match = re.search(r"\bALT[\s\-]*PRO\b", cover_text, re.IGNORECASE)
+        if alt_match:
+            result.model = "ALT PRO"
+            result.record("model", "cover")
 
     for field, patterns in IDENTIFIER_PATTERNS.items():
         match_info = _search_patterns(cover_text, patterns)
@@ -457,4 +577,9 @@ def _score_title(line: str) -> float:
     return len(stripped) * (1.0 + uppercase_ratio)
 
 
-__all__ = ["extract_front_matter"]
+__all__ = [
+    "extract_front_matter",
+    "infer_manufacturer_from_footer",
+    "infer_manufacturer_from_footer_texts",
+    "load_pattern_bundle",
+]

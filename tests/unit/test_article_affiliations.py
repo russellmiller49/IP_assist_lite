@@ -3,10 +3,12 @@ from __future__ import annotations
 import pytest
 
 from medparse.ingest.models import PageData
-from medparse.normalize.article_frontmatter import link_authors_to_affiliations
 from medparse.normalize.article_frontmatter import extract_superscript_affiliations
+from medparse.normalize.article_frontmatter import link_authors_to_affiliations
 from medparse.pipeline.run_extract import _document_metrics
 from medparse.schema.article import Affiliation, ArticleDocument, Author
+from medparse.second_pass.patchers.article_affiliations import apply_article_affiliations
+from medparse.second_pass.types import SecondPassContext
 
 
 def test_link_authors_to_affiliations_returns_unresolved() -> None:
@@ -83,3 +85,68 @@ def test_link_authors_to_affiliations_majority_mapped(caplog: pytest.LogCaptureF
     assert authors[1].affiliation_ids == ["2"]
     assert authors[2].affiliation_ids == []
     assert "Unable to resolve" not in caplog.text
+
+
+def test_article_affiliations_nearest_mapping_second_pass() -> None:
+    authors = [
+        Author(given="Alice", family="Johnson"),
+        Author(given="Brian", family="Lee"),
+    ]
+    affiliations = [
+        Affiliation(
+            id="1",
+            text="Massachusetts General Hospital, Boston, Massachusetts; Brigham and Women's Hospital, Boston, Massachusetts; for the Lung Screening Research Group",
+        )
+    ]
+    document = ArticleDocument(
+        doc_type="article",
+        source_file="nejm.pdf",
+        page_count=1,
+        authors=authors,
+        affiliations=affiliations,
+    )
+    document.pipeline_info = {}
+
+    paragraph_store = {
+        "p1": {"text": "Original Article", "order": [1], "page": 1},
+        "p2": {
+            "text": "Alice Johnson, M.D., Massachusetts General Hospital, Boston, Massachusetts",
+            "order": [2],
+            "page": 1,
+        },
+        "p3": {
+            "text": "Brian Lee, M.D., Brigham and Women's Hospital, Boston, Massachusetts",
+            "order": [3],
+            "page": 1,
+        },
+        "p4": {
+            "text": "for the Lung Screening Research Group",
+            "order": [4],
+            "page": 1,
+        },
+    }
+
+    ctx = SecondPassContext(
+        validation_issues=[],
+        paragraph_store=paragraph_store,
+        evidence_bank={},
+        profile=None,
+        engines_tried=[],
+        emit_policies={},
+        config={},
+        mode="always",
+        doc_metrics={},
+        max_runtime_ms=2500,
+    )
+
+    result = apply_article_affiliations(document, ctx)
+    assert result.applied is True
+    assert "affiliations_split" in result.modifications
+    assert result.modifications["affiliations_split"] >= 1
+    assert document.pipeline_info.get("frontmatter_affiliations_unresolved") == 0
+    consortia = document.pipeline_info.get("affiliation_consortia", [])
+    assert consortia and "Lung Screening Research Group" in consortia[0]
+
+    assert document.authors[0].affiliation_ids == ["1"]
+    assert document.authors[1].affiliation_ids
+    assert document.authors[1].affiliation_ids != ["1"]

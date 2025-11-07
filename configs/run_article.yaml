@@ -1,5 +1,6 @@
 doc_type: article
 profile: enriched
+second_pass: auto
 engines:
   - pymupdf
   - pdfplumber

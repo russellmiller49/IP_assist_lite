@@ -18,6 +18,22 @@ def _make_relation(subject: str, predicate: str, obj: str) -> Relation:
 def test_emit_metrics_mirror_pipeline_counters():
     document = ArticleDocument(doc_type="article", source_file="dummy.pdf", page_count=1)
     document.pipeline_info["paragraph_dedup_applied"] = True
+    document.pipeline_info["second_pass"] = {
+        "applied": ["patch_a"],
+        "patches_applied": ["patch_a"],
+        "modifications": {"diagnostic_yield_numerator": 1},
+        "diff_summary": {"diagnostic_yield_numerator": 1},
+        "reasons": ["ats_diagnostic_yield_backfill"],
+    }
+    document.ats_compatibility.compatible_with_ats = False
+    document.ats_compatibility.strict_required = False
+    document.ats_compatibility.exclusion_reasons = ["not_diagnostic_study"]
+    document.pipeline_info["safety_blocks_added"] = 2
+    document.pipeline_info["safety_expected_min"] = 12
+    document.pipeline_info["references_anchor_backfill"] = True
+    document.pipeline_info["references_anchor"] = {"pages": [9, 10], "source": "second-pass:test"}
+    document.pipeline_info["toc_guard_pages_dropped"] = [3, 4]
+    document.pipeline_info["toc_guard_pages_dropped_count"] = 2
     document.relations = [
         _make_relation("A", "rel", "B"),
         _make_relation("A", "rel", "C"),
@@ -81,6 +97,26 @@ def test_emit_metrics_mirror_pipeline_counters():
     assert metrics["recommendations_graded"] == 1
     assert metrics["recommendations_ungraded_typed"] == 1
     assert metrics["frontmatter_affiliations_unresolved"] == 0
+    assert metrics["second_pass_applied"] is True
+    assert metrics["second_pass_patches"] == ["patch_a"]
+    assert metrics["second_pass_reasons"] == ["ats_diagnostic_yield_backfill"]
+    assert metrics["second_pass_modifications"] == {"diagnostic_yield_numerator": 1}
+    assert metrics["ats_compatibility"]["compatible_with_ats"] is False
+    assert metrics["ats_compatibility"]["exclusion_reasons"] == ["not_diagnostic_study"]
+    assert "safety_blocks_added" not in metrics or isinstance(metrics["safety_blocks_added"], int)
+    assert "safety_expected_min" not in metrics or isinstance(metrics["safety_expected_min"], int)
+
+    assert "second_pass" in metrics
+    sp_payload = metrics["second_pass"]
+    assert sp_payload["applied"] == ["patch_a"]
+    assert sp_payload["reasons"] == ["ats_diagnostic_yield_backfill"]
+    assert sp_payload["modifications"] == {"diagnostic_yield_numerator": 1}
+
+    summary = metrics.get("_metrics")
+    assert isinstance(summary, dict)
+    assert summary["second_pass_applied"] == ["patch_a"]
+    assert summary["second_pass_reasons"] == ["ats_diagnostic_yield_backfill"]
+    assert summary["second_pass_modifications"] == {"diagnostic_yield_numerator": 1}
 
 
 def test_ifu_toc_guard_metrics():
@@ -101,6 +137,8 @@ def test_ifu_toc_guard_metrics():
         "dot_leader_min": 0.15,
     }
     document.pipeline_info["toc_guard_applied"] = True
+    document.pipeline_info["toc_guard_pages_dropped"] = [2, 3, 50]
+    document.pipeline_info["toc_guard_pages_dropped_count"] = 3
     document.pipeline_info["paragraph_dedup_applied"] = True
 
     # Add some tables
@@ -126,6 +164,11 @@ def test_ifu_toc_guard_metrics():
         "max_tables": 5,
     }
 
+    document.pipeline_info["safety_blocks_added"] = 2
+    document.pipeline_info["safety_expected_min"] = 10
+    document.pipeline_info["references_anchor_backfill"] = True
+    document.pipeline_info["references_anchor"] = {"pages": [49, 50]}
+
     warnings = _apply_emit_constraints(document, emit_cfg)
     metrics = _document_metrics(document)
 
@@ -138,3 +181,10 @@ def test_ifu_toc_guard_metrics():
 
     # Check tables metrics
     assert "tables_kept" in metrics or "tables_dropped" in metrics
+    assert metrics["safety_blocks_found"] == len(document.safety_blocks)
+    assert metrics["safety_blocks_added"] == 2
+    assert metrics["safety_expected_min"] == 10
+    assert metrics["references_anchor_backfill"] is True
+    assert metrics["references_anchor_pages"] == [49, 50]
+    assert metrics["toc_pages_dropped"][-1] == 50
+    assert metrics["toc_drop_count"] == len(document.pipeline_info["toc_guard_pages_dropped"])

@@ -3,12 +3,13 @@
 from __future__ import annotations
 
 import json
+from copy import deepcopy
 import time
 from dataclasses import dataclass, field
 import re
 from datetime import datetime
 from pathlib import Path
-from typing import Any, Dict, Iterable, List, Literal, Optional, Sequence, Tuple, Type
+from typing import Any, Dict, Iterable, List, Literal, Optional, Sequence, Tuple, Type, cast
 
 from collections import defaultdict
 import yaml
@@ -26,7 +27,10 @@ from medparse.schema.ifu import IFUDocument
 from medparse.schema.textbook import TextbookChapterDocument
 from medparse.utils.cache import compute_cache_key, load_cache_entry, store_cache_entry
 from medparse.emit.evidence_bank import EvidenceBank
+from medparse.second_pass import SecondPassContext, run_second_pass
+from medparse.second_pass.types import SecondPassMode, SecondPassReport
 from medparse.validate.ats_yield import validate_ats_yield
+from medparse.validate.validators import ValidationIssue, validate_document
 from medparse.text.hash import normalize_paragraph_text, stable_par_hash
 from medparse.utils.log import get_logger
 
@@ -51,6 +55,22 @@ MODEL_MAP: Dict[str, Type[BaseDocument]] = {
     "ifu": IFUDocument,
     "textbook": TextbookChapterDocument,
 }
+
+
+def _deep_update(base: Dict[str, object], overrides: Dict[str, object]) -> Dict[str, object]:
+    """Recursively merge ``overrides`` into ``base`` and return new dictionary."""
+
+    result: Dict[str, object] = deepcopy(base)
+    for key, value in overrides.items():
+        if (
+            key in result
+            and isinstance(result[key], dict)
+            and isinstance(value, dict)
+        ):
+            result[key] = _deep_update(result[key], value)  # type: ignore[arg-type]
+        else:
+            result[key] = value
+    return result
 
 
 def _estimate_pdf_density(pdf_path: Path, *, sample_pages: int = 6) -> Dict[str, float]:
@@ -96,6 +116,100 @@ def _estimate_pdf_density(pdf_path: Path, *, sample_pages: int = 6) -> Dict[str,
         "avg_chars_per_page": avg_chars,
         "image_ratio": image_ratio,
     }
+
+
+def _register_research_outcome_evidence(
+    document: BaseDocument,
+    bank: EvidenceBank,
+    paragraph_store: Dict[str, Dict[str, object]],
+) -> None:
+    outcomes = getattr(document, "research_outcomes", None)
+    if not outcomes:
+        return
+
+    def _register_ids(evidence_ids: Sequence[str]) -> None:
+        for evidence_hash in evidence_ids:
+            if not evidence_hash:
+                continue
+            entry = paragraph_store.get(evidence_hash)
+            if not isinstance(entry, dict):
+                continue
+            span = EvidenceSpan(
+                page=entry.get("page"),
+                confidence=0.85,
+            )
+            span.hash = evidence_hash
+            span.paragraph_hash = evidence_hash
+            bank.add_evidence(span)
+
+    _register_ids(getattr(outcomes, "evidence_ids", []) or [])
+
+    for metric in _iter_research_metrics(outcomes):
+        _register_ids(getattr(metric, "evidence_ids", []) or [])
+
+    for arm in getattr(outcomes, "arms", []) or []:
+        _register_ids(getattr(arm, "evidence_ids", []) or [])
+        for attr in ("diagnostic_accuracy", "diagnostic_yield"):
+            metric = getattr(arm, attr, None)
+            if metric:
+                _register_ids(getattr(metric, "evidence_ids", []) or [])
+        for metric in getattr(arm, "complications", {}).values():
+            _register_ids(getattr(metric, "evidence_ids", []) or [])
+
+
+def _iter_research_metrics(outcomes: object) -> List[object]:
+    metrics: List[object] = []
+    for attr in ("diagnostic_accuracy", "diagnostic_yield"):
+        metric = getattr(outcomes, attr, None)
+        if metric:
+            metrics.append(metric)
+    for metric in getattr(outcomes, "complications", {}).values():
+        if metric:
+            metrics.append(metric)
+    return metrics
+
+
+def _research_metric_has_value(metric: Optional[object]) -> bool:
+    if metric is None:
+        return False
+    percent = getattr(metric, "percent", None)
+    if percent is not None:
+        return True
+    ci_95 = getattr(metric, "ci_95", None)
+    if ci_95:
+        return True
+    p_value = getattr(metric, "p_value", None)
+    if p_value is not None:
+        return True
+    n_over_n = getattr(metric, "n_over_N", None) or getattr(metric, "n_over_n", None)
+    if n_over_n and (getattr(n_over_n, "numerator", None) is not None or getattr(n_over_n, "denominator", None) is not None):
+        return True
+    evidence_ids = getattr(metric, "evidence_ids", None)
+    if evidence_ids:
+        return True
+    return False
+
+
+def _research_accuracy_present(outcomes: Optional[object]) -> bool:
+    if outcomes is None:
+        return False
+    if _research_metric_has_value(getattr(outcomes, "diagnostic_accuracy", None)):
+        return True
+    for arm in getattr(outcomes, "arms", []) or []:
+        if _research_metric_has_value(getattr(arm, "diagnostic_accuracy", None)):
+            return True
+    return False
+
+
+def _research_yield_present(outcomes: Optional[object]) -> bool:
+    if outcomes is None:
+        return False
+    if _research_metric_has_value(getattr(outcomes, "diagnostic_yield", None)):
+        return True
+    for arm in getattr(outcomes, "arms", []) or []:
+        if _research_metric_has_value(getattr(arm, "diagnostic_yield", None)):
+            return True
+    return False
 
 
 def _normalize_override_key(value: str) -> str:
@@ -233,7 +347,7 @@ def _resolve_ifu_engines(
     elif mode != "auto":
         engines = _unique_order([text_engine, fallback_engine, *base_engines])
     else:
-        sample_pages = int(auto_block.get("sample_pages", 6) or 6)
+        sample_pages = int(auto_block.get("sample_pages", 3) or 3)
         metrics = _estimate_pdf_density(pdf_path, sample_pages=sample_pages)
         avg_chars = float(metrics.get("avg_chars_per_page", 0.0))
         image_ratio = float(metrics.get("image_ratio", 0.0))
@@ -241,15 +355,27 @@ def _resolve_ifu_engines(
 
         char_threshold = float(auto_block.get("char_density_threshold", auto_block.get("char_threshold", 900)))
         image_threshold = float(auto_block.get("image_density_threshold", auto_block.get("image_threshold", 0.8)))
+        low_density_threshold = float(auto_block.get("low_density_threshold", 100))
+        low_density_image_threshold = float(auto_block.get("low_density_image_threshold", 0.5))
         large_doc_pages = float(auto_block.get("large_doc_pages", 120))
         prefer_engine = str(auto_block.get("prefer", text_engine or "pymupdf"))
         fallback = str(auto_block.get("fallback", fallback_engine or "pdfplumber"))
 
         primary = prefer_engine
-        if avg_chars < char_threshold or image_ratio >= image_threshold:
+        low_density_triggered = False
+        if avg_chars <= low_density_threshold and image_ratio >= low_density_image_threshold:
+            primary = fallback
+            low_density_triggered = True
+        elif avg_chars < char_threshold or image_ratio >= image_threshold:
             primary = fallback
         elif page_count >= large_doc_pages:
             primary = prefer_engine
+
+        runtime_info["density_sample_pages"] = sample_pages
+        runtime_info["avg_chars_per_page"] = avg_chars
+        runtime_info["image_ratio"] = image_ratio
+        if low_density_triggered:
+            runtime_info["low_density_triggered"] = True
 
         engines = _unique_order([primary, prefer_engine, fallback, fallback_engine, text_engine, *base_engines])
 
@@ -290,6 +416,7 @@ class PipelineConfig:
     metadata_sources: Dict[str, Any] = field(default_factory=dict)
     enrichment: Dict[str, Any] = field(default_factory=dict)
     ifu: Dict[str, Any] = field(default_factory=dict)
+    second_pass: Dict[str, Any] = field(default_factory=dict)
 
     @classmethod
     def from_path(cls, path: Path) -> "PipelineConfig":
@@ -322,6 +449,29 @@ class PipelineConfig:
             ocr_settings = {"enable": ocr_enable}
 
         size_guards_config = data.get("size_guards") or {}
+        shared_second_pass_path = path.parent / "_shared" / "second_pass.yaml"
+        if not shared_second_pass_path.exists():
+            raise FileNotFoundError(f"Second-pass configuration missing: {shared_second_pass_path}")
+        try:
+            raw_second_pass = yaml.safe_load(shared_second_pass_path.read_text(encoding="utf-8")) or {}
+        except Exception as exc:  # pragma: no cover - defensive
+            raise ValueError(f"Failed to parse second-pass config at {shared_second_pass_path}: {exc}") from exc
+
+        if isinstance(raw_second_pass, dict) and "second_pass" in raw_second_pass:
+            shared_second_pass = raw_second_pass.get("second_pass") or {}
+        else:
+            shared_second_pass = raw_second_pass
+
+        if not isinstance(shared_second_pass, dict):
+            raise ValueError(f"Second-pass configuration malformed at {shared_second_pass_path}")
+
+        second_pass_config = deepcopy(shared_second_pass)
+        overrides = data.get("second_pass")
+        if isinstance(overrides, dict):
+            second_pass_config = _deep_update(second_pass_config, overrides)
+        elif isinstance(overrides, str) and overrides.strip():
+            second_pass_config = dict(second_pass_config)
+            second_pass_config["enabled"] = overrides.strip().lower()
 
         return cls(
             doc_type=data["doc_type"],
@@ -341,6 +491,7 @@ class PipelineConfig:
             metadata_sources=data.get("metadata_sources") or {},
             enrichment=data.get("enrichment") or {},
             ifu=data.get("ifu") or {},
+            second_pass=second_pass_config,
         )
 
     def to_extraction_config(self, *, use_cache: bool) -> ExtractionConfig:
@@ -421,7 +572,7 @@ class PipelineOutcome:
     config: PipelineConfig
     success: bool
     document: Optional[BaseDocument]
-    metrics: Dict[str, float | int | bool]
+    metrics: Dict[str, Any]
     engine: str
     mode: str
     cache_used: bool = False
@@ -430,10 +581,24 @@ class PipelineOutcome:
     warnings: List[str] = field(default_factory=list)
     metadata: Dict[str, Any] = field(default_factory=dict)
     emit_settings: Dict[str, Any] = field(default_factory=dict)
+    second_pass_report: Optional[SecondPassReport] = None
+    validator_issues: List[ValidationIssue] = field(default_factory=list)
 
     def to_payload(self) -> Dict[str, object]:
         if self.success and self.document is not None:
             payload = self.document.model_dump(mode="json", exclude_none=True)
+
+            structured_outcomes = payload.get("outcomes")
+            research_outcomes = payload.pop("research_outcomes", None)
+            if research_outcomes:
+                if not isinstance(structured_outcomes, list):
+                    structured_outcomes = structured_outcomes or []
+                payload["outcomes"] = {
+                    "structured": structured_outcomes or [],
+                    "research": research_outcomes,
+                }
+            elif structured_outcomes is None:
+                payload["outcomes"] = []
 
             payload["_metrics"] = self.metrics
             payload["_engine"] = self.engine
@@ -466,6 +631,14 @@ class PipelineOutcome:
                 for key, value in doc_pipeline_info.items():
                     pipeline_metadata.setdefault(key, value)
             pipeline_metadata.update({k: v for k, v in self.metadata.items() if k not in pipeline_metadata})
+            if self.second_pass_report:
+                pipeline_metadata["second_pass"] = self.second_pass_report.as_metadata()
+            if self.validator_issues:
+                pipeline_metadata["validators"] = {
+                    "passed": not any(issue.severity == "error" for issue in self.validator_issues),
+                    "warnings": [issue.message for issue in self.validator_issues if issue.severity == "warning"],
+                    "errors": [issue.message for issue in self.validator_issues if issue.severity == "error"],
+                }
             payload["_pipeline_metadata"] = pipeline_metadata
             return payload
         return {
@@ -705,6 +878,8 @@ def _build_evidence_bank(document: BaseDocument, size_guards: SizeGuards) -> Evi
                     setattr(diagnostic_flow, "evidence", pointer)
                     setattr(diagnostic_flow, "evidence_refs", [ref])
 
+    _register_research_outcome_evidence(document, bank, paragraph_store)
+
     return bank
 
 
@@ -786,7 +961,9 @@ def write_failure_artifact(
     from datetime import datetime
 
     failure_payload = {
+        "source_file": str(doc_path),
         "failure_reason": f"{exc.__class__.__name__}: {exc}",
+        "issues": [stage],
         "metrics": {
             "stage": stage,
             "profile": profile or "auto",
@@ -802,6 +979,51 @@ def write_failure_artifact(
     failure_path.write_text(json.dumps(failure_payload, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
+def _sync_second_pass_summary(
+    document: BaseDocument,
+    report: SecondPassReport,
+    metrics: Dict[str, Any],
+) -> bool:
+    """Propagate second-pass details onto the document pipeline info and metrics."""
+
+    pipeline_info = getattr(document, "pipeline_info", {}) or {}
+    if not isinstance(pipeline_info, dict):
+        pipeline_info = {}
+    summary = report.summary
+    applied_names = list(summary.applied)
+    reasons = list(summary.reasons)
+    modifications = dict(summary.modifications)
+
+    bucket = pipeline_info.setdefault("second_pass", {})
+    bucket["mode"] = report.mode
+    bucket["runtime_ms"] = report.runtime_ms
+    bucket["patches_attempted"] = [result.name for result in report.patch_results]
+    bucket["patches_applied"] = applied_names
+    bucket["applied"] = applied_names
+    bucket["reasons"] = reasons
+    bucket["modifications"] = modifications
+    bucket["diff_summary"] = dict(report.diff_summary)
+    if report.notes:
+        bucket["notes"] = list(report.notes)
+    if report.skipped:
+        bucket["skipped"] = True
+
+    document.pipeline_info = pipeline_info
+
+    metrics["second_pass"] = {
+        "mode": report.mode,
+        "applied": applied_names,
+        "reasons": reasons,
+        "modifications": modifications,
+    }
+    metrics["second_pass_applied"] = bool(applied_names)
+    metrics["second_pass_patches"] = applied_names
+    metrics["second_pass_reasons"] = reasons
+    metrics["second_pass_modifications"] = modifications
+
+    return bool(applied_names)
+
+
 def run_extract(
     pdf_path: Path,
     config_path: Path,
@@ -814,6 +1036,7 @@ def run_extract(
     emit_overrides: Optional[Dict[str, object]] = None,
     metadata_overrides: Optional[Dict[str, object]] = None,
     ifu_overrides: Optional[Dict[str, object]] = None,
+    second_pass_mode: SecondPassMode = "auto",
 ) -> PipelineOutcome:
     """Run extraction with completeness checks and caching."""
 
@@ -864,6 +1087,18 @@ def run_extract(
                 merged_ifu[key] = value
         config.ifu = merged_ifu
 
+    second_pass_config = config.second_pass or {}
+    default_second_pass_mode = "auto"
+    if isinstance(second_pass_config, dict) and isinstance(second_pass_config.get("enabled"), str):
+        default_second_pass_mode = str(second_pass_config["enabled"]).lower()
+    requested_second_pass_mode = str(second_pass_mode or default_second_pass_mode).lower()
+    if requested_second_pass_mode not in {"off", "auto", "always"}:
+        requested_second_pass_mode = default_second_pass_mode if default_second_pass_mode in {"off", "auto", "always"} else "auto"
+    active_second_pass_mode = cast(SecondPassMode, requested_second_pass_mode)
+    max_second_pass_runtime = 2500
+    if isinstance(second_pass_config, dict) and isinstance(second_pass_config.get("max_runtime_ms"), int):
+        max_second_pass_runtime = max(250, int(second_pass_config["max_runtime_ms"]))
+
     if config.doc_type not in EXTRACTOR_MAP:
         raise ValueError(f"Unsupported doc_type '{config.doc_type}' in {config_path}")
 
@@ -886,6 +1121,7 @@ def run_extract(
         "metadata_sources": dict(config.metadata_sources or {}),
         "emit_policy_source": emit_policy_source,
     }
+    base_metadata["second_pass_mode"] = active_second_pass_mode
     if engine_timeouts:
         base_metadata["engine_timeouts"] = dict(engine_timeouts)
     if config.doc_type == "ifu":
@@ -895,6 +1131,12 @@ def run_extract(
             base_metadata["ifu_engine_source"] = runtime_info.get("source")
             if runtime_info.get("override_key"):
                 base_metadata["ifu_engine_override_key"] = runtime_info.get("override_key")
+            if "avg_chars_per_page" in runtime_info:
+                base_metadata["ifu_density_avg_chars"] = runtime_info.get("avg_chars_per_page")
+            if "image_ratio" in runtime_info:
+                base_metadata["ifu_density_image_ratio"] = runtime_info.get("image_ratio")
+            if runtime_info.get("low_density_triggered"):
+                base_metadata["ifu_low_density_triggered"] = True
     threshold_signature = json.dumps(config.thresholds, sort_keys=True)
     cache_key = compute_cache_key(
         pdf_bytes,
@@ -911,7 +1153,62 @@ def run_extract(
         cached_profile = cached_entry.get("profile")
         if cached_profile == extraction_config.profile.value:
             document = _hydrate_document(config.doc_type, cached_entry)
-            metrics = cached_entry.get("metrics", {})
+            metrics = dict(cached_entry.get("metrics", {}))
+            paragraph_store = getattr(document, "paragraph_store", {}) or {}
+            validator_issues: List[ValidationIssue] = []
+            if extraction_config.should_validate():
+                validator_issues = validate_document(document)
+            second_pass_report: Optional[SecondPassReport] = None
+            applied_any = False
+            if active_second_pass_mode != "off":
+                cache_second_pass_context = SecondPassContext(
+                    validation_issues=list(validator_issues),
+                    paragraph_store=dict(paragraph_store) if isinstance(paragraph_store, dict) else {},
+                    evidence_bank=dict(getattr(document, "evidence_bank", {}) or {}),
+                    profile=extraction_config.profile.value,
+                    engines_tried=list(engines),
+                    emit_policies=dict(config.emit or {}),
+                    config=second_pass_config if isinstance(second_pass_config, dict) else {},
+                    mode=active_second_pass_mode,
+                    doc_metrics=dict(metrics),
+                    max_runtime_ms=max_second_pass_runtime,
+                )
+                document, second_pass_report = run_second_pass(document, cache_second_pass_context)
+                applied_any = _sync_second_pass_summary(document, second_pass_report, metrics)
+                metrics.update(_document_metrics(document))
+                if applied_any and extraction_config.should_validate():
+                    validator_issues = validate_document(document)
+            else:
+                metrics["second_pass"] = {
+                    "mode": active_second_pass_mode,
+                    "applied": [],
+                    "reasons": [],
+                    "modifications": {},
+                }
+                metrics["second_pass_applied"] = False
+                metrics["second_pass_patches"] = []
+                metrics["second_pass_reasons"] = []
+                metrics["second_pass_modifications"] = {}
+                pipeline_info = getattr(document, "pipeline_info", {}) or {}
+                if not isinstance(pipeline_info, dict):
+                    pipeline_info = {}
+                bucket = pipeline_info.setdefault("second_pass", {})
+                bucket.clear()
+                bucket.update(
+                    {
+                        "mode": active_second_pass_mode,
+                        "applied": [],
+                        "patches_applied": [],
+                        "reasons": [],
+                        "modifications": {},
+                        "diff_summary": {},
+                        "runtime_ms": 0,
+                        "patches_attempted": [],
+                    }
+                )
+                document.pipeline_info = pipeline_info
+            metrics["engine_selected"] = cached_engine or engines[0]
+            metrics["engines_tried"] = list(engines)
             LOGGER.info(
                 "Cache hit: doc_type=%s engine=%s page_count=%s",
                 config.doc_type,
@@ -930,13 +1227,17 @@ def run_extract(
                 warnings=cached_entry.get("warnings", []),
                 metadata=cached_entry.get("metadata", {}),
                 emit_settings=cached_entry.get("emit", {}),
+                second_pass_report=second_pass_report,
+                validator_issues=list(validator_issues),
             )
 
-    last_metrics: Dict[str, float | int] = {}
+    last_metrics: Dict[str, Any] = {}
     last_engine = engines[0]
     last_ocr_pages: List[int] = []
     failure_reason: Optional[str] = None
     last_metadata: Dict[str, Any] = dict(base_metadata)
+    last_second_pass_report: Optional[SecondPassReport] = None
+    last_validator_issues: List[ValidationIssue] = []
 
     for idx, engine in enumerate(engines):
         LOGGER.info(
@@ -966,6 +1267,27 @@ def run_extract(
         metrics = _compute_metrics(pages, total_pages, duration)
         metrics.update(_document_metrics(document))
         document.pipeline_info.setdefault("extracted_chars", metrics.get("extracted_chars"))
+        extracted_chars = int(metrics.get("extracted_chars") or 0)
+        if extracted_chars == 0:
+            LOGGER.warning(
+                "Engine %s produced zero characters; attempting fallback engine if available.",
+                engine,
+            )
+            metrics["engine_selected"] = engine
+            metrics["engines_tried"] = list(engines)
+            last_metrics = metrics
+            last_engine = engine
+            last_ocr_pages = ocr_pages
+            zero_warning = f"{engine}_zero_chars"
+            metadata_with_zero = dict(base_metadata)
+            zero_list = metadata_with_zero.setdefault("threshold_warnings", [])
+            if zero_warning not in zero_list:
+                zero_list.append(zero_warning)
+            last_metadata = metadata_with_zero
+            failure_reason = zero_warning
+            last_second_pass_report = None
+            last_validator_issues = []
+            continue
         if bool(document.pipeline_info.get("paragraph_dedup_applied")):
             metrics["paragraph_dedup_applied"] = True
         if bool(document.pipeline_info.get("text_repair_applied")):
@@ -992,6 +1314,8 @@ def run_extract(
                 duration,
             )
             metrics["engine_timeout"] = True
+            metrics["engine_selected"] = engine
+            metrics["engines_tried"] = list(engines)
             last_metrics = metrics
             last_engine = engine
             last_ocr_pages = ocr_pages
@@ -1002,6 +1326,8 @@ def run_extract(
                 warnings_list.append(timeout_warning)
             last_metadata = metadata_with_timeout
             failure_reason = timeout_warning
+            last_second_pass_report = None
+            last_validator_issues = []
             continue
 
         # Build evidence bank for deduplication and size reduction
@@ -1052,8 +1378,64 @@ def run_extract(
             metrics.get("unique_pages_ratio", 0.0),
         )
 
+        validator_issues: List[ValidationIssue] = []
+        if extraction_config.should_validate():
+            validator_issues = validate_document(document)
+
+        second_pass_report: Optional[SecondPassReport] = None
+        applied_any = False
+        if active_second_pass_mode != "off":
+            second_pass_context = SecondPassContext(
+                validation_issues=list(validator_issues),
+                paragraph_store=dict(paragraph_store) if isinstance(paragraph_store, dict) else {},
+                evidence_bank=dict(getattr(document, "evidence_bank", {}) or {}),
+                profile=extraction_config.profile.value,
+                engines_tried=list(engines),
+                emit_policies=dict(config.emit or {}),
+                config=second_pass_config if isinstance(second_pass_config, dict) else {},
+                mode=active_second_pass_mode,
+                doc_metrics=dict(metrics),
+                max_runtime_ms=max_second_pass_runtime,
+            )
+            document, second_pass_report = run_second_pass(document, second_pass_context)
+            applied_any = _sync_second_pass_summary(document, second_pass_report, metrics)
+            metrics.update(_document_metrics(document))
+            if applied_any and extraction_config.should_validate():
+                validator_issues = validate_document(document)
+        else:
+            metrics["second_pass"] = {
+                "mode": active_second_pass_mode,
+                "applied": [],
+                "reasons": [],
+                "modifications": {},
+            }
+            metrics["second_pass_applied"] = False
+            metrics["second_pass_patches"] = []
+            metrics["second_pass_reasons"] = []
+            metrics["second_pass_modifications"] = {}
+            pipeline_info = getattr(document, "pipeline_info", {}) or {}
+            if not isinstance(pipeline_info, dict):
+                pipeline_info = {}
+            bucket = pipeline_info.setdefault("second_pass", {})
+            bucket.clear()
+            bucket.update(
+                {
+                    "mode": active_second_pass_mode,
+                    "applied": [],
+                    "patches_applied": [],
+                    "reasons": [],
+                    "modifications": {},
+                    "diff_summary": {},
+                    "runtime_ms": 0,
+                    "patches_attempted": [],
+                }
+            )
+            document.pipeline_info = pipeline_info
+
         meets_thresholds, threshold_warnings = _meets_thresholds(config, metrics, document=document)
         combined_warnings = list(dict.fromkeys(threshold_warnings + emit_warnings))
+        metrics["engine_selected"] = engine
+        metrics["engines_tried"] = list(engines)
         if meets_thresholds:
             if cache_enabled and idx == 0:
                 cache_metadata = dict(base_metadata)
@@ -1081,6 +1463,8 @@ def run_extract(
                 warnings=combined_warnings,
                 metadata=dict(base_metadata),
                 emit_settings=config.emit,
+                second_pass_report=second_pass_report,
+                validator_issues=list(validator_issues),
             )
 
         last_metrics = metrics
@@ -1092,6 +1476,8 @@ def run_extract(
         failure_reason = (
             "Extraction did not satisfy completeness thresholds"
         )
+        last_second_pass_report = second_pass_report
+        last_validator_issues = list(validator_issues)
 
         LOGGER.warning(
             "Thresholds not met with engine=%s (chars=%d ratio=%.2f)",
@@ -1099,6 +1485,9 @@ def run_extract(
             metrics.get("extracted_chars", 0),
             metrics.get("unique_pages_ratio", 0.0),
         )
+
+    last_metrics.setdefault("engines_tried", list(engines))
+    last_metrics.setdefault("engine_selected", last_engine)
 
     return PipelineOutcome(
         pdf_path=pdf_path,
@@ -1114,6 +1503,8 @@ def run_extract(
         warnings=last_metadata.get("threshold_warnings", []),
         metadata=last_metadata,
         emit_settings=config.emit,
+        second_pass_report=last_second_pass_report,
+        validator_issues=list(last_validator_issues),
     )
 
 
@@ -1226,8 +1617,8 @@ def _meets_thresholds(
     return True, warnings
 
 
-def _document_metrics(document: BaseDocument) -> Dict[str, int | float | bool]:
-    payload: Dict[str, int | float | bool] = {}
+def _document_metrics(document: BaseDocument) -> Dict[str, Any]:
+    payload: Dict[str, Any] = {}
     pipeline_info = getattr(document, "pipeline_info", {}) or {}
     if not isinstance(pipeline_info, dict):
         pipeline_info = {}
@@ -1316,6 +1707,19 @@ def _document_metrics(document: BaseDocument) -> Dict[str, int | float | bool]:
         if diag is not None and hasattr(diag, "strict"):
             payload["diagnostic_yield_strict"] = bool(getattr(diag, "strict"))
 
+    research_outcomes = getattr(document, "research_outcomes", None)
+    if research_outcomes is not None:
+        payload["research_outcomes_present"] = True
+        accuracy_present = _research_accuracy_present(research_outcomes)
+        yield_present = _research_yield_present(research_outcomes)
+        if accuracy_present:
+            payload["diagnostic_accuracy_present"] = True
+        if yield_present:
+            payload["diagnostic_yield_present"] = True
+    else:
+        payload.setdefault("research_outcomes_present", False)
+        payload.setdefault("diagnostic_accuracy_present", payload.get("diagnostic_accuracy_present", False))
+
     if getattr(document, "doc_type", None) == "article":
         payload["ats"] = validate_ats_yield(document)
         ats_applicability = pipeline_info.get("ats_yield_applicability")
@@ -1327,6 +1731,15 @@ def _document_metrics(document: BaseDocument) -> Dict[str, int | float | bool]:
                 payload["ats_yield_reasons"] = list(reasons)
             else:
                 payload["ats_yield_reasons"] = [str(reasons)]
+        ats_meta = getattr(document, "ats_compatibility", None)
+        if ats_meta is not None:
+            compatibility_payload = {
+                "compatible_with_ats": bool(getattr(ats_meta, "compatible_with_ats", False)),
+                "strict_required": bool(getattr(ats_meta, "strict_required", False)),
+                "exclusion_reasons": list(getattr(ats_meta, "exclusion_reasons", []) or []),
+            }
+            payload["ats_compatibility"] = compatibility_payload
+            pipeline_info["ats_compatibility"] = compatibility_payload
 
     payload["paragraph_dedup_applied"] = bool(pipeline_info.get("paragraph_dedup_applied"))
     try:
@@ -1363,11 +1776,28 @@ def _document_metrics(document: BaseDocument) -> Dict[str, int | float | bool]:
         blocks = getattr(document, "safety_blocks") or []
         payload["safety_blocks_found"] = len(blocks)
         pipeline_info["safety_blocks_found"] = len(blocks)
+        try:
+            value = int(pipeline_info.get("safety_blocks_added") or 0)
+        except (TypeError, ValueError):
+            value = 0
+        payload["safety_blocks_added"] = value
+        if "safety_expected_min" in pipeline_info:
+            try:
+                payload["safety_expected_min"] = int(pipeline_info.get("safety_expected_min") or 0)
+            except (TypeError, ValueError):
+                payload["safety_expected_min"] = 0
 
     if hasattr(document, "references"):
         references = getattr(document, "references") or []
         payload["references_count"] = len(references)
         pipeline_info["references_detected"] = len(references)
+    if "references_anchor_backfill" in pipeline_info:
+        payload["references_anchor_backfill"] = bool(pipeline_info.get("references_anchor_backfill"))
+        anchor_info = pipeline_info.get("references_anchor")
+        if isinstance(anchor_info, dict):
+            payload["references_anchor_pages"] = anchor_info.get("pages", [])
+    else:
+        payload.setdefault("references_anchor_backfill", False)
 
     if "long_doc_fast_path" in pipeline_info:
         payload["long_doc_fast_path"] = bool(pipeline_info.get("long_doc_fast_path"))
@@ -1396,6 +1826,9 @@ def _document_metrics(document: BaseDocument) -> Dict[str, int | float | bool]:
             ),
         }
         payload["toc_guard"] = guard_metrics
+    if isinstance(pipeline_info.get("toc_guard_pages_dropped"), list):
+        payload["toc_pages_dropped"] = pipeline_info.get("toc_guard_pages_dropped")
+        payload["toc_drop_count"] = pipeline_info.get("toc_guard_pages_dropped_count", 0)
     anchors_bleed = pipeline_info.get("anchors_bleed")
     if isinstance(anchors_bleed, dict):
         payload["anchors_bleed"] = dict(anchors_bleed)
@@ -1408,6 +1841,141 @@ def _document_metrics(document: BaseDocument) -> Dict[str, int | float | bool]:
             payload["extracted_chars"] = int(pipeline_info.get("extracted_chars") or 0)
         except (TypeError, ValueError):
             payload["extracted_chars"] = 0
+
+    second_pass_info = pipeline_info.get("second_pass", {})
+    applied_list: List[str] = []
+    reasons_list: List[str] = []
+    modifications_map: Dict[str, int] = {}
+    if isinstance(second_pass_info, dict):
+        applied_candidates = second_pass_info.get("applied")
+        if isinstance(applied_candidates, list):
+            applied_list = [str(candidate) for candidate in applied_candidates if candidate]
+        else:
+            patches_applied = second_pass_info.get("patches_applied")
+            if isinstance(patches_applied, list):
+                applied_list = [str(candidate) for candidate in patches_applied if candidate]
+        if applied_list:
+            applied_list = list(dict.fromkeys(applied_list))
+
+        raw_reasons = second_pass_info.get("reasons")
+        if isinstance(raw_reasons, list):
+            reasons_list = [str(reason) for reason in raw_reasons if reason]
+
+        raw_modifications = second_pass_info.get("modifications")
+        if isinstance(raw_modifications, dict):
+            for key, value in raw_modifications.items():
+                try:
+                    modifications_map[str(key)] = int(value)
+                except (TypeError, ValueError):
+                    continue
+        if not modifications_map:
+            diff_summary = second_pass_info.get("diff_summary")
+            if isinstance(diff_summary, dict):
+                for key, value in diff_summary.items():
+                    try:
+                        modifications_map[str(key)] = int(value)
+                    except (TypeError, ValueError):
+                        continue
+
+        payload["second_pass_applied"] = bool(applied_list)
+        payload["second_pass_patches"] = applied_list
+        payload["second_pass_reasons"] = reasons_list
+        payload["second_pass_modifications"] = dict(modifications_map)
+        if modifications_map:
+            payload["second_pass_modifications_total"] = sum(modifications_map.values())
+        pipeline_info["second_pass_modifications"] = dict(modifications_map)
+
+        ro_backfill = second_pass_info.get("research_outcomes_backfill")
+        if isinstance(ro_backfill, dict):
+            payload["second_pass_research_outcomes_backfill"] = dict(ro_backfill)
+    else:
+        payload.setdefault("second_pass_applied", False)
+        payload.setdefault("second_pass_patches", [])
+        payload.setdefault("second_pass_reasons", [])
+        payload.setdefault("second_pass_modifications", {})
+    if "second_pass_modifications_total" not in payload:
+        payload["second_pass_modifications_total"] = 0
+
+    if "toc_guard_adjustments" in pipeline_info:
+        try:
+            payload["toc_guard_adjustments"] = int(pipeline_info.get("toc_guard_adjustments") or 0)
+        except (TypeError, ValueError):
+            payload["toc_guard_adjustments"] = 0
+
+    if "grade_backfilled" in pipeline_info:
+        try:
+            payload["grade_backfilled"] = int(pipeline_info.get("grade_backfilled") or 0)
+        except (TypeError, ValueError):
+            payload["grade_backfilled"] = 0
+
+    if "recommendations_retyped" in pipeline_info:
+        try:
+            payload["recommendations_retyped"] = int(pipeline_info.get("recommendations_retyped") or 0)
+        except (TypeError, ValueError):
+            payload["recommendations_retyped"] = 0
+
+    if "affiliation_softmap_applied" in pipeline_info:
+        payload["affiliation_softmap_applied"] = bool(pipeline_info.get("affiliation_softmap_applied"))
+
+    if "indications_fallback_provenance" in pipeline_info:
+        payload["indications_fallback_provenance"] = pipeline_info.get("indications_fallback_provenance")
+
+    if "front_matter_fallback_reason" in pipeline_info:
+        payload["front_matter_fallback_reason"] = pipeline_info.get("front_matter_fallback_reason")
+
+    if "safety_density_boost_applied" in pipeline_info:
+        payload["safety_density_boost_applied"] = bool(pipeline_info.get("safety_density_boost_applied"))
+
+    second_pass_payload: Dict[str, object] = {
+        "mode": None,
+        "applied": [],
+        "reasons": [],
+        "modifications": {},
+    }
+    if isinstance(second_pass_info, dict):
+        applied_candidates = second_pass_info.get("applied")
+        if isinstance(applied_candidates, list):
+            applied_list = list(dict.fromkeys(applied_candidates))
+        else:
+            patches_applied = second_pass_info.get("patches_applied")
+            applied_list = list(dict.fromkeys(patches_applied)) if isinstance(patches_applied, list) else []
+        reasons_list = second_pass_info.get("reasons") if isinstance(second_pass_info.get("reasons"), list) else []
+        modifications_map: Dict[str, int] = {}
+        raw_modifications = second_pass_info.get("modifications")
+        if isinstance(raw_modifications, dict):
+            for key, value in raw_modifications.items():
+                try:
+                    modifications_map[str(key)] = int(value)
+                except (TypeError, ValueError):
+                    continue
+        else:
+            raw_diff_summary = second_pass_info.get("diff_summary")
+            if isinstance(raw_diff_summary, dict):
+                for key, value in raw_diff_summary.items():
+                    try:
+                        modifications_map.setdefault(str(key), int(value))
+                    except (TypeError, ValueError):
+                        continue
+        second_pass_payload = {
+            "mode": second_pass_info.get("mode"),
+            "applied": applied_list,
+            "reasons": list(reasons_list) if reasons_list else [],
+            "modifications": modifications_map,
+        }
+    payload["second_pass"] = second_pass_payload
+
+    metrics_summary = {
+        "toc_pages_dropped": int(
+            pipeline_info.get("toc_guard_pages_dropped_count")
+            if isinstance(pipeline_info.get("toc_guard_pages_dropped_count"), int)
+            else len(payload.get("toc_pages_dropped") or [])
+        ),
+        "safety_blocks_found": payload.get("safety_blocks_found", 0),
+        "second_pass_applied": list(second_pass_payload.get("applied", [])),
+        "second_pass_reasons": list(second_pass_payload.get("reasons", [])),
+        "second_pass_modifications": dict(second_pass_payload.get("modifications", {})),
+    }
+    payload["_metrics"] = metrics_summary
 
     _validate_metrics_consistency(payload, pipeline_info)
     document.pipeline_info = pipeline_info
@@ -2094,7 +2662,7 @@ def _store_success_in_cache(
     cache_key: str,
     doc_type: str,
     document: BaseDocument,
-    metrics: Dict[str, float | int | bool],
+    metrics: Dict[str, Any],
     engine: str,
     profile: str,
     warnings: List[str],

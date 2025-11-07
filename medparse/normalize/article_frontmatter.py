@@ -871,7 +871,7 @@ def link_authors_to_affiliations(
         if fallback_id:
             for author in unresolved:
                 author.affiliation_ids = [fallback_id]
-            LOGGER.warning(
+            LOGGER.info(
                 "Assigned all authors to sole affiliation id '%s' due to missing explicit markers.",
                 fallback_id,
             )

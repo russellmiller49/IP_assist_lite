@@ -5,8 +5,12 @@ from __future__ import annotations
 import hashlib
 import re
 from collections import defaultdict
-from typing import Dict, Iterable, List, NamedTuple, Optional, Sequence, Set, Tuple
+from pathlib import Path
+from typing import Any, Dict, Iterable, List, NamedTuple, Optional, Sequence, Set, Tuple
 
+import yaml
+
+from medparse.guideline.grade_normalizer import detect_grade_from_lexicon
 from medparse.normalize.guideline_grade import SIGN_INLINE_RE, detect_context_candidates, detect_inline_candidates
 from medparse.tables.extract_guideline_tables import TableGradeIndex, extract_guideline_grade_index
 from medparse.guideline.grades import canonicalize_scale, map_grade_code, map_sign_letter
@@ -48,11 +52,95 @@ DEFINITION_FIELD_MAP = {
     "diagnostic accuracy": "diagnostic_accuracy",
 }
 
+DEFAULT_MAX_PROMOTED = 50
+DEFAULT_EXCLUDE_HEADINGS = (
+    "remarks",
+    "good practice",
+    "implementation considerations",
+    "tables",
+    "figures",
+)
+PROMOTION_PREFIX_PATTERN = re.compile(
+    r"^(we\s+(recommend|suggest)|recommendation\s*\d+\s*[:.)])",
+    re.IGNORECASE,
+)
+GRADE_TOKEN_PATTERN = re.compile(
+    r"\b(grade|strength|level|strong|conditional|weak)\b|\b[ABC]\b",
+    re.IGNORECASE,
+)
+MODAL_TRIGGER_RE = re.compile(r"\b(we|the\s+panel)\s+(recommend|suggest)\b", re.IGNORECASE)
+GRADE_PROXIMITY_RE = re.compile(
+    r"(?i)(recommendation\s+grade\s*[A-D]"
+    r"|grade\s*(?:1\s*)?[A-D]"
+    r"|(?:strong|weak|conditional)\s+recommendation"
+    r"|(?:very\s+low|low|moderate|high)\s+(?:certainty|quality)"
+    r"|ungraded\s+consensus(?:-based)?\s+statement)"
+)
+FIRST_SENTENCE_BOUNDARY_RE = re.compile(r"[.!?]")
+
+_GUIDELINE_PROMOTER_CONFIG_PATH = Path(__file__).resolve().parents[2] / "configs" / "_shared" / "second_pass.yaml"
+_GUIDELINE_PROMOTER_SETTINGS: Optional[Dict[str, Any]] = None
+
 
 class EnumeratedItem(NamedTuple):
     number: str
     text: str
     paragraph_hashes: List[str]
+    section_title: Optional[str] = None
+
+
+def _guideline_promoter_settings() -> Dict[str, Any]:
+    global _GUIDELINE_PROMOTER_SETTINGS
+    if _GUIDELINE_PROMOTER_SETTINGS is not None:
+        return _GUIDELINE_PROMOTER_SETTINGS
+
+    settings: Dict[str, Any] = {}
+    if not _GUIDELINE_PROMOTER_CONFIG_PATH.exists():
+        _GUIDELINE_PROMOTER_SETTINGS = settings
+        return settings
+
+    try:
+        with _GUIDELINE_PROMOTER_CONFIG_PATH.open("r", encoding="utf-8") as handle:
+            data = yaml.safe_load(handle) or {}
+    except Exception:
+        _GUIDELINE_PROMOTER_SETTINGS = settings
+        return settings
+
+    if isinstance(data, dict):
+        block = data.get("guideline_promoter")
+        if isinstance(block, dict):
+            settings = block
+
+    _GUIDELINE_PROMOTER_SETTINGS = settings
+    return settings
+
+
+def _strip_recommendation_label(text: str) -> str:
+    if not text:
+        return ""
+    parts = text.split(".", 1)
+    if len(parts) == 2 and parts[0].strip().isdigit():
+        return parts[1].strip()
+    return text.strip()
+
+
+def _eligible_summary_candidate(text: str, exclude_tokens: Sequence[str]) -> bool:
+    stripped = _strip_recommendation_label(text)
+    if not stripped:
+        return False
+    if not PROMOTION_PREFIX_PATTERN.match(stripped):
+        return False
+    lowered = stripped.lower()
+    for token in exclude_tokens:
+        if lowered.startswith(token):
+            return False
+    return True
+
+
+def _allow_grade_capture(text: str) -> bool:
+    if not text:
+        return False
+    return bool(GRADE_TOKEN_PATTERN.search(text))
 
 
 def _has_numbered_recap(document: ArticleDocument) -> bool:
@@ -121,11 +209,16 @@ def enrich_guideline_document(document: ArticleDocument, pages: Sequence) -> Non
 
 
 def _promote_recommendations(document: ArticleDocument, paragraph_store: Dict[str, Dict[str, object]]) -> None:
+    entries = list(_iter_paragraph_entries(paragraph_store)) if paragraph_store else []
+    entry_index_map = {hash_id: idx for idx, (hash_id, _) in enumerate(entries)} if entries else {}
+
     summary_recs = _extract_summary_recommendations(document, paragraph_store)
     base_recs = list(document.recommendations or [])
 
+    pipeline_info = getattr(document, "pipeline_info", {}) or {}
     recommendations: List[GuidelineRecommendation] = []
     seen_signatures: Set[str] = set()
+    retyped_signatures: List[str] = []
 
     for rec in base_recs:
         if not isinstance(rec, GuidelineRecommendation) or not rec.text:
@@ -133,6 +226,7 @@ def _promote_recommendations(document: ArticleDocument, paragraph_store: Dict[st
         signature = _stable_text_signature(rec.text)
         if signature in seen_signatures:
             continue
+        setattr(rec, "_stable_signature", signature)
         recommendations.append(rec)
         seen_signatures.add(signature)
 
@@ -142,15 +236,41 @@ def _promote_recommendations(document: ArticleDocument, paragraph_store: Dict[st
         signature = _stable_text_signature(rec.text)
         if signature in seen_signatures:
             continue
+        setattr(rec, "_stable_signature", signature)
         recommendations.append(rec)
         seen_signatures.add(signature)
+        retyped_signatures.append(signature)
+
+    filtered_recommendations: List[GuidelineRecommendation] = []
+    first_sentence_signatures: Set[str] = set()
+    for rec in recommendations:
+        signature = _first_sentence_signature(rec.text or "")
+        if signature and signature in first_sentence_signatures:
+            continue
+        modal_trigger = _modal_trigger_present(rec.text or "")
+        grade_hint = _recommendation_grade_hint(rec, entries, entry_index_map)
+        if not (modal_trigger or grade_hint):
+            continue
+        if signature:
+            first_sentence_signatures.add(signature)
+        filtered_recommendations.append(rec)
+
+    recommendations = filtered_recommendations
 
     pending_remarks = _preprocess_recommendations(recommendations)
-    grade_sources = _assign_recommendation_grades(document, recommendations, paragraph_store)
+    retyped_signature_set = set(retyped_signatures)
+    pipeline_info["recommendations_promoted"] = len(base_recs)
+    pipeline_info["recommendations_retyped"] = len(retyped_signatures)
+    pipeline_info["retyped_recommendation_signatures"] = list(dict.fromkeys(retyped_signatures))
+    grade_sources = _assign_recommendation_grades(
+        document,
+        recommendations,
+        paragraph_store,
+        retyped_signature_set,
+    )
     _finalize_recommendation_texts(recommendations)
     _apply_remarks(recommendations, pending_remarks)
 
-    pipeline_info = getattr(document, "pipeline_info", {}) or {}
     if isinstance(grade_sources, dict) and grade_sources:
         metrics_block = pipeline_info.setdefault("recommendation_metrics", {})
         metrics_block["grade_source_breakdown"] = dict(grade_sources)
@@ -209,6 +329,7 @@ def _assign_recommendation_grades(
     document: ArticleDocument,
     recommendations: List[GuidelineRecommendation],
     paragraph_store: Dict[str, Dict[str, object]],
+    retyped_signatures: Set[str],
 ) -> Dict[str, int]:
     tables = getattr(document, "tables", []) or []
     table_index = extract_guideline_grade_index(tables, signature_fn=_stable_text_signature)
@@ -225,7 +346,13 @@ def _assign_recommendation_grades(
     entry_index = {hash_id: idx for idx, (_, hash_id, _) in enumerate(ordered_entries)}
 
     for rec in recommendations:
-        inline_payloads = _inline_candidates_for_rec(rec, paragraph_store, ordered_entries, entry_index)
+        inline_payloads = _inline_candidates_for_rec(
+            rec,
+            paragraph_store,
+            ordered_entries,
+            entry_index,
+            retyped_signatures,
+        )
         table_payloads = _table_candidates_for_rec(rec, table_index)
         context_payloads = [dict(candidate) for candidate in context_map.get(id(rec), [])]
 
@@ -255,14 +382,22 @@ def _assign_recommendation_grades(
                 if source:
                     source_counts[source] += 1
             else:
-                rec.grade_normalized = None
-                rec.grade_source = None
-                rec.ungraded = True
-                if rec.statement_type != "consensus":
-                    rec.statement_type = "ungraded"
-                if rec.ungraded:
-                    rec.ungraded_reason = rec.ungraded_reason or "no_grade_detected"
-                rec.grade = rec.grade if isinstance(rec.grade, str) else None
+                lexicon_payload = detect_grade_from_lexicon(rec.text, scale_hint=scale_hint)
+                if lexicon_payload:
+                    lexicon_payload.setdefault("source", "lexicon")
+                    _apply_grade_payload(rec, lexicon_payload, scale_hint=scale_hint)
+                    source = str(lexicon_payload.get("source") or "lexicon")
+                    if source:
+                        source_counts[source] += 1
+                else:
+                    rec.grade_normalized = None
+                    rec.grade_source = None
+                    rec.ungraded = True
+                    if rec.statement_type != "consensus":
+                        rec.statement_type = "ungraded"
+                    if rec.ungraded:
+                        rec.ungraded_reason = rec.ungraded_reason or "no_grade_detected"
+                    rec.grade = rec.grade if isinstance(rec.grade, str) else None
         _apply_recommendation_type(rec)
         _finalize_recommendation_flags(rec)
 
@@ -274,10 +409,16 @@ def _inline_candidates_for_rec(
     paragraph_store: Dict[str, Dict[str, object]],
     ordered_entries: List[Tuple[int, str, Dict[str, object]]],
     entry_index: Dict[str, int],
+    retyped_signatures: Set[str],
 ) -> List[Dict[str, object]]:
     payloads: List[Dict[str, object]] = []
     seen_texts: Set[str] = set()
     detection_texts: List[str] = []
+    signature = getattr(rec, "_stable_signature", None)
+    if signature is None:
+        signature = _stable_text_signature(rec.text or "")
+        setattr(rec, "_stable_signature", signature)
+    retyped = signature in retyped_signatures if retyped_signatures else False
     for base_text in (rec.text, rec.grade_raw):
         normalized = (base_text or "").strip()
         if normalized:
@@ -302,6 +443,8 @@ def _inline_candidates_for_rec(
         normalized = candidate_text.strip()
         lowered = normalized.lower()
         if not normalized or lowered in seen_texts:
+            continue
+        if retyped and not _allow_grade_capture(normalized):
             continue
         seen_texts.add(lowered)
         for candidate in detect_inline_candidates(normalized):
@@ -1100,6 +1243,106 @@ def _build_pointer(hash_id: str, entry: Dict[str, object]) -> EvidenceSpan:
     )
 
 
+def _normalize_section_name(value: Optional[str]) -> str:
+    if not value:
+        return ""
+    return " ".join(str(value).strip().lower().split())
+
+
+def _section_lists(settings: Dict[str, Any]) -> Tuple[Set[str], Set[str]]:
+    def _collect(name: str) -> Set[str]:
+        raw = settings.get(name, [])
+        if isinstance(raw, (list, tuple, set)):
+            return {_normalize_section_name(token) for token in raw if isinstance(token, str) and token.strip()}
+        return set()
+
+    allow = _collect("allow_sections")
+    deny = _collect("deny_sections")
+    return allow, deny
+
+
+def _section_allowed(section_title: Optional[str], allow: Set[str], deny: Set[str]) -> bool:
+    normalized = _normalize_section_name(section_title)
+    if normalized and any(normalized.startswith(token) for token in deny):
+        return False
+    if allow:
+        return bool(normalized and any(normalized.startswith(token) for token in allow))
+    return True
+
+
+def _modal_trigger_present(text: Optional[str]) -> bool:
+    if not text:
+        return False
+    stripped = _strip_recommendation_label(text)
+    return bool(MODAL_TRIGGER_RE.search(stripped))
+
+
+def _first_sentence_signature(text: Optional[str]) -> Optional[str]:
+    if not text:
+        return None
+    stripped = _strip_recommendation_label(text)
+    if not stripped:
+        return None
+    parts = FIRST_SENTENCE_BOUNDARY_RE.split(stripped, maxsplit=1)
+    first_sentence = parts[0].strip() if parts else stripped.strip()
+    if not first_sentence:
+        return None
+    normalized = " ".join(first_sentence.split()).lower()
+    if not normalized:
+        return None
+    return _stable_text_signature(normalized)
+
+
+def _item_has_grade_hint(
+    item: EnumeratedItem,
+    entries: List[Tuple[str, Dict[str, object]]],
+    index_map: Dict[str, int],
+) -> bool:
+    for text in (_strip_recommendation_label(item.text or ""),):
+        if text and GRADE_PROXIMITY_RE.search(text):
+            return True
+    for hash_id in item.paragraph_hashes:
+        idx = index_map.get(hash_id)
+        if idx is None:
+            continue
+        for neighbor in (idx - 1, idx, idx + 1):
+            if 0 <= neighbor < len(entries):
+                entry = entries[neighbor][1]
+                paragraph_text = entry.get("text")
+                if isinstance(paragraph_text, str) and GRADE_PROXIMITY_RE.search(paragraph_text):
+                    return True
+    return False
+
+
+def _recommendation_grade_hint(
+    rec: GuidelineRecommendation,
+    entries: List[Tuple[str, Dict[str, object]]],
+    index_map: Dict[str, int],
+) -> bool:
+    candidate_texts: List[str] = []
+    if rec.text:
+        candidate_texts.append(_strip_recommendation_label(rec.text))
+    hashes: List[str] = []
+    hashes.extend(rec.anchors or [])
+    hashes.extend(rec.evidence_refs or [])
+    if rec.evidence and getattr(rec.evidence, "paragraph_hash", None):
+        hashes.append(rec.evidence.paragraph_hash)
+    seen: Set[str] = set()
+    for hash_id in hashes:
+        if not hash_id or hash_id in seen:
+            continue
+        seen.add(hash_id)
+        idx = index_map.get(hash_id)
+        if idx is None:
+            continue
+        for neighbor in (idx - 1, idx, idx + 1):
+            if 0 <= neighbor < len(entries):
+                paragraph_text = entries[neighbor][1].get("text")
+                if isinstance(paragraph_text, str):
+                    candidate_texts.append(paragraph_text)
+    return any(text and GRADE_PROXIMITY_RE.search(text) for text in candidate_texts)
+
+
 def _extract_summary_recommendations(
     document: ArticleDocument,
     paragraph_store: Dict[str, Dict[str, object]],
@@ -1116,13 +1359,68 @@ def _extract_summary_recommendations(
     if not items:
         return []
 
+    settings = _guideline_promoter_settings()
+    try:
+        max_per_section = int(settings.get("max_promoted_per_section", DEFAULT_MAX_PROMOTED))
+    except Exception:
+        max_per_section = DEFAULT_MAX_PROMOTED
+    max_per_section = max(1, max_per_section)
+    try:
+        max_total = int(settings.get("max_promoted_total", max_per_section * 4))
+    except Exception:
+        max_total = max_per_section * 4
+    max_total = max(max_total, max_per_section)
+
+    exclude_tokens_raw = settings.get("exclude_headings", DEFAULT_EXCLUDE_HEADINGS)
+    if isinstance(exclude_tokens_raw, (list, tuple)):
+        exclude_tokens = tuple(
+            token.strip().lower()
+            for token in exclude_tokens_raw
+            if isinstance(token, str) and token.strip()
+        )
+    else:
+        exclude_tokens = tuple(token for token in DEFAULT_EXCLUDE_HEADINGS)
+    if not exclude_tokens:
+        exclude_tokens = tuple(token for token in DEFAULT_EXCLUDE_HEADINGS)
+
+    allow_sections, deny_sections = _section_lists(settings)
+    entry_index_map = {hash_id: idx for idx, (hash_id, _) in enumerate(entries)}
+    first_sentence_signatures: Set[str] = set()
+    section_counts: Dict[str, int] = defaultdict(int)
+
     recommendations: List[GuidelineRecommendation] = []
     summary_anchor_ids: Set[str] = set()
     for item in items:
+        section_key = _normalize_section_name(item.section_title) or "__unknown__"
+        if not _section_allowed(item.section_title, allow_sections, deny_sections):
+            continue
+        if section_counts[section_key] >= max_per_section:
+            continue
+
         recommendation = _build_recommendation_from_item(document, item, paragraph_store)
-        if recommendation:
-            summary_anchor_ids.update(recommendation.anchors or [])
-            recommendations.append(recommendation)
+        if not recommendation:
+            continue
+        if not _eligible_summary_candidate(recommendation.text or "", exclude_tokens):
+            continue
+
+        modal_ok = _modal_trigger_present(recommendation.text or "")
+        grade_hint_ok = _item_has_grade_hint(item, entries, entry_index_map)
+        if not (modal_ok or grade_hint_ok):
+            continue
+
+        sentence_signature = _first_sentence_signature(recommendation.text or "")
+        if sentence_signature:
+            if sentence_signature in first_sentence_signatures:
+                continue
+            first_sentence_signatures.add(sentence_signature)
+
+        summary_anchor_ids.update(recommendation.anchors or [])
+        recommendations.append(recommendation)
+        section_counts[section_key] += 1
+
+        if len(recommendations) >= max_total:
+            break
+
     if summary_anchor_ids:
         pipeline_info = getattr(document, "pipeline_info", {}) or {}
         anchors = list(dict.fromkeys(summary_anchor_ids))
@@ -1150,14 +1448,16 @@ def _collect_enumerated_items(
     current_number: Optional[str] = None
     current_parts: List[str] = []
     current_paragraphs: List[str] = []
+    current_section: Optional[str] = None
     enumerating = False
     blank_streak = 0
     seen_numbers: Set[int] = set()
     heading_entry = entries[heading_index][1]
     heading_page = heading_entry.get("page") if isinstance(heading_entry, dict) else None
+    active_section = (heading_entry.get("text") or "").strip() if isinstance(heading_entry, dict) else None
 
     def finalize_current() -> None:
-        nonlocal current_number, current_parts, current_paragraphs
+        nonlocal current_number, current_parts, current_paragraphs, current_section
         if current_number and current_parts:
             text = " ".join(current_parts).strip()
             if text:
@@ -1167,11 +1467,13 @@ def _collect_enumerated_items(
                         number=current_number,
                         text=text,
                         paragraph_hashes=paragraph_hashes,
+                        section_title=current_section or active_section,
                     )
                 )
         current_number = None
         current_parts = []
         current_paragraphs = []
+        current_section = None
 
     for idx in range(heading_index + 1, len(entries)):
         hash_id, entry = entries[idx]
@@ -1219,11 +1521,13 @@ def _collect_enumerated_items(
                 current_number = number
                 current_parts = [segment.strip()]
                 current_paragraphs = [hash_id]
+                current_section = active_section
                 seen_numbers.add(number_int)
             continue
 
         if not enumerating:
             if is_heading:
+                active_section = text.strip()
                 break
             continue
 
@@ -1243,6 +1547,7 @@ def _collect_enumerated_items(
             continue
 
         if is_heading:
+            active_section = text.strip()
             finalize_current()
             break
 
@@ -1418,6 +1723,8 @@ def _finalize_recommendation_flags(rec: GuidelineRecommendation) -> None:
 
 def _recommendation_density_stats(
     recommendations: Sequence[GuidelineRecommendation],
+    *,
+    skip_ungraded_signatures: Optional[Set[str]] = None,
 ) -> Tuple[int, int, float, float]:
     total = len(recommendations)
     if total == 0:
@@ -1425,19 +1732,33 @@ def _recommendation_density_stats(
     with_grade = 0
     graded = 0
     typed_ungraded = 0
+    effective_total = total
     for rec in recommendations:
         normalized = getattr(rec, "grade_normalized", None) or {}
         graded_flag = bool(getattr(rec, "graded", False))
         typed_flag = bool(getattr(rec, "typed", False) or normalized)
+        signature = getattr(rec, "_stable_signature", None)
+        if signature is None:
+            signature = _stable_text_signature(rec.text or "")
+            setattr(rec, "_stable_signature", signature)
+        skip_retyped = (
+            skip_ungraded_signatures
+            and signature in skip_ungraded_signatures
+            and not normalized
+        )
+        if skip_retyped:
+            effective_total -= 1
+            continue
         if normalized:
             with_grade += 1
         if graded_flag:
             graded += 1
         elif typed_flag:
             typed_ungraded += 1
-    typed_ungraded = min(typed_ungraded, max(0, total - graded))
-    grade_density = with_grade / total if total else 0.0
-    typed_density = (graded + typed_ungraded) / total if total else 0.0
+    effective_total = max(effective_total, 0)
+    typed_ungraded = min(typed_ungraded, max(0, effective_total - graded))
+    grade_density = with_grade / effective_total if effective_total else 0.0
+    typed_density = (graded + typed_ungraded) / effective_total if effective_total else 0.0
     return graded, typed_ungraded, grade_density, typed_density
 
 
@@ -1447,9 +1768,17 @@ def _update_recommendation_metrics(document: ArticleDocument) -> None:
         if getattr(rec, "ungraded", None) is None:
             rec.ungraded = False
 
-    graded_count, typed_ungraded_count, grade_density, typed_density = _recommendation_density_stats(recommendations)
+    pipeline_info = getattr(document, "pipeline_info", {}) or {}
+    skip_signatures = set(
+        signature
+        for signature in pipeline_info.get("retyped_recommendation_signatures", [])
+        if isinstance(signature, str)
+    )
+    graded_count, typed_ungraded_count, grade_density, typed_density = _recommendation_density_stats(
+        recommendations,
+        skip_ungraded_signatures=skip_signatures,
+    )
 
-    pipeline_info = getattr(document, "pipeline_info", {})
     if not isinstance(pipeline_info, dict):
         pipeline_info = {}
     metrics = pipeline_info.setdefault("recommendation_metrics", {})

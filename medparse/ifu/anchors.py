@@ -7,7 +7,7 @@ import re
 from dataclasses import dataclass, field, replace
 from difflib import SequenceMatcher
 from pathlib import Path
-from typing import Any, Dict, Iterable, List, Optional, Sequence, Tuple
+from typing import Any, Callable, Dict, Iterable, List, Optional, Sequence, Tuple
 
 import yaml
 
@@ -22,6 +22,35 @@ LOGGER = get_logger(__name__)
 DOT_LEADER_PATTERN = re.compile(r"\.{2,}")
 TRAILING_NUMBER_PATTERN = re.compile(r"\s\d{1,4}\s*$")
 ANCHOR_HEADING_PATTERN = re.compile(r"^\s*\d+\.\s+[A-Z].*$")
+ANCHOR_PREFIX_CHARS = "".join(
+    [
+        "-",
+        "!",
+        "\u00b7",
+        "\u2022",
+        "\u2023",
+        "\u25aa",
+        "\u25cf",
+        "\u25a0",
+        "\u25b6",
+        "\u25ba",
+        "\u25c6",
+        "\u25c7",
+        "\u25a1",
+        "\u25b2",
+        "\u25b3",
+        "\u2206",
+        "\u00bb",
+        "\u26a0",
+        "\uf06d",
+        "\uf06e",
+        "\uf06f",
+        "\uf0a7",
+        "\uf0b7",
+        "\uf0d8",
+    ]
+)
+ANCHOR_PREFIX_CLASS = re.escape(ANCHOR_PREFIX_CHARS)
 
 # Enhanced TOC detection patterns
 TOC_HEADER_PATTERN = re.compile(r"^\s*(contents|table of contents|index)\s*$", re.IGNORECASE)
@@ -40,6 +69,17 @@ ANCHOR_TOC_WINDOW = 10
 ANCHOR_TOC_RATIO = 0.4
 
 SECTION_ALIAS_PATH = Path(__file__).resolve().parents[2] / "configs" / "_shared" / "ifu_section_aliases.yaml"
+
+GLOBAL_STOP_ANCHORS = [
+    "instructions",
+    "sterilization",
+    "specifications",
+    "symbols",
+    "index",
+    "table of contents",
+]
+
+INTUITIVE_CLINICAL_STOP = re.compile(r"^\s*1\.(5|6)\b")
 
 
 @functools.lru_cache(maxsize=1)
@@ -392,6 +432,14 @@ MANUFACTURER_ANCHORS: Dict[str, Dict[str, Dict[str, List[str]]]] = {
     "OLYMPUS": OLYMPUS_ANCHORS,
 }
 
+
+def _coerce_page_number(value: object) -> Optional[int]:
+    try:
+        number = int(value)  # type: ignore[arg-type]
+    except (TypeError, ValueError):
+        return None
+    return number if number >= 0 else None
+
 @dataclass(slots=True)
 class Section:
     anchor: str
@@ -463,13 +511,30 @@ def slice_section(
     bleed_threshold: float = 0.8,
     field_name: Optional[str] = None,
     manufacturer_rules: Optional[Dict[str, object]] = None,
+    toc_mask: Optional[Sequence[int]] = None,
+    section_validator: Optional[Callable[[Section], bool]] = None,
 ) -> Section:
     guard = guard_config or TocGuardConfig()
 
     working_pages = list(pages)
     guard_report: Optional[TocGuardReport] = None
+    toc_mask_set: set[int] = set()
+    for mask_page in toc_mask or []:
+        coerced = _coerce_page_number(mask_page)
+        if coerced is not None:
+            toc_mask_set.add(coerced)
     if toc_guard:
         working_pages, guard_report = strip_toc(working_pages, guard)
+        if guard_report and guard_report.pages_dropped:
+            for page in guard_report.pages_dropped:
+                coerced = _coerce_page_number(page)
+                if coerced is not None:
+                    toc_mask_set.add(coerced)
+    elif toc_mask:
+        for page in toc_mask:
+            coerced = _coerce_page_number(page)
+            if coerced is not None:
+                toc_mask_set.add(coerced)
 
     min_page_threshold = min_start_page
     if isinstance(manufacturer_rules, dict):
@@ -491,6 +556,15 @@ def slice_section(
 
     start_list = _coerce_anchor_list(start_anchor)
     stop_list = _coerce_anchor_list(stop_anchors)
+
+    if stop_list:
+        existing_lower = {str(anchor).lower() for anchor in stop_list if isinstance(anchor, str)}
+        for anchor in GLOBAL_STOP_ANCHORS:
+            if anchor.lower() not in existing_lower:
+                stop_list.append(anchor)
+                existing_lower.add(anchor.lower())
+    else:
+        stop_list = list(GLOBAL_STOP_ANCHORS)
 
     if not working_pages or not start_list:
         return Section(
@@ -525,6 +599,10 @@ def slice_section(
         if not candidate:
             break
         start_page_no, line_index, raw_line = candidate
+        if start_page_no in toc_mask_set:
+            current_pages = _drop_first_anchor_occurrence(current_pages, start_patterns)
+            attempts += 1
+            continue
         if min_page_threshold is not None and start_page_no < min_page_threshold:
             current_pages = _drop_first_anchor_occurrence(current_pages, start_patterns)
             attempts += 1
@@ -535,7 +613,15 @@ def slice_section(
             continue
 
         start_tokens = _extract_heading_tokens(raw_line)
-        pages_for_slice: Sequence[PageData] = current_pages
+        pages_for_slice_list = list(current_pages)
+        if pages_for_slice_list:
+            for idx, page in enumerate(pages_for_slice_list):
+                if page.number >= start_page_no:
+                    pages_for_slice_list = pages_for_slice_list[idx:]
+                    break
+            else:
+                pages_for_slice_list = []
+        pages_for_slice: Sequence[PageData] = pages_for_slice_list
         window_applied = False
         trimmed_prefix = 0
 
@@ -551,7 +637,12 @@ def slice_section(
                 break
 
             cleaned = clean_paragraph(extracted)
-            cleaned = _truncate_to_stop(cleaned, stop_list, start_tokens)
+            cleaned = _truncate_to_stop(
+                cleaned,
+                stop_list,
+                start_tokens,
+                field_name=field_name,
+            )
             cleaned = normalize_bullets(cleaned)
             trimmed_text, trimmed_prefix = trim_anchor_bleed(cleaned, ratio_threshold=bleed_threshold)
 
@@ -577,7 +668,7 @@ def slice_section(
             start_page = start_page_no
             end_page = _find_anchor_page(pages_for_slice, stop_list) if stop_list else None
 
-            return Section(
+            candidate_section = Section(
                 anchor=start_list[0] if start_list else "",
                 text=trimmed_text,
                 start_page=start_page,
@@ -586,6 +677,13 @@ def slice_section(
                 trimmed_prefix=trimmed_prefix,
                 toc_report=guard_report,
             )
+
+            if section_validator and not section_validator(candidate_section):
+                current_pages = _drop_first_anchor_occurrence(current_pages, start_patterns)
+                attempts += 1
+                continue
+
+            return candidate_section
 
         current_pages = _drop_first_anchor_occurrence(current_pages, start_patterns)
         attempts += 1
@@ -657,6 +755,9 @@ def is_toc_like_para(line: str) -> bool:
         return False
     if "table of contents" in lowered or "contents" in lowered or lowered.endswith("index"):
         return True
+    dot_pairs = len(re.findall(r"\.\s*\.", line))
+    if dot_pairs >= 3 and re.search(r"\d{1,3}\s*$", line):
+        return True
     if DOT_LEADER_LINE.search(line) or PAGE_NUMBER_LINE.search(line) or TRAILING_NUMBER_PATTERN.search(line):
         return True
     return False
@@ -666,6 +767,9 @@ def looks_like_section_heading(line: str) -> bool:
     if not line:
         return False
     stripped = line.strip()
+    if not stripped:
+        return False
+    stripped = stripped.lstrip(ANCHOR_PREFIX_CHARS).strip()
     if not stripped:
         return False
     if re.match(r"^\d+(?:\.\d+)*\s+", stripped):
@@ -771,6 +875,8 @@ def _truncate_to_stop(
     text: str,
     stop_anchors: Sequence[str],
     start_tokens: Optional[Sequence[int]] = None,
+    *,
+    field_name: Optional[str] = None,
 ) -> str:
     if not text or not stop_anchors:
         return text
@@ -782,6 +888,11 @@ def _truncate_to_stop(
         if start_tokens:
             heading_tokens = _extract_heading_tokens(raw_line)
             if _should_stop_at_heading(heading_tokens, start_tokens):
+                return "\n".join(lines[:idx])
+            if (
+                field_name == "clinical_risks_and_benefits"
+                and INTUITIVE_CLINICAL_STOP.match(raw_line or "")
+            ):
                 return "\n".join(lines[:idx])
         normalized_line = _normalize_for_match(raw_line)
         if not normalized_line:
@@ -902,7 +1013,11 @@ def _find_anchor_page(pages: Sequence[PageData], anchors: Sequence[str]) -> Opti
 
 def _compile_anchor_pattern(anchor: str) -> re.Pattern[str]:
     escaped = re.escape(anchor)
-    pattern = rf"^\s*(?:\d+(?:\.\d+)*\s+)?{escaped}(?:\b|[:\-–—]|\s)"
+    pattern = (
+        rf"^\s*(?:[{ANCHOR_PREFIX_CLASS}]+\s*)?"
+        rf"(?:\d+(?:\.\d+)*\s+)?"
+        rf"{escaped}(?:\b|[:\-–—]|\s)"
+    )
     return re.compile(pattern, flags=re.IGNORECASE | re.MULTILINE)
 
 

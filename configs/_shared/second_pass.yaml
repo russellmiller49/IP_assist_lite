@@ -1,0 +1,81 @@
+second_pass:
+  enabled: auto
+  max_runtime_ms: 2500
+
+  guideline_promoter:
+    max_promoted_per_section: 64
+    allow_sections:
+      - Recommendations
+      - Summary of Recommendations
+      - Key Recommendations
+    deny_sections:
+      - Key Points
+      - Practice Implications
+      - Background
+      - Highlights
+      - Clinical Summary
+    exclude_headings:
+      - Remarks
+      - Good practice
+      - Implementation
+      - Tables
+      - Figures
+    first_sentence_dedupe: true
+
+  yield_ats:
+    max_proximity_paras: 2
+
+  sectionizer:
+    min_sections_research: 4
+
+  ifu:
+    enable: auto  # off | auto | always
+    safety_density_min:
+      default: 20
+      small_leaflet_pages_max: 4
+      small_leaflet: 8  # page_count <= 4
+      by_manufacturer:
+        Intuitive: 20
+        ERBE: 15
+        Olympus: 8
+    safety:
+      booster:
+        dedupe_ratio: 0.92
+        max_added: 20
+    references_anchor:
+      detect_terms:
+        - References
+        - Bibliography
+        - Literature
+      min_tail_pages: 1
+      tail_pages: 2
+
+  toc_guard:
+    drop_patterns:
+      - "^[0-9]+(\\.[0-9]+)*\\s+[-–.…]{2,}\\s*[0-9]+\\s*$"
+      - "^[A-Z][A-Za-z ]+\\s+[-–.…]{2,}\\s*[0-9]+\\s*$"
+    min_hits: 2
+
+  manufacturer_overrides:
+    intuitive:
+      skip_anchors:
+        - software license
+        - trademarks
+        - service
+        - index
+    olympus:
+      skip_anchors:
+        - software license
+        - service
+        - customer support
+    erbe:
+      skip_anchors:
+        - service
+        - software license
+        - legal
+
+  frontmatter_patterns:
+    part_number: "(?:(?:part|art)\\s*(?:number|no\\.? )|p/?n|catalog(?:ue)?\\s*(?:no\\.?|number)?|cat(?:\\.)?\\s*no\\.?|order\\s*(?:no\\.?|number)|ref|article\\s*(?:no\\.?|number)|document\\s*(?:no\\.?|number))\\s*[:#]?\\s*([A-Z0-9][A-Z0-9\\-_/]{2,})"
+    revision: "\\brev(?:ision)?\\s*[:#]?\\s*([A-Z0-9.\\-]+)"
+    publication_date: "\\b(?:date|issued|publication)\\s*[:#]?\\s*([0-9]{4}(?:[./-][0-9]{1,2}){0,2})"
+    model: "\\bmodel\\s*[:#]?\\s*([A-Z0-9\\- ]{3,})"

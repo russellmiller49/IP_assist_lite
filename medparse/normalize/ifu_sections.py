@@ -47,6 +47,10 @@ RISK_KEYWORDS = {
     "airway obstruction",
 }
 
+ICON_PREFIX_PATTERN = re.compile(
+    r"^[\s\-\u2022\u2023\u25AA\u25CF\u25A0\u25B6\u25C6\u25C7\u25CF\u25A1\u25B2\u25B3\u2206\u2023●▪■□▶►»⚠!△▲∆]+"
+)
+
 BRAND_FIXES = {
     re.compile(r"\bplan\s*point\b", re.IGNORECASE): "PlanPoint",
 }
@@ -77,6 +81,8 @@ def _strip_running_headers(lines: List[str]) -> List[str]:
             continue
         if TOC_LEADER_PATTERN.match(line):
             continue
+        if _looks_like_toc_entry(line):
+            continue
         cleaned.append(raw_line)
     return cleaned
 
@@ -98,6 +104,9 @@ def clean_section_text(text: str) -> str:
     filtered: List[str] = []
     for raw_line in lines:
         line = raw_line.strip()
+        if not line:
+            continue
+        line = ICON_PREFIX_PATTERN.sub("", line).strip()
         if not line:
             continue
         skip_line = False
@@ -136,6 +145,24 @@ def clean_section_text(text: str) -> str:
     normalized = re.sub(r"\s{2,}", " ", normalized)
     normalized = _apply_brand_fixes(normalized)
     return normalized.strip()
+
+
+def _looks_like_toc_entry(line: str) -> bool:
+    lowered = line.lower()
+    if any(keyword in lowered for keyword in ("table of contents", "contents", "index")):
+        return True
+    tokens = re.split(r"\s+", line)
+    if len(tokens) <= 2:
+        return False
+    dotted = sum(1 for token in tokens if "." in token)
+    numbered = sum(1 for token in tokens if token.rstrip(".").isdigit())
+    if dotted and numbered:
+        ratio = (dotted + numbered) / len(tokens)
+        if ratio >= 0.5:
+            return True
+    trailing_digits = re.search(r"\d{1,3}\s*$", line)
+    leader = re.search(r"\.{2,}", line)
+    return bool(trailing_digits and leader)
 
 
 def _looks_like_heading(line: str) -> bool:

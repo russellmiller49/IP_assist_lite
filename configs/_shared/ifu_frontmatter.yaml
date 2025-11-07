@@ -5,6 +5,7 @@ manufacturers:
       - 'ERBE\s+Medical'
       - 'ERBE\s+USA'
       - 'ERBE\s+Austria'
+      - 'erbe\.(?:com|de|at)'
   - name: "Intuitive Surgical, Inc."
     patterns:
       - 'Intuitive\s+Surgical'
@@ -12,12 +13,15 @@ manufacturers:
       - 'Intuitive\s+Surgical\s+SARL'
       - 'Intuitive\s+Ib[eé]rica'
       - 'Intuitive\s+Operations'
+      - '©\s*Intuitive'
+      - 'intuitive\.(?:com|co\.uk|eu)'
   - name: "Olympus Corporation"
     patterns:
       - 'Olympus\s+Corporation'
       - 'Olympus\s+America\s+Inc\.'
       - 'Olympus\s+Medical'
       - 'Olympus\s+KeyMed'
+      - 'olympus\.(?:com|co\.jp|eu)'
 
 product_patterns:
   "ERBE Elektromedizin GmbH":
@@ -50,3 +54,32 @@ product_patterns:
       group: 1
 
 product_name_from_filename: true
+
+pattern_bundle:
+  manufacturers:
+    - "(?i)Intuitive Surgical"
+    - "(?i)ERBE(?:\\s+Elektromedizin)?"
+    - "(?i)Olympus"
+    - "(?i)intuitive\\.(?:com|co\\.uk|eu)"
+    - "(?i)olympus\\.(?:com|co\\.jp|eu)"
+    - "(?i)erbe\\.(?:com|de|at)"
+  product_name:
+    - "(?i)(Ion Endoluminal System)"
+    - "(?i)(System Carrier)"
+    - "(?i)(ALT[- ]?Pro)"
+    - "(?i)(BW[- ]?18V)"
+  part_number:
+    - "(?i)(?:Part No\\.?|P/N|PN|REF|Order No\\.?|Document ID|Doc ID|Catalog(?:ue)? No\\.?)\\s*[:#]?\\s*([A-Z0-9\\-\\.]+)"
+    - "(?i)Order\\s*(?:No\\.?|Number)\\s*[:#]?\\s*([A-Z0-9\\-\\.]+)"
+    - "(?i)REF\\s*[:#]?\\s*([A-Z0-9\\-\\.]+)"
+  revision:
+    - "(?i)(?:Rev(?:ision)?\\.?|Version|Revision\\s*(?:Level|Code))\\s*[:#]?\\s*([A-Z0-9\\-\\.]+)"
+  publication_date:
+    - "(?i)(?:Published|Issue(?:d)?|Date|Revision Date|Release Date)\\s*[:#]?\\s*([0-9]{4}[-/][0-9]{2}[-/][0-9]{2})"
+    - "(?i)(?:Published|Issue(?:d)?|Date)\\s*[:#]?\\s*([A-Za-z]{3,9}\\s+\\d{4})"
+    - "(?i)(January|February|March|April|May|June|July|August|September|October|November|December)\\s+(\\d{4})"
+    - "(?i)(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)\\.?,?\\s+(\\d{4})"
+  model:
+    - "(?i)Model\\s*[:#]?\\s*([A-Z0-9\\-]+)"
+    - "(?i)(BW[- ]?18V)"
+    - "(?i)(ALT[- ]?Pro)"

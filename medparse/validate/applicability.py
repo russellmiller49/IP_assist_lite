@@ -69,7 +69,9 @@ def is_diagnostic_study(article: ArticleDocument) -> Tuple[bool, List[str]]:
     reasons: List[str] = []
 
     subtype = getattr(article, "doc_subtype", None) or ""
-    if subtype in {"therapeutic_trial", "practice_management"}:
+    if subtype == "research_diagnostic":
+        return True, ["doc_subtype:research_diagnostic"]
+    if subtype in {"therapeutic_trial", "practice_management", "research_therapeutic", "editorial_or_economics", "other_research"}:
         return False, [f"doc_subtype:{subtype}"]
 
     sections = getattr(article, "sections", {}) or {}

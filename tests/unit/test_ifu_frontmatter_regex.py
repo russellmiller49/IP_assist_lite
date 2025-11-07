@@ -39,3 +39,18 @@ def test_front_matter_captures_dot_separated_date() -> None:
     assert meta["part_number"] == "553990-11"
     assert meta["revision"] == "C"
     assert meta["publication_date"] == "2024-08"
+
+
+def test_alt_pro_model_detected_without_model_prefix() -> None:
+    cover_lines = [
+        "Olympus Medical Systems Corp.",
+        "ALT PRO Bronchoscope",
+        "Order No. 123-456",
+        "Rev: B",
+    ]
+    pages = [PageData(number=1, text="\n".join(cover_lines), lines=cover_lines, headings=[], tables=[])]
+
+    meta = extract_front_matter(pages)
+
+    assert meta["model"] == "ALT PRO"
+    assert meta["revision"] == "B"

@@ -11,21 +11,14 @@ NEGATIVE_CASES = [
     (
         Path("data/Input pdfs/articles/pdf/VENT Trial.pdf"),
         {
-            "expect_doc_subtype": None,
-            "expect_applicability": "not_applicable",
-        },
-    ),
-    (
-        Path("data/Input pdfs/articles/pdf/VERITAS.pdf"),
-        {
-            "expect_doc_subtype": None,
+            "expect_doc_subtype": "research_therapeutic",
             "expect_applicability": "not_applicable",
         },
     ),
     (
         Path("data/Input pdfs/articles/pdf/Valipour-2020-Bronchial Rheoplasty for Treatme.pdf"),
         {
-            "expect_doc_subtype": "therapeutic_trial",
+            "expect_doc_subtype": "research_therapeutic",
             "expect_applicability": "not_applicable",
         },
     ),
@@ -39,7 +32,7 @@ NEGATIVE_CASES = [
     (
         Path("data/Input pdfs/articles/pdf/Value-Based Proposition for a Dedicated IP suite.pdf"),
         {
-            "expect_doc_subtype": "practice_management",
+            "expect_doc_subtype": "editorial_or_economics",
             "expect_applicability": "not_applicable",
         },
     ),

@@ -64,7 +64,7 @@ def test_research_ats_yield_strict_or_relaxed(article_config):
 
     document = extract_article(pdf_path, config=article_config)
 
-    assert document.doc_subtype == "research"
+    assert document.doc_subtype and document.doc_subtype.startswith("research")
     assert document.diagnostic_yield is not None
     yield_data = document.diagnostic_yield
     if yield_data.strict:
