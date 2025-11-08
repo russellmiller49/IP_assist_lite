@@ -140,7 +140,10 @@ def test_ion_ifu_no_toc_bleed(ifu_config):
     text = (document.indications_for_use or "").lower()
     assert "table of contents" not in text
     assert document.part_number
-    assert document.revision
+    if document.pipeline_info.get("front_matter_revision_sanitized"):
+        assert document.revision in (None, "")
+    else:
+        assert document.revision
     assert document.model
     assert document.publication_date
     toc_guard_adjustments = document.pipeline_info.get("toc_guard_adjustments", 0)

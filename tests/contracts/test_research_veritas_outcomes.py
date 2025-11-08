@@ -24,6 +24,7 @@ def test_research_veritas_outcomes() -> None:
     document = outcome.document
     assert document is not None
     assert document.doc_subtype == "research_diagnostic"
+    assert document.research_scope == "diagnostic_ppn_bronchoscopy"
 
     research = getattr(document, "research_outcomes", None)
     assert research is not None, "Research outcomes missing for VERITAS trial"

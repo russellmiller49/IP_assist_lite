@@ -24,6 +24,7 @@ def test_research_editorial_value_based_no_strict_yield() -> None:
     document = outcome.document
     assert document is not None
     assert document.doc_subtype == "editorial_or_economics"
+    assert document.research_scope == "editorial_or_economics"
 
     ats_meta = getattr(document, "ats_compatibility", None)
     assert ats_meta is not None

@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import functools
+import math
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Dict, Literal, Optional
@@ -60,6 +61,43 @@ def _load_safety_density_min() -> Dict[str, object]:
     return {}
 
 
+@functools.lru_cache(maxsize=1)
+def _load_dynamic_threshold_cfg() -> Dict[str, object]:
+    if not SAFETY_CONFIG_PATH.exists():
+        return {}
+    try:
+        data = yaml.safe_load(SAFETY_CONFIG_PATH.read_text(encoding="utf-8")) or {}
+    except Exception:
+        return {}
+    if isinstance(data, dict) and "second_pass" in data and isinstance(data["second_pass"], dict):
+        data = data["second_pass"]
+    if not isinstance(data, dict):
+        return {}
+    ifu_cfg = data.get("ifu")
+    if not isinstance(ifu_cfg, dict):
+        return {}
+    safety_cfg = ifu_cfg.get("safety")
+    if not isinstance(safety_cfg, dict):
+        return {}
+    dynamic_cfg = safety_cfg.get("dynamic_threshold")
+    return dynamic_cfg if isinstance(dynamic_cfg, dict) else {}
+
+
+def _dynamic_expected(char_count: int, cfg: Dict[str, object]) -> int:
+    if char_count <= 0:
+        char_count = 0
+    min_short = _coerce_positive_int(cfg.get("min_short")) or 8
+    cap_long = _coerce_positive_int(cfg.get("cap_long")) or 20
+    chars_per_10 = _coerce_positive_int(cfg.get("chars_per_10")) or 50_000
+    units = int(math.floor((char_count / chars_per_10) + 0.5)) if char_count > 0 else 0
+    expected = units * 10
+    if expected <= 0:
+        expected = min_short
+    expected = max(min_short, expected)
+    expected = min(cap_long, expected)
+    return expected
+
+
 def _severity_label(kind: str, variant: str = "default") -> str:
     table = SEVERITY_TABLE.get(kind, {})
     candidate = table.get(variant)
@@ -100,9 +138,7 @@ def validate_ifu(document: IFUDocument, config: ExtractionConfig) -> list[Issue]
 
     # Skip validation for non-IFU subtypes
     doc_subtype = getattr(document, "doc_subtype", None)
-    if doc_subtype in {"catalog", "installation_guide", "tech_manual"}:
-        # Skip clinical field validation for non-IFUs
-        return issues
+    skip_clinical = doc_subtype in {"catalog", "installation_guide", "tech_manual"}
 
     ifu_settings = getattr(config, "ifu", {}) or {}
     small_ifu_threshold = _coerce_positive_int(ifu_settings.get("small_ifu_threshold")) or 4
@@ -199,7 +235,12 @@ def validate_ifu(document: IFUDocument, config: ExtractionConfig) -> list[Issue]
 
         dropped = pipeline_info.get("toc_guard_pages_dropped")
         if dropped:
-            issues.append(Issue.warn(f"TOC guard dropped pages {dropped}"))
+            severity_hint = str(pipeline_info.get("toc_guard_severity") or "warn").lower()
+            message = f"TOC guard dropped pages {dropped}"
+            if severity_hint == "error":
+                issues.append(Issue.error(message))
+            else:
+                issues.append(Issue.warn(message))
 
     # Validate required clinical fields for true IFUs
     if doc_subtype != "catalog" and doc_subtype != "installation_guide":
@@ -285,29 +326,40 @@ def validate_ifu(document: IFUDocument, config: ExtractionConfig) -> list[Issue]
                 vendor_override_applied = True
                 break
 
-    expected_min = small_leaflet_min if page_count and page_count <= small_leaflet_pages_max else vendor_min
+    extracted_chars = _coerce_positive_int(pipeline_info.get("extracted_chars")) if isinstance(pipeline_info, dict) else 0
+    dynamic_cfg = _load_dynamic_threshold_cfg()
+    dynamic_expected = _dynamic_expected(extracted_chars, dynamic_cfg)
+
+    if page_count and page_count <= small_leaflet_pages_max:
+        expected_min = max(dynamic_expected, small_leaflet_min)
+    else:
+        expected_min = max(dynamic_expected, vendor_min)
 
     if isinstance(pipeline_info, dict):
-        pipeline_info.setdefault("safety_expected_min", expected_min)
-        expectation_source = (
-            "density_config_override"
-            if density_cfg and vendor_override_applied
-            else "density_config"
-            if density_cfg
-            else ("vendor_override" if vendor_override_applied else "default")
-        )
-        pipeline_info.setdefault("safety_expectation_source", expectation_source)
+        pipeline_info["safety_expected_min"] = expected_min
+        expectation_source = "dynamic"
+        if vendor_override_applied:
+            expectation_source = "vendor_override"
+        pipeline_info["safety_expectation_source"] = expectation_source
 
     if expected_min > 0 and len(safety_blocks) < expected_min:
-        message = f"Safety content below expected density (found {len(safety_blocks)}, expected >= {expected_min})"
-        variant = "default"
-        if manufacturer_label and "intuitive" in manufacturer_label and page_count and page_count > 30:
-            variant = "intuitive_big"
-        severity_label = _severity_label("safety_density_shortfall", variant)
-        issues.append(_issue_from_label(severity_label, message))
+        if page_count and page_count <= small_leaflet_pages_max and len(safety_blocks) >= small_leaflet_min:
+            pass
+        else:
+            message = f"Safety content below expected density (found {len(safety_blocks)}, expected >= {expected_min})"
+            variant = "default"
+            if manufacturer_label and "intuitive" in manufacturer_label and page_count and page_count > 30:
+                variant = "intuitive_big"
+            severity_label = _severity_label("safety_density_shortfall", variant)
+            if expected_min <= 12:
+                severity_label = "warning"
+            issues.append(_issue_from_label(severity_label, message))
 
     if isinstance(pipeline_info, dict):
         document.pipeline_info = pipeline_info
+
+    if skip_clinical:
+        return issues
 
     if getattr(document, "references", None):
         sections_map = {}

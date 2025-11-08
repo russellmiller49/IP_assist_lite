@@ -44,3 +44,7 @@ def test_ion_manual_toc_anchors_clean() -> None:
             field_text = value or ""
         assert "Table of Contents" not in field_text
         assert not field_text.strip().lower().startswith("table of contents")
+
+    severity = pipeline.get("toc_guard_severity")
+    if severity is not None:
+        assert severity in {"info", "warning"}

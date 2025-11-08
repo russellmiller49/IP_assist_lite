@@ -112,12 +112,20 @@ def validate_article(doc: ArticleDocument, cfg: ExtractionConfig) -> List[Issue]
 
     # Research articles require different validation
     min_sections = _coerce_int(getattr(research_cfg, "min_sections", 4))
-    if min_sections and not sections_ok(doc, min_sections=min_sections):
+    imrad_required = _imrad_required(doc)
+    pipeline_info = getattr(doc, "pipeline_info", {}) or {}
+    if isinstance(pipeline_info, dict):
+        pipeline_info["imrad_required"] = imrad_required
+        doc.pipeline_info = pipeline_info
+    if imrad_required and min_sections and not sections_ok(doc, min_sections=min_sections):
         issues.append(Issue.error(f"Research article has too few sections: {len(doc.sections or {})}/{min_sections}"))
 
     # Research articles require ATS-compliant diagnostic yield when applicable
     require_diagnostic_yield = bool(getattr(research_cfg, "require_diagnostic_yield", True))
-    if doc.doc_subtype == "research_diagnostic":
+    ats_required = (doc.doc_subtype or "").lower() == "research_diagnostic"
+    if isinstance(pipeline_info, dict):
+        pipeline_info["ats_yield_required"] = bool(ats_required)
+    if ats_required:
         performance_sources = _collect_diagnostic_performance_sources(doc)
         if not performance_sources:
             issues.append(Issue.error("Diagnostic performance missing for diagnostic research article"))
@@ -236,6 +244,28 @@ def _check_diagnostic_yield(doc: ArticleDocument) -> List[Issue]:
                 )
 
     return issues
+
+
+def _resolve_sectionizer_mode(doc: ArticleDocument) -> str:
+    pipeline_info = getattr(doc, "pipeline_info", {}) or {}
+    if not isinstance(pipeline_info, dict):
+        return ""
+    mode = pipeline_info.get("sectionizer_mode")
+    if isinstance(mode, str) and mode:
+        return mode.lower()
+    sectionizer_meta = pipeline_info.get("sectionizer")
+    if isinstance(sectionizer_meta, dict):
+        nested_mode = sectionizer_meta.get("mode")
+        if isinstance(nested_mode, str) and nested_mode:
+            return nested_mode.lower()
+    return ""
+
+
+def _imrad_required(doc: ArticleDocument) -> bool:
+    subtype = (doc.doc_subtype or "").lower()
+    if subtype != "research_diagnostic":
+        return False
+    return _resolve_sectionizer_mode(doc) != "editorial"
 
 
 def _resolve_strict_flag(diagnostic_yield) -> bool:

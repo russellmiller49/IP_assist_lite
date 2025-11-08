@@ -82,7 +82,12 @@ def _as_positive_int(value: Any, default: int) -> int:
     return number if number >= 0 else default
 
 
-def _compute_safety_expected_min(document: IFUDocument, config: ExtractionConfig) -> tuple[int, str]:
+def _compute_safety_expected_min(
+    document: IFUDocument,
+    config: ExtractionConfig,
+    *,
+    manufacturer_hint: Optional[str] = None,
+) -> tuple[int, str]:
     raw_ifu_settings = getattr(config, "ifu", {})
     if isinstance(raw_ifu_settings, dict):
         ifu_settings = raw_ifu_settings
@@ -113,7 +118,7 @@ def _compute_safety_expected_min(document: IFUDocument, config: ExtractionConfig
         if isinstance(overrides_cfg, dict):
             vendor_overrides = overrides_cfg
 
-    manufacturer_label = (document.manufacturer or "").strip().lower()
+    manufacturer_label = (document.manufacturer or manufacturer_hint or "").strip().lower()
     vendor_min = default_min
     vendor_override_applied = False
     if manufacturer_label and isinstance(vendor_overrides, dict):
@@ -154,15 +159,20 @@ def _clamp_pages(pages: List[int], page_count: int) -> List[int]:
     return clamped
 
 
-def _set_safety_expectations(document: IFUDocument, config: ExtractionConfig) -> None:
-    expected_min, source = _compute_safety_expected_min(document, config)
+def _set_safety_expectations(
+    document: IFUDocument,
+    config: ExtractionConfig,
+    *,
+    manufacturer_hint: Optional[str] = None,
+) -> None:
+    expected_min, source = _compute_safety_expected_min(document, config, manufacturer_hint=manufacturer_hint)
     pipeline_info = getattr(document, "pipeline_info", {}) or {}
     if not isinstance(pipeline_info, dict):
         pipeline_info = {}
         document.pipeline_info = pipeline_info
 
-    pipeline_info.setdefault("safety_expected_min", expected_min)
-    pipeline_info.setdefault("safety_expectation_source", source)
+    pipeline_info["safety_expected_min"] = expected_min
+    pipeline_info["safety_expectation_source"] = source
     pipeline_info.setdefault("safety_blocks_added", pipeline_info.get("safety_blocks_added", 0))
 
 
@@ -448,6 +458,6 @@ def extract_ifu(
         document.pipeline_info["paragraph_dedup_applied"] = True
     else:
         document.pipeline_info.setdefault("paragraph_dedup_applied", False)
-    _set_safety_expectations(document, extraction_config)
+    _set_safety_expectations(document, extraction_config, manufacturer_hint=manufacturer_for_safety)
     return document
 __all__ = ["extract_ifu"]

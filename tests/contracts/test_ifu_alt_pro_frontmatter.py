@@ -28,6 +28,15 @@ def test_alt_pro_front_matter_backfill() -> None:
     assert document.model == "ALT PRO"
     assert document.part_number is not None and document.part_number.strip()
     assert document.publication_date is not None and document.publication_date.startswith("20")
+    indications = document.indications_for_use
+    assert indications
+    if isinstance(indications, dict):
+        assert "leakage testing" in indications.get("text", "").lower()
+    assert document.contraindications
+    assert any("none known" in entry.lower() for entry in document.contraindications)
+
+    toc_severity = document.pipeline_info.get("toc_guard_severity")
+    assert toc_severity in {None, "info"}
 
     second_pass_info = getattr(document, "pipeline_info", {}).get("second_pass", {})
     assert isinstance(second_pass_info, dict)

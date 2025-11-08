@@ -84,6 +84,9 @@ def test_emit_metrics_mirror_pipeline_counters():
 
     metrics = _document_metrics(document)
 
+    assert metrics["research_scope"] == "unknown"
+    assert metrics["imrad_required"] is False
+    assert metrics["ats_yield_required"] is False
     assert metrics["relations_dropped"] == document.pipeline_info.get("relations_dropped")
     assert metrics["tables_dropped"] == document.pipeline_info.get("tables_dropped")
     assert metrics["paragraph_dedup_applied"] is True

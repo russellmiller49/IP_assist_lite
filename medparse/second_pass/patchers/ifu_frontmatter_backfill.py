@@ -199,10 +199,21 @@ def _normalize_part_number(value: str) -> Optional[str]:
     return value.strip().upper()
 
 
-def _normalize_revision(value: str) -> Optional[str]:
+def _sanitize_revision_token(value: str) -> Optional[str]:
     if not value:
         return None
-    return value.strip().upper()
+    token = value.strip().upper()
+    if not token:
+        return None
+    if not re.fullmatch(r"[A-Z0-9][A-Z0-9.\-]{0,10}", token):
+        return None
+    if re.fullmatch(r"[A-Z]{4,}", token) and not re.search(r"\d", token):
+        return None
+    return token
+
+
+def _normalize_revision(value: str) -> Optional[str]:
+    return _sanitize_revision_token(value)
 
 
 def _normalize_model(value: str) -> Optional[str]:
@@ -225,6 +236,31 @@ def _normalize_product_name(value: str) -> Optional[str]:
     if not cleaned:
         return None
     return cleaned
+
+
+def _resolve_frontmatter_settings(ctx: SecondPassContext) -> Dict[str, object]:
+    if not isinstance(ctx.config, dict):
+        return {}
+    ifu_cfg = ctx.config.get("ifu", {})
+    if not isinstance(ifu_cfg, dict):
+        return {}
+    frontmatter_cfg = ifu_cfg.get("frontmatter", {})
+    return frontmatter_cfg if isinstance(frontmatter_cfg, dict) else {}
+
+
+def _drop_heading_candidates(frontmatter_cfg: Dict[str, object]) -> set[str]:
+    headings = frontmatter_cfg.get("drop_headings_as_product", []) if isinstance(frontmatter_cfg, dict) else []
+    if not isinstance(headings, list):
+        return set()
+    return {str(value).strip().upper() for value in headings if isinstance(value, str) and value.strip()}
+
+
+def _vendor_settings(frontmatter_cfg: Dict[str, object], vendor_key: str) -> Dict[str, object]:
+    vendor_block = frontmatter_cfg.get("vendor_heuristics", {}) if isinstance(frontmatter_cfg, dict) else {}
+    if not isinstance(vendor_block, dict):
+        return {}
+    entry = vendor_block.get(vendor_key)
+    return entry if isinstance(entry, dict) else {}
 
 
 def _resolve_pattern_bundle(ctx: SecondPassContext) -> Dict[str, List[str]]:
@@ -254,9 +290,102 @@ def _resolve_pattern_bundle(ctx: SecondPassContext) -> Dict[str, List[str]]:
             bundle.setdefault(legacy_key, [legacy_pattern])
     return bundle
 
+
+CHANNEL_BRUSH_PATTERN = re.compile(r"\b(BW\s?-?\d{1,3}[A-Z0-9]{0,2})\b", re.IGNORECASE)
+
+
+def _find_channel_brush(entries: List[Dict[str, object]]) -> Optional[Dict[str, object]]:
+    hit_indices: List[int] = []
+    for idx, entry in enumerate(entries):
+        text = entry.get("text")
+        if isinstance(text, str) and "channel cleaning brush" in text.lower():
+            hit_indices.append(idx)
+    if not hit_indices:
+        return None
+    for idx in hit_indices:
+        start = max(0, idx - 3)
+        end = min(len(entries), idx + 4)
+        for neighbor in range(start, end):
+            text = entries[neighbor].get("text")
+            if not isinstance(text, str):
+                continue
+            match = CHANNEL_BRUSH_PATTERN.search(text)
+            if not match:
+                continue
+            token = match.group(1).upper().replace(" ", "-")
+            return {
+                "part_number": token,
+                "page": entries[neighbor].get("page"),
+            }
+    return None
+
+
+def _find_print_code(entries: List[Dict[str, object]], pattern_str: Optional[str]) -> Optional[str]:
+    if not pattern_str:
+        return None
+    try:
+        pattern = re.compile(pattern_str, re.IGNORECASE)
+    except re.error:
+        return None
+    for entry in entries:
+        text = entry.get("text")
+        if not isinstance(text, str):
+            continue
+        match = pattern.search(text)
+        if match:
+            return match.group(0).strip()
+    return None
+
+
+def _apply_channel_brush_template(
+    document: IFUDocument,
+    entries: List[Dict[str, object]],
+    vendor_cfg: Dict[str, object],
+    modifications: Dict[str, int],
+) -> bool:
+    context = _find_channel_brush(entries)
+    if not context:
+        return False
+    applied = False
+    part_number = context.get("part_number")
+    if isinstance(part_number, str) and part_number and document.part_number != part_number:
+        document.part_number = part_number
+        modifications["part_number"] = modifications.get("part_number", 0) + 1
+        applied = True
+    if document.model != "Channel Cleaning Brush":
+        document.model = "Channel Cleaning Brush"
+        modifications["model"] = modifications.get("model", 0) + 1
+        applied = True
+    manufacturer_hint = vendor_cfg.get("manufacturer") if isinstance(vendor_cfg, dict) else None
+    if manufacturer_hint and not document.manufacturer:
+        document.manufacturer = str(manufacturer_hint)
+        modifications["manufacturer"] = modifications.get("manufacturer", 0) + 1
+        applied = True
+    template = vendor_cfg.get("product_name_template") if isinstance(vendor_cfg, dict) else None
+    if template and document.manufacturer and document.part_number and document.model:
+        try:
+            product_name = str(template).format(
+                manufacturer=document.manufacturer,
+                part_number=document.part_number,
+                model=document.model,
+            ).strip()
+        except Exception:
+            product_name = None
+        if product_name and document.product_name != product_name:
+            document.product_name = product_name
+            try:
+                document.product_name_source = "second_pass_vendor_template"  # type: ignore[attr-defined]
+            except Exception:
+                pass
+            modifications["product_name"] = modifications.get("product_name", 0) + 1
+            applied = True
+    return applied
+
 def _extract_fields(
     paragraph_store: Dict[str, Dict[str, object]],
     pattern_bundle: Dict[str, List[str]],
+    *,
+    frontmatter_cfg: Optional[Dict[str, object]] = None,
 ) -> Dict[str, str]:
     compiled_catalog: Dict[str, List[re.Pattern[str]]] = {}
     for key, patterns in pattern_bundle.items():
@@ -270,6 +399,7 @@ def _extract_fields(
         if isinstance(entry, dict)
     )
     manufacturer_candidate: Optional[str] = None
+    drop_headings = _drop_heading_candidates(frontmatter_cfg or {})
 
     for entry in ordered_entries:
         text = entry.get("text")
@@ -306,7 +436,7 @@ def _extract_fields(
         if "product_name" not in found and "product_name" in compiled_catalog:
             match = _apply_pattern_list(stripped, compiled_catalog["product_name"])
             normalized = _normalize_product_name(match) if match else None
-            if normalized:
+            if normalized and normalized.strip().upper() not in drop_headings:
                 found["product_name"] = normalized
 
         if manufacturer_candidate is None and "manufacturers" in compiled_catalog:
@@ -314,6 +444,13 @@ def _extract_fields(
             normalized = _normalize_manufacturer(match) if match else None
             if normalized:
                 manufacturer_candidate = normalized
+
+        if "publication_date" not in found:
+            doi_match = re.search(r"date of issue\s*[:#]?\s*([0-9]{4}(?:[./-][0-9]{1,2}){0,2})", stripped, re.IGNORECASE)
+            if doi_match:
+                normalized = _normalize_date_token(doi_match.group(1))
+                if normalized:
+                    found["publication_date"] = normalized
 
     if "publication_date" not in found:
         for entry in ordered_entries:
@@ -434,10 +571,33 @@ def apply_ifu_frontmatter_backfill(document: BaseDocument, ctx: SecondPassContex
         return SecondPassPatchResult.skipped_result(PATCH_NAME, reason="doc_not_ifu")
 
     pipeline_info = getattr(document, "pipeline_info", {}) or {}
+    if not isinstance(pipeline_info, dict):
+        pipeline_info = {}
     second_pass_bucket = pipeline_info.setdefault("second_pass", {})
     applied = second_pass_bucket.get("patches_applied") or []
     if isinstance(applied, list) and PATCH_NAME in applied:
         return SecondPassPatchResult.skipped_result(PATCH_NAME, reason="already_applied")
+
+    frontmatter_cfg = _resolve_frontmatter_settings(ctx)
+    drop_headings = _drop_heading_candidates(frontmatter_cfg)
+    ordered_entries = _ordered_paragraph_entries(ctx.paragraph_store)
+    vendor_olympus = _vendor_settings(frontmatter_cfg, "olympus")
+
+    product_name_reset = False
+    existing_product = getattr(document, "product_name", None)
+    if isinstance(existing_product, str) and existing_product.strip():
+        if existing_product.strip().upper() in drop_headings:
+            document.product_name = None
+            product_name_reset = True
+
+    revision_reset = False
+    if document.revision:
+        normalized_revision = _sanitize_revision_token(document.revision)
+        if normalized_revision:
+            document.revision = normalized_revision
+        else:
+            document.revision = None
+            revision_reset = True
 
     fields_missing = {
         "manufacturer": not document.manufacturer,
@@ -447,22 +607,24 @@ def apply_ifu_frontmatter_backfill(document: BaseDocument, ctx: SecondPassContex
         "model": not document.model,
         "product_name": not getattr(document, "product_name", None),
     }
-    if not any(fields_missing.values()):
+    needs_processing = any(fields_missing.values()) or product_name_reset or revision_reset
+    if not needs_processing:
         return SecondPassPatchResult.skipped_result(PATCH_NAME, reason="frontmatter_complete")
 
     pattern_bundle = _resolve_pattern_bundle(ctx)
-
     early_store = _earliest_pages(ctx.paragraph_store, limit=3)
     late_store = _latest_pages(ctx.paragraph_store, limit=2) if any(fields_missing.values()) else {}
 
-    extracted = _extract_fields(early_store, pattern_bundle)
+    extracted = _extract_fields(early_store, pattern_bundle, frontmatter_cfg=frontmatter_cfg)
     if late_store:
-        late_extracted = _extract_fields(late_store, pattern_bundle)
+        late_extracted = _extract_fields(late_store, pattern_bundle, frontmatter_cfg=frontmatter_cfg)
         for field, value in late_extracted.items():
             extracted.setdefault(field, value)
 
     manufacturer_candidate = extracted.pop("_manufacturer_candidate", None)
     modifications: Dict[str, int] = {}
+    extra_meta: Dict[str, int] = {}
+    reason_tags: List[str] = ["frontmatter_backfill"]
 
     if fields_missing["manufacturer"]:
         footer_lines: List[str] = []
@@ -479,7 +641,7 @@ def apply_ifu_frontmatter_backfill(document: BaseDocument, ctx: SecondPassContex
         if manufacturer_guess:
             normalized_manufacturer = _normalize_manufacturer(manufacturer_guess) or manufacturer_guess
             document.manufacturer = normalized_manufacturer
-            modifications["manufacturer"] = 1
+            modifications["manufacturer"] = modifications.get("manufacturer", 0) + 1
 
     if fields_missing["product_name"] and extracted.get("product_name"):
         document.product_name = extracted["product_name"]
@@ -487,16 +649,16 @@ def apply_ifu_frontmatter_backfill(document: BaseDocument, ctx: SecondPassContex
             document.product_name_source = "second_pass_backfill"  # type: ignore[attr-defined]
         except Exception:
             pass
-        modifications["product_name"] = 1
+        modifications["product_name"] = modifications.get("product_name", 0) + 1
     if fields_missing["part_number"] and extracted.get("part_number"):
         document.part_number = extracted["part_number"]
-        modifications["part_number"] = 1
+        modifications["part_number"] = modifications.get("part_number", 0) + 1
     if fields_missing["revision"] and extracted.get("revision"):
         document.revision = extracted["revision"]
-        modifications["revision"] = 1
+        modifications["revision"] = modifications.get("revision", 0) + 1
     if fields_missing["publication_date"] and extracted.get("publication_date"):
         document.publication_date = extracted["publication_date"]
-        modifications["publication_date"] = 1
+        modifications["publication_date"] = modifications.get("publication_date", 0) + 1
     if fields_missing["model"] and extracted.get("model"):
         raw_model = extracted["model"]
         candidate_lines = [line.strip(" -") for line in str(raw_model).splitlines() if line.strip()]
@@ -506,15 +668,43 @@ def apply_ifu_frontmatter_backfill(document: BaseDocument, ctx: SecondPassContex
                 cleaned_model = "ALT PRO"
                 break
         document.model = cleaned_model
-        modifications["model"] = 1
+        modifications["model"] = modifications.get("model", 0) + 1
 
-    if not modifications:
+    if product_name_reset:
+        extra_meta["product_name_reset"] = 1
+        reason_tags.append("frontmatter_backfill:product_reset")
+    if revision_reset:
+        extra_meta["revision_sanitized"] = extra_meta.get("revision_sanitized", 0) + 1
+        reason_tags.append("frontmatter_backfill:revision_sanitized")
+        pipeline_info["front_matter_revision_sanitized"] = True
+        warnings = pipeline_info.setdefault("threshold_warnings", [])
+        if isinstance(warnings, list) and "front_matter_revision_sanitized" not in warnings:
+            warnings.append("front_matter_revision_sanitized")
+
+    channel_applied = _apply_channel_brush_template(document, ordered_entries, vendor_olympus, modifications)
+    if channel_applied:
+        reason_tags.append("frontmatter_backfill:channel_brush")
+
+    late_entries_ordered = _ordered_paragraph_entries(late_store) if late_store else []
+    print_code = _find_print_code(late_entries_ordered or ordered_entries[-6:], vendor_olympus.get("print_code_pattern")) if vendor_olympus else None
+    if print_code:
+        front_meta = pipeline_info.setdefault("front_matter_meta", {})
+        if not isinstance(front_meta, dict):
+            front_meta = {}
+            pipeline_info["front_matter_meta"] = front_meta
+        front_meta["print_code"] = print_code
+        extra_meta["print_code"] = 1
+
+    if not modifications and not extra_meta:
         pipeline_info.setdefault("front_matter_fallback_reason", "not_detected")
         pipeline_info["front_matter_incomplete"] = True
         document.pipeline_info = pipeline_info
         return SecondPassPatchResult.skipped_result(PATCH_NAME, reason="no_fields_detected")
 
     mod_payload = {f"front_matter_{field}": int(count) for field, count in modifications.items()}
+    for key, count in extra_meta.items():
+        mod_payload[f"front_matter_{key}"] = int(count)
+
     meta = second_pass_bucket.setdefault("meta", {})
     for key, count in mod_payload.items():
         meta[key] = meta.get(key, 0) + count
@@ -531,8 +721,10 @@ def apply_ifu_frontmatter_backfill(document: BaseDocument, ctx: SecondPassContex
     if PATCH_NAME not in applied_list:
         applied_list.append(PATCH_NAME)
     reasons_list = second_pass_bucket.setdefault("reasons", [])
-    if "frontmatter_backfill" not in reasons_list:
-        reasons_list.append("frontmatter_backfill")
+    for tag in reason_tags:
+        if tag not in reasons_list:
+            reasons_list.append(tag)
+
     remaining_missing = {
         "manufacturer": not document.manufacturer,
         "part_number": not document.part_number,
@@ -552,5 +744,5 @@ def apply_ifu_frontmatter_backfill(document: BaseDocument, ctx: SecondPassContex
         name=PATCH_NAME,
         applied=True,
         modifications=dict(mod_payload),
-        reasons=["frontmatter_backfill"],
+        reasons=list(dict.fromkeys(reason_tags)),
     )

@@ -259,6 +259,15 @@ class ArticleDocument(BaseDocument):
             "diagnostic_study",
         ]
     ] = None
+    research_scope: Optional[
+        Literal[
+            "diagnostic_ppn_bronchoscopy",
+            "research_therapeutic",
+            "editorial_or_economics",
+            "non_bronchoscopic",
+            "unknown",
+        ]
+    ] = None
 
     # Title and metadata (enhanced)
     title: Optional[str] = None

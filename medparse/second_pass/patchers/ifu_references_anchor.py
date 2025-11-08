@@ -40,11 +40,15 @@ def apply_ifu_references_anchor(document: BaseDocument, ctx: SecondPassContext) 
     page_count = getattr(document, "page_count", 0) or 0
     tail_pages = 2
     if isinstance(ctx.config, dict):
-        tail_pages = int(
+        config_block = (
             ctx.config.get("ifu", {})
-            .get("references", {})
-            .get("tail_pages", tail_pages)
+            .get("references_anchor", {})
         )
+        if isinstance(config_block, dict):
+            try:
+                tail_pages = int(config_block.get("tail_pages", tail_pages))
+            except (TypeError, ValueError):
+                tail_pages = tail_pages
     tail_pages = max(1, tail_pages)
 
     candidate_pages: Set[int] = set()

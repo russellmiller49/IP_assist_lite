@@ -57,6 +57,16 @@ def _tables_contain_terms(article: ArticleDocument, terms: Sequence[str]) -> boo
 def is_diagnostic_study(article: ArticleDocument) -> Tuple[bool, List[str]]:
     """Return (applicable, reasons) for ATS diagnostic-yield validation."""
 
+    pipeline_info = getattr(article, "pipeline_info", {}) or {}
+    if not isinstance(pipeline_info, dict):
+        pipeline_info = {}
+    research_scope = getattr(article, "research_scope", None) or pipeline_info.get("research_scope")
+    scope_normalized = str(research_scope or "").strip().lower()
+    if scope_normalized == "diagnostic_ppn_bronchoscopy":
+        return True, ["research_scope:diagnostic_ppn_bronchoscopy"]
+    if scope_normalized in {"editorial_or_economics", "research_therapeutic", "non_bronchoscopic"}:
+        return False, [f"research_scope:{scope_normalized}"]
+
     topics = _load_topics()
     diag_cfg = topics.get("diagnostic", {})
     negative_cfg = topics.get("negative", {})

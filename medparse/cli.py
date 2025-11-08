@@ -667,20 +667,38 @@ def _write_outcome(outcome: PipelineOutcome, out_path: Path) -> bool:
     out_path.write_text(payload_json)
     typer.echo(f"Wrote {out_path}")
 
+    def _normalized_list(value: object) -> List[str]:
+        if isinstance(value, list):
+            return [str(item) for item in value]
+        return []
+
     applied_list: List[str] = []
     reasons_list: List[str] = []
+    second_pass_blocks: List[Dict[str, object]] = []
+
     if outcome.second_pass_report is not None:
-        applied_list = list(outcome.second_pass_report.summary.applied)
-        reasons_list = list(outcome.second_pass_report.summary.reasons)
-    else:
-        second_pass_data = payload.get("second_pass", {}) if isinstance(payload, dict) else {}
-        if isinstance(second_pass_data, dict):
-            raw_applied = second_pass_data.get("applied")
-            if isinstance(raw_applied, list):
-                applied_list = [str(item) for item in raw_applied]
-            raw_reasons = second_pass_data.get("reasons")
-            if isinstance(raw_reasons, list):
-                reasons_list = [str(item) for item in raw_reasons]
+        summary = outcome.second_pass_report.summary
+        applied_list = list(summary.applied)
+        reasons_list = list(summary.reasons)
+        second_pass_blocks.append(outcome.second_pass_report.as_metadata())
+
+    payload_second_pass = payload.get("second_pass", {}) if isinstance(payload, dict) else {}
+    if isinstance(payload_second_pass, dict):
+        second_pass_blocks.append(payload_second_pass)
+    pipeline_meta = payload.get("_pipeline_metadata", {}) if isinstance(payload, dict) else {}
+    if isinstance(pipeline_meta, dict):
+        pipeline_second_pass = pipeline_meta.get("second_pass")
+        if isinstance(pipeline_second_pass, dict):
+            second_pass_blocks.append(pipeline_second_pass)
+
+    for block in second_pass_blocks:
+        applied_candidates = _normalized_list(block.get("patches_applied")) or _normalized_list(block.get("applied"))
+        if applied_candidates and len(applied_candidates) > len(applied_list):
+            applied_list = list(dict.fromkeys(applied_candidates))
+        reasons_candidates = _normalized_list(block.get("reasons"))
+        if reasons_candidates and len(reasons_candidates) > len(reasons_list):
+            reasons_list = reasons_candidates
+
     summary = f"Second pass: {len(applied_list)} patches -> {applied_list} reasons={reasons_list}"
     typer.echo(summary)
 

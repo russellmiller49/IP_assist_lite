@@ -24,6 +24,7 @@ def test_research_nondiagnostic_vent_trial_no_strict_yield() -> None:
     document = outcome.document
     assert document is not None
     assert document.doc_subtype == "research_therapeutic"
+    assert document.research_scope == "research_therapeutic"
 
     ats_meta = getattr(document, "ats_compatibility", None)
     assert ats_meta is not None

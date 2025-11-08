@@ -204,6 +204,18 @@ def apply_sectionizer_salvage(document: BaseDocument, ctx: SecondPassContext) ->
     pipeline_info["section_salvage_applied"] = True
     if pruned_labels:
         pipeline_info["section_salvage_pruned"] = pruned_labels
+    sectionizer_bucket = pipeline_info.setdefault("sectionizer", {})
+    sectionizer_bucket["sections_rebuilt"] = len(rebuilt)
+    sectionizer_bucket["sections_pruned"] = len(pruned_labels)
+    pipeline_info["sections_rebuilt"] = len(rebuilt)
+    pipeline_info["sections_pruned"] = len(pruned_labels)
+    if subtype == "editorial_or_economics":
+        sectionizer_bucket["mode"] = "editorial"
+        pipeline_info["sectionizer_mode"] = "editorial"
+        pipeline_info["imrad_required"] = False
+    else:
+        sectionizer_bucket.setdefault("mode", "research")
+        pipeline_info.setdefault("sectionizer_mode", sectionizer_bucket.get("mode"))
     pipeline_info.setdefault("second_pass", {}).setdefault("patches_applied", [])
     document.pipeline_info = pipeline_info
 

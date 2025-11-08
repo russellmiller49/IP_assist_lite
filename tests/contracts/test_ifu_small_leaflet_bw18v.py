@@ -27,21 +27,23 @@ def test_small_leaflet_indications_fallback() -> None:
     document = outcome.document
     assert document is not None
 
-    # Ensure indications_for_use populated via small IFU policy with provenance
     indications = document.indications_for_use
-    if isinstance(indications, dict):
-        assert indications.get("derived_from") == "intended_use"
-        assert indications.get("text")
-    else:
-        assert isinstance(indications, str)
-        assert indications.strip()
+    assert isinstance(indications, dict)
+    assert indications.get("derived_from") == "intended_use"
+    assert indications.get("text")
+    localized = document.pipeline_info.get("localized", {})
+    if isinstance(localized, dict) and localized.get("indications"):
+        assert localized.get("indications", {}).get("ja")
 
     pipeline = document.pipeline_info
-    assert pipeline.get("small_ifu_fallback_applied") is True
-    assert pipeline.get("small_ifu_threshold") and pipeline.get("small_ifu_threshold") >= 2
+    assert pipeline.get("indications_fallback_provenance") == "second_pass_small_leaflet"
     assert pipeline.get("safety_expected_min") == 8
     assert len(document.safety_blocks or []) >= pipeline.get("safety_expected_min")
     assert pipeline.get("safety_blocks_added", 0) >= 0
+    assert document.model == "Channel Cleaning Brush"
+    assert document.product_name.startswith("Olympus")
+    if document.revision:
+        assert "ACUUM" not in document.revision
 
     # Safety density should not raise hard errors for small leaflets
     extraction_config = get_extraction_config()

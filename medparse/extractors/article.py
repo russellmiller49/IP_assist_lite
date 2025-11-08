@@ -22,6 +22,7 @@ from medparse.normalize.article_frontmatter import (
 )
 from medparse.normalize.title_block import extract_title
 from medparse.normalize.article_sections import normalize_article_sections
+from medparse.normalize.article_scope import infer_research_scope
 from medparse.normalize.article_yield_ats import (
     ATS_REASON_DERIVED,
     ATS_REASON_FOLLOW_UP,
@@ -78,6 +79,7 @@ ATS_CANONICAL_REASONS = {
 
 PRACTICE_MANAGEMENT_TERMS = {
     "practice management",
+    "topics in practice management",
     "financial plan",
     "business plan",
     "business model",
@@ -85,6 +87,12 @@ PRACTICE_MANAGEMENT_TERMS = {
     "return on investment",
     "revenue",
     "workflow",
+    "efficiency",
+    "ip suite",
+    "value-based",
+    "value based",
+    "billing",
+    "coding",
     "operations",
     "strategy",
     "swot",
@@ -170,6 +178,7 @@ THERAPEUTIC_SCOPE_TERMS = {
 EDITORIAL_SCOPE_TERMS = {
     "value-based",
     "value based",
+    "topics in practice management",
     "cost-effective",
     "cost effectiveness",
     "economics",
@@ -187,6 +196,23 @@ EDITORIAL_SCOPE_TERMS = {
     "profitability",
     "return on investment",
     "business plan",
+    "efficiency",
+    "ip suite",
+    "billing",
+    "coding",
+}
+
+EDITORIAL_TITLE_CUES = {
+    "topics in practice management",
+    "value-based",
+    "value based",
+    "dedicated ip suite",
+    "practice management",
+    "macra",
+    "mips",
+    "workflow",
+    "billing",
+    "coding",
 }
 
 DIAGNOSTIC_NEGATIVE_TERMS = {
@@ -222,6 +248,17 @@ DIAGNOSTIC_PERFORMANCE_TERMS = {
     "diagnostic endpoint",
     "diagnostic efficacy",
 }
+
+DIAGNOSTIC_REQUIRED_PHRASES = {
+    "diagnostic accuracy",
+    "diagnostic yield",
+    "noninferiority margin",
+    "non-inferiority margin",
+    "sensitivity",
+    "specificity",
+}
+
+SIMPLE_N_OVER_N_PATTERN = re.compile(r"\b\d{1,4}\s*/\s*\d{1,4}\b")
 
 DIAGNOSTIC_ENDPOINT_TERMS = {
     "primary endpoint",
@@ -532,6 +569,16 @@ def extract_article(
         n_lesions=_as_int(yield_data.get("n_lesions")),
         references=references,
     )
+
+    research_scope = infer_research_scope(document)
+    if research_scope:
+        document.research_scope = research_scope
+        document.pipeline_info["research_scope"] = research_scope
+
+    imrad_required = doc_subtype == "research_diagnostic"
+    ats_required = research_scope == "diagnostic_ppn_bronchoscopy"
+    document.pipeline_info["imrad_required"] = imrad_required
+    document.pipeline_info["ats_yield_required"] = ats_required
 
     if unresolved_affiliations:
         document.pipeline_info["frontmatter_affiliations_unresolved"] = len(unresolved_affiliations)
@@ -1495,6 +1542,11 @@ def _infer_doc_subtype(
         ]
     )
 
+    editorial_header_hits = _editorial_header_hits(title_lower, first_pages_text)
+    if editorial_header_hits:
+        LOGGER.debug("Editorial/economics detected via header cues: %s", sorted(editorial_header_hits))
+        return "editorial_or_economics"
+
     if any(phrase in combined_scope for phrase in PRACTICE_MANAGEMENT_TERMS):
         LOGGER.debug("Practice management markers detected; attempting refined subtype.")
         refined_candidate = _refine_research_subtype(
@@ -1540,6 +1592,7 @@ def _refine_research_subtype(
         LOGGER.debug("Editorial/economics scope detected via terms: %s", sorted(editorial_hits))
         return "editorial_or_economics"
 
+    practice_hits = {term for term in PRACTICE_MANAGEMENT_TERMS if term in scope_lower or term in title_lower}
     therapeutic_hits = {term for term in THERAPEUTIC_SCOPE_TERMS if term in scope_lower}
     therapeutic_strength = len(therapeutic_hits)
     if therapeutic_hits and any(token in scope_lower for token in {"trial", "randomized", "clinical outcome"}):
@@ -1551,6 +1604,7 @@ def _refine_research_subtype(
     pathology_hits = _count_pathology_signals(normalized_sections)
 
     diagnostic_phrase_hits = {term for term in DIAGNOSTIC_PERFORMANCE_TERMS if term in scope_lower}
+    diagnostic_section_signal = _has_diagnostic_outcome_signal(normalized_sections)
     noninferiority_pair = _sentence_contains_terms(
         scope_lower,
         {"noninferiority", "non-inferiority"},
@@ -1599,6 +1653,11 @@ def _refine_research_subtype(
     if diagnostic_context_score >= 4 or (
         diagnostic_context_score >= 3 and diagnostic_context_score >= therapeutic_strength + 1
     ):
+        if not diagnostic_section_signal and practice_hits:
+            LOGGER.debug(
+                "Practice-management cues present without diagnostic outcome signals; routing to editorial scope."
+            )
+            return "editorial_or_economics"
         LOGGER.debug(
             "Research subtype flagged diagnostic via performance cues (phrases=%s endpoint=%s biopsy=%s score=%d).",
             sorted(diagnostic_phrase_hits),
@@ -1617,6 +1676,37 @@ def _refine_research_subtype(
         return "other_research"
 
     return "research"
+
+
+def _editorial_header_hits(*segments: Optional[str]) -> set[str]:
+    hits: set[str] = set()
+    normalized_segments = [segment or "" for segment in segments]
+    for segment in normalized_segments:
+        lowered = segment.lower()
+        for cue in EDITORIAL_TITLE_CUES:
+            if cue in lowered:
+                hits.add(cue)
+    return hits
+
+
+def _has_diagnostic_outcome_signal(sections: dict[str, str]) -> bool:
+    target_blocks: List[str] = []
+    for key, text in sections.items():
+        if not isinstance(text, str):
+            continue
+        lowered_key = (key or "").lower()
+        if lowered_key.startswith("abstract") or "result" in lowered_key or "finding" in lowered_key:
+            target_blocks.append(text.lower())
+    haystack = " ".join(target_blocks)
+    if not haystack:
+        return False
+    if any(term in haystack for term in DIAGNOSTIC_REQUIRED_PHRASES):
+        return True
+    if SIMPLE_N_OVER_N_PATTERN.search(haystack):
+        return True
+    if "sensitivity" in haystack and "specificity" in haystack:
+        return True
+    return False
 
 
 def _collect_section_paragraphs(sections: dict[str, str]) -> List[str]:

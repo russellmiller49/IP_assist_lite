@@ -28,6 +28,8 @@ def test_ifu_alt_pro_safety_density_threshold() -> None:
     assert expected_min is not None
     assert len(document.safety_blocks) >= max(0, expected_min - 5)
     assert document.pipeline_info.get("safety_expected_min") == expected_min
+    assert metrics.get("safety_status") == "ok"
+    assert metrics.get("safety_found") == len(document.safety_blocks)
 
     safety_added = document.pipeline_info.get("safety_blocks_added", 0)
     assert isinstance(safety_added, int) and safety_added >= 0

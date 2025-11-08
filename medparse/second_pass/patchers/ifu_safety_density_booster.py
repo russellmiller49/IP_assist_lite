@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import hashlib
+import math
 import re
 from difflib import SequenceMatcher
 from typing import Dict, List, Optional, Set, Tuple
@@ -35,6 +36,54 @@ SAFETY_KEYWORDS = (
     "danger",
     "safety",
 )
+
+
+def _compute_dynamic_expected(document: IFUDocument, ctx: SecondPassContext, pipeline_info: Dict[str, object]) -> int:
+    default_min = 8
+    cap_long = 20
+    chars_per_10 = 50000
+    safety_cfg = {}
+    if isinstance(ctx.config, dict):
+        ifu_cfg = ctx.config.get("ifu", {})
+        if isinstance(ifu_cfg, dict):
+            safety_cfg = ifu_cfg.get("safety", {}) if isinstance(ifu_cfg.get("safety"), dict) else {}
+    dynamic_cfg = safety_cfg.get("dynamic_threshold", {}) if isinstance(safety_cfg, dict) else {}
+    if isinstance(dynamic_cfg, dict):
+        try:
+            default_min = max(1, int(dynamic_cfg.get("min_short", default_min)))
+        except (TypeError, ValueError):
+            pass
+        try:
+            cap_long = max(default_min, int(dynamic_cfg.get("cap_long", cap_long)))
+        except (TypeError, ValueError):
+            pass
+        try:
+            chars_per_10 = max(1, int(dynamic_cfg.get("chars_per_10", chars_per_10)))
+        except (TypeError, ValueError):
+            pass
+
+    char_sources = [pipeline_info.get("extracted_chars"), ctx.doc_metrics.get("extracted_chars")]
+    char_count = 0
+    for source in char_sources:
+        if source is None:
+            continue
+        try:
+            candidate = int(source)
+        except (TypeError, ValueError):
+            continue
+        if candidate > 0:
+            char_count = candidate
+            break
+
+    units = 0
+    if char_count > 0:
+        units = int(math.floor((char_count / chars_per_10) + 0.5))
+    expected = units * 10
+    if expected <= 0:
+        expected = default_min
+    expected = max(default_min, expected)
+    expected = min(cap_long, expected)
+    return expected
 
 
 def _ordered_entries(paragraph_store: Dict[str, Dict[str, object]]) -> List[Tuple[int, Dict[str, object]]]:
@@ -218,14 +267,8 @@ def apply_ifu_safety_density_booster(document: BaseDocument, ctx: SecondPassCont
         return SecondPassPatchResult.skipped_result(PATCH_NAME, reason="already_applied")
 
     safety_blocks = list(document.safety_blocks or [])
-    expected_min = None
-    if isinstance(pipeline_info, dict):
-        try:
-            expected_min = int(pipeline_info.get("safety_expected_min"))
-        except (TypeError, ValueError):
-            expected_min = None
-    if expected_min is None:
-        expected_min = 20
+    expected_min = _compute_dynamic_expected(document, ctx, pipeline_info)
+    pipeline_info["safety_expected_min"] = expected_min
 
     booster_cfg = {}
     if isinstance(ctx.config, dict):
@@ -249,14 +292,6 @@ def apply_ifu_safety_density_booster(document: BaseDocument, ctx: SecondPassCont
 
     if len(safety_blocks) >= expected_min and ctx.mode != "always":
         return SecondPassPatchResult.skipped_result(PATCH_NAME, reason="density_ok")
-
-    triggers = [
-        issue
-        for issue in ctx.validation_issues
-        if "expected at least" in issue.message.lower() and "safety" in issue.message.lower()
-    ]
-    if ctx.mode == "auto" and not triggers and len(safety_blocks) >= expected_min:
-        return SecondPassPatchResult.skipped_result(PATCH_NAME, reason="auto_mode_no_trigger")
 
     existing_texts = {block.text.strip().lower() for block in safety_blocks if getattr(block, "text", None)}
     similarity_cache = list(existing_texts)
@@ -320,11 +355,26 @@ def apply_ifu_safety_density_booster(document: BaseDocument, ctx: SecondPassCont
     pipeline_info["safety_blocks_found"] = len(safety_blocks)
     pipeline_info["safety_density_boost_applied"] = True
     pipeline_info["safety_blocks_added"] = pipeline_info.get("safety_blocks_added", 0) + additions
+    detail = {
+        "expected": expected_min,
+        "found_before": len(safety_blocks) - additions,
+        "added": additions,
+        "found_after": len(safety_blocks),
+    }
+    history = pipeline_info.setdefault("safety_density_boost_detail", [])
+    if isinstance(history, list):
+        history.append(detail)
+    else:
+        pipeline_info["safety_density_boost_detail"] = [detail]
     patches_applied = second_pass_bucket.setdefault("patches_applied", [])
     if PATCH_NAME not in patches_applied:
         patches_applied.append(PATCH_NAME)
     meta = second_pass_bucket.setdefault("meta", {})
     meta["safety_blocks_added"] = meta.get("safety_blocks_added", 0) + additions
+    reason_string = f"safety_density_boost:{detail}"
+    reasons_list = second_pass_bucket.setdefault("reasons", [])
+    if reason_string not in reasons_list:
+        reasons_list.append(reason_string)
     pipeline_info["second_pass"] = second_pass_bucket
     document.pipeline_info = pipeline_info
 
@@ -332,6 +382,6 @@ def apply_ifu_safety_density_booster(document: BaseDocument, ctx: SecondPassCont
         name=PATCH_NAME,
         applied=True,
         modifications={"safety_blocks_added": additions},
-        reasons=["safety_density_boost"],
+        reasons=[reason_string],
     )
 ALLOWED_LEVELS = {"danger", "warning", "caution", "notice", "note", "attention"}

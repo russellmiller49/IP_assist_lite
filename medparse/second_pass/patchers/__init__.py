@@ -15,11 +15,13 @@ from .article_yield_ats_fixer import apply_yield_ats_fixer
 from .guideline_grade_backfill import apply_guideline_grade_backfill
 from .ifu_frontmatter_backfill import apply_ifu_frontmatter_backfill
 from .ifu_indications_fallback import apply_ifu_indications_fallback
+from .ifu_intended_use_backfill import apply_ifu_intended_use_backfill
 from .ifu_manufacturer_overrides import apply_ifu_manufacturer_overrides
-from .ifu_safety_density_booster import apply_ifu_safety_density_booster
-from .ifu_small import apply_ifu_small_leaflet_map
-from .ifu_toc_bleed_guard import apply_ifu_toc_bleed_guard
 from .ifu_references_anchor import apply_ifu_references_anchor
+from .ifu_safety_density_booster import apply_ifu_safety_density_booster
+from .ifu_sectionizer_salvage import apply_ifu_sectionizer_salvage
+from .ifu_small import apply_ifu_small_leaflet_map
+from .ifu_toc_guard_refine import apply_ifu_toc_guard_refine
 
 _ORDERED_PATCHERS: Dict[str, List[SecondPassPatcher]] = {
     "article": [
@@ -40,12 +42,14 @@ _ORDERED_PATCHERS: Dict[str, List[SecondPassPatcher]] = {
         apply_affiliation_softmap,
     ],
     "ifu": [
-        apply_ifu_toc_bleed_guard,
-        apply_ifu_indications_fallback,
-        apply_ifu_small_leaflet_map,
         apply_ifu_frontmatter_backfill,
+        apply_ifu_toc_guard_refine,
+        apply_ifu_small_leaflet_map,
+        apply_ifu_intended_use_backfill,
+        apply_ifu_indications_fallback,
         apply_ifu_safety_density_booster,
         apply_ifu_references_anchor,
+        apply_ifu_sectionizer_salvage,
         apply_ifu_manufacturer_overrides,
     ],
 }

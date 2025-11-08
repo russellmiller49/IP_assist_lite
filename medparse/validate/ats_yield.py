@@ -40,17 +40,31 @@ def validate_ats_yield(document: ArticleDocument) -> Dict[str, object]:
     }
 
     pipeline_info = getattr(document, "pipeline_info", {}) or {}
+    if not isinstance(pipeline_info, dict):
+        pipeline_info = {}
     ats_compat = getattr(document, "ats_compatibility", None)
     if not isinstance(ats_compat, ATSCompatibility):
         ats_compat = ATSCompatibility()
         document.ats_compatibility = ats_compat
 
-    subtype = (getattr(document, "doc_subtype", None) or "").strip()
-    strict_candidate = subtype == "research_diagnostic"
+    subtype = (getattr(document, "doc_subtype", None) or "").strip().lower()
+    scope = (
+        getattr(document, "research_scope", None)
+        or pipeline_info.get("research_scope")
+        if isinstance(pipeline_info, dict)
+        else None
+    )
+    scope_normalized = str(scope or "").strip().lower()
+    if not scope_normalized and subtype == "research_diagnostic":
+        scope_normalized = "diagnostic_ppn_bronchoscopy"
+    strict_candidate = scope_normalized == "diagnostic_ppn_bronchoscopy"
     if not strict_candidate:
         pipeline_info["ats_yield_applicability"] = "not_applicable"
-        primary_reason = f"doc_subtype:{subtype}" if subtype else "not_diagnostic_study"
-        reasons = [primary_reason]
+        reasons: List[str] = []
+        if scope_normalized:
+            reasons.append(f"research_scope:{scope_normalized}")
+        if subtype:
+            reasons.append(f"doc_subtype:{subtype}")
         if "not_diagnostic_study" not in reasons:
             reasons.append("not_diagnostic_study")
         pipeline_info["ats_yield_reasons"] = reasons

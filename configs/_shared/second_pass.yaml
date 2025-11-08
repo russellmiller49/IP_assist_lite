@@ -42,6 +42,51 @@ second_pass:
       booster:
         dedupe_ratio: 0.92
         max_added: 20
+      dynamic_threshold:
+        min_short: 8
+        cap_long: 20
+        chars_per_10: 50000
+    frontmatter:
+      drop_headings_as_product:
+        - INSTRUCTIONS
+        - INSTRUCTIONS USA
+        - Contents
+        - Labels and Symbols
+      vendor_heuristics:
+        olympus:
+          manufacturer: "Olympus Corporation"
+          product_name_template: "{manufacturer} {part_number} {model}"
+          print_code_pattern: "GR\\s*\\d{3,5}\\s*\\d{1,2}"
+    anchors:
+      indications_en:
+        - Indications for use
+        - INTENDED USE
+        - Intended use
+        - This instrument has been designed to be used
+      indications_ja:
+        - 使用目的
+      contraindications:
+        - Contraindications
+      important_info:
+        - Important Information — Please Read Before Use
+      sectionizer_extra:
+        - Important Information
+        - Signal words
+        - Precautions
+        - Routine Maintenance
+        - Troubleshooting
+    toc_guard:
+      drop_patterns:
+        - "^[0-9]+(\\.[0-9]+)*\\s+[-–.…]{2,}\\s*[0-9]+\\s*$"
+        - "^[A-Z][A-Za-z ]+\\s+[-–.…]{2,}\\s*[0-9]+\\s*$"
+      headings:
+        - Contents
+        - "Chapter "
+      protect:
+        - Indications for use
+        - Important Information
+        - Contraindications
+      min_hits: 2
     references_anchor:
       detect_terms:
         - References
@@ -49,12 +94,6 @@ second_pass:
         - Literature
       min_tail_pages: 1
       tail_pages: 2
-
-  toc_guard:
-    drop_patterns:
-      - "^[0-9]+(\\.[0-9]+)*\\s+[-–.…]{2,}\\s*[0-9]+\\s*$"
-      - "^[A-Z][A-Za-z ]+\\s+[-–.…]{2,}\\s*[0-9]+\\s*$"
-    min_hits: 2
 
   manufacturer_overrides:
     intuitive:

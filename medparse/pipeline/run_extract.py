@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import math
 from copy import deepcopy
 import time
 from dataclasses import dataclass, field
@@ -17,7 +18,7 @@ import yaml
 from medparse.config import ExtractionConfig, ExtractionProfile
 from medparse.extractors.article import extract_article
 from medparse.extractors.guideline import extract_guideline
-from medparse.extractors.ifu import extract_ifu
+from medparse.extractors.ifu import extract_ifu, _load_safety_density_min_config
 from medparse.ifu.frontmatter import extract_front_matter
 from medparse.extractors.textbook import extract_textbook_chapter
 from medparse.extract.utils import load_pages
@@ -1617,6 +1618,61 @@ def _meets_thresholds(
     return True, warnings
 
 
+def _dynamic_safety_expected_from_chars(
+    char_count: int,
+    *,
+    min_short: int = 8,
+    cap_long: int = 20,
+    chars_per_10: int = 50_000,
+) -> int:
+    if char_count <= 0:
+        return min_short
+    units = int(math.floor((char_count / chars_per_10) + 0.5))
+    expected = units * 10
+    if expected <= 0:
+        expected = min_short
+    expected = max(min_short, expected)
+    expected = min(cap_long, expected)
+    return expected
+
+
+def _resolve_safety_expected(pipeline_info: Dict[str, object], document: BaseDocument) -> Optional[int]:
+    chars = pipeline_info.get("extracted_chars")
+    try:
+        char_count = int(chars)
+    except (TypeError, ValueError):
+        return None
+    if char_count <= 0:
+        return None
+    dynamic_value = _dynamic_safety_expected_from_chars(char_count)
+    density_cfg = _load_safety_density_min_config()
+    vendor_expected = None
+    small_leaflet_min = 8
+    small_leaflet_pages_max = 4
+    if density_cfg:
+        small_leaflet_min = int(density_cfg.get("small_leaflet", small_leaflet_min) or small_leaflet_min)
+        small_leaflet_pages_max = int(density_cfg.get("small_leaflet_pages_max", small_leaflet_pages_max) or small_leaflet_pages_max)
+        overrides = density_cfg.get("by_manufacturer", {})
+        manufacturer = (getattr(document, "manufacturer", "") or "").strip().lower()
+        if manufacturer and isinstance(overrides, dict):
+            for key, value in overrides.items():
+                if not isinstance(key, str):
+                    continue
+                key_norm = key.strip().lower()
+                if key_norm and key_norm in manufacturer:
+                    try:
+                        vendor_expected = int(value)
+                    except (TypeError, ValueError):
+                        vendor_expected = None
+                    break
+    page_count = getattr(document, "page_count", 0) or 0
+    if page_count and page_count <= small_leaflet_pages_max:
+        vendor_expected = max(vendor_expected or 0, small_leaflet_min)
+    if vendor_expected is not None:
+        return max(dynamic_value, vendor_expected)
+    return dynamic_value
+
+
 def _document_metrics(document: BaseDocument) -> Dict[str, Any]:
     payload: Dict[str, Any] = {}
     pipeline_info = getattr(document, "pipeline_info", {}) or {}
@@ -1634,6 +1690,18 @@ def _document_metrics(document: BaseDocument) -> Dict[str, Any]:
 
     if hasattr(document, "doc_subtype"):
         payload["doc_subtype"] = getattr(document, "doc_subtype")
+
+    research_scope = getattr(document, "research_scope", None) or pipeline_info.get("research_scope")
+    if research_scope:
+        payload["research_scope"] = research_scope
+        pipeline_info["research_scope"] = research_scope
+    else:
+        payload.setdefault("research_scope", "unknown")
+
+    imrad_required = bool(pipeline_info.get("imrad_required"))
+    payload["imrad_required"] = imrad_required
+    ats_required = bool(pipeline_info.get("ats_yield_required"))
+    payload["ats_yield_required"] = ats_required
 
     if hasattr(document, "tables"):
         tables = getattr(document, "tables") or []
@@ -1775,12 +1843,27 @@ def _document_metrics(document: BaseDocument) -> Dict[str, Any]:
     if hasattr(document, "safety_blocks"):
         blocks = getattr(document, "safety_blocks") or []
         payload["safety_blocks_found"] = len(blocks)
+        payload["safety_found"] = len(blocks)
         pipeline_info["safety_blocks_found"] = len(blocks)
+        expected_value = _resolve_safety_expected(pipeline_info, document)
+        if expected_value is not None:
+            payload["safety_expected"] = expected_value
+            payload["safety_found"] = len(blocks)
+            pipeline_info["safety_expected_min"] = expected_value
+            added = 0
+            try:
+                added = int(pipeline_info.get("safety_blocks_added") or 0)
+            except (TypeError, ValueError):
+                added = 0
+            payload["safety_added"] = added
+            payload["safety_status"] = "ok" if len(blocks) >= expected_value else "low"
         try:
             value = int(pipeline_info.get("safety_blocks_added") or 0)
         except (TypeError, ValueError):
             value = 0
         payload["safety_blocks_added"] = value
+        if "safety_added" not in payload:
+            payload["safety_added"] = value
         if "safety_expected_min" in pipeline_info:
             try:
                 payload["safety_expected_min"] = int(pipeline_info.get("safety_expected_min") or 0)
@@ -1829,6 +1912,9 @@ def _document_metrics(document: BaseDocument) -> Dict[str, Any]:
     if isinstance(pipeline_info.get("toc_guard_pages_dropped"), list):
         payload["toc_pages_dropped"] = pipeline_info.get("toc_guard_pages_dropped")
         payload["toc_drop_count"] = pipeline_info.get("toc_guard_pages_dropped_count", 0)
+        payload["toc_guard_dropped_pages"] = pipeline_info.get("toc_guard_pages_dropped")
+    if "toc_guard_severity" in pipeline_info:
+        payload["toc_guard_severity"] = pipeline_info.get("toc_guard_severity")
     anchors_bleed = pipeline_info.get("anchors_bleed")
     if isinstance(anchors_bleed, dict):
         payload["anchors_bleed"] = dict(anchors_bleed)
@@ -1919,9 +2005,18 @@ def _document_metrics(document: BaseDocument) -> Dict[str, Any]:
 
     if "indications_fallback_provenance" in pipeline_info:
         payload["indications_fallback_provenance"] = pipeline_info.get("indications_fallback_provenance")
+    indications_value = getattr(document, "indications_for_use", None)
+    if isinstance(indications_value, dict):
+        anchor_page = indications_value.get("anchor_page")
+        if isinstance(anchor_page, int):
+            payload["indications_anchor_page"] = anchor_page
+    elif isinstance(pipeline_info.get("indications_anchor_page"), int):
+        payload["indications_anchor_page"] = pipeline_info.get("indications_anchor_page")
 
     if "front_matter_fallback_reason" in pipeline_info:
         payload["front_matter_fallback_reason"] = pipeline_info.get("front_matter_fallback_reason")
+    if pipeline_info.get("front_matter_revision_sanitized"):
+        payload["front_matter_revision_sanitized"] = True
 
     if "safety_density_boost_applied" in pipeline_info:
         payload["safety_density_boost_applied"] = bool(pipeline_info.get("safety_density_boost_applied"))
