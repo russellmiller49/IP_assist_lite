@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import copy
 import time
 from typing import Dict, List
 
@@ -40,6 +41,35 @@ def _aggregate_modifications(results: List[SecondPassPatchResult]) -> Dict[str, 
     return summary
 
 
+WATCH_KEYS = (
+    "indications_for_use",
+    "intended_use",
+    "sections_map",
+    "safety_blocks",
+    "front_matter",
+)
+
+
+def _snapshot_fields(document: BaseDocument) -> Dict[str, object]:
+    pipeline_info = getattr(document, "pipeline_info", {}) or {}
+    if not isinstance(pipeline_info, dict):
+        pipeline_info = {}
+    snapshot: Dict[str, object] = {}
+    snapshot["indications_for_use"] = copy.deepcopy(getattr(document, "indications_for_use", None))
+    snapshot["intended_use"] = copy.deepcopy(getattr(document, "intended_use", None))
+    snapshot["safety_blocks"] = copy.deepcopy(getattr(document, "safety_blocks", None))
+    snapshot["sections_map"] = copy.deepcopy(pipeline_info.get("sections"))
+    snapshot["front_matter"] = copy.deepcopy(pipeline_info.get("front_matter"))
+    return snapshot
+
+
+def _watch_changed(before: Dict[str, object], after: Dict[str, object]) -> bool:
+    for key in WATCH_KEYS:
+        if before.get(key) != after.get(key):
+            return True
+    return False
+
+
 def run_second_pass(document: BaseDocument, ctx: SecondPassContext) -> tuple[BaseDocument, SecondPassReport]:
     """Execute the ordered second-pass patchers for the given document."""
 
@@ -60,6 +90,8 @@ def run_second_pass(document: BaseDocument, ctx: SecondPassContext) -> tuple[Bas
 
     max_runtime_ms = max(250, int(ctx.max_runtime_ms or 0))
     timed_out = False
+
+    baseline_snapshot = _snapshot_fields(document)
 
     for patcher in patchers:
         elapsed_ms = int((time.perf_counter() - start) * 1000)
@@ -158,6 +190,9 @@ def run_second_pass(document: BaseDocument, ctx: SecondPassContext) -> tuple[Bas
         modifications=dict(summary_modifications),
     )
 
+    watch_snapshot = _snapshot_fields(document)
+    requires_revalidation = _watch_changed(baseline_snapshot, watch_snapshot)
+
     report = SecondPassReport(
         mode=ctx.mode,
         runtime_ms=runtime_ms,
@@ -167,6 +202,7 @@ def run_second_pass(document: BaseDocument, ctx: SecondPassContext) -> tuple[Bas
         notes=["timed_out"] if timed_out else [],
         skipped=False,
         summary=summary,
+        requires_revalidation=requires_revalidation,
     )
 
     return document, report

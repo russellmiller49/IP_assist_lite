@@ -52,7 +52,8 @@ def apply_ifu_references_anchor(document: BaseDocument, ctx: SecondPassContext) 
     tail_pages = max(1, tail_pages)
 
     candidate_pages: Set[int] = set()
-    for entry in ctx.paragraph_store.values():
+    evidence_map: Dict[int, List[str]] = {}
+    for hash_id, entry in ctx.paragraph_store.items():
         page_no = entry.get("page")
         text = entry.get("text")
         if not isinstance(page_no, int) or not isinstance(text, str):
@@ -61,6 +62,7 @@ def apply_ifu_references_anchor(document: BaseDocument, ctx: SecondPassContext) 
             continue
         if REFERENCE_PATTERN.search(text):
             candidate_pages.add(page_no)
+            evidence_map.setdefault(page_no, []).append(str(hash_id))
 
     if not candidate_pages and page_count:
         start_page = max(1, page_count - tail_pages + 1)
@@ -89,16 +91,29 @@ def apply_ifu_references_anchor(document: BaseDocument, ctx: SecondPassContext) 
             if not isinstance(sections_map, dict):
                 sections_map = {}
         references_section = sections_map.get("references")
+        evidence_ids: List[str] = []
+        for page in normalized_pages:
+            evidence_ids.extend(evidence_map.get(page, []))
+        evidence_ids = list(dict.fromkeys(evidence_ids))
+        payload = {
+            "page_span": [start_page, end_page],
+            "source": "second_pass:references_anchor_backfill",
+        }
+        if evidence_ids:
+            payload["evidence_ids"] = evidence_ids
         if isinstance(references_section, dict):
-            references_section.setdefault("start_page", start_page)
-            references_section.setdefault("end_page", end_page)
-            references_section.setdefault("source", "second_pass_references_anchor")
+            references_section.setdefault("page_span", payload["page_span"])
+            references_section.setdefault("source", payload["source"])
+            if evidence_ids:
+                existing_ids = references_section.setdefault("evidence_ids", [])
+                if isinstance(existing_ids, list):
+                    for evidence in evidence_ids:
+                        if evidence not in existing_ids:
+                            existing_ids.append(evidence)
+                else:
+                    references_section["evidence_ids"] = evidence_ids
         else:
-            sections_map["references"] = {
-                "start_page": start_page,
-                "end_page": end_page,
-                "source": "second_pass_references_anchor",
-            }
+            sections_map["references"] = payload
         pipeline_info["sections"] = sections_map
         try:
             setattr(document, "sections", sections_map)

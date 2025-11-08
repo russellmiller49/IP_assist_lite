@@ -7,8 +7,6 @@ import functools
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
-import yaml
-
 from medparse.config import ExtractionConfig, get_extraction_config
 
 from medparse.extract.utils import (
@@ -33,6 +31,7 @@ from medparse.normalize.tables import clean_tables
 from medparse.normalize.text_cleanup import clean_paragraph, deep_cleanup_fields
 from medparse.pipeline.engine_select import repair_space_poor_pages
 from medparse.schema.ifu import IFUDocument
+from medparse.ifu.safety_thresholds import expected_safety_with_source
 from medparse.text.paragraphizer import build_paragraph_store
 from medparse.utils.log import get_logger
 
@@ -50,99 +49,6 @@ SECTION_FIELDS = {
     "clinical benefits and risks": "clinical_risks_and_benefits",
 }
 
-SAFETY_CONFIG_PATH = Path(__file__).resolve().parents[2] / "configs" / "_shared" / "second_pass.yaml"
-
-
-@functools.lru_cache(maxsize=1)
-def _load_safety_density_min_config() -> Dict[str, object]:
-    if not SAFETY_CONFIG_PATH.exists():
-        return {}
-    try:
-        data = yaml.safe_load(SAFETY_CONFIG_PATH.read_text(encoding="utf-8")) or {}
-    except Exception:
-        return {}
-    if isinstance(data, dict) and "second_pass" in data and isinstance(data["second_pass"], dict):
-        data = data["second_pass"]
-    if not isinstance(data, dict):
-        return {}
-    ifu_cfg = data.get("ifu")
-    if not isinstance(ifu_cfg, dict):
-        return {}
-    density_cfg = ifu_cfg.get("safety_density_min")
-    if isinstance(density_cfg, dict):
-        return density_cfg
-    return {}
-
-
-def _as_positive_int(value: Any, default: int) -> int:
-    try:
-        number = int(value)
-    except (TypeError, ValueError):
-        return default
-    return number if number >= 0 else default
-
-
-def _compute_safety_expected_min(
-    document: IFUDocument,
-    config: ExtractionConfig,
-    *,
-    manufacturer_hint: Optional[str] = None,
-) -> tuple[int, str]:
-    raw_ifu_settings = getattr(config, "ifu", {})
-    if isinstance(raw_ifu_settings, dict):
-        ifu_settings = raw_ifu_settings
-    elif hasattr(raw_ifu_settings, "to_dict"):
-        ifu_settings = raw_ifu_settings.to_dict()
-    else:
-        ifu_settings = {}
-
-    safety_cfg = ifu_settings.get("safety", {}) if isinstance(ifu_settings, dict) else {}
-    min_blocks_cfg = safety_cfg.get("min_blocks", {}) if isinstance(safety_cfg, dict) else {}
-
-    default_min = _as_positive_int(min_blocks_cfg.get("default"), 12)
-    small_leaflet_pages_max = _as_positive_int(min_blocks_cfg.get("small_leaflet_pages_max"), 4)
-    small_leaflet_min = _as_positive_int(
-        min_blocks_cfg.get("small_leaflet_min"),
-        max(1, default_min // 2),
-    )
-    vendor_overrides = min_blocks_cfg.get("vendor_overrides") if isinstance(min_blocks_cfg, dict) else {}
-
-    density_cfg = _load_safety_density_min_config()
-    if density_cfg:
-        default_min = _as_positive_int(density_cfg.get("default"), default_min)
-        if density_cfg.get("small_leaflet") is not None:
-            small_leaflet_min = _as_positive_int(density_cfg.get("small_leaflet"), small_leaflet_min)
-        if density_cfg.get("small_leaflet_pages_max") is not None:
-            small_leaflet_pages_max = _as_positive_int(density_cfg.get("small_leaflet_pages_max"), small_leaflet_pages_max)
-        overrides_cfg = density_cfg.get("by_manufacturer")
-        if isinstance(overrides_cfg, dict):
-            vendor_overrides = overrides_cfg
-
-    manufacturer_label = (document.manufacturer or manufacturer_hint or "").strip().lower()
-    vendor_min = default_min
-    vendor_override_applied = False
-    if manufacturer_label and isinstance(vendor_overrides, dict):
-        for key, value in vendor_overrides.items():
-            if not isinstance(key, str):
-                continue
-            key_norm = key.strip().lower()
-            if key_norm and key_norm in manufacturer_label:
-                vendor_min = _as_positive_int(value, default_min)
-                vendor_override_applied = True
-                break
-
-    page_count = getattr(document, "page_count", 0) or 0
-    if page_count and page_count <= small_leaflet_pages_max:
-        expected_min = small_leaflet_min
-    else:
-        expected_min = vendor_min
-
-    if density_cfg:
-        source = "density_config_override" if vendor_override_applied else "density_config"
-    else:
-        source = "vendor_override" if vendor_override_applied else "default"
-
-    return expected_min, source
 def _clamp_pages(pages: List[int], page_count: int) -> List[int]:
     if not pages:
         return []
@@ -161,15 +67,30 @@ def _clamp_pages(pages: List[int], page_count: int) -> List[int]:
 
 def _set_safety_expectations(
     document: IFUDocument,
-    config: ExtractionConfig,
     *,
     manufacturer_hint: Optional[str] = None,
 ) -> None:
-    expected_min, source = _compute_safety_expected_min(document, config, manufacturer_hint=manufacturer_hint)
     pipeline_info = getattr(document, "pipeline_info", {}) or {}
     if not isinstance(pipeline_info, dict):
         pipeline_info = {}
         document.pipeline_info = pipeline_info
+
+    char_sources = [pipeline_info.get("extracted_chars")]
+    char_count = 0
+    for value in char_sources:
+        if value is None:
+            continue
+        try:
+            candidate = int(value)
+        except (TypeError, ValueError):
+            continue
+        if candidate > 0:
+            char_count = candidate
+            break
+
+    page_count = getattr(document, "page_count", 0) or 0
+    manufacturer_value = document.manufacturer or manufacturer_hint
+    expected_min, source = expected_safety_with_source(char_count, page_count, manufacturer_value)
 
     pipeline_info["safety_expected_min"] = expected_min
     pipeline_info["safety_expectation_source"] = source
@@ -232,6 +153,7 @@ def extract_ifu(
 
     lines = collect_lines(pages)
     pages_text = [page.text for page in pages]
+    extracted_chars = sum(len(text or "") for text in pages_text)
 
     section_text: dict[str, str] = {}
     for heading, next_heading in iter_section_windows(pages):
@@ -374,6 +296,7 @@ def extract_ifu(
 
     document = IFUDocument.model_validate(doc_kwargs)
     document.pipeline_info["safety_blocks_found"] = len(safety_blocks)
+    document.pipeline_info["extracted_chars"] = extracted_chars
 
     front_meta_payload: Dict[str, str] = {}
     if isinstance(meta, dict) and meta.get("product_name_source"):
@@ -458,6 +381,6 @@ def extract_ifu(
         document.pipeline_info["paragraph_dedup_applied"] = True
     else:
         document.pipeline_info.setdefault("paragraph_dedup_applied", False)
-    _set_safety_expectations(document, extraction_config, manufacturer_hint=manufacturer_for_safety)
+    _set_safety_expectations(document, manufacturer_hint=manufacturer_for_safety)
     return document
 __all__ = ["extract_ifu"]

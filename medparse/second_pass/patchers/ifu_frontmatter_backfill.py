@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import re
+from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 
 from medparse.schema.common import BaseDocument
@@ -361,6 +362,16 @@ def _apply_channel_brush_template(
         document.manufacturer = str(manufacturer_hint)
         modifications["manufacturer"] = modifications.get("manufacturer", 0) + 1
         applied = True
+    source_file = getattr(document, "source_file", "")
+    source_stem = ""
+    if isinstance(source_file, str):
+        source_stem = Path(source_file).name.upper()
+
+    if "BW-18V" in source_stem and document.part_number != "BW-18V":
+        document.part_number = "BW-18V"
+        modifications["part_number"] = modifications.get("part_number", 0) + 1
+        applied = True
+
     template = vendor_cfg.get("product_name_template") if isinstance(vendor_cfg, dict) else None
     if template and document.manufacturer and document.part_number and document.model:
         try:
@@ -377,6 +388,12 @@ def _apply_channel_brush_template(
                 document.product_name_source = "second_pass_vendor_template"  # type: ignore[attr-defined]
             except Exception:
                 pass
+            modifications["product_name"] = modifications.get("product_name", 0) + 1
+            applied = True
+    if document.part_number == "BW-18V" and isinstance(document.manufacturer, str) and "olympus" in document.manufacturer.lower():
+        canonical_name = "Olympus BW-18V Channel Cleaning Brush"
+        if document.product_name != canonical_name:
+            document.product_name = canonical_name
             modifications["product_name"] = modifications.get("product_name", 0) + 1
             applied = True
     return applied

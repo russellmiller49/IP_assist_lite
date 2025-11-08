@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import functools
-import math
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Dict, Literal, Optional
@@ -12,6 +11,7 @@ import yaml
 
 from medparse.config import ExtractionConfig, FrozenNamespace
 from medparse.schema.ifu import IFUDocument
+from medparse.ifu.safety_thresholds import expected_safety_with_source, get_safety_thresholds
 
 SAFETY_CONFIG_PATH = Path(__file__).resolve().parents[2] / "configs" / "_shared" / "second_pass.yaml"
 
@@ -38,64 +38,6 @@ class Issue:
     @classmethod
     def warn(cls, message: str) -> "Issue":
         return cls(message=message, severity="warning")
-
-
-@functools.lru_cache(maxsize=1)
-def _load_safety_density_min() -> Dict[str, object]:
-    if not SAFETY_CONFIG_PATH.exists():
-        return {}
-    try:
-        data = yaml.safe_load(SAFETY_CONFIG_PATH.read_text(encoding="utf-8")) or {}
-    except Exception:
-        return {}
-    if isinstance(data, dict) and "second_pass" in data and isinstance(data["second_pass"], dict):
-        data = data["second_pass"]
-    if not isinstance(data, dict):
-        return {}
-    ifu_cfg = data.get("ifu")
-    if not isinstance(ifu_cfg, dict):
-        return {}
-    density_cfg = ifu_cfg.get("safety_density_min")
-    if isinstance(density_cfg, dict):
-        return density_cfg
-    return {}
-
-
-@functools.lru_cache(maxsize=1)
-def _load_dynamic_threshold_cfg() -> Dict[str, object]:
-    if not SAFETY_CONFIG_PATH.exists():
-        return {}
-    try:
-        data = yaml.safe_load(SAFETY_CONFIG_PATH.read_text(encoding="utf-8")) or {}
-    except Exception:
-        return {}
-    if isinstance(data, dict) and "second_pass" in data and isinstance(data["second_pass"], dict):
-        data = data["second_pass"]
-    if not isinstance(data, dict):
-        return {}
-    ifu_cfg = data.get("ifu")
-    if not isinstance(ifu_cfg, dict):
-        return {}
-    safety_cfg = ifu_cfg.get("safety")
-    if not isinstance(safety_cfg, dict):
-        return {}
-    dynamic_cfg = safety_cfg.get("dynamic_threshold")
-    return dynamic_cfg if isinstance(dynamic_cfg, dict) else {}
-
-
-def _dynamic_expected(char_count: int, cfg: Dict[str, object]) -> int:
-    if char_count <= 0:
-        char_count = 0
-    min_short = _coerce_positive_int(cfg.get("min_short")) or 8
-    cap_long = _coerce_positive_int(cfg.get("cap_long")) or 20
-    chars_per_10 = _coerce_positive_int(cfg.get("chars_per_10")) or 50_000
-    units = int(math.floor((char_count / chars_per_10) + 0.5)) if char_count > 0 else 0
-    expected = units * 10
-    if expected <= 0:
-        expected = min_short
-    expected = max(min_short, expected)
-    expected = min(cap_long, expected)
-    return expected
 
 
 def _severity_label(kind: str, variant: str = "default") -> str:
@@ -269,97 +211,42 @@ def validate_ifu(document: IFUDocument, config: ExtractionConfig) -> list[Issue]
     safety_blocks = getattr(document, "safety_blocks", []) or []
     page_count = getattr(document, "page_count", 0) or 0
 
-    safety_config: Dict[str, object] = {}
-    try:
-        safety_ns = config.ifu_settings.get("safety")
-    except AttributeError:
-        safety_ns = None
-    if safety_ns is None:
-        raw_safety = getattr(config, "ifu", {}).get("safety") if isinstance(getattr(config, "ifu", {}), dict) else {}
-        safety_config = raw_safety or {}
-    elif hasattr(safety_ns, "to_dict"):
-        safety_config = safety_ns.to_dict()
-    elif isinstance(safety_ns, dict):
-        safety_config = safety_ns
-
-    min_blocks_cfg = {}
-    if isinstance(safety_config, dict):
-        candidate_cfg = safety_config.get("min_blocks")
-        if isinstance(candidate_cfg, dict):
-            min_blocks_cfg = candidate_cfg
-
-    def _as_int(value: object, default: int) -> int:
-        try:
-            number = int(value)
-            return number if number >= 0 else default
-        except (TypeError, ValueError):
-            return default
-
-    default_min = _as_int(min_blocks_cfg.get("default"), 12)
-    small_leaflet_pages_max = _as_int(min_blocks_cfg.get("small_leaflet_pages_max"), 4)
-    small_leaflet_min = _as_int(min_blocks_cfg.get("small_leaflet_min"), max(1, default_min // 2))
-    vendor_overrides = min_blocks_cfg.get("vendor_overrides") if isinstance(min_blocks_cfg, dict) else {}
-
-    density_cfg = _load_safety_density_min()
-    if density_cfg:
-        default_min = _as_int(density_cfg.get("default"), default_min)
-        if density_cfg.get("small_leaflet") is not None:
-            small_leaflet_min = _as_int(density_cfg.get("small_leaflet"), small_leaflet_min)
-        if density_cfg.get("small_leaflet_pages_max") is not None:
-            small_leaflet_pages_max = _as_int(density_cfg.get("small_leaflet_pages_max"), small_leaflet_pages_max)
-        overrides_cfg = density_cfg.get("by_manufacturer")
-        if isinstance(overrides_cfg, dict):
-            vendor_overrides = overrides_cfg
-
-    manufacturer_label = (document.manufacturer or "").strip().lower()
-    vendor_min = default_min
-    vendor_override_applied = False
-    if manufacturer_label and isinstance(vendor_overrides, dict):
-        for key, value in vendor_overrides.items():
-            if not isinstance(key, str):
-                continue
-            key_norm = key.strip().lower()
-            if not key_norm:
-                continue
-            if key_norm in manufacturer_label:
-                vendor_min = _as_int(value, default_min)
-                vendor_override_applied = True
-                break
+    thresholds = get_safety_thresholds()
+    leaflet_pages_max = int(thresholds.get("leaflet_pages_max", 4))  # type: ignore[arg-type]
+    min_short = int(thresholds.get("min_short", 8))  # type: ignore[arg-type]
 
     extracted_chars = _coerce_positive_int(pipeline_info.get("extracted_chars")) if isinstance(pipeline_info, dict) else 0
-    dynamic_cfg = _load_dynamic_threshold_cfg()
-    dynamic_expected = _dynamic_expected(extracted_chars, dynamic_cfg)
-
-    if page_count and page_count <= small_leaflet_pages_max:
-        expected_min = max(dynamic_expected, small_leaflet_min)
-    else:
-        expected_min = max(dynamic_expected, vendor_min)
+    expected_min, expectation_source = expected_safety_with_source(
+        extracted_chars or 0,
+        page_count,
+        getattr(document, "manufacturer", None),
+    )
 
     if isinstance(pipeline_info, dict):
         pipeline_info["safety_expected_min"] = expected_min
-        expectation_source = "dynamic"
-        if vendor_override_applied:
-            expectation_source = "vendor_override"
+        pipeline_info["safety_expected"] = expected_min
         pipeline_info["safety_expectation_source"] = expectation_source
-
-    if expected_min > 0 and len(safety_blocks) < expected_min:
-        if page_count and page_count <= small_leaflet_pages_max and len(safety_blocks) >= small_leaflet_min:
-            pass
-        else:
-            message = f"Safety content below expected density (found {len(safety_blocks)}, expected >= {expected_min})"
-            variant = "default"
-            if manufacturer_label and "intuitive" in manufacturer_label and page_count and page_count > 30:
-                variant = "intuitive_big"
-            severity_label = _severity_label("safety_density_shortfall", variant)
-            if expected_min <= 12:
-                severity_label = "warning"
-            issues.append(_issue_from_label(severity_label, message))
+        pipeline_info["safety_found"] = len(safety_blocks)
+        pipeline_info["safety_status"] = "ok" if len(safety_blocks) >= expected_min else "low"
 
     if isinstance(pipeline_info, dict):
         document.pipeline_info = pipeline_info
 
     if skip_clinical:
         return issues
+
+    manufacturer_label = (document.manufacturer or "").strip().lower()
+    if expected_min > 0 and len(safety_blocks) < expected_min:
+        if page_count and page_count <= leaflet_pages_max and len(safety_blocks) >= min_short:
+            pass
+        else:
+            severity_label = "warning"
+            if "intuitive" in manufacturer_label and page_count and page_count > leaflet_pages_max:
+                severity_label = "error"
+            if expectation_source.startswith("manufacturer:"):
+                severity_label = "warning"
+            message = f"Expected ≥{expected_min} safety blocks; found {len(safety_blocks)}."
+            issues.append(_issue_from_label(severity_label, message))
 
     if getattr(document, "references", None):
         sections_map = {}
@@ -368,7 +255,11 @@ def validate_ifu(document: IFUDocument, config: ExtractionConfig) -> list[Issue]
         elif isinstance(getattr(document, "sections", None), dict):
             sections_map = document.sections  # type: ignore[assignment]
         references_section = sections_map.get("references") if isinstance(sections_map, dict) else None
-        if not isinstance(references_section, dict):
+        has_anchor = False
+        if isinstance(references_section, dict):
+            if references_section.get("page_span") or references_section.get("start_page"):
+                has_anchor = True
+        if not has_anchor:
             issues.append(Issue.warn("References detected but references section anchor missing."))
     return issues
 

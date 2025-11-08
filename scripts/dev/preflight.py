@@ -301,10 +301,16 @@ def check_second_pass_config() -> Tuple[bool, str]:
     ifu_block = shared_block.get("ifu") if isinstance(shared_block, dict) else None
     if not isinstance(ifu_block, dict):
         return False, "second_pass.ifu block missing"
-    density_cfg = ifu_block.get("safety_density_min")
-    if not isinstance(density_cfg, dict):
-        return False, "second_pass.ifu.safety_density_min missing"
-    vendor_overrides = density_cfg.get("by_manufacturer")
+    safety_cfg = ifu_block.get("safety")
+    if not isinstance(safety_cfg, dict):
+        return False, "second_pass.ifu.safety block missing"
+    required_keys = ("min_short", "leaflet_pages_max", "cap_long", "chars_per_10")
+    if not all(key in safety_cfg for key in required_keys):
+        return False, "second_pass.ifu.safety thresholds incomplete"
+    vendor_overrides = safety_cfg.get("by_manufacturer")
+    if not isinstance(vendor_overrides, dict):
+        legacy_cfg = ifu_block.get("safety_density_min")
+        vendor_overrides = legacy_cfg.get("by_manufacturer") if isinstance(legacy_cfg, dict) else {}
     if isinstance(vendor_overrides, dict):
         vendor_summary = ", ".join(
             f"{name}:{value}" for name, value in vendor_overrides.items()

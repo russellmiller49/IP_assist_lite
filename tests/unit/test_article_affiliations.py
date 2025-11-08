@@ -150,3 +150,63 @@ def test_article_affiliations_nearest_mapping_second_pass() -> None:
     assert document.authors[0].affiliation_ids == ["1"]
     assert document.authors[1].affiliation_ids
     assert document.authors[1].affiliation_ids != ["1"]
+
+
+def test_article_affiliations_zotero_fallback(monkeypatch: pytest.MonkeyPatch) -> None:
+    authors = [
+        Author(given="Alice", family="Baker"),
+        Author(given="Brian", family="Clark"),
+    ]
+    affiliations = [
+        Affiliation(id="1", text="Existing Department"),
+    ]
+    document = ArticleDocument(
+        doc_type="article",
+        source_file="nejm.pdf",
+        page_count=1,
+        authors=authors,
+        affiliations=affiliations,
+    )
+    document.pipeline_info = {"metadata_sources": {"zotero_json": "/tmp/zotero.json"}}
+
+    class StubAuthor:
+        def __init__(self, given: str, family: str, affiliation: str):
+            self.given = given
+            self.family = family
+            self.affiliation = affiliation
+
+    class StubFrontMatter:
+        def __init__(self) -> None:
+            self.authors = [StubAuthor("Alice", "Baker", "Zotero Department")]
+
+    monkeypatch.setattr(
+        "medparse.second_pass.patchers.article_affiliations.configure_zotero_library",
+        lambda path: None,
+    )
+    monkeypatch.setattr(
+        "medparse.second_pass.patchers.article_affiliations.lookup_front_matter",
+        lambda doi, title: StubFrontMatter(),
+    )
+
+    ctx = SecondPassContext(
+        validation_issues=[],
+        paragraph_store={},
+        evidence_bank={},
+        profile=None,
+        engines_tried=[],
+        emit_policies={},
+        config={},
+        mode="always",
+        doc_metrics={},
+        max_runtime_ms=2500,
+    )
+
+    result = apply_article_affiliations(document, ctx)
+    assert result.applied is True
+    assert document.authors[0].affiliation_ids
+    assert document.authors[0].affiliation_ids[0] != "1"
+    assert document.pipeline_info["metadata_sources"]["zotero_json"] == "/tmp/zotero.json"
+    assert document.pipeline_info.get("affiliation_zotero_mapped") == 1
+    assert document.pipeline_info.get("affiliation_zotero_added") == 1
+    assert any(aff.text == "Zotero Department" for aff in document.affiliations)
+    assert result.modifications.get("affiliations_zotero_mapped") == 1

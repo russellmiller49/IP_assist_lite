@@ -39,13 +39,17 @@ second_pass:
         ERBE: 15
         Olympus: 8
     safety:
+      min_short: 8
+      leaflet_pages_max: 4
+      cap_long: 20
+      chars_per_10: 50000
+      by_manufacturer:
+        Intuitive: 20
+        ERBE: 15
+        Olympus: 8
       booster:
         dedupe_ratio: 0.92
         max_added: 20
-      dynamic_threshold:
-        min_short: 8
-        cap_long: 20
-        chars_per_10: 50000
     frontmatter:
       drop_headings_as_product:
         - INSTRUCTIONS

@@ -6,8 +6,9 @@ import hashlib
 import math
 import re
 from difflib import SequenceMatcher
-from typing import Dict, List, Optional, Set, Tuple
+from typing import Dict, List, Optional, Sequence, Set, Tuple
 
+from medparse.ifu.safety_thresholds import expected_safety_min
 from medparse.schema.common import BaseDocument, EvidenceSpan
 from medparse.schema.ifu import IFUDocument, SafetyBlock
 
@@ -38,31 +39,11 @@ SAFETY_KEYWORDS = (
 )
 
 
-def _compute_dynamic_expected(document: IFUDocument, ctx: SecondPassContext, pipeline_info: Dict[str, object]) -> int:
-    default_min = 8
-    cap_long = 20
-    chars_per_10 = 50000
-    safety_cfg = {}
-    if isinstance(ctx.config, dict):
-        ifu_cfg = ctx.config.get("ifu", {})
-        if isinstance(ifu_cfg, dict):
-            safety_cfg = ifu_cfg.get("safety", {}) if isinstance(ifu_cfg.get("safety"), dict) else {}
-    dynamic_cfg = safety_cfg.get("dynamic_threshold", {}) if isinstance(safety_cfg, dict) else {}
-    if isinstance(dynamic_cfg, dict):
-        try:
-            default_min = max(1, int(dynamic_cfg.get("min_short", default_min)))
-        except (TypeError, ValueError):
-            pass
-        try:
-            cap_long = max(default_min, int(dynamic_cfg.get("cap_long", cap_long)))
-        except (TypeError, ValueError):
-            pass
-        try:
-            chars_per_10 = max(1, int(dynamic_cfg.get("chars_per_10", chars_per_10)))
-        except (TypeError, ValueError):
-            pass
-
-    char_sources = [pipeline_info.get("extracted_chars"), ctx.doc_metrics.get("extracted_chars")]
+def _compute_expected(document: IFUDocument, ctx: SecondPassContext, pipeline_info: Dict[str, object]) -> int:
+    char_sources = [
+        pipeline_info.get("extracted_chars"),
+        ctx.doc_metrics.get("extracted_chars"),
+    ]
     char_count = 0
     for source in char_sources:
         if source is None:
@@ -74,16 +55,9 @@ def _compute_dynamic_expected(document: IFUDocument, ctx: SecondPassContext, pip
         if candidate > 0:
             char_count = candidate
             break
-
-    units = 0
-    if char_count > 0:
-        units = int(math.floor((char_count / chars_per_10) + 0.5))
-    expected = units * 10
-    if expected <= 0:
-        expected = default_min
-    expected = max(default_min, expected)
-    expected = min(cap_long, expected)
-    return expected
+    page_count = getattr(document, "page_count", 0) or 0
+    manufacturer = getattr(document, "manufacturer", None)
+    return expected_safety_min(char_count, page_count, manufacturer)
 
 
 def _ordered_entries(paragraph_store: Dict[str, Dict[str, object]]) -> List[Tuple[int, Dict[str, object]]]:
@@ -221,6 +195,36 @@ def _determine_target_pages(document: IFUDocument, ctx: SecondPassContext) -> Se
     return bounded_pages
 
 
+def _min_expected_by_pages(page_count: int) -> int:
+    if page_count <= 0:
+        return 8
+    estimated = math.ceil(page_count / 3)
+    return max(8, min(20, estimated))
+
+
+def _candidate_entries(
+    ordered_entries: Sequence[Tuple[int, Dict[str, object]]],
+    target_pages: Set[int],
+) -> List[Tuple[Dict[str, object], str, str]]:
+    candidates: List[Tuple[Dict[str, object], str, str]] = []
+    restrict_to_targets = bool(target_pages)
+    for _, entry in ordered_entries:
+        text = entry.get("text")
+        if not isinstance(text, str):
+            continue
+        stripped = text.strip()
+        if not stripped:
+            continue
+        page = entry.get("page")
+        if restrict_to_targets and (not isinstance(page, int) or page not in target_pages):
+            continue
+        source_hint = _looks_like_safety(stripped)
+        if not source_hint:
+            continue
+        candidates.append((entry, stripped, source_hint))
+    return candidates
+
+
 def _looks_like_safety(text: str) -> Optional[str]:
     if not text:
         return None
@@ -267,7 +271,10 @@ def apply_ifu_safety_density_booster(document: BaseDocument, ctx: SecondPassCont
         return SecondPassPatchResult.skipped_result(PATCH_NAME, reason="already_applied")
 
     safety_blocks = list(document.safety_blocks or [])
-    expected_min = _compute_dynamic_expected(document, ctx, pipeline_info)
+    expected_min = _compute_expected(document, ctx, pipeline_info)
+    page_count_value = getattr(document, "page_count", None)
+    page_count_int = int(page_count_value or 0)
+    expected_min = max(expected_min, _min_expected_by_pages(page_count_int))
     pipeline_info["safety_expected_min"] = expected_min
 
     booster_cfg = {}
@@ -299,20 +306,14 @@ def apply_ifu_safety_density_booster(document: BaseDocument, ctx: SecondPassCont
     additions = 0
     ordered_entries = _ordered_entries(ctx.paragraph_store)
     target_pages = _determine_target_pages(document, ctx)
-    page_count = getattr(document, "page_count", None)
+    candidate_entries = _candidate_entries(ordered_entries, target_pages)
+    if not candidate_entries:
+        return SecondPassPatchResult.skipped_result(PATCH_NAME, reason="no_safety_candidates")
+    candidate_cap = min(20, int(math.ceil(len(candidate_entries) * 0.35)))
+    max_added = min(max_added, candidate_cap)
     added_hashes: Set[str] = set()
 
-    for _, entry in ordered_entries:
-        text = entry.get("text")
-        if not isinstance(text, str):
-            continue
-        stripped = text.strip()
-        page = entry.get("page")
-        if target_pages and (not isinstance(page, int) or page not in target_pages):
-            continue
-        source_hint = _looks_like_safety(stripped)
-        if not source_hint:
-            continue
+    for entry, stripped, source_hint in candidate_entries:
         lowered = stripped.lower()
         if lowered in existing_texts or _similar_text(stripped, similarity_cache, dedupe_ratio):
             continue
@@ -333,7 +334,7 @@ def apply_ifu_safety_density_booster(document: BaseDocument, ctx: SecondPassCont
         safety_block = SafetyBlock(level=level, text=stripped, evidence=evidence)
         safety_block.source = source_value
         safety_block.category = "second_pass:safety_density_boost"
-        bounded_page = _bounded_page(entry.get("page"), page_count)
+        bounded_page = _bounded_page(entry.get("page"), page_count_value)
         if bounded_page is not None:
             safety_block.page = bounded_page
         safety_block.hash = normalized_hash

@@ -77,6 +77,7 @@ class SecondPassReport:
     notes: List[str] = field(default_factory=list)
     skipped: bool = False
     summary: PatcherResult = field(default_factory=PatcherResult)
+    requires_revalidation: bool = False
 
     def as_metadata(self) -> Dict[str, object]:
         """Convert report into pipeline metadata payload."""
@@ -90,6 +91,7 @@ class SecondPassReport:
             "applied": list(self.summary.applied),
             "reasons": list(self.summary.reasons),
             "modifications": dict(self.summary.modifications),
+            "requires_revalidation": self.requires_revalidation,
         }
 
 

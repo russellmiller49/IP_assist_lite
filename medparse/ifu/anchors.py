@@ -293,6 +293,7 @@ INTUITIVE_ANCHORS: Dict[str, Dict[str, List[str]]] = {
             "1.4.4 intended patient population",
             "contraindications",
             "warnings",
+            "table 1.1",
         ],
     },
     "intended_use": {
@@ -536,6 +537,18 @@ def slice_section(
             if coerced is not None:
                 toc_mask_set.add(coerced)
 
+    start_list = _coerce_anchor_list(start_anchor)
+    stop_list = _coerce_anchor_list(stop_anchors)
+
+    if stop_list:
+        existing_lower = {str(anchor).lower() for anchor in stop_list if isinstance(anchor, str)}
+        for anchor in GLOBAL_STOP_ANCHORS:
+            if anchor.lower() not in existing_lower:
+                stop_list.append(anchor)
+                existing_lower.add(anchor.lower())
+    else:
+        stop_list = list(GLOBAL_STOP_ANCHORS)
+
     min_page_threshold = min_start_page
     if isinstance(manufacturer_rules, dict):
         rule_min = manufacturer_rules.get("min_anchor_page")
@@ -551,20 +564,14 @@ def slice_section(
                     if min_page_threshold is None or field_min > min_page_threshold:
                         min_page_threshold = field_min
 
+    if field_name == "indications_for_use":
+        preferred_page = _resolve_indications_heading_page(working_pages, guard_report, start_list)
+        if preferred_page is not None:
+            if min_page_threshold is None or preferred_page > min_page_threshold:
+                min_page_threshold = preferred_page
+
     if min_page_threshold is not None:
         working_pages = [page for page in working_pages if page.number >= min_page_threshold]
-
-    start_list = _coerce_anchor_list(start_anchor)
-    stop_list = _coerce_anchor_list(stop_anchors)
-
-    if stop_list:
-        existing_lower = {str(anchor).lower() for anchor in stop_list if isinstance(anchor, str)}
-        for anchor in GLOBAL_STOP_ANCHORS:
-            if anchor.lower() not in existing_lower:
-                stop_list.append(anchor)
-                existing_lower.add(anchor.lower())
-    else:
-        stop_list = list(GLOBAL_STOP_ANCHORS)
 
     if not working_pages or not start_list:
         return Section(
@@ -701,6 +708,59 @@ def slice_section(
         trimmed_prefix=0,
         toc_report=guard_report,
     )
+
+
+def _resolve_indications_heading_page(
+    pages: Sequence[PageData],
+    guard_report: Optional[TocGuardReport],
+    start_list: Sequence[str],
+) -> Optional[int]:
+    if not guard_report or not guard_report.pages_dropped:
+        return None
+    aliases = _normalize_anchor_aliases(start_list)
+    if not aliases:
+        return None
+    dropped_pages = [_coerce_page_number(page) for page in guard_report.pages_dropped]
+    dropped_pages = [page for page in dropped_pages if page is not None]
+    if not dropped_pages:
+        return None
+    minimum_page = max(dropped_pages)
+    for page in pages:
+        if page.number is None or page.number <= minimum_page:
+            continue
+        if _page_matches_heading_alias(page, aliases):
+            return page.number
+    return None
+
+
+def _normalize_anchor_aliases(anchors: Sequence[str]) -> List[str]:
+    normalized: List[str] = []
+    for anchor in anchors:
+        if not anchor:
+            continue
+        parts = [segment.strip().lower() for segment in str(anchor).split("|") if segment.strip()]
+        normalized.extend(parts)
+    return normalized
+
+
+def _page_matches_heading_alias(page: PageData, aliases: Sequence[str]) -> bool:
+    headings = getattr(page, "headings", []) or []
+    for heading in headings:
+        title = getattr(heading, "title", "")
+        normalized = _normalize_heading_text(title)
+        if normalized and any(normalized.startswith(alias) for alias in aliases):
+            return True
+    for line in (page.lines[:6] if page.lines else []):
+        normalized_line = _normalize_heading_text(line)
+        if normalized_line and any(normalized_line.startswith(alias) for alias in aliases):
+            return True
+    return False
+
+
+def _normalize_heading_text(text: Optional[str]) -> str:
+    if not text:
+        return ""
+    return re.sub(r"\s+", " ", text).strip().lower()
 
 
 def looks_like_toc(text: str) -> bool:

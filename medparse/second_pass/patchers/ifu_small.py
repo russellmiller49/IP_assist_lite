@@ -8,6 +8,7 @@ from typing import Dict, List, Optional, Tuple
 from medparse.schema.common import BaseDocument
 from medparse.schema.ifu import IFUDocument
 
+from medparse.ifu.safety_thresholds import get_safety_thresholds
 from ..types import SecondPassContext, SecondPassPatchResult
 
 PATCH_NAME = "ifu_small_leaflet_map"
@@ -170,14 +171,8 @@ def apply_ifu_small_leaflet_map(document: BaseDocument, ctx: SecondPassContext) 
     if not isinstance(document, IFUDocument):
         return SecondPassPatchResult.skipped_result(PATCH_NAME, reason="doc_not_ifu")
 
-    page_threshold = 4
-    if isinstance(ctx.config, dict):
-        density_cfg = ctx.config.get("ifu", {}).get("safety_density_min", {})
-        if isinstance(density_cfg, dict):
-            try:
-                page_threshold = int(density_cfg.get("small_leaflet_pages_max", page_threshold))
-            except (TypeError, ValueError):
-                page_threshold = 4
+    thresholds = get_safety_thresholds()
+    page_threshold = int(thresholds.get("leaflet_pages_max", 4))  # type: ignore[arg-type]
     if (document.page_count or 0) > page_threshold:
         return SecondPassPatchResult.skipped_result(PATCH_NAME, reason="page_count_too_high")
 

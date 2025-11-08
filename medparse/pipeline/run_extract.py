@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import json
-import math
 from copy import deepcopy
 import time
 from dataclasses import dataclass, field
@@ -18,7 +17,8 @@ import yaml
 from medparse.config import ExtractionConfig, ExtractionProfile
 from medparse.extractors.article import extract_article
 from medparse.extractors.guideline import extract_guideline
-from medparse.extractors.ifu import extract_ifu, _load_safety_density_min_config
+from medparse.extractors.ifu import extract_ifu
+from medparse.ifu.safety_thresholds import expected_safety_min
 from medparse.ifu.frontmatter import extract_front_matter
 from medparse.extractors.textbook import extract_textbook_chapter
 from medparse.extract.utils import load_pages
@@ -211,6 +211,55 @@ def _research_yield_present(outcomes: Optional[object]) -> bool:
         if _research_metric_has_value(getattr(arm, "diagnostic_yield", None)):
             return True
     return False
+
+
+SECTION_GUARD_HINTS = (
+    "too few sections",
+    "too few populated sections",
+    "insufficient structural signals",
+    "no sections parsed",
+)
+
+
+def _normalize_validator_issues(
+    document: BaseDocument,
+    issues: Sequence[ValidationIssue],
+) -> List[ValidationIssue]:
+    if not isinstance(document, ArticleDocument):
+        return list(issues)
+    subtype = (getattr(document, "doc_subtype", "") or "").lower()
+    if subtype not in {"editorial_or_economics", "statement"}:
+        return list(issues)
+    adjusted: List[ValidationIssue] = []
+    for issue in issues:
+        if issue.severity == "error" and _is_section_guard_issue(issue.message):
+            adjusted.append(ValidationIssue(issue.message, severity="warning"))
+        else:
+            adjusted.append(issue)
+    return adjusted
+
+
+def _is_section_guard_issue(message: str) -> bool:
+    lowered = (message or "").lower()
+    return any(hint in lowered for hint in SECTION_GUARD_HINTS)
+
+
+def _run_validation(document: BaseDocument) -> List[ValidationIssue]:
+    return _normalize_validator_issues(document, validate_document(document))
+
+
+def _inject_metadata_sources(document: BaseDocument, metadata_sources: Dict[str, Any]) -> None:
+    if not metadata_sources:
+        return
+    pipeline_info = getattr(document, "pipeline_info", {}) or {}
+    if not isinstance(pipeline_info, dict):
+        pipeline_info = {}
+    existing = pipeline_info.get("metadata_sources")
+    merged = dict(metadata_sources)
+    if isinstance(existing, dict):
+        merged.update(existing)
+    pipeline_info["metadata_sources"] = merged
+    document.pipeline_info = pipeline_info
 
 
 def _normalize_override_key(value: str) -> str:
@@ -1154,11 +1203,12 @@ def run_extract(
         cached_profile = cached_entry.get("profile")
         if cached_profile == extraction_config.profile.value:
             document = _hydrate_document(config.doc_type, cached_entry)
+            _inject_metadata_sources(document, dict(config.metadata_sources or {}))
             metrics = dict(cached_entry.get("metrics", {}))
             paragraph_store = getattr(document, "paragraph_store", {}) or {}
             validator_issues: List[ValidationIssue] = []
             if extraction_config.should_validate():
-                validator_issues = validate_document(document)
+                validator_issues = _run_validation(document)
             second_pass_report: Optional[SecondPassReport] = None
             applied_any = False
             if active_second_pass_mode != "off":
@@ -1177,8 +1227,9 @@ def run_extract(
                 document, second_pass_report = run_second_pass(document, cache_second_pass_context)
                 applied_any = _sync_second_pass_summary(document, second_pass_report, metrics)
                 metrics.update(_document_metrics(document))
-                if applied_any and extraction_config.should_validate():
-                    validator_issues = validate_document(document)
+                needs_revalidation = applied_any or (second_pass_report.requires_revalidation if second_pass_report else False)
+                if needs_revalidation and extraction_config.should_validate():
+                    validator_issues = _run_validation(document)
             else:
                 metrics["second_pass"] = {
                     "mode": active_second_pass_mode,
@@ -1263,6 +1314,7 @@ def run_extract(
             pages=pages,
             config=extraction_config,
         )
+        _inject_metadata_sources(document, dict(config.metadata_sources or {}))
         duration = time.time() - start
 
         metrics = _compute_metrics(pages, total_pages, duration)
@@ -1381,7 +1433,7 @@ def run_extract(
 
         validator_issues: List[ValidationIssue] = []
         if extraction_config.should_validate():
-            validator_issues = validate_document(document)
+            validator_issues = _run_validation(document)
 
         second_pass_report: Optional[SecondPassReport] = None
         applied_any = False
@@ -1401,8 +1453,9 @@ def run_extract(
             document, second_pass_report = run_second_pass(document, second_pass_context)
             applied_any = _sync_second_pass_summary(document, second_pass_report, metrics)
             metrics.update(_document_metrics(document))
-            if applied_any and extraction_config.should_validate():
-                validator_issues = validate_document(document)
+            needs_revalidation = applied_any or (second_pass_report.requires_revalidation if second_pass_report else False)
+            if needs_revalidation and extraction_config.should_validate():
+                validator_issues = _run_validation(document)
         else:
             metrics["second_pass"] = {
                 "mode": active_second_pass_mode,
@@ -1618,24 +1671,6 @@ def _meets_thresholds(
     return True, warnings
 
 
-def _dynamic_safety_expected_from_chars(
-    char_count: int,
-    *,
-    min_short: int = 8,
-    cap_long: int = 20,
-    chars_per_10: int = 50_000,
-) -> int:
-    if char_count <= 0:
-        return min_short
-    units = int(math.floor((char_count / chars_per_10) + 0.5))
-    expected = units * 10
-    if expected <= 0:
-        expected = min_short
-    expected = max(min_short, expected)
-    expected = min(cap_long, expected)
-    return expected
-
-
 def _resolve_safety_expected(pipeline_info: Dict[str, object], document: BaseDocument) -> Optional[int]:
     chars = pipeline_info.get("extracted_chars")
     try:
@@ -1644,33 +1679,9 @@ def _resolve_safety_expected(pipeline_info: Dict[str, object], document: BaseDoc
         return None
     if char_count <= 0:
         return None
-    dynamic_value = _dynamic_safety_expected_from_chars(char_count)
-    density_cfg = _load_safety_density_min_config()
-    vendor_expected = None
-    small_leaflet_min = 8
-    small_leaflet_pages_max = 4
-    if density_cfg:
-        small_leaflet_min = int(density_cfg.get("small_leaflet", small_leaflet_min) or small_leaflet_min)
-        small_leaflet_pages_max = int(density_cfg.get("small_leaflet_pages_max", small_leaflet_pages_max) or small_leaflet_pages_max)
-        overrides = density_cfg.get("by_manufacturer", {})
-        manufacturer = (getattr(document, "manufacturer", "") or "").strip().lower()
-        if manufacturer and isinstance(overrides, dict):
-            for key, value in overrides.items():
-                if not isinstance(key, str):
-                    continue
-                key_norm = key.strip().lower()
-                if key_norm and key_norm in manufacturer:
-                    try:
-                        vendor_expected = int(value)
-                    except (TypeError, ValueError):
-                        vendor_expected = None
-                    break
     page_count = getattr(document, "page_count", 0) or 0
-    if page_count and page_count <= small_leaflet_pages_max:
-        vendor_expected = max(vendor_expected or 0, small_leaflet_min)
-    if vendor_expected is not None:
-        return max(dynamic_value, vendor_expected)
-    return dynamic_value
+    manufacturer = getattr(document, "manufacturer", None)
+    return expected_safety_min(char_count, page_count, manufacturer)
 
 
 def _document_metrics(document: BaseDocument) -> Dict[str, Any]:

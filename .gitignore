@@ -68,6 +68,7 @@ scratch*
 !tests/integration/test_*.py
 !tests/unit/test_*.py
 !tests/contracts/test_*.py
+!tests/second_pass/test_*.py
 
 # Streamlit/FastAPI apps (using Gradio instead)
 streamlit_*.py

@@ -15,6 +15,7 @@ from .article_yield_ats_fixer import apply_yield_ats_fixer
 from .guideline_grade_backfill import apply_guideline_grade_backfill
 from .ifu_frontmatter_backfill import apply_ifu_frontmatter_backfill
 from .ifu_indications_fallback import apply_ifu_indications_fallback
+from .ifu_indications_anchor_numbered import apply_ifu_indications_anchor_numbered
 from .ifu_intended_use_backfill import apply_ifu_intended_use_backfill
 from .ifu_manufacturer_overrides import apply_ifu_manufacturer_overrides
 from .ifu_references_anchor import apply_ifu_references_anchor
@@ -45,6 +46,7 @@ _ORDERED_PATCHERS: Dict[str, List[SecondPassPatcher]] = {
         apply_ifu_frontmatter_backfill,
         apply_ifu_toc_guard_refine,
         apply_ifu_small_leaflet_map,
+        apply_ifu_indications_anchor_numbered,
         apply_ifu_intended_use_backfill,
         apply_ifu_indications_fallback,
         apply_ifu_safety_density_booster,

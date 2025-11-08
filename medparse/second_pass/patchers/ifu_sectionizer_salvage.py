@@ -109,7 +109,12 @@ def apply_ifu_sectionizer_salvage(document: BaseDocument, ctx: SecondPassContext
     if not isinstance(pipeline_info, dict):
         pipeline_info = {}
 
-    pipeline_info["sections"] = rebuilt
+    existing_sections = {}
+    if isinstance(pipeline_info.get("sections"), dict):
+        existing_sections = dict(pipeline_info.get("sections") or {})
+    merged_sections = dict(existing_sections)
+    merged_sections.update(rebuilt)
+    pipeline_info["sections"] = merged_sections
 
     second_pass_bucket = pipeline_info.setdefault("second_pass", {})
     patches_applied = second_pass_bucket.setdefault("patches_applied", [])

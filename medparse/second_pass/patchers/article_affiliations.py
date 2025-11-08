@@ -5,6 +5,7 @@ from __future__ import annotations
 import re
 from typing import Dict, Iterable, List, Optional, Sequence, Set, Tuple
 
+from medparse.normalize.zotero_map import configure_zotero_library, lookup_front_matter
 from medparse.schema.article import Affiliation, ArticleDocument, Author
 from medparse.schema.common import BaseDocument
 
@@ -33,15 +34,27 @@ def apply_article_affiliations(document: BaseDocument, ctx: SecondPassContext) -
 
     split_affiliations, split_added = _split_affiliation_blocks(affiliations)
     consortia_list, filtered_affiliations = _extract_consortia(split_affiliations)
+    existing_affiliation_ids = {str(aff.id) for aff in filtered_affiliations if aff.id}
 
     aff_token_map = _build_affiliation_tokens(filtered_affiliations)
     aff_index_map = {aff.id: idx for idx, aff in enumerate(filtered_affiliations)}
     mapped_count = _map_authors_nearest(authors, candidate_lines, aff_token_map, aff_index_map)
+    unresolved_after_nearest = _count_unresolved(authors)
+    zotero_mapped = 0
+    zotero_aff_added = 0
+    if unresolved_after_nearest:
+        zotero_mapped, zotero_aff_added = _map_authors_from_zotero(
+            document,
+            authors,
+            filtered_affiliations,
+            existing_affiliation_ids,
+        )
 
     unresolved_after = _count_unresolved(authors)
 
     consortia_count = len(consortia_list)
-    has_changes = (split_added + consortia_count + mapped_count) > 0
+    total_mapped = mapped_count + zotero_mapped
+    has_changes = (split_added + consortia_count + total_mapped + zotero_aff_added) > 0
     if not has_changes:
         return SecondPassPatchResult.skipped_result(PATCH_NAME, reason="no_changes")
 
@@ -53,6 +66,10 @@ def apply_article_affiliations(document: BaseDocument, ctx: SecondPassContext) -
             consortia_payload.extend(consortia_list)
         else:
             pipeline_info["affiliation_consortia"] = consortia_list
+    if zotero_mapped:
+        pipeline_info["affiliation_zotero_mapped"] = pipeline_info.get("affiliation_zotero_mapped", 0) + zotero_mapped
+    if zotero_aff_added:
+        pipeline_info["affiliation_zotero_added"] = pipeline_info.get("affiliation_zotero_added", 0) + zotero_aff_added
 
     document.pipeline_info = pipeline_info
 
@@ -61,8 +78,12 @@ def apply_article_affiliations(document: BaseDocument, ctx: SecondPassContext) -
         modifications["affiliations_split"] = split_added
     if consortia_count:
         modifications["affiliations_consortia_removed"] = consortia_count
-    if mapped_count:
-        modifications["affiliations_mapped"] = mapped_count
+    if total_mapped:
+        modifications["affiliations_mapped"] = total_mapped
+    if zotero_mapped:
+        modifications["affiliations_zotero_mapped"] = zotero_mapped
+    if zotero_aff_added:
+        modifications["affiliations_zotero_added"] = zotero_aff_added
 
     return SecondPassPatchResult(
         name=PATCH_NAME,
@@ -237,6 +258,125 @@ def _score_affiliations(
     # Resolve ties by earliest affiliation index
     best_candidates.sort(key=lambda aff_id: aff_index_map.get(aff_id, 10**6))
     return best_candidates[0]
+
+
+def _map_authors_from_zotero(
+    document: ArticleDocument,
+    authors: Sequence[Author],
+    affiliations: List[Affiliation],
+    existing_ids: Set[str],
+) -> Tuple[int, int]:
+    pipeline_info = getattr(document, "pipeline_info", {}) or {}
+    zotero_path = _resolve_zotero_path(pipeline_info)
+    if not zotero_path:
+        return 0, 0
+    try:
+        configure_zotero_library(zotero_path)
+    except Exception:
+        return 0, 0
+    front_matter = lookup_front_matter(getattr(document, "doi", None), getattr(document, "title", None))
+    if not front_matter or not getattr(front_matter, "authors", None):
+        return 0, 0
+
+    name_to_affiliation: Dict[str, str] = {}
+    for fm_author in front_matter.authors:
+        given = getattr(fm_author, "given", None)
+        family = getattr(fm_author, "family", None)
+        affiliation_text = getattr(fm_author, "affiliation", None)
+        key = _normalize_author_key(given, family)
+        if key and affiliation_text:
+            name_to_affiliation[key] = affiliation_text
+    if not name_to_affiliation:
+        return 0, 0
+
+    normalized_affiliations = {
+        str(aff.id): _normalize_affiliation_text(aff.text)
+        for aff in affiliations
+        if aff.id
+    }
+
+    mapped = 0
+    added = 0
+    for author in authors:
+        if author.affiliation_ids:
+            continue
+        key = _normalize_author_key(author.given, author.family)
+        if not key:
+            continue
+        affiliation_text = name_to_affiliation.get(key)
+        if not affiliation_text:
+            continue
+        aff_id, created = _match_or_create_affiliation(
+            affiliations,
+            normalized_affiliations,
+            existing_ids,
+            affiliation_text,
+        )
+        if aff_id is None:
+            continue
+        author.affiliation_ids = [aff_id]
+        mapped += 1
+        if created:
+            added += 1
+    return mapped, added
+
+
+def _resolve_zotero_path(pipeline_info: Dict[str, object]) -> Optional[str]:
+    if not isinstance(pipeline_info, dict):
+        return None
+    metadata_sources = pipeline_info.get("metadata_sources")
+    if isinstance(metadata_sources, dict):
+        path = metadata_sources.get("zotero_json")
+        if isinstance(path, str) and path.strip():
+            return path.strip()
+    return None
+
+
+def _normalize_author_key(given: Optional[str], family: Optional[str]) -> str:
+    parts = [str(value).strip() for value in (given, family) if value and str(value).strip()]
+    if not parts:
+        return ""
+    normalized = " ".join(parts)
+    return re.sub(r"[^a-z0-9]", "", normalized.lower())
+
+
+def _normalize_affiliation_text(text: Optional[str]) -> str:
+    if not text:
+        return ""
+    return re.sub(r"\s+", " ", text).strip().lower()
+
+
+def _match_or_create_affiliation(
+    affiliations: List[Affiliation],
+    normalized_affiliations: Dict[str, str],
+    existing_ids: Set[str],
+    text: str,
+) -> Tuple[Optional[str], bool]:
+    normalized_text = _normalize_affiliation_text(text)
+    if not normalized_text:
+        return None, False
+    for aff_id, normalized in normalized_affiliations.items():
+        if normalized == normalized_text:
+            return aff_id, False
+    new_id = _next_affiliation_id(existing_ids)
+    affiliations.append(
+        Affiliation(
+            id=new_id,
+            text=text.strip(),
+        )
+    )
+    normalized_affiliations[new_id] = normalized_text
+    return new_id, True
+
+
+def _next_affiliation_id(existing_ids: Set[str]) -> str:
+    counter = 1
+    while True:
+        candidate = str(counter)
+        if candidate not in existing_ids:
+            existing_ids.add(candidate)
+            return candidate
+        counter += 1
 
 
 def _tokenize(text: Optional[str]) -> Set[str]:

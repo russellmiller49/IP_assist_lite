@@ -160,9 +160,10 @@ def _looks_like_toc_page(page: PageData, config: TocGuardConfig) -> bool:
     if not lines:
         return False
 
-    lowered = "\n".join(lines).lower()
-    if any(keyword in lowered for keyword in TOC_KEYWORDS):
-        return True
+    lowered_lines = [line.lower() for line in lines]
+    for keyword in TOC_KEYWORDS:
+        if any(line.startswith(keyword) for line in lowered_lines):
+            return True
 
     dotted_lines = sum(1 for line in lines if DOT_LEADER_RE.search(line))
     numbered_lines = sum(1 for line in lines if PAGE_NUMBER_RE.search(line))
@@ -181,12 +182,12 @@ def _looks_like_toc_page(page: PageData, config: TocGuardConfig) -> bool:
     if dotted_ratio >= config.dot_leader_min and numbered_ratio >= config.page_number_ratio:
         return True
 
-    if numbered_ratio >= 0.5 and short_lines / total_lines >= 0.7:
+    if total_lines >= 4 and numbered_ratio >= 0.5 and short_lines / total_lines >= 0.7:
         return True
 
     # Guard for sequences of numbered headings (e.g., chapter lists)
     heading_hits = sum(1 for line in lines if _looks_like_section_candidate(line))
-    if heading_hits >= 4 and numbered_ratio >= 0.3:
+    if total_lines >= 5 and heading_hits >= 4 and numbered_ratio >= 0.3:
         return True
 
     return False

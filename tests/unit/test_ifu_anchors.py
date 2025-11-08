@@ -3,7 +3,7 @@
 import pytest
 from unittest.mock import MagicMock
 
-from medparse.ingest.models import PageData
+from medparse.ingest.models import Heading, PageData
 from medparse.ifu.anchors import (
     looks_like_toc,
     normalize_bullets,
@@ -15,6 +15,7 @@ from medparse.ifu.anchors import (
     INTUITIVE_ANCHORS,
     OLYMPUS_ANCHORS,
 )
+from medparse.ifu.toc_guard import TocGuardReport
 from medparse.normalize.ifu_anchors import lift_ifu_clinical_fields
 
 
@@ -222,6 +223,50 @@ class TestAnchorBleedPrevention:
         # This should detect the TOC bleed
         text = "\n".join(pages[0].lines[1:])
         assert looks_like_toc(text) is True
+
+    def test_prefers_post_toc_heading_for_indications(self, monkeypatch):
+        """Ensure slice_section skips TOC remnants when a heading exists after TOC."""
+        pages = [
+            PageData(
+                number=1,
+                text="Table of Contents\nIndications for Use ........ 5",
+                lines=["Table of Contents", "Indications for Use ........ 5"],
+            ),
+            PageData(
+                number=2,
+                text="Indications for Use ........ 5",
+                lines=["Indications for Use ........ 5"],
+            ),
+            PageData(
+                number=3,
+                text="Indications for Use\nThis device is intended for use in bronchoscopy.",
+                lines=["Indications for Use", "This device is intended for use in bronchoscopy."],
+                headings=[Heading(title="Indications for Use", page=3, line_index=0)],
+            ),
+            PageData(
+                number=4,
+                text="Warnings\nUse with caution.",
+                lines=["Warnings", "Use with caution."],
+                headings=[Heading(title="Warnings", page=4, line_index=0)],
+            ),
+        ]
+
+        def fake_guard(page_list, guard):
+            filtered = [page for page in page_list if page.number != 1]
+            return filtered, TocGuardReport(enabled=True, pages_dropped=[1], pages_considered=1)
+
+        monkeypatch.setattr("medparse.ifu.anchors.apply_toc_guard", fake_guard)
+
+        section = slice_section(
+            pages,
+            start_anchor=["Indications for Use"],
+            stop_anchors=["Warnings"],
+            field_name="indications_for_use",
+        )
+
+        assert section.start_page == 3
+        assert "bronchoscopy" in section.text.lower()
+        assert "........" not in section.text
 
 
 class TestIntuitiveIonSpecifics:
