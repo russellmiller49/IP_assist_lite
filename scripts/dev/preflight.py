@@ -44,19 +44,22 @@ def check_spacy() -> Tuple[bool, str]:
 
 
 def check_typer() -> Tuple[bool, str]:
-    """Check typer version (must be <0.10 for spaCy 3.7)."""
+    """Check typer version (must be >=0.12.5,<0.17.0 for docling compatibility)."""
     try:
         import typer
+        from packaging import version
 
         # typer doesn't expose __version__ directly, check via importlib
-        from importlib.metadata import version
+        from importlib.metadata import version as get_version
 
-        ver = version("typer")
-        major, minor = map(int, ver.split(".")[:2])
+        ver_str = get_version("typer")
+        ver = version.parse(ver_str)
+        min_ver = version.parse("0.12.5")
+        max_ver = version.parse("0.17.0")
 
-        if major == 0 and minor < 10:
-            return True, f"typer {ver}"
-        return False, f"typer {ver} (requires <0.10 for spaCy 3.7)"
+        if min_ver <= ver < max_ver:
+            return True, f"typer {ver_str}"
+        return False, f"typer {ver_str} (requires >=0.12.5,<0.17.0 for docling compatibility)"
     except ImportError:
         return False, "typer not installed"
     except Exception as e:
