@@ -18,6 +18,8 @@ INTENDED_USE_RE = re.compile(r"^(?:\d+\.){1,3}\s*intended\s+use\b|^intended\s+us
 DOT_LEADER_RE = re.compile(r"[.·…]{2,}")
 CAPTION_RE = re.compile(r"^(figure|table|image|video)\\b", re.IGNORECASE)
 SENTENCE_SPLIT_RE = re.compile(r"[.!?]+\\s+")
+ANCHOR_PREFIX_RE = re.compile(r"^((?:\d+\.){1,3})")
+INLINE_ANCHOR_RE = re.compile(r"(?:^|\\b)((?:\\d+\\.){1,3})\\s*indications?\\s+for\\s+use\\b", re.IGNORECASE)
 
 
 def _ordered_entries(paragraph_store: Dict[str, Dict[str, object]]) -> List[Dict[str, object]]:
@@ -67,6 +69,26 @@ def _extract_text(value: object) -> str:
     return ""
 
 
+def _match_indications_heading(line: str) -> tuple[bool, str | None]:
+    cleaned = line.strip()
+    if not cleaned:
+        return False, None
+    if HEADING_RE.match(cleaned):
+        prefix = ANCHOR_PREFIX_RE.match(cleaned)
+        if prefix:
+            return True, prefix.group(1).rstrip(".")
+        return True, None
+    lowered = cleaned.lower()
+    if "indications for use" not in lowered:
+        return False, None
+    if _looks_like_toc(cleaned):
+        return False, None
+    inline = INLINE_ANCHOR_RE.search(cleaned)
+    if inline:
+        return True, inline.group(1).rstrip(".")
+    return True, None
+
+
 def _collect_body_lines(
     entries: List[Dict[str, object]],
     start_idx: int,
@@ -113,6 +135,9 @@ def _apply_indications_payload(document: IFUDocument, payload: Dict[str, object]
     if not isinstance(pipeline_info, dict):
         pipeline_info = {}
     pipeline_info["indications_provenance"] = payload.get("provenance")
+    anchors_used = payload.get("anchors_used")
+    if anchors_used:
+        pipeline_info["indications_anchors_used"] = anchors_used
     document.pipeline_info = pipeline_info
 
 
@@ -138,6 +163,7 @@ def apply_ifu_indications_anchor_numbered(document: BaseDocument, ctx: SecondPas
 
     extracted_text = None
     evidence_ids: List[str] = []
+    anchors_used: List[str] = []
 
     for entry_idx, entry in enumerate(ordered_entries):
         page = entry.get("page")
@@ -151,12 +177,19 @@ def apply_ifu_indications_anchor_numbered(document: BaseDocument, ctx: SecondPas
             cleaned = raw_line.strip()
             if not cleaned:
                 continue
-            if HEADING_RE.match(cleaned):
-                body_lines, evidence_ids = _collect_body_lines(ordered_entries, entry_idx, line_idx, toc_mask)
-                if len(body_lines) >= 2:
-                    extracted_text = " ".join(body_lines)
-                    extracted_text = re.sub(r"\\s+", " ", extracted_text).strip()
-                break
+            is_heading, anchor_value = _match_indications_heading(cleaned)
+            if not is_heading:
+                continue
+            if anchor_value:
+                if anchor_value not in anchors_used:
+                    anchors_used.append(anchor_value)
+            elif "inline_indications" not in anchors_used:
+                anchors_used.append("inline_indications")
+            body_lines, evidence_ids = _collect_body_lines(ordered_entries, entry_idx, line_idx, toc_mask)
+            if len(body_lines) >= 2:
+                extracted_text = " ".join(body_lines)
+                extracted_text = re.sub(r"\\s+", " ", extracted_text).strip()
+            break
         if extracted_text:
             break
 
@@ -166,10 +199,12 @@ def apply_ifu_indications_anchor_numbered(document: BaseDocument, ctx: SecondPas
     if extracted_text:
         payload: Dict[str, object] = {
             "text": extracted_text,
-            "provenance": "second_pass:indications_numbered",
+            "provenance": "anchor_numbered",
         }
         if evidence_ids:
             payload["evidence_ids"] = evidence_ids
+        if anchors_used:
+            payload["anchors_used"] = anchors_used
         _apply_indications_payload(document, payload)
         modifications["indications_for_use"] = 1
         reasons.append("indications_numbered_heading")
@@ -182,14 +217,14 @@ def apply_ifu_indications_anchor_numbered(document: BaseDocument, ctx: SecondPas
                 if sentences and len(sentences) <= 3:
                     payload = {
                         "text": intended.strip(),
-                        "provenance": "second_pass:intended_to_indications",
+                        "provenance": "fallback_from_intended",
                     }
                     _apply_indications_payload(document, payload)
                     modifications["indications_for_use"] = 1
                     reasons.append("fallback_intended_to_indications")
 
     if not modifications:
-        return SecondPassPatchResult.skipped_result(PATCH_NAME, reason="no_heading_detected")
+        return SecondPassPatchResult.skipped_result(PATCH_NAME, reason="no_headings_detected")
 
     second_pass_bucket = pipeline_info.setdefault("second_pass", {})
     if not isinstance(second_pass_bucket, dict):

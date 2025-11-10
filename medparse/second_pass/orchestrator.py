@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import copy
 import time
-from typing import Dict, List
+from typing import Dict, List, Sequence
 
 from medparse.schema.common import BaseDocument
 from medparse.utils.log import get_logger
@@ -13,6 +13,7 @@ from .patchers import get_patchers_for
 from .types import PatcherResult, SecondPassContext, SecondPassPatchResult, SecondPassReport
 
 LOGGER = get_logger(__name__)
+MAX_REASON_LENGTH = 160
 
 
 def _ensure_pipeline_bucket(document: BaseDocument) -> Dict[str, object]:
@@ -39,6 +40,23 @@ def _aggregate_modifications(results: List[SecondPassPatchResult]) -> Dict[str, 
         for key, value in result.modifications.items():
             summary[key] = summary.get(key, 0) + int(value)
     return summary
+
+
+def _sanitize_reasons(reasons: Sequence[str]) -> List[str]:
+    """Normalize reason strings for logging/aggregation."""
+
+    normalized: List[str] = []
+    for raw in reasons:
+        if not raw:
+            continue
+        text = str(raw).strip()
+        if not text:
+            continue
+        if len(text) > MAX_REASON_LENGTH:
+            text = text[: MAX_REASON_LENGTH - 3] + "..."
+        if text not in normalized:
+            normalized.append(text)
+    return normalized
 
 
 WATCH_KEYS = (
@@ -123,21 +141,24 @@ def run_second_pass(document: BaseDocument, ctx: SecondPassContext) -> tuple[Bas
                 reason=f"patch_reverted:{exc.__class__.__name__}",
             )
             second_pass_bucket.setdefault("patch_reverted", []).append(patch_name)
+        sanitized_reasons = _sanitize_reasons(result.reasons or [])
+        result.reasons = sanitized_reasons
         result.runtime_ms = int((time.perf_counter() - result_start) * 1000)
         patch_results.append(result)
+        reasons_text = ", ".join(sanitized_reasons) if sanitized_reasons else ""
         if result.applied:
             patches_applied.append(result.name)
             LOGGER.info(
-                "Second pass patcher '%s' applied modifications=%s reasons=%s",
+                "Second pass: %s applied modifications=%s reasons=[%s]",
                 result.name,
                 result.modifications or {},
-                result.reasons or [],
+                reasons_text,
             )
         else:
             LOGGER.debug(
-                "Second pass patcher '%s' skipped (reasons=%s)",
+                "Second pass: %s skipped reasons=[%s]",
                 result.name,
-                result.reasons or [],
+                reasons_text,
             )
 
     runtime_ms = int((time.perf_counter() - start) * 1000)

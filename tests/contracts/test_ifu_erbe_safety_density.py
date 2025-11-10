@@ -34,5 +34,10 @@ def test_erbe_safety_density_uses_vendor_override() -> None:
 
     pipeline = document.pipeline_info
     assert pipeline.get("safety_expected_min") == 15
-    assert pipeline.get("safety_expectation_source") in {"density_config_override", "vendor_override"}
+    assert pipeline.get("safety_threshold_rule") == "manufacturer_override"
     assert metrics.get("safety_status") == "ok"
+    summary = metrics.get("_metrics", {})
+    assert summary.get("safety_expected_min") == 15
+    assert summary.get("safety_found") == len(document.safety_blocks or [])
+    assert summary.get("safety_threshold_rule") == "manufacturer_override"
+    assert summary.get("safety_gap") == max(0, summary.get("safety_expected_min", 0) - summary.get("safety_found", 0))

@@ -6,6 +6,7 @@ import json
 import warnings
 from pathlib import Path
 from typing import Dict, Iterable, List, Optional
+from urllib import error as urllib_error, request as urllib_request
 
 # Suppress sklearn version warnings from spaCy models (loaded internally)
 # These warnings occur because spaCy models contain sklearn components from 1.1.2
@@ -112,6 +113,11 @@ def extract_articles(
         help="Second-pass remediation stage (off|auto|always).",
         click_type=click.Choice(["off", "auto", "always"], case_sensitive=False),
     ),
+    proc_suite_url: Optional[str] = typer.Option(
+        None,
+        "--proc-suite-url",
+        help="POST dictations to Procedure Suite compose_and_code endpoint.",
+    ),
 ) -> None:
     """Run the article extractor for every PDF in ``input_dir``."""
 
@@ -132,6 +138,7 @@ def extract_articles(
         evidence_policy=evidence_policy,
         zotero_json=zotero_json,
         second_pass_mode=second_pass,
+        proc_suite_url=proc_suite_url,
     )
 
 
@@ -187,6 +194,11 @@ def extract_guidelines(
         "--second-pass",
         help="Second-pass remediation stage (off|auto|always).",
         click_type=click.Choice(["off", "auto", "always"], case_sensitive=False),
+    ),
+    proc_suite_url: Optional[str] = typer.Option(
+        None,
+        "--proc-suite-url",
+        help="POST dictations to Procedure Suite compose_and_code endpoint.",
     ),
 ) -> None:
     """Run the guideline extractor for every PDF in ``input_dir``."""
@@ -275,6 +287,11 @@ def extract_ifus(
         help="Second-pass remediation stage (off|auto|always).",
         click_type=click.Choice(["off", "auto", "always"], case_sensitive=False),
     ),
+    proc_suite_url: Optional[str] = typer.Option(
+        None,
+        "--proc-suite-url",
+        help="POST dictations to Procedure Suite compose_and_code endpoint.",
+    ),
 ) -> None:
     """Run the IFU/manual extractor."""
 
@@ -297,6 +314,7 @@ def extract_ifus(
         ifu_engine_override=ifu_engine_override,
         ifu_fast_long_docs=ifu_fast_long_docs,
         second_pass_mode=second_pass,
+        proc_suite_url=proc_suite_url,
     )
 
 
@@ -412,6 +430,8 @@ def extract_textbook(
         outcome.metadata["emit_raw_pages"] = emit_raw_pages
         if _write_outcome(outcome, out_path):
             successes += 1
+            if proc_suite_url:
+                _export_proc_suite(proc_suite_url, outcome, out_path)
         else:
             failures.append(out_path)
 
@@ -440,6 +460,7 @@ def _run_pipeline_for_pdfs(
     ifu_engine_override: Optional[str] = None,
     ifu_fast_long_docs: Optional[bool] = None,
     second_pass_mode: str = "auto",
+    proc_suite_url: Optional[str] = None,
 ) -> None:
     pdfs = list(pdfs)
     if not pdfs:
@@ -643,6 +664,9 @@ def _write_outcome(outcome: PipelineOutcome, out_path: Path) -> bool:
             "warnings": [issue.message for issue in validator_issues if issue.severity == "warning"],
             "errors": [issue.message for issue in validator_issues if issue.severity == "error"],
         }
+        info_messages = [issue.message for issue in validator_issues if issue.severity == "info"]
+        if info_messages:
+            metadata["validators"]["info"] = info_messages
     else:
         metadata.setdefault(
             "validators",
@@ -732,6 +756,117 @@ def _write_outcome(outcome: PipelineOutcome, out_path: Path) -> bool:
     failure_path.write_text(json.dumps(failure_payload, indent=2, ensure_ascii=False))
     typer.echo(f"EXTRACTION FAILED: {outcome.failure_reason}")
     return False
+
+
+def _export_proc_suite(proc_suite_url: str, outcome: PipelineOutcome, out_path: Path) -> None:
+    payload = _build_proc_suite_payload(outcome)
+    if not payload:
+        return
+    try:
+        response = _post_proc_suite(proc_suite_url, payload)
+    except Exception as exc:
+        typer.echo(f"⚠ Proc Suite request failed for {out_path.name}: {exc}")
+        return
+
+    sidecar_json = out_path.with_name(f"{out_path.stem}.proc_suite.json")
+    sidecar_json.write_text(json.dumps({"request": payload, "response": response}, indent=2))
+    note_md = response.get("note_md")
+    if isinstance(note_md, str) and note_md.strip():
+        sidecar_md = out_path.with_name(f"{out_path.stem}.proc_suite.md")
+        sidecar_md.write_text(note_md)
+
+
+def _build_proc_suite_payload(outcome: PipelineOutcome) -> Optional[Dict[str, object]]:
+    if not outcome.success or outcome.document is None:
+        return None
+    document = outcome.document
+    fragments: List[str] = []
+    for field in ("title", "summary", "abstract", "key_points", "indications"):
+        fragments.extend(_flatten_text(getattr(document, field, None)))
+    sections = getattr(document, "sections", None)
+    if isinstance(sections, dict):
+        for key in list(sections.keys())[:3]:
+            fragments.extend(_flatten_text(sections.get(key)))
+    if not fragments:
+        paragraph_store = getattr(document, "paragraph_store", {}) or {}
+        if isinstance(paragraph_store, dict):
+            for entry in paragraph_store.values():
+                if isinstance(entry, dict):
+                    text = entry.get("text")
+                    if isinstance(text, str) and text.strip():
+                        fragments.append(text.strip())
+                if len(fragments) >= 3:
+                    break
+    trimmed: List[str] = []
+    for fragment in fragments:
+        fragment = fragment.strip()
+        if not fragment:
+            continue
+        trimmed.append(fragment[:400])
+        if len(trimmed) >= 8:
+            break
+    text_blob = " ".join(trimmed).strip()
+    if not text_blob:
+        return None
+    text_blob = text_blob[:4000]
+
+    hints: Dict[str, object] = {
+        "doc_type": outcome.config.doc_type,
+        "source_file": str(outcome.pdf_path),
+    }
+    title = getattr(document, "title", None)
+    if isinstance(title, str) and title.strip():
+        hints["title"] = title.strip()
+    timestamp = getattr(document, "extraction_timestamp", None)
+    if timestamp:
+        iso_fn = getattr(timestamp, "isoformat", None)
+        if callable(iso_fn):
+            hints["date_time"] = iso_fn()
+        else:
+            hints["date_time"] = str(timestamp)
+    paragraph_store = getattr(document, "paragraph_store", {}) or {}
+    if isinstance(paragraph_store, dict):
+        hashes = list(paragraph_store.keys())[:8]
+        if hashes:
+            hints["paragraph_hashes"] = hashes
+    umls_entities = getattr(document, "umls_entities", None)
+    if isinstance(umls_entities, list) and umls_entities:
+        hints["umls_entities"] = umls_entities[:10]
+    return {"text": text_blob, "hints": hints}
+
+
+def _flatten_text(value: object) -> List[str]:
+    if isinstance(value, str):
+        return [value]
+    if isinstance(value, (list, tuple, set)):
+        fragments: List[str] = []
+        for item in value:
+            fragments.extend(_flatten_text(item))
+        return fragments
+    if isinstance(value, dict):
+        fragments: List[str] = []
+        for item in value.values():
+            fragments.extend(_flatten_text(item))
+        return fragments
+    return []
+
+
+def _post_proc_suite(base_url: str, payload: Dict[str, object]) -> Dict[str, object]:
+    endpoint = f"{base_url.rstrip('/')}/proc/compose_and_code"
+    data = json.dumps(payload).encode("utf-8")
+    req = urllib_request.Request(
+        endpoint,
+        data=data,
+        headers={"Content-Type": "application/json"},
+        method="POST",
+    )
+    timeout = float(os.getenv("PROCSUITE_TIMEOUT", 15))
+    try:
+        with urllib_request.urlopen(req, timeout=timeout) as resp:
+            body = resp.read()
+    except urllib_error.URLError as exc:  # pragma: no cover - network guard
+        raise RuntimeError(str(exc)) from exc
+    return json.loads(body.decode("utf-8"))
 
 
 def _normalize_summary(value: Optional[str]) -> Optional[str]:

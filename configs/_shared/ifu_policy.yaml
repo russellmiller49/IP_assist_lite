@@ -1,0 +1,14 @@
+safety_density:
+  default_min_blocks: 20
+  small_leaflet:
+    max_pages: 4
+    min_blocks: 8
+    subtype_labels:
+      - small_leaflet
+  manufacturer_overrides:
+    - manufacturer: ERBE
+      min_blocks: 15
+    - manufacturer: ERBE
+      title_contains:
+        - "units and modules"
+      min_blocks: 15

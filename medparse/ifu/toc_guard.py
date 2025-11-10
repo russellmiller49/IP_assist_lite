@@ -111,12 +111,13 @@ def apply_toc_guard(
             continue
         filtered.append(page)
 
-    if dropped:
-        LOGGER.debug("TOC guard dropped pages: %s", dropped)
+    unique_dropped = list(dict.fromkeys(dropped))
+    if unique_dropped:
+        LOGGER.debug("TOC guard dropped pages: %s", unique_dropped)
 
     report = TocGuardReport(
         enabled=True,
-        pages_dropped=dropped,
+        pages_dropped=unique_dropped,
         pages_considered=min(len(pages), limit),
     )
     return filtered, report

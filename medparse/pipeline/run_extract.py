@@ -18,8 +18,9 @@ from medparse.config import ExtractionConfig, ExtractionProfile
 from medparse.extractors.article import extract_article
 from medparse.extractors.guideline import extract_guideline
 from medparse.extractors.ifu import extract_ifu
-from medparse.ifu.safety_thresholds import expected_safety_min
+from medparse.ifu.safety_thresholds import expected_safety_with_source
 from medparse.ifu.frontmatter import extract_front_matter
+from medparse.ifu.revision import sync_revision_status
 from medparse.extractors.textbook import extract_textbook_chapter
 from medparse.extract.utils import load_pages
 from medparse.schema.article import ArticleDocument
@@ -245,6 +246,8 @@ def _is_section_guard_issue(message: str) -> bool:
 
 
 def _run_validation(document: BaseDocument) -> List[ValidationIssue]:
+    if isinstance(document, IFUDocument):
+        sync_revision_status(document)
     return _normalize_validator_issues(document, validate_document(document))
 
 
@@ -684,11 +687,14 @@ class PipelineOutcome:
             if self.second_pass_report:
                 pipeline_metadata["second_pass"] = self.second_pass_report.as_metadata()
             if self.validator_issues:
+                info_messages = [issue.message for issue in self.validator_issues if issue.severity == "info"]
                 pipeline_metadata["validators"] = {
                     "passed": not any(issue.severity == "error" for issue in self.validator_issues),
                     "warnings": [issue.message for issue in self.validator_issues if issue.severity == "warning"],
                     "errors": [issue.message for issue in self.validator_issues if issue.severity == "error"],
                 }
+                if info_messages:
+                    pipeline_metadata["validators"]["info"] = info_messages
             payload["_pipeline_metadata"] = pipeline_metadata
             return payload
         return {
@@ -1672,20 +1678,33 @@ def _meets_thresholds(
 
 
 def _resolve_safety_expected(pipeline_info: Dict[str, object], document: BaseDocument) -> Optional[int]:
-    chars = pipeline_info.get("extracted_chars")
-    try:
-        char_count = int(chars)
-    except (TypeError, ValueError):
+    if document is None:
         return None
-    if char_count <= 0:
-        return None
-    page_count = getattr(document, "page_count", 0) or 0
-    manufacturer = getattr(document, "manufacturer", None)
-    return expected_safety_min(char_count, page_count, manufacturer)
+    if isinstance(pipeline_info, dict):
+        existing = pipeline_info.get("safety_expected_min")
+        try:
+            existing_value = int(existing)
+        except (TypeError, ValueError):
+            existing_value = None
+        else:
+            if existing_value > 0:
+                if not isinstance(pipeline_info.get("safety_threshold_rule"), str):
+                    _, inferred_rule = expected_safety_with_source(document)
+                    if inferred_rule:
+                        pipeline_info["safety_threshold_rule"] = inferred_rule
+                return existing_value
+    expected_min, rule = expected_safety_with_source(document)
+    if isinstance(pipeline_info, dict):
+        if rule:
+            pipeline_info.setdefault("safety_threshold_rule", rule)
+        pipeline_info["safety_expected_min"] = expected_min
+    return expected_min if expected_min > 0 else None
 
 
 def _document_metrics(document: BaseDocument) -> Dict[str, Any]:
     payload: Dict[str, Any] = {}
+    if isinstance(document, IFUDocument):
+        sync_revision_status(document)
     pipeline_info = getattr(document, "pipeline_info", {}) or {}
     if not isinstance(pipeline_info, dict):
         pipeline_info = {}
@@ -1880,6 +1899,21 @@ def _document_metrics(document: BaseDocument) -> Dict[str, Any]:
                 payload["safety_expected_min"] = int(pipeline_info.get("safety_expected_min") or 0)
             except (TypeError, ValueError):
                 payload["safety_expected_min"] = 0
+        gap_value = pipeline_info.get("safety_gap")
+        try:
+            gap_int = int(gap_value) if gap_value is not None else max(0, (payload.get("safety_expected") or 0) - len(blocks))
+        except (TypeError, ValueError):
+            gap_int = max(0, (payload.get("safety_expected") or 0) - len(blocks))
+        payload["safety_gap"] = gap_int
+        pipeline_info["safety_gap"] = gap_int
+        rule_value = pipeline_info.get("safety_threshold_rule")
+        if isinstance(rule_value, str) and rule_value:
+            payload["safety_threshold_rule"] = rule_value
+        elif expected_value is not None:
+            _, inferred_rule = expected_safety_with_source(document)
+            if inferred_rule:
+                payload["safety_threshold_rule"] = inferred_rule
+                pipeline_info["safety_threshold_rule"] = inferred_rule
 
     if hasattr(document, "references"):
         references = getattr(document, "references") or []
@@ -1974,6 +2008,13 @@ def _document_metrics(document: BaseDocument) -> Dict[str, Any]:
                     except (TypeError, ValueError):
                         continue
 
+    rebuilt_sections = modifications_map.get("sections_rebuilt")
+    if isinstance(rebuilt_sections, int) and rebuilt_sections > 0:
+        payload["sections_rebuilt"] = rebuilt_sections
+        if getattr(document, "doc_type", "") == "ifu":
+            payload["sectionizer_mode"] = "ifu_salvage"
+
+    if isinstance(second_pass_info, dict):
         payload["second_pass_applied"] = bool(applied_list)
         payload["second_pass_patches"] = applied_list
         payload["second_pass_reasons"] = reasons_list
@@ -2081,6 +2122,18 @@ def _document_metrics(document: BaseDocument) -> Dict[str, Any]:
         "second_pass_reasons": list(second_pass_payload.get("reasons", [])),
         "second_pass_modifications": dict(second_pass_payload.get("modifications", {})),
     }
+    if "safety_expected_min" in payload:
+        metrics_summary["safety_expected_min"] = payload.get("safety_expected_min", 0)
+    metrics_summary["safety_found"] = payload.get("safety_found", 0)
+    metrics_summary["safety_gap"] = payload.get("safety_gap", 0)
+    if "safety_threshold_rule" in payload:
+        metrics_summary["safety_threshold_rule"] = payload["safety_threshold_rule"]
+    if isinstance(pipeline_info, dict) and "revision_status" in pipeline_info:
+        metrics_summary["revision_status"] = pipeline_info.get("revision_status")
+    if "sections_rebuilt" in payload:
+        metrics_summary["sections_rebuilt"] = payload.get("sections_rebuilt", 0)
+    if "sectionizer_mode" in payload:
+        metrics_summary["sectionizer_mode"] = payload.get("sectionizer_mode")
     payload["_metrics"] = metrics_summary
 
     _validate_metrics_consistency(payload, pipeline_info)

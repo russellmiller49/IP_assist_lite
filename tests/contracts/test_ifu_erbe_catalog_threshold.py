@@ -33,7 +33,7 @@ def test_erbe_catalog_dynamic_threshold(erbe_outcome) -> None:
 
     assert pipeline.get("safety_expected_min") == 15
     assert pipeline.get("safety_expected") == 15
-    assert pipeline.get("safety_expectation_source", "").startswith("manufacturer")
+    assert pipeline.get("safety_threshold_rule") == "manufacturer_override"
 
     for issue in erbe_outcome.validator_issues:
         if "Expected ≥" in issue.message:

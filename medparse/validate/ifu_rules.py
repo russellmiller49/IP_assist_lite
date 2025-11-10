@@ -12,6 +12,7 @@ import yaml
 from medparse.config import ExtractionConfig, FrozenNamespace
 from medparse.schema.ifu import IFUDocument
 from medparse.ifu.safety_thresholds import expected_safety_with_source, get_safety_thresholds
+from medparse.ifu.revision import sync_revision_status
 
 SAFETY_CONFIG_PATH = Path(__file__).resolve().parents[2] / "configs" / "_shared" / "second_pass.yaml"
 
@@ -23,7 +24,7 @@ SEVERITY_TABLE = {
 
 FRONT_MATTER_CRITICAL = set(SEVERITY_TABLE["missing_front_matter"].get("critical", []))
 
-Severity = Literal["error", "warning"]
+Severity = Literal["error", "warning", "info"]
 
 
 @dataclass(frozen=True)
@@ -38,6 +39,10 @@ class Issue:
     @classmethod
     def warn(cls, message: str) -> "Issue":
         return cls(message=message, severity="warning")
+
+    @classmethod
+    def info(cls, message: str) -> "Issue":
+        return cls(message=message, severity="info")
 
 
 def _severity_label(kind: str, variant: str = "default") -> str:
@@ -77,6 +82,7 @@ def _coerce_text(value: object) -> Optional[str]:
 
 def validate_ifu(document: IFUDocument, config: ExtractionConfig) -> list[Issue]:
     issues: list[Issue] = []
+    sync_revision_status(document)
 
     # Skip validation for non-IFU subtypes
     doc_subtype = getattr(document, "doc_subtype", None)
@@ -105,6 +111,11 @@ def validate_ifu(document: IFUDocument, config: ExtractionConfig) -> list[Issue]
 
     pipeline_info = getattr(document, "pipeline_info", {}) or {}
     extracted_chars = _coerce_positive_int(pipeline_info.get("extracted_chars")) if isinstance(pipeline_info, dict) else 0
+    page_count = getattr(document, "page_count", 0) or 0
+    thresholds = get_safety_thresholds()
+    leaflet_pages_max = int(thresholds.get("leaflet_pages_max", 4))  # type: ignore[arg-type]
+    is_small_leaflet_doc = bool(page_count and page_count <= leaflet_pages_max)
+    revision_status = str(pipeline_info.get("revision_status") or "").strip().lower() if isinstance(pipeline_info, dict) else ""
 
     # For Intuitive, require cover metadata
     if not manufacturer:
@@ -124,6 +135,13 @@ def validate_ifu(document: IFUDocument, config: ExtractionConfig) -> list[Issue]
         for field in ("part_number", "revision", "publication_date", "model"):
             value = getattr(document, field)
             if value:
+                continue
+            if field == "revision" and revision_status == "sanitized_unusable":
+                message = "Revision sanitized; original value unusable."
+                if is_small_leaflet_doc:
+                    issues.append(Issue.info(message))
+                else:
+                    issues.append(Issue.warn(message))
                 continue
             if field == "revision" and extracted_chars and extracted_chars > 100_000:
                 if getattr(document, "part_number") and getattr(document, "model"):
@@ -209,25 +227,18 @@ def validate_ifu(document: IFUDocument, config: ExtractionConfig) -> list[Issue]
                         issues.append(Issue.error("Possible TOC bleed detected in indications_for_use"))
 
     safety_blocks = getattr(document, "safety_blocks", []) or []
-    page_count = getattr(document, "page_count", 0) or 0
 
-    thresholds = get_safety_thresholds()
-    leaflet_pages_max = int(thresholds.get("leaflet_pages_max", 4))  # type: ignore[arg-type]
-    min_short = int(thresholds.get("min_short", 8))  # type: ignore[arg-type]
+    expected_min, threshold_rule = expected_safety_with_source(document)
 
-    extracted_chars = _coerce_positive_int(pipeline_info.get("extracted_chars")) if isinstance(pipeline_info, dict) else 0
-    expected_min, expectation_source = expected_safety_with_source(
-        extracted_chars or 0,
-        page_count,
-        getattr(document, "manufacturer", None),
-    )
-
+    found_blocks = len(safety_blocks)
     if isinstance(pipeline_info, dict):
         pipeline_info["safety_expected_min"] = expected_min
         pipeline_info["safety_expected"] = expected_min
-        pipeline_info["safety_expectation_source"] = expectation_source
-        pipeline_info["safety_found"] = len(safety_blocks)
-        pipeline_info["safety_status"] = "ok" if len(safety_blocks) >= expected_min else "low"
+        pipeline_info["safety_expectation_source"] = threshold_rule
+        pipeline_info["safety_threshold_rule"] = threshold_rule
+        pipeline_info["safety_found"] = found_blocks
+        pipeline_info["safety_status"] = "ok" if found_blocks >= expected_min else "low"
+        pipeline_info["safety_gap"] = max(0, expected_min - found_blocks)
 
     if isinstance(pipeline_info, dict):
         document.pipeline_info = pipeline_info
@@ -236,17 +247,14 @@ def validate_ifu(document: IFUDocument, config: ExtractionConfig) -> list[Issue]
         return issues
 
     manufacturer_label = (document.manufacturer or "").strip().lower()
-    if expected_min > 0 and len(safety_blocks) < expected_min:
-        if page_count and page_count <= leaflet_pages_max and len(safety_blocks) >= min_short:
-            pass
-        else:
+    if expected_min > 0 and found_blocks < expected_min:
+        severity_label = "warning"
+        if "intuitive" in manufacturer_label and page_count and page_count > leaflet_pages_max:
+            severity_label = "error"
+        if threshold_rule == "manufacturer_override":
             severity_label = "warning"
-            if "intuitive" in manufacturer_label and page_count and page_count > leaflet_pages_max:
-                severity_label = "error"
-            if expectation_source.startswith("manufacturer:"):
-                severity_label = "warning"
-            message = f"Expected ≥{expected_min} safety blocks; found {len(safety_blocks)}."
-            issues.append(_issue_from_label(severity_label, message))
+        message = f"Expected ≥{expected_min} safety blocks; found {found_blocks}."
+        issues.append(_issue_from_label(severity_label, message))
 
     if getattr(document, "references", None):
         sections_map = {}

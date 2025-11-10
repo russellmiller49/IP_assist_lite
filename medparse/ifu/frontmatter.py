@@ -51,10 +51,11 @@ IDENTIFIER_PATTERNS: Dict[str, Sequence[re.Pattern[str]]] = {
         re.compile(r"(?:Revision\s*(?:Level|Code)|Rev\.)\s*[:#]?\s*([A-Z0-9][A-Z0-9\.\-]{0,9})", re.IGNORECASE),
     ),
     "publication_date": (
-        re.compile(r"(?:Published|Issue|Revision|Release|Effective|Publication|Date\s*of\s*issue|Printed\s*on)\s*(?:Date)?\s*[:#]?\s*([0-9]{4}[-/\.][01]?[0-9](?:[-/\.][0-3]?[0-9])?)", re.IGNORECASE),
+        re.compile(r"(?:Published|Issue|Revision|Release|Effective|Publication|Date\s*of\s*issue|Printed\s*on|Created(?:\s*on)?)\s*(?:Date)?\s*[:#]?\s*([0-9]{4}[-/\.][01]?[0-9](?:[-/\.][0-3]?[0-9])?)", re.IGNORECASE),
         re.compile(r"(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{4})", re.IGNORECASE),
         re.compile(r"(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)\.?\s+(\d{4})", re.IGNORECASE),
         re.compile(r"(0?[1-9]|1[0-2])[/-](\d{4})"),
+        re.compile(r"(?:D0\d{5,6})\s*[\[(]?\s*(\d{4}-\d{2})\s*[\])]?"),
     ),
     "model": (
         re.compile(r"(?:Model|Type|Series)\s*[:#]?\s*([A-Z0-9][A-Z0-9\-_/]{1,})", re.IGNORECASE),
@@ -131,6 +132,14 @@ def _load_frontmatter_config() -> Dict[str, object]:
             if compiled_list:
                 product_patterns_cfg[str(key)] = compiled_list
     data["_product_patterns"] = product_patterns_cfg
+
+    print_code_patterns: List[re.Pattern[str]] = []
+    for pattern in data.get("print_code_patterns", []) or []:
+        try:
+            print_code_patterns.append(re.compile(str(pattern), re.IGNORECASE))
+        except re.error:
+            continue
+    data["_print_code_patterns"] = print_code_patterns
 
     return data
 
@@ -246,7 +255,9 @@ class FrontMatterResult:
     part_number: Optional[str] = None
     revision: Optional[str] = None
     publication_date: Optional[str] = None
+    publication_date_precision: Optional[str] = None
     model: Optional[str] = None
+    print_code: Optional[str] = None
     provenance: Dict[str, str] = field(default_factory=dict)
 
     def as_dict(self) -> Dict[str, Optional[str]]:
@@ -257,7 +268,9 @@ class FrontMatterResult:
             "part_number": self.part_number,
             "revision": self.revision,
             "publication_date": self.publication_date,
+            "publication_date_precision": self.publication_date_precision,
             "model": self.model,
+            "print_code": self.print_code,
         }
         if self.provenance:
             payload["_provenance"] = dict(self.provenance)
@@ -335,6 +348,8 @@ def extract_front_matter(
             if normalized:
                 result.publication_date = normalized
                 result.record("publication_date", source)
+                if re.fullmatch(r"\d{4}-\d{2}$", normalized):
+                    result.publication_date_precision = "month"
         elif field == "part_number":
             result.part_number = raw_value.strip().upper()
             result.record("part_number", source)
@@ -344,6 +359,18 @@ def extract_front_matter(
         elif field == "model":
             result.model = raw_value.strip()
             result.record("model", source)
+
+    print_code_patterns = config.get("_print_code_patterns") if isinstance(config, dict) else None
+    if isinstance(print_code_patterns, list) and print_code_patterns:
+        match_info = _search_patterns(cover_text, print_code_patterns)
+        source = "pattern_cover"
+        if not match_info:
+            match_info = _search_patterns(tail_text, print_code_patterns)
+            source = "pattern_tail"
+        if match_info:
+            raw_value, _pattern = match_info
+            result.print_code = raw_value.strip()
+            result.record("print_code", source)
 
     product_name, product_source = _select_product_name(pages, result, metadata_title, config)
     if product_name:

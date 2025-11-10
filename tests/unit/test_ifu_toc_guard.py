@@ -3,11 +3,28 @@ from __future__ import annotations
 from medparse.ingest.models import PageData
 from medparse.extractors.ifu import _clamp_pages
 from medparse.ifu.toc_guard import TocGuardConfig, apply_toc_guard, trim_anchor_bleed
+from medparse.schema.ifu import IFUDocument
+from medparse.second_pass.patchers.ifu_toc_guard_refine import apply_ifu_toc_guard_refine
+from medparse.second_pass.types import SecondPassContext
 
 
 def _make_page(number: int, lines: list[str]) -> PageData:
     text = "\n".join(lines)
     return PageData(number=number, text=text, lines=lines, headings=[], tables=[])
+
+
+def _make_second_pass_ctx() -> SecondPassContext:
+    return SecondPassContext(
+        validation_issues=[],
+        paragraph_store={},
+        evidence_bank={},
+        profile="enriched",
+        engines_tried=[],
+        emit_policies={},
+        config={},
+        mode="auto",
+        doc_metrics={},
+    )
 
 
 def test_apply_toc_guard_drops_leading_toc_pages() -> None:
@@ -37,3 +54,30 @@ def test_trim_anchor_bleed_removes_toc_lines() -> None:
 def test_clamp_pages_bounds_results_to_document_range() -> None:
     clamped = _clamp_pages([0, 1, 5, 9, "10", None], page_count=6)
     assert clamped == [1, 5, 6]
+
+
+def test_toc_guard_refine_records_reasons_once() -> None:
+    document = IFUDocument(
+        doc_type="ifu",
+        source_file="dummy.pdf",
+        page_count=5,
+        manufacturer="Acme",
+        product_name="Test Device",
+        indications_for_use={"text": "Use per instructions."},
+        contraindications=[],
+    )
+    document.pipeline_info = {"toc_guard_pages_dropped": [1, 2, 2]}
+
+    ctx = _make_second_pass_ctx()
+    result = apply_ifu_toc_guard_refine(document, ctx)
+
+    assert result.applied
+    assert result.reasons == ["toc_guard_refine:severity=info"]
+    assert result.modifications == {"toc_guard_pages_dropped": 2}
+    bucket = document.pipeline_info.get("second_pass", {})
+    assert bucket.get("reasons") == ["toc_guard_refine:severity=info"]
+    assert document.pipeline_info.get("toc_guard_pages_dropped") == [1, 2]
+    assert document.pipeline_info.get("toc_guard_pages_dropped_count") == 2
+    toc_meta = document.pipeline_info.get("toc_guard", {})
+    assert isinstance(toc_meta, dict)
+    assert toc_meta.get("pages_dropped") == [1, 2]

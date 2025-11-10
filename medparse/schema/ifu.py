@@ -36,7 +36,7 @@ class IFUDocument(BaseDocument):
     publication_date: Optional[str] = None
     model: Optional[str] = None
     software_versions: List[str] = Field(default_factory=list)
-    indications_for_use: Optional[Union[str, Dict[str, str]]] = None
+    indications_for_use: Optional[Union[str, Dict[str, object]]] = None
     intended_use: Optional[str] = None
     intended_user: Optional[str] = None
     intended_patient_population: Optional[str] = None

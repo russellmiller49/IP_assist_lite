@@ -30,6 +30,7 @@ def test_ifu_alt_pro_safety_density_threshold() -> None:
     assert document.pipeline_info.get("safety_expected_min") == expected_min
     assert metrics.get("safety_status") == "ok"
     assert metrics.get("safety_found") == len(document.safety_blocks)
+    assert document.pipeline_info.get("safety_threshold_rule") == "default"
 
     safety_added = document.pipeline_info.get("safety_blocks_added", 0)
     assert isinstance(safety_added, int) and safety_added >= 0
@@ -39,3 +40,8 @@ def test_ifu_alt_pro_safety_density_threshold() -> None:
 
     second_pass_meta = document.pipeline_info.get("second_pass", {}).get("meta", {})
     assert "safety_blocks_added" in second_pass_meta
+    summary = metrics.get("_metrics", {})
+    assert summary.get("safety_threshold_rule") == "default"
+    assert summary.get("safety_expected_min") == expected_min
+    assert summary.get("safety_found") == len(document.safety_blocks)
+    assert summary.get("safety_gap") == max(0, expected_min - summary.get("safety_found", 0))

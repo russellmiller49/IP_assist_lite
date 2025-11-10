@@ -112,7 +112,7 @@ def test_safety_shortfall_intuitive_error() -> None:
     document = _base_ifu(manufacturer="Intuitive Surgical, Inc.", page_count=40, safety_blocks=[])
 
     issues = validate_ifu(document, config)
-    issue = _get_issue(issues, "Safety content below expected density")
+    issue = _get_issue(issues, "Expected ≥")
     assert issue is not None
     assert issue.severity == "error"
 
@@ -122,6 +122,28 @@ def test_safety_shortfall_non_intuitive_warning() -> None:
     document = _base_ifu(manufacturer="ERBE Elektromedizin GmbH", page_count=25, safety_blocks=[])
 
     issues = validate_ifu(document, config)
-    issue = _get_issue(issues, "Safety content below expected density")
+    issue = _get_issue(issues, "Expected ≥")
+    assert issue is not None
+    assert issue.severity == "warning"
+
+
+def test_revision_sanitized_small_leaflet_info() -> None:
+    config = _make_config()
+    document = _base_ifu(page_count=3, revision=None)
+    document.pipeline_info = {"front_matter_revision_sanitized": True}
+
+    issues = validate_ifu(document, config)
+    issue = _get_issue(issues, "sanitized")
+    assert issue is not None
+    assert issue.severity == "info"
+
+
+def test_revision_sanitized_large_doc_warning() -> None:
+    config = _make_config()
+    document = _base_ifu(page_count=12, revision=None)
+    document.pipeline_info = {"front_matter_revision_sanitized": True}
+
+    issues = validate_ifu(document, config)
+    issue = _get_issue(issues, "sanitized")
     assert issue is not None
     assert issue.severity == "warning"

@@ -55,7 +55,7 @@ def test_ion_ifu_front_matter(ion_ifu_pdf, golden_data):
 def test_ion_ifu_validation(ion_ifu_pdf):
     """Test that Ion IFU passes validation with no errors."""
     doc = extract_ifu(ion_ifu_pdf, engine="pymupdf")
-    issues = validate_document(doc, min_safety_blocks=20)
+    issues = validate_document(doc)
 
     # Should have no errors
     errors = [i for i in issues if i.severity == "error"]

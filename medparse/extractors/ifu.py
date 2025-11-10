@@ -75,25 +75,19 @@ def _set_safety_expectations(
         pipeline_info = {}
         document.pipeline_info = pipeline_info
 
-    char_sources = [pipeline_info.get("extracted_chars")]
-    char_count = 0
-    for value in char_sources:
-        if value is None:
-            continue
-        try:
-            candidate = int(value)
-        except (TypeError, ValueError):
-            continue
-        if candidate > 0:
-            char_count = candidate
-            break
+    if manufacturer_hint and not getattr(document, "manufacturer", None):
+        pipeline_info.setdefault("manufacturer", manufacturer_hint)
 
-    page_count = getattr(document, "page_count", 0) or 0
-    manufacturer_value = document.manufacturer or manufacturer_hint
-    expected_min, source = expected_safety_with_source(char_count, page_count, manufacturer_value)
+    expected_min, rule = expected_safety_with_source(document)
 
     pipeline_info["safety_expected_min"] = expected_min
-    pipeline_info["safety_expectation_source"] = source
+    pipeline_info["safety_expected"] = expected_min
+    pipeline_info["safety_expectation_source"] = rule
+    pipeline_info["safety_threshold_rule"] = rule
+    found_blocks = len(getattr(document, "safety_blocks", []) or [])
+    pipeline_info.setdefault("safety_found", found_blocks)
+    pipeline_info["safety_gap"] = max(0, expected_min - pipeline_info.get("safety_found", found_blocks))
+    pipeline_info["safety_status"] = "ok" if pipeline_info.get("safety_found", found_blocks) >= expected_min else "low"
     pipeline_info.setdefault("safety_blocks_added", pipeline_info.get("safety_blocks_added", 0))
 
 
@@ -296,6 +290,7 @@ def extract_ifu(
 
     document = IFUDocument.model_validate(doc_kwargs)
     document.pipeline_info["safety_blocks_found"] = len(safety_blocks)
+    document.pipeline_info["safety_found"] = len(safety_blocks)
     document.pipeline_info["extracted_chars"] = extracted_chars
 
     front_meta_payload: Dict[str, str] = {}
@@ -303,6 +298,11 @@ def extract_ifu(
         product_source = str(meta.get("product_name_source"))
         if product_source:
             front_meta_payload["product_name_source"] = product_source
+    if isinstance(meta, dict):
+        for extra_field in ("print_code", "publication_date_precision"):
+            value = meta.get(extra_field)
+            if isinstance(value, str) and value:
+                front_meta_payload[extra_field] = value
     for field_name, source_name in provenance.items():
         key_name = f"{field_name}_source"
         if key_name not in front_meta_payload and source_name:

@@ -14,7 +14,7 @@ from medparse.validate.article_rules import validate_article as run_article_rule
 from medparse.validate.ifu_rules import Issue as IfuIssue
 from medparse.validate.ifu_rules import validate_ifu as run_ifu_rules
 
-Severity = Literal["warning", "error"]
+Severity = Literal["warning", "error", "info"]
 
 
 @dataclass
@@ -23,7 +23,7 @@ class ValidationIssue:
     severity: Severity = "error"
 
 
-def validate_document(document, *, min_safety_blocks: int = 20) -> List[ValidationIssue]:
+def validate_document(document, *, min_safety_blocks: int = 0) -> List[ValidationIssue]:
     """Validate a document instance and return issues."""
 
     config = get_extraction_config()
@@ -116,8 +116,8 @@ def _validate_ifu(
                     )
                 )
 
-    # Safety blocks check
-    if len(document.safety_blocks) < min_safety_blocks:
+    # Safety blocks check (legacy override)
+    if min_safety_blocks and len(document.safety_blocks) < min_safety_blocks:
         issues.append(
             ValidationIssue(
                 f"Expected at least {min_safety_blocks} safety blocks; found {len(document.safety_blocks)}.",

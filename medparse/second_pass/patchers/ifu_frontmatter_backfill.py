@@ -9,6 +9,7 @@ from typing import Dict, List, Optional, Tuple
 from medparse.schema.common import BaseDocument
 from medparse.schema.ifu import IFUDocument
 from medparse.ifu.frontmatter import infer_manufacturer_from_footer_texts, load_pattern_bundle
+from medparse.ifu.revision import sync_revision_status
 
 from ..types import SecondPassContext, SecondPassPatchResult
 
@@ -756,6 +757,7 @@ def apply_ifu_frontmatter_backfill(document: BaseDocument, ctx: SecondPassContex
         pipeline_info.pop("front_matter_incomplete", None)
     pipeline_info["second_pass"] = second_pass_bucket
     document.pipeline_info = pipeline_info
+    sync_revision_status(document)
 
     return SecondPassPatchResult(
         name=PATCH_NAME,

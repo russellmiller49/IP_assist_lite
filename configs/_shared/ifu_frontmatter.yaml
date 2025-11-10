@@ -55,6 +55,9 @@ product_patterns:
 
 product_name_from_filename: true
 
+print_code_patterns:
+  - "GR\\s*\\d{3,5}\\s*\\d{1,2}"
+
 pattern_bundle:
   manufacturers:
     - "(?i)Intuitive Surgical"

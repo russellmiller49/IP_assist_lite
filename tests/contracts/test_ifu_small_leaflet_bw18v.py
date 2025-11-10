@@ -38,6 +38,11 @@ def test_small_leaflet_indications_fallback() -> None:
     pipeline = document.pipeline_info
     assert pipeline.get("indications_fallback_provenance") == "second_pass_small_leaflet"
     assert pipeline.get("safety_expected_min") == 8
+    assert pipeline.get("safety_threshold_rule") == "small_leaflet"
+    assert pipeline.get("revision_status") == "sanitized_unusable"
+    front_meta = pipeline.get("front_matter_meta", {})
+    assert isinstance(front_meta, dict)
+    assert front_meta.get("revision_provenance") == "sanitized"
     assert len(document.safety_blocks or []) >= pipeline.get("safety_expected_min")
     assert pipeline.get("safety_blocks_added", 0) >= 0
     assert document.model == "Channel Cleaning Brush"
@@ -51,3 +56,10 @@ def test_small_leaflet_indications_fallback() -> None:
     extraction_config.ifu = config_payload.get("ifu", {}) or {}
     issues = validate_ifu(document, extraction_config)
     assert not any(issue.severity == "error" for issue in issues)
+    safety_warnings = [issue.message for issue in issues if "Expected ≥" in issue.message]
+    assert len(safety_warnings) <= 1
+    if safety_warnings:
+        assert "≥8" in safety_warnings[0]
+    assert not any("≥20" in issue.message for issue in issues)
+    info_messages = [issue.message for issue in issues if issue.severity == "info"]
+    assert any("Revision sanitized" in message for message in info_messages)

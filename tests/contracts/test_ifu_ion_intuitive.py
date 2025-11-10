@@ -50,3 +50,8 @@ def test_ion_manual_toc_guard_and_anchor_hygiene() -> None:
     for field in text_fields:
         if isinstance(field, str) and field:
             assert "Table of Contents" not in field
+
+    indications = document.indications_for_use
+    assert isinstance(indications, dict)
+    assert indications.get("provenance") == "anchor_numbered"
+    assert indications.get("anchors_used")

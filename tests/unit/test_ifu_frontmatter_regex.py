@@ -54,3 +54,30 @@ def test_alt_pro_model_detected_without_model_prefix() -> None:
 
     assert meta["model"] == "ALT PRO"
     assert meta["revision"] == "B"
+
+
+def test_erbe_issue_date_precision_flag() -> None:
+    cover_lines = [
+        "ERBE Elektromedizin GmbH",
+        "D080643 System Carrier",
+        "Issue Date: 2022-07",
+    ]
+    pages = [PageData(number=1, text="\n".join(cover_lines), lines=cover_lines, headings=[], tables=[])]
+
+    meta = extract_front_matter(pages)
+
+    assert meta["publication_date"] == "2022-07"
+    assert meta["publication_date_precision"] == "month"
+
+
+def test_print_code_captured_for_olympus() -> None:
+    cover_lines = [
+        "Olympus Corporation",
+        "BW-18V Channel Cleaning Brush",
+        "GR1234 05",
+    ]
+    pages = [PageData(number=1, text="\n".join(cover_lines), lines=cover_lines, headings=[], tables=[])]
+
+    meta = extract_front_matter(pages)
+
+    assert meta["print_code"] == "GR1234 05"

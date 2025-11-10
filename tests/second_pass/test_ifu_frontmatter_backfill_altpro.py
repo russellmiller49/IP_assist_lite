@@ -54,6 +54,9 @@ def test_alt_pro_frontmatter_backfill_recovers_model_and_revision() -> None:
     meta = document.pipeline_info.get("second_pass", {}).get("meta", {})
     assert meta.get("front_matter_model") == 1
     assert meta.get("front_matter_revision") == 1
+    front_meta = document.pipeline_info.get("front_matter_meta", {})
+    assert front_meta.get("revision_status") == "extracted"
+    assert front_meta.get("revision_provenance") == "extracted"
 
 
 def test_unknown_vendor_footer_inference_backfills_manufacturer_and_date() -> None:
@@ -146,10 +149,12 @@ def test_channel_brush_template_and_revision_sanitized() -> None:
     assert document.manufacturer == "Olympus Corporation"
     assert document.part_number == "BW-18V"
     assert document.model == "Channel Cleaning Brush"
-    assert document.product_name == "Olympus Corporation BW-18V Channel Cleaning Brush"
+    assert document.product_name == "Olympus BW-18V Channel Cleaning Brush"
     assert document.revision is None
     meta = document.pipeline_info.get("front_matter_meta", {})
     assert meta.get("print_code") == "GR1234 05"
     assert document.pipeline_info.get("front_matter_revision_sanitized") is True
     warnings = document.pipeline_info.get("threshold_warnings") or []
     assert "front_matter_revision_sanitized" in warnings
+    assert document.pipeline_info.get("revision_status") == "sanitized_unusable"
+    assert meta.get("revision_provenance") == "sanitized"

@@ -33,6 +33,7 @@ def test_bw18v_uses_leaflet_threshold(bw18v_outcome) -> None:
 
     assert pipeline.get("safety_expected_min") == 8
     assert pipeline.get("safety_expected") == 8
+    assert pipeline.get("safety_threshold_rule") == "small_leaflet"
     assert pipeline.get("safety_status") == "ok"
 
     product_name = document.product_name or ""

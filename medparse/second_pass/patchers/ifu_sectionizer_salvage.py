@@ -124,7 +124,7 @@ def apply_ifu_sectionizer_salvage(document: BaseDocument, ctx: SecondPassContext
     if PATCH_NAME not in applied_list:
         applied_list.append(PATCH_NAME)
     reasons_list = second_pass_bucket.setdefault("reasons", [])
-    reason_label = f"section_salvage_ifu:{{'sections_rebuilt': {len(rebuilt)}}}"
+    reason_label = "section_salvage_ifu"
     if reason_label not in reasons_list:
         reasons_list.append(reason_label)
 

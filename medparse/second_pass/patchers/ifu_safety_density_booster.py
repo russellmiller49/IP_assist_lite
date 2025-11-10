@@ -8,7 +8,7 @@ import re
 from difflib import SequenceMatcher
 from typing import Dict, List, Optional, Sequence, Set, Tuple
 
-from medparse.ifu.safety_thresholds import expected_safety_min
+from medparse.ifu.safety_thresholds import expected_safety_with_source
 from medparse.schema.common import BaseDocument, EvidenceSpan
 from medparse.schema.ifu import IFUDocument, SafetyBlock
 
@@ -40,24 +40,10 @@ SAFETY_KEYWORDS = (
 
 
 def _compute_expected(document: IFUDocument, ctx: SecondPassContext, pipeline_info: Dict[str, object]) -> int:
-    char_sources = [
-        pipeline_info.get("extracted_chars"),
-        ctx.doc_metrics.get("extracted_chars"),
-    ]
-    char_count = 0
-    for source in char_sources:
-        if source is None:
-            continue
-        try:
-            candidate = int(source)
-        except (TypeError, ValueError):
-            continue
-        if candidate > 0:
-            char_count = candidate
-            break
-    page_count = getattr(document, "page_count", 0) or 0
-    manufacturer = getattr(document, "manufacturer", None)
-    return expected_safety_min(char_count, page_count, manufacturer)
+    expected_min, rule = expected_safety_with_source(document)
+    if rule and isinstance(pipeline_info, dict):
+        pipeline_info.setdefault("safety_threshold_rule", rule)
+    return expected_min
 
 
 def _ordered_entries(paragraph_store: Dict[str, Dict[str, object]]) -> List[Tuple[int, Dict[str, object]]]:
@@ -195,13 +181,6 @@ def _determine_target_pages(document: IFUDocument, ctx: SecondPassContext) -> Se
     return bounded_pages
 
 
-def _min_expected_by_pages(page_count: int) -> int:
-    if page_count <= 0:
-        return 8
-    estimated = math.ceil(page_count / 3)
-    return max(8, min(20, estimated))
-
-
 def _candidate_entries(
     ordered_entries: Sequence[Tuple[int, Dict[str, object]]],
     target_pages: Set[int],
@@ -265,6 +244,7 @@ def apply_ifu_safety_density_booster(document: BaseDocument, ctx: SecondPassCont
         return SecondPassPatchResult.skipped_result(PATCH_NAME, reason="doc_not_ifu")
 
     pipeline_info = getattr(document, "pipeline_info", {}) or {}
+    page_count_value = getattr(document, "page_count", None)
     second_pass_bucket = pipeline_info.setdefault("second_pass", {})
     applied = second_pass_bucket.get("patches_applied") or []
     if isinstance(applied, list) and PATCH_NAME in applied:
@@ -272,9 +252,6 @@ def apply_ifu_safety_density_booster(document: BaseDocument, ctx: SecondPassCont
 
     safety_blocks = list(document.safety_blocks or [])
     expected_min = _compute_expected(document, ctx, pipeline_info)
-    page_count_value = getattr(document, "page_count", None)
-    page_count_int = int(page_count_value or 0)
-    expected_min = max(expected_min, _min_expected_by_pages(page_count_int))
     pipeline_info["safety_expected_min"] = expected_min
 
     booster_cfg = {}
@@ -309,8 +286,17 @@ def apply_ifu_safety_density_booster(document: BaseDocument, ctx: SecondPassCont
     candidate_entries = _candidate_entries(ordered_entries, target_pages)
     if not candidate_entries:
         return SecondPassPatchResult.skipped_result(PATCH_NAME, reason="no_safety_candidates")
-    candidate_cap = min(20, int(math.ceil(len(candidate_entries) * 0.35)))
-    max_added = min(max_added, candidate_cap)
+    available_candidates = len(candidate_entries)
+    gap = max(0, expected_min - len(safety_blocks))
+    candidate_cap = min(20, int(math.ceil(available_candidates * 0.35))) if available_candidates else 0
+    if candidate_cap:
+        limited_additions = min(max_added, candidate_cap)
+    else:
+        limited_additions = max_added
+    if gap > limited_additions:
+        max_added = min(available_candidates, gap)
+    else:
+        max_added = min(available_candidates, limited_additions)
     added_hashes: Set[str] = set()
 
     for entry, stripped, source_hint in candidate_entries:
@@ -354,6 +340,9 @@ def apply_ifu_safety_density_booster(document: BaseDocument, ctx: SecondPassCont
 
     document.safety_blocks = safety_blocks
     pipeline_info["safety_blocks_found"] = len(safety_blocks)
+    pipeline_info["safety_found"] = len(safety_blocks)
+    pipeline_info["safety_gap"] = max(0, expected_min - len(safety_blocks))
+    pipeline_info["safety_status"] = "ok" if len(safety_blocks) >= expected_min else "low"
     pipeline_info["safety_density_boost_applied"] = True
     pipeline_info["safety_blocks_added"] = pipeline_info.get("safety_blocks_added", 0) + additions
     detail = {

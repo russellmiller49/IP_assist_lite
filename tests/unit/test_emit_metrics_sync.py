@@ -143,6 +143,9 @@ def test_ifu_toc_guard_metrics():
     document.pipeline_info["toc_guard_pages_dropped"] = [2, 3, 50]
     document.pipeline_info["toc_guard_pages_dropped_count"] = 3
     document.pipeline_info["paragraph_dedup_applied"] = True
+    second_pass_bucket = document.pipeline_info.setdefault("second_pass", {})
+    modifications = second_pass_bucket.setdefault("modifications", {})
+    modifications["sections_rebuilt"] = 3
 
     # Add some tables
     document.tables = [
@@ -191,3 +194,11 @@ def test_ifu_toc_guard_metrics():
     assert metrics["references_anchor_pages"] == [49, 50]
     assert metrics["toc_pages_dropped"][-1] == 50
     assert metrics["toc_drop_count"] == len(document.pipeline_info["toc_guard_pages_dropped"])
+    summary = metrics.get("_metrics", {})
+    assert summary.get("safety_expected_min") == 10
+    assert summary.get("safety_found") == len(document.safety_blocks)
+    assert summary.get("safety_gap") == max(0, 10 - len(document.safety_blocks))
+    assert "safety_threshold_rule" in summary
+    assert summary.get("sections_rebuilt") == 3
+    assert summary.get("sectionizer_mode") == "ifu_salvage"
+    assert summary.get("revision_status") == document.pipeline_info.get("revision_status")
