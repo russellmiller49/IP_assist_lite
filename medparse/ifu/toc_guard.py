@@ -154,6 +154,15 @@ def trim_anchor_bleed(text: str, *, max_blocks: int = 3, ratio_threshold: float 
 
 
 def _looks_like_toc_page(page: PageData, config: TocGuardConfig) -> bool:
+    """Detect TOC pages using multiple heuristics.
+
+    Improved to catch more TOC formats:
+    - Explicit keywords
+    - Dot leaders with page numbers
+    - High density of short lines with numbers
+    - Numbered section headings
+    - Repeated patterns like "...N" or whitespace + number
+    """
     if not page.lines:
         return False
 
@@ -162,13 +171,27 @@ def _looks_like_toc_page(page: PageData, config: TocGuardConfig) -> bool:
         return False
 
     lowered_lines = [line.lower() for line in lines]
+
+    # Rule 1: Explicit TOC keywords (most reliable)
     for keyword in TOC_KEYWORDS:
-        if any(line.startswith(keyword) for line in lowered_lines):
+        if any(line.startswith(keyword) or keyword in line for line in lowered_lines):
             return True
 
     dotted_lines = sum(1 for line in lines if DOT_LEADER_RE.search(line))
     numbered_lines = sum(1 for line in lines if PAGE_NUMBER_RE.search(line))
     short_lines = sum(1 for line in lines if len(line) <= 80)
+
+    # Additional pattern: lines with multiple spaces followed by page number
+    spaced_number_lines = sum(
+        1 for line in lines
+        if re.search(r"\s{3,}\d{1,3}\s*$", line)
+    )
+
+    # Additional pattern: lines that end with tab + number (common in some ToCs)
+    tab_number_lines = sum(
+        1 for line in lines
+        if re.search(r"\t+\d{1,3}\s*$", line)
+    )
 
     total_lines = len(lines)
     if total_lines == 0:
@@ -176,19 +199,37 @@ def _looks_like_toc_page(page: PageData, config: TocGuardConfig) -> bool:
 
     dotted_ratio = dotted_lines / total_lines
     numbered_ratio = numbered_lines / total_lines
+    spaced_ratio = spaced_number_lines / total_lines
+    tab_ratio = tab_number_lines / total_lines
 
+    # Rule 2: Classic dot leader format
     if dotted_lines >= config.min_dotted_lines and numbered_lines >= config.min_page_number_lines:
         return True
 
+    # Rule 3: Ratio-based detection (original logic)
     if dotted_ratio >= config.dot_leader_min and numbered_ratio >= config.page_number_ratio:
         return True
 
+    # Rule 4: Space-based TOC format (no dots, just whitespace alignment)
+    if spaced_ratio >= 0.3 and numbered_ratio >= 0.4:
+        return True
+
+    # Rule 5: Tab-delimited TOC format
+    if tab_ratio >= 0.25 and numbered_ratio >= 0.3:
+        return True
+
+    # Rule 6: Dense short lines with high page number density (original logic)
     if total_lines >= 4 and numbered_ratio >= 0.5 and short_lines / total_lines >= 0.7:
         return True
 
-    # Guard for sequences of numbered headings (e.g., chapter lists)
+    # Rule 7: Sequences of numbered headings (chapter lists)
     heading_hits = sum(1 for line in lines if _looks_like_section_candidate(line))
     if total_lines >= 5 and heading_hits >= 4 and numbered_ratio >= 0.3:
+        return True
+
+    # Rule 8: Very high density of lines ending with numbers (aggressive)
+    # This catches minimalist TOCs without dots or explicit spacing
+    if total_lines >= 3 and numbered_ratio >= 0.6:
         return True
 
     return False

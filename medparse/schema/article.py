@@ -209,7 +209,7 @@ class TableFootnote(MedparseModel):
 
 
 class EnhancedTable(MedparseModel):
-    """Table with header stitching, stub columns, and footnotes."""
+    """Table with header stitching, stub columns, footnotes, and markdown rendering."""
 
     id: str
     label: Optional[str] = None  # "Table 1", "Table 2a"
@@ -221,6 +221,8 @@ class EnhancedTable(MedparseModel):
     page: Optional[int] = None
     table_type: Optional[str] = None  # From classifier
     truncated_cells: bool = False
+    markdown: Optional[str] = None  # Markdown-formatted table
+    column_alignments: List[str] = Field(default_factory=list)  # "left", "center", "right"
 
 
 class ArticleFigure(MedparseModel):

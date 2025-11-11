@@ -821,16 +821,53 @@ def _coi_and_funding(pages: Sequence[PageData]) -> tuple[List[str], List[str]]:
 
 
 def _map_tables(blocks: Sequence[TableBlock]) -> List[EnhancedTable]:
+    from medparse.tables.markdown_formatter import (
+        detect_stub_column,
+        table_to_markdown,
+    )
+
     tables: List[EnhancedTable] = []
     for idx, block in enumerate(blocks, start=1):
+        # Wrap single header row in list for multi-row header support
+        headers_multi_row = [block.headers] if block.headers else []
+
+        # Detect stub column
+        flat_headers = block.headers if block.headers else []
+        stub_col = detect_stub_column(flat_headers, block.rows)
+
+        # Generate markdown representation
+        try:
+            markdown_text = table_to_markdown(
+                headers=headers_multi_row,
+                rows=block.rows,
+                auto_align=True,
+                caption=block.caption,
+                label=f"Table {idx}",
+            )
+        except Exception:
+            # Fallback to None if markdown generation fails
+            markdown_text = None
+
+        # Estimate column alignments for reference
+        from medparse.tables.markdown_formatter import _estimate_column_alignment
+
+        alignments = []
+        if flat_headers:
+            for col_idx in range(len(flat_headers)):
+                align = _estimate_column_alignment(flat_headers, block.rows, col_idx)
+                alignments.append(align)
+
         tables.append(
             EnhancedTable(
                 id=f"table_{idx}",
                 caption=block.caption,
-                headers=[block.headers],
+                headers=headers_multi_row,
                 rows=block.rows,
                 page=block.page,
                 table_type=block.table_type,
+                stub_column=stub_col,
+                markdown=markdown_text,
+                column_alignments=alignments,
             )
         )
     return tables

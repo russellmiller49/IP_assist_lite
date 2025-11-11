@@ -20,6 +20,7 @@ MANUFACTURER_PATTERNS: Sequence[tuple[str, Sequence[re.Pattern[str]]]] = [
         (
             re.compile(r"ERBE\s+Elektromedizin\s+GmbH", re.IGNORECASE),
             re.compile(r"ERBE\s+Medical", re.IGNORECASE),
+            re.compile(r"ERBE\s+USA", re.IGNORECASE),
         ),
     ),
     (
@@ -37,6 +38,56 @@ MANUFACTURER_PATTERNS: Sequence[tuple[str, Sequence[re.Pattern[str]]]] = [
             re.compile(r"Olympus\s+Medical", re.IGNORECASE),
         ),
     ),
+    (
+        "Merit Medical Systems, Inc.",
+        (
+            re.compile(r"Merit\s+Medical\s+Systems", re.IGNORECASE),
+            re.compile(r"Merit\s+Medical", re.IGNORECASE),
+        ),
+    ),
+    (
+        "Boston Scientific Corporation",
+        (
+            re.compile(r"Boston\s+Scientific\s+Corporation", re.IGNORECASE),
+            re.compile(r"Boston\s+Scientific", re.IGNORECASE),
+        ),
+    ),
+    (
+        "Cook Medical Inc.",
+        (
+            re.compile(r"Cook\s+Medical", re.IGNORECASE),
+            re.compile(r"Cook\s+Incorporated", re.IGNORECASE),
+        ),
+    ),
+    (
+        "Medtronic, Inc.",
+        (
+            re.compile(r"Medtronic", re.IGNORECASE),
+            re.compile(r"Covidien", re.IGNORECASE),
+        ),
+    ),
+    (
+        "ConMed Corporation",
+        (
+            re.compile(r"ConMed\s+Corporation", re.IGNORECASE),
+            re.compile(r"ConMed", re.IGNORECASE),
+        ),
+    ),
+    (
+        "Teleflex Incorporated",
+        (
+            re.compile(r"Teleflex\s+(?:Incorporated|Inc\.?)", re.IGNORECASE),
+            re.compile(r"Teleflex\s+Medical", re.IGNORECASE),
+        ),
+    ),
+    (
+        "Pulmonx Corporation",
+        (
+            re.compile(r"Pulmonx\s+Corporation", re.IGNORECASE),
+            re.compile(r"Pulmonx", re.IGNORECASE),
+            re.compile(r"Zephyr\s+Endobronchial\s+Valve", re.IGNORECASE),
+        ),
+    ),
 ]
 
 IDENTIFIER_PATTERNS: Dict[str, Sequence[re.Pattern[str]]] = {
@@ -51,15 +102,26 @@ IDENTIFIER_PATTERNS: Dict[str, Sequence[re.Pattern[str]]] = {
         re.compile(r"(?:Revision\s*(?:Level|Code)|Rev\.)\s*[:#]?\s*([A-Z0-9][A-Z0-9\.\-]{0,9})", re.IGNORECASE),
     ),
     "publication_date": (
-        re.compile(r"(?:Published|Issue|Revision|Release|Effective|Publication|Date\s*of\s*issue|Printed\s*on|Created(?:\s*on)?)\s*(?:Date)?\s*[:#]?\s*([0-9]{4}[-/\.][01]?[0-9](?:[-/\.][0-3]?[0-9])?)", re.IGNORECASE),
+        # Standard date formats with labels
+        re.compile(r"(?:Published|Issue(?:d)?|Revision|Release(?:d)?|Effective|Publication|Date\s*of\s*issue|Printed\s*on|Created(?:\s*on)?|Last\s+(?:updated|revised))\s*(?:Date)?\s*[:#]?\s*([0-9]{4}[-/\.][01]?[0-9](?:[-/\.][0-3]?[0-9])?)", re.IGNORECASE),
+        # Month + year formats
         re.compile(r"(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{4})", re.IGNORECASE),
         re.compile(r"(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)\.?\s+(\d{4})", re.IGNORECASE),
+        # MM/YYYY or MM-YYYY
         re.compile(r"(0?[1-9]|1[0-2])[/-](\d{4})"),
+        # Document number formats (common in IFUs)
         re.compile(r"(?:D0\d{5,6})\s*[\[(]?\s*(\d{4}-\d{2})\s*[\])]?"),
+        # Revision date
+        re.compile(r"(?:Rev(?:ision)?\.?|Version)\s*(?:Date)?\s*[:#]?\s*([0-9]{4}[-/\.][01]?[0-9](?:[-/\.][0-3]?[0-9])?)", re.IGNORECASE),
+        # Copyright year (last resort - prefer revision/publication dates)
+        re.compile(r"©\s*(\d{4})", re.IGNORECASE),
+        re.compile(r"Copyright\s+©?\s*(\d{4})", re.IGNORECASE),
     ),
     "model": (
-        re.compile(r"(?:Model|Type|Series)\s*[:#]?\s*([A-Z0-9][A-Z0-9\-_/]{1,})", re.IGNORECASE),
-        re.compile(r"System\s*[:#]\s*([A-Z0-9][A-Z0-9\-_/]{1,})", re.IGNORECASE),
+        re.compile(r"(?:Model(?:\s+No\.?|\s+Number)?|Type|Series)\s*[:#]?\s*([A-Z0-9][A-Z0-9\-_/\s]{1,20})", re.IGNORECASE),
+        re.compile(r"System\s*[:#]?\s*([A-Z0-9][A-Z0-9\-_/\s]{1,20})", re.IGNORECASE),
+        re.compile(r"(?:Product\s+)?Code\s*[:#]?\s*([A-Z0-9][A-Z0-9\-_/]{1,15})", re.IGNORECASE),
+        re.compile(r"(?:Device\s+)?ID\s*[:#]?\s*([A-Z0-9][A-Z0-9\-_/]{1,15})", re.IGNORECASE),
     ),
 }
 

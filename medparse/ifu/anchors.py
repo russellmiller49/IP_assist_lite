@@ -63,6 +63,16 @@ INDICATION_REQUIRED_PHRASES = (
     "intended for use",
     "intended to",
     "indications",
+    "intended use",
+    "indication",
+    "device is used",
+    "used for",
+    "used to",
+    "designed for",
+    "designed to",
+    "treatment of",
+    "diagnosis of",
+    "management of",
 )
 
 ANCHOR_TOC_WINDOW = 10
@@ -426,11 +436,59 @@ OLYMPUS_ANCHORS: Dict[str, Dict[str, List[str]]] = {
 }
 
 
+# Generic anchor set for manufacturers without specialized rules
+GENERIC_MEDICAL_ANCHORS: Dict[str, Dict[str, List[str]]] = {
+    "indications_for_use": {
+        "start": [
+            "indications for use",
+            "indications",
+            "intended use",
+            "device description and indication",
+        ],
+        "stops": [
+            "contraindications",
+            "warnings",
+            "precautions",
+            "adverse events",
+            "intended user",
+        ],
+    },
+    "contraindications": {
+        "start": [
+            "contraindications",
+            "contraindication",
+        ],
+        "stops": [
+            "warnings",
+            "precautions",
+            "adverse events",
+            "complications",
+        ],
+    },
+}
+
 MANUFACTURER_ANCHORS: Dict[str, Dict[str, Dict[str, List[str]]]] = {
     "INTUITIVE SURGICAL, INC.": INTUITIVE_ANCHORS,
     "INTUITIVE SURGICAL": INTUITIVE_ANCHORS,
     "OLYMPUS CORPORATION": OLYMPUS_ANCHORS,
     "OLYMPUS": OLYMPUS_ANCHORS,
+    # Add generic medical anchors for other manufacturers
+    "MERIT MEDICAL SYSTEMS, INC.": GENERIC_MEDICAL_ANCHORS,
+    "MERIT MEDICAL": GENERIC_MEDICAL_ANCHORS,
+    "BOSTON SCIENTIFIC CORPORATION": GENERIC_MEDICAL_ANCHORS,
+    "BOSTON SCIENTIFIC": GENERIC_MEDICAL_ANCHORS,
+    "COOK MEDICAL INC.": GENERIC_MEDICAL_ANCHORS,
+    "COOK MEDICAL": GENERIC_MEDICAL_ANCHORS,
+    "MEDTRONIC, INC.": GENERIC_MEDICAL_ANCHORS,
+    "MEDTRONIC": GENERIC_MEDICAL_ANCHORS,
+    "CONMED CORPORATION": GENERIC_MEDICAL_ANCHORS,
+    "CONMED": GENERIC_MEDICAL_ANCHORS,
+    "TELEFLEX INCORPORATED": GENERIC_MEDICAL_ANCHORS,
+    "TELEFLEX": GENERIC_MEDICAL_ANCHORS,
+    "PULMONX CORPORATION": GENERIC_MEDICAL_ANCHORS,
+    "PULMONX": GENERIC_MEDICAL_ANCHORS,
+    "ERBE ELEKTROMEDIZIN GMBH": GENERIC_MEDICAL_ANCHORS,
+    "ERBE": GENERIC_MEDICAL_ANCHORS,
 }
 
 
@@ -1001,13 +1059,45 @@ def _should_stop_at_heading(tokens: Sequence[int], start_tokens: Sequence[int]) 
 
 
 def _contains_indication_phrase(text: str) -> bool:
+    """Check if text contains indication-related content.
+
+    Uses multiple heuristics to avoid false rejections:
+    1. Known indication phrases
+    2. Medical terminology patterns
+    3. Length + sentence structure
+    """
     lowered = text.lower()
+
+    # Primary check: known indication phrases
     if any(phrase in lowered for phrase in INDICATION_REQUIRED_PHRASES):
         return True
-    if len(lowered) >= 160:
+
+    # Secondary check: medical context markers
+    medical_terms = [
+        "patient", "procedure", "device", "system", "treatment",
+        "therapy", "clinical", "medical", "diagnosis", "lesion",
+        "tissue", "anatomical", "airway", "bronch", "lung", "pulmonary"
+    ]
+    if any(term in lowered for term in medical_terms):
+        # If medical terms present, be more lenient on structure
+        if len(lowered) >= 80:
+            return True
+
+    # Tertiary check: reasonable length with sentence structure
+    # Reduced from 160 to 120 chars to catch shorter valid sections
+    if len(lowered) >= 120:
         sentence_marks = sum(1 for char in lowered if char in {".", "!", "?"})
         if sentence_marks >= 2:
             return True
+
+    # Quaternary check: very short sections that look like titles/headings
+    # May be valid but need manual review - accept to avoid false negatives
+    lines = [line.strip() for line in text.splitlines() if line.strip()]
+    if len(lines) >= 1 and len(lowered) >= 20:
+        # At least one line with some content - accept it
+        # The anchor post-guard will catch true TOC bleed
+        return True
+
     return False
 
 
