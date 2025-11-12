@@ -35,6 +35,14 @@ from medparse.ifu.safety_thresholds import expected_safety_with_source
 from medparse.text.paragraphizer import build_paragraph_store
 from medparse.utils.log import get_logger
 
+# Smart chunking and validation (Phase 2 improvements)
+try:
+    from medparse.text.smart_chunker import build_smart_paragraph_store
+    from medparse.validate.metadata_validator import validate_and_correct_metadata
+    SMART_CHUNKING_AVAILABLE = True
+except ImportError:
+    SMART_CHUNKING_AVAILABLE = False
+
 LOGGER = get_logger(__name__)
 
 SECTION_FIELDS = {
@@ -132,6 +140,19 @@ def extract_ifu(
         manufacturer_hint=manufacturer_hint,
         manufacturer_source=manufacturer_source,
     )
+
+    # Validate and correct metadata (Phase 2)
+    if SMART_CHUNKING_AVAILABLE and isinstance(meta, dict):
+        try:
+            corrected_meta, errors, warnings = validate_and_correct_metadata(meta)
+            if errors:
+                LOGGER.warning(f"Metadata validation errors: {errors}")
+            if warnings:
+                LOGGER.debug(f"Metadata validation warnings: {warnings}")
+            meta = corrected_meta
+        except Exception as e:
+            LOGGER.warning(f"Metadata validation failed: {e}")
+
     provenance = {}
     if isinstance(meta, dict) and "_provenance" in meta:
         provenance = dict(meta.pop("_provenance", {}) or {})
@@ -369,18 +390,58 @@ def extract_ifu(
         }
         document.pipeline_info["spacing_metrics"] = spacing_metrics
 
-    paragraph_store, dedup_applied = build_paragraph_store(
-        document.doc_id,
-        pages,
-        join_hyphens=True,
-        drop_headers=True,
-        drop_footers=True,
-    )
-    document.paragraph_store = paragraph_store
-    if dedup_applied:
-        document.pipeline_info["paragraph_dedup_applied"] = True
+    # Use smart chunker with column detection (Phase 2)
+    use_smart_chunking = SMART_CHUNKING_AVAILABLE
+    # Check config flag if available
+    emit_settings = getattr(extraction_config, "emit", {}) if hasattr(extraction_config, "emit") else {}
+    if isinstance(emit_settings, dict) and "use_smart_chunking" in emit_settings:
+        use_smart_chunking = use_smart_chunking and emit_settings.get("use_smart_chunking", True)
+
+    if use_smart_chunking:
+        try:
+            paragraph_store, chunking_metadata = build_smart_paragraph_store(
+                document.doc_id,
+                pages,
+                use_column_detection=True,
+                join_hyphens=True,
+                strip_headers=True,
+                strip_footers=True,
+            )
+            document.paragraph_store = paragraph_store
+            # Store column detection metadata
+            if chunking_metadata:
+                document.pipeline_info["paragraph_dedup_applied"] = chunking_metadata.get("dedup_applied", False)
+                document.pipeline_info["column_detection"] = {
+                    "multi_column_pages": chunking_metadata.get("multi_column_pages", 0),
+                    "max_columns_detected": chunking_metadata.get("max_columns_detected", 0),
+                    "used_smart_chunking": True,
+                }
+            LOGGER.info(f"Smart chunking applied: {chunking_metadata.get('multi_column_pages', 0)} multi-column pages detected")
+        except Exception as e:
+            LOGGER.warning(f"Smart chunking failed, falling back to legacy: {e}")
+            paragraph_store, dedup_applied = build_paragraph_store(
+                document.doc_id,
+                pages,
+                join_hyphens=True,
+                drop_headers=True,
+                drop_footers=True,
+            )
+            document.paragraph_store = paragraph_store
+            document.pipeline_info["paragraph_dedup_applied"] = dedup_applied
     else:
-        document.pipeline_info.setdefault("paragraph_dedup_applied", False)
+        # Legacy paragraphizer
+        paragraph_store, dedup_applied = build_paragraph_store(
+            document.doc_id,
+            pages,
+            join_hyphens=True,
+            drop_headers=True,
+            drop_footers=True,
+        )
+        document.paragraph_store = paragraph_store
+        if dedup_applied:
+            document.pipeline_info["paragraph_dedup_applied"] = True
+        else:
+            document.pipeline_info.setdefault("paragraph_dedup_applied", False)
     _set_safety_expectations(document, manufacturer_hint=manufacturer_for_safety)
     return document
 __all__ = ["extract_ifu"]

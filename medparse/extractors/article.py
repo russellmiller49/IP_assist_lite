@@ -68,6 +68,13 @@ from medparse.text.paragraphizer import build_paragraph_store
 from medparse.utils.log import get_logger
 from medparse.guideline.promoter import enrich_guideline_document
 
+# Smart chunking (Phase 2 improvements)
+try:
+    from medparse.text.smart_chunker import build_smart_paragraph_store
+    SMART_CHUNKING_AVAILABLE = True
+except ImportError:
+    SMART_CHUNKING_AVAILABLE = False
+
 LOGGER = get_logger(__name__)
 UMLS_PAGE_CACHE: Dict[str, List[UmlsEntityRecord]] = {}
 ATS_CANONICAL_REASONS = {
@@ -643,14 +650,59 @@ def extract_article(
     if extraction_config.max_relations:
         document.pipeline_info["max_relations"] = extraction_config.max_relations
 
-    paragraph_store, dedup_applied = build_paragraph_store(
-        document.doc_id,
-        pages,
-        join_hyphens=True,
-        drop_headers=True,
-        drop_footers=True,
-    )
-    document.paragraph_store = paragraph_store
+    # Use smart chunker with column detection (Phase 2)
+    use_smart_chunking = SMART_CHUNKING_AVAILABLE
+    # Check config flag if available
+    emit_settings = getattr(extraction_config, "emit", {}) if hasattr(extraction_config, "emit") else {}
+    if isinstance(emit_settings, dict) and "use_smart_chunking" in emit_settings:
+        use_smart_chunking = use_smart_chunking and emit_settings.get("use_smart_chunking", True)
+
+    if use_smart_chunking:
+        try:
+            paragraph_store, chunking_metadata = build_smart_paragraph_store(
+                document.doc_id,
+                pages,
+                use_column_detection=True,
+                join_hyphens=True,
+                strip_headers=True,
+                strip_footers=True,
+            )
+            document.paragraph_store = paragraph_store
+            # Store column detection metadata
+            if chunking_metadata:
+                document.pipeline_info["paragraph_dedup_applied"] = chunking_metadata.get("dedup_applied", False)
+                document.pipeline_info["column_detection"] = {
+                    "multi_column_pages": chunking_metadata.get("multi_column_pages", 0),
+                    "max_columns_detected": chunking_metadata.get("max_columns_detected", 0),
+                    "used_smart_chunking": True,
+                }
+            LOGGER.info(f"Smart chunking applied: {chunking_metadata.get('multi_column_pages', 0)} multi-column pages detected")
+        except Exception as e:
+            LOGGER.warning(f"Smart chunking failed, falling back to legacy: {e}")
+            paragraph_store, dedup_applied = build_paragraph_store(
+                document.doc_id,
+                pages,
+                join_hyphens=True,
+                drop_headers=True,
+                drop_footers=True,
+            )
+            document.paragraph_store = paragraph_store
+            document.pipeline_info["paragraph_dedup_applied"] = dedup_applied
+    else:
+        # Legacy paragraphizer
+        paragraph_store, dedup_applied = build_paragraph_store(
+            document.doc_id,
+            pages,
+            join_hyphens=True,
+            drop_headers=True,
+            drop_footers=True,
+        )
+        document.paragraph_store = paragraph_store
+        if dedup_applied:
+            document.pipeline_info["paragraph_dedup_applied"] = True
+        else:
+            document.pipeline_info.setdefault("paragraph_dedup_applied", False)
+
     if doc_subtype == "research_diagnostic":
         try:
             research_outcomes = extract_research_outcomes(
@@ -664,10 +716,6 @@ def extract_article(
             research_outcomes = None
         if research_outcomes:
             document.research_outcomes = research_outcomes
-    if dedup_applied:
-        document.pipeline_info["paragraph_dedup_applied"] = True
-    else:
-        document.pipeline_info.setdefault("paragraph_dedup_applied", False)
 
     enrich_guideline_document(document, pages)
 
