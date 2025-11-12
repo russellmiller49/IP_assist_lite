@@ -33,28 +33,33 @@ thresholds:
 size_guards:
   max_evidence_per_item: 5
   max_chars_per_evidence: 2000
-  max_tables: 50
-  max_table_cells: 5000
-  max_sections: 60
-  max_paragraph_chars: 3000
+  max_tables: 75  # Increased from 50 for meta-analyses
+  max_table_cells: 8000  # Increased from 5000
+  max_sections: 80  # Increased from 60
+  max_paragraph_chars: 4000  # Increased from 3000
   keep_table_types:
     - diagnostic_accuracy
     - baseline
+    - baseline_characteristics
     - complications
     - yield
     - outcomes
+    - diagnostic_yield
 
 emit:
   evidence_policy: compact
   tables_mode: compact
-  evidence_max_chars: 600
-  table_cell_max_chars: 800
+  evidence_max_chars: 800  # Increased from 600
+  table_cell_max_chars: 1000  # Increased from 800
   paragraph_store: true
-  max_entities: 3000
-  max_relations: 15000
-  max_relations_per_pair: 6
+  max_entities: 5000  # Increased from 3000
+  max_relations: 25000  # Increased from 15000
+  max_relations_per_pair: 8  # Increased from 6
   relation_mode: compact
-  relation_window: 80
+  relation_window: 100  # Increased from 80
   keep_evidence_bank: true
-  max_tables: 10
-  max_json_bytes: 10000000
+  max_tables: 30  # Increased from 10 - for systematic reviews
+  max_json_bytes: 15000000  # Increased from 10MB
+  use_smart_chunking: true  # NEW: Enable column-aware chunking
+  strip_headers_footers: true  # NEW: Enable header/footer removal
+  preserve_page_metadata: true  # NEW: Always include page numbers

@@ -16,22 +16,24 @@ thresholds:
 size_guards:
   max_evidence_per_item: 3
   max_chars_per_evidence: 1200
-  max_tables: 30
-  max_table_cells: 3000
-  max_sections: 40
-  max_paragraph_chars: 2000
+  max_tables: 100  # Increased from 30 - technical manuals can have 100+ tables
+  max_table_cells: 10000  # Increased from 3000
+  max_sections: 60  # Increased from 40
+  max_paragraph_chars: 3000  # Increased from 2000
 
 emit:
   evidence_policy: compact
   tables_mode: compact
   evidence_max_chars: 500
-  table_cell_max_chars: 600
+  table_cell_max_chars: 800  # Increased from 600
   paragraph_store: true
-  max_entities: 3000
-  max_relations: 15000
+  max_entities: 5000  # Increased from 3000
+  max_relations: 20000  # Increased from 15000
   relation_window: 80
   keep_evidence_bank: true
-  max_tables: 10
+  max_tables: 50  # Increased from 10 - critical for long IFUs
+  use_smart_chunking: true  # NEW: Enable column-aware chunking
+  strip_headers_footers: true  # NEW: Enable aggressive header/footer removal
 
 ifu:
   small_ifu_threshold: 4
