@@ -26,14 +26,14 @@ except ImportError:  # pragma: no cover - optional dependency
 
 
 def extract_tables(pdf_path: Path, page_number: int, page_text: str) -> List[TableData]:
-    """Extract tables for a page when context suggests structured data."""
-
-    lower_text = page_text.lower()
-    if not any(keyword in lower_text for keyword in TABLE_KEYWORDS):
-        return []
+    """Extract tables for a page using pdfplumber."""
 
     if pdfplumber is None:
-        return _extract_inline_tables(page_text, page_number)
+        # Fallback to inline table extraction only if pdfplumber not available
+        lower_text = page_text.lower()
+        if any(keyword in lower_text for keyword in TABLE_KEYWORDS):
+            return _extract_inline_tables(page_text, page_number)
+        return []
 
     try:
         with pdfplumber.open(pdf_path) as pdf:

@@ -126,6 +126,24 @@ def iter_smart_paragraphs(
             if (strip_headers and is_header_line(stripped)) or (strip_footers and is_footer_line(stripped)):
                 continue
 
+            # Check if column changed - if so, flush buffer (column boundary = paragraph break)
+            line_column = column_map.get(line_idx, current_column)
+            if buffer and current_column is not None and line_column != current_column:
+                text = _flush_buffer(buffer, join_hyphens=join_hyphens)
+                normalized = normalize_paragraph_text(text)
+                if normalized:
+                    para_id = f"page{page.number}_para{para_count}"
+                    para_count += 1
+                    yield SmartParagraph(
+                        id=para_id,
+                        page=page.number,
+                        text=normalized,
+                        char_span=(0, len(normalized)),
+                        column_index=current_column,
+                        is_multi_column=bool(column_map),
+                    )
+                buffer = []
+
             # Detect paragraph boundaries
             if buffer:
                 # Numbered list item
