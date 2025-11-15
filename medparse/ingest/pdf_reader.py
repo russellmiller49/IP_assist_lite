@@ -40,6 +40,7 @@ def iter_pages(
     page_limit: Optional[int] = None,
     enable_ocr: bool = False,
     min_chars_for_ocr: int = 120,
+    start_page: int = 1,
 ) -> Iterator[PageData]:
     """Yield ``PageData`` instances for each page in the PDF.
 
@@ -49,13 +50,20 @@ def iter_pages(
 
     engine_normalized = (engine or "pymupdf").lower()
 
+    normalized_start = max(1, int(start_page or 1))
+
     if engine_normalized == "pdfplumber" and pdfplumber is not None:
         try:
             with pdfplumber.open(pdf_path) as pdf:
                 total_pages = len(pdf.pages)
-                limit = page_limit or total_pages
-                for index in range(total_pages):
-                    if limit and index + 1 > limit:
+                if total_pages == 0:
+                    return
+                limit = page_limit or (total_pages - normalized_start + 1)
+                limit = max(0, limit)
+                end_page = total_pages if limit == 0 else min(total_pages, normalized_start + limit - 1)
+                for page_number in range(normalized_start, end_page + 1):
+                    index = page_number - 1
+                    if limit and page_number - normalized_start + 1 > limit:
                         break
                     page = pdf.pages[index]
 
@@ -85,7 +93,7 @@ def iter_pages(
                     ]
                     tables = extract_tables(pdf_path, index + 1, page_text)
                     page_data = PageData(
-                        number=index + 1,
+                        number=page_number,
                         text=page_text,
                         lines=lines,
                         blocks=blocks,
@@ -93,7 +101,7 @@ def iter_pages(
                         word_boxes=word_boxes,
                     )
                     if enable_ocr and len(page_text.strip()) < min_chars_for_ocr:
-                        ocr_text = _ocr_page(pdf_path, index + 1)
+                        ocr_text = _ocr_page(pdf_path, page_number)
                         if ocr_text:
                             cleaned_lines = _clean_lines(ocr_text.splitlines())
                             page_data.text = ocr_text
@@ -113,12 +121,22 @@ def iter_pages(
         except Exception:
             document = None
         else:
-            for index, page in enumerate(document, start=1):
-                if page_limit and index > page_limit:
+            total_pages = getattr(document, "page_count", None) or len(document)
+            if total_pages == 0:
+                return
+            limit = page_limit or (total_pages - normalized_start + 1)
+            limit = max(0, limit)
+            end_page = total_pages if limit == 0 else min(total_pages, normalized_start + limit - 1)
+            for page_number in range(normalized_start, end_page + 1):
+                if limit and page_number - normalized_start + 1 > limit:
                     break
-                page_data = _page_from_pymupdf(pdf_path, page, index)
+                try:
+                    page = document.load_page(page_number - 1)
+                except Exception:
+                    continue
+                page_data = _page_from_pymupdf(pdf_path, page, page_number)
                 if enable_ocr and len(page_data.text.strip()) < min_chars_for_ocr:
-                    ocr_text = _ocr_page(pdf_path, index)
+                    ocr_text = _ocr_page(pdf_path, page_number)
                     if ocr_text:
                         cleaned_lines = _clean_lines(ocr_text.splitlines())
                         page_data.text = ocr_text
@@ -130,6 +148,8 @@ def iter_pages(
             return
 
     # Fallback: treat local file bytes as text (used in tests)
+    if normalized_start > 1:
+        return
     raw_bytes = pdf_path.read_bytes()
     text = normalize_text_artifacts(raw_bytes.decode("utf-8", errors="ignore"))
     lines = _clean_lines(text.splitlines())

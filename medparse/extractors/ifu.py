@@ -2,10 +2,10 @@
 
 from __future__ import annotations
 
-import re
 import functools
+import re
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional, Sequence, Tuple
 
 from medparse.config import ExtractionConfig, get_extraction_config
 
@@ -18,6 +18,7 @@ from medparse.extract.utils import (
     section_text_between,
 )
 from medparse.ingest.models import PageData
+from medparse.ifu.anchors import resolve_toc_guard, strip_toc
 from medparse.ifu.frontmatter import extract_front_matter
 from medparse.ifu.manufacturer import detect_manufacturer
 from medparse.ifu.safety import extract_safety_blocks as build_safety_blocks
@@ -32,7 +33,7 @@ from medparse.normalize.text_cleanup import clean_paragraph, deep_cleanup_fields
 from medparse.pipeline.engine_select import repair_space_poor_pages
 from medparse.schema.ifu import IFUDocument
 from medparse.ifu.safety_thresholds import expected_safety_with_source
-from medparse.text.paragraphizer import build_paragraph_store
+from medparse.text.paragraphizer import build_paragraph_store, reflow_two_column_pages
 from medparse.utils.log import get_logger
 
 LOGGER = get_logger(__name__)
@@ -48,6 +49,8 @@ SECTION_FIELDS = {
     "clinical risks & benefits": "clinical_risks_and_benefits",
     "clinical benefits and risks": "clinical_risks_and_benefits",
 }
+
+BULLET_SPLIT_PATTERN = re.compile(r"\s+(?=(?:\d+[\).]|[\u2022\u2023\u25E6\*])\s+)")
 
 def _clamp_pages(pages: List[int], page_count: int) -> List[int]:
     if not pages:
@@ -89,6 +92,76 @@ def _set_safety_expectations(
     pipeline_info["safety_gap"] = max(0, expected_min - pipeline_info.get("safety_found", found_blocks))
     pipeline_info["safety_status"] = "ok" if pipeline_info.get("safety_found", found_blocks) >= expected_min else "low"
     pipeline_info.setdefault("safety_blocks_added", pipeline_info.get("safety_blocks_added", 0))
+
+
+def _adjust_column_map_after_strip(
+    page: PageData,
+    before_lines: Sequence[str],
+    after_lines: Sequence[str],
+) -> None:
+    column_map = getattr(page, "column_map", None)
+    if not isinstance(column_map, dict) or not column_map:
+        return
+    if not after_lines:
+        page.column_map = {}
+        return
+    diff = len(before_lines) - len(after_lines)
+    removed_front = False
+    removed_back = False
+    if diff == 1:
+        if before_lines[1:] == list(after_lines):
+            removed_front = True
+        elif before_lines[:-1] == list(after_lines):
+            removed_back = True
+    elif diff == 2:
+        if before_lines[1:-1] == list(after_lines):
+            removed_front = True
+            removed_back = True
+    else:
+        if before_lines and after_lines and before_lines[0] != after_lines[0]:
+            removed_front = True
+        if before_lines and after_lines and before_lines[-1] != after_lines[-1]:
+            removed_back = True
+    if removed_front:
+        column_map = {idx - 1: col for idx, col in column_map.items() if idx > 0}
+    if removed_back:
+        max_idx = len(after_lines) - 1
+        column_map = {idx: col for idx, col in column_map.items() if idx <= max_idx}
+    column_map = {idx: col for idx, col in column_map.items() if 0 <= idx < len(after_lines)}
+    page.column_map = column_map
+
+
+def _split_bullet_lines(
+    lines: Sequence[str],
+    column_map: Dict[int, int],
+) -> Tuple[List[str], Dict[int, int]]:
+    if not lines:
+        return list(lines), dict(column_map)
+
+    expanded: List[str] = []
+    updated_map: Dict[int, int] = {}
+
+    for idx, line in enumerate(lines):
+        text = line or ""
+        stripped = text.strip()
+        if not stripped:
+            expanded.append(text)
+            continue
+        if BULLET_SPLIT_PATTERN.search(text):
+            segments = BULLET_SPLIT_PATTERN.split(text)
+        else:
+            segments = [text]
+
+        for segment in segments:
+            normalized = segment.strip()
+            if not normalized:
+                expanded.append("")
+                continue
+            expanded.append(normalized)
+            if idx in column_map:
+                updated_map[len(expanded) - 1] = column_map[idx]
+
+    return expanded, updated_map if updated_map else dict(column_map)
 
 
 def extract_ifu(
@@ -136,14 +209,31 @@ def extract_ifu(
     if isinstance(meta, dict) and "_provenance" in meta:
         provenance = dict(meta.pop("_provenance", {}) or {})
 
+    column_mode_active = bool(ifu_settings.get("_column_mode_active"))
+
+    if column_mode_active:
+        reflow_two_column_pages(pages)
+
     # Strip page furniture (headers/footers) before processing
-    lines_by_page = [page.lines for page in pages]
+    lines_by_page = [list(page.lines) for page in pages]
+    raw_software: List[str] = []
+    for raw_lines in lines_by_page[:10]:
+        for line in raw_lines or []:
+            lowered = line.lower()
+            if "ion" in lowered and "os" in lowered:
+                raw_software.append(line.strip())
+            elif "planpoint" in lowered or ("plan" in lowered and "point" in lowered):
+                raw_software.append(line.strip())
     clean_lines_by_page = strip_furniture(lines_by_page, threshold=0.6)
 
     # Update pages with cleaned lines and rebuild text
-    for page, clean_lines in zip(pages, clean_lines_by_page):
-        page.lines = clean_lines
-        page.text = '\n'.join(clean_lines)
+    for page, before_lines, clean_lines in zip(pages, lines_by_page, clean_lines_by_page):
+        if column_mode_active:
+            _adjust_column_map_after_strip(page, before_lines, clean_lines)
+        split_lines, updated_map = _split_bullet_lines(clean_lines, page.column_map)
+        page.lines = split_lines
+        page.text = '\n'.join(split_lines)
+        page.column_map = updated_map
 
     lines = collect_lines(pages)
     pages_text = [page.text for page in pages]
@@ -160,7 +250,18 @@ def extract_ifu(
     if not manufacturer_for_safety:
         manufacturer_for_safety = manufacturer_hint
 
-    safety_blocks = build_safety_blocks(pages, manufacturer=manufacturer_for_safety)
+    ifu_settings_dict = ifu_settings if isinstance(ifu_settings, dict) else {}
+    safety_guard = resolve_toc_guard(ifu_settings_dict, manufacturer_for_safety)
+    safety_filtered_pages, safety_guard_report = strip_toc(pages, safety_guard)
+    safety_pages = safety_filtered_pages or pages
+    safety_toc_dropped: List[int] = []
+    if safety_guard_report and getattr(safety_guard_report, "pages_dropped", None):
+        for value in safety_guard_report.pages_dropped:
+            try:
+                safety_toc_dropped.append(int(value))
+            except (TypeError, ValueError):
+                continue
+    safety_blocks = build_safety_blocks(safety_pages, manufacturer=manufacturer_for_safety)
 
     references = normalize_references(
         reference_section(lines),
@@ -220,18 +321,8 @@ def extract_ifu(
         )
         if toc_guard_info:
             doc_kwargs["_toc_guard_info"] = toc_guard_info
-
-    # Collect software versions from Equipment/Software Version section
-    raw_software: List[str] = []
-    for page_idx, page_text in enumerate(pages_text[:10]):  # Check first 10 pages
-        # Look for Equipment and Software Version section
-        if "equipment" in page_text.lower() and "software" in page_text.lower():
-            # Extract lines that mention Ion OS or PlanPoint
-            for line in page_text.splitlines():
-                if "ion" in line.lower() and "os" in line.lower():
-                    raw_software.append(line.strip())
-                elif "planpoint" in line.lower():
-                    raw_software.append(line.strip())
+        if not doc_kwargs.get("indications_for_use") and doc_kwargs.get("intended_use"):
+            doc_kwargs["indications_for_use"] = doc_kwargs["intended_use"]
 
     for key in (
         "part_number",
@@ -292,6 +383,11 @@ def extract_ifu(
     document.pipeline_info["safety_blocks_found"] = len(safety_blocks)
     document.pipeline_info["safety_found"] = len(safety_blocks)
     document.pipeline_info["extracted_chars"] = extracted_chars
+    if safety_toc_dropped:
+        unique_safety_toc = sorted({page for page in safety_toc_dropped if isinstance(page, int)})
+        if unique_safety_toc:
+            document.pipeline_info["safety_toc_guard_pages_dropped"] = unique_safety_toc
+            document.pipeline_info["safety_toc_guard_pages_dropped_count"] = len(unique_safety_toc)
 
     front_meta_payload: Dict[str, str] = {}
     if isinstance(meta, dict) and meta.get("product_name_source"):
@@ -375,6 +471,7 @@ def extract_ifu(
         join_hyphens=True,
         drop_headers=True,
         drop_footers=True,
+        detect_columns=column_mode_active,
     )
     document.paragraph_store = paragraph_store
     if dedup_applied:

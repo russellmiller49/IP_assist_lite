@@ -118,6 +118,12 @@ def extract_articles(
         "--proc-suite-url",
         help="POST dictations to Procedure Suite compose_and_code endpoint.",
     ),
+    chunking: str = typer.Option(
+        "smart",
+        "--chunking",
+        help="Chunking mode (smart|off).",
+        click_type=click.Choice(["smart", "off"], case_sensitive=False),
+    ),
 ) -> None:
     """Run the article extractor for every PDF in ``input_dir``."""
 
@@ -139,6 +145,7 @@ def extract_articles(
         zotero_json=zotero_json,
         second_pass_mode=second_pass,
         proc_suite_url=proc_suite_url,
+        chunking_mode=chunking,
     )
 
 
@@ -292,6 +299,12 @@ def extract_ifus(
         "--proc-suite-url",
         help="POST dictations to Procedure Suite compose_and_code endpoint.",
     ),
+    chunking: str = typer.Option(
+        "smart",
+        "--chunking",
+        help="Chunking mode (smart|off).",
+        click_type=click.Choice(["smart", "off"], case_sensitive=False),
+    ),
 ) -> None:
     """Run the IFU/manual extractor."""
 
@@ -315,6 +328,7 @@ def extract_ifus(
         ifu_fast_long_docs=ifu_fast_long_docs,
         second_pass_mode=second_pass,
         proc_suite_url=proc_suite_url,
+        chunking_mode=chunking,
     )
 
 
@@ -461,6 +475,7 @@ def _run_pipeline_for_pdfs(
     ifu_fast_long_docs: Optional[bool] = None,
     second_pass_mode: str = "auto",
     proc_suite_url: Optional[str] = None,
+    chunking_mode: Optional[str] = None,
 ) -> None:
     pdfs = list(pdfs)
     if not pdfs:
@@ -506,6 +521,7 @@ def _run_pipeline_for_pdfs(
                 metadata_overrides=metadata_payload,
                 ifu_overrides=ifu_payload,
                 second_pass_mode=second_pass_normalized,
+                chunking_mode=chunking_mode,
             )
         except Exception as exc:  # pragma: no cover - defensive batch safeguard
             write_failure_artifact(

@@ -14,6 +14,7 @@ from typing import Any, Dict, Iterable, List, Literal, Optional, Sequence, Tuple
 from collections import defaultdict
 import yaml
 
+from medparse.chunking import build_document_chunks
 from medparse.config import ExtractionConfig, ExtractionProfile
 from medparse.extractors.article import extract_article
 from medparse.extractors.guideline import extract_guideline
@@ -23,6 +24,7 @@ from medparse.ifu.frontmatter import extract_front_matter
 from medparse.ifu.revision import sync_revision_status
 from medparse.extractors.textbook import extract_textbook_chapter
 from medparse.extract.utils import load_pages
+from medparse.ingest.models import PageData
 from medparse.schema.article import ArticleDocument
 from medparse.schema.common import BaseDocument, EvidenceSpan, SizeGuards
 from medparse.schema.ifu import IFUDocument
@@ -58,6 +60,8 @@ MODEL_MAP: Dict[str, Type[BaseDocument]] = {
     "textbook": TextbookChapterDocument,
 }
 
+_SHARED_CHUNKING_DEFAULTS: Optional[Dict[str, Any]] = None
+
 
 def _deep_update(base: Dict[str, object], overrides: Dict[str, object]) -> Dict[str, object]:
     """Recursively merge ``overrides`` into ``base`` and return new dictionary."""
@@ -73,6 +77,39 @@ def _deep_update(base: Dict[str, object], overrides: Dict[str, object]) -> Dict[
         else:
             result[key] = value
     return result
+
+
+def _resolve_chunking_settings(emit_config: Dict[str, Any] | None, cli_mode: Optional[str]) -> Dict[str, Any]:
+    """Return normalized chunking settings from emit config + CLI mode."""
+
+    chunking_block: Dict[str, Any] = _load_shared_chunking_defaults()
+    if isinstance(emit_config, dict):
+        block = emit_config.get("chunking")
+        if isinstance(block, dict):
+            chunking_block.update(block)
+    config_enabled = bool(chunking_block.get("enabled"))
+    cli_normalized = (cli_mode or "").strip().lower()
+    if cli_normalized not in {"smart", "off", ""}:
+        cli_normalized = "smart"
+    # When CLI mode is omitted we respect config; when explicitly "off" we disable.
+    cli_enabled = cli_normalized != "off"
+    enabled = config_enabled and cli_enabled
+    settings = {
+        "enabled": enabled,
+        "mode": "smart" if enabled else "off",
+        "token_min": chunking_block.get("token_min", 200),
+        "token_max": chunking_block.get("token_max", 500),
+        "overlap_ratio": chunking_block.get("overlap_ratio", 0.15),
+        "enable_c99": chunking_block.get("enable_c99", False),
+        "max_chunks_per_doc": chunking_block.get("max_chunks_per_doc", 0),
+        "min_tokens_merge_threshold": chunking_block.get("min_tokens_merge_threshold", 0),
+        "column_mode": str(chunking_block.get("column_mode", "off") or "off").lower(),
+    }
+    if not config_enabled:
+        settings["reason"] = "config_disabled"
+    elif not cli_enabled:
+        settings["reason"] = "cli_disabled"
+    return settings
 
 
 def _estimate_pdf_density(pdf_path: Path, *, sample_pages: int = 6) -> Dict[str, float]:
@@ -169,6 +206,48 @@ def _iter_research_metrics(outcomes: object) -> List[object]:
         if metric:
             metrics.append(metric)
     return metrics
+
+
+def _build_chunks_if_enabled(
+    document: BaseDocument,
+    pages: Sequence[PageData],
+    settings: Dict[str, Any],
+) -> Dict[str, Any]:
+    """Run smart chunker when enabled and capture metrics."""
+
+    chunk_settings = settings or {}
+    mode = str(chunk_settings.get("mode") or "smart")
+    chunk_metrics: Dict[str, Any] = {
+        "enabled": False,
+        "mode": mode,
+    }
+    if not chunk_settings.get("enabled"):
+        if chunk_settings.get("reason"):
+            chunk_metrics["reason"] = chunk_settings["reason"]
+        return chunk_metrics
+
+    try:
+        chunks, metrics = build_document_chunks(
+            document,
+            pages,
+            settings=chunk_settings,
+            mode=mode,
+        )
+    except Exception as exc:  # pragma: no cover - defensive guard
+        LOGGER.exception("Chunking failed: %s", exc)
+        chunk_metrics.update(
+            {
+                "reason": f"error:{exc.__class__.__name__}",
+                "error": str(exc),
+            }
+        )
+        return chunk_metrics
+
+    document.chunks = chunks
+    chunk_metrics.update(dict(metrics))
+    chunk_metrics["mode"] = mode
+    chunk_metrics["enabled"] = bool(chunks)
+    return chunk_metrics
 
 
 def _research_metric_has_value(metric: Optional[object]) -> bool:
@@ -451,6 +530,272 @@ def _resolve_ifu_engines(
 
 
 @dataclass
+class PageLoadOutcome:
+    pages: List[PageData]
+    ocr_pages: List[int]
+    engines_used: List[str]
+    engines_consumed: int
+    streaming_enabled: bool
+    batches: int
+    batches_failed: int
+    engine_timeouts: Dict[str, float]
+    complete: bool
+    failure_reason: Optional[str] = None
+
+
+def _resolve_streaming_settings(config: PipelineConfig) -> Dict[str, Any]:
+    if config.doc_type != "ifu":
+        return {
+            "enabled": False,
+            "page_threshold": 0,
+            "pages_per_batch": 0,
+            "max_failed_batches": 0,
+        }
+    ifu_settings = config.ifu if isinstance(config.ifu, dict) else {}
+    extract_block = ifu_settings.get("extract") if isinstance(ifu_settings, dict) else {}
+    if not isinstance(extract_block, dict):
+        extract_block = {}
+    long_doc_block = extract_block.get("long_doc") if isinstance(extract_block.get("long_doc"), dict) else {}
+    streaming_block = long_doc_block if isinstance(long_doc_block, dict) else {}
+    enabled = bool(streaming_block.get("streaming"))
+    page_threshold = int(streaming_block.get("page_threshold", 250) or 250)
+    pages_per_batch = int(streaming_block.get("pages_per_batch", 40) or 40)
+    max_failed_batches = int(streaming_block.get("max_failed_batches", 5) or 5)
+    per_page_timeout_s = float(streaming_block.get("per_page_timeout_s", streaming_block.get("per_page_timeout", 0)) or 0)
+    return {
+        "enabled": enabled,
+        "page_threshold": max(1, page_threshold),
+        "pages_per_batch": max(5, pages_per_batch),
+        "max_failed_batches": max(1, max_failed_batches),
+        "per_page_timeout_s": per_page_timeout_s if per_page_timeout_s > 0 else 0,
+    }
+
+
+def _load_document_pages(
+    pdf_path: Path,
+    *,
+    engines: Sequence[str],
+    start_index: int,
+    total_pages: int,
+    max_pages: Optional[int],
+    ocr_enabled: bool,
+    engine_timeouts: Dict[str, float],
+    streaming_settings: Dict[str, Any],
+) -> PageLoadOutcome:
+    streaming_enabled = False
+    if streaming_settings.get("enabled"):
+        threshold = int(streaming_settings.get("page_threshold", 250) or 250)
+        streaming_enabled = bool(total_pages and total_pages >= threshold)
+        if not streaming_enabled and max_pages:
+            streaming_enabled = max_pages >= threshold
+
+    if streaming_enabled:
+        return _stream_document_pages(
+            pdf_path,
+            engines=engines,
+            start_index=start_index,
+            total_pages=total_pages,
+            max_pages=max_pages,
+            ocr_enabled=ocr_enabled,
+            engine_timeouts=engine_timeouts,
+            streaming_settings=streaming_settings,
+        )
+
+    return _load_pages_single_engine(
+        pdf_path,
+        engines=engines,
+        start_index=start_index,
+        max_pages=max_pages,
+        ocr_enabled=ocr_enabled,
+        engine_timeouts=engine_timeouts,
+    )
+
+
+def _load_pages_single_engine(
+    pdf_path: Path,
+    *,
+    engines: Sequence[str],
+    start_index: int,
+    max_pages: Optional[int],
+    ocr_enabled: bool,
+    engine_timeouts: Dict[str, float],
+) -> PageLoadOutcome:
+    engine = engines[start_index]
+    load_start = time.perf_counter()
+    try:
+        pages = load_pages(
+            pdf_path,
+            engine=engine,
+            max_pages=max_pages,
+            ocr=ocr_enabled,
+            start_page=1,
+        )
+    except Exception as exc:  # pragma: no cover - defensive
+        LOGGER.warning("Failed to load pages with engine=%s: %s", engine, exc)
+        return PageLoadOutcome(
+            pages=[],
+            ocr_pages=[],
+            engines_used=[engine],
+            engines_consumed=1,
+            streaming_enabled=False,
+            batches=0,
+            batches_failed=1,
+            engine_timeouts={},
+            complete=False,
+            failure_reason=f"load_failed:{engine}",
+        )
+
+    duration = time.perf_counter() - load_start
+    ocr_pages = [page.number for page in pages if getattr(page, "ocr_applied", False)]
+    timeouts_triggered: Dict[str, float] = {}
+    limit = engine_timeouts.get(engine)
+    if limit and duration > limit:
+        timeouts_triggered[engine] = duration
+
+    return PageLoadOutcome(
+        pages=list(pages),
+        ocr_pages=ocr_pages,
+        engines_used=[engine],
+        engines_consumed=1,
+        streaming_enabled=False,
+        batches=1,
+        batches_failed=0,
+        engine_timeouts=timeouts_triggered,
+        complete=True,
+        failure_reason=None,
+    )
+
+
+def _stream_document_pages(
+    pdf_path: Path,
+    *,
+    engines: Sequence[str],
+    start_index: int,
+    total_pages: int,
+    max_pages: Optional[int],
+    ocr_enabled: bool,
+    engine_timeouts: Dict[str, float],
+    streaming_settings: Dict[str, Any],
+) -> PageLoadOutcome:
+    pages: List[PageData] = []
+    ocr_pages: List[int] = []
+    batches = 0
+    failed_batches = 0
+    engines_used: List[str] = []
+    engine_timeouts_triggered: Dict[str, float] = {}
+    current_index = start_index
+    engines_consumed = 1
+    pages_per_batch = max(1, int(streaming_settings.get("pages_per_batch", 40) or 40))
+    max_failed_batches = max(1, int(streaming_settings.get("max_failed_batches", 5) or 5))
+    per_page_timeout_s = float(streaming_settings.get("per_page_timeout_s", 0) or 0)
+
+    target_final_page = 0
+    if max_pages:
+        target_final_page = int(max_pages)
+        if total_pages:
+            target_final_page = min(int(total_pages), target_final_page)
+    elif total_pages:
+        target_final_page = int(total_pages)
+
+    start_page = 1
+    complete = False
+    consecutive_failures = 0
+
+    while True:
+        if target_final_page and start_page > target_final_page:
+            complete = True
+            break
+        if current_index >= len(engines):
+            break
+        engine = engines[current_index]
+
+        remaining = None
+        if target_final_page:
+            remaining = target_final_page - start_page + 1
+            if remaining <= 0:
+                complete = True
+                break
+        requested = pages_per_batch if remaining is None else min(pages_per_batch, remaining)
+        batch_start = time.perf_counter()
+        try:
+            batch_pages = load_pages(
+                pdf_path,
+                engine=engine,
+                max_pages=requested,
+                ocr=ocr_enabled,
+                start_page=start_page,
+            )
+        except Exception as exc:  # pragma: no cover - defensive
+            LOGGER.warning(
+                "Streaming batch failed engine=%s start_page=%s count=%s: %s",
+                engine,
+                start_page,
+                requested,
+                exc,
+            )
+            failed_batches += 1
+            consecutive_failures += 1
+            start_page += requested
+            if consecutive_failures >= max_failed_batches:
+                current_index += 1
+                engines_consumed = max(engines_consumed, current_index - start_index + 1)
+                consecutive_failures = 0
+            continue
+
+        duration = time.perf_counter() - batch_start
+        if not batch_pages:
+            if target_final_page:
+                failed_batches += 1
+                start_page += requested
+                continue
+            complete = True
+            break
+
+        consecutive_failures = 0
+        batches += 1
+        if engine not in engines_used:
+            engines_used.append(engine)
+        pages.extend(batch_pages)
+        ocr_pages.extend([page.number for page in batch_pages if getattr(page, "ocr_applied", False)])
+        last_page_number = batch_pages[-1].number or (start_page + len(batch_pages) - 1)
+        start_page = last_page_number + 1
+
+        timeout_limit = engine_timeouts.get(engine)
+        if per_page_timeout_s > 0:
+            batch_pages_count = len(batch_pages) or requested or 1
+            per_batch_limit = per_page_timeout_s * max(1, batch_pages_count)
+            if per_batch_limit and (timeout_limit is None or per_batch_limit < timeout_limit):
+                timeout_limit = per_batch_limit
+        if timeout_limit and duration > timeout_limit:
+            engine_timeouts_triggered[engine] = duration
+            current_index += 1
+            engines_consumed = max(engines_consumed, current_index - start_index + 1)
+        if not target_final_page and len(batch_pages) < requested:
+            complete = True
+            break
+
+    if not engines_used and start_index < len(engines):
+        engines_used.append(engines[start_index])
+
+    reason = None
+    if not pages:
+        reason = "streaming_no_pages"
+
+    return PageLoadOutcome(
+        pages=pages,
+        ocr_pages=ocr_pages,
+        engines_used=engines_used,
+        engines_consumed=max(1, min(len(engines) - start_index, engines_consumed)),
+        streaming_enabled=True,
+        batches=batches,
+        batches_failed=failed_batches,
+        engine_timeouts=engine_timeouts_triggered,
+        complete=complete,
+        failure_reason=reason,
+    )
+
+
+@dataclass
 class PipelineConfig:
     doc_type: DocType
     profile: ExtractionProfile = ExtractionProfile.ENRICHED
@@ -652,6 +997,14 @@ class PipelineOutcome:
                 }
             elif structured_outcomes is None:
                 payload["outcomes"] = []
+
+            doc_subtype = payload.get("doc_subtype")
+            if doc_subtype not in {"research_diagnostic", "research_therapeutic"}:
+                if "outcomes" in payload:
+                    payload.pop("outcomes", None)
+                    emit_pruned = self.metrics.setdefault("emit_pruned", [])
+                    if "outcomes" not in emit_pruned:
+                        emit_pruned.append("outcomes")
 
             payload["_metrics"] = self.metrics
             payload["_engine"] = self.engine
@@ -1077,6 +1430,24 @@ def _sync_second_pass_summary(
     metrics["second_pass_reasons"] = reasons
     metrics["second_pass_modifications"] = modifications
 
+    patch_summaries: List[Dict[str, object]] = []
+    for result in report.patch_results:
+        if not result.applied and not result.modifications:
+            continue
+        detail: Dict[str, object] = {"name": result.name}
+        if result.modifications:
+            for key, value in result.modifications.items():
+                try:
+                    detail[key] = int(value)
+                except (TypeError, ValueError):
+                    continue
+        if result.reasons:
+            detail["reasons"] = list(result.reasons)
+        patch_summaries.append(detail)
+    if patch_summaries:
+        metrics["patches"] = patch_summaries
+        bucket["patch_summaries"] = patch_summaries
+
     return bool(applied_names)
 
 
@@ -1093,6 +1464,7 @@ def run_extract(
     metadata_overrides: Optional[Dict[str, object]] = None,
     ifu_overrides: Optional[Dict[str, object]] = None,
     second_pass_mode: SecondPassMode = "auto",
+    chunking_mode: Optional[str] = None,
 ) -> PipelineOutcome:
     """Run extraction with completeness checks and caching."""
 
@@ -1115,6 +1487,18 @@ def run_extract(
                 continue
             merged_emit[key] = value
         config.emit = merged_emit
+
+    chunking_settings = _resolve_chunking_settings(config.emit, chunking_mode)
+    column_mode_active = False
+    if config.doc_type == "ifu":
+        ifu_settings = config.ifu if isinstance(config.ifu, dict) else {}
+        column_pref = str((ifu_settings.get("column_mode") or "off")).lower()
+        column_mode_active = bool(chunking_settings.get("enabled")) or column_pref == "auto"
+        if isinstance(config.ifu, dict):
+            config.ifu["_column_mode_active"] = column_mode_active
+        chunking_settings["column_mode"] = "auto" if column_mode_active else "off"
+    else:
+        chunking_settings.setdefault("column_mode", "off")
 
     if metadata_overrides:
         merged_metadata = dict(config.metadata_sources or {})
@@ -1297,26 +1681,73 @@ def run_extract(
     last_second_pass_report: Optional[SecondPassReport] = None
     last_validator_issues: List[ValidationIssue] = []
 
-    for idx, engine in enumerate(engines):
+
+    last_metrics: Dict[str, Any] = {}
+    last_engine = engines[0]
+    last_ocr_pages: List[int] = []
+    failure_reason: Optional[str] = None
+    last_metadata: Dict[str, Any] = dict(base_metadata)
+    last_second_pass_report: Optional[SecondPassReport] = None
+    last_validator_issues: List[ValidationIssue] = []
+
+    streaming_settings = _resolve_streaming_settings(config)
+    preview_limit = None if force_deep else config.max_preview_pages
+    idx = 0
+    validator_issues: List[ValidationIssue] = []
+
+    while idx < len(engines):
+        base_engine = engines[idx]
         LOGGER.info(
             "Starting extraction: doc_type=%s engine=%s profile=%s",
             config.doc_type,
-            engine,
+            base_engine,
             extraction_config.profile.value,
         )
 
         start = time.time()
-        pages = load_pages(
+        load_outcome = _load_document_pages(
             pdf_path,
-            engine=engine,
-            max_pages=None if force_deep else config.max_preview_pages,
-            ocr=ocr_enabled,
+            engines=engines,
+            start_index=idx,
+            total_pages=total_pages,
+            max_pages=preview_limit,
+            ocr_enabled=ocr_enabled,
+            engine_timeouts=engine_timeouts,
+            streaming_settings=streaming_settings,
         )
-        ocr_pages = [page.number for page in pages if getattr(page, "ocr_applied", False)]
+        engines_consumed = max(1, load_outcome.engines_consumed)
+        idx += engines_consumed
+        engines_used = load_outcome.engines_used or [base_engine]
+        engine = engines_used[-1]
+        pages = load_outcome.pages
+        ocr_pages = list(load_outcome.ocr_pages)
+
+        if not pages:
+            LOGGER.warning(
+                "Page loading failed for engine=%s (consumed=%d) reason=%s",
+                engine,
+                engines_consumed,
+                load_outcome.failure_reason,
+            )
+            last_metrics = {
+                "engines_tried": list(dict.fromkeys(engines_used)),
+                "engine_selected": engine,
+            }
+            last_engine = engine
+            last_ocr_pages = ocr_pages
+            failure_reason = load_outcome.failure_reason or "pages_not_loaded"
+            last_metadata = dict(base_metadata)
+            warnings_bucket = last_metadata.setdefault("threshold_warnings", [])
+            if failure_reason not in warnings_bucket:
+                warnings_bucket.append(failure_reason)
+            last_second_pass_report = None
+            last_validator_issues = []
+            continue
+
         document = extractor(
             pdf_path,
             engine=engine,
-            page_limit=None if force_deep else config.max_preview_pages,
+            page_limit=preview_limit,
             pages=pages,
             config=extraction_config,
         )
@@ -1326,6 +1757,7 @@ def run_extract(
         metrics = _compute_metrics(pages, total_pages, duration)
         metrics.update(_document_metrics(document))
         document.pipeline_info.setdefault("extracted_chars", metrics.get("extracted_chars"))
+        pipeline_info = getattr(document, "pipeline_info", {}) or {}
         extracted_chars = int(metrics.get("extracted_chars") or 0)
         if extracted_chars == 0:
             LOGGER.warning(
@@ -1333,7 +1765,7 @@ def run_extract(
                 engine,
             )
             metrics["engine_selected"] = engine
-            metrics["engines_tried"] = list(engines)
+            metrics["engines_tried"] = list(dict.fromkeys(engines_used))
             last_metrics = metrics
             last_engine = engine
             last_ocr_pages = ocr_pages
@@ -1351,6 +1783,7 @@ def run_extract(
             metrics["paragraph_dedup_applied"] = True
         if bool(document.pipeline_info.get("text_repair_applied")):
             metrics["text_repair_applied"] = True
+        emit_warnings: List[str] = []
         rec_metrics = document.pipeline_info.get("recommendation_metrics")
         if isinstance(rec_metrics, dict) and rec_metrics.get("total"):
             LOGGER.info(
@@ -1362,7 +1795,32 @@ def run_extract(
                 float(rec_metrics.get("typed_density", 0.0)),
             )
 
-        emit_warnings = _apply_emit_constraints(document, config.emit, policy_source=emit_policy_source)
+        emit_warnings = _apply_emit_constraints(document, config.emit, policy_source=emit_policy_source) or []
+
+        chunk_metrics = _build_chunks_if_enabled(document, pages, chunking_settings)
+        pipeline_info["chunking"] = chunk_metrics
+        metrics["chunking"] = chunk_metrics
+
+        metrics["engines_tried"] = list(dict.fromkeys(engines_used))
+        metrics["engine_selected"] = engine
+        if load_outcome.streaming_enabled:
+            streaming_payload = {
+                "enabled": True,
+                "batches": load_outcome.batches,
+                "batches_failed": load_outcome.batches_failed,
+                "pages_per_batch": streaming_settings.get("pages_per_batch"),
+                "per_page_timeout_s": streaming_settings.get("per_page_timeout_s") or 0,
+            }
+            metrics["streaming_fallback"] = streaming_payload
+            pipeline_info["streaming_fallback"] = streaming_payload
+        if load_outcome.engine_timeouts:
+            metrics.setdefault("engine_timeouts", {}).update(load_outcome.engine_timeouts)
+            existing_timeouts = pipeline_info.get("engine_timeouts_triggered")
+            if isinstance(existing_timeouts, dict):
+                existing_timeouts.update(load_outcome.engine_timeouts)
+            else:
+                pipeline_info["engine_timeouts_triggered"] = dict(load_outcome.engine_timeouts)
+        document.pipeline_info = pipeline_info
 
         timeout_limit = engine_timeouts.get(engine)
         if timeout_limit and duration > timeout_limit:
@@ -1373,8 +1831,6 @@ def run_extract(
                 duration,
             )
             metrics["engine_timeout"] = True
-            metrics["engine_selected"] = engine
-            metrics["engines_tried"] = list(engines)
             last_metrics = metrics
             last_engine = engine
             last_ocr_pages = ocr_pages
@@ -1387,67 +1843,27 @@ def run_extract(
             failure_reason = timeout_warning
             last_second_pass_report = None
             last_validator_issues = []
+            timeout_bucket = pipeline_info.setdefault("engine_timeouts_triggered", {})
+            if isinstance(timeout_bucket, dict):
+                timeout_bucket[engine] = duration
             continue
 
         # Build evidence bank for deduplication and size reduction
         size_guards = SizeGuards(**(config.size_guards or {}))
         evidence_bank = _build_evidence_bank(document, size_guards)
-
-        # Populate document with evidence bank
         document.evidence_bank = evidence_bank.get_bank()
-        metrics["evidence_bank_size"] = len(document.evidence_bank)
 
-        paragraph_store = getattr(document, "paragraph_store", {})
-        if isinstance(paragraph_store, dict):
-            metrics["paragraph_store_size"] = len(paragraph_store)
-
-        removed_hashes = _clean_debug_evidence(document)
-        if removed_hashes:
-            metrics["evidence_bank_size"] = len(document.evidence_bank)
-            document.pipeline_info["evidence_bank_pruned"] = len(removed_hashes)
-
-        # Add truncation notice if any truncation occurred
-        truncation_notice = evidence_bank.get_truncation_notice()
-        if truncation_notice:
-            document.truncation_notice = truncation_notice
-
-        # Log deduplication stats
-        stats = evidence_bank.get_stats()
-        if config.doc_type == "ifu" and stats["total_added"] == 0 and stats["deduplicated"] == 0 and stats["truncated"] == 0:
-            LOGGER.debug(
-                "Evidence deduplication skipped: total=0 doc_type=%s bank_size=%d",
-                config.doc_type,
-                len(document.evidence_bank),
-            )
-        else:
-            LOGGER.info(
-                "Evidence deduplication: total=%d deduplicated=%d truncated=%d bank_size=%d",
-                stats["total_added"],
-                stats["deduplicated"],
-                stats["truncated"],
-                len(document.evidence_bank),
-            )
-
-        LOGGER.info(
-            "Completed extraction: doc_type=%s engine=%s duration=%.2fs chars=%d coverage=%.2f",
-            config.doc_type,
-            engine,
-            duration,
-            metrics.get("extracted_chars", 0),
-            metrics.get("unique_pages_ratio", 0.0),
-        )
-
-        validator_issues: List[ValidationIssue] = []
-        if extraction_config.should_validate():
-            validator_issues = _run_validation(document)
+        cache_metadata = dict(base_metadata)
+        cache_metadata.setdefault("engines_tried", []).extend(metrics["engines_tried"])
 
         second_pass_report: Optional[SecondPassReport] = None
         applied_any = False
         if active_second_pass_mode != "off":
+            paragraph_store = dict(getattr(document, "paragraph_store", {}) or {})
             second_pass_context = SecondPassContext(
                 validation_issues=list(validator_issues),
-                paragraph_store=dict(paragraph_store) if isinstance(paragraph_store, dict) else {},
-                evidence_bank=dict(getattr(document, "evidence_bank", {}) or {}),
+                paragraph_store=paragraph_store,
+                evidence_bank=dict(document.evidence_bank or {}),
                 profile=extraction_config.profile.value,
                 engines_tried=list(engines),
                 emit_policies=dict(config.emit or {}),
@@ -1470,35 +1886,22 @@ def run_extract(
                 "modifications": {},
             }
             metrics["second_pass_applied"] = False
-            metrics["second_pass_patches"] = []
-            metrics["second_pass_reasons"] = []
-            metrics["second_pass_modifications"] = {}
-            pipeline_info = getattr(document, "pipeline_info", {}) or {}
-            if not isinstance(pipeline_info, dict):
-                pipeline_info = {}
-            bucket = pipeline_info.setdefault("second_pass", {})
-            bucket.clear()
-            bucket.update(
-                {
-                    "mode": active_second_pass_mode,
-                    "applied": [],
-                    "patches_applied": [],
-                    "reasons": [],
-                    "modifications": {},
-                    "diff_summary": {},
-                    "runtime_ms": 0,
-                    "patches_attempted": [],
-                }
-            )
-            document.pipeline_info = pipeline_info
 
-        meets_thresholds, threshold_warnings = _meets_thresholds(config, metrics, document=document)
-        combined_warnings = list(dict.fromkeys(threshold_warnings + emit_warnings))
-        metrics["engine_selected"] = engine
-        metrics["engines_tried"] = list(engines)
+        combined_warnings = list(dict.fromkeys(issue.message for issue in validator_issues))
+        if emit_warnings:
+            combined_warnings.extend(emit_warnings)
+        combined_warnings = list(dict.fromkeys(combined_warnings))
+        meets_thresholds, threshold_warnings = _meets_thresholds(
+            config,
+            metrics,
+            document=document,
+        )
+        combined_warnings.extend(threshold_warnings)
+
         if meets_thresholds:
-            if cache_enabled and idx == 0:
-                cache_metadata = dict(base_metadata)
+            warnings_payload = list(dict.fromkeys(combined_warnings))
+            cache_metadata["threshold_warnings"] = warnings_payload
+            if cache_enabled:
                 _store_success_in_cache(
                     cache_key,
                     config.doc_type,
@@ -1506,7 +1909,7 @@ def run_extract(
                     metrics,
                     engine,
                     extraction_config.profile.value,
-                    combined_warnings,
+                    warnings_payload,
                     cache_metadata,
                     config.emit,
                 )
@@ -1520,7 +1923,7 @@ def run_extract(
                 mode="full",
                 cache_used=False,
                 ocr_pages=ocr_pages,
-                warnings=combined_warnings,
+                warnings=warnings_payload,
                 metadata=dict(base_metadata),
                 emit_settings=config.emit,
                 second_pass_report=second_pass_report,
@@ -1546,7 +1949,8 @@ def run_extract(
             metrics.get("unique_pages_ratio", 0.0),
         )
 
-    last_metrics.setdefault("engines_tried", list(engines))
+    if "engines_tried" not in last_metrics:
+        last_metrics["engines_tried"] = list(engines)
     last_metrics.setdefault("engine_selected", last_engine)
 
     return PipelineOutcome(
@@ -1732,14 +2136,29 @@ def _document_metrics(document: BaseDocument) -> Dict[str, Any]:
     payload["imrad_required"] = imrad_required
     ats_required = bool(pipeline_info.get("ats_yield_required"))
     payload["ats_yield_required"] = ats_required
+    fm_confidence = pipeline_info.get("front_matter_confidence")
+    if isinstance(fm_confidence, dict):
+        payload["front_matter_confidence"] = fm_confidence
 
     if hasattr(document, "tables"):
         tables = getattr(document, "tables") or []
         payload["tables_kept"] = len(tables)
         pipeline_info["tables_kept"] = len(tables)
+        original_tables = pipeline_info.get("tables_original")
+        if isinstance(original_tables, int):
+            payload["tables_original"] = original_tables
+        else:
+            payload.setdefault("tables_original", len(tables))
+        dropped_tables = pipeline_info.get("tables_dropped")
+        if isinstance(dropped_tables, int):
+            payload["tables_dropped"] = dropped_tables
+        else:
+            payload.setdefault("tables_dropped", 0)
     else:
         payload["tables_kept"] = payload.get("tables_kept", 0)
         pipeline_info.setdefault("tables_kept", 0)
+        payload.setdefault("tables_original", payload.get("tables_kept", 0))
+        payload.setdefault("tables_dropped", pipeline_info.get("tables_dropped", 0))
 
     if hasattr(document, "recommendations"):
         recs = getattr(document, "recommendations") or []
@@ -1829,15 +2248,16 @@ def _document_metrics(document: BaseDocument) -> Dict[str, Any]:
                 payload["ats_yield_reasons"] = list(reasons)
             else:
                 payload["ats_yield_reasons"] = [str(reasons)]
-        ats_meta = getattr(document, "ats_compatibility", None)
+        ats_meta = getattr(document, "ats_profile", None)
         if ats_meta is not None:
-            compatibility_payload = {
-                "compatible_with_ats": bool(getattr(ats_meta, "compatible_with_ats", False)),
-                "strict_required": bool(getattr(ats_meta, "strict_required", False)),
-                "exclusion_reasons": list(getattr(ats_meta, "exclusion_reasons", []) or []),
+            profile_payload = {
+                "is_diagnostic_study": bool(getattr(ats_meta, "is_diagnostic_study", False)),
+                "strict_yield_required": bool(getattr(ats_meta, "strict_yield_required", False)),
+                "strict_yield_observed": bool(getattr(ats_meta, "strict_yield_observed", False)),
+                "strict_exclusion_reasons": list(getattr(ats_meta, "strict_exclusion_reasons", []) or []),
             }
-            payload["ats_compatibility"] = compatibility_payload
-            pipeline_info["ats_compatibility"] = compatibility_payload
+            payload["ats_profile"] = profile_payload
+            pipeline_info["ats_profile"] = profile_payload
 
     payload["paragraph_dedup_applied"] = bool(pipeline_info.get("paragraph_dedup_applied"))
     try:
@@ -1932,6 +2352,12 @@ def _document_metrics(document: BaseDocument) -> Dict[str, Any]:
         threshold_value = pipeline_info.get("long_doc_page_threshold")
         if threshold_value is not None:
             payload["long_doc_page_threshold"] = threshold_value
+    streaming_meta = pipeline_info.get("streaming_fallback")
+    if isinstance(streaming_meta, dict):
+        payload["streaming_fallback"] = streaming_meta
+    timeouts_meta = pipeline_info.get("engine_timeouts_triggered")
+    if isinstance(timeouts_meta, dict) and timeouts_meta:
+        payload["engine_timeouts"] = dict(timeouts_meta)
 
     unresolved_affiliations = pipeline_info.get("frontmatter_affiliations_unresolved")
     if unresolved_affiliations is not None:
@@ -1977,6 +2403,7 @@ def _document_metrics(document: BaseDocument) -> Dict[str, Any]:
     applied_list: List[str] = []
     reasons_list: List[str] = []
     modifications_map: Dict[str, int] = {}
+    patch_summaries: List[Dict[str, object]] = []
     if isinstance(second_pass_info, dict):
         applied_candidates = second_pass_info.get("applied")
         if isinstance(applied_candidates, list):
@@ -2007,6 +2434,11 @@ def _document_metrics(document: BaseDocument) -> Dict[str, Any]:
                         modifications_map[str(key)] = int(value)
                     except (TypeError, ValueError):
                         continue
+        raw_patch_summaries = second_pass_info.get("patch_summaries")
+        if isinstance(raw_patch_summaries, list):
+            for entry in raw_patch_summaries:
+                if isinstance(entry, dict):
+                    patch_summaries.append(dict(entry))
 
     rebuilt_sections = modifications_map.get("sections_rebuilt")
     if isinstance(rebuilt_sections, int) and rebuilt_sections > 0:
@@ -2022,6 +2454,8 @@ def _document_metrics(document: BaseDocument) -> Dict[str, Any]:
         if modifications_map:
             payload["second_pass_modifications_total"] = sum(modifications_map.values())
         pipeline_info["second_pass_modifications"] = dict(modifications_map)
+        if patch_summaries:
+            payload["patches"] = patch_summaries
 
         ro_backfill = second_pass_info.get("research_outcomes_backfill")
         if isinstance(ro_backfill, dict):
@@ -2109,6 +2543,8 @@ def _document_metrics(document: BaseDocument) -> Dict[str, Any]:
             "reasons": list(reasons_list) if reasons_list else [],
             "modifications": modifications_map,
         }
+        if patch_summaries:
+            second_pass_payload["patch_summaries"] = patch_summaries
     payload["second_pass"] = second_pass_payload
 
     metrics_summary = {
@@ -2118,9 +2554,12 @@ def _document_metrics(document: BaseDocument) -> Dict[str, Any]:
             else len(payload.get("toc_pages_dropped") or [])
         ),
         "safety_blocks_found": payload.get("safety_blocks_found", 0),
-        "second_pass_applied": list(second_pass_payload.get("applied", [])),
+        "safety_blocks_added": payload.get("safety_blocks_added", 0),
+        "second_pass_applied": bool(second_pass_payload.get("applied")),
+        "second_pass_patches": list(second_pass_payload.get("applied", [])),
         "second_pass_reasons": list(second_pass_payload.get("reasons", [])),
         "second_pass_modifications": dict(second_pass_payload.get("modifications", {})),
+        "patches": list(second_pass_payload.get("patch_summaries", [])),
     }
     if "safety_expected_min" in payload:
         metrics_summary["safety_expected_min"] = payload.get("safety_expected_min", 0)
@@ -2134,6 +2573,16 @@ def _document_metrics(document: BaseDocument) -> Dict[str, Any]:
         metrics_summary["sections_rebuilt"] = payload.get("sections_rebuilt", 0)
     if "sectionizer_mode" in payload:
         metrics_summary["sectionizer_mode"] = payload.get("sectionizer_mode")
+    metrics_summary["tables_kept"] = int(payload.get("tables_kept", 0))
+    metrics_summary["tables_dropped"] = int(payload.get("tables_dropped", 0))
+    metrics_summary["tables_original"] = int(payload.get("tables_original", 0))
+    if "streaming_fallback" in payload:
+        metrics_summary["streaming_fallback"] = payload.get("streaming_fallback")
+    if "engine_timeouts" in payload:
+        metrics_summary["engine_timeouts"] = payload.get("engine_timeouts")
+    chunk_metrics = pipeline_info.get("chunking")
+    if isinstance(chunk_metrics, dict):
+        metrics_summary["chunking"] = chunk_metrics
     payload["_metrics"] = metrics_summary
 
     _validate_metrics_consistency(payload, pipeline_info)
@@ -2615,6 +3064,10 @@ def _apply_emit_constraints(
         document.pipeline_info.setdefault("tables_original", len(tables))
         document.pipeline_info["tables_kept"] = len(cleaned_tables)
         document.pipeline_info["tables_dropped"] = tables_dropped
+    else:
+        pipeline_info.setdefault("tables_original", 0)
+        pipeline_info.setdefault("tables_kept", 0)
+        pipeline_info.setdefault("tables_dropped", 0)
 
     entities = getattr(document, "umls_entities", None)
     if entities and max_entities and len(entities) > max_entities:
@@ -2630,77 +3083,6 @@ def _apply_emit_constraints(
             sorted_entities = list(entities)
         setattr(document, "umls_entities", sorted_entities[:max_entities])
         warnings.append("umls_entities_truncated")
-
-    def _aggregate_relations(items: List[object]) -> List[object]:
-        if len(items) < 2:
-            return items
-        aggregated: Dict[tuple, object] = {}
-        counts: Dict[tuple, int] = defaultdict(int)
-        order: List[tuple] = []
-        passthrough: List[object] = []
-        for relation in items:
-            is_mapping = isinstance(relation, dict)
-            subject = relation.get("subject") if is_mapping else getattr(relation, "subject", None)
-            predicate = relation.get("predicate") if is_mapping else getattr(relation, "predicate", None)
-            obj = relation.get("object") if is_mapping else getattr(relation, "object", None)
-            attrs = relation.get("attributes") if is_mapping else getattr(relation, "attributes", None)
-            if not isinstance(attrs, dict):
-                attrs = {}
-                if is_mapping:
-                    relation = dict(relation)
-                    relation["attributes"] = attrs
-                else:
-                    setattr(relation, "attributes", attrs)
-            if not subject or not predicate or not obj:
-                passthrough.append(relation)
-                continue
-            page_window = attrs.get("page_window")
-            page = attrs.get("page")
-            window_label = attrs.get("window_tokens") or attrs.get("window")
-            key = (subject, predicate, obj, page_window, page, window_label)
-            counts[key] += 1
-            if key not in aggregated:
-                aggregated[key] = relation
-                order.append(key)
-        result: List[object] = []
-        for key in order:
-            relation = aggregated[key]
-            count = counts.get(key, 1)
-            if count > 1:
-                attrs = relation["attributes"] if isinstance(relation, dict) else getattr(relation, "attributes", {})
-                if not isinstance(attrs, dict):
-                    attrs = {}
-                    if isinstance(relation, dict):
-                        relation["attributes"] = attrs
-                    else:
-                        setattr(relation, "attributes", attrs)
-                attrs["count"] = count
-            result.append(relation)
-        if passthrough:
-            result.extend(passthrough)
-        return result
-
-    def _limit_relations_per_pair(items: List[object], cap: int) -> tuple[List[object], bool, int]:
-        counts: Dict[tuple, int] = defaultdict(int)
-        limited: List[object] = []
-        truncated = False
-        dropped = 0
-        for relation in items:
-            is_mapping = isinstance(relation, dict)
-            subject = relation.get("subject") if is_mapping else getattr(relation, "subject", None)
-            predicate = relation.get("predicate") if is_mapping else getattr(relation, "predicate", None)
-            obj = relation.get("object") if is_mapping else getattr(relation, "object", None)
-            if not subject or not predicate or not obj:
-                limited.append(relation)
-                continue
-            key = (subject, predicate, obj)
-            if counts[key] >= cap:
-                truncated = True
-                dropped += 1
-                continue
-            counts[key] += 1
-            limited.append(relation)
-        return limited, truncated, dropped
 
     relations = getattr(document, "relations", None)
     if relations:
@@ -2815,6 +3197,99 @@ def _apply_emit_constraints(
             document.pipeline_info["approx_size_bytes"] = approx_size
 
     return warnings
+
+
+def _aggregate_relations(items: List[object]) -> List[object]:
+    if len(items) < 2:
+        return items
+    aggregated: Dict[tuple, object] = {}
+    counts: Dict[tuple, int] = defaultdict(int)
+    order: List[tuple] = []
+    passthrough: List[object] = []
+    for relation in items:
+        is_mapping = isinstance(relation, dict)
+        subject = relation.get("subject") if is_mapping else getattr(relation, "subject", None)
+        predicate = relation.get("predicate") if is_mapping else getattr(relation, "predicate", None)
+        obj = relation.get("object") if is_mapping else getattr(relation, "object", None)
+        attrs = relation.get("attributes") if is_mapping else getattr(relation, "attributes", None)
+        if not isinstance(attrs, dict):
+            attrs = {}
+            if is_mapping:
+                relation = dict(relation)
+                relation["attributes"] = attrs
+            else:
+                setattr(relation, "attributes", attrs)
+        if not subject or not predicate or not obj:
+            passthrough.append(relation)
+            continue
+        page_window = attrs.get("page_window")
+        page = attrs.get("page")
+        window_label = attrs.get("window_tokens") or attrs.get("window")
+        key = (subject, predicate, obj, page_window, page, window_label)
+        counts[key] += 1
+        if key not in aggregated:
+            aggregated[key] = relation
+            order.append(key)
+    result: List[object] = []
+    for key in order:
+        relation = aggregated[key]
+        count = counts.get(key, 1)
+        if count > 1:
+            attrs = relation["attributes"] if isinstance(relation, dict) else getattr(relation, "attributes", {})
+            if not isinstance(attrs, dict):
+                attrs = {}
+                if isinstance(relation, dict):
+                    relation["attributes"] = attrs
+                else:
+                    setattr(relation, "attributes", attrs)
+            attrs["count"] = count
+        result.append(relation)
+    if passthrough:
+        result.extend(passthrough)
+    return result
+
+
+def _load_shared_chunking_defaults() -> Dict[str, Any]:
+    global _SHARED_CHUNKING_DEFAULTS
+    if _SHARED_CHUNKING_DEFAULTS is not None:
+        return dict(_SHARED_CHUNKING_DEFAULTS)
+    config_path = Path(__file__).resolve().parents[2] / "configs" / "_shared" / "chunking.yaml"
+    defaults: Dict[str, Any] = {}
+    try:
+        with config_path.open("r", encoding="utf-8") as handle:
+            data = yaml.safe_load(handle) or {}
+            if isinstance(data, dict):
+                defaults = dict(data)
+    except FileNotFoundError:
+        defaults = {}
+    except Exception as exc:  # pragma: no cover - config optional
+        LOGGER.debug("Unable to load shared chunking defaults: %s", exc)
+        defaults = {}
+    _SHARED_CHUNKING_DEFAULTS = defaults
+    return dict(defaults)
+
+
+def _limit_relations_per_pair(items: List[object], cap: int) -> tuple[List[object], bool, int]:
+    counts: Dict[tuple, int] = defaultdict(int)
+    limited: List[object] = []
+    truncated = False
+    dropped = 0
+    for relation in items:
+        is_mapping = isinstance(relation, dict)
+        subject = relation.get("subject") if is_mapping else getattr(relation, "subject", None)
+        predicate = relation.get("predicate") if is_mapping else getattr(relation, "predicate", None)
+        obj = relation.get("object") if is_mapping else getattr(relation, "object", None)
+        if not subject or not predicate or not obj:
+            limited.append(relation)
+            continue
+        key = (subject, predicate, obj)
+        if counts[key] >= cap:
+            truncated = True
+            dropped += 1
+            continue
+        counts[key] += 1
+        limited.append(relation)
+    return limited, truncated, dropped
 
 
 def _store_success_in_cache(

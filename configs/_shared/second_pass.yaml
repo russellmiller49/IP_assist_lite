@@ -64,8 +64,11 @@ second_pass:
     anchors:
       indications_en:
         - Indications for use
+        - Indications
         - INTENDED USE
         - Intended use
+        - Intended Purpose
+        - Intended Patient Population
         - This instrument has been designed to be used
       indications_ja:
         - 使用目的
@@ -79,6 +82,16 @@ second_pass:
         - Precautions
         - Routine Maintenance
         - Troubleshooting
+      window_max_chars: 2400
+      stop_headings:
+        - Clinical risks
+        - Clinical risks and Benefits
+        - Serious incident reporting
+        - Contraindications
+        - Intended Use
+        - User Qualifications
+        - Warnings
+        - Precautions
     toc_guard:
       drop_patterns:
         - "^[0-9]+(\\.[0-9]+)*\\s+[-–.…]{2,}\\s*[0-9]+\\s*$"

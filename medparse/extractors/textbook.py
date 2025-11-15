@@ -75,10 +75,15 @@ def extract_textbook_chapter(
             LOGGER.warning("UMLS linking failed for textbook %s: %s", pdf_path.name, exc)
             umls_result = UmlsLinkingResult(status="skipped_model_missing", entities=[])
         umls_records = umls_result.entities
+    page_text_map: Dict[int, str] = {
+        getattr(page, "number", idx + 1) or idx + 1: page.text or ""
+        for idx, page in enumerate(pages)
+    }
     if extraction_config.should_extract_relations() and umls_records:
         relation_records = build_cooccurrence(
             [record.model_dump() for record in umls_records],
             window=extraction_config.relation_window or "page",
+            page_texts=page_text_map,
         )
 
     book_meta_payload = load_book_metadata(pdf_path.parent)
@@ -261,6 +266,8 @@ def _map_umls_entities(records: Sequence[UmlsEntityRecord]) -> List[UmlsEntity]:
                 text=record.text,
                 page=record.page,
                 confidence=record.confidence,
+                match_score=record.match_score,
+                disambiguation_score=record.disambiguation_score,
             )
         )
     return mapped
@@ -275,6 +282,11 @@ def _map_relations(records: Sequence[RelationRecord]) -> List[Relation]:
                 predicate=record.predicate,
                 object=record.object,
                 attributes=record.attributes,
+                evidence_refs=record.evidence_refs or None,
+                confidence=record.confidence,
+                negated=record.negated,
+                conditional=record.conditional,
+                temporal=record.temporal,
             )
         )
     return mapped

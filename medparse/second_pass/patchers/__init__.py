@@ -12,6 +12,8 @@ from .article_section_fix import apply_sectionizer_salvage
 from .article_yield_strict_miner import apply_article_yield_strict_miner
 from .article_research_outcomes_backfill import apply_article_research_outcomes_backfill
 from .article_yield_ats_fixer import apply_yield_ats_fixer
+from .article_subtype_resolve import apply_article_subtype_resolve
+from .article_definitions_keyvalue_backfill import apply_article_definitions_keyvalue_backfill
 from .guideline_grade_backfill import apply_guideline_grade_backfill
 from .ifu_frontmatter_backfill import apply_ifu_frontmatter_backfill
 from .ifu_indications_fallback import apply_ifu_indications_fallback
@@ -28,9 +30,11 @@ _ORDERED_PATCHERS: Dict[str, List[SecondPassPatcher]] = {
     "article": [
         apply_yield_ats_fixer,
         apply_sectionizer_salvage,
+        apply_article_subtype_resolve,
         apply_article_yield_strict_miner,
         apply_article_research_outcomes_backfill,
         apply_guideline_grade_backfill,
+        apply_article_definitions_keyvalue_backfill,
         apply_article_affiliations,
         apply_affiliation_softmap,
     ],

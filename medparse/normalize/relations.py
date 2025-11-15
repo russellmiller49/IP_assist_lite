@@ -4,9 +4,16 @@ from __future__ import annotations
 
 from collections import Counter, defaultdict
 from itertools import combinations
-from typing import Dict, Iterable, List, Optional, Union
+from typing import Dict, Iterable, List, Optional, Tuple, Union
 
 from pydantic import BaseModel, Field
+
+from medparse.normalize.relation_patterns import (
+    detect_conditional,
+    detect_negation,
+    detect_pattern,
+    detect_temporal,
+)
 
 
 class RelationRecord(BaseModel):
@@ -17,6 +24,11 @@ class RelationRecord(BaseModel):
     object: str
     attributes: Dict[str, object] = Field(default_factory=dict)
     evidence: Optional[str] = None
+    confidence: float = Field(default=0.5, ge=0.0, le=1.0)
+    negated: bool = False
+    conditional: bool = False
+    temporal: Optional[str] = None
+    evidence_refs: List[str] = Field(default_factory=list)
 
 
 WINDOW_TOKEN_DEFAULT = 200
@@ -29,6 +41,75 @@ MAX_EDGES_PER_PAIR = 5
 HUB_COUNT_THRESHOLD = 60
 HUB_PAGE_RATIO = 0.6
 CHAR_PER_TOKEN = 5
+
+
+CONDITION_SEMTYPES = {"T047", "T046", "T191", "T184", "T033"}
+INTERVENTION_SEMTYPES = {"T061", "T062", "T074", "T200", "T195", "T121"}
+FACTOR_SEMTYPES = {"T055", "T166", "T130", "T103", "T082"}
+
+
+def _entity_role(entity: dict) -> str:
+    semtypes = {str(code).upper() for code in entity.get("semtypes") or []}
+    if semtypes & CONDITION_SEMTYPES:
+        return "condition"
+    if semtypes & INTERVENTION_SEMTYPES:
+        return "intervention"
+    if semtypes & FACTOR_SEMTYPES:
+        return "factor"
+    return "unknown"
+
+
+def _first_offset(entity: dict) -> Tuple[Optional[int], Optional[int]]:
+    offsets = entity.get("offsets") or []
+    if not offsets:
+        return None, None
+    start, end = offsets[0]
+    return (
+        int(start) if isinstance(start, int) else None,
+        int(end) if isinstance(end, int) else None,
+    )
+
+
+def _build_evidence_id(page: int, start: Optional[int], end: Optional[int]) -> str:
+    if start is None or end is None:
+        return f"page-{page}"
+    return f"page-{page}-span-{start}-{end}"
+
+
+def _context_snippet(
+    page_text: str,
+    page_label: int,
+    left_bounds: Tuple[Optional[int], Optional[int]],
+    right_bounds: Tuple[Optional[int], Optional[int]],
+) -> tuple[str, List[str]]:
+    left_start, left_end = left_bounds
+    right_start, right_end = right_bounds
+    if left_start is None or right_start is None:
+        return "", []
+    span_start = max(0, min(left_start, right_start) - 5)
+    span_end = min(
+        len(page_text),
+        max(left_end or left_start, right_end or right_start) + 5,
+    )
+    snippet = page_text[span_start:span_end].strip()
+    if not snippet:
+        return "", []
+    evidence_id = _build_evidence_id(page_label, span_start, span_end)
+    return snippet, [evidence_id]
+
+
+def _orient_entities(predicate: str, left: dict, right: dict) -> tuple[dict, dict]:
+    left_role = _entity_role(left)
+    right_role = _entity_role(right)
+    subject = left
+    obj = right
+    if predicate in {"treated_with", "diagnosed_by"}:
+        if left_role != "condition" and right_role == "condition":
+            subject, obj = right, left
+    elif predicate in {"risk_factor_for", "prognostic_factor_for"}:
+        if left_role == "condition" and right_role != "condition":
+            subject, obj = right, left
+    return subject, obj
 
 
 def relations_from_outcomes(
@@ -60,6 +141,8 @@ def relations_from_outcomes(
                 object=name,
                 attributes=attributes,
                 evidence=evidence,
+                confidence=0.85,
+                evidence_refs=list(outcome.get("evidence_ids", []) or []),
             )
         )
     return relations
@@ -95,6 +178,8 @@ def relations_from_recommendations(
                 object=text,
                 attributes=attributes,
                 evidence=evidence,
+                confidence=0.82,
+                evidence_refs=list(rec.get("evidence_ids", []) or []),
             )
         )
     return relations
@@ -120,6 +205,7 @@ def build_cooccurrence(
     entities: Iterable[dict],
     *,
     window: Union[str, int] = "page",
+    page_texts: Optional[Dict[int, str]] = None,
 ) -> List[RelationRecord]:
     """Build capped co-occurrence edges between UMLS entities."""
 
@@ -131,6 +217,7 @@ def build_cooccurrence(
     window_chars = window_tokens * CHAR_PER_TOKEN
 
     page_groups, entity_counts, entity_pages = _group_entities_by_page(entities)
+    page_map = page_texts or {}
     total_pages = len([page for page in page_groups if page is not None])
     hub_entities = _identify_hub_entities(entity_counts, entity_pages, total_pages)
 
@@ -141,6 +228,8 @@ def build_cooccurrence(
         if len(items) < 2:
             continue
 
+        page_label = page if isinstance(page, int) else -1
+        page_text = page_map.get(page_label)
         candidates: List[tuple[float, int, Optional[int], tuple[str, str], dict, dict]] = []
         for idx, left in enumerate(items):
             left_cui = left.get("cui")
@@ -176,7 +265,6 @@ def build_cooccurrence(
 
         candidates.sort(key=lambda entry: entry[0], reverse=True)
         emitted = 0
-        page_label = page if page is not None else -1
 
         for score, approx_tokens, distance_chars, pair_key, left, right in candidates:
             if emitted >= MAX_EDGES_PER_PAGE:
@@ -194,14 +282,46 @@ def build_cooccurrence(
                 attributes["distance_chars"] = distance_chars
 
             evidence = f"page {page_label} window<={window_tokens} tokens"
+            evidence_refs: List[str] = [f"page-{page_label}"]
+            predicate = "associated_with"
+            confidence = 0.55
+            negated = False
+            conditional_flag = False
+            temporal = None
+
+            left_bounds = _first_offset(left)
+            right_bounds = _first_offset(right)
+            if page_text and left_bounds[0] is not None and right_bounds[0] is not None:
+                snippet, refs = _context_snippet(page_text, page_label, left_bounds, right_bounds)
+                if snippet:
+                    evidence = snippet
+                    evidence_refs = refs or evidence_refs
+                    pattern = detect_pattern(snippet)
+                    if pattern:
+                        predicate = pattern.predicate
+                        confidence = pattern.confidence
+                    negated = detect_negation(snippet)
+                    conditional_flag = detect_conditional(snippet)
+                    temporal = detect_temporal(snippet)
+
+            subject_entity, object_entity = _orient_entities(predicate, left, right)
+            subject = subject_entity.get("cui")
+            obj = object_entity.get("cui")
+            if not subject or not obj:
+                continue
 
             relations.append(
                 RelationRecord(
-                    subject=pair_key[0],
-                    predicate="co_occurs_with",
-                    object=pair_key[1],
+                    subject=subject,
+                    predicate=predicate,
+                    object=obj,
                     attributes=attributes,
                     evidence=evidence,
+                    confidence=round(confidence, 3),
+                    negated=negated,
+                    conditional=conditional_flag,
+                    temporal=temporal,
+                    evidence_refs=evidence_refs,
                 )
             )
 
@@ -317,6 +437,7 @@ def _legacy_cooccurrence(
                     object=cui_right,
                     attributes=attributes,
                     evidence=evidence,
+                    confidence=0.5,
                 )
             )
 

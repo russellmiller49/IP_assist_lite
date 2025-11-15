@@ -1,0 +1,6 @@
+enabled: true
+token_min: 200
+token_max: 500
+overlap_ratio: 0.15
+max_chunks_per_doc: 1200
+min_tokens_merge_threshold: 140

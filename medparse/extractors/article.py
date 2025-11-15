@@ -16,7 +16,8 @@ from medparse.normalize.article_frontmatter import (
     extract_coi_and_funding,
     extract_doi,
     extract_bibliographic_metadata,
-    extract_title_hierarchical,
+    resolve_publication_year,
+    resolve_title,
     is_valid_title,
     link_authors_to_affiliations,
 )
@@ -45,6 +46,7 @@ from medparse.normalize.zotero_map import (
     lookup_front_matter,
 )
 from medparse.normalize.tables_classifier import TableBlock, classify_and_gate_tables
+from medparse.normalize.umls_filters import filter_umls_entities
 from medparse.normalize.umls_linking import (
     UmlsEntity as UmlsEntityRecord,
     UmlsLinkingResult,
@@ -57,11 +59,13 @@ from medparse.schema.article import (
     ArticleDocument,
     ArticleFigure,
     Author,
+    ClinicalTrialRegistration,
     DiagnosticYield,
     EnhancedTable,
     GrantInfo,
     GuidelineRecommendation,
     Outcome,
+    StructuredAbstract,
 )
 from medparse.schema.common import EvidenceSpan, Relation, UmlsEntity
 from medparse.text.paragraphizer import build_paragraph_store
@@ -76,6 +80,26 @@ ATS_CANONICAL_REASONS = {
     ATS_REASON_NONSPECIFIC,
     ATS_REASON_DERIVED,
 }
+
+STRUCTURED_ABSTRACT_LABELS = {
+    "background": "background",
+    "introduction": "background",
+    "objective": "background",
+    "objectives": "background",
+    "design": "methods",
+    "methods": "methods",
+    "materials and methods": "methods",
+    "patients and methods": "methods",
+    "patients": "methods",
+    "results": "results",
+    "findings": "results",
+    "conclusion": "conclusions",
+    "conclusions": "conclusions",
+    "interpretation": "conclusions",
+}
+
+KEYWORD_HEADER_RE = re.compile(r"^(keywords|key words)\s*[:\-]\s*(.+)$", re.IGNORECASE)
+CLINICAL_TRIAL_RE = re.compile(r"NCT\d{8}", re.IGNORECASE)
 
 PRACTICE_MANAGEMENT_TERMS = {
     "practice management",
@@ -373,17 +397,19 @@ def extract_article(
 
     _strip_page_furniture(pages)
     sections = normalize_article_sections(pages)
+    abstract_text = sections.pop("abstract", None)
+    abstract_payload = _build_structured_abstract(abstract_text)
+    keywords = _extract_article_keywords(pages)
+    clinical_trials = _extract_clinical_trials(pages)
     flat_lines = collect_lines(pages)
 
     # Try both title extraction methods and use the better one
     doi = extract_doi(pages[:2])
     biblio = extract_bibliographic_metadata(pages)
-    fallback_title = pdf_path.stem.replace("_", " ").strip()
-    title_info = extract_title_hierarchical(
+    title_info = resolve_title(
         pages,
         metadata=None,
         doi=doi,
-        fallback=fallback_title,
     )
 
     # Use the font-aware extractor as a candidate but guard against headers
@@ -399,12 +425,6 @@ def extract_article(
             "source": title_source,
             "confidence": title_confidence,
         }
-    elif not title_info.get("title") and fallback_title:
-        title_info = {
-            "title": fallback_title,
-            "source": title_info.get("source") or "filename",
-            "confidence": max(best_confidence, 0.25),
-        }
     frontmatter = extract_authors_affiliations(pages)
     authors = _build_authors(frontmatter)
     affiliations = _build_affiliations(frontmatter.get("affiliations", []))
@@ -412,7 +432,14 @@ def extract_article(
     fm_info: Optional[Dict[str, object]] = None
     zotero_author_count = 0
     journal_value = biblio.get("journal")
-    year_value = biblio.get("year")
+    year_info = resolve_publication_year(pages)
+    if not year_info.get("year") and biblio.get("year"):
+        year_info = {
+            "year": biblio.get("year"),
+            "source": "bibliographic_block",
+            "confidence": 0.6,
+        }
+    year_value = year_info.get("year")
 
     if extraction_config.should_use_zotero():
         zotero_path = extraction_config.metadata_sources.get("zotero_json")
@@ -455,6 +482,11 @@ def extract_article(
             journal_value = zotero_match.journal
         if zotero_match.year is not None:
             year_value = zotero_match.year
+            year_info = {
+                "year": zotero_match.year,
+                "source": "zotero",
+                "confidence": max(float(year_info.get("confidence", 0.0) or 0.0), 0.9),
+            }
     elif fm_info is None and extraction_config.should_use_zotero():
         fm_info = {"status": "not_found", "source": "zotero"}
 
@@ -506,6 +538,7 @@ def extract_article(
         GrantInfo(agency=statement) for statement in funding_statements if statement != "None"
     ]
 
+    umls_filter_report: Dict[str, object] = {}
     if extraction_config.should_enrich_umls():
         try:
             umls_result = link_entities(
@@ -519,6 +552,20 @@ def extract_article(
     else:
         umls_result = UmlsLinkingResult(status="skipped_disabled", entities=[])
     umls_records = umls_result.entities
+
+    page_text_map: Dict[int, str] = {}
+    if umls_records:
+        page_text_map = {
+            getattr(page, "number", idx + 1) or idx + 1: page.text or ""
+            for idx, page in enumerate(pages)
+        }
+        umls_records, umls_filter_report = filter_umls_entities(
+            umls_records,
+            page_texts=page_text_map,
+            doc_subtype=doc_subtype,
+        )
+        umls_result.filter_report = umls_filter_report
+        umls_result.entities = umls_records
 
     relation_records = (
         build_relations(
@@ -534,6 +581,7 @@ def extract_article(
             build_cooccurrence(
                 [record.model_dump() for record in umls_records],
                 window=extraction_config.relation_window or "page",
+                page_texts=page_text_map,
             )
         )
 
@@ -549,7 +597,7 @@ def extract_article(
         volume=biblio.get("volume"),
         issue=biblio.get("issue"),
         sections=sections,
-        abstract=sections.get("abstract"),
+        abstract=abstract_payload,
         authors=authors,
         affiliations=affiliations,
         conflicts_of_interest=conflicts,
@@ -568,7 +616,20 @@ def extract_article(
         n_patients=_as_int(yield_data.get("n_patients")),
         n_lesions=_as_int(yield_data.get("n_lesions")),
         references=references,
+        keywords=keywords,
+        clinical_trials=clinical_trials,
     )
+
+    document.pipeline_info["front_matter_confidence"] = {
+        "title": {
+            "confidence": float(title_info.get("confidence", 0.0) or 0.0),
+            "source": title_info.get("source"),
+        },
+        "year": {
+            "confidence": float(year_info.get("confidence", 0.0) or 0.0),
+            "source": year_info.get("source"),
+        },
+    }
 
     research_scope = infer_research_scope(document)
     if research_scope:
@@ -631,6 +692,8 @@ def extract_article(
     if umls_result.umls_model:
         document.pipeline_info.setdefault("umls_model", umls_result.umls_model)
     document.pipeline_info["umls_entities_count"] = len(umls_records)
+    if umls_filter_report:
+        document.pipeline_info["umls_filtering"] = umls_filter_report
     document.pipeline_info["doc_subtype"] = doc_subtype
     if yield_definitions_present is not None:
         document.pipeline_info["yield_definitions_present"] = bool(yield_definitions_present)
@@ -1829,6 +1892,8 @@ def _map_umls_entities(records: Sequence[UmlsEntityRecord]) -> List[UmlsEntity]:
                 text=record.text,
                 page=record.page,
                 confidence=record.confidence,
+                match_score=record.match_score,
+                disambiguation_score=record.disambiguation_score,
             )
         )
     return mapped
@@ -1849,6 +1914,11 @@ def _map_relations(records: Sequence[RelationRecord]) -> List[Relation]:
                 object=record.object,
                 attributes=record.attributes,
                 evidence=evidence,
+                evidence_refs=record.evidence_refs or None,
+                confidence=record.confidence,
+                negated=record.negated,
+                conditional=record.conditional,
+                temporal=record.temporal,
             )
         )
     return mapped
@@ -1868,6 +1938,84 @@ def _as_int(value: Optional[float]) -> Optional[int]:
         return int(value)
     except (TypeError, ValueError):
         return None
+
+
+def _normalize_abstract_label(label: str) -> Optional[str]:
+    cleaned = label.strip().lower().rstrip(":")
+    cleaned = re.sub(r"\s+", " ", cleaned)
+    return STRUCTURED_ABSTRACT_LABELS.get(cleaned)
+
+
+def _build_structured_abstract(raw: Optional[str]) -> Optional[StructuredAbstract]:
+    if not raw:
+        return None
+    sections: Dict[str, str] = {}
+    current_label: Optional[str] = None
+    buffer: List[str] = []
+
+    for line in raw.splitlines():
+        stripped = line.strip()
+        if not stripped:
+            if buffer and current_label:
+                buffer.append("")
+            continue
+        if ":" in stripped:
+            label_candidate, remainder = stripped.split(":", 1)
+            normalized = _normalize_abstract_label(label_candidate)
+            if normalized:
+                if current_label and buffer:
+                    sections[current_label] = " ".join(part for part in buffer if part).strip()
+                current_label = normalized
+                buffer = [remainder.strip()]
+                continue
+        if current_label:
+            buffer.append(stripped)
+        else:
+            buffer.append(stripped)
+
+    if current_label and buffer:
+        sections[current_label] = " ".join(part for part in buffer if part).strip()
+
+    structured = bool(sections)
+    return StructuredAbstract(structured=structured, sections=sections, text=raw.strip())
+
+
+def _extract_article_keywords(pages: Sequence[PageData]) -> List[str]:
+    for page in pages[:3]:
+        lines = page.lines or []
+        for idx, raw_line in enumerate(lines[:80]):
+            match = KEYWORD_HEADER_RE.match(raw_line.strip())
+            if not match:
+                continue
+            payload = [match.group(2)]
+            for follow in lines[idx + 1 : idx + 6]:
+                follow_clean = follow.strip()
+                if not follow_clean:
+                    break
+                lowered = follow_clean.lower()
+                if lowered.startswith(("abbreviations", "introduction", "abstract")):
+                    break
+                payload.append(follow_clean)
+            tokens = re.split(r"[,;•·]", " ".join(payload))
+            keywords = [token.strip(" .;:,\u2022\u2023") for token in tokens]
+            keywords = [token for token in keywords if len(token) >= 2]
+            if keywords:
+                return keywords
+    return []
+
+
+def _extract_clinical_trials(pages: Sequence[PageData]) -> List[ClinicalTrialRegistration]:
+    seen: List[str] = []
+    for page in pages:
+        candidates = [page.text or ""]
+        if page.lines:
+            candidates.append(" ".join(page.lines))
+        combined = " ".join(candidates)
+        for match in CLINICAL_TRIAL_RE.findall(combined):
+            trial_id = match.upper()
+            if trial_id not in seen:
+                seen.append(trial_id)
+    return [ClinicalTrialRegistration(id=trial_id, registry="ClinicalTrials.gov") for trial_id in seen]
 
 
 __all__ = ["extract_article"]

@@ -146,6 +146,17 @@ def _contains_any(text: str, terms: Iterable[str]) -> bool:
     return any(term in text for term in terms)
 
 
+def _abstract_text(document: ArticleDocument) -> str:
+    abstract = getattr(document, "abstract", None)
+    if isinstance(abstract, str):
+        return abstract
+    if abstract and getattr(abstract, "text", None):
+        parts = [abstract.text]
+        parts.extend(abstract.sections.values())
+        return " ".join(part for part in parts if part)
+    return ""
+
+
 def infer_research_scope(document: ArticleDocument | None) -> str:
     """Classify the research scope for validator routing."""
 
@@ -156,7 +167,7 @@ def infer_research_scope(document: ArticleDocument | None) -> str:
     if subtype in {"guideline", "statement", "classification"}:
         return "unknown"
     title = (document.title or "").lower()
-    abstract = (document.abstract or "").lower()
+    abstract = _abstract_text(document).lower()
     sections_text = _normalize_sections(document.sections)
     table_text = _table_text(document.tables)
     combined = " ".join(part for part in (title, abstract, sections_text, table_text) if part)

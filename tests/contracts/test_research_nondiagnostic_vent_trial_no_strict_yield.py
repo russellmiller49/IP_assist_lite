@@ -26,10 +26,11 @@ def test_research_nondiagnostic_vent_trial_no_strict_yield() -> None:
     assert document.doc_subtype == "research_therapeutic"
     assert document.research_scope == "research_therapeutic"
 
-    ats_meta = getattr(document, "ats_compatibility", None)
+    ats_meta = getattr(document, "ats_profile", None)
     assert ats_meta is not None
-    assert ats_meta.compatible_with_ats is False
-    assert "not_diagnostic_study" in (ats_meta.exclusion_reasons or [])
+    assert ats_meta.is_diagnostic_study is False
+    assert ats_meta.strict_yield_required is False
+    assert "not_diagnostic_study" in (ats_meta.strict_exclusion_reasons or [])
 
     metrics = outcome.metrics
     ats_metrics = metrics.get("ats")

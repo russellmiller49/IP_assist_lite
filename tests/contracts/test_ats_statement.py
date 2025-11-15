@@ -31,6 +31,9 @@ def test_ats_statement_has_summary_structures():
 
     assert document.definitions
     assert "diagnostic_yield" in document.definitions
+    diag_def = document.definitions["diagnostic_yield"]
+    assert diag_def.text
+    assert diag_def.evidence_refs, "diagnostic yield definition missing evidence refs"
 
     assert document.diagnostic_flow is not None
     assert document.diagnostic_flow.formula

@@ -14,7 +14,7 @@ from medparse.guideline.grade_normalizer import detect_grade_from_lexicon
 from medparse.normalize.guideline_grade import SIGN_INLINE_RE, detect_context_candidates, detect_inline_candidates
 from medparse.tables.extract_guideline_tables import TableGradeIndex, extract_guideline_grade_index
 from medparse.guideline.grades import canonicalize_scale, map_grade_code, map_sign_letter
-from medparse.schema.article import ArticleDocument, DiagnosticFlow, GuidelineRecommendation, KeyPoint
+from medparse.schema.article import ArticleDocument, DefinitionEntry, DiagnosticFlow, GuidelineRecommendation, KeyPoint
 from medparse.schema.common import EvidenceSpan
 
 
@@ -1114,17 +1114,24 @@ def _extract_definitions(document: ArticleDocument, paragraph_store: Dict[str, D
         _derive_definitions_from_key_points(document)
         return
 
-    extracted: Dict[str, str] = {}
+    table_hash = None
+    if target_table.caption:
+        table_hash = _find_paragraph_hash(paragraph_store, target_table.caption[:200])
+
+    extracted: Dict[str, DefinitionEntry] = {}
     for row in target_table.rows or []:
         if not row or len(row) < 2:
             continue
         header = (row[0] or "").strip().lower()
-        value = (row[1] or "").strip()
+        value_parts = [(cell or "").strip() for cell in row[1:] if cell]
+        value = " ".join(part for part in value_parts if part)
         if not header or not value:
             continue
         for key, field in DEFINITION_FIELD_MAP.items():
             if key in header:
-                extracted[field] = value
+                value_hash = _find_paragraph_hash(paragraph_store, value[:200])
+                evidence_refs = [value_hash] if value_hash else ([table_hash] if table_hash else [])
+                _set_definition_entry(extracted, field, value, evidence_refs=evidence_refs, overwrite=True)
                 break
 
     if not extracted:
@@ -1132,34 +1139,38 @@ def _extract_definitions(document: ArticleDocument, paragraph_store: Dict[str, D
         return
 
     document.definitions = extracted
-    hash_id = _find_paragraph_hash(paragraph_store, "Table 1. Definitions of Diagnostic Outcome Measures")
-    if hash_id:
-        entry = paragraph_store.get(hash_id, {})
-        document.definitions_evidence = _build_pointer(hash_id, entry)
-        document.definitions_evidence_refs = [hash_id]
+    if table_hash:
+        entry = paragraph_store.get(table_hash, {})
+        document.definitions_evidence = _build_pointer(table_hash, entry)
+        document.definitions_evidence_refs = [table_hash]
 
 
 def _derive_definitions_from_key_points(document: ArticleDocument) -> None:
     if not document.key_points:
         return
 
-    mapping: Dict[str, str] = dict(document.definitions or {})
+    mapping: Dict[str, DefinitionEntry] = dict(document.definitions or {})
     evidence_span = document.definitions_evidence
     evidence_refs = document.definitions_evidence_refs
 
     for point in document.key_points:
         text_lower = point.text.lower()
         if "strict definition of diagnostic yield" in text_lower:
-            mapping.setdefault("diagnostic_yield", point.text)
+            _set_definition_entry(
+                mapping,
+                "diagnostic_yield",
+                point.text,
+                evidence_refs=point.evidence_refs,
+            )
             if point.evidence and not evidence_span:
                 evidence_span = point.evidence
                 evidence_refs = point.evidence_refs
         if "typical diagnostic accuracy measures" in text_lower:
-            mapping.setdefault("sensitivity", point.text)
-            mapping.setdefault("specificity", point.text)
-            mapping.setdefault("ppv", point.text)
-            mapping.setdefault("npv", point.text)
-            mapping.setdefault("diagnostic_accuracy", point.text)
+            _set_definition_entry(mapping, "sensitivity", point.text, evidence_refs=point.evidence_refs)
+            _set_definition_entry(mapping, "specificity", point.text, evidence_refs=point.evidence_refs)
+            _set_definition_entry(mapping, "ppv", point.text, evidence_refs=point.evidence_refs)
+            _set_definition_entry(mapping, "npv", point.text, evidence_refs=point.evidence_refs)
+            _set_definition_entry(mapping, "diagnostic_accuracy", point.text, evidence_refs=point.evidence_refs)
             if point.evidence and not evidence_span:
                 evidence_span = point.evidence
                 evidence_refs = point.evidence_refs
@@ -1170,6 +1181,23 @@ def _derive_definitions_from_key_points(document: ArticleDocument) -> None:
             document.definitions_evidence = evidence_span
         if evidence_refs:
             document.definitions_evidence_refs = evidence_refs
+
+
+def _set_definition_entry(
+    mapping: Dict[str, DefinitionEntry],
+    field: str,
+    text: str,
+    *,
+    evidence_refs: Optional[List[str]] = None,
+    overwrite: bool = False,
+) -> None:
+    normalized = (text or "").strip()
+    if not normalized:
+        return
+    if not overwrite and field in mapping and mapping[field].text:
+        return
+    refs = [ref for ref in (evidence_refs or []) if ref]
+    mapping[field] = DefinitionEntry(text=normalized, evidence_refs=refs)
 
 
 def _extract_diagnostic_flow(document: ArticleDocument) -> None:

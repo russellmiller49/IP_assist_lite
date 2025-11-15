@@ -31,12 +31,19 @@ emit:
   max_relations: 15000
   relation_window: 80
   keep_evidence_bank: true
-  max_tables: 10
+  max_tables: 24
 
 ifu:
   small_ifu_threshold: 4
   small_leaflet_policy: map_intended_use_to_indications
   ifu_engine: hybrid
+  extract:
+    long_doc:
+      streaming: true
+      per_page_timeout_s: 10
+      page_threshold: 250
+      pages_per_batch: 40
+      max_failed_batches: 4
   engine_overrides:
     intuitive: pymupdf
     erbe: pdfplumber
@@ -56,8 +63,8 @@ ifu:
       prefer: pymupdf
       fallback: pdfplumber
       timeouts:
-        pymupdf: 70
-        pdfplumber: 85
+        pymupdf: 240
+        pdfplumber: 210
   anchors:
     indications_for_use:
       start:

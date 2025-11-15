@@ -255,6 +255,10 @@ def extract_centered_title_block(page: PageData) -> Optional[str]:
             words = cleaned.split()
             if cleaned.isupper() or len(words) <= 2 or re.search(r"\b\d{1,3}\b", cleaned):
                 return True
+        if "@" in cleaned:
+            return True
+        if re.search(r"\.{3,}", cleaned):
+            return True
         return False
 
     def _merge_segments(segments: List[str]) -> str:
@@ -1203,6 +1207,74 @@ def _valid_marker(marker: str) -> bool:
     return True
 
 
+_YEAR_LINE_PATTERN = re.compile(
+    r"(?:published|accepted|copyright|©)\s*(?:online|on|in|by|:)?\s*(?:[A-Za-z]+\s+)?((?:19|20)\d{2})",
+    re.IGNORECASE,
+)
+
+
+def resolve_title(
+    pages: List[PageData],
+    *,
+    metadata: Optional[Dict[str, Any]] = None,
+    doi: Optional[str] = None,
+) -> Dict[str, Optional[object]]:
+    info = extract_title_hierarchical(pages, metadata=metadata, doi=doi, fallback=None)
+    if info.get("title"):
+        return info
+
+    heading_title = _first_heading_before_abstract(pages)
+    if heading_title:
+        return {"title": heading_title, "confidence": 0.45, "source": "heading"}
+    meta_title = (metadata or {}).get("title") if metadata else None
+    if meta_title and is_valid_title(meta_title):
+        return {"title": meta_title.strip(), "confidence": 0.4, "source": "metadata"}
+    return {"title": None, "confidence": 0.0, "source": None}
+
+
+def resolve_publication_year(
+    pages: List[PageData],
+) -> Dict[str, Optional[object]]:
+    for page in pages[:2]:
+        for line in page.lines or []:
+            match = _YEAR_LINE_PATTERN.search(line)
+            if match:
+                return {
+                    "year": int(match.group(1)),
+                    "source": "published_line",
+                    "confidence": 0.85,
+                }
+    doi_hint = extract_doi(pages[:2])
+    if doi_hint:
+        year_match = re.search(r"(19|20)\d{2}", doi_hint)
+        if year_match:
+            return {
+                "year": int(year_match.group(0)),
+                "source": "doi_hint",
+                "confidence": 0.5,
+            }
+    return {"year": None, "source": None, "confidence": 0.0}
+
+
+def _first_heading_before_abstract(pages: List[PageData]) -> Optional[str]:
+    abstract_seen = False
+    for page in pages[:2]:
+        for heading in page.headings or []:
+            title = getattr(heading, "title", None) if hasattr(heading, "title") else heading.get("title")
+            level = getattr(heading, "level", None) if hasattr(heading, "level") else heading.get("level")
+            if not title:
+                continue
+            lowered = title.lower()
+            if "abstract" in lowered:
+                abstract_seen = True
+                break
+            if level == 1 and not abstract_seen:
+                return title.strip()
+        if abstract_seen:
+            break
+    return None
+
+
 __all__ = [
     "extract_title_hierarchical",
     "is_valid_title",
@@ -1211,4 +1283,6 @@ __all__ = [
     "extract_coi_and_funding",
     "extract_doi",
     "link_authors_to_affiliations",
+    "resolve_title",
+    "resolve_publication_year",
 ]

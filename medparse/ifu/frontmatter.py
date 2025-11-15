@@ -39,14 +39,19 @@ MANUFACTURER_PATTERNS: Sequence[tuple[str, Sequence[re.Pattern[str]]]] = [
     ),
 ]
 
+DATE_FALLBACK_PATTERN = re.compile(r"\b(20\d{2}[./-]\s*[01]\d)\b")
+
+
 IDENTIFIER_PATTERNS: Dict[str, Sequence[re.Pattern[str]]] = {
     "part_number": (
+        re.compile(r"\bPN\s*[:#]?\s*([A-Z0-9][A-Z0-9\-/ \t]{2,})", re.IGNORECASE),
         re.compile(
-            r"(?:PN|P/N|REF|Catalog(?:ue)?\s*(?:No\.?|Number)?|Cat(?:\.)?\s*No\.?|Order\s*(?:No\.?|Number)|Document\s*(?:No\.|#)|Article\s*(?:No\.?|Number))\s*[:#]?\s*([A-Z0-9][A-Z0-9\-_/]{2,})",
+            r"(?:PN|P/N|REF|Catalog(?:ue)?\s*(?:No\.?|Number)?|Cat(?:\.)?\s*No\.?|Order\s*(?:No\.?|Number)|Document\s*(?:No\.|#)|Article\s*(?:No\.?|Number))\s*[:#]?\s*([A-Z0-9][A-Z0-9\-/ \t]{2,})",
             re.IGNORECASE,
         ),
     ),
     "revision": (
+        re.compile(r"\bRev\.?\s*([A-Z0-9.\-]{1,12})", re.IGNORECASE),
         re.compile(r"(?:Rev(?:ision)?|Version)\s*[:#]?\s*([A-Z0-9][A-Z0-9\.\-]{0,9})", re.IGNORECASE),
         re.compile(r"(?:Revision\s*(?:Level|Code)|Rev\.)\s*[:#]?\s*([A-Z0-9][A-Z0-9\.\-]{0,9})", re.IGNORECASE),
     ),
@@ -56,10 +61,11 @@ IDENTIFIER_PATTERNS: Dict[str, Sequence[re.Pattern[str]]] = {
         re.compile(r"(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)\.?\s+(\d{4})", re.IGNORECASE),
         re.compile(r"(0?[1-9]|1[0-2])[/-](\d{4})"),
         re.compile(r"(?:D0\d{5,6})\s*[\[(]?\s*(\d{4}-\d{2})\s*[\])]?"),
+        DATE_FALLBACK_PATTERN,
     ),
     "model": (
-        re.compile(r"(?:Model|Type|Series)\s*[:#]?\s*([A-Z0-9][A-Z0-9\-_/]{1,})", re.IGNORECASE),
-        re.compile(r"System\s*[:#]\s*([A-Z0-9][A-Z0-9\-_/]{1,})", re.IGNORECASE),
+        re.compile(r"(?:Model|Type|Series)\s*[:#]?\s*([A-Z0-9][A-Z0-9\-/ \t]{1,})", re.IGNORECASE),
+        re.compile(r"System\s*[:#]\s*([A-Z0-9][A-Z0-9\-/ \t]{1,})", re.IGNORECASE),
     ),
 }
 
@@ -79,6 +85,9 @@ BLOCKLIST_KEYWORDS = {
     "copyright",
     "printed",
 }
+
+TOC_DOT_RE = re.compile(r"[.·…]{2,}\s*\d+$")
+CHAPTER_LINE_RE = re.compile(r"^(?:chapter|section)\s+\d", re.IGNORECASE)
 
 CONFIG_PATH = Path(__file__).resolve().parents[2] / "configs" / "_shared" / "ifu_frontmatter.yaml"
 FOOTER_SAMPLE_PAGES = 2
@@ -346,19 +355,32 @@ def extract_front_matter(
         if field == "publication_date":
             normalized = _normalize_date(raw_value)
             if normalized:
-                result.publication_date = normalized
-                result.record("publication_date", source)
-                if re.fullmatch(r"\d{4}-\d{2}$", normalized):
+                if _pattern is DATE_FALLBACK_PATTERN and re.fullmatch(r"\d{4}-\d{2}$", normalized):
+                    result.publication_date = f"{normalized}-01"
                     result.publication_date_precision = "month"
+                else:
+                    result.publication_date = normalized
+                    if re.fullmatch(r"\d{4}-\d{2}$", normalized):
+                        result.publication_date_precision = "month"
+                result.record("publication_date", source)
         elif field == "part_number":
-            result.part_number = raw_value.strip().upper()
+            normalized_part = _normalize_part_number(raw_value)
+            if normalized_part:
+                result.part_number = normalized_part
             result.record("part_number", source)
         elif field == "revision":
-            result.revision = raw_value.strip().upper()
-            result.record("revision", source)
+            normalized_revision = _sanitize_revision(raw_value)
+            if normalized_revision:
+                manufacturer_value = (result.manufacturer or "").lower()
+                if "intuitive" in manufacturer_value and not normalized_revision.lower().startswith("rev"):
+                    normalized_revision = f"Rev {normalized_revision}"
+                result.revision = normalized_revision
+                result.record("revision", source)
         elif field == "model":
-            result.model = raw_value.strip()
-            result.record("model", source)
+            normalized_model = _normalize_model(raw_value)
+            if normalized_model:
+                result.model = normalized_model
+                result.record("model", source)
 
     print_code_patterns = config.get("_print_code_patterns") if isinstance(config, dict) else None
     if isinstance(print_code_patterns, list) and print_code_patterns:
@@ -387,18 +409,42 @@ def extract_front_matter(
             if not part_match:
                 part_match = re.search(r"\b([0-9]{3,}[-_][0-9]{2,})\b", normalized_title)
             if part_match:
-                result.part_number = part_match.group(1).upper()
-                result.record("part_number", "filename")
+                normalized_part = _normalize_part_number(part_match.group(1))
+                if normalized_part:
+                    result.part_number = normalized_part
+                    result.record("part_number", "filename")
         if not result.part_number:
             doc_match = re.search(r"\b(D[0-9]{5,})\b", normalized_title, re.IGNORECASE)
             if doc_match:
-                result.part_number = doc_match.group(1).upper()
-                result.record("part_number", "filename")
+                normalized_part = _normalize_part_number(doc_match.group(1))
+                if normalized_part:
+                    result.part_number = normalized_part
+                    result.record("part_number", "filename")
         if not result.revision:
             rev_match = re.search(r"\brev(?:ision)?[_\-\s]*([A-Z0-9\.\-]{1,10})", normalized_title, re.IGNORECASE)
             if rev_match:
-                result.revision = rev_match.group(1).upper()
-                result.record("revision", "filename")
+                normalized = _sanitize_revision(rev_match.group(1))
+                if normalized:
+                    result.revision = normalized
+                    result.record("revision", "filename")
+
+    if not result.model or result.model.lower() == "project":
+        fallback_model = _normalize_model(_fallback_model_from_text(cover_text) or "")
+        if not fallback_model:
+            fallback_model = _normalize_model(_fallback_model_from_text(tail_text) or "")
+        if fallback_model:
+            result.model = fallback_model
+            result.record("model", "fallback_cover")
+
+    if result.product_name and result.manufacturer:
+        manufacturer_clean = result.manufacturer.split(",")[0].strip()
+        if (
+            manufacturer_clean
+            and "intuitive" in result.manufacturer.lower()
+            and not result.product_name.lower().startswith(manufacturer_clean.lower().split()[0])
+        ):
+            result.product_name = f"{manufacturer_clean.split()[0]} {result.product_name}"
+            result.record("product_name", "manufacturer_prefix")
 
     return result.as_dict()
 
@@ -438,6 +484,8 @@ def _normalize_date(raw: str) -> Optional[str]:
     candidate = raw.strip()
     if not candidate:
         return None
+    candidate = re.sub(r"([./-])\s+", r"\1", candidate)
+    candidate = re.sub(r"\s+([./-])", r"\1", candidate)
     candidate = candidate.replace("/", "-").replace(".", "-")
     if re.fullmatch(r"\d{4}-\d{2}-\d{2}", candidate):
         return candidate
@@ -485,13 +533,93 @@ def _normalize_date(raw: str) -> Optional[str]:
     return None
 
 
+REVISION_PREFIX = re.compile(r"(?i)^rev(?:ision)?[:\s-]*")
+
+
+def _sanitize_revision(value: str) -> Optional[str]:
+    if not value:
+        return None
+    token = REVISION_PREFIX.sub("", value).strip(" .-_")
+    token = re.sub(r"\s+", "", token).upper()
+    if not token:
+        return None
+    if token in {"NA", "N/A", "NONE"}:
+        return None
+    if len(token) > 12:
+        return None
+    if not re.fullmatch(r"[A-Z0-9.\-]+", token):
+        return None
+    digits = sum(char.isdigit() for char in token)
+    letters = sum(char.isalpha() for char in token)
+    if digits >= 3 and letters == 0:
+        return None
+    return token
+
+
+def _normalize_part_number(value: str) -> str:
+    raw = value or ""
+    normalized = raw.strip()
+    upper = normalized.upper()
+    stop_tokens = (" REV", " REV.", " VERSION", " DATE", " MODEL", " USER", " PN ")
+    for marker in stop_tokens:
+        idx = upper.find(marker)
+        if idx != -1:
+            normalized = normalized[:idx]
+            upper = upper[:idx]
+            break
+    cleaned = re.sub(r"[^\w\s\-/]", "", normalized)
+    cleaned = re.sub(r"\s+", "-", cleaned.strip())
+    cleaned = re.sub(r"-{2,}", "-", cleaned).strip("-_/")
+    return cleaned
+
+
+def _normalize_model(value: str) -> str:
+    cleaned = value.strip()
+    if not cleaned:
+        return ""
+    cleaned = re.split(r"[.;]", cleaned)[0].strip()
+    if re.search(r"\d", cleaned) and " " in cleaned:
+        cleaned = cleaned.replace(" ", "")
+    return cleaned
+
+
+def _fallback_model_from_text(text: str) -> Optional[str]:
+    if not text:
+        return None
+    match = re.search(r"\bModel\s+([A-Z0-9][A-Z0-9\-/ \t]{1,})", text, re.IGNORECASE)
+    if match:
+        return match.group(1).strip()
+    return None
+
+
 def _clean_product_name(value: str, *, manufacturer: Optional[str] = None) -> str:
     cleaned = value.strip()
     cleaned = re.sub(r"(?i)^product\s+name[:\-]\s*", "", cleaned)
     cleaned = cleaned.strip(" :-")
+    lowered = cleaned.lower()
+    if "table of contents" in lowered or lowered == "contents":
+        return ""
+    if _looks_like_toc_line(cleaned):
+        return ""
     if manufacturer and cleaned.lower() == manufacturer.lower():
         return ""
     return cleaned
+
+
+def _looks_like_toc_line(line: str) -> bool:
+    stripped = line.strip()
+    if not stripped:
+        return False
+    lowered = stripped.lower()
+    if "table of contents" in lowered or lowered == "contents":
+        return True
+    if CHAPTER_LINE_RE.match(stripped):
+        return True
+    if TOC_DOT_RE.search(stripped):
+        return True
+    if re.search(r"\s\d{1,3}$", stripped) and "." in stripped:
+        return True
+    return False
 
 
 def _select_product_name(
@@ -566,16 +694,36 @@ def _select_product_name(
     return None, None
 
 
-def _collect_cover_lines(pages: Sequence[PageData], max_pages: int = 3) -> List[str]:
+def _collect_cover_lines(pages: Sequence[PageData], max_pages: int = 3, tail_pages: int = 2) -> List[str]:
     lines: List[str] = []
-    for page in pages[:max_pages]:
-        if not page or not page.lines:
-            continue
-        for raw_line in page.lines:
+    seen_indexes: set[int] = set()
+
+    def _append_lines(source_page: PageData) -> None:
+        raw_lines = list(source_page.lines or [])
+        if not raw_lines and source_page.text:
+            raw_lines = source_page.text.splitlines()
+        for raw_line in raw_lines:
             stripped = raw_line.strip()
-            if not stripped:
+            if not stripped or _looks_like_toc_line(stripped):
                 continue
             lines.append(stripped)
+
+    total_pages = len(pages)
+    for idx in range(min(max_pages, total_pages)):
+        page = pages[idx]
+        if page:
+            _append_lines(page)
+        seen_indexes.add(idx)
+
+    if tail_pages > 0 and total_pages:
+        for offset in range(tail_pages, 0, -1):
+            index = total_pages - offset
+            if index < 0 or index in seen_indexes or index >= total_pages:
+                continue
+            page = pages[index]
+            if page:
+                _append_lines(page)
+
     return lines
 
 
@@ -584,6 +732,8 @@ def _score_title(line: str) -> float:
     if not stripped:
         return 0.0
     if stripped.endswith(("-", "–", "—")):
+        return 0.0
+    if _looks_like_toc_line(stripped):
         return 0.0
     lowered = stripped.lower()
     if any(keyword in lowered for keyword in BLOCKLIST_KEYWORDS):

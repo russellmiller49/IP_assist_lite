@@ -17,10 +17,20 @@ def load_pages(
     engine: str = "pymupdf",
     max_pages: Optional[int] = None,
     ocr: bool = False,
+    start_page: int = 1,
 ) -> List[PageData]:
     """Load all pages for ``pdf_path`` via the ingestion layer."""
 
-    return list(iter_pages(pdf_path, engine=engine, page_limit=max_pages, enable_ocr=ocr))
+    start_page = max(1, int(start_page or 1))
+    return list(
+        iter_pages(
+            pdf_path,
+            engine=engine,
+            page_limit=max_pages,
+            enable_ocr=ocr,
+            start_page=start_page,
+        )
+    )
 
 
 def iter_section_windows(pages: Sequence[PageData]) -> Iterator[Tuple[Heading, Optional[Heading]]]:

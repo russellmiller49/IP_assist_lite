@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from typing import Dict, List, Literal, Optional, Tuple
 
-from pydantic import Field
+from pydantic import Field, ConfigDict
 
 from .base import MedparseModel
 from .common import BaseDocument, EvidenceSpan, Relation, UmlsEntity
@@ -73,7 +73,7 @@ class CountFraction(MedparseModel):
 class ResearchOutcomeMetric(MedparseModel):
     """Normalized diagnostic performance metric with evidence pointers."""
 
-    percent: Optional[float] = Field(default=None, ge=0.0, le=100.0)
+    percent: Optional[float] = Field(default=None, ge=-200.0, le=200.0)
     ci_95: Optional[Tuple[float, float]] = None
     p_value: Optional[float] = None
     n_over_N: Optional[CountFraction] = None
@@ -93,6 +93,13 @@ class ResearchOutcomeArm(MedparseModel):
 
 class ResearchOutcomes(MedparseModel):
     """Bundle of diagnostic research outcomes with per-arm metrics."""
+
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        str_strip_whitespace=True,
+        extra="allow",
+    )
 
     design: Optional[str] = None
     primary_outcome: Optional[str] = None
@@ -118,6 +125,19 @@ class DiagnosticYield(MedparseModel):
     method_note: Optional[str] = None
     evidence_refs: Optional[List[str]] = None  # Hash IDs for evidence bank
     pooled_value: Optional[float] = None  # When multiple strata pooled
+    strict: bool = False
+    compatible_with_ats: bool = False
+    evidence: Optional[EvidenceSpan] = None
+
+
+class DefinitionEntry(MedparseModel):
+    """Structured definition text with provenance references."""
+
+    text: str
+    evidence_refs: List[str] = Field(default_factory=list)
+    value: Optional[float] = None
+    numerator: Optional[int] = None
+    denominator: Optional[int] = None
     pooling_method: Optional[Literal["fixed_effects", "weighted"]] = None
     strata: List[Dict] = Field(default_factory=list)  # Individual stratum yields
     compatible_with_ats: bool = False
@@ -140,12 +160,13 @@ class DiagnosticYield(MedparseModel):
         return self.denominator
 
 
-class ATSCompatibility(MedparseModel):
-    """Compatibility report for ATS diagnostic-yield expectations."""
+class ATSProfile(MedparseModel):
+    """Document-level ATS diagnostic yield profile."""
 
-    compatible_with_ats: bool = False
-    exclusion_reasons: List[str] = Field(default_factory=list)
-    strict_required: bool = False
+    is_diagnostic_study: bool = False
+    strict_yield_required: bool = False
+    strict_yield_observed: bool = False
+    strict_exclusion_reasons: List[str] = Field(default_factory=list)
 
 
 class GuidelineRecommendation(MedparseModel):
@@ -292,7 +313,7 @@ class ArticleDocument(BaseDocument):
     pages: Optional[str] = None
 
     # Content (enhanced)
-    abstract: Optional[str] = None
+    abstract: Optional[StructuredAbstract] = None
     graphical_abstract_image: Optional[str] = None  # Path or base64
     highlights: List[str] = Field(default_factory=list)  # "What this paper adds", "Key Points"
     keywords: List[str] = Field(default_factory=list)
@@ -307,12 +328,13 @@ class ArticleDocument(BaseDocument):
     outcomes: List[Outcome] = Field(default_factory=list)
     diagnostic_yield: Optional[DiagnosticYield] = None
     research_outcomes: Optional[ResearchOutcomes] = None
-    definitions: Dict[str, str] = Field(default_factory=dict)
+    definitions: Dict[str, DefinitionEntry] = Field(default_factory=dict)
     definitions_evidence: Optional[EvidenceSpan] = None
     definitions_evidence_refs: Optional[List[str]] = None
     diagnostic_flow: Optional[DiagnosticFlow] = None
     yield_definitions_present: Optional[bool] = None
-    ats_compatibility: ATSCompatibility = Field(default_factory=ATSCompatibility)
+    ats_profile: ATSProfile = Field(default_factory=ATSProfile)
+    clinical_trials: List[ClinicalTrialRegistration] = Field(default_factory=list)
 
     # Guidelines (enhanced)
     recommendations: List[GuidelineRecommendation] = Field(default_factory=list)
@@ -341,3 +363,16 @@ class ArticleDocument(BaseDocument):
         """Get first corresponding author for backward compatibility."""
         corresponding = [a for a in self.authors if a.is_corresponding]
         return corresponding[0] if corresponding else None
+class StructuredAbstract(MedparseModel):
+    """Structured abstract with IMRAD segments."""
+
+    structured: bool = False
+    sections: Dict[str, str] = Field(default_factory=dict)
+    text: Optional[str] = None
+
+
+class ClinicalTrialRegistration(MedparseModel):
+    """Registered clinical trial identifier."""
+
+    id: str
+    registry: Optional[str] = None

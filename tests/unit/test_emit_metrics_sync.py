@@ -24,10 +24,12 @@ def test_emit_metrics_mirror_pipeline_counters():
         "modifications": {"diagnostic_yield_numerator": 1},
         "diff_summary": {"diagnostic_yield_numerator": 1},
         "reasons": ["ats_diagnostic_yield_backfill"],
+        "patch_summaries": [{"name": "patch_a", "diagnostic_yield_numerator": 1}],
     }
-    document.ats_compatibility.compatible_with_ats = False
-    document.ats_compatibility.strict_required = False
-    document.ats_compatibility.exclusion_reasons = ["not_diagnostic_study"]
+    document.ats_profile.is_diagnostic_study = False
+    document.ats_profile.strict_yield_required = False
+    document.ats_profile.strict_yield_observed = False
+    document.ats_profile.strict_exclusion_reasons = ["not_diagnostic_study"]
     document.pipeline_info["safety_blocks_added"] = 2
     document.pipeline_info["safety_expected_min"] = 12
     document.pipeline_info["references_anchor_backfill"] = True
@@ -104,8 +106,8 @@ def test_emit_metrics_mirror_pipeline_counters():
     assert metrics["second_pass_patches"] == ["patch_a"]
     assert metrics["second_pass_reasons"] == ["ats_diagnostic_yield_backfill"]
     assert metrics["second_pass_modifications"] == {"diagnostic_yield_numerator": 1}
-    assert metrics["ats_compatibility"]["compatible_with_ats"] is False
-    assert metrics["ats_compatibility"]["exclusion_reasons"] == ["not_diagnostic_study"]
+    assert metrics["ats_profile"]["is_diagnostic_study"] is False
+    assert metrics["ats_profile"]["strict_exclusion_reasons"] == ["not_diagnostic_study"]
     assert "safety_blocks_added" not in metrics or isinstance(metrics["safety_blocks_added"], int)
     assert "safety_expected_min" not in metrics or isinstance(metrics["safety_expected_min"], int)
 
@@ -117,9 +119,14 @@ def test_emit_metrics_mirror_pipeline_counters():
 
     summary = metrics.get("_metrics")
     assert isinstance(summary, dict)
-    assert summary["second_pass_applied"] == ["patch_a"]
+    assert summary["second_pass_applied"] is True
+    assert summary["second_pass_patches"] == ["patch_a"]
     assert summary["second_pass_reasons"] == ["ats_diagnostic_yield_backfill"]
     assert summary["second_pass_modifications"] == {"diagnostic_yield_numerator": 1}
+    assert summary["tables_original"] == document.pipeline_info.get("tables_original")
+    assert summary["tables_kept"] == metrics["tables_kept"]
+    assert summary["tables_dropped"] == metrics["tables_dropped"]
+    assert summary["patches"][0]["name"] == "patch_a"
 
 
 def test_ifu_toc_guard_metrics():

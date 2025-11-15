@@ -9,7 +9,8 @@ def test_article_extraction_captures_metadata_and_yield() -> None:
 
     assert document.doc_type == "article"
     assert document.title == "Robotic Cryobiopsy 2022"
-    assert document.abstract and "peripheral lung lesions" in document.abstract.lower()
+    abstract_text = document.abstract.text if document.abstract else ""
+    assert abstract_text and "peripheral lung lesions" in abstract_text.lower()
     assert document.n_patients == 112
     assert document.n_lesions == 120
     assert document.yield_summary and document.yield_summary.strict_yield == 101 / 112

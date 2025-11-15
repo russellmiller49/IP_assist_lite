@@ -51,6 +51,7 @@ LEVEL_TO_SEVERITY = {
 ICON_PREFIX_PATTERN = re.compile(
     r"^[\s\-\u2022\u2023\u25AA\u25CF\u25A0\u25B6\u25C6\u25C7\u25CF\u25A1\u25B2\u25B3\u2206\u2023●▪■□▶►»⚠!△▲∆]+"
 )
+DOT_LEADER_SEGMENT = re.compile(r"(?:\.\s*){4,}")
 COLON_HEADER_PATTERN = re.compile(r"^\s*([A-Z][A-Z0-9\s/&\-]+?)\s*[:：]\s*(.*)$")
 DASH_HEADER_PATTERN = re.compile(r"^\s*([A-Z][A-Z0-9\s/&\-]+?)\s*[–—\-]\s*(.+)$")
 HEADING_WITH_NUMBER_PATTERN = re.compile(r"^\s*\d+(?:\.\d+)*\s+[A-Z]")
@@ -62,6 +63,10 @@ BULLET_PATTERN = re.compile(
 )
 INDENT_PATTERN = re.compile(r"^\s{2,}")
 FOOTER_CLEANUP_PATTERN = re.compile(r"(page\s+\d+(?:\s*/\s*\d+)?|\b\d+\s*/\s*\d+\b)", re.IGNORECASE)
+TOC_PAGE_TRAIL_RE = re.compile(r"[.·…\-–—]{2,}\s*\d{1,4}\s*$")
+TRAILING_DIGITS_RE = re.compile(r"\b\d{1,4}\s*$")
+PAGE_TOKEN_RE = re.compile(r"\bpage\s+\d{1,4}\b", re.IGNORECASE)
+CHAPTER_LINE_RE = re.compile(r"^\s*(?:chapter|section)\s+[A-Z0-9IVXLC]+", re.IGNORECASE)
 
 PHRASES_CONFIG_PATH = Path(__file__).resolve().parents[2] / "configs" / "_shared" / "ifu_safety_phrases.yaml"
 
@@ -125,6 +130,16 @@ def extract_safety_blocks(
                 seen_hashes.add(block_hash)
                 title = _normalize_title(header.title) or header.level.title()
                 severity = LEVEL_TO_SEVERITY.get(header.level, "warning")
+                lowered_text = cleaned_text.lower()
+                lowered_title = title.lower()
+                if "software" in lowered_text and "license" in lowered_text:
+                    continue
+                if any(token in lowered_title for token in ("disclaimer", "license", "ownership", "term", "software")):
+                    continue
+                if DOT_LEADER_SEGMENT.search(cleaned_text) or DOT_LEADER_SEGMENT.search(title):
+                    continue
+                if re.search(r"\d+\s*$", title) and "." in title:
+                    continue
                 blocks.append(
                     SafetyBlock(
                         level=header.level,
@@ -180,6 +195,35 @@ def _match_level(label: str) -> Optional[str]:
     return None
 
 
+def _looks_like_toc_entry(value: str) -> bool:
+    stripped = (value or "").strip()
+    if not stripped:
+        return False
+    if DOT_LEADER_SEGMENT.search(stripped) and TRAILING_DIGITS_RE.search(stripped):
+        return True
+    if TOC_PAGE_TRAIL_RE.search(stripped):
+        return True
+    if PAGE_TOKEN_RE.search(stripped) and TRAILING_DIGITS_RE.search(stripped):
+        return True
+    if CHAPTER_LINE_RE.match(stripped):
+        return True
+    tokens = stripped.split()
+    if tokens and tokens[-1].isdigit():
+        prefix_tokens = tokens[:-1]
+        prefix = " ".join(prefix_tokens).strip()
+        if (
+            prefix
+            and not any(char.isdigit() for char in prefix)
+            and ":" not in prefix
+            and "-" not in prefix
+            and "–" not in prefix
+            and "—" not in prefix
+        ):
+            if prefix.isupper() or len(prefix_tokens) >= 2:
+                return True
+    return False
+
+
 def _detect_header(
     lines: Sequence[str],
     idx: int,
@@ -200,6 +244,9 @@ def _detect_header(
 
     candidate = _strip_leading_icons(raw_line)
     lines_consumed = 1
+
+    if _looks_like_toc_entry(raw_line):
+        return None
 
     if not candidate and source == "icon":
         lookahead_idx = idx + 1
@@ -243,6 +290,9 @@ def _detect_header(
 
     if source == "heading" and colon_match and label.isupper():
         source = "table"
+
+    if _looks_like_toc_entry(label):
+        return None
 
     level = _match_level(label)
     upper_label = label.upper()

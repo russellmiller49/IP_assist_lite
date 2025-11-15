@@ -68,6 +68,7 @@ python -m medparse.cli extract-articles "data/Input pdfs/articles/pdf" \
   --profile enriched \
   --no-cache \
   --second-pass auto \
+  --chunking smart \
   --evidence-policy compact \
   --tables-mode compact
 
@@ -78,6 +79,7 @@ python -m medparse.cli extract-ifus "data/Input pdfs/IFUs/pdf" \
   --profile enriched \
   --no-cache \
   --second-pass auto \
+  --chunking smart \
   --evidence-policy compact \
   --tables-mode compact \
   --ifu-engine hybrid \
@@ -99,6 +101,10 @@ Results are saved to:
 - `out/textbooks/` - Textbook extractions
 
 `configs/run_ifu.yaml` defines manufacturer overrides and engine selection. CLI flags such as `--ifu-engine` (`pymupdf`, `pdfplumber`, or `hybrid`) and `--ifu-fast-long-docs/--no-ifu-fast-long-docs` can override the YAML defaults.
+
+## Smart Chunking
+
+Articles and IFUs now emit `chunks[]`—layout-aware windows (≈200–500 tokens) keyed by paragraph hashes for downstream retrieval. Chunking is enabled by default via `configs/_shared/emit.yaml` and can be toggled per run with `--chunking smart|off`. Metrics surface under `_metrics.chunking` (enabled flag, chunk count, average tokens, overlap ratio) so QA can verify coverage.
 
 ## Configuration
 

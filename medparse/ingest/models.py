@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import List, Literal, Optional, Tuple
+from typing import Dict, List, Literal, Optional, Tuple
 
 # Word box: (x0, y0, x1, y1, text)
 WordBox = Tuple[float, float, float, float, str]
@@ -52,3 +52,4 @@ class PageData:
     tables: List[TableData] = field(default_factory=list)
     word_boxes: List[WordBox] = field(default_factory=list)  # For word-level spacing restoration
     ocr_applied: bool = False
+    column_map: Dict[int, int] = field(default_factory=dict)

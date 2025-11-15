@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import hashlib
 from datetime import datetime
-from typing import Dict, List, Literal, Optional, Tuple
+from typing import Any, Dict, List, Literal, Optional, Tuple
 from uuid import uuid4
 
 from pydantic import Field
@@ -109,6 +109,10 @@ class BaseDocument(MedparseModel):
         default_factory=dict,
         description="Deduplicated paragraph metadata keyed by stable hash (text, pages, offsets)",
     )
+    chunks: List[Dict[str, Any]] = Field(
+        default_factory=list,
+        description="RAG-ready chunk metadata keyed by paragraph hashes",
+    )
     truncation_notice: Optional[TruncationNotice] = None
     front_matter_source: Optional[str] = None
     front_matter_confidence: Optional[float] = Field(default=None, ge=0.0, le=1.0)
@@ -124,6 +128,8 @@ class UmlsEntity(MedparseModel):
     text: str
     page: Optional[int] = None
     confidence: float = Field(default=0.0, ge=0.0, le=1.0)
+    match_score: Optional[float] = Field(default=None, ge=0.0, le=1.0)
+    disambiguation_score: Optional[float] = Field(default=None, ge=0.0, le=1.0)
 
 
 class Relation(MedparseModel):
@@ -135,6 +141,10 @@ class Relation(MedparseModel):
     attributes: Dict[str, object] = Field(default_factory=dict)
     evidence: Optional[EvidenceSpan] = None
     evidence_refs: Optional[List[str]] = None  # Hash IDs for evidence bank
+    confidence: float = Field(default=0.5, ge=0.0, le=1.0)
+    negated: bool = False
+    conditional: bool = False
+    temporal: Optional[str] = None
 
 
 __all__ = [

@@ -18,7 +18,8 @@ conda run -n medparse-py311 python -m medparse.cli extract-articles \
     --config configs/run_article.yaml \
     --profile enriched \
     --no-cache \
-    --second-pass auto
+    --second-pass auto \
+    --chunking smart
 ```
 
 ### Using conda run with zotero (Recommended)
@@ -30,6 +31,7 @@ conda run -n medparse-py311 python -m medparse.cli extract-articles \
   --profile enriched \
   --no-cache \
   --second-pass auto \
+  --chunking smart \
   --zotero-json data/zotero/my_library.json \
   --evidence-policy compact
 ```
@@ -44,6 +46,7 @@ conda run -n medparse-py311 python -m medparse.cli extract-articles \
 - Files: `article_*.json`
 - UMLS entities: 1000-3000 per document
 - File size: 200KB-15MB
+- Chunks: `chunks[]` plus `_metrics.chunking` summary
 
 ---
 
@@ -57,7 +60,8 @@ conda run -n medparse-py311 python -m medparse.cli extract-ifus \
     --config configs/run_ifu.yaml \
     --profile enriched \
     --no-cache \
-    --second-pass auto
+    --second-pass auto \
+    --chunking smart
 ```
 
 ### Using wrapper script
@@ -70,6 +74,7 @@ conda run -n medparse-py311 python -m medparse.cli extract-ifus \
 - Files: `ifu_*.json`
 - Extracts: contraindications, indications, adverse events, device metadata
 - File size: 100KB-5MB
+- Chunks: anchor-aware `chunks[]` with `_metrics.chunking`
 
 ---
 
@@ -117,6 +122,7 @@ conda run -n medparse-py311 python scripts/batch_extract_ifus.py
 | `--profile` | `enriched` or `fast_raw` | `enriched` |
 | `--no-cache` | Skip pipeline cache | Off (uses cache) |
 | `--force-deep` | Force full extraction | Off |
+| `--chunking` | Smart chunking (`smart` or `off`) | `smart` |
 | `--max-pages N` | Limit pages processed | No limit |
 | `--second-pass` | Second-pass remediation stage | `auto` |
 

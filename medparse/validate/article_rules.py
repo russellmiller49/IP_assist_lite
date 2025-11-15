@@ -130,8 +130,9 @@ def validate_article(doc: ArticleDocument, cfg: ExtractionConfig) -> List[Issue]
         if not performance_sources:
             issues.append(Issue.error("Diagnostic performance missing for diagnostic research article"))
         else:
-            ats_gate = getattr(doc, "ats_compatibility", None)
-            if require_diagnostic_yield and getattr(ats_gate, "compatible_with_ats", False):
+            ats_gate = getattr(doc, "ats_profile", None)
+            strict_required = bool(getattr(ats_gate, "strict_yield_required", False))
+            if require_diagnostic_yield and strict_required:
                 issues.extend(_check_diagnostic_yield(doc))
             elif require_diagnostic_yield and getattr(doc, "diagnostic_yield", None) is None:
                 issues.append(Issue.warn("Diagnostic yield absent; relying on diagnostic accuracy outputs."))
@@ -139,8 +140,8 @@ def validate_article(doc: ArticleDocument, cfg: ExtractionConfig) -> List[Issue]
         # No strict diagnostic performance requirement for therapeutic/editorial research.
         pass
     else:
-        ats_gate = getattr(doc, "ats_compatibility", None)
-        strict_required = bool(getattr(ats_gate, "compatible_with_ats", False))
+        ats_gate = getattr(doc, "ats_profile", None)
+        strict_required = bool(getattr(ats_gate, "strict_yield_required", False))
         if require_diagnostic_yield and strict_required and getattr(doc, "diagnostic_yield", None) is None:
             issues.extend(_check_diagnostic_yield(doc))
 

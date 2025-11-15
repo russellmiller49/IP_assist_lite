@@ -1,0 +1,25 @@
+{
+  "source_file": "/home/rjm/projects/IP_assist_lite/data/Input pdfs/articles/pdf/Valipour-2020-Bronchial Rheoplasty for Treatme.pdf",
+  "failure_reason": "validation_failed",
+  "issues": [
+    "Article title appears to be an ALL-CAPS organization name."
+  ],
+  "metrics": {
+    "page_count": 9,
+    "coverage_ratio": 1.0,
+    "extracted_chars": 48853,
+    "sections_count": 4,
+    "recommendations_count": 0,
+    "umls_entities": 279,
+    "diagnostic_yield_present": false,
+    "tables_kept": 0,
+    "duration_s": 2.2205262184143066,
+    "engines_tried": [
+      "pymupdf",
+      "pdfplumber"
+    ],
+    "engine_selected": "pymupdf",
+    "profile": "enriched",
+    "cache_used": false
+  }
+}

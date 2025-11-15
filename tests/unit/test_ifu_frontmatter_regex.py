@@ -37,7 +37,7 @@ def test_front_matter_captures_dot_separated_date() -> None:
     meta = extract_front_matter(pages)
 
     assert meta["part_number"] == "553990-11"
-    assert meta["revision"] == "C"
+    assert meta["revision"] == "Rev C"
     assert meta["publication_date"] == "2024-08"
 
 

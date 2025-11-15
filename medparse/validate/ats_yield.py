@@ -5,7 +5,7 @@ from __future__ import annotations
 import re
 from typing import Dict, List, Optional, Tuple
 
-from medparse.schema.article import ArticleDocument, ATSCompatibility
+from medparse.schema.article import ArticleDocument, ATSProfile
 from medparse.normalize._ats_codes import (
     ATS_REASON_NO_N_OVER_N,
     ATS_REASON_FOLLOW_UP,
@@ -42,10 +42,10 @@ def validate_ats_yield(document: ArticleDocument) -> Dict[str, object]:
     pipeline_info = getattr(document, "pipeline_info", {}) or {}
     if not isinstance(pipeline_info, dict):
         pipeline_info = {}
-    ats_compat = getattr(document, "ats_compatibility", None)
-    if not isinstance(ats_compat, ATSCompatibility):
-        ats_compat = ATSCompatibility()
-        document.ats_compatibility = ats_compat
+    ats_profile = getattr(document, "ats_profile", None)
+    if not isinstance(ats_profile, ATSProfile):
+        ats_profile = ATSProfile()
+        document.ats_profile = ats_profile
 
     subtype = (getattr(document, "doc_subtype", None) or "").strip().lower()
     scope = (
@@ -68,9 +68,10 @@ def validate_ats_yield(document: ArticleDocument) -> Dict[str, object]:
         if "not_diagnostic_study" not in reasons:
             reasons.append("not_diagnostic_study")
         pipeline_info["ats_yield_reasons"] = reasons
-        ats_compat.strict_required = False
-        ats_compat.compatible_with_ats = False
-        _append_reason(ats_compat.exclusion_reasons, "not_diagnostic_study")
+        ats_profile.is_diagnostic_study = False
+        ats_profile.strict_yield_required = False
+        ats_profile.strict_yield_observed = False
+        ats_profile.strict_exclusion_reasons = ["not_diagnostic_study"]
         document.pipeline_info = pipeline_info
         result["strict_yield_detected"] = False
         result["compatible"] = False
@@ -82,6 +83,8 @@ def validate_ats_yield(document: ArticleDocument) -> Dict[str, object]:
         pipeline_info["ats_yield_applicability"] = pipeline_info.get("ats_yield_applicability", "not_applicable")
         pipeline_info.setdefault("ats_yield_reasons", ["no_diagnostic_payload"])
         document.pipeline_info = pipeline_info
+        ats_profile.strict_yield_observed = False
+        ats_profile.strict_exclusion_reasons = ["no_diagnostic_payload"]
         result["compatible"] = False
         return result
 
@@ -92,27 +95,17 @@ def validate_ats_yield(document: ArticleDocument) -> Dict[str, object]:
         pipeline_info["ats_yield_applicability"] = "not_applicable"
         pipeline_info["ats_yield_reasons"] = applicability_reasons
         document.pipeline_info = pipeline_info
+        ats_profile.is_diagnostic_study = False
+        ats_profile.strict_yield_required = False
+        ats_profile.strict_yield_observed = False
+        ats_profile.strict_exclusion_reasons = applicability_reasons or []
         result["strict_yield_detected"] = False
         result["compatible"] = False
         result["exclusion_reasons"] = []
         return result
-    ats_compat.strict_required = True if applicability else False
-    ats_compat.compatible_with_ats = bool(applicability)
-    if applicability:
-        ats_compat.exclusion_reasons = []
-    if not applicability:
-        reasons_block = list(applicability_reasons or [])
-        for reason in reasons_block:
-            _append_reason(ats_compat.exclusion_reasons, reason)
-        _append_reason(ats_compat.exclusion_reasons, "not_diagnostic_study")
-        if "not_diagnostic_study" not in reasons_block:
-            reasons_block.append("not_diagnostic_study")
-        pipeline_info["ats_yield_reasons"] = reasons_block
-        document.pipeline_info = pipeline_info
-        result["strict_yield_detected"] = False
-        result["compatible"] = False
-        result["exclusion_reasons"] = ["not_diagnostic_study"]
-        return result
+    ats_profile.is_diagnostic_study = True
+    ats_profile.strict_yield_required = True
+    ats_profile.strict_exclusion_reasons = []
 
     pipeline_info["ats_yield_reasons"] = applicability_reasons or ["diagnostic_cues_detected"]
     document.pipeline_info = pipeline_info
@@ -190,6 +183,8 @@ def validate_ats_yield(document: ArticleDocument) -> Dict[str, object]:
     result["strict_yield_detected"] = bool(initial_strict_claim or strict_indices or has_counts)
     result["compatible"] = diagnostic.compatible_with_ats
     result["exclusion_reasons"] = ordered_reasons
+    ats_profile.strict_yield_observed = bool(compatible)
+    ats_profile.strict_exclusion_reasons = ordered_reasons
     document.pipeline_info = pipeline_info
 
     return result

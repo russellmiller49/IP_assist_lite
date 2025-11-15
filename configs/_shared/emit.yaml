@@ -1,6 +1,11 @@
 emit:
   evidence_policy: compact
   tables_mode: compact
+  chunking:
+    enabled: true
+    token_min: 200
+    token_max: 500
+    overlap_ratio: 0.15
   max_relations: 300
   max_table_rows: 200
   tables:

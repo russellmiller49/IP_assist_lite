@@ -44,6 +44,9 @@ MONTH_LOOKUP = {
 
 PUBLISHED_KEYWORDS = ("published", "issued", "printed", "publication", "effective")
 
+TOC_LINE_RE = re.compile(r"[.·…]{2,}\s*\d+$")
+CHAPTER_PATTERN = re.compile(r"^(?:chapter|section)\s+\d", re.IGNORECASE)
+
 LEGACY_PATTERNS: Dict[str, str] = {
     "part_number": (
         r"(?:part\s*(?:number|no\.?)|p/?n|catalog(?:ue)?\s*(?:no\.?|number)?|cat(?:\.)?\s*no\.?|order\s*(?:no\.?|number)|"
@@ -201,6 +204,17 @@ def _normalize_part_number(value: str) -> Optional[str]:
     return value.strip().upper()
 
 
+def _looks_like_toc_entry(value: str) -> bool:
+    stripped = (value or "").strip()
+    if not stripped:
+        return False
+    if TOC_LINE_RE.search(stripped):
+        return True
+    if CHAPTER_PATTERN.match(stripped):
+        return True
+    return False
+
+
 def _sanitize_revision_token(value: str) -> Optional[str]:
     if not value:
         return None
@@ -236,6 +250,8 @@ def _normalize_product_name(value: str) -> Optional[str]:
         return None
     cleaned = re.sub(r"\s{2,}", " ", value.strip(" :-\t"))
     if not cleaned:
+        return None
+    if _looks_like_toc_entry(cleaned):
         return None
     return cleaned
 
@@ -604,7 +620,7 @@ def apply_ifu_frontmatter_backfill(document: BaseDocument, ctx: SecondPassContex
     product_name_reset = False
     existing_product = getattr(document, "product_name", None)
     if isinstance(existing_product, str) and existing_product.strip():
-        if existing_product.strip().upper() in drop_headings:
+        if existing_product.strip().upper() in drop_headings or _looks_like_toc_entry(existing_product):
             document.product_name = None
             product_name_reset = True
 

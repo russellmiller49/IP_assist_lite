@@ -53,6 +53,8 @@ class UmlsEntity(BaseModel):
     text: str
     page: Optional[int] = None
     confidence: float = 0.0
+    match_score: Optional[float] = None
+    disambiguation_score: Optional[float] = None
 
 
 class UmlsLinkingResult(BaseModel):
@@ -61,6 +63,7 @@ class UmlsLinkingResult(BaseModel):
     entities: List[UmlsEntity] = Field(default_factory=list)
     status: Literal["linked", "skipped_model_missing", "skipped_disabled", "skipped_no_input"]
     umls_model: Optional[str] = None
+    filter_report: Optional[Dict[str, object]] = None
 
 
 def _semtypes_allowed(semtypes: Iterable[str]) -> bool:
@@ -185,11 +188,15 @@ def _link_page_text(linker, text: str, *, min_confidence: float) -> List[UmlsEnt
                 offsets=[(ent.start_char, ent.end_char)],
                 confidence=score,
                 text=ent.text,
+                match_score=score,
+                disambiguation_score=score,
             )
         else:
             page_entities[key].offsets.append((ent.start_char, ent.end_char))
             if score > page_entities[key].confidence:
                 page_entities[key].confidence = score
+                page_entities[key].match_score = score
+                page_entities[key].disambiguation_score = score
 
     return list(page_entities.values())
 
@@ -233,6 +240,8 @@ def _quickumls_link(
                     confidence=candidate["similarity"],
                     text=candidate["ngram"][:80],
                     page=page_number,
+                    match_score=candidate["similarity"],
+                    disambiguation_score=1.0,
                 )
             )
     return entities

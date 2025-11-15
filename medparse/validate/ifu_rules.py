@@ -246,15 +246,28 @@ def validate_ifu(document: IFUDocument, config: ExtractionConfig) -> list[Issue]
     if skip_clinical:
         return issues
 
-    manufacturer_label = (document.manufacturer or "").strip().lower()
-    if expected_min > 0 and found_blocks < expected_min:
-        severity_label = "warning"
-        if "intuitive" in manufacturer_label and page_count and page_count > leaflet_pages_max:
-            severity_label = "error"
-        if threshold_rule == "manufacturer_override":
-            severity_label = "warning"
-        message = f"Expected ≥{expected_min} safety blocks; found {found_blocks}."
-        issues.append(_issue_from_label(severity_label, message))
+    if expected_min > 0:
+        tier_hint = None
+        if page_count and page_count <= leaflet_pages_max:
+            tier_hint = "leaflet (≤4 pages)"
+        elif page_count and page_count >= 40:
+            tier_hint = "manual (≥40 pages)"
+        added_blocks = 0
+        if isinstance(pipeline_info, dict):
+            try:
+                added_blocks = int(pipeline_info.get("safety_blocks_added") or 0)
+            except (TypeError, ValueError):
+                added_blocks = 0
+        parts = [f"Safety blocks {found_blocks}/{expected_min}"]
+        if tier_hint:
+            parts.append(f"[{tier_hint}]")
+        if added_blocks:
+            parts.append(f"(+{added_blocks} added)")
+        message = " ".join(parts)
+        if found_blocks < expected_min:
+            issues.append(Issue.warn(message))
+        else:
+            issues.append(Issue.info(message))
 
     if getattr(document, "references", None):
         sections_map = {}

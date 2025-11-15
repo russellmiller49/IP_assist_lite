@@ -8,6 +8,8 @@ from typing import List, Optional
 
 from medparse.ingest.models import TableData
 
+TABLE_HEADER_RE = re.compile(r"\btable\s*\d", re.IGNORECASE)
+
 TABLE_KEYWORDS = (
     "table",
     "status indicator",
@@ -19,6 +21,21 @@ TABLE_KEYWORDS = (
     "adverse event",
 )
 
+
+def _looks_like_dense_grid(text: str) -> bool:
+    lines = text.splitlines()
+    dense_rows = 0
+    for line in lines:
+        stripped = line.strip()
+        if not stripped:
+            continue
+        parts = re.split(r"\s{3,}", stripped)
+        if len(parts) >= 3 and all(part for part in parts[:3]):
+            dense_rows += 1
+        if dense_rows >= 2:
+            return True
+    return False
+
 try:
     import pdfplumber  # type: ignore
 except ImportError:  # pragma: no cover - optional dependency
@@ -29,7 +46,8 @@ def extract_tables(pdf_path: Path, page_number: int, page_text: str) -> List[Tab
     """Extract tables for a page when context suggests structured data."""
 
     lower_text = page_text.lower()
-    if not any(keyword in lower_text for keyword in TABLE_KEYWORDS):
+    force_scan = bool(TABLE_HEADER_RE.search(page_text)) or _looks_like_dense_grid(page_text)
+    if not force_scan and not any(keyword in lower_text for keyword in TABLE_KEYWORDS):
         return []
 
     if pdfplumber is None:
@@ -40,6 +58,20 @@ def extract_tables(pdf_path: Path, page_number: int, page_text: str) -> List[Tab
             page = pdf.pages[page_number - 1]
             found: List[TableData] = []
             for raw_table in page.extract_tables() or []:
+                if not raw_table:
+                    continue
+                headers, rows = _split_table(raw_table)
+                title = _detect_table_title(page_text, headers)
+                found.append(TableData(title=title, headers=headers, rows=rows, page=page_number))
+            if found:
+                return found
+            table_settings = {
+                "vertical_strategy": "lines",
+                "horizontal_strategy": "lines",
+                "intersection_tolerance": 5,
+            }
+            tuned_tables = page.extract_tables(table_settings=table_settings) or []
+            for raw_table in tuned_tables:
                 if not raw_table:
                     continue
                 headers, rows = _split_table(raw_table)
@@ -103,6 +135,10 @@ def _extract_inline_tables(page_text: str, page_number: int) -> List[TableData]:
             if cells:
                 rows.append(cells)
                 continue
+        split_cells = re.split(r"\s{3,}", stripped)
+        if len(split_cells) >= 3 and any(cell.strip() for cell in split_cells):
+            rows.append([cell.strip() for cell in split_cells])
+            continue
         if rows:
             headers, body = _split_table(rows)
             tables.append(TableData(title=None, headers=headers, rows=body, page=page_number))
