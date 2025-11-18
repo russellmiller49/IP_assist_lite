@@ -172,9 +172,7 @@ def check_doc_type_model() -> Tuple[bool, str]:
     if not declared_version:
         return False, "Doc-type manifest missing sklearn_version"
 
-    declared_major = declared_version.split(".")[:2]
-    runtime_major = runtime_version.split(".")[:2]
-    if declared_major != runtime_major:
+    if declared_version != runtime_version:
         return False, f"Doc-type model targets sklearn {declared_version}, runtime is {runtime_version}"
 
     if not model_path.exists():

@@ -16,7 +16,7 @@ thresholds:
 size_guards:
   max_evidence_per_item: 3
   max_chars_per_evidence: 1200
-  max_tables: 30
+  max_tables: 24  # tables.max_tables: keep IFU tables cap at 24
   max_table_cells: 3000
   max_sections: 40
   max_paragraph_chars: 2000
@@ -33,14 +33,21 @@ emit:
   keep_evidence_bank: true
   max_tables: 24
 
+text_normalization:
+  enabled: true
+
+tables:
+  sterilization_hints:
+    enabled: true
+
 ifu:
   small_ifu_threshold: 4
   small_leaflet_policy: map_intended_use_to_indications
   ifu_engine: hybrid
   extract:
     long_doc:
-      streaming: true
-      per_page_timeout_s: 10
+      streaming: true          # enable streaming fallback for ≥ page_threshold pages
+      per_page_timeout_s: 10   # throttles per-batch runtime; metrics capture batches_failed on timeout
       page_threshold: 250
       pages_per_batch: 40
       max_failed_batches: 4
@@ -104,3 +111,5 @@ ifu:
     booster:
       dedupe_ratio: 0.92
       max_added: 20
+  safety_typing:
+    enabled: true

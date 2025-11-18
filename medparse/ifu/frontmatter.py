@@ -64,6 +64,7 @@ IDENTIFIER_PATTERNS: Dict[str, Sequence[re.Pattern[str]]] = {
         DATE_FALLBACK_PATTERN,
     ),
     "model": (
+        re.compile(r"(EU[\s\-]?ME\s*3)", re.IGNORECASE),
         re.compile(r"(?:Model|Type|Series)\s*[:#]?\s*([A-Z0-9][A-Z0-9\-/ \t]{1,})", re.IGNORECASE),
         re.compile(r"System\s*[:#]\s*([A-Z0-9][A-Z0-9\-/ \t]{1,})", re.IGNORECASE),
     ),
@@ -85,6 +86,12 @@ BLOCKLIST_KEYWORDS = {
     "copyright",
     "printed",
 }
+
+ADDRESS_LINE_RE = re.compile(
+    r"\b(fax|telephone|tel\.?|suite|drive|road|street|st\.|ave|avenue|p\.?\s*o\.|box|floor)\b",
+    re.IGNORECASE,
+)
+COUNTRY_TOKENS = ("japan", "u.s.a", "usa", "australia", "singapore", "canada", "korea")
 
 TOC_DOT_RE = re.compile(r"[.·…]{2,}\s*\d+$")
 CHAPTER_LINE_RE = re.compile(r"^(?:chapter|section)\s+\d", re.IGNORECASE)
@@ -445,6 +452,14 @@ def extract_front_matter(
         ):
             result.product_name = f"{manufacturer_clean.split()[0]} {result.product_name}"
             result.record("product_name", "manufacturer_prefix")
+        if (
+            "olympus" in result.manufacturer.lower()
+            and result.model
+            and result.model.replace(" ", "").lower()
+            not in result.product_name.replace(" ", "").lower()
+        ):
+            result.product_name = f"{result.product_name} {result.model}".strip()
+            result.record("product_name", "model_append")
 
     return result.as_dict()
 
@@ -617,7 +632,24 @@ def _looks_like_toc_line(line: str) -> bool:
         return True
     if TOC_DOT_RE.search(stripped):
         return True
-    if re.search(r"\s\d{1,3}$", stripped) and "." in stripped:
+    trailing_digits = re.search(r"\s\d{1,3}$", stripped)
+    if trailing_digits:
+        tokens = stripped.split()
+        if "." in stripped or len(tokens) >= 3:
+            return True
+    return False
+
+
+def _looks_like_address_line(line: str) -> bool:
+    stripped = line.strip()
+    if not stripped:
+        return False
+    lowered = stripped.lower()
+    if ADDRESS_LINE_RE.search(stripped):
+        return True
+    if any(token in lowered for token in COUNTRY_TOKENS) and any(char.isdigit() for char in stripped):
+        return True
+    if "telephone" in lowered or "fax" in lowered:
         return True
     return False
 
@@ -706,6 +738,8 @@ def _collect_cover_lines(pages: Sequence[PageData], max_pages: int = 3, tail_pag
             stripped = raw_line.strip()
             if not stripped or _looks_like_toc_line(stripped):
                 continue
+            if _looks_like_address_line(stripped):
+                continue
             lines.append(stripped)
 
     total_pages = len(pages)
@@ -734,6 +768,8 @@ def _score_title(line: str) -> float:
     if stripped.endswith(("-", "–", "—")):
         return 0.0
     if _looks_like_toc_line(stripped):
+        return 0.0
+    if _looks_like_address_line(stripped):
         return 0.0
     lowered = stripped.lower()
     if any(keyword in lowered for keyword in BLOCKLIST_KEYWORDS):

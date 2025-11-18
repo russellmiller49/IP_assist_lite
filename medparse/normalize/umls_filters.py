@@ -115,17 +115,16 @@ def _drop_reason(entity: UmlsEntity, page_map: Dict[int, str], is_guideline: boo
     text = (entity.text or "").strip()
     if not text:
         return "empty_text"
-    if len(text) < 4 and text.upper() not in SHORT_TEXT_WHITELIST:
-        return "short_text"
 
     normalized_alpha = re.sub(r"[^a-z]", "", text.lower())
-    if normalized_alpha in MONTH_NAMES:
-        return "stop_term"
-    if normalized_alpha in STOPWORD_TERMS:
+    if normalized_alpha in MONTH_NAMES or normalized_alpha in STOPWORD_TERMS:
         return "stop_term"
     prefix = re.sub(r"[^a-z]", "", text.lower())
     if any(prefix.startswith(marker) for marker in ("table", "figure", "page")):
         return "stop_term"
+
+    if len(text) < 4 and text.upper() not in SHORT_TEXT_WHITELIST:
+        return "short_text"
 
     if not _is_token_aligned(entity, page_map):
         return "misaligned_span"
@@ -155,6 +154,7 @@ def _is_token_aligned(entity: UmlsEntity, page_map: Dict[int, str]) -> bool:
     text = page_map.get(entity.page) or ""
     if not text:
         return True
+    entity_text = (entity.text or "").strip().lower()
     for start, end in entity.offsets:
         if start is None or end is None or start < 0 or end <= start:
             continue
@@ -163,10 +163,13 @@ def _is_token_aligned(entity: UmlsEntity, page_map: Dict[int, str]) -> bool:
         start_char = text[start]
         end_index = min(end, len(text)) - 1
         end_char = text[end_index]
-        if start > 0 and text[start - 1].isalnum() and start_char.isalnum():
-            return False
-        if end < len(text) and text[end].isalnum() and end_char.isalnum():
-            return False
+        span = text[start:end].strip().lower()
+        enforce_boundaries = bool(entity_text and span and span == entity_text)
+        if enforce_boundaries:
+            if start > 0 and text[start - 1].isalnum() and start_char.isalnum():
+                return False
+            if end < len(text) and text[end].isalnum() and end_char.isalnum():
+                return False
     return True
 
 

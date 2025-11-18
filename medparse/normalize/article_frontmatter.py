@@ -69,6 +69,10 @@ TITLE_SKIP_KEYWORDS = {
     "accp",
     "sign",
     "statements",
+    "original article",
+    "original articles",
+    "case report",
+    "supplement",
 }
 
 RUNNING_HEADER_PATTERNS = [
@@ -215,16 +219,26 @@ def is_valid_title(title: str) -> bool:
     if not title:
         return False
 
-    words = title.split()
-    if len(words) < 3:
+    cleaned = title.strip()
+    if len(cleaned) < 6 or len(cleaned) > 240:
         return False
 
-    lowered_title = title.lower()
+    words = cleaned.split()
+    if len(words) < 2:
+        return False
+
+    lowered_title = cleaned.lower()
     if "doi" in lowered_title or "http" in lowered_title or "www." in lowered_title:
         return False
+    if any(token in lowered_title for token in ("original article", "case report", "official journal")):
+        return False
 
-    # Reject all-caps organizational names
-    if title.isupper() and any(org in title for org in ['SOCIETY', 'ASSOCIATION', 'ORGANIZATION', 'JOURNAL', 'STATEMENT', 'GUIDELINE']):
+    alpha_chars = [char for char in cleaned if char.isalpha()]
+    upper_chars = [char for char in alpha_chars if char.isupper()]
+    if alpha_chars and len(upper_chars) / len(alpha_chars) > 0.9:
+        return False
+
+    if cleaned.isupper():
         return False
 
     # Must have at least one non-stopword
@@ -233,8 +247,8 @@ def is_valid_title(title: str) -> bool:
     if len(non_stopwords) < 1:
         return False
 
-    alpha = sum(1 for c in title if c.isalpha())
-    digits = sum(1 for c in title if c.isdigit())
+    alpha = sum(1 for c in cleaned if c.isalpha())
+    digits = sum(1 for c in cleaned if c.isdigit())
     if alpha == 0 or digits > alpha:
         return False
 

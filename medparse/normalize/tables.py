@@ -107,6 +107,10 @@ def clean_tables(tables: List[Dict[str, object]] | None) -> List[Dict[str, objec
             "headers": list(table.get("headers") or []),
             "rows": [list(row) for row in (table.get("rows") or [])],
             "page": table.get("page"),
+            "caption": table.get("caption"),
+            "footnotes": list(table.get("footnotes") or []),
+            "heading_path": list(table.get("heading_path") or []),
+            "rows_truncated": bool(table.get("rows_truncated")),
         }
         merged.append(new_table)
         last_by_base[base_title or title] = new_table

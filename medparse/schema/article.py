@@ -16,6 +16,7 @@ class Author(MedparseModel):
     given: str
     family: str
     suffix: Optional[str] = None
+    full_name: Optional[str] = None
     orcid: Optional[str] = None
     email: Optional[str] = None
     affiliation_ids: List[str] = Field(default_factory=list)
@@ -242,6 +243,8 @@ class EnhancedTable(MedparseModel):
     page: Optional[int] = None
     table_type: Optional[str] = None  # From classifier
     truncated_cells: bool = False
+    rows_truncated: bool = False
+    heading_path: List[str] = Field(default_factory=list)
 
 
 class ArticleFigure(MedparseModel):
@@ -335,6 +338,7 @@ class ArticleDocument(BaseDocument):
     yield_definitions_present: Optional[bool] = None
     ats_profile: ATSProfile = Field(default_factory=ATSProfile)
     clinical_trials: List[ClinicalTrialRegistration] = Field(default_factory=list)
+    statistical_results: List[StatisticalResult] = Field(default_factory=list)
 
     # Guidelines (enhanced)
     recommendations: List[GuidelineRecommendation] = Field(default_factory=list)
@@ -376,3 +380,21 @@ class ClinicalTrialRegistration(MedparseModel):
 
     id: str
     registry: Optional[str] = None
+
+
+class StatisticalResult(MedparseModel):
+    """Structured statistical comparison with confidence intervals."""
+
+    comparison: Optional[str] = None
+    outcome: Optional[str] = None
+    group1_value: Optional[float] = None
+    group1_n: Optional[int] = None
+    group2_value: Optional[float] = None
+    group2_n: Optional[int] = None
+    difference: Optional[float] = None
+    ci_lower: Optional[float] = None
+    ci_upper: Optional[float] = None
+    p_value: Optional[float] = None
+    test: Optional[str] = None
+    interpretation: Optional[str] = None
+    evidence_refs: List[str] = Field(default_factory=list)

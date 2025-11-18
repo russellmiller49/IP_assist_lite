@@ -43,6 +43,10 @@ product_patterns:
       group: 1
     - regex: '(?i)(BW[\s\-]?18V\s+.*)'
       group: 1
+    - regex: '(?i)(EVIS\s+EUS\s+Endoscopic\s+Ultrasound\s+Center.*)'
+      group: 1
+    - regex: '(?i)(Olympus\s+EU[\s\-]?ME\s*3.*)'
+      group: 1
     - regex: '(?i)(System\s+Carrier.*)'
       group: 1
     - regex: '(?i)(Units and Modules.*)'

@@ -1,0 +1,25 @@
+{
+  "source_file": "/home/rjm/projects/IP_assist_lite/data/Input pdfs/IFUs/pdf/EU-ME3_InstructionManual.pdf",
+  "failure_reason": "pdfplumber_timeout",
+  "issues": [
+    "pdfplumber_timeout"
+  ],
+  "metrics": {
+    "page_count": 750,
+    "coverage_ratio": 1.0,
+    "extracted_chars": 716341,
+    "sections_count": null,
+    "recommendations_count": null,
+    "umls_entities": null,
+    "diagnostic_yield_present": null,
+    "tables_kept": 85,
+    "duration_s": 124.19723963737488,
+    "engines_tried": [
+      "pymupdf",
+      "pdfplumber"
+    ],
+    "engine_selected": "pdfplumber",
+    "profile": "enriched",
+    "cache_used": false
+  }
+}

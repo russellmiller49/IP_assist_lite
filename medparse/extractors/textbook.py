@@ -14,7 +14,7 @@ from medparse.normalize.fm_zotero import link_front_matter
 from medparse.normalize.layout import is_toc_page
 from medparse.normalize.metadata import normalize_chapter_title
 from medparse.normalize.page_furniture import strip_furniture
-from medparse.normalize.relations import RelationRecord, build_cooccurrence
+from medparse.relations.extract_relations import RelationRecord, build_cooccurrence
 from medparse.normalize.textbook_anchors import build_section_map, extract_keywords_clean
 from medparse.normalize.figures_captions import FigureBlock, extract_figures_and_captions
 from medparse.normalize.umls_linking import (
@@ -85,6 +85,7 @@ def extract_textbook_chapter(
             window=extraction_config.relation_window or "page",
             page_texts=page_text_map,
         )
+        relation_records = _drop_title_relations(relation_records, title)
 
     book_meta_payload = load_book_metadata(pdf_path.parent)
     if book_meta_payload:
@@ -290,6 +291,21 @@ def _map_relations(records: Sequence[RelationRecord]) -> List[Relation]:
             )
         )
     return mapped
+
+
+def _drop_title_relations(relations: Sequence[RelationRecord], title: Optional[str]) -> List[RelationRecord]:
+    if not title:
+        return list(relations)
+    normalized = title.strip().lower()
+    if not normalized:
+        return list(relations)
+    filtered: List[RelationRecord] = []
+    for record in relations:
+        subject = getattr(record, "subject", None)
+        if isinstance(subject, str) and subject.strip().lower() == normalized:
+            continue
+        filtered.append(record)
+    return filtered
 
 
 def _compute_coverage_ratio(

@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import re
 from collections import Counter, defaultdict
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from statistics import median
 from typing import Dict, Iterable, Iterator, List, Optional, Sequence, Tuple
 
@@ -18,6 +18,15 @@ FOOTER_RE = re.compile(r"^\d+\s*/\s*\d+$")
 PURE_DIGITS_RE = re.compile(r"^\d{1,4}$")
 DOT_LEADER_RE = re.compile(r"\.{4,}\s*\d+$")
 LIST_BULLET_RE = re.compile(r"^(?:[\-\u2022\u2023\u25E6\*]\s+|\d+[\).]\s+)")
+LIST_MARKER_RE = re.compile(r"^(?:[\-\u2022\u2023\u25E6\*]+|\d+[\).])\s+")
+TOC_LINE_PATTERN = re.compile(r"(?:\.{2,}|…|\s{4,})\s*\d{1,4}\s*$")
+TRAILING_PAGE_NUMBER = re.compile(r"\s\d{1,4}\s*$")
+CHAPTER_LINE_PATTERN = re.compile(r"^\s*(?:chapter|section)\s+[A-Z0-9IVXLC]+", re.IGNORECASE)
+ADDRESS_TOKEN_RE = re.compile(
+    r"\b(fax|telephone|tel\.?|suite|drive|road|street|st\.|ave|avenue|corporate|parkway|p\.?\s*o\.|box|japan|u\.s\.a|usa|korea|australia|telephone:|fax:)\b",
+    re.IGNORECASE,
+)
+ZIP_TOKEN_RE = re.compile(r"\b[A-Z]{2}\s*\d{3,5}(?:-\d{3,4})?\b")
 
 
 @dataclass(slots=True)
@@ -30,6 +39,78 @@ class Paragraph:
     char_span: Tuple[int, int]
     line_span: Optional[Tuple[int, int]] = None
     column_id: Optional[int] = None
+    paragraph_type: str = "body"
+    lists: List[str] = field(default_factory=list)
+
+
+def _strip_list_marker(value: str) -> str:
+    cleaned = LIST_MARKER_RE.sub("", value or "", count=1).strip()
+    return normalize_paragraph_text(cleaned)
+
+
+def _looks_like_address(text: str) -> bool:
+    if not text:
+        return False
+    lowered = text.lower()
+    digits = sum(char.isdigit() for char in text)
+    if digits >= 6 and ("," in text or "-" in text):
+        if ADDRESS_TOKEN_RE.search(text) or ZIP_TOKEN_RE.search(text):
+            return True
+    if ADDRESS_TOKEN_RE.search(text) and digits >= 3:
+        return True
+    if "telephone" in lowered or "fax" in lowered:
+        return True
+    if ZIP_TOKEN_RE.search(text):
+        return True
+    return False
+
+
+def _looks_like_heading_line(text: str) -> bool:
+    stripped = text.strip()
+    if not stripped:
+        return False
+    if stripped.isupper() and len(stripped.split()) <= 8:
+        return True
+    if CHAPTER_LINE_PATTERN.match(stripped):
+        return True
+    return False
+
+
+def _looks_like_toc(lines: List[str], normalized: str, page_number: int) -> bool:
+    if page_number > 10:
+        return False
+    lowered = normalized.lower()
+    if "table of contents" in lowered or lowered.startswith("contents"):
+        return True
+    line_hits = 0
+    for line in lines:
+        stripped = line.strip()
+        if not stripped:
+            continue
+        if TOC_LINE_PATTERN.search(stripped):
+            line_hits += 1
+            continue
+        if TRAILING_PAGE_NUMBER.search(stripped) and len(stripped.split()) >= 3:
+            line_hits += 1
+    if line_hits >= max(1, len(lines) - 1):
+        return True
+    has_chapter = any(CHAPTER_LINE_PATTERN.match(line.strip()) for line in lines if line.strip())
+    dotted = normalized.count("..")
+    if has_chapter and dotted:
+        return True
+    if dotted >= 4:
+        return True
+    return False
+
+
+def _classify_paragraph(lines: List[str], normalized: str, page_number: int) -> str:
+    if _looks_like_address(normalized):
+        return "address"
+    if _looks_like_heading_line(normalized):
+        return "heading"
+    if _looks_like_toc(lines, normalized, page_number):
+        return "toc"
+    return "body"
 
 
 def iter_paragraphs(
@@ -38,8 +119,11 @@ def iter_paragraphs(
     join_hyphens: bool = True,
     drop_headers: bool = True,
     drop_footers: bool = True,
+    toc_pages: Optional[Iterable[int]] = None,
 ) -> Iterator[Paragraph]:
     """Yield normalized paragraphs from the provided pages."""
+
+    toc_page_set = {int(page) for page in (toc_pages or []) if isinstance(page, int)}
 
     for page in pages:
         lines = list(page.lines or [])
@@ -59,126 +143,159 @@ def iter_paragraphs(
             continue
 
         line_offsets = _line_offsets(lines)
-        buffer: List[str] = []
-        start_offset: int | None = None
-        end_offset: int | None = None
+        text_buffer: List[str] = []
+        text_start_offset: Optional[int] = None
+        text_end_offset: Optional[int] = None
+        text_start_line_idx: Optional[int] = None
+        text_last_line_idx: Optional[int] = None
+        list_buffer: List[str] = []
+        list_start_offset: Optional[int] = None
+        list_end_offset: Optional[int] = None
+        list_start_line_idx: Optional[int] = None
+        list_last_line_idx: Optional[int] = None
         para_count = 0
-        start_line_idx: Optional[int] = None
-        last_line_idx: Optional[int] = None
+        toc_override = page.number in toc_page_set
+
+        def _emit_paragraph(
+            raw_lines: List[str],
+            text_value: str,
+            start_offset: Optional[int],
+            end_offset: Optional[int],
+            start_idx: Optional[int],
+            end_idx: Optional[int],
+            *,
+            paragraph_type: str = "body",
+            list_payload: Optional[List[str]] = None,
+        ) -> Optional[Paragraph]:
+            nonlocal para_count
+            normalized = normalize_paragraph_text(text_value)
+            if not normalized:
+                return None
+            para_type = paragraph_type
+            if toc_override:
+                para_type = "toc"
+            elif paragraph_type == "body":
+                para_type = _classify_paragraph(raw_lines, normalized, page.number)
+            para_id = f"page{page.number}_para{para_count}"
+            para_count += 1
+            span_start = int(start_offset or 0)
+            span_end = int(end_offset or span_start + len(normalized))
+            line_span = None
+            if start_idx is not None and end_idx is not None:
+                line_span = (start_idx, end_idx)
+            return Paragraph(
+                id=para_id,
+                page=page.number,
+                text=normalized,
+                char_span=(span_start, span_end),
+                line_span=line_span,
+                paragraph_type=para_type,
+                lists=list(list_payload or []),
+            )
+
+        def _flush_text_buffer() -> Optional[Paragraph]:
+            nonlocal text_buffer, text_start_offset, text_end_offset, text_start_line_idx, text_last_line_idx
+            if not text_buffer:
+                return None
+            text_value = _flush_buffer(text_buffer, join_hyphens=join_hyphens)
+            paragraph = _emit_paragraph(
+                list(text_buffer),
+                text_value,
+                text_start_offset,
+                text_end_offset,
+                text_start_line_idx,
+                text_last_line_idx,
+            )
+            text_buffer = []
+            text_start_offset = None
+            text_end_offset = None
+            text_start_line_idx = None
+            text_last_line_idx = None
+            return paragraph
+
+        def _flush_list_buffer() -> Optional[Paragraph]:
+            nonlocal list_buffer, list_start_offset, list_end_offset, list_start_line_idx, list_last_line_idx
+            if not list_buffer:
+                return None
+            text_value = " ".join(list_buffer)
+            paragraph = _emit_paragraph(
+                list(list_buffer),
+                text_value,
+                list_start_offset,
+                list_end_offset,
+                list_start_line_idx,
+                list_last_line_idx,
+                paragraph_type="list",
+                list_payload=list(list_buffer),
+            )
+            list_buffer = []
+            list_start_offset = None
+            list_end_offset = None
+            list_start_line_idx = None
+            list_last_line_idx = None
+            return paragraph
 
         for line_idx, (raw_line, line_start, line_end) in enumerate(line_offsets):
             stripped = raw_line.strip()
             if not stripped:
-                if buffer:
-                    text = _flush_buffer(buffer, join_hyphens=join_hyphens)
-                    normalized = normalize_paragraph_text(text)
-                    if normalized:
-                        para_id = f"page{page.number}_para{para_count}"
-                        para_count += 1
-                        yield Paragraph(
-                            id=para_id,
-                            page=page.number,
-                            text=normalized,
-                            char_span=(start_offset or line_start, end_offset or line_end),
-                            line_span=(start_line_idx or line_idx, last_line_idx or line_idx),
-                        )
-                buffer = []
-                start_offset = None
-                end_offset = None
-                start_line_idx = None
-                last_line_idx = None
+                paragraph = _flush_text_buffer()
+                if paragraph:
+                    yield paragraph
+                list_paragraph = _flush_list_buffer()
+                if list_paragraph:
+                    yield list_paragraph
                 continue
 
             if is_boilerplate_line(stripped):
                 continue
 
             is_bullet_line = bool(LIST_BULLET_RE.match(stripped))
+            is_heading_candidate = stripped.isupper() and len(stripped.split()) <= 6
 
-            if buffer and is_bullet_line:
-                text = _flush_buffer(buffer, join_hyphens=join_hyphens)
-                normalized = normalize_paragraph_text(text)
-                if normalized:
-                    para_id = f"page{page.number}_para{para_count}"
-                    para_count += 1
-                    line_start = start_line_idx if start_line_idx is not None else line_idx
-                    fallback_end = line_idx - 1 if line_idx > 0 else line_idx
-                    line_end = last_line_idx if last_line_idx is not None else fallback_end
-                    yield Paragraph(
-                        id=para_id,
-                        page=page.number,
-                        text=normalized,
-                        char_span=(start_offset or line_start, end_offset or line_end),
-                        line_span=(line_start, line_end),
-                    )
-                buffer = []
-                start_offset = None
-                end_offset = None
-                start_line_idx = None
-                last_line_idx = None
+            if is_bullet_line:
+                paragraph = _flush_text_buffer()
+                if paragraph:
+                    yield paragraph
+                cleaned_item = _strip_list_marker(stripped)
+                if cleaned_item:
+                    if list_start_offset is None:
+                        leading_ws = len(raw_line) - len(raw_line.lstrip())
+                        list_start_offset = line_start + leading_ws
+                    list_end_offset = line_end
+                    if list_start_line_idx is None:
+                        list_start_line_idx = line_idx
+                    list_last_line_idx = line_idx
+                    list_buffer.append(cleaned_item)
+                continue
 
-            if buffer and re.match(r"^\d+[\).]", stripped):
-                text = _flush_buffer(buffer, join_hyphens=join_hyphens)
-                normalized = normalize_paragraph_text(text)
-                if normalized:
-                    para_id = f"page{page.number}_para{para_count}"
-                    para_count += 1
-                    yield Paragraph(
-                        id=para_id,
-                        page=page.number,
-                        text=normalized,
-                        char_span=(start_offset or line_start, end_offset or line_end),
-                        line_span=(start_line_idx or line_idx, last_line_idx or line_idx),
-                    )
-                buffer = []
-                start_offset = None
-                end_offset = None
-                start_line_idx = None
-                last_line_idx = None
+            list_paragraph = _flush_list_buffer()
+            if list_paragraph:
+                yield list_paragraph
 
-            if buffer and stripped.isupper() and len(stripped.split()) <= 6:
-                text = _flush_buffer(buffer, join_hyphens=join_hyphens)
-                normalized = normalize_paragraph_text(text)
-                if normalized:
-                    para_id = f"page{page.number}_para{para_count}"
-                    para_count += 1
-                    yield Paragraph(
-                        id=para_id,
-                        page=page.number,
-                        text=normalized,
-                        char_span=(start_offset or line_start, end_offset or line_end),
-                        line_span=(start_line_idx or line_idx, last_line_idx or line_idx),
-                    )
-                buffer = []
-                start_offset = None
-                end_offset = None
-                start_line_idx = None
-                last_line_idx = None
+            if text_buffer and is_heading_candidate:
+                paragraph = _flush_text_buffer()
+                if paragraph:
+                    yield paragraph
 
-            if buffer and buffer[-1].endswith("-") and join_hyphens:
-                buffer[-1] = buffer[-1][:-1] + stripped
+            if text_buffer and text_buffer[-1].endswith("-") and join_hyphens:
+                text_buffer[-1] = text_buffer[-1][:-1] + stripped
             else:
-                buffer.append(stripped)
+                text_buffer.append(stripped)
 
-            if start_offset is None:
+            if text_start_offset is None:
                 leading_ws = len(raw_line) - len(raw_line.lstrip())
-                start_offset = line_start + leading_ws
-            end_offset = line_end
-            if start_line_idx is None:
-                start_line_idx = line_idx
-            last_line_idx = line_idx
+                text_start_offset = line_start + leading_ws
+            text_end_offset = line_end
+            if text_start_line_idx is None:
+                text_start_line_idx = line_idx
+            text_last_line_idx = line_idx
 
-        if buffer:
-            text = _flush_buffer(buffer, join_hyphens=join_hyphens)
-            normalized = normalize_paragraph_text(text)
-            if normalized:
-                para_id = f"page{page.number}_para{para_count}"
-                yield Paragraph(
-                    id=para_id,
-                    page=page.number,
-                    text=normalized,
-                    char_span=(start_offset or 0, end_offset or len(normalized)),
-                    line_span=(start_line_idx or len(line_offsets) - 1, last_line_idx or len(line_offsets) - 1),
-                )
+        paragraph = _flush_text_buffer()
+        if paragraph:
+            yield paragraph
+        list_paragraph = _flush_list_buffer()
+        if list_paragraph:
+            yield list_paragraph
 
 
 def build_paragraph_store(
@@ -189,6 +306,7 @@ def build_paragraph_store(
     drop_headers: bool = True,
     drop_footers: bool = True,
     detect_columns: bool = False,
+    toc_pages: Optional[Iterable[int]] = None,
 ) -> tuple[Dict[str, Dict[str, object]], bool]:
     """Construct a hashed paragraph store for downstream evidence references."""
 
@@ -204,6 +322,7 @@ def build_paragraph_store(
         join_hyphens=join_hyphens,
         drop_headers=drop_headers,
         drop_footers=drop_footers,
+        toc_pages=toc_pages,
     ):
         hash_id = stable_par_hash(doc_id, paragraph.page, paragraph.text)
         entry = store.get(hash_id)
@@ -231,6 +350,8 @@ def build_paragraph_store(
                 "order": [global_index],
                 "occurrences": [occurrence],
                 "column_id": column_id,
+                "type": paragraph.paragraph_type,
+                "lists": list(paragraph.lists or []),
             }
         else:
             dedup_applied = True
@@ -243,10 +364,17 @@ def build_paragraph_store(
                 pages_mapping.append(paragraph.page)
             if column_id is not None and entry.get("column_id") is None:
                 entry["column_id"] = column_id
+            existing_type = entry.get("type")
+            if (not existing_type or existing_type == "body") and paragraph.paragraph_type != "body":
+                entry["type"] = paragraph.paragraph_type
+            if paragraph.lists and not entry.get("lists"):
+                entry["lists"] = list(paragraph.lists)
         global_index += 1
 
     for entry in store.values():
         entry.setdefault("pages", [entry.get("page")])
+        entry.setdefault("type", "body")
+        entry.setdefault("lists", [])
 
     return store, dedup_applied
 

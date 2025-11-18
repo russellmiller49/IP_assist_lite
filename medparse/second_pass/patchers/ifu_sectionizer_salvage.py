@@ -48,6 +48,9 @@ def _detect_headings(entries: List[Dict[str, object]], anchors: List[str]) -> Li
     for entry in entries:
         text = entry.get("text")
         page = entry.get("page")
+        entry_type = entry.get("type")
+        if entry_type in {"toc", "address"}:
+            continue
         if not isinstance(text, str) or not isinstance(page, int):
             continue
         for raw_line in text.splitlines():

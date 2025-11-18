@@ -7,8 +7,9 @@ from typing import Iterator, List, Optional, Sequence, Tuple
 
 from medparse.ingest.cleaning import normalize_text_artifacts
 from medparse.ingest.models import Heading, PageData, TextBlock, WordBox
-from medparse.ingest.tables import extract_tables
+from medparse.tables.extractor import attach_heading_context, extract_tables
 from medparse.normalize.text_assemble import words_to_text, restore_spaces
+from medparse.text.normalization import normalize_page_text
 
 try:
     import fitz  # type: ignore
@@ -41,6 +42,7 @@ def iter_pages(
     enable_ocr: bool = False,
     min_chars_for_ocr: int = 120,
     start_page: int = 1,
+    text_normalization: bool = True,
 ) -> Iterator[PageData]:
     """Yield ``PageData`` instances for each page in the PDF.
 
@@ -86,6 +88,10 @@ def iter_pages(
                         word_boxes = []
 
                     page_text = normalize_text_artifacts(page_text)
+                    if text_normalization:
+                        page_text, normalization_report = normalize_page_text(page_text)
+                    else:
+                        normalization_report = {}
                     lines = _clean_lines(page_text.splitlines())
                     blocks = [
                         TextBlock(text=line, bbox=None, font_size=None, is_bold=line.isupper())
@@ -99,6 +105,7 @@ def iter_pages(
                         blocks=blocks,
                         tables=tables,
                         word_boxes=word_boxes,
+                        normalization_report=normalization_report,
                     )
                     if enable_ocr and len(page_text.strip()) < min_chars_for_ocr:
                         ocr_text = _ocr_page(pdf_path, page_number)
@@ -109,6 +116,7 @@ def iter_pages(
                             page_data.ocr_applied = True
                     if include_headings:
                         page_data.headings = _detect_page_headings(page_data)
+                        attach_heading_context(page_data)
                     yield page_data
                 return
         except Exception:
@@ -134,7 +142,12 @@ def iter_pages(
                     page = document.load_page(page_number - 1)
                 except Exception:
                     continue
-                page_data = _page_from_pymupdf(pdf_path, page, page_number)
+                page_data = _page_from_pymupdf(
+                    pdf_path,
+                    page,
+                    page_number,
+                    text_normalization=text_normalization,
+                )
                 if enable_ocr and len(page_data.text.strip()) < min_chars_for_ocr:
                     ocr_text = _ocr_page(pdf_path, page_number)
                     if ocr_text:
@@ -144,6 +157,7 @@ def iter_pages(
                         page_data.ocr_applied = True
                 if include_headings:
                     page_data.headings = _detect_page_headings(page_data)
+                    attach_heading_context(page_data)
                 yield page_data
             return
 
@@ -160,6 +174,7 @@ def iter_pages(
     page_data = PageData(number=1, text=text, lines=lines, blocks=blocks, tables=tables)
     if include_headings:
         page_data.headings = _detect_page_headings(page_data)
+        attach_heading_context(page_data)
     yield page_data
 
 
@@ -185,7 +200,13 @@ def _ocr_page(pdf_path: Path, page_number: int) -> Optional[str]:
         return None
 
 
-def _page_from_pymupdf(pdf_path: Path, page: "fitz.Page", index: int) -> PageData:
+def _page_from_pymupdf(
+    pdf_path: Path,
+    page: "fitz.Page",
+    index: int,
+    *,
+    text_normalization: bool = True,
+) -> PageData:
     block_payload: List[TextBlock] = []
     for block in page.get_text("dict").get("blocks", []):
         spans = _collect_spans(block)
@@ -219,6 +240,10 @@ def _page_from_pymupdf(pdf_path: Path, page: "fitz.Page", index: int) -> PageDat
         word_boxes = []
 
     page_text = normalize_text_artifacts(page_text)
+    if text_normalization:
+        page_text, normalization_report = normalize_page_text(page_text)
+    else:
+        normalization_report = {}
     lines = _clean_lines(page_text.splitlines())
     tables = extract_tables(pdf_path, index, page_text)
     return PageData(
@@ -227,7 +252,8 @@ def _page_from_pymupdf(pdf_path: Path, page: "fitz.Page", index: int) -> PageDat
         lines=lines,
         blocks=block_payload,
         tables=tables,
-        word_boxes=word_boxes
+        word_boxes=word_boxes,
+        normalization_report=normalization_report,
     )
 
 

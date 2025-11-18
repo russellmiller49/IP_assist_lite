@@ -538,8 +538,10 @@ class PageLoadOutcome:
     streaming_enabled: bool
     batches: int
     batches_failed: int
+    windows_completed: int
     engine_timeouts: Dict[str, float]
     complete: bool
+    last_page_loaded: Optional[int] = None
     failure_reason: Optional[str] = None
 
 
@@ -640,8 +642,10 @@ def _load_pages_single_engine(
             streaming_enabled=False,
             batches=0,
             batches_failed=1,
+            windows_completed=0,
             engine_timeouts={},
             complete=False,
+            last_page_loaded=None,
             failure_reason=f"load_failed:{engine}",
         )
 
@@ -652,6 +656,13 @@ def _load_pages_single_engine(
     if limit and duration > limit:
         timeouts_triggered[engine] = duration
 
+    last_page_loaded = None
+    if pages:
+        try:
+            last_page_loaded = pages[-1].number
+        except Exception:  # pragma: no cover - defensive
+            last_page_loaded = None
+
     return PageLoadOutcome(
         pages=list(pages),
         ocr_pages=ocr_pages,
@@ -660,8 +671,10 @@ def _load_pages_single_engine(
         streaming_enabled=False,
         batches=1,
         batches_failed=0,
+        windows_completed=1 if pages else 0,
         engine_timeouts=timeouts_triggered,
         complete=True,
+        last_page_loaded=last_page_loaded,
         failure_reason=None,
     )
 
@@ -700,6 +713,7 @@ def _stream_document_pages(
     start_page = 1
     complete = False
     consecutive_failures = 0
+    last_completed_page: Optional[int] = None
 
     while True:
         if target_final_page and start_page > target_final_page:
@@ -758,6 +772,7 @@ def _stream_document_pages(
         pages.extend(batch_pages)
         ocr_pages.extend([page.number for page in batch_pages if getattr(page, "ocr_applied", False)])
         last_page_number = batch_pages[-1].number or (start_page + len(batch_pages) - 1)
+        last_completed_page = last_page_number
         start_page = last_page_number + 1
 
         timeout_limit = engine_timeouts.get(engine)
@@ -768,6 +783,7 @@ def _stream_document_pages(
                 timeout_limit = per_batch_limit
         if timeout_limit and duration > timeout_limit:
             engine_timeouts_triggered[engine] = duration
+            failed_batches += 1
             current_index += 1
             engines_consumed = max(engines_consumed, current_index - start_index + 1)
         if not target_final_page and len(batch_pages) < requested:
@@ -789,8 +805,10 @@ def _stream_document_pages(
         streaming_enabled=True,
         batches=batches,
         batches_failed=failed_batches,
+        windows_completed=batches,
         engine_timeouts=engine_timeouts_triggered,
         complete=complete,
+        last_page_loaded=last_completed_page,
         failure_reason=reason,
     )
 
@@ -814,6 +832,8 @@ class PipelineConfig:
     metadata_sources: Dict[str, Any] = field(default_factory=dict)
     enrichment: Dict[str, Any] = field(default_factory=dict)
     ifu: Dict[str, Any] = field(default_factory=dict)
+    tables: Dict[str, Any] = field(default_factory=dict)
+    text_normalization: Dict[str, Any] = field(default_factory=dict)
     second_pass: Dict[str, Any] = field(default_factory=dict)
 
     @classmethod
@@ -889,6 +909,8 @@ class PipelineConfig:
             metadata_sources=data.get("metadata_sources") or {},
             enrichment=data.get("enrichment") or {},
             ifu=data.get("ifu") or {},
+            tables=data.get("tables") or {},
+            text_normalization=data.get("text_normalization") or {},
             second_pass=second_pass_config,
         )
 
@@ -929,6 +951,12 @@ class PipelineConfig:
         if isinstance(max_relations, int) and max_relations > 0:
             kwargs["max_relations"] = max_relations
         kwargs["ifu"] = self.ifu
+        kwargs["size_guards"] = self.size_guards
+        kwargs["max_pages"] = self.max_preview_pages
+        kwargs["min_chars"] = self.min_chars
+        kwargs["min_pages_ratio"] = self.min_pages_ratio
+        kwargs["text_normalization"] = self.text_normalization
+        kwargs["tables"] = self.tables
         return ExtractionConfig(**kwargs)
 
     def resolved_engines(self, *, force_deep: bool = False) -> List[str]:
@@ -1435,12 +1463,15 @@ def _sync_second_pass_summary(
         if not result.applied and not result.modifications:
             continue
         detail: Dict[str, object] = {"name": result.name}
+        modification_payload: Dict[str, int] = {}
         if result.modifications:
             for key, value in result.modifications.items():
                 try:
-                    detail[key] = int(value)
+                    modification_payload[str(key)] = int(value)
                 except (TypeError, ValueError):
                     continue
+        if modification_payload or result.applied:
+            detail["modifications"] = modification_payload
         if result.reasons:
             detail["reasons"] = list(result.reasons)
         patch_summaries.append(detail)
@@ -1808,6 +1839,8 @@ def run_extract(
                 "enabled": True,
                 "batches": load_outcome.batches,
                 "batches_failed": load_outcome.batches_failed,
+                "windows_completed": load_outcome.windows_completed,
+                "last_completed_page": load_outcome.last_page_loaded,
                 "pages_per_batch": streaming_settings.get("pages_per_batch"),
                 "per_page_timeout_s": streaming_settings.get("per_page_timeout_s") or 0,
             }
@@ -2583,6 +2616,9 @@ def _document_metrics(document: BaseDocument) -> Dict[str, Any]:
     chunk_metrics = pipeline_info.get("chunking")
     if isinstance(chunk_metrics, dict):
         metrics_summary["chunking"] = chunk_metrics
+    normalization_summary = pipeline_info.get("_normalization")
+    if isinstance(normalization_summary, dict) and normalization_summary:
+        metrics_summary["_normalization"] = normalization_summary
     payload["_metrics"] = metrics_summary
 
     _validate_metrics_consistency(payload, pipeline_info)

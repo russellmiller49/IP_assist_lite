@@ -1,5 +1,9 @@
 safety_density:
-  default_min_blocks: 20
+  default_min_blocks: 12
+  short_max_pages: 4
+  short_min_blocks: 8
+  long_min_pages: 40
+  long_min_blocks: 20
   small_leaflet:
     max_pages: 4
     min_blocks: 8

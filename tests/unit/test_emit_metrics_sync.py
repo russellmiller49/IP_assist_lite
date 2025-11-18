@@ -24,7 +24,13 @@ def test_emit_metrics_mirror_pipeline_counters():
         "modifications": {"diagnostic_yield_numerator": 1},
         "diff_summary": {"diagnostic_yield_numerator": 1},
         "reasons": ["ats_diagnostic_yield_backfill"],
-        "patch_summaries": [{"name": "patch_a", "diagnostic_yield_numerator": 1}],
+        "patch_summaries": [
+            {
+                "name": "patch_a",
+                "modifications": {"diagnostic_yield_numerator": 1},
+                "reasons": ["ats_diagnostic_yield_backfill"],
+            }
+        ],
     }
     document.ats_profile.is_diagnostic_study = False
     document.ats_profile.strict_yield_required = False
@@ -126,7 +132,10 @@ def test_emit_metrics_mirror_pipeline_counters():
     assert summary["tables_original"] == document.pipeline_info.get("tables_original")
     assert summary["tables_kept"] == metrics["tables_kept"]
     assert summary["tables_dropped"] == metrics["tables_dropped"]
-    assert summary["patches"][0]["name"] == "patch_a"
+    first_patch = summary["patches"][0]
+    assert first_patch["name"] == "patch_a"
+    assert first_patch["modifications"] == {"diagnostic_yield_numerator": 1}
+    assert first_patch["reasons"] == ["ats_diagnostic_yield_backfill"]
 
 
 def test_ifu_toc_guard_metrics():

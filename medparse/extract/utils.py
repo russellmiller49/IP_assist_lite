@@ -18,6 +18,7 @@ def load_pages(
     max_pages: Optional[int] = None,
     ocr: bool = False,
     start_page: int = 1,
+    text_normalization: bool = True,
 ) -> List[PageData]:
     """Load all pages for ``pdf_path`` via the ingestion layer."""
 
@@ -29,6 +30,7 @@ def load_pages(
             page_limit=max_pages,
             enable_ocr=ocr,
             start_page=start_page,
+            text_normalization=text_normalization,
         )
     )
 
@@ -97,6 +99,10 @@ def collect_tables(pages: Sequence[PageData]) -> List[dict]:
                     "headers": table.headers,
                     "rows": table.rows,
                     "page": page.number,
+                    "caption": table.caption,
+                    "footnotes": list(getattr(table, "footnotes", [])),
+                    "heading_path": list(getattr(table, "heading_path", [])),
+                    "rows_truncated": bool(getattr(table, "rows_truncated", False)),
                 }
             )
     return serialised

@@ -38,6 +38,10 @@ class TableData:
     headers: List[str]
     rows: List[List[str]]
     page: int
+    caption: Optional[str] = None
+    footnotes: List[str] = field(default_factory=list)
+    heading_path: List[str] = field(default_factory=list)
+    rows_truncated: bool = False
 
 
 @dataclass(slots=True)
@@ -53,3 +57,4 @@ class PageData:
     word_boxes: List[WordBox] = field(default_factory=list)  # For word-level spacing restoration
     ocr_applied: bool = False
     column_map: Dict[int, int] = field(default_factory=dict)
+    normalization_report: Dict[str, int] = field(default_factory=dict)

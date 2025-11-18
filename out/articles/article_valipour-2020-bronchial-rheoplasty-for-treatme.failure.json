@@ -10,10 +10,10 @@
     "extracted_chars": 48853,
     "sections_count": 4,
     "recommendations_count": 0,
-    "umls_entities": 279,
+    "umls_entities": 253,
     "diagnostic_yield_present": false,
-    "tables_kept": 0,
-    "duration_s": 2.2205262184143066,
+    "tables_kept": 7,
+    "duration_s": 2.50038480758667,
     "engines_tried": [
       "pymupdf",
       "pdfplumber"

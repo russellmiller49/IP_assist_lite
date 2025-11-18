@@ -77,6 +77,19 @@ class EvidenceBank:
                 return text
         return None
 
+    @staticmethod
+    def _clip_sentence(snippet: str, limit: int) -> str:
+        if limit <= 0 or len(snippet) <= limit:
+            return snippet.strip()
+        window = snippet[:limit]
+        sentence_end = max(window.rfind(". "), window.rfind("? "), window.rfind("! "))
+        if sentence_end >= max(40, int(limit * 0.5)):
+            return window[: sentence_end + 1].strip()
+        last_space = window.rfind(" ")
+        if last_space > 0:
+            return window[:last_space].strip()
+        return window.strip()
+
     def add_evidence(self, evidence: Optional[EvidenceSpan]) -> Optional[str]:
         """Add evidence to bank and return hash ID."""
 
@@ -88,7 +101,7 @@ class EvidenceBank:
         clip_info: Dict[str, object] = {}
         if self.inline_text and evidence.text and len(evidence.text) > max_chars:
             original_len = len(evidence.text)
-            evidence.text = evidence.text[:max_chars]
+            evidence.text = self._clip_sentence(evidence.text, max_chars)
             evidence.truncated = True
             self.stats["truncated"] += 1
             clip_info = {
@@ -115,12 +128,12 @@ class EvidenceBank:
             if snippet:
                 if len(snippet) > max_chars:
                     original_len = len(snippet)
-                    snippet = snippet[:max_chars]
-                    payload["text"] = snippet
+                    clipped = self._clip_sentence(snippet, max_chars)
+                    payload["text"] = clipped
                     self._apply_truncation_metadata(
                         payload,
                         original_length=original_len,
-                        kept_length=len(snippet),
+                        kept_length=len(clipped),
                         reason="length_cap",
                     )
                     self.stats["truncated"] += 1

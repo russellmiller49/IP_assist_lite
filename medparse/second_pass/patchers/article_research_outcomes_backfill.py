@@ -12,6 +12,7 @@ from medparse.schema.article import (
     ResearchOutcomeArm,
     ResearchOutcomeMetric,
     ResearchOutcomes,
+    StatisticalResult,
 )
 from medparse.second_pass.types import SecondPassContext, SecondPassPatchResult
 
@@ -57,6 +58,10 @@ def apply_article_research_outcomes_backfill(
         modifications["diagnostic_yield_backfilled"] = yield_count
     if complication_count:
         modifications["complications_backfilled"] = complication_count
+    stats_results = _extract_statistical_results(paragraph_store)
+    added_stats = _merge_statistical_results(document, stats_results)
+    if added_stats:
+        modifications["statistical_results_backfilled"] = len(added_stats)
 
     return SecondPassPatchResult(
         name=PATCH_NAME,
@@ -81,11 +86,15 @@ def _apply_therapeutic_outcomes_backfill(
 
     document.research_outcomes = outcomes
     _record_therapeutic_metrics(document, metric_count)
-
+    stats_results = _extract_statistical_results(paragraph_store)
+    added_stats = _merge_statistical_results(document, stats_results)
+    modifications = {"therapeutic_metrics_backfilled": metric_count}
+    if added_stats:
+        modifications["statistical_results_backfilled"] = len(added_stats)
     return SecondPassPatchResult(
         name=PATCH_NAME,
         applied=True,
-        modifications={"therapeutic_metrics_backfilled": metric_count},
+        modifications=modifications,
         reasons=["therapeutic_outcomes_backfill"],
     )
 
@@ -282,6 +291,27 @@ _DUAL_RATE_PATTERNS = [
     ),
 ]
 
+_STAT_DECIMAL_GAP_PATTERN = re.compile(r"(?<=\d)\.\s+(?=\d)")
+_STAT_NEGATIVE_GAP_PATTERN = re.compile(r"(?<=-)\s+(?=\d)")
+
+_ABSTRACT_RESULT_PATTERN = re.compile(
+    r"(?P<g1_count>\d+)\s+of\s+(?P<g1_total>\d+)\s+patients\s*\((?P<g1_value>-?\d+(?:\.\d+)?)%\)\s+in\s+the\s+(?P<g1_label>[^.;,]+?)\s+group.*?"
+    r"(?P<g2_count>\d+)\s+of\s+(?P<g2_total>\d+)\s+patients\s*\((?P<g2_value>-?\d+(?:\.\d+)?)%\)\s+in\s+the\s+(?P<g2_label>[^.;,]+?)\s+group.*?"
+    r"(?:absolute\s+)?difference(?:,\s*|\s+of\s+)?(?P<difference>-?\d+(?:\.\d+)?)\s+(?:percentage\s+points?|percent).*?"
+    r"95%\s+confidence\s+interval(?:\s*\[[^\]]+\])?,\s*(?P<ci_lower>-?\d+(?:\.\d+)?)[\s\u00A0]*to[\s\u00A0]*(?P<ci_upper>-?\d+(?:\.\d+)?).*?"
+    r"P[\s\u00A0]*[=<>]\s*(?P<p_value>\d+(?:\.\d+)?)(?:\s*(?:for)?\s*(?P<interpretation>[A-Za-z\-\s]+?))?(?:;|\.|$)",
+    flags=re.IGNORECASE | re.DOTALL,
+)
+
+_GROUP_PERCENT_PATTERN = re.compile(
+    r"(?P<value>-?\d+(?:\.\d+)?)%\s+in\s+the\s+(?P<label>[^.;,]+?)\s+group",
+    flags=re.IGNORECASE,
+)
+_DIFF_PERCENT_WITH_P_PATTERN = re.compile(
+    r"(?:mean\s+)?(?:between-group\s+)?difference.*?(?P<difference>-?\d+(?:\.\d+)?)%.*?P[\s\u00A0=]*[<=>]?[\s\u00A0]*(?P<p_value>0?\.\d+)",
+    flags=re.IGNORECASE | re.DOTALL,
+)
+
 
 def _extract_therapeutic_outcomes(
     document: ArticleDocument,
@@ -466,6 +496,16 @@ def _normalize_whitespace(text: str) -> str:
     return " ".join(text.split())
 
 
+def _normalize_stat_text(text: str) -> str:
+    """Collapse errant spacing produced by PDF extraction so regexes can match."""
+    if not text:
+        return text
+    normalized = text.replace("−", "-").replace("–", "-").replace("—", "-")
+    normalized = _STAT_DECIMAL_GAP_PATTERN.sub(".", normalized)
+    normalized = _STAT_NEGATIVE_GAP_PATTERN.sub("", normalized)
+    return normalized
+
+
 def _to_float(value: str) -> float:
     try:
         return float(value.replace(" ", ""))
@@ -577,6 +617,226 @@ def _parse_single_rate_with_keywords(
             evidence_hash=hash_id,
         )
         return {label: metric}
+    return None
+
+
+def _extract_statistical_results(
+    paragraph_store: Dict[str, Dict[str, object]],
+) -> List[StatisticalResult]:
+    results_map: Dict[Tuple[str, str, Optional[float], Optional[float]], StatisticalResult] = {}
+    order: List[Tuple[str, str, Optional[float], Optional[float]]] = []
+    ordered_entries = _ordered_paragraphs(paragraph_store)
+    total = len(ordered_entries)
+    for idx, (hash_id, entry) in enumerate(ordered_entries):
+        text = str(entry.get("text") or "")
+        next_text = ""
+        if idx + 1 < total:
+            next_entry = ordered_entries[idx + 1][1]
+            next_text = str(next_entry.get("text") or "")
+        combined_text = f"{text} {next_text}".strip()
+        if not text:
+            continue
+        normalized = _normalize_stat_text(_normalize_whitespace(combined_text))
+        lowered = normalized.lower()
+        if "p=" not in lowered and "p =" not in lowered and "p =" not in lowered and "p<" not in lowered:
+            continue
+        for matcher in (_match_abstract_stat_result, _match_percent_diff_stat_result):
+            result = matcher(normalized, hash_id)
+            if result is None:
+                continue
+            key = (
+                _stat_comparison_key(result.comparison or ""),
+                (result.outcome or "").lower(),
+                result.difference,
+                result.p_value,
+            )
+            existing = results_map.get(key)
+            if existing is None:
+                results_map[key] = result
+                order.append(key)
+                continue
+            results_map[key] = _merge_stat_result_entry(result, existing)
+            break
+    return [results_map[key] for key in order]
+
+
+def _match_abstract_stat_result(text: str, hash_id: str) -> Optional[StatisticalResult]:
+    match = _ABSTRACT_RESULT_PATTERN.search(text)
+    if not match:
+        return None
+    comparison = _format_comparison(match.group("g1_label"), match.group("g2_label"))
+    window_start = max(0, match.start() - 200)
+    outcome = _infer_outcome_label(text[window_start : match.end()])
+    interpretation = match.group("interpretation")
+    cleaned_interp = _clean_interpretation(interpretation)
+    result = StatisticalResult(
+        comparison=comparison,
+        outcome=outcome,
+        group1_value=_safe_float(match.group("g1_value")),
+        group1_n=_safe_int(match.group("g1_total")),
+        group2_value=_safe_float(match.group("g2_value")),
+        group2_n=_safe_int(match.group("g2_total")),
+        difference=_safe_float(match.group("difference")),
+        ci_lower=_safe_float(match.group("ci_lower")),
+        ci_upper=_safe_float(match.group("ci_upper")),
+        p_value=_safe_float(match.group("p_value")),
+        interpretation=cleaned_interp,
+        test=cleaned_interp or None,
+        evidence_refs=[hash_id],
+    )
+    return result
+
+
+def _match_percent_diff_stat_result(text: str, hash_id: str) -> Optional[StatisticalResult]:
+    groups = list(_GROUP_PERCENT_PATTERN.finditer(text))
+    if len(groups) < 2:
+        return None
+    g1, g2 = groups[0], groups[1]
+    diff_subtext = text[g2.end() :]
+    diff_match = _DIFF_PERCENT_WITH_P_PATTERN.search(diff_subtext)
+    diff_offset = g2.end()
+    if not diff_match:
+        diff_match = _DIFF_PERCENT_WITH_P_PATTERN.search(text)
+        diff_offset = 0
+    if not diff_match:
+        return None
+    comparison = _format_comparison(g1.group("label"), g2.group("label"))
+    window_start = max(0, g1.start() - 200)
+    diff_end = diff_match.end() + diff_offset
+    outcome = _infer_outcome_label(text[window_start:diff_end])
+    result = StatisticalResult(
+        comparison=comparison,
+        outcome=outcome,
+        group1_value=_safe_float(g1.group("value")),
+        group2_value=_safe_float(g2.group("value")),
+        difference=_safe_float(diff_match.group("difference")),
+        p_value=_safe_float(diff_match.group("p_value")),
+        evidence_refs=[hash_id],
+    )
+    return result
+
+
+def _merge_statistical_results(
+    document: ArticleDocument,
+    stats: List[StatisticalResult],
+) -> List[StatisticalResult]:
+    if not stats:
+        return []
+    existing = getattr(document, "statistical_results", []) or []
+    seen = {
+        (
+            entry.comparison or "",
+            entry.outcome or "",
+            tuple(entry.evidence_refs or []),
+        )
+        for entry in existing
+    }
+    appended: List[StatisticalResult] = []
+    for stat in stats:
+        key = (
+            stat.comparison or "",
+            stat.outcome or "",
+            tuple(stat.evidence_refs or []),
+        )
+        if key in seen:
+            continue
+        existing.append(stat)
+        appended.append(stat)
+        seen.add(key)
+    document.statistical_results = existing
+    return appended
+
+
+def _stat_result_quality(result: StatisticalResult) -> int:
+    score = 0
+def _merge_stat_result_entry(
+    primary: StatisticalResult,
+    secondary: StatisticalResult,
+) -> StatisticalResult:
+    merged = primary.model_copy(deep=True)
+    for field in (
+        "group1_value",
+        "group1_n",
+        "group2_value",
+        "group2_n",
+        "difference",
+        "ci_lower",
+        "ci_upper",
+        "p_value",
+        "interpretation",
+        "test",
+    ):
+        existing_value = getattr(merged, field)
+        new_value = getattr(secondary, field)
+        if existing_value is None and new_value is not None:
+            setattr(merged, field, new_value)
+    refs = set(merged.evidence_refs or [])
+    refs.update(secondary.evidence_refs or [])
+    merged.evidence_refs = sorted(refs) if refs else None
+    return merged
+
+
+def _format_comparison(label_a: str, label_b: str) -> str:
+    def _clean(label: str) -> str:
+        cleaned = label.replace("group", "").strip(" .")
+        cleaned = re.sub(r"-\s+", "", cleaned)
+        return re.sub(r"\s+", " ", cleaned)
+
+    return f"{_clean(label_a)} vs {_clean(label_b)}".strip()
+
+
+def _stat_comparison_key(value: str) -> str:
+    normalized = re.sub(r"-\s+", "", value or "")
+    return re.sub(r"\s+", " ", normalized).strip().lower()
+
+
+def _clean_interpretation(value: Optional[str]) -> Optional[str]:
+    if not value:
+        return None
+    cleaned = value.strip(" .;:,").lower()
+    if not cleaned:
+        return None
+    return cleaned
+
+
+def _safe_float(value: Optional[str]) -> Optional[float]:
+    if value is None:
+        return None
+    try:
+        cleaned = value.replace(" ", "").replace("−", "-").replace("<", "").replace(">", "")
+        return float(cleaned)
+    except (TypeError, ValueError, AttributeError):
+        return None
+
+
+def _safe_int(value: Optional[str]) -> Optional[int]:
+    if value is None:
+        return None
+    try:
+        return int(value.replace(" ", ""))
+    except (TypeError, ValueError, AttributeError):
+        return None
+
+
+def _infer_outcome_label(text: str) -> Optional[str]:
+    lowered = text.lower()
+    if "diagnostic accuracy" in lowered:
+        return "diagnostic_accuracy"
+    if "diagnostic yield" in lowered:
+        return "diagnostic_yield"
+    if "fev" in lowered:
+        return "fev1"
+    if "walk test" in lowered or "6-minute" in lowered:
+        return "six_minute_walk"
+    if "pneumothorax" in lowered:
+        return "pneumothorax"
+    if "hemoptysis" in lowered:
+        return "hemoptysis"
+    if "complication" in lowered:
+        return "complications"
+    diag_markers = ("navigational bronchoscopy", "transthoracic needle biopsy", "noninferiority")
+    if any(marker in lowered for marker in diag_markers):
+        return "diagnostic_accuracy"
     return None
 
 

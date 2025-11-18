@@ -5,7 +5,7 @@ from __future__ import annotations
 import re
 from typing import Any, Dict, List, Optional
 
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 
 class TableData(BaseModel):
@@ -14,6 +14,9 @@ class TableData(BaseModel):
     headers: List[str]
     rows: List[List[str]]
     page: Optional[int] = None
+    footnotes: List[str] = Field(default_factory=list)
+    heading_path: List[str] = Field(default_factory=list)
+    rows_truncated: bool = False
 
 
 class TableBlock(BaseModel):
@@ -24,6 +27,9 @@ class TableBlock(BaseModel):
     rows: List[List[str]]
     page: Optional[int] = None
     confidence: float = 0.8
+    footnotes: List[str] = Field(default_factory=list)
+    heading_path: List[str] = Field(default_factory=list)
+    rows_truncated: bool = False
 
 
 # Table type classification patterns
@@ -82,10 +88,17 @@ def classify_and_gate_tables(tables: List[Any]) -> List[TableBlock]:
         else:
             table_data = table
 
+        title_contains_table = bool(
+            table_data.title and "table" in table_data.title.lower()
+        )
+
         # Gate 1: Header allowlist (≥2 medical/unit headers)
         medical_headers = count_medical_headers(table_data.headers)
         if medical_headers < 2:
-            continue  # Skip - likely not a real table
+            if title_contains_table:
+                medical_headers = 2
+            else:
+                continue  # Skip - likely not a real table
 
         # Gate 2: Paragraph check (reject prose mis-detected as tables)
         if is_paragraph_table(table_data):
@@ -111,7 +124,10 @@ def classify_and_gate_tables(tables: List[Any]) -> List[TableBlock]:
             headers=table_data.headers,
             rows=table_data.rows,
             page=table_data.page,
-            confidence=0.85 if medical_headers >= 3 else 0.75
+            confidence=0.85 if medical_headers >= 3 else 0.75,
+            footnotes=table_data.footnotes,
+            heading_path=table_data.heading_path,
+            rows_truncated=table_data.rows_truncated,
         ))
 
     return gated_tables
@@ -131,7 +147,10 @@ def _convert_to_table_data(raw_table: Any) -> TableData:
             title=raw_table.get('title') or raw_table.get('caption'),
             headers=raw_table.get('headers', []),
             rows=raw_table.get('rows', []),
-            page=raw_table.get('page')
+            page=raw_table.get('page'),
+            footnotes=list(raw_table.get('footnotes', []) or []),
+            heading_path=list(raw_table.get('heading_path', []) or []),
+            rows_truncated=bool(raw_table.get('rows_truncated', False)),
         )
 
     # Fallback

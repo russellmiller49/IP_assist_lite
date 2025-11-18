@@ -33,7 +33,9 @@ from medparse.normalize.text_cleanup import clean_paragraph, deep_cleanup_fields
 from medparse.pipeline.engine_select import repair_space_poor_pages
 from medparse.schema.ifu import IFUDocument
 from medparse.ifu.safety_thresholds import expected_safety_with_source
+from medparse.text.normalization import summarize_normalization_reports
 from medparse.text.paragraphizer import build_paragraph_store, reflow_two_column_pages
+from medparse.tables.ifu_hints import detect_sterilization_table_hints
 from medparse.utils.log import get_logger
 
 LOGGER = get_logger(__name__)
@@ -177,7 +179,13 @@ def extract_ifu(
     extraction_config = config or get_extraction_config()
     ifu_settings = getattr(extraction_config, "ifu", {}) or {}
     engine_runtime = ifu_settings.get("_engine_runtime") if isinstance(ifu_settings, dict) else {}
-    pages = pages or load_pages(pdf_path, engine=engine, max_pages=page_limit)
+    text_norm_enabled = extraction_config.text_normalization_enabled()
+    pages = pages or load_pages(
+        pdf_path,
+        engine=engine,
+        max_pages=page_limit,
+        text_normalization=text_norm_enabled,
+    )
     pages, spacing_info = repair_space_poor_pages(
         pdf_path,
         pages,
@@ -189,7 +197,12 @@ def extract_ifu(
     tables_pages = pages
     if tables_engine and tables_engine != engine:
         try:
-            tables_pages = load_pages(pdf_path, engine=tables_engine, max_pages=page_limit)
+            tables_pages = load_pages(
+                pdf_path,
+                engine=tables_engine,
+                max_pages=page_limit,
+                text_normalization=text_norm_enabled,
+            )
         except Exception as exc:
             LOGGER.warning("Table engine '%s' failed (%s); using primary engine", tables_engine, exc)
             tables_pages = pages
@@ -269,6 +282,12 @@ def extract_ifu(
         headings=[heading.title for page in pages for heading in page.headings],
     )
 
+    tables_payload = collect_tables(tables_pages)
+    if extraction_config.sterilization_hints_enabled():
+        hint_tables = detect_sterilization_table_hints(pages, tables_payload)
+        if hint_tables:
+            tables_payload.extend(hint_tables)
+
     doc_kwargs: dict[str, object] = {
         "doc_type": "ifu",
         "doc_subtype": doc_subtype,
@@ -281,7 +300,7 @@ def extract_ifu(
         "publication_date": None,
         "model": None,
         "software_versions": [],
-        "tables": collect_tables(tables_pages),
+        "tables": tables_payload,
         "references": references,
         "safety_blocks": safety_blocks,
     }
@@ -465,6 +484,21 @@ def extract_ifu(
         }
         document.pipeline_info["spacing_metrics"] = spacing_metrics
 
+    toc_page_hints: set[int] = set()
+    def _extend_pages(values: Sequence[object]) -> None:
+        for value in values:
+            try:
+                toc_page_hints.add(int(value))
+            except (TypeError, ValueError):
+                continue
+
+    if toc_guard_info:
+        dropped_pages = toc_guard_info.get("pages_dropped", [])
+        if isinstance(dropped_pages, list):
+            _extend_pages(dropped_pages)
+    if safety_toc_dropped:
+        _extend_pages(safety_toc_dropped)
+
     paragraph_store, dedup_applied = build_paragraph_store(
         document.doc_id,
         pages,
@@ -472,12 +506,16 @@ def extract_ifu(
         drop_headers=True,
         drop_footers=True,
         detect_columns=column_mode_active,
+        toc_pages=toc_page_hints,
     )
     document.paragraph_store = paragraph_store
     if dedup_applied:
         document.pipeline_info["paragraph_dedup_applied"] = True
     else:
         document.pipeline_info.setdefault("paragraph_dedup_applied", False)
+    normalization_summary = summarize_normalization_reports(pages)
+    if normalization_summary:
+        document.pipeline_info["_normalization"] = normalization_summary
     _set_safety_expectations(document, manufacturer_hint=manufacturer_for_safety)
     return document
 __all__ = ["extract_ifu"]

@@ -39,7 +39,7 @@ from medparse.normalize.guideline_grades import (
 )
 from medparse.normalize.outcomes import OutcomeData, extract_outcomes
 from medparse.normalize.page_furniture import strip_furniture
-from medparse.normalize.relations import RelationRecord, build_cooccurrence, build_relations
+from medparse.relations.extract_relations import RelationRecord, build_cooccurrence
 from medparse.normalize.zotero_map import (
     FrontMatter,
     configure_zotero_library,
@@ -66,8 +66,10 @@ from medparse.schema.article import (
     GuidelineRecommendation,
     Outcome,
     StructuredAbstract,
+    TableFootnote,
 )
 from medparse.schema.common import EvidenceSpan, Relation, UmlsEntity
+from medparse.text.normalization import summarize_normalization_reports
 from medparse.text.paragraphizer import build_paragraph_store
 from medparse.utils.log import get_logger
 from medparse.guideline.promoter import enrich_guideline_document
@@ -81,25 +83,8 @@ ATS_CANONICAL_REASONS = {
     ATS_REASON_DERIVED,
 }
 
-STRUCTURED_ABSTRACT_LABELS = {
-    "background": "background",
-    "introduction": "background",
-    "objective": "background",
-    "objectives": "background",
-    "design": "methods",
-    "methods": "methods",
-    "materials and methods": "methods",
-    "patients and methods": "methods",
-    "patients": "methods",
-    "results": "results",
-    "findings": "results",
-    "conclusion": "conclusions",
-    "conclusions": "conclusions",
-    "interpretation": "conclusions",
-}
-
-KEYWORD_HEADER_RE = re.compile(r"^(keywords|key words)\s*[:\-]\s*(.+)$", re.IGNORECASE)
-CLINICAL_TRIAL_RE = re.compile(r"NCT\d{8}", re.IGNORECASE)
+KEYWORD_HEADER_RE = re.compile(r"^(keywords|key\s+words)\b[\s:;\-\u2013]*\s*(.+)$", re.IGNORECASE)
+CLINICAL_TRIAL_RE = re.compile(r"N\s*CT[-\s]*(\d{8})", re.IGNORECASE)
 
 PRACTICE_MANAGEMENT_TERMS = {
     "practice management",
@@ -389,7 +374,12 @@ def extract_article(
     """Extract an article document honouring the configured profile."""
 
     extraction_config = config or get_extraction_config()
-    pages = pages or load_pages(pdf_path, engine=engine, max_pages=page_limit)
+    pages = pages or load_pages(
+        pdf_path,
+        engine=engine,
+        max_pages=page_limit,
+        text_normalization=extraction_config.text_normalization_enabled(),
+    )
     pages_for_detection = [copy.deepcopy(page) for page in pages]
     sections_for_detection = normalize_article_sections(pages_for_detection)
     if not pages:
@@ -397,8 +387,12 @@ def extract_article(
 
     _strip_page_furniture(pages)
     sections = normalize_article_sections(pages)
-    abstract_text = sections.pop("abstract", None)
-    abstract_payload = _build_structured_abstract(abstract_text)
+    abstract_payload = _extract_structured_abstract_payload(pages)
+    if abstract_payload is None or not abstract_payload.text:
+        abstract_text = sections.pop("abstract", None)
+        abstract_payload = _build_structured_abstract_from_text(abstract_text)
+    elif abstract_payload.text:
+        sections["abstract"] = abstract_payload.text
     keywords = _extract_article_keywords(pages)
     clinical_trials = _extract_clinical_trials(pages)
     flat_lines = collect_lines(pages)
@@ -567,15 +561,7 @@ def extract_article(
         umls_result.filter_report = umls_filter_report
         umls_result.entities = umls_records
 
-    relation_records = (
-        build_relations(
-            title=title_info.get("title") or pdf_path.stem,
-            outcomes=[outcome.model_dump() for outcome in outcomes],
-            recommendations=[rec.model_dump() for rec in recommendations],
-        )
-        if extraction_config.should_extract_relations()
-        else []
-    )
+    relation_records: List[RelationRecord] = []
     if extraction_config.should_extract_relations() and umls_records:
         relation_records.extend(
             build_cooccurrence(
@@ -583,6 +569,10 @@ def extract_article(
                 window=extraction_config.relation_window or "page",
                 page_texts=page_text_map,
             )
+        )
+        relation_records = _drop_title_relations(
+            relation_records,
+            title_info.get("title"),
         )
 
     document = ArticleDocument(
@@ -619,6 +609,10 @@ def extract_article(
         keywords=keywords,
         clinical_trials=clinical_trials,
     )
+
+    for author in document.authors:
+        fallback_full_name = _compose_full_name(author.given, author.family)
+        author.full_name = author.full_name or fallback_full_name or author.family or author.given
 
     document.pipeline_info["front_matter_confidence"] = {
         "title": {
@@ -705,6 +699,9 @@ def extract_article(
         document.pipeline_info["max_entities"] = extraction_config.max_entities
     if extraction_config.max_relations:
         document.pipeline_info["max_relations"] = extraction_config.max_relations
+    normalization_summary = summarize_normalization_reports(pages)
+    if normalization_summary:
+        document.pipeline_info["_normalization"] = normalization_summary
 
     paragraph_store, dedup_applied = build_paragraph_store(
         document.doc_id,
@@ -755,11 +752,14 @@ def _build_authors(frontmatter: dict) -> List[Author]:
     for author in frontmatter.get("authors", []):
         try:
             is_corr = _matches_corresponding(author, corresponding_name)
+            given = author.get("given", "")
+            family = author.get("family", "")
             payload.append(
                 Author(
-                    given=author.get("given", ""),
-                    family=author.get("family", ""),
+                    given=given,
+                    family=family,
                     suffix=author.get("suffix"),
+                    full_name=_compose_full_name(given, family),
                     affiliation_ids=[
                         marker
                         for marker in author.get("footnotes", [])
@@ -784,6 +784,13 @@ def _matches_corresponding(author: dict, corr_lower: str) -> bool:
     return candidate and candidate in corr_lower
 
 
+def _compose_full_name(given: str, family: str) -> Optional[str]:
+    parts = [part.strip() for part in (given, family) if part and part.strip()]
+    if not parts:
+        return None
+    return " ".join(parts)
+
+
 def _build_affiliations(records: Iterable[dict]) -> List[Affiliation]:
     payload: List[Affiliation] = []
     for record in records:
@@ -804,10 +811,13 @@ def _authors_from_front_matter(front_matter: FrontMatter) -> List[Author]:
     authors: List[Author] = []
     for author in front_matter.authors:
         try:
+            given = author.given or ""
+            family = author.family or ""
             authors.append(
                 Author(
-                    given=author.given or "",
-                    family=author.family or "",
+                    given=given,
+                    family=family,
+                    full_name=_compose_full_name(given, family),
                 )
             )
         except Exception as exc:  # pragma: no cover - defensive
@@ -886,6 +896,11 @@ def _coi_and_funding(pages: Sequence[PageData]) -> tuple[List[str], List[str]]:
 def _map_tables(blocks: Sequence[TableBlock]) -> List[EnhancedTable]:
     tables: List[EnhancedTable] = []
     for idx, block in enumerate(blocks, start=1):
+        footnotes = [
+            TableFootnote(symbol=str(num + 1), text=note)
+            for num, note in enumerate(block.footnotes or [])
+            if isinstance(note, str) and note.strip()
+        ]
         tables.append(
             EnhancedTable(
                 id=f"table_{idx}",
@@ -894,6 +909,9 @@ def _map_tables(blocks: Sequence[TableBlock]) -> List[EnhancedTable]:
                 rows=block.rows,
                 page=block.page,
                 table_type=block.table_type,
+                 footnotes=footnotes,
+                 rows_truncated=bool(block.rows_truncated),
+                 heading_path=list(block.heading_path or []),
             )
         )
     return tables
@@ -1899,6 +1917,21 @@ def _map_umls_entities(records: Sequence[UmlsEntityRecord]) -> List[UmlsEntity]:
     return mapped
 
 
+def _drop_title_relations(relations: Sequence[RelationRecord], title: Optional[str]) -> List[RelationRecord]:
+    if not title:
+        return list(relations)
+    normalized = title.strip().lower()
+    if not normalized:
+        return list(relations)
+    filtered: List[RelationRecord] = []
+    for record in relations:
+        subject = getattr(record, "subject", None)
+        if isinstance(subject, str) and subject.strip().lower() == normalized:
+            continue
+        filtered.append(record)
+    return filtered
+
+
 def _map_relations(records: Sequence[RelationRecord]) -> List[Relation]:
     mapped: List[Relation] = []
     for record in records:
@@ -1940,44 +1973,119 @@ def _as_int(value: Optional[float]) -> Optional[int]:
         return None
 
 
-def _normalize_abstract_label(label: str) -> Optional[str]:
-    cleaned = label.strip().lower().rstrip(":")
-    cleaned = re.sub(r"\s+", " ", cleaned)
-    return STRUCTURED_ABSTRACT_LABELS.get(cleaned)
+ABSTRACT_LABEL_MAP = {
+    "background": {"background", "importance", "rationale"},
+    "objectives": {"objectives", "objective", "aims", "purpose"},
+    "methods": {
+        "methods",
+        "patients and methods",
+        "materials and methods",
+        "study design",
+        "study methodology",
+    },
+    "results": {"results", "findings"},
+    "conclusions": {"conclusion", "conclusions", "interpretation"},
+}
+
+ABSTRACT_SKIP_PREFIXES = (
+    "the authors'",
+    "the authors’",
+    "address reprint requests",
+    "correspondence",
+    "copyright",
+    "©",
+    "from the",
+    "n engl j med",
+)
+
+ABSTRACT_STOP_TOKENS = (
+    "the new england journal",
+    "downloaded from",
+)
 
 
-def _build_structured_abstract(raw: Optional[str]) -> Optional[StructuredAbstract]:
-    if not raw:
-        return None
-    sections: Dict[str, str] = {}
+def _extract_structured_abstract_payload(pages: Sequence[PageData]) -> Optional[StructuredAbstract]:
+    collecting = False
     current_label: Optional[str] = None
     buffer: List[str] = []
+    sections: Dict[str, str] = {}
+    raw_segments: List[str] = []
+    stop = False
 
-    for line in raw.splitlines():
-        stripped = line.strip()
-        if not stripped:
-            if buffer and current_label:
-                buffer.append("")
-            continue
-        if ":" in stripped:
-            label_candidate, remainder = stripped.split(":", 1)
-            normalized = _normalize_abstract_label(label_candidate)
-            if normalized:
-                if current_label and buffer:
-                    sections[current_label] = " ".join(part for part in buffer if part).strip()
-                current_label = normalized
-                buffer = [remainder.strip()]
+    for page in pages[:2]:
+        for raw_line in page.lines or []:
+            line = raw_line.strip()
+            if not line:
+                if collecting and buffer:
+                    buffer.append("")
                 continue
-        if current_label:
-            buffer.append(stripped)
-        else:
-            buffer.append(stripped)
+            lower = line.lower()
+            if not collecting:
+                if lower.startswith("abstract"):
+                    collecting = True
+                    remainder = line[len("abstract") :].lstrip(" :.-")
+                    if remainder:
+                        buffer.append(remainder)
+                        raw_segments.append(remainder)
+                    continue
+                continue
+
+            if any(token in lower for token in ABSTRACT_STOP_TOKENS):
+                stop = True
+                break
+            if any(lower.startswith(prefix) for prefix in ABSTRACT_SKIP_PREFIXES):
+                continue
+
+            normalized_label = _normalize_abstract_label(line)
+            if normalized_label:
+                if current_label and buffer:
+                    sections[current_label] = _collapse_section(buffer)
+                current_label = normalized_label
+                buffer = []
+                raw_segments.append(line)
+                continue
+
+            buffer.append(line)
+            raw_segments.append(line)
+
+        if stop:
+            break
+
+    if not collecting:
+        return None
 
     if current_label and buffer:
-        sections[current_label] = " ".join(part for part in buffer if part).strip()
+        sections[current_label] = _collapse_section(buffer)
+
+    text = "\n".join(raw_segments).strip()
+    if not text:
+        return None
 
     structured = bool(sections)
-    return StructuredAbstract(structured=structured, sections=sections, text=raw.strip())
+    return StructuredAbstract(structured=structured, sections=sections, text=text)
+
+
+def _normalize_abstract_label(label: str) -> Optional[str]:
+    cleaned = label.strip(" :.\u2014").lower()
+    cleaned = re.sub(r"\s+", " ", cleaned)
+    for canonical, aliases in ABSTRACT_LABEL_MAP.items():
+        if cleaned in aliases:
+            return canonical
+    return None
+
+
+def _collapse_section(lines: List[str]) -> str:
+    collapsed = " ".join(part for part in lines if part)
+    return re.sub(r"\s+", " ", collapsed).strip()
+
+
+def _build_structured_abstract_from_text(raw: Optional[str]) -> Optional[StructuredAbstract]:
+    if not raw:
+        return None
+    stripped = raw.strip()
+    if not stripped:
+        return None
+    return StructuredAbstract(structured=False, sections={}, text=stripped)
 
 
 def _extract_article_keywords(pages: Sequence[PageData]) -> List[str]:
@@ -1993,10 +2101,11 @@ def _extract_article_keywords(pages: Sequence[PageData]) -> List[str]:
                 if not follow_clean:
                     break
                 lowered = follow_clean.lower()
-                if lowered.startswith(("abbreviations", "introduction", "abstract")):
+                if lowered.startswith(("abbreviations", "introduction", "abstract", "correspondence")):
                     break
                 payload.append(follow_clean)
-            tokens = re.split(r"[,;•·]", " ".join(payload))
+            joined = " ".join(payload)
+            tokens = re.split(r"[;,•·\u2022\u2023]", joined)
             keywords = [token.strip(" .;:,\u2022\u2023") for token in tokens]
             keywords = [token for token in keywords if len(token) >= 2]
             if keywords:
@@ -2012,7 +2121,7 @@ def _extract_clinical_trials(pages: Sequence[PageData]) -> List[ClinicalTrialReg
             candidates.append(" ".join(page.lines))
         combined = " ".join(candidates)
         for match in CLINICAL_TRIAL_RE.findall(combined):
-            trial_id = match.upper()
+            trial_id = f"NCT{match}".upper()
             if trial_id not in seen:
                 seen.append(trial_id)
     return [ClinicalTrialRegistration(id=trial_id, registry="ClinicalTrials.gov") for trial_id in seen]

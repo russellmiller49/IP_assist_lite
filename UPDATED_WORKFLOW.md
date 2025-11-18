@@ -47,6 +47,11 @@ python -m medparse.cli extract-ifus \
   --ifu-engine hybrid \
   --ifu-fast-long-docs
 
+# Streaming metadata surfaces under `_metrics.streaming_fallback` (batches, windows completed, last completed page, failed windows) so long-manual extractions can be audited for partial timeouts.
+# Text normalization stays on via `text_normalization.enabled` (see `configs/run_*.yaml`) so ingest repairs (fractions, unit spacing, run-ons) are tracked in `_metrics._normalization`.
+# IFU-specific helpers like sterilization table hints are guarded by `tables.sterilization_hints.enabled`, while `ifu.safety_typing.enabled` controls the new signal-word classifier for untyped safety blocks.
+# Articles automatically emit structured abstracts, keyword lists, clinical trial registrations, and `statistical_results[]` (with CI/p-values + evidence refs) so QA can spot-check VERITAS/VENT-style claims without hunting through prose.
+
 # Textbooks
 python -m medparse.cli extract-textbooks \
   "data/Input pdfs/Textbooks" \
@@ -169,9 +174,10 @@ pytest tests/integration/test_medparse_articles.py \
 - `second_pass: auto` is the default in `configs/run_ifu.yaml`; override via `--second-pass {auto,always,off}`.
 - TOC guard now runs before anchor discovery, drops leading TOC pages, and records them in `_metrics.toc_pages_dropped`. Anchors starting on TOC pages are re-searched automatically.
 - Front-matter patterns live in `configs/_shared/ifu_frontmatter.yaml` (`pattern_bundle`). Extend this YAML to capture new manufacturers, product names, part numbers, models, revisions, or publication dates.
-- Safety density thresholds are centralized in `configs/_shared/second_pass.yaml` (`second_pass.ifu.safety_density_min`) with defaults (20) and vendor overrides (Intuitive=20, ERBE=15, Olympus=8). Validators and second pass use the same table.
+- Safety density thresholds are unified: ≤4 pages ⇒ ≥8 blocks, ≥40 pages ⇒ ≥20 blocks, otherwise ≥12. The booster records `_metrics.safety_blocks_added`, and validators emit a warning only if the final count (after boosting) still trails the expectation.
 - References anchor patcher now registers a `references` section so downstream validators remain quiet after backfill.
-- Second-pass results surface in both `second_pass` (mode/applied/reasons/modifications) and `_metrics.second_pass_*`, and the CLI prints a single summary line of applied IFU patchers.
+- Table budgets are capped at 24 (`emit.max_tables`/`size_guards.max_tables` in `configs/run_ifu.yaml`). `_metrics.tables_original|kept|dropped` mirrors the emitted tables array so QA can confirm nothing was silently truncated.
+- Second-pass results surface in both `second_pass` (mode/applied/reasons/modifications) and `_metrics.second_pass_*`. Each patch now emits a full entry in `_metrics.patches[]` with `{name, modifications, reasons}` for easier debugging, and the CLI prints a single summary line of applied IFU patchers.
 ```
 
 ---

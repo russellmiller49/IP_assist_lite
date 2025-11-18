@@ -1,4 +1,4 @@
-"""Lightweight rule-based relation extraction for enriched documents."""
+"""Heuristic relation extraction built on UMLS co-occurrence windows."""
 
 from __future__ import annotations
 
@@ -8,7 +8,7 @@ from typing import Dict, Iterable, List, Optional, Tuple, Union
 
 from pydantic import BaseModel, Field
 
-from medparse.normalize.relation_patterns import (
+from medparse.relations.patterns import (
     detect_conditional,
     detect_negation,
     detect_pattern,
@@ -110,95 +110,6 @@ def _orient_entities(predicate: str, left: dict, right: dict) -> tuple[dict, dic
         if left_role == "condition" and right_role != "condition":
             subject, obj = right, left
     return subject, obj
-
-
-def relations_from_outcomes(
-    procedure_name: str,
-    outcomes: Iterable[dict],
-) -> List[RelationRecord]:
-    """Generate ``has_complication`` relations from outcome records."""
-
-    relations: List[RelationRecord] = []
-    for outcome in outcomes:
-        name = outcome.get("name")
-        if not name:
-            continue
-
-        attributes: Dict[str, object] = {}
-        for key in ("percent", "value", "n", "denominator", "ci_lower", "ci_upper"):
-            if outcome.get(key) is not None:
-                attributes[key] = outcome[key]
-
-        evidence = None
-        evidence_data = outcome.get("evidence")
-        if isinstance(evidence_data, dict):
-            evidence = evidence_data.get("text")
-
-        relations.append(
-            RelationRecord(
-                subject=procedure_name,
-                predicate="has_complication",
-                object=name,
-                attributes=attributes,
-                evidence=evidence,
-                confidence=0.85,
-                evidence_refs=list(outcome.get("evidence_ids", []) or []),
-            )
-        )
-    return relations
-
-
-def relations_from_recommendations(
-    guideline_title: str,
-    recommendations: Iterable[dict],
-) -> List[RelationRecord]:
-    """Generate ``recommends`` relations from guideline recommendations."""
-
-    relations: List[RelationRecord] = []
-    for rec in recommendations:
-        text = rec.get("text")
-        if not text:
-            continue
-
-        attributes: Dict[str, object] = {}
-        for key in ("grade", "strength", "evidence_level", "statement_type", "votes"):
-            value = rec.get(key)
-            if value:
-                attributes[key] = value
-
-        evidence = None
-        evidence_data = rec.get("evidence")
-        if isinstance(evidence_data, dict):
-            evidence = evidence_data.get("text")
-
-        relations.append(
-            RelationRecord(
-                subject=guideline_title,
-                predicate="recommends",
-                object=text,
-                attributes=attributes,
-                evidence=evidence,
-                confidence=0.82,
-                evidence_refs=list(rec.get("evidence_ids", []) or []),
-            )
-        )
-    return relations
-
-
-def build_relations(
-    *,
-    title: str,
-    outcomes: Iterable[dict] | None = None,
-    recommendations: Iterable[dict] | None = None,
-) -> List[RelationRecord]:
-    """Convenience wrapper combining outcome and recommendation relations."""
-
-    relations: List[RelationRecord] = []
-    if outcomes:
-        relations.extend(relations_from_outcomes(title, outcomes))
-    if recommendations:
-        relations.extend(relations_from_recommendations(title, recommendations))
-    return relations
 
 
 def build_cooccurrence(
@@ -433,7 +344,7 @@ def _legacy_cooccurrence(
             relations.append(
                 RelationRecord(
                     subject=cui_left,
-                    predicate="co_occurs_with",
+                    predicate="associated_with",
                     object=cui_right,
                     attributes=attributes,
                     evidence=evidence,
@@ -444,10 +355,4 @@ def _legacy_cooccurrence(
     return relations
 
 
-__all__ = [
-    "RelationRecord",
-    "build_relations",
-    "build_cooccurrence",
-    "relations_from_outcomes",
-    "relations_from_recommendations",
-]
+__all__ = ["RelationRecord", "build_cooccurrence"]

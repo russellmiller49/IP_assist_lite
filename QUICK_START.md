@@ -100,7 +100,7 @@ Results are saved to:
 - `out/ifus/` - IFU extractions
 - `out/textbooks/` - Textbook extractions
 
-`configs/run_ifu.yaml` defines manufacturer overrides and engine selection. CLI flags such as `--ifu-engine` (`pymupdf`, `pdfplumber`, or `hybrid`) and `--ifu-fast-long-docs/--no-ifu-fast-long-docs` can override the YAML defaults.
+`configs/run_ifu.yaml` defines manufacturer overrides and engine selection. CLI flags such as `--ifu-engine` (`pymupdf`, `pdfplumber`, or `hybrid`) and `--ifu-fast-long-docs/--no-ifu-fast-long-docs` can override the YAML defaults. Long manuals stream in 40-page windows (`ifu.extract.long_doc.pages_per_batch`) with a 10 s per-page timeout guard; `_metrics.streaming_fallback` records `windows_completed`, `last_completed_page`, and any `batches_failed` so you can confirm streaming health during QA.
 
 ## Smart Chunking
 
@@ -114,10 +114,17 @@ Environment variables in `.env`:
 
 Key IFU configuration files:
 - `configs/_shared/ifu_frontmatter.yaml` – regex `pattern_bundle` for manufacturer, product name, part number, revision, publication date, and model. Extend this file when onboarding a new vendor.
-- `configs/_shared/second_pass.yaml` – houses second-pass defaults, including IFU safety density thresholds (`second_pass.ifu.safety_density_min`). Defaults are 20 blocks (8 for ≤4-page leaflets) with overrides for Intuitive, ERBE, and Olympus.
-- `configs/run_ifu.yaml` – controls TOC guard, engine selection, and manufacturer overrides (`small_ifu_threshold`, `ifu.engine`, etc.).
+- `configs/_shared/second_pass.yaml` – houses second-pass defaults, including the unified safety density thresholds: ≤4 pages ⇒ ≥8 blocks, ≥40 pages ⇒ ≥20 blocks, else ≥12. The booster writes `_metrics.safety_blocks_added`, and the validator only warns when the final count remains below the target after boosting.
+- `configs/run_ifu.yaml` – controls TOC guard, streaming knobs (`ifu.extract.long_doc.*`), chunking defaults, and the tables cap (`emit.max_tables` / `size_guards.max_tables`, now 24).
+- `text_normalization.enabled` (set in both `configs/run_article.yaml` and `configs/run_ifu.yaml`) keeps ingestion fixes on by default—fraction ligatures, unit spacing, and run-on repairs record a `_normalization.report` in `_metrics`.
+- `tables.sterilization_hints.enabled` (per config) toggles IFU-only sterilization table detection. Disable it if a PDF set has incompatible scans.
 
-Each extraction now records a second-pass summary (`second_pass.applied`, `second_pass.reasons`) and rolled-up metrics in `_metrics` so QA can verify which fixes ran and how many safety blocks were harvested.
+Each extraction now records a second-pass summary (`second_pass.applied`, `second_pass.reasons`) plus a per-patch array (`_metrics.patches[]` with `name`, `modifications`, and `reasons`). Table budgets and counts are mirrored (`_metrics.tables_original|kept|dropped`) so you can verify that streaming flushes preserved tables and that no rows were dropped unexpectedly.
+
+Article payloads now expose richer structured fields by default:
+- `abstract` captures both free-form text and, when headings exist, a structured map (background/methods/results/conclusions) so downstream summarizers can target the right subsection.
+- `keywords[]` and `clinical_trials[]` (with `registry` + `id`, e.g., `NCT` numbers) surface front-matter metadata even when PDFs bury it in sidebars.
+- `statistical_results[]` enumerates comparisons parsed from research text (_e.g._ VERITAS and VENT trials), including per-arm values, confidence intervals, p-values, and `evidence_refs` for easy traceability.
 
 ## Troubleshooting
 

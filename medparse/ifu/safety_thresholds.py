@@ -74,7 +74,24 @@ def _load_legacy_policy() -> Dict[str, Any]:
     default_min = density_block.get("default")
     if default_min is None:
         default_min = safety_block.get("cap_long")
-    default_min_blocks = _coerce_positive_int(default_min, 20)
+    default_min_blocks = _coerce_positive_int(default_min, 12)
+
+    short_max_pages = _coerce_positive_int(
+        density_block.get("short_max_pages") or safety_block.get("leaflet_pages_max"),
+        4,
+    )
+    short_min_blocks = _coerce_positive_int(
+        density_block.get("short_min_blocks") or safety_block.get("min_short"),
+        8,
+    )
+    long_min_pages = _coerce_positive_int(
+        density_block.get("long_min_pages") or safety_block.get("long_manual_pages_min"),
+        40,
+    )
+    long_min_blocks = _coerce_positive_int(
+        density_block.get("long_min_blocks") or safety_block.get("cap_long"),
+        20,
+    )
 
     small_leaflet = {
         "max_pages": _coerce_positive_int(
@@ -104,6 +121,10 @@ def _load_legacy_policy() -> Dict[str, Any]:
     return {
         "default_min_blocks": default_min_blocks,
         "small_leaflet": small_leaflet,
+        "short_max_pages": short_max_pages,
+        "short_min_blocks": short_min_blocks,
+        "long_min_pages": long_min_pages,
+        "long_min_blocks": long_min_blocks,
         "manufacturer_overrides": manufacturer_overrides,
     }
 
@@ -252,14 +273,28 @@ def _apply_manufacturer_overrides(
 
 def _resolve_expectation(document: object) -> SafetyExpectation:
     policy = _load_policy()
-    default_min = _coerce_positive_int(policy.get("default_min_blocks"), 20)
+    short_max_pages = _coerce_positive_int(policy.get("short_max_pages"), 4)
+    short_min_blocks = _coerce_positive_int(policy.get("short_min_blocks"), 8)
+    long_min_pages = _coerce_positive_int(policy.get("long_min_pages"), 40)
+    long_min_blocks = _coerce_positive_int(policy.get("long_min_blocks"), 20)
+    default_min = _coerce_positive_int(policy.get("default_min_blocks"), 12)
+
     small_leaflet = _apply_small_leaflet_rule(policy, document)
     if small_leaflet:
-        return small_leaflet
-    override = _apply_manufacturer_overrides(policy, document, default_min)
+        expectation = small_leaflet
+    else:
+        page_count = max(0, _to_int(_get_attr(document, "page_count")))
+        if short_max_pages and page_count and page_count <= short_max_pages:
+            expectation = SafetyExpectation(minimum=short_min_blocks, rule="short_doc")
+        elif long_min_pages and page_count and page_count >= long_min_pages:
+            expectation = SafetyExpectation(minimum=long_min_blocks, rule="long_doc")
+        else:
+            expectation = SafetyExpectation(minimum=default_min, rule="default")
+
+    override = _apply_manufacturer_overrides(policy, document, expectation.minimum)
     if override:
         return override
-    return SafetyExpectation(minimum=default_min, rule="default")
+    return expectation
 
 
 def expected_safety_with_source(document: object | None) -> Tuple[int, str]:

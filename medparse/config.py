@@ -108,6 +108,8 @@ class ExtractionConfig(BaseModel):
     metadata_sources_data: Dict[str, Any] = Field(default_factory=dict, alias="metadata_sources")
     enrichment_data: Dict[str, Any] = Field(default_factory=dict, alias="enrichment")
     ifu: Dict[str, Any] = Field(default_factory=dict)
+    text_normalization: Dict[str, Any] = Field(default_factory=dict)
+    tables: Dict[str, Any] = Field(default_factory=dict)
 
     _thresholds_namespace: Optional["FrozenNamespace"] = PrivateAttr(default=None)
     _size_guards_namespace: Optional["FrozenNamespace"] = PrivateAttr(default=None)
@@ -159,6 +161,14 @@ class ExtractionConfig(BaseModel):
     def should_extract_relations(self) -> bool:
         """Check if relation extraction should run."""
         return self.is_enriched() and self.enable_relations
+
+    def text_normalization_enabled(self) -> bool:
+        block = self.text_normalization or {}
+        return bool(block.get("enabled", True))
+
+    def sterilization_hints_enabled(self) -> bool:
+        hints = (self.tables or {}).get("sterilization_hints", {})
+        return bool(hints.get("enabled", True))
 
     def should_normalize_guidelines(self) -> bool:
         """Check if guideline normalization should run."""
