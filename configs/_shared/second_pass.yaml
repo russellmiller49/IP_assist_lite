@@ -2,6 +2,10 @@ second_pass:
   enabled: auto
   max_runtime_ms: 2500
 
+  observability:
+    emit_validation_metrics: true
+    emit_quality_metrics: true
+
   guideline_promoter:
     max_promoted_per_section: 64
     allow_sections:

@@ -24,7 +24,9 @@ from medparse.ifu.frontmatter import extract_front_matter
 from medparse.ifu.revision import sync_revision_status
 from medparse.extractors.textbook import extract_textbook_chapter
 from medparse.extract.utils import load_pages
+from medparse.ingest.docling_adapter import DoclingAdapter, DoclingArtifacts, DoclingTable
 from medparse.ingest.models import PageData
+from medparse.ingest.page_predicates import DoclingPageTargets, analyze_docling_targets
 from medparse.schema.article import ArticleDocument
 from medparse.schema.common import BaseDocument, EvidenceSpan, SizeGuards
 from medparse.schema.ifu import IFUDocument
@@ -61,6 +63,7 @@ MODEL_MAP: Dict[str, Type[BaseDocument]] = {
 }
 
 _SHARED_CHUNKING_DEFAULTS: Optional[Dict[str, Any]] = None
+_DOCLING_ADAPTER: Optional[DoclingAdapter] = None
 
 
 def _deep_update(base: Dict[str, object], overrides: Dict[str, object]) -> Dict[str, object]:
@@ -79,10 +82,16 @@ def _deep_update(base: Dict[str, object], overrides: Dict[str, object]) -> Dict[
     return result
 
 
-def _resolve_chunking_settings(emit_config: Dict[str, Any] | None, cli_mode: Optional[str]) -> Dict[str, Any]:
+def _resolve_chunking_settings(
+    config_chunking: Optional[Dict[str, Any]],
+    emit_config: Dict[str, Any] | None,
+    cli_mode: Optional[str],
+) -> Dict[str, Any]:
     """Return normalized chunking settings from emit config + CLI mode."""
 
     chunking_block: Dict[str, Any] = _load_shared_chunking_defaults()
+    if isinstance(config_chunking, dict):
+        chunking_block.update(config_chunking)
     if isinstance(emit_config, dict):
         block = emit_config.get("chunking")
         if isinstance(block, dict):
@@ -94,9 +103,10 @@ def _resolve_chunking_settings(emit_config: Dict[str, Any] | None, cli_mode: Opt
     # When CLI mode is omitted we respect config; when explicitly "off" we disable.
     cli_enabled = cli_normalized != "off"
     enabled = config_enabled and cli_enabled
+    chunk_method = str(chunking_block.get("method", "smart") or "smart").lower()
     settings = {
         "enabled": enabled,
-        "mode": "smart" if enabled else "off",
+        "mode": chunk_method if enabled else "off",
         "token_min": chunking_block.get("token_min", 200),
         "token_max": chunking_block.get("token_max", 500),
         "overlap_ratio": chunking_block.get("overlap_ratio", 0.15),
@@ -110,6 +120,318 @@ def _resolve_chunking_settings(emit_config: Dict[str, Any] | None, cli_mode: Opt
     elif not cli_enabled:
         settings["reason"] = "cli_disabled"
     return settings
+
+
+def _extract_document(
+    doc_type: DocType,
+    pdf_path: Path,
+    *,
+    engine: str,
+    page_limit: Optional[int],
+    pages: Sequence[PageData],
+    config: ExtractionConfig,
+) -> BaseDocument:
+    backend_mode = _resolve_backend_mode(config)
+    if backend_mode == "docling" and _docling_enabled(config):
+        return _extract_docling(
+            doc_type,
+            pdf_path,
+            engine=engine,
+            page_limit=page_limit,
+            pages=pages,
+            config=config,
+        )
+    return _extract_legacy(
+        doc_type,
+        pdf_path,
+        engine=engine,
+        page_limit=page_limit,
+        pages=pages,
+        config=config,
+    )
+
+
+def _extract_legacy(
+    doc_type: DocType,
+    pdf_path: Path,
+    *,
+    engine: str,
+    page_limit: Optional[int],
+    pages: Sequence[PageData],
+    config: ExtractionConfig,
+) -> BaseDocument:
+    extractor = EXTRACTOR_MAP.get(doc_type)
+    if extractor is None:
+        raise ValueError(f"Unsupported doc_type '{doc_type}'")
+    return extractor(
+        pdf_path,
+        engine=engine,
+        page_limit=page_limit,
+        pages=pages,
+        config=config,
+    )
+
+
+def _extract_docling(
+    doc_type: DocType,
+    pdf_path: Path,
+    *,
+    engine: str,
+    page_limit: Optional[int],
+    pages: Sequence[PageData],
+    config: ExtractionConfig,
+) -> BaseDocument:
+    document = _extract_legacy(
+        doc_type,
+        pdf_path,
+        engine=engine,
+        page_limit=page_limit,
+        pages=pages,
+        config=config,
+    )
+    try:
+        _apply_docling_overlays(document, pdf_path, pages, config)
+    except RuntimeError as exc:
+        LOGGER.warning("Docling overlay unavailable: %s", exc)
+    except Exception as exc:  # pragma: no cover - defensive
+        LOGGER.warning("Docling overlay failed: %s", exc)
+    return document
+
+
+def _resolve_backend_mode(config: ExtractionConfig) -> str:
+    try:
+        backend_value = config.extract.get("backend", "legacy")
+    except AttributeError:
+        backend_value = "legacy"
+    backend = str(backend_value or "legacy").strip().lower()
+    return backend if backend in {"legacy", "docling"} else "legacy"
+
+
+def _docling_enabled(config: ExtractionConfig) -> bool:
+    try:
+        return bool(config.docling.get("enabled", False))
+    except AttributeError:
+        return False
+
+
+def _get_docling_adapter() -> DoclingAdapter:
+    global _DOCLING_ADAPTER
+    if _DOCLING_ADAPTER is None:
+        _DOCLING_ADAPTER = DoclingAdapter()
+    return _DOCLING_ADAPTER
+
+
+def _apply_docling_overlays(
+    document: BaseDocument,
+    pdf_path: Path,
+    pages: Sequence[PageData],
+    config: ExtractionConfig,
+) -> None:
+    docling_block = getattr(config, "docling", None)
+    selective = True
+    force_pages: List[int] = []
+    if docling_block is not None:
+        try:
+            selective = bool(docling_block.get("selective_pages", True))
+        except AttributeError:
+            selective = True
+        try:
+            force_pages_raw = docling_block.get("force_pages", [])
+        except AttributeError:
+            force_pages_raw = []
+        force_pages = _normalize_page_list(force_pages_raw)
+
+    targets = analyze_docling_targets(pages, force_pages=force_pages)
+    requested_pages = targets.all_pages
+    if not requested_pages:
+        if not selective:
+            requested_pages = sorted({page.number or idx + 1 for idx, page in enumerate(pages)})
+        elif force_pages:
+            requested_pages = sorted(force_pages)
+    if not requested_pages:
+        pipeline_info = getattr(document, "pipeline_info", {}) or {}
+        docling_info = pipeline_info.setdefault("docling", {})
+        docling_info.setdefault("requested_pages", [])
+        document.pipeline_info = pipeline_info
+        return
+    adapter = _get_docling_adapter()
+    artifacts = adapter.extract(
+        pdf_path,
+        doc_type=getattr(document, "doc_type", None) or config.doc_type,
+        pages=requested_pages,
+    )
+    tables_added = _merge_docling_tables(document, artifacts.tables, config)
+    _record_docling_metrics(
+        document,
+        artifacts,
+        targets,
+        selective,
+        requested_pages,
+        tables_added,
+    )
+
+
+def _normalize_page_list(values: Sequence[object] | None) -> List[int]:
+    if not values:
+        return []
+    seen: set[int] = set()
+    normalized: List[int] = []
+    for value in values:
+        try:
+            page = int(value)
+        except (TypeError, ValueError):
+            continue
+        if page <= 0 or page in seen:
+            continue
+        seen.add(page)
+        normalized.append(page)
+    return normalized
+
+
+def _merge_docling_tables(
+    document: BaseDocument,
+    docling_tables: Sequence[DoclingTable],
+    config: ExtractionConfig,
+) -> int:
+    if not docling_tables:
+        return 0
+    pipeline_info = getattr(document, "pipeline_info", {}) or {}
+    existing_tables = list(getattr(document, "tables", []) or [])
+    table_cap = _resolve_table_cap(config)
+    seen = {_table_signature(table) for table in existing_tables if table}
+    additions: List[object] = []
+    for idx, table in enumerate(docling_tables):
+        signature = _docling_signature(table)
+        if signature in seen:
+            continue
+        converted = _convert_docling_table(document, table, len(existing_tables) + len(additions))
+        if converted is None:
+            continue
+        additions.append(converted)
+        seen.add(signature)
+        if table_cap is not None and len(existing_tables) + len(additions) >= table_cap:
+            break
+    if not additions:
+        document.pipeline_info = pipeline_info
+        return 0
+    merged = existing_tables + additions
+    setattr(document, "tables", merged)
+    pipeline_info.setdefault("tables_original", len(merged))
+    pipeline_info.setdefault("docling_tables_added", 0)
+    pipeline_info["docling_tables_added"] += len(additions)
+    if table_cap is not None:
+        pipeline_info.setdefault("tables_cap", table_cap)
+    document.pipeline_info = pipeline_info
+    return len(additions)
+
+
+def _convert_docling_table(
+    document: BaseDocument,
+    table: DoclingTable,
+    index: int,
+) -> Optional[object]:
+    doc_type = getattr(document, "doc_type", None)
+    if doc_type == "article":
+        from medparse.schema.article import EnhancedTable
+
+        base_id = getattr(document, "doc_id", "doc") or "doc"
+        table_id = f"{base_id}-docling-{table.page}-{index}"
+        headers = [table.headers] if table.headers else []
+        return EnhancedTable(
+            id=table_id,
+            label=table.label or f"Docling Table {table.page}",
+            caption=table.caption,
+            headers=headers,
+            rows=table.rows,
+            page=table.page,
+            table_type="docling",
+            heading_path=[],
+        )
+    if doc_type == "ifu":
+        return {
+            "title": table.label or table.caption,
+            "headers": table.headers,
+            "rows": table.rows,
+            "page": table.page,
+            "caption": table.caption,
+            "footnotes": [],
+            "heading_path": [],
+            "rows_truncated": False,
+            "source": "docling",
+        }
+    return None
+
+
+def _record_docling_metrics(
+    document: BaseDocument,
+    artifacts: DoclingArtifacts,
+    targets: DoclingPageTargets,
+    selective: bool,
+    requested_pages: Sequence[int],
+    tables_added: int,
+) -> None:
+    pipeline_info = getattr(document, "pipeline_info", {}) or {}
+    docling_info = pipeline_info.setdefault("docling", {})
+    docling_info["selective"] = bool(selective)
+    docling_info["table_pages"] = targets.table_pages
+    docling_info["safety_pages"] = targets.safety_pages
+    docling_info["forced_pages"] = targets.forced_pages
+    docling_info["requested_pages"] = list(requested_pages)
+    docling_info["pages_processed"] = artifacts.pages_processed
+    docling_info["duration_s"] = artifacts.duration_s
+    docling_info["tables_detected"] = len(artifacts.tables)
+    docling_info["tables_added"] = tables_added
+    pipeline_info["docling_pages_processed"] = len(artifacts.pages_processed)
+    pipeline_info["docling_duration_s"] = artifacts.duration_s
+    document.pipeline_info = pipeline_info
+
+
+def _resolve_table_cap(config: ExtractionConfig) -> Optional[int]:
+    tables_conf = getattr(config, "tables", None)
+    cap: Optional[int] = None
+    if isinstance(tables_conf, dict):
+        value = tables_conf.get("max_tables")
+        if isinstance(value, int):
+            cap = value
+    if cap is None:
+        try:
+            cap = int(config.size_guards.get("max_tables"))
+        except Exception:
+            cap = None
+    return cap
+
+
+def _table_signature(table: object) -> tuple:
+    if isinstance(table, dict):
+        headers = table.get("headers") or []
+        rows = table.get("rows") or []
+        page = table.get("page")
+        caption = table.get("caption")
+    else:
+        headers = getattr(table, "headers", []) or []
+        rows = getattr(table, "rows", []) or []
+        page = getattr(table, "page", None)
+        caption = getattr(table, "caption", None)
+    header_row = headers[0] if headers else []
+    return (
+        page,
+        tuple(_normalize_row(header_row)),
+        tuple(_normalize_row(row) for row in rows[:2]),
+        str(caption or ""),
+    )
+
+
+def _docling_signature(table: DoclingTable) -> tuple:
+    return (
+        table.page,
+        tuple(_normalize_row(table.headers)),
+        tuple(_normalize_row(row) for row in table.rows[:2]),
+        str(table.caption or ""),
+    )
+
+
+def _normalize_row(row: Sequence[str]) -> tuple:
+    return tuple((cell or "").strip() for cell in row)
 
 
 def _estimate_pdf_density(pdf_path: Path, *, sample_pages: int = 6) -> Dict[str, float]:
@@ -543,6 +865,7 @@ class PageLoadOutcome:
     complete: bool
     last_page_loaded: Optional[int] = None
     failure_reason: Optional[str] = None
+    batch_durations: List[float] = field(default_factory=list)
 
 
 def _resolve_streaming_settings(config: PipelineConfig) -> Dict[str, Any]:
@@ -647,6 +970,7 @@ def _load_pages_single_engine(
             complete=False,
             last_page_loaded=None,
             failure_reason=f"load_failed:{engine}",
+            batch_durations=[],
         )
 
     duration = time.perf_counter() - load_start
@@ -676,6 +1000,7 @@ def _load_pages_single_engine(
         complete=True,
         last_page_loaded=last_page_loaded,
         failure_reason=None,
+        batch_durations=[],
     )
 
 
@@ -714,6 +1039,7 @@ def _stream_document_pages(
     complete = False
     consecutive_failures = 0
     last_completed_page: Optional[int] = None
+    batch_duration_values: List[float] = []
 
     while True:
         if target_final_page and start_page > target_final_page:
@@ -757,6 +1083,7 @@ def _stream_document_pages(
             continue
 
         duration = time.perf_counter() - batch_start
+        batch_duration_values.append(duration)
         if not batch_pages:
             if target_final_page:
                 failed_batches += 1
@@ -810,6 +1137,7 @@ def _stream_document_pages(
         complete=complete,
         last_page_loaded=last_completed_page,
         failure_reason=reason,
+        batch_durations=batch_duration_values,
     )
 
 
@@ -834,6 +1162,10 @@ class PipelineConfig:
     ifu: Dict[str, Any] = field(default_factory=dict)
     tables: Dict[str, Any] = field(default_factory=dict)
     text_normalization: Dict[str, Any] = field(default_factory=dict)
+    extract: Dict[str, Any] = field(default_factory=dict)
+    docling: Dict[str, Any] = field(default_factory=dict)
+    chunking: Dict[str, Any] = field(default_factory=dict)
+    umls: Dict[str, Any] = field(default_factory=dict)
     second_pass: Dict[str, Any] = field(default_factory=dict)
 
     @classmethod
@@ -911,6 +1243,10 @@ class PipelineConfig:
             ifu=data.get("ifu") or {},
             tables=data.get("tables") or {},
             text_normalization=data.get("text_normalization") or {},
+            extract=data.get("extract") or {},
+            docling=data.get("docling") or {},
+            chunking=data.get("chunking") or {},
+            umls=data.get("umls") or {},
             second_pass=second_pass_config,
         )
 
@@ -957,6 +1293,10 @@ class PipelineConfig:
         kwargs["min_pages_ratio"] = self.min_pages_ratio
         kwargs["text_normalization"] = self.text_normalization
         kwargs["tables"] = self.tables
+        kwargs["extract"] = self.extract
+        kwargs["docling"] = self.docling
+        kwargs["chunking"] = self.chunking
+        kwargs["umls"] = self.umls
         return ExtractionConfig(**kwargs)
 
     def resolved_engines(self, *, force_deep: bool = False) -> List[str]:
@@ -1087,6 +1427,56 @@ class PipelineOutcome:
             "mode": self.mode,
             "issues": list(self.warnings) if self.warnings else [],
         }
+
+
+def build_language_payloads(
+    payload: Dict[str, object],
+    *,
+    drop_chunks: bool = True,
+) -> Dict[str, Dict[str, object]]:
+    """Split a payload into per-language variants based on paragraph_store lang tags."""
+    if not isinstance(payload, dict):
+        return {}
+
+    pipeline_meta = payload.get("_pipeline_metadata", {}) or {}
+    if not isinstance(pipeline_meta, dict):
+        pipeline_meta = {}
+    lang_counts = pipeline_meta.get("lang_counts") or {}
+    if not isinstance(lang_counts, dict) or len(lang_counts) <= 1:
+        return {}
+
+    paragraph_store = payload.get("paragraph_store")
+    if not isinstance(paragraph_store, dict):
+        return {}
+
+    splits: Dict[str, Dict[str, object]] = {}
+    for lang in sorted(lang_counts.keys()):
+        if lang in {None, "und"}:
+            continue
+        filtered_store: Dict[str, Dict[str, object]] = {}
+        for key, entry in paragraph_store.items():
+            if not isinstance(entry, dict):
+                continue
+            if entry.get("lang") == lang:
+                filtered_store[key] = dict(entry)
+        if not filtered_store:
+            continue
+
+        variant = deepcopy(payload)
+        variant["paragraph_store"] = filtered_store
+        variant.setdefault("_pipeline_metadata", {})
+        variant["_pipeline_metadata"]["language"] = lang
+        variant["_pipeline_metadata"]["split_from"] = payload.get("doc_id")
+        variant["_pipeline_metadata"]["split_languages"] = True
+        if drop_chunks and "chunks" in variant:
+            variant.pop("chunks", None)
+            variant["_pipeline_metadata"]["chunks_removed_for_split"] = True
+        base_doc_id = str(payload.get("doc_id") or "")
+        if base_doc_id:
+            variant["doc_id"] = f"{base_doc_id}:{lang}"
+        splits[lang] = variant
+
+    return splits
 
 
 def _build_evidence_bank(document: BaseDocument, size_guards: SizeGuards) -> EvidenceBank:
@@ -1249,6 +1639,7 @@ def _build_evidence_bank(document: BaseDocument, size_guards: SizeGuards) -> Evi
                     if ref:
                         evidence.hash = resolved.hash or ref
                         pointer = evidence.as_pointer()
+                        pointer.text = resolved.text
                         _apply_pointer(relation, "evidence", pointer, ref)
             elif isinstance(evidence, list):
                 prepared: List[tuple[EvidenceSpan, EvidenceSpan]] = []
@@ -1263,6 +1654,7 @@ def _build_evidence_bank(document: BaseDocument, size_guards: SizeGuards) -> Evi
                     for (original, resolved), ref in zip(prepared, refs, strict=False):
                         original.hash = resolved.hash or ref
                     pointer = prepared[0][0].as_pointer()
+                    pointer.text = prepared[0][1].text
                     setattr(relation, "evidence_refs", refs)
                     setattr(relation, "evidence", pointer)
 
@@ -1519,7 +1911,7 @@ def run_extract(
             merged_emit[key] = value
         config.emit = merged_emit
 
-    chunking_settings = _resolve_chunking_settings(config.emit, chunking_mode)
+    chunking_settings = _resolve_chunking_settings(config.chunking, config.emit, chunking_mode)
     column_mode_active = False
     if config.doc_type == "ifu":
         ifu_settings = config.ifu if isinstance(config.ifu, dict) else {}
@@ -1573,7 +1965,6 @@ def run_extract(
     if config.doc_type not in EXTRACTOR_MAP:
         raise ValueError(f"Unsupported doc_type '{config.doc_type}' in {config_path}")
 
-    extractor = EXTRACTOR_MAP[config.doc_type]
     pdf_bytes = pdf_path.read_bytes()
     total_pages = _determine_total_pages(pdf_path)
     engine_timeouts: Dict[str, float] = {}
@@ -1682,6 +2073,13 @@ def run_extract(
                 document.pipeline_info = pipeline_info
             metrics["engine_selected"] = cached_engine or engines[0]
             metrics["engines_tried"] = list(engines)
+            pipeline_info = getattr(document, "pipeline_info", {}) or {}
+            pipeline_info["engine_selected"] = metrics["engine_selected"]
+            pipeline_info["engines_tried"] = list(engines)
+            pipeline_info["engine_switchovers"] = max(0, len(list(dict.fromkeys(engines))) - 1)
+            pipeline_info["duration_s"] = metrics.get("duration_s")
+            pipeline_info["page_count"] = metrics.get("page_count")
+            document.pipeline_info = pipeline_info
             LOGGER.info(
                 "Cache hit: doc_type=%s engine=%s page_count=%s",
                 config.doc_type,
@@ -1775,7 +2173,8 @@ def run_extract(
             last_validator_issues = []
             continue
 
-        document = extractor(
+        document = _extract_document(
+            config.doc_type,
             pdf_path,
             engine=engine,
             page_limit=preview_limit,
@@ -1789,6 +2188,13 @@ def run_extract(
         metrics.update(_document_metrics(document))
         document.pipeline_info.setdefault("extracted_chars", metrics.get("extracted_chars"))
         pipeline_info = getattr(document, "pipeline_info", {}) or {}
+        pipeline_info["duration_s"] = duration
+        if total_pages:
+            pipeline_info["page_count"] = total_pages
+        pipeline_info["engine_selected"] = engine
+        ordered_engines = list(dict.fromkeys(engines_used))
+        pipeline_info["engines_tried"] = ordered_engines
+        pipeline_info["engine_switchovers"] = max(0, len(ordered_engines) - 1)
         extracted_chars = int(metrics.get("extracted_chars") or 0)
         if extracted_chars == 0:
             LOGGER.warning(
@@ -1832,7 +2238,7 @@ def run_extract(
         pipeline_info["chunking"] = chunk_metrics
         metrics["chunking"] = chunk_metrics
 
-        metrics["engines_tried"] = list(dict.fromkeys(engines_used))
+        metrics["engines_tried"] = ordered_engines
         metrics["engine_selected"] = engine
         if load_outcome.streaming_enabled:
             streaming_payload = {
@@ -1844,6 +2250,11 @@ def run_extract(
                 "pages_per_batch": streaming_settings.get("pages_per_batch"),
                 "per_page_timeout_s": streaming_settings.get("per_page_timeout_s") or 0,
             }
+            if load_outcome.batch_durations:
+                durations = load_outcome.batch_durations
+                streaming_payload["batch_durations"] = durations
+                streaming_payload["batch_duration_avg"] = round(sum(durations) / len(durations), 3)
+                streaming_payload["batch_duration_max"] = max(durations)
             metrics["streaming_fallback"] = streaming_payload
             pipeline_info["streaming_fallback"] = streaming_payload
         if load_outcome.engine_timeouts:
@@ -1883,6 +2294,8 @@ def run_extract(
 
         # Build evidence bank for deduplication and size reduction
         size_guards = SizeGuards(**(config.size_guards or {}))
+        if getattr(size_guards, "max_tables", None):
+            pipeline_info.setdefault("tables_cap", size_guards.max_tables)
         evidence_bank = _build_evidence_bank(document, size_guards)
         document.evidence_bank = evidence_bank.get_bank()
 
@@ -2580,6 +2993,38 @@ def _document_metrics(document: BaseDocument) -> Dict[str, Any]:
             second_pass_payload["patch_summaries"] = patch_summaries
     payload["second_pass"] = second_pass_payload
 
+    extraction_metrics = {
+        "engine": pipeline_info.get("engine_selected"),
+        "engines_tried": pipeline_info.get("engines_tried"),
+        "engine_switchovers": pipeline_info.get("engine_switchovers"),
+        "pages_total": payload.get("page_count", pipeline_info.get("page_count")),
+        "duration_s": pipeline_info.get("duration_s"),
+    }
+    if "streaming_fallback" in payload:
+        extraction_metrics["streaming_fallback"] = payload.get("streaming_fallback")
+    if "engine_timeouts" in payload:
+        extraction_metrics["engine_timeouts"] = payload.get("engine_timeouts")
+
+    quality_metrics = {
+        "tables_original": int(payload.get("tables_original", 0)),
+        "tables_kept": int(payload.get("tables_kept", 0)),
+        "tables_dropped": int(payload.get("tables_dropped", 0)),
+        "safety_blocks_added": payload.get("safety_blocks_added", 0),
+        "safety_blocks_found": payload.get("safety_blocks_found", 0),
+    }
+    if "safety_expected_min" in payload:
+        quality_metrics["safety_expected_min"] = payload.get("safety_expected_min")
+    table_cap_value = pipeline_info.get("tables_cap")
+    if table_cap_value is not None:
+        quality_metrics["tables_cap"] = table_cap_value
+
+    validation_metrics = {
+        "second_pass_applied": bool(second_pass_payload.get("applied")),
+        "patches": list(second_pass_payload.get("patch_summaries", [])),
+        "reasons": list(second_pass_payload.get("reasons", [])),
+        "modifications": dict(second_pass_payload.get("modifications", {})),
+    }
+
     metrics_summary = {
         "toc_pages_dropped": int(
             pipeline_info.get("toc_guard_pages_dropped_count")
@@ -2588,7 +3033,7 @@ def _document_metrics(document: BaseDocument) -> Dict[str, Any]:
         ),
         "safety_blocks_found": payload.get("safety_blocks_found", 0),
         "safety_blocks_added": payload.get("safety_blocks_added", 0),
-        "second_pass_applied": bool(second_pass_payload.get("applied")),
+        "second_pass_applied": validation_metrics["second_pass_applied"],
         "second_pass_patches": list(second_pass_payload.get("applied", [])),
         "second_pass_reasons": list(second_pass_payload.get("reasons", [])),
         "second_pass_modifications": dict(second_pass_payload.get("modifications", {})),
@@ -2619,6 +3064,9 @@ def _document_metrics(document: BaseDocument) -> Dict[str, Any]:
     normalization_summary = pipeline_info.get("_normalization")
     if isinstance(normalization_summary, dict) and normalization_summary:
         metrics_summary["_normalization"] = normalization_summary
+    metrics_summary["extraction_metrics"] = extraction_metrics
+    metrics_summary["quality_metrics"] = quality_metrics
+    metrics_summary["validation_metrics"] = validation_metrics
     payload["_metrics"] = metrics_summary
 
     _validate_metrics_consistency(payload, pipeline_info)
@@ -2697,6 +3145,14 @@ def _apply_emit_constraints(
     tables_cfg = emit.get("tables")
     if not isinstance(tables_cfg, dict):
         tables_cfg = {}
+    split_languages = bool(emit.get("split_languages", False))
+    lang_counts = pipeline_info.get("lang_counts") if isinstance(pipeline_info, dict) else None
+    if not split_languages and isinstance(lang_counts, dict) and len(lang_counts) > 1:
+        split_languages = True
+    pipeline_info["split_languages"] = split_languages
+    if bool(tables_cfg.get("vision_route")):
+        pipeline_info["tables_need_vision"] = True
+        pipeline_info["tables_need_vision_reason"] = "emit_tables_vision_route"
     preserve_header_tokens = [
         str(value).lower()
         for value in tables_cfg.get("preserve_headers", [])

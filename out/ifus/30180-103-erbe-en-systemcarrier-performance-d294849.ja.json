@@ -1,0 +1,2371 @@
+{
+  "doc_id": "eeca102f-8cdc-407a-9e75-55936084a02b:ja",
+  "doc_type": "ifu",
+  "source_file": "/input/30180-103_ERBE_EN_SystemCarrier_performance__D294849.pdf",
+  "page_count": 156,
+  "extraction_timestamp": "2025-11-22T18:20:31.059649",
+  "extraction_version": "v1.0.0",
+  "evidence_bank": {},
+  "paragraph_store": {
+    "cd1af3ac33938d28": {
+      "id": "page8_para1",
+      "text": "ZH \u4eea\u5668\u53f0\u8f66\u7684\u4f7f\u7528\u8bf4\u660e\u4e66\u4ecb\u7ecd\u4e86\u4eea\u5668/\u914d\u4ef6\u7684\u88c5\u914d\u5b89\u5168\u987b\u77e5\u3002\u88c5\u914d\u64cd\u4f5c\u524d\u8bf7\u60a8\u9605\u8bfb\u672c\u5b89\u5168 \u987b\u77e5\u3002 8 / 156",
+      "page": 8,
+      "char_span": [
+        2450,
+        2503
+      ],
+      "length": 53,
+      "order": [
+        91
+      ],
+      "occurrences": [
+        {
+          "page": 8,
+          "char_span": [
+            2450,
+            2503
+          ]
+        }
+      ],
+      "column_id": null,
+      "type": "heading",
+      "lists": [],
+      "pages": [
+        8
+      ],
+      "lang": "ja"
+    },
+    "ca400d8bf1c2137a": {
+      "id": "page9_para7",
+      "text": "\u5100\u5668\u53f0\u8eca\u7684\u4f7f\u7528\u8aaa\u660e\u66f8\u4ecb\u7d39\u4e86\u5100\u5668/ \u914d\u4ef6\u7684\u88dd\u914d\u5b89\u5168\u9808\u77e5\u3002 \u88dd\u914d\u64cd\u4f5c\u524d\u8acb\u60a8\u95b1\u8b80\u672c\u5b89\u5168 \u9808\u77e5\u3002",
+      "page": 9,
+      "char_span": [
+        68,
+        112
+      ],
+      "length": 44,
+      "order": [
+        100,
+        1581
+      ],
+      "occurrences": [
+        {
+          "page": 9,
+          "char_span": [
+            68,
+            112
+          ]
+        },
+        {
+          "page": null,
+          "char_span": null
+        }
+      ],
+      "column_id": 1,
+      "type": "body",
+      "lists": [],
+      "pages": [
+        9
+      ],
+      "lang": "ja"
+    }
+  },
+  "doc_subtype": "installation_guide",
+  "manufacturer": "ERBE Elektromedizin GmbH",
+  "product_name": "System Carrier",
+  "part_number": "30180-103",
+  "revision": "D294849",
+  "publication_date": "2025-01-01",
+  "model": "System Carrier Performance",
+  "software_versions": [],
+  "indications_for_use": {
+    "text": "MOUNTING-\uf020.",
+    "provenance": "second_pass_important_information",
+    "derived_from": "important_information",
+    "evidence_ids": [
+      "5f858cc8265bfe37"
+    ],
+    "evidence_refs": [
+      "5f858cc8265bfe37"
+    ],
+    "evidence_span": {
+      "first": "5f858cc8265bfe37",
+      "last": "5f858cc8265bfe37"
+    },
+    "page_range": [
+      1,
+      1
+    ]
+  },
+  "intended_use": "MOUNTING-\uf020.",
+  "contraindications": [],
+  "adverse_events": [],
+  "safety_blocks": [
+    {
+      "level": "note",
+      "text": "The illustrations in this Mounting Instruction may differ in some details from your product.",
+      "title": "The information contained in this Mounting Instruction can be changed or expanded without prior notice and without obligation on the part of Erbe Elektromedizin GmbH",
+      "page": 2,
+      "hash": "c593d906066922408d28",
+      "severity": "note",
+      "source": "heading",
+      "evidence": {
+        "text": "The illustrations in this Mounting Instruction may differ in some details from your product.",
+        "page": 2,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "caution",
+      "text": "Installing the cable holders in the door",
+      "title": "Caution, read safety instructions before installation",
+      "page": 3,
+      "hash": "2bcf52b16d2feb8f8b1b",
+      "severity": "caution",
+      "source": "heading",
+      "evidence": {
+        "text": "Installing the cable holders in the door",
+        "page": 3,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "caution",
+      "text": "Installing hook for cable storage",
+      "title": "Caution, read safety instructions before installation",
+      "page": 3,
+      "hash": "a8d449b27a8d24ea6e75",
+      "severity": "caution",
+      "source": "heading",
+      "evidence": {
+        "text": "Installing hook for cable storage",
+        "page": 3,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "caution",
+      "text": "Installing footswitch support for large one-pedal footswitch",
+      "title": "Caution, read safety instructions before installation",
+      "page": 3,
+      "hash": "7faf9da0e851a59b5fcf",
+      "severity": "caution",
+      "source": "heading",
+      "evidence": {
+        "text": "Installing footswitch support for large one-pedal footswitch",
+        "page": 3,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "caution",
+      "text": "30180-103_V25709 2025-01",
+      "title": "Caution, read safety instructions before installation",
+      "page": 3,
+      "hash": "e4909f778b4112a0aff8",
+      "severity": "caution",
+      "source": "heading",
+      "evidence": {
+        "text": "30180-103_V25709 2025-01",
+        "page": 3,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "caution",
+      "text": "What would you like to do?",
+      "title": "Caution, read safety instructions before installation",
+      "page": 3,
+      "hash": "658d26d8a252d02c0e69",
+      "severity": "caution",
+      "source": "heading",
+      "evidence": {
+        "text": "What would you like to do?",
+        "page": 3,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "caution",
+      "text": "Click on the accessory / unit to be mounted.",
+      "title": "Caution, read safety instructions before installation",
+      "page": 3,
+      "hash": "4680e91580093035b515",
+      "severity": "caution",
+      "source": "heading",
+      "evidence": {
+        "text": "Click on the accessory / unit to be mounted.",
+        "page": 3,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "caution",
+      "text": "Installing the cable holders on the sys\u00ad tem carrier Installing IES\u00a03",
+      "title": "Caution, read safety instructions before installation",
+      "page": 3,
+      "hash": "6eb7d21fe5360e7051a1",
+      "severity": "caution",
+      "source": "heading",
+      "evidence": {
+        "text": "Installing the cable holders on the sys\u00ad tem carrier Installing IES\u00a03",
+        "page": 3,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "caution",
+      "text": "Installing ESM\u00a02",
+      "title": "Caution, read safety instructions before installation",
+      "page": 3,
+      "hash": "d9b575a0326ab62b0ae0",
+      "severity": "caution",
+      "source": "heading",
+      "evidence": {
+        "text": "Installing ESM\u00a02",
+        "page": 3,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "caution",
+      "text": "Installing baskets Installing EIP\u00a02",
+      "title": "Caution, read safety instructions before installation",
+      "page": 3,
+      "hash": "8a91d000b45ad90a6333",
+      "severity": "caution",
+      "source": "heading",
+      "evidence": {
+        "text": "Installing baskets Installing EIP\u00a02",
+        "page": 3,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "caution",
+      "text": "Installing IES\u00a03 and ESM\u00a02",
+      "title": "Caution, read safety instructions before installation",
+      "page": 3,
+      "hash": "d545982e2c5de2c84d11",
+      "severity": "caution",
+      "source": "heading",
+      "evidence": {
+        "text": "Installing IES\u00a03 and ESM\u00a02",
+        "page": 3,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "caution",
+      "text": "Installing footswitch support for small one-pedal footswitch on the system carrier Installing IES\u00a03 and EIP\u00a02 Installing footswitch support for small one-pedal footswitch in the door Installing ESM\u00a02 and EIP\u00a02 Installing attache\u00ad ment rail for ESM 2 suction container",
+      "title": "Caution, read safety instructions before installation",
+      "page": 3,
+      "hash": "4a30c8e91f070b96ea56",
+      "severity": "caution",
+      "source": "heading",
+      "evidence": {
+        "text": "Installing footswitch support for small one-pedal footswitch on the system carrier Installing IES\u00a03 and EIP\u00a02 Installing footswitch support for small one-pedal footswitch in the door Installing ESM\u00a02",
+        "page": 3,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "warning",
+      "text": "DE",
+      "title": "Safety Instructions",
+      "page": 7,
+      "hash": "4d5c122814aeb42ea9d2",
+      "severity": "warning",
+      "source": "heading",
+      "evidence": {
+        "text": "DE",
+        "page": 7,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "warning",
+      "text": "EN",
+      "title": "Safety Instructions",
+      "page": 7,
+      "hash": "e791390d42d9f041dff6",
+      "severity": "warning",
+      "source": "heading",
+      "evidence": {
+        "text": "EN",
+        "page": 7,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "warning",
+      "text": "FR",
+      "title": "Safety Instructions",
+      "page": 7,
+      "hash": "b68a9de80346cb485032",
+      "severity": "warning",
+      "source": "heading",
+      "evidence": {
+        "text": "FR",
+        "page": 7,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "warning",
+      "text": "ES",
+      "title": "Safety Instructions",
+      "page": 7,
+      "hash": "33ff772543d43af883a1",
+      "severity": "warning",
+      "source": "heading",
+      "evidence": {
+        "text": "ES",
+        "page": 7,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "warning",
+      "text": "IT",
+      "title": "Safety Instructions",
+      "page": 7,
+      "hash": "35dceb745840db74a50a",
+      "severity": "warning",
+      "source": "heading",
+      "evidence": {
+        "text": "IT",
+        "page": 7,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "warning",
+      "text": "PT",
+      "title": "Safety Instructions",
+      "page": 7,
+      "hash": "82b680f397c66e5fb925",
+      "severity": "warning",
+      "source": "heading",
+      "evidence": {
+        "text": "PT",
+        "page": 7,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "warning",
+      "text": "EL",
+      "title": "Safety Instructions",
+      "page": 7,
+      "hash": "57e92924c91ae3e735d1",
+      "severity": "warning",
+      "source": "heading",
+      "evidence": {
+        "text": "EL",
+        "page": 7,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "warning",
+      "text": "NL",
+      "title": "Safety Instructions",
+      "page": 7,
+      "hash": "9361a8644af6b76fe2ee",
+      "severity": "warning",
+      "source": "heading",
+      "evidence": {
+        "text": "NL",
+        "page": 7,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "warning",
+      "text": "DA",
+      "title": "Safety Instructions",
+      "page": 7,
+      "hash": "0a5ac9dabf847ae384f3",
+      "severity": "warning",
+      "source": "heading",
+      "evidence": {
+        "text": "DA",
+        "page": 7,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "warning",
+      "text": "NO",
+      "title": "Safety Instructions",
+      "page": 7,
+      "hash": "3b754ba38386c4c370a5",
+      "severity": "warning",
+      "source": "heading",
+      "evidence": {
+        "text": "NO",
+        "page": 7,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "warning",
+      "text": "SV",
+      "title": "Safety Instructions",
+      "page": 7,
+      "hash": "40dc3492bcd6da0bf8ae",
+      "severity": "warning",
+      "source": "heading",
+      "evidence": {
+        "text": "SV",
+        "page": 7,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "warning",
+      "text": "FI",
+      "title": "Safety Instructions",
+      "page": 7,
+      "hash": "5835aa9449ab1e5fdc76",
+      "severity": "warning",
+      "source": "heading",
+      "evidence": {
+        "text": "FI",
+        "page": 7,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "warning",
+      "text": "30180-103_V25709 2025-01",
+      "title": "Safety Instructions",
+      "page": 7,
+      "hash": "779c93e50ab868692632",
+      "severity": "warning",
+      "source": "heading",
+      "evidence": {
+        "text": "30180-103_V25709 2025-01",
+        "page": 7,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "warning",
+      "text": "Sicherheitshinweise zur Montage von Ger\u00e4ten/Zubeh\u00f6r finden Sie in der Gebrauchsanweisung des Sys- temtr\u00e4gers. Lesen Sie diese Sicherheitshinweise bevor Sie Montaget\u00e4tigkeiten ausf\u00fchren.",
+      "title": "Safety Instructions",
+      "page": 7,
+      "hash": "f6b1ebce3e019c19e529",
+      "severity": "warning",
+      "source": "heading",
+      "evidence": {
+        "text": "Sicherheitshinweise zur Montage von Ger\u00e4ten/Zubeh\u00f6r finden Sie in der Gebrauchsanweisung des Sys- temtr\u00e4gers. Lesen Sie diese Sicherheitshinweise bevor Sie Montaget\u00e4tigkeiten ausf\u00fchren.",
+        "page": 7,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "warning",
+      "text": "Safety instructions about installing units/accessories are available in the user manual for the system carrier. Read these safety instructions before starting the installation.",
+      "title": "Safety Instructions",
+      "page": 7,
+      "hash": "71108e76c45699474437",
+      "severity": "warning",
+      "source": "heading",
+      "evidence": {
+        "text": "Safety instructions about installing units/accessories are available in the user manual for the system carrier. Read these safety instructions before starting the installation.",
+        "page": 7,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "warning",
+      "text": "Pri\u00e8re de consulter le mode d\u2019emploi du support syst\u00e8me pour conna\u00eetre les consignes de s\u00e9curit\u00e9 re- latives au montage de dispositifs/d\u2019accessoires. Pri\u00e8re de consulter les pr\u00e9sentes consignes de s\u00e9curit\u00e9 avant de proc\u00e9der \u00e0 un quelconque montage.",
+      "title": "Safety Instructions",
+      "page": 7,
+      "hash": "11783efd2ac415ed7a23",
+      "severity": "warning",
+      "source": "heading",
+      "evidence": {
+        "text": "Pri\u00e8re de consulter le mode d\u2019emploi du support syst\u00e8me pour conna\u00eetre les consignes de s\u00e9curit\u00e9 re- latives au montage de dispositifs/d\u2019accessoires. Pri\u00e8re de consulter les pr\u00e9sentes consignes de s\u00e9c",
+        "page": 7,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "warning",
+      "text": "Encontrar\u00e1 indicaciones de seguridad sobre el montaje de aparatos y accesorios en el manual de ins- trucciones del soporte del sistema. Lea estas indicaciones de seguridad antes de realizar los trabajos de montaje.",
+      "title": "Safety Instructions",
+      "page": 7,
+      "hash": "9eabec5dcd4c9c99a367",
+      "severity": "warning",
+      "source": "heading",
+      "evidence": {
+        "text": "Encontrar\u00e1 indicaciones de seguridad sobre el montaje de aparatos y accesorios en el manual de ins- trucciones del soporte del sistema. Lea estas indicaciones de seguridad antes de realizar los trabaj",
+        "page": 7,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "warning",
+      "text": "Per le avvertenze di sicurezza riguardanti il montaggio di apparecchi/accessori, consultare le istruzioni per l'uso del portante di sistema. Leggere le avvertenze di sicurezza prima di eseguire interventi di mon- taggio.",
+      "title": "Safety Instructions",
+      "page": 7,
+      "hash": "643aecd41ac4752b1dfd",
+      "severity": "warning",
+      "source": "heading",
+      "evidence": {
+        "text": "Per le avvertenze di sicurezza riguardanti il montaggio di apparecchi/accessori, consultare le istruzioni per l'uso del portante di sistema. Leggere le avvertenze di sicurezza prima di eseguire interv",
+        "page": 7,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "warning",
+      "text": "Indica\u00e7\u00f5es de seguran\u00e7a para a montagem de unidades/acess\u00f3rios podem ser encontradas no manual de instru\u00e7\u00f5es do suporte do sistema. Leia estas indica\u00e7\u00f5es de seguran\u00e7a antes de realizar atividades de montagem.",
+      "title": "Safety Instructions",
+      "page": 7,
+      "hash": "093f701f54d0e6b5bcd6",
+      "severity": "warning",
+      "source": "heading",
+      "evidence": {
+        "text": "Indica\u00e7\u00f5es de seguran\u00e7a para a montagem de unidades/acess\u00f3rios podem ser encontradas no manual de instru\u00e7\u00f5es do suporte do sistema. Leia estas indica\u00e7\u00f5es de seguran\u00e7a antes de realizar atividades de m",
+        "page": 7,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "warning",
+      "text": "\u0393\u03b9\u03b1 \u03bf\u03b4\u03b7\u03b3\u03af\u03b5\u03c2 \u03b1\u03c3\u03c6\u03b1\u03bb\u03b5\u03af\u03b1\u03c2 \u03c3\u03c7\u03b5\u03c4\u03b9\u03ba\u03ac \u03bc\u03b5 \u03c4\u03b7\u03bd \u03c4\u03bf\u03c0\u03bf\u03b8\u03ad\u03c4\u03b7\u03c3\u03b7 \u03c3\u03c5\u03c3\u03ba\u03b5\u03c5\u03ce\u03bd/\u03c0\u03b1\u03c1\u03b5\u03bb\u03ba\u03bf\u03bc\u03ad\u03bd\u03c9\u03bd, \u03b1\u03bd\u03b1\u03c4\u03c1\u03ad\u03be\u03c4\u03b5 \u03c3\u03c4\u03b9\u03c2 \u03bf\u03b4\u03b7\u03b3\u03af\u03b5\u03c2 \u03c7\u03c1\u03ae\u03c3\u03b7\u03c2 \u03c4\u03bf\u03c5 \u03c6\u03bf\u03c1\u03ad\u03b1 \u03c3\u03c5\u03c3\u03c4\u03ae\u03bc\u03b1\u03c4\u03bf\u03c2. \u0394\u03b9\u03b1\u03b2\u03ac\u03c3\u03c4\u03b5 \u03b1\u03c5\u03c4\u03ad\u03c2 \u03c4\u03b9\u03c2 \u03bf\u03b4\u03b7\u03b3\u03af\u03b5\u03c2 \u03b1\u03c3\u03c6\u03b1\u03bb\u03b5\u03af\u03b1\u03c2 \u03c0\u03c1\u03b9\u03bd \u03b1\u03c0\u03cc \u03c4\u03b7 \u03b4\u03b9\u03b5\u03be\u03b1\u03b3\u03c9\u03b3\u03ae \u03b5\u03c1\u03b3\u03b1- \u03c3\u03b9\u03ce\u03bd \u03c4\u03bf\u03c0\u03bf\u03b8\u03ad\u03c4\u03b7\u03c3\u03b7\u03c2.",
+      "title": "Safety Instructions",
+      "page": 7,
+      "hash": "d9427e7363d7edde628c",
+      "severity": "warning",
+      "source": "heading",
+      "evidence": {
+        "text": "\u0393\u03b9\u03b1 \u03bf\u03b4\u03b7\u03b3\u03af\u03b5\u03c2 \u03b1\u03c3\u03c6\u03b1\u03bb\u03b5\u03af\u03b1\u03c2 \u03c3\u03c7\u03b5\u03c4\u03b9\u03ba\u03ac \u03bc\u03b5 \u03c4\u03b7\u03bd \u03c4\u03bf\u03c0\u03bf\u03b8\u03ad\u03c4\u03b7\u03c3\u03b7 \u03c3\u03c5\u03c3\u03ba\u03b5\u03c5\u03ce\u03bd/\u03c0\u03b1\u03c1\u03b5\u03bb\u03ba\u03bf\u03bc\u03ad\u03bd\u03c9\u03bd, \u03b1\u03bd\u03b1\u03c4\u03c1\u03ad\u03be\u03c4\u03b5 \u03c3\u03c4\u03b9\u03c2 \u03bf\u03b4\u03b7\u03b3\u03af\u03b5\u03c2 \u03c7\u03c1\u03ae\u03c3\u03b7\u03c2 \u03c4\u03bf\u03c5 \u03c6\u03bf\u03c1\u03ad\u03b1 \u03c3\u03c5\u03c3\u03c4\u03ae\u03bc\u03b1\u03c4\u03bf\u03c2. \u0394\u03b9\u03b1\u03b2\u03ac\u03c3\u03c4\u03b5 \u03b1\u03c5\u03c4\u03ad\u03c2 \u03c4\u03b9\u03c2 \u03bf\u03b4\u03b7\u03b3\u03af\u03b5\u03c2 \u03b1\u03c3\u03c6\u03b1\u03bb\u03b5\u03af\u03b1\u03c2 \u03c0\u03c1\u03b9\u03bd \u03b1\u03c0\u03cc \u03c4\u03b7 \u03b4\u03b9\u03b5\u03be\u03b1\u03b3\u03c9\u03b3\u03ae \u03b5\u03c1\u03b3\u03b1- \u03c3\u03b9\u03ce\u03bd \u03c4\u03bf\u03c0\u03bf\u03b8\u03ad\u03c4",
+        "page": 7,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "warning",
+      "text": "Veiligheidsinstructies voor de montage van apparaten/accessoires vindt u in de gebruiksaanwijzing van de systeemdrager. Lees deze veiligheidsinstructies voordat u montagewerkzaamheden gaat uitvoeren.",
+      "title": "Safety Instructions",
+      "page": 7,
+      "hash": "dbb2289cfe53900c2636",
+      "severity": "warning",
+      "source": "heading",
+      "evidence": {
+        "text": "Veiligheidsinstructies voor de montage van apparaten/accessoires vindt u in de gebruiksaanwijzing van de systeemdrager. Lees deze veiligheidsinstructies voordat u montagewerkzaamheden gaat uitvoeren.",
+        "page": 7,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "warning",
+      "text": "Sikkerhedshenvisninger til montering af apparater/tilbeh\u00f8r kan findes i brugsanvisningen til system- holderen. L\u00e6s disse sikkerhedshenvisninger, f\u00f8r du udf\u00f8rer monteringsarbejderne.",
+      "title": "Safety Instructions",
+      "page": 7,
+      "hash": "e126f965a46b64ae3f73",
+      "severity": "warning",
+      "source": "heading",
+      "evidence": {
+        "text": "Sikkerhedshenvisninger til montering af apparater/tilbeh\u00f8r kan findes i brugsanvisningen til system- holderen. L\u00e6s disse sikkerhedshenvisninger, f\u00f8r du udf\u00f8rer monteringsarbejderne.",
+        "page": 7,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "warning",
+      "text": "Sikkerhetsmerknader om montering av apparater/tilbeh\u00f8r finner du i bruksanvisningen for systemb\u00e6- reren. Les disse sikkerhetsmerknadene f\u00f8r du utf\u00f8rer arbeid med montering.",
+      "title": "Safety Instructions",
+      "page": 7,
+      "hash": "f01639b8262156570d3c",
+      "severity": "warning",
+      "source": "heading",
+      "evidence": {
+        "text": "Sikkerhetsmerknader om montering av apparater/tilbeh\u00f8r finner du i bruksanvisningen for systemb\u00e6- reren. Les disse sikkerhetsmerknadene f\u00f8r du utf\u00f8rer arbeid med montering.",
+        "page": 7,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "warning",
+      "text": "S\u00e4kerhetsanvisningar om montering av apparater och tillbeh\u00f6r hittar du i bruksanvisningen till system- b\u00e4raren. L\u00e4s de h\u00e4r s\u00e4kerhetsanvisningarna f\u00f6re monteringsarbeten.",
+      "title": "Safety Instructions",
+      "page": 7,
+      "hash": "04e69586dcb604aad210",
+      "severity": "warning",
+      "source": "heading",
+      "evidence": {
+        "text": "S\u00e4kerhetsanvisningar om montering av apparater och tillbeh\u00f6r hittar du i bruksanvisningen till system- b\u00e4raren. L\u00e4s de h\u00e4r s\u00e4kerhetsanvisningarna f\u00f6re monteringsarbeten.",
+        "page": 7,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "warning",
+      "text": "Laitteiden / lis\u00e4varusteiden asennusta koskevia turvallisuusohjeita on j\u00e4rjestelm\u00e4telineen k\u00e4ytt\u00f6oh- jeessa. Lue n\u00e4m\u00e4 turvallisuusohjeet ennen ryhtymist\u00e4 asennustoimiin.",
+      "title": "Safety Instructions",
+      "page": 7,
+      "hash": "664a9081778010a740ad",
+      "severity": "warning",
+      "source": "heading",
+      "evidence": {
+        "text": "Laitteiden / lis\u00e4varusteiden asennusta koskevia turvallisuusohjeita on j\u00e4rjestelm\u00e4telineen k\u00e4ytt\u00f6oh- jeessa. Lue n\u00e4m\u00e4 turvallisuusohjeet ennen ryhtymist\u00e4 asennustoimiin.",
+        "page": 7,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "warning",
+      "text": "ET Seadmete/tarvikute paigaldamise ohutusjuhised leiate s\u00fcsteemikanduri kasutusjuhendist. Lugege enne paigaldustegevuste teostamist neid ohutusjuhiseid. LV Dro\u0161\u012bbas nor\u0101d\u012bjumus par ier\u012b\u010du/piederumu uzst\u0101d\u012b\u0161anu skat\u012bt sist\u0113mas pamatnes lieto\u0161anas instruk- cij\u0101. Izlasiet \u0161os dro\u0161\u012bbas nor\u0101d\u012bjumus, pirms veicat uzst\u0101d\u012b\u0161anu. LT Prietais\u0173 ir reikmen\u0173 montavimo saugos nuorodas rasite sistem\u0173 laikiklio naudojimo instrukcijoje. Prie\u0161 imdamiesi montavimo darb\u0173 perskaitykite \u0161ias saugos nuorodas. PL Wskaz\u00f3wki bezpiecze\u0144stwa dotycz\u0105ce monta\u017cu urz\u0105dze\u0144/wyposa\u017cenia dodatkowego mo\u017cna znale\u017a\u0107 w instrukcji obs\u0142ugi no\u015bnika systemu. Przed przyst\u0105pieniem do prac monta\u017cowych nale\u017cy przeczyta\u0107 te wskaz\u00f3wki bezpiecze\u0144stwa. CS Bezpe\u010dnostn\u00ed pokyny k mont\u00e1\u017ei p\u0159\u00edstroj\u016f/p\u0159\u00edslu\u0161enstv\u00ed najdete v n\u00e1vodu k pou\u017eit\u00ed syst\u00e9mov\u00e9ho nosi\u010de. Tyto bezpe\u010dnostn\u00ed pokyny si p\u0159e\u010dt\u011bte je\u0161t\u011b p\u0159ed mont\u00e1\u017e\u00ed. SK i Bezpe\u010dnostn\u00e9 pokyny t\u00fdkaj\u00face sa mont\u00e1\u017ee pr\u00edstrojov/pr\u00edslu\u0161enstva n\u00e1jdete v n\u00e1vode na pou\u017eitie no- si\u010da syst\u00e9mu. Pred vykonan\u00edm mont\u00e1\u017enych pr\u00e1c si pre\u010d\u00edtajte tieto bezpe\u010dnostn\u00e9 pokyny. HU A k\u00e9sz\u00fcl\u00e9kek, illetve kieg\u00e9sz\u00edt\u0151k \u00f6sszeszerel\u00e9s\u00e9vel kapcsolatos biztons\u00e1gi utas\u00edt\u00e1sok a rendszer tart\u00f3- j\u00e1nak haszn\u00e1lati \u00fatmutat\u00f3j\u00e1ban tal\u00e1lhat\u00f3ak. A szerel\u00e9s elkezd\u00e9se el\u0151tt olvassa el a biztons\u00e1gi utas\u00edt\u00e1- sokat. RU \u0423\u043a\u0430\u0437\u0430\u043d\u0438\u044f \u043f\u043e \u0442\u0435\u0445\u043d\u0438\u043a\u0435 \u0431\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e\u0441\u0442\u0438 \u043f\u0440\u0438 \u0443\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0435 \u043f\u0440\u0438\u0431\u043e\u0440\u043e\u0432/\u043f\u0440\u0438\u043d\u0430\u0434\u043b\u0435\u0436\u043d\u043e\u0441\u0442\u0435\u0439 \u043f\u0440\u0438\u0432\u0435\u0434\u0435\u043d\u044b \u0432 \u0438\u043d- \u0441\u0442\u0440\u0443\u043a\u0446\u0438\u0438 \u043f\u043e \u044d\u043a\u0441\u043f\u043b\u0443\u0430\u0442\u0430\u0446\u0438\u0438 \u0441\u0438\u0441\u0442\u0435\u043c\u044b-\u043d\u043e\u0441\u0438\u0442\u0435\u043b\u044f. \u041e\u0437\u043d\u0430\u043a\u043e\u043c\u044c\u0442\u0435\u0441\u044c \u0441 \u0443\u043a\u0430\u0437\u0430\u043d\u0438\u044f\u043c\u0438 \u043f\u043e \u0442\u0435\u0445\u043d\u0438\u043a\u0435 \u0431\u0435\u0437\u043e\u043f\u0430\u0441- \u043d\u043e\u0441\u0442\u0438 \u043f\u0435\u0440\u0435\u0434 \u0443\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u043e\u0439. SL Varnostna navodila za monta\u017eo enot/opreme najdete v navodilih za uporabo nosilca za sistem. Pred za- \u010detkom monta\u017ee preberite ta varnostna navodila. HR Sigurnosne napomene o monta\u017ei proizvoda/pribora prona\u0107i \u0107ete u korisni\u010dkim uputama nosa\u010da susta- va. Pro\u010ditajte ove sigurnosne napomene prije nego \u0161to zapo\u010dnete monta\u017eu. RO Indica\u021biile de siguran\u021b\u0103 pentru montajul aparatelor/accesoriilor sunt disponibile \u00een cadrul instruc\u021biunilor de utilizare pentru sistemul de suport. Citi\u021bi aceste indica\u021bii de siguran\u021b\u0103 \u00eenainte de a efectua montajul. BG \u0418\u043d\u0441\u0442\u0440\u0443\u043a\u0446\u0438\u0438 \u0437\u0430 \u0431\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e\u0441\u0442 \u043e\u0442\u043d\u043e\u0441\u043d\u043e \u043c\u043e\u043d\u0442\u0430\u0436\u0430 \u043d\u0430 \u0430\u043f\u0430\u0440\u0430\u0442\u0438/\u043f\u0440\u0438\u043d\u0430\u0434\u043b\u0435\u0436\u043d\u043e\u0441\u0442\u0438 \u0449\u0435 \u043d\u0430\u043c\u0435\u0440\u0438\u0442\u0435 \u0432 \u0438\u043d- \u0441\u0442\u0440\u0443\u043a\u0446\u0438\u044f\u0442\u0430 \u0437\u0430 \u0443\u043f\u043e\u0442\u0440\u0435\u0431\u0430 \u043d\u0430 \u043d\u043e\u0441\u0430\u0447\u0430 \u043d\u0430 \u0441\u0438\u0441\u0442\u0435\u043c\u0430\u0442\u0430. \u041f\u0440\u043e\u0447\u0435\u0442\u0435\u0442\u0435 \u0442\u0435\u0437\u0438 \u0438\u043d\u0441\u0442\u0440\u0443\u043a\u0446\u0438\u0438 \u0437\u0430 \u0431\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e\u0441\u0442 \u043f\u0440\u0435- \u0434\u0438 \u0434\u0430 \u0438\u0437\u0432\u044a\u0440\u0448\u0438\u0442\u0435 \u043c\u043e\u043d\u0442\u0430\u0436\u043d\u0438 \u0434\u0435\u0439\u043d\u043e\u0441\u0442\u0438. TR Cihazlar\u0131n/aksesuarlar\u0131n montaj\u0131na ili\u015fkin g\u00fcvenlik bilgilerini sistem ta\u015f\u0131y\u0131c\u0131s\u0131n\u0131n kullan\u0131m k\u0131lavuzunda bulabilirsiniz. Montaj i\u015flerini yapmadan \u00f6nce bu g\u00fcvenlik bilgilerini okuyun. ZH \u4eea\u5668\u53f0\u8f66\u7684\u4f7f\u7528\u8bf4\u660e\u4e66\u4ecb\u7ecd\u4e86\u4eea\u5668/\u914d\u4ef6\u7684\u88c5\u914d\u5b89\u5168\u987b\u77e5\u3002\u88c5\u914d\u64cd\u4f5c\u524d\u8bf7\u60a8\u9605\u8bfb\u672c\u5b89\u5168 \u987b\u77e5\u3002",
+      "title": "Safety Instructions",
+      "page": 8,
+      "hash": "9aaa6f9b8783afec2513",
+      "severity": "warning",
+      "source": "heading",
+      "evidence": {
+        "text": "ET Seadmete/tarvikute paigaldamise ohutusjuhised leiate s\u00fcsteemikanduri kasutusjuhendist. Lugege enne paigaldustegevuste teostamist neid ohutusjuhiseid. LV Dro\u0161\u012bbas nor\u0101d\u012bjumus par ier\u012b\u010du/piederumu uz",
+        "page": 8,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "warning",
+      "text": "\u5100\u5668\u53f0\u8eca\u7684\u4f7f\u7528\u8aaa\u660e\u66f8\u4ecb\u7d39\u4e86\u5100\u5668/ \u914d\u4ef6\u7684\u88dd\u914d\u5b89\u5168\u9808\u77e5\u3002 \u88dd\u914d\u64cd\u4f5c\u524d\u8acb\u60a8\u95b1\u8b80\u672c\u5b89\u5168 \u9808\u77e5\u3002",
+      "title": "Safety Instructions",
+      "page": 9,
+      "hash": "975c8ed0f44aa31af8fa",
+      "severity": "warning",
+      "source": "heading",
+      "evidence": {
+        "text": "\u5100\u5668\u53f0\u8eca\u7684\u4f7f\u7528\u8aaa\u660e\u66f8\u4ecb\u7d39\u4e86\u5100\u5668/ \u914d\u4ef6\u7684\u88dd\u914d\u5b89\u5168\u9808\u77e5\u3002 \u88dd\u914d\u64cd\u4f5c\u524d\u8acb\u60a8\u95b1\u8b80\u672c\u5b89\u5168 \u9808\u77e5\u3002",
+        "page": 9,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "warning",
+      "text": "\uc7a5\uce58/ \uc561\uc138\uc11c\ub9ac \uc7a5\ucc29\uc5d0 \uad00\ud55c \uc548\uc804 \uc9c0\uce68\uc740 \uc2dc\uc2a4\ud15c \uce90\ub9ac\uc5b4\uc758 \uc0ac\uc6a9 \uc124\uba85\uc11c\ub97c \ucc38\uc870\ud558\uc2ed\uc2dc\uc624. \uc7a5\ucc29 \uc791\uc5c5\uc744 \uc218\ud589\ud558\uae30 \uc804\uc5d0 \uc774 \uc548\uc804 \uc9c0\uce68\uc744 \uc77d\uc73c\uc2ed\uc2dc\uc624.",
+      "title": "Safety Instructions",
+      "page": 9,
+      "hash": "2772cd9ec106de0fd63e",
+      "severity": "warning",
+      "source": "heading",
+      "evidence": {
+        "text": "\uc7a5\uce58/ \uc561\uc138\uc11c\ub9ac \uc7a5\ucc29\uc5d0 \uad00\ud55c \uc548\uc804 \uc9c0\uce68\uc740 \uc2dc\uc2a4\ud15c \uce90\ub9ac\uc5b4\uc758 \uc0ac\uc6a9 \uc124\uba85\uc11c\ub97c \ucc38\uc870\ud558\uc2ed\uc2dc\uc624. \uc7a5\ucc29 \uc791\uc5c5\uc744 \uc218\ud589\ud558\uae30 \uc804\uc5d0 \uc774 \uc548\uc804 \uc9c0\uce68\uc744 \uc77d\uc73c\uc2ed\uc2dc\uc624.",
+        "page": 9,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "warning",
+      "text": "Uputstva o bezbednosti za monta\u017eu sredstava/pribora prona\u0107i \u0107ete u uputstvu za upotrebu nosa\u010da sistema. Pro\u010ditajte ova uputstva o bezbednosti pre nego \u0161to po\u010dnete monta\u017eu.",
+      "title": "Safety Instructions",
+      "page": 9,
+      "hash": "d5609a9d1547911265e1",
+      "severity": "warning",
+      "source": "heading",
+      "evidence": {
+        "text": "Uputstva o bezbednosti za monta\u017eu sredstava/pribora prona\u0107i \u0107ete u uputstvu za upotrebu nosa\u010da sistema. Pro\u010ditajte ova uputstva o bezbednosti pre nego \u0161to po\u010dnete monta\u017eu.",
+        "page": 9,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "warning",
+      "text": "B\u1ea1n c\u00f3 th\u1ec3 t\u00ecm th\u1ea5y h\u01b0\u1edbng d\u1eabn an to\u00e0n c\u00e0i \u0111\u1eb7t thi\u1ebft b\u1ecb / ph\u1ee5 ki\u1ec7n trong h\u01b0\u1edbng d\u1eabn v\u1eadn h\u00e0nh c\u1ee7a nh\u00e0 cung c\u1ea5p. \u0110\u1ecdc k\u0129 h\u01b0\u1edbng d\u1eabn an to\u00e0n tr\u01b0\u1edbc khi ti\u1ebfn h\u00e0nh l\u1eafp \u0111\u1eb7t.",
+      "title": "Safety Instructions",
+      "page": 9,
+      "hash": "c1ef8bfc13b20b752836",
+      "severity": "warning",
+      "source": "heading",
+      "evidence": {
+        "text": "B\u1ea1n c\u00f3 th\u1ec3 t\u00ecm th\u1ea5y h\u01b0\u1edbng d\u1eabn an to\u00e0n c\u00e0i \u0111\u1eb7t thi\u1ebft b\u1ecb / ph\u1ee5 ki\u1ec7n trong h\u01b0\u1edbng d\u1eabn v\u1eadn h\u00e0nh c\u1ee7a nh\u00e0 cung c\u1ea5p. \u0110\u1ecdc k\u0129 h\u01b0\u1edbng d\u1eabn an to\u00e0n tr\u01b0\u1edbc khi ti\u1ebfn h\u00e0nh l\u1eafp \u0111\u1eb7t.",
+        "page": 9,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "warning",
+      "text": "Petunjuk keselamatan terkait perakitan perangkat/aksesori dapat ditemukan di dalam petunjuk penggunaan modul sistem. Baca petunjuk keselamatan ini sebelum melakukan perakitan.",
+      "title": "Safety Instructions",
+      "page": 9,
+      "hash": "7544580e75c1809258a0",
+      "severity": "warning",
+      "source": "heading",
+      "evidence": {
+        "text": "Petunjuk keselamatan terkait perakitan perangkat/aksesori dapat ditemukan di dalam petunjuk penggunaan modul sistem. Baca petunjuk keselamatan ini sebelum melakukan perakitan.",
+        "page": 9,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "warning",
+      "text": "Safety Instructions",
+      "title": "Safety Instructions",
+      "page": 10,
+      "hash": "4d27b04c353b0d0d2d97",
+      "severity": "warning",
+      "source": "heading",
+      "evidence": {
+        "text": "Safety Instructions",
+        "page": 10,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "Tools required",
+      "title": "IMPORTANT! Only use original Erbe accessories",
+      "page": 12,
+      "hash": "8a23ec9cfa8b28827a06",
+      "severity": "note",
+      "source": "heading",
+      "evidence": {
+        "text": "Tools required",
+        "page": 12,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "Torque screwdriver (1 Nm) hex socket 2.5",
+      "title": "IMPORTANT! Only use original Erbe accessories",
+      "page": 12,
+      "hash": "feb48c0a78eb47697814",
+      "severity": "note",
+      "source": "heading",
+      "evidence": {
+        "text": "Torque screwdriver (1 Nm) hex socket 2.5",
+        "page": 12,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "Cutter",
+      "title": "IMPORTANT! Only use original Erbe accessories",
+      "page": 12,
+      "hash": "79bbfe8106aee95b42dc",
+      "severity": "note",
+      "source": "heading",
+      "evidence": {
+        "text": "Cutter",
+        "page": 12,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "Installing the cable holders on the system carrier",
+      "title": "IMPORTANT! Only use original Erbe accessories",
+      "page": 12,
+      "hash": "1142b9436f22c958da18",
+      "severity": "note",
+      "source": "heading",
+      "evidence": {
+        "text": "Installing the cable holders on the system carrier",
+        "page": 12,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "Erbe REF 20180-460",
+      "title": "IMPORTANT! Only use original Erbe accessories",
+      "page": 12,
+      "hash": "9352ecc3d69e60712322",
+      "severity": "note",
+      "source": "heading",
+      "evidence": {
+        "text": "Erbe REF 20180-460",
+        "page": 12,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "M4 x 8",
+      "title": "IMPORTANT! Only use original Erbe accessories",
+      "page": 12,
+      "hash": "87bc6e99c00c9eabd67d",
+      "severity": "note",
+      "source": "heading",
+      "evidence": {
+        "text": "M4 x 8",
+        "page": 12,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "30180-103_V25709 2025-01",
+      "title": "IMPORTANT! Only use original Erbe accessories",
+      "page": 12,
+      "hash": "2b3cdcd179955090dc33",
+      "severity": "note",
+      "source": "heading",
+      "evidence": {
+        "text": "30180-103_V25709 2025-01",
+        "page": 12,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "Torque screwdriver (1.4 Nm) Open-end wrench 7",
+      "title": "IMPORTANT! Only use original Erbe accessories",
+      "page": 16,
+      "hash": "221ba2df3a1cb3638cfe",
+      "severity": "note",
+      "source": "heading",
+      "evidence": {
+        "text": "Torque screwdriver (1.4 Nm) Open-end wrench 7",
+        "page": 16,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "Installing the cable holders in the door",
+      "title": "IMPORTANT! Only use original Erbe accessories",
+      "page": 16,
+      "hash": "912d4c0a7c82ebfd6986",
+      "severity": "note",
+      "source": "heading",
+      "evidence": {
+        "text": "Installing the cable holders in the door",
+        "page": 16,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "Erbe REF 20180-464",
+      "title": "IMPORTANT! Only use original Erbe accessories",
+      "page": 16,
+      "hash": "6c9a7625182bca26224f",
+      "severity": "note",
+      "source": "heading",
+      "evidence": {
+        "text": "Erbe REF 20180-464",
+        "page": 16,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "Universal fastening set: Not all parts are required for the following assembly steps.",
+      "title": "IMPORTANT! Only use original Erbe accessories",
+      "page": 16,
+      "hash": "689aaba4cc3300ad5265",
+      "severity": "note",
+      "source": "heading",
+      "evidence": {
+        "text": "Universal fastening set: Not all parts are required for the following assembly steps.",
+        "page": 16,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "Erbe REF 20180-465 Tools required No tool needed. 30180-103_V 25709 2025-01",
+      "title": "IMPORTANT! Only use original Erbe accessories",
+      "page": 20,
+      "hash": "c72c70819adc34107296",
+      "severity": "note",
+      "source": "heading",
+      "evidence": {
+        "text": "Erbe REF 20180-465 Tools required No tool needed. 30180-103_V 25709 2025-01",
+        "page": 20,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "Erbe REF 20180-520",
+      "title": "IMPORTANT! Only use original Erbe accessories",
+      "page": 24,
+      "hash": "80ddb7fa5af9c15a42d3",
+      "severity": "note",
+      "source": "heading",
+      "evidence": {
+        "text": "Erbe REF 20180-520",
+        "page": 24,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "Installing footswitch support for large one-pedal footswitch",
+      "title": "IMPORTANT! Only use original Erbe accessories",
+      "page": 28,
+      "hash": "51b5c92043ada2e87d65",
+      "severity": "note",
+      "source": "heading",
+      "evidence": {
+        "text": "Installing footswitch support for large one-pedal footswitch",
+        "page": 28,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "Erbe REF 20180-463",
+      "title": "IMPORTANT! Only use original Erbe accessories",
+      "page": 28,
+      "hash": "fd9396b35e3b6a4d4277",
+      "severity": "note",
+      "source": "heading",
+      "evidence": {
+        "text": "Erbe REF 20180-463",
+        "page": 28,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "Installing footswitch support for small one-pedal footswitch on the system carrier",
+      "title": "IMPORTANT! Only use original Erbe accessories",
+      "page": 32,
+      "hash": "30af001211a9a64592ae",
+      "severity": "note",
+      "source": "heading",
+      "evidence": {
+        "text": "Installing footswitch support for small one-pedal footswitch on the system carrier",
+        "page": 32,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "Installing footswitch support for small one-pedal footswitch in the door",
+      "title": "IMPORTANT! Only use original Erbe accessories",
+      "page": 36,
+      "hash": "676213a6cc8a4504a764",
+      "severity": "note",
+      "source": "heading",
+      "evidence": {
+        "text": "Installing footswitch support for small one-pedal footswitch in the door",
+        "page": 36,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "Installing attachement rail for ESM 2 suction container",
+      "title": "IMPORTANT! Only use original Erbe accessories",
+      "page": 40,
+      "hash": "d67d10e84ebf16c4e675",
+      "severity": "note",
+      "source": "heading",
+      "evidence": {
+        "text": "Installing attachement rail for ESM 2 suction container",
+        "page": 40,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "Erbe REF 20180-509",
+      "title": "IMPORTANT! Only use original Erbe accessories",
+      "page": 40,
+      "hash": "002fd462d70645140817",
+      "severity": "note",
+      "source": "heading",
+      "evidence": {
+        "text": "Erbe REF 20180-509",
+        "page": 40,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "Erbe REF 20180-512",
+      "title": "IMPORTANT! Only use original Erbe accessories",
+      "page": 44,
+      "hash": "6483f42c78be852287f8",
+      "severity": "note",
+      "source": "heading",
+      "evidence": {
+        "text": "Erbe REF 20180-512",
+        "page": 44,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "Installing IES 3",
+      "title": "IMPORTANT! Only use original Erbe accessories",
+      "page": 44,
+      "hash": "d18e3d3e457d8c0a0e9e",
+      "severity": "note",
+      "source": "heading",
+      "evidence": {
+        "text": "Installing IES 3",
+        "page": 44,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "M8 x 16",
+      "title": "IMPORTANT! Only use original Erbe accessories",
+      "page": 44,
+      "hash": "727e19f8a20c3db60dc2",
+      "severity": "note",
+      "source": "heading",
+      "evidence": {
+        "text": "M8 x 16",
+        "page": 44,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "Keep for later use",
+      "title": "IMPORTANT! Only use original Erbe accessories",
+      "page": 44,
+      "hash": "078d9ddd5fcec5cd87d0",
+      "severity": "note",
+      "source": "heading",
+      "evidence": {
+        "text": "Keep for later use",
+        "page": 44,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "Erbe REF 20180-511",
+      "title": "IMPORTANT! Only use original Erbe accessories",
+      "page": 50,
+      "hash": "aa6e1f956b285bafa24f",
+      "severity": "note",
+      "source": "heading",
+      "evidence": {
+        "text": "Erbe REF 20180-511",
+        "page": 50,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "Installing ESM 2",
+      "title": "IMPORTANT! Only use original Erbe accessories",
+      "page": 50,
+      "hash": "116a606dc12044a84c86",
+      "severity": "note",
+      "source": "heading",
+      "evidence": {
+        "text": "Installing ESM 2",
+        "page": 50,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "Erbe REF 20180-513",
+      "title": "IMPORTANT! Only use original Erbe accessories",
+      "page": 56,
+      "hash": "07828f3ddbd92071bd6e",
+      "severity": "note",
+      "source": "heading",
+      "evidence": {
+        "text": "Erbe REF 20180-513",
+        "page": 56,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "Torque screwdriver (1 Nm) hex socket 6",
+      "title": "IMPORTANT! Only use original Erbe accessories",
+      "page": 56,
+      "hash": "6e22ac2fb2bb09ade315",
+      "severity": "note",
+      "source": "heading",
+      "evidence": {
+        "text": "Torque screwdriver (1 Nm) hex socket 6",
+        "page": 56,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "Torque screwdriver (4.9 Nm) open-end wrench 10",
+      "title": "IMPORTANT! Only use original Erbe accessories",
+      "page": 56,
+      "hash": "c21fe99b2f06a0a8d92a",
+      "severity": "note",
+      "source": "heading",
+      "evidence": {
+        "text": "Torque screwdriver (4.9 Nm) open-end wrench 10",
+        "page": 56,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "Preparation",
+      "title": "IMPORTANT! Only use original Erbe accessories",
+      "page": 56,
+      "hash": "8702981cc3294f846643",
+      "severity": "note",
+      "source": "heading",
+      "evidence": {
+        "text": "Preparation",
+        "page": 56,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "Installing EIP 2",
+      "title": "IMPORTANT! Before installing the units on the system carrier, remove all cables, tubing, and instruments",
+      "page": 56,
+      "hash": "25608989319d67c10ec7",
+      "severity": "note",
+      "source": "heading",
+      "evidence": {
+        "text": "Installing EIP 2",
+        "page": 56,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "Installing IES 3 and ESM 2",
+      "title": "IMPORTANT! Only use original Erbe accessories",
+      "page": 60,
+      "hash": "dcae67c0cf881e7b430d",
+      "severity": "note",
+      "source": "heading",
+      "evidence": {
+        "text": "Installing IES 3 and ESM 2",
+        "page": 60,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "Installing IES 3 and EIP 2",
+      "title": "IMPORTANT! Only use original Erbe accessories",
+      "page": 68,
+      "hash": "3cf57f5742ab98c2c737",
+      "severity": "note",
+      "source": "heading",
+      "evidence": {
+        "text": "Installing IES 3 and EIP 2",
+        "page": 68,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "Installing ESM 2 and EIP 2",
+      "title": "IMPORTANT! Before installing the units on the system carrier, remove all cables, tubing, and instruments",
+      "page": 76,
+      "hash": "beaa24454f25f9c0e033",
+      "severity": "note",
+      "source": "heading",
+      "evidence": {
+        "text": "Installing ESM 2 and EIP 2",
+        "page": 76,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "Installing different VIO series",
+      "title": "IMPORTANT! Only use original Erbe accessories",
+      "page": 84,
+      "hash": "aae715307af20339f0ef",
+      "severity": "note",
+      "source": "heading",
+      "evidence": {
+        "text": "Installing different VIO series",
+        "page": 84,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "separately as needed; they are not part of this fastening set 20180-150. For order numbers for the matching protective caps, see the repair in\u00ad structions for the respective VIO unit.",
+      "title": "IMPORTANT! Order the protective caps for the via of the units (see Step",
+      "page": 84,
+      "hash": "b97ba4ee33a0f921ea9a",
+      "severity": "note",
+      "source": "heading",
+      "evidence": {
+        "text": "separately as needed; they are not part of this fastening set 20180-150. For order numbers for the matching protective caps, see the repair in\u00ad structions for the respective VIO unit.",
+        "page": 84,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "Erbe REF 20180-150",
+      "title": "IMPORTANT! Order the protective caps for the via of the units (see Step",
+      "page": 84,
+      "hash": "3764771b156a41ff4986",
+      "severity": "note",
+      "source": "heading",
+      "evidence": {
+        "text": "Erbe REF 20180-150",
+        "page": 84,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "M4 x 16 screws included",
+      "title": "IMPORTANT! Order the protective caps for the via of the units (see Step",
+      "page": 84,
+      "hash": "6d29f22160625808c7b0",
+      "severity": "note",
+      "source": "heading",
+      "evidence": {
+        "text": "M4 x 16 screws included",
+        "page": 84,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "Installing ERBEJET 2 or ERBECRYO 2",
+      "title": "IMPORTANT! Only use original Erbe accessories",
+      "page": 88,
+      "hash": "d62e2d8b7022a4fa5e71",
+      "severity": "note",
+      "source": "heading",
+      "evidence": {
+        "text": "Installing ERBEJET 2 or ERBECRYO 2",
+        "page": 88,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "Fastening set for APC on system carrier Erbe REF 20180-150",
+      "title": "IMPORTANT! Only use original Erbe accessories",
+      "page": 92,
+      "hash": "53fa438b88bc292420ff",
+      "severity": "note",
+      "source": "heading",
+      "evidence": {
+        "text": "Fastening set for APC on system carrier Erbe REF 20180-150",
+        "page": 92,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "Installing APC 2 and VIO S or VIO D series",
+      "title": "IMPORTANT! Only use original Erbe accessories",
+      "page": 92,
+      "hash": "8f27265b4d63c1175972",
+      "severity": "note",
+      "source": "heading",
+      "evidence": {
+        "text": "Installing APC 2 and VIO S or VIO D series",
+        "page": 92,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "Installing APC 3 and VIO 3 series",
+      "title": "IMPORTANT! Only use original Erbe accessories",
+      "page": 98,
+      "hash": "c56f108e147777b27d04",
+      "severity": "note",
+      "source": "heading",
+      "evidence": {
+        "text": "Installing APC 3 and VIO 3 series",
+        "page": 98,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "IMPORTANT! Only use original Erbe accessories. For the following assembly sequence, the Erbe fastening set shown below must be ordered in quantity 2 (1 for mounting the unit on the other unit, 1 for mounting the unit on the system carrier)",
+      "title": "IMPORTANT! Only use original Erbe accessories. For the following assembly sequence, the Erbe fastening set shown below must be ordered in quantity 2 (1 for mounting the unit on the other unit, 1 for mounting the unit on the system carrier)",
+      "page": 104,
+      "hash": "618c6efb14e0c84ca0c9",
+      "severity": "note",
+      "source": "heading",
+      "evidence": {
+        "text": "IMPORTANT! Only use original Erbe accessories. For the following assembly sequence, the Erbe fastening set shown below must be ordered in quantity 2 (1 for mounting the unit on the other unit, 1 for m",
+        "page": 104,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "separately as needed; it is not part of this fastening set 20180-150. Erbe order number 40160-131: Protective cap for VIO 3n Fire, Metal or Water: Erbe REF No. 40160-112. Protective cap for VIO 3n Stone or Timber: Erbe REF No. 40160-131.",
+      "title": "IMPORTANT! Order the protective cap for the via of the VIO 3n (see Step",
+      "page": 104,
+      "hash": "4664b14b10686d0a15ba",
+      "severity": "note",
+      "source": "heading",
+      "evidence": {
+        "text": "separately as needed; it is not part of this fastening set 20180-150. Erbe order number 40160-131: Protective cap for VIO 3n Fire, Metal or Water: Erbe REF No. 40160-112. Protective cap for VIO 3n Sto",
+        "page": 104,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "Installing ERBEJET 2 or ERBECRYO 2 + APC 2 + VIO S or VIO D series",
+      "title": "IMPORTANT! Only use original Erbe accessories",
+      "page": 110,
+      "hash": "8da60278d06808f45998",
+      "severity": "note",
+      "source": "heading",
+      "evidence": {
+        "text": "Installing ERBEJET 2 or ERBECRYO 2 + APC 2 + VIO S or VIO D series",
+        "page": 110,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "Installing VIO seal + APC 3 + VIO 3 series",
+      "title": "IMPORTANT! Before installing the units on the system carrier, remove all cables, tubing, and instruments",
+      "page": 119,
+      "hash": "eff15a0b263b88d1704c",
+      "severity": "note",
+      "source": "heading",
+      "evidence": {
+        "text": "Installing VIO seal + APC 3 + VIO 3 series",
+        "page": 119,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "Installing ERBEJET 2 or ERBECRYO 2 + APC 3 + VIO 3",
+      "title": "IMPORTANT! Only use original Erbe accessories",
+      "page": 126,
+      "hash": "248072cdfa62672669e9",
+      "severity": "note",
+      "source": "heading",
+      "evidence": {
+        "text": "Installing ERBEJET 2 or ERBECRYO 2 + APC 3 + VIO 3",
+        "page": 126,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "fastening sets",
+      "title": "IMPORTANT! Only use original Erbe accessories. For this assembly sequence you will need the following Erbe",
+      "page": 136,
+      "hash": "e5b2cfc056e9b092e529",
+      "severity": "note",
+      "source": "heading",
+      "evidence": {
+        "text": "fastening sets",
+        "page": 136,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "1 x Erbe fastening set 20180-150 ERBEJET 2 / ERBECRYO 2 on system carrier",
+      "title": "IMPORTANT! Only use original Erbe accessories. For this assembly sequence you will need the following Erbe",
+      "page": 136,
+      "hash": "360cac121e4833d36783",
+      "severity": "note",
+      "source": "heading",
+      "evidence": {
+        "text": "1 x Erbe fastening set 20180-150 ERBEJET 2 / ERBECRYO 2 on system carrier",
+        "page": 136,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "1 x Erbe fastening set 20180-144 VIO seal on ERBEJET 2 / ERBECRYO 2",
+      "title": "IMPORTANT! Only use original Erbe accessories. For this assembly sequence you will need the following Erbe",
+      "page": 136,
+      "hash": "40086d202a1c0200985e",
+      "severity": "note",
+      "source": "heading",
+      "evidence": {
+        "text": "1 x Erbe fastening set 20180-144 VIO seal on ERBEJET 2 / ERBECRYO 2",
+        "page": 136,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "1 x Erbe fastening set 20180-150 APC 3 on VIO seal",
+      "title": "IMPORTANT! Only use original Erbe accessories. For this assembly sequence you will need the following Erbe",
+      "page": 136,
+      "hash": "89c33e24a9062b7512b8",
+      "severity": "note",
+      "source": "heading",
+      "evidence": {
+        "text": "1 x Erbe fastening set 20180-150 APC 3 on VIO seal",
+        "page": 136,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "1 x Erbe fastening set 30135-030 + 40160-065 VIO 3 n on APC 3",
+      "title": "IMPORTANT! Only use original Erbe accessories. For this assembly sequence you will need the following Erbe",
+      "page": 136,
+      "hash": "8791fe8e30d6708637fb",
+      "severity": "note",
+      "source": "heading",
+      "evidence": {
+        "text": "1 x Erbe fastening set 30135-030 + 40160-065 VIO 3 n on APC 3",
+        "page": 136,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "Erbe REF 20180-150 M 4 x 8 M 4 x 16 screws included Keep for later use Keep for later use",
+      "title": "IMPORTANT! Only use original Erbe accessories. For this assembly sequence you will need the following Erbe",
+      "page": 136,
+      "hash": "de2142cf514539762f69",
+      "severity": "note",
+      "source": "heading",
+      "evidence": {
+        "text": "Erbe REF 20180-150 M 4 x 8 M 4 x 16 screws included Keep for later use Keep for later use",
+        "page": 136,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "Installing ERBEJET 2 or ERBECRYO 2 + VIO seal + APC 3 + VIO 3n",
+      "title": "IMPORTANT! Before installing the units on the system carrier, remove all cables, tubing, and instruments",
+      "page": 139,
+      "hash": "e652447a656bcaa1db27",
+      "severity": "note",
+      "source": "heading",
+      "evidence": {
+        "text": "Installing ERBEJET 2 or ERBECRYO 2 + VIO seal + APC 3 + VIO 3n",
+        "page": 139,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "VIO unit",
+      "title": "IMPORTANT! Only use original Erbe cables",
+      "page": 151,
+      "hash": "8ac70fb49b3d4f6e3421",
+      "severity": "note",
+      "source": "heading",
+      "evidence": {
+        "text": "VIO unit",
+        "page": 151,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "APC module",
+      "title": "IMPORTANT! Only use original Erbe cables",
+      "page": 151,
+      "hash": "4dd25671c1abcc5bfe04",
+      "severity": "note",
+      "source": "heading",
+      "evidence": {
+        "text": "APC module",
+        "page": 151,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "VIO seal",
+      "title": "IMPORTANT! Only use original Erbe cables",
+      "page": 151,
+      "hash": "cb85a9a9d55f2cb58a1d",
+      "severity": "note",
+      "source": "heading",
+      "evidence": {
+        "text": "VIO seal",
+        "page": 151,
+        "confidence": 0.8,
+        "truncated": false
+      }
+    }
+  ],
+  "tables": [],
+  "references": [],
+  "_metrics": {
+    "page_count": 156,
+    "unique_pages_seen": 156,
+    "unique_pages_ratio": 1.0,
+    "extracted_chars": 40085,
+    "duration_s": 18.47531008720398,
+    "coverage_ratio": 1.0,
+    "doc_subtype": "installation_guide",
+    "research_scope": "unknown",
+    "imrad_required": false,
+    "ats_yield_required": false,
+    "tables_kept": 0,
+    "tables_original": 0,
+    "tables_dropped": 0,
+    "research_outcomes_present": false,
+    "diagnostic_accuracy_present": false,
+    "paragraph_dedup_applied": true,
+    "relations_dropped": 0,
+    "relations_count": 0,
+    "relations_kept": 0,
+    "safety_blocks_found": 100,
+    "safety_found": 100,
+    "safety_expected": 15,
+    "safety_added": 0,
+    "safety_status": "ok",
+    "safety_blocks_added": 0,
+    "safety_expected_min": 15,
+    "safety_gap": 0,
+    "safety_threshold_rule": "manufacturer_override",
+    "references_count": 0,
+    "references_anchor_backfill": false,
+    "long_doc_fast_path": true,
+    "long_doc_page_threshold": 80,
+    "frontmatter_affiliations_unresolved": 0,
+    "second_pass_applied": true,
+    "second_pass_patches": [
+      "ifu_frontmatter_backfill",
+      "ifu_intended_use_backfill",
+      "ifu_sectionizer_salvage"
+    ],
+    "second_pass_reasons": [
+      "frontmatter_backfill",
+      "no_toc_drops",
+      "page_count_too_high",
+      "no_headings_detected",
+      "indications_from_important_information",
+      "indications_present",
+      "density_ok",
+      "page_threshold",
+      "no_references_detected",
+      "section_salvage_ifu",
+      "no_sections"
+    ],
+    "second_pass_modifications": {
+      "front_matter_model": 1,
+      "intended_use": 1,
+      "indications_for_use": 1,
+      "sections_rebuilt": 20
+    },
+    "second_pass_modifications_total": 23,
+    "second_pass": {
+      "mode": "auto",
+      "applied": [
+        "ifu_frontmatter_backfill",
+        "ifu_intended_use_backfill",
+        "ifu_sectionizer_salvage"
+      ],
+      "reasons": [
+        "frontmatter_backfill",
+        "no_toc_drops",
+        "page_count_too_high",
+        "no_headings_detected",
+        "indications_from_important_information",
+        "indications_present",
+        "density_ok",
+        "page_threshold",
+        "no_references_detected",
+        "section_salvage_ifu",
+        "no_sections"
+      ],
+      "modifications": {
+        "front_matter_model": 1,
+        "intended_use": 1,
+        "indications_for_use": 1,
+        "sections_rebuilt": 20
+      },
+      "patch_summaries": [
+        {
+          "name": "ifu_frontmatter_backfill",
+          "modifications": {
+            "front_matter_model": 1
+          },
+          "reasons": [
+            "frontmatter_backfill"
+          ]
+        },
+        {
+          "name": "ifu_intended_use_backfill",
+          "modifications": {
+            "intended_use": 1,
+            "indications_for_use": 1
+          },
+          "reasons": [
+            "indications_from_important_information"
+          ]
+        },
+        {
+          "name": "ifu_sectionizer_salvage",
+          "modifications": {
+            "sections_rebuilt": 20
+          },
+          "reasons": [
+            "section_salvage_ifu"
+          ]
+        }
+      ]
+    },
+    "_metrics": {
+      "toc_pages_dropped": 0,
+      "safety_blocks_found": 100,
+      "safety_blocks_added": 0,
+      "second_pass_applied": true,
+      "second_pass_patches": [
+        "ifu_frontmatter_backfill",
+        "ifu_intended_use_backfill",
+        "ifu_sectionizer_salvage"
+      ],
+      "second_pass_reasons": [
+        "frontmatter_backfill",
+        "no_toc_drops",
+        "page_count_too_high",
+        "no_headings_detected",
+        "indications_from_important_information",
+        "indications_present",
+        "density_ok",
+        "page_threshold",
+        "no_references_detected",
+        "section_salvage_ifu",
+        "no_sections"
+      ],
+      "second_pass_modifications": {
+        "front_matter_model": 1,
+        "intended_use": 1,
+        "indications_for_use": 1,
+        "sections_rebuilt": 20
+      },
+      "patches": [
+        {
+          "name": "ifu_frontmatter_backfill",
+          "modifications": {
+            "front_matter_model": 1
+          },
+          "reasons": [
+            "frontmatter_backfill"
+          ]
+        },
+        {
+          "name": "ifu_intended_use_backfill",
+          "modifications": {
+            "intended_use": 1,
+            "indications_for_use": 1
+          },
+          "reasons": [
+            "indications_from_important_information"
+          ]
+        },
+        {
+          "name": "ifu_sectionizer_salvage",
+          "modifications": {
+            "sections_rebuilt": 20
+          },
+          "reasons": [
+            "section_salvage_ifu"
+          ]
+        }
+      ],
+      "safety_expected_min": 15,
+      "safety_found": 100,
+      "safety_gap": 0,
+      "safety_threshold_rule": "manufacturer_override",
+      "revision_status": "extracted",
+      "sections_rebuilt": 20,
+      "sectionizer_mode": "ifu_salvage",
+      "tables_kept": 0,
+      "tables_dropped": 0,
+      "tables_original": 0,
+      "chunking": {
+        "enabled": true,
+        "mode": "smart",
+        "chunks_created": 240,
+        "chunks_unique": 194,
+        "chunks_deduped": 46,
+        "chunks_emitted": 194,
+        "chunks_truncated": 0,
+        "dedup_applied": true,
+        "policy": "standard",
+        "chunks_per_page": 1.244,
+        "unique_hash_ratio": 0.8083,
+        "avg_tokens": 47.35,
+        "token_min": 200,
+        "token_max": 500,
+        "overlap_ratio": 0.15,
+        "max_chunks_per_doc": 1200
+      },
+      "extraction_metrics": {
+        "engine": "pymupdf",
+        "engines_tried": [
+          "pymupdf"
+        ],
+        "engine_switchovers": 0,
+        "pages_total": 156,
+        "duration_s": 18.47531008720398
+      },
+      "quality_metrics": {
+        "tables_original": 0,
+        "tables_kept": 0,
+        "tables_dropped": 0,
+        "safety_blocks_added": 0,
+        "safety_blocks_found": 100,
+        "safety_expected_min": 15
+      },
+      "validation_metrics": {
+        "second_pass_applied": true,
+        "patches": [
+          {
+            "name": "ifu_frontmatter_backfill",
+            "modifications": {
+              "front_matter_model": 1
+            },
+            "reasons": [
+              "frontmatter_backfill"
+            ]
+          },
+          {
+            "name": "ifu_intended_use_backfill",
+            "modifications": {
+              "intended_use": 1,
+              "indications_for_use": 1
+            },
+            "reasons": [
+              "indications_from_important_information"
+            ]
+          },
+          {
+            "name": "ifu_sectionizer_salvage",
+            "modifications": {
+              "sections_rebuilt": 20
+            },
+            "reasons": [
+              "section_salvage_ifu"
+            ]
+          }
+        ],
+        "reasons": [
+          "frontmatter_backfill",
+          "no_toc_drops",
+          "page_count_too_high",
+          "no_headings_detected",
+          "indications_from_important_information",
+          "indications_present",
+          "density_ok",
+          "page_threshold",
+          "no_references_detected",
+          "section_salvage_ifu",
+          "no_sections"
+        ],
+        "modifications": {
+          "front_matter_model": 1,
+          "intended_use": 1,
+          "indications_for_use": 1,
+          "sections_rebuilt": 20
+        }
+      }
+    },
+    "chunking": {
+      "enabled": true,
+      "mode": "smart",
+      "chunks_created": 240,
+      "chunks_unique": 194,
+      "chunks_deduped": 46,
+      "chunks_emitted": 194,
+      "chunks_truncated": 0,
+      "dedup_applied": true,
+      "policy": "standard",
+      "chunks_per_page": 1.244,
+      "unique_hash_ratio": 0.8083,
+      "avg_tokens": 47.35,
+      "token_min": 200,
+      "token_max": 500,
+      "overlap_ratio": 0.15,
+      "max_chunks_per_doc": 1200
+    },
+    "engines_tried": [
+      "pymupdf"
+    ],
+    "engine_selected": "pymupdf",
+    "patches": [
+      {
+        "name": "ifu_frontmatter_backfill",
+        "modifications": {
+          "front_matter_model": 1
+        },
+        "reasons": [
+          "frontmatter_backfill"
+        ]
+      },
+      {
+        "name": "ifu_intended_use_backfill",
+        "modifications": {
+          "intended_use": 1,
+          "indications_for_use": 1
+        },
+        "reasons": [
+          "indications_from_important_information"
+        ]
+      },
+      {
+        "name": "ifu_sectionizer_salvage",
+        "modifications": {
+          "sections_rebuilt": 20
+        },
+        "reasons": [
+          "section_salvage_ifu"
+        ]
+      }
+    ],
+    "emit_policy_source": "yaml",
+    "sections_rebuilt": 20,
+    "sectionizer_mode": "ifu_salvage",
+    "indications_fallback_provenance": "important_information",
+    "front_matter_fallback_reason": "second_pass_backfill",
+    "emit_pruned": [
+      "outcomes"
+    ]
+  },
+  "_engine": "pymupdf",
+  "_mode": "full",
+  "_cache_used": false,
+  "_pipeline_metadata": {
+    "profile": "enriched",
+    "engines_requested": [
+      "pymupdf",
+      "pdfplumber"
+    ],
+    "engine_used": "pymupdf",
+    "mode": "full",
+    "cache_used": false,
+    "ocr_used_pages": [],
+    "coverage_ratio": 1.0,
+    "page_count": 156,
+    "timestamp": "2025-11-22T18:20:31.059649",
+    "version": "v1.0.0",
+    "warnings": [],
+    "emit": {
+      "evidence_policy": "compact",
+      "tables_mode": "compact",
+      "chunking": {
+        "enabled": true,
+        "token_min": 200,
+        "token_max": 500,
+        "overlap_ratio": 0.15
+      },
+      "max_relations": 15000,
+      "max_table_rows": 200,
+      "tables": {
+        "preserve_summary_recommendations": true,
+        "preserve_headers": [
+          "summary of recommendations",
+          "summary of statements",
+          "recommendations and strength"
+        ]
+      },
+      "evidence_max_chars": 500,
+      "table_cell_max_chars": 600,
+      "paragraph_store": true,
+      "max_entities": 3000,
+      "relation_window": 80,
+      "keep_evidence_bank": true,
+      "max_tables": 24
+    },
+    "safety_blocks_found": 100,
+    "safety_found": 100,
+    "extracted_chars": 40085,
+    "safety_toc_guard_pages_dropped": [
+      4,
+      13
+    ],
+    "safety_toc_guard_pages_dropped_count": 2,
+    "manufacturer_detection": {
+      "name": "ERBE Elektromedizin GmbH",
+      "confidence": "high",
+      "source": "cover"
+    },
+    "front_matter_meta": {
+      "product_name_source": "pattern",
+      "publication_date_precision": "month",
+      "manufacturer_source": "cover",
+      "publication_date_source": "pattern_cover",
+      "part_number_source": "filename",
+      "manufacturer_detection_confidence": "high",
+      "manufacturer_detection_source": "cover",
+      "revision_status": "extracted",
+      "revision_provenance": "extracted"
+    },
+    "long_doc_fast_path": true,
+    "long_doc_page_threshold": 80,
+    "long_doc_page_count": 156,
+    "long_doc_fast_engine": "pymupdf",
+    "text_repair_applied": false,
+    "engine_used_per_page": {
+      "1": "pymupdf",
+      "2": "pymupdf",
+      "3": "pymupdf",
+      "4": "pymupdf",
+      "5": "pymupdf",
+      "6": "pymupdf",
+      "7": "pymupdf",
+      "8": "pymupdf",
+      "9": "pymupdf",
+      "10": "pymupdf",
+      "11": "pymupdf",
+      "12": "pymupdf",
+      "13": "pymupdf",
+      "14": "pymupdf",
+      "15": "pymupdf",
+      "16": "pymupdf",
+      "17": "pymupdf",
+      "18": "pymupdf",
+      "19": "pymupdf",
+      "20": "pymupdf",
+      "21": "pymupdf",
+      "22": "pymupdf",
+      "23": "pymupdf",
+      "24": "pymupdf",
+      "25": "pymupdf",
+      "26": "pymupdf",
+      "27": "pymupdf",
+      "28": "pymupdf",
+      "29": "pymupdf",
+      "30": "pymupdf",
+      "31": "pymupdf",
+      "32": "pymupdf",
+      "33": "pymupdf",
+      "34": "pymupdf",
+      "35": "pymupdf",
+      "36": "pymupdf",
+      "37": "pymupdf",
+      "38": "pymupdf",
+      "39": "pymupdf",
+      "40": "pymupdf",
+      "41": "pymupdf",
+      "42": "pymupdf",
+      "43": "pymupdf",
+      "44": "pymupdf",
+      "45": "pymupdf",
+      "46": "pymupdf",
+      "47": "pymupdf",
+      "48": "pymupdf",
+      "49": "pymupdf",
+      "50": "pymupdf",
+      "51": "pymupdf",
+      "52": "pymupdf",
+      "53": "pymupdf",
+      "54": "pymupdf",
+      "55": "pymupdf",
+      "56": "pymupdf",
+      "57": "pymupdf",
+      "58": "pymupdf",
+      "59": "pymupdf",
+      "60": "pymupdf",
+      "61": "pymupdf",
+      "62": "pymupdf",
+      "63": "pymupdf",
+      "64": "pymupdf",
+      "65": "pymupdf",
+      "66": "pymupdf",
+      "67": "pymupdf",
+      "68": "pymupdf",
+      "69": "pymupdf",
+      "70": "pymupdf",
+      "71": "pymupdf",
+      "72": "pymupdf",
+      "73": "pymupdf",
+      "74": "pymupdf",
+      "75": "pymupdf",
+      "76": "pymupdf",
+      "77": "pymupdf",
+      "78": "pymupdf",
+      "79": "pymupdf",
+      "80": "pymupdf",
+      "81": "pymupdf",
+      "82": "pymupdf",
+      "83": "pymupdf",
+      "84": "pymupdf",
+      "85": "pymupdf",
+      "86": "pymupdf",
+      "87": "pymupdf",
+      "88": "pymupdf",
+      "89": "pymupdf",
+      "90": "pymupdf",
+      "91": "pymupdf",
+      "92": "pymupdf",
+      "93": "pymupdf",
+      "94": "pymupdf",
+      "95": "pymupdf",
+      "96": "pymupdf",
+      "97": "pymupdf",
+      "98": "pymupdf",
+      "99": "pymupdf",
+      "100": "pymupdf",
+      "101": "pymupdf",
+      "102": "pymupdf",
+      "103": "pymupdf",
+      "104": "pymupdf",
+      "105": "pymupdf",
+      "106": "pymupdf",
+      "107": "pymupdf",
+      "108": "pymupdf",
+      "109": "pymupdf",
+      "110": "pymupdf",
+      "111": "pymupdf",
+      "112": "pymupdf",
+      "113": "pymupdf",
+      "114": "pymupdf",
+      "115": "pymupdf",
+      "116": "pymupdf",
+      "117": "pymupdf",
+      "118": "pymupdf",
+      "119": "pymupdf",
+      "120": "pymupdf",
+      "121": "pymupdf",
+      "122": "pymupdf",
+      "123": "pymupdf",
+      "124": "pymupdf",
+      "125": "pymupdf",
+      "126": "pymupdf",
+      "127": "pymupdf",
+      "128": "pymupdf",
+      "129": "pymupdf",
+      "130": "pymupdf",
+      "131": "pymupdf",
+      "132": "pymupdf",
+      "133": "pymupdf",
+      "134": "pymupdf",
+      "135": "pymupdf",
+      "136": "pymupdf",
+      "137": "pymupdf",
+      "138": "pymupdf",
+      "139": "pymupdf",
+      "140": "pymupdf",
+      "141": "pymupdf",
+      "142": "pymupdf",
+      "143": "pymupdf",
+      "144": "pymupdf",
+      "145": "pymupdf",
+      "146": "pymupdf",
+      "147": "pymupdf",
+      "148": "pymupdf",
+      "149": "pymupdf",
+      "150": "pymupdf",
+      "151": "pymupdf",
+      "152": "pymupdf",
+      "153": "pymupdf",
+      "154": "pymupdf",
+      "155": "pymupdf",
+      "156": "pymupdf"
+    },
+    "spacing_metrics": {
+      "space_ratio_before": 0.14253167797260977,
+      "space_ratio_after": null,
+      "avg_token_length_before": 4.777719482336481,
+      "avg_token_length_after": null,
+      "repair_strategy": null
+    },
+    "paragraph_dedup_applied": true,
+    "lang_counts": {
+      "en": 1261,
+      "ja": 2
+    },
+    "safety_expected_min": 15,
+    "safety_expected": 15,
+    "safety_expectation_source": "manufacturer_override",
+    "safety_threshold_rule": "manufacturer_override",
+    "safety_gap": 0,
+    "safety_status": "ok",
+    "safety_blocks_added": 0,
+    "revision_status": "extracted",
+    "tables_kept": 0,
+    "relations_dropped": 0,
+    "tables_dropped": 0,
+    "relations_kept": 0,
+    "references_detected": 0,
+    "frontmatter_affiliations_unresolved": 0,
+    "second_pass_modifications": {
+      "front_matter_model": 1,
+      "intended_use": 1,
+      "indications_for_use": 1,
+      "sections_rebuilt": 20
+    },
+    "duration_s": 18.47531008720398,
+    "engine_selected": "pymupdf",
+    "engines_tried": [
+      "pymupdf"
+    ],
+    "engine_switchovers": 0,
+    "emit_policy_source": "yaml",
+    "split_languages": true,
+    "chunking": {
+      "enabled": true,
+      "mode": "smart",
+      "chunks_created": 240,
+      "chunks_unique": 194,
+      "chunks_deduped": 46,
+      "chunks_emitted": 194,
+      "chunks_truncated": 0,
+      "dedup_applied": true,
+      "policy": "standard",
+      "chunks_per_page": 1.244,
+      "unique_hash_ratio": 0.8083,
+      "avg_tokens": 47.35,
+      "token_min": 200,
+      "token_max": 500,
+      "overlap_ratio": 0.15,
+      "max_chunks_per_doc": 1200
+    },
+    "second_pass": {
+      "mode": "auto",
+      "runtime_ms": 167,
+      "patches_applied": [
+        "ifu_frontmatter_backfill",
+        "ifu_intended_use_backfill",
+        "ifu_sectionizer_salvage"
+      ],
+      "diff_summary": {
+        "front_matter_model": 1,
+        "intended_use": 1,
+        "indications_for_use": 1,
+        "sections_rebuilt": 20
+      },
+      "notes": [],
+      "applied": [
+        "ifu_frontmatter_backfill",
+        "ifu_intended_use_backfill",
+        "ifu_sectionizer_salvage"
+      ],
+      "reasons": [
+        "frontmatter_backfill",
+        "no_toc_drops",
+        "page_count_too_high",
+        "no_headings_detected",
+        "indications_from_important_information",
+        "indications_present",
+        "density_ok",
+        "page_threshold",
+        "no_references_detected",
+        "section_salvage_ifu",
+        "no_sections"
+      ],
+      "modifications": {
+        "front_matter_model": 1,
+        "intended_use": 1,
+        "indications_for_use": 1,
+        "sections_rebuilt": 20
+      },
+      "requires_revalidation": true
+    },
+    "front_matter_fallback_reason": "second_pass_backfill",
+    "indications_fallback_provenance": "important_information",
+    "sections": {
+      "3 Only for VIO S and VIO D units": {
+        "start_page": 85,
+        "source": "second_pass_ifu_sectionizer"
+      },
+      "7 Attachment points on the system carrier": {
+        "start_page": 86,
+        "source": "second_pass_ifu_sectionizer"
+      },
+      "8 Attachment points on the unit": {
+        "start_page": 86,
+        "source": "second_pass_ifu_sectionizer"
+      },
+      "6 Attachment points on the system carrier": {
+        "start_page": 89,
+        "source": "second_pass_ifu_sectionizer"
+      },
+      "7 Attachment points on the unit": {
+        "start_page": 90,
+        "source": "second_pass_ifu_sectionizer"
+      },
+      "5 Attachment points on the system carrier": {
+        "start_page": 100,
+        "source": "second_pass_ifu_sectionizer"
+      },
+      "6 Attachment points on the unit": {
+        "start_page": 100,
+        "source": "second_pass_ifu_sectionizer"
+      },
+      "10 VIO 3 or VIO 3n": {
+        "start_page": 102,
+        "source": "second_pass_ifu_sectionizer"
+      },
+      "1.0 Nm 13": {
+        "start_page": 102,
+        "source": "second_pass_ifu_sectionizer"
+      },
+      "6 Attachment points on VIO seal": {
+        "start_page": 105,
+        "source": "second_pass_ifu_sectionizer"
+      },
+      "10 VIO 3n": {
+        "start_page": 106,
+        "source": "second_pass_ifu_sectionizer"
+      },
+      "18 Attachment points on VIO 3n": {
+        "start_page": 107,
+        "source": "second_pass_ifu_sectionizer"
+      },
+      "16 Attachment points on ERBEJET 2 / ERBECRYO 2": {
+        "start_page": 115,
+        "source": "second_pass_ifu_sectionizer"
+      },
+      "1 ERBEJET 2 ERBECRYO 2": {
+        "start_page": 115,
+        "source": "second_pass_ifu_sectionizer"
+      },
+      "17 Attachment points on APC 3": {
+        "start_page": 122,
+        "source": "second_pass_ifu_sectionizer"
+      },
+      "21 VIO 3 or VIO 3n": {
+        "start_page": 123,
+        "source": "second_pass_ifu_sectionizer"
+      },
+      "15 Attachment points on ERBEJET 2 / ERBECRYO 2": {
+        "start_page": 132,
+        "source": "second_pass_ifu_sectionizer"
+      },
+      "20 VIO 3": {
+        "start_page": 133,
+        "source": "second_pass_ifu_sectionizer"
+      },
+      "16 Attachment points on VIO seal": {
+        "start_page": 142,
+        "source": "second_pass_ifu_sectionizer"
+      },
+      "31 VIO 3n": {
+        "start_page": 145,
+        "source": "second_pass_ifu_sectionizer"
+      }
+    },
+    "metadata_sources": {},
+    "second_pass_mode": "auto",
+    "engine_timeouts": {
+      "pymupdf": 240.0,
+      "pdfplumber": 210.0
+    },
+    "ifu_engine_mode": "pdfplumber",
+    "ifu_engine_source": "manufacturer:erbe",
+    "ifu_engine_override_key": "erbe",
+    "language": "ja",
+    "split_from": "eeca102f-8cdc-407a-9e75-55936084a02b",
+    "chunks_removed_for_split": true
+  }
+}

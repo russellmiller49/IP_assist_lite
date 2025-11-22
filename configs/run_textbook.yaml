@@ -4,6 +4,11 @@ engines:
   - pymupdf
   - pdfplumber
 
+chunking:
+  method: smart
+  column_mode: auto
+  overlap_ratio: 0.10
+
 metadata_sources:
   zotero_json: "data/zotero/my_library.json"
 

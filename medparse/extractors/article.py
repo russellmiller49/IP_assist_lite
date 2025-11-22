@@ -548,16 +548,29 @@ def extract_article(
     umls_records = umls_result.entities
 
     page_text_map: Dict[int, str] = {}
+    filter_mode = "strict"
+    try:
+        filter_mode = str(extraction_config.umls.get("post_filter", "strict") or "strict").lower()
+    except AttributeError:
+        filter_mode = "strict"
+
     if umls_records:
         page_text_map = {
             getattr(page, "number", idx + 1) or idx + 1: page.text or ""
             for idx, page in enumerate(pages)
         }
-        umls_records, umls_filter_report = filter_umls_entities(
-            umls_records,
-            page_texts=page_text_map,
-            doc_subtype=doc_subtype,
-        )
+        if filter_mode != "off":
+            umls_records, umls_filter_report = filter_umls_entities(
+                umls_records,
+                page_texts=page_text_map,
+                doc_subtype=doc_subtype,
+            )
+        else:
+            umls_filter_report = {
+                "mode": "passthrough",
+                "kept": len(umls_records),
+                "dropped": {},
+            }
         umls_result.filter_report = umls_filter_report
         umls_result.entities = umls_records
 

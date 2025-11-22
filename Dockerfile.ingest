@@ -1,0 +1,57 @@
+# Dockerfile.ingest for medparse worker
+# Decoupled extraction pipeline using latest docling and typer
+
+FROM python:3.11-slim
+
+ARG GIT_SHA=dev
+ENV GIT_SHA=${GIT_SHA}
+ENV INGEST_BUILD_SHA=${GIT_SHA}
+
+WORKDIR /app
+
+# Install system dependencies if needed (e.g. for docling/OCR)
+# checking if docling needs tesseract or similar
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    libgl1 \
+    libglib2.0-0 \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy requirements
+# We assume requirements.txt contains the base, but we might need to override for this specific container
+# if docling/typer versions are specific.
+# For now, we'll copy the whole context and install. 
+# Ideally, we should have a requirements-ingest.txt.
+# We will assume a requirements file exists or we install key packages manually as per instruction.
+
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt \
+    && pip install --no-cache-dir "numpy<2.0.0" docling rapidocr_onnxruntime onnxruntime \
+    && pip install --no-cache-dir --index-url https://download.pytorch.org/whl/cpu torch torchvision torchaudio
+
+RUN python - <<'PY'
+from pathlib import Path
+from rapidocr_onnxruntime import RapidOCR
+
+cache_dir = Path('/root/.cache/rapidocr')
+cache_dir.mkdir(parents=True, exist_ok=True)
+_ = RapidOCR()
+print('RapidOCR cache warmed')
+PY
+
+COPY . .
+
+# Environment variables
+ENV PYTHONPATH=/app
+ENV OMP_NUM_THREADS=1
+ENV MKL_NUM_THREADS=1
+ENV NUMEXPR_MAX_THREADS=1
+ENV TOKENIZERS_PARALLELISM=false
+
+# Runtime flags (documented for runbook):
+# - Use `--gpus all` when GPU acceleration is desired and CUDA runtime is installed.
+# - Use `--cpus="4.0"` to pin the container to four cores on CPU-only hosts.
+# - Set `THINC_USE_OPS=cuda` only in host processes that run spaCy/scispaCy.
+
+# Default command
+CMD ["python", "-m", "medparse.pipeline.run_ingest", "--help"]

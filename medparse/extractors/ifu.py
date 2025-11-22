@@ -28,8 +28,13 @@ from medparse.normalize.ifu_sections import clean_section_text
 from medparse.normalize.page_furniture import strip_furniture
 from medparse.normalize.references import gate_ifu_references, normalize_references
 from medparse.normalize.software import filter_software_versions
-from medparse.normalize.tables import clean_tables
-from medparse.normalize.text_cleanup import clean_paragraph, deep_cleanup_fields
+from medparse.normalize.tables import clean_tables, suppress_table_ghosts, detect_complex_tables
+from medparse.normalize.text_cleanup import (
+    clean_paragraph,
+    deep_cleanup_fields,
+    repair_paragraph_store,
+    tag_paragraph_languages,
+)
 from medparse.pipeline.engine_select import repair_space_poor_pages
 from medparse.schema.ifu import IFUDocument
 from medparse.ifu.safety_thresholds import expected_safety_with_source
@@ -508,11 +513,25 @@ def extract_ifu(
         detect_columns=column_mode_active,
         toc_pages=toc_page_hints,
     )
+    repaired_paragraphs = repair_paragraph_store(paragraph_store)
+    lang_counts = tag_paragraph_languages(paragraph_store)
     document.paragraph_store = paragraph_store
+    # Post-paragraph cleanup that depends on final paragraph_store and tables
+    complex_table_pages = detect_complex_tables(doc_kwargs.get("tables"))
+    table_ghosts_removed = suppress_table_ghosts(paragraph_store, doc_kwargs.get("tables"))
     if dedup_applied:
         document.pipeline_info["paragraph_dedup_applied"] = True
     else:
         document.pipeline_info.setdefault("paragraph_dedup_applied", False)
+    if repaired_paragraphs:
+        document.pipeline_info["paragraph_text_repaired"] = True
+    if lang_counts:
+        document.pipeline_info["lang_counts"] = lang_counts
+    if table_ghosts_removed:
+        document.pipeline_info["table_ghosts_removed"] = int(table_ghosts_removed)
+    if complex_table_pages:
+        document.pipeline_info["tables_need_vision"] = True
+        document.pipeline_info["tables_need_vision_pages"] = sorted(complex_table_pages)
     normalization_summary = summarize_normalization_reports(pages)
     if normalization_summary:
         document.pipeline_info["_normalization"] = normalization_summary

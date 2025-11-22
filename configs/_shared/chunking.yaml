@@ -1,6 +1,8 @@
 enabled: true
-token_min: 200
+method: smart
+token_min: 150
 token_max: 500
-overlap_ratio: 0.15
+overlap_ratio: 0.10
+column_mode: auto
 max_chunks_per_doc: 1200
 min_tokens_merge_threshold: 140

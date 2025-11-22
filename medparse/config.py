@@ -110,12 +110,20 @@ class ExtractionConfig(BaseModel):
     ifu: Dict[str, Any] = Field(default_factory=dict)
     text_normalization: Dict[str, Any] = Field(default_factory=dict)
     tables: Dict[str, Any] = Field(default_factory=dict)
+    extract_settings: Dict[str, Any] = Field(default_factory=dict, alias="extract")
+    docling_settings: Dict[str, Any] = Field(default_factory=dict, alias="docling")
+    chunking_settings: Dict[str, Any] = Field(default_factory=dict, alias="chunking")
+    umls_settings: Dict[str, Any] = Field(default_factory=dict, alias="umls")
 
     _thresholds_namespace: Optional["FrozenNamespace"] = PrivateAttr(default=None)
     _size_guards_namespace: Optional["FrozenNamespace"] = PrivateAttr(default=None)
     _metadata_sources_namespace: Optional["FrozenNamespace"] = PrivateAttr(default=None)
     _enrichment_namespace: Optional["FrozenNamespace"] = PrivateAttr(default=None)
     _ifu_namespace: Optional["FrozenNamespace"] = PrivateAttr(default=None)
+    _extract_namespace: Optional["FrozenNamespace"] = PrivateAttr(default=None)
+    _docling_namespace: Optional["FrozenNamespace"] = PrivateAttr(default=None)
+    _chunking_namespace: Optional["FrozenNamespace"] = PrivateAttr(default=None)
+    _umls_namespace: Optional["FrozenNamespace"] = PrivateAttr(default=None)
 
     @classmethod
     def from_env(cls) -> "ExtractionConfig":
@@ -212,6 +220,34 @@ class ExtractionConfig(BaseModel):
         if self._ifu_namespace is None:
             self._ifu_namespace = FrozenNamespace(self.ifu)
         return self._ifu_namespace
+
+    @property
+    def extract(self) -> "FrozenNamespace":
+        """Return extraction backend configuration."""
+        if self._extract_namespace is None:
+            self._extract_namespace = FrozenNamespace(self.extract_settings)
+        return self._extract_namespace
+
+    @property
+    def docling(self) -> "FrozenNamespace":
+        """Return Docling augmentation configuration."""
+        if self._docling_namespace is None:
+            self._docling_namespace = FrozenNamespace(self.docling_settings)
+        return self._docling_namespace
+
+    @property
+    def chunking(self) -> "FrozenNamespace":
+        """Return chunking configuration overrides."""
+        if self._chunking_namespace is None:
+            self._chunking_namespace = FrozenNamespace(self.chunking_settings)
+        return self._chunking_namespace
+
+    @property
+    def umls(self) -> "FrozenNamespace":
+        """Return UMLS normalization configuration."""
+        if self._umls_namespace is None:
+            self._umls_namespace = FrozenNamespace(self.umls_settings)
+        return self._umls_namespace
 
     def should_use_zotero(self) -> bool:
         """Check if Zotero front-matter enrichment is enabled."""

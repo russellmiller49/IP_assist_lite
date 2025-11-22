@@ -1,0 +1,3021 @@
+{
+  "doc_id": "119bc9a4-476b-45c4-87ea-df5af1d29d01:ja",
+  "doc_type": "ifu",
+  "source_file": "/input/BW-18V_Instruction_Manual.pdf",
+  "page_count": 2,
+  "extraction_timestamp": "2025-11-22T18:21:10.485751",
+  "extraction_version": "v1.0.0",
+  "evidence_bank": {},
+  "paragraph_store": {
+    "902d54c8e52f91bd": {
+      "id": "page2_para0",
+      "text": "取扱説明書",
+      "page": 2,
+      "char_span": [
+        0,
+        5
+      ],
+      "length": 5,
+      "order": [
+        62
+      ],
+      "occurrences": [
+        {
+          "page": 2,
+          "char_span": [
+            0,
+            5
+          ]
+        }
+      ],
+      "column_id": 0,
+      "type": "body",
+      "lists": [],
+      "pages": [
+        2
+      ],
+      "lang": "ja"
+    },
+    "41acee2fb6e5d984": {
+      "id": "page2_para1",
+      "text": "チャンネル掃除用ブラシ BW-18V",
+      "page": 2,
+      "char_span": [
+        7,
+        25
+      ],
+      "length": 18,
+      "order": [
+        63
+      ],
+      "occurrences": [
+        {
+          "page": 2,
+          "char_span": [
+            7,
+            25
+          ]
+        }
+      ],
+      "column_id": 0,
+      "type": "heading",
+      "lists": [],
+      "pages": [
+        2
+      ],
+      "lang": "ja"
+    },
+    "6224047d3d700202": {
+      "id": "page2_para2",
+      "text": "1 使用目的",
+      "page": 2,
+      "char_span": [
+        27,
+        33
+      ],
+      "length": 6,
+      "order": [
+        64
+      ],
+      "occurrences": [
+        {
+          "page": 2,
+          "char_span": [
+            27,
+            33
+          ]
+        }
+      ],
+      "column_id": 0,
+      "type": "body",
+      "lists": [],
+      "pages": [
+        2
+      ],
+      "lang": "ja"
+    },
+    "5eaeb54f7e24d647": {
+      "id": "page2_para3",
+      "text": "本製品は、 OES 胆道ファイバースコープ CHF-B20 、気管支ファイバービデオスコープ BF-MP290F と組み合わせて吸引 管路をブラッシングすることを目的としています。この目的以外には使用しないでください。 2 警告表示",
+      "page": 2,
+      "char_span": [
+        35,
+        151
+      ],
+      "length": 116,
+      "order": [
+        65
+      ],
+      "occurrences": [
+        {
+          "page": 2,
+          "char_span": [
+            35,
+            151
+          ]
+        }
+      ],
+      "column_id": 0,
+      "type": "body",
+      "lists": [],
+      "pages": [
+        2
+      ],
+      "lang": "ja"
+    },
+    "38df608b0b3dc872": {
+      "id": "page2_para4",
+      "text": "本取扱説明書の中では、以下の警告表示を使用しています。",
+      "page": 2,
+      "char_span": [
+        153,
+        180
+      ],
+      "length": 27,
+      "order": [
+        66
+      ],
+      "occurrences": [
+        {
+          "page": 2,
+          "char_span": [
+            153,
+            180
+          ]
+        }
+      ],
+      "column_id": 0,
+      "type": "body",
+      "lists": [],
+      "pages": [
+        2
+      ],
+      "lang": "ja"
+    },
+    "8406a8d2a473c080": {
+      "id": "page2_para5",
+      "text": "それを守らないと死亡、または重傷につながる可能性のある事柄を示しています。",
+      "page": 2,
+      "char_span": [
+        182,
+        219
+      ],
+      "length": 37,
+      "order": [
+        67
+      ],
+      "occurrences": [
+        {
+          "page": 2,
+          "char_span": [
+            182,
+            219
+          ]
+        }
+      ],
+      "column_id": 0,
+      "type": "body",
+      "lists": [],
+      "pages": [
+        2
+      ],
+      "lang": "ja"
+    },
+    "68f0a6b5e19b91de": {
+      "id": "page2_para6",
+      "text": "それを守らないと中程度以下の傷害、または機器の損傷につながる可能性のある事柄を示しています。",
+      "page": 2,
+      "char_span": [
+        221,
+        267
+      ],
+      "length": 46,
+      "order": [
+        68
+      ],
+      "occurrences": [
+        {
+          "page": 2,
+          "char_span": [
+            221,
+            267
+          ]
+        }
+      ],
+      "column_id": 0,
+      "type": "body",
+      "lists": [],
+      "pages": [
+        2
+      ],
+      "lang": "ja"
+    },
+    "bace05906e39500f": {
+      "id": "page2_para7",
+      "text": "使用にあたっての有効な知識、情報などの内容を示しています。 3 各部の名称",
+      "page": 2,
+      "char_span": [
+        269,
+        306
+      ],
+      "length": 37,
+      "order": [
+        69
+      ],
+      "occurrences": [
+        {
+          "page": 2,
+          "char_span": [
+            269,
+            306
+          ]
+        }
+      ],
+      "column_id": 0,
+      "type": "body",
+      "lists": [],
+      "pages": [
+        2
+      ],
+      "lang": "ja"
+    },
+    "341f591d7f593e78": {
+      "id": "page2_para8",
+      "text": "金属チップ リング部 ブラシ部 シャフト",
+      "page": 2,
+      "char_span": [
+        308,
+        328
+      ],
+      "length": 20,
+      "order": [
+        70
+      ],
+      "occurrences": [
+        {
+          "page": 2,
+          "char_span": [
+            308,
+            328
+          ]
+        }
+      ],
+      "column_id": 0,
+      "type": "body",
+      "lists": [],
+      "pages": [
+        2
+      ],
+      "lang": "ja"
+    },
+    "c2dbc60b719a1fd4": {
+      "id": "page2_para9",
+      "text": "4 準備と点検/使用方法",
+      "page": 2,
+      "char_span": [
+        330,
+        342
+      ],
+      "length": 12,
+      "order": [
+        71
+      ],
+      "occurrences": [
+        {
+          "page": 2,
+          "char_span": [
+            330,
+            342
+          ]
+        }
+      ],
+      "column_id": 0,
+      "type": "body",
+      "lists": [],
+      "pages": [
+        2
+      ],
+      "lang": "ja"
+    },
+    "55c536cdf6738274": {
+      "id": "page2_para10",
+      "text": "• 使用前および使用後に必ずチャンネル掃除用ブラシ全体をよく見て異常がないことを確認してください。特 に金属チップがはずれていないかチェックしてください。壊れたチャンネル掃除用ブラシを使用すると、機 器の破損の原因となります。",
+      "page": 2,
+      "char_span": [
+        344,
+        457
+      ],
+      "length": 113,
+      "order": [
+        72
+      ],
+      "occurrences": [
+        {
+          "page": 2,
+          "char_span": [
+            344,
+            457
+          ]
+        }
+      ],
+      "column_id": 0,
+      "type": "list",
+      "lists": [
+        "使用前および使用後に必ずチャンネル掃除用ブラシ全体をよく見て異常がないことを確認してください。特 に金属チップがはずれていないかチェックしてください。壊れたチャンネル掃除用ブラシを使用すると、機 器の破損の原因となります。"
+      ],
+      "pages": [
+        2
+      ],
+      "lang": "ja"
+    },
+    "d53ca2bee82179e1": {
+      "id": "page2_para11",
+      "text": "• チャンネル掃除用ブラシは消耗品であり、 曲げ、 座屈などによりブラシ部が破損してしまうことがあります。 ブラシ部がはずれて管路内に残っている可能性がある場合は、鉗子などを挿入して残っていないか十分 チェックしてください。残ったまま内視鏡を使用すると、症例中にブラシ部が脱落する可能性があります。 ただし、残った場所によっては発見できない場合がありますので、見つからない場合は最寄りの当社サービ スセンターまたは当社支店、営業所にご連絡ください。",
+      "page": 2,
+      "char_span": [
+        458,
+        682
+      ],
+      "length": 224,
+      "order": [
+        73
+      ],
+      "occurrences": [
+        {
+          "page": 2,
+          "char_span": [
+            458,
+            682
+          ]
+        }
+      ],
+      "column_id": 0,
+      "type": "list",
+      "lists": [
+        "チャンネル掃除用ブラシは消耗品であり、 曲げ、 座屈などによりブラシ部が破損してしまうことがあります。 ブラシ部がはずれて管路内に残っている可能性がある場合は、鉗子などを挿入して残っていないか十分 チェックしてください。残ったまま内視鏡を使用すると、症例中にブラシ部が脱落する可能性があります。 ただし、残った場所によっては発見できない場合がありますので、見つからない場合は最寄りの当社サービ スセンターまたは当社支店、営業所にご連絡ください。"
+      ],
+      "pages": [
+        2
+      ],
+      "lang": "ja"
+    },
+    "f5bb0130ba3a512e": {
+      "id": "page2_para12",
+      "text": "• チャンネル掃除用ブラシの引き抜きによるシリンダ開口部からの汚物の飛沫を避けるため、なるべく内視鏡 から顔を離してブラッシングしてください。",
+      "page": 2,
+      "char_span": [
+        683,
+        754
+      ],
+      "length": 71,
+      "order": [
+        74
+      ],
+      "occurrences": [
+        {
+          "page": 2,
+          "char_span": [
+            683,
+            754
+          ]
+        }
+      ],
+      "column_id": 0,
+      "type": "list",
+      "lists": [
+        "チャンネル掃除用ブラシの引き抜きによるシリンダ開口部からの汚物の飛沫を避けるため、なるべく内視鏡 から顔を離してブラッシングしてください。"
+      ],
+      "pages": [
+        2
+      ],
+      "lang": "ja"
+    },
+    "4cfbeea14e44e021": {
+      "id": "page2_para13",
+      "text": "チャンネル掃除用ブラシは、洗浄/消毒(または滅菌)したものを準備します。",
+      "page": 2,
+      "char_span": [
+        756,
+        792
+      ],
+      "length": 36,
+      "order": [
+        75
+      ],
+      "occurrences": [
+        {
+          "page": 2,
+          "char_span": [
+            756,
+            792
+          ]
+        }
+      ],
+      "column_id": 0,
+      "type": "body",
+      "lists": [],
+      "pages": [
+        2
+      ],
+      "lang": "ja"
+    },
+    "5813375bdeccb0bd": {
+      "id": "page2_para14",
+      "text": "ブラッシング前に上記適応内視鏡の取扱説明書を熟読し、準備と点検を行ない、上記適応内視鏡の取扱説明書に沿っ て使用します。 5 チャンネル掃除用ブラシの洗浄/消毒/滅菌方法",
+      "page": 2,
+      "char_span": [
+        794,
+        879
+      ],
+      "length": 85,
+      "order": [
+        76
+      ],
+      "occurrences": [
+        {
+          "page": 2,
+          "char_span": [
+            794,
+            879
+          ]
+        }
+      ],
+      "column_id": 0,
+      "type": "body",
+      "lists": [],
+      "pages": [
+        2
+      ],
+      "lang": "ja"
+    },
+    "fb859c02c489806f": {
+      "id": "page2_para15",
+      "text": "• 感染防止上、皮膚の保護上、必ず防護メガネ/フェイスマスク、防水性の保護服またはガウン、滅菌手袋な どの保護具を使用してください。",
+      "page": 2,
+      "char_span": [
+        881,
+        947
+      ],
+      "length": 66,
+      "order": [
+        77
+      ],
+      "occurrences": [
+        {
+          "page": 2,
+          "char_span": [
+            881,
+            947
+          ]
+        }
+      ],
+      "column_id": 0,
+      "type": "list",
+      "lists": [
+        "感染防止上、皮膚の保護上、必ず防護メガネ/フェイスマスク、防水性の保護服またはガウン、滅菌手袋な どの保護具を使用してください。"
+      ],
+      "pages": [
+        2
+      ],
+      "lang": "ja"
+    },
+    "d1279059068ce39d": {
+      "id": "page2_para16",
+      "text": "• 本取扱説明書に記載している洗浄、消毒、滅菌方法では、クロイツフェルト・ヤコブ病の病因物質と言われ ているプリオンを消失または不活化することはできません。クロイツフェルト・ヤコブ病または変異型クロ イツフェルト・ヤコブ病患者に本製品を使用する場合は、クロイツフェルト・ヤコブ病または変異型クロイ ツフェルト・ヤコブ病患者専用の機器として使用するか、使用後に適切な方法で廃棄してください。クロイ ツフェルト・ヤコブ病への対応方法は、種々のガイドラインに従ってください。",
+      "page": 2,
+      "char_span": [
+        948,
+        1182
+      ],
+      "length": 234,
+      "order": [
+        78
+      ],
+      "occurrences": [
+        {
+          "page": 2,
+          "char_span": [
+            948,
+            1182
+          ]
+        }
+      ],
+      "column_id": 0,
+      "type": "list",
+      "lists": [
+        "本取扱説明書に記載している洗浄、消毒、滅菌方法では、クロイツフェルト・ヤコブ病の病因物質と言われ ているプリオンを消失または不活化することはできません。クロイツフェルト・ヤコブ病または変異型クロ イツフェルト・ヤコブ病患者に本製品を使用する場合は、クロイツフェルト・ヤコブ病または変異型クロイ ツフェルト・ヤコブ病患者専用の機器として使用するか、使用後に適切な方法で廃棄してください。クロイ ツフェルト・ヤコブ病への対応方法は、種々のガイドラインに従ってください。"
+      ],
+      "pages": [
+        2
+      ],
+      "lang": "ja"
+    },
+    "999b305cb075b250": {
+      "id": "page2_para17",
+      "text": "• 本製品は、種々のガイドラインで示されている、プリオンを消失または不活化する方法に対する耐久性が まったくありません。あるいは、十分な耐久性がありません。各方法に対する耐久性は、お近くの当社指定 のサービスセンターまたは当社支店、営業所までお問い合わせください。 本取扱説明書に記載されていない方法で洗浄、消毒、滅菌を行った場合、当社は本製品の有効性、安全性、 耐久性を保証できません。使用前に異常がないか十分に確認したうえで、医師の責任で使用してください。 異常がある場合は使用しないでください。",
+      "page": 2,
+      "char_span": [
+        1183,
+        1433
+      ],
+      "length": 250,
+      "order": [
+        79
+      ],
+      "occurrences": [
+        {
+          "page": 2,
+          "char_span": [
+            1183,
+            1433
+          ]
+        }
+      ],
+      "column_id": 0,
+      "type": "list",
+      "lists": [
+        "本製品は、種々のガイドラインで示されている、プリオンを消失または不活化する方法に対する耐久性が まったくありません。あるいは、十分な耐久性がありません。各方法に対する耐久性は、お近くの当社指定 のサービスセンターまたは当社支店、営業所までお問い合わせください。 本取扱説明書に記載されていない方法で洗浄、消毒、滅菌を行った場合、当社は本製品の有効性、安全性、 耐久性を保証できません。使用前に異常がないか十分に確認したうえで、医師の責任で使用してください。 異常がある場合は使用しないでください。"
+      ],
+      "pages": [
+        2
+      ],
+      "lang": "ja"
+    },
+    "738eee668f64d744": {
+      "id": "page2_para18",
+      "text": "超音波洗浄、消毒、滅菌するときには、シャフトを直径 15cm 以下に丸めないでください。シャフトの巻き癖 の原因となる場合があります。",
+      "page": 2,
+      "char_span": [
+        1435,
+        1502
+      ],
+      "length": 67,
+      "order": [
+        80
+      ],
+      "occurrences": [
+        {
+          "page": 2,
+          "char_span": [
+            1435,
+            1502
+          ]
+        }
+      ],
+      "column_id": 1,
+      "type": "body",
+      "lists": [],
+      "pages": [
+        2
+      ],
+      "lang": "ja"
+    },
+    "81c5e920d3d60415": {
+      "id": "page2_para19",
+      "text": "5.1 洗浄",
+      "page": 2,
+      "char_span": [
+        1504,
+        1510
+      ],
+      "length": 6,
+      "order": [
+        81
+      ],
+      "occurrences": [
+        {
+          "page": 2,
+          "char_span": [
+            1504,
+            1510
+          ]
+        }
+      ],
+      "column_id": 1,
+      "type": "body",
+      "lists": [],
+      "pages": [
+        2
+      ],
+      "lang": "ja"
+    },
+    "dba2fd0d899030f9": {
+      "id": "page2_para20",
+      "text": "1. 低泡性洗浄液にチャンネル掃除用ブラシを浸漬します。洗浄液の温度、浸漬時間については洗浄液の取扱説明書 に従ってください。",
+      "page": 2,
+      "char_span": [
+        1512,
+        1575
+      ],
+      "length": 63,
+      "order": [
+        82
+      ],
+      "occurrences": [
+        {
+          "page": 2,
+          "char_span": [
+            1512,
+            1575
+          ]
+        }
+      ],
+      "column_id": 1,
+      "type": "list",
+      "lists": [
+        "低泡性洗浄液にチャンネル掃除用ブラシを浸漬します。洗浄液の温度、浸漬時間については洗浄液の取扱説明書 に従ってください。"
+      ],
+      "pages": [
+        2
+      ],
+      "lang": "ja"
+    },
+    "bba1b691ed3ff98c": {
+      "id": "page2_para21",
+      "text": "2. 低泡性洗浄液中で、スポンジまたはガーゼを用いて全体を洗浄します。特にブラシ部に付着した血液などは指で つまみ洗いし十分に洗浄除去します。",
+      "page": 2,
+      "char_span": [
+        1576,
+        1647
+      ],
+      "length": 71,
+      "order": [
+        83
+      ],
+      "occurrences": [
+        {
+          "page": 2,
+          "char_span": [
+            1576,
+            1647
+          ]
+        }
+      ],
+      "column_id": 1,
+      "type": "list",
+      "lists": [
+        "低泡性洗浄液中で、スポンジまたはガーゼを用いて全体を洗浄します。特にブラシ部に付着した血液などは指で つまみ洗いし十分に洗浄除去します。"
+      ],
+      "pages": [
+        2
+      ],
+      "lang": "ja"
+    },
+    "62b99bf5b1d3e61d": {
+      "id": "page2_para22",
+      "text": "3. 水洗いを行い、洗浄液をきれいに洗い流します。",
+      "page": 2,
+      "char_span": [
+        1648,
+        1673
+      ],
+      "length": 25,
+      "order": [
+        84
+      ],
+      "occurrences": [
+        {
+          "page": 2,
+          "char_span": [
+            1648,
+            1673
+          ]
+        }
+      ],
+      "column_id": 1,
+      "type": "list",
+      "lists": [
+        "水洗いを行い、洗浄液をきれいに洗い流します。"
+      ],
+      "pages": [
+        2
+      ],
+      "lang": "ja"
+    },
+    "a8da1fa9d93dece2": {
+      "id": "page2_para23",
+      "text": "4. 超音波洗浄を行います。 (処理条件: 38 ~ 47KHz 、 5 分間)",
+      "page": 2,
+      "char_span": [
+        1674,
+        1714
+      ],
+      "length": 40,
+      "order": [
+        85
+      ],
+      "occurrences": [
+        {
+          "page": 2,
+          "char_span": [
+            1674,
+            1714
+          ]
+        }
+      ],
+      "column_id": 1,
+      "type": "list",
+      "lists": [
+        "超音波洗浄を行います。 (処理条件: 38 ~ 47KHz 、 5 分間)"
+      ],
+      "pages": [
+        2
+      ],
+      "lang": "ja"
+    },
+    "692aa7a27ed81d71": {
+      "id": "page2_para24",
+      "text": "5. 水洗いを行い、水分はガーゼでふき取ります。",
+      "page": 2,
+      "char_span": [
+        1715,
+        1739
+      ],
+      "length": 24,
+      "order": [
+        86
+      ],
+      "occurrences": [
+        {
+          "page": 2,
+          "char_span": [
+            1715,
+            1739
+          ]
+        }
+      ],
+      "column_id": 1,
+      "type": "list",
+      "lists": [
+        "水洗いを行い、水分はガーゼでふき取ります。"
+      ],
+      "pages": [
+        2
+      ],
+      "lang": "ja"
+    },
+    "0a91ea208d459925": {
+      "id": "page2_para25",
+      "text": "粘液、血液が残っていると、消毒液浸漬、オートクレーブにより固化してしまう場合があります。",
+      "page": 2,
+      "char_span": [
+        1741,
+        1785
+      ],
+      "length": 44,
+      "order": [
+        87
+      ],
+      "occurrences": [
+        {
+          "page": 2,
+          "char_span": [
+            1741,
+            1785
+          ]
+        }
+      ],
+      "column_id": 1,
+      "type": "body",
+      "lists": [],
+      "pages": [
+        2
+      ],
+      "lang": "ja"
+    },
+    "c9f33fd03a596fad": {
+      "id": "page2_para26",
+      "text": "5.2 消毒",
+      "page": 2,
+      "char_span": [
+        1787,
+        1793
+      ],
+      "length": 6,
+      "order": [
+        88
+      ],
+      "occurrences": [
+        {
+          "page": 2,
+          "char_span": [
+            1787,
+            1793
+          ]
+        }
+      ],
+      "column_id": 1,
+      "type": "body",
+      "lists": [],
+      "pages": [
+        2
+      ],
+      "lang": "ja"
+    },
+    "5272bf5628e58335": {
+      "id": "page2_para27",
+      "text": "1. 「 5.1 洗浄」に沿って洗浄後、 2 ~ 3.2 %のグルタラール製剤を用意します。消毒液の濃度と温度は、消毒液の取扱 説明書に従ってください。",
+      "page": 2,
+      "char_span": [
+        1795,
+        1871
+      ],
+      "length": 76,
+      "order": [
+        89
+      ],
+      "occurrences": [
+        {
+          "page": 2,
+          "char_span": [
+            1795,
+            1871
+          ]
+        }
+      ],
+      "column_id": 1,
+      "type": "list",
+      "lists": [
+        "「 5.1 洗浄」に沿って洗浄後、 2 ~ 3.2 %のグルタラール製剤を用意します。消毒液の濃度と温度は、消毒液の取扱 説明書に従ってください。"
+      ],
+      "pages": [
+        2
+      ],
+      "lang": "ja"
+    },
+    "63f7a89339b1aa22": {
+      "id": "page2_para28",
+      "text": "2. 消毒液の入ったバットなどにチャンネル掃除用ブラシを浸漬し、 外表面の気泡をガーゼなどを用いて除去します。 特にブラシ部は指でつまみ洗いして、気泡を除去してください。",
+      "page": 2,
+      "char_span": [
+        1872,
+        1957
+      ],
+      "length": 85,
+      "order": [
+        90
+      ],
+      "occurrences": [
+        {
+          "page": 2,
+          "char_span": [
+            1872,
+            1957
+          ]
+        }
+      ],
+      "column_id": 1,
+      "type": "list",
+      "lists": [
+        "消毒液の入ったバットなどにチャンネル掃除用ブラシを浸漬し、 外表面の気泡をガーゼなどを用いて除去します。 特にブラシ部は指でつまみ洗いして、気泡を除去してください。"
+      ],
+      "pages": [
+        2
+      ],
+      "lang": "ja"
+    },
+    "85479dfc7a3d7c37": {
+      "id": "page2_para29",
+      "text": "3. 消毒液の取扱説明書に記載されている浸漬時間に従って、消毒液に浸漬します。",
+      "page": 2,
+      "char_span": [
+        1958,
+        1997
+      ],
+      "length": 39,
+      "order": [
+        91
+      ],
+      "occurrences": [
+        {
+          "page": 2,
+          "char_span": [
+            1958,
+            1997
+          ]
+        }
+      ],
+      "column_id": 1,
+      "type": "list",
+      "lists": [
+        "消毒液の取扱説明書に記載されている浸漬時間に従って、消毒液に浸漬します。"
+      ],
+      "pages": [
+        2
+      ],
+      "lang": "ja"
+    },
+    "dbc5616064766318": {
+      "id": "page2_para30",
+      "text": "4. 消毒液から引き上げ、滅菌水で十分にリンスします。",
+      "page": 2,
+      "char_span": [
+        1998,
+        2025
+      ],
+      "length": 27,
+      "order": [
+        92
+      ],
+      "occurrences": [
+        {
+          "page": 2,
+          "char_span": [
+            1998,
+            2025
+          ]
+        }
+      ],
+      "column_id": 1,
+      "type": "list",
+      "lists": [
+        "消毒液から引き上げ、滅菌水で十分にリンスします。"
+      ],
+      "pages": [
+        2
+      ],
+      "lang": "ja"
+    },
+    "2a7e44a8b5f878f7": {
+      "id": "page2_para31",
+      "text": "5. 清潔なガーゼなどで水分をふき取ります。",
+      "page": 2,
+      "char_span": [
+        2026,
+        2048
+      ],
+      "length": 22,
+      "order": [
+        93
+      ],
+      "occurrences": [
+        {
+          "page": 2,
+          "char_span": [
+            2026,
+            2048
+          ]
+        }
+      ],
+      "column_id": 1,
+      "type": "list",
+      "lists": [
+        "清潔なガーゼなどで水分をふき取ります。"
+      ],
+      "pages": [
+        2
+      ],
+      "lang": "ja"
+    },
+    "82223faf9694c125": {
+      "id": "page2_para32",
+      "text": "• 消毒液によりチャンネル掃除用ブラシを消毒する場合は、その薬品メーカーに対象となる病原菌に関する消 毒効果を確認してください。",
+      "page": 2,
+      "char_span": [
+        2050,
+        2114
+      ],
+      "length": 64,
+      "order": [
+        94
+      ],
+      "occurrences": [
+        {
+          "page": 2,
+          "char_span": [
+            2050,
+            2114
+          ]
+        }
+      ],
+      "column_id": 1,
+      "type": "list",
+      "lists": [
+        "消毒液によりチャンネル掃除用ブラシを消毒する場合は、その薬品メーカーに対象となる病原菌に関する消 毒効果を確認してください。"
+      ],
+      "pages": [
+        2
+      ],
+      "lang": "ja"
+    },
+    "c994970fbff9dd38": {
+      "id": "page2_para33",
+      "text": "• 本製品の耐性が確認されている消毒液の具体的製品名は、最寄りの当社指定のサービスセンターまたは当社 支店、営業所までお問い合わせください。",
+      "page": 2,
+      "char_span": [
+        2115,
+        2185
+      ],
+      "length": 70,
+      "order": [
+        95
+      ],
+      "occurrences": [
+        {
+          "page": 2,
+          "char_span": [
+            2115,
+            2185
+          ]
+        }
+      ],
+      "column_id": 1,
+      "type": "list",
+      "lists": [
+        "本製品の耐性が確認されている消毒液の具体的製品名は、最寄りの当社指定のサービスセンターまたは当社 支店、営業所までお問い合わせください。"
+      ],
+      "pages": [
+        2
+      ],
+      "lang": "ja"
+    },
+    "7097a16016674cd8": {
+      "id": "page2_para34",
+      "text": "5.3 滅菌",
+      "page": 2,
+      "char_span": [
+        2187,
+        2193
+      ],
+      "length": 6,
+      "order": [
+        96
+      ],
+      "occurrences": [
+        {
+          "page": 2,
+          "char_span": [
+            2187,
+            2193
+          ]
+        }
+      ],
+      "column_id": 1,
+      "type": "body",
+      "lists": [],
+      "pages": [
+        2
+      ],
+      "lang": "ja"
+    },
+    "00faa7390902b2ec": {
+      "id": "page2_para35",
+      "text": "1. 「 5.1 洗浄」に沿って洗浄後、シャフトを丸めてチャンネル掃除用ブラシを滅菌パックに入れ、密封します。",
+      "page": 2,
+      "char_span": [
+        2195,
+        2250
+      ],
+      "length": 55,
+      "order": [
+        97
+      ],
+      "occurrences": [
+        {
+          "page": 2,
+          "char_span": [
+            2195,
+            2250
+          ]
+        }
+      ],
+      "column_id": 1,
+      "type": "list",
+      "lists": [
+        "「 5.1 洗浄」に沿って洗浄後、シャフトを丸めてチャンネル掃除用ブラシを滅菌パックに入れ、密封します。"
+      ],
+      "pages": [
+        2
+      ],
+      "lang": "ja"
+    },
+    "3526b66b7c4c87eb": {
+      "id": "page2_para36",
+      "text": "2. チャンネル掃除用ブラシを密封した滅菌パックをオートクレーブ装置に入れた後、下記条件に従ってオートク レーブ(高圧蒸気滅菌)をします。オートクレーブ装置の操作は、装置の取扱説明書あるいは製造メーカーの指 示に従ってください。",
+      "page": 2,
+      "char_span": [
+        2251,
+        2365
+      ],
+      "length": 114,
+      "order": [
+        98
+      ],
+      "occurrences": [
+        {
+          "page": 2,
+          "char_span": [
+            2251,
+            2365
+          ]
+        }
+      ],
+      "column_id": 1,
+      "type": "list",
+      "lists": [
+        "チャンネル掃除用ブラシを密封した滅菌パックをオートクレーブ装置に入れた後、下記条件に従ってオートク レーブ(高圧蒸気滅菌)をします。オートクレーブ装置の操作は、装置の取扱説明書あるいは製造メーカーの指 示に従ってください。"
+      ],
+      "pages": [
+        2
+      ],
+      "lang": "ja"
+    },
+    "c6017e85b95bc996": {
+      "id": "page2_para37",
+      "text": "排気方式 温度 作用時間",
+      "page": 2,
+      "char_span": [
+        2367,
+        2379
+      ],
+      "length": 12,
+      "order": [
+        99
+      ],
+      "occurrences": [
+        {
+          "page": 2,
+          "char_span": [
+            2367,
+            2379
+          ]
+        }
+      ],
+      "column_id": 1,
+      "type": "body",
+      "lists": [],
+      "pages": [
+        2
+      ],
+      "lang": "ja"
+    },
+    "0b4e8818a4a7d912": {
+      "id": "page2_para38",
+      "text": "強制排気方式 132 ~ 134  C 5 分間",
+      "page": 2,
+      "char_span": [
+        2381,
+        2406
+      ],
+      "length": 25,
+      "order": [
+        100
+      ],
+      "occurrences": [
+        {
+          "page": 2,
+          "char_span": [
+            2381,
+            2406
+          ]
+        }
+      ],
+      "column_id": 1,
+      "type": "heading",
+      "lists": [],
+      "pages": [
+        2
+      ],
+      "lang": "ja"
+    },
+    "e3115f015cabc8a0": {
+      "id": "page2_para39",
+      "text": "• オートクレーブをする場合は、ブラシ部の毛がつぶれないようにしてください。",
+      "page": 2,
+      "char_span": [
+        2408,
+        2446
+      ],
+      "length": 38,
+      "order": [
+        101
+      ],
+      "occurrences": [
+        {
+          "page": 2,
+          "char_span": [
+            2408,
+            2446
+          ]
+        }
+      ],
+      "column_id": 1,
+      "type": "list",
+      "lists": [
+        "オートクレーブをする場合は、ブラシ部の毛がつぶれないようにしてください。"
+      ],
+      "pages": [
+        2
+      ],
+      "lang": "ja"
+    },
+    "ae179701d2360071": {
+      "id": "page2_para40",
+      "text": "• 132  C 、 60 分の高圧蒸気滅菌に対する耐久性は保証していません。 本条件で滅菌を行うと、 部品の劣化によっ て、部品破壊などの異常が発生するおそれがあります。本条件で高圧蒸気滅菌してから使用する場合は、使 用前に異常がないか十分に確認したうえで、医師の責任で使用してください。異常がある場合は使用しない でください。 6 保管",
+      "page": 2,
+      "char_span": [
+        2447,
+        2618
+      ],
+      "length": 171,
+      "order": [
+        102
+      ],
+      "occurrences": [
+        {
+          "page": 2,
+          "char_span": [
+            2447,
+            2618
+          ]
+        }
+      ],
+      "column_id": 1,
+      "type": "list",
+      "lists": [
+        "132  C 、 60 分の高圧蒸気滅菌に対する耐久性は保証していません。 本条件で滅菌を行うと、 部品の劣化によっ て、部品破壊などの異常が発生するおそれがあります。本条件で高圧蒸気滅菌してから使用する場合は、使 用前に異常がないか十分に確認したうえで、医師の責任で使用してください。異常がある場合は使用しない でください。 6 保管"
+      ],
+      "pages": [
+        2
+      ],
+      "lang": "ja"
+    },
+    "65dafb7c62f481fa": {
+      "id": "page2_para41",
+      "text": "常温、常湿でかつ直射日光の当たらない清潔な場所に保管します。",
+      "page": 2,
+      "char_span": [
+        2620,
+        2650
+      ],
+      "length": 30,
+      "order": [
+        103
+      ],
+      "occurrences": [
+        {
+          "page": 2,
+          "char_span": [
+            2620,
+            2650
+          ]
+        }
+      ],
+      "column_id": 1,
+      "type": "body",
+      "lists": [],
+      "pages": [
+        2
+      ],
+      "lang": "ja"
+    },
+    "25c8cf06087e230b": {
+      "id": "page2_para42",
+      "text": "• シャフトを直径 15cm 以下に丸めないでください。シャフトの巻き癖の原因となる場合があります。",
+      "page": 2,
+      "char_span": [
+        2652,
+        2702
+      ],
+      "length": 50,
+      "order": [
+        104
+      ],
+      "occurrences": [
+        {
+          "page": 2,
+          "char_span": [
+            2652,
+            2702
+          ]
+        }
+      ],
+      "column_id": 1,
+      "type": "list",
+      "lists": [
+        "シャフトを直径 15cm 以下に丸めないでください。シャフトの巻き癖の原因となる場合があります。"
+      ],
+      "pages": [
+        2
+      ],
+      "lang": "ja"
+    },
+    "516045c2bde94cf7": {
+      "id": "page2_para43",
+      "text": "• チャンネル掃除用ブラシはキャリングケース内に保管しないでください。キャリングケースは内視鏡の運搬 時にだけ使用してください。キャリングケースを日常の保管の手段として使っていると菌の繁殖を促進する おそれがあります。",
+      "page": 2,
+      "char_span": [
+        2703,
+        2812
+      ],
+      "length": 109,
+      "order": [
+        105
+      ],
+      "occurrences": [
+        {
+          "page": 2,
+          "char_span": [
+            2703,
+            2812
+          ]
+        }
+      ],
+      "column_id": 1,
+      "type": "list",
+      "lists": [
+        "チャンネル掃除用ブラシはキャリングケース内に保管しないでください。キャリングケースは内視鏡の運搬 時にだけ使用してください。キャリングケースを日常の保管の手段として使っていると菌の繁殖を促進する おそれがあります。"
+      ],
+      "pages": [
+        2
+      ],
+      "lang": "ja"
+    },
+    "bffe7e283a323c08": {
+      "id": "page2_para44",
+      "text": "本製品の内容について不明な点がある場合は、最寄りの当社指定のサービスセンター、または当社営業所にお問い合 わせください。",
+      "page": 2,
+      "char_span": [
+        2814,
+        2874
+      ],
+      "length": 60,
+      "order": [
+        106
+      ],
+      "occurrences": [
+        {
+          "page": 2,
+          "char_span": [
+            2814,
+            2874
+          ]
+        }
+      ],
+      "column_id": 1,
+      "type": "body",
+      "lists": [],
+      "pages": [
+        2
+      ],
+      "lang": "ja"
+    }
+  },
+  "manufacturer": "Olympus Corporation",
+  "product_name": "Olympus BW-18V Channel Cleaning Brush",
+  "part_number": "BW-18V",
+  "publication_date": "2022-03-18",
+  "model": "Channel Cleaning Brush",
+  "software_versions": [],
+  "indications_for_use": {
+    "text": "for brushing the suction channels of OES TRANSDUODENAL CHOLEDOCHOFIBERSCOPE CHF-B20 and BRONCHOFIBERVIDEOSCOPE BF-MP190F/290F *1 .",
+    "provenance": "second_pass_small_leaflet",
+    "derived_from": "intended_use"
+  },
+  "intended_use": "for brushing the suction channels of OES TRANSDUODENAL CHOLEDOCHOFIBERSCOPE CHF-B20 and BRONCHOFIBERVIDEOSCOPE BF-MP190F/290F *1 .",
+  "contraindications": [],
+  "adverse_events": [],
+  "safety_blocks": [
+    {
+      "level": "notice",
+      "text": "INSTRUCTIONS USA: CAUTION: Federal law restricts this device to sale by or on the order of a physician.",
+      "page": 1,
+      "hash": "bb831e21198c66a9",
+      "category": "second_pass:safety_density_boost",
+      "source": "heading",
+      "evidence": {
+        "text": "INSTRUCTIONS USA: CAUTION: Federal law restricts this device to sale by or on the order of a physician.",
+        "hash": "bb831e21198c66a9",
+        "page": 1,
+        "confidence": 1.0,
+        "truncated": false
+      }
+    },
+    {
+      "level": "notice",
+      "text": "CHANNEL CLEANING BRUSH BW-18V",
+      "page": 1,
+      "hash": "35ad1c54084e50b4",
+      "category": "second_pass:safety_density_boost",
+      "source": "heading",
+      "evidence": {
+        "text": "CHANNEL CLEANING BRUSH BW-18V",
+        "hash": "35ad1c54084e50b4",
+        "page": 1,
+        "confidence": 1.0,
+        "truncated": false
+      }
+    },
+    {
+      "level": "notice",
+      "text": "1 INTENDED USE",
+      "page": 1,
+      "hash": "8a913f059e4c34fa",
+      "category": "second_pass:safety_density_boost",
+      "source": "heading",
+      "evidence": {
+        "text": "1 INTENDED USE",
+        "hash": "8a913f059e4c34fa",
+        "page": 1,
+        "confidence": 1.0,
+        "truncated": false
+      }
+    },
+    {
+      "level": "notice",
+      "text": "2 SYMBOLS",
+      "page": 1,
+      "hash": "18c465b6b324bdfa",
+      "category": "second_pass:safety_density_boost",
+      "source": "heading",
+      "evidence": {
+        "text": "2 SYMBOLS",
+        "hash": "18c465b6b324bdfa",
+        "page": 1,
+        "confidence": 1.0,
+        "truncated": false
+      }
+    },
+    {
+      "level": "notice",
+      "text": "Indicates a potentially hazardous situation which, if not avoided, could result in death or serious injury.",
+      "page": 1,
+      "hash": "f412628e5a2daf31",
+      "category": "second_pass:safety_density_boost",
+      "source": "heading",
+      "evidence": {
+        "text": "Indicates a potentially hazardous situation which, if not avoided, could result in death or serious injury.",
+        "hash": "f412628e5a2daf31",
+        "page": 1,
+        "confidence": 1.0,
+        "truncated": false
+      }
+    },
+    {
+      "level": "notice",
+      "text": "Indicates a potentially hazardous situation which, if not avoided, may result in minor or moderate injury. It may also be used to alert against unsafe practices or potential equipment damage.",
+      "page": 1,
+      "hash": "867fe40e8ce2b10f",
+      "category": "second_pass:safety_density_boost",
+      "source": "heading",
+      "evidence": {
+        "text": "Indicates a potentially hazardous situation which, if not avoided, may result in minor or moderate injury. It may also be used to alert against unsafe practices or potential equipment damage.",
+        "hash": "867fe40e8ce2b10f",
+        "page": 1,
+        "confidence": 1.0,
+        "truncated": false
+      }
+    },
+    {
+      "level": "notice",
+      "text": "5 PREPARATION, INSPECTION AND USE",
+      "page": 1,
+      "hash": "68154053ea349736",
+      "category": "second_pass:safety_density_boost",
+      "source": "heading",
+      "evidence": {
+        "text": "5 PREPARATION, INSPECTION AND USE",
+        "hash": "68154053ea349736",
+        "page": 1,
+        "confidence": 1.0,
+        "truncated": false
+      }
+    },
+    {
+      "level": "notice",
+      "text": "• Patient debris and reprocessing chemicals are hazardous. Wear protective equipment.",
+      "page": 1,
+      "hash": "44452407061c40b0",
+      "category": "second_pass:safety_density_boost",
+      "source": "heading",
+      "evidence": {
+        "text": "• Patient debris and reprocessing chemicals are hazardous. Wear protective equipment.",
+        "hash": "44452407061c40b0",
+        "page": 1,
+        "confidence": 1.0,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "Before and after use, visually inspect the exterior of the Channel Cleaning Brush for breakage etc. In particular, confirm that Metal Tip is firmly attached. Using a damaged or worn brush may damage the endoscope being cleaned.",
+      "title": "Note",
+      "page": 1,
+      "hash": "644fbdb42470fccc",
+      "severity": "note",
+      "category": "second_pass:safety_typing",
+      "source": "heading",
+      "evidence": {
+        "text": "Before and after use, visually inspect the exterior of the Channel Cleaning Brush for breakage etc. In particular, confirm that Metal Tip is firmly attached. Using a damaged or worn brush may damage t",
+        "page": 1,
+        "confidence": 0.6,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "The Channel Cleaning Brush is a consumable item. The bristle section can be damaged, by, for example, bending or buckling. If the bristle section becomes detached and remains inside the channel, insert (for example) biopsy forceps to retrieve it. Depending on the location, the bristle section may not be recoverable. In this case, contact Olympus. If the bristle section is left unrecovered within the scope, and the scope is used in this condition, the unrecovered portion may become dislodged from the scope during the patient procedure.",
+      "title": "Note",
+      "page": 1,
+      "hash": "70fc946556def93b",
+      "severity": "note",
+      "category": "second_pass:safety_typing",
+      "source": "heading",
+      "evidence": {
+        "text": "The Channel Cleaning Brush is a consumable item. The bristle section can be damaged, by, for example, bending or buckling. If the bristle section becomes detached and remains inside the channel, inser",
+        "page": 1,
+        "confidence": 0.6,
+        "truncated": false
+      }
+    },
+    {
+      "level": "caution",
+      "text": "To avoid splattering of detergent solution when the Channel Cleaning Brush is pulled out, keep the endoscope away from your face.",
+      "title": "Caution",
+      "page": 1,
+      "hash": "b2f50d0437817cf2",
+      "severity": "caution",
+      "category": "second_pass:safety_typing",
+      "source": "heading",
+      "evidence": {
+        "text": "To avoid splattering of detergent solution when the Channel Cleaning Brush is pulled out, keep the endoscope away from your face.",
+        "page": 1,
+        "confidence": 0.6,
+        "truncated": false
+      }
+    },
+    {
+      "level": "warning",
+      "text": "Patient debris and reprocessing chemicals are hazardous. Wear protective equipment.",
+      "title": "Warning",
+      "page": 1,
+      "hash": "92ff22cc4eabd7e3",
+      "severity": "warning",
+      "category": "second_pass:safety_typing",
+      "source": "heading",
+      "evidence": {
+        "text": "Patient debris and reprocessing chemicals are hazardous. Wear protective equipment.",
+        "page": 1,
+        "confidence": 0.6,
+        "truncated": false
+      }
+    },
+    {
+      "level": "caution",
+      "text": "With the cleaning, disinfection and sterilization methods stated in this instruction manual, prions, which are considered to be the pathogenic substance of the Creutzfeldt-Jakob disease (CJD) cannot be destroyed or inactivated. When using this instrument on a patient with CJD or variant Creutzfeldt-Jakob disease (vCJD), be sure to use this product for such patient only and/or immediately dispose of this product after use in an appropriate manner. For methods to handle CJD, please follow the respective guidelines in your country.",
+      "title": "Caution",
+      "page": 1,
+      "hash": "faf51935fb2ec8f6",
+      "severity": "caution",
+      "category": "second_pass:safety_typing",
+      "source": "heading",
+      "evidence": {
+        "text": "With the cleaning, disinfection and sterilization methods stated in this instruction manual, prions, which are considered to be the pathogenic substance of the Creutzfeldt-Jakob disease (CJD) cannot b",
+        "page": 1,
+        "confidence": 0.6,
+        "truncated": false
+      }
+    },
+    {
+      "level": "caution",
+      "text": "This instrument is not durable, or does not have sufficient durability against the respective methods stated in the guidelines of each country for destroying or inactivating prions. For information on the durability against each method, please contact Olympus. If cleaning, disinfection and sterilization methods not stated in this instruction manual are performed, Olympus cannot guarantee the effectiveness, safety and durability of this instrument. Make sure to confirm that there is no abnormality before use, and use under responsibility of a physician. Do not use if any abnormality is found.",
+      "title": "Caution",
+      "page": 1,
+      "hash": "054ebd8aced837d5",
+      "severity": "caution",
+      "category": "second_pass:safety_typing",
+      "source": "heading",
+      "evidence": {
+        "text": "This instrument is not durable, or does not have sufficient durability against the respective methods stated in the guidelines of each country for destroying or inactivating prions. For information on",
+        "page": 1,
+        "confidence": 0.6,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "Soak the Channel Cleaning Brush in a low foaming detergent solution for the amount of time and at the temperature recommended by the detergent manufacturer.",
+      "title": "Note",
+      "page": 1,
+      "hash": "a9859b1022450dd3",
+      "severity": "note",
+      "category": "second_pass:safety_typing",
+      "source": "heading",
+      "evidence": {
+        "text": "Soak the Channel Cleaning Brush in a low foaming detergent solution for the amount of time and at the temperature recommended by the detergent manufacturer.",
+        "page": 1,
+        "confidence": 0.6,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "Clean the entire brush, while it is soaking in the low foaming detergent solution, using a sponge or lint-free cloth. In particular, clean off the bristle section with your fingertips to remove adhering debris.",
+      "title": "Note",
+      "page": 1,
+      "hash": "6af1fccc70fbd562",
+      "severity": "note",
+      "category": "second_pass:safety_typing",
+      "source": "heading",
+      "evidence": {
+        "text": "Clean the entire brush, while it is soaking in the low foaming detergent solution, using a sponge or lint-free cloth. In particular, clean off the bristle section with your fingertips to remove adheri",
+        "page": 1,
+        "confidence": 0.6,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "Rinse with water to remove the detergent solution completely.",
+      "title": "Note",
+      "page": 1,
+      "hash": "e7c36b8b013b0667",
+      "severity": "note",
+      "category": "second_pass:safety_typing",
+      "source": "heading",
+      "evidence": {
+        "text": "Rinse with water to remove the detergent solution completely.",
+        "page": 1,
+        "confidence": 0.6,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "Perform ultrasonic cleaning, for 5 minutes at 38 – 47 KHz.",
+      "title": "Note",
+      "page": 1,
+      "hash": "8cf5054df4839634",
+      "severity": "note",
+      "category": "second_pass:safety_typing",
+      "source": "heading",
+      "evidence": {
+        "text": "Perform ultrasonic cleaning, for 5 minutes at 38 – 47 KHz.",
+        "page": 1,
+        "confidence": 0.6,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "Rinse in water, then thoroughly dry with lint-free cloth.",
+      "title": "Note",
+      "page": 1,
+      "hash": "3007e64f6d79de59",
+      "severity": "note",
+      "category": "second_pass:safety_typing",
+      "source": "heading",
+      "evidence": {
+        "text": "Rinse in water, then thoroughly dry with lint-free cloth.",
+        "page": 1,
+        "confidence": 0.6,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "After cleaning the brush in accordance with Section 6.1, “Cleaning” prepare a 2.0 – 3.2% glutaraldehyde solution. Follow the manufacturer’s instructions regarding its concentration and temperature.",
+      "title": "Note",
+      "page": 1,
+      "hash": "568ecc1618335572",
+      "severity": "note",
+      "category": "second_pass:safety_typing",
+      "source": "heading",
+      "evidence": {
+        "text": "After cleaning the brush in accordance with Section 6.1, “Cleaning” prepare a 2.0 – 3.2% glutaraldehyde solution. Follow the manufacturer’s instructions regarding its concentration and temperature.",
+        "page": 1,
+        "confidence": 0.6,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "Soak the Channel Cleaning Brush in a basin filled with disinfectant solution, then remove bubbles from the outer surface, using a lint-free cloth. In particular, rub the bristle section with your fingers to remove bubbles.",
+      "title": "Note",
+      "page": 1,
+      "hash": "540bb53f1582d7e9",
+      "severity": "note",
+      "category": "second_pass:safety_typing",
+      "source": "heading",
+      "evidence": {
+        "text": "Soak the Channel Cleaning Brush in a basin filled with disinfectant solution, then remove bubbles from the outer surface, using a lint-free cloth. In particular, rub the bristle section with your fing",
+        "page": 1,
+        "confidence": 0.6,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "Soak in disinfectant solution for the amount of time recommended by the disinfectant manufacturer.",
+      "title": "Note",
+      "page": 1,
+      "hash": "1e6a6e6527b8a3bd",
+      "severity": "note",
+      "category": "second_pass:safety_typing",
+      "source": "heading",
+      "evidence": {
+        "text": "Soak in disinfectant solution for the amount of time recommended by the disinfectant manufacturer.",
+        "page": 1,
+        "confidence": 0.6,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "Remove from the disinfectant solution, then rinse thoroughly with sterile water.",
+      "title": "Note",
+      "page": 1,
+      "hash": "791e73d81f3fd1ec",
+      "severity": "note",
+      "category": "second_pass:safety_typing",
+      "source": "heading",
+      "evidence": {
+        "text": "Remove from the disinfectant solution, then rinse thoroughly with sterile water.",
+        "page": 1,
+        "confidence": 0.6,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "Thoroughly dry with a sterile lint-free cloth.",
+      "title": "Note",
+      "page": 1,
+      "hash": "379ffcdd77485eba",
+      "severity": "note",
+      "category": "second_pass:safety_typing",
+      "source": "heading",
+      "evidence": {
+        "text": "Thoroughly dry with a sterile lint-free cloth.",
+        "page": 1,
+        "confidence": 0.6,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "After cleaning the brush in accordance with Section 6.1, “Cleaning”, seal the brush in packaging appropriate for steam (autoclave) sterilization according to your hospital’s protocol.",
+      "title": "Note",
+      "page": 1,
+      "hash": "9bdcead9efd4bb45",
+      "severity": "note",
+      "category": "second_pass:safety_typing",
+      "source": "heading",
+      "evidence": {
+        "text": "After cleaning the brush in accordance with Section 6.1, “Cleaning”, seal the brush in packaging appropriate for steam (autoclave) sterilization according to your hospital’s protocol.",
+        "page": 1,
+        "confidence": 0.6,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "Autoclave the brush (steam sterilization) under the following conditions. Operate the autoclave in accordance with its instruction manual.",
+      "title": "Note",
+      "page": 1,
+      "hash": "80b812c537353920",
+      "severity": "note",
+      "category": "second_pass:safety_typing",
+      "source": "heading",
+      "evidence": {
+        "text": "Autoclave the brush (steam sterilization) under the following conditions. Operate the autoclave in accordance with its instruction manual.",
+        "page": 1,
+        "confidence": 0.6,
+        "truncated": false
+      }
+    },
+    {
+      "level": "caution",
+      "text": "Utilize the autoclave drying cycle, or leave the brush in the autoclave at the conclusion of the cycle with the door ajar, to ensure that the sterile packs are dry before handling.",
+      "title": "Caution",
+      "page": 1,
+      "hash": "f3fcee510cdae406",
+      "severity": "caution",
+      "category": "second_pass:safety_typing",
+      "source": "heading",
+      "evidence": {
+        "text": "Utilize the autoclave drying cycle, or leave the brush in the autoclave at the conclusion of the cycle with the door ajar, to ensure that the sterile packs are dry before handling.",
+        "page": 1,
+        "confidence": 0.6,
+        "truncated": false
+      }
+    },
+    {
+      "level": "caution",
+      "text": "Do not coil the shaft with a diameter less than 15 cm. The shaft can be damaged if coiled too tightly.",
+      "title": "Caution",
+      "page": 1,
+      "hash": "b8425539006f26d8",
+      "severity": "caution",
+      "category": "second_pass:safety_typing",
+      "source": "heading",
+      "evidence": {
+        "text": "Do not coil the shaft with a diameter less than 15 cm. The shaft can be damaged if coiled too tightly.",
+        "page": 1,
+        "confidence": 0.6,
+        "truncated": false
+      }
+    },
+    {
+      "level": "warning",
+      "text": "Do not store the Channel Cleaning Brush in the carrying case. Use the carrying case only for shipping the endoscope. Routinely storing the Channel Cleaning Brush in a humid, dark, non-ventilated environment such as the carrying case can present an infection control risk.",
+      "title": "Warning",
+      "page": 1,
+      "hash": "dc1a1077ee901526",
+      "severity": "warning",
+      "category": "second_pass:safety_typing",
+      "source": "heading",
+      "evidence": {
+        "text": "Do not store the Channel Cleaning Brush in the carrying case. Use the carrying case only for shipping the endoscope. Routinely storing the Channel Cleaning Brush in a humid, dark, non-ventilated envir",
+        "page": 1,
+        "confidence": 0.6,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "使用前および使用後に必ずチャンネル掃除用ブラシ全体をよく見て異常がないことを確認してください。特 に金属チップがはずれていないかチェックしてください。壊れたチャンネル掃除用ブラシを使用すると、機 器の破損の原因となります。",
+      "title": "Note",
+      "page": 2,
+      "hash": "9101c595a4030aaf",
+      "severity": "note",
+      "category": "second_pass:safety_typing",
+      "source": "heading",
+      "evidence": {
+        "text": "使用前および使用後に必ずチャンネル掃除用ブラシ全体をよく見て異常がないことを確認してください。特 に金属チップがはずれていないかチェックしてください。壊れたチャンネル掃除用ブラシを使用すると、機 器の破損の原因となります。",
+        "page": 2,
+        "confidence": 0.6,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "チャンネル掃除用ブラシは消耗品であり、 曲げ、 座屈などによりブラシ部が破損してしまうことがあります。 ブラシ部がはずれて管路内に残っている可能性がある場合は、鉗子などを挿入して残っていないか十分 チェックしてください。残ったまま内視鏡を使用すると、症例中にブラシ部が脱落する可能性があります。 ただし、残った場所によっては発見できない場合がありますので、見つからない場合は最寄りの当社サービ スセンターまたは当社支店、営業所にご連絡ください。",
+      "title": "Note",
+      "page": 2,
+      "hash": "3643576e52d0d296",
+      "severity": "note",
+      "category": "second_pass:safety_typing",
+      "source": "heading",
+      "evidence": {
+        "text": "チャンネル掃除用ブラシは消耗品であり、 曲げ、 座屈などによりブラシ部が破損してしまうことがあります。 ブラシ部がはずれて管路内に残っている可能性がある場合は、鉗子などを挿入して残っていないか十分 チェックしてください。残ったまま内視鏡を使用すると、症例中にブラシ部が脱落する可能性があります。 ただし、残った場所によっては発見できない場合がありますので、見つからない場合は最寄りの当社サービ スセン",
+        "page": 2,
+        "confidence": 0.6,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "チャンネル掃除用ブラシの引き抜きによるシリンダ開口部からの汚物の飛沫を避けるため、なるべく内視鏡 から顔を離してブラッシングしてください。",
+      "title": "Note",
+      "page": 2,
+      "hash": "6b8b8e57375d4b9f",
+      "severity": "note",
+      "category": "second_pass:safety_typing",
+      "source": "heading",
+      "evidence": {
+        "text": "チャンネル掃除用ブラシの引き抜きによるシリンダ開口部からの汚物の飛沫を避けるため、なるべく内視鏡 から顔を離してブラッシングしてください。",
+        "page": 2,
+        "confidence": 0.6,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "感染防止上、皮膚の保護上、必ず防護メガネ/フェイスマスク、防水性の保護服またはガウン、滅菌手袋な どの保護具を使用してください。",
+      "title": "Note",
+      "page": 2,
+      "hash": "a89ac8cf80bc200e",
+      "severity": "note",
+      "category": "second_pass:safety_typing",
+      "source": "heading",
+      "evidence": {
+        "text": "感染防止上、皮膚の保護上、必ず防護メガネ/フェイスマスク、防水性の保護服またはガウン、滅菌手袋な どの保護具を使用してください。",
+        "page": 2,
+        "confidence": 0.6,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "本取扱説明書に記載している洗浄、消毒、滅菌方法では、クロイツフェルト・ヤコブ病の病因物質と言われ ているプリオンを消失または不活化することはできません。クロイツフェルト・ヤコブ病または変異型クロ イツフェルト・ヤコブ病患者に本製品を使用する場合は、クロイツフェルト・ヤコブ病または変異型クロイ ツフェルト・ヤコブ病患者専用の機器として使用するか、使用後に適切な方法で廃棄してください。クロイ ツフェルト・ヤコブ病への対応方法は、種々のガイドラインに従ってください。",
+      "title": "Note",
+      "page": 2,
+      "hash": "98a9d2e33a240e74",
+      "severity": "note",
+      "category": "second_pass:safety_typing",
+      "source": "heading",
+      "evidence": {
+        "text": "本取扱説明書に記載している洗浄、消毒、滅菌方法では、クロイツフェルト・ヤコブ病の病因物質と言われ ているプリオンを消失または不活化することはできません。クロイツフェルト・ヤコブ病または変異型クロ イツフェルト・ヤコブ病患者に本製品を使用する場合は、クロイツフェルト・ヤコブ病または変異型クロイ ツフェルト・ヤコブ病患者専用の機器として使用するか、使用後に適切な方法で廃棄してください。クロイ ツフェル",
+        "page": 2,
+        "confidence": 0.6,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "本製品は、種々のガイドラインで示されている、プリオンを消失または不活化する方法に対する耐久性が まったくありません。あるいは、十分な耐久性がありません。各方法に対する耐久性は、お近くの当社指定 のサービスセンターまたは当社支店、営業所までお問い合わせください。 本取扱説明書に記載されていない方法で洗浄、消毒、滅菌を行った場合、当社は本製品の有効性、安全性、 耐久性を保証できません。使用前に異常がないか十分に確認したうえで、医師の責任で使用してください。 異常がある場合は使用しないでください。",
+      "title": "Note",
+      "page": 2,
+      "hash": "04aff54796404df7",
+      "severity": "note",
+      "category": "second_pass:safety_typing",
+      "source": "heading",
+      "evidence": {
+        "text": "本製品は、種々のガイドラインで示されている、プリオンを消失または不活化する方法に対する耐久性が まったくありません。あるいは、十分な耐久性がありません。各方法に対する耐久性は、お近くの当社指定 のサービスセンターまたは当社支店、営業所までお問い合わせください。 本取扱説明書に記載されていない方法で洗浄、消毒、滅菌を行った場合、当社は本製品の有効性、安全性、 耐久性を保証できません。使用前に異常がな",
+        "page": 2,
+        "confidence": 0.6,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "低泡性洗浄液にチャンネル掃除用ブラシを浸漬します。洗浄液の温度、浸漬時間については洗浄液の取扱説明書 に従ってください。",
+      "title": "Note",
+      "page": 2,
+      "hash": "d7d5701f6df1037f",
+      "severity": "note",
+      "category": "second_pass:safety_typing",
+      "source": "heading",
+      "evidence": {
+        "text": "低泡性洗浄液にチャンネル掃除用ブラシを浸漬します。洗浄液の温度、浸漬時間については洗浄液の取扱説明書 に従ってください。",
+        "page": 2,
+        "confidence": 0.6,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "低泡性洗浄液中で、スポンジまたはガーゼを用いて全体を洗浄します。特にブラシ部に付着した血液などは指で つまみ洗いし十分に洗浄除去します。",
+      "title": "Note",
+      "page": 2,
+      "hash": "a7ff6ea2ddcd9128",
+      "severity": "note",
+      "category": "second_pass:safety_typing",
+      "source": "heading",
+      "evidence": {
+        "text": "低泡性洗浄液中で、スポンジまたはガーゼを用いて全体を洗浄します。特にブラシ部に付着した血液などは指で つまみ洗いし十分に洗浄除去します。",
+        "page": 2,
+        "confidence": 0.6,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "水洗いを行い、洗浄液をきれいに洗い流します。",
+      "title": "Note",
+      "page": 2,
+      "hash": "ff7032b51bd5147e",
+      "severity": "note",
+      "category": "second_pass:safety_typing",
+      "source": "heading",
+      "evidence": {
+        "text": "水洗いを行い、洗浄液をきれいに洗い流します。",
+        "page": 2,
+        "confidence": 0.6,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "超音波洗浄を行います。 (処理条件: 38 ~ 47KHz 、 5 分間)",
+      "title": "Note",
+      "page": 2,
+      "hash": "3aac5936446bb2d6",
+      "severity": "note",
+      "category": "second_pass:safety_typing",
+      "source": "heading",
+      "evidence": {
+        "text": "超音波洗浄を行います。 (処理条件: 38 ~ 47KHz 、 5 分間)",
+        "page": 2,
+        "confidence": 0.6,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "水洗いを行い、水分はガーゼでふき取ります。",
+      "title": "Note",
+      "page": 2,
+      "hash": "0c0685d5e53b2171",
+      "severity": "note",
+      "category": "second_pass:safety_typing",
+      "source": "heading",
+      "evidence": {
+        "text": "水洗いを行い、水分はガーゼでふき取ります。",
+        "page": 2,
+        "confidence": 0.6,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "「 5.1 洗浄」に沿って洗浄後、 2 ~ 3.2 %のグルタラール製剤を用意します。消毒液の濃度と温度は、消毒液の取扱 説明書に従ってください。",
+      "title": "Note",
+      "page": 2,
+      "hash": "a1da30e9c3a75851",
+      "severity": "note",
+      "category": "second_pass:safety_typing",
+      "source": "heading",
+      "evidence": {
+        "text": "「 5.1 洗浄」に沿って洗浄後、 2 ~ 3.2 %のグルタラール製剤を用意します。消毒液の濃度と温度は、消毒液の取扱 説明書に従ってください。",
+        "page": 2,
+        "confidence": 0.6,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "消毒液の入ったバットなどにチャンネル掃除用ブラシを浸漬し、 外表面の気泡をガーゼなどを用いて除去します。 特にブラシ部は指でつまみ洗いして、気泡を除去してください。",
+      "title": "Note",
+      "page": 2,
+      "hash": "9e3faae57ff1f56a",
+      "severity": "note",
+      "category": "second_pass:safety_typing",
+      "source": "heading",
+      "evidence": {
+        "text": "消毒液の入ったバットなどにチャンネル掃除用ブラシを浸漬し、 外表面の気泡をガーゼなどを用いて除去します。 特にブラシ部は指でつまみ洗いして、気泡を除去してください。",
+        "page": 2,
+        "confidence": 0.6,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "消毒液の取扱説明書に記載されている浸漬時間に従って、消毒液に浸漬します。",
+      "title": "Note",
+      "page": 2,
+      "hash": "b26a3c7411b36b9e",
+      "severity": "note",
+      "category": "second_pass:safety_typing",
+      "source": "heading",
+      "evidence": {
+        "text": "消毒液の取扱説明書に記載されている浸漬時間に従って、消毒液に浸漬します。",
+        "page": 2,
+        "confidence": 0.6,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "消毒液から引き上げ、滅菌水で十分にリンスします。",
+      "title": "Note",
+      "page": 2,
+      "hash": "903d42b87b9744da",
+      "severity": "note",
+      "category": "second_pass:safety_typing",
+      "source": "heading",
+      "evidence": {
+        "text": "消毒液から引き上げ、滅菌水で十分にリンスします。",
+        "page": 2,
+        "confidence": 0.6,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "清潔なガーゼなどで水分をふき取ります。",
+      "title": "Note",
+      "page": 2,
+      "hash": "88be9e1f24582e02",
+      "severity": "note",
+      "category": "second_pass:safety_typing",
+      "source": "heading",
+      "evidence": {
+        "text": "清潔なガーゼなどで水分をふき取ります。",
+        "page": 2,
+        "confidence": 0.6,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "消毒液によりチャンネル掃除用ブラシを消毒する場合は、その薬品メーカーに対象となる病原菌に関する消 毒効果を確認してください。",
+      "title": "Note",
+      "page": 2,
+      "hash": "50ab9d34c73c957a",
+      "severity": "note",
+      "category": "second_pass:safety_typing",
+      "source": "heading",
+      "evidence": {
+        "text": "消毒液によりチャンネル掃除用ブラシを消毒する場合は、その薬品メーカーに対象となる病原菌に関する消 毒効果を確認してください。",
+        "page": 2,
+        "confidence": 0.6,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "本製品の耐性が確認されている消毒液の具体的製品名は、最寄りの当社指定のサービスセンターまたは当社 支店、営業所までお問い合わせください。",
+      "title": "Note",
+      "page": 2,
+      "hash": "a8100d1d5b9e8b3e",
+      "severity": "note",
+      "category": "second_pass:safety_typing",
+      "source": "heading",
+      "evidence": {
+        "text": "本製品の耐性が確認されている消毒液の具体的製品名は、最寄りの当社指定のサービスセンターまたは当社 支店、営業所までお問い合わせください。",
+        "page": 2,
+        "confidence": 0.6,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "「 5.1 洗浄」に沿って洗浄後、シャフトを丸めてチャンネル掃除用ブラシを滅菌パックに入れ、密封します。",
+      "title": "Note",
+      "page": 2,
+      "hash": "043607cdb37ba39a",
+      "severity": "note",
+      "category": "second_pass:safety_typing",
+      "source": "heading",
+      "evidence": {
+        "text": "「 5.1 洗浄」に沿って洗浄後、シャフトを丸めてチャンネル掃除用ブラシを滅菌パックに入れ、密封します。",
+        "page": 2,
+        "confidence": 0.6,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "チャンネル掃除用ブラシを密封した滅菌パックをオートクレーブ装置に入れた後、下記条件に従ってオートク レーブ(高圧蒸気滅菌)をします。オートクレーブ装置の操作は、装置の取扱説明書あるいは製造メーカーの指 示に従ってください。",
+      "title": "Note",
+      "page": 2,
+      "hash": "890fe2797a615eb5",
+      "severity": "note",
+      "category": "second_pass:safety_typing",
+      "source": "heading",
+      "evidence": {
+        "text": "チャンネル掃除用ブラシを密封した滅菌パックをオートクレーブ装置に入れた後、下記条件に従ってオートク レーブ(高圧蒸気滅菌)をします。オートクレーブ装置の操作は、装置の取扱説明書あるいは製造メーカーの指 示に従ってください。",
+        "page": 2,
+        "confidence": 0.6,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "オートクレーブをする場合は、ブラシ部の毛がつぶれないようにしてください。",
+      "title": "Note",
+      "page": 2,
+      "hash": "09344305c719878e",
+      "severity": "note",
+      "category": "second_pass:safety_typing",
+      "source": "heading",
+      "evidence": {
+        "text": "オートクレーブをする場合は、ブラシ部の毛がつぶれないようにしてください。",
+        "page": 2,
+        "confidence": 0.6,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "132  C 、 60 分の高圧蒸気滅菌に対する耐久性は保証していません。 本条件で滅菌を行うと、 部品の劣化によっ て、部品破壊などの異常が発生するおそれがあります。本条件で高圧蒸気滅菌してから使用する場合は、使 用前に異常がないか十分に確認したうえで、医師の責任で使用してください。異常がある場合は使用しない でください。 6 保管",
+      "title": "Note",
+      "page": 2,
+      "hash": "fea86e949cb3929a",
+      "severity": "note",
+      "category": "second_pass:safety_typing",
+      "source": "heading",
+      "evidence": {
+        "text": "132  C 、 60 分の高圧蒸気滅菌に対する耐久性は保証していません。 本条件で滅菌を行うと、 部品の劣化によっ て、部品破壊などの異常が発生するおそれがあります。本条件で高圧蒸気滅菌してから使用する場合は、使 用前に異常がないか十分に確認したうえで、医師の責任で使用してください。異常がある場合は使用しない でください。 6 保管",
+        "page": 2,
+        "confidence": 0.6,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "シャフトを直径 15cm 以下に丸めないでください。シャフトの巻き癖の原因となる場合があります。",
+      "title": "Note",
+      "page": 2,
+      "hash": "b205f666f020b806",
+      "severity": "note",
+      "category": "second_pass:safety_typing",
+      "source": "heading",
+      "evidence": {
+        "text": "シャフトを直径 15cm 以下に丸めないでください。シャフトの巻き癖の原因となる場合があります。",
+        "page": 2,
+        "confidence": 0.6,
+        "truncated": false
+      }
+    },
+    {
+      "level": "note",
+      "text": "チャンネル掃除用ブラシはキャリングケース内に保管しないでください。キャリングケースは内視鏡の運搬 時にだけ使用してください。キャリングケースを日常の保管の手段として使っていると菌の繁殖を促進する おそれがあります。",
+      "title": "Note",
+      "page": 2,
+      "hash": "751aee6a458e720a",
+      "severity": "note",
+      "category": "second_pass:safety_typing",
+      "source": "heading",
+      "evidence": {
+        "text": "チャンネル掃除用ブラシはキャリングケース内に保管しないでください。キャリングケースは内視鏡の運搬 時にだけ使用してください。キャリングケースを日常の保管の手段として使っていると菌の繁殖を促進する おそれがあります。",
+        "page": 2,
+        "confidence": 0.6,
+        "truncated": false
+      }
+    }
+  ],
+  "tables": [
+    {
+      "title": "Sterilization parameters",
+      "headers": [
+        "Sterilizer",
+        "Temperature",
+        "Exposure time"
+      ],
+      "rows": [
+        [
+          "Prevacuum",
+          "132 – 134 ° C (270 – 274 ° F)",
+          "5 minutes"
+        ]
+      ],
+      "page": 1,
+      "caption": "Sterilizer Temperature Exposure time",
+      "footnotes": [],
+      "heading_path": [
+        "Intended Use",
+        "2 SYMBOLS",
+        "5 PREPARATION, INSPECTION AND USE",
+        "Sterilization"
+      ],
+      "rows_truncated": true
+    }
+  ],
+  "references": [],
+  "_metrics": {
+    "page_count": 2,
+    "unique_pages_seen": 2,
+    "unique_pages_ratio": 1.0,
+    "extracted_chars": 11014,
+    "duration_s": 1.3891077041625977,
+    "coverage_ratio": 1.0,
+    "doc_subtype": null,
+    "research_scope": "unknown",
+    "imrad_required": false,
+    "ats_yield_required": false,
+    "tables_kept": 1,
+    "tables_original": 1,
+    "tables_dropped": 0,
+    "research_outcomes_present": false,
+    "diagnostic_accuracy_present": false,
+    "paragraph_dedup_applied": false,
+    "relations_dropped": 0,
+    "relations_count": 0,
+    "relations_kept": 0,
+    "safety_blocks_found": 53,
+    "safety_found": 53,
+    "safety_expected": 8,
+    "safety_added": 8,
+    "safety_status": "ok",
+    "safety_blocks_added": 8,
+    "safety_expected_min": 8,
+    "safety_gap": 0,
+    "safety_threshold_rule": "small_leaflet",
+    "references_count": 0,
+    "references_anchor_backfill": false,
+    "long_doc_fast_path": false,
+    "frontmatter_affiliations_unresolved": 0,
+    "toc_guard": {
+      "pages_dropped": [],
+      "pages_dropped_count": 0
+    },
+    "toc_pages_dropped": [],
+    "toc_drop_count": 0,
+    "toc_guard_dropped_pages": [],
+    "small_ifu_fallback_applied": true,
+    "small_ifu_threshold": 4,
+    "second_pass_applied": true,
+    "second_pass_patches": [
+      "ifu_frontmatter_backfill",
+      "ifu_small_leaflet_map",
+      "ifu_safety_density_booster",
+      "ifu_safety_typing",
+      "ifu_sectionizer_salvage"
+    ],
+    "second_pass_reasons": [
+      "frontmatter_backfill",
+      "frontmatter_backfill:product_reset",
+      "frontmatter_backfill:revision_sanitized",
+      "frontmatter_backfill:channel_brush",
+      "no_toc_drops",
+      "small_leaflet_mapper",
+      "indications_present",
+      "no_anchor_match",
+      "safety_density_boost:{'expected': 8, 'found_before': 0, 'added': 8, 'found_after': 8}",
+      "list_backfill",
+      "no_references_detected",
+      "section_salvage_ifu",
+      "no_sections"
+    ],
+    "second_pass_modifications": {
+      "front_matter_product_name": 3,
+      "front_matter_model": 2,
+      "front_matter_product_name_reset": 1,
+      "front_matter_revision_sanitized": 1,
+      "front_matter_print_code": 1,
+      "indications_for_use": 1,
+      "intended_use": 1,
+      "safety_blocks_added": 8,
+      "safety_blocks_typed": 45,
+      "sections_rebuilt": 6
+    },
+    "second_pass_modifications_total": 69,
+    "second_pass": {
+      "mode": "auto",
+      "applied": [
+        "ifu_frontmatter_backfill",
+        "ifu_small_leaflet_map",
+        "ifu_safety_density_booster",
+        "ifu_safety_typing",
+        "ifu_sectionizer_salvage"
+      ],
+      "reasons": [
+        "frontmatter_backfill",
+        "frontmatter_backfill:product_reset",
+        "frontmatter_backfill:revision_sanitized",
+        "frontmatter_backfill:channel_brush",
+        "no_toc_drops",
+        "small_leaflet_mapper",
+        "indications_present",
+        "no_anchor_match",
+        "safety_density_boost:{'expected': 8, 'found_before': 0, 'added': 8, 'found_after': 8}",
+        "list_backfill",
+        "no_references_detected",
+        "section_salvage_ifu",
+        "no_sections"
+      ],
+      "modifications": {
+        "front_matter_product_name": 3,
+        "front_matter_model": 2,
+        "front_matter_product_name_reset": 1,
+        "front_matter_revision_sanitized": 1,
+        "front_matter_print_code": 1,
+        "indications_for_use": 1,
+        "intended_use": 1,
+        "safety_blocks_added": 8,
+        "safety_blocks_typed": 45,
+        "sections_rebuilt": 6
+      },
+      "patch_summaries": [
+        {
+          "name": "ifu_frontmatter_backfill",
+          "modifications": {
+            "front_matter_product_name": 3,
+            "front_matter_model": 2,
+            "front_matter_product_name_reset": 1,
+            "front_matter_revision_sanitized": 1,
+            "front_matter_print_code": 1
+          },
+          "reasons": [
+            "frontmatter_backfill",
+            "frontmatter_backfill:product_reset",
+            "frontmatter_backfill:revision_sanitized",
+            "frontmatter_backfill:channel_brush"
+          ]
+        },
+        {
+          "name": "ifu_small_leaflet_map",
+          "modifications": {
+            "indications_for_use": 1,
+            "intended_use": 1
+          },
+          "reasons": [
+            "small_leaflet_mapper"
+          ]
+        },
+        {
+          "name": "ifu_safety_density_booster",
+          "modifications": {
+            "safety_blocks_added": 8
+          },
+          "reasons": [
+            "safety_density_boost:{'expected': 8, 'found_before': 0, 'added': 8, 'found_after': 8}"
+          ]
+        },
+        {
+          "name": "ifu_safety_typing",
+          "modifications": {
+            "safety_blocks_typed": 45
+          },
+          "reasons": [
+            "list_backfill"
+          ]
+        },
+        {
+          "name": "ifu_sectionizer_salvage",
+          "modifications": {
+            "sections_rebuilt": 6
+          },
+          "reasons": [
+            "section_salvage_ifu"
+          ]
+        }
+      ]
+    },
+    "_metrics": {
+      "toc_pages_dropped": 0,
+      "safety_blocks_found": 53,
+      "safety_blocks_added": 8,
+      "second_pass_applied": true,
+      "second_pass_patches": [
+        "ifu_frontmatter_backfill",
+        "ifu_small_leaflet_map",
+        "ifu_safety_density_booster",
+        "ifu_safety_typing",
+        "ifu_sectionizer_salvage"
+      ],
+      "second_pass_reasons": [
+        "frontmatter_backfill",
+        "frontmatter_backfill:product_reset",
+        "frontmatter_backfill:revision_sanitized",
+        "frontmatter_backfill:channel_brush",
+        "no_toc_drops",
+        "small_leaflet_mapper",
+        "indications_present",
+        "no_anchor_match",
+        "safety_density_boost:{'expected': 8, 'found_before': 0, 'added': 8, 'found_after': 8}",
+        "list_backfill",
+        "no_references_detected",
+        "section_salvage_ifu",
+        "no_sections"
+      ],
+      "second_pass_modifications": {
+        "front_matter_product_name": 3,
+        "front_matter_model": 2,
+        "front_matter_product_name_reset": 1,
+        "front_matter_revision_sanitized": 1,
+        "front_matter_print_code": 1,
+        "indications_for_use": 1,
+        "intended_use": 1,
+        "safety_blocks_added": 8,
+        "safety_blocks_typed": 45,
+        "sections_rebuilt": 6
+      },
+      "patches": [
+        {
+          "name": "ifu_frontmatter_backfill",
+          "modifications": {
+            "front_matter_product_name": 3,
+            "front_matter_model": 2,
+            "front_matter_product_name_reset": 1,
+            "front_matter_revision_sanitized": 1,
+            "front_matter_print_code": 1
+          },
+          "reasons": [
+            "frontmatter_backfill",
+            "frontmatter_backfill:product_reset",
+            "frontmatter_backfill:revision_sanitized",
+            "frontmatter_backfill:channel_brush"
+          ]
+        },
+        {
+          "name": "ifu_small_leaflet_map",
+          "modifications": {
+            "indications_for_use": 1,
+            "intended_use": 1
+          },
+          "reasons": [
+            "small_leaflet_mapper"
+          ]
+        },
+        {
+          "name": "ifu_safety_density_booster",
+          "modifications": {
+            "safety_blocks_added": 8
+          },
+          "reasons": [
+            "safety_density_boost:{'expected': 8, 'found_before': 0, 'added': 8, 'found_after': 8}"
+          ]
+        },
+        {
+          "name": "ifu_safety_typing",
+          "modifications": {
+            "safety_blocks_typed": 45
+          },
+          "reasons": [
+            "list_backfill"
+          ]
+        },
+        {
+          "name": "ifu_sectionizer_salvage",
+          "modifications": {
+            "sections_rebuilt": 6
+          },
+          "reasons": [
+            "section_salvage_ifu"
+          ]
+        }
+      ],
+      "safety_expected_min": 8,
+      "safety_found": 53,
+      "safety_gap": 0,
+      "safety_threshold_rule": "small_leaflet",
+      "revision_status": "sanitized_unusable",
+      "sections_rebuilt": 6,
+      "sectionizer_mode": "ifu_salvage",
+      "tables_kept": 1,
+      "tables_dropped": 0,
+      "tables_original": 1,
+      "chunking": {
+        "enabled": true,
+        "mode": "smart",
+        "chunks_created": 33,
+        "chunks_unique": 33,
+        "chunks_deduped": 0,
+        "chunks_emitted": 33,
+        "chunks_truncated": 0,
+        "dedup_applied": false,
+        "policy": "standard",
+        "chunks_per_page": 16.5,
+        "unique_hash_ratio": 1.0,
+        "avg_tokens": 64.82,
+        "token_min": 200,
+        "token_max": 500,
+        "overlap_ratio": 0.15,
+        "max_chunks_per_doc": 1200
+      },
+      "extraction_metrics": {
+        "engine": "pymupdf",
+        "engines_tried": [
+          "pymupdf"
+        ],
+        "engine_switchovers": 0,
+        "pages_total": 2,
+        "duration_s": 1.3891077041625977
+      },
+      "quality_metrics": {
+        "tables_original": 1,
+        "tables_kept": 1,
+        "tables_dropped": 0,
+        "safety_blocks_added": 8,
+        "safety_blocks_found": 53,
+        "safety_expected_min": 8
+      },
+      "validation_metrics": {
+        "second_pass_applied": true,
+        "patches": [
+          {
+            "name": "ifu_frontmatter_backfill",
+            "modifications": {
+              "front_matter_product_name": 3,
+              "front_matter_model": 2,
+              "front_matter_product_name_reset": 1,
+              "front_matter_revision_sanitized": 1,
+              "front_matter_print_code": 1
+            },
+            "reasons": [
+              "frontmatter_backfill",
+              "frontmatter_backfill:product_reset",
+              "frontmatter_backfill:revision_sanitized",
+              "frontmatter_backfill:channel_brush"
+            ]
+          },
+          {
+            "name": "ifu_small_leaflet_map",
+            "modifications": {
+              "indications_for_use": 1,
+              "intended_use": 1
+            },
+            "reasons": [
+              "small_leaflet_mapper"
+            ]
+          },
+          {
+            "name": "ifu_safety_density_booster",
+            "modifications": {
+              "safety_blocks_added": 8
+            },
+            "reasons": [
+              "safety_density_boost:{'expected': 8, 'found_before': 0, 'added': 8, 'found_after': 8}"
+            ]
+          },
+          {
+            "name": "ifu_safety_typing",
+            "modifications": {
+              "safety_blocks_typed": 45
+            },
+            "reasons": [
+              "list_backfill"
+            ]
+          },
+          {
+            "name": "ifu_sectionizer_salvage",
+            "modifications": {
+              "sections_rebuilt": 6
+            },
+            "reasons": [
+              "section_salvage_ifu"
+            ]
+          }
+        ],
+        "reasons": [
+          "frontmatter_backfill",
+          "frontmatter_backfill:product_reset",
+          "frontmatter_backfill:revision_sanitized",
+          "frontmatter_backfill:channel_brush",
+          "no_toc_drops",
+          "small_leaflet_mapper",
+          "indications_present",
+          "no_anchor_match",
+          "safety_density_boost:{'expected': 8, 'found_before': 0, 'added': 8, 'found_after': 8}",
+          "list_backfill",
+          "no_references_detected",
+          "section_salvage_ifu",
+          "no_sections"
+        ],
+        "modifications": {
+          "front_matter_product_name": 3,
+          "front_matter_model": 2,
+          "front_matter_product_name_reset": 1,
+          "front_matter_revision_sanitized": 1,
+          "front_matter_print_code": 1,
+          "indications_for_use": 1,
+          "intended_use": 1,
+          "safety_blocks_added": 8,
+          "safety_blocks_typed": 45,
+          "sections_rebuilt": 6
+        }
+      }
+    },
+    "chunking": {
+      "enabled": true,
+      "mode": "smart",
+      "chunks_created": 33,
+      "chunks_unique": 33,
+      "chunks_deduped": 0,
+      "chunks_emitted": 33,
+      "chunks_truncated": 0,
+      "dedup_applied": false,
+      "policy": "standard",
+      "chunks_per_page": 16.5,
+      "unique_hash_ratio": 1.0,
+      "avg_tokens": 64.82,
+      "token_min": 200,
+      "token_max": 500,
+      "overlap_ratio": 0.15,
+      "max_chunks_per_doc": 1200
+    },
+    "engines_tried": [
+      "pymupdf"
+    ],
+    "engine_selected": "pymupdf",
+    "patches": [
+      {
+        "name": "ifu_frontmatter_backfill",
+        "modifications": {
+          "front_matter_product_name": 3,
+          "front_matter_model": 2,
+          "front_matter_product_name_reset": 1,
+          "front_matter_revision_sanitized": 1,
+          "front_matter_print_code": 1
+        },
+        "reasons": [
+          "frontmatter_backfill",
+          "frontmatter_backfill:product_reset",
+          "frontmatter_backfill:revision_sanitized",
+          "frontmatter_backfill:channel_brush"
+        ]
+      },
+      {
+        "name": "ifu_small_leaflet_map",
+        "modifications": {
+          "indications_for_use": 1,
+          "intended_use": 1
+        },
+        "reasons": [
+          "small_leaflet_mapper"
+        ]
+      },
+      {
+        "name": "ifu_safety_density_booster",
+        "modifications": {
+          "safety_blocks_added": 8
+        },
+        "reasons": [
+          "safety_density_boost:{'expected': 8, 'found_before': 0, 'added': 8, 'found_after': 8}"
+        ]
+      },
+      {
+        "name": "ifu_safety_typing",
+        "modifications": {
+          "safety_blocks_typed": 45
+        },
+        "reasons": [
+          "list_backfill"
+        ]
+      },
+      {
+        "name": "ifu_sectionizer_salvage",
+        "modifications": {
+          "sections_rebuilt": 6
+        },
+        "reasons": [
+          "section_salvage_ifu"
+        ]
+      }
+    ],
+    "emit_policy_source": "yaml",
+    "sections_rebuilt": 6,
+    "sectionizer_mode": "ifu_salvage",
+    "indications_fallback_provenance": "second_pass_small_leaflet",
+    "front_matter_fallback_reason": "second_pass_backfill",
+    "front_matter_revision_sanitized": true,
+    "safety_density_boost_applied": true,
+    "emit_pruned": [
+      "outcomes"
+    ]
+  },
+  "_engine": "pymupdf",
+  "_mode": "full",
+  "_cache_used": false,
+  "_pipeline_metadata": {
+    "profile": "enriched",
+    "engines_requested": [
+      "pymupdf",
+      "pdfplumber"
+    ],
+    "engine_used": "pymupdf",
+    "mode": "full",
+    "cache_used": false,
+    "ocr_used_pages": [],
+    "coverage_ratio": 1.0,
+    "page_count": 2,
+    "timestamp": "2025-11-22T18:21:10.485751",
+    "version": "v1.0.0",
+    "warnings": [
+      "Revision sanitized; original value unusable.",
+      "Safety blocks 53/8 [leaflet (≤4 pages)] (+8 added)"
+    ],
+    "emit": {
+      "evidence_policy": "compact",
+      "tables_mode": "compact",
+      "chunking": {
+        "enabled": true,
+        "token_min": 200,
+        "token_max": 500,
+        "overlap_ratio": 0.15
+      },
+      "max_relations": 15000,
+      "max_table_rows": 200,
+      "tables": {
+        "preserve_summary_recommendations": true,
+        "preserve_headers": [
+          "summary of recommendations",
+          "summary of statements",
+          "recommendations and strength"
+        ]
+      },
+      "evidence_max_chars": 500,
+      "table_cell_max_chars": 600,
+      "paragraph_store": true,
+      "max_entities": 3000,
+      "relation_window": 80,
+      "keep_evidence_bank": true,
+      "max_tables": 24
+    },
+    "safety_blocks_found": 53,
+    "safety_found": 53,
+    "extracted_chars": 11014,
+    "manufacturer_detection": {
+      "name": "Olympus Corporation",
+      "confidence": "high",
+      "source": "cover"
+    },
+    "front_matter_meta": {
+      "product_name_source": "pattern",
+      "print_code": "GR1695 21",
+      "manufacturer_source": "cover",
+      "revision_source": "pattern_cover",
+      "publication_date_source": "pattern_cover",
+      "print_code_source": "pattern_cover",
+      "part_number_source": "filename",
+      "manufacturer_detection_confidence": "high",
+      "manufacturer_detection_source": "cover",
+      "revision_status": "sanitized_unusable",
+      "revision_provenance": "sanitized"
+    },
+    "long_doc_fast_path": false,
+    "toc_guard_applied": true,
+    "toc_guard_pages_dropped": [],
+    "toc_guard_pages_dropped_count": 0,
+    "toc_guard": {
+      "enabled": true,
+      "pages_dropped": [],
+      "pages_dropped_count": 0,
+      "config": {
+        "enabled": true,
+        "density_threshold": 0.65,
+        "dot_leader_min": 0.2,
+        "page_number_ratio": 0.4,
+        "scan_page_limit": 15,
+        "min_dotted_lines": 2,
+        "min_page_number_lines": 2
+      },
+      "small_ifu_threshold": 4,
+      "small_ifu_fallback_applied": true,
+      "pages_considered": 2
+    },
+    "small_ifu_threshold": 4,
+    "small_ifu_fallback_applied": true,
+    "text_repair_applied": false,
+    "engine_used_per_page": {
+      "1": "pymupdf",
+      "2": "pymupdf"
+    },
+    "spacing_metrics": {
+      "space_ratio_before": 0.10857038324339156,
+      "space_ratio_after": null,
+      "avg_token_length_before": 5.30655737704918,
+      "avg_token_length_after": null,
+      "repair_strategy": null
+    },
+    "paragraph_dedup_applied": false,
+    "lang_counts": {
+      "en": 63,
+      "ja": 45
+    },
+    "table_ghosts_removed": 1,
+    "tables_need_vision": true,
+    "tables_need_vision_pages": [
+      1
+    ],
+    "safety_expected_min": 8,
+    "safety_expected": 8,
+    "safety_expectation_source": "small_leaflet",
+    "safety_threshold_rule": "small_leaflet",
+    "safety_gap": 0,
+    "safety_status": "ok",
+    "safety_blocks_added": 8,
+    "revision_status": "sanitized_unusable",
+    "tables_kept": 1,
+    "relations_dropped": 0,
+    "tables_dropped": 0,
+    "relations_kept": 0,
+    "references_detected": 0,
+    "frontmatter_affiliations_unresolved": 0,
+    "second_pass_modifications": {
+      "front_matter_product_name": 3,
+      "front_matter_model": 2,
+      "front_matter_product_name_reset": 1,
+      "front_matter_revision_sanitized": 1,
+      "front_matter_print_code": 1,
+      "indications_for_use": 1,
+      "intended_use": 1,
+      "safety_blocks_added": 8,
+      "safety_blocks_typed": 45,
+      "sections_rebuilt": 6
+    },
+    "duration_s": 1.3891077041625977,
+    "engine_selected": "pymupdf",
+    "engines_tried": [
+      "pymupdf"
+    ],
+    "engine_switchovers": 0,
+    "emit_policy_source": "yaml",
+    "split_languages": true,
+    "chunking": {
+      "enabled": true,
+      "mode": "smart",
+      "chunks_created": 33,
+      "chunks_unique": 33,
+      "chunks_deduped": 0,
+      "chunks_emitted": 33,
+      "chunks_truncated": 0,
+      "dedup_applied": false,
+      "policy": "standard",
+      "chunks_per_page": 16.5,
+      "unique_hash_ratio": 1.0,
+      "avg_tokens": 64.82,
+      "token_min": 200,
+      "token_max": 500,
+      "overlap_ratio": 0.15,
+      "max_chunks_per_doc": 1200
+    },
+    "second_pass": {
+      "mode": "auto",
+      "runtime_ms": 24,
+      "patches_applied": [
+        "ifu_frontmatter_backfill",
+        "ifu_small_leaflet_map",
+        "ifu_safety_density_booster",
+        "ifu_safety_typing",
+        "ifu_sectionizer_salvage"
+      ],
+      "diff_summary": {
+        "front_matter_product_name": 3,
+        "front_matter_model": 2,
+        "front_matter_product_name_reset": 1,
+        "front_matter_revision_sanitized": 1,
+        "front_matter_print_code": 1,
+        "indications_for_use": 1,
+        "intended_use": 1,
+        "safety_blocks_added": 8,
+        "safety_blocks_typed": 45,
+        "sections_rebuilt": 6
+      },
+      "notes": [],
+      "applied": [
+        "ifu_frontmatter_backfill",
+        "ifu_small_leaflet_map",
+        "ifu_safety_density_booster",
+        "ifu_safety_typing",
+        "ifu_sectionizer_salvage"
+      ],
+      "reasons": [
+        "frontmatter_backfill",
+        "frontmatter_backfill:product_reset",
+        "frontmatter_backfill:revision_sanitized",
+        "frontmatter_backfill:channel_brush",
+        "no_toc_drops",
+        "small_leaflet_mapper",
+        "indications_present",
+        "no_anchor_match",
+        "safety_density_boost:{'expected': 8, 'found_before': 0, 'added': 8, 'found_after': 8}",
+        "list_backfill",
+        "no_references_detected",
+        "section_salvage_ifu",
+        "no_sections"
+      ],
+      "modifications": {
+        "front_matter_product_name": 3,
+        "front_matter_model": 2,
+        "front_matter_product_name_reset": 1,
+        "front_matter_revision_sanitized": 1,
+        "front_matter_print_code": 1,
+        "indications_for_use": 1,
+        "intended_use": 1,
+        "safety_blocks_added": 8,
+        "safety_blocks_typed": 45,
+        "sections_rebuilt": 6
+      },
+      "requires_revalidation": true
+    },
+    "front_matter_revision_sanitized": true,
+    "threshold_warnings": [
+      "front_matter_revision_sanitized"
+    ],
+    "front_matter_fallback_reason": "second_pass_backfill",
+    "front_matter_incomplete": true,
+    "indications_anchor_page": 1,
+    "indications_fallback_provenance": "second_pass_small_leaflet",
+    "safety_density_boost_applied": true,
+    "safety_density_boost_detail": [
+      {
+        "expected": 8,
+        "found_before": 0,
+        "added": 8,
+        "found_after": 8
+      }
+    ],
+    "sections": {
+      "1 INTENDED USE": {
+        "start_page": 1,
+        "source": "second_pass_ifu_sectionizer"
+      },
+      "2 SYMBOLS": {
+        "start_page": 1,
+        "source": "second_pass_ifu_sectionizer"
+      },
+      "5 PREPARATION, INSPECTION AND USE": {
+        "start_page": 1,
+        "source": "second_pass_ifu_sectionizer"
+      },
+      "6.1 Cleaning": {
+        "start_page": 1,
+        "source": "second_pass_ifu_sectionizer"
+      },
+      "6.2 Disinfection": {
+        "start_page": 1,
+        "source": "second_pass_ifu_sectionizer"
+      },
+      "6.3 Sterilization": {
+        "start_page": 1,
+        "source": "second_pass_ifu_sectionizer"
+      }
+    },
+    "metadata_sources": {},
+    "second_pass_mode": "auto",
+    "engine_timeouts": {
+      "pymupdf": 240.0,
+      "pdfplumber": 210.0
+    },
+    "ifu_engine_mode": "pymupdf",
+    "ifu_engine_source": "manufacturer:olympus",
+    "ifu_engine_override_key": "olympus",
+    "validators": {
+      "passed": true,
+      "warnings": [],
+      "errors": [],
+      "info": [
+        "Revision sanitized; original value unusable.",
+        "Safety blocks 53/8 [leaflet (≤4 pages)] (+8 added)"
+      ]
+    },
+    "language": "ja",
+    "split_from": "119bc9a4-476b-45c4-87ea-df5af1d29d01",
+    "chunks_removed_for_split": true
+  }
+}

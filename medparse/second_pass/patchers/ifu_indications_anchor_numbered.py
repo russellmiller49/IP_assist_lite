@@ -255,8 +255,8 @@ def apply_ifu_indications_anchor_numbered(document: BaseDocument, ctx: SecondPas
     if not isinstance(document, IFUDocument):
         return SecondPassPatchResult.skipped_result(PATCH_NAME, reason="doc_not_ifu")
 
-    existing = _extract_text(document.indications_for_use)
-    if existing:
+    existing = document.indications_for_use
+    if isinstance(existing, dict) and _extract_text(existing):
         return SecondPassPatchResult.skipped_result(PATCH_NAME, reason="indications_present")
 
     paragraph_store = ctx.paragraph_store or {}

@@ -5,6 +5,32 @@ engines:
   - pymupdf
   - pdfplumber
 
+extract:
+  backend: legacy        # legacy | docling
+  long_doc:
+    streaming: true
+    pages_per_batch: 40
+    per_page_timeout_s: 10
+
+tables:
+  mode: fast
+  max_tables: 24
+  sterilization_hints:
+    enabled: true
+
+docling:
+  enabled: false
+  selective_pages: true
+  force_pages: []
+
+chunking:
+  method: smart
+  column_mode: auto
+  overlap_ratio: 0.10
+
+umls:
+  post_filter: strict
+
 thresholds:
   default:
     min_chars_abs: 10000
@@ -36,9 +62,6 @@ emit:
 text_normalization:
   enabled: true
 
-tables:
-  sterilization_hints:
-    enabled: true
 
 ifu:
   small_ifu_threshold: 4

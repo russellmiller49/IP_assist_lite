@@ -19,6 +19,7 @@ PURE_DIGITS_RE = re.compile(r"^\d{1,4}$")
 DOT_LEADER_RE = re.compile(r"\.{4,}\s*\d+$")
 LIST_BULLET_RE = re.compile(r"^(?:[\-\u2022\u2023\u25E6\*]\s+|\d+[\).]\s+)")
 LIST_MARKER_RE = re.compile(r"^(?:[\-\u2022\u2023\u25E6\*]+|\d+[\).])\s+")
+INLINE_LIST_MARKER_RE = re.compile(r"(?:[\-\u2022\u2023\u25E6\*]+|\d+[\).])\s+")
 TOC_LINE_PATTERN = re.compile(r"(?:\.{2,}|…|\s{4,})\s*\d{1,4}\s*$")
 TRAILING_PAGE_NUMBER = re.compile(r"\s\d{1,4}\s*$")
 CHAPTER_LINE_PATTERN = re.compile(r"^\s*(?:chapter|section)\s+[A-Z0-9IVXLC]+", re.IGNORECASE)
@@ -46,6 +47,29 @@ class Paragraph:
 def _strip_list_marker(value: str) -> str:
     cleaned = LIST_MARKER_RE.sub("", value or "", count=1).strip()
     return normalize_paragraph_text(cleaned)
+
+
+def _split_inline_list_segments(value: str) -> List[Tuple[str, int, int]]:
+    """Split a single line that may contain multiple inline list markers."""
+
+    if not value:
+        return []
+
+    matches = list(INLINE_LIST_MARKER_RE.finditer(value))
+    if len(matches) <= 1:
+        stripped = value.strip()
+        if not stripped:
+            return []
+        return [(stripped, 0, len(stripped))]
+
+    segments: List[Tuple[str, int, int]] = []
+    for idx, match in enumerate(matches):
+        start = match.start()
+        end = matches[idx + 1].start() if (idx + 1) < len(matches) else len(value)
+        segment = value[start:end].strip()
+        if segment:
+            segments.append((segment, start, end))
+    return segments
 
 
 def _looks_like_address(text: str) -> bool:
@@ -148,7 +172,8 @@ def iter_paragraphs(
         text_end_offset: Optional[int] = None
         text_start_line_idx: Optional[int] = None
         text_last_line_idx: Optional[int] = None
-        list_buffer: List[str] = []
+        list_text_buffer: List[str] = []
+        list_payload_buffer: List[str] = []
         list_start_offset: Optional[int] = None
         list_end_offset: Optional[int] = None
         list_start_line_idx: Optional[int] = None
@@ -214,21 +239,22 @@ def iter_paragraphs(
             return paragraph
 
         def _flush_list_buffer() -> Optional[Paragraph]:
-            nonlocal list_buffer, list_start_offset, list_end_offset, list_start_line_idx, list_last_line_idx
-            if not list_buffer:
+            nonlocal list_text_buffer, list_payload_buffer, list_start_offset, list_end_offset, list_start_line_idx, list_last_line_idx
+            if not list_text_buffer:
                 return None
-            text_value = " ".join(list_buffer)
+            text_value = " ".join(list_text_buffer)
             paragraph = _emit_paragraph(
-                list(list_buffer),
+                list(list_text_buffer),
                 text_value,
                 list_start_offset,
                 list_end_offset,
                 list_start_line_idx,
                 list_last_line_idx,
                 paragraph_type="list",
-                list_payload=list(list_buffer),
+                list_payload=list(list_payload_buffer),
             )
-            list_buffer = []
+            list_text_buffer = []
+            list_payload_buffer = []
             list_start_offset = None
             list_end_offset = None
             list_start_line_idx = None
@@ -256,17 +282,55 @@ def iter_paragraphs(
                 paragraph = _flush_text_buffer()
                 if paragraph:
                     yield paragraph
-                cleaned_item = _strip_list_marker(stripped)
-                if cleaned_item:
-                    if list_start_offset is None:
-                        leading_ws = len(raw_line) - len(raw_line.lstrip())
-                        list_start_offset = line_start + leading_ws
-                    list_end_offset = line_end
-                    if list_start_line_idx is None:
+                if list_text_buffer:
+                    list_paragraph = _flush_list_buffer()
+                    if list_paragraph:
+                        yield list_paragraph
+                leading_ws = len(raw_line) - len(raw_line.lstrip())
+                segments = _split_inline_list_segments(stripped)
+                if not segments:
+                    continue
+                if len(segments) > 1:
+                    for segment_text, seg_start, seg_end in segments:
+                        display_item = normalize_paragraph_text(segment_text)
+                        if not display_item:
+                            continue
+                        cleaned_item = _strip_list_marker(segment_text)
+                        seg_abs_start = line_start + leading_ws + seg_start
+                        seg_abs_end = line_start + leading_ws + seg_end
+                        list_start_offset = seg_abs_start
+                        list_end_offset = seg_abs_end
                         list_start_line_idx = line_idx
-                    list_last_line_idx = line_idx
-                    list_buffer.append(cleaned_item)
+                        list_last_line_idx = line_idx
+                        list_text_buffer.append(display_item)
+                        list_payload_buffer.append(cleaned_item or display_item)
+                        list_paragraph = _flush_list_buffer()
+                        if list_paragraph:
+                            yield list_paragraph
+                    continue
+                segment_text, seg_start, seg_end = segments[0]
+                display_item = normalize_paragraph_text(segment_text)
+                if not display_item:
+                    continue
+                cleaned_item = _strip_list_marker(segment_text)
+                seg_abs_start = line_start + leading_ws + seg_start
+                seg_abs_end = line_start + leading_ws + seg_end
+                list_start_offset = seg_abs_start
+                list_end_offset = seg_abs_end
+                list_start_line_idx = line_idx
+                list_last_line_idx = line_idx
+                list_text_buffer.append(display_item)
+                list_payload_buffer.append(cleaned_item or display_item)
                 continue
+
+            if list_text_buffer and not is_heading_candidate:
+                continuation = normalize_paragraph_text(stripped)
+                if continuation:
+                    list_text_buffer[-1] = f"{list_text_buffer[-1]} {continuation}"
+                    list_payload_buffer[-1] = f"{list_payload_buffer[-1]} {continuation}"
+                    list_end_offset = line_end
+                    list_last_line_idx = line_idx
+                    continue
 
             list_paragraph = _flush_list_buffer()
             if list_paragraph:

@@ -10,6 +10,16 @@ HEADER_FOOTER_HINTS = [
     "IonSystem,Instruments,andAccessoriesUserManual",
     "553990-11Rev.C",
 ]
+HEADER_FOOTER_REGEXES = [
+    re.compile(r"\bEU-?ME\s*3\s+INSTRUCTION\s+MANUAL\b.*", re.IGNORECASE),
+    re.compile(r"\bALT-?PRO\s+INSTRUCTION\s+MANUAL\b.*", re.IGNORECASE),
+    re.compile(r"\bBW-?18V\s+INSTRUCTION\s+MANUAL\b.*", re.IGNORECASE),
+]
+
+DECIMAL_GAP_RE = re.compile(r"(\d)\s*\.\s+(\d)")
+MODEL_GAP_RE = re.compile(r"\b(IF)\s+(\d{3,4})\b", re.IGNORECASE)
+TRAILING_ROMAN_RE = re.compile(r"\b[ivxlcdm]{1,4}\b", re.IGNORECASE)
+LANG_JA_RE = re.compile(r"[\u3040-\u30ff\u4e00-\u9fff]")
 
 FUSE_RULES = [
     (re.compile(r"([A-Za-z])(\d)"), r"\1 \2"),
@@ -39,6 +49,30 @@ def strip_headers_footers(text: str) -> str:
     cleaned = text
     for hint in HEADER_FOOTER_HINTS:
         cleaned = cleaned.replace(hint, "")
+    for pattern in HEADER_FOOTER_REGEXES:
+        cleaned = pattern.sub("", cleaned)
+    cleaned = re.sub(r"\s{2,}", " ", cleaned)
+    return cleaned.strip()
+
+
+def repair_text_fragments(text: str) -> str:
+    """Fix common IFU breakages (decimal shattering, model splits, footer bleed)."""
+    if not text:
+        return text
+    value = strip_headers_footers(text)
+    value = DECIMAL_GAP_RE.sub(r"\1.\2", value)
+    # Handle double-processed decimals like "6.0. 0"
+    value = DECIMAL_GAP_RE.sub(r"\1.\2", value)
+    value = MODEL_GAP_RE.sub(r"\1\2", value)
+    # Drop trailing roman numerals that were footers (e.g., "... MANUAL i")
+    pieces = [piece.strip() for piece in value.splitlines() if piece.strip()]
+    normalized_lines = []
+    for line in pieces:
+        if "instruction manual" in line.lower() and TRAILING_ROMAN_RE.search(line):
+            continue
+        normalized_lines.append(line)
+    value = " ".join(normalized_lines) if normalized_lines else value
+    return collapse_runs(value)
     return cleaned
 
 
@@ -206,10 +240,55 @@ def deep_cleanup_fields(ifu_json: Dict[str, object]) -> None:
         tbl["rows"] = cleaned_rows
 
 
+def repair_paragraph_store(paragraph_store: Dict[str, Dict[str, object]]) -> bool:
+    """Apply fragment repairs to every paragraph entry. Returns True if modified."""
+    if not isinstance(paragraph_store, dict):
+        return False
+
+    modified = False
+    for key, entry in list(paragraph_store.items()):
+        text = entry.get("text")
+        if isinstance(text, str):
+            fixed = repair_text_fragments(text)
+            if fixed != text:
+                entry["text"] = fixed
+                modified = True
+            if not fixed.strip():
+                paragraph_store.pop(key, None)
+                modified = True
+    return modified
+
+
+def detect_language_code(text: str) -> str:
+    """Lightweight language detector for IFUs (English vs Japanese)."""
+    if not isinstance(text, str) or not text:
+        return "und"
+    if LANG_JA_RE.search(text):
+        return "ja"
+    return "en"
+
+
+def tag_paragraph_languages(paragraph_store: Dict[str, Dict[str, object]]) -> Dict[str, int]:
+    """Annotate paragraphs with detected language to enable filtering."""
+    counts: Dict[str, int] = {}
+    if not isinstance(paragraph_store, dict):
+        return counts
+
+    for entry in paragraph_store.values():
+        text = entry.get("text")
+        lang = detect_language_code(text) if isinstance(text, str) else "und"
+        entry["lang"] = lang
+        counts[lang] = counts.get(lang, 0) + 1
+    return counts
+
+
 __all__ = [
     "restore_whitespace",
     "strip_headers_footers",
     "deep_cleanup_fields",
+    "repair_paragraph_store",
+    "tag_paragraph_languages",
+    "repair_text_fragments",
     "rebuild_paragraphs_from_words",
     "normalize_ligatures",
     "clean_paragraph",

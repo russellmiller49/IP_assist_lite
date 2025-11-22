@@ -1,5 +1,14 @@
 # IFU Extraction Improvements Plan
 
+## Latest fixes from external review (2025-09-09)
+- Added paragraph-level repair to merge shattered decimals (e.g., `6. 0. 0 → 6.0.0`) and join split model IDs (`IF 1000 → IF1000`) so paragraph_store content is safe for RAG.
+- Stripped noisy instruction-manual footers (`EU-ME 3 INSTRUCTION MANUAL i`, `ALT-Pro INSTRUCTION MANUAL 31`, `BW-18V INSTRUCTION MANUAL`) during cleanup to stop footer bleed into paragraphs and safety blocks.
+- Suppressed table “ghosting” by dropping paragraph_store entries that duplicate structured tables on the same page; tables stay as the single source of truth.
+- Tagged paragraph languages (English vs Japanese) to enable filtering or splitting mixed-language manuals.
+- Emitting per-language JSON splits when mixed-language content is detected (e.g., BW-18V_en.json, BW-18V_ja.json) with chunks dropped to avoid cross-language bleed.
+- Flagging complex tables (wide, fragmented headers, long tables) for vision-based extraction; config flag `emit.tables.vision_route=true` can force the hint.
+- TODO next: upgrade complex table extraction (license/compatibility matrices) via a vision-backed parser.
+
 ## Issue Analysis Summary
 
 ### 1. Intuitive Ion (Critical Issues)
