@@ -1,4 +1,0 @@
-# file: /home/rjm/projects/IP_assist_lite/medparse/extract/guideline.py
-# hypothesis_version: 6.140.3
-
-[100, '!', '"\'“”‘’', '()[]', '(\\w)-\\s+(\\w)', '-\\1', '-\\s+([A-Za-z])', '.', '/', ':', '?', 'GRADE', '[\\"“”\\\'●•]', '\\(([A-Z]{2,})\\)', '\\1', '\\1\\2', '\\b(19|20)\\d{2}\\b', '\\s*,\\s*', '\\s+', '\\s+([.,;:])', 'acknowledgements', 'and', 'appendix', 'bibliography', 'by', 'consensus_percentage', 'endoscopy 2015', 'evidence', 'figures', 'for', 'georg thieme verlag', 'grade', 'guideline', 'in', 'label', 'number', 'of', 'on', 'or', 'per', 'recommendation grade', 'recommendations', 'references', 'rest', 'society', 'strength_scale', 'text', 'the', 'to', 'vilmann peter', 'vs', 'with']

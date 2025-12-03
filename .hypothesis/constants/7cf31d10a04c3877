@@ -1,4 +1,0 @@
-# file: /home/rjm/projects/IP_assist_lite/medparse/ingest/cleaning.py
-# hypothesis_version: 6.140.3
-
-['/uniFB01', '/uniFB02', ': ', '[ \\t]+\\n', '[ \\t]{2,}', '\\1\\2', '\\n[ \\t]+', '\\s*:\\s*', '\\s+', '^[A-Z0-9\\s\\-\\|]{6,}$', 'fi', 'fl', '·', 'ﬁ', 'ﬂ']
